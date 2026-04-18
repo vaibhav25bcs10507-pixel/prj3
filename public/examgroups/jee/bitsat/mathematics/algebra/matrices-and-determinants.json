@@ -1,0 +1,506 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<ol start=\"109\">\n<li>If $A, B, C$ are the angles of a $\\triangle A B C$, then</li>\n</ol>\n<p>$$ \\Delta=\\left|\\begin{array}{ccc} \\sin 2 A & \\sin C & \\sin B \\\\ \\sin C & \\sin 2 B & \\sin A \\\\ \\sin B & \\sin A & \\sin 2 C \\end{array}\\right| \\text { is equal to } $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>2</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$k^3$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$k$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>0</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text {  } \\Delta=\\left|\\begin{array}{ccc} 2 \\sin A \\cos A & \\sin C & \\sin B \\\\ \\sin C & 2 \\sin B \\cos B & \\sin A \\\\ \\sin B & \\sin A & 2 \\sin C \\cos C \\end{array}\\right| \\\\ & =\\left|\\begin{array}{ccc} 2 k a \\cos A & k c & k b \\\\ k c & 2 k b \\cos B & k a \\\\ k b & k a & 2 k c \\cos C \\end{array}\\right| \\\\ & {\\left[\\because \\frac{\\sin A}{a}=\\frac{\\sin B}{b}=\\frac{\\sin C}{c}=k\\right]} \\end{aligned} $$</p>\n<p>$$ =k^3\\left|\\begin{array}{ccc} 2 a \\cos A & c & b \\\\ c & 2 b \\cos B & a \\\\ b & a & 2 c \\cos c \\end{array}\\right| $$</p>\n<p>$$ =k^3 \\left\\lvert\\, \\begin{array}{ll} a \\cos A+a \\cos A & a \\cos B+b \\cos A \\\\ a \\cos B+b \\cos A & b \\cos B+b \\cos B \\\\ c \\cos A+a \\cos C & b \\cos C+c \\cos B \\end{array}\\right. $$</p>\n<p>$$ \\left.\\begin{aligned} & c \\cos A+a \\cos C \\\\ & b \\cos C+c \\cos B \\\\ & c \\cos C+c \\cos C \\end{aligned} \\right\\rvert\\, $$</p>\n<p>$$ \\begin{aligned} & \\left.=k^3\\left|\\begin{array}{ccc} \\cos A & a & 0 \\\\ \\cos B & b & 0 \\\\ \\cos C & c & 0 \\end{array}\\right|| | \\begin{array}{ccc} a & \\cos A & 0 \\\\ b & \\cos B & 0 \\\\ c & \\cos C & 0 \\end{array} \\right\\rvert\\, \\\\ & =k^3 \\times 0=0 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If $ A=\\frac{1}{3}\\left[\\begin{array}{ccc}1 & 2 & 2 \\\\ 2 & 1 & -2 \\\\ a & 2 & b\\end{array}\\right] $ is an orthogonal matrix, then",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$ a=-2, b=-1 $"
+      },
+      {
+        "identifier": "B",
+        "content": "$ a=2, b=1 $"
+      },
+      {
+        "identifier": "C",
+        "content": "$ a=2, b=-1 $"
+      },
+      {
+        "identifier": "D",
+        "content": "$ a=-2, b=1 $"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We know that, if $ A $ is an orthogonal matrix, then</p><p>$ A A^{T}=I $</p><p>$ \\begin{array}{c} \\Rightarrow \\quad \\frac{1}{3}\\left[\\begin{array}{ccc} 1 & 2 & 2 \\\\ 2 & 1 & -2 \\\\ a & 2 & b \\end{array}\\right] \\cdot \\frac{1}{3}\\left[\\begin{array}{ccc} 1 & 2 & a \\\\ 2 & 1 & 2 \\\\ 2 & -2 & b \\end{array}\\right]=\\left[\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right] \\\\ \\Rightarrow\\left[\\begin{array}{ccc} 1 & 2 & 2 \\\\ 2 & 1 & -2 \\\\ a & 2 & b \\end{array}\\right]\\left[\\begin{array}{ccc} 1 & 2 & a \\\\ 2 & 1 & 2 \\\\ 2 & -2 & b \\end{array}\\right]=\\left[\\begin{array}{lll} 9 & 0 & 0 \\\\ 0 & 9 & 0 \\\\ 0 & 0 & 9 \\end{array}\\right] \\\\ \\Rightarrow\\left[\\begin{array}{ccc} 9 & 0 & a+4+2 b \\\\ 0 & 9 & 2 a+2-2 b \\\\ a+2 b & 2 a+2-2 b & a^{2}+4+b^{2} \\end{array}\\right] \\\\ =\\left[\\begin{array}{lll} 9 & 0 & 0 \\\\ 0 & 9 & 0 \\\\ 0 & 0 & 9 \\end{array}\\right] \\end{array} $</p><p>$ \\Rightarrow \\quad a+4+2 b=0 \\text { and } 2 a+2-2 b=0 $</p><p>$ \\Rightarrow \\quad a+2 b=-4 \\quad \\ldots \\text { (i) } $</p><p>and $ a-b=-1 \\quad \\ldots \\text { (ii) } $</p><p>By solving Eqs. (i) and (ii), we get</p><p>$ a=-2, b=-1 $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Suppose $ p, q, r \\neq 0 $ and system of equation $ (p+a) x+b y+c z=0 $, $ a x+(q+b) y+c z=0 $, $ a x+b y+(r+c) z=0 $, has a non-trivial solution, then the value of $ \\frac{a}{p}+\\frac{b}{q}+\\frac{c}{r} $ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-1"
+      },
+      {
+        "identifier": "B",
+        "content": "0"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $ |A|=\\left|\\begin{array}{ccc}p+a & b & c \\\\ a & q+b & c \\\\ a & b & r+c\\end{array}\\right| $</p><p>Also, given that equations has non trivial solution $ \\therefore $</p><p>$ |A|=0 $</p><p>$ \\begin{aligned} & \\quad\\left|\\begin{array}{ccc} p+a & b & c \\\\ a & q+b & c \\\\ a & b & r+c \\end{array}\\right|=0 \\\\ \\Rightarrow & (p+a)[(q+b)(r+c)-b c]-b[a(r+c)-c a] +c[a b-a(q+b)]=0 \\\\ \\Rightarrow & (p+a)[q r+q c+b r]-b[a r]+c[-a q]=0 \\\\ \\Rightarrow & p q r+p q c+p b r+a q r=0 \\end{aligned} $</p><p>Dividing whole equation by $ p q r $</p><p>$ \\begin{array}{ll} \\Rightarrow & \\frac{p q r}{p q r}+\\frac{p q c}{p q r}+\\frac{p r b}{p q r}+\\frac{q r a}{p q r}=0 \\\\ \\Rightarrow & 1+\\frac{c}{r}+\\frac{b}{q}+\\frac{a}{p}=0 \\\\ \\Rightarrow & \\frac{a}{p}+\\frac{b}{q}+\\frac{c}{r}=-1 \\end{array} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If matrix $ A=\\left[\\begin{array}{ccc}3 & -2 & 4 \\\\ 1 & 2 & -1 \\\\ 0 & 1 & 1\\end{array}\\right] $ and $ A^{-1}=\\frac{1}{k} \\operatorname{adj}(A) $,",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7"
+      },
+      {
+        "identifier": "B",
+        "content": "-7"
+      },
+      {
+        "identifier": "C",
+        "content": "15"
+      },
+      {
+        "identifier": "D",
+        "content": "-11"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given the matrix $ A = \\begin{bmatrix} 3 & -2 & 4 \\\\ 1 & 2 & -1 \\\\ 0 & 1 & 1 \\end{bmatrix} $ and $ A^{-1} = \\frac{1}{k} \\operatorname{adj}(A) $, we want to determine the value of $ k $.</p>\n<p>We know from the properties of matrices that:</p>\n<p>$ A^{-1} = \\frac{\\operatorname{adj}(A)}{|A|} $</p>\n<p>By comparing this equation with the given relationship $ A^{-1} = \\frac{1}{k} \\operatorname{adj}(A) $, we can identify that:</p>\n<p>$ k = |A| $</p>\n<p>Therefore, we need to calculate the determinant $|A|$ of the matrix $ A $:</p>\n<p>$ |A| = \\left| \\begin{array}{ccc} 3 & -2 & 4 \\\\ 1 & 2 & -1 \\\\ 0 & 1 & 1 \\end{array} \\right| $</p>\n<p>To find $|A|$, expand across the first row:</p>\n<p>$ |A| = 3 \\begin{vmatrix} 2 & -1 \\\\ 1 & 1 \\end{vmatrix} - (-2) \\begin{vmatrix} 1 & -1 \\\\ 0 & 1 \\end{vmatrix} + 4 \\begin{vmatrix} 1 & 2 \\\\ 0 & 1 \\end{vmatrix} $</p>\n<p>Calculate each of the 2x2 determinants:</p>\n<p>$ \\begin{vmatrix} 2 & -1 \\\\ 1 & 1 \\end{vmatrix} = (2 \\times 1) - (-1 \\times 1) = 2 + 1 = 3 $</p>\n<p>$ \\begin{vmatrix} 1 & -1 \\\\ 0 & 1 \\end{vmatrix} = (1 \\times 1) - (0 \\times -1) = 1 $</p>\n<p>$ \\begin{vmatrix} 1 & 2 \\\\ 0 & 1 \\end{vmatrix} = (1 \\times 1) - (0 \\times 2) = 1 $</p>\n<p>Substitute these values back into the determinant calculation:</p>\n<p>$ |A| = 3 \\times 3 + 2 \\times 1 + 4 \\times 1 = 9 + 2 + 4 = 15 $</p>\n<p>Thus, the value of $ k $ is $|A| = 15$.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If the system of linear equation $$3 x-2 y+z=2, 4 x-3 y+3 z=-5$$ and $$7 x-5 y+\\lambda z=9$$ has no solution, then $$\\lambda$$ equals to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "7"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the value of $$\\lambda$$ for which the given system of linear equations has no solution, we need to analyze the consistency of these equations. The given system is:</p>\n\n<p>\n\n<p>$$3x - 2y + z = 2$$  (Equation 1)<br></p>\n\n<p>$$4x - 3y + 3z = -5$$  (Equation 2)<br></p>\n\n<p>$$7x - 5y + \\lambda z = 9$$  (Equation 3)</p>\n\n</p>\n\n<p>For a system of linear equations to have no solution, the equations must be inconsistent, meaning they do not intersect at any point. This happens when the determinant of the coefficient matrix is zero, and the augmented matrix creates a contradiction.</p>\n\n<p>First, let's form the coefficient matrix and calculate its determinant. The coefficient matrix $$A$$ of the system is:</p>\n\n<p>\n\n<p>$$A = \\begin{pmatrix} 3 & -2 & 1 \\\\ 4 & -3 & 3 \\\\ 7 & -5 & \\lambda \\end{pmatrix}$$</p>\n\n</p>\n\n<p>The determinant of matrix $$A$$ is given by:</p>\n\n<p>\n\n<p>$$\\text{det}(A) = \\begin{vmatrix} 3 & -2 & 1 \\\\ 4 & -3 & 3 \\\\ 7 & -5 & \\lambda \\end{vmatrix}$$</p>\n\n</p>\n\n<p>Expanding this determinant along the first row, we get:</p>\n\n<p>\n\n<p>$$\\text{det}(A) = 3\\begin{vmatrix} -3 & 3 \\\\ -5 & \\lambda \\end{vmatrix} - (-2)\\begin{vmatrix} 4 & 3 \\\\ 7 & \\lambda \\end{vmatrix} + 1\\begin{vmatrix} 4 & -3 \\\\ 7 & -5 \\end{vmatrix}$$</p>\n\n</p>\n\n<p>Now, calculate these 2x2 determinants:</p>\n\n<p>\n\n<p>$$\\begin{vmatrix} -3 & 3 \\\\ -5 & \\lambda \\end{vmatrix} = (-3)(\\lambda) - (3)(-5) = -3\\lambda + 15$$<br></p>\n\n<p>$$\\begin{vmatrix} 4 & 3 \\\\ 7 & \\lambda \\end{vmatrix} = (4)(\\lambda) - (3)(7) = 4\\lambda - 21$$<br></p>\n\n<p>$$\\begin{vmatrix} 4 & -3 \\\\ 7 & -5 \\end{vmatrix} = (4)(-5) - (-3)(7) = -20 + 21 = 1$$</p>\n\n</p>\n\n<p>Substitute these into the expansion to get the determinant:</p>\n\n<p>\n\n<p>$$\\text{det}(A) = 3(-3\\lambda + 15) + 2(4\\lambda - 21) + 1(1)$$<br></p>\n\n<p>$$= 3(-3\\lambda + 15) + 2(4\\lambda - 21) + 1$$<br></p>\n\n<p>$$= 3(-3\\lambda) + 3(15) + 2(4\\lambda) - 2(21) + 1$$<br></p>\n\n<p>$$= -9\\lambda + 45 + 8\\lambda - 42 + 1$$<br></p>\n\n<p>$$= -\\lambda + 4$$</p>\n\n</p>\n\n<p>For the system to have no solution, $$\\text{det}(A)$$ must be zero, because that's when the coefficient matrix does not have full rank and the system is inconsistent:</p>\n\n<p>\n\n<p>$$-\\lambda + 4 = 0$$<br></p>\n\n<p>$$\\lambda = 4$$</p>\n\n</p>\n\n<p>Therefore, the value of $$\\lambda$$ that makes the system of linear equations have no solution is $$4$$.</p>\n\n<p><strong>Answer: (A) 4</strong></p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $$A=\\left[\\begin{array}{lll}3 & 2 & 3 \\\\ 4 & 1 & 0 \\\\ 2 & 5 & 1\\end{array}\\right]$$ and $$49 B=\\left[\\begin{array}{ccc}1 & 13 & -3 \\\\ -4 & -3 & 12 \\\\ \\alpha & -11 & -5\\end{array}\\right]$$ If $$B$$ is the inverse of $$A$$, then the value of $$\\alpha$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "18"
+      },
+      {
+        "identifier": "C",
+        "content": "20"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Since, $$B$$ is the inverse of $$A$$.</p>\n<p>$$\\begin{aligned}\n& \\therefore \\quad A \\times B=I \\\\\n& \\Rightarrow\\left[\\begin{array}{lll}\n3 & 2 & 3 \\\\\n4 & 1 & 0 \\\\\n2 & 5 & 1\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n1 / 49 & 13 / 49 & -3 / 49 \\\\\n-4 / 49 & -3 / 49 & 12 / 49 \\\\\n\\alpha / 49 & -11 / 49 & -5 / 49\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{ccc}\n(3-8+3 \\alpha / 49 & (39-6-33) / 49 & (-9+24-15) / 49 \\\\\n(4-4+0) / 49 & (52-3+0) / 49 & (-12+12+0) / 49 \\\\\n(2-20+\\alpha) / 49 & (26-15-11) / 49 & (-6+60-5) / 49\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{ccc}\n(-5+3 \\alpha) / 49 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n(-18+\\alpha) / 49 & 0 & 1\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& \\Rightarrow \\quad \\frac{-5+3 \\alpha}{49}=1 \\text { and } \\frac{-18+\\alpha}{49}=0 \\\\\n& \\Rightarrow \\quad 3 \\alpha=54 \\text { and } \\alpha=18 \\\\\n& \\Rightarrow \\quad \\alpha=18 \\text { and } \\alpha=18\n\\end{aligned}$$</p>\n<p>Thus, $$\\alpha=18$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\n\\text { If } A=\\left[\\begin{array}{cc}\n\\sin \\theta & -\\cos \\theta \\\\\n\\cos \\theta & \\sin \\theta\n\\end{array}\\right] \\text {, then } A(\\operatorname{adj} A)^{-1} \\text { equals to }\n$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\n\\left[\\begin{array}{cc}\n-1 & 0 \\\\\n0 & -1\n\\end{array}\\right]\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\n\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\n\\left[\\begin{array}{ll}\n0 & 1 \\\\\n1 & 0\n\\end{array}\\right]\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\n\\left[\\begin{array}{cc}\n0 & -1 \\\\\n-1 & 0\n\\end{array}\\right]\n$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\text { Given, } A=\\left[\\begin{array}{cc}\n\\sin \\theta & -\\cos \\theta \\\\\n\\cos \\theta & \\sin \\theta\n\\end{array}\\right]$$</p>\n<p>$$\n\\begin{aligned}\n& \\Rightarrow \\quad \\operatorname{adj} A=\\left[\\begin{array}{cc}\n\\sin \\theta & -\\cos \\theta \\\\\n-(-\\cos \\theta) & \\sin \\theta\n\\end{array}\\right] \\\\\n& {\\left[\\because \\text { If } A=\\left[\\begin{array}{ll}\na & b \\\\\nc & d\n\\end{array}\\right] \\text {, then adj } A=\\left[\\begin{array}{cc}\nd & -c \\\\\n-b & a\n\\end{array}\\right]\\right] }\n\\end{aligned}\n$$</p>\n<p>$$\\begin{aligned}\n& \\Rightarrow \\operatorname{adj} A=A \\\\\n& \\begin{aligned}\n\\operatorname{Now,} A\\left(\\operatorname{adj}(A)^{-1}\\right) & =A(A)^{-1} \\\\\n= & I=\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right] \\quad\\left[\\because A A^{-1}=A^{-1} A=I\\right]\n\\end{aligned}\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$a, b, c$$ are non-zero real numbers and if the system of equations $$(a-1) x-y-z=0, -x+(b-1) y-z=0,-x-y+(c-1) z=0$$ has a non-trivial solution, then $$a b+b c+c a$$ equals to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a b c$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$a+b+c$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-1$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, system of equations has a non-trivial solution</p>\n<p>$$\\therefore \\quad\\left|\\begin{array}{ccc}\na-1 & -1 & -1 \\\\\n-1 & b-1 & -1 \\\\\n-1 & -1 & c-1\n\\end{array}\\right|=0$$</p>\n<p>On applying $$C_2 \\rightarrow C_2-C_3$$, we get</p>\n<p>$$\\left|\\begin{array}{ccc}\na-1 & 0 & -1 \\\\\n-1 & b & -1 \\\\\n-1 & -c & c-1\n\\end{array}\\right|=0$$</p>\n<p>On applying $$R_2 \\rightarrow R_2-R_3$$, we get</p>\n<p>$$\\left|\\begin{array}{ccc}\na-1 & -1 & -1 \\\\\n0 & b+c & -c \\\\\n-1 & -c & c-1\n\\end{array}\\right|=0$$</p>\n<p>On applying $$R_3 \\rightarrow R_3-R_1$$, we get</p>\n<p>$$\\left|\\begin{array}{ccc}\na-1 & 0 & -1 \\\\\n0 & b+c & -c \\\\\na & -c & c\n\\end{array}\\right|=0$$</p>\n<p>On expanding along $$R_1$$, we get</p>\n<p>$$\\begin{aligned}\n& (a-1)\\left(b c+c^2-c^2\\right)-1(a b+a c)=0 \\\\\n& \\Rightarrow \\quad(a-1)(b c)-a b-a c=0 \\\\\n& \\Rightarrow \\quad a b c-b c-a b-a c=0 \\\\\n& \\Rightarrow \\quad a b+b c+a c=a b c \\\\\n&\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Given 2x $$-$$ y + 2z = 2, x $$-$$ 2y - z = $$-$$4, x + y + $$\\lambda$$z = 4, then the value of $$\\lambda$$ such that the given system of equation has no solution is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-$$3"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "0"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Since, the system has no solution.</p>\n<p>$$\\left| {\\matrix{\n   2 & { - 1} & 2  \\cr \n   1 & { - 2} & { - 1}  \\cr \n   1 & 1 & \\lambda   \\cr \n\n } } \\right| = 0$$</p>\n<p>$$ \\Rightarrow 2( - 2\\lambda  + 1) + 1(\\lambda  + 1) + 2(3) = 0$$</p>\n<p>$$ \\Rightarrow  - 4\\lambda  + 2 + \\lambda  + 1 + 6 = 0$$</p>\n<p>$$ \\Rightarrow 3\\lambda  = 9 \\Rightarrow \\lambda  = 3$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let $$A = \\left[ {\\matrix{\n   1 & { - 1} & 1  \\cr \n   2 & 1 & { - 3}  \\cr \n   1 & 1 & 1  \\cr \n\n } } \\right]$$ and $$10B = \\left[ {\\matrix{\n   4 & 2 & 2  \\cr \n   { - 5} & 0 & \\alpha   \\cr \n   1 & { - 2} & 3  \\cr \n\n } } \\right]$$</p>\n<p>If B is the inverse of A, then the value of $$\\alpha$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-$$4"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$A = \\left[ {\\matrix{\n   1 & { - 1} & 1  \\cr \n   2 & 1 & { - 3}  \\cr \n   1 & 1 & 1  \\cr \n\n } } \\right]$$</p>\n<p>$$\\therefore$$ $$\\left| A \\right| = \\left| {\\matrix{\n   1 & { - 1} & 1  \\cr \n   2 & 1 & { - 3}  \\cr \n   1 & 1 & 1  \\cr \n\n } } \\right|$$</p>\n<p>$$ = 1(1 + 3) + 1(2 + 3) + 1(2 - 1) = 4 + 5 + 1 = 0$$</p>\n<p>$$ \\Rightarrow Adj\\,A = {\\left[ {\\matrix{\n   4 & { - 5} & 1  \\cr \n   2 & 0 & { - 2}  \\cr \n   2 & 5 & 3  \\cr \n\n } } \\right]^T} = \\left[ {\\matrix{\n   4 & 2 & 2  \\cr \n   { - 5} & 0 & 5  \\cr \n   1 & { - 2} & 3  \\cr \n\n } } \\right]$$</p>\n<p>$$ \\Rightarrow B = {A^{ - 1}} = {1 \\over {10}}\\left[ {\\matrix{\n   4 & 2 & 2  \\cr \n   { - 5} & 0 & 5  \\cr \n   1 & { - 2} & 3  \\cr \n\n } } \\right]$$ [$$\\because$$ $${A^{ - 1}} = {1 \\over {|A|}}Adj\\,A$$]</p>\n<p>$$ \\Rightarrow 10B = \\left[ {\\matrix{\n   4 & 2 & 2  \\cr \n   { - 5} & 0 & 5  \\cr \n   1 & { - 2} & 3  \\cr \n\n } } \\right]$$</p>\n<p>Hence, $$\\alpha  = 5$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>If $$\\left[ {\\matrix{\n   1 & { - \\tan \\theta }  \\cr \n   {\\tan \\theta } & 1  \\cr \n\n } } \\right]{\\left[ {\\matrix{\n   1 & {\\tan \\theta }  \\cr \n   { - \\tan \\theta } & 1  \\cr \n\n } } \\right]^{ - 1}} = \\left[ {\\matrix{\n   a & { - b}  \\cr \n   b & a  \\cr \n\n } } \\right]$$, then </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a = 1, b = 1"
+      },
+      {
+        "identifier": "B",
+        "content": "$$a = \\sin 2\\theta ,b = \\cos 2\\theta $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$a = \\cos 2\\theta ,b = \\sin 2\\theta $$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given,</p>\n<p>$$\\left[ {\\matrix{\n   1 & { - \\tan \\theta }  \\cr \n   {\\tan \\theta } & 1  \\cr \n\n } } \\right]{\\left[ {\\matrix{\n   1 & {\\tan \\theta }  \\cr \n   { - \\tan \\theta } & 1  \\cr \n\n } } \\right]^{ - 1}} = \\left[ {\\matrix{\n   a & { - b}  \\cr \n   b & a  \\cr \n\n } } \\right]$$</p>\n<p>$$ \\Rightarrow \\left[ {\\matrix{\n   1 & { - \\tan \\theta }  \\cr \n   {\\tan \\theta } & 1  \\cr \n\n } } \\right]\\,.\\,{1 \\over {1 + {{\\tan }^2}\\theta }}\\left[ {\\matrix{\n   1 & { - \\tan \\theta }  \\cr \n   {\\tan \\theta } & 1  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   a & { - b}  \\cr \n   b & a  \\cr \n\n } } \\right]$$</p>\n<p>$$ \\Rightarrow {1 \\over {1 + {{\\tan }^2}\\theta }}\\left[ {\\matrix{\n   {1 - {{\\tan }^2}\\theta } & { - 2\\tan \\theta }  \\cr \n   {2\\tan \\theta } & {1 - {{\\tan }^2}\\theta }  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   a & { - b}  \\cr \n   b & a  \\cr \n\n } } \\right]$$</p>\n<p>$$ \\Rightarrow \\left[ {\\matrix{\n   {{{1 - {{\\tan }^2}\\theta } \\over {1 + {{\\tan }^2}\\theta }}} & {{{2\\tan \\theta } \\over {1 + {{\\tan }^2}\\theta }}}  \\cr \n   {{{2\\tan \\theta } \\over {1 + {{\\tan }^2}\\theta }}} & {{{1 - {{\\tan }^2}\\theta } \\over {1 + {{\\tan }^2}\\theta }}}  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   a & { - b}  \\cr \n   b & a  \\cr \n\n } } \\right]$$</p>\n<p>$$ \\Rightarrow \\left[ {\\matrix{\n   {\\cos 2\\theta } & { - \\sin 2\\theta }  \\cr \n   {\\sin 2\\theta } & {\\cos 2\\theta }  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   a & { - b}  \\cr \n   b & a  \\cr \n\n } } \\right]$$</p>\n<p>$$ \\Rightarrow a = \\cos 2\\theta ,b = \\sin 2\\theta $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>If p $$\\ne$$ a, q $$\\ne$$ b, r $$\\ne$$ c and the system of equations</p>\n<p>px + ay + az = 0</p>\n<p>bx + qy + bz = 0</p>\n<p>cx + cy + rz = 0</p>\n<p>has a non-trivial solution, then the value of $$\\frac{p}{p-a}+\\frac{q}{q-b}+\\frac{r}{r-c}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "0"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>As the given system of equations has a non-trivial solution.</p>\n<p>$$\\Delta  = \\left| {\\matrix{\n   p & a & a  \\cr \n   b & q & b  \\cr \n   c & c & r  \\cr \n\n } } \\right| = 0$$</p>\n<p>Applying $${C_2} \\to {C_2} - {C_1}$$ and $${C_3} \\to {C_3} - {C_1}$$</p>\n<p>$$\\Delta  = \\left| {\\matrix{\n   p & {a - p} & {a - p}  \\cr \n   b & {q - b} & 0  \\cr \n   c & 0 & {r - c}  \\cr \n\n } } \\right| = 0$$</p>\n<p>Expanding along C<sub>3</sub>, we get</p>\n<p>$$(a - p)\\left| {\\matrix{\n   b & {q - b}  \\cr \n   c & 0  \\cr \n\n } } \\right| + (r - c)\\left| {\\matrix{\n   p & {a - p}  \\cr \n   b & {q - b}  \\cr \n\n } } \\right| = 0$$</p>\n<p>$$ \\Rightarrow (a - p)( - c)(q - b) + (r - c)\\{ p(q - b) - b(a - p)\\}  = 0$$</p>\n<p>$$ \\Rightarrow (p - a)(q - b)c + p(r - c)(q - b) + b(r - c)(p - a) = 0$$</p>\n<p>Dividing $$(p - a)(q - b)(r - c)$$, we get</p>\n<p>$${c \\over {r - c}} + {p \\over {p - a}} + {b \\over {q - b}} = 0$$</p>\n<p>$$ \\Rightarrow {p \\over {p - a}} + {q \\over {q - b}} + {r \\over {r - c}} = {{q - b} \\over {q - b}} + {{r - c} \\over {r - c}} = 2$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "If p$$\\ne$$ q $$\\ne$$ r and $$\\left| {\\matrix{\n   0 & {x - p} & {x - q}  \\cr \n   {x + p} & 0 & {x - r}  \\cr \n   {x + q} & {x - r} & 0  \\cr \n\n } } \\right| = 0$$, then the value of x which satisfy the equation is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x = p"
+      },
+      {
+        "identifier": "B",
+        "content": "x = q"
+      },
+      {
+        "identifier": "C",
+        "content": "x = r"
+      },
+      {
+        "identifier": "D",
+        "content": "x = 0"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$\\left| {\\matrix{\n   0 & {x - p} & {x - q}  \\cr \n   {x + p} & 0 & {x - r}  \\cr \n   {x + q} & {x - r} & 0  \\cr \n\n } } \\right| = 0$$</p>\n<p>$$ - (x - p)\\left| {\\matrix{\n   {x + p} & {x - r}  \\cr \n   {x + q} & 0  \\cr \n\n } } \\right| + (x - q)\\left| {\\matrix{\n   {x + p} & 0  \\cr \n   {x + q} & {x - r}  \\cr \n\n } } \\right| = 0$$</p>\n<p>$$ \\Rightarrow (x - p)(x + q)(x - r) + (x - q)(x + p)(x - r) = 0$$</p>\n<p>$$ \\Rightarrow (x - r)[(x - p)(x + q) + (x - q)(x + p)] = 0$$</p>\n<p>$$ \\Rightarrow (x - r)[{x^2} - px + qx - pq + {x^2} - qx + px - pq] = 0$$</p>\n<p>$$ \\Rightarrow (x - r)[2{x^2} - 2pq] = 0 \\Rightarrow x - r = 0$$ or $${x^2} - pq = 0$$</p>\neither x = r or pq</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Matrix $$A = \\left| {\\matrix{\n   x & 3 & 2  \\cr \n   1 & y & 4  \\cr \n   2 & 2 & z  \\cr \n\n } } \\right|$$, if xyz = 60 and 8x + 4y + 3z = 20, then A(adj A) is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\matrix{\n   {64} & 0 & 0  \\cr \n   0 & {64} & 0  \\cr \n   0 & 0 & {64}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\matrix{\n   {88} & 0 & 0  \\cr \n   0 & {88} & 0  \\cr \n   0 & 0 & {88}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\matrix{\n   {68} & 0 & 0  \\cr \n   0 & {68} & 0  \\cr \n   0 & 0 & {68}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   {34} & 0 & 0  \\cr \n   0 & {34} & 0  \\cr \n   0 & 0 & {34}  \\cr \n\n } } \\right]$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>A . adj A = | A | I</p>\n<p>| A | = xyz $$-$$ 8x $$-$$ 3(z $$-$$ 8) + 2(2 $$-$$ 2y)</p>\n<p>| A | = xyz $$-$$ (8x + 3z + 4y) + 28</p>\n<p>$$\\Rightarrow$$ 60 $$-$$ 20 + 28 = 68</p>\n<p>$$\\Rightarrow$$ (adj A)<sup>$$-$$1</sup> always exists whenever (A)<sup>$$-$$1</sup> exists.</p>\n<p>$$\\therefore$$ A . adj A = | A | I</p>\n<p>$$ = 68\\left[ {\\matrix{\n   1 & 0 & 0  \\cr \n   0 & 1 & 0  \\cr \n   0 & 0 & 1  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   {68} & 0 & 0  \\cr \n   0 & {68} & 0  \\cr \n   0 & 0 & {68}  \\cr \n\n } } \\right]$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>An ordered pair ($$\\alpha$$, $$\\beta$$) for which the system of linear $$(1 + \\alpha )x + \\beta y + z = 2$$, $$\\alpha x + (1 + \\beta )y + z = 3$$, $$\\alpha x + \\beta y + 2z = 2$$ has a unique solution.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(1, $$-$$3)"
+      },
+      {
+        "identifier": "B",
+        "content": "($$-$$3, 1)"
+      },
+      {
+        "identifier": "C",
+        "content": "(2, 4)"
+      },
+      {
+        "identifier": "D",
+        "content": "($$-$$4, 2)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$(1 + \\alpha )x + \\beta y + z = 2$$</p>\n<p>$$\\alpha x + (1 + \\beta )y + z = 3$$</p>\n<p>$$\\alpha x + \\beta y + 2z = 2$$</p>\n<p>For unique solution $$\\left| {\\matrix{\n   {1 + \\alpha } & \\beta  & 1  \\cr \n   \\alpha  & {1 + \\beta } & 1  \\cr \n   \\alpha  & \\beta  & 2  \\cr \n\n } } \\right| \\ne 0$$</p>\n<p>Apply R<sub>1</sub> $$\\to$$ R<sub>1</sub> - R<sub>2</sub> and R<sub>2</sub> $$\\to$$ R<sub>2</sub> - R<sub>3</sub>, we get</p>\n<p>$$\\left| {\\matrix{\n   1 & { - 1} & 0  \\cr \n   0 & 1 & { - 1}  \\cr \n   \\alpha  & \\beta  & 2  \\cr \n\n } } \\right| \\ne 0$$</p>\n<p>Expanding along R<sub>1</sub>, we get</p>\n<p>$$1(2 + \\beta ) + 1(0 + \\alpha ) \\ne 0$$</p>\n<p>$$ = \\alpha  + \\beta  + 2 \\ne 0$$</p>\n<p>Only option (c) satisfied above equation.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider matrix $$A = \\left[ {\\matrix{\n   2 & 1  \\cr \n   1 & 2  \\cr \n\n } } \\right]$$, if $${A^{ - 1}} = \\alpha I + \\beta A$$, where $$\\alpha$$, $$\\beta$$ $$ \\notin $$ R, then ($$\\alpha$$ + $$\\beta$$) is equal to (where A<sup>$$-$$1</sup> denotes the inverse of matrix A)</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "$${4 \\over 3}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${5 \\over 3}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 3}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$A = \\left[ {\\matrix{\n   2 & 1  \\cr \n   1 & 2  \\cr \n\n } } \\right]$$</p>\n<p>We know that, $$\\left| {A \\to \\lambda I} \\right| = 0$$</p>\n<p>$$\\left| {\\left[ {\\matrix{\n   2 & 1  \\cr \n   1 & 2  \\cr \n\n } } \\right] - \\left[ {\\matrix{\n   \\lambda  & 0  \\cr \n   0 & \\lambda   \\cr \n\n } } \\right]} \\right| = 0$$</p>\n<p>$$ = \\left| {\\matrix{\n   {2 - \\lambda } & 1  \\cr \n   1 & {2 - \\lambda }  \\cr \n\n } } \\right| = 0$$</p>\n<p>$$ \\Rightarrow {(2 - \\lambda )^2} - 1 = 0$$</p>\n<p>$$ \\Rightarrow 4 - 4\\lambda  + {\\lambda ^2} - 1 = 0$$</p>\n<p>$$ \\Rightarrow {\\lambda ^2} - 4\\lambda  + 3 = 0$$</p>\n<p>$$\\therefore$$ $${A^2} - 4A + 3I = 0$$</p>\n<p>Multiply by A<sup>$$-$$1</sup>, we get</p>\n<p>$$A - 4I + 3{A^{ - 1}} = 0$$</p>\n<p>$$ \\Rightarrow {A^{ - 1}} = {{ - 1} \\over 3}A + {4 \\over 3}I$$</p>\n<p>$$\\therefore$$ $$\\alpha  =  - {1 \\over 3}$$ and $$\\beta  = {4 \\over 3}$$</p>\n<p>$$\\alpha  + \\beta  =  - {1 \\over 3} + {4 \\over 3} = {3 \\over 3} = 1$$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  }
+]

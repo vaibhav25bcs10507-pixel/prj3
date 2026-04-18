@@ -1,0 +1,350 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The function $f(x)=\\frac{x}{\\sin x}$ is strictly increasing in the interval.</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\left[0, \\frac{\\pi}{2}\\right]$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\left[\\frac{\\pi}{2}, \\pi\\right)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\left(0, \\frac{\\pi}{2}\\right)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\left(\\frac{\\pi}{2}, \\pi\\right)$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\\\ &\\begin{aligned} & \\text { We have, } f(x)=\\frac{x}{\\sin x} \\\\ & \\therefore f^{\\prime}(x)=\\frac{\\sin x-x \\cos x}{\\sin ^2 x}=\\frac{g(x)}{\\sin ^2 x} \\text {, where } g(x) \\\\ & =\\sin x-x \\cos x \\\\ & \\text { Now, } g(x)=\\sin x-x \\cos x \\\\ & g^{\\prime}(x)=\\cos x-\\cos x+x \\sin x=x \\sin x \\\\ & \\Rightarrow g^{\\prime}(x)>0 \\text { for all } x \\in\\left(0, \\frac{\\pi}{2}\\right) \\\\ & \\qquad\\left[\\because \\sin x>0 \\text { for } x \\in\\left(0, \\frac{\\pi}{2}\\right)\\right] \\end{aligned} \\end{aligned} $$</p>\n<p>$\\Rightarrow g(x)$ is an increasing function on $\\left(0, \\frac{\\pi}{2}\\right)$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow g(x)>g(0), \\forall x \\in\\left(0, \\frac{\\pi}{2}\\right) \\\\ & \\Rightarrow g(x)>0, \\forall x \\in\\left(0, \\frac{\\pi}{2}\\right) \\\\ & \\Rightarrow \\frac{g(x)}{\\sin ^2 x}>0, \\forall x \\in\\left(0, \\frac{\\pi}{2}\\right) \\\\ & \\quad \\quad\\left[\\because \\sin ^2 x>0 \\text { for } x \\in\\left(0, \\frac{\\pi}{2}\\right)\\right] \\\\ & \\Rightarrow f^{\\prime}(x)>0, \\forall x \\in\\left(0, \\frac{\\pi}{2}\\right) \\end{aligned} $$</p>\n<p>Hence, $f(x)$ is strictly increasing on $\\left(0, \\frac{\\pi}{2}\\right)$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For what values of the parameter ' $a$ ' does the function $f(x)=x^3+3(a-7) x^2+3\\left(a^2-9\\right) x-1$ have a positive point of maximum.</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$(-\\infty, 9)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$(-\\infty,-3) \\cup\\left(3, \\frac{29}{7}\\right)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$(-\\infty, 9) \\cup\\left(9, \\frac{29}{7}\\right)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\left(9, \\frac{29}{7}\\right),(6, \\infty)$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$ \\begin{aligned} f(x) & =x^3+3(a-7) x^2+3\\left(a^2-9\\right) x-1 \\\\ f^{\\prime}(x) & =3 x^2+6(a-7) x+3\\left(a^2-9\\right) \\\\ & =3\\left[x^2+2(a-7) x+\\left(a^2-9\\right)\\right] \\end{aligned} $$</p>\n<p>For local maximum, we must have $f^{\\prime}(x)=0$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow x^2+2(a-7) x+a^2-9=0 \\\\ & \\Rightarrow x=-(a-7) \\pm \\sqrt{58-14 a} \\end{aligned} $$</p>\n<p>Let $x_1=-(a-7)+\\sqrt{58-14 a}$ and</p>\n<p>$$ x_2=-(a-7)-\\sqrt{58-14 a} $$</p>\n<p>For $x_1, x_2$ to be real, we must have</p>\n<p>$$ 58-14 a>0 \\Rightarrow a<\\frac{58}{14}=\\frac{29}{7} $$</p>\n<p>Now, $f^{\\prime \\prime}(x)=3[2 x+2(a-7)]=6[x+a-7]$</p>\n<p>Clearly, $f^{\\prime \\prime}\\left(x_2\\right)=6\\left(x_2+a-7\\right)=-6 \\sqrt{58-14 a}<0$</p>\n<p>So, $x_2=-(a-7)-\\sqrt{58-14 a}$ is a point of local maximum.</p>\n<p>Now, $x_2>0$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow-(a-7)-\\sqrt{58-14 a}>0 \\\\ & \\Rightarrow 7-a>\\sqrt{58-14 a} \\Rightarrow(7-a)^2>58-14 a \\\\ & \\Rightarrow a^2-9>0 \\Rightarrow a<-3 \\text { or } a>3 \\\\ & \\text { Hence, } a \\in(-\\infty,-3) \\cup\\left(3, \\frac{29}{7}\\right) \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The slope of the curve $2 y^2=a x^2+b$ at $(1,-1)$ is -1 . Then, the value of $b$ is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>0</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>2</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>-1</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>-2</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { The equation of the curve is } 2 y^2=a x^2+b \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)$$</p>\n<p>Differentiate w.r.t. $x$, we get</p>\n<p>$$ \\begin{aligned} & 4 y \\frac{d y}{d x}=2 a x \\Rightarrow \\frac{d y}{d x}=\\frac{a x}{2 y} \\\\ \\therefore \\quad & \\left(\\frac{d y}{d x}\\right)_{(1,-1)}=\\frac{-a}{2} \\end{aligned} $$</p>\n<p>Also, since the slope of the tangent at $(1,-1)$ is -1 .</p>\n<p>$$ \\therefore \\quad \\frac{-a}{2}=-1 \\Rightarrow a=2 $$</p>\n<p>Since, the point $(1,-1)$ lies on Eq. (i)</p>\n<p>$$ \\begin{array}{ll} \\therefore & 2(-1)^2=a(1)^2+b=a+b=2 \\\\ \\Rightarrow & 2+b=2 \\Rightarrow b=0 \\end{array} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The maximum area of rectangle inscribed in a circle of diameter $ R $ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$ R^{2} $"
+      },
+      {
+        "identifier": "B",
+        "content": "$ \\frac{R^{2}}{2} $"
+      },
+      {
+        "identifier": "C",
+        "content": "$ \\frac{R^{2}}{4} $"
+      },
+      {
+        "identifier": "D",
+        "content": "$ \\frac{R^{2}}{8} $"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>According to question,</p><p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7m7ue7m/2ad102dd-958d-4e2f-8bf8-f4ef08aad487/d6b1c520-f46a-11ef-bbe5-33f4ad49c5b5/file-jaoe38c1m7m7ue7n.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7m7ue7m/2ad102dd-958d-4e2f-8bf8-f4ef08aad487/d6b1c520-f46a-11ef-bbe5-33f4ad49c5b5/file-jaoe38c1m7m7ue7n.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"BITSAT 2024 Mathematics - Application of Derivatives Question 4 English Explanation\"></p><p>Diameter $ =\\boldsymbol{R} $</p><p>Diagonals, $ d_{1}=d_{2}=R $</p><p>$ \\begin{aligned} \\text { Max Area of rectangle (any quadrilateral) } &amp; =\\frac{1}{2} d_{1} \\times d_{2} \\\\ &amp; =\\frac{1}{2} \\times R \\times R=\\frac{R^{2}}{2} \\end{aligned} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Consider the function $ f(x)=\\frac{|x-1|}{x^{2}} $, then $ f(x) $ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "increasing in $ (0,1) \\cup(2, \\infty) $"
+      },
+      {
+        "identifier": "B",
+        "content": "increasing in $ (-\\infty, 0) \\cup(0,1) $"
+      },
+      {
+        "identifier": "C",
+        "content": "decreasing in $ (-\\infty, 0) \\cup(2, \\infty) $"
+      },
+      {
+        "identifier": "D",
+        "content": "decreasing in $ (0,1) \\cup(2, \\infty) $"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $ f(x)=\\left\\{\\begin{array}{cl}\\frac{x-1}{x^{2}} ; &amp; x \\geq 1 \\\\ \\frac{-x+1}{x^{2}} ; &amp; x &lt; 1\\end{array}\\right. $</p><p>$ f(x)=\\left\\{\\begin{array}{cl} \\frac{1}{x}-\\frac{1}{x^{2}} ; &amp; x \\geq 1 \\\\ -\\frac{1}{x}+\\frac{1}{x^{2}} ; &amp; x &lt; 1 \\end{array}\\right. $</p><p>$ f^{\\prime}(x)=\\left\\{\\begin{array}{ll} \\frac{-1}{x^{2}}+\\frac{2}{x^{3}} ; &amp; x \\geq 1 \\\\ \\frac{1}{x^{2}}-\\frac{2}{x^{3}} ; &amp; x &lt; 1 \\end{array}\\right. $</p><p>$ f^{\\prime}(x)=\\left\\{\\begin{array}{ll} \\frac{2-x}{x^{3}} ; &amp; x \\geq 1 \\\\ \\frac{x-2}{x^{3}} ; &amp; x &lt; 1 \\end{array}\\right. $</p><p>By observation, $ f^{\\prime}(x) $ will be</p><p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7m7w97s/835d4060-0959-4fec-93a7-5fcbbf4ee40f/0a743280-f46b-11ef-bbe5-33f4ad49c5b5/file-jaoe38c1m7m7w97t.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7m7w97s/835d4060-0959-4fec-93a7-5fcbbf4ee40f/0a743280-f46b-11ef-bbe5-33f4ad49c5b5/file-jaoe38c1m7m7w97t.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"BITSAT 2024 Mathematics - Application of Derivatives Question 5 English Explanation\"></p><p>Decreasing in $ (0,1) \\cup(2, \\infty) $</p><p>and increasing in $ (-\\infty, 0) \\cup(1,2) $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A cylindrical tank of radius $$10 \\mathrm{~m}$$ is being filled with wheat at the rate of $$200 \\pi$$ cubic metre per hour. Then, the depth of the wheat is increasing at the rate of</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.5 m/h"
+      },
+      {
+        "identifier": "B",
+        "content": "2 m/h"
+      },
+      {
+        "identifier": "C",
+        "content": "0.2 m/h"
+      },
+      {
+        "identifier": "D",
+        "content": "2.2 m/h"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $$r$$ be the radius of the cylinder.</p>\n<p>Then, volume $$(V)$$ of the cylinder is given by,</p>\n<p>$$\\begin{aligned}\n& V=\\pi(\\text { radius })^2 \\times \\text { height } \\\\\n& \\Rightarrow V=\\pi(10)^2 h \\\\\n& \\Rightarrow V=100 \\pi h\n\\end{aligned}$$</p>\n<p>On differentiating w.r.t. $$t$$, we get</p>\n<p>$$\\begin{aligned}\n& \\frac{d V}{d t}=100 \\pi \\frac{d h}{d t} \\\\\n& \\Rightarrow \\quad 200 \\pi=100 \\pi \\frac{d h}{d t} \\\\\n& {\\left[\\because \\text { Given, } \\frac{d V}{d t}=200 \\pi \\mathrm{m}^3 / \\mathrm{h}\\right]} \\\\\n& \\Rightarrow \\quad \\frac{d h}{d t}=\\frac{200 \\pi}{100 \\pi}=2 \\mathrm{~m} / \\mathrm{h} \\\\\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Water is being filled at the rate of $$1 \\mathrm{~cm}^3 / \\mathrm{s}$$ in a right circular conical vessel (vertex downwards) of height $$35 \\mathrm{~cm}$$ and diameter $$14 \\mathrm{~cm}$$. When the height of the water levels is $$10 \\mathrm{~cm}$$, the rate (in $$\\mathrm{cm}^2 / \\mathrm{sec}$$) at which the wet conical surface area of the vessel increases is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{\\sqrt{26}}{10}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{\\sqrt{21}}{5}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{\\sqrt{26}}{5}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $$r$$ be the radius and $$h$$ be the height of cone.</p>\n<p>$$\\therefore \\quad \\frac{r}{h}=\\frac{7}{35}=\\frac{1}{5} \\Rightarrow r=\\frac{h}{5} \\mathrm{~cm}$$</p>\n<p>Now, volume of cone $$=V=\\frac{1}{3} \\pi r^2 h=\\frac{1}{75} \\pi h^3$$</p>\n<p>$$\\Rightarrow \\quad \\frac{d \\dot{V}}{d t}=\\frac{1}{75} \\pi\\left(3 h^2\\right) \\frac{d h}{d t}$$</p>\n<p>$$\\Rightarrow \\quad \\frac{d h}{d t}=\\frac{1 \\times 75}{\\pi \\times 3 h^2}$$</p>\n<p>$$\n\\left[\\because \\text { Given, } \\frac{d V}{d t}=1 \\mathrm{~cm}^3 / \\mathrm{sec}\\right]\n$$</p>\n<p>$$\n\\begin{aligned}\n& \\text { Now, } A=\\pi r l=\\pi r \\sqrt{r^2+h^2} \\\\\n& \\Rightarrow \\quad A=\\pi r^2 \\sqrt{1+\\frac{h^2}{r^2}}=\\frac{\\pi h^2}{25} \\sqrt{1+25} \\\\\n& \\Rightarrow \\quad A=\\frac{\\sqrt{26}}{25} \\pi h^2 \\\\\n& \\therefore \\frac{d A}{d t}=\\frac{\\sqrt{26}}{25} \\pi \\cdot 2 h \\frac{d h}{d t} \\\\\n& \\left.\\Rightarrow \\quad \\frac{d A}{d t}\\right|_{h=10}=\\frac{\\sqrt{26}}{25} \\pi \\times 2 \\times 10 \\times \\frac{1 \\times 75}{\\pi \\times 3 \\times 10^2} \\\\\n& =\\frac{\\sqrt{26}}{5} \\mathrm{~cm}^2 / \\mathrm{s} \\\\\n&\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A running track of 440 ft is to be laid out enclosing a football field, the shape of which is a rectangle with a semi-circle at each end. If the area of the rectangular portion is to be maximum, then the lengths of its side are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "70 ft and 110 ft"
+      },
+      {
+        "identifier": "B",
+        "content": "80 ft and 120 ft"
+      },
+      {
+        "identifier": "C",
+        "content": "35 ft and 110 ft"
+      },
+      {
+        "identifier": "D",
+        "content": "35 ft and 120 ft"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1lhyh0e0v/0f788291-d759-49c7-91a1-1c06a4a42a0d/778218f0-f86a-11ed-a462-b137e84afc65/file-1lhyh0e0w.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1lhyh0e0v/0f788291-d759-49c7-91a1-1c06a4a42a0d/778218f0-f86a-11ed-a462-b137e84afc65/file-1lhyh0e0w.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"BITSAT 2022 Mathematics - Application of Derivatives Question 9 English Explanation\"></p>\n<p>Perimeter = 440 ft</p>\n<p>$$\\Rightarrow$$ 2x + $$\\pi$$r + $$\\pi$$r = 440</p>\n<p>2x + 2$$\\pi$$r = 440</p>\n<p>A = Area of the rectangular portion = x2r</p>\n<p>A = $$x\\frac{(440-2x)}{\\pi}=\\frac{1}{\\pi}(440x-2x^2)$$</p>\n<p>Let $$\\frac{dA}{dx}=\\frac{1}{\\pi}(440-4x)=0$$</p>\n<p>$$\\Rightarrow$$ x = 110 for which $$\\frac{d^2A}{dx^2} &lt; 0$$</p>\n<p>$$\\Rightarrow$$ A is maximum when x = 110</p>\n<p>$$\\Rightarrow$$ $$2r=\\frac{440-2x}{\\pi}=\\frac{440-220}{22/7}=70$$</p>\n<p>$$\\therefore$$ r = 35 ft and x = 110 ft</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A spherical balloon is filled with 4500$$\\pi$$ cubic meters of helium gas. If a leak in the balloon causes the gas to escape at the rate of 72$$\\pi$$ cubic meters per minute then the rate (in meters per minute) at which the radius of the balloon decreases 49 min after the leakage began is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{9}{7}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{7}{9}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{2}{9}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "9"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>V = $$\\frac{4}{3}\\pi r^3\\Rightarrow4500\\pi=\\frac{4\\pi r^3}{3}$$</p>\n<p>$$\\Rightarrow$$ r = 15 m</p>\n<p>After 49 min = (4500 $$-$$ 49.72) $$\\pi$$</p>\n<p>= 972 $$\\pi$$m<sup>3</sup></p>\n<p>$$\\Rightarrow$$ 972$$\\pi=\\frac{4}{3}\\pi r^3$$</p>\n<p>$$\\Rightarrow$$ r<sup>3</sup> = 3 $$\\times$$ 243 = 3 $$\\times$$ 3<sup>5</sup></p>\n<p>r = 9</p>\n<p>$$\\frac{dv}{dt}=4 \\pi r^2\\left(\\frac{dr}{dt}\\right)$$</p>\n<p>72$$\\pi$$ = 4$$\\pi$$ $$\\times$$ 9 $$\\times$$ $$\\left(\\frac{dr}{dt}\\right)$$</p>\n<p>$$\\frac{dr}{dt}=\\left(\\frac{2}{9}\\right)$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The slope of the tangent to the curve x = t<sup>2</sup> + 3t $$-$$ 8, y = 2t<sup>2</sup> $$-$$ 2t $$-$$ 5 at the point t = 2 is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${7 \\over 6}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${5 \\over 6}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${6 \\over 7}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $${{dx} \\over {dt}} = 2t + 3$$ and $${{dy} \\over {dt}} = 4t - 2$$</p>\n<p>$$\\therefore$$ $${{dy} \\over {dx}} = {{dy/dt} \\over {dx/dt}} = {{4t - 2} \\over {2t + 3}}$$</p>\n<p>Thus, slope of the tangent to the curve at the point t = 2 is</p>\n<p>$${\\left[ {{{dy} \\over {dx}}} \\right]_{t = 2}} = {{4(2) - 2} \\over {2(2) + 3}} = {6 \\over 7}$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let $$f(x) = {a_0} + {a_1}{x^2} + {a_2}{x^4} + {a_3}{x^6} + ... + {a_n}{x^{2n}}$$ be a polynomial in a real variable x with $$0 < {a_1} < {a_2} < {a_3} < .... < {a_n}$$, the function f(x) has</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "neither a maxima nor a minima"
+      },
+      {
+        "identifier": "B",
+        "content": "only one maxima"
+      },
+      {
+        "identifier": "C",
+        "content": "both maxima and minima"
+      },
+      {
+        "identifier": "D",
+        "content": "only one minima"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$f(x) = {a_0} + {a_1}{x^2} + {a_2}{x^4} + {a_3}{x^6} + ... + {a_n}{x^{2n}}$$</p>\n<p>$$f'(x) = 2{a_1}x + 4{a_2}{x^3} + 6{a_3}{x^5} + .... + 2n{a_n}{x^{2n - 1}}$$</p>\n<p>$$f'(x) = 2x({a_1} + 2{a_2}{x^2} + 3{a_3}{x^4} + .... + n{a_n}{x^{2n - 2}})$$</p>\n<p>For maxima or minima</p>\n<p>Put f'(x) = 0 $$\\Rightarrow$$ x = 0</p>\n<p>$$f''(x) = 2({a_1} + 6{a_2}{x^2} + 15{a_3}{x^4} + ... + n(2n - 1){a_n}{x^{2n - 2}})$$</p>\n<p>$${(f''(x))_{x = 0}} = 2{a_1} > 0$$</p>\n<p>$$\\therefore$$ f(x) has only one minima at x = 0.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  }
+]

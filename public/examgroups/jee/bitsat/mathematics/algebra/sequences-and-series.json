@@ -1,0 +1,632 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The coefficient of $x^n$ in the expansion of $\\frac{1-a x-x^2}{e^x}$ is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{(-1)^n}{n!}\\left\\{-n^2-n(a+1)+1\\right\\}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{(-1)^n}{n!}\\left\\{n^2-n(a+1)-1\\right\\}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{(-1)^n}{n!}\\left\\{-n^2+n(a+1)+1\\right\\}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>None of the above</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Taylor series expansion of $e^{-x}$ is</p>\n<p>$$ e^{-x}=1-\\frac{x}{1!}+\\frac{x^2}{2!}-\\frac{x^3}{3!}+\\ldots=\\sum_{k=0}^{\\infty} \\frac{(-1)^k x^k}{k!} $$</p>\n<p>Now, $\\frac{1-a x-x^2}{e^x}=\\left(1-a x-x^2\\right) e^{-x}$</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ =e^{-x}-(a x) e^{-x}-\\left(x^2\\right) e^{-x} $$</p>\n<p>From $e^{-x}$, the coefficient of $x^n$ in $e^{-x}$ is $\\frac{(-1)^n}{n!}$</p>\n<p>From $-a x e^{-x}$, the coefficient of $x^n$ in $-a x e^{-x}$ is given by the coefficient of $x^{n-1}$ in $e^{-x}$, multiplied by $-a$</p>\n<p>$$ -a \\cdot \\frac{(-1)^{n-1}}{(n-1)!} $$</p>\n<p>From $-x^2 e^{-x}$, the coefficient of $x^n$ in $-x^2 e^{-x}$ is given by the coefficient of $x^{n-2}$ in $e^{-x}$, multiplied by -1 :</p>\n<p>$$ \\frac{-(-1)^{n-2}}{(n-2)!} $$</p>\n<p>Now, combine the coefficient from all three terms</p>\n<p>$$ \\begin{aligned} & \\text { coefficient of } x^n=\\frac{(-1)^n}{n!}-a \\frac{(-1)^{n-1}}{(n-1)!}-\\frac{(-1)^{n-2}}{(n-2)} \\\\ & =(-1)^{n-2}\\left[\\frac{(-1)^2}{n!}-a \\cdot \\frac{(-1)}{(n-1)!}-1 \\cdot \\frac{1}{(n-2)!}\\right] \\\\ & =(-1)^{n-2}\\left[\\frac{1}{n!}+\\frac{a}{(n-1)!}-\\frac{1}{(n-2)!}\\right] \\\\ & =\\frac{(-1)^n}{n!}\\left[1+(a+1) n-n^2\\right] \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For three numbers $a, b, c$ between 2 and 18 such that their sum is 25 , the numbers $2, a, b$ are in AP and the numbers $b, c, 18$ are in GP Then, the value of $a+b+c$ is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>12</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>24</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>25</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>20</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $a+b+c=25\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)$</p>\n<p>Also, $2, a, b$ are in AP</p>\n<p>$$ \\Rightarrow \\quad 2 a=2+b \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)$$</p>\n<p>And $b, c, 18$ are in GP</p>\n<p>$$ \\Rightarrow \\quad c^2=18 b \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)$$</p>\n<p>From Eqs. (i) and (ii), we get</p>\n<p>$$ \\begin{aligned} &  \\frac{2+b}{2}+b+c=25 \\\\ & \\Rightarrow  2+b+2 b+2 c=50 \\\\ & \\Rightarrow 3 b+2 c=48 \\\\ & \\Rightarrow  3\\left(\\frac{c^2}{18}\\right)+2 c=48\\,\\,\\,\\,\\,[using\\,\\, Eq. (iii)] \\\\  \\Rightarrow & c^2+12 c-288=0 \\Rightarrow c=12-2 \\end{aligned} $$</p>\n<p></p>\n<p>$\\because a, b, c$ lies between 2 and 18</p>\n<p>$$ \\therefore \\quad c=12 $$</p>\n<p>Thus, $a=5$ and $b=8$</p>\n<p>$$ \\therefore \\quad a+b+c=5+8+12=25 $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $a, b, c, d$ be four positive unequal quantities and $s=a+b+c+d$, then $(s-a)(s-b)(s-c) (s-d)>k a b c d$. Then, value of $k$ is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>3</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>27</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>36</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>81</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Using $A M>G M$, we have</p>\n<p>$$ \\begin{aligned} & \\frac{a+b+c}{3}>(a b c)^{1 / 3} \\\\ \\Rightarrow & a+b+c>3(a b c)^{1 / 3} \\Rightarrow(s-d)>3(a b c)^{1 / 3} \\end{aligned} $$</p>\n<p>Similarly, $(s-a)>3(b c d)^{1 / 3},(s-b)>3(a c d)^{1 / 3}$ and</p>\n<p>$$ \\begin{aligned} & (s-c)>3(a b d)^{1 / 3} \\\\ & \\therefore(s-a)(s-b)(s-c)(s-d)> \\\\ & \\quad 3^4(a b c)^{\\frac{1}{3}}(b c d)^{\\frac{1}{3}}(a c d)^{\\frac{1}{3}}(a b d)^{\\frac{1}{3}} \\\\ & \\quad=81 a b c d \\end{aligned} $$</p>\n<p>Thus, $k=81$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If $ a > 0, b > 0, c > 0 $ and $ a, b, c $ are distinct, then $ (a+b)(b+c)(c+a) $ is greater than",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$ 2(a+b+c) $"
+      },
+      {
+        "identifier": "B",
+        "content": "$ 3(a+b+c) $"
+      },
+      {
+        "identifier": "C",
+        "content": "$ 6 a b c $"
+      },
+      {
+        "identifier": "D",
+        "content": "$ 8 a b c $"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We know that $ \\mathrm{AM} \\geq \\mathrm{GM} $</p><p>Now, applying Eq. (i) in $ a $ and $ b $</p><p>$ \\Rightarrow \\quad \\frac{a+b}{2} \\geq \\sqrt{a b} $</p><p>applying Eq. (i) in $ b $ and $ c $</p><p>$ \\Rightarrow \\quad \\frac{b+c}{2} \\geq \\sqrt{b c} $</p><p>and applying Eq. (i) in $ c $ and $ a $</p><p>$ \\Rightarrow \\quad \\frac{c+a}{2} \\geq \\sqrt{c a} $</p><p>By Eqs. (ii), (iii) and'(iv)</p><p>$ \\Rightarrow \\quad \\frac{(a+\\bar{b})(b+c)(c+a)}{8} \\geq a b c $</p><p>$ \\Rightarrow \\quad(a+b)(b+c)(c+a) \\geq 8 a b c $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If $ \\sum\\limits_{k=1}^{n} k(k+1)(k-1)=p n^{4}+q n^{3}+t n^{2}+s n $, where $ p, q, t $ and $ s $ are constants, then the value of $ s $ is equal to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$ -\\frac{1}{4} $"
+      },
+      {
+        "identifier": "B",
+        "content": "$ -\\frac{1}{2} $"
+      },
+      {
+        "identifier": "C",
+        "content": "$ \\frac{1}{2} $"
+      },
+      {
+        "identifier": "D",
+        "content": "$ \\frac{1}{4} $"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $ S=\\sum\\limits_{k=1}^{n} k(k+1)(k-1) $</p><p>$ =\\sum\\limits_{k=1}^{n} k^{3}-k $</p><p>We know that</p><p>$ \\sum\\limits_{r=1}^{P} r=\\frac{P(P+1)}{2} $</p><p>and $ \\quad \\sum\\limits_{r=1}^{P} r^{3}=\\left[\\frac{P(P+1)}{2}\\right]^{2} $</p><p>$ \\begin{aligned} \\therefore & =\\left[\\frac{n(n+1)}{2}\\right]^{2}-\\left[\\frac{n(n+1)}{2}\\right] \\\\ & =\\frac{n(n+1)}{2}\\left[\\frac{n(n+1)}{2}-1\\right] \\\\ & =\\left(\\frac{n^{2}+n}{2}\\right)\\left[\\frac{n^{2}+n-2}{2}\\right] \\\\ & =\\frac{n^{4}}{4}+\\frac{n^{3}}{2}-\\frac{n^{2}}{4}-\\frac{n}{2} \\end{aligned} $</p><p>Now, by comparing $ p n^{4}+q n^{3}+t n^{2}+s n $ with Eq. (i),</p><p>$ S=-\\frac{1}{2} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "There are four numbers of which the first three are in GP and the last three are in AP, whose common difference is 6 . If the first and the last numbers are equal, then two other numbers are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$ -2,4 $"
+      },
+      {
+        "identifier": "B",
+        "content": "$ -4,2 $"
+      },
+      {
+        "identifier": "C",
+        "content": "2,6"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve the problem, let's consider the setup described:</p>\n\n<p><p>The three numbers in an Arithmetic Progression (AP) are denoted as $a$, $a+6$, and $a+12$, where the common difference is 6.</p></p>\n<p><p>The sequence of four numbers has the first and last numbers equal.</p></p>\n<p><p>Thus, the four numbers are $(a+12)$, $a$, $a+6$, and $(a+12)$.</p></p>\n\n<p>The problem states that the first three numbers are in a Geometric Progression (GP). Therefore, the following relationship should hold:</p>\n<p>$ a^2 = (a+12)(a+6) $</p>\n<p>Expanding and solving the equation:</p>\n<p>$ a^2 = a^2 + 18a + 72 $</p>\n<p>Simplifying:</p>\n<p>$ 0 = 18a + 72 $</p>\n<p>Solving for $a$:</p>\n<p>$ 18a = -72 $</p>\n<p>$ a = -\\frac{72}{18} = -4 $</p>\n<p>Given this value of $a$, the four numbers are calculated as:</p>\n\n<p><p>$a+12 = 8$,</p></p>\n<p><p>$a = -4$,</p></p>\n<p><p>$a+6 = 2$,</p></p>\n<p><p>$a+12 = 8$.</p></p>\n\n<p>Therefore, the sequence of four numbers is $8, -4, 2, 8$. </p>\n<p>The two intermediate numbers among the four (excluding the repeated elements at the start and end) are $-4$ and $2$. Hence, the two other numbers in this sequence are $-4, 2$.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The coefficient of $ x^{n} $ in the expansion of $ \\frac{e^{7 x}+e^{x}}{e^{3 x}} $ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$ \\frac{4^{n-1}+(-2)^{n}}{n!} $"
+      },
+      {
+        "identifier": "B",
+        "content": "$ \\frac{4^{n-1}+2^{n}}{n!} $"
+      },
+      {
+        "identifier": "C",
+        "content": "$ \\frac{4^{n}+(-2)^{n}}{n!} $"
+      },
+      {
+        "identifier": "D",
+        "content": "$ \\frac{4^{n-1}+(-2)^{n-1}}{n!} $"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $ \\frac{e^{7 x}+e^{x}}{e^{3 x}} \\Rightarrow e^{4 x}+e^{-2 x} $</p><p>Series of $ e^{a}=1+\\frac{a}{1!}+\\frac{a^{2}}{2!}+\\frac{a^{3}}{3!} \\ldots $</p><p>$ \\begin{array}{l}  \\Rightarrow e^{4 x}+e^{-2 x}=\\left(1+\\frac{4 x}{1!}+\\frac{(4 x)^{2}}{2!}+\\frac{(4 x)^{3}}{3!}+\\ldots\\right) +\\left(1+\\frac{(-2 x)}{1!}+\\frac{(-2 x)^{2}}{2!}+\\ldots \\ldots\\right) \\end{array} $</p><p>Here, coefficient of</p><p>$ \\begin{array}{c} x^{2} \\equiv \\frac{4^{2}}{2!}+\\frac{(-2)^{2}}{2!} \\\\ x^{3} \\equiv \\frac{4^{3}}{3!}+\\frac{(-2)^{3}}{3!} \\\\ \\vdots \\\\ x^{n}=\\frac{4^{n}}{n!}+\\frac{(-2)^{n}}{n!} \\end{array} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $$\\frac{1}{16}, a$$ and $$b$$ be in GP and $$\\frac{1}{a}, \\frac{1}{b}, 6$$ be in AP, where $$a, b>0$$. Then, $$72(a+b)$$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "12"
+      },
+      {
+        "identifier": "B",
+        "content": "14"
+      },
+      {
+        "identifier": "C",
+        "content": "16"
+      },
+      {
+        "identifier": "D",
+        "content": "18"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve the problem, let’s analyze it step by step.</p>\n\n<p>Firstly, since $$\\frac{1}{16}, a,$$ and $$b$$ are in geometric progression (GP), the common ratio can be denoted as $$r$$. For GP, the relation between terms is given by:</p>\n\n<p>If $$\\frac{1}{16}$$ is the first term and $$a$$ is the second term, then:</p>\n\n<p>$$ a = \\frac{1}{16} \\cdot r $$</p>\n\n<p>If $$a$$ is the second term and $$b$$ is the third term, then:</p>\n\n<p>$$ b = a \\cdot r $$</p>\n\n<p>Substituting the expression for $$a$$ in the second equation:</p>\n\n<p>$$ b = \\left( \\frac{1}{16} \\cdot r \\right) \\cdot r = \\frac{1}{16} \\cdot r^2 $$</p>\n\n<p>We are also given that $$\\frac{1}{a}, \\frac{1}{b},$$ and $$6$$ are in arithmetic progression (AP). For AP, the middle term is the average of the two surrounding terms:</p>\n\n<p>Since $$\\frac{1}{a}, \\frac{1}{b}, 6$$ are in AP:</p>\n\n<p>$$ 2 \\cdot \\frac{1}{b} = \\frac{1}{a} + 6 $$</p>\n\n<p>Now, substituting the values of $$\\frac{1}{a}$$ and $$\\frac{1}{b}$$ from the GP relations:</p>\n\n<p>Since $$ a = \\frac{1}{16} \\cdot r $$:</p>\n\n<p>$$ \\frac{1}{a} = \\frac{1}{ \\left( \\frac{1}{16} \\cdot r \\right) } = 16 \\cdot \\frac{1}{r} = \\frac{16}{r} $$</p>\n\n<p>Also, since $$ b = \\frac{1}{16} \\cdot r^2 $$:</p>\n\n<p>$$ \\frac{1}{b} = \\frac{1}{ \\left( \\frac{1}{16} \\cdot r^2 \\right) } = 16 \\cdot \\frac{1}{r^2} = \\frac{16}{r^2} $$</p>\n\n<p>Substitute these values into the AP equation:</p>\n\n<p>$$ 2 \\cdot \\frac{16}{r^2} = \\frac{16}{r} + 6 $$</p>\n\n<p>Expanding and simplifying, we get:</p>\n\n<p>$$ \\frac{32}{r^2} = \\frac{16}{r} + 6 $$</p>\n\n<p>To clear the fractions, multiply all terms by $$r^2$$:</p>\n\n<p>$$ 32 = 16r + 6r^2 $$</p>\n\n<p>Rearranging into standard quadratic form:</p>\n\n<p>$$ 6r^2 + 16r - 32 = 0 $$</p>\n\n<p>Divide throughout by 2 for simplicity:</p>\n\n<p>$$ 3r^2 + 8r - 16 = 0 $$</p>\n\n<p>Solving the quadratic equation using the quadratic formula:</p>\n\n<p>$$ r = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} $$</p>\n\n<p>where $$a = 3$$, $$b = 8$$, and $$c = -16$$:</p>\n\n<p>$$ r = \\frac{-8 \\pm \\sqrt{8^2 - 4 \\cdot 3 \\cdot (-16)}}{2 \\cdot 3} = \\frac{-8 \\pm \\sqrt{64 + 192}}{6} = \\frac{-8 \\pm \\sqrt{256}}{6} = \\frac{-8 \\pm 16}{6} $$</p>\n\n<p>This gives us two possible values for $$r$$:</p>\n\n<p>$$ r = \\frac{8}{6} = \\frac{4}{3} $$</p>\n\n<p>$$ r = \\frac{-24}{6} = -4 $$</p>\n\n<p>Since $$a$$ and $$b$$ are positive, $$r = \\frac{4}{3}$$ is the suitable solution.</p>\n\n<p>Now calculate values for $$a$$ and $$b$$:</p>\n\n<p>$$ a = \\frac{1}{16} \\cdot \\frac{4}{3} = \\frac{1}{12} $$</p>\n\n<p>$$ b = \\left( \\frac{1}{12} \\right) \\cdot \\frac{4}{3} = \\frac{1}{9} $$</p>\n\n<p>Finally,$$ 72(a + b) $$ =:</p>\n\n<p>$$ 72 \\left( \\frac{1}{12} + \\frac{1}{9} \\right) = 72 \\left( \\frac{3 + 4}{36} \\right) = 72 \\left( \\frac{7}{36} \\right) = 14 $$</p>\n\n<p>Therefore, the answer is Option B: 14.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$a_1, a_2, \\ldots, a_n$$ are in HP, then the expression $$a_1 a_2+a_2 a_3+\\ldots+a_{n-1} a_n$$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n\\left(a_1-a_n\\right)$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$(n-1)\\left(a_1-a_n\\right)$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$n a_1 a_n$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$(n-1) a_1 a_n$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$a_1, a_2, \\ldots a_n$$ are in HP</p>\n<p>$$\\Rightarrow \\frac{1}{a_1}, \\frac{1}{a_2}, \\ldots, \\frac{1}{a_n}$$ are in AP</p>\n<p>$$\\Rightarrow \\frac{1}{a_2}-\\frac{1}{a_1}=d$$, where $$d$$ is common difference</p>\n<p>$$\\begin{aligned}\n\\Rightarrow \\quad a_1 a_2 & =\\frac{a_1-a_2}{d}=\\frac{a_1}{d}-\\frac{a_2}{d} \\quad \\text{... (i)}\\\\\n& a_2 a_3=\\frac{a_2}{d}-\\frac{a_3}{d} \\quad \\text{... (ii)}\n\\end{aligned}$$</p>\n<p>$$a_{n-1} a_n=\\frac{a_{n-1}}{d}-\\frac{a_n}{d} \\ldots(n-1)$$</p>\n<p>On adding Eqs. (i), (ii), ......, $$(n-1)$$, we get</p>\n<p>$$\\begin{array}{r}\na_1 a_2+a_2 a_3+\\ldots+a_{n-1} a_n \\\\\n=\\frac{a_1}{d}-\\frac{a_n}{d}\n\\end{array}$$</p>\n<p>$$\\begin{aligned}\n& \\text { Also, } \\frac{1}{a_n}=\\frac{1}{a_1}+(n-1) d \\\\\n& \\Rightarrow \\quad \\frac{a_1-a_n}{d}=(n-1) a_1 a_n \\\\\n& \\therefore \\quad a_1 a_2+a_2 a_3+\\ldots+a_{n-1} a_n=(n-1) a_1 a_n\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Given, a sequence of 4 numbers, first three of which are in GP and the last three are in AP with common difference 6. If first and last term of this sequence are equal, then the last term is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "8"
+      },
+      {
+        "identifier": "D",
+        "content": "16"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $$a, b, c$$ and $$d$$ be four numbers of sequence.</p>\n<p>Now, according to the question, $$b^2=a c$$ and $$c-b=d-c=6$$</p>\n<p>Also given that $$a=d$$</p>\n<p>$$\\therefore b^2=a c \\Rightarrow b^2=a\\left(\\frac{a+b}{2}\\right) \\quad\\left[\\because c=\\frac{b+d}{2} \\text { and } a=d\\right]$$</p>\n<p>$$\\Rightarrow a^2-2 b^2+a b=0$$</p>\n<p>Now, $$c-b=6$$ and $$a-c=6$$, gives $$a-b=12$$</p>\n<p>$$\\begin{array}{ll}\n\\Rightarrow & b=a-12 \\\\\n\\therefore & a^2-2 b^2+a b=0 \\\\\n\\Rightarrow & a^2-2(a-12)^2+a(a-12)=0 \\\\\n\\Rightarrow & a^2-2 a^2-288+48 a+a^2-12 a=0 \\\\\n\\Rightarrow & 36 a=288 \\Rightarrow a=8\n\\end{array}$$</p>\n<p>Hence, last term is $$d=a=8$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let a<sub>1</sub>, a<sub>2</sub>, ...... a<sub>40</sub> be in AP and h<sub>1</sub>, h<sub>2</sub>, ..... h<sub>10</sub> be in HP. If a<sub>1</sub> = h<sub>1</sub> = 2 and a<sub>10</sub> = h<sub>10</sub> = 3, then a<sub>4</sub>h<sub>7</sub> is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let d be the common difference of the AP. Then,</p>\n<p>$${a_{10}} = 3 \\Rightarrow {a_1} + 9d = 3$$</p>\n<p>$$ \\Rightarrow 2 + 9d = 3 \\Rightarrow d = {1 \\over 9}$$</p>\n<p>$$\\therefore$$ $${a_4} = {a_1} + 3d = 2 + {1 \\over 3} = {7 \\over 3}$$</p>\n<p>Let D be the common difference of $${1 \\over {{h_1}}},{1 \\over {{h_2}}},\\,...\\, - {1 \\over {{h_{10}}}}$$.</p>\n<p>Then, $${h_{10}} = 3$$</p>\n<p>$$ \\Rightarrow {1 \\over {{h_{10}}}} = {1 \\over 3} \\Rightarrow {1 \\over 2} + 9D = {1 \\over 3}$$</p>\n<p>$$ \\Rightarrow 9D =  - {1 \\over 6} \\Rightarrow D =  - {1 \\over {54}}$$</p>\n<p>$$\\therefore$$ $${1 \\over {{h_7}}} = {1 \\over {{h_1}}} + 6D = {1 \\over 2} - {1 \\over 9} = {7 \\over {18}}$$</p>\n<p>$$ \\Rightarrow {h_7} = {{18} \\over 7}$$</p>\n<p>$$\\therefore$$ $${a_4}{h_7} = {7 \\over 3} \\times {{18} \\over 7} = 6$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub> .... be a harmonic progression with a<sub>1</sub> = 5 and a<sub>20</sub> = 25. The least positive integer n for which a<sub>n</sub> < 0, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "22"
+      },
+      {
+        "identifier": "B",
+        "content": "23"
+      },
+      {
+        "identifier": "C",
+        "content": "24"
+      },
+      {
+        "identifier": "D",
+        "content": "25"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>It is given that a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub> .... are in HP.</p>\n<p>Therefore, $${1 \\over {{a_1}}},{1 \\over {{a_2}}},{1 \\over {{a_3}}}$$, ..... are in AP</p>\n<p>Let d be the common difference of the AP.</p>\n<p>$$\\therefore$$ $${1 \\over {{a_n}}} = {1 \\over {{a_1}}} + (n - 1)d$$ and $${1 \\over {{a_{20}}}} = {1 \\over {{a_1}}} + 19d$$</p>\n<p>$$ \\Rightarrow {1 \\over {{a_n}}} = {1 \\over 5} + (n - 1)d$$ and $${1 \\over {25}} = {1 \\over 5} + 19d$$</p>\n<p>$$ \\Rightarrow {1 \\over {{a_n}}} = {1 \\over 5} + (n - 1)d$$ and $$d = {{ - 4} \\over {19 \\times 25}}$$</p>\n<p>$$ \\Rightarrow {1 \\over {{a_n}}} = {1 \\over 5} - {{4(n - 1)} \\over {19 \\times 25}}$$</p>\n<p>$$ \\Rightarrow {1 \\over {{a_n}}} = {{95 - 4n + 4} \\over {19 \\times 25}}$$</p>\n<p>$$ \\Rightarrow {a_n} = {{99 - 4n} \\over {19 \\times 25}}$$</p>\n<p>Now, $${a_n} < 0$$</p>\n<p>$$ \\Rightarrow {{99 - 4n} \\over {19 \\times 25}} < 0$$</p>\n<p>$$ \\Rightarrow 99 - 4n < 0$$</p>\n<p>$$ \\Rightarrow 4n > 99$$</p>\n<p>$$ \\Rightarrow n > 24{3 \\over 4} \\Rightarrow n \\ge 25$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>In a sequence of 21 terms, the first 11 terms are in AP with common difference 2 and the last 11 terms are in GP with common ratio 2. If the middle term of AP be equal to the middle term of the GP, then the middle term of the entire sequence is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-\\frac{10}{31}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{10}{31}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{32}{31}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-\\frac{31}{32}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Since, the first 11 terms are in AP, d = 2</p>\n<p>$$\\therefore$$ a<sub>11</sub> = a + 10d = a + 20</p>\n<p>the middle term of AP is</p>\n<p>T<sub>6</sub> = a + 5d = a + 10</p>\n<p>For the next 11 terms in GP</p>\n<p>r = 2</p>\n<p;>$$\\therefore$$ The middle term of GP is b(2)<sup>5</sup> where b is the first term of a GP which is the last term of AP</p>\n<p>b(2)<sup>5</sup> = (a + 20) 32</p>\n<p>According to the given condition,</p>\n<p>$$\\Rightarrow$$ a + 10 = (a + 20) 32</p>\n<p>$$\\Rightarrow$$ 31a = 10 $$-$$ 640</p>\n<p>a = $$-\\frac{630}{31}$$</p>\n<p>$$\\therefore$$ Middle term of entire sequence is 11th term</p>\n<p>$$\\therefore$$ T<sub>11</sub> = $$\\frac{-630}{31}+10\\times d$$</p>\n<p>$$=\\frac{-630}{31}+10\\times 2 =\\frac{-10}{31}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>If a + 2b + 3c = 12, (a, b, c $$\\in$$R<sup>+</sup>), then the maximum value of ab<sup>2</sup>c<sup>3</sup> is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2<sup>3</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "2<sup>4</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "2<sup>6</sup>"
+      },
+      {
+        "identifier": "D",
+        "content": "2<sup>5</sup>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, a + 2b + 3c = 12 $$\\forall$$ a, b, c $$\\in$$ R<sup>+</sup></p>\n<p>As, AM $$\\ge$$ GM</p>\n<p>$${{a + b + b + c + c + c} \\over 6} \\ge \\root 6 \\of {a{b^2}{c^3}} $$</p>\n<p>$$ \\Rightarrow {{12} \\over 6} \\ge \\root 6 \\of {a{b^2}{c^3}}  \\Rightarrow a{b^2}{c^3} \\le {2^6}$$</p>\n<p>Hence, the maximum value of ab<sup>2</sup>c<sup>3</sup> is 2<sup>6</sup>.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Sum of n terms of the infinite series</p>\n<p>1.3<sup>2</sup> + 2.5<sup>2</sup> + 3.7<sup>2</sup> + ..... $$\\infty$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${n \\over 6}(n + 1)(6{n^2} + 14n + 7)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${n \\over 6}(n + 1)(6{n^2} + 14n + 5)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${n \\over 6}(n + 1)(2n + 1)(3n + 1)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$4{n^3} + 4{n^2} + n$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>a<sub>n</sub> of the series $$ = n{(2n + 1)^2}\\forall n \\in E$$</p>\n<p>$${a_n} = n[4{n^2} + 4n + 1] \\Rightarrow {a_n} = 4{n^3} + 4{n^2} + n$$</p>\n<p>$${S_n} = \\sum {{a_n} = 4\\sum {{n^3} + 4\\sum {{n^2} + \\sum n } } } $$</p>\n<p>$$ = 4{\\left( {{{n(n + 1)} \\over 2}} \\right)^2} + {{4n(n + 1)(2n + 1)} \\over 6} + {{n(n + 1)} \\over 2}$$</p>\n<p>$$ = {{n(n + 1)} \\over 2}\\left[ {2{n^2} + 2n + {{4(2n + 1)} \\over 3} + 1} \\right]$$</p>\n<p>$$ = {{n(n + 1)} \\over 2}\\left[ {{{6{n^2} + 6n + (8n + 4) + 3} \\over 3}} \\right]$$</p>\n<p>$$ = {{n(n + 1)} \\over 2}\\left[ {{{6{n^2} + 14n + 7} \\over 3}} \\right] = {n \\over 6}(n + 1)(6{n^2} + 14n + 7)$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>If a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, ......., a<sub>20</sub> are AM's between 13 and 67, then the maximum value of a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, ......, a<sub>20</sub> is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(20)<sup>20</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "(40)<sup>20</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "(60)<sup>20</sup>"
+      },
+      {
+        "identifier": "D",
+        "content": "(80)<sup>20</sup>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\because$$ 13, a<sub>1</sub>, a<sub>2</sub>, ....., a<sub>20</sub>, 67 are in AP.</p>\n<p>$$\\therefore$$ a<sub>1</sub> + a<sub>2</sub> + a<sub>3</sub> + .....  + a<sub>20</sub> = 20$$\\left( {{{13 + 67} \\over 2}} \\right)$$ = 800</p>\n<p>Also, AM > GM</p>\n<p>$$\\Rightarrow$$ $${{{a_1} + {a_2} + .... + {a_{20}}} \\over {20}} \\ge {({a_1},{a_2},{a_3},....,{a_{20}})^{{1 \\over {20}}}}$$</p>\n<p>$$ \\Rightarrow 40 \\ge {({a_1}\\,.\\,{a_2}\\,.\\,{a_3}\\,....\\,{a_{20}})^{{1 \\over {20}}}}$$</p>\n<p>Hence, maximum value of $${a_1}\\,.\\,{a_2}\\,.\\,{a_3}\\,....\\,{a_{20}}$$ is (40)<sup>20</sup>.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>If p, q, r are in AP and are positive, the roots of the quadratic equation px<sup>2</sup> + qx + r = 0 are all real for</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left| {{r \\over p} - 7} \\right| \\ge 4\\sqrt 3 $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left| {{p \\over r} - 7} \\right| < 4\\sqrt 3 $$"
+      },
+      {
+        "identifier": "C",
+        "content": "All p and r"
+      },
+      {
+        "identifier": "D",
+        "content": "No p and r"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Since, p, q and r are positive and are in AP.</p>\n<p>$$\\therefore$$ $$q = {{p + r} \\over 2}$$ ...... (i)</p>\n<p>$$\\because$$ The roots of the equation, px<sup>2</sup> + qx + r = 0 are real.</p>\n<p>$$ \\Rightarrow {q^2} \\ge 4pr \\Rightarrow {\\left[ {{{p + r} \\over 2}} \\right]^2} \\ge 4pr$$ [from Eq. (i)]</p>\n<p>$$ \\Rightarrow {p^2} + {r^2} - 14pr \\ge 0$$</p>\n<p>$$ \\Rightarrow {\\left( {{r \\over p}} \\right)^2} - 14\\left( {{r \\over p}} \\right) + 1 \\ge 0$$</p>\n<p>$$ \\Rightarrow {\\left( {{r \\over p} - 7} \\right)^2} - 48 \\ge 0$$</p>\n<p>$$ \\Rightarrow {\\left( {{r \\over p} - 7} \\right)^2} - {(4\\sqrt 3 )^2} \\ge 0 \\Rightarrow \\left| {{r \\over p} - 7} \\right| \\ge 4\\sqrt 3 $$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>If one GM, g and two AM's p and q are inserted between two numbers a and b, then (2p $$-$$ q) (p $$-$$ 2q) is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "g<sup>2</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-$$g<sup>2</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "2g"
+      },
+      {
+        "identifier": "D",
+        "content": "3g<sup>2</sup>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Since, $$g = \\sqrt {ab} $$. Also, a, p, q and b are in AP.</p>\n<p>So, common difference d is $${{b - a} \\over 3}$$.</p>\n<p>$$\\therefore$$ $$p = a + d = a + {{b - a} \\over 3} = {{2a + b} \\over 3}$$</p>\n<p>$$q = b - d = b - {{b - a} \\over 3} = {{a + 2b} \\over 3}$$</p>\n<p>Now, $$(2p - q)(p - 2q)$$</p>\n<p>$$ = {{(4a + 2b - a - 2b)} \\over 3}\\,.\\,{{(2a + b - 2a - 4b)} \\over 3}$$</p>\n<p>$$ =  - ab =  - {g^2}$$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Given that x, y, and z are three consecutive positive integers and x $$-$$ z + 2 = 0, what is the value of $${1 \\over 2}{\\log _e}x + {1 \\over 2}{\\log _e}z + {1 \\over {2xz + 1}} + {1 \\over 3}{\\left( {{1 \\over {2xz + 1}}} \\right)^3} + ...$$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "log<sub>e</sub> x"
+      },
+      {
+        "identifier": "B",
+        "content": "log<sub>e</sub> y"
+      },
+      {
+        "identifier": "C",
+        "content": "log<sub>e</sub> z"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Since x, y, z are three consecutive integers</p>\n<p>$$\\therefore$$ 2y = x + z</p>\n<p>$$\\Rightarrow$$ (4y<sup>2</sup>) = (x + z)<sup>2</sup></p>\n<p>= (x $$-$$ z)<sup>2</sup> + 4xz</p>\n<p>= ($$-$$2)<sup>2</sup> + 4xz [$$\\because$$ x $$-$$ z = $$-$$2]</p>\n<p>$$\\Rightarrow$$ 4y<sup>2</sup> = 4 + 4xz</p>\n<p>$$\\Rightarrow$$ y<sup>2</sup> = 1 + xz</p>\n<p>Now,</p>\n<p>$${1 \\over 2}{\\log _e}x + {1 \\over 2}{\\log _e}z + {1 \\over {2xz + 1}} + {1 \\over 3}{\\left( {{1 \\over {2xz + 1}}} \\right)^3} + ...$$</p>\n<p>$$ = {1 \\over 2}\\left[ {{{\\log }_e}(xz) + 2\\left( {{1 \\over {2zx + 1}} + {1 \\over 3}\\,.\\,{1 \\over {{{(2zx + 1)}^3}}} + ...} \\right)} \\right]$$</p>\n<p>$$ = {1 \\over 2}\\left[ {{{\\log }_e}(xz) + {{\\log }_e}\\left( {{{1 + {1 \\over {2zx + 1}}} \\over {1 - {1 \\over {2zx + 1}}}}} \\right)} \\right]$$</p>\n<p>$$ = {1 \\over 2}\\left[ {{{\\log }_e}(xz) + {{\\log }_e}\\left( {{{1 + xz} \\over {xz}}} \\right)} \\right]$$</p>\n<p>$$ = {1 \\over 2}[{\\log _e}(1 + xz)] = {1 \\over 2}[{\\log _e}{(y)^2}] = {\\log _e}(y)$$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The value of the sum $$\\sum\\limits_{k = 1}^\\infty  {\\sum\\limits_{n = 1}^\\infty  {{k \\over {{2^{n + k}}}}} } $$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $${S_\\infty } = \\sum\\limits_{k = 1}^\\infty  {\\sum\\limits_{n = 1}^\\infty  {{k \\over {{2^{n + k}}}}} } $$</p>\n<p>$${S_\\infty } = \\sum\\limits_{k = 1}^\\infty  {{k \\over {{2^k}}}\\,.\\,\\sum\\limits_{n = 1}^\\infty  {{1 \\over {{2^n}}}} } $$</p>\n<p>$${S_\\infty } = \\sum\\limits_{k = 1}^\\infty  {{k \\over {{2^k}}}\\left( {{1 \\over 2} + {1 \\over {{2^2}}} + {1 \\over {{2^3}}} + ....} \\right)} $$</p>\n<p>$${S_\\infty } = \\sum\\limits_{k = 1}^\\infty  {{k \\over {{2^k}}}\\left[ {{1 \\over 2}\\left( {1 + {1 \\over 2} + {1 \\over {{2^2}}}...} \\right)} \\right]} $$</p>\n<p>$${S_\\infty } = \\sum\\limits_{k = 1}^\\infty  {{k \\over {{2^k}}}\\left( {{1 \\over 2} \\times {1 \\over {1 - {1 \\over 2}}}} \\right) = \\sum\\limits_{k = 1}^\\infty  {{k \\over {{2^k}}}} } $$</p>\n<p>$${S_\\infty } = {1 \\over 2} + {2 \\over {{2^2}}} + {3 \\over {{2^3}}} + {4 \\over {{2^4}}} + ...$$ ..... (i)</p>\n<p>$${1 \\over 2}{S_\\infty } = {1 \\over {{2^2}}} + {2 \\over {{2^3}}} + {3 \\over {{2^4}}} + ...$$ ...... (ii)</p>\n<p>From Eqs. (i) and (ii), we get</p>\n<p>$${1 \\over 2}{S_\\infty } = {1 \\over 2} + {1 \\over {{2^2}}} + {1 \\over {{2^3}}} + ...$$</p>\n<p>$${1 \\over 2}{S_\\infty } = {1 \\over 2}\\left( {{1 \\over {1 - {1 \\over 2}}}} \\right)$$</p>\n<p>$${1 \\over 2}{S_\\infty } = 1$$</p>\n<p>$${S_\\infty } = 2$$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The Boolean expression</p>\n<p>$$ \\sim(p \\wedge q) \\vee(p \\wedge \\sim q) \\vee(\\sim p \\wedge \\sim q) $$</p>\n<p>is equivalent to</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$p \\wedge q$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\sim p \\wedge q$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$p \\vee \\sim q$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\sim p \\vee q$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Using DeMorgan's law,</p>\n<p>$$ \\sim(p \\wedge q)=\\sim p \\vee \\sim q $$</p>\n<p>Thus, our expression becomes</p>\n<p>$$ (\\sim p \\vee \\sim q) \\vee(p \\wedge \\sim q) \\vee(\\sim p \\wedge \\sim q) $$</p>\n<p>Rearrange and group similar terms</p>\n<p>$$ \\sim p \\vee(\\sim q \\vee(p \\wedge \\sim q) \\vee(\\sim p \\wedge \\sim q)) $$</p>\n<p>Since, $\\sim q \\vee(p \\wedge \\sim q) \\vee(\\sim p \\wedge \\sim q)$ simplifies to $\\sim q \\vee p$, we get</p>\n<p>$$ \\sim p \\vee q $$</p>\n<p>The Boolean expression simplifies to $\\sim p \\vee q$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The Boolean expression $ \\sim(p \\vee q) \\vee(\\sim p \\wedge q) $ is equivalent to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$ p $"
+      },
+      {
+        "identifier": "B",
+        "content": "$ \\sim q $"
+      },
+      {
+        "identifier": "C",
+        "content": "$ q $"
+      },
+      {
+        "identifier": "D",
+        "content": "$ \\sim p $"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>The Boolean expression $ \\sim(p \\vee q) \\vee (\\sim p \\wedge q) $ is simplified as follows:</p>\n\n<p><p>Start with the given expression:</p>\n<p>$    \\sim(p \\vee q) \\vee (\\sim p \\wedge q)    $</p></p>\n<p><p>Apply De Morgan's Law:</p>\n<p>$    (\\sim p \\wedge \\sim q) \\vee (\\sim p \\wedge q)    $</p></p>\n<p><p>Use the Distributive Law:</p>\n<p>$    \\sim p \\wedge (\\sim q \\vee q)    $</p></p>\n<p><p>By the Complement Law, $(\\sim q \\vee q)$ is a tautology ($t$):</p>\n<p>$    \\sim p \\wedge t    $</p></p>\n<p><p>Finally, apply the Identity Law:</p>\n<p>$    \\sim p    $</p></p>\n\n<p>Therefore, the expression simplifies to $ \\sim p $.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which of the following is always true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "($$\\sim$$ p $$ \\vee $$ $$\\sim$$ q) $$\\equiv$$ (p $$ \\wedge $$ q)"
+      },
+      {
+        "identifier": "B",
+        "content": "(p $$\\to$$ q) $$\\equiv$$ ($$\\sim$$ q $$\\to$$ $$\\sim$$ p)"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sim$$ (p $$\\to$$ $$\\sim$$ q) $$\\equiv$$ (p $$\\wedge$$ $$\\sim$$ q)"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sim$$ (p $$\\leftrightarrow$$ q) $$\\equiv$$ (p $$\\to$$ q) $$\\to$$ (q $$\\to$$ p)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "Since, $$\\sim$$ (p $$\\vee$$ q) $$\\equiv$$ ($$\\sim$$ p $$\\wedge$$ $$\\sim$$ q) and $$\\sim$$ (p $$\\wedge$$ q) $$\\equiv$$ ($$\\sim$$ p $$\\vee$$ $$\\sim$$ q)</p>\n<p>So, options (a) and (d) are not true.</p>\n<p>$$\\sim$$ (p $$\\to$$ q) $$\\equiv$$ p $$\\wedge$$ $$\\sim$$ q, so option (c) is not true.</p>\n<p>Now, p $$\\to$$ q $$\\sim$$ p $$\\vee$$ q</p>\n<p>$$\\sim$$ q $$\\to$$ $$\\sim$$ p $$\\equiv$$ [$$\\sim$$ ($$\\sim$$ q) $$\\vee$$ $$\\sim$$ p]</p>\n<p>$$\\equiv$$ q $$\\vee$$ $$\\sim$$ p $$\\equiv$$ p $$\\vee$$ q $$\\Rightarrow$$ p $$\\to$$ q $$\\equiv$$ ($$\\sim$$ q $$\\to$$ $$\\sim$$ p)</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,284 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The solution of the differential equation $\\frac{d y}{d x}+x \\sin 2 y=x^3 \\cos ^2 y$ is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\tan y=\\left(x^2-1\\right) e^{x^2}+C$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$e^{x^2}=\\frac{1}{2}\\left(x^2-1\\right) \\tan y e^{x^2}+C$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\tan y\\left(x^2-1\\right)=e^{x^2}+C$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$e^{x^2} \\tan y=\\frac{1}{2}\\left(x^2-1\\right) e^{x^2}+C$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We have $\\frac{d y}{d x}+x \\sin 2 y=x^3 \\cos ^2 y$</p>\n<p>Dividing both sides by $\\cos ^2 y$, we get</p>\n<p>$$ \\begin{aligned} & \\sec ^2 y \\frac{d y}{d x}+x \\frac{\\sin 2 y}{\\cos ^2 y}=x^3 \\\\ & \\Rightarrow \\sec ^2 y \\frac{d y}{d x}+2 x \\tan y=x^3 \\end{aligned} $$</p>\n<p>Put $\\tan y=v$</p>\n<p>and $\\sec ^2 y \\frac{d y}{d x}=\\frac{d v}{d x}$, we get</p>\n<p>$$ \\frac{d v}{d x}+(2 x) v=x^3 $$</p>\n<p>Now, $\\mathrm{IF}=e^{\\int 2 x d x}=e^{x^2}$</p>\n<p>Multiplying both sides by IF, we get</p>\n<p>$$ e^{x^2} \\frac{d v}{d x}+2 x v \\cdot e^{x^2}=e^{x^2} \\cdot x^3 $$</p>\n<p>$$ \\begin{aligned} &\\text { Integrating both sides w.r.t } x \\text {, we get }\\\\ &\\begin{aligned} & v e^{x^2}=\\int x^3 e^{x^2} d x+C \\\\ &=\\int x^3 e^t\\left(\\frac{d t}{2 x}\\right)+C, \\text { where } t=x^2 \\\\ &=\\frac{1}{2} \\int t e^t d t+C=\\frac{1}{2}\\left(t e^t-e^t\\right)+C \\\\ &=\\frac{1}{2}(t-1) e^t+C=\\frac{1}{2}\\left(x^2-1\\right) e^{x^2}+C \\\\ & \\Rightarrow \\quad e^{x^2} \\tan y=\\frac{1}{2}\\left(x^2-1\\right) e^{x^2}+C \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The solution of the differential equation </p>\n<p>$ (x+1) \\frac{d y}{d x}-y=e^{3 x}(x+1)^{2} $ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$ y=(x+1) e^{3 x}+C $"
+      },
+      {
+        "identifier": "B",
+        "content": "$ 3 y=(x+1)+e^{3 x}+C $"
+      },
+      {
+        "identifier": "C",
+        "content": "$ \\frac{3 y}{x+1}=e^{3 x}+C $"
+      },
+      {
+        "identifier": "D",
+        "content": "$ y e^{-3 x}=3(x+1)+C $"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve the given differential equation </p>\n<p>$ (x+1) \\frac{d y}{d x} - y = e^{3x}(x+1)^2 $</p>\n<p>we start by rewriting it in the standard linear form:</p>\n<p>$ \\frac{d y}{d x} - \\frac{y}{x+1} = e^{3x}(x+1) $</p>\n<p>Here, it's a first-order linear differential equation of the form </p>\n<p>$ \\frac{d y}{d x} + P(x)y = Q(x) $</p>\n<p>where $ P(x) = -\\frac{1}{x+1} $ and $ Q(x) = e^{3x}(x+1) $.</p>\n<h3>Step 1: Calculate the Integrating Factor (IF)</h3>\n<p>The integrating factor is given by:</p>\n<p>$ \\text{IF} = e^{\\int P(x) \\, dx} = e^{\\int -\\frac{1}{x+1} \\, dx} = e^{-\\ln(x+1)} = \\frac{1}{x+1} $</p>\n<h3>Step 2: Determine the Solution</h3>\n<p>Using the integrating factor, the solution of the differential equation is:</p>\n<p>$ y \\cdot \\text{IF} = \\int Q(x) \\cdot \\text{IF} \\, dx $</p>\n<p>Substituting the known values:</p>\n<p>$ y \\cdot \\frac{1}{x+1} = \\int e^{3x}(x+1) \\cdot \\frac{1}{x+1} \\, dx $</p>\n<p>This simplifies to:</p>\n<p>$ \\frac{y}{x+1} = \\frac{e^{3x}}{3} + C' $</p>\n<p>Therefore, the complete solution is:</p>\n<p>$ \\frac{3y}{x+1} = e^{3x} + C'  $</p>\n<p>where $ C' = C/3 $ representing an integration constant.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$\\left(1+x^2\\right) d y+2 x y d x=\\cot x d x$$, then the general solution be</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y=\\frac{\\log |\\sin x|}{1+x^2}+\\frac{C}{1+x^2}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$y=\\frac{\\log |\\sin x|}{1-x^2}+\\frac{C}{1-x^2}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$y=\\frac{\\log |\\cos x|}{1+x^2}+\\frac{C}{1+x^2}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$y=\\frac{\\log |\\cos x|}{1-x^2}+\\frac{C}{1-x^2}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$(1+x)^2 d y+2 x y d x=\\cot x d x$$</p>\n<p>$$\\Rightarrow \\quad \\frac{d y}{d x}+\\frac{2 x}{1+x^2} y=\\frac{\\cot x}{1+x^2}$$,\nwhich is a linear differential equation of the form of $$\\frac{d y}{d x}+P y=Q$$</p>\n<p>Here, $$P=\\frac{2 x}{1+x^2}$$ and $$Q=\\frac{\\cot x}{1+x^2}$$</p>\n<p>Now, IF $$=\\exp \\left(\\int \\frac{2 x}{1+x^2} d x\\right)=\\exp \\left(\\log \\left(1+x^2\\right)\\right)$$</p>\n<p>$$=1+x^2$$</p>\n<p>and the solution of this linear differential equation be</p>\n<p>$$\\begin{aligned}\n& y \\times \\mathrm{IF}=\\int(Q \\times \\mathrm{IF}) d x+C \\\\\n& \\Rightarrow \\quad y\\left(1+x^2\\right)=\\int\\left(\\frac{\\cot x}{1+x^2} \\times\\left(1+x^2\\right)\\right) d x+C \\\\\n& \\Rightarrow \\quad y\\left(1+x^2\\right)=\\int \\cot x d x+C \\\\\n& \\Rightarrow \\quad y\\left(1+x^2\\right)=\\log |\\sin x|+C \\\\\n& \\Rightarrow \\quad y=\\frac{\\log |\\sin x|}{1+x^2}+\\frac{C}{1+x^2}\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>$$\\left( {{{dy} \\over {dx}}} \\right)\\tan x = y{\\sec ^2}x + \\sin x$$, find general solution</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y = \\tan x(\\log |{\\mathop{\\rm cosec}\\nolimits} x - \\cot x| + \\cos x + c)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$y = {\\sec ^2}x + \\tan x + c$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$y = \\log |\\sec x + \\tan x| + {\\mathop{\\rm cosec}\\nolimits} \\,x + c$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$y = {\\tan ^2}x + \\sin x + c$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given that</p>\n<p>$$\\left( {{{dy} \\over {dx}}} \\right)\\tan x = y{\\sec ^2}x + \\sin x$$</p>\n<p>$$\\tan \\left( {{{dy} \\over {dx}}} \\right) - y{\\sec ^2}x = \\sin x$$</p>\n<p>$${{dy} \\over {dx}} + \\left( {{{ - {{\\sec }^2}x} \\over {\\tan x}}} \\right)y = {{\\sin x} \\over {\\tan x}}$$</p>\n<p>Here, $$P =  - {{{{\\sec }^2}x} \\over {\\tan x}}$$ and $$Q = \\cos x$$</p>\n<p>$$IF = {e^{\\int {P\\,dx} }} = {e^{\\int {{{ - {{\\sec }^2}x} \\over {\\tan x}}dx} }}$$</p>\n<p>$$IF = {e^{ - \\log (\\tan x)}} = {e^{\\log \\cot x}} = \\cot x$$</p>\n<p>Now, $$y \\times IF = \\int {(Q \\times IF)dx + C} $$</p>\n<p>$$y\\,.\\,\\cot x = \\int {\\cos x\\,.\\,\\cot x + C} $$</p>\n<p>$$y\\,.\\,\\cot x = \\int {{{1 - {{\\sin }^2}x} \\over {\\sin x}} + C} $$</p>\n<p>$$y\\,.\\,\\cot x = \\log |{\\mathop{\\rm cosec}\\nolimits} \\,x - \\cot x| + \\cos x + C$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Solution of $$\\left( {{{x + y - 1} \\over {x + y - 2}}} \\right){{dy} \\over {dx}} = \\left( {{{x + y + 1} \\over {x + y + 2}}} \\right)$$, given that y = 1 when x = 1 is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\ln \\left| {{{{{(x - y)}^2} - 2} \\over 2}} \\right| = 2(x + y)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\ln \\left| {{{{{(x + y)}^2} - 2} \\over 2}} \\right| = 2(x - y)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\ln \\left| {{{{{(x - y)}^2} + 2} \\over 2}} \\right| = 2(x + y)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\ln \\left| {{{{{(x + y)}^2} + 2} \\over 2}} \\right| = 2(x + y)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\left( {{{x + y - 1} \\over {x + y - 2}}} \\right){{dy} \\over {dx}} = \\left( {{{x + y + 1} \\over {x + y + 2}}} \\right)$$</p>\n<p>Put $$x + y = v$$</p>\n<p>$$\\therefore$$ $$1 + {{dy} \\over {dx}} = {{dv} \\over {dx}}$$ or $$\\left( {{{v - 1} \\over {v - 2}}} \\right)\\left( {{{dv} \\over {dx}} - 1} \\right) = \\left( {{{v + 1} \\over {v + 2}}} \\right)$$</p>\n<p>$$ \\Rightarrow {{dv} \\over {dx}} - 1 = {{(v + 1)(v - 2)} \\over {(v - 1)(v + 2)}} = {{{v^2} - v - 2} \\over {{v^2} + v - 2}}$$ or $${{dv} \\over {dx}} = {{2{v^2} - 4} \\over {({v^2} + v - 2)}}$$</p>\n<p>$$ \\Rightarrow {{({v^2} + v - 2)} \\over {({v^2} - 2)}}dv = 2dx \\Rightarrow \\left( {1 + {v \\over {{v^2} - 2}}} \\right)dv = 2dx$$</p>\n<p>On integrating, we get</p>\n<p>$$v + {1 \\over 2}\\log \\left| {{v^2} - 2} \\right| = 2x + c$$</p>or, $$(y - x) + {1 \\over 2}\\log \\left| {{{(x + y)}^2} - 2} \\right| = c$$</p>\n<p>Given, y = 1 when x = 1</p>\n<p>$$\\therefore$$ $$0 + {1 \\over 2}\\log 2 = c$$ or $$(y - x) + {1 \\over 2}\\log \\left| {{{{{(x + y)}^2} - 2} \\over 2}} \\right| = 0$$</p>\n<p>or, $$\\log \\left| {{{{{(x + y)}^2} - 2} \\over 2}} \\right| = 2(x - y)$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The solution of $${x^3}{{dy} \\over {dx}} + 4{x^2}\\tan y = {e^x}\\sec y$$ satisfying y (1) = 0, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\tan y = (x - 2){e^x}\\log x$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sin y = {e^x}(x - 1){x^{ - 4}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\tan y = (x - 1){e^x}{x^{ - 3}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sin y = {e^x}(x - 1){x^3}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $$\\cos y{{dy} \\over {dx}} + {4 \\over x}\\sin y = {{{e^x}} \\over {{x^3}}}$$</p>\n<p>Let $$\\sin y = t$$</p>\n<p>$$ \\Rightarrow \\cos y{{dy} \\over {dx}} = {{dt} \\over {dx}}$$ $$\\therefore$$ $${{dt} \\over {dx}} + {4 \\over x}t = {{{e^x}} \\over {{x^3}}}$$</p>\n<p>$$IF = {e^{\\int {{4 \\over x}dx} }} = {e^{4\\log x}} = {x^4}$$</p>\n<p>The solution is</p>\n<p>$$\\therefore$$ $$t{x^4} = \\int {{x^4}\\,.\\,{{{e^x}} \\over {{x^3}}}dx = x{e^x} - {e^x} + c} $$ $$\\because$$ $$\\sin y\\,{x^4} = x{e^x} - {e^x} + c$$</p>\n<p>$$\\because$$ x = 1, y = 0 [$$\\because$$ c = 0]</p>\n<p>$$\\therefore$$ $$\\sin y = {e^x}(x - 1){x^{ - 4}}$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The solution of the equation $${{dy} \\over {dx}} + {1 \\over x}\\tan y = {1 \\over {{x^2}}}\\tan y\\sin y$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2y = \\sin y(1 - 2c{x^2})$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$2x = \\cot y(1 + 2c{x^2})$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2x = \\sin y(1 - 2c{x^2})$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2x\\sin y = 1 - 2c{x^2}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $${{dy} \\over {dx}} + {{\\tan y} \\over x} = {{\\tan y\\sin y} \\over {{x^2}}}$$</p>\n<p>Now, divide by tan y sin y both sides, we get</p>\n<p>$$\\cot y\\cos ec\\,y{{dy} \\over {dx}} + {{\\cos ec\\,y} \\over x} = {1 \\over {{x^2}}}$$ ...... (i)</p>\n<p>Put cosec y = z</p>\n<p>$$\\therefore$$ $$ - \\cos ec\\,y\\cot y{{dy} \\over {dx}} = {{dz} \\over {dx}}$$</p>\n<p>$$\\therefore$$ Eq. (i) reduces to</p>\n<p>$${{dz} \\over {dx}} - {z \\over x} =  - {1 \\over {{x^2}}}$$</p>\n<p>$$IF = {e^{\\int { - {1 \\over x}dx} }} = {e^{ - \\log x}} = {1 \\over x}$$</p>\n<p>Hence solution is</p>\n<p>$${z \\over x} = \\int { - {1 \\over {{x^3}}}dx = {1 \\over {2{x^2}}} + c} $$</p>\n<p>$$ \\Rightarrow {1 \\over {x\\sin y}} = {{1 - 2c{x^2}} \\over {2{x^2}}}$$</p>\n<p>$$ \\Rightarrow 2x = \\sin y{(1 - 2cx)^2}$$</p>\n<p>$$ \\Rightarrow 2x = \\sin y(1 - 2c{x^2})$$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The solution of differential equation $$(x{y^5} + 2y)dx - xdy = 0$$, is</p>\n</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$9{x^8} + 4{x^9}{y^4} = 9{y^4}C$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$9{x^8} - 4{x^9}{y^4} - 9{y^4}C = 0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${x^8}(9 + 4{y^4}) = 10{y^4}C$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $$(x{y^5} + 2y)dx = x\\,dy$$</p>\n<p>$$ \\Rightarrow x{{dy} \\over {dx}} - 2y = x{y^5}$$</p>\n<p>$$ \\Rightarrow {{dy} \\over {dx}} - {{2y} \\over x} = {y^5}$$</p>\n<p>$$ \\Rightarrow {y^{ - 5}}{{dy} \\over {dx}} - {{2{y^{ - 4}}} \\over x} = 1$$ ..... (i)</p>\n<p>Put, $${y^{ - 4}} = t$$</p>\n<p>$$ \\Rightarrow  - 4{y^{ - 5}}{{dy} \\over {dx}} = {{dt} \\over {dx}}$$</p>\n<p>$$ \\Rightarrow {y^{ - 5}}{{dy} \\over {dx}} = {{ - 1} \\over 4}{{dt} \\over {dx}}$$ ..... (ii)</p>\n<p>From Eqs. (i) and (ii), we get</p>\n<p>$$ - {1 \\over 4}{{dt} \\over {dx}} - {{2t} \\over x} = 1$$</p>\n<p>$$ \\Rightarrow {{dt} \\over {dx}} + {{8t} \\over x} =  - 4$$</p>\n<p>Now, $$IF = {e^{\\int {{8 \\over x}dx} }} = {e^{8\\log x}} = {x^8}$$</p>\n<p>and the solution is</p>\n<p>$$t\\,.\\,{x^8} = \\int {( - 4){x^8}dx + C} $$</p>\n<p>$$ \\Rightarrow {{{x^8}} \\over {{y^4}}} =  - {{4\\,.\\,{x^9}} \\over 9} + C$$</p>\n<p>$$ \\Rightarrow 9{x^8} + 4{x^9}\\,.\\,{y^4} = 9{y^4}C$$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A curve passes through (2, 0) and the slope of the tangent at P(x, y) is equal to $${{{{(x + 1)}^2} + y - 3} \\over {x + 1}}$$ then the equation of the curve is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "y = x<sup>2</sup> $$-$$ 2x"
+      },
+      {
+        "identifier": "B",
+        "content": "y = x<sup>3</sup> $$-$$ 8"
+      },
+      {
+        "identifier": "C",
+        "content": "y<sup>2</sup> = x<sup>2</sup> + 2x"
+      },
+      {
+        "identifier": "D",
+        "content": "y<sup>2</sup> = 5x<sup>2</sup> $$-$$ 6"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>Slope of tangent of the curve is $${{{{(x + 1)}^2} + y - 3} \\over {x + 1}}$$</p>\n<p>$$\\therefore$$ $${{dy} \\over {dx}} = {{{{(x + 1)}^2} + y - 3} \\over {x + 1}}$$</p>\n<p>$$ \\Rightarrow {{dy} \\over {dx}} = {{{{(x + 1)}^2} - 3} \\over {x + 1}} + {y \\over {x + 1}}$$</p>\n<p>$$ \\Rightarrow {{dy} \\over {dx}} - {y \\over {x + 1}} = {{{{(x + 1)}^2} - 3} \\over {x + 1}}$$</p>\n<p>This is a form of linear differential equations</p>\n<p>$$\\therefore$$ $$IF = {e^{\\int {{{ - 1} \\over {x + 1}}dx} }} = {e^{\\log {1 \\over {1 + x}}}} = {1 \\over {1 + x}}$$</p>\n<p>Solution of given differential equation is</p>\n<p>$${y \\over {x + 1}} = \\int {{{{{(x + 1)}^2} - 3} \\over {{{(x + 1)}^2}}}dx} $$</p>\n<p>$${y \\over {x + 1}} = \\int {\\left( {1 - {3 \\over {{{(x + 1)}^2}}}} \\right)dx} $$</p>\n<p>$${y \\over {x + 1}} = x + {3 \\over {x + 1}} + c$$</p>\n<p>$$\\because$$ Curve passes through (2, 0)</p>\n<p>$$\\therefore$$ $$0 = 2 + {3 \\over 3} + c$$</p>\n<p>$$ \\Rightarrow c =  - 3$$</p>\n<p>Hence, equation of curve is</p>\n<p>$${y \\over {x + 1}} = x + {3 \\over {x + 1}} - 3$$</p>\n<p>$$y = {x^2} + x + 3 - 3x - 3$$</p>\n<p>$$y = {x^2} - 2x$$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,349 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The value of $\\lim _{x \\rightarrow \\frac{\\pi}{2}} \\frac{\\cot x-\\cos x}{(\\pi-2 x)^3}$ is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{1}{16}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{2}{17}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{1}{8}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{2}{33}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\\\ &\\begin{aligned} & \\text {  We have, } \\lim _{x \\rightarrow \\frac{\\pi}{2}} \\frac{\\cot x-\\cos x}{(\\pi-2 x)^3}=\\lim _{x \\rightarrow \\frac{\\pi}{2}} \\frac{\\cot x(1-\\sin x)}{(\\pi-2 x)^3} \\\\ & =\\lim _{x \\rightarrow \\frac{\\pi}{2}} \\frac{\\tan \\left(\\frac{\\pi}{2}-x\\right)\\left[1-\\cos \\left(\\frac{\\pi}{2}-x\\right)\\right]}{(\\pi-2 x)^3} \\\\ & =\\lim _{x \\rightarrow \\frac{\\pi}{2}} \\frac{\\tan \\left(\\frac{\\pi}{2}-x\\right) \\cdot 2 \\sin ^2\\left(\\frac{\\pi}{4}-\\frac{x}{2}\\right)}{2\\left(\\frac{\\pi}{2}-x\\right) \\cdot 16\\left(\\frac{\\pi}{4}-\\frac{x}{2}\\right)^2} \\\\ & =\\frac{2}{32} \\lim _{x \\rightarrow \\frac{\\pi}{2}} \\frac{\\tan \\left(\\frac{\\pi}{2}-x\\right)}{\\left(\\frac{\\pi}{2}-x\\right)} \\times \\lim _{x \\rightarrow \\frac{\\pi}{2}}\\left\\{\\frac{\\sin \\left(\\frac{\\pi}{4}-\\frac{x}{2}\\right)}{\\left(\\frac{\\pi}{4}-\\frac{x}{2}\\right)}\\right\\}^2=\\frac{2}{32}=\\frac{1}{16} \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & =\\lim _{h \\rightarrow 0} h e^a\\left(\\frac{e^{h h}-1}{e^h-1}\\right) \\\\ & =\\lim _{h \\rightarrow 0} e^a\\left\\{\\frac{e^{b-a}-1}{\\left(\\frac{e^h-1}{h}\\right)}\\right\\}=e^a\\left(e^{b-a}-1\\right)=e^b-e^a \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the function $g(x)$ defined as</p>\n<p>$$ g(x)=\\left\\{\\begin{array}{cc} \\frac{x^2-4}{x^2-2|x-2|-4}, & x \\neq 2 \\\\ \\frac{3}{4}, & x=2 \\end{array}\\right. $$</p>\n<p>Which of the following statements is true about the continuity of $g(x)$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$g(x)$ is continuous for all values of $x$.</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$g(x)$ is continuous only for $x>2$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$g(x)$ is continuous at $x=2$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$g(x)$ is not continuous at $x=2$</p>\n\n"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>When $x<2|x-2|=-(x-2)=2-x$.</p>\n<p>Then for $x<2$ :</p>\n<p>$$ \\begin{aligned} g(x) & =\\frac{x^2-4}{x^2-2(2-x)-4}=\\frac{x^2-4}{x^2+2 x-8} \\\\ & =\\frac{(x-2)(x+2)}{(x-2)(x+4)}=\\frac{x+2}{x+4} \\end{aligned} $$</p>\n<p>The limit from the left is</p>\n<p>$$ \\mathop {\\lim }\\limits_{x \\to {2^ - }} g(x)=\\mathop {\\lim }\\limits_{x \\to {2^ - }} \\frac{x+2}{x+4}=\\frac{2+2}{2+4}=\\frac{4}{6}=\\frac{2}{3} $$</p>\n<p>When $x>2|x-2|=x-2$.</p>\n<p>Then, for $x>2$ :</p>\n<p>$$ \\begin{aligned} g(x) & =\\frac{x^2-4}{x^2-2(x-2)-4}=\\frac{x^2-4}{x^2-2 x} \\\\ & =\\frac{(x-2)(x+2)}{x(x-2)}=\\frac{x+2}{x} \\end{aligned} $$</p>\n<p>The limit from the right is:</p>\n<p>$$ \\mathop {\\lim }\\limits_{x \\to {2^ + }} g(x)=\\mathop {\\lim }\\limits_{x \\to {2^ + }} \\frac{x+2}{x}=\\frac{2+2}{2}=\\frac{4}{2}=2 $$</p>\n<p>Since, $\\mathop {\\lim }\\limits_{x \\to {2^ - }} g(x)=\\frac{2}{3}$ and $\\mathop {\\lim }\\limits_{x \\to {2^ + }} g(x)=2$, the limit $\\mathop {\\lim }\\limits_{x \\to {2}} g(x)$ does not exist because the left and right limits are not equal.</p>\n<p>Since, the limit does not exists at $x=2, g(x)$ is not continuous at $x=2$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $\\mathop {\\lim }\\limits_{x \\to \\infty }\\left\\{\\frac{x^2-1}{x+1}-a x-b\\right\\}=2$. The value of $a$ is</p>\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>-1</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>0</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>1</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>2</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $\\mathop {\\lim }\\limits_{x \\to \\infty }\\left\\{\\frac{x^2-1}{x+1}-a x-b\\right\\}=2$</p>\n<p>$$ \\Rightarrow \\mathop {\\lim }\\limits_{x \\to \\infty } \\frac{x^2(1-a)-x(a+b)-1-b}{x+1}=2 $$</p>\n<p>Since, the limit of the given expression is a finite non-zero number, therefore numerator and denominator are of the same degree.</p>\n<p>$$ \\begin{aligned} \\therefore & & 1-a & =0 \\\\ \\Rightarrow & & a & =1 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $ f $ be the function defined by</p><p>$ f(x)=\\left\\{\\begin{array}{cc} \\frac{x^{2}-1}{x^{2}-2|x-1|-1}, & x \\neq 1 \\\\ \\frac{1}{2}, & x=1 \\end{array}\\right. $</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The function is continuous for all values of $ x $"
+      },
+      {
+        "identifier": "B",
+        "content": "The function is continuous only for $ x > 1 $"
+      },
+      {
+        "identifier": "C",
+        "content": "The function is continuous at $ x=1 $"
+      },
+      {
+        "identifier": "D",
+        "content": "The function is not continuous at $ x=1 $."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$ f(x)=\\left\\{\\begin{array}{cc}\\frac{x^{2}-1}{x^{2}-2 x+1} ; & x > 1 \\\\ \\frac{1}{2} ; & x=1 \\\\ \\frac{x^{2}-1}{x^{2}+2 x-3} ; & x < 1\\end{array}\\right. $</p><p>$ \\begin{array}{ll} \\because & x^{2}+3 x-x-3 \\\\ & =x(x+3)-1(x+3) \\end{array} $</p><p>Lets Find</p><p>LHL, $ \\lim \\limits_{x \\rightarrow 1^{-}} \\frac{x^{2}-1}{x^{2}-2 x+1} $ and RHL, $ \\lim \\limits_{x \\rightarrow 1^{+}} \\frac{x^{2}-1}{x^{2}+2 x-3} $</p><p>$ \\begin{array}{l} \\Rightarrow \\lim \\limits_{x \\rightarrow 1^{-}} \\frac{(x-1)(x+1)}{(x-1)^{2}} \\Rightarrow \\lim \\limits_{x \\rightarrow 1^{+}} \\frac{(x-1)(x+1)}{(x+3)(x-1)} \\\\ \\Rightarrow \\lim \\limits_{x \\rightarrow 1^{-}} \\frac{x+1}{x-1}=\\infty \\Rightarrow \\lim \\limits_{x \\rightarrow 1^{+}} \\frac{x+1}{x+3}=\\frac{2}{4}=\\frac{1}{2} \\end{array} $</p><p>$ \\therefore \\mathrm{LHL} \\neq f(1) \\Rightarrow f(x) $ is not continuous at $ x=1 $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The value of $$\\lim _\\limits{x \\rightarrow 0} \\frac{8}{x^8}\\left(1-\\cos \\frac{x^2}{2}-\\cos \\frac{x^2}{4}+\\cos \\frac{x^2}{2} \\cos \\frac{x^2}{4}\\right)$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{32}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{8}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{64}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{16}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\text { } \\lim _{x \\rightarrow 0} \\frac{8}{x^8}\\left(1-\\cos \\frac{x^2}{2}-\\cos \\frac{x^2}{4}+\\cos \\frac{x^2}{2} \\cos \\frac{x^2}{4}\\right) \\\\\n& =\\lim _{x \\rightarrow 0} \\frac{8}{x^8}\\left(\\left(1-\\cos \\frac{x^2}{2}\\right)-\\cos \\frac{x^2}{4}\\left(1-\\cos \\frac{x^2}{2}\\right)\\right) \\\\\n& =\\lim _{x \\rightarrow 0} \\frac{8}{x^8}\\left(1-\\cos \\frac{x^2}{2}\\right)\\left(1-\\cos \\frac{x^2}{4}\\right)\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& =\\lim _{x \\rightarrow 0} \\frac{8}{x^8}\\left(2 \\sin ^2 \\frac{x^2}{4}\\right)\\left(2 \\sin ^2 \\frac{x^2}{8}\\right) \\\\\n& =\\lim _{x \\rightarrow 0} \\frac{8 \\times 2 \\times 2}{4^2 \\times 8^2}\\left(\\frac{\\sin \\frac{x^2}{4}}{\\frac{x^2}{4}}\\right)^2\\left(\\frac{\\sin \\frac{x^2}{8}}{\\frac{x^2}{8}}\\right)^2 \\\\\n& =\\frac{1}{32} \\times(1)^2 \\times(1)^2=\\frac{1}{32}\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\n\\text { The value of } \\lim _\\limits{x \\rightarrow 0} \\frac{(27+x)^{1 / 3}-3}{9-(27+x)^{2 / 3}} \\text { equals to }\n$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-\\frac{1}{3}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{6}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-\\frac{1}{6}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{3}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$\\lim _\\limits{x \\rightarrow 0} \\frac{(27+x)^{1 / 3}-3}{9-(27+x)^{2 / 3}}$$</p>\n<p>$$\n=\\lim _\\limits{x \\rightarrow 0} \\frac{3\\left[\\left(1+\\frac{x}{27}\\right)^{1 / 3}-1\\right]}{9\\left[1-\\left(1+\\frac{x}{27}\\right)^{2 / 3}\\right]}\n$$</p>\n<p>$$\n=\\lim _\\limits{x \\rightarrow 0} \\frac{1}{3}\\left[\\frac{\\left.\\left(1+\\frac{x}{3 \\times 27}+\\frac{\\frac{1}{3}\\left(\\frac{1}{3}-1\\right)}{2!} x^2+\\ldots\\right)-1\\right)}{1-\\left(1+\\frac{2 x}{3 \\times 27}+\\frac{\\frac{2}{3}\\left(\\frac{2}{3}-1\\right)}{2!} x^2+\\ldots\\right)}\\right]\n$$</p>\n<p>$$\n\\begin{aligned}\n& =\\lim _\\limits{x \\rightarrow 0} \\frac{1}{3}\\left[\\frac{x\\left(\\frac{1}{3 \\times 27}+\\frac{\\frac{1}{3}\\left(\\frac{1}{3}-1\\right)}{2!} x+\\ldots\\right.}{-x\\left(\\frac{2}{3 \\times 27}+\\frac{\\frac{2}{3}\\left(\\frac{2}{3}-1\\right)}{2!} x+\\ldots\\right)}\\right] \\\\\n& =\\frac{1}{3}\\left[\\frac{\\frac{1}{3 \\times 27}+0+\\ldots .}{-\\left(\\frac{2}{3 \\times 27}+0+\\ldots\\right)}\\right] \\\\\n& =\\frac{1}{3}\\left(\\frac{1}{-2}\\right)=-\\frac{1}{6} .\n\\end{aligned}\n$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The value of $$\\mathop {\\lim }\\limits_{x \\to 0} {{1-\\cos (1 - \\cos x)} \\over {{x^4}}}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{6}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{8}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{10}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{12}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$1 - \\cos (1 - \\cos x) = 2{\\sin ^2}\\left( {{{1 - \\cos x} \\over 2}} \\right) = 2{\\sin ^2}\\left( {{{\\sin }^2}{x \\over 2}} \\right)$$</p>\n<p>$$\\therefore$$ $$\\mathop {\\lim }\\limits_{x \\to 0} {{1-\\cos (1 - \\cos x)} \\over {{x^4}}} = \\mathop {\\lim }\\limits_{x \\to 0} {{2{{\\sin }^2}\\left( {{{\\sin }^2}{x \\over 2}} \\right)} \\over {{x^4}}} = \\mathop {\\lim }\\limits_{x \\to 0} {{2{{\\sin }^2}\\left( {{{\\sin }^2}{x \\over 2}} \\right)} \\over {{{\\left( {{{\\sin }^2}{x \\over 2}} \\right)}^2}}} \\times {{{{\\sin }^4}{x \\over 2}} \\over {{{\\left( {{x \\over 2}} \\right)}^2} \\times 16}}$$</p>\n<p>[$$\\because$$ $$\\mathop {\\lim }\\limits_{x \\to 0} {{\\sin x} \\over x} = 1$$]</p>\n<p>$$ = {1 \\over 8}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The value of $$\\mathop {\\lim }\\limits_{x \\to 0} {{{{(1 + x)}^{{1 \\over x}}} - e + {1 \\over 2}ex} \\over {{x^2}}}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{11} \\over {24}}e$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - {{11} \\over {24}}e$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${e \\over {24}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $$y = {(1 + x)^{1/x}}$$</p>\n<p>$$ \\Rightarrow \\log y = {1 \\over x}\\log (1 + x) = {1 \\over x}\\left[ {x - {{{x^2}} \\over 2} + {{{x^3}} \\over 3} - {{{x^4}} \\over 4}\\, + \\,...} \\right]$$</p>\n<p>$$ = 1 - {x \\over 2} + {{{x^2}} \\over 3} - {{{x^3}} \\over 4}\\, + \\,....$$</p>\n<p>$$y = {e^{\\left( {1 - {x \\over 2} + {{{x^2}} \\over 3}\\, + \\,...} \\right)}} = e{e^{\\left( {{{ - x} \\over 2} + {{{x^2}} \\over 3}\\,....} \\right)}}$$</p>\n<p>$$ = e\\left[ {1 + \\left( { - {x \\over 2} + {{{x^2}} \\over 3}\\, - \\,...} \\right) + {1 \\over {2!}}{{\\left( { - {x \\over 2} + {{{x^3}} \\over 3}\\, - \\,....} \\right)}^2} + \\,...} \\right]$$</p>\n<p>$$y - e + {1 \\over 2}ex = e{x^2}\\left[ {{1 \\over 3} + 0(x) + {1 \\over 2}{{\\left( { - {1 \\over 2} + 0(x)} \\right)}^2}\\, + \\,...} \\right]$$ [$$\\because$$ 0(x) in terms containing x]</p>\n<p>$$\\mathop {\\lim }\\limits_{} {{y - e + {1 \\over 2}ex} \\over {{x^2}}} = e\\left[ {{1 \\over 3} + {1 \\over 8}} \\right] = {{11} \\over {24}}e$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The value of $$\\mathop {\\lim }\\limits_{x \\to 0} {{\\sqrt {1 - {{\\cos x}^2}} } \\over {1 - \\cos x}}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sqrt 2 $$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The required limit</p>\n<p>$$ = \\mathop {\\lim }\\limits_{x \\to 0} {{\\sqrt {(1 - \\cos {x^2})(1 + \\cos {x^2})} } \\over {(1 - \\cos x)\\sqrt {1 + \\cos {x^2}} }}$$</p>\n<p>$$ = \\mathop {\\lim }\\limits_{x \\to 0} {{\\left( {{{\\sin {x^2}} \\over {{x^2}}}} \\right)} \\over {2\\left( {{{{{\\sin }^2}x/2} \\over {{x^2}}}} \\right)}}.{1 \\over {\\sqrt {1 + \\cos {x^2}} }} = {1 \\over {2 \\times {1 \\over 4} \\times \\sqrt 2 }} = \\sqrt 2 $$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>If $$f(x) = \\left\\{ {\\matrix{\n   {a{x^2} + 1,} & {x \\le 1}  \\cr \n   {{x^2} + ax + b,} & {x > 1}  \\cr \n\n } } \\right.$$ is differentiable at x = 1, then</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a = 1, b = 1"
+      },
+      {
+        "identifier": "B",
+        "content": "a = 1, b = 0"
+      },
+      {
+        "identifier": "C",
+        "content": "a = 2, b = 0"
+      },
+      {
+        "identifier": "D",
+        "content": "a = 2, b = 1"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$f'(1 - 0) = \\mathop {\\lim }\\limits_{h \\to 0} {{f(1 - h) - f(1)} \\over { - h}}$$</p>\n<p>$$ = \\mathop {\\lim }\\limits_{h \\to 0} {{a{{(1 - h)}^2} + 1 - (1 + a)} \\over { - h}} = \\mathop {\\lim }\\limits_{h \\to 0} {{a({h^2} - 2h)} \\over { - h}} = 2a$$</p>\n<p>$$f'(1 + 0) = \\mathop {\\lim }\\limits_{h \\to 0} {{f(1 + h) - f(1)} \\over h}$$</p>\n<p>$$ = \\mathop {\\lim }\\limits_{h \\to 0} {{{{(1 + h)}^2} + a(1 + h) + b - (1 + a)} \\over h}$$</p>\n<p>$$ = \\mathop {\\lim }\\limits_{h \\to 0} {{{h^2} + 2h + ah + b} \\over h} = 2 + a$$, if b = 0</p>\n<p>Thus, $$2a = 2 + a,b = 0$$</p>\n<p>$$ \\Rightarrow a = 2,b = 0$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The value of $$\\mathop {\\lim }\\limits_{x \\to \\infty } {1 \\over n}\\left\\{ {{1 \\over {n + 1}} + {2 \\over {n + 2}} + .... + {{3n} \\over {4n}}} \\right\\}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5 - 2\\log 2$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$4 - 2\\log 2$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$3 - 2\\log 2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2 - 2\\log 2$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\mathop {\\lim }\\limits_{n \\to \\infty } {1 \\over n}\\left\\{ {{1 \\over {n + 1}} + {2 \\over {n + 2}} + .... + {{3n} \\over {n + 3n}}} \\right\\}$$</p>\n<p>$$ = \\mathop {\\lim }\\limits_{n \\to \\infty } \\sum\\limits_{r = 1}^{3n} {{1 \\over n}\\left( {{r \\over {n + r}}} \\right) = \\int_0^3 {{x \\over {1 + x}}dx} } $$</p>\n<p>$$ = \\int_0^3 {\\left( {1 - {1 \\over {1 + x}}} \\right)dx} $$</p>\n<p>$$ = [x - \\log (1 + x)]_0^3$$</p>\n<p>$$ = 3 - \\log 4 = 3 - 2\\log 2$$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  }
+]

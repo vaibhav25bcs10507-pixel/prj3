@@ -1,0 +1,190 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The value of integral $$\\int \\frac{d x}{(1+x)^{3 / 4}(x-2)^{5 / 4}}$$ is is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-\\frac{3}{4}\\left(\\frac{x+1}{x-2}\\right)^{1 / 4}+C$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-\\frac{3}{4}\\left(\\frac{x-2}{x+1}\\right)^{1 / 4}+C$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-\\frac{4}{3}\\left(\\frac{x+1}{x-2}\\right)^{1 / 4}+C$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-\\frac{4}{3}\\left(\\frac{x-2}{x+1}\\right)^{1 / 4}+C$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n\\text { Let } I & =\\int \\frac{d x}{(x+1)^{3 / 4}(x-2)^{5 / 4}} \\\\\n& =\\int \\frac{d x}{\\left(\\frac{x+1}{x-2}\\right)^{3 / 4}(x-2)^2}\n\\end{aligned}$$</p>\n<p>On putting, $$\\frac{x+1}{x-2}=t \\Rightarrow \\frac{d}{d x}\\left(\\frac{x+1}{x-2}\\right)=\\frac{d t}{d x}$$</p>\n<p>$$\\begin{aligned}\n& \\Rightarrow \\quad \\frac{(x-2) \\frac{d}{d x}(x+1)-(x+1) \\frac{d}{d x}(x-2)}{(x-2)^2}=\\frac{d t}{d x} \\\\\n& \\Rightarrow \\quad \\frac{(x-2)(1)-(x+1)(1)}{(x-2)^2}=\\frac{d t}{d x}\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& \\Rightarrow \\quad \\frac{-3}{(x-2)^2} d x=d t \\\\\n& \\text { So, } I=\\int \\frac{d t}{-3 t^{3 / 4}}=-\\frac{1}{3}\\left(\\frac{t^{-3 / 4+1}}{-\\frac{3}{4}+1}\\right)+C \\\\\n& =-\\frac{1}{3}\\left(4 t^{1 / 4}\\right)+C=-\\frac{4}{3}\\left(\\frac{x+1}{x-2}\\right)^{1 / 4}+C \\\\\n&\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $$f(x)=\\int \\frac{\\sqrt{x}}{(1+x)^2} d x$$, where $$x \\geq 0$$. Then, $$f(3)-f(1)$$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{\\pi}{12}+\\frac{1}{2}-\\frac{\\sqrt{3}}{4}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-\\frac{\\pi}{6}+\\frac{1}{2}+\\frac{\\sqrt{3}}{4}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-\\frac{\\pi}{12}+\\frac{1}{2}+\\frac{\\sqrt{3}}{4}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{\\pi}{6}+\\frac{1}{2}-\\frac{\\sqrt{3}}{4}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\text { We have, } f(x)=\\int \\frac{\\sqrt{x}}{(1+x)^2} d x \\text {, where } x \\geq 0$$</p>\n<p>$$\\text { Let } I=\\int \\frac{\\sqrt{x}}{(1+x)^2} d x$$</p>\n<p>On putting, $$x=\\tan ^2 \\theta \\Rightarrow d x=2 \\tan \\theta \\sec ^2 \\theta d \\theta$$</p>\n<p>$$\\begin{aligned}\n\\therefore \\quad & =\\int \\frac{(\\tan \\theta)\\left(2 \\tan \\theta \\sec ^2 \\theta\\right)}{\\left(1+\\tan ^2 \\theta\\right)^2} d \\theta \\\\\n& =\\int \\frac{2 \\tan ^2 \\theta \\sec ^2 \\theta}{\\sec ^4 \\theta} d \\theta \\\\\n& =2 \\int \\sin ^2 \\theta d \\theta \\\\\n& =2 \\int \\frac{1-\\cos 2 \\theta}{2} d \\theta \\\\\n& =\\theta-\\frac{\\sin 2 \\theta}{2}+C \\\\\n& =\\theta-\\frac{\\tan \\theta}{1+\\tan ^2 \\theta}+C=\\tan ^{-1} \\sqrt{x}-\\frac{\\sqrt{x}}{1+x}+C\n\\end{aligned}\n$$</p>\n<p>$$\n\\begin{aligned}\n& \\therefore f(3)-f(1)=\\left(\\tan ^{-1} \\sqrt{3}-\\frac{\\sqrt{3}}{1+3}+C\\right) \\\\\n& -\\left(\\tan ^{-1} \\sqrt{1}-\\frac{\\sqrt{1}}{1+1}+C\\right) \\\\\n& =\\frac{\\pi}{3}-\\frac{\\pi}{4}+\\frac{1}{2}-\\frac{\\sqrt{3}}{4}=\\frac{\\pi}{12}+\\frac{1}{2}-\\frac{\\sqrt{3}}{4}\n\\end{aligned}\n$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "bitsat-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The value of $$\\int {{1 \\over {{{[{{(x - 1)}^3}{{(x + 2)}^5}]}^{{1 \\over 4}}}}}dx} $$, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${4 \\over 3}{\\left( {{{x + 1} \\over {x - 2}}} \\right)^{{1 \\over 4}}} + C$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${3 \\over 4}{\\left( {{{x - 1} \\over {x + 2}}} \\right)^{{1 \\over 4}}} + C$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${4 \\over 3}{\\left( {{{x - 1} \\over {x + 2}}} \\right)^{{1 \\over 4}}} + C$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 3}{\\left( {{{2x - 1} \\over {4x - 3}}} \\right)^{{1 \\over 4}}} + C$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$I = \\int {{1 \\over {{{\\left( {{{x - 1} \\over {x + 2}}} \\right)}^{3/4}}{{(x + 2)}^2}}}dx} $$</p>\n<p>Let $${{x - 1} \\over {x + 2}} = t \\Rightarrow {{3dx} \\over {{{(x + 2)}^2}}} = dt$$</p>\n<p>$$ \\Rightarrow I = {1 \\over 3}\\int {{1 \\over {{t^{3/4}}}}dt = {1 \\over 3}\\left( {{{{t^{1/4}}} \\over {1/4}}} \\right) + C} $$</p>\n<p>$$ = {{{4^{{t^{1/4}}}}} \\over 3} + C = {4 \\over 3}{\\left( {{{x - 1} \\over {x + 2}}} \\right)^{1/4}} + C$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let $$f(x) = \\int {{{{x^2}dx} \\over {(1 + {x^2})(1 + \\sqrt {1 + {x^2}} )}}} $$ and $$f(0) = 0$$, then the value of $$f(1)$$ be</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\log (1 + \\sqrt 2 )$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\log (1 + \\sqrt 2 ) - {\\pi  \\over 4}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\log (1 + \\sqrt 2 ) + {\\pi  \\over 2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$f(x) = \\int {{{{x^2}dx} \\over {(1 + {x^2})(1 + \\sqrt {1 + {x^2}} )}}} $$</p>\n<p>Let $$x = \\tan \\theta $$</p>\n<p>$$ \\Rightarrow dx = {\\sec ^2}\\theta d\\theta  = (1 + {x^2})d\\theta $$</p>\n<p>$$f(x) = \\int {{{{x^2}dx} \\over {(1 + {x^2})(1 + \\sqrt {1 + {x^2}} )}}} $$</p>\n<p>$$ = \\int {{{{{\\tan }^2}\\theta {{\\sec }^2}\\theta d\\theta } \\over {{{\\sec }^2}\\theta (1 + \\sec \\theta )}} = \\int {{{{{\\tan }^2}\\theta d\\theta } \\over {1 + \\sec \\theta }}} } $$</p>\n<p>$$ = \\int {{{{{\\sin }^2}\\theta d\\theta } \\over {\\cos \\theta (1 + \\cos \\theta )}}} $$</p>\n<p>$$ = \\int {{{1 - {{\\cos }^2}\\theta d\\theta } \\over {\\cos \\theta (1 + \\cos \\theta )}}} $$</p>\n<p>$$ = \\int {{{(1 - \\cos \\theta )d\\theta } \\over {\\cos \\theta }}} $$</p>\n<p>$$ = \\int {\\sec \\theta d\\theta  - \\int {d\\theta } } $$</p>\n<p>$$ = \\log (x + \\sqrt {1 + {x^2}} ) - {\\tan ^{ - 1}}x + C$$</p>\n<p>$$\\therefore$$ $$f(0) = \\log (0 + \\sqrt {1 + 0} ) - {\\tan ^{ - 1}}(0) + C$$</p>\n<p>$$0 = \\log 1 - 0 + C$$</p>\n<p>$$ \\Rightarrow C = 0$$</p>\n<p>$$\\therefore$$ $$f(1) = \\log (1 + \\sqrt {1 + {1^2}} ) - {\\tan ^{ - 1}}(1)$$</p>\n<p>$$ = \\log (1 + \\sqrt 2 ) - {\\pi  \\over 4}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "bitsat-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>$$\\int {{1 \\over {1 - 2\\sin x}}dx} $$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {2\\sqrt 3 }}\\log \\left| {{{\\tan {x \\over 2} - 2 - \\sqrt 3 } \\over {\\tan {x \\over 2} - 2 + \\sqrt 3 }}} \\right| + c$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\sqrt 3 } \\over 2}\\log \\left| {{{\\tan {x \\over 2} - 2 - \\sqrt 3 } \\over {\\tan {x \\over 2} - 2 + \\sqrt 3 }}} \\right| + c$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over {\\sqrt 3 }}\\log \\left| {{{\\tan {x \\over 2} - 2 - \\sqrt 3 } \\over {\\tan {x \\over 2} - 2 + \\sqrt 3 }}} \\right| + c$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $$I = \\int {{1 \\over {1 - 2\\sin x}}dx} $$</p>\n<p>On putting $$\\sin x = {{2\\tan {x \\over 2}} \\over {1 + {{\\tan }^2}{x \\over 2}}}$$, we get</p>\n<p>$$I = \\int {{1 \\over {1 - {{4\\tan {x \\over 2}} \\over {1 + {{\\tan }^2}{x \\over 2}}}}}dx = \\int {{{1 + {{\\tan }^2}{x \\over 2}} \\over {1 + {{\\tan }^2}{x \\over 2} - 4\\tan {x \\over 2}}}dx} } $$</p>\n<p>$$ = \\int {{{{{\\sec }^2}{x \\over 2}} \\over {1 + {{\\tan }^2}{x \\over 2} - 4\\tan {x \\over 2}}}dx} $$</p>\n<p>$$ = 2\\int {{1 \\over {{{\\left( {\\tan {x \\over 2} - 2} \\right)}^2} - {{(\\sqrt 3 )}^2}}}d\\left( {\\tan {x \\over 2}} \\right)} $$</p>\n<p>$$ = 2\\int {{{dt} \\over {{{(t - 2)}^2} - {{(\\sqrt 3 )}^2}}}} $$, where $$t = \\tan {x \\over 2}$$</p>\n<p>$$ = 2\\,.\\,{1 \\over {2\\sqrt 3 }}\\log \\left| {{{t - 2 - \\sqrt 3 } \\over {t - 2 + \\sqrt 3 }}} \\right| + c = {1 \\over {\\sqrt 3 }}\\log \\left| {{{\\tan {x \\over 2} - 2 - \\sqrt 3 } \\over {\\tan {x \\over 2} - 2 + \\sqrt 3 }}} \\right| + c$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "$$\\int {{{8{x^{43}} + 13{x^{38}}} \\over {{{({x^{13}} + {x^5} + 1)}^4}}}dx} $$ equals to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{{x^{39}}} \\over {3{{({x^{13}} + {x^5} + 1)}^3}}} + C$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{{x^{39}}} \\over {{{({x^{13}} + {x^5} + 1)}^3}}} + C$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{x^{39}}} \\over {5{{({x^{13}} + {x^5} + 1)}^3}}} + C$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$I = \\int {{{8{x^{43}} + 13{x^{38}}} \\over {{{({x^{13}} + {x^5} + 1)}^4}}}dx} $$</p>\n<p>$$ = \\int {{{8{x^{43}} + 13{x^{38}}} \\over {{x^{52}}\\left( {1 + {1 \\over {{x^8}}} + {1 \\over {{x^{13}}}}} \\right)}}dx} $$</p>\n<p>$$ = \\int {{{8\\left( {{1 \\over {{x^9}}}} \\right) + 13\\left( {{1 \\over {{x^{14}}}}} \\right)} \\over {{{\\left( {1 + {1 \\over {{x^8}}} + {1 \\over {{x^{13}}}}} \\right)}^4}}}dx} $$</p>\n<p>Put, $$1 + {1 \\over {{x^8}}} + {1 \\over {{x^{13}}}} = t$$</p>\n<p>$$ \\Rightarrow \\left( {{{ - 8} \\over {{x^9}}} - {{13} \\over {{x^{14}}}}} \\right)dx = dt$$</p>\n<p>$$\\therefore$$ $$I =  - \\int {{{dt} \\over {{t^4}}} = {1 \\over {3{t^3}}} + C} $$</p>\n<p>$$\\eqalign{\n  &  \\Rightarrow I = {1 \\over {3{{\\left( {1 + {1 \\over {{x^8}}} + {1 \\over {{x^{13}}}}} \\right)}^3}}} + C = {{{x^{39}}} \\over {3{{({x^{13}} + {x^5} + 1)}^3}}} + C  \\cr \n  &  \\cr} $$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The value of integral $\\int_a^b e^x d x$ as limit of sums is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$e^a-e^b$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$e^b-e^a$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$e^b+e^a$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$-e^a-e^b$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text {  } \\int_a^b e^x d x=\\lim _{h \\rightarrow 0} h\\left[e^a+e^{a+h}+e^{a+2 h}+\\ldots+e^{a+(n-1) h}\\right] \\\\ & =\\lim _{h \\rightarrow 0} h e^a\\left[1+e^h+e^{2 h}+e^{3 h}+\\ldots+e^{(n-1) h}\\right] \\\\ & =\\lim _{h \\rightarrow 0} h e^a\\left\\{\\frac{\\left(e^h\\right)^n-1}{e^h-1}\\right\\} \\\\ & \\quad\\left[\\because a+a r+\\ldots+a r^{n-1}=a\\left(\\frac{r^n-1}{r-1}\\right)\\right] \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & =\\lim _{h \\rightarrow 0} h e^a\\left(\\frac{e^{n h}-1}{e^h-1}\\right) \\\\ & =\\lim _{h \\rightarrow 0} e^a\\left\\{\\frac{e^{b-a}-1}{\\left(\\frac{e^h-1}{h}\\right)}\\right\\}=e^a\\left(e^{b-a}-1\\right)=e^b-e^a \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>What is the value of the definite integral $\\int_0^\\pi \\log (\\sin x) d x$ ?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$-\\frac{\\pi}{4} \\log 2$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$-\\frac{\\pi}{2} \\log 2$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$-\\pi \\log 2$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$-\\frac{\\pi}{4} \\log \\left(\\frac{1}{2}\\right)$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $I=\\int_0^{\\frac{\\pi}{2}} \\log (\\sin x) d x$</p>\n<p>Using the property:</p>\n<p>$$ \\int_0^a f(x) d x=\\int_0^a f(a-x) d x $$</p>\n<p>we replace $x$ with $\\frac{\\pi}{2}-x$, we get</p>\n<p>$$ \\begin{aligned} & I=\\int_0^{\\frac{\\pi}{2}} \\log (\\cos x) d x \\\\ \\Rightarrow & I+I=\\int_0^{\\frac{\\pi}{2}}[\\log (\\cos x)+\\log (\\sin x)] d x \\\\ = & \\int_0^{\\frac{\\pi}{2}} \\log \\left(\\frac{1}{2} \\sin 2 x\\right) d x=\\int_0^{\\frac{\\pi}{2}} \\log \\left(\\frac{1}{2}\\right) d x+\\int_0^{\\frac{\\pi}{2}} \\log (\\sin 2 x) d x \\\\ = & -\\frac{\\pi}{2} \\log 2+\\int_0^{\\frac{\\pi}{2}} \\log (\\sin x) d x \\\\ \\Rightarrow & 2 I=-\\frac{\\pi}{2} \\log 2+I \\\\ \\Rightarrow & I=-\\frac{\\pi}{2} \\log 2 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "bitsat-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$ \\int_{0}^{\\infty} \\frac{d x}{\\left(x^{2}+a^{2}\\right)\\left(x^{2}+b^{2}\\right)} $ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$ \\frac{\\pi a b}{a+b} $"
+      },
+      {
+        "identifier": "B",
+        "content": "$ \\frac{a b}{2(a+b)} $"
+      },
+      {
+        "identifier": "C",
+        "content": "$ \\frac{\\pi}{2 a b(a+b)} $"
+      },
+      {
+        "identifier": "D",
+        "content": "$ \\frac{\\pi(a+b)}{2 a b} $"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $ I=\\int_{0}^{\\infty} \\frac{1}{\\left(x^{2}+a^{2}\\right)\\left(x^{2}+b^{2}\\right)} d x $</p><p>$ \\begin{array}{l} I=\\frac{1}{a^{2}-b^{2}} \\int_{0}^{\\infty} \\frac{\\left(x^{2}+a^{2}\\right)-\\left(x^{2}+b^{2}\\right)}{\\left(x^{2}+a^{2}\\right)\\left(x^{2}+b^{2}\\right)} d x \\\\ I=\\frac{1}{a^{2}-b^{2}} \\int_{0}^{\\infty} \\frac{1}{\\left(x^{2}+b^{2}\\right)}-\\frac{1}{\\left(x^{2}+a^{2}\\right)} d x \\\\ I=\\frac{1}{a^{2}-b^{2}}\\left[\\frac{1}{b} \\tan ^{-1} \\frac{x}{b}-\\frac{1}{a} \\tan ^{-1} \\frac{x}{a}\\right]_{0}^{\\infty} \\\\ I=\\frac{1}{a^{2}-b^{2}}\\left[\\frac{1}{b} \\times \\frac{\\pi}{2}-\\frac{1}{a} \\times \\frac{\\pi}{2}\\right] \\\\ I=\\frac{1}{(a+b)(a-b)}\\left[\\frac{a-b}{a b}\\right] \\times \\frac{\\pi}{2} \\\\ I=\\frac{\\pi}{2 a b(a+b)} \\end{array} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The value of definite integral $ \\int_{0}^{\\pi / 2} \\log (\\tan x) d x $ is .",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "$ \\frac{\\pi}{4} $"
+      },
+      {
+        "identifier": "C",
+        "content": "$ \\frac{\\pi}{2} $"
+      },
+      {
+        "identifier": "D",
+        "content": "$ \\pi $"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $ I=\\int_{0}^{\\frac{\\pi}{2}} \\log (\\tan x) d x \\quad \\ldots \\text { (i) } $</p><p>By applying property,</p><p>$ \\begin{aligned} \\int_{a}^{b} f(x) d x & =\\int_{a}^{b} f(a+b-x) d x \\\\ I & =\\int_{0}^{\\frac{\\pi}{2}} \\log \\left(\\tan \\left(\\frac{\\pi}{2}-x\\right)\\right) d x \\\\ I & =\\int_{0}^{\\frac{\\pi}{2}} \\log (\\cot x) d x \\end{aligned} \\quad \\ldots \\text { (ii) } $</p><p>Adding Eqs. (i) and (ii),</p><p>$ \\begin{array}{l} 2 I=\\int_{0}^{\\frac{\\pi}{2}}[\\log (\\tan x)+\\log (\\cot x)] d x \\\\ 2 I=\\int_{0}^{\\frac{\\pi}{2}} \\log 1 d x=0 \\end{array} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "bitsat-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>$$\\int\\limits_0^1 {{{\\log (1 + x)} \\over {1 + {x^2}}}dx} $$ is equal to :</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\pi  \\over 8}\\log 2$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\pi  \\over 8}\\log {1 \\over 2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\pi  \\over 4}\\log 2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $$I = \\int_0^1 {{{\\log (1 + x)} \\over {1 + {x^2}}}dx = \\int_0^{\\pi /4} {{{\\log (1 + \\tan \\theta )} \\over {(1 + {{\\tan }^2}\\theta )}}{{\\sec }^2}\\theta d\\theta } } $$</p>\n<p>Let $$x = \\tan \\theta  \\Rightarrow dx = {\\sec ^2}\\theta d\\theta $$</p>\n<p>$$ = \\int_0^{\\pi /4} {\\log (1 + \\tan \\theta )d\\theta  = \\int_0^{\\pi /4} {\\log \\left[ {1 + \\tan \\left( {{\\pi  \\over 4} - \\theta } \\right)} \\right]d\\theta } } $$</p>\n<p>$$ = \\int_0^{\\pi /4} {\\log \\left( {1 + {{1 - \\tan \\theta } \\over {1 + \\tan \\theta }}} \\right)d\\theta } $$</p>\n<p>$$ = \\int_0^{\\pi /4} {\\log \\left( {{2 \\over {1 + \\tan \\theta }}} \\right)d\\theta  = \\log 2\\int_0^{\\pi /4} {1d\\theta  - I} } $$</p>\n<p>$$ \\Rightarrow 2I = {\\pi  \\over 4}\\log 2 \\Rightarrow I = {\\pi  \\over 8}\\log 2$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "bitsat-2021",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The value of the definite integral $$\\int\\limits_0^{\\pi /2} {{{dx} \\over {\\tan x + \\cot x + \\cos ec\\,x + \\sec x}}} $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1 - {\\pi  \\over 4}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$1 + {\\pi  \\over 4}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\pi  + {1 \\over 4}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$I = \\int\\limits_0^{{\\pi  \\over 2}} {{{dx} \\over {\\tan x + \\cot x + \\cos ec\\,x + \\sec x}}} $$</p>\n<p>$$ \\Rightarrow I = \\int\\limits_0^{{\\pi  \\over 2}} {{{dx} \\over {{{\\sin x} \\over {\\cos x}} + {{\\cos x} \\over {\\sin x}} + {1 \\over {\\sin x}} + {1 \\over {\\cos x}}}}} $$</p>\n<p>$$ \\Rightarrow I = \\int\\limits_0^{{\\pi  \\over 2}} {{{\\sin x\\cos xdx} \\over {1 + \\sin x + \\cos x}}} $$</p>\n<p>$$ \\Rightarrow I = \\int\\limits_0^{{\\pi  \\over 2}} {{{2\\sin {x \\over 2}\\cos {x \\over 2}\\left( {{{\\cos }^2}{x \\over 2} - {{\\sin }^2}{x \\over 2}} \\right)} \\over {2{{\\cos }^2}{x \\over 2} + 2\\sin {x \\over 2}\\cos {x \\over 2}}}} $$</p>\n<p>$$ \\Rightarrow I = \\int\\limits_0^{{\\pi  \\over 2}} {\\sin {x \\over 2}\\left( {\\cos {x \\over 2} - \\sin {x \\over 2}} \\right)dx} $$</p>\n<p>$$ \\Rightarrow I = {1 \\over 2}\\int\\limits_0^{{\\pi  \\over 2}} {(\\sin x + \\cos x - 1)dx} $$</p>\n<p>$$ \\Rightarrow I = {1 \\over 2}[ - \\cos x + \\sin x - x]_0^{\\pi /2}$$</p>\n<p>$$ \\Rightarrow I = {1 \\over 2}\\left[ {\\left( { - \\cos {\\pi  \\over 2} + \\sin {\\pi  \\over 2} - {\\pi  \\over 2}} \\right) - ( - \\cos 0 + \\sin 0 - 0} \\right]$$</p>\n<p>$$ \\Rightarrow I = {1 \\over 2}\\left[ {0 + 1 - {\\pi  \\over 2} + 1} \\right] = 1 - {\\pi  \\over 4}$$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "bitsat-2020",
+    "difficulty": null
+  }
+]
