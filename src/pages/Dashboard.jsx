@@ -4,11 +4,7 @@ import { useAuth } from '../context/AuthContext'
 import { useQuiz } from '../context/QuizContext'
 import { getStructure } from '../services/questionsService'
 import {
-  ChevronRight, ChevronDown,
-  TrendingUp, CheckCircle2, Target,
-  Atom, Calculator, FlaskConical,
-  PlayCircle, BookMarked,
-  Layers, Clock, AlertTriangle
+  ChevronDown, TrendingUp, CheckCircle2, Target, Atom, Calculator, FlaskConical, PlayCircle, BookMarked, Layers, Menu, X
 } from 'lucide-react'
 
 /* ── per-subject theming ─────────────────────────────── */
@@ -62,6 +58,7 @@ export default function Dashboard() {
   const [loading, setLoading]             = useState(true)
   const [selectedGroup, setSelectedGroup] = useState(null)
   const [selectedExam, setSelectedExam]   = useState(null)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   useEffect(() => {
     getStructure().then(s => {
@@ -77,6 +74,7 @@ export default function Dashboard() {
   const handleSelectExam = (group, exam) => {
     setSelectedGroup(group)
     setSelectedExam(exam)
+    setIsSidebarOpen(false) // auto-close on mobile
   }
 
   const { overallStats } = useMemo(() => {
@@ -119,59 +117,94 @@ export default function Dashboard() {
   }
 
   return (
+    <div className="flex min-h-[calc(100vh-3.5rem)] relative">
+      {/* ── Permanent Mini Sidebar (Mobile Only) ── */}
+      <div className="lg:hidden w-14 shrink-0 bg-[#121214] border-r border-zinc-800/80 flex flex-col items-center py-4 sticky top-14 h-[calc(100vh-3.5rem)] z-30">
+        <button
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-xl transition-colors cursor-pointer border-none bg-transparent"
+        >
+          <Menu size={20} />
+        </button>
+      </div>
 
-    <div className="py-10 px-6 w-full lg:px-12 fade-up">
-      <div className="flex flex-col gap-8 items-start lg:flex-row lg:gap-12">
+      {/* Mobile Overlay */}
+      {isSidebarOpen && (
+        <div
+          className="lg:hidden fixed inset-0 top-14 left-14 bg-black/60 backdrop-blur-sm z-30"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
+      {/* ── Left Sidebar Drawer (Mobile) / Permanent Sidebar (Desktop) ── */}
+      <div className={`
+        fixed bottom-0 left-0 z-40 w-72 bg-[#121214] border-r border-zinc-800 p-6 overflow-y-auto transform transition-transform duration-300 ease-in-out
+        lg:sticky lg:top-14 lg:h-[calc(100vh-3.5rem)] lg:translate-x-0 lg:z-20
+        ${isSidebarOpen ? 'translate-x-14 top-14 shadow-2xl lg:shadow-none' : '-translate-x-full top-14 lg:shadow-none'}
+      `}>
         
-        {/* ── Left Sidebar (Full Height) ── */}
-        <div className="space-y-10 w-full lg:pr-8 lg:w-60 lg:border-r shrink-0 min-h-[80vh] lg:border-zinc-800/50">
-          
-          {/* Exam Selector */}
-          <div className="flex flex-col gap-6">
-            {examGroups.map((grp) => (
-              <div key={grp}>
-                <h3 className="pl-3 mb-2 font-bold tracking-widest uppercase text-[10px] text-zinc-500">{fmtGroup(grp)}</h3>
-                <div className="flex flex-col gap-1.5">
-                  {Object.keys(structure[grp] || {}).map((ex) => {
-                    const isSelected = selectedGroup === grp && selectedExam === ex
-                    return (
-                      <button
-                        key={ex}
-                        onClick={() => handleSelectExam(grp, ex)}
-                        className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all cursor-pointer text-left w-full
-                          ${isSelected
-                            ? 'bg-indigo-500/10 text-indigo-400 ring-1 ring-indigo-500/20'
-                            : 'text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-200'
-                          }`}
-                      >
-                        <Layers size={16} className={isSelected ? 'text-indigo-400' : 'text-zinc-500'} />
-                        {fmtExam(ex)}
-                      </button>
-                    )
-                  })}
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Sidebar Header */}
+        <div className="flex items-center justify-between mb-8">
+          <span className="text-sm font-bold text-white tracking-tight">Select Exam</span>
+          <button
+            onClick={() => setIsSidebarOpen(false)}
+            className="lg:hidden p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors cursor-pointer border-none bg-transparent"
+          >
+            <X size={20} />
+          </button>
         </div>
 
-        {/* ── Right Content Area ── */}
-        <div className="flex-1 space-y-10 w-full min-w-0">
-          
-          {/* Hero greeting */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
-            <div>
-              <p className="mb-1.5 text-xs font-semibold tracking-widest text-indigo-400 uppercase">Dashboard</p>
-              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Hey, <span className="capitalize gradient-text">{displayName}</span>
-              </h1>
-              <p className="mt-2 text-sm text-zinc-400">Pick up where you left off or start a new chapter.</p>
+        {/* Exam Selector */}
+        <div className="flex flex-col gap-6">
+          {examGroups.map((grp) => (
+            <div key={grp}>
+              <h3 className="pl-3 mb-2 font-bold tracking-widest uppercase text-[10px] text-zinc-500">{fmtGroup(grp)}</h3>
+              <div className="flex flex-col gap-1.5">
+                {Object.keys(structure[grp] || {}).map((ex) => {
+                  const isSelected = selectedGroup === grp && selectedExam === ex
+                  return (
+                    <button
+                      key={ex}
+                      onClick={() => handleSelectExam(grp, ex)}
+                      className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all cursor-pointer text-left w-full
+                        ${isSelected
+                          ? 'bg-indigo-500/10 text-indigo-400 ring-1 ring-indigo-500/20'
+                          : 'text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-200'
+                        }`}
+                    >
+                      <Layers size={16} className={isSelected ? 'text-indigo-400' : 'text-zinc-500'} />
+                      {fmtExam(ex)}
+                    </button>
+                  )
+                })}
+              </div>
             </div>
-            <div className="flex gap-2 items-center py-1.5 px-3 font-medium rounded-full border text-[11px] bg-zinc-900/50 border-zinc-800 text-zinc-400">
-              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
-              {fmtGroup(selectedGroup)} {fmtExam(selectedExam)}
-            </div>
-          </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── Main Content Container ── */}
+      <div className="flex-1 w-full min-w-0">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 fade-up">
+          <div className="flex flex-col gap-8 items-start lg:gap-12">
+            
+            {/* ── Right Content Area ── */}
+            <div className="flex-1 space-y-10 w-full min-w-0">
+              
+              {/* Hero greeting */}
+              <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
+                <div>
+                  <p className="text-xs font-semibold tracking-widest text-indigo-400 uppercase mb-1.5">Dashboard</p>
+                  <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Hey, <span className="capitalize gradient-text">{displayName}</span>
+                  </h1>
+                  <p className="mt-2 text-sm text-zinc-400">Pick up where you left off or start a new chapter.</p>
+                </div>
+                <div className="flex gap-2 items-center py-1.5 px-3 font-medium rounded-full border text-[11px] bg-zinc-900/50 border-zinc-800 text-zinc-400">
+                  <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
+                  {fmtGroup(selectedGroup)} {fmtExam(selectedExam)}
+                </div>
+              </div>
 
           {/* Stats row */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 stagger">
@@ -239,6 +272,8 @@ export default function Dashboard() {
         )}
         </div>
       </div>
+    </div>
+    </div>
     </div>
     </div>
   )

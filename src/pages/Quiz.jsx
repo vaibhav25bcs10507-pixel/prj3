@@ -57,7 +57,7 @@ export default function Quiz() {
   const fmt = (s) => s.replace(/-/g, ' ')
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-5">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 py-4 sm:py-6 space-y-5">
 
       {/* ── Header ── */}
       <div className="flex items-center gap-3">
@@ -114,7 +114,7 @@ export default function Quiz() {
           {questions.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_268px] gap-4">
               <QuestionCard />
-              <div className="order-first lg:order-last">
+              <div>
                 <QuestionGrid />
               </div>
             </div>

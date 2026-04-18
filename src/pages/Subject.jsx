@@ -68,7 +68,7 @@ export default function Subject() {
 
   if (!loading && !divisions) {
     return (
-      <div className="w-full px-6 lg:px-12 py-10 fade-up">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 fade-up">
         <button
           onClick={() => navigate('/')}
           className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8 cursor-pointer w-fit group"
@@ -90,7 +90,7 @@ export default function Subject() {
   const totalChapters = Object.values(divisions).reduce((s, chs) => s + chs.length, 0)
 
   return (
-    <div className="w-full px-6 lg:px-12 py-10 fade-up max-w-7xl mx-auto">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 fade-up">
       {/* Back button */}
       <button
         onClick={() => navigate('/')}
@@ -132,10 +132,12 @@ export default function Subject() {
           return (
             <div key={division} className="space-y-6">
               {/* Division Header */}
-              <div className="flex items-center gap-3 border-b border-zinc-800/80 pb-4">
-                <div className={`w-3 h-3 rounded-full ${theme.dot}`} />
-                <h2 className="text-2xl font-bold text-white capitalize tracking-tight">{division.replace(/-/g, ' ')}</h2>
-                <span className="text-sm font-medium text-zinc-500 ml-2">{chapters.length} Chapters</span>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 border-b border-zinc-800/80 pb-4">
+                <div className="flex items-center gap-3">
+                  <div className={`w-3 h-3 rounded-full shrink-0 ${theme.dot}`} />
+                  <h2 className="text-xl sm:text-2xl font-bold text-white capitalize tracking-tight">{division.replace(/-/g, ' ')}</h2>
+                </div>
+                <span className="text-xs sm:text-sm font-medium text-zinc-500 sm:ml-2">{chapters.length} Chapters</span>
               </div>
 
               {/* Chapters Grid */}
