@@ -48,26 +48,28 @@ export default function QuestionGrid() {
       </div>
 
       {/* Grid */}
-      <div className="flex flex-wrap gap-1 max-h-[40vh] overflow-y-auto pr-1 pb-1">
-        {gridItems.map((item) => {
-          let cls = 'bg-zinc-800 text-zinc-500'
-          if (item.answered) cls = item.isCorrect ? 'bg-emerald-600/80 text-white' : 'bg-red-600/80 text-white'
+      <div className="max-h-[40vh] overflow-y-auto pr-3 pb-2 -mr-2 scrollbar-hide">
+        <div className="flex flex-wrap gap-1.5 p-1">
+          {gridItems.map((item) => {
+            let cls = 'bg-zinc-800 text-zinc-500'
+            if (item.answered) cls = item.isCorrect ? 'bg-emerald-600/80 text-white' : 'bg-red-600/80 text-white'
 
-          let ring = ''
-          if (item.bookmarked) ring += ' ring-1 ring-amber-400'
-          if (item.isCurrent)  ring += ' ring-2 ring-indigo-400 scale-110'
+            let ring = ''
+            if (item.bookmarked) ring += ' ring-1 ring-amber-400'
+            if (item.isCurrent)  ring += ' ring-2 ring-indigo-400 scale-110'
 
-          return (
-            <button
-              key={item.id}
-              onClick={() => handleClick(item.index)}
-              className={`w-8 h-8 rounded-lg text-[11px] font-bold flex items-center justify-center
-                          transition-all duration-100 cursor-pointer border-none hover:opacity-80 ${cls}${ring}`}
-            >
-              {item.index + 1}
-            </button>
-          )
-        })}
+            return (
+              <button
+                key={item.id}
+                onClick={() => handleClick(item.index)}
+                className={`w-8 h-8 rounded-lg text-[11px] font-bold flex items-center justify-center
+                            transition-all duration-100 cursor-pointer border-none hover:opacity-80 ${cls}${ring}`}
+              >
+                {item.index + 1}
+              </button>
+            )
+          })}
+        </div>
       </div>
 
       {/* Legend */}
