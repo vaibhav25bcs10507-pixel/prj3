@@ -63,7 +63,7 @@ export default function Quiz() {
       <div className="flex items-center gap-3">
         <button
           onClick={() => navigate(-1)}
-          className="w-8 h-8 flex items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-400 hover:text-white transition-all cursor-pointer"
+          className="w-8 h-8 flex items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-50 transition-all cursor-pointer"
           title="Go Back"
         >
           <ArrowLeft size={15} />

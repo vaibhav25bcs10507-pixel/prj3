@@ -71,7 +71,7 @@ export default function Subject() {
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 fade-up">
         <button
           onClick={() => navigate('/')}
-          className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8 cursor-pointer w-fit group"
+          className="flex items-center gap-2 text-zinc-400 hover:text-zinc-50 transition-colors mb-8 cursor-pointer w-fit group"
         >
           <div className="w-8 h-8 rounded-full bg-zinc-800/50 flex items-center justify-center group-hover:bg-zinc-800 transition-colors">
             <ChevronLeft size={16} />
@@ -94,7 +94,7 @@ export default function Subject() {
       {/* Back button */}
       <button
         onClick={() => navigate('/')}
-        className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8 cursor-pointer w-fit group"
+        className="flex items-center gap-2 text-zinc-400 hover:text-zinc-50 transition-colors mb-8 cursor-pointer w-fit group"
       >
         <div className="w-8 h-8 rounded-full bg-zinc-800/50 flex items-center justify-center group-hover:bg-zinc-800 transition-colors">
           <ChevronLeft size={16} />
@@ -112,7 +112,7 @@ export default function Subject() {
             <Layers size={14} className="text-zinc-600" />
             {examGroup?.toUpperCase()} · {exam?.replace(/-/g, ' ')}
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight capitalize">
+          <h1 className="text-3xl sm:text-4xl font-bold text-zinc-50 tracking-tight capitalize">
             {subjectName}
           </h1>
           <div className="flex flex-wrap items-center gap-3 mt-3">
@@ -135,7 +135,7 @@ export default function Subject() {
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 border-b border-zinc-800/80 pb-4">
                 <div className="flex items-center gap-3">
                   <div className={`w-3 h-3 rounded-full shrink-0 ${theme.dot}`} />
-                  <h2 className="text-xl sm:text-2xl font-bold text-white capitalize tracking-tight">{division.replace(/-/g, ' ')}</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold text-zinc-50 capitalize tracking-tight">{division.replace(/-/g, ' ')}</h2>
                 </div>
                 <span className="text-xs sm:text-sm font-medium text-zinc-500 sm:ml-2">{chapters.length} Chapters</span>
               </div>
@@ -155,7 +155,7 @@ export default function Subject() {
                         </div>
                         <button
                           onClick={() => startQuiz(division, chapter)}
-                          className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-zinc-400 hover:text-white bg-zinc-800/50 hover:bg-zinc-800 px-3 py-1.5 rounded-lg transition-colors cursor-pointer shrink-0"
+                          className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-zinc-400 hover:text-zinc-50 bg-zinc-800/50 hover:bg-zinc-800 px-3 py-1.5 rounded-lg transition-colors cursor-pointer shrink-0"
                           title="Practice entire chapter"
                         >
                           <PlayCircle size={14} className={theme.accent} />

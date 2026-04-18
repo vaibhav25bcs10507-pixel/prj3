@@ -27,7 +27,7 @@ export default function App() {
       <ThemeProvider>
         <AuthProvider>
           <QuizProvider>
-            <div className="min-h-screen bg-zinc-950 text-white">
+            <div className="min-h-screen bg-zinc-950 text-zinc-50">
               <Navbar />
               <Suspense fallback={<LoadingFallback />}>
               <Routes>

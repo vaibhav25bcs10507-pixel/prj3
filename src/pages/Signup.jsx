@@ -46,12 +46,12 @@ export default function Signup() {
         {/* Logo mark */}
         <div className="flex justify-center mb-8">
           <div className="w-12 h-12 rounded-2xl bg-indigo-500 flex items-center justify-center shadow-xl shadow-indigo-500/30">
-            <Zap size={22} className="text-white" fill="white" />
+            <Zap size={22} className="text-zinc-50" fill="white" />
           </div>
         </div>
 
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-white tracking-tight">Create account</h1>
+          <h1 className="text-2xl font-bold text-zinc-50 tracking-tight">Create account</h1>
           <p className="text-sm text-zinc-500 mt-1.5">Start your JEE prep journey today</p>
         </div>
 
@@ -80,7 +80,7 @@ export default function Signup() {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="you@example.com"
-              className="w-full bg-zinc-900 border border-zinc-800 hover:border-zinc-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-xl px-4 py-2.5 text-sm text-white placeholder-zinc-600 outline-none transition-all"
+              className="w-full bg-zinc-900 border border-zinc-800 hover:border-zinc-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-xl px-4 py-2.5 text-sm text-zinc-50 placeholder-zinc-600 outline-none transition-all"
             />
           </div>
 
@@ -95,7 +95,7 @@ export default function Signup() {
               onChange={(e) => setPassword(e.target.value)}
               required
               placeholder="At least 6 characters"
-              className="w-full bg-zinc-900 border border-zinc-800 hover:border-zinc-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-xl px-4 py-2.5 text-sm text-white placeholder-zinc-600 outline-none transition-all"
+              className="w-full bg-zinc-900 border border-zinc-800 hover:border-zinc-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-xl px-4 py-2.5 text-sm text-zinc-50 placeholder-zinc-600 outline-none transition-all"
             />
           </div>
 
@@ -110,7 +110,7 @@ export default function Signup() {
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
               placeholder="Re-enter your password"
-              className="w-full bg-zinc-900 border border-zinc-800 hover:border-zinc-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-xl px-4 py-2.5 text-sm text-white placeholder-zinc-600 outline-none transition-all"
+              className="w-full bg-zinc-900 border border-zinc-800 hover:border-zinc-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-xl px-4 py-2.5 text-sm text-zinc-50 placeholder-zinc-600 outline-none transition-all"
             />
           </div>
 

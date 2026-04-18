@@ -1,7 +1,7 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { useTheme } from '../context/ThemeContext'
-import { LogOut, Zap, LayoutDashboard, BookOpen, Palette } from 'lucide-react'
+import { LogOut, Zap, LayoutDashboard, BookOpen, Sun, Moon } from 'lucide-react'
 
 export default function Navbar() {
   const { user, signOut } = useAuth()
@@ -39,9 +39,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex gap-2 items-center no-underline group">
             <div className="flex justify-center items-center w-7 h-7 bg-indigo-500 rounded-lg shadow-lg transition-shadow shadow-indigo-500/30 group-hover:shadow-indigo-500/50">
-              <Zap size={14} className="text-white" fill="white" />
+              <Zap size={14} className="text-zinc-50" fill="white" />
             </div>
-            <span className="text-sm font-bold tracking-tight text-white">QuizVault</span>
+            <span className="text-sm font-bold tracking-tight text-zinc-50">QuizVault</span>
           </Link>
 
           {/* Right */}
@@ -53,7 +53,7 @@ export default function Navbar() {
                   title="Toggle Theme"
                   className="flex gap-1.5 items-center p-1.5 text-sm font-medium bg-transparent rounded-lg border-none transition-all cursor-pointer text-zinc-500 hover:text-indigo-400 hover:bg-indigo-500/10 mr-1"
                 >
-                  <Palette size={16} />
+                  {theme === 'cherry' ? <Sun size={16} /> : <Moon size={16} />}
                 </button>
                 {navLink('/', 'Dashboard', LayoutDashboard)}
                 {pathname.startsWith('/quiz') && (

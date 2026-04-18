@@ -34,7 +34,7 @@ function StatCard({ value, label, sub, colorClass, icon: _IconComponent }) {
         <_IconComponent size={18} />
       </div>
       <div>
-        <p className="text-2xl font-bold tracking-tight text-white">{value}</p>
+        <p className="text-2xl font-bold tracking-tight text-zinc-50">{value}</p>
         <p className="mt-1 text-xs font-bold tracking-widest uppercase text-zinc-500">{label}</p>
         {sub && <p className="mt-0.5 text-[11px] text-zinc-500">{sub}</p>}
       </div>
@@ -122,7 +122,7 @@ export default function Dashboard() {
       <div className="lg:hidden w-14 shrink-0 bg-zinc-900 border-r border-zinc-800/80 flex flex-col items-center py-4 sticky top-14 h-[calc(100vh-3.5rem)] z-30">
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-          className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-xl transition-colors cursor-pointer border-none bg-transparent"
+          className="p-2 text-zinc-400 hover:text-zinc-50 hover:bg-zinc-800 rounded-xl transition-colors cursor-pointer border-none bg-transparent"
         >
           <Menu size={20} />
         </button>
@@ -145,10 +145,10 @@ export default function Dashboard() {
         
         {/* Sidebar Header */}
         <div className="flex items-center justify-between mb-8">
-          <span className="text-sm font-bold text-white tracking-tight">Select Exam</span>
+          <span className="text-sm font-bold text-zinc-50 tracking-tight">Select Exam</span>
           <button
             onClick={() => setIsSidebarOpen(false)}
-            className="lg:hidden p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors cursor-pointer border-none bg-transparent"
+            className="lg:hidden p-2 text-zinc-400 hover:text-zinc-50 hover:bg-zinc-800 rounded-lg transition-colors cursor-pointer border-none bg-transparent"
           >
             <X size={20} />
           </button>
@@ -195,7 +195,7 @@ export default function Dashboard() {
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
                 <div>
                   <p className="text-xs font-semibold tracking-widest text-indigo-400 uppercase mb-1.5">Dashboard</p>
-                  <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                  <h1 className="text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl">
                     Hey, <span className="capitalize gradient-text">{displayName}</span>
                   </h1>
                   <p className="mt-2 text-sm text-zinc-400">Pick up where you left off or start a new chapter.</p>
@@ -234,7 +234,7 @@ export default function Dashboard() {
           {/* Course Syllabus */}
           <div>
             <div className="flex justify-between items-center mb-5">
-              <h2 className="text-lg font-bold tracking-tight text-white">Course Syllabus</h2>
+              <h2 className="text-lg font-bold tracking-tight text-zinc-50">Course Syllabus</h2>
             </div>
 
             {Object.keys(subjects).length === 0 ? (
@@ -258,7 +258,7 @@ export default function Dashboard() {
                     <Icon size={20} className={theme.accent} />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold tracking-tight text-white capitalize">{subject}</h3>
+                    <h3 className="text-base font-bold tracking-tight text-zinc-50 capitalize">{subject}</h3>
                     <div className="flex items-center mt-2">
                       <span className={`text-[10px] uppercase font-bold tracking-wider rounded-md px-1.5 py-0.5 ${theme.badge}`}>
                         {totalChapters} chapters
