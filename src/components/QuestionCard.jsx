@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useQuiz } from '../context/QuizContext'
 import MathRenderer from './MathRenderer'
 import OptionsList from './OptionsList'
@@ -20,7 +20,9 @@ export default function QuestionCard() {
   const [showExplanation, setShowExplanation] = useState(false)
 
   const questionId = currentQuestion?.id
-  useMemo(() => { setShowExplanation(false) }, [questionId])
+  useEffect(() => {
+    setShowExplanation(false)
+  }, [questionId])
 
   const progress  = currentQuestion ? progressMap.get(currentQuestion.id) : null
   const wasAnswered = isAnswered || (progress?.selectedOption != null)
@@ -52,15 +54,21 @@ export default function QuestionCard() {
   }, [currentQuestion, toggleReviewMark])
 
   // Keyboard navigation
-  useMemo(() => {
+  useEffect(() => {
     const handler = (e) => {
       const tag = e.target?.tagName?.toLowerCase()
       if (tag === 'input' || tag === 'textarea' || tag === 'select') return
-      if (e.key === 'ArrowLeft')  { e.preventDefault(); if (currentIndex > 0) setCurrentIndex(currentIndex - 1) }
-      if (e.key === 'ArrowRight') { e.preventDefault(); if (currentIndex < questions.length - 1) setCurrentIndex(currentIndex + 1) }
+      if (e.key === 'ArrowLeft')  {
+        e.preventDefault()
+        if (currentIndex > 0) setCurrentIndex(currentIndex - 1)
+      }
+      if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        if (currentIndex < questions.length - 1) setCurrentIndex(currentIndex + 1)
+      }
     }
-    document.addEventListener('keydown', handler)
-    return () => document.removeEventListener('keydown', handler)
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
   }, [currentIndex, questions.length, setCurrentIndex])
 
   if (!currentQuestion) {
