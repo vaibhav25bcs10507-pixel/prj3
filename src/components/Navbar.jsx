@@ -1,53 +1,66 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
-import { LogOut, BookOpen, LayoutDashboard } from 'lucide-react'
+import { LogOut, Zap, LayoutDashboard, BookOpen } from 'lucide-react'
 
 export default function Navbar() {
   const { user, signOut } = useAuth()
   const navigate = useNavigate()
+  const { pathname } = useLocation()
 
   const handleSignOut = async () => {
     await signOut()
     navigate('/login')
   }
 
+  const navLink = (to, label, Icon) => {
+    const active = pathname === to
+    return (
+      <Link
+        to={to}
+        className={`flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg transition-all no-underline
+          ${active
+            ? 'bg-indigo-500/15 text-indigo-300'
+            : 'text-zinc-400 hover:text-zinc-100 hover:bg-white/5'
+          }`}
+      >
+        <Icon size={15} />
+        <span className="hidden sm:inline">{label}</span>
+      </Link>
+    )
+  }
+
   return (
-    <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="sticky top-0 z-50 border-b border-zinc-800/60 bg-zinc-950/80 backdrop-blur-xl">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-14">
+
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 text-lg font-bold text-white no-underline">
-            <BookOpen size={22} className="text-indigo-400" />
-            <span>QuizVault</span>
+          <Link to="/" className="flex items-center gap-2 no-underline group">
+            <div className="w-7 h-7 rounded-lg bg-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-500/30 group-hover:shadow-indigo-500/50 transition-shadow">
+              <Zap size={14} className="text-white" fill="white" />
+            </div>
+            <span className="text-sm font-bold text-white tracking-tight">QuizVault</span>
           </Link>
 
-          {/* Right side */}
-          <div className="flex items-center gap-3">
+          {/* Right */}
+          <div className="flex items-center gap-1">
             {user ? (
               <>
-                <Link
-                  to="/"
-                  className="flex items-center gap-1.5 text-sm text-slate-300 hover:text-white no-underline transition-colors"
-                >
-                  <LayoutDashboard size={16} />
-                  <span className="hidden sm:inline">Dashboard</span>
-                </Link>
-                <Link
-                  to="/quiz"
-                  className="flex items-center gap-1.5 text-sm text-slate-300 hover:text-white no-underline transition-colors"
-                >
-                  <BookOpen size={16} />
-                  <span className="hidden sm:inline">Quiz</span>
-                </Link>
-                <div className="h-5 w-px bg-slate-700" />
-                <span className="text-xs text-slate-500 hidden md:inline">
+                {navLink('/', 'Dashboard', LayoutDashboard)}
+                {navLink('/quiz', 'Quiz', BookOpen)}
+
+                <div className="w-px h-5 bg-zinc-800 mx-1" />
+
+                <span className="text-xs text-zinc-600 hidden md:inline max-w-[160px] truncate">
                   {user.email}
                 </span>
+
                 <button
                   onClick={handleSignOut}
-                  className="flex items-center gap-1 text-sm text-slate-400 hover:text-red-400 transition-colors cursor-pointer bg-transparent border-none"
+                  title="Sign out"
+                  className="flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-red-400 px-2.5 py-1.5 rounded-lg hover:bg-red-500/10 transition-all cursor-pointer border-none bg-transparent"
                 >
-                  <LogOut size={16} />
+                  <LogOut size={15} />
                   <span className="hidden sm:inline">Sign Out</span>
                 </button>
               </>
@@ -55,13 +68,13 @@ export default function Navbar() {
               <>
                 <Link
                   to="/login"
-                  className="text-sm text-slate-300 hover:text-white no-underline transition-colors"
+                  className="text-sm font-medium text-zinc-400 hover:text-zinc-100 px-3 py-1.5 rounded-lg hover:bg-white/5 transition-all no-underline"
                 >
-                  Login
+                  Log in
                 </Link>
                 <Link
                   to="/signup"
-                  className="text-sm bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-md no-underline transition-colors"
+                  className="text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 px-3.5 py-1.5 rounded-lg transition-colors no-underline shadow-lg shadow-indigo-500/20"
                 >
                   Sign Up
                 </Link>

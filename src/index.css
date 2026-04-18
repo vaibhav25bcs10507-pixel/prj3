@@ -1,9 +1,49 @@
 @import "tailwindcss";
 
-/* MathJax rendered content inside question HTML */
-.question-html p {
-  margin-bottom: 0.5rem;
+/* ── Design tokens ──────────────────────────────────────────── */
+:root {
+  --bg:        #09090b;
+  --surface:   #111113;
+  --surface-2: #18181b;
+  --border:    #27272a;
+  --border-2:  #3f3f46;
+  --accent:    #6366f1;
+  --accent-hi: #818cf8;
+  --muted:     #71717a;
+  --text:      #fafafa;
+  --text-2:    #a1a1aa;
 }
+
+/* ── Base ───────────────────────────────────────────────────── */
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle grid texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(99,102,241,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+#root { position: relative; z-index: 1; }
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* ── MathJax / question HTML ─────────────────────────────────── */
+.question-html p { margin-bottom: 0.4rem; line-height: 1.75; }
+.question-html p:last-child { margin-bottom: 0; }
 .question-html img {
   max-width: 100%;
   height: auto;
@@ -11,18 +51,34 @@
   margin: 0.75rem auto;
   max-height: 40vh;
   border-radius: 0.5rem;
+  border: 1px solid var(--border);
 }
-.question-html table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0.75rem 0;
+.question-html table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.9em; }
+.question-html th, .question-html td { border: 1px solid var(--border-2); padding: 0.4rem 0.6rem; text-align: left; }
+.question-html th { background: var(--surface-2); font-weight: 600; }
+
+/* ── Animations ─────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-.question-html th,
-.question-html td {
-  border: 1px solid #475569;
-  padding: 0.5rem;
-  text-align: left;
+.fade-up { animation: fadeUp 0.3s ease both; }
+
+.stagger > *        { animation: fadeUp 0.3s ease both; }
+.stagger > *:nth-child(1) { animation-delay: 0ms; }
+.stagger > *:nth-child(2) { animation-delay: 50ms; }
+.stagger > *:nth-child(3) { animation-delay: 100ms; }
+.stagger > *:nth-child(4) { animation-delay: 150ms; }
+.stagger > *:nth-child(5) { animation-delay: 200ms; }
+.stagger > *:nth-child(6) { animation-delay: 250ms; }
+
+/* ── Gradient text ───────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #c7d2fe 0%, #a5b4fc 40%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.question-html th {
-  background-color: #1e293b;
-}
+
+/* ── Glow ────────────────────────────────────────────────────── */
+.glow { box-shadow: 0 0 32px rgba(99,102,241,.2), 0 0 8px rgba(99,102,241,.08); }
