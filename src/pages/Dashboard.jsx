@@ -81,7 +81,11 @@ export default function Dashboard() {
     let attempted = 0, correct = 0
     let bookmarked = 0, mistakes = 0
 
-    for (const [, p] of progressMap) {
+    const prefix = selectedGroup && selectedExam ? `${selectedGroup}/${selectedExam}/` : null
+
+    for (const [qId, p] of progressMap) {
+      if (prefix && !qId.startsWith(prefix)) continue;
+
       if (p.selectedOption != null) { 
         attempted++
         if (p.isCorrect) {
@@ -97,7 +101,7 @@ export default function Dashboard() {
       overallStats: { attempted, correct, accuracy },
       derivedStats: { bookmarked, mistakes }
     }
-  }, [progressMap])
+  }, [progressMap, selectedGroup, selectedExam])
 
   const displayName = user?.email?.split('@')[0] || 'Student'
 
