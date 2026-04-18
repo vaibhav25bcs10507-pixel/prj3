@@ -1,0 +1,1289 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Let $A$ and $B$ be real symmetric matrices of same size. Which one of the following options is correct?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$A^{\\top}=A^{-1}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\mathrm{AB}=\\mathrm{BA}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$(\\mathrm{AB})^{\\top}=\\mathrm{B}^{\\top} \\mathrm{A}^{\\top}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\mathrm{A}=\\mathrm{A}^{-1}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$A$ and $B$ are symmetrix <div></div>$A^{\\top}=A, B^{\\top}=B$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-me-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the system of linear equations</p><p>x + 2y + z = 5</p><p>2x + ay + 4z = 12</p><p>2x + 4y + 6z = b</p><p>The values of <b>a</b> and <b>b</b> such that there exists a non-trivial null space and the system admits infinite solutions are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>a = 8, b = 14</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>a = 4, b = 12</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>a = 8, b = 12</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>a = 4, b = 14</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the values of $ a $ and $ b $ for which the given system of linear equations has a non-trivial null space and admits infinite solutions, we first need to analyze the system of equations. The system is given by:</p>\n\n<p>1) $ x + 2y + z = 5 $</p>\n\n<p>2) $ 2x + ay + 4z = 12 $</p>\n\n<p>3) $ 2x + 4y + 6z = b $</p>\n\n<p>Let's represent this system in matrix form $ Ax = b $, where $ A $ is the coefficient matrix, $ x $ is the variable vector, and $ b $ is the constant vector. Thus:</p>\n\n<p>$$ A = \\begin{pmatrix} 1 & 2 & 1 \\\\ 2 & a & 4 \\\\ 2 & 4 & 6  \\end{pmatrix}, \\quad x = \\begin{pmatrix} x \\\\ y \\\\ z  \\end{pmatrix}, \\quad b = \\begin{pmatrix} 5 \\\\ 12 \\\\ b  \\end{pmatrix} $$</p>\n\n<p>For the system to have a non-trivial null space and admit infinite solutions, the coefficient matrix must be singular, meaning $ \\text{det}(A) = 0 $ and the rank condition must match the right-hand side.</p>\n\n<p>First, we will find the determinant of matrix $ A $:</p>\n\n<p>$$ \\text{det}(A) = \\begin{vmatrix} 1 & 2 & 1 \\\\ 2 & a & 4 \\\\ 2 & 4 & 6  \\end{vmatrix} $$</p>\n\n<p>Expanding along the first row:</p>\n\n<p>$$ \\text{det}(A) = 1 \\cdot \\begin{vmatrix} a & 4 \\\\ 4 & 6  \\end{vmatrix} - 2 \\cdot \\begin{vmatrix} 2 & 4 \\\\ 2 & 6  \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 2 & a \\\\ 2 & 4 \\end{vmatrix} $$</p>\n\n<p>Calculating each of the 2x2 minors:</p>\n\n<p>$$ \\begin{vmatrix} a & 4 \\\\ 4 & 6  \\end{vmatrix} = a \\cdot 6 - 4 \\cdot 4 = 6a - 16 $$</p>\n\n<p>$$ \\begin{vmatrix} 2 & 4 \\\\ 2 & 6  \\end{vmatrix} = 2 \\cdot 6 - 4 \\cdot 2 = 12 - 8 = 4 $$</p>\n\n<p>$$ \\begin{vmatrix} 2 & a \\\\ 2 & 4 \\end{vmatrix} = 2 \\cdot 4 - a \\cdot 2 = 8 - 2a $$</p>\n\n<p>So, the determinant is:</p>\n\n<p>$$ \\text{det}(A) = 1 \\cdot (6a - 16) - 2 \\cdot 4 + 1 \\cdot (8 - 2a) = 6a - 16 - 8 + 8 - 2a = 4a - 16 $$</p>\n\n<p>For the matrix to be singular, we must have:</p>\n\n<p>$$ 4a - 16 = 0 \\quad \\Rightarrow \\quad a = 4 $$</p>\n\n<p>Now substitute $ a = 4 $ into the coefficient matrix:</p>\n\n<p>$$ A = \\begin{pmatrix} 1 & 2 & 1 \\\\ 2 & 4 & 4 \\\\ 2 & 4 & 6  \\end{pmatrix} $$</p>\n\n<p>We should also verify if $ b $ satisfies the condition for infinite solutions. The reduced row echelon form (RREF) should indicate this:</p>\n\n<p>Perform row operations to reduce $ A $ with $ a = 4 $:</p>\n\n<p>$$ \\begin{aligned} R2 \\leftarrow R2 - 2R1 & : \\begin{pmatrix} 1 & 2 & 1 \\\\ 0 & 0 & 2 \\\\ 2 & 4 & 6  \\end{pmatrix} \\\\ R3 \\leftarrow R3 - 2R1 & : \\begin{pmatrix} 1 & 2 & 1 \\\\ 0 & 0 & 2 \\\\ 0 & 0 & 4  \\end{pmatrix} \\\\ R3 \\leftarrow R3 - 2R2 & : \\begin{pmatrix} 1 & 2 & 1 \\\\ 0 & 0 & 2 \\\\ 0 & 0 & 0  \\end{pmatrix} \\end{aligned} $$</p>\n\n<p>The rank of the coefficient matrix is 2 because there are 2 non-zero rows. For consistency, the augmented matrix's rank must also be 2, leading to:</p>\n\n<p>$$ \\begin{pmatrix} 1 & 2 & 1 & | & 5 \\\\ 0 & 0 & 2 & | & 2 \\\\ 0 & 0 & 0 & | & (b - 2 \\cdot 2)  \\end{pmatrix} = \\begin{pmatrix} 1 & 2 & 1 & | & 5 \\\\ 0 & 0 & 2 & | & 2 \\\\ 0 & 0 & 0 & | & (b - 4)  \\end{pmatrix} $$</p>\n\n<p>For the system to admit infinite solutions:</p>\n\n<p>$$ b - 4 = 0 \\quad \\Rightarrow \\quad b = 4 $$</p>\n\n<p>Therefore, the unique set of values $ a = 4 $ and $ b = 14 $ ensures the system has a non-trivial null space and admits infinite solutions. So the correct answer is:</p>\n\n<p>Option D</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-me-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>A linear transformation maps a point (𝑥, 𝑦) in the plane to the point (𝑥̂, 𝑦̂) according to the rule</p>\n\n<p>𝑥̂ = 3𝑦, 𝑦̂ = 2𝑥.</p>\n\n<p>Then, the disc 𝑥<sup>2</sup> + 𝑦<sup>2</sup> ≤ 1 gets transformed to a region with an area equal to _________ . (Rounded off to two decimals)</p>\n\n<p>Use π = 3.14.&nbsp;</p>\n",
+    "options": [],
+    "correct_options": [],
+    "explanation": "<p><strong>Given that,</strong></p>\n\n<p>𝑥̂ = 3𝑦 and 𝑦̂ = 2𝑥</p>\n\n<p>Therefore,</p>\n\n<p>y = 𝑥̂ / 3 and x = 𝑦̂ / 2</p>\n\n<p>The given region is:</p>\n\n<p>x<sup>2</sup> + y<sup>2</sup> ≤ 1</p>\n\n<p>Substitute:</p>\n\n<p>(𝑦̂ / 2)<sup>2</sup> + (𝑥̂ / 3)<sup>2</sup> ≤ 1</p>\n\n<p>(𝑦̂ <sup>2</sup> / 4) + (𝑥̂ <sup>2</sup> / 9) ≤ 1</p>\n\n<p>This is the equation of an ellipse with a semi-major axis, a = 3, and a semi-minor axis, b = 2. Thus, the area of the transformed region is:</p>\n\n<p>A = πab = 6π ≃ 18.84 units</p>",
+    "answer": "18.80TO18.90",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-me-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "If A =&nbsp;<span class=\"math-tex\">$\\begin{bmatrix} 10 &amp; 2k + 5 \\\\\\ 3k - 3 &amp; k + 5 \\end{bmatrix} $</span>&nbsp;is a symmetric matrix, the value of k is _______.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "-0.4"
+      },
+      {
+        "identifier": "D",
+        "content": "<span class=\"math-tex\">$\\frac{1 + \\sqrt{1561}}{12}$</span>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "explanation": "<p>Given : Matrix $ A = \\begin{bmatrix} 10 & 2k + 5 \\\\ 3k - 3 & k + 5 \\end{bmatrix} $ is symmetric.</p>\n\n<p>A matrix $ [A] = \\begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{bmatrix} $ is symmetric if $ [A] = [A^T] $, which means $ a_{12} = a_{21} $.</p>\n\n<p>Therefore:</p>\n\n<p>$  \\begin{aligned} & 2k + 5 = 3k - 3 \\\\ & 5 + 3 = 3k - 2k \\\\ & k = 8 \\\\ \\end{aligned}  $</p>\n\n<p>Hence, the correct value of $ k $ is 8.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The product of eigenvalues of the matrix $$P$$ is $$P = \\left[ {\\matrix{\n   2 &amp; 0 &amp; 1  \\cr \n   4 &amp; { - 3} &amp; 3  \\cr \n   0 &amp; 2 &amp; { - 1}  \\cr \n\n } } \\right]$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-6$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$6$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$-2$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The determinant of a $$2 \\times 2$$ matrix is $$50.$$ If one eigenvalue of the matrix is $$10,$$ the other eigenvalue is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "5 ",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The condition for which the eigenvalues of the matrix $$A = \\left[ {\\matrix{\n   2 &amp; 1  \\cr \n   1 &amp; k  \\cr \n\n } } \\right]$$ are positive, is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$k &gt; 1/2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$k &gt; -2$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$k &gt; 0$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$k &lt;  - 1/2$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The solution to the system of equations is $$\\left[ {\\matrix{\n   2 &amp; 5  \\cr \n   { - 4} &amp; 3  \\cr \n\n } } \\right]\\left\\{ {\\matrix{\n   x  \\cr \n   y  \\cr \n\n } } \\right\\} = \\left\\{ {\\matrix{\n   2  \\cr \n   { - 30}  \\cr \n\n } } \\right\\}$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$6, 2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-6, 2$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-6, -2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6, -2$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A real square matrix $$A$$ is called skew-symmetric if ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${A^T} = A$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${A^T} = {A^{ - 1}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${A^T} =  - A$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${A^T} = A + {A^{ - 1}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "If any two columns of a determinant $$P = \\left| {\\matrix{\n   4 &amp; 7 &amp; 8  \\cr \n   3 &amp; 1 &amp; 5  \\cr \n   9 &amp; 6 &amp; 2  \\cr \n\n } } \\right|$$ are interchanged, which one of the following statements regarding the value of the determinant is CORRECT? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "absolute value remains unchanged but sign will change. "
+      },
+      {
+        "identifier": "B",
+        "content": "Both absolute valu and sign will change  "
+      },
+      {
+        "identifier": "C",
+        "content": "Absolute value will change but sign will not change."
+      },
+      {
+        "identifier": "D",
+        "content": "Both absolute value and sign will remain unchanged. "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The lowest eigen value of the $$2 \\times 2$$ matrix $$\\left[ {\\matrix{\n   4 &amp; 2  \\cr \n   1 &amp; 3  \\cr \n\n } } \\right]$$ is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "At least one eigenvalue of a singular matrix is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "positive "
+      },
+      {
+        "identifier": "B",
+        "content": "zero "
+      },
+      {
+        "identifier": "C",
+        "content": "negative "
+      },
+      {
+        "identifier": "D",
+        "content": "imaginary"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following describes the relationship among the three vectors,  $$\\widehat i + \\widehat j + \\widehat k,\\,\\,2\\widehat i + 3\\widehat j + \\widehat k$$ and $$5\\widehat i + 6\\widehat j + 4\\widehat k?$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The vectors are mutually perpendicular "
+      },
+      {
+        "identifier": "B",
+        "content": "The vectors are linearly dependent "
+      },
+      {
+        "identifier": "C",
+        "content": "The vectors are linearly independent "
+      },
+      {
+        "identifier": "D",
+        "content": "The vectors are unit vectors "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Given that the determinant of the matrix $$\\left[ {\\matrix{\n   1 &amp; 3 &amp; 0  \\cr \n   2 &amp; 6 &amp; 4  \\cr \n   { - 1} &amp; 0 &amp; 2  \\cr \n\n } } \\right]$$   is $$-12$$, the determinant of the matrix $$\\left[ {\\matrix{\n   2 &amp; 6 &amp; 0  \\cr \n   4 &amp; {12} &amp; 8  \\cr \n   { - 2} &amp; 0 &amp; 4  \\cr \n\n } } \\right]$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-96$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-24$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$24$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$96$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the  following equations is a correct identity for arbitrary $$3 \\times 3$$ real matrices $$P,Q$$ and $$R$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P(Q+R)=PQ+RP$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\left( {P - Q} \\right)^2} = {P^2} - 2PQ + {Q^2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\det \\,\\,\\left( {P + Q} \\right) = \\det \\,P + \\det \\,Q$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\left( {P + Q} \\right)^2} = {P^2} + PQ + QP + {Q^2}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a $$3 \\times 3$$ real symmetric matrix $$S$$ such that two of its eigen values are $$a \\ne 0,$$ $$b\\,\\, \\ne 0$$ with respective eigen vectors $$\\left[ {\\matrix{\n   {{x_1}}  \\cr \n   {{x_2}}  \\cr \n   {{x_3}}  \\cr \n\n } } \\right],\\left[ {\\matrix{\n   {{y_1}}  \\cr \n   {{y_2}}  \\cr \n   {{y_3}}  \\cr \n\n } } \\right].$$ If $$a\\, \\ne b$$ then $${x_1}{y_1} + {x_2}{y_2} + {x_3}{y_3}$$ equals",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$b$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$ab$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The eigen values of a symmetric matrix are all ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "complex with non-zero positive imaginary part. "
+      },
+      {
+        "identifier": "B",
+        "content": "complex with non-zero negative imaginary part. "
+      },
+      {
+        "identifier": "C",
+        "content": "real "
+      },
+      {
+        "identifier": "D",
+        "content": "pure imaginary "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-me-2013",
+    "difficulty": null
+  },
+  {
+    "content": "For the matrix $$A = \\left[ {\\matrix{\n   5 &amp; 3  \\cr \n   1 &amp; 3  \\cr \n\n } } \\right],$$ ONE of the normalized eigen vectors is given as  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\matrix{\n   {{1 \\over 2}}  \\cr \n   {{{\\sqrt 3 } \\over 2}}  \\cr \n\n } } \\right)$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {\\matrix{\n   {{1 \\over {\\sqrt 2 }}}  \\cr \n   {{{ - 1} \\over {\\sqrt 2 }}}  \\cr \n\n } } \\right)$$  "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\matrix{\n   {{3 \\over {\\sqrt {10} }}}  \\cr \n   {{{ - 1} \\over {\\sqrt {10} }}}  \\cr \n\n } } \\right)$$  "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {\\matrix{\n   {{1 \\over 5}}  \\cr \n   {{2 \\over {\\sqrt 5 }}}  \\cr \n\n } } \\right)$$  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-me-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following system of equations \n<br>$$2{x_1} + {x_2} + {x_3} = 0,\\,\\,{x_2} - {x_3} = 0$$ and $${x_1} + {x_2} = 0.$$ \n<br>This system has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a unique  solution "
+      },
+      {
+        "identifier": "B",
+        "content": "no solution "
+      },
+      {
+        "identifier": "C",
+        "content": "infinite number of solutions "
+      },
+      {
+        "identifier": "D",
+        "content": "five solutions "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-me-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Eigen values of a real symmetric matrix are always ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "positive "
+      },
+      {
+        "identifier": "B",
+        "content": "negative "
+      },
+      {
+        "identifier": "C",
+        "content": "real "
+      },
+      {
+        "identifier": "D",
+        "content": "$$162.$$ $$\\left[ {\\rm A} \\right]$$ is a square "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-me-2011",
+    "difficulty": null
+  },
+  {
+    "content": "One of the eigen vector of the matrix $$A = \\left[ {\\matrix{\n   2 &amp; 2  \\cr \n   1 &amp; 3  \\cr \n\n } } \\right]$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\matrix{\n   2  \\cr \n   { - 1}  \\cr \n\n } } \\right]$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\matrix{\n   2  \\cr \n   1  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\matrix{\n   4  \\cr \n   1  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   1  \\cr \n   { - 1}  \\cr \n\n } } \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-me-2010",
+    "difficulty": null
+  },
+  {
+    "content": "For a matrix $$\\left[ M \\right] = \\left[ {\\matrix{\n   {{3 \\over 5}} &amp; {{4 \\over 5}}  \\cr \n   x &amp; {{3 \\over 5}}  \\cr \n\n } } \\right].$$ The transpose of the matrix is equal to the inverse of the matrix, $${\\left[ M \\right]^T} = {\\left[ M \\right]^{ - 1}}.$$ The value of $$x$$ is given by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${ - {4 \\over 5}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${ - {3 \\over 5}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{3 \\over 5}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{4 \\over 5}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-me-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The matrix $$\\left[ {\\matrix{\n   1 &amp; 2 &amp; 4  \\cr \n   3 &amp; 0 &amp; 6  \\cr \n   1 &amp; 1 &amp; P  \\cr \n\n } } \\right]$$ has one eigen value to $$3.$$ The sum of the other two eigen values is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$p$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$p-1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$p-2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$p-3$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "For what values of <b>'a'</b> if any will the following system of equations in $$x, y$$ and $$z$$ have a solution?\n$$$2x+3y=4,$$$\n$$$x+y+z=4,$$$\n$$$x+2y-z=a$$$\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "any real number "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "there is no such value "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "If a square matrix $$A$$ is real and symmetric then the eigen values ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "are always real "
+      },
+      {
+        "identifier": "B",
+        "content": "are always real and positive "
+      },
+      {
+        "identifier": "C",
+        "content": "are always real and non-negative "
+      },
+      {
+        "identifier": "D",
+        "content": "occur in complex conjugate pairs "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The number of linearly independent eigen vectors of $$\\left[ {\\matrix{\n   2 &amp; 1  \\cr \n   0 &amp; 2  \\cr \n\n } } \\right]$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "infinite "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  },
+  {
+    "content": "$$A$$ is a $$3 \\times 4$$ matrix and $$AX=B$$ is an inconsistent system of equations. The highest possible rank of $$A$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$4$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The sum of the eigen values of the matrix $$\\left[ {\\matrix{\n   1 &amp; 1 &amp; 3  \\cr \n   1 &amp; 5 &amp; 1  \\cr \n   3 &amp; 1 &amp; 1  \\cr \n\n } } \\right]$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$7$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$9$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$18$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-me-2004",
+    "difficulty": null
+  },
+  {
+    "content": "For what value of $$x$$ will the matrix given below become singular? $$\\left[ {\\matrix{\n   8 &amp; x &amp; 0  \\cr \n   4 &amp; 0 &amp; 2  \\cr \n   {12} &amp; 6 &amp; 0  \\cr \n\n } } \\right]$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-me-2004",
+    "difficulty": null
+  },
+  {
+    "content": "For the following set of simultaneous equations\n$$$1.5x - 0.5y + z = 2$$$\n$$$4x + 2y + 3z = 9$$$\n$$$7x + y + 5z = 10$$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the solution is unique"
+      },
+      {
+        "identifier": "B",
+        "content": "infinitely many solutions exist"
+      },
+      {
+        "identifier": "C",
+        "content": "the equations are incompatible "
+      },
+      {
+        "identifier": "D",
+        "content": "finite many solutions exist"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-me-1997",
+    "difficulty": null
+  },
+  {
+    "content": "In the Gauss - elimination for a solving system of linear algebraic equations, triangularization leads to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "diagonal matrix "
+      },
+      {
+        "identifier": "B",
+        "content": "lower triangular matrix "
+      },
+      {
+        "identifier": "C",
+        "content": "upper triangular matrix "
+      },
+      {
+        "identifier": "D",
+        "content": "singular matrix"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-me-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The eigen values of $$\\left[ {\\matrix{\n   1 &amp; 1 &amp; 1  \\cr \n   1 &amp; 1 &amp; 1  \\cr \n   1 &amp; 1 &amp; 1  \\cr \n\n } } \\right]$$ are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0,0,0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$0,0,1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$0,0,3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1,1,1$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-me-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Among the following, the pair of vectors orthogonal to each other is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {3,4,7} \\right],\\left[ {3,4,7} \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {1,0,0} \\right],\\left[ {1,1,0} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {1,0,2} \\right],\\left[ {0,5,0} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {1,1,1} \\right],\\left[ { - 1, - 1, - 1} \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-me-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Solve the system $$2x+3y+z=9,$$ $$4x+y=7,$$ $$x-3y-7z=6$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$X = \\left[ {\\matrix{\n   1  \\cr \n   3  \\cr \n   { - 2}  \\cr \n\n } } \\right]$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-me-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Find out the eigen value of the matrix $$A = \\left[ {\\matrix{\n   1 &amp; 0 &amp; 0  \\cr \n   2 &amp; 3 &amp; 1  \\cr \n   0 &amp; 2 &amp; 4  \\cr \n\n } } \\right]$$ for any one of the eigen  values, find out the corresponding eigen vector?",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\lambda  = 1,2,5$$ are the eigen values $$K\\left[ {\\matrix{\n   1  \\cr \n   { - 3/2}  \\cr \n   1  \\cr \n\n } } \\right]$$ is an eigen vector of matrix $$A$$ corresponding to $$\\lambda  = 1$$ for $$K \\ne 0$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-me-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The matrix $\\begin{bmatrix} 1 & a \\\\ 8 & 3 \\end{bmatrix}$ (where $a > 0$) has a negative eigenvalue if $a$ is greater than</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{3}{8}$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{1}{8}$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{1}{4}$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{1}{5}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve this problem, we need to find the eigenvalues of the matrix $$\\begin{bmatrix} 1 & a \\\\ 8 & 3 \\end{bmatrix}$$. The eigenvalues of a matrix $$A$$ are the solutions to the characteristic equation given by $$\\det(A - \\lambda I) = 0$$, where $$\\lambda$$ is an eigenvalue and $$I$$ is the identity matrix.</p>\n\n<p>Let's compute the characteristic equation for the given matrix:</p>\n\n<p>First, we form the matrix $$A - \\lambda I$$:</p>\n\n<p>$$\\begin{bmatrix} 1 & a \\\\ 8 & 3 \\end{bmatrix} - \\lambda \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 - \\lambda & a \\\\ 8 & 3 - \\lambda \\end{bmatrix}$$</p>\n\n<p>The determinant of this matrix is:</p>\n\n<p>$$\\det(\\begin{bmatrix} 1 - \\lambda & a \\\\ 8 & 3 - \\lambda \\end{bmatrix}) = (1 - \\lambda)(3 - \\lambda) - 8a$$</p>\n\n<p>Expanding this determinant, we get:</p>\n\n<p>$$f(\\lambda) = (1 - \\lambda)(3 - \\lambda) - 8a$$</p>\n\n<p>$$f(\\lambda) = 3 - 4\\lambda + \\lambda^2 - 8a$$</p>\n\n<p>Rearranging the terms, we obtain the quadratic equation:</p>\n\n<p>$$\\lambda^2 - 4\\lambda + (3 - 8a) = 0$$</p>\n\n<p>We need to find the conditions under which one of the eigenvalues is negative. The eigenvalues of a quadratic equation $$ax^2 + bx + c$$ are given by the quadratic formula:</p>\n\n<p>$$\\lambda = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$</p>\n\n<p>In our case, $$a = 1$$, $$b = -4$$, and $$c = 3 - 8a$$, so the eigenvalues are:</p>\n\n<p>$$\\lambda = \\frac{4 \\pm \\sqrt{16 - 4(1)(3 - 8a)}}{2}$$</p>\n\n<p>$$\\lambda = \\frac{4 \\pm \\sqrt{16 - 12 + 32a}}{2}$$</p>\n\n<p>$$\\lambda = \\frac{4 \\pm \\sqrt{4 + 32a}}{2}$$</p>\n\n<p>$$\\lambda = 2 \\pm \\sqrt{1 + 8a}$$</p>\n\n<p>For one of the eigenvalues to be negative, we need:</p>\n\n<p>$$2 - \\sqrt{1 + 8a} < 0$$</p>\n\n<p>Subtracting 2 from both sides, we get:</p>\n\n<p>$$-\\sqrt{1 + 8a} < -2$$</p>\n\n<p>Multiplying both sides by -1, we get:</p>\n\n<p>$$\\sqrt{1 + 8a} > 2$$</p>\n\n<p>Squaring both sides to eliminate the square root, we get:</p>\n\n<p>$$1 + 8a > 4$$</p>\n\n<p>Subtracting 1 from both sides, we get:</p>\n\n<p>$$8a > 3$$</p>\n\n<p>Dividing both sides by 8, we get:</p>\n\n<p>$$a > \\frac{3}{8}$$</p>\n\n<p>Therefore, the matrix has a negative eigenvalue if $$a > \\frac{3}{8}$$, which corresponds to Option A.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-me-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "A is a 3&nbsp;× 5 real matrix of rank 2. For the set of homogeneous equations Ax = 0, where 0 is a zero vector and x is a vector of unknown variables, which of the following is/are true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The given set of equations will have a unique solution."
+      },
+      {
+        "identifier": "B",
+        "content": "The given set of equations will be satisfied by a zero vector of appropriate size."
+      },
+      {
+        "identifier": "C",
+        "content": "The given set of equations will have infinitely many solutions."
+      },
+      {
+        "identifier": "D",
+        "content": "The given set of equations will have many but a finite number of solutions."
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "explanation": "<p>For the set of homogeneous equations $ Ax = 0 $, where $ A $ is a $ 3 \\times 5 $ real matrix of rank 2, here is an analysis of the solution set :</p>\n\n<p><strong>Matrix Information</strong> :</p>\n\n\n<p><p>$ A $ is a $ 3 \\times 5 $ real matrix.</p></p>\n<p><p>The given matrix rank, $\\rho(A)$, is 2.</p></p>\n<p><p>This implies there are two linearly independent rows.</p></p>\n\n\n<p><p><strong>Maximal Rank Condition</strong> :</p>\n<p>Since $ A $ is $ 3 \\times 5 $ :</p>\n<p>$    [A]_{3 \\times 5} \\Rightarrow \\rho(A) \\leq \\min(3, 5) \\Rightarrow \\rho(A) \\leq 3    $</p></p>\n<p><p><strong>Rank Analysis</strong> :</p>\n<p>Given: $\\rho(A) = 2$, meaning :</p></p>\n\n\n<p><p>There are 2 linearly independent rows.</p></p>\n<p><p>The determinant of any $ 3 \\times 3 $ sub-matrix of $ A $ is zero ($|A|_{3 \\times 3} = 0$).</p></p>\n\n\n<p><strong>Solution Implications</strong> :</p>\n\n\n<p><p>Since the rank $\\rho(A) = 2$ and the number of unknowns in $ x $ is 5, the system of equations $ Ax = 0 $ will not have a unique solution.</p></p>\n<p><p>The system will have infinitely many solutions because the dimension of the solution space is $ 5 - 2 = 3 $.</p></p>\n<p><p>Any homogeneous system $ Ax = 0 $ is always satisfied by the zero vector of appropriate size $ x = 0 $.</p></p>\n\n<p>Therefore, based on this analysis :</p>\n\n<p><p>The given set of equations will have the zero vector as a solution (B).</p></p>\n<p><p>The given set of equations will have infinitely many solutions (C).</p></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "If the sum and product of eigenvalues of a 2&nbsp;× 2 real matrix&nbsp;<span class=\"math-tex\">$\\begin{bmatrix}3&amp;p\\\\\\ p&amp;q\\end{bmatrix} $</span>&nbsp;are 4 and -1&nbsp;respectively, then |p| is _______ (in integer).",
+    "options": [],
+    "correct_options": [],
+    "explanation": "<p>Given a 2 × 2 real matrix $A$:</p>\n<p>$ A = \\begin{bmatrix} 3 & p \\\\ p & q \\end{bmatrix} $</p>\n<p>We know the following properties about the eigenvalues of the matrix:</p>\n\n<p><p>The <strong>sum</strong> of the eigenvalues is 4.</p></p>\n<p><p>The <strong>product</strong> of the eigenvalues is -1.</p></p>\n\n<p>Recall some important properties of eigenvalues for a matrix $A$:</p>\n\n<p><p>The <strong>sum</strong> of the eigenvalues is equal to the <strong>trace</strong> of the matrix $A$.</p></p>\n<p><p>The <strong>product</strong> of the eigenvalues is equal to the <strong>determinant</strong> of the matrix $A$.</p></p>\n\n<p>Starting with the given matrix $A$:</p>\n<p>$ \\text{Trace of } A = 3 + q $</p>\n<p>Given the sum of eigenvalues:</p>\n<p>$ \\lambda_1 + \\lambda_2 = 4 $</p>\n<p>Thus,</p>\n<p>$ 3 + q = 4 $</p>\n<p>$ q = 4 - 3 $</p>\n<p>$ q = 1 $</p>\n<p>Next, consider the product of the eigenvalues:</p>\n<p>$ \\lambda_1 \\cdot \\lambda_2 = \\text{det}(A) = 3 \\cdot 1 - p^2 = -1 $</p>\n<p>So,</p>\n<p>$ 3 - p^2 = -1 $</p>\n<p>$ -p^2 = -1 - 3 $</p>\n<p>$ -p^2 = -4 $</p>\n<p>$ p^2 = 4 $</p>\n<p>This gives:</p>\n<p>$ p = \\pm 2 $</p>\n<p>Therefore, the absolute value of $p$ is:</p>\n<p>$ |p| = 2 $</p>\n<p>Hence, $|p|$ is 2.</p>",
+    "answer": "2",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p style=\"\">The system of linear equations in real (x, y) given by</p>\n\n<p style=\"\"><span class=\"math-tex\">$\\rm \\begin{pmatrix} \\rm x &amp; \\rm y \\end{pmatrix} \\begin{bmatrix} 2 &amp; 5- 2 α \\\\\\ α &amp; 1 \\end{bmatrix} = \\rm \\begin{pmatrix} \\rm 0 &amp; \\rm 0 \\end{pmatrix} $</span></p>\n\n<p style=\"\">involves a real parameter&nbsp;α&nbsp;and has infinitely many non-trivial solutions for special value(s) of&nbsp;α. Which one or more among the following options is/are non-trivial solution(s) of (x, y) for such special value(s) of α&nbsp;?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x = 2, y = −2"
+      },
+      {
+        "identifier": "B",
+        "content": "x = −1, y = 4"
+      },
+      {
+        "identifier": "C",
+        "content": "x = 1, y = 1"
+      },
+      {
+        "identifier": "D",
+        "content": "x = 4, y = −2"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "explanation": "<p>Given : The system of linear equations in real $(x, y)$,</p>\n\n<p>$$ \\left[\\begin{array}{ll} x & y \\end{array}\\right]\\left[\\begin{array}{cc} 2 & 5-2 \\alpha \\\\ \\alpha & 1 \\end{array}\\right]=\\left[\\begin{array}{ll} 0 & 0 \\end{array}\\right] $$ ..........(i)</p>\n\n<p>As we know that,</p>\n\n<p>System of linear equation,</p>\n\n<p>$$ A X=0 $$ ........(ii)</p>\n\n<p>By equation (i) and (ii), we get</p>\n\n<p>$$ \\operatorname{Matrix}[A]=\\left[\\begin{array}{cc} 2 & 5-2 \\alpha \\\\ \\alpha & 1 \\end{array}\\right] $$</p>\n\n<p>It has infinity many non-trivial solutions for special values of $\\alpha$.</p>\n\n<p>That means $\\operatorname{det}(A)$ will be zero.</p>\n\n<p>$$ \\begin{aligned} & \\operatorname{det}(A)=\\left|\\begin{array}{cc} 2 & 5-2 \\alpha \\\\ \\alpha & 1 \\end{array}\\right|=0 \\\\ & 2 \\times 1-(5-2 \\alpha) \\times \\alpha=0 \\\\ & 2-5 \\alpha+2 \\alpha^2=0 \\\\ & 2 \\alpha^2-5 \\alpha+2=0 \\\\ & \\alpha=2, \\frac{1}{2}  \\end{aligned} $$</p>\n\n<p>For $\\alpha=2$,</p>\n\n<p>$$ [A]=\\left[\\begin{array}{cc} 2 & 5-2 \\alpha \\\\ \\alpha & 1 \\end{array}\\right]=\\left[\\begin{array}{ll} 2 & 1 \\\\ 2 & 1 \\end{array}\\right] $$</p>\n\n<p>System of linear equation will be,</p>\n\n<p>$$ \\begin{aligned} & {\\left[\\begin{array}{ll} x & y \\end{array}\\right]_{1 \\times 2}\\left[\\begin{array}{ll} 2 & 1 \\\\\\\\ 2 & 1 \\end{array}\\right]_{2 \\times 2}=\\left[\\begin{array}{ll} 0 & 0 \\end{array}\\right]_{1 \\times 2}} \\\\\\\\ & 2 x+2 y=0 \\text { and } x+y=0 \\\\\\\\ & x=-y ........(iii)\\end{aligned} $$</p>\n\n<p>For $\\alpha=\\frac{1}{2}$,</p>\n\n<p>$$ [A]=\\left[\\begin{array}{cc} 2 & 5-2 \\times(1 / 2) \\\\ 1 / 2 & 1 \\end{array}\\right]=\\left[\\begin{array}{cc} 2 & 4 \\\\ 1 / 2 & 1 \\end{array}\\right] $$</p>\n\n<p>System of linear equation will be,</p>\n\n<p>$$ \\left[\\begin{array}{ll} x & y \\end{array}\\right]_{1 \\times 2}\\left[\\begin{array}{cc} 2 & 4 \\\\\\\\ 1 / 2 & 1 \\end{array}\\right]=\\left[\\begin{array}{ll} 0 & 0 \\end{array}\\right] $$</p>\n\n<p>$$ \\begin{aligned} & 2 x+\\frac{y}{2}=0 \\text { and } 4 x+y=0 \\\\\\\\ & 2 x=-\\frac{y}{2} \\\\\\\\ & 4 x=-y ...........(iv) \\end{aligned} $$</p>\n\n<p>For equation (iii) and (iv), only $x=-1, y=4$ and $x=2, y=-2$ are satisfied. \n<br/><br/>Hence, the correct option are (A, B).</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the matrix $$A = \\left[ {\\matrix{\n   {50} &amp; {70}  \\cr \n   {70} &amp; {80}  \\cr \n\n } } \\right]$$ whose eigenvectors corresponding to eigen values $${\\lambda _1}$$ and $${\\lambda _2}$$ are $${x_1} = \\left[ {\\matrix{\n   {70}  \\cr \n   {{\\lambda _1} - 50}  \\cr \n\n } } \\right]$$  and $${x_2} = \\left[ {\\matrix{\n   {{\\lambda _2} - 80}  \\cr \n   {70}  \\cr \n\n } } \\right],$$ respectively. The value of $$x_1^T{x_2}$$ is ________",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The number of linear independent eigenvectors of matrix $$A = \\left[ {\\matrix{\n   2 &amp; 1 &amp; 0  \\cr \n   0 &amp; 2 &amp; 0  \\cr \n   0 &amp; 0 &amp; 3  \\cr \n\n } } \\right]$$ is ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "For a given matrix $$P = \\left[ {\\matrix{\n   {4 + 3i} &amp; { - i}  \\cr \n   i &amp; {4 - 3i}  \\cr \n\n } } \\right],$$  where $$i = \\sqrt { - 1} ,$$  the inverse of matrix $$P$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {24}}\\left[ {\\matrix{\n   {4 - 3i} &amp; i  \\cr \n   { - i} &amp; {4 + 3i}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {25}}\\left[ {\\matrix{\n   i &amp; {4 - 3i}  \\cr \n   {4 + 3i} &amp; i  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over {24}}\\left[ {\\matrix{\n   {4 + 3i} &amp; { - i}  \\cr \n   i &amp; {4 - 3i}  \\cr \n \n } } \\right]$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over {25}}\\left[ {\\matrix{\n   {4 + 3i} &amp; { - i}  \\cr \n   i &amp; {4 - 3i}  \\cr \n\n } } \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Choose the CORRECT set of functions, which are linearly dependent. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sin x,\\,{\\sin ^2}x$$ and $${\\cos ^2}x$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\cos x,\\sin x$$ and $$\\tan x$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\cos \\,2x,{\\sin ^2}x$$ and $${\\cos ^2}x$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\cos \\,2x,\\sin x$$ and $$\\cos x$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-me-2013",
+    "difficulty": null
+  },
+  {
+    "content": "$$x+2y+z=4, 2x+y+2z=5, x-y+z=1$$ \n<br>The system of algebraic equations given above has  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a unique solution of $$x=1,y=1$$ and $$z=1$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "only the two solutions of $$x=1, y=1, z=1$$ and $$x=2, y=1, z=0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "infinite number of solutions.  "
+      },
+      {
+        "identifier": "D",
+        "content": "no feasible solution.  "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-me-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The eigen vectors of the matrix $$\\left[ {\\matrix{\n   1 &amp; 2  \\cr \n   0 &amp; 2  \\cr \n\n } } \\right]$$ are written in the form $$\\left[ {\\matrix{\n   1  \\cr \n   a  \\cr \n\n } } \\right]\\,\\,\\&amp; \\,\\,\\left[ {\\matrix{\n   1  \\cr \n   b  \\cr \n\n } } \\right].$$ What is $$a+b$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Multiplication of matrices $$E$$ and $$F$$ is $$G.$$ Matrices $$E$$ and $$G$$ are \n<br>$$E = \\left[ {\\matrix{\n   {\\cos \\theta } &amp; { - sin\\theta } &amp; 0  \\cr \n   {sin\\theta } &amp; {\\cos \\theta } &amp; 0  \\cr \n   0 &amp; 0 &amp; 1  \\cr \n\n } } \\right]$$ and $$G = \\left[ {\\matrix{\n   1 &amp; 0 &amp; 0  \\cr \n   0 &amp; 1 &amp; 0  \\cr \n   0 &amp; 0 &amp; 1  \\cr \n\n } } \\right]$$ \n<br>What is the matrix $$F?$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\matrix{\n   {\\cos \\theta } &amp; { - sin\\theta } &amp; 0  \\cr \n   {sin\\theta } &amp; {\\cos \\theta } &amp; 0  \\cr \n   0 &amp; 0 &amp; 1  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\matrix{\n   {\\cos \\theta } &amp; {\\cos \\theta } &amp; 0  \\cr \n   { - \\cos \\theta } &amp; {sin\\theta } &amp; 0  \\cr \n   0 &amp; 0 &amp; 1  \\cr \n\n } } \\right]\\,$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\matrix{\n   {\\cos \\theta } &amp; { - sin\\theta } &amp; 0  \\cr \n   { - sin\\theta } &amp; {\\cos \\theta } &amp; 0  \\cr \n   0 &amp; 0 &amp; 1  \\cr \n\n } } \\right]\\,$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   {sin\\theta } &amp; { - \\cos \\theta } &amp; 0  \\cr \n   {\\cos \\theta } &amp; {sin\\theta } &amp; 0  \\cr \n   0 &amp; 0 &amp; 1  \\cr \n\n } } \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-me-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Eigen values of a matrix $$S = \\left[ {\\matrix{\n   3 &amp; 2  \\cr \n   2 &amp; 3  \\cr \n\n } } \\right]$$ are $$5$$ and $$1.$$ What are the eigen values of the matrix $${S^2} = SS?$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ and $$25$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$6,4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5,1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2,10$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-me-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is an eigen vector of the matrix $$\\left[ {\\matrix{\n   5 &amp; 0 &amp; 0 &amp; 0  \\cr \n   0 &amp; 5 &amp; 0 &amp; 0  \\cr \n   0 &amp; 0 &amp; 2 &amp; 1  \\cr \n   0 &amp; 0 &amp; 3 &amp; 1  \\cr \n\n } } \\right]$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\left[ {\\matrix{\n   1 &amp; { - 2} &amp; 0 &amp; 0  \\cr \n\n } } \\right]^T}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\left[ {\\matrix{\n   0 &amp; {  0} &amp; 1 &amp; 0  \\cr \n\n } } \\right]^T}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\left[ {\\matrix{\n   1 &amp; { 0} &amp; 0 &amp; -2  \\cr \n\n } } \\right]^T}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\left[ {\\matrix{\n   1 &amp; { - 1} &amp; 2 &amp; 1  \\cr \n\n } } \\right]^T}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  }
+]

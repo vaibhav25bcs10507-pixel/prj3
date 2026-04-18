@@ -1,0 +1,1028 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "A 3-input majority logic gate has inputs $X, Y$ and $Z$. The output $F$ of the gate is logic ' 1 ' if two or more of the inputs are logic ' 1 '. The output $F$ is logic ' 0 ' if two or more of the inputs are logic '0'.\nWhich one of the following options is a Boolean expression of the output $F$ ?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$X Y+Y Z+Z X$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$X \\oplus Y \\oplus Z$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$X+Y+Z$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$X Y Z$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given inputs are, } $$</p>\n<p>$$ \\begin{array}{|c|c|c|c|} \\hline X &amp; Y &amp; Z &amp; F \\\\ \\hline 0 &amp; 0 &amp; 0 &amp; 0 \\\\ \\hline 0 &amp; 0 &amp; 1 &amp; 0 \\\\ \\hline 0 &amp; 1 &amp; 0 &amp; 0 \\\\ \\hline 0 &amp; 1 &amp; 1 &amp; 1 \\\\ \\hline 1 &amp; 0 &amp; 0 &amp; 0 \\\\ \\hline 1 &amp; 0 &amp; 1 &amp; 1 \\\\ \\hline 1 &amp; 1 &amp; 0 &amp; 1 \\\\ \\hline 1 &amp; 1 &amp; 1 &amp; 1 \\\\ \\hline \\end{array} $$</p>\n<p>$$ \\text { From 3-variable k-map: } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbet4lqn/52802826-fd48-4ae9-b44e-2bee4485c50b/aaa27100-3f88-11f0-b3f0-e1093d075446/file-jaoe38c1mbet4lqo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbet4lqn/52802826-fd48-4ae9-b44e-2bee4485c50b/aaa27100-3f88-11f0-b3f0-e1093d075446/file-jaoe38c1mbet4lqo.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Digital Circuits - Logic Gates Question 1 English Explanation\"></p>\n<p>$$ \\therefore \\quad F=y z+x y+x z $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>For the circuit shown below, the propagation delay of each NAND gate is 1 ns. The critical path delay, in ns, is __________ (rounded off to the nearest integer).</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywourf8/89f63e5a-5d8c-499c-9089-8da16216ebcd/402df140-47ff-11ef-a812-8332c7889a1e/file-jaoe38c1lywourf9.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywourf8/89f63e5a-5d8c-499c-9089-8da16216ebcd/402df140-47ff-11ef-a812-8332c7889a1e/file-jaoe38c1lywourf9.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Digital Circuits - Logic Gates Question 2 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>Given circuit is</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywourf8/89f63e5a-5d8c-499c-9089-8da16216ebcd/402df140-47ff-11ef-a812-8332c7889a1e/file-jaoe38c1lywourf9.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywourf8/89f63e5a-5d8c-499c-9089-8da16216ebcd/402df140-47ff-11ef-a812-8332c7889a1e/file-jaoe38c1lywourf9.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Digital Circuits - Logic Gates Question 2 English Explanation 1\">\n\n<p>Redrawing the circuit as</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywowjk3/49580c14-621b-4154-96e5-6ffb87e2d1d3/71b8e530-47ff-11ef-a812-8332c7889a1e/file-jaoe38c1lywowjk4.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywowjk3/49580c14-621b-4154-96e5-6ffb87e2d1d3/71b8e530-47ff-11ef-a812-8332c7889a1e/file-jaoe38c1lywowjk4.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Digital Circuits - Logic Gates Question 2 English Explanation 2\">\n\n<p>Critical path delay $=1+1=2 \\mathrm{~ns}$</p>\n\n<p>Hence, the correct answer is 2 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum  number of 2-input NAND gates required to implement a 2-input XOR gate is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4 "
+      },
+      {
+        "identifier": "B",
+        "content": "5 "
+      },
+      {
+        "identifier": "C",
+        "content": "6 "
+      },
+      {
+        "identifier": "D",
+        "content": "7 "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The output of the combinational circuit given below is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/6fd7997b5b870afe09d5ccd4034d7262691e57b9612d2d341518ae8b743b88b7.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 1 Digital Circuits - Logic Gates Question 20 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A+B+C"
+      },
+      {
+        "identifier": "B",
+        "content": "A(B+C)"
+      },
+      {
+        "identifier": "C",
+        "content": "B(C+A)"
+      },
+      {
+        "identifier": "D",
+        "content": "C(A+B)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the figure shown, the output ܻ is required to be ܻ Y=AB+ $$\\overline C $$$$\\overline D $$. The gates G1 and G2 must be,\nrespectively, \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/2ef696eed0e7a32c2102e4158a817d4cc2a8e21c9c2ffa30829f2241bc2354da.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 2 Digital Circuits - Logic Gates Question 18 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "NOR, OR \n"
+      },
+      {
+        "identifier": "B",
+        "content": "OR, NAND"
+      },
+      {
+        "identifier": "C",
+        "content": "NAND, OR \n"
+      },
+      {
+        "identifier": "D",
+        "content": "AND, NAND "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit shown, diodes $${D_1}$$  ,$${D_2}$$  and $${D_3}$$  are ideal, and the inputs $${E_1}$$ , $${E_2}$$ and $${E_3}$$ are “0 V” for\nlogic ‘0’ and “10 V” for logic ‘1’. What logic gate does the circuit represent? \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/fbbc0e1a97180977d7785fb117eb9cbbac71bb0e5c045ee27842435f9e7fd3fe.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 3 Digital Circuits - Logic Gates Question 19 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3-input OR gate"
+      },
+      {
+        "identifier": "B",
+        "content": "3-input NOR gate"
+      },
+      {
+        "identifier": "C",
+        "content": "3-input AND gate"
+      },
+      {
+        "identifier": "D",
+        "content": "3-input XOR  gate"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit shown in the figure, if C = 0, the expression for Y is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/4efe0208cb24ec72f80f778a60896ae1a2386a4b3d278f8fdb5a98586a96a7c1.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 4 Digital Circuits - Logic Gates Question 21 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Y= $$A\\overline B  + \\overline A B$$"
+      },
+      {
+        "identifier": "B",
+        "content": "Y=A+B"
+      },
+      {
+        "identifier": "C",
+        "content": "Y= $$\\,\\overline A \\, \\overline B $$"
+      },
+      {
+        "identifier": "D",
+        "content": "Y=A B"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "A bulb in a staircase has two switches, one switch being at the ground floor and the other one at the\nfirst floor. The bulb can be turned ON and also can be turned OFF by any one of the switches\nirrespective of the state of the other switch. The logic of switching of the bulb resembles.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "an AND gate  "
+      },
+      {
+        "identifier": "B",
+        "content": "an OR gate"
+      },
+      {
+        "identifier": "C",
+        "content": "an XOR gate "
+      },
+      {
+        "identifier": "D",
+        "content": "a NAND gate"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The output Y in the circuit below is always ‘1’ when <img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/XgCaBf9IdFeJGCI87/anmSOsfSUygwQWIgRPeAXhchKj3xz/io1kwHhF1k8bA9n1UTrbhn/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Digital Circuits - Logic Gates Question 23 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "two or more of the inputs P, Q, R are ‘0’\n"
+      },
+      {
+        "identifier": "B",
+        "content": "two or more of the inputs P, Q, R are ‘1"
+      },
+      {
+        "identifier": "C",
+        "content": "any odd number of the inputs P, Q, R is ‘0’"
+      },
+      {
+        "identifier": "D",
+        "content": "any odd number of the inputs P, Q, R is ‘1’ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "For the output F to be 1 in the logic circuit shown, the input combination should be\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b731a9aec623a29e7a77a5edc27dd2ac73e291308a6ceda9bdcbac52a3a1bda6.jpg\" loading=\"lazy\" alt=\"GATE ECE 2010 Digital Circuits - Logic Gates Question 24 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A = 1, B= 1. C = 0 "
+      },
+      {
+        "identifier": "B",
+        "content": "A = 1, B= 0,C = 0"
+      },
+      {
+        "identifier": "C",
+        "content": "A = 0, B= 1. C = 0"
+      },
+      {
+        "identifier": "D",
+        "content": "A = 0, B= 0, C = 1 "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Match the logic gates in column A with their equivalents in column B.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/2fbc577e62e87a959d7cd46d57be42084cc5794cb7ecc3b7967ac6e12249b8a4.jpg\" loading=\"lazy\" alt=\"GATE ECE 2010 Digital Circuits - Logic Gates Question 25 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P-2, Q-4, R-1, S-3"
+      },
+      {
+        "identifier": "B",
+        "content": "P-4, Q-2, R-1, S-3"
+      },
+      {
+        "identifier": "C",
+        "content": "P-2, Q-4, R-3, S-1"
+      },
+      {
+        "identifier": "D",
+        "content": "P-4, Q-2, R-3, S-1"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "If the input to the digital circuit (in the figure) consisting of a cascade of 20 XOR-gates is X then the output Y is equal to<br><br>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwp9t4x2/9391a0ad-be44-489a-aac3-5de0bed14461/b51abc60-539a-11ec-bfd6-3905384ffb4d/file-1kwp9t4x3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwp9t4x2/9391a0ad-be44-489a-aac3-5de0bed14461/b51abc60-539a-11ec-bfd6-3905384ffb4d/file-1kwp9t4x3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2002 Digital Circuits - Logic Gates Question 26 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O "
+      },
+      {
+        "identifier": "B",
+        "content": "1 "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline X $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "X "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "For the ring oscillator shown in the figure, the propagation delay of each inverter is 100 pico sec. What is the fundamental frequency of the oscillator output?\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ff6fdf9962c34a71507d4a952137b2ef6d42f381cc68579ab92678815934acd0.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Digital Circuits - Logic Gates Question 27 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10 MHz"
+      },
+      {
+        "identifier": "B",
+        "content": "100 MHz"
+      },
+      {
+        "identifier": "C",
+        "content": "1 GHz"
+      },
+      {
+        "identifier": "D",
+        "content": "2 GHz"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "For the logic circuit shown in Figure, the required input condition (A, B, C) to make the output (X)=1.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/63d0e4da0ad435fc24dcb2eb027adac4cad294bc21a70dd0bebe272b28a16d95.jpg\" loading=\"lazy\" alt=\"GATE ECE 2000 Digital Circuits - Logic Gates Question 28 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1, 0, 1"
+      },
+      {
+        "identifier": "B",
+        "content": "0, 0, 1"
+      },
+      {
+        "identifier": "C",
+        "content": "1, 1, 1"
+      },
+      {
+        "identifier": "D",
+        "content": "0, 1, 1"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "The output of the logic gate in figure is  <img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/d684a9fa0bb90f4cc70810d789a65cef9959442350cbd2defd7280b92722d9a2.jpg\" loading=\"lazy\" alt=\"GATE ECE 1997 Digital Circuits - Logic Gates Question 33 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 "
+      },
+      {
+        "identifier": "B",
+        "content": "1 "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline A \\,$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "A "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of NAND gates required to implement the Boolean function $$A + A\\overline B $$ $$ + A\\overline B C$$  is equal to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Zero"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "7"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "A ring oscillator consisting of 5 inverters is running at a frequency of 1.0 MH$$_z$$. The progagation delay per gate is ______",
+    "options": [],
+    "correct_options": [],
+    "answer": "100",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Boolean expression for the output of XNOR (equivalence) logic gate with inputs A and B is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$A\\overline B  + \\overline A B$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline A \\,\\overline B  + AB$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$(\\overline A  + B)(A + \\overline B )$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$(\\overline A \\, + \\overline B )(A + B)$$ "
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "content": "For the logic circuit shown in Figure, the output is equal to\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/011b69401f14e4c5c6bdf7cb9928b7eb4f7f420d37c7aea62c2de3de2a23392f.jpg\" loading=\"lazy\" alt=\"GATE ECE 1993 Digital Circuits - Logic Gates Question 36 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline A \\,.\\overline B .\\overline C $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline A \\, + \\overline B  + \\overline C $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline {AB}  + \\overline {BC}  + \\overline A  + \\overline C $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline {AB}  + \\overline {BC} $$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "content": "Indicate which of the following logic gates can be used to realize all possible combinational Logic functions:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "OR gates only."
+      },
+      {
+        "identifier": "B",
+        "content": "NAND gates only."
+      },
+      {
+        "identifier": "C",
+        "content": "EX-OR gates only. "
+      },
+      {
+        "identifier": "D",
+        "content": "NOR gates only."
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "Minimum number of 2-input NAND gates required to implement the function, f=($$\\overline X $$+$$\\overline Y $$)(Z+W) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "The Boolean function A+BC is a reduced form of ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "AB+BC"
+      },
+      {
+        "identifier": "B",
+        "content": "(A+B).(A+C)"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline A $$B+A$$\\overline B $$ C"
+      },
+      {
+        "identifier": "D",
+        "content": "(A+C).B"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "For the identity AB+$$\\overline A $$ C + BC= AB + $$\\overline A $$  C, The dual form is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(a+b)($$\\overline A  + c$$)(b+c)=(a+b)($$\\overline A $$+C)"
+      },
+      {
+        "identifier": "B",
+        "content": "($$\\overline A  + \\overline B )(A + \\overline C )(\\overline B  + \\overline C ) = \\overline {(A} \\, + \\overline B )(A + \\overline C )$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$(A + B)(\\overline A  + C)(B + C) = (\\overline A  + \\overline {B)} (A + \\overline C )$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline A \\,\\overline B  + A\\,\\overline C  + \\overline B \\,\\overline C  = \\,\\overline A \\overline B  + A\\,\\overline C $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of 2-input NAND gates required to implement the Boolean function Z=A$$\\overline {B\\,} $$C, assuming that A, B and C are available, is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "two"
+      },
+      {
+        "identifier": "B",
+        "content": "three"
+      },
+      {
+        "identifier": "C",
+        "content": "five"
+      },
+      {
+        "identifier": "D",
+        "content": "six"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "For the circuit shown below the output Fis given by\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/m71jRZzJHU9zbz1lt/4FP331uUBpzzoTgnOmyIRywFeX6mo/VeFwk3u1Fj7O1jhzcQVerm/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1988 Digital Circuits - Logic Gates Question 32 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "F=1"
+      },
+      {
+        "identifier": "B",
+        "content": "F=0"
+      },
+      {
+        "identifier": "C",
+        "content": "F=X"
+      },
+      {
+        "identifier": "D",
+        "content": "F= $$\\overline X $$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a Boolean gate (D) where the output Y is related to the inputs A and b as, Y = A + $$\\overline B $$, where + denotes logical OR operation. The Boolean inputs '0' and '1' are also available separately. Using instances of only D gates and inputs '0' and '1', ___________ (select the correct options).</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "NAND logic can be implemented"
+      },
+      {
+        "identifier": "B",
+        "content": "OR logic cannot be implemented"
+      },
+      {
+        "identifier": "C",
+        "content": "NOR logic can be implemented"
+      },
+      {
+        "identifier": "D",
+        "content": "AND logic cannot be implemented"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>F(A, B) = A + $$\\overline B $$</p>\n<p>As 0 and 1 are available.</p>\n<p>F(0, B) = A + $$\\overline B $$ = 0 + $$\\overline B $$</p>\n<p>= $$\\overline B $$ (NOT)</p>\n<p>F(A + $$\\overline B $$) = A + $$\\overline{\\overline B} $$ = A + B</p>\n<p>F(A + $$\\overline B$$) = A + B (OR)</p>\n<p>With the combination of OR and NOT, NOR gate can be implemented.</p>\n<p>Since NOR gate is universal logic gate, so all the functions can be implemented.</p>\n<p>So, correct option is (a, c).</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "The logic gates shown in the digital circuit below use strong pull-down nMOS transistors for\nLOW logic level at the outputs. When the pull-downs are off, high-value resistors set the\noutput logic levels to HIGH (i.e. the pull-ups are weak). Note that some nodes are\nintentionally shorted to implement “wired logic”. Such shorted nodes will be HIGH only if\nthe outputs of all the gates whose outputs are shorted are HIGH.\n<br><picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/jf7629jjz2hutly/4ae4fc4a-01eb-45a6-a9a0-73a606cc43d4/02947060-b9c1-11e9-8dd7-afa307a7b101/file-jf7629jjz2hutlz-320w.jpg\"><img src=\"https://imagex.cdn.examgoal.net/jf7629jjz2hutly/4ae4fc4a-01eb-45a6-a9a0-73a606cc43d4/02947060-b9c1-11e9-8dd7-afa307a7b101/file-jf7629jjz2hutlz-500w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE ECE 2018 Digital Circuits - Logic Gates Question 4 English\"></picture>\n<br><br>The number of distinct values of X<sub>3</sub>X<sub>2</sub>X<sub>1</sub>X<sub>0</sub> (out of the 16 possible values) that give\n𝑌 = 1 is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "8 to 8",
+    "explanation": "<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/jf7629jjz2i4wek/66dfbde9-b35a-44ef-99ee-2dd6fe6709d0/1ad484c0-b9c2-11e9-8dd7-afa307a7b101/file-jf7629jjz2i4wel-320w.jpg\"><img src=\"https://imagex.cdn.examgoal.net/jf7629jjz2i4wek/66dfbde9-b35a-44ef-99ee-2dd6fe6709d0/1ad484c0-b9c2-11e9-8dd7-afa307a7b101/file-jf7629jjz2i4wel-500w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE ECE 2018 Digital Circuits - Logic Gates Question 4 English Explanation\"></picture>\n<br><br>From figure, M = $$\\left( {{X_1} \\oplus {X_2}} \\right){\\overline X _3}$$\n<br><br>N = $$\\left( {A.{X_0}} \\right){\\overline X _0}$$\n<br><br>&nbsp;&nbsp;&nbsp; = 0 [ as $${X_0}{\\overline X _0}$$ = 0 ]\n<br><br>Y = (N + X<sub>3</sub>) = X<sub>3</sub>\n<br><br>The number of distinct values possible with X<sub>3</sub>X<sub>2</sub>X<sub>1</sub>X<sub>0</sub> = 16. And out of 16 combinations <b>8</b> such combination present when X<sub>3</sub> = 1 and gives output Y = 1.",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "All the logic gates shown in the figure have a propagation delay of 20 ns. Let A = C = 0 and B = 1\nuntil time t = 0. At t = 0, all the inputs flip (i.e., A = C = 1 and B = 0) and remain in that state. For\nt &gt; 0, output Z = 1 for a duration (in ns) of ______________. \n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwp89fex/1987c5da-28bb-471d-8501-63e459108ad7/a7e6aaa0-5394-11ec-bfd6-3905384ffb4d/file-1kwp89fey.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwp89fex/1987c5da-28bb-471d-8501-63e459108ad7/a7e6aaa0-5394-11ec-bfd6-3905384ffb4d/file-1kwp89fey.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2015 Set 1 Digital Circuits - Logic Gates Question 10 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "40",
+    "explanation": "As per the information given in the question, the\nwaveforms A, B, C are as follows:<br><br>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwpaf4ks/65749312-2f9e-42ab-8e64-4388075db79c/18a462c0-539d-11ec-bfd6-3905384ffb4d/file-1kwpaf4kt.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwpaf4ks/65749312-2f9e-42ab-8e64-4388075db79c/18a462c0-539d-11ec-bfd6-3905384ffb4d/file-1kwpaf4kt.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2015 Set 1 Digital Circuits - Logic Gates Question 10 English Explanation 1\">\n<br>\nFor the given logic gates, the output waveforms X and Y\nare first obtained and then used to obtain Z.<br><br><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwpah5u1/3919bcda-8dd1-492a-9a5a-3e05931c978f/513b3b90-539d-11ec-bfd6-3905384ffb4d/file-1kwpah5u2.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwpah5u1/3919bcda-8dd1-492a-9a5a-3e05931c978f/513b3b90-539d-11ec-bfd6-3905384ffb4d/file-1kwpah5u2.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2015 Set 1 Digital Circuits - Logic Gates Question 10 English Explanation 2\"><br>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwpaj5d5/8fdffea1-c5e5-49fc-812b-890496a29771/887cbd90-539d-11ec-bfd6-3905384ffb4d/file-1kwpaj5d6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwpaj5d5/8fdffea1-c5e5-49fc-812b-890496a29771/887cbd90-539d-11ec-bfd6-3905384ffb4d/file-1kwpaj5d6.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 70vh\" alt=\"GATE ECE 2015 Set 1 Digital Circuits - Logic Gates Question 10 English Explanation 3\"><br><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwpalz4x/9716df54-0452-4d65-8848-24f711724511/d71a7910-539d-11ec-bfd6-3905384ffb4d/file-1kwpalz4y.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwpalz4x/9716df54-0452-4d65-8848-24f711724511/d71a7910-539d-11ec-bfd6-3905384ffb4d/file-1kwpalz4y.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2015 Set 1 Digital Circuits - Logic Gates Question 10 English Explanation 4\"><br><br>\nThe output Z is HIGH during a period of 20 ns to 60 ns for a duration of 40 ns.\n",
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A 3-input majority gate is defined by the logic function M (a,b,c) = ab+bc+ca.  Which one of\nthe following gates is represented by the function M$$\\left( {\\overline {M\\left( {a,b,c} \\right),} M\\left( {a,b,\\overline c } \\right),c} \\right)?$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3-Input NAND gate "
+      },
+      {
+        "identifier": "B",
+        "content": "3-Input XOR gate "
+      },
+      {
+        "identifier": "C",
+        "content": "3-Input NOR gate "
+      },
+      {
+        "identifier": "D",
+        "content": "3-Input XNOR gate "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A universal logic gate can implement any Boolean function by connecting sufficient number of\nthem appropriately. Three gates are shown.  \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b4029d3e566186be1ce18b794f40608ffb05e7b75c95935dd7c8bd85a131aff8.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 3 Digital Circuits - Logic Gates Question 9 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/cf169f90b251f32f5145d6f3e6491884629df706c15ab7e59dfc95f136b5603a.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 3 Digital Circuits - Logic Gates Question 9 English 2\"> \n<p>Which one of the following statesments is TRUE?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Gate 1 is a universal gate."
+      },
+      {
+        "identifier": "B",
+        "content": "Gate 2 is a universal gate. "
+      },
+      {
+        "identifier": "C",
+        "content": "Gate 3 is a universal gate. "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the gates shown is a universal gate. "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The output F in the digital logic circuit shown in the figure is\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwp84f5x/1e9614d6-bd10-42c7-bed0-66f821b5f6b2/1ca98660-5394-11ec-bfd6-3905384ffb4d/file-1kwp84f5y.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwp84f5x/1e9614d6-bd10-42c7-bed0-66f821b5f6b2/1ca98660-5394-11ec-bfd6-3905384ffb4d/file-1kwp84f5y.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2014 Set 1 Digital Circuits - Logic Gates Question 12 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$F\\, = \\overline X YZ + X\\overline Y Z$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$F\\, = \\overline X YZ + X\\overline Y Z$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$F\\, = \\,\\overline X \\overline Y Z + XYZ$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$F\\, = \\,\\overline X \\overline Y \\overline {Z + } XYZ$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the follwing Boolean expression correctly represents the relation between P, Q, R and M<sub>1</sub>?<br><br>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwp8sjyl/5ba545e2-290e-4e51-a3f5-fd2cd5107d88/bbc93bd0-5396-11ec-bfd6-3905384ffb4d/file-1kwp8sjym.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwp8sjyl/5ba545e2-290e-4e51-a3f5-fd2cd5107d88/bbc93bd0-5396-11ec-bfd6-3905384ffb4d/file-1kwp8sjym.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2008 Digital Circuits - Logic Gates Question 13 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "M<sub>1</sub>=(P OR Q) XOR R"
+      },
+      {
+        "identifier": "B",
+        "content": "M<sub>1</sub>=(P AND Q) XOR R"
+      },
+      {
+        "identifier": "C",
+        "content": "M<sub>1</sub>=(P NOR Q) XOR R "
+      },
+      {
+        "identifier": "D",
+        "content": "M<sub>1</sub>=(P XOR Q) XOR R"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The gates G<sub>1</sub> and G<sub>2</sub> in figure have propagation delays of 10nsec and 20nsec respectively. If the input V<sub>i</sub> makes an abrupt change from logic 0 to 1 at\ntime t = t<sub>0</sub>, then the output waveform V<sub>0</sub> is  <br><br>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwp9kkeb/5fd55b18-68c5-4b7d-ac95-d539fbfa47fa/c6c78930-5399-11ec-bfd6-3905384ffb4d/file-1kwp9kkec.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwp9kkeb/5fd55b18-68c5-4b7d-ac95-d539fbfa47fa/c6c78930-5399-11ec-bfd6-3905384ffb4d/file-1kwp9kkec.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2002 Digital Circuits - Logic Gates Question 14 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwp92d1l/763e0c8e-6b47-42b9-8d9a-0b55537933e4/cc88d790-5397-11ec-bfd6-3905384ffb4d/file-1kwp92d1m.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwp92d1l/763e0c8e-6b47-42b9-8d9a-0b55537933e4/cc88d790-5397-11ec-bfd6-3905384ffb4d/file-1kwp92d1m.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2002 Digital Circuits - Logic Gates Question 14 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwp969w4/a0fc524b-91bd-488e-b43b-c500ee59d404/39561540-5398-11ec-bfd6-3905384ffb4d/file-1kwp969w5.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwp969w4/a0fc524b-91bd-488e-b43b-c500ee59d404/39561540-5398-11ec-bfd6-3905384ffb4d/file-1kwp969w5.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2002 Digital Circuits - Logic Gates Question 14 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwp958fl/2f405c0c-5cf1-44f0-b64a-9ae7345d4f00/1c666610-5398-11ec-bfd6-3905384ffb4d/file-1kwp958fm.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwp958fl/2f405c0c-5cf1-44f0-b64a-9ae7345d4f00/1c666610-5398-11ec-bfd6-3905384ffb4d/file-1kwp958fm.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2002 Digital Circuits - Logic Gates Question 14 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwp9lxd9/5536660c-1f10-4c12-9450-1fc7c8e309ff/ec9badd0-5399-11ec-bfd6-3905384ffb4d/file-1kwp9lxda.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwp9lxd9/5536660c-1f10-4c12-9450-1fc7c8e309ff/ec9badd0-5399-11ec-bfd6-3905384ffb4d/file-1kwp9lxda.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2002 Digital Circuits - Logic Gates Question 14 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "In the figure the LED\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/2b8f8ebe6780798c3e1ff1f5de28e86b102c6f4114bd6ffe454976ac6221cbc2.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Digital Circuits - Logic Gates Question 15 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "emits light when both S1 and S2 are closed."
+      },
+      {
+        "identifier": "B",
+        "content": "emits light when both S1 and S2 are open. "
+      },
+      {
+        "identifier": "C",
+        "content": "emits light when only S1 or S2 is closed. "
+      },
+      {
+        "identifier": "D",
+        "content": "does not emit light, irrespective of the switch positions.  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "For the logic circuit shown in the figure, the simplified Boolean expression for the output Y is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/6deac61d7048eb3ce30eb9772622225398f6593ea057c6b921a724b2f196d031.jpg\" loading=\"lazy\" alt=\"GATE ECE 2000 Digital Circuits - Logic Gates Question 16 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A + B + C "
+      },
+      {
+        "identifier": "B",
+        "content": "A"
+      },
+      {
+        "identifier": "C",
+        "content": "B "
+      },
+      {
+        "identifier": "D",
+        "content": "C "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "For the digital block shown in Figure. 2(a), the output Y=f(S<sub>3</sub>,S<sub>2</sub>,S<sub>1</sub>,S<sub>0</sub>) where S<sub>3</sub>\nis MSB and S<sub>0</sub> is LSB. Y is given in terms of minterms as $$Y\\, = \\,\\sum m\\left( {1,5,6,7,11,12,13,15} \\right)$$ and its complements $$\\overline Y \\, = \\,\\sum m\\left( {0,2,3,4,8,9,10,14} \\right)$$.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/28b4de4172489d28e29ded11dfe4efedf3d6c05bec531e828fa51913dd497598.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Digital Circuits - Logic Gates Question 7 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c571f9b11aa6924f89dbd9520376fc4736e37b54a40c0341e52cefb57b58c242.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Digital Circuits - Logic Gates Question 7 English 2\"> \n<p>(a) Enter the logical values in the given Karnaugh map [figure2(b)] for the output\nY.\n<br>(b) Write down the expression for Y in sum-of products from using minimum\nnumber of terms.\n<br>(c) Draw the circuit for the digital logic boxes using four 2-input NAND gates\nonly for each of the boxes. </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(b)$$Y\\, = \\,{S_3}{S_2}\\overline {{S_1}}  + \\overline {{S_3}} {S_2}{S_1} + \\overline {{S_3}} \\overline {{S_1}} {S_0} + {S_3}{S_1}{S_0}$$\n<br>(c)$$Y\\, = \\,{S_2}\\left[ {{S_3} \\oplus {S_1}} \\right] + {S_0}\\left[ {\\overline {{S_3} \\oplus {S_1}} } \\right]$$",
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The operating conditions (ON = 1, OFF = 0) of three pumps (x,y,z) are to be\nmonitored. x = 1 implies that pump X is on. It is required that the indicator (LED)\non the panel should glow when a majority of the pumps fail. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/0231274fad5049ed1893493b032bd9847c188a5107e13fb3b9bd13cf93d2942d.jpg\" loading=\"lazy\" alt=\"GATE ECE 2000 Digital Circuits - Logic Gates Question 6 English\"> \n<p>(a) Enter the logical values in the K-map in the format shown in figure 3(a). Derive\nthe minimal Boolean sum-of-products expression whose output is zero when a majority of the pumps fail. \n<br>(b) The above expression is implemented using logic gates, and point P is the\noutput of this circuit, as shown in figure 3(b). P is at 0 V when a majority of the pumps fails and is at 5 V otherwise. Design a circuit to drive the LED using this output. The current through the LED should be 10 mA and the voltage drop across it is 1V. Assume that P can source or sink 10 mA and a 5 V supply is available. </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "The truth table for the output Y in terms of three inputs A, B and C are given in\ntable. Draw a logic circuit realization using only NOR gates. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/34a214a096d971bc39dd133a9ea62e000567b722dad5f2cf54f6ac8e959fc78e.jpg\" loading=\"lazy\" alt=\"GATE ECE 1993 Digital Circuits - Logic Gates Question 8 English\"> \n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$Y = \\left( {\\overline A  + \\overline C } \\right)\\left( {\\overline A  + \\overline B } \\right)\\left( {\\overline B  + \\overline C } \\right)$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "content": "A combinational circuit has three inputs A, B and C and an output F.  F is true only for the following input combinations?\n<p>A is false and B is true\n<br>A is false and C is true\n<br>A, B and C are all false \n<br>A, B and C are all true.</p>\n<p>(a)Write the truth table for F. use the convention, true = 1 and false = 0. \n<br>(b)Write the simplified expression for F as a Sum of Products.\n<br>(c) Write the simplified expression for F as a product of Sums.\n<br>(d) Draw a logic circuit implementation of F using the minimum number of 2\ninput NAND gates only. </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(b) F = $$\\overline A \\, + \\,BC$$ \n<br>(c) F = $$\\left( {\\overline A  + B} \\right)\\left( {A + C} \\right)$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  }
+]

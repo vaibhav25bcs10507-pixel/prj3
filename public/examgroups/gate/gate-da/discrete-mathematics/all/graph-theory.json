@@ -1,0 +1,15 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a directed graph $G=(V, E)$, where $V=\\{0,1,2, \\ldots, 100\\}$ and $E=\\{(i$, $j): 0 < j-i \\leq 2$, for all $i, j \\in V\\}$. Suppose the adjacency list of each vertex is in decreasing order of vertex number, and depth-first search (DFS) is performed at vertex 0 . The number of vertices that will be discovered after vertex 50 is___________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "75",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mdio3eux/c7213ed1-abb5-4b1b-99c6-5908a87aefee/8d3835a0-6940-11f0-b6af-1d99e72f4c22/file-jaoe38c1mdio3euy.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mdio3eux/c7213ed1-abb5-4b1b-99c6-5908a87aefee/8d3835a0-6940-11f0-b6af-1d99e72f4c22/file-jaoe38c1mdio3euy.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE AI 2025 Discrete Mathematics - Graph Theory Question 1 English Explanation\"></p>\n<p>$$ \\begin{aligned} &amp;\\text { Adjacency list : }\\\\ &amp;\\begin{aligned} &amp; 0 \\rightarrow 2,1 \\\\ &amp; 1 \\rightarrow 3,2 \\\\ &amp; 2 \\rightarrow 4,3 \\\\ &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\vdots \\\\ &amp; 99 \\rightarrow 100 \\\\ &amp; 100 \n\\rightarrow \\\\ &amp; \\hline \\end{aligned} \\end{aligned} $$</p>\n$$\\eqalign{\n  \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,&amp; Dfs\\,\\,(0)  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\, \\downarrow   \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,2  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\, \\downarrow   \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,4\\,  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\, \\downarrow   \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,6  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\, \\vdots   \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\, \\vdots   \\cr \n  &amp; \\,\\,\\,\\,(50)  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\, \\downarrow   \\cr \n  &amp; \\,\\,\\,\\,\\,\\,52  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\, \\vdots   \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\, \\vdots   \\cr \n  &amp; 99 \\leftarrow 100 \\cr} $$\n\n<p>$$ \\text { Vertex discovered after } 50 \\rightarrow 101-26=75 $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  }
+]

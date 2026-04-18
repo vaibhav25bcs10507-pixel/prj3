@@ -1,0 +1,1379 @@
+[
+  {
+    "direction": null,
+    "content": "<p>For the two port network shown below, the [Y]-parameters is given as</p>\n<p>$$[Y] = {1 \\over {100}}\\left[ {\\matrix{\n   2 &amp; { - 1}  \\cr \n   { - 1} &amp; {4/3}  \\cr \n\n } } \\right]S$$</p>\n<p>The value of load impedance $$\\mathrm{Z_L}$$, in $$\\Omega$$, for maximum power transfer will be ___________ (rounded off to the nearest integer).</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywom1wr/fd0d409d-fa75-47e7-adb5-2b8cd77870d7/4dff7fb0-47fe-11ef-a812-8332c7889a1e/file-jaoe38c1lywom1ws.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywom1wr/fd0d409d-fa75-47e7-adb5-2b8cd77870d7/4dff7fb0-47fe-11ef-a812-8332c7889a1e/file-jaoe38c1lywom1ws.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Network Theory - Two Port Networks Question 7 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "80",
+    "explanation": "<p>Given two-port network and Y-parameters are given below,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywom1wr/fd0d409d-fa75-47e7-adb5-2b8cd77870d7/4dff7fb0-47fe-11ef-a812-8332c7889a1e/file-jaoe38c1lywom1ws.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywom1wr/fd0d409d-fa75-47e7-adb5-2b8cd77870d7/4dff7fb0-47fe-11ef-a812-8332c7889a1e/file-jaoe38c1lywom1ws.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Network Theory - Two Port Networks Question 7 English Explanation 1\">\n\n<p>$$ \\begin{aligned} &amp; {[Y]=\\frac{1}{100}\\left[\\begin{array}{cc} 2 &amp; -1 \\\\ -1 &amp; \\frac{4}{3} \\end{array}\\right]} \\\\\\\\ &amp; {[Y]=\\left[\\begin{array}{cc} \\frac{2}{100} &amp; \\frac{-1}{100} \\\\ \\frac{-1}{100} &amp; \\frac{4}{300} \\end{array}\\right]} \\end{aligned} $$</p>\n\n<p>Obtaining $\\pi$-network from given $[Y]$ parameters</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywoosi7/f6b2eb84-279f-4c7b-96f4-e21432da1d81/9a292df0-47fe-11ef-a812-8332c7889a1e/file-jaoe38c1lywoosi8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywoosi7/f6b2eb84-279f-4c7b-96f4-e21432da1d81/9a292df0-47fe-11ef-a812-8332c7889a1e/file-jaoe38c1lywoosi8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Network Theory - Two Port Networks Question 7 English Explanation 2\">\n\n<p>$$ \\begin{aligned} &amp; Y_{11}=Y_A+Y_B=\\frac{2}{100} \\\\ &amp; Y_{12}=Y_{21}=-Y_B=\\frac{-1}{100} \\\\ &amp; Y_{22}=Y_B+Y_C=\\frac{4}{300} \\end{aligned} $$</p>\n\n<p>From the above equations,</p>\n\n<p>$$ Y_A=\\frac{1}{100} S, Y_B=\\frac{1}{100} S, Y_C=\\frac{1}{300} S $$</p>\n\n<p>Now replacing this pie network in two port network.</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywoqh0w/018cc178-c969-43f2-9469-011f9793fc28/c8e91b00-47fe-11ef-a812-8332c7889a1e/file-jaoe38c1lywoqh0x.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywoqh0w/018cc178-c969-43f2-9469-011f9793fc28/c8e91b00-47fe-11ef-a812-8332c7889a1e/file-jaoe38c1lywoqh0x.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Network Theory - Two Port Networks Question 7 English Explanation 3\">\n\n<p>For maximum power transfer, $Z_L=Z_{t h}$.</p>\n\n<p>For $Z_{t h}$, circuit becomes.</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyworw3y/4085e66f-9da4-4d5e-a21d-f3b0c190866f/f05f56e0-47fe-11ef-a812-8332c7889a1e/file-jaoe38c1lyworw3z.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyworw3y/4085e66f-9da4-4d5e-a21d-f3b0c190866f/f05f56e0-47fe-11ef-a812-8332c7889a1e/file-jaoe38c1lyworw3z.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Network Theory - Two Port Networks Question 7 English Explanation 4\">\n\n<p>$$ \\begin{aligned} &amp; Z_{t h}=300 \\| 109.09=79.99 \\Omega \\\\\\\\ &amp; Z_{t h}=80 \\Omega \\end{aligned} $$</p>\n\n<p>For maximum power transfer</p>\n\n<p>$$ Z_L=Z_{t h}=80 \\Omega $$</p>\n\n<p>Hence, the correct answer is 80 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\text { Consider the two-port network shown in the figure. } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0r8g3w/fe2a1993-d495-46de-9c51-390b9b8fb10f/96717cc0-ae97-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0r8g3x.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0r8g3w/fe2a1993-d495-46de-9c51-390b9b8fb10f/96717cc0-ae97-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0r8g3x.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Network Theory - Two Port Networks Question 4 English\">The admittance parameters, in siemens are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$y_{11}=2, y_{12}=-4, y_{21}=-1, y_{22}=2$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$y_{11}=2, y_{12}=-4, y_{21}=-4, y_{22}=2$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$y_{11}=2, y_{12}=-4, y_{21}=-4, y_{22}=3$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$y_{11}=1, y_{12}=-2, y_{21}=-1, y_{22}=3$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0r8fek/43c63f3a-a7ad-4ef3-96c5-4ec551ebe87d/95e653c0-ae97-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0r8fel.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0r8fek/43c63f3a-a7ad-4ef3-96c5-4ec551ebe87d/95e653c0-ae97-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0r8fel.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Network Theory - Two Port Networks Question 4 English Explanation\">From the above mentioned data, we have following equations</p>\n<p>$$ -I_1+\\frac{V_1}{1}-3 V_2+\\frac{V_1-V_2}{1}=0 $$</p>\n<p></p>\n<p>or,&nbsp;&nbsp;&nbsp;$$ I_1=V_1-3 V_2+V_1-V_2 $$</p>\n<p></p>\n<p>or,&nbsp;&nbsp;&nbsp;$$ I_1=2 V_1-4 V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)$$</p>\n<p>&nbsp;</p>\n<p>and</p>\n<p>$$ -I_2+\\frac{V_2}{1}+\\frac{V_2-V_1}{1}=0 $$</p>\n<p>or,&nbsp;&nbsp;$$ I_2=2 V_2-V_1 $$</p>\n<p>or,&nbsp;&nbsp;$$ I_2=-V_1+2 V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)$$</p>\n<p>From above equation (i) and equation (ii), on solving we get</p>\n<p>$$ \\begin{aligned} &amp; y_{11}=2 \\mho ; y_{12}=-4 \\mho \\\\ &amp; y_{21}=-1 \\mho ; y_{22}=2 \\mho \\end{aligned} $$</p>\n<p>or,&nbsp;$$ [Y]=\\left[\\begin{array}{cc} 2 &amp; -4 \\\\ -1 &amp; 2 \\end{array}\\right] \\mho $$</p>\n",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In the given circuit, the two-port network has the impedance matrix $[Z]=\\left[\\begin{array}{cc}40 &amp; 60 \\\\ 60 &amp; 120\\end{array}\\right]$. The value of $Z_L$ for which maximum power is transferred to the load is $\\_\\_\\_\\_$ $\\Omega$.</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh20udw0/ca214b6a-cf18-46b5-bf9a-0dfa7313138e/f3578d00-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20udw1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh20udw0/ca214b6a-cf18-46b5-bf9a-0dfa7313138e/f3578d00-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20udw1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Network Theory - Two Port Networks Question 2 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "48",
+    "explanation": "<p>$$ \\text { Given two port network is shown in below figure, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh20ucyb/85ce1e95-2b27-472d-b777-c74828eba3bb/f29e7630-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20ucyc.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh20ucyb/85ce1e95-2b27-472d-b777-c74828eba3bb/f29e7630-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20ucyc.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Network Theory - Two Port Networks Question 2 English Explanation 1\">$$ \\begin{aligned} &amp;[Z]=\\left[\\begin{array}{cc} 40 &amp; 60 \\\\ 60 &amp; 120 \\end{array}\\right]\\\\ &amp;Z \\text { parameter equation from matrix is, }\\\\ &amp;\\begin{aligned} &amp; V_1=40 I_1+60 I_2 \\\\ &amp; V_2=60 I_1+120 I_2 \\end{aligned} \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh20vobr/3689e7e7-76f7-4184-8fb7-450720bd5db7/1736bf70-af4a-11f0-ba93-393527bdf085/file-jaoe38c1mh20vobs.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh20vobr/3689e7e7-76f7-4184-8fb7-450720bd5db7/1736bf70-af4a-11f0-ba93-393527bdf085/file-jaoe38c1mh20vobs.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Network Theory - Two Port Networks Question 2 English Explanation 2\">Applying KVL in output loop,</p>\n<p>$$ \\begin{aligned} &amp; -V_{d c}+120 I_{d c}+60 I_1=0 \\\\ &amp; V_{d c}=120 I_{d c}+60 I_1 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} $$</p>\n<p>Applying KVL in input loop,</p>\n<p>$$ \\begin{aligned} &amp; 0+50 I_1+60 I_{d c}=0 \\\\ &amp; I_1=\\frac{-6}{5} I_{d c} \\end{aligned} $$</p>\n<p>Substituting the value of $I_1$ in equation (i),</p>\n<p>$$ V_{d c}=120 I_{d c}+60\\left(\\frac{-6}{5}\\right) I_{d c} $$</p>\n<p>$$ R_{t h}=\\frac{V_{d c}}{I_{d c}}=48 \\Omega $$</p>\n<p>From maximum power transfer theorem,</p>\n<p>$$ \\begin{aligned} &amp; &amp; Z_L &amp; =Z_{\\text {th }} \\\\ \\therefore &amp; &amp; Z_L &amp; =48 \\Omega \\end{aligned} $$</p>\n<p>Hence, the value of $Z_L$ for which maximum power is transferred to the load is $\\mathbf{4 8} \\boldsymbol{\\Omega}$.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The ABCD matrix for a two-port network is defined by :\n<br><br>$$\\left[ {\\matrix{\n   {{V_1}}  \\cr \n   {{I_1}}  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   A &amp; B  \\cr \n   C &amp; D  \\cr \n\n } } \\right]\\left[ {\\matrix{\n   {{V_2}}  \\cr \n   { - {I_2}}  \\cr \n\n } } \\right]$$\n<img src=\"https://imagex.cdn.examgoal.net/jf762sdjyvd3ot0/9487e874-fc6c-448d-bb99-90ff208767f9/eef5a140-b5d4-11e9-a092-5b9aaf57c6e8/file-jf762sdjyvd3ot1-320w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE ECE 2018 Network Theory - Two Port Networks Question 11 English\">\n<br><br>The parameter\nB\nfor the given two-port network (in ohms, correct to two decimal places)\nis _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "4.3TO5.3",
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsz3fp/ed657c28-00f4-48a3-8bbb-d9ddb0f306a4/b0ca6550-d403-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsz3fq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsz3fp/ed657c28-00f4-48a3-8bbb-d9ddb0f306a4/b0ca6550-d403-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsz3fq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2018 Network Theory - Two Port Networks Question 11 English Explanation\"></p>\n<p>ABCD matrix for the above network is given as shown below,</p>\n<p>$$ \\left[\\begin{array}{l} V_1 \\\\ I_1 \\end{array}\\right]=\\left[\\begin{array}{ll} A &amp; B \\\\ C &amp; D \\end{array}\\right]\\left[\\begin{array}{c} V_2 \\\\ -I_2 \\end{array}\\right] $$</p>\n<p>It can also be written as,</p>\n<p>$$ \\begin{aligned} &amp; V_1=A V_2-B I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ &amp; I_1=C V_2-D I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} $$</p>\n<p>From equation (i),</p>\n<p>$$ B=-\\left.\\frac{V_1}{I_2}\\right|_{V_2=0} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)$$</p>\n<p>Applying KVL in input loop,</p>\n<p>$$ V_1=7 I_1+5 I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)$$</p>\n<p>Applying KVL in output loop,</p>\n<p>$$ V_2=5 I_1+7 I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(v)$$</p>\n<p>At $V_2=0$,</p>\n<p>$$ \\begin{aligned} 0 &amp; =5 I_1+7 I_2 \\\\ I_1 &amp; =-\\frac{7}{5} I_2 \\end{aligned} $$</p>\n<p>Substituting the value of $I_1$ in equation (iv),</p>\n<p>$$ \\begin{aligned} V_1 &amp; =7 \\times\\left(-\\frac{7}{5} I_2\\right)+5 I_2 \\\\ V_1 &amp; =-\\frac{24}{5} I_2 \\\\ B &amp; =-\\frac{V_1}{I_2}=\\frac{24}{5}=4.8 \\Omega \\end{aligned} $$</p>\n<p>Hence, the value of $B$ is $\\mathbf{4 . 8} \\boldsymbol{\\Omega}$.</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "The z-parameter matrix for the two-port network shown is $$$\\left[ {\\matrix{\n   {2\\,j\\,\\omega } &amp; {j\\,\\omega }  \\cr \n   {j\\,\\omega } &amp; {3\\, + \\,2\\,j\\,\\omega }  \\cr \n\n } } \\right]$$$ \nWhere the entries are in $$\\Omega $$. Suppose $$\\,{Z_b}\\,\\left( {j\\,\\omega } \\right) = {R_b} + j\\,\\omega $$ \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/JfFz7xjoY11XAHr6L/dy3fiGaJDYxeTBvfVD6nQKmnlrqrr/Od73VQYV1RgrlsSpMxyEAX/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 2 Network Theory - Two Port Networks Question 38 English\">\nThen the value of $${R_b}$$ (in $$\\Omega $$) equals _______________________3",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsntcy/2db262e0-d45c-441c-a0cd-0b95cc39bd75/771b3420-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsntcz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsntcy/2db262e0-d45c-441c-a0cd-0b95cc39bd75/771b3420-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsntcz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2016 Set 2 Network Theory - Two Port Networks Question 38 English Explanation\">For $T$-type of 2-port network, $z$-parameter can be written as</p>\n<p>$$ [Z]=\\left[\\begin{array}{cc} z_a+z_c &amp; z_c \\\\ z_c &amp; z_b+z_c \\end{array}\\right] \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)$$</p>\n<p>Given : $[Z]=\\left[\\begin{array}{cc}2 j \\omega &amp; j \\omega \\\\ j \\omega &amp; 3+2 j \\omega\\end{array}\\right]\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)$</p>\n<p>By comparing equation (i) and (ii),</p>\n<p>$$ \\begin{aligned} &amp; z_c=j \\omega\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii) \\\\ &amp; z_b+z_c=3+2 j \\omega \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)\\end{aligned} $$</p>\n<p>From equation (iii) and (iv),</p>\n<p>$$ \\begin{aligned} &amp; z_b+j \\omega=3+2 j \\omega \\\\ &amp; z_b=3+j \\omega=R_b+j \\omega \\quad \\text { [Given] } \\\\ &amp; R_b=3 \\Omega \\end{aligned} $$</p>\n<p>Hence, the value of $R_b$ is $\\mathbf{3} \\boldsymbol{\\Omega}$.</p>",
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a two-port network with the transmission matrix: T = $$\\begin{bmatrix}A&amp;B\\\\C&amp;D\\end{bmatrix}$$. If the network is\nreciprocal, then",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "T<sup>-1</sup> = T"
+      },
+      {
+        "identifier": "B",
+        "content": "T<sup>2</sup> = T"
+      },
+      {
+        "identifier": "C",
+        "content": "Determinant (T) = 0"
+      },
+      {
+        "identifier": "D",
+        "content": "Determinant (T) = 1"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $T=\\left[\\begin{array}{ll}A & B \\\\ C & D\\end{array}\\right]$</p>\n<p>Condition of reciprocal network for $A B C D$ parameter is given by,</p>\n<p>$$ \\begin{aligned} & |T|=\\left|\\begin{array}{ll} A & B \\\\ C & D \\end{array}\\right|=1 \\\\ & \\Delta T=A D-B C=1 \\end{aligned} $$</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The 2-port admittance matrix of the circuit shown is given by \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/ehHUaKWObcZ6YiKyd/QTkPoU04c4qEBwmhBF9Ib6B5XsNsL/ugKH95hR8BL47Wp2LUqtBn/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 2 Network Theory - Two Port Networks Question 39 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\matrix{\n   {0.3} &amp; { - 0.2}  \\cr \n   { - 0.2} &amp; {0.3}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\matrix{\n   {15} &amp; { 5}  \\cr \n   { 5} &amp; {15}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\matrix{\n   {3.33} &amp; { 5}  \\cr \n   { 5} &amp; {3.33}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   {0.3} &amp; {  0.4}  \\cr \n   {  0.4} &amp; {0.3}  \\cr \n\n } } \\right]$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below. } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsgf4w/a38f8c94-ee03-418a-b167-0e1361e9db89/a9746a00-d401-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsgf4x.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsgf4w/a38f8c94-ee03-418a-b167-0e1361e9db89/a9746a00-d401-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsgf4x.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2015 Set 2 Network Theory - Two Port Networks Question 39 English Explanation 1\"></p>\n<p>$$ \\text { Standard } \\pi \\text { - network : } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsgfuk/4dc93350-4e53-4a75-abcf-618a9785b5e7/aa0167c0-d401-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsgful.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsgfuk/4dc93350-4e53-4a75-abcf-618a9785b5e7/aa0167c0-d401-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsgful.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2015 Set 2 Network Theory - Two Port Networks Question 39 English Explanation 2\"></p>\n<p>Comparing admittance of $\\pi$-network with given figure,</p>\n<p>$$ Y_A=\\frac{1}{5} \\mho, Y_B=\\frac{1}{10} \\mho, Y_C=\\frac{1}{10} \\mho $$</p>\n<p>Admittance parameter matrix for standard $\\pi$ network is given by,</p>\n<p>$$ \\begin{gathered} {[Y]=\\left[\\begin{array}{cc} Y_A+Y_B &amp; -Y_A \\\\ -Y_A &amp; Y_A+Y_C \\end{array}\\right]=\\left[\\begin{array}{ll} y_{11} &amp; y_{12} \\\\ y_{21} &amp; y_{22} \\end{array}\\right]} \\\\ {[Y]=\\left[\\begin{array}{cc} \\frac{1}{10}+\\frac{1}{5} &amp; -\\frac{1}{5} \\\\ -\\frac{1}{5} &amp; \\frac{1}{5}+\\frac{1}{10} \\end{array}\\right]=\\left[\\begin{array}{cc} \\frac{3}{10} &amp; -\\frac{1}{5} \\\\ -\\frac{1}{5} &amp; \\frac{3}{10} \\end{array}\\right]} \\\\ {[Y]=\\left[\\begin{array}{cc} 0.3 &amp; -0.2 \\\\ -0.2 &amp; 0.3 \\end{array}\\right]} \\end{gathered} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For the two-port network shown below, the short-circuit admittance parameter\nmatrix is\n<img alt=\"GATE ECE 2010 Network Theory - Two Port Networks Question 55 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b1f8072792812f46fb915a487750c61d74a8119049e8a00d404f9b1a5e8adaa2.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\begin{bmatrix}4&amp;-2\\\\-2&amp;4\\end{bmatrix}S$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\begin{bmatrix}1&amp;-0.5\\\\-0.5&amp;1\\end{bmatrix}S$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\begin{bmatrix}1&amp;0.5\\\\0.5&amp;1\\end{bmatrix}S$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\begin{bmatrix}4&amp;2\\\\2&amp;4\\end{bmatrix}S$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrz0o6/184b17c6-b189-4e19-ac82-f762a452ba6f/c5869c60-d3ff-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrz0o7.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrz0o6/184b17c6-b189-4e19-ac82-f762a452ba6f/c5869c60-d3ff-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrz0o7.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2010 Network Theory - Two Port Networks Question 55 English Explanation 1\"></p>\n<p>$$ \\text { Standard } \\pi \\text { - network : } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrz1qq/37fef6f4-ed5d-4c40-9f88-a5318c90651d/c65a6720-d3ff-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrz1qr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrz1qq/37fef6f4-ed5d-4c40-9f88-a5318c90651d/c65a6720-d3ff-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrz1qr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2010 Network Theory - Two Port Networks Question 55 English Explanation 2\"></p>\n<p>Comparing admittance of $\\pi$-network with given figure,</p>\n<p>$$ Y_A=2 \\mathrm{~S}, Y_B=2 \\mathrm{~S}, Y_C=2 \\mathrm{~S} $$</p>\n<p>Short circuit admittance parameter matrix for standard $\\pi$-network is given by,</p>\n<p>$$ \\begin{aligned} &amp; {[Y]=\\left[\\begin{array}{cc} Y_A+Y_B &amp; -Y_A \\\\ -Y_A &amp; Y_A+Y_C \\end{array}\\right]=\\left[\\begin{array}{ll} y_{11} &amp; y_{12} \\\\ y_{21} &amp; y_{22} \\end{array}\\right]} \\\\ &amp; {[Y]=\\left[\\begin{array}{cc} 2+2 &amp; -2 \\\\ -2 &amp; 2+2 \\end{array}\\right]=\\left[\\begin{array}{cc} 4 &amp; -2 \\\\ -2 &amp; 4 \\end{array}\\right] \\mathrm{S}} \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "If the transfer function of the following network is $$\\,{{{V_0}(s)} \\over {{V_i}(s)}} = {1 \\over {2\\, + \\,sCR}}$$\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/jXgFer2kmQTkVFkyN/G6KWBu0RC3AmUkzewfBTujHkZTpEN/qZ3BTPWFfVdMMWqjTNKwAp/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2009 Network Theory - Two Port Networks Question 40 English\">\n<p> The value of the load resistance $${R_L}$$ is </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "R/4"
+      },
+      {
+        "identifier": "B",
+        "content": "R/2"
+      },
+      {
+        "identifier": "C",
+        "content": "R"
+      },
+      {
+        "identifier": "D",
+        "content": "2R"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The ABCD parameters of an ideal n:1 transformer shown in Fig. are $$\\left[ {\\matrix{\n   n &amp; 0  \\cr \n   0 &amp; X  \\cr \n\n } } \\right]$$. The value of X will be \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/yZ9w68HSRW8LXCigI/Kc5dsvLse4zS5peGo96IMrupBmchN/DW6pRVVkRSjgSYgkEyySko/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Network Theory - Two Port Networks Question 41 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n "
+      },
+      {
+        "identifier": "B",
+        "content": "1/n"
+      },
+      {
+        "identifier": "C",
+        "content": "$${n^2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "1/$${n^2}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $\\left[\\begin{array}{ll}A &amp; B \\\\ C &amp; D\\end{array}\\right]=\\left[\\begin{array}{ll}n &amp; 0 \\\\ 0 &amp; x\\end{array}\\right]\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)$</p>\n<p>Circuit is shown below,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrkijf/1b435430-7999-4955-b23a-6b772ba9a078/3230fab0-d3fe-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrkijg.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrkijf/1b435430-7999-4955-b23a-6b772ba9a078/3230fab0-d3fe-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrkijg.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2005 Network Theory - Two Port Networks Question 41 English Explanation\"></p>\n<p>Standard $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{C} \\boldsymbol{D}$ parameter equation :</p>\n<p>$$ \\begin{aligned} &amp; V_1=A V_2-B I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\\\ &amp; I_1=C V_2-D I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)\\end{aligned} $$</p>\n<p>For an ideal transformer,</p>\n<p>$$ \\begin{aligned} &amp; \\frac{V_1}{V_2}=\\frac{n}{1} \\\\ &amp; \\frac{I_1}{I_2}=\\frac{-1}{n} \\end{aligned} $$</p>\n<p>In above expression, negative sign is due to direction of output two port current.</p>\n<p>$$ \\begin{aligned} &amp; V_1=n V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)\\\\ &amp; I_1=\\frac{-I_2}{n} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(v)\\end{aligned} $$</p>\n<p>Comparing equation (iv) and (v) with equation (ii) and (iii),</p>\n<p>$$ \\begin{aligned} &amp; A=n, B=0 \\\\ &amp; C=0, D=\\frac{1}{n} \\\\ &amp; {\\left[\\begin{array}{ll} A &amp; B \\\\ C &amp; D \\end{array}\\right]=\\left[\\begin{array}{ll} n &amp; 0 \\\\ 0 &amp; \\frac{1}{n} \\end{array}\\right]} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(vi)\\end{aligned} $$</p>\n<p>Comparing equation (i) and (vi),</p>\n<p>$$ x=\\frac{1}{n} $$</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The admittance parameter Y<sub>12</sub> in the 2-port network in Figure is\n<img alt=\"GATE ECE 2001 Network Theory - Two Port Networks Question 56 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/72f400e0f50bc95da878172b391baf456cfd3fefaf555d8b477177c7be1ddbea.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-0.2 mho"
+      },
+      {
+        "identifier": "B",
+        "content": "0.1 mho"
+      },
+      {
+        "identifier": "C",
+        "content": "-0.05 mho"
+      },
+      {
+        "identifier": "D",
+        "content": "0.05 mho"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrd7ct/a2e21d45-95b5-4b13-9a65-fd5c3697bba4/66e362d0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrd7cu.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrd7ct/a2e21d45-95b5-4b13-9a65-fd5c3697bba4/66e362d0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrd7cu.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2001 Network Theory - Two Port Networks Question 56 English Explanation 1\"></p>\n<p>$$ \\text { Standard } \\pi \\text { - network : } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrd83e/02d163b4-ce89-4c8f-883f-9ac96f027c74/677590b0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrd83f.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrd83e/02d163b4-ce89-4c8f-883f-9ac96f027c74/677590b0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrd83f.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2001 Network Theory - Two Port Networks Question 56 English Explanation 2\"></p>\n<p>Comparing admittance of $\\pi$-network with given figure,</p>\n<p>$$ Y_A=\\frac{1}{20} \\mathrm{mho}, Y_B=\\frac{1}{5} \\mathrm{mho}, Y_C=\\frac{1}{10} \\mathrm{mho} $$</p>\n<p>Admittance parameter matrix for standard $\\pi$ network is given by,</p>\n<p>$$ [Y]=\\left[\\begin{array}{cc} Y_A+Y_B &amp; -Y_A \\\\ -Y_A &amp; Y_A+Y_C \\end{array}\\right]=\\left[\\begin{array}{ll} y_{11} &amp; y_{12} \\\\ y_{21} &amp; y_{22} \\end{array}\\right] $$</p>\n<p>Hence, $y_{12}=-Y_A=\\frac{-1}{20}=-0.05 \\mathrm{mho}$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "If each branch of a Delta circuit has impedance $$\\sqrt 3 \\,Z$$, then each branch of the equivalent Wye circuit has impedance ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${Z \\over {\\sqrt 3 }}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "3Z"
+      },
+      {
+        "identifier": "C",
+        "content": "$$3\\sqrt 3 \\,Z$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${Z \\over 3}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l98ub5qh/caeb93bf-faaa-44c5-ba6b-10419fb40c77/5dc4b480-4bf0-11ed-acc2-1b84618d6d1c/file-1l98ub5qi.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l98ub5qh/caeb93bf-faaa-44c5-ba6b-10419fb40c77/5dc4b480-4bf0-11ed-acc2-1b84618d6d1c/file-1l98ub5qi.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2001 Network Theory - Two Port Networks Question 42 English Explanation\">\n<br><br>$Z_A=\\frac{Z_{A B} \\times Z_{A C}}{Z_{A B}+Z_{B C}+Z_{C A}}$\n<br><br>$Z_A=\\frac{\\sqrt{3} Z \\times \\sqrt{3} Z}{\\sqrt{3} Z+\\sqrt{3} Z+\\sqrt{3} Z}=\\frac{3 Z^2}{3 \\sqrt{3} Z}=\\frac{Z}{\\sqrt{3}}$\n<br><br>$Z_B=\\frac{Z_{a b} \\times Z_{b c}}{Z_{a b}+Z_{b c}+Z_{c a}}=\\frac{Z}{\\sqrt{3}}$\n<br><br>$Z_C=\\frac{Z_{b c} \\times Z_{c a}}{Z_{a b}+Z_{b c}+Z_{c a}}=\\frac{Z}{\\sqrt{3}}$",
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "A 2-port network is shown in figure. The parameter $${h_{21}}$$ for this network can be given by \n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1minpwecu/ce5a25fb-c0f8-4bae-b8fa-4e7ce426e5ce/9c911ce0-cf04-11f0-a964-8d5b6f8c6b80/file-jaoe38c1minpwecv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1minpwecu/ce5a25fb-c0f8-4bae-b8fa-4e7ce426e5ce/9c911ce0-cf04-11f0-a964-8d5b6f8c6b80/file-jaoe38c1minpwecv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 1999 Network Theory - Two Port Networks Question 43 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "- 1/2"
+      },
+      {
+        "identifier": "B",
+        "content": "+ 1/2"
+      },
+      {
+        "identifier": "C",
+        "content": "- 3/2"
+      },
+      {
+        "identifier": "D",
+        "content": "+ 3/2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrb0k6/9733c620-a5df-43a2-bf7b-b9b0bd733884/2a054360-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrb0k7.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrb0k6/9733c620-a5df-43a2-bf7b-b9b0bd733884/2a054360-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrb0k7.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 1999 Network Theory - Two Port Networks Question 43 English Explanation 1\"></p>\n<p>Standard $\\boldsymbol{h}$-parameter equation :</p>\n<p>$$ \\begin{aligned} &amp; V_1=h_{11} I_1+h_{12} V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ &amp; I_2=h_{21} I_1+h_{22} V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} $$</p>\n<p>From equation (ii),</p>\n<p>$$ h_{21}=\\left.\\frac{I_2}{I_1}\\right|_{V_2=0}=\\text { Forward current gain, when } $$</p>\n<p>output is short circuited</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrb1ej/e57d8512-d42d-4465-967b-18ad8a1e7bbe/2aac0ab0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrb1ek.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrb1ej/e57d8512-d42d-4465-967b-18ad8a1e7bbe/2aac0ab0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrb1ek.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 1999 Network Theory - Two Port Networks Question 43 English Explanation 2\"></p>\n<p>Applying KVL in loop (1),</p>\n<p>$$ \\begin{aligned} &amp; I_2 R+\\left(I_1+I_2\\right) R=0 \\\\ &amp; 2 I_2 R=-I_1 R \\\\ &amp; \\frac{I_2}{I_1}=\\frac{-1}{2}=h_{21} \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The short-circuit admittance matrix of a two-port network is $$$\\begin{bmatrix}0&amp;-\\frac12\\\\\\frac12&amp;0\\end{bmatrix}$$$\nThe two port network is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "non-reciprocal and passive"
+      },
+      {
+        "identifier": "B",
+        "content": "non-reciprocal and active"
+      },
+      {
+        "identifier": "C",
+        "content": "reciprocal and passive"
+      },
+      {
+        "identifier": "D",
+        "content": "reciprocal and active"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given: The admittance matrix is $$[Y]=\\begin{bmatrix} 0 & -\\frac{1}{2} \\\\ \\frac{1}{2} & 0 \\end{bmatrix}$$</p>\n<p><b>Symmetrical Network Condition:</b></p>\n<p>The matrix is symmetrical if $$y_{11} = y_{22}$$.<br>\n\nHere, $y_{11} = 0$ and $y_{22} = 0$, so the network is symmetrical.</p>\n<p><b>Reciprocal Network Condition:</b></p>\n<p>The network is reciprocal if $$y_{12} = y_{21}$$.<br>\n\nBut here, $y_{12} = -\\frac{1}{2}$ and $y_{21} = \\frac{1}{2}$, which are not equal.<br>\n\nSo, the network is <b>not</b> reciprocal.</p>\n<p><b>Passive or Active:</b></p>\n<p>All passive and resistive networks are always reciprocal.<br>\n\nSince this network is not reciprocal, it must be <b>active</b> (it can have active components).</p>\n<p>So, the network is <b>symmetrical, non-reciprocal, and active</b>. The correct answer is option (B).</p>",
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The condition, that a 2-port network is reciprocal, can be expressed in terms of its ABCD parameters as ...............",
+    "options": [],
+    "correct_options": [],
+    "answer": "AD-BC = 1",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The open circuit impedance matrix of the 2-port network shown in figure is</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1minpc9hq/d6aa3973-5e0c-450c-b771-a64d008491e4/6ca062e0-cf02-11f0-a964-8d5b6f8c6b80/file-jaoe38c1minpc9hr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1minpc9hq/d6aa3973-5e0c-450c-b771-a64d008491e4/6ca062e0-cf02-11f0-a964-8d5b6f8c6b80/file-jaoe38c1minpc9hr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 1990 Network Theory - Two Port Networks Question 1 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\begin{bmatrix}-2 & 1 \\\\ -8 & 3\\end{bmatrix}$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\begin{bmatrix}-2 & -8 \\\\ -8 & 3\\end{bmatrix}$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\begin{bmatrix}0 & 1 \\\\ 1 & 0\\end{bmatrix}$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\begin{bmatrix}2 & -1 \\\\ -1 & 3\\end{bmatrix}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given circuit is shown below,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1minpc9hq/d6aa3973-5e0c-450c-b771-a64d008491e4/6ca062e0-cf02-11f0-a964-8d5b6f8c6b80/file-jaoe38c1minpc9hr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1minpc9hq/d6aa3973-5e0c-450c-b771-a64d008491e4/6ca062e0-cf02-11f0-a964-8d5b6f8c6b80/file-jaoe38c1minpc9hr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 1990 Network Theory - Two Port Networks Question 1 English Explanation 1\"></p>\n<p>Open circuit impedance parameter $=z$-parameter</p>\n<p>Standard $z$-parameter equation :</p>\n<p>$$ \\begin{aligned} &amp; V_1=z_{11} I_1+z_{12} I_2 .......(i) \\\\ &amp; V_2=z_{21} I_1+z_{22} I_2 .......(ii) \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1minpf777/bc1f2c02-61f3-4833-96df-b59016bc30d1/be489f40-cf02-11f0-a964-8d5b6f8c6b80/file-jaoe38c1minpf778.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1minpf777/bc1f2c02-61f3-4833-96df-b59016bc30d1/be489f40-cf02-11f0-a964-8d5b6f8c6b80/file-jaoe38c1minpf778.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 1990 Network Theory - Two Port Networks Question 1 English Explanation 2\"></p>\n<p>Applying KVL in loop (1),</p>\n<p>$$ \\begin{aligned} &amp; V_1=I_2-2 I_1 \\\\ &amp; V_1=-2 I_1+I_2 .......(iii) \\end{aligned} $$</p>\n<p>Applying KVL in loop (2),</p>\n<p>$$ \\begin{aligned} &amp; V_2=2\\left(I_2-3 I_1\\right)+\\left(I_2-2 I_1\\right) \\\\ &amp; V_2=2 I_2-6 I_1+I_2-2 I_1 \\\\ &amp; V_2=-8 I_1+3 I_2 .......(iv) \\end{aligned} $$</p>\n<p>Comparing equation (iii) and (iv) with (i) and (ii),</p>\n<p>$$ \\left[\\begin{array}{ll} z_{11} &amp; z_{12} \\\\ z_{21} &amp; z_{22} \\end{array}\\right]=\\left[\\begin{array}{ll} -2 &amp; 1 \\\\ -8 &amp; 3 \\end{array}\\right] $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-ece-1990",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The $Z$-parameter matrix of a two port network relates the port voltages and port currents as follows:</p>\n<p>$$ \\left[\\begin{array}{l} V_1 \\\\ V_2 \\end{array}\\right]=Z\\left[\\begin{array}{l} I_1 \\\\ I_2 \\end{array}\\right] $$</p>\n<p>The Z-parameter matrix (with each entry in Ohms) of the network shown below is</p>\n<p>___________.</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbexieib/18e35eb0-053c-4235-8cf7-dbf2d3301def/cee47430-3f99-11f0-a491-e768f614f5b9/file-jaoe38c1mbexieic.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbexieib/18e35eb0-053c-4235-8cf7-dbf2d3301def/cee47430-3f99-11f0-a491-e768f614f5b9/file-jaoe38c1mbexieic.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Network Theory - Two Port Networks Question 5 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\left[\\begin{array}{cc}\\frac{10}{3} & \\frac{2}{3} \\\\ \\frac{2}{3} & \\frac{10}{3}\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\left[\\begin{array}{cc}\\frac{2}{3} & \\frac{10}{3} \\\\ \\frac{10}{3} & \\frac{2}{3}\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\left[\\begin{array}{cc}10 & 2 \\\\ 2 & 10\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\left[\\begin{array}{cc}\\frac{10}{3} & \\frac{1}{3} \\\\ \\frac{1}{3} & \\frac{10}{3}\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbexjhjv/6291a820-91a9-4e09-bc8d-551a1f29958d/ed0d66b0-3f99-11f0-a491-e768f614f5b9/file-jaoe38c1mbexjhjw.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbexjhjv/6291a820-91a9-4e09-bc8d-551a1f29958d/ed0d66b0-3f99-11f0-a491-e768f614f5b9/file-jaoe38c1mbexjhjw.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Network Theory - Two Port Networks Question 5 English Explanation 1\"></p>\n<p>$$ \\begin{aligned} &amp; R_1=\\frac{2 \\times 2}{2+2+2}=\\frac{2}{3} \\Omega \\\\ &amp; R_1=\\frac{2}{3} \\Omega \\\\ &amp; R_3=\\frac{2}{3} \\Omega \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbexk7mv/b91e2a11-2df0-40d6-b10b-bddb832f0dc3/01337b70-3f9a-11f0-a491-e768f614f5b9/file-jaoe38c1mbexk7mw.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbexk7mv/b91e2a11-2df0-40d6-b10b-bddb832f0dc3/01337b70-3f9a-11f0-a491-e768f614f5b9/file-jaoe38c1mbexk7mw.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Network Theory - Two Port Networks Question 5 English Explanation 2\"></p>\n<p>$$ \\begin{aligned} &amp; Z_{11}=Z_a+Z_b=\\frac{10}{3} \\Omega \\\\ &amp; Z_{22}=Z_b+Z_c=\\frac{10}{3} \\Omega \\\\ &amp; Z_{12}=Z_{21}+Z_b=\\frac{2}{3} \\Omega \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For the two port network shown below, the value of the $Y_{21}$ parameter (in Siemens) is ______.</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxl0gx01/87467340-5571-49f6-a6ef-e2126f55d41c/0d89c810-2dc7-11ef-ab56-674ed58d7efd/file-jaoe38c1lxl0gx02.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxl0gx01/87467340-5571-49f6-a6ef-e2126f55d41c/0d89c810-2dc7-11ef-ab56-674ed58d7efd/file-jaoe38c1lxl0gx02.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Network Theory - Two Port Networks Question 6 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.5",
+    "explanation": "<p>Given Circuit is shown below.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfdv7or5/3ea25aed-6716-48ce-bc1d-92e5872265a0/e7839810-8e34-11f0-a029-e731836977d4/file-jaoe38c1mfdv7or6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfdv7or5/3ea25aed-6716-48ce-bc1d-92e5872265a0/e7839810-8e34-11f0-a029-e731836977d4/file-jaoe38c1mfdv7or6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Network Theory - Two Port Networks Question 6 English Explanation\">$$ \\begin{aligned} &amp;\\text { Applying KVL in Loop (1), }\\\\ &amp;\\begin{aligned} &amp; -V_1+2 I_1+4\\left(I_1+I_2\\right)-8 V_1=0 \\\\ &amp; 6 I_1+4 I_2=9 V_1 \\\\ &amp; V_1=\\left(\\frac{6}{9}\\right) I_1+\\left(\\frac{4}{9}\\right) I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp;\\text { Applying KVL in Loop (2), }\\\\ &amp;\\begin{aligned} &amp; -V_2+4\\left(I_1+I_2\\right)-8 V_1=0 \\\\ &amp; V_2=4\\left(I_1+I_2\\right)-8\\left[\\left(\\frac{6}{9}\\right) I_1+\\left(\\frac{4}{9}\\right) I_2\\right] \\\\ &amp; V_2=4\\left(I_1+I_2\\right)-\\frac{48}{9} I_1-\\frac{32}{9} I_2 \\\\ &amp; V_2=\\left(4-\\frac{48}{9}\\right) I_1+\\left(4-\\frac{32}{9}\\right) I_2 \\\\ &amp; V_2=\\left(\\frac{-12}{9}\\right) I_1+\\left(\\frac{4}{9}\\right) I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} \\end{aligned} $$</p>\n<p>From equation (i) and (ii),</p>\n<p>$$ \\left[\\begin{array}{ll} z_{11} &amp; z_{12} \\\\ z_{21} &amp; z_{22} \\end{array}\\right]=\\left[\\begin{array}{cc} \\frac{6}{9} &amp; \\frac{4}{9} \\\\ \\frac{-12}{9} &amp; \\frac{4}{9} \\end{array}\\right] $$</p>\n<p>Relationship between $Z$ and $Y$ parameter :</p>\n<p>$$ \\begin{aligned} &amp; {[Y]=[Z]^{-1} \\text { and }[Z]=[Y]^{-1}} \\\\ &amp; {[Y]=[Z]^{-1}=\\left[\\begin{array}{cc} \\frac{6}{9} &amp; \\frac{4}{9} \\\\ \\frac{-12}{9} &amp; \\frac{4}{9} \\end{array}\\right]^{-1}} \\end{aligned} $$</p>\n<p></p>\n<p>$$ \\begin{aligned} &amp; {[Y]=\\frac{1}{\\left(\\frac{6}{9} \\times \\frac{4}{9}+\\frac{12}{9} \\times \\frac{4}{9}\\right)}\\left[\\begin{array}{cc} \\frac{4}{9} &amp; \\frac{-4}{9} \\\\ \\frac{12}{9} &amp; \\frac{6}{9} \\end{array}\\right]} \\\\ &amp; {[Y]=\\frac{81}{(24+48) 9}\\left[\\begin{array}{cc} 4 &amp; -4 \\\\ 12 &amp; 6 \\end{array}\\right]} \\\\ &amp; {[Y]=\\frac{9}{72}\\left[\\begin{array}{cc} 4 &amp; -4 \\\\ 12 &amp; 6 \\end{array}\\right]=\\frac{1}{8}\\left[\\begin{array}{cc} 4 &amp; -4 \\\\ 12 &amp; 6 \\end{array}\\right]} \\\\ &amp; {[Y]=\\left[\\begin{array}{cc} \\frac{1}{2} &amp; \\frac{-1}{2} \\\\ \\frac{12}{8} &amp; \\frac{6}{8} \\end{array}\\right]} \\\\ &amp; Y_{11}=\\frac{1}{2} \\mho, Y_{12}=\\frac{-1}{2} \\mho, Y_{21}=\\frac{3}{2}=1.5 \\mho \\\\and\\,\\,\\,\\, &amp; Y_{22}=0.75 \\mho \\end{aligned} $$</p>\n<p>Hence, the correct Answer is $\\mathbf{1 . 5}$.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The h-parameters of a two port network are shown below. The condition for the maximum small signal voltage gain $${{{V_{out}}} \\over {{V_s}}}$$ is</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxe9o43/406baf90-2a3f-45b2-bd23-61eb0f9a6350/a2fd2a30-4862-11ef-8807-81b9920dce91/file-jaoe38c1lyxe9o44.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxe9o43/406baf90-2a3f-45b2-bd23-61eb0f9a6350/a2fd2a30-4862-11ef-8807-81b9920dce91/file-jaoe38c1lyxe9o44.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Network Theory - Two Port Networks Question 9 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "h$$_{11}=0$$, h$$_{12}=0$$, h$$_{21}=$$ very high and h$$_{22}=0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "h$$_{11}=$$ very high, h$$_{12}=0$$, h$$_{21}=$$ very high and h$$_{22}=0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "h$$_{11}=0$$, h$$_{12}=$$ very high, h$$_{21}=$$ very high and h$$_{22}=0$$"
+      },
+      {
+        "identifier": "D",
+        "content": "h$$_{11}=0$$, h$$_{12}=0$$, h$$_{21}=$$ very high and h$$_{22}=$$ very high"
+      }
+    ],
+    "correct_options": [],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The S-parameters of a two port network is given as</p>\n<p>$$[S] = \\left[ {\\matrix{\n   {{S_{11}}} &amp; {{S_{12}}}  \\cr \n   {{S_{21}}} &amp; {{S_{22}}}  \\cr \n\n } } \\right]$$</p>\n<p>with reference to $${Z_0}$$. Two lossless transmission line sections of electrical lengths $${\\theta _1} = \\beta {l_1}$$ and $${\\theta _2} = \\beta {l_2}$$ are added to the input and output ports for measurement purposes, respectively. The S-parameters $$[S']$$ of the resultant two port network is</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxe2i26/e7c99249-e9ff-49c4-a27d-331b36519385/dba620e0-4861-11ef-8807-81b9920dce91/file-jaoe38c1lyxe2i27.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxe2i26/e7c99249-e9ff-49c4-a27d-331b36519385/dba620e0-4861-11ef-8807-81b9920dce91/file-jaoe38c1lyxe2i27.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Network Theory - Two Port Networks Question 8 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\matrix{\n   {{S_{11}}{e^{ - j2{\\theta _1}}}} & {{S_{12}}{e^{ - j({\\theta _1} + {\\theta _2})}}}  \\cr \n   {{S_{21}}{e^{ - j({\\theta _1} + {\\theta _2})}}} & {{S_{22}}{e^{ - j2{\\theta _2}}}}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\matrix{\n   {{S_{11}}{e^{j2{\\theta _1}}}} & {{S_{12}}{e^{ - j({\\theta _1} + {\\theta _2})}}}  \\cr \n   {{S_{21}}{e^{ - j({\\theta _1} + {\\theta _2})}}} & {{S_{22}}{e^{j2{\\theta _2}}}}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\matrix{\n   {{S_{11}}{e^{j2{\\theta _1}}}} & {{S_{12}}{e^{j({\\theta _1} + {\\theta _2})}}}  \\cr \n   {{S_{21}}{e^{j({\\theta _1} + {\\theta _2})}}} & {{S_{22}}{e^{j2{\\theta _2}}}}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   {{S_{11}}{e^{ - j2{\\theta _1}}}} & {{S_{12}}{e^{j({\\theta _1} + {\\theta _2})}}}  \\cr \n   {{S_{21}}{e^{j({\\theta _1} + {\\theta _2})}}} & {{S_{22}}{e^{ - j2{\\theta _2}}}}  \\cr \n\n } } \\right]$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxe3lpw/0daf6bd4-a641-4d0b-ab22-cf7843a0eba0/fa48d740-4861-11ef-8807-81b9920dce91/file-jaoe38c1lyxe3lpx.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxe3lpw/0daf6bd4-a641-4d0b-ab22-cf7843a0eba0/fa48d740-4861-11ef-8807-81b9920dce91/file-jaoe38c1lyxe3lpx.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Network Theory - Two Port Networks Question 8 English Explanation\">\n\n<p>$$ \\left[\\begin{array}{l} V_1^{-} \\\\ V_2^{-} \\end{array}\\right]=\\left[\\begin{array}{ll} S_{11} &amp; S_{12} \\\\ S_{21} &amp; S_{22} \\end{array}\\right]\\left[\\begin{array}{l} V_1^{+} \\\\ V_2^{+} \\end{array}\\right] $$ ........(i)</p>\n\n<p>To be calculated,</p>\n\n<p>$$ \\left[\\begin{array}{l} V_{1 N}^{-} \\\\ V_{2 N}^{-} \\end{array}\\right]=\\left[\\begin{array}{ll} S_{11 N} &amp; S_{12 N} \\\\ S_{21 N} &amp; S_{22 N} \\end{array}\\right]\\left[\\begin{array}{l} V_{1 N}^{+} \\\\ V_{2 N}^{+} \\end{array}\\right] $$</p>\n\n<p>$\\begin{aligned} &amp; V_1^{+}=V_{1 N}^{+} e^{-j \\theta_1} \\\\\\\\ &amp; V_{1 N}^{-}=V_1^{-} e^{-j \\theta_1}=V_1^{-}=V_{1 N}^{-} e^{j \\theta_1} \\\\\\\\ &amp; V_2^{+}=V_{2 N}^{+} e^{-j \\theta_2} \\\\\\\\ &amp; V_{2 N}^{-}=V_2^{-} e^{-j \\theta_2}=V_2^{-}=V_{2 N}^{-} e^{j \\theta_2}\\end{aligned}$</p>\n\n<p>Feeding the data in equation (i),</p>\n\n<p>$$ \\left[\\begin{array}{l} V_{1 N}^{-} \\\\ V_{2 N}^{-} \\end{array}\\right]=\\left[\\begin{array}{cc} S_{11 N} e^{-j\\left(2 \\theta_1\\right)} &amp; S_{12 N} e^{-j\\left(\\theta_1+\\theta_2\\right)} \\\\ S_{21 N} e^{-j\\left(\\theta_1+\\theta_2\\right)} &amp; S_{22 N} e^{-j 2\\left(\\theta_2\\right)} \\end{array}\\right] $$</p>\n\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A linear 2-port network is shown in Fig. (a). An ideal DC voltage source of 10 V is connected across Port 1. A variable resistance R is connected across Port 2. As R is varied, the measured voltage and current at Port 2 is shown in Fig. (b) as a V<sub>2</sub> versus $$-$$I<sub>2</sub> plot. Note that for V<sub>2</sub> = 5 V, I<sub>2</sub> = 0 mA, and for V<sub>2</sub> = 4 V, I<sub>2</sub> = $$-$$4 mA. When the variable resistance R at Port 2 is replaced by the load shown in Fig. (c), the current I<sub>2</sub> is ________ mA (rounded off to one decimal place).</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7e7t5bm/6d7e8496-0998-40f2-adec-84d7e46f266a/a52ed120-274c-11ed-9790-fb4466c4cdf1/file-1l7e7t5bn.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7e7t5bm/6d7e8496-0998-40f2-adec-84d7e46f266a/a52ed120-274c-11ed-9790-fb4466c4cdf1/file-1l7e7t5bn.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Network Theory - Two Port Networks Question 10 English 1\"></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7e7uewp/e726a29f-1c29-4ea9-984e-98a5796c8cb2/c8658e90-274c-11ed-9790-fb4466c4cdf1/file-1l7e7uewq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7e7uewp/e726a29f-1c29-4ea9-984e-98a5796c8cb2/c8658e90-274c-11ed-9790-fb4466c4cdf1/file-1l7e7uewq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Network Theory - Two Port Networks Question 10 English 2\"></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7e7vnzf/822de713-eec4-4b5e-ab0f-93668126dd4c/eb376fb0-274c-11ed-9790-fb4466c4cdf1/file-1l7e7vnzg.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7e7vnzf/822de713-eec4-4b5e-ab0f-93668126dd4c/eb376fb0-274c-11ed-9790-fb4466c4cdf1/file-1l7e7vnzg.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Network Theory - Two Port Networks Question 10 English 3\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p>For I<sub>2</sub> = 0, V<sub>2</sub> = V<sub>OC</sub> = 5 V</p>\n<p>For Thevenin's resistance R<sub>th</sub>,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7e7xsyg/4fe7ca75-5f99-43cc-a5d7-16f7ca84340c/26ad2580-274d-11ed-9790-fb4466c4cdf1/file-1l7e7xsyh.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7e7xsyg/4fe7ca75-5f99-43cc-a5d7-16f7ca84340c/26ad2580-274d-11ed-9790-fb4466c4cdf1/file-1l7e7xsyh.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Network Theory - Two Port Networks Question 10 English Explanation 1\"></p>\n<p>For $$-$$I<sub>2</sub> = 20 mA, V<sub>2</sub> = 0</p>\n<p>I<sub>SC</sub> = $$-$$I<sub>2</sub></p>\n<p>I<sub>SC</sub> = 20 mA</p>\n<p>R<sub>th</sub> = $${{{V_{OC}}} \\over {{I_{SC}}}} = {5 \\over {20}} \\times {10^3} = 250$$ $$\\Omega$$</p>\n<p>Network is replaced by Thevenin's equivalent,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7e81yvl/5d362eab-4594-4859-b57c-418517955dd7/9a7c8410-274d-11ed-9790-fb4466c4cdf1/file-1l7e81yvm.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7e81yvl/5d362eab-4594-4859-b57c-418517955dd7/9a7c8410-274d-11ed-9790-fb4466c4cdf1/file-1l7e81yvm.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Network Theory - Two Port Networks Question 10 English Explanation 2\"></p>\n<p>$${I_2} = {{10 - 5} \\over {1.25 \\times {{10}^3}}} = {5 \\over {1.25}} \\times {10^{ - 3}}$$ A = 4 mA</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For a 2-port network consisting of an ideal lossless transformer, the parameter $S_{21}$ (rounded off to two decimal places) for a reference impedance of $10 \\Omega$ is $\\_\\_\\_\\_$ .</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh25ex63/0bb082b9-77c5-4097-ad73-deb03adaff9e/d2ef53b0-af5b-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25ex64.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh25ex63/0bb082b9-77c5-4097-ad73-deb03adaff9e/d2ef53b0-af5b-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25ex64.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Network Theory - Two Port Networks Question 3 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.8",
+    "explanation": "<p>$$ \\text { Given : } \\quad Z_0=10 \\Omega $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh25ew67/ed2b06be-e811-4197-a512-492c5f1680de/d22a2ef0-af5b-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25ew68.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh25ew67/ed2b06be-e811-4197-a512-492c5f1680de/d22a2ef0-af5b-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25ew68.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Network Theory - Two Port Networks Question 3 English Explanation\">As the given transformer is ideal,</p>\n<p>$$ \\begin{aligned} &amp; \\frac{V_2}{V_1}=\\frac{1}{2} \\\\ &amp; V_1=2 V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ &amp; \\frac{I_1}{I_2}=-\\frac{1}{2} \\\\ &amp; I_1=-0.5 I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\\\ &amp; {[T]=\\left[\\begin{array}{cc} 2 &amp; 0 \\\\ 0 &amp; 0.5 \\end{array}\\right]} \\end{aligned} $$</p>\n<p>Scattering parameter $S_{21}$ in terms of $A B C D$ is given by,</p>\n<p>$$ S_{21}=\\frac{2}{A+\\frac{B}{Z_0}+\\frac{C}{Z_0}+D}=\\frac{2}{2+0+0+0.5}=\\frac{2}{2.5}=0.8 $$</p>\n<p>Hence, the parameter $S_{21}$ is $\\mathbf{0 . 8}$.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The z-parameter matrix $$\\begin{bmatrix}z_{11}&amp;z_{12}\\\\z_{21}&amp;z_{22}\\end{bmatrix}$$ for the two-port network shown is\n<img alt=\"GATE ECE 2016 Set 3 Network Theory - Two Port Networks Question 44 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a9080622be79eb2a2ffff929e9706ebb352a16c1564b75ebc378b3576439f709.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\begin{bmatrix}2&amp;-2\\\\-2&amp;2\\end{bmatrix}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\begin{bmatrix}2&amp;2\\\\2&amp;2\\end{bmatrix}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\begin{bmatrix}9&amp;-3\\\\6&amp;9\\end{bmatrix}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\begin{bmatrix}9&amp;3\\\\6&amp;9\\end{bmatrix}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsqod2/7d3b438f-be09-41c5-9009-47816841cc21/c6ac7760-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqod3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsqod2/7d3b438f-be09-41c5-9009-47816841cc21/c6ac7760-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqod3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2016 Set 3 Network Theory - Two Port Networks Question 44 English Explanation 1\"></p>\n<p>Standard $z$-parameter equation :</p>\n<p>$$ \\begin{aligned} &amp; V_1=z_{11} I_1+z_{12} I_2 \\\\ &amp; V_2=z_{21} I_1+z_{22} I_2 \\end{aligned} $$</p>\n<p>Given circuit can be redrawn as shown below,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsqp9l/2a2b511c-9e4f-49b4-8517-caf8d6670fd6/c75f4ca0-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqp9m.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsqp9l/2a2b511c-9e4f-49b4-8517-caf8d6670fd6/c75f4ca0-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqp9m.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2016 Set 3 Network Theory - Two Port Networks Question 44 English Explanation 2\"></p>\n<p>(i) Calculation of $z_{11}$ :</p>\n<p>$z_{11}=\\left.\\frac{V_1}{I_1}\\right|_{I_2=0}=$ Driving point input impedance, when output is open circuited.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsqqa4/2b17091e-a508-4a7c-bd26-92ce91ee05b4/c827ccc0-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqqa5.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsqqa4/2b17091e-a508-4a7c-bd26-92ce91ee05b4/c827ccc0-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqqa5.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2016 Set 3 Network Theory - Two Port Networks Question 44 English Explanation 3\"></p>\n<p>(ii) Calculation of $z_{21}$ :</p>\n<p>$z_{21}=\\left.\\frac{V_2}{I_1}\\right|_{I_2=0}=$ Transfer impedance, when</p>\n<p>output is open circuited.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsqr7j/04512fae-3b8a-4deb-a8d9-e822aebba20e/c8df5cf0-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqr7k.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsqr7j/04512fae-3b8a-4deb-a8d9-e822aebba20e/c8df5cf0-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqr7k.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2016 Set 3 Network Theory - Two Port Networks Question 44 English Explanation 4\"></p>\n<p>$$ I_{3 \\Omega}=\\frac{I_1 \\times 6}{3+6}=\\frac{2}{3} I_1 \\quad[\\mathrm{By} \\mathrm{CDR}] $$</p>\n<p>$$ \\begin{aligned} &amp;I_{6 \\Omega}=\\frac{I_1 \\times 3}{3+6}=\\frac{1}{3} I_1\\text { [By CDR] } \\end{aligned} $$</p>\n<p>Applying KVL in above loop,</p>\n<p>$$ \\begin{aligned} &amp; -V_2-3 \\times \\frac{2}{3} I_1=0 \\\\ &amp; \\frac{V_2}{I_1}=-2 \\Omega \\\\ &amp; z_{21}=\\frac{V_2}{I_1}=-2 \\Omega \\end{aligned} $$</p>\n<p>(iii) Calculation of $z_{22}$ :</p>\n<p>$z_{22}=\\left.\\frac{V_2}{I_2}\\right|_{I_1=0}=$ Driving point output impedance,</p>\n<p>when input is open circuited.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsqs5k/011cea43-a859-46ff-a7aa-82aa119adea3/c99a4880-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqs5l.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsqs5k/011cea43-a859-46ff-a7aa-82aa119adea3/c99a4880-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqs5l.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2016 Set 3 Network Theory - Two Port Networks Question 44 English Explanation 5\"></p>\n<p>$$ \\begin{aligned} &amp;I_{3 \\Omega}=\\frac{I_2 \\times 6}{3+6}=\\frac{2}{3} I_2\\text { [By CDR] } \\end{aligned} $$</p>\n<p>Applying KVL in above shown loop,</p>\n<p>$$ \\begin{aligned} &amp; -V_2+\\frac{2}{3} I_2 \\times 3=0 \\\\ &amp; z_{22}=\\frac{V_2}{I_2}=2 \\Omega \\end{aligned} $$</p>\n<p>(iv) Calculation of $z_{12}$ :</p>\n<p>$$ z_{12}=\\left.\\frac{V_1}{I_2}\\right|_{I_1=0}=\\text { Transfer impedance, when  input is open circuited.} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsqt26/b5424739-bc24-4983-b59c-5809d07f65c8/ca4d6be0-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqt27.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsqt26/b5424739-bc24-4983-b59c-5809d07f65c8/ca4d6be0-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsqt27.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2016 Set 3 Network Theory - Two Port Networks Question 44 English Explanation 6\"></p>\n<p>$$ \\begin{aligned} &amp;I_{6 \\Omega}=\\frac{3 \\times I_2}{3+6}=\\frac{3}{9} I_2\\text { [By CDR] } \\end{aligned} $$</p>\n<p>From figure, $-V_1-6 \\times \\frac{1}{3} I_2=0$</p>\n<p>$$ \\begin{aligned} &amp; V_1=-6 \\times I_2 \\times \\frac{3}{9}=-2 I_2 \\\\ &amp; z_{12}=\\frac{V_1}{I_2}=-2 \\Omega \\\\ &amp; {[z]=\\left[\\begin{array}{cc} 2 &amp; -2 \\\\ -2 &amp; 2 \\end{array}\\right]} \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The ABCD parameters of the following  2-port network are \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/UJ9bhtpnMv0EGt5dX/xsy7XLdlzjPqstlDHicDT4I1eQ25g/1kQMJ6DyQNF5y5UcXPsIfu/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 3 Network Theory - Two Port Networks Question 22 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\matrix{\n   {3.5\\, + \\,j2} &amp; {20.5}  \\cr \n   {20.5} &amp; {3.5\\, - \\,j2}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\matrix{\n   {3.5\\, + \\,j2} &amp; {30.5}  \\cr \n   {0.5} &amp; {3.5\\, - \\,j2}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\,\\left[ {\\matrix{\n   {10} &amp; {2 + \\,j0}  \\cr \n   {2 + \\,j0} &amp; {10}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   {7\\, + \\,j4} &amp; {0.5}  \\cr \n   {30.5} &amp; {7\\, - \\,j4}  \\cr \n\n } } \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwsjlke/6754abeb-985b-4ba5-8136-f5d368f7b9f7/01d980e0-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsjlkf.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwsjlke/6754abeb-985b-4ba5-8136-f5d368f7b9f7/01d980e0-d402-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwsjlkf.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2015 Set 3 Network Theory - Two Port Networks Question 22 English Explanation\">$z$-parameter for standard $T$ network is given by,</p>\n<p>$$ \\begin{aligned} &amp; {[Z]=\\left[\\begin{array}{cc} Z_1+Z_2 &amp; Z_1 \\\\ Z_1 &amp; Z_1+Z_3 \\end{array}\\right]} \\\\ &amp; {[Z]=\\left[\\begin{array}{cc} (5+j 4)+(2) &amp; 2 \\\\ 2 &amp; (5-j 4)+(2) \\end{array}\\right]} \\\\ &amp; {[Z]=\\left[\\begin{array}{cc} 7+j 4 &amp; 2 \\\\ 2 &amp; 7-j 4 \\end{array}\\right]} \\end{aligned} $$</p>\n<p></p>\n<p>$$ \\begin{aligned} Hence,\\,\\,&amp; V_1=(7+j 4) I_1+2 I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ &amp; V_2=2 I_1+(7-j 4) I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} $$</p>\n<p>Standard $\\boldsymbol{A} \\boldsymbol{B} \\boldsymbol{C} \\boldsymbol{D}$ parameter equation :</p>\n<p>$$ \\begin{aligned} &amp; V_1=A V_2-B I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)\\\\ &amp; I_1=C V_2-D I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)\\end{aligned} $$</p>\n<p>From equation (ii),</p>\n<p>$$ \\begin{aligned} &amp; 2 I_1=V_2-(7-j 4) I_2 \\\\ &amp; I_1=\\frac{V_2}{2}-\\left(\\frac{7-j 4}{2}\\right) I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(v)\\\\ &amp; I_1=0.5 V_2-(3.5-j 2) I_2 \\end{aligned} $$</p>\n<p>Put the value of $I_1$ in equation (i),</p>\n<p>$$ \\begin{aligned} V_1 &amp; =(7+j 4)\\left[\\frac{V_2}{2}-\\left(\\frac{7-j 4}{2}\\right) I_2\\right]+2 I_2 \\\\ V_1 &amp; =\\left(\\frac{7+j 4}{2}\\right) V_2-\\frac{(7+j 4)(7-j 4)}{2} I_2+2 I_2 \\\\ V_1 &amp; =\\left(\\frac{7+j 4}{2}\\right) V_2-\\frac{(49+16)}{2} I_2+2 I_2 \\\\ V_1 &amp; =(3.5+j 2) V_2-30.5 I_2 \\end{aligned} $$</p>\n<p>Comparing equation (vi) and (v) with equation (iii) and (iv),</p>\n<p>$$ T=\\left[\\begin{array}{ll} A &amp; B \\\\ C &amp; D \\end{array}\\right]=\\left[\\begin{array}{cc} 3.5+j 2 &amp; 30.5 \\\\ 0.5 &amp; 3.5-j 2 \\end{array}\\right] $$</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In the h-parameter model of the 2-port network given in the figure shown, the value of h<sub>22</sub> (in\nS) is _____ .\n<img alt=\"GATE ECE 2014 Set 2 Network Theory - Two Port Networks Question 46 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/5c787217ce69a962e3556c369840551f852e8d8d1cb47837c662f76820912840.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.25",
+    "explanation": "<p>When two networks are connected in parallel, then overall $y$-parameter is addition of individual $y$-parameter.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miws9moy/677a8214-d255-481e-ad5b-b3980b740269/eca15550-d400-11f0-890a-d1bfb04bf31c/file-jaoe38c1miws9mp1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miws9moy/677a8214-d255-481e-ad5b-b3980b740269/eca15550-d400-11f0-890a-d1bfb04bf31c/file-jaoe38c1miws9mp1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2014 Set 2 Network Theory - Two Port Networks Question 46 English Explanation 1\">$$ \\text { Standard } \\pi \\text { - network : } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miws9noz/f3f6cb0b-23bd-4f06-a920-3c437375ce7e/ed66c830-d400-11f0-890a-d1bfb04bf31c/file-jaoe38c1miws9np0.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miws9noz/f3f6cb0b-23bd-4f06-a920-3c437375ce7e/ed66c830-d400-11f0-890a-d1bfb04bf31c/file-jaoe38c1miws9np0.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2014 Set 2 Network Theory - Two Port Networks Question 46 English Explanation 2\"></p>\n<p>Admittance parameter matrix for standard $\\pi$ network is given by,</p>\n<p>$$ [Y]=\\left[\\begin{array}{cc} Y_A+Y_B &amp; -Y_A \\\\ -Y_A &amp; Y_A+Y_C \\end{array}\\right]=\\left[\\begin{array}{ll} y_{11} &amp; y_{12} \\\\ y_{21} &amp; y_{22} \\end{array}\\right] $$</p>\n<p>For network (1) $y$-parameter is given by,</p>\n<p>$$ \\left[Y_1\\right]=\\left[\\begin{array}{cc} \\frac{1}{3}+\\frac{1}{3} &amp; -\\frac{1}{3} \\\\ -\\frac{1}{3} &amp; \\frac{1}{3}+\\frac{1}{3} \\end{array}\\right]=\\left[\\begin{array}{cc} \\frac{2}{3} &amp; -\\frac{1}{3} \\\\ -\\frac{1}{3} &amp; \\frac{2}{3} \\end{array}\\right] $$</p>\n<p>Similarly, for network (2), $y$-parameter is given by,</p>\n<p>$$ \\left[Y_2\\right]=\\left[\\begin{array}{cc} 1 &amp; -\\frac{1}{2} \\\\ -\\frac{1}{2} &amp; 1 \\end{array}\\right] $$</p>\n<p>Thus, $[Y]=\\left[Y_1\\right]+\\left[Y_2\\right]=\\left[\\begin{array}{cc}\\frac{5}{3} &amp; -\\frac{5}{6} \\\\ -\\frac{5}{6} &amp; \\frac{5}{3}\\end{array}\\right]$</p>\n<p>$$ \\text {  } \\quad \\begin{aligned}\\,\\, I_1 &amp; =\\frac{5}{3} V_1-\\frac{5}{6} V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ and\\,\\,\\,I_2 &amp; =\\frac{-5}{6} V_1+\\frac{5}{3} V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} $$</p>\n<p>Standard $\\boldsymbol{h}$-parameter equation :</p>\n<p>$$ \\begin{aligned} &amp; V_1=h_{11} I_1+h_{12} V_2 \\\\ &amp; I_2=h_{21} I_1+h_{22} V_2 \\\\ h_{22}= &amp; \\left.\\frac{I_2}{V_2}\\right|_{I_1=0}=\\text { Driving point output admittance } \\end{aligned} $$</p>\n<p>when input is open circuited.</p>\n<p>From equation (i),</p>\n<p>$$ \\begin{aligned} &amp; 0=\\frac{5}{3} V_1-\\frac{5}{6} V_2 \\\\ &amp; \\frac{5}{3} V_1=\\frac{5}{6} V_2 \\\\ &amp; 2 V_1=V_2 \\\\ &amp; V_1=\\frac{V_2}{2} \\end{aligned} $$</p>\n<p>Put the value of $V_1$ in equation (ii),</p>\n<p>$$ h_{22}=\\frac{I_2}{V_2}=\\frac{15}{12}=1.25 \\mathrm{~S} $$</p>\n<p>Hence, the value of $h_{22}$ is $\\mathbf{1 . 2 5 ~ S}$.</p>",
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For the two-port network shown in the figure, the impedance (Z) matrix (in Ω) is\n<img alt=\"GATE ECE 2014 Set 4 Network Theory - Two Port Networks Question 45 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c26017fa134062b9128b97bf93d9fbddc10f6aa90d4083ea59dff0f5de58dde7.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\begin{bmatrix}6&amp;24\\\\42&amp;9\\end{bmatrix}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\begin{bmatrix}9&amp;8\\\\8&amp;24\\end{bmatrix}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\begin{bmatrix}9&amp;6\\\\6&amp;24\\end{bmatrix}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\begin{bmatrix}42&amp;6\\\\6&amp;60\\end{bmatrix}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwse19d/7d209322-59f8-4b0e-9e07-94be087304f2/671e2510-d401-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwse19e.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwse19d/7d209322-59f8-4b0e-9e07-94be087304f2/671e2510-d401-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwse19e.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2014 Set 4 Network Theory - Two Port Networks Question 45 English Explanation 1\"></p>\n<p>By using $\\pi$ to $\\boldsymbol{T}$ conversion :</p>\n<p>Applying conversion from $\\pi$ to $T$.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwse1xb/0d0d4aeb-46c8-4939-a294-0a24bf2835b4/67a1acf0-d401-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwse1xc.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwse1xb/0d0d4aeb-46c8-4939-a294-0a24bf2835b4/67a1acf0-d401-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwse1xc.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2014 Set 4 Network Theory - Two Port Networks Question 45 English Explanation 2\"></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwse2oh/64b79428-bd20-4de8-902c-95d370984843/68370f20-d401-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwse2oi.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwse2oh/64b79428-bd20-4de8-902c-95d370984843/68370f20-d401-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwse2oi.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2014 Set 4 Network Theory - Two Port Networks Question 45 English Explanation 3\"></p>\n<p></p>\n<p>$$ \\begin{aligned} where,\\,\\,&amp; Z_1=\\frac{Z_{12} Z_{13}}{Z_{12}+Z_{13}+Z_{23}} \\\\ &amp; Z_1=\\frac{10 \\times 60}{30+10+60}=\\frac{600}{100}=6 \\Omega \\\\ &amp; Z_2=\\frac{Z_{12} Z_{23}}{Z_{12}+Z_{13}+Z_{23}} \\\\ &amp; Z_2=\\frac{30 \\times 10}{30+10+60}=\\frac{300}{100}=3 \\Omega \\\\ &amp; Z_3=\\frac{Z_{23} Z_{13}}{Z_{12}+Z_{13}+Z_{23}} \\\\ &amp; Z_3=\\frac{60 \\times 30}{30+10+60}=\\frac{1800}{100}=18 \\Omega \\end{aligned} $$</p>\n<p>$z$-parameter for $T$-network is given by,</p>\n<p>$$ [Z]=\\left[\\begin{array}{cc} Z_1+Z_2 &amp; Z_1 \\\\ Z_1 &amp; Z_1+Z_3 \\end{array}\\right]=\\left[\\begin{array}{cc} 9 &amp; 6 \\\\ 6 &amp; 24 \\end{array}\\right] \\Omega $$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "<p>The equivalent resistance in the infinite ladder network shown in the figure, is$${R_e}$$ \n</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l9irntvg/b386e363-6866-4cd2-9b9b-7dea675544f2/d93c7c40-5165-11ed-960b-4518cb703937/file-1l9irntvp.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l9irntvg/b386e363-6866-4cd2-9b9b-7dea675544f2/d93c7c40-5165-11ed-960b-4518cb703937/file-1l9irntvp.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2014 Set 4 Network Theory - Two Port Networks Question 23 English\">\n<p>The value of $${R_e}/R$$ is _______________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.6",
+    "explanation": "Given circuit can be replaced by circuit shown below,<br><br><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l9irvndf/2060460e-4d8a-41ef-9a5c-64d8ce13865d/b2aed630-5166-11ed-960b-4518cb703937/file-1l9irvndg.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l9irvndf/2060460e-4d8a-41ef-9a5c-64d8ce13865d/b2aed630-5166-11ed-960b-4518cb703937/file-1l9irvndg.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2014 Set 4 Network Theory - Two Port Networks Question 23 English Explanation\"><br><br>$${R_{eq}} = R + {{R \\times {R_{eq}}} \\over {R + {R_{eq}}}}$$<br><br>$${R_{eq}} = {{{R^2} + R{R_{eq}} + R{R_{eq}}} \\over {(R + {R_{eq}})}}$$<br><br>$${R_{eq}}(R + {R_{eq}}) = {R^2} + R{R_{eq}} + R{R_{eq}}$$<br><br>$$R{R_{eq}} + R_{eq}^2 = {R^2} + 2R{R_{eq}}$$<br><br>$$R_{eq}^2 - R{R_{eq}} - {R^2} = 0$$<br><br>$${R_{eq}} = {{R \\pm \\sqrt {{R^2} + 4{R^2}} } \\over 2} = {{R \\pm \\sqrt 5 R} \\over 2}$$<br><br>R<sub>eq</sub> cannot be negative. So,<br><br>$${R_{eq}} = \\left[ {{{1 + \\sqrt 5 } \\over 2}} \\right]R = 1.618R$$<br><br>Therefore, $${R_e} = R + {R_{eq}}$$<br><br>$${R_e} = R + 1.618R = 2.618R$$<br><br>$${{{R_e}} \\over R} = 2.618 = 2.62$$",
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit shown below, the network N is described by the following Y matrix:\n$$$Y\\;=\\;\\begin{bmatrix}0.1S&amp;-0.01S\\\\0.01S&amp;0.1S\\end{bmatrix}$$$\nThe voltage gain $$\\frac{V_2}{V_1}$$ is\n\n<img alt=\"GATE ECE 2011 Network Theory - Two Port Networks Question 47 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/76ce85dc916b572caec10a2da9c65b8ec471cddd958c2da54b93b0ff5d6cb2eb.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1/90"
+      },
+      {
+        "identifier": "B",
+        "content": "-1/90"
+      },
+      {
+        "identifier": "C",
+        "content": "-1/99"
+      },
+      {
+        "identifier": "D",
+        "content": "-1/11"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &amp;\\text { Given : }\\\\ &amp;\\begin{aligned} &amp; Y=\\left[\\begin{array}{cc} 0.1 &amp; -0.01 \\\\ 0.01 &amp; 0.1 \\end{array}\\right] \\mathrm{S} \\\\ &amp; I_1=0.1 V_1-0.01 V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ &amp; I_2=0.01 V_1+0.1 V_2\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii) \\end{aligned} \\end{aligned} $$</p>\n<p><code></code><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miws11z5/6e5a3533-ce0a-4582-83a6-09e5e4a127d4/fe26eb10-d3ff-11f0-890a-d1bfb04bf31c/file-jaoe38c1miws11z6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miws11z5/6e5a3533-ce0a-4582-83a6-09e5e4a127d4/fe26eb10-d3ff-11f0-890a-d1bfb04bf31c/file-jaoe38c1miws11z6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2011 Network Theory - Two Port Networks Question 47 English Explanation\"></p>\n<p>Applying KVL in input port,</p>\n<p>$$ 100=25 I_1+V_1 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)$$</p>\n<p>Applying KVL in output port,</p>\n<p>$$ V_2=-100 I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)$$</p>\n<p>From equation (iii) and (iv),</p>\n<p>$$ \\begin{aligned} &amp; V_2=-100\\left(0.01 V_1+0.1 V_2\\right) \\\\ &amp; V_2=-V_1-10 V_2 \\\\ &amp; 11 V_2=-V_1 \\\\ &amp; \\frac{V_2}{V_1}=\\frac{-1}{11} \\end{aligned} $$</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A two-port network shown below is excited by external dc sources. The voltages and the currents are measured with voltmeters $${V_1}$$, $${V_2}$$ and ammeter $${A_1}$$, $${A_2}$$ (all assumed to be ideal), as indicated. Under following switch conditions, the readings obtained are:\n<p> (i) $${S_1} - open,\\,\\,\\,\\,{S_2} - closed$$\n<br> $${A_1} = 0\\,A,\\,\\,\\,\\,\\,\\,{V_1} = \\,4.5\\,\\,V,$$\n<br> $${V_2}\\, = \\,1.5\\,V,\\,\\,\\,\\,{A_2}\\, = \\,1\\,A$$\n</p><p> (ii) $${S_1} - Closed,\\,\\,\\,\\,{S_2} - Open$$ \n<br> $${A_1} = 4\\,A,\\,\\,\\,\\,\\,\\,{V_1} = \\,6\\,\\,V,$$\n<br> $${V_2}\\, = \\,6\\,V,\\,\\,\\,\\,{A_2}\\, = \\,0\\,A$$ </p> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/YaqghkCEKqvIBPNZi/N4eAdplLAmKAoMM9VoyTTIb5m3Fus/aj75j5ZkZWrO0Crbk2GRDU/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Network Theory - Two Port Networks Question 25 English\"> \n The z-parameter matrix for this network is  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\matrix{\n   {1.5} &amp; {1.5}  \\cr \n   {4.5} &amp; {1.5}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\matrix{\n   {1.5} &amp; {4.5}  \\cr \n   {1.5} &amp; {4.5}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\matrix{\n   {1.5} &amp; {4.5}  \\cr \n   {1.5} &amp; {1.5}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   {4.5} &amp; {1.5}  \\cr \n   {1.5} &amp; {4.5}  \\cr \n\n } } \\right]$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Voltmeter measures voltage and ammeter measures current.</p>\n<p>Given :</p>\n<p>(i) When $S_1$-open and $S_2$-closed</p>\n<p></p>\n<p>$$ \\begin{aligned}Then\\,\\, &amp; I_1=A_1=0 \\mathrm{~A}, V_1=4.5 \\mathrm{~V} \\\\ &amp; I_2=A_2=1 \\mathrm{~A}, V_2=1.5 \\mathrm{~V} \\end{aligned} $$</p>\n<p>(ii) When $S_1$-closed and $S_2$-open</p>\n<p></p>\n<p>$$ \\begin{aligned} Then\\,\\,&amp; I_2=A_2=0 \\mathrm{~A}, V_1=6 \\mathrm{~V} \\\\ &amp; I_1=A_1=4 \\mathrm{~A}, V_2=6 \\mathrm{~V} \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrveqa/3ff1498d-7ff0-47fc-a2a6-6c6045cf94c8/61263320-d3ff-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrveqb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrveqa/3ff1498d-7ff0-47fc-a2a6-6c6045cf94c8/61263320-d3ff-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrveqb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2008 Network Theory - Two Port Networks Question 25 English Explanation\"></p>\n<p>Standard $z$-parameter equation :</p>\n<p>$$ \\begin{aligned} &amp; V_1=z_{11} I_1+z_{12} I_2 \\\\ &amp; V_2=z_{21} I_1+z_{22} I_2 \\\\ &amp; z_{11}=\\left.\\frac{V_1}{I_1}\\right|_{I_2=0}=\\left.\\frac{V_1}{A_1}\\right|_{A_2=0}=\\frac{6}{4}=1.5 \\Omega \\\\ &amp; z_{12}=\\left.\\frac{V_1}{I_2}\\right|_{I_1=0}=\\left.\\frac{V_1}{A_2}\\right|_{A_1=0}=\\frac{4.5}{1}=4.5 \\Omega \\\\ &amp; z_{21}=\\left.\\frac{V_2}{I_1}\\right|_{I_2=0}=\\left.\\frac{V_2}{A_1}\\right|_{A_2=0}=\\frac{6}{4}=1.5 \\Omega \\\\ &amp; z_{22}=\\left.\\frac{V_2}{I_2}\\right|_{I_1=0}=\\left.\\frac{V_2}{A_2}\\right|_{A_1=0}=\\frac{1.5}{1}=1.5 \\Omega \\\\ &amp; z=\\left[\\begin{array}{ll} z_{11} &amp; z_{12} \\\\ z_{21} &amp; z_{22} \\end{array}\\right]=\\left[\\begin{array}{ll} 1.5 &amp; 4.5 \\\\ 1.5 &amp; 1.5 \\end{array}\\right] \\end{aligned} $$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The driving point impedance of the following network is given by $$Z(s) = {{0.2\\,s} \\over {{s^2}\\, + \\,0.1\\,s\\, + \\,2}}$$. The component values are\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/Q4vjeMM1v9JVvytQ0/6YgRwhaURO72TVQgCYmCtYkmoAyWx/uvS4oJGVW2kIIKL1pNTG7L/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Network Theory - Two Port Networks Question 26 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "L = 5H, R = 0.5 $$\\Omega $$, C = 0.1 F"
+      },
+      {
+        "identifier": "B",
+        "content": "L = 0.1 H, R = 0.5 $$\\Omega $$, C = 5 F"
+      },
+      {
+        "identifier": "C",
+        "content": "L = 5H, R = 2 $$\\Omega $$, C = 0.1 F "
+      },
+      {
+        "identifier": "D",
+        "content": "L = 0.1 H, R = 2 $$\\Omega $$, C = 5 F "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A two-port network shown below is excited by external dc sources. The voltages and the currents are measured with voltmeters $${V_1}$$, $${V_2}$$ and ammeter $${A_1}$$, $${A_2}$$ (all assumed to be ideal), as indicated. Under following switch conditions, the readings obtained are:\n<p> (i) $${S_1} - open,\\,\\,\\,\\,{S_2} - closed$$\n<br> $${A_1} = 0\\,A,\\,\\,\\,\\,\\,\\,{V_1} = \\,4.5\\,\\,V,$$\n<br> $${V_2}\\, = \\,1.5\\,V,\\,\\,\\,\\,{A_2}\\, = \\,1\\,A$$\n</p><p> (ii) $${S_1} - Closed,\\,\\,\\,\\,{S_2} - Open$$ \n<br> $${A_1} = 4\\,A,\\,\\,\\,\\,\\,\\,{V_1} = \\,6\\,\\,V,$$\n<br> $${V_2}\\, = \\,6\\,V,\\,\\,\\,\\,{A_2}\\, = \\,0\\,A$$ </p> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/YaqghkCEKqvIBPNZi/N4eAdplLAmKAoMM9VoyTTIb5m3Fus/aj75j5ZkZWrO0Crbk2GRDU/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Network Theory - Two Port Networks Question 24 English\"> \nThe h-parameter matrix for this network is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\matrix{\n   { - 3} &amp; 3  \\cr \n   { - 1} &amp; {0.67}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\matrix{\n   { - 3} &amp; -1  \\cr \n   { 3} &amp; {0.67}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\matrix{\n   {  3} &amp; 3  \\cr \n   {  1} &amp; {0.67}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   { 3} &amp; 1  \\cr \n   { - 3} &amp; {-0.67}  \\cr \n\n } } \\right]$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\text { The result obtained in previous question, }\\\\ &\\begin{aligned} & z=\\left[\\begin{array}{ll} z_{11} & z_{12} \\\\ z_{21} & z_{22} \\end{array}\\right]=\\left[\\begin{array}{ll} 1.5 & 4.5 \\\\ 1.5 & 1.5 \\end{array}\\right] \\\\ & V_1=1.5 I_1+4.5 I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ & V_2=1.5 I_1+1.5 I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\text { Standard } \\boldsymbol{h} \\text {-parameter equation : }\\\\ &\\begin{aligned} & V_1=h_{11} I_1+h_{12} V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)\\\\ & I_2=h_{21} I_1+h_{22} V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)\\end{aligned} \\end{aligned} $$</p>\n<p>From equation (ii),</p>\n<p>$$ I_2=-I_1+\\frac{1}{1.5} V_2 $$</p>\n<p>Put the value of $I_2$ in equation (i),</p>\n<p>$$ \\begin{aligned} V_1 & =1.5 I_1+4.5\\left[-I_1+\\frac{1}{1.5} V_2\\right] \\\\ V_1 & =-3 I_1+3 V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(v)\\\\ I_2 & =-I_1+0.67 V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(vi)\\end{aligned} $$</p>\n<p>Comparing equation (v) and (vi) with equation (iii) and (iv),</p>\n<p>$$ [h]=\\left[\\begin{array}{ll} h_{11} & h_{12} \\\\ h_{21} & h_{22} \\end{array}\\right]=\\left[\\begin{array}{cc} -3 & 3 \\\\ -1 & 0.67 \\end{array}\\right] $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "In the two port network shown in the figure below, z<sub>12</sub> and z<sub>21</sub> are, respectively\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1minr67bp/96c9b860-fcf6-42a7-8f45-cca5b73217ed/965b0c50-cf09-11f0-a964-8d5b6f8c6b80/file-jaoe38c1minr67bq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1minr67bp/96c9b860-fcf6-42a7-8f45-cca5b73217ed/965b0c50-cf09-11f0-a964-8d5b6f8c6b80/file-jaoe38c1minr67bq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2006 Network Theory - Two Port Networks Question 48 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$r_0\\;and\\;\\beta\\;r_0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$0\\;and\\;-\\beta\\;r_0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$0\\;and\\;\\beta\\;r_0$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$r_0\\;and\\;-\\beta\\;r_0$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrsgvd/ac5c520d-1611-4ca6-b0d8-51e0415399c1/0f603590-d3ff-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrsgve.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrsgvd/ac5c520d-1611-4ca6-b0d8-51e0415399c1/0f603590-d3ff-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrsgve.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2006 Network Theory - Two Port Networks Question 48 English Explanation\"></p>\n<p>Standard $z$-parameter equation :</p>\n<p>$$ \\begin{aligned} &amp; V_1=z_{11} I_1+z_{12} I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ &amp; V_2=z_{21} I_1+z_{22} I_2\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii) \\end{aligned} $$</p>\n<p>From figure,</p>\n<p>$$ \\begin{aligned} &amp; V_1=I_1 r_e+0 \\times I_2=I_1 r_e \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)\\\\ &amp; V_2=\\left(I_2-\\beta I_1\\right) r_0 \\\\ &amp; V_2=-\\beta r_0 I_1+r_0 I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)\\end{aligned} $$</p>\n<p>Comparing equation (iii) and (iv) with equation (i) and (ii),</p>\n<p>Hence, $z_{11}=r_e, z_{12}=0$</p>\n<p>and $z_{21}=-\\beta r_0, z_{22}=r_0$</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p>A two-port network is represented by ABCD parameters given by </p>\n<p>$$\\left[ {\\matrix{    {{V_1}}  \\cr     {{I_1}}  \\cr    } } \\right] = \\,\\left[ {\\matrix{    A &amp; B  \\cr     C &amp; D  \\cr    } } \\right]\\,\\left[ {\\matrix{    {{V_2}}  \\cr     { - \\,{I_2}}  \\cr    } } \\right]$$</p>\n<p> If port-2 is terminated by $${R_L}$$, the input impedance seen at port-1 is given by </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{A\\, + \\,B{R_L}} \\over {C + \\,D{R_L}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\,A{R_L} + \\,C} \\over {B{R_L}\\, + D}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{\\,D{R_L} + \\,A} \\over {\\,B{R_L} + C}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\,B + A{R_L}} \\over {D + \\,C{R_L}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrqf6g/840271d8-8b80-479e-9dd0-da5eaa70ee39/d6734d80-d3fe-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrqf6h.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrqf6g/840271d8-8b80-479e-9dd0-da5eaa70ee39/d6734d80-d3fe-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrqf6h.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2006 Network Theory - Two Port Networks Question 27 English Explanation\"></p>\n<p>Standard $A B C D$ parameter equation :</p>\n<p>$$ \\begin{aligned} &amp; V_1=A V_2-B I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ &amp; I_1=C V_2-D I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} $$</p>\n<p>From output port,</p>\n<p>$$ V_2=-I_2 R_L \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)$$</p>\n<p>From equation (i) and (iii),</p>\n<p>$$ \\begin{aligned} &amp; V_1=A\\left(-I_2 R_L\\right)-B I_2 \\\\ &amp; V_1=-I_2\\left(A R_L+B\\right) \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)\\end{aligned} $$</p>\n<p>From equation (ii) and (iii),</p>\n<p>$$ \\begin{aligned} &amp; I_1=C\\left(-I_2 R_L\\right)-D I_2 \\\\ &amp; I_1=-I_2\\left(C R_L+D\\right) \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(v)\\end{aligned} $$</p>\n<p>From equation (iv) and (v),</p>\n<p>$$ Z_{\\text {in }}=\\frac{V_1}{I_1}=\\frac{A R_L+B}{C R_L+D} $$</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The h parameters of the circuit shown in Fig. are\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/NWLrc72BvFnd9Bi9S/x3J5GXf9hn879qql3ENrESbv2gyJC/B3P8aIbbPUcCWvkEeV9yNI/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Network Theory - Two Port Networks Question 28 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\,\\left[ {\\matrix{\n   {0.1} &amp; {0.1}  \\cr \n   { - \\,0.1} &amp; {0.3}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\,\\left[ {\\matrix{\n   {10} &amp; {-1}  \\cr \n   { \\,1} &amp; {0.05}  \\cr \n\n } } \\right]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\matrix{\n   {30} &amp; {20}  \\cr \n   {20} &amp; {20}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   {10} &amp; {1}  \\cr \n   {-1} &amp; {0.05}  \\cr \n\n } } \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrnxd5/60128aa3-e7c6-42af-8c87-0af6a7cb50be/91123990-d3fe-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrnxd6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrnxd5/60128aa3-e7c6-42af-8c87-0af6a7cb50be/91123990-d3fe-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrnxd6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2005 Network Theory - Two Port Networks Question 28 English Explanation 1\"></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrny7n/3b109c19-729a-48bb-9caa-9a36c192f77e/91b9c430-d3fe-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrny7o.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrny7n/3b109c19-729a-48bb-9caa-9a36c192f77e/91b9c430-d3fe-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrny7o.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2005 Network Theory - Two Port Networks Question 28 English Explanation 2\"></p>\n<p>Standard $\\boldsymbol{h}$-parameter equation :</p>\n<p>$$ \\begin{aligned} &amp; V_1=h_{11} I_1+h_{12} V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ &amp; I_2=h_{21} I_1+h_{22} V_2\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii) \\end{aligned} $$</p>\n<p>Applying KVL in input loop,</p>\n<p>$$ \\begin{aligned} &amp; V_1=10 I_1+20\\left(I_1+I_2\\right) \\\\ &amp; V_1=30 I_1+20 I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)\\end{aligned} $$</p>\n<p>Applying KVL in output loop,</p>\n<p>$$ \\begin{aligned} &amp; V_2=20 I_1+20 I_2 \\\\ &amp; 20 I_2=-20 I_1+V_2 \\\\ &amp; I_2=-I_1+\\frac{1}{20} V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)\\end{aligned} $$</p>\n<p>Put the value of $I_2$ in equation (iii),</p>\n<p>$$ \\begin{aligned} &amp; V_1=30 I_1+20\\left(-I_1+\\frac{1}{20} V_2\\right) \\\\ &amp; V_1=10 I_1+V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(v)\\end{aligned} $$</p>\n<p>Comparing equation (v) and (iv) with equation (i) and (ii),</p>\n<p>$$ [h]=\\left[\\begin{array}{ll} h_{11} &amp; h_{12} \\\\ h_{21} &amp; h_{22} \\end{array}\\right]=\\left[\\begin{array}{cc} 10 &amp; 1 \\\\ -1 &amp; 0.05 \\end{array}\\right] $$</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "<p>If R<sub>1</sub> = R<sub>2</sub> = R<sub>4</sub> = R and R<sub>3</sub> = 1.1R in the bridge circuit shown in figure, then the reading in the ideal voltmeter connected between a\nand b is</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l9ctc50p/ae0a5070-df54-413b-917a-a51fd6990b10/b27e5590-4e1f-11ed-b7b0-3524b2bc8505/file-1l9ctc50q.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l9ctc50p/ae0a5070-df54-413b-917a-a51fd6990b10/b27e5590-4e1f-11ed-b7b0-3524b2bc8505/file-1l9ctc50q.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2005 Network Theory - Two Port Networks Question 49 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.238 V"
+      },
+      {
+        "identifier": "B",
+        "content": "0.138 V"
+      },
+      {
+        "identifier": "C",
+        "content": "-0.238 V"
+      },
+      {
+        "identifier": "D",
+        "content": "1 V"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "Ideal voltmeter is connected between node a and b. Hence, replace it with its internal resistance R<sub>in</sub> = $$\\infty $$, i.e., current through ideal voltmeter will be zero.\n<br><br><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l9cvfoxv/2bf758f4-9a1e-418c-9cee-7d54188d4df6/e7916530-4e27-11ed-b459-6d2ae4022676/file-1l9cvfoxw.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l9cvfoxv/2bf758f4-9a1e-418c-9cee-7d54188d4df6/e7916530-4e27-11ed-b459-6d2ae4022676/file-1l9cvfoxw.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2005 Network Theory - Two Port Networks Question 49 English Explanation\">\n<br><br>$$\n\\begin{aligned}\n&amp;V_a=\\frac{R_2}{R_1+R_2} \\times 10=5 \\mathrm{~V} \\\\\\\\\n&amp;V_b=\\frac{R_5}{R_3+R_5} \\times 10=\\frac{1.1}{2.1} \\times 10=5.238 \\mathrm{~V}\n\\end{aligned}\n$$\n<br><br>So, voltage across terminal $a b$ is\n<br><br>$$\nV_{a b}=V_a-V_b=-0.238 \\mathrm{~V}\n$$",
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "For the lattice circuit shown in Fig., $${Z_a} = j\\,2\\,\\Omega \\,\\,and\\,\\,{Z_b} = \\,\\,2\\Omega $$. The values of the open circuit impedance parameters \n<br> $$Z\\,\\left[ {\\matrix{\n   {{Z_{11}}} &amp; {{Z_{12}}}  \\cr \n   {{Z_{21}}} &amp; {{Z_{22}}}  \\cr \n\n } } \\right]\\,$$ are \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/SELaz94YDuuXYGowP/RnskxGDrcGSCkfjkWRXnfaYoPE9GK/BWJUCnPRrPUcge86KCtb7u/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2004 Network Theory - Two Port Networks Question 30 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\,\\left[ {\\matrix{\n   {1 - j} &amp; {1 + j}  \\cr \n   {1 + j} &amp; {1 + j}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\,\\left[ {\\matrix{\n   {1 - j} &amp; {1 + j}  \\cr \n   {-1 + j} &amp; {1 - j}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\,\\left[ {\\matrix{\n   {1 + j} &amp; {1 + j}  \\cr \n   {1 - j} &amp; {1 - j}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\,\\left[ {\\matrix{\n   {1 + j} &amp; {j - 1}  \\cr \n   {j - 1} &amp; {1 + j}  \\cr \n\n } } \\right]$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrj697/7f0d95c7-7e1c-4b77-ab89-d54703e5f2c6/0ce4cac0-d3fe-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrj698.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrj697/7f0d95c7-7e1c-4b77-ab89-d54703e5f2c6/0ce4cac0-d3fe-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrj698.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2004 Network Theory - Two Port Networks Question 30 English Explanation\"></p>\n<p>For above Lattice network, $z$-parameter is given by,</p>\n<p>$$ [Z]=\\left[\\begin{array}{cc} \\frac{z_1+z_2}{2} &amp; \\frac{z_1-z_2}{2} \\\\ \\frac{z_1-z_2}{2} &amp; \\frac{z_1+z_2}{2} \\end{array}\\right] $$</p>\n<p>where, $z_1=j 2 \\Omega, z_2=2 \\Omega$</p>\n<p>$$ [Z]=\\left[\\begin{array}{cc} 1+j &amp; j-1 \\\\ j-1 &amp; 1+j \\end{array}\\right] $$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "For the circuit shown in Figure, the initial conditions are zeros. Its transfer function \n$$H(s) = {{{V_c}\\,(s)} \\over {{V_i}\\,(s)}}$$ is \n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l9crwgut/70489d16-8fbc-43a8-be73-095a1bfcfe01/158fb850-4e1a-11ed-bedf-cbd1a7a2f67f/file-1l9crwguu.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l9crwgut/70489d16-8fbc-43a8-be73-095a1bfcfe01/158fb850-4e1a-11ed-bedf-cbd1a7a2f67f/file-1l9crwguu.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2004 Network Theory - Two Port Networks Question 29 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {{s^2}\\, + \\,{{10}^6}\\,s\\, + \\,{{10}^6}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{{{10}^6}} \\over {{s^2}\\, + \\,{{10}^3}\\,s\\, + \\,{{10}^6}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{{10}^3}} \\over {{s^2}\\, + \\,{{10}^3}\\,s\\, + \\,{{10}^6}}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{{{10}^6}} \\over {{s^2}\\, + \\,{{10}^6}\\,s\\, + \\,{{10}^6}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "Appling KVL in given circuit\n<br/><br/>$$\n\\begin{aligned}\n&V_i(s)=I(s)\\left\\langle R+s L+\\frac{1}{s c}\\right\\rangle \\\\\\\\\n&V_i(s)=\\frac{I(s)}{s c}\\left(s^2 L C+s C R+1\\right) \\\\\\\\\n&V_0(s)=\\frac{I(s)}{S C} \\\\\\\\\n&\\therefore \\frac{V_0(s)}{V_i(s)}=\\frac{1}{s^2 L C+s C R+1}=\\frac{\\frac{1}{L C}}{s^2+\\frac{L}{R} s+\\frac{1}{L C}} \\\\\\\\\n&\\frac{V_0(s)}{V_i(s)}=\\frac{10^6}{s^2+10^6 s+10^6}\n\\end{aligned}\n$$",
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The impedance parameters Z<sub>11</sub> and Z<sub>12</sub> of the two-port network in figure are\n<img alt=\"GATE ECE 2003 Network Theory - Two Port Networks Question 50 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/034d4d8332947420b0e2741598a2609b23d8f688a565bcbfa47a75362949c2a2.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Z<sub>11</sub> = 2.75Ω and Z<sub>12</sub> =0.25Ω"
+      },
+      {
+        "identifier": "B",
+        "content": "Z<sub>11</sub> = 3Ω and Z<sub>12</sub> =0.5Ω"
+      },
+      {
+        "identifier": "C",
+        "content": "Z<sub>11</sub> = 3Ω and Z<sub>12</sub> =0.25Ω"
+      },
+      {
+        "identifier": "D",
+        "content": "Z<sub>11</sub> = 2.25Ω and Z<sub>12</sub> =0.5Ω"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrh9en/94978d40-fa48-4af5-91a8-74f55847df55/d7b586f0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrh9eo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrh9en/94978d40-fa48-4af5-91a8-74f55847df55/d7b586f0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrh9eo.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2003 Network Theory - Two Port Networks Question 50 English Explanation 1\"></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrha99/dca47a6a-1b69-445c-a378-c0867103e0df/d85dadd0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrha9a.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrha99/dca47a6a-1b69-445c-a378-c0867103e0df/d85dadd0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrha9a.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2003 Network Theory - Two Port Networks Question 50 English Explanation 2\"></p>\n<p>$$ \\text { Applying delta to star conversion, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrhb1b/91e4305a-1537-47a1-ade6-6806b039e4b7/d8f7caf0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrhb1c.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrhb1b/91e4305a-1537-47a1-ade6-6806b039e4b7/d8f7caf0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrhb1c.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2003 Network Theory - Two Port Networks Question 50 English Explanation 3\"><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwrhbmj/97325375-27ba-49f7-a70d-d88cad183378/d96c5eb0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrhbmk.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwrhbmj/97325375-27ba-49f7-a70d-d88cad183378/d96c5eb0-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwrhbmk.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2003 Network Theory - Two Port Networks Question 50 English Explanation 4\"></p>\n<p>$z$-parameter of $T$-network is given by,</p>\n<p>$$ \\begin{aligned} &amp; {[Z]=\\left[\\begin{array}{cc} Z_1+Z_2 &amp; Z_1 \\\\ Z_1 &amp; Z_1+Z_3 \\end{array}\\right]} \\\\ &amp; {\\left[\\begin{array}{ll} z_{11} &amp; z_{12} \\\\ z_{21} &amp; z_{22} \\end{array}\\right]=\\left[\\begin{array}{cc} \\frac{5}{2}+\\frac{1}{4} &amp; \\frac{1}{4} \\\\ \\frac{1}{4} &amp; \\frac{7}{2}+\\frac{1}{4} \\end{array}\\right]} \\\\ &amp; {\\left[\\begin{array}{ll} z_{11} &amp; z_{12} \\\\ z_{21} &amp; z_{22} \\end{array}\\right]=\\left[\\begin{array}{cc} \\frac{11}{4} &amp; \\frac{1}{4} \\\\ \\frac{1}{4} &amp; \\frac{15}{4} \\end{array}\\right]} \\\\ &amp; z_{11}=\\frac{11}{4}=2.75 \\Omega, z_{12}=\\frac{1}{4}=0.25 \\Omega \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The driving-point impedance Z(s) of a network has the pole-zero locations as shown in figure. If Z(0) = 3, then Z(s) is\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/1gRG6jC8RVbxWGa6x/XYYcBL9yie0PbjY4xK7YrzLGBxWQy/fiOPIgcWfjt3JXNOFdRcCw/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2003 Network Theory - Two Port Networks Question 31 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{3\\,(s + 3)} \\over {{s^2}\\, + \\,2s\\, + 3}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{2\\,(s + 3)} \\over {{s^2}\\, + \\,2s\\, + 2}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{3\\,(s - 3)} \\over {{s^2}\\, - \\,2s\\, - 3}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{2\\,(s - 3)} \\over {{s^2}\\, - \\,2s\\, - 3}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The Z parameters $${Z_{11}}$$ and $${Z_{21}}$$ for the 2-port network in Fig. are\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/HFerpi2XKdMXecvSP/hkUzsWmblTooBrNoHKQg4SpWgvEsh/0oeqpUDcrMUYo9O50LVcMI/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Network Theory - Two Port Networks Question 32 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${Z_{11}} =  - {6 \\over {11}}\\,\\Omega ;\\,\\,{Z_{21}}\\, = \\,{{16} \\over {11}}\\,\\Omega $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${Z_{11}} =   {6 \\over {11}}\\,\\Omega ;\\,\\,{Z_{21}}\\, = \\,{{4} \\over {11}}\\,\\Omega $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${Z_{11}} =   {6 \\over {11}}\\,\\Omega ;\\,\\,{Z_{21}}\\, = \\,-{{16} \\over {11}}\\,\\Omega $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${Z_{11}} =   {4 \\over {11}}\\,\\Omega ;\\,\\,{Z_{21}}\\, = \\,{{4} \\over {11}}\\,\\Omega $$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1miwreqt0/dd9bc60d-f1e0-4ca7-b945-a02eb7e01f74/91b8cf40-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwreqt1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1miwreqt0/dd9bc60d-f1e0-4ca7-b945-a02eb7e01f74/91b8cf40-d3fd-11f0-890a-d1bfb04bf31c/file-jaoe38c1miwreqt1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2001 Network Theory - Two Port Networks Question 32 English Explanation\"></p>\n<p>For given figure, $z$-parameter equation is given by,</p>\n<p>$$ \\begin{aligned} &amp; E_1=z_{11} I_1+z_{12} I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ &amp; E_2=z_{21} I_1+z_{22} I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} $$</p>\n<p>Applying KVL in input loop,</p>\n<p>$$ \\begin{aligned} &amp; -E_1+2 I_1+4\\left(I_1+I_2\\right)-10 E_1=0 \\\\ &amp; 11 E_1=6 I_1+4 I_2 \\\\ &amp; E_1=\\frac{6}{11} I_1+\\frac{4}{11} I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)\\end{aligned} $$</p>\n<p>Applying KVL in output loop,</p>\n<p>$$ \\begin{aligned} &amp; -E_2+4\\left(I_1+I_2\\right)-10 E_1=0 \\\\ &amp; E_2=4\\left(I_1+I_2\\right)-10\\left[\\frac{6}{11} I_1+\\frac{4}{11} I_2\\right] \\\\ &amp; E_2=\\left(4-\\frac{60}{11}\\right) I_1+\\left(4-\\frac{40}{11}\\right) I_2 \\\\ &amp; E_2=\\frac{-16}{11} I_1+\\frac{4}{11} I_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)\\end{aligned} $$</p>\n<p>Comparing equation (iii) and (iv) with equation (i) and (ii),</p>\n<p>$$ \\begin{aligned} &amp; z_{11}=\\frac{6}{11} \\Omega \\text { and } z_{12}=\\frac{4}{11} \\Omega \\\\ &amp; z_{21}=\\frac{-16}{11} \\Omega \\text { and } z_{22}=\\frac{4}{11} \\Omega \\end{aligned} $$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "A Delta-connected network with its Wye-equivalent is shown in Fig.P2.4. The\nresistance R<sub>1</sub>, R<sub>2</sub> and R<sub>3</sub> (in ohms) are respectively\n<br><br><img alt=\"GATE ECE 1999 Network Theory - Two Port Networks Question 51 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/995229886d9a771cf467910d139de26fb9109cbfde1be48e81777879ded54b7e.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1.5, 3 and 9"
+      },
+      {
+        "identifier": "B",
+        "content": "3, 9 and 1.5"
+      },
+      {
+        "identifier": "C",
+        "content": "9, 3 and 1.5"
+      },
+      {
+        "identifier": "D",
+        "content": "3, 1.5 and 9"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "For delta to star conversion, the equivalent resistant in\nstar network is given by,\n<br/><br/>$$\n\\begin{aligned}\n&R_1=R_a=\\frac{R_{a b} \\times R_{c a}}{R_{a b}+R_{b c}+R_{c a}}=\\frac{5 \\times 30}{50}=3 \\Omega \\\\\\\\\n&R_2=R_b=\\frac{R_{a b} \\times R_{b c}}{R_{a b}+R_{b c}+R_{c a}}=\\frac{15 \\times 5}{50}=1.5 \\Omega \\\\\\\\\n&R_3=R_c=\\frac{R_{b c} \\times R_{c a}}{R_{a b}+R_{b c}+R_{c a}}=\\frac{30 \\times 15}{50}=9 \\Omega\n\\end{aligned}\n$$",
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuil of Fig. the equivalent impedance seen across terminals A. B is \n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l95eo4kc/81353035-e06a-4676-bd1a-d60270d0d3a9/da5e75c0-4a0c-11ed-b6e4-a16315bc6438/file-1l95eo4kd.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l95eo4kc/81353035-e06a-4676-bd1a-d60270d0d3a9/da5e75c0-4a0c-11ed-b6e4-a16315bc6438/file-1l95eo4kd.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 1997 Network Theory - Two Port Networks Question 33 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(16/3) $$\\Omega $$"
+      },
+      {
+        "identifier": "B",
+        "content": "(8/3) $$\\Omega $$"
+      },
+      {
+        "identifier": "C",
+        "content": "(8/3 + 12 j ) $$\\Omega $$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "D",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "$\\frac{Z_1}{Z_2}=\\frac{Z_3}{Z_4} \\Rightarrow$ Bridge is balanced\n<br/><br/>$$\n\\therefore Z_{e q}=(2 \\| 4)+(2 \\| 4)=\\frac{8}{3} \\Omega\n$$",
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "For the 2-port network shown in Fig. determine the h-parameters. Using these parameters, calculate the output (port '2' ) $${v_2}$$, when the output port is terminated in a 3$$\\Omega $$ resistance and a 1 V (DC) is applied at the input port ($${v_1}$$ = 1 V).\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/aIpHmP9VQiOLaXNBx/xiwT5oUmX2jLTHrY6sCeT6Kr2zvGp/MabWIN82Y1A9UDWUjKeA5V/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 1995 Network Theory - Two Port Networks Question 12 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${V_2}$$ = 6 V",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "For a 2-port network to be reciprocal",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$z_{11}\\;=\\;z_{22}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$y_{21}\\;=\\;y_{12}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$h_{21}\\;=\\;-h_{12}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "AB - BC = 0"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<table style=\"border-collapse: collapse; width: 100%; font-size: 24px; text-align: center; font-family: serif;\">\n    <tr style=\"background-color: #c3e6e4; font-weight: bold;\">\n        <td style=\"border: 2px solid #008080;\">S. No.</td>\n        <td style=\"border: 2px solid #008080;\">Parameter</td>\n        <td style=\"border: 2px solid #008080;\" colspan=\"2\">Condition for</td>\n    </tr>\n\n    <tr style=\"background-color: #c3e6e4; font-weight: bold;\">\n        <td style=\"border: 2px solid #008080;\"></td>\n        <td style=\"border: 2px solid #008080;\"></td>\n        <td style=\"border: 2px solid #008080;\">Reciprocity</td>\n        <td style=\"border: 2px solid #008080;\">Symmetricity</td>\n    </tr>\n\n    <tr>\n        <td style=\"border: 2px solid #008080;\">1.</td>\n        <td style=\"border: 2px solid #008080;\">z-parameter</td>\n        <td style=\"border: 2px solid #008080;\">z₁₂ = z₂₁</td>\n        <td style=\"border: 2px solid #008080;\">z₁₁ = z₂₂</td>\n    </tr>\n\n    <tr>\n        <td style=\"border: 2px solid #008080;\">2.</td>\n        <td style=\"border: 2px solid #008080;\">y-parameter</td>\n        <td style=\"border: 2px solid #008080;\">y₁₂ = y₂₁</td>\n        <td style=\"border: 2px solid #008080;\">y₁₁ = y₂₂</td>\n    </tr>\n\n    <tr>\n        <td style=\"border: 2px solid #008080;\">3.</td>\n        <td style=\"border: 2px solid #008080;\">h-parameter</td>\n        <td style=\"border: 2px solid #008080;\">h₁₂ = −h₂₁</td>\n        <td style=\"border: 2px solid #008080;\">Δh = 1</td>\n    </tr>\n\n    <tr>\n        <td style=\"border: 2px solid #008080;\">4.</td>\n        <td style=\"border: 2px solid #008080;\">g-parameter</td>\n        <td style=\"border: 2px solid #008080;\">g₁₂ = −g₂₁</td>\n        <td style=\"border: 2px solid #008080;\">Δg = 1</td>\n    </tr>\n\n    <tr>\n        <td style=\"border: 2px solid #008080;\">5.</td>\n        <td style=\"border: 2px solid #008080;\">ABCD parameter</td>\n        <td style=\"border: 2px solid #008080;\">AD − BC = 1</td>\n        <td style=\"border: 2px solid #008080;\">A = D</td>\n    </tr>\n</table>\n",
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Two two-port networks are connected in cascade. The combination is to be\nrepresented as a single two-port network. The parameters of the network are\nobtained by multiplying the individual",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "z-parameter matrix"
+      },
+      {
+        "identifier": "B",
+        "content": "h-parameter matrix"
+      },
+      {
+        "identifier": "C",
+        "content": "y-parameter matrix"
+      },
+      {
+        "identifier": "D",
+        "content": "ABCD parameter matrix"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>When two two-port networks are <strong>connected in cascade</strong>, the overall (combined) two-port network parameters can be found as follows:</p>\n<ul>\n<li><p>For <strong>cascade connection</strong>, the <strong>output port of the first network</strong> is connected to the <strong>input port of the second network</strong>.</p></li>\n<li><p>In such a configuration, <strong>ABCD (Transmission) parameters</strong> are the most convenient, since for cascaded two-ports:</p></li>\n</ul>\n<p>$ [T]_{overall} = [T]_1 \\times [T]_2 $</p>\n<p>Thus, the <strong>ABCD parameter matrices are multiplied</strong> to find the overall parameters of the cascaded network.</p>\n<p>✅ <strong>Correct Option:</strong></p>\n<blockquote>\n  <p><strong>Option D — ABCD parameter matrix</strong></p>\n</blockquote>\n<p><strong>Explanation:</strong></p>\n<ul>\n<li><p><strong>z-parameters (impedance parameters):</strong> useful for series connections.</p></li>\n<li><p><strong>y-parameters (admittance parameters):</strong> useful for parallel connections.</p></li>\n<li><p><strong>h-parameters (hybrid parameters):</strong> useful when one port variable is a mix of voltage and current, e.g., transistor models.</p></li>\n<li><p><strong>ABCD-parameters:</strong> useful for cascade connections because they relate input and output variables linearly in a form that allows direct multiplication.</p></li>\n</ul>\n<p><strong>Final Answer:</strong> ✅ <strong>Option D — ABCD parameter matrix</strong></p>",
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "The condition AD - BC = 1 for a two-port network implies that the network is a ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "reciprocal network"
+      },
+      {
+        "identifier": "B",
+        "content": "lumped element network"
+      },
+      {
+        "identifier": "C",
+        "content": "lossless network"
+      },
+      {
+        "identifier": "D",
+        "content": "unilateral element network"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Condition of reciprocal network for $A B C D$ parameter is given by,</p>\n<p>$$ \\begin{aligned} & \\Delta T=\\left|\\begin{array}{ll} A & B \\\\ C & D \\end{array}\\right|=1 \\\\ & \\Delta T=A D-B C=1 \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>\n<style type=\"text/css\">\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n\n.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}\n\n</style>\n<table class=\"tg\"><thead>\n\n  <tr>\n\n    <th class=\"tg-c3ow\" rowspan=\"2\">S.NO.</th>\n\n    <th class=\"tg-c3ow\" rowspan=\"2\">Parameter</th>\n\n    <th class=\"tg-c3ow\" colspan=\"2\">Condition for</th>\n\n  </tr>\n\n  <tr>\n\n    <th class=\"tg-c3ow\">$$<br>\\text { Reciprocity }<br>$$</th>\n\n    <th class=\"tg-c3ow\">$$<br>\\text { Symmetricity }<br>$$</th>\n\n  </tr></thead>\n\n<tbody>\n\n  <tr>\n\n    <td class=\"tg-c3ow\">1.</td>\n\n    <td class=\"tg-c3ow\">$z$-parameter</td>\n\n    <td class=\"tg-c3ow\">$$<br>z_{12}=z_{21}<br>$$</td>\n\n    <td class=\"tg-c3ow\">$$<br>z_{11}=z_{22}<br>$$</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-c3ow\">2.</td>\n\n    <td class=\"tg-c3ow\">$y$-parameter</td>\n\n    <td class=\"tg-c3ow\">$$<br>y_{12}=y_{21}<br>$$</td>\n\n    <td class=\"tg-c3ow\">$$<br>y_{11}=y_{22}<br>$$</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-c3ow\">3.</td>\n\n    <td class=\"tg-c3ow\">$h$-parameter</td>\n\n    <td class=\"tg-c3ow\">$$<br>h_{12}=-h_{21}<br>$$</td>\n\n    <td class=\"tg-c3ow\">$$<br>\\Delta h=1<br>$$</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-c3ow\">4.</td>\n\n    <td class=\"tg-c3ow\">$$<br>g \\text {-parameter }<br>$$</td>\n\n    <td class=\"tg-c3ow\">$$<br>g_{12}=-g_{21}<br>$$</td>\n\n    <td class=\"tg-c3ow\">$$<br>\\Delta g=1<br>$$</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-c3ow\">5.</td>\n\n    <td class=\"tg-c3ow\">$$<br>\\begin{gathered}<br>A B C D \\\\<br>\\text { parameter }<br>\\end{gathered}<br>$$</td>\n\n    <td class=\"tg-c3ow\">$$<br>A D-B C=1<br>$$</td>\n\n    <td class=\"tg-c3ow\">$$<br>A=D<br>$$</td>\n\n  </tr>\n\n</tbody></table>",
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "For the transfer function of a physical two-port network ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "all the zeroes must lie only in the left half of the s-plane "
+      },
+      {
+        "identifier": "B",
+        "content": "the poles may lie anywhere in the s-plane "
+      },
+      {
+        "identifier": "C",
+        "content": "the poles lying on the imaginary axis must be simple "
+      },
+      {
+        "identifier": "D",
+        "content": "a pole may lie at origin"
+      }
+    ],
+    "correct_options": [
+      "D",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "The condition AD - BC = 1 for a two-port network implies that the network is a ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "reciprocal network"
+      },
+      {
+        "identifier": "B",
+        "content": "lumped element network"
+      },
+      {
+        "identifier": "C",
+        "content": "lossless network"
+      },
+      {
+        "identifier": "D",
+        "content": "unilateral element network"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "Two two-port network A and B are connected in parallel. The combination is to be represented as a single two-port network. The parameters of this network are obtained by addition of the individual",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "z parameters"
+      },
+      {
+        "identifier": "B",
+        "content": "h parameters "
+      },
+      {
+        "identifier": "C",
+        "content": "y parameters"
+      },
+      {
+        "identifier": "D",
+        "content": "ABCD parameters"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>If two 2-port networks $A$ and $B$ are connected in parallel then equivalent $y$-parameter is the sum of individual $y$-parameters.</p>\n<p>$$ [Y]=[Y]_A+[Y]_B $$</p>\n<p>Hence, the correct option is (C).</p>\n<table class=\"tabular\">\n\n<tbody>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">S. No.</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">2-port connection</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">Relation</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">1.</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Series</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Addition of <span class=\"math-inline \" data-overflow=\"visible\"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mi>z</mi>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mi>z</mi>\n\n</math></mathmlword><asciimath style=\"display: none;\">z</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1.052ex\" height=\"1.025ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -442 465 453\" style=\"vertical-align: -0.025ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><path data-c=\"1D467\" d=\"M347 338Q337 338 294 349T231 360Q211 360 197 356T174 346T162 335T155 324L153 320Q150 317 138 317Q117 317 117 325Q117 330 120 339Q133 378 163 406T229 440Q241 442 246 442Q271 442 291 425T329 392T367 375Q389 375 411 408T434 441Q435 442 449 442H462Q468 436 468 434Q468 430 463 420T449 399T432 377T418 358L411 349Q368 298 275 214T160 106L148 94L163 93Q185 93 227 82T290 71Q328 71 360 90T402 140Q406 149 409 151T424 153Q443 153 443 143Q443 138 442 134Q425 72 376 31T278 -11Q252 -11 232 6T193 40T155 57Q111 57 76 -3Q70 -11 59 -11H54H41Q35 -5 35 -2Q35 13 93 84Q132 129 225 214T340 322Q352 338 347 338Z\"></path></g></g></g></svg></mjx-container></span>-parameter</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">2.</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Parallel</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Addition of <span class=\"math-inline \" data-overflow=\"visible\"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mi>y</mi>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mi>y</mi>\n\n</math></mathmlword><asciimath style=\"display: none;\">y</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1.109ex\" height=\"1.464ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -442 490 647\" style=\"vertical-align: -0.464ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><path data-c=\"1D466\" d=\"M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z\"></path></g></g></g></svg></mjx-container></span>-parameter</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">3.</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Series parallel</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Addition of <span class=\"math-inline \" data-overflow=\"visible\"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mi>h</mi>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mi>h</mi>\n\n</math></mathmlword><asciimath style=\"display: none;\">h</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1.303ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 576 705\" style=\"vertical-align: -0.025ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><path data-c=\"210E\" d=\"M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z\"></path></g></g></g></svg></mjx-container></span>-parameter</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">4.</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Parallel series</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Addition of <span class=\"math-inline \" data-overflow=\"visible\"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mi>g</mi>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mi>g</mi>\n\n</math></mathmlword><asciimath style=\"display: none;\">g</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1.079ex\" height=\"1.464ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -442 477 647\" style=\"vertical-align: -0.464ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><path data-c=\"1D454\" d=\"M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z\"></path></g></g></g></svg></mjx-container></span>-parameter</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">5.</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Cascade</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Multiplication of <span class=\"math-inline \"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mi>A</mi>\n\n  <mi>B</mi>\n\n  <mi>C</mi>\n\n  <mi>D</mi>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mi>A</mi>\n\n  <mi>B</mi>\n\n  <mi>C</mi>\n\n  <mi>D</mi>\n\n</math></mathmlword><asciimath style=\"display: none;\">ABCD</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"7.007ex\" height=\"1.67ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -716 3097 738\" style=\"vertical-align: -0.05ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><path data-c=\"1D434\" d=\"M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z\"></path></g><g data-mml-node=\"mi\" transform=\"translate(750,0)\"><path data-c=\"1D435\" d=\"M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z\"></path></g><g data-mml-node=\"mi\" transform=\"translate(1509,0)\"><path data-c=\"1D436\" d=\"M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z\"></path></g><g data-mml-node=\"mi\" transform=\"translate(2269,0)\"><path data-c=\"1D437\" d=\"M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z\"></path></g></g></g></svg></mjx-container></span> parameters</td>\n\n</tr>\n\n</tbody>\n\n</table>",
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "Find the Y-parameters (short ciruit admittance parameters) for the network shown in figure.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/bJeEaehaOnUbmwbaY/rU0bQJxmqzpjdrXJVHDeX4RMeOcOE/wOd08lyfDKJHWSTNPojP3n/image.svg\" loading=\"lazy\" alt=\"GATE ECE 2003 Network Theory - Two Port Networks Question 21 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "solve it ",
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the network in Fig.\n<p> (a) Find its short-circuit admittance parameters.\n<br> (b) Find the open-ciruit impedance $${Z_{22}}$$.</p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/QF9FysDQZu5K9zTiT/PAuo7f1s9Mr5Hi4vPYHRtiL0uoK3f/nOZbF6UfBcKaFpiHLFuIDI/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2002 Network Theory - Two Port Networks Question 14 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br> (a) $$\\left[ {\\matrix{\n   {0.3} &amp; { - 0.3}  \\cr \n   {0.1} &amp; 0  \\cr \n\n } } \\right]$$\n<br> (b) $${Z_{22}} = 10$$",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The admittance parameters of a 2-port network shown in Fig. are given by $${Y_{11}} = \\,2\\,\\,mho$$, $${Y_{12}}$$ = - 0.5 mho, $${Y_{21}}$$ = 4.8 mho, $${Y_{22}}$$ = 1 mho. The output port is terminated with a load admittance $${Y_L}$$ = 0.2 mho. Find $${E_2}$$ for each of the following conditions:\n<p> (a) $${E_1} = \\,10\\,\\angle \\,{0^{ \\circ \\,}}\\,V$$\n<br> (b) $${I_1} = \\,10\\,\\angle \\,{0^{ \\circ \\,}}\\,A$$\n<br> (c) A source $$10\\,\\angle \\,{0^{ \\circ \\,}}\\,V$$ in series with a 0.25 $$\\Omega $$ resistor is connected to the input port. </p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/5FrtB8Wlswf6m8XEN/zwuinJYNmn3koKryXtXk9hAT37myQ/r4Jh2MYCbXRm3PhxajWZrW/image.svg\" loading=\"lazy\" alt=\"GATE ECE 2001 Network Theory - Two Port Networks Question 15 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br> (a) $${E_2}$$ = -40 V\n<br> (b) $${E_2}$$ = - 10 V\n<br> (c) $${E_2}$$ = - 20 V",
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Find the input resistance $${R_{in}}$$ of the infinite section resistive network shown in Fig.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/fyvSw2nfCnXUMgrQl/gXjuKAIapCbKFdoj5rDZhYjllLcj0/s48KygEUkbchoE4rZTsOpl/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 1996 Network Theory - Two Port Networks Question 17 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\,{R_{in}} = {{V5\\, + \\,1} \\over 2}\\,\\Omega $$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The open circuit impedance matrix $${Z_{OC}}$$ of a three-terminal two-port network with A as the input terminal, B as the output terminal, and C as the common terminal, is given as \n$$$\\left[ {{Z_{OC}}} \\right] = \\left[ {\\matrix{\n   2 &amp; 5  \\cr \n   3 &amp; 7  \\cr \n\n } } \\right]$$$ \n<p> Write down the short circuit admittance matrix $${{Y_{SC}}}$$ of the network viewed as a two-port network, but now taking B as the input terminal, C as the output terminal and A as the common terminal. </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${Y_{SC}} = \\left[ {\\matrix{\n   { - 2} &amp; { - 1}  \\cr \n   { - 3} &amp; { - 1}  \\cr \n\n } } \\right]$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Show that the system shown in Fig. is a double integator. In other words, prove that the transfer gain is given by\n<br> $${{{V_0}\\,(s)} \\over {{V_s}\\,(s)}} =  - {1 \\over {{{(CR\\,s)}^2}}}$$, assume ideal OP-Amp\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/iclRgTuLO3edTfx0G/NTSANcv45HKqO0k5CF2D7RYcWoID0/1TcnRnleQxGATOICwQOqQp/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 1995 Network Theory - Two Port Networks Question 18 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "solve it ",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Find the current-transfer-ratio, $${{I_2}}$$/$${{I_1}}$$, for the network shown below (Fig). Also, mark all branch currents.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/GzLWjFG1i4Jzpv4Ao/CzMgpslVmLqtYJR6yPwJN9UyL3QFN/yDKRryBBUBe9NTUpQdcUOY/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 1995 Network Theory - Two Port Networks Question 19 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\,{{{I_2}} \\over {{I_1}}} = \\, - {{11} \\over {26}}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Assuming that the amplifier shown in the Fig., below, is a voltage-controlled voltage source, show that the voltage transfer function of the network is given by \n<br> $$T(s) = {{{V_2}\\,(s)} \\over {{V_1}\\,(s)}} = \\,{K \\over {{s^2} + \\,(3 - K)\\,s + 1}}$$\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/IyOhw3ug4VdUnXdXx/XqvqmQIW8Jo7tDf0mcKgxLnizLb4N/cFT5cC1dllpomf1vqHRsQ4/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1994 Network Theory - Two Port Networks Question 20 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "solve it ",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "content": "The two-port Darlington impedance booster of figure uses identical transistors $$({h_{ie}} = 1\\,k,\\,\\,{h_{fe}} = \\,100,\\,\\,{h_{re}} = \\,\\,{h_{oe}} = \\,0$$. Calculate the z-parameters of the network. (Use relavant approximations)\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/a9na1SkSuZVzsgvav/78of3udJeAnBYylhvuekmlksfjTVR/snDoXWha9MVTyandJsWxnk/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 1992 Network Theory - Two Port Networks Question 13 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br> $${Z_{11}} = \\,10.1\\,\\,M\\,\\Omega $$\n<br> $${Z_{12}} = \\,1\\,\\,K\\,\\Omega $$\n<br> $${Z_{21}} = \\,10\\,\\,M\\,\\Omega $$\n<br> $${Z_{22}} = \\,1\\,\\,K\\,\\Omega $$",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  }
+]

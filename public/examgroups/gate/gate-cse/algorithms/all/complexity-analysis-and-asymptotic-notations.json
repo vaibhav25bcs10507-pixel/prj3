@@ -1,0 +1,1877 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following functions, where $n$ is a positive integer.</p>\n<p>$$ n^{1 / 3}, \\log (n), \\log (n!), 2^{\\log (n)} $$</p>\n<p>Which one of the following options lists the functions in increasing order of asymptotic growth rate?</p>\n<p>Note: Assume the base of log to be 2 .</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\log (n), n^{1 / 3}, 2^{\\log (n)}, \\log (n!)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$n^{1 / 3}, \\log (n), \\log (n!), 2^{\\log (n)}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\log (n), n^{1 / 3}, \\log (n!), 2^{\\log (n)}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$2^{\\log (n)}, n^{1 / 3}, \\log (n), \\log (n!)$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Step 1: Write the functions and their types</b></p>\n<p>\n\n$$n^{1 / 3}$$ is a polynomial function.<br>\n\n$$\\log_2(n)$$ is a logarithmic function.<br>\n\n$$\\log_2(n!)$$ is the logarithm of the factorial of $n$.<br>\n\n$$2^{\\log_2 n}$$ can also be rewritten as $n$ because $2^{\\log_2 n} = n$.\n\n</p>\n<p><b>Step 2: Find which functions grow faster as $n$ increases</b></p>\n<p>\n\nThe order from slowest to fastest growth is:\n\n<br>\n\nLogarithmic < Polynomial < Functions involving $n \\log n$ or higher.\n\n</p>\n<p>\n\n$\\log_2(n)$ is the slowest among all these functions.\n\n<br>\n\n$n^{1 / 3}$ grows faster than $\\log_2(n)$, but slower than $n$.\n\n<br>\n\n$2^{\\log_2 n} = n$ is a linear (polynomial) function, which is faster than $n^{1 / 3}$.\n\n<br>\n\n$\\log_2(n!)$ is approximately $n \\log_2 n$ (by Stirling’s approximation), which grows even faster than $n$.\n\n</p>\n<p><b>Step 3: Write in increasing order</b></p>\n<p>\n\nSo, the order from slowest to fastest is:\n\n$$ \\log_2 n, \\; n^{1 / 3}, \\; 2^{\\log_2 n}, \\; \\log_2 n! $$\n\n</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following can be recurrence relation(s) corresponding to an algorithm with time complexity $\\Theta(n)$ ?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$T(n)=T(n-1)+1, \\quad T(1)=1$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$T(n)=2 T\\left(\\frac{n}{2}\\right)+1, T(1)=1$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\quad T(n)=2 T\\left(\\frac{n}{2}\\right)+n, \\quad T(1)=1$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$T(n)=T(n-1)+n, \\quad T(1)=1$</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\text { }\\\\ &\\begin{aligned} (a)\\,\\,\\,\\,\\,\\, T(n) & =T(n-1)+1 \\\\ & =T(n-2)+1+1 \\\\ & =T(n-k)+k \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,[n-k=1, k=n-1]\\\\ & =T(1)+n-1 \\\\ T(n) & =n \\end{aligned}\\\\ & \\end{aligned} $$</p>\n<p></p>\n<p>$$ \\begin{aligned}(b)\\,\\,\\,\\,\\,\\,\\, & T(n)=2 T\\left(\\frac{n}{2}\\right)+1 \\\\ & f(n)=1, n^{\\log _b^a}=n \\end{aligned} $$</p>\n<p>Master theorems case (i)</p>\n<p></p>\n<p>$$ \\begin{aligned} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,& T(n)=\\theta(n) \\\\(c)\\,\\,\\,\\,\\, & T(n)=2 T\\left(\\frac{n}{2}\\right)+n \\\\ & f(n)=n, n^{\\log _b^a}=n \\end{aligned} $$</p>\n<p>Master theorems case (ii) applicable</p>\n<p></p>\n<p>$$ \\begin{aligned} T(n) & =\\theta(n \\cdot \\log n) \\\\(d)\\,\\,\\, T(n) & =T(n-1)+n \\\\ & =T(n-2)+(n-1)+n \\\\ & =T(n-3)+(n-2)+(n-1)+n \\\\ & =T(1)+2+3+\\ldots . .+(n-1)+n \\\\ T(n) & =\\frac{n(n+1)}{2}=\\theta\\left(n^2\\right) \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider an unordered list of $N$ distinct integers.\nWhat is the minimum number of element comparisons required to find an integer in the list that is NOT the largest in the list?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$N-1$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " N\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $2 N-1$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We want to find any integer from the list that is guaranteed not to be the largest. Here’s how you can achieve that with just one comparison :</p>\n\n<p><p>Pick any two distinct integers from the list.</p></p>\n<p><p>Compare them. Let’s denote the two numbers by $$a$$ and $$b$$.</p></p>\n<p><p>Without loss of generality, assume $$a < b$$. Since $$a < b$$, we know that $$a$$ cannot be the maximum element in the entire list (because the maximum must be larger than every other number).</p></p>\n<p><p>Thus, with just one comparison, you have identified an integer (namely, $$a$$) that is not the largest.</p></p>\n\n<p>So, the minimum number of comparisons required is $$1$$.</p>\n<p>The correct answer is Option A.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following recurrence relation :</p>\n<p>$$T(n)=2 T(n-1)+n 2^n \\text { for } n>0, T(0)=1$$</p>\n<p>Which ONE of the following options is CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$T(n)=\\Theta\\left(n^2 2^n\\right)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$T(n)=\\Theta\\left(n 2^n\\right)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$T(n)=\\Theta\\left((\\log n)^2 2^n\\right)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$T(n)=\\Theta\\left(4^n\\right)$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given the recurrence relation $ T(n) = 2T(n-1) + n2^n $ with $ T(0) = 1 $, we need to determine the asymptotic notation for $ T(n) $.</p>\n<p>First, we solve the recurrence relation using the method of iteration. Expanding the recurrence relation step-by-step, we get:</p>\n<p>$ \\begin{aligned} T(n) &= 2T(n-1) + n2^n \\\\ &= 2[2T(n-2) + (n-1)2^{n-1}] + n2^n \\\\ &= 4T(n-2) + (n-1)2^n + n2^n \\\\ &= 4T(n-2) + (2n - 1)2^n \\\\ &= 4[2T(n-3) + (n-2)2^{n-2}] + (2n - 1)2^n \\\\ &= 8T(n-3) + (n-2)2^n + (2n - 1)2^n \\\\ &= 8T(n-3) + (3n - 3)2^n \\\\ &\\;\\;\\vdots \\\\ &= 2^k T(n-k) + [kn - \\text{constant terms}]2^n. \\end{aligned} $</p>\n<p>Continuing this process until $ k = n $, we reach:</p>\n<p>$ T(n) = 2^n T(0) + \\left[\\sum\\limits_{i=1}^{n} (n - i + 1)2^n\\right]. $</p>\n<p>Given $ T(0) = 1 $, we simplify the summation:</p>\n<p>$ T(n) = 2^n \\cdot 1 + 2^n \\sum\\limits_{i=1}^{n} i = 2^n + 2^n \\cdot \\frac{n(n+1)}{2} = 2^n + n(n+1)2^{n-1}. $</p>\n<p>Combining the terms, we get:</p>\n<p>$ T(n) = (n^2 + n + 2)2^{n-1}. $</p>\n<p>For asymptotic analysis, the dominant term is $ n^2 2^n $, leading to $ T(n) = \\Theta(n^2 2^n) $.</p>\n<p>Thus, the correct answer is $\\boxed{A}$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $T(n)$ be the recurrence relation defined as follows:</p><p>$T(0) = 1$<br>$T(1) = 2$, and<br>$T(n) = 5T(n - 1) - 6T(n - 2)$ for $n \\geq 2$</p><p>Which one of the following statements is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$T(n) = \\Theta(2^n)$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$T(n) = \\Theta(n2^n)$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$T(n) = \\Theta(3^n)$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$T(n) = \\Theta(n3^n)$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which one of the given options is true for the recurrence relation, we need to solve it. The recurrence relation given is:</p>\n\n<p>$T(0) = 1$<br>$T(1) = 2$, and<br>$T(n) = 5T(n - 1) - 6T(n - 2)$ for $n \\geq 2$.</p>\n\n<p>This is a linear homogeneous recurrence relation with constant coefficients. To solve it, we start by finding the characteristic equation associated with the recurrence relation:</p>\n\n<p>Assume $T(n) = r^n$. Substituting this into the recurrence relation, we get:</p>\n\n<p>$$r^n = 5r^{n-1} - 6r^{n-2}$$</p>\n\n<p>Dividing through by $r^{n-2}$, we get:</p>\n\n<p>$$r^2 = 5r - 6$$</p>\n\n<p>Rearranging, we obtain the characteristic equation:</p>\n\n<p>$$r^2 - 5r + 6 = 0$$</p>\n\n<p>Next, we solve this quadratic equation to find the roots:</p>\n\n<p>$$r = \\frac{5 \\pm \\sqrt{25 - 24}}{2}$$</p>\n\n<p>$$r = \\frac{5 \\pm 1}{2}$$</p>\n\n<p>So, the roots are:</p>\n\n<p>$$r = 3 \\quad \\text{and} \\quad r = 2$$</p>\n\n<p>Since we have two distinct roots, the general solution to the recurrence relation is:</p>\n\n<p>$$T(n) = A \\cdot 3^n + B \\cdot 2^n$$</p>\n\n<p>We use the initial conditions $T(0) = 1$ and $T(1) = 2$ to find the values of $A$ and $B$:</p>\n\n<p>For $T(0) = 1$:</p>\n\n<p>$$A \\cdot 3^0 + B \\cdot 2^0 = 1$$</p>\n\n<p>$$A + B = 1 \\quad (1)$$</p>\n\n<p>For $T(1) = 2$:</p>\n\n<p>$$A \\cdot 3^1 + B \\cdot 2^1 = 2$$</p>\n\n<p>$$3A + 2B = 2 \\quad (2)$$</p>\n\n<p>Solving equations (1) and (2) simultaneously:</p>\n\n<p>From equation (1):</p>\n\n<p>$$B = 1 - A$$</p>\n\n<p>Substitute into equation (2):</p>\n\n<p>$$3A + 2(1 - A) = 2$$</p>\n\n<p>$$3A + 2 - 2A = 2$$</p>\n\n<p>$$A = 0$$</p>\n\n<p>Substitute $A = 0$ into equation (1):</p>\n\n<p>$$0 + B = 1$$</p>\n\n<p>$$B = 1$$</p>\n\n<p>So, the specific solution to the recurrence is:</p>\n\n<p>$$T(n) = 3^0 \\cdot 2^n = 2^n$$</p>\n\n<p>According to our options, the true statement is:</p>\n\n<p><b>Option A: $T(n) = \\Theta(2^n)$</b></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p> Given an integer array of size $N$, we want to check if the array is sorted (in either ascending or descending order). An algorithm solves this problem by making a single pass through the array and comparing each element of the array only with its adjacent elements. The worst-case time complexity of this algorithm is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>both $O(N)$ and $\\Omega(N)$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$O(N)$ but not $\\Omega(N)$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\Omega(N)$ but not $O(N)$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>neither $O(N)$ nor $\\Omega(N)$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine whether an array of size $N$ is sorted (either in ascending or descending order) by making a single pass through the array and comparing each element only with its adjacent elements, we need to understand the time complexity concepts involved.</p>\n\n<p>In computational complexity theory, $O(N)$ (Big-O notation) signifies the upper bound of the running time, while $\\Omega(N)$ (Omega notation) represents the lower bound of the running time.</p>\n\n<p>Since the algorithm makes a single pass through the array and compares each element with its adjacent elements, it will perform a linear number of comparisons, i.e., $N-1$ comparisons (since there are $N$ elements). Consequently, the time complexity of this algorithm in the worst-case scenario will be linear.</p>\n\n<p>Therefore, the algorithm's worst-case time complexity is $O(N)$ because the number of operations grows linearly with the size of the input array $N$. It is also $\\Omega(N)$ because the algorithm must examine each element at least once to determine if the array is sorted.</p>\n\n<p>Hence, the correct option is:</p>\n\n<p><strong>Option A: both $O(N)$ and $\\Omega(N)$</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let $$f$$ and $$g$$ be functions of natural numbers given by $$f(n)=n$$ and $$g(n)=n^2$$. Which of the following statements is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$f \\in O(g)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$f \\in \\Omega (g)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$f \\in o(g)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$f \\in \\Theta (g)$$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the statements are true, we need to analyze the functions $$f(n) = n$$ and $$g(n) = n^2$$ using the asymptotic notations $$O$$, $$\\Omega$$, $$o$$, and $$\\Theta$$.</p>\n\n<p><strong>Option A: $$f \\in O(g)$$</strong></p>\n\n<p>This means that $$f(n)$$ grows no faster than $$g(n)$$ up to a constant factor. Mathematically, we need to show that there exists a constant $$C > 0$$ and a natural number $$n_0$$ such that: </p>\n\n<p>$$f(n) \\leq C \\cdot g(n) \\text{ for all } n \\geq n_0$$</p>\n\n<p>Substituting the given functions:</p>\n\n<p>$$n \\leq C \\cdot n^2$$</p>\n\n<p>For this to be true, we can choose $$C = 1$$ and any $$n_0 \\geq 1$$. Clearly, for all $$n \\geq 1$$, the inequality $$n \\leq n^2$$ holds. Hence, option A is true.</p>\n\n<p><strong>Option B: $$f \\in \\Omega(g)$$</strong></p>\n\n<p>This means that $$f(n)$$ grows at least as fast as $$g(n)$$ up to a constant factor. Mathematically, there must exist a constant $$C > 0$$ and a natural number $$n_0$$ such that: </p>\n\n<p>$$f(n) \\geq C \\cdot g(n) \\text{ for all } n \\geq n_0$$</p>\n\n<p>Substituting the given functions:</p>\n\n<p>$$n \\geq C \\cdot n^2$$</p>\n\n<p>This inequality does not hold for sufficiently large $$n$$ since $$n^2$$ grows much faster than $$n$$. Therefore, option B is false.</p>\n\n<p><strong>Option C: $$f \\in o(g)$$</strong></p>\n\n<p>This means that $$f(n)$$ grows strictly slower than $$g(n)$$. Formally, for every positive constant $$C$$, there exists a natural number $$n_0$$ such that: </p>\n\n<p>$$f(n) < C \\cdot g(n) \\text{ for all } n \\geq n_0$$</p>\n\n<p>Substituting the given functions:</p>\n\n<p>$$n < C \\cdot n^2$$</p>\n\n<p>For any positive constant $$C$$, we can find some $$n_0 > \\frac{1}{C}$$, after which the inequality will hold. Hence, option C is true.</p>\n\n<p><strong>Option D: $$f \\in \\Theta(g)$$</strong></p>\n\n<p>This means that $$f(n)$$ and $$g(n)$$ grow at the same rate, i.e., there exist positive constants $$C_1$$ and $$C_2$$, and a natural number $$n_0$$ such that: </p>\n\n<p>$$C_1 \\cdot g(n) \\leq f(n) \\leq C_2 \\cdot g(n) \\text{ for all } n \\geq n_0$$</p>\n\n<p>Substituting the functions:</p>\n\n<p>$$C_1 \\cdot n^2 \\leq n \\leq C_2 \\cdot n^2$$</p>\n\n<p>Such an inequality cannot hold for sufficiently large $$n$$ because $$n^2$$ grows much faster than $$n$$. Therefore, option D is false.</p>\n\n<p><strong>Final Answer:</strong></p>\n\n<p>Option A and Option C are true.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which one of the following statements is TRUE for all positive functions f(n) ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "f(n<sup>2</sup>) = $$\\theta$$(f(n)<sup>2</sup>), when f(n) is a polynomial"
+      },
+      {
+        "identifier": "B",
+        "content": "f(n<sup>2</sup>) = o(f(n)<sup>2</sup>)"
+      },
+      {
+        "identifier": "C",
+        "content": "f(n<sup>2</sup>) = O(f(n)<sup>2</sup>), when f(n) is an exponential function"
+      },
+      {
+        "identifier": "D",
+        "content": "f(n<sup>2</sup>) = $$\\Omega$$(f(n)<sup>2</sup>)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statement is true for all positive functions $ f(n) $, let's analyze each option one by one.</p>\n<p><strong>Option A:</strong></p>\n<p>$ f(n^2) = \\theta(f(n)^2) $, when $ f(n) $ is a polynomial.</p>\n\n<p><p>Let $ f(n) = n^k $ where $ k > 0 $.</p></p>\n<p><p>Then $ f(n^2) = (n^2)^k = n^{2k} $.</p></p>\n<p><p>Also, $ f(n)^2 = (n^k)^2 = n^{2k} $.</p></p>\n<p><p>Therefore, $ f(n^2) = \\theta(f(n)^2) $ because both functions grow at the same rate.</p></p>\n\n<p><strong>Option B:</strong></p>\n<p>$ f(n^2) = o(f(n)^2) $.</p>\n\n<p><p>Consider $ f(n) = n $.</p></p>\n<p><p>Then $ f(n^2) = n^2 $ and $ f(n)^2 = n^2 $.</p></p>\n<p><p>The ratio $ \\frac{f(n^2)}{f(n)^2} = 1 $, which does not approach 0 as $ n \\to \\infty $.</p></p>\n<p><p>Therefore, $ f(n^2) $ is not $ o(f(n)^2) $.</p></p>\n\n<p><strong>Option C:</strong></p>\n<p>$ f(n^2) = O(f(n)^2) $, when $ f(n) $ is an exponential function.</p>\n\n<p><p>Let $ f(n) = a^n $ where $ a > 1 $.</p></p>\n<p><p>Then $ f(n^2) = a^{n^2} $ and $ f(n)^2 = a^{2n} $.</p></p>\n<p><p>The ratio $ \\frac{f(n^2)}{f(n)^2} = a^{n^2 - 2n} $ grows exponentially, so $ f(n^2) $ is not $ O(f(n)^2) $.</p></p>\n\n<p><strong>Option D:</strong></p>\n<p>$ f(n^2) = \\Omega(f(n)^2) $.</p>\n\n<p><p>Consider $ f(n) = \\log n $.</p></p>\n<p><p>Then $ f(n^2) = 2\\log n $ and $ f(n)^2 = (\\log n)^2 $.</p></p>\n<p><p>The ratio $ \\frac{f(n^2)}{f(n)^2} = \\frac{2}{\\log n} $ approaches 0 as $ n \\to \\infty $.</p></p>\n<p><p>Therefore, $ f(n^2) $ is not $ \\Omega(f(n)^2) $.</p></p>\n\n<p><strong>Conclusion:</strong></p>\n<p>Only <strong>Option A</strong> holds true for all positive polynomial functions $ f(n) $.</p>\n<p><strong>Answer:</strong> Option A</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following three functions.</p>\n\n<p>f<sub>1</sub> = 10<sup>n</sup>, f<sub>2</sub> = n<sup>logn</sup>, f<sub>3</sub> = n<sup>√n</sup></p>\n\n<p>Which one of the following options arranges the functions in the increasing order of asymptotic growth rate?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "f<sub>1</sub> , f<sub>2</sub>, f<sub>3</sub>"
+      },
+      {
+        "identifier": "B",
+        "content": "f<sub>2</sub>, f<sub>1</sub>, f<sub>3</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "f<sub>3</sub>, f<sub>2</sub>, f<sub>1</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "f<sub>2</sub>, f<sub>3</sub>, f<sub>1</sub>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To arrange the functions $ f_1 = 10^n $, $ f_2 = n^{\\log n} $, and $ f_3 = n^{\\sqrt{n}} $ in increasing order of their asymptotic growth rates, we'll compare their growth by analyzing their exponents and expressions.</p>\n<h3><strong>Given Functions:</strong></h3>\n\n<p><p>$ f_1 = 10^n $</p></p>\n<p><p>$ f_2 = n^{\\log n} $</p></p>\n<p><p>$ f_3 = n^{\\sqrt{n}} $</p></p>\n\n<h3><strong>Expressing Functions Using Exponentials:</strong></h3>\n<p>We'll rewrite the functions in terms of the natural exponential function $ e $:</p>\n\n<p><p><strong>For $ f_1 $:</strong></p>\n<p>$    f_1 = 10^n = e^{n \\ln 10}    $</p></p>\n\n\n<p><strong>Exponent:</strong> $ E_1 = n \\ln 10 $</p>\n\n\n<p><p><strong>For $ f_2 $:</strong></p>\n<p>$    f_2 = n^{\\log n} = e^{\\log n \\cdot \\ln n} = e^{(\\ln n)(\\ln n)} = e^{(\\ln n)^2}    $</p></p>\n\n\n<p><strong>Exponent:</strong> $ E_2 = (\\ln n)^2 $</p>\n\n\n<p><p><strong>For $ f_3 $:</strong></p>\n<p>$    f_3 = n^{\\sqrt{n}} = e^{\\sqrt{n} \\ln n}    $</p></p>\n\n\n<p><strong>Exponent:</strong> $ E_3 = \\sqrt{n} \\ln n $</p>\n\n<h3><strong>Comparing the Growth Rates:</strong></h3>\n<h4><strong>Step 1: Compare $ f_2 $ and $ f_3 $</strong></h4>\n\n<p><p><strong>Exponents to Compare:</strong> $ E_2 = (\\ln n)^2 $ and $ E_3 = \\sqrt{n} \\ln n $</p></p>\n<p><p><strong>Compute the ratio:</strong></p>\n<p>$   \\frac{E_3}{E_2} = \\frac{\\sqrt{n} \\ln n}{(\\ln n)^2} = \\frac{\\sqrt{n}}{\\ln n}   $</p></p>\n<p><p>As $ n $ approaches infinity, $ \\sqrt{n} $ grows much faster than $ \\ln n $.</p></p>\n<p><p>Therefore, $ \\frac{\\sqrt{n}}{\\ln n} \\to \\infty $, implying $ E_3 > E_2 $.</p></p>\n<p><p><strong>Conclusion:</strong> $ f_3 $ grows faster than $ f_2 $.</p></p>\n\n<h4><strong>Step 2: Compare $ f_3 $ and $ f_1 $</strong></h4>\n\n<p><p><strong>Exponents to Compare:</strong> $ E_3 = \\sqrt{n} \\ln n $ and $ E_1 = n \\ln 10 $</p></p>\n<p><p><strong>Compute the ratio:</strong></p>\n<p>$   \\frac{E_1}{E_3} = \\frac{n \\ln 10}{\\sqrt{n} \\ln n} = \\frac{\\sqrt{n} \\ln 10}{\\ln n}   $</p></p>\n<p><p>Again, $ \\sqrt{n} $ grows faster than $ \\ln n $, so $ \\frac{\\sqrt{n}}{\\ln n} \\to \\infty $, implying $ E_1 > E_3 $.</p></p>\n<p><p><strong>Conclusion:</strong> $ f_1 $ grows faster than $ f_3 $.</p></p>\n\n<h3><strong>Final Ordering:</strong></h3>\n<p>Based on the comparisons:</p>\n\n<p><p><strong>Slowest Growth:</strong> $ f_2 = n^{\\log n} $</p></p>\n<p><p><strong>Middle Growth:</strong> $ f_3 = n^{\\sqrt{n}} $</p></p>\n<p><p><strong>Fastest Growth:</strong> $ f_1 = 10^n $</p></p>\n\n<h3><strong>Answer:</strong></h3>\n<p><strong>Option D:</strong> $ f_2,\\ f_3,\\ f_1 $</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "For parameters a and b, both of which are $$\\omega \\left( 1 \\right)$$,\n<br>T(n) = $$T\\left( {{n^{1/a}}} \\right) + 1$$, and T(b) = 1.\n<br>Then T(n) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\left( {{{\\log }_a}{{\\log }_b}n} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\left( {{{\\log }_{ab}}n} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\left( {{{\\log }_b}{{\\log }_a}n} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\left( {{{\\log }_2}{{\\log }_2}n} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> <br/><br/>$\\begin{aligned} & T(n)=T\\left(n^{1 / a}\\right)+1 \\\\\\\\ & T(b)=1 \\\\\\\\ & a=b=\\omega(1) \\\\\\\\ & T(n)=T\\left(n^{1 / a}\\right)+1 \\\\\\\\ & T(b)=1 \\\\\\\\ & T(n)=T\\left(n^{1 / a}\\right)+1 \\\\\\\\ & T\\left(n^{1 / a}\\right)=T\\left(n^{1 / a^2}\\right)+1 \\\\\\\\ & T\\left(n^{1 / a^2}\\right)=T\\left(n^{1 / a^3}\\right)+1\\end{aligned}$</p>\n<p>On applying substitution after k iterations</p>\n<p>$$ \\begin{aligned} & T(n)=T\\left(n^{1 / d^k}\\right)+1+1+\\ldots \\ldots k \\text { times } \\\\\\\\ & T(n)=T\\left(n^{1 / d^k}\\right)+k \\end{aligned} $$</p>\n<p>When $n^{1 / a^k}=b$ taking $\\log _b$ on both sides</p>\n<p>$$ \\begin{aligned} & \\frac{1}{a^k} \\log _b n=\\log _b b \\\\\\\\ & \\log _b n=a^k \\\\\\\\ & a^k=\\log _b n \\\\\\\\ & k=\\log _a \\log _b n \\\\\\\\ & \\theta\\left(\\log _a \\log _b n\\right) \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following functions from positive integers to real numbers :</p>\n<p>$10, \\sqrt{n}, n, \\log _2 n, \\frac{100}{n}$.</p>\n<p>The CORRECT arrangement of the above functions in increasing order of asymptotic complexity is :</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\log _2 n, \\frac{100}{n}, 10, \\sqrt{n}, n$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{100}{n}, 10, \\log _2 n, \\sqrt{n}, n$"
+      },
+      {
+        "identifier": "C",
+        "content": "$10, \\frac{100}{n}, \\sqrt{n}, \\log _2 n, n$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{100}{n}, \\log _2 n, 10, \\sqrt{n}, n$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To see why Option B is correct, compare each function’s growth as $n \\to \\infty$:</p>\n\n<p><p>$\\displaystyle \\frac{100}{n}$  </p>\n<p>– Tends to 0, so it grows the slowest (in fact it’s $o(1)$).  </p></p>\n<p><p>$10$  </p>\n<p>– A nonzero constant, $\\Theta(1)$.  </p></p>\n<p><p>$\\log_2 n$  </p>\n<p>– Grows unbounded but very slowly, $\\Theta(\\log n)$.  </p></p>\n<p><p>$\\sqrt{n}$  </p>\n<p>– Polynomial growth, $\\Theta(n^{1/2})$.  </p></p>\n<p><p>$n$  </p>\n<p>– Linear growth, $\\Theta(n)$.</p></p>\n\n<p>Putting them in increasing order gives  </p>\n<p>$ \\frac{100}{n},\\; 10,\\; \\log_2 n,\\; \\sqrt{n},\\; n $</p>\n<p>which is Option B.</p>",
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-cse-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the equality $$\\sum\\limits_{i = 0}^n {{i^3}}  = X$$ and the following choices for $$X$$ \n<br>$$\\eqalign{\n  &amp; \\,\\,\\,\\,\\,\\,\\,{\\rm I}.\\,\\,\\,\\,\\,\\,\\Theta \\left( {{n^4}} \\right)  \\cr \n  &amp; \\,\\,\\,\\,\\,{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,\\,\\Theta \\left( {{n^5}} \\right)  \\cr \n  &amp; \\,\\,\\,{\\rm I}{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,\\,O\\left( {{n^5}} \\right)  \\cr \n  &amp; \\,\\,\\,{\\rm I}V.\\,\\,\\,\\,\\,\\,\\Omega \\left( {{n^3}} \\right) \\cr} $$\n<br>The equality above remains correct if $$𝑋$$ is replaced by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $${\\rm I}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Only $${\\rm II}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm I}$$ or $${\\rm III}$$ or $${\\rm IV}$$ but not $${\\rm II}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm II}$$ or $${\\rm III}$$ or $${\\rm IV}$$ but not $${\\rm I}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is the tightest upper bound that represents the number of swaps required to sort n numbers using selection sort?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(log n)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(n log n)"
+      },
+      {
+        "identifier": "D",
+        "content": "O(n<sup>2</sup>)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "What is the time complexity of Bellman-Ford single-source shortest path algorithm on a complete graph of n vertices?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta ({n^2})$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta ({n^2}\\log n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta ({n^3})$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta ({n^3}\\log n)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is the tightest  upper bound that represents the time complexity of inserting an object in to a binary search tree of n nodes?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(1)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(log n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(n)"
+      },
+      {
+        "identifier": "D",
+        "content": "O(n log n)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The worst case running time to search for an element in a balanced binary search tree with n2<sup>n</sup> elements is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta (n\\,\\log \\,n)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta (n{2^n})$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta (n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta (\\log \\,n)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Let W(n) and A(n) denote respectively, the worst case and average case running time of an algorithm executed on an input of size n. Which of the following is ALWAYS TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$A(n) = \\Omega (W(n))$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$A(n) = \\Theta (W(n))$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$A(n) = O (W(n))$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$A(n) = 0 (W(n))$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Two alternate packages A and B are available for processing a database having 10<sup>k</sup> records. Package A requires 0.0001n<sup>2</sup> time units and package B requires $$10n.\\log _{10}^n$$ time units to process n records. What is the smallest value of k for which package B will be preferred over A?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "12"
+      },
+      {
+        "identifier": "B",
+        "content": "10"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following segment of C-code:\n<pre><code>int j, n;\nj=1;\nwhile(j &lt;= n)\n j = j * 2;</code></pre>\nThe number of comparisons made in the execution of the loop for any n &gt; 0 is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\lceil {{{\\log }_2}n} \\right\\rceil  + 1$$"
+      },
+      {
+        "identifier": "B",
+        "content": "n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\lceil {{{\\log }_2}n} \\right\\rceil $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\lfloor {{{\\log }_2}n} \\right\\rfloor  + 1$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C-program fragment in which i, j and n are integer variables.<br>\nfor (i = n, j = 0; i &gt; 0; i /= 2, j += i);<br>\nlet val (j) denote the value stored in the variable j after termination of the for loop. Which one of the following is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "val (j) = $$\\theta $$ (log n)"
+      },
+      {
+        "identifier": "B",
+        "content": "val (j) = ($$\\sqrt n $$)"
+      },
+      {
+        "identifier": "C",
+        "content": "val (j) = $$\\theta $$ (n)"
+      },
+      {
+        "identifier": "D",
+        "content": "val (j) = $$\\theta $$ (n log n)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The time complexity of computing the transitive closure of a binary relation on a set of elements is known to be:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O (n)"
+      },
+      {
+        "identifier": "B",
+        "content": "O (n log n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O (n<sup>3/2</sup>)"
+      },
+      {
+        "identifier": "D",
+        "content": "O (n<sup>3</sup>)"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following three claims <br>\nI. (n + k)<sup>m</sup> = $$\\Theta \\,({n^m})$$  where k and m are constants<br>\nII. 2<sup>n+1</sup> = O(2<sup>n</sup>)<br>\nIII. 2<sup>2n</sup> = O(2<sup>2n</sup>)<br>\nWhich of those claims are correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and II"
+      },
+      {
+        "identifier": "B",
+        "content": "I and III"
+      },
+      {
+        "identifier": "C",
+        "content": "II and III"
+      },
+      {
+        "identifier": "D",
+        "content": "I, II and III"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an array multiplier for multiplying two n bit numbers. If each gate in the circuit has a unit delay, the total delay of the multiplier is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\,(1)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\,(\\log n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\,(n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\,({n^2})$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "In the worst case, the number of comparisons needed to search a singly linked list of length n for a given element is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "log n"
+      },
+      {
+        "identifier": "B",
+        "content": "n/2"
+      },
+      {
+        "identifier": "C",
+        "content": "Log<sub>2</sub> n - 1"
+      },
+      {
+        "identifier": "D",
+        "content": "n"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Let f(n) =  n<sup>2</sup> log n and g(n) = n(log n)<sup>10</sup> be two positive functions of n. Which of the following statements is correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "f(n) = O(g(n)) and g(n) ≠ O(f(n))"
+      },
+      {
+        "identifier": "B",
+        "content": "g(n) = O(f(n)) and f(n) ≠ O(g(n))"
+      },
+      {
+        "identifier": "C",
+        "content": "f(n) ≠ O(g(n)) and g(n) ≠ O(f(n))"
+      },
+      {
+        "identifier": "D",
+        "content": "f(n) = O(g(n)) and g(n) = O(f(n))"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The maximum gate delay for any output to appear in an array multiplier for multiplying two n bit number is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O (n<sup>2</sup>)"
+      },
+      {
+        "identifier": "B",
+        "content": "O (n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O (log n)"
+      },
+      {
+        "identifier": "D",
+        "content": "O (1)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The concatenation of two lists is to be performed on 0(1) time. Which of the following implementations of a list should be used?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Singly linked list"
+      },
+      {
+        "identifier": "B",
+        "content": "Doubly linked list"
+      },
+      {
+        "identifier": "C",
+        "content": "Circular doubly linked list"
+      },
+      {
+        "identifier": "D",
+        "content": "Array implementation of list"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "For Circular Doubly linked list there will be no traversal for concatenation.\n<br><br>\nExcept for circular linked lists for all other lists we need to reach till end to attach the second list.",
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is false?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$100\\,n\\,\\log n = O\\left( {{{n\\,\\log \\,n} \\over {100}}} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sqrt {\\log \\,n}  = O(\\log \\,\\log \\,n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "if 0 &lt; x &lt; y then n <sup>x</sup> = O(n<sup>y</sup>)"
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^n} \\ne O({n^k})$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Option (a):</b> <br>100nlogn = O(nlogn) = O($${{n\\log n} \\over {100}}$$)(As 100 is a constant so multiplication or division does not change the order).<br>This is True. <br>\n<br><b>Option (b):</b> <br>$$\\sqrt {\\log n} $$ = log<sup>1/2</sup>n = 1/2(logn) = O(logn)<br>Which is not O(loglogn).So,this is False. <br>\n<br><b>Option (c):</b> <br>0 &lt; x &lt; y<br> Let x = 3, y = 5<br>n<sup>3</sup> = O(n<sup>5</sup>) = lower = O(higher)<br>This is True. <br>\n<br><b>Option (d):</b> <br>2<sup>n</sup> != O(n<sup>k</sup>) <br>Here,2<sup>n</sup> is higher growth rate function than n<sup>k</sup>.So,This option is True.</p>",
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following recurrence relation:</p><p>$$T(n) = \\begin{cases} \\sqrt{n} T(\\sqrt{n}) + n & \\text{for } n \\ge 1, \\\\ 1 & \\text{for } n = 1. \\end{cases}$$</p><p>Which one of the following options is CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$$T(n) = \\Theta(n \\log \\log n)$$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$$T(n) = \\Theta(n \\log n)$$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$$T(n) = \\Theta(n^2 \\log n)$$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$$T(n) = \\Theta(n^2 \\log \\log n)$$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve the recurrence relation, let's analyze the provided recurrence:</p>\n\n<p>$$T(n) = \\begin{cases} \\sqrt{n} T(\\sqrt{n}) + n & \\text{for } n \\ge 1, \\\\ 1 & \\text{for } n = 1. \\end{cases}$$</p>\n\n<p>First, perform a change of variables to simplify the recurrence. Let:</p>\n\n<p>$$n = 2^m$$</p>\n\n<p>This implies:</p>\n\n<p>$$\\sqrt{n} = 2^{m/2}$$</p>\n\n<p>Substitute back into the recurrence:</p>\n\n<p>$$T(2^m) = \\sqrt{2^m} \\cdot T(2^{m/2}) + 2^m$$</p>\n\n<p>Since $\\sqrt{2^m} = 2^{m/2}$, the recurrence becomes:</p>\n\n<p>$$T(2^m) = 2^{m/2} T(2^{m/2}) + 2^m$$</p>\n\n<p>Now, let's make another substitution:</p>\n\n<p>$$S(m) = T(2^m)$$</p>\n\n<p>This gives us a new recurrence relation in terms of $S(m)$:</p>\n\n<p>$$S(m) = 2^{m/2} S(m/2) + 2^m$$</p>\n\n<p>Let's solve this recurrence using a recursive approach:</p>\n\n<p>Assume $S(m) = 2^m f(m)$. Substitute back into the recurrence:</p>\n\n<p>$$2^m f(m) = 2^{m/2} \\cdot 2^{m/2} f(m/2) + 2^m$$</p>\n\n<p>Which simplifies to:</p>\n\n<p>$$2^m f(m) = 2^m f(m/2) + 2^m$$</p>\n\n<p>Divide both sides by $2^m$:</p>\n\n<p>$$f(m) = f(m/2) + 1$$</p>\n\n<p>This is a simple recurrence relation for $f(m)$. We can solve it by repeated substitution:</p>\n\n<p>$$f(m/2) = f(m/4) + 1$$</p>\n\n<p>$$f(m/4) = f(m/8) + 1$$</p>\n\n<p>Continue this process until reaching $f(1)$:</p>\n\n<p>$$f(m) = f(1) + \\log m$$</p>\n\n<p>Since $f(1)$ is a constant, we can write:</p>\n\n<p>$$f(m) = C + \\log m$$</p>\n\n<p>Thus:</p>\n\n<p>$$S(m) = 2^m (C + \\log m)$$</p>\n\n<p>Substituting back $S(m) = T(2^m)$, we get:</p>\n\n<p>$$T(2^m) = 2^m (C + \\log m)$$</p>\n\n<p>Replacing $m = \\log n$ (since $n = 2^m$), we obtain:</p>\n\n<p>$$T(n) = n (C + \\log \\log n)$$</p>\n\n<p>Therefore, the asymptotic complexity is:</p>\n\n<p>$$T(n) = \\Theta(n \\log \\log n)$$</p>\n\n<p>Thus, the correct option is:</p>\n\n<p><b>Option A</b>: $$T(n) = \\Theta(n \\log \\log n)$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider functions Function_1 and Function_2 expressed in pseudocode as follows:</p>\n<p><pre><code>Function 1\n   while n > 1 do\n     for i = 1 to n do\n       x = x + 1;\n     end for\n     n = \u0005n/2\u0006;\n   end while</code></pre>\n<br/><pre><code>Function 2\n  for i = 1 to 100 ∗ n do\n    x = x + 1;\n  end for</code></pre>\n</p>\n<p>Let $$f_1(n)$$ and $$f_2(n)$$ denote the number of times the statement \"$$x=x+1$$\" is executed in Function_1 and Function_2, respectively.</p>\n<p>Which of the following statements is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${f_1}(n) \\in \\Theta ({f_2}(n))$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${f_1}(n) \\in o({f_2}(n))$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${f_1}(n) \\in \\omega ({f_2}(n))$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${f_1}(n) \\in O(n)$$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To analyze these functions, we need to understand how many times the statement &quot;$$x = x + 1$$&quot; is executed in each.</p>\n<p><code>Function 1</code> executes a loop that cuts $$n$$ in half every time it runs. The inner for-loop runs $$n$$ times for each iteration of the while loop. Therefore, we have to sum the number of times the inner loop runs until $$n$$ becomes less than or equal to 1.</p>\n<p>The number of times the $$x=x+1$$ gets executed in the first function can be expressed as:</p>\n<p>$$\nf_1(n) = n + n/2 + n/4 + n/8 + ... + 1\n$$</p>\n<p>This is a geometric series that converges to $$2n$$ as $$n$$ approaches infinity, so we can say that:</p>\n<p>$$\nf_1(n) \\in O(n)\n$$</p>\n<p>And also since it&#39;s a tight bound with the factor of 2, we can say:</p>\n<p>$$\nf_1(n) \\in \\Theta(n)\n$$</p>\n<p><code>Function 2</code> executes a loop that repeats $$100 \\cdot n$$ times regardless of the value of $$n$$. This gives us a straightforward linear function:</p>\n<p>$$\nf_2(n) = 100 \\cdot n\n$$</p>\n<p>Considering Option A ($${f_1}(n) \\in \\Theta ({f_2}(n))$$):</p>\n<p>Since $$f_2(n)$$ is directly proportional to $$n$$ and $$f_1(n)$$ approaches a factor of $$2n$$ as $$n$$ gets larger, we can say that $$f_1(n)$$ and $$f_2(n)$$ are both linearly dependent on $$n$$. They differ by a constant factor of 100 (considering the leading coefficient), so:</p>\n<p>$$\nf_1(n) \\in \\Theta(f_2(n))\n$$</p>\n<p>Therefore, Option A is TRUE.</p>\n<p>Considering Option B ($${f_1}(n) \\in o({f_2}(n))$$):</p>\n<p>The notation $$o({f_2}(n))$$ denotes a function that grows slower than $$f_2(n)$$. However, since we&#39;ve established that $$f_1(n)$$ grows at the same rate as $$f_2(n)$$, it cannot be in $$o({f_2}(n))$$.</p>\n<p>Therefore, Option B is FALSE.</p>\n<p>Considering Option C ($${f_1}(n) \\in \\omega ({f_2}(n))$$):</p>\n<p>The notation $$\\omega ({f_2}(n))$$ denotes a function that grows faster than $$f_2(n)$$. Since both functions grow linearly with respect to $$n$$, $$f_1(n)$$ does not grow faster than $$f_2(n)$$.</p>\n<p>Therefore, Option C is FALSE.</p>\n<p>Considering Option D ($${f_1}(n) \\in O(n)$$):</p>\n<p>We&#39;ve already established that $$f_1(n)$$ is a sequence that sums to a geometric series which converges to $$2n$$ and is hence bound by $$O(n)$$.</p>\n<p>Therefore, Option D is TRUE.</p>\n<p>In conclusion:</p>\n<p>Option A (TRUE)\nOption B (FALSE)\nOption C (FALSE)\nOption D (TRUE)</p>\n",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the following recurrence :</p>\n<p>f(1) = 1;</p>\n<p>f(2n) = 2f(n) $$-$$ 1, for n $$\\ge$$ 1;</p>\n<p>f(2n + 1) = 2f(n) + 1, for n $$\\ge$$ 1;</p>\n<p>Then, which of the following statements is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "f(2<sup>n</sup> $$-$$ 1) = 2<sup>n</sup> $$-$$ 1"
+      },
+      {
+        "identifier": "B",
+        "content": "f(2<sup>n</sup>) = 1"
+      },
+      {
+        "identifier": "C",
+        "content": "f(5 . 2<sup>n</sup>) = 2<sup>n + 1</sup> + 1"
+      },
+      {
+        "identifier": "D",
+        "content": "f(2<sup>n</sup> + 1) = 2<sup>n</sup> + 1"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n\n<p>f(1) = 1</p>\n\n<p>f(2n) = 2f(n) - 1, for n ≥ 1; (This applies when the input to the function f is even)</p>\n\n<p>f(2n + 1) = 2f(n) + 1, for n ≥ 1; (This applies when the input to the function f is odd)</p>\n\n<p>Options C and D are true, as illustrated in the following diagram:</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lzhmfda5/0e7e15bb-ad66-40eb-9e6d-867a1e27b4db/377f7ad0-5382-11ef-b844-3941c449b0e4/file-jaoe38c1lzhmfda6.png?format=png\" alt=\"GATE CSE 2022 Algorithms - Complexity Analysis and Asymptotic Notations Question 11 English Explanation\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\">\n\n<p>For Option A :</p>\n\n<p>Since 2<sup>n</sup> + 1 is definitely odd,</p>\n\n<p>$$ \\begin{array}{ll} \\therefore &amp; f(2^n + 1) = 2f(2^{n-1}) + 1 \\\\\\\\  &amp; = 2(1) + 1 \\quad \\text{(As we know $f(2^{n-1}) = 1$)} \\\\\\\\  &amp; = 3  \\end{array} $$</p>\n\n<p>Therefore, A is false.</p>\n\n<p>For Option B :</p>\n\n<p>5 ⋅ 2<sup>n</sup> is definitely an even number for all n ≥ 1,</p>\n\n<p>$$ \\begin{array}{rl} &amp; f(5 \\cdot 2^n) = 2f(5 \\cdot 2^{n-1}) - 1 \\\\\\\\  = &amp; 2(2f(5 \\cdot 2^{n-2}) - 1) - 1 \\\\\\\\  = &amp; 2^2f(5 \\cdot 2^{n-2}) - 2 - 1 \\\\\\\\  = &amp; 2^2(2f(5 \\cdot 2^{n-3}) - 1) - 2 - 1 \\\\\\\\  = &amp; 2^3f(5 \\cdot 2^{n-3}) - 2^2 - 2 - 1 \\\\\\\\  &amp; \\vdots \\\\\\\\  = &amp; 2^n f(5 \\cdot 2^0) - (2^{n-1}) - 2^{n-2} - 2^{n-3} \\ldots - 2 - 1 \\\\\\\\  = &amp; 2^n f(5) - (1 + 2 + 2^2 + \\ldots 2^{n-2} + 2^{n-1}) \\\\\\\\  = &amp; 2^n(3) - (2^n - 1) \\\\\\\\  = &amp; 2^n(2 + 1) - (2^n - 1) \\\\\\\\  = &amp; 2^{n+1} + 2^n - 2^n + 1 \\\\\\\\  = &amp; 2^{n+1} + 1  \\end{array} $$</p>\n\n<p>Therefore, B is false.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>For constants a&nbsp;≥ 1 and b &gt; 1, consider the following recurrence defined on the non-negative integers :</p>\n\n<p>$$T\\left( n \\right) = a.T\\left( {\\frac{n}{b}} \\right) + f\\left( n \\right)$$</p>\n\n<p>Which one of the following options is correct about the recurrence T(n)?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "If f(n) is $$\\frac{n}{{{{\\log }_2}(n)}}$$, then T(n) is&nbsp;θ(log<sub>2</sub>(n))."
+      },
+      {
+        "identifier": "B",
+        "content": "If f(n) is n log<sub>2</sub>(n), then T(n) is&nbsp;θ(n log<sub>2</sub>(n))."
+      },
+      {
+        "identifier": "C",
+        "content": "If f(n) is O(n<sup>log<sub>b</sub>(a) -&nbsp;ϵ</sup>) for some&nbsp;ϵ &gt; 0, then T(n) is&nbsp;θ(n<sup><span style=\"\">log</span><span style=\" position: relative; line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">b</span><span style=\"\">(a)</span></sup><span style=\"font-size: 10.5px;\">).</span>"
+      },
+      {
+        "identifier": "D",
+        "content": "If f(n) is&nbsp;θ(n<sup><span style=\"\">log</span><span style=\" position: relative; line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">b</span></sup><span style=\"\"><sup>(a)</sup>), then T(n) is&nbsp;θ(n<sup>log</sup></span><sup><span style=\" position: relative; line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">b</span></sup><span style=\"\"><sup>(a)</sup>)</span>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which option is correct, we'll analyze each one using the <strong>Master Theorem</strong> for solving recurrences of the form:</p>\n<p>$ T(n) = a \\, T\\left( \\frac{n}{b} \\right) + f(n) $</p>\n<p>where $ a \\geq 1 $ and $ b > 1 $.</p>\n<hr />\n<h3><strong>Master Theorem Overview:</strong></h3>\n\n<p><p><strong>Case 1:</strong> If $ f(n) = O\\left( n^{\\log_b a - \\epsilon} \\right) $ for some $ \\epsilon > 0 $, then:</p>\n<p>$   T(n) = \\Theta\\left( n^{\\log_b a} \\right)   $</p></p>\n\n<p><p><strong>Case 2:</strong> If $ f(n) = \\Theta\\left( n^{\\log_b a} \\cdot \\log^k n \\right) $ for some $ k \\geq 0 $, then:</p>\n<p>$   T(n) = \\Theta\\left( n^{\\log_b a} \\cdot \\log^{k+1} n \\right)   $</p></p>\n\n<p><p><strong>Case 3:</strong> If $ f(n) = \\Omega\\left( n^{\\log_b a + \\epsilon} \\right) $ for some $ \\epsilon > 0 $ and $ a \\, f\\left( \\frac{n}{b} \\right) \\leq c \\, f(n) $ for some $ c < 1 $ and sufficiently large $ n $, then:</p>\n<p>$   T(n) = \\Theta\\left( f(n) \\right)   $</p></p>\n\n<hr />\n<h3><strong>Option A:</strong></h3>\n<p><strong>Statement:</strong> If $ f(n) = \\dfrac{n}{\\log_2 n} $, then $ T(n) = \\Theta(\\log_2 n) $.</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Without specific values of $ a $ and $ b $:</strong></p></p>\n<p><p>We cannot directly apply the Master Theorem since $ \\log_2 n $ is smaller than any polynomial $ n^\\epsilon $.</p></p>\n<p><p>Moreover, $ \\dfrac{n}{\\log_2 n} $ is <strong>larger</strong> than $ \\log_2 n $.</p></p>\n<p><p><strong>Conclusion:</strong> <strong>Option A is incorrect</strong> because the claim $ T(n) = \\Theta(\\log_2 n) $ doesn't align with the growth rate of $ f(n) $ and the Master Theorem.</p></p>\n\n<hr />\n<h3><strong>Option B:</strong></h3>\n<p><strong>Statement:</strong> If $ f(n) = n \\log_2 n $, then $ T(n) = \\Theta(n \\log_2 n) $.</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Without specific values of $ a $ and $ b $:</strong></p></p>\n<p><p>Again, we need values for $ a $ and $ b $ to calculate $ \\log_b a $ and compare $ f(n) $ with $ n^{\\log_b a} $.</p></p>\n<p><p><strong>Conclusion:</strong> <strong>Option B is insufficiently defined</strong> due to lack of specific $ a $ and $ b $. We cannot confirm the correctness of this option.</p></p>\n\n<hr />\n<h3><strong>Option C:</strong></h3>\n<p><strong>Statement:</strong> If $ f(n) = O\\left( n^{\\log_b a - \\epsilon} \\right) $ for some $ \\epsilon > 0 $, then $ T(n) = \\Theta\\left( n^{\\log_b a} \\right) $.</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Applies directly to Master Theorem Case 1:</strong></p></p>\n<p><p>Since $ f(n) $ is polynomially smaller than $ n^{\\log_b a} $, the first case of the Master Theorem applies.</p></p>\n<p><p><strong>Conclusion:</strong> <strong>Option C is correct</strong> according to the Master Theorem.</p></p>\n\n<hr />\n<h3><strong>Option D:</strong></h3>\n<p><strong>Statement:</strong> If $ f(n) = \\Theta\\left( n^{\\log_b a} \\right) $, then $ T(n) = \\Theta\\left( n^{\\log_b a} \\log n \\right) $.</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Applies directly to Master Theorem Case 2:</strong></p></p>\n<p><p>Here, $ f(n) = \\Theta\\left( n^{\\log_b a} \\cdot \\log^0 n \\right) $.</p></p>\n<p><p>According to Case 2, $ T(n) = \\Theta\\left( n^{\\log_b a} \\cdot \\log^{0+1} n \\right) = \\Theta\\left( n^{\\log_b a} \\log n \\right) $.</p></p>\n<p><p><strong>Conclusion:</strong> <strong>Option D is correct</strong>.</p></p>\n\n<hr />\n<p><strong>Note:</strong> Since the question asks for <strong>which one of the options is correct</strong>, and <strong>both Option C and Option D are correct</strong>, but only <strong>Option C</strong> precisely matches the Master Theorem's Case 1 without any ambiguity.</p>\n<p><strong>Answer:</strong> Option C</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following recurrence relation.</p>\n\n<p>$$T(n) = \\left\\{ {\\begin{array}{*{20}{c}} {T(n/2) + T(2n/5) + 7n \\ \\ \\ if\\ n &gt; 0}\\\\ {1\\ \\ \\ \\ \\ \\ \\ if\\ n = 0} \\end{array}} \\right.$$</p>\n\n<p>Which one of the following option is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "T(n) = Θ(n log n)"
+      },
+      {
+        "identifier": "B",
+        "content": "T(n) = Θ(n<sup>5/2</sup>)"
+      },
+      {
+        "identifier": "C",
+        "content": "T(n) = Θ((log n)<sup>5/2</sup>)"
+      },
+      {
+        "identifier": "D",
+        "content": "T(n) = Θ(n)"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given : </b></p>\n<p>$$T(n) = \\left\\{ {\\begin{array}{*{20}{c}} {T(n/2) + T(2n/5) + 7n \\ \\ \\ if\\ n &gt; 0}\\\\ {1\\ \\ \\ \\ \\ \\ \\ if\\ n = 0} \\end{array}} \\right.$$</p>\n<p>Recurrence tree for given recurrence relation is </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m39me6nc/da7e40e8-e39e-442d-b80d-24d8b1560dec/aee28a80-9e4c-11ef-b87a-b377860e1168/file-jaoe38c1m39me6nd.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m39me6nc/da7e40e8-e39e-442d-b80d-24d8b1560dec/aee28a80-9e4c-11ef-b87a-b377860e1168/file-jaoe38c1m39me6nd.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 1 Algorithms - Complexity Analysis and Asymptotic Notations Question 14 English Explanation\"></p>\n<p>$$ \\begin{aligned} &amp; T(n)=7 n+7\\left(\\frac{9}{10}\\right) n+7\\left(\\frac{9}{10}\\right)^2 n+7\\left(\\frac{9}{10}\\right)^3 n+\\cdots \\cdots \\\\\\\\ &amp; T(n)=7 n\\left[1+\\left(\\frac{9}{10}\\right)+\\left(\\frac{9}{10}\\right)^2+\\left(\\frac{9}{10}\\right)^3+\\cdots \\cdots\\right] \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} \\text { Decreasing GP } &amp; =\\theta(1) \\\\\\\\ &amp; =7 n * \\theta(1) \\\\\\\\ &amp; =0(7 n) \\\\\\\\ &amp; =0(n) \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "<p>There are n unsorted arrays : A<sub>1</sub>, A<sub>2</sub>, …, A<sub>n</sub>. Assume that n is odd. Each of A<sub>1</sub>, A<sub>2</sub>, …, A<sub>n</sub> contains n distinct elements. There are no common elements between any two arrays. The worst-case time complexity of computing the median of the medians of A<sub>1</sub>, A<sub>2</sub>, …, A<sub>n</sub> is :</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$O\\left( n \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$O\\left( {n\\log n} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$O\\left( {{n^2}\\log n} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$O\\left( {{n^2}} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the worst-case time complexity of computing the <strong>median of the medians</strong> of $ n $ unsorted arrays $ A_1, A_2, \\ldots, A_n $, each containing $ n $ distinct elements, we need to consider the steps involved and their associated time complexities.</p>\n<h3><strong>Given:</strong></h3>\n\n<p><p>$ n $ unsorted arrays $ A_1, A_2, \\ldots, A_n $</p></p>\n<p><p>Each $ A_i $ contains $ n $ <strong>distinct</strong> elements</p></p>\n<p><p>There are <strong>no common elements</strong> between any two arrays</p></p>\n<p><p>$ n $ is <strong>odd</strong></p></p>\n\n<h3><strong>Objective:</strong></h3>\n<p>Compute the <strong>median of the medians</strong> of the arrays $ A_i $.</p>\n<h3><strong>Approach:</strong></h3>\n\n<p><strong>Compute the Median of Each Array $ A_i $:</strong></p>\n\n\n<p><p>Since each $ A_i $ is unsorted and contains $ n $ elements, we need to find its median.</p></p>\n<p><p><strong>Finding the median in an unsorted array of size $ n $ can be done in $ O(n) $ time</strong> using the <strong>Median of Medians algorithm</strong> (also known as the BFPRT algorithm), which provides a linear-time selection algorithm.</p></p>\n<p><p><strong>Total time to find medians of all $ n $ arrays:</strong></p>\n<p>$      T_1 = n \\times O(n) = O(n^2)      $</p></p>\n\n\n<p><strong>Collect the Medians:</strong></p>\n\n\n<p><p>After computing the medians, we have an array $ M $ of size $ n $ containing the medians of $ A_i $.</p></p>\n<p><p>Since $ n $ is odd, the median of $ M $ is the element at position $ \\frac{n+1}{2} $ when $ M $ is sorted.</p></p>\n\n\n<p><strong>Compute the Median of $ M $:</strong></p>\n\n\n<p><p><strong>Finding the median of $ M $ (size $ n $) can be done in $ O(n) $ time</strong> using the same linear-time selection algorithm.</p></p>\n<p><p><strong>Total time to find the median of medians:</strong></p>\n<p>$      T_2 = O(n)      $</p></p>\n\n<h3><strong>Total Time Complexity:</strong></h3>\n\n<p><p><strong>Overall time complexity:</strong></p>\n<p>$   T_{\\text{total}} = T_1 + T_2 = O(n^2) + O(n) = O(n^2)   $</p></p>\n<p><p><strong>Dominant term:</strong> $ O(n^2) $</p></p>\n\n<h3><strong>Conclusion:</strong></h3>\n\n<p><p>The worst-case time complexity is <strong>$ O(n^2) $</strong>.</p></p>\n<p><p>This is because we need to process all $ n^2 $ elements to compute the medians, and each operation to find a median takes linear time relative to the size of its array.</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Option D</p>\n<p>    $O(n^2)$</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "The given diagram shows the flowchart for a recursive function $$A(n).$$ Assume that all statements, except for the recursive calls, have $$O(1)$$ time complexity. If the worst case time complexity of this function is $$O\\left( {{n^\\alpha }} \\right),$$ then the least possible value (accurate up to two decimal positions) of $$\\alpha $$ is ____________ .\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/ymCS3L0GIbNLvOdpf/TGF7RQZ9DQSCHEFqVnyw53YyffgTd/79Lw0ede3gu81TeE9NS7vo/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2016 Set 2 Algorithms - Complexity Analysis and Asymptotic Notations Question 18 English\"> \n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.2 to 2.4",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$f\\left( n \\right) = n$$ and $$g\\left( n \\right) = {n^{\\left( {1 + \\sin \\,\\,n} \\right)}},$$ where $$n$$ is a positive integer. Which of the following statements is/are correct?\n<p>$$\\eqalign{\n  &amp; \\,\\,\\,\\,\\,\\,\\,{\\rm I}.\\,\\,\\,\\,\\,\\,\\,f\\left( n \\right) = O\\left( {g\\left( n \\right)} \\right)  \\cr \n  &amp; \\,\\,\\,\\,\\,{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,\\,\\,f\\left( n \\right) = \\Omega \\left( {g\\left( n \\right)} \\right) \\cr} $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $${\\rm I}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Only $${\\rm I}$$$${\\rm I}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "both $${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $${\\rm I}$$  nor $${\\rm I}$$$${\\rm I}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C function.\n<pre><code class=\"c\">int fun1 (int n) { \n     int i, j, k, p, q = 0; \n     for (i = 1; i &lt; n; ++i) \n     {\n        p = 0; \n       for (j = n; j &gt; 1; j = j/2) \n           ++p;  \n       for (k = 1; k &lt; p; k = k * 2) \n           ++q;\n     } \n     return q;\n}</code></pre>\nWhich one of the following most closely approximates the return value of the function <b>fun1</b>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n^3$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$n{\\left( {\\log n} \\right)^2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$n\\log n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$n\\log \\left( {\\log n} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An algorithm performs $${\\left( {\\log N} \\right)^{1/2}}$$ find operations, N insert operations, $${\\left( {\\log N} \\right)^{1/2}}$$ delete operations, and $${\\left( {\\log N} \\right)^{1/2}}$$decrease-key operations on a set of data items with keys drawn from a linearly ordered set. For a delete operation, a pointer is provided to the record that must be deleted. For the decrease-key operation, a pointer is provided to the record that has its key decreased. Which one of the following data structures is the most suited for the algorithm to use, if the goal is to achieve the best total asymptotic complexity considering all the operations?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Unsorted array"
+      },
+      {
+        "identifier": "B",
+        "content": "Min-heap"
+      },
+      {
+        "identifier": "C",
+        "content": "Sorted array"
+      },
+      {
+        "identifier": "D",
+        "content": "Sorted doubly linked list"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The number of elements that can be stored in $$\\Theta (\\log n)$$ time using heap sort is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta (1)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta (\\sqrt {\\log n} )$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta ({{\\log \\,n} \\over {\\log \\,\\log \\,n}})$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta (\\log n)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the given options provides the increasing order of asymptotic Complexity of functions f<sub>1</sub>, f<sub>2</sub>, f<sub>3</sub> and f<sub>4</sub>?<br>\nf<sub>1</sub> = 2<sup>n</sup> f<sub>2</sub> = n<sup>3/2</sup><br>  f<sub>3</sub>(n) = $$n\\,\\log _2^n$$<br>\nf<sub>4</sub> (n) = n<sup> log<sub>2</sub>n</sup>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "f<sub>3</sub>, f<sub>2</sub>, f<sub>4</sub>, f<sub>1</sub>"
+      },
+      {
+        "identifier": "B",
+        "content": "f<sub>3</sub>, f<sub>2</sub>, f<sub>1</sub>, f<sub>4</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "f<sub>2</sub>, f<sub>3</sub>, f<sub>1</sub>, f<sub>4</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "f<sub>2</sub>, f<sub>3</sub>, f<sub>4</sub>, f<sub>1</sub>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C functions:\n<pre><code>int f1(int n){\n if(n == 0 || n == 1){\n    return n;\n }\n return (2 * f1(n - 1) + 3 * f1(n - 2));\n}\nint f2(int n){\n int i;\n int X[N], Y[N], Z[N];\n X[0] = Y[0] = Z[0] = 0;\n X[1] = 1; Y[1] = 2; Z[1] = 3;\n for(i = 2; i &lt;= n; i++){\n  X[i] = Y[i - 1] + Z[i - 2];\n  Y[i] = 2 * X[i];\n  Z[i] = 3 * X[i];\n }\n return X[n];\n}\n</code></pre>\nThe returning time of f1(n) and f2(n) are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\,(n)\\,and\\,\\Theta \\,(n)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\,({2^n})\\,and\\,\\Theta \\,(n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\,(n)\\,and\\,\\Theta \\,({2^n})$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\,({2^n})\\,and\\,\\Theta \\,({2^n})$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of comparisons required to determine if an integer appears more than n/2 times in a sorted array of n integers is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\,(n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\,({\\log ^*}n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\,({\\log\\,}n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\,(1)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following functions:\nF(n) = 2<sup>n</sup><br>\nG(n) = n!<br>\nH(n) = n<sup>logn</sup><br>\nWhich of the following statements about the asymptotic behaviour of f(n), g(n), and h(n) is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "f(n) = O (g(n)); g(n) = O(h(n))"
+      },
+      {
+        "identifier": "B",
+        "content": "f(n) = $$\\Omega$$ (g(n)); g(n) = O(h(n))"
+      },
+      {
+        "identifier": "C",
+        "content": "g(n) = O (f(n)); h(n) = O(f(n))"
+      },
+      {
+        "identifier": "D",
+        "content": "h(n) = O (f(n)); g(n) = $$\\Omega$$ (f(n))"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C functions:\n<pre><code>int f1(int n){\n if(n == 0 || n == 1){\n    return n;\n }\n return (2 * f1(n - 1) + 3 * f1(n - 2));\n}\nint f2(int n){\n int i;\n int X[N], Y[N], Z[N];\n X[0] = Y[0] = Z[0] = 0;\n X[1] = 1; Y[1] = 2; Z[1] = 3;\n for(i = 2; i &lt;= n; i++){\n  X[i] = Y[i - 1] + Z[i - 2];\n  Y[i] = 2 * X[i];\n  Z[i] = 3 * X[i];\n }\n return X[n];\n}\n</code></pre>\nf1(8) and f2(8) return the values ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1661 and 1640"
+      },
+      {
+        "identifier": "B",
+        "content": "59 and 59"
+      },
+      {
+        "identifier": "C",
+        "content": "1640 and 1640"
+      },
+      {
+        "identifier": "D",
+        "content": "1640 and 1661"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "You are given the post order traversal, P, of a binary search tree on the n element, 1,2,....,n. You have to determine the unique binary search tree that has P as its post order traversal. What is the time complexity of the most efficient algorithm for doing this?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\,(\\log n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\,(n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\,(n\\log n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above, as the tree cannot be uniquely determined."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "What is the time complexity of the following recursive function?\n<pre><code>int DoSomething(int n){\n if(n &lt;= 2)\n     return 1;\n else\n     return (floor(sqrt(n)) + n);\n}</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\,({n^2})$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\,(n\\,{\\log _2}\\,n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\,({\\log _2}\\,n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\,({\\log _2}\\,{\\log _2}\\,n)$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C code segment:\n<pre><code class=\"c\">int IsPrime(n){\n int i, n;\n for(i=2; i&lt;=sqrt(n);i++){\n  if(n % i == 0){\n    printf(\"No prime\\n\"); return 0;\n  }\n  return 1;\n }\n}</code></pre>\nLet T(n) denote the number of times the for loop is executed by the program on input n. Which of the following is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "T(n) = O ($$\\sqrt n $$) and T(n) = $$\\Omega \\,(\\sqrt n )$$"
+      },
+      {
+        "identifier": "B",
+        "content": "T(n) = O ($$\\sqrt n $$) and T(n) = $$\\Omega \\,(1)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "T(n) = O (n) and T(n) = $$\\Omega \\,(\\sqrt n )$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "In the following C function, let n $$ \\ge $$ m.\n<pre><code class=\"c\">int gcd(n,m)\n{\nif (n % m == 0) return m;\nn = n % m;\nreturn gcd(m,n);\n}</code></pre>\nHow many recursive calls are made by this function?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta(\\log_2n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Omega(n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta(\\log_2\\log_2n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta(\\sqrt{n})$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C - function:\n<pre><code class=\"c\">double foo(int n){\n int i;\n double sum;\n if(n == 0) return 1.0;\n sum = 0.0;\n for (i = 0; i &lt; n; i++){\n  sum += foo(i);\n }\n return sum;\n}</code></pre>\nThe space complexity of the above function is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(1)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(n!)"
+      },
+      {
+        "identifier": "D",
+        "content": "O(n<sup>n</sup>)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C - function:\n<pre><code class=\"c\">double foo(int n){\n int i;\n double sum;\n if(n == 0) return 1.0;\n sum = 0.0;\n for (i = 0; i &lt; n; i++){\n  sum += foo(i);\n }\n return sum;\n}</code></pre>\nSuppose we modify the above function foo() and store the values of foo(i), $$0 \\le i \\le n$$, as and when they are computed. With this modification, the time complexity for function foo() is significantly reduced. The space complexity of the modified function would be:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(1)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(n<sup>2</sup>)"
+      },
+      {
+        "identifier": "D",
+        "content": "O(n!)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A Priority-Queue is implemented as a Max-Heap. Initially, it has 5 elements. The level-order traversal of the heap is given below:<br>\n10, 8, 5, 3, 2<br>\nTwo new elements '1' and '7' are inserted in the heap in that order, The level order traversal of the heap after the insertion of the elements is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10, 8, 7, 5, 3, 2, 1"
+      },
+      {
+        "identifier": "B",
+        "content": "10, 8, 7, 2, 3, 1, 5"
+      },
+      {
+        "identifier": "C",
+        "content": "10, 8, 7, 1, 2, 3, 5"
+      },
+      {
+        "identifier": "D",
+        "content": "10, 8, 7, 3, 2, 1, 5"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The recurrence equation<br>\nT(1) = 1<br>\nT(n) = 2T(n - 1)+n, $$n \\ge 2$$<br>\nEvaluates to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2<sup>n+1</sup> - n - 2"
+      },
+      {
+        "identifier": "B",
+        "content": "2<sup>n</sup> - n"
+      },
+      {
+        "identifier": "C",
+        "content": "2<sup>n+1</sup> - 2n - 2"
+      },
+      {
+        "identifier": "D",
+        "content": "2<sup>n</sup> + n"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Let A[1,...,n] be an array storing a bit (1 or 0) at each location, and f(m) is a function whose time complexity is O(m). Consider the following program fragment written in a C like language:\n<pre><code class=\"c\">counter = 0;\nfor(i = 1; i &lt;= n; i++){\n if(A[i]==1){\n   counter++;\n }else{\n   f(counter); counter = 0;\n }\n}</code></pre>\nThe complexity of this program fragment is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Omega ({n^2})$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Omega (n\\,\\log n)\\,and\\,O({n^2})$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\theta (n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$O(n)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "What does the following algorithm approximate? <br>(Assume m &gt; 1, $$ \\in  &gt; 0$$)\n<pre><code class=\"c\">x = m;\ny = 1;\nwhile(x - y &gt; ε){\n x = (x + y) / 2;\n y = m/x;\n}\nprint(x);\n</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "log m"
+      },
+      {
+        "identifier": "B",
+        "content": "m<sup>2</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "m<sup>1/2</sup>"
+      },
+      {
+        "identifier": "D",
+        "content": "m<sup>1/3</sup>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The time complexity of the following C function is (assume n &gt; 0)\n<pre><code class=\"c\">int recursive(int n){\n if(n == 1){\n   return (1);\n }\n return (recursive(n - 1) + recursive(n - 1));\n}</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(n)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(n log n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(n<sup>2</sup>)"
+      },
+      {
+        "identifier": "D",
+        "content": "O(2<sup>n</sup>)"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The cube root of a natural number n is defined as the largest natural number m such that $${m^3} \\le n$$. The complexity of computing the cube root of n (n is represented in binary notation) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(n) but not O(n<sup>0.5</sup>)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(n<sup>0.5</sup>) but not O((log n)<sup>k</sup>) for any constant k &gt; 0"
+      },
+      {
+        "identifier": "C",
+        "content": "O((log n)<sup>k</sup>) for some constant k &gt; 0, but not O((log log n)<sup>m</sup>) for any constant m &gt; 0"
+      },
+      {
+        "identifier": "D",
+        "content": "O((log log n)<sup>k</sup>) for some constant k &gt; 0.5, but not O((log log n)<sup>0.5</sup>)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following algorithm for searching for a given number x in an unsorted array A[1..n] having n distinct values:<br>\n1. Choose an i uniformly at random fro 1..n;<br>\n2. If A[i]=x then stop else Goto 1;<br>\nAssuming that x is present A, what is the expected number of comparisons made by the algorithm before it terminates?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n"
+      },
+      {
+        "identifier": "B",
+        "content": "n-1"
+      },
+      {
+        "identifier": "C",
+        "content": "2n"
+      },
+      {
+        "identifier": "D",
+        "content": "n/2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The running time of the following algorithm Procedure A(n)<br>\nIf n&lt;=2 return (1) else return (A([$$\\sqrt n $$]));\nis best described by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(n)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(log n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(log log n)"
+      },
+      {
+        "identifier": "D",
+        "content": "O(1)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following functions<br>\n$$f(n) = 3{n^{\\sqrt n }}$$<br>\n$$g(n) = {2^{\\sqrt n {{\\log }_2}n}}$$<br>\n$$h(n) = n!$$<br>\nWhich of the following is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "h(n) is O (f(n))"
+      },
+      {
+        "identifier": "B",
+        "content": "h(n) is O (g(n))"
+      },
+      {
+        "identifier": "C",
+        "content": "g(n) is not O (f(n))"
+      },
+      {
+        "identifier": "D",
+        "content": "f(n) is O (g(n))"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Conside the following two functions:<br>\n$${g_1}(n) = \\left\\{ {\\matrix{\n   {{n^3}\\,for\\,0 \\le n &lt; 10,000}  \\cr \n   {{n^2}\\,for\\,n \\ge 10,000}  \\cr \n\n } } \\right.$$\n<br>\n$${g_2}(n) = \\left\\{ {\\matrix{\n   {n\\,for\\,0 \\le n \\le 100}  \\cr \n   {{n^3}\\,for\\,n &gt; 100}  \\cr \n\n } } \\right.$$\nWhich of the following is true:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${g_1}(n)\\,is\\,0\\,({g_2}(n))$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${g_1}(n)\\,is\\,0\\,({n^3})$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${g_2}(n)\\,is\\,0\\,({g_1}(n))$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${g_2}(n)\\,is\\,0\\,(n)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\sum\\limits_{1 \\le k \\le n} {O(n)} $$ where O(n) stands for order n is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(n)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(n<sup>2</sup>)"
+      },
+      {
+        "identifier": "C",
+        "content": "O (m<sup>3</sup>)"
+      },
+      {
+        "identifier": "D",
+        "content": "O(3n<sup>2</sup>)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  },
+  {
+    "content": "Express T(n) in terms of the harmonic number H<sub>n</sub> = $$\\sum\\limits_{t = 1}^n {1/i,n \\ge 1} $$ where T(n) satisfies the recurrence relation, T(n) = $${{n + 1} \\over 2}$$ T(n-1) + 1, for $$n \\ge 2$$ and T(1) = 1 What is the the asymptotic behavior of T(n) as a function of n?",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve by yourself",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Solve the recurrence equations<br>\nT (n) = T (n - 1) + n<br>\nT (1) = 1<br>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve by yourself",
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  },
+  {
+    "content": "What is the generating function G (z) for the sequence of Fibonacci numbers?",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve by yourself",
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  }
+]

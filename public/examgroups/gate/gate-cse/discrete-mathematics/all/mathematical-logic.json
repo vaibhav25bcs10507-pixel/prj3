@@ -1,0 +1,1922 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For two different persons $x$ and $y$, the predicate $M(x, y)$ denotes that $x$ knows $y$. Consider the following statement.</p>\n<p>There is a person who does not know anyone else, but that person is known by everyone else.</p>\n<p>Which one of the following expressions represents the above statement?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$(\\exists y)(\\forall x)((x \\neq y)) \\rightarrow(M(x, y) \\wedge \\neg M(y, x))$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$(\\forall y)(\\exists x)((x \\neq y)) \\rightarrow(M(x, y) \\wedge \\neg M(y, x))$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$(\\exists y)(\\exists x)((x \\neq y)) \\rightarrow(M(x, y) \\wedge \\neg M(y, x))$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$(\\forall y)(\\forall x)((x \\neq y)) \\rightarrow(M(x, y) \\wedge \\neg M(y, x))$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$M(x, y): x$ knows $y$</p>\n<p>: $y$ known by $x$</p>\n<p>$\\neg M(y, x): y$ does not know $x$</p>\n<p>Given statement can be written as</p>\n<p>There exist a person $y$ and for every one else $x$ in domain, if $x \\neq y$ then $y$ is known by every one else $x$ and $y$ does not know any one else ' $x$ '.</p>\n<p>Symbolic form:</p>\n<p>$$ \\exists y, \\forall x,(x \\neq y) \\rightarrow[M(x, y) \\wedge \\neg(M(y, x))] $$</p>\n<p>∴ Option (a) is true.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $P(x)$ be an arbitrary predicate over the domain of natural numbers. Which ONE of the following statements is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $(P(0) \\wedge(\\forall x[P(x+1)])) \\Rightarrow(\\forall x P(x))$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $(P(0) \\wedge(\\forall x[P(x) \\Rightarrow P(x-1)])) \\Rightarrow(\\forall x P(x))$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $(P(1000) \\wedge(\\forall x[P(x) \\Rightarrow P(x-1)])) \\Rightarrow(\\forall x P(x))$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $(P(1000) \\wedge(\\forall x[P(x) \\Rightarrow P(x+1)])) \\Rightarrow(\\forall x P(x))$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Domain $=\\mathrm{N}$</p>\n<p>By assignment Method = Consider RHS is false.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yjgojd/71ad96ba-97c9-4a01-8fae-f559e612f08d/aeafa290-fb31-11ef-8a25-9b868f15d9f1/file-jaoe38c1m7yjgoje.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yjgojd/71ad96ba-97c9-4a01-8fae-f559e612f08d/aeafa290-fb31-11ef-8a25-9b868f15d9f1/file-jaoe38c1m7yjgoje.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Discrete Mathematics - Mathematical Logic Question 4 English Explanation\"></p>\n<p>$$\\therefore T \\wedge F \\Rightarrow F$$</p>\n<p>$F \\Rightarrow F$ is valid</p>\n<p>$\\therefore \\quad$ Option (a) is true.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let <i>p</i> and <i>q</i> be the following propositions:</p><p><i>p</i>: Fail grade can be given.</p><p><i>q</i>: Student scores more than 50% marks.</p><p>Consider the statement: “Fail grade cannot be given when student scores more than 50% marks.”</p><p>Which one of the following is the CORRECT representation of the above statement in propositional logic?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p><i>q &rarr; ¬ p</i></p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p><i>q &rarr; p</i></p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p><i>p &rarr; q</i></p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p><i>¬ p &rarr; q</i></p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To analyze the given statement and correctly represent it in propositional logic, first let's break down the statement step-by-step.</p>\n\n<p>The statement is: \"Fail grade cannot be given when student scores more than 50% marks.\"</p>\n\n<p>Given propositions:</p>\n<ul>\n    <li><b>p</b>: Fail grade can be given.</li>\n    <li><b>q</b>: Student scores more than 50% marks.</li>\n</ul>\n\n<p>To translate the given statement into propositional logic, observe the following:</p>\n<ol>\n    <li>When a student scores more than 50%, a fail grade cannot be given. This means if <i>q</i> (student scores more than 50%), then it is not possible for <i>p</i> (fail grade can be given) to be true.</li>\n    <li>In logical terms, this means that if <i>q</i> is true, then <i>p</i> must be false. The negation of <i>p</i> ( ¬<i>p</i>) should be true if <i>q</i> is true.</li>\n</ol>\n\n<p>Therefore, the correct representation in propositional logic is:</p>\n<p><i>q &rarr; ¬ p</i></p>\n\n<p>Thus, the correct option is:</p>\n<p><b>Option A</b></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Geetha has a conjecture about integers, which is of the form</p>\n<p>$$\\forall x\\left( {P(x) \\Rightarrow \\exists yQ(x,y)} \\right)$$,</p>\n<p>where P is a statement about integers, and Q is a statement about pairs of integers. Which of the following (one or more) option(s) would imply Geetha's conjecture?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\exists x\\left( {P(x) \\wedge \\forall yQ(x,y)} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\forall x\\forall yQ(x,y)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\exists y\\forall x\\left( {P(x) \\Rightarrow Q(x,y)} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\exists x\\left( {P(x) \\wedge \\exists yQ(x,y)} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Here, domain is set of integers, So Elements</p>\n<p>$$ x, y E\\{\\ldots . .-3,-2,-1,0,1,2, \\ldots \\ldots\\} $$</p>\n<p>Expression $E=\\forall x\\left\\{P(x) \\Rightarrow \\exists_y Q(x, y)\\right\\}$</p>\n<p>Which says if x is P then 'always exists a y such such that $Q(x, y)$.</p>\n<p>Now, checking options.</p>\n<p><b>For option (A) :</b></p>\n<p>Is $\\frac{\\exists[P(x)] \\wedge \\forall_y \\theta(x, y)}{\\text { LHS }} \\rightarrow \\frac{E}{\\text { RHS }}$ True ?</p>\n<p>Here, for LHS to be true. Say there exists an $x=(6)$ for which $p(x)=p(c)=$ True and for all $y \\theta(6, y)$ is True.</p>\n<p>Now, RHS : $E=\\forall x<\\frac{p(x)}{A} \\Rightarrow \\frac{\\exists y 2(x, y)}{B}$</p>\n<p>$A=$ True for say $x=7$, so $p(7)=$ True</p>\n<p>For B, say there doesn't exist any y such that $Q(7, y)=$ True. Hence $A \\Rightarrow B$ \n\n<br/><br/>$T \\Rightarrow F$ is false.</p>\n<p>So, its case of True $\\Rightarrow$ False as LHS is True and A</p>\n<p>RHS is False</p>\n<p>Therefore it becomes case of True $\\rightarrow$ False and eventually its False:</p>\n<p><b>For option (B) :</b></p>\n<p>$$ \\frac{\\forall x \\forall y Q(x, y)}{L H S} \\rightarrow \\frac{E}{R H S} \\text { True? } $$</p>\n<p>Here, LHS is True for all values of x and y .</p>\n<p>Now Ans: $E=\\forall x \\frac{[P(x)]}{A} \\Rightarrow \\frac{\\exists y Q(x, y)]}{B}$</p>\n<p>Now, since,</p>\n<p>$$ \\begin{aligned} & \\forall x \\forall y Q(x, y)=\\text { True. } \\\\\\\\ & \\exists y Q(x, y)=\\text { True too. } \\end{aligned} $$</p>\n<p>So, For $A \\Rightarrow B$</p>\n<p>$\\mathrm{A} \\Rightarrow$ True is always True.</p>\n<p>As RHS is True. Its case of</p>\n<p>True $\\rightarrow$ True which is true.</p>\n<p><b>For option (C) :</b></p>\n<p>$$ \\frac{\\exists y \\forall x[P(x) \\Rightarrow Q(x, y)]}{\\text { LHS }} \\rightarrow \\frac{E}{R H S} \\text { True? } $$</p>\n<p>For LHS to be true, there exists some y say $\\mathrm{y}=$ 2 for which for all x which are satisfying property p implies property $\\mathrm{Q}(\\mathrm{x}, \\mathrm{y})$</p>\n<p>Now, RHS : $=E=\\forall x\\left[\\frac{P(x)}{A} \\Rightarrow \\frac{\\exists y Q(x, y)}{B}\\right]$</p>\n<p>$B=\\exists y Q(x, y)$ is always, true as there exists at least one $y$ (we assumed $\\mathrm{y}=2$ ) such that $\\forall x Q(x, 2)$ is True. So B is true</p>\n<p>The case becomes $A \\Rightarrow B$</p>\n<p>$A \\Rightarrow$ True which is true</p>\n<p>So, L.H.S $\\rightarrow$ R.H.S. is true.</p>\n<p><b>For Option (D) :</b></p>\n<p>$\\frac{\\exists \\times[P(x) \\wedge \\exists y 2(x, y)]}{\\text { LHS }} \\rightarrow \\frac{E}{R H S}$ True?</p>\n<p>For LHS to be true, assume $x=6$ for which properly $P(6)$ is true and there exists a $y$ assume $y=2$ such that $Q(6,2)$ is true.</p>\n<p>Now, RHS $=E=V x\\left[\\frac{P(x)}{A} \\Rightarrow \\frac{\\exists y Q(x, y)}{B}\\right]$</p>\n<p>Say $x=3$ and $P(x)=$ True</p>\n<p>But there exists no y for $Q(3, y)$ to be true.</p>\n<p>Hence, it becomes $A \\Rightarrow B$</p>\n<p>True $\\Rightarrow$ False so RHS is False</p>\n<p>Also, it becomes case of True $\\rightarrow$ False which is false.</p>\n<p>Hence, the correct options are (B) and (C).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Choose the correct choice(s) regarding the following propositional logic assertion S:</p>\n\n<p>S : ((P&nbsp;∧ Q)→ R)→ ((P&nbsp;∧ Q)→ (Q&nbsp;→ R))</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The antecedent of S is logically equivalent to the consequent of S."
+      },
+      {
+        "identifier": "B",
+        "content": "S is a tautology"
+      },
+      {
+        "identifier": "C",
+        "content": "S is a contradiction"
+      },
+      {
+        "identifier": "D",
+        "content": "S is neither a tautology nor a contradiction."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><strong>Concepts</strong></p>\n\n<p><p>An <strong>antecedent</strong> is the first part of a hypothetical proposition, typically the <code>if</code> part in an <code>if-then</code> statement.</p></p>\n<p><p>A <strong>consequent</strong> is the second part of a hypothetical proposition, often the <code>then</code> part in an <code>if-then</code> statement.</p></p>\n\n<p><strong>Symbols</strong></p>\n\n<p><p>∧ = AND (symbolically, <code>⋅</code>)</p></p>\n<p><p>∨ = OR (symbolically, <code>+</code>)</p></p>\n<p><p>¬ = NOT (symbolically, <code>̅</code>)</p></p>\n<p><p>1 = TRUE</p></p>\n\n<p><strong>Formulas</strong></p>\n\n<p><p>$ A \\rightarrow B \\equiv \\neg A \\lor B \\equiv \\neg A + B $</p></p>\n<p><p>$ \\neg (A \\cdot B) = \\overline{A} + \\overline{B} $</p></p>\n\n<p><strong>Calculation</strong></p>\n<p><strong>Antecedent of S:</strong></p>\n\n<p>$ (P \\land Q) \\rightarrow R \\equiv \\neg (P \\cdot Q) + R \\equiv \\overline{P} + \\overline{Q} + R $</p>\n\n<p><strong>Consequent of S:</strong></p>\n\n<p><p>$ (P \\land Q) \\rightarrow (Q \\rightarrow R) \\equiv \\neg (P \\cdot Q) + (\\neg Q + R) $</p></p>\n<p><p>$ \\equiv \\overline{P} + \\overline{Q} + \\overline{Q} + R \\equiv \\overline{P} + \\overline{Q} + R $</p></p>\n\n<p>Thus, we see that the antecedent of S is logically equivalent to the consequent of S.</p>\n<p>Rewriting S:</p>\n\n<p><p>$ S \\equiv ((P \\land Q) \\rightarrow R) \\rightarrow ((P \\land Q) \\rightarrow (Q \\rightarrow R)) $</p></p>\n<p><p>$ S \\equiv \\neg (\\neg (P \\cdot Q) + R) + (\\neg (P \\cdot Q) + (\\neg Q + R)) $</p></p>\n<p><p>$ S \\equiv P \\cdot Q \\cdot \\overline{R} + \\overline{P} + \\overline{Q} + (\\overline{Q} + R) $</p></p>\n<p><p>$ S \\equiv P \\cdot Q \\cdot \\overline{R} + \\overline{P} + \\overline{Q} + \\overline{Q} + R $</p></p>\n<p><p>$ S \\equiv \\overline{R} \\cdot (P \\cdot Q) + \\overline{P} + \\overline{Q} + R $</p></p>\n\n<p>Further simplifying:</p>\n\n<p><p>$ S \\equiv (\\overline{P} + P)(\\overline{P} + Q \\cdot \\overline{R}) + \\overline{Q} + R $</p></p>\n<p><p>$ S \\equiv \\overline{P} + Q \\cdot \\overline{R} + \\overline{Q} + R $</p></p>\n<p><p>$ S \\equiv \\overline{P} + \\overline{Q} + \\overline{R} + R $</p></p>\n\n<p><strong>Final Result</strong></p>\n<p>Since $ \\overline{R} + R = 1 $, the expression simplifies to:</p>\n\n<p>$ S = 1 = \\text{TRUE} $</p>\n\n<p>Thus, S is a tautology.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Let p and q be two propositions. Consider the following two formulae in propositional logic.</p>\n\n<p>S<sub>1</sub> : (¬p&nbsp;∧&nbsp;(p&nbsp;∨&nbsp;q))&nbsp;→ q</p>\n\n<p>S<sub>2</sub> : q → (¬p&nbsp;∧ (p&nbsp;∨&nbsp;q))</p>\n\n<p>Which one of the following choices is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Neither S<sub>1</sub> nor S<sub>2</sub> is a tautology."
+      },
+      {
+        "identifier": "B",
+        "content": "S<sub>1</sub> is not a tautology but S<sub>2</sub> is a tautology."
+      },
+      {
+        "identifier": "C",
+        "content": "Both S<sub>1</sub> and S<sub>2</sub> are tautologies."
+      },
+      {
+        "identifier": "D",
+        "content": "S<sub>1</sub> is a tautology but S<sub>2</sub> is not a tautology."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Definitions:</strong></h3>\n\n<p><p><strong>Tautology:</strong> A propositional logic formula that is always true, regardless of the truth values of its propositional variables.</p></p>\n<p><p><strong>Implication ($ A \\rightarrow B $) Truth Table:</strong></p>\n<table border=\"1\">\n  <tr>\n    <th>A</th>\n    <th>B</th>\n    <th>A → B</th>\n  </tr>\n  <tr>\n    <td>T</td>\n    <td>T</td>\n    <td>T</td>\n  </tr>\n  <tr>\n    <td>T</td>\n    <td>F</td>\n    <td>F</td>\n  </tr>\n  <tr>\n    <td>F</td>\n    <td>T</td>\n    <td>T</td>\n  </tr>\n  <tr>\n    <td>F</td>\n    <td>F</td>\n    <td>T</td>\n  </tr>\n</table>\n\n\n<p>An implication is false only when the antecedent $ A $ is true and the consequent $ B $ is false.</p>\n<hr />\n<h3><strong>Analyzing $ S_1 $:</strong></h3>\n<p><strong>$ S_1: (¬p \\land (p \\lor q)) \\rightarrow q $</strong></p>\n<h4><strong>Step 1: Simplify the Antecedent</strong></h4>\n<p>Simplify $ (¬p \\land (p \\lor q)) $:</p>\n\n<p><p><strong>Distribute $ ¬p $ over $ (p \\lor q) $:</strong></p>\n<p>$ (¬p \\land (p \\lor q)) = (¬p \\land p) \\lor (¬p \\land q) $</p></p>\n<p><p><strong>Simplify $ (¬p \\land p) $:</strong></p>\n<p>$ (¬p \\land p) $ is always <strong>false</strong> because $ p $ and $ ¬p $ cannot both be true.</p></p>\n<p><p><strong>Resulting Expression:</strong></p>\n<p>$ (¬p \\land (p \\lor q)) = \\text{False} \\lor (¬p \\land q) = (¬p \\land q) $</p></p>\n\n<h4><strong>Step 2: Rewrite $ S_1 $</strong></h4>\n<p>$ S_1 $ simplifies to:</p>\n<p>$ (¬p \\land q) \\rightarrow q $</p>\n<h4><strong>Step 3: Analyze the Implication</strong></h4>\n<p>We need to check if $ (¬p \\land q) \\rightarrow q $ is always true.</p>\n\n<p><p><strong>Case 1:</strong> When $ (¬p \\land q) $ is <strong>true</strong>:</p></p>\n<p><p>$ ¬p $ is true (so $ p $ is false), and $ q $ is true.</p></p>\n<p><p>Since $ q $ is true, the consequent is true.</p></p>\n<p><p>Therefore, the implication is <strong>true</strong>.</p></p>\n<p><p><strong>Case 2:</strong> When $ (¬p \\land q) $ is <strong>false</strong>:</p></p>\n<p><p>The antecedent is false.</p></p>\n<p><p>According to the truth table, if the antecedent is false, the implication is <strong>true</strong> regardless of the consequent.</p></p>\n\n<p><strong>Conclusion:</strong> $ S_1 $ is <strong>always true</strong>; hence, it is a <strong>tautology</strong>.</p>\n<hr />\n<h3><strong>Analyzing $ S_2 $:</strong></h3>\n<p><strong>$ S_2: q \\rightarrow (¬p \\land (p \\lor q)) $</strong></p>\n<h4><strong>Step 1: Simplify the Consequent</strong></h4>\n<p>Simplify $ (¬p \\land (p \\lor q)) $:</p>\n\n<p><p><strong>Distribute $ ¬p $ over $ (p \\lor q) $:</strong></p>\n<p>$ (¬p \\land (p \\lor q)) = (¬p \\land p) \\lor (¬p \\land q) $</p></p>\n<p><p><strong>Simplify $ (¬p \\land p) $:</strong></p>\n<p>$ (¬p \\land p) $ is always <strong>false</strong>.</p></p>\n<p><p><strong>Resulting Expression:</strong></p>\n<p>$ (¬p \\land (p \\lor q)) = \\text{False} \\lor (¬p \\land q) = (¬p \\land q) $</p></p>\n\n<h4><strong>Step 2: Rewrite $ S_2 $</strong></h4>\n<p>$ S_2 $ simplifies to:</p>\n<p>$ q \\rightarrow (¬p \\land q) $</p>\n<h4><strong>Step 3: Analyze the Implication</strong></h4>\n<p>We need to find an assignment where the implication is <strong>false</strong>.</p>\n\n<p><p>**An implication $ A \\rightarrow B $ is false only when $ A $ is *<em>true</em>* and $ B $ is <strong>false</strong>.**</p></p>\n<p><p><strong>Assign $ p = \\text{True} $, $ q = \\text{True} $:</strong></p></p>\n<p><p>$ ¬p = \\text{False} $</p></p>\n<p><p>$ (¬p \\land q) = \\text{False} \\land \\text{True} = \\text{False} $</p></p>\n<p><p>Therefore, the consequent $ (¬p \\land q) $ is <strong>false</strong>.</p></p>\n<p><p>The antecedent $ q $ is <strong>true</strong>.</p></p>\n<p><p><strong>Result:</strong> The implication $ q \\rightarrow (¬p \\land q) $ is <strong>false</strong> under this assignment.</p></p>\n\n<p><strong>Conclusion:</strong> Since there's an assignment where $ S_2 $ is false, $ S_2 $ is <strong>not a tautology</strong>.</p>\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>$ S_1 $ is a tautology.</strong></p></p>\n<p><p><strong>$ S_2 $ is not a tautology.</strong></p></p>\n\n<hr />\n<p><strong>Therefore, the correct choice is:</strong></p>\n<p><strong>Option D:</strong> $ S_1 $ is a tautology but $ S_2 $ is not a tautology.</p>\n<hr />\n<p><strong>Answer:</strong> Option <strong>D</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The statement $(\\neg p) \\Rightarrow(\\neg q)$ is logically equivalent to which of the statements below?</p>\n<p>I. $\\quad p \\Rightarrow q$</p>\n<p>II. $q \\Rightarrow p$</p>\n<p>III. $(\\neg q) \\vee p$</p>\n<p>IV. $(\\neg p) \\vee q$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I only"
+      },
+      {
+        "identifier": "B",
+        "content": "I and IV only"
+      },
+      {
+        "identifier": "C",
+        "content": "II only"
+      },
+      {
+        "identifier": "D",
+        "content": "II and III only"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s rewrite $(\\neg p)\\to(\\neg q)$ using the fact  </p>\n<p>$$A\\to B\\;\\equiv\\;\\neg A\\;\\vee\\;B\\,. $$  </p>\n<p>Here $A=\\neg p$ and $B=\\neg q$, so  </p>\n<p>$$ (\\neg p)\\to(\\neg q) \\;\\equiv\\; \\neg(\\neg p)\\;\\vee\\;\\neg q \\;=\\; p\\;\\vee\\;\\neg q \\;=\\; (\\neg q)\\;\\vee\\;p. $$</p>\n<p>That matches statement III.  </p>\n<p>Also, by taking its contrapositive,  </p>\n<p>$$ (\\neg p)\\to(\\neg q) \\;\\equiv\\; q\\;\\to\\;p, $$</p>\n<p>which is statement II.  </p>\n<p>Hence the expression is equivalent to II and III only, i.e. Option D.</p>",
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-cse-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the first-order logic sentence $F: \\forall x(\\exists y R(x, y))$. Assuming non-empty logical domains, which of the sentences below are implied by $F$?</p>\n<p>I. $\\quad \\exists y(\\exists x R(x, y))$</p>\n<p>II. $\\quad \\exists y(\\forall x R(x, y))$</p>\n<p>III. $\\forall y(\\exists x R(x, y))$</p>\n<p>IV. $\\neg \\exists x(\\forall y \\neg R(x, y))$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "IV only"
+      },
+      {
+        "identifier": "B",
+        "content": "I and IV only"
+      },
+      {
+        "identifier": "C",
+        "content": "II only"
+      },
+      {
+        "identifier": "D",
+        "content": "II and III only"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We start from  </p>\n<p>$$F:\\;\\forall x\\,\\exists y\\,R(x,y)$$  </p>\n<p>and check each candidate:</p>\n\n<p><p>I.  $$\\exists y\\,\\exists x\\,R(x,y)$$  </p>\n<p>• Since the domain is non‐empty, pick some $a$. By $F$ there is $b$ with $R(a,b)$.  </p>\n<p>• Hence $\\exists x\\,\\exists y\\,R(x,y)$ (and order of the two $\\exists$ doesn’t matter).  </p>\n<p>→ I follows.</p></p>\n<p><p>II. $$\\exists y\\,\\forall x\\,R(x,y)$$  </p>\n<p>• This says one single $y$ works for every $x$.  </p>\n<p>• From $F$ each $x$ may choose a different $y$, so there need not be a universal witness.  </p>\n<p>→ II does not follow.</p></p>\n<p><p>III. $$\\forall y\\,\\exists x\\,R(x,y)$$  </p>\n<p>• This demands every $y$ relate to some $x$.  </p>\n<p>• But $F$ only guarantees for each $x$ some $y$, not the other way around.  </p>\n<p>→ III does not follow.</p></p>\n<p><p>IV. $$\\neg \\exists x\\,\\forall y\\,\\neg R(x,y)$$  </p>\n<p>• Rewrite the negation:  </p>\n<p>$$\\neg\\exists x\\,\\forall y\\,\\neg R(x,y)\\;\\equiv\\;\\forall x\\,\\neg\\big(\\forall y\\,\\neg R(x,y)\\big)         \\;\\equiv\\;\\forall x\\,\\exists y\\,R(x,y).$$  </p>\n<p>• That is exactly $F$.  </p>\n<p>→ IV follows trivially.</p></p>\n\n<p>Conclusion: I and IV are implied.  That’s Option B.</p>",
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-cse-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$p,q,r,s$$ represent the following propositions.\n<p>$$p:\\,\\,\\,x \\in \\left\\{ {8,9,10,11,12} \\right\\}$$\n<br>$$q:\\,\\,\\,x$$ is a composite number\n<br>$$r:\\,\\,\\,x$$ is a perfect square\n<br>$$s:\\,\\,\\,x$$ is a prime number </p>\n<p>The integer $$x \\ge 2$$ which satisfies $$\\neg \\left( {\\left( {p \\Rightarrow q} \\right) \\wedge \\left( {\\neg r \\vee \\neg s} \\right)} \\right)$$ is ______________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "11",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following expressions:\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$(i)$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ false\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$(ii)$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$Q$$\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$(iii)$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ true\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$(iv)$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$P∨Q$$\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$(v)$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$\\neg QVP$$\n<p>The number of expressions given above that are logically implied by $$P \\wedge \\left( {P \\Rightarrow Q} \\right)$$) is _____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In a room there are only two types of people, namely Type $$1$$ and Type $$2.$$ Type $$1$$ people always tell the truth and Type $$2$$ people always lie. You give a fair coin to a person in that room, without knowing which type he is from and tell him to toss it and hide the result from you till you ask for it. Upon asking, the person replies the following “The result of the toss is head if and only if I am telling the truth.”\n<p>Which of the following options is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The result is head "
+      },
+      {
+        "identifier": "B",
+        "content": "The result is tail "
+      },
+      {
+        "identifier": "C",
+        "content": "If the person is of Type $$2,$$ then the result is tail "
+      },
+      {
+        "identifier": "D",
+        "content": "If the person is of Type $$1,$$ then the result is tail  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following two statements.\n<p>$$S1:$$ If a candidate is known to be corrupt, then he will not be elected\n<br>$$S2:$$ If a candidate is kind, he will be elected</p>\n<p>Which one of the following statements follows from $$S1$$ and $$S2$$ as per sound inference rules of logic?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "If a person is known to be corrupt, he is kind"
+      },
+      {
+        "identifier": "B",
+        "content": "If a person is not known to be corrupt, he is not kind "
+      },
+      {
+        "identifier": "C",
+        "content": "If a person is kind, he is not known to be corrupt "
+      },
+      {
+        "identifier": "D",
+        "content": "If a person is not kind, he is not known to be corrupt "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the statement \n<br>\"Not all that glitters is gold\"\n<br> Predicate glitters$$(x)$$ is true if $$x$$ glitters and \n<br>predicate gold$$(x)$$ is true if $$x$$ is gold.\n<p>Which one of the following logical formulae represents the above statement?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\forall x:\\,glitters\\,\\left( x \\right) \\Rightarrow \\neg gold\\left( x \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\forall x:\\,gold\\left( x \\right) \\Rightarrow glitters\\left( x \\right)$$ v"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\exists x:\\,gold\\left( x \\right) \\wedge \\neg glitters\\left( x \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\exists x:\\,glitters\\,\\left( x \\right) \\wedge \\neg gold\\left( x \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements:\n<br>P: Good mobile phones are not cheap\n<br>Q: Cheap mobile phones are not good\n<br>L: P implies Q\n<br>M: Q implies P\n<br>N: P is equivalent to Q\n<p>Which of the following about L, M, and N is Correct?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only L is TRUE."
+      },
+      {
+        "identifier": "B",
+        "content": "Only M is TRUE."
+      },
+      {
+        "identifier": "C",
+        "content": "Only N is TRUE."
+      },
+      {
+        "identifier": "D",
+        "content": "L, M and N are TRUE."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following logical inferences. \n<br>$${{\\rm I}_1}:$$  If it rains then the cricket match will not be played. The cricket match was played.\n<br><b>Inference:</b> there was no rain.\n<p>$${{\\rm I}_2}:$$ If it rains then the cricket match will not be played. It did not rain\n<br><b>Inference:</b>the cricket match was played. which of the following is TRUE? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both $${{\\rm I}_1}$$ and $${{\\rm I}_2}$$ are correct inferences"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\rm I}_1}$$ is correct but $${{\\rm I}_2}:$$ is not a correct inference"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{\\rm I}_1}$$ is not correct but $${{\\rm I}_2}$$ is a correct inference "
+      },
+      {
+        "identifier": "D",
+        "content": "Both $${{\\rm I}_1}$$ and $${{\\rm I}_2}$$ are not correct inferences"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "What is the correct translation of the following statement into mathematical logic? \"Some real numbers are rational\" ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\exists x\\left( {real\\left( x \\right) \\vee rational\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\forall x\\left( {real\\left( x \\right) \\to rational\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\exists x\\left( {real\\left( x \\right) \\wedge rational\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\exists x\\left( {rational\\left( x \\right) \\to real\\left( x \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The truth table\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/b18oO9ZSx4VJCexF2/cm80Ye2rJjYF0nmkT4rLgkaWzVM7U/ao1yhsbvHDeGHSNuvxpa10/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2012 Discrete Mathematics - Mathematical Logic Question 43 English\"> \n<p>Represents the Boolean function</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$X$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$X+Y$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$X \\oplus Y$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$Y$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "A set of Boolean connectives is functionally complete if all Boolean function can be synthesized using those, Which of the following sets of connectives is NOT functionally complete?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "EX-NOR"
+      },
+      {
+        "identifier": "B",
+        "content": "implication, negation "
+      },
+      {
+        "identifier": "C",
+        "content": "OR, negation "
+      },
+      {
+        "identifier": "D",
+        "content": "NAND"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Identify the correct translation into logical notation of the following assertion. \n<p>$$Some\\,boys\\,in\\,the\\,class\\,are\\,taller\\,than\\,all\\,the\\,girls$$\n<br><b>Note:</b> taller$$\\left( {x,\\,y} \\right)$$ is true if $$x$$ is taller than $$y$$.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\exists x} \\right)\\left( {boy\\left( x \\right) \\to \\left( {\\forall y} \\right)\\left( {girl\\left( y \\right) \\wedge taller\\left( {x,y} \\right)} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {\\exists x} \\right)\\left( {boy\\left( x \\right) \\wedge \\left( {\\forall y} \\right)\\left( {girl\\left( y \\right) \\wedge taller\\left( {x,y} \\right)} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\exists x} \\right)\\left( {boy\\left( x \\right) \\to \\left( {\\forall y} \\right)\\left( {girl\\left( y \\right) \\to taller\\left( {x,y} \\right)} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {\\exists x} \\right)\\left( {boy\\left( x \\right) \\wedge \\left( {\\forall y} \\right)\\left( {girl\\left( y \\right) \\to taller\\left( {x,y} \\right)} \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$a(x,y)$$, $$b(x,y)$$ and $$c(x,y)$$ be three statements with variables $$x$$ and $$y$$ chosen from some universe. Consider the following statement:\n$$$\\left( {\\exists x} \\right)\\left( {\\forall y} \\right)\\left[ {\\left( {a\\left( {x,\\,y} \\right) \\wedge b\\left( {x,\\,y} \\right)} \\right) \\wedge \\neg c\\left( {x,\\,y} \\right)} \\right]$$$\n<p>Which one of the following is its equivalent? </p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\forall x} \\right)\\left( {\\exists y} \\right)\\left[ {\\left( {a\\left( {x,\\,y} \\right) \\vee b\\left( {x,\\,y} \\right)} \\right) \\to c\\left( {x,\\,y} \\right)} \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {\\exists x} \\right)\\left( {\\forall y} \\right)\\left[ {\\left( {a\\left( {x,\\,y} \\right) \\vee b\\left( {x,\\,y} \\right)} \\right) \\wedge \\neg c\\left( {x,\\,y} \\right)} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$ - \\left[ {\\left( {\\forall x} \\right)\\left( {\\exists y} \\right)\\left[ {\\left( {a\\left( {x,\\,y} \\right) \\wedge b\\left( {x,\\,y} \\right)} \\right) \\to c\\left( {x,\\,y} \\right)} \\right]} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - \\left[ {\\left( {\\forall x} \\right)\\left( {\\exists y} \\right)\\left[ {\\left( {a\\left( {x,\\,y} \\right) \\vee b\\left( {x,\\,y} \\right)} \\right) \\to c\\left( {x,\\,y} \\right)} \\right]} \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "\"If X then Y unless Z\" is represented by which of the following formulas in propositional logic? (\" $$\\neg $$ \" is negation, \" $$ \\wedge $$ \" is conjunction, and \" $$ \\to $$ \" is implication)",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {{\\rm X} \\wedge \\neg Z} \\right) \\to Y$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {X \\wedge Y} \\right) \\to \\neg Z$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm X} \\to \\left( {Y \\wedge \\neg Z} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {{\\rm X} \\to Y} \\right) \\wedge \\neg Z$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two well-formed formulas in propositional logic \n<br>$$F1:P \\Rightarrow \\neg P$$\n<br>$$F2:\\left( {P \\Rightarrow \\neg P} \\right) \\vee \\left( {\\neg P \\Rightarrow } \\right)$$\n<p>Which of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "F1 is satisfiable, F2 is valid "
+      },
+      {
+        "identifier": "B",
+        "content": "F1 is unsatisfiable, F2 is satisfiable "
+      },
+      {
+        "identifier": "C",
+        "content": "F1 is unsatisfiable, F2 is valid "
+      },
+      {
+        "identifier": "D",
+        "content": "F1 and F2 are both satisfiable"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "What is the converse of the following assertion?\n<br>I stay only if you go",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I stay if you go "
+      },
+      {
+        "identifier": "B",
+        "content": "If I stay then you go "
+      },
+      {
+        "identifier": "C",
+        "content": "If you do not go then I do not stay "
+      },
+      {
+        "identifier": "D",
+        "content": "If I do not stay then you go "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The proposition $$p \\wedge \\left( { \\sim p \\vee q} \\right)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a tautology "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ \\Leftrightarrow \\left( {p \\wedge q} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$ \\Leftrightarrow \\left( {p \\vee q} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "a contradiction"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following predicate calculus statements is/are valid?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\forall \\,x} \\right){\\rm P}\\left( x \\right) \\vee \\left( {\\forall \\,x} \\right)Q\\left( x \\right) \\to \\left( {\\forall \\,x} \\right)$$\n<br>$$\\left\\{ {{\\rm P}\\left( x \\right) \\vee Q\\left( x \\right)} \\right\\}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {\\exists \\,x} \\right){\\rm P}\\left( x \\right) \\wedge \\left( {\\exists \\,x} \\right)Q\\left( x \\right) \\to \\left( {\\exists \\,x} \\right)$$\n<br>$$\\left\\{ {{\\rm P}\\left( x \\right) \\wedge Q\\left( x \\right)} \\right\\}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\forall \\,x} \\right)\\,\\left\\{ {{\\rm P}\\left( x \\right) \\vee Q\\left( x \\right)} \\right\\} \\to \\left( {\\forall \\,x} \\right)\\,\\,$$\n<br>$${\\rm P}\\left( x \\right) \\vee \\left( {\\forall \\,x} \\right)\\,\\,Q\\left( x \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {\\exists \\,x} \\right)\\,\\,\\left\\{ {{\\rm P}\\left( x \\right) \\vee Q\\left( x \\right)} \\right\\} \\to  \\sim \\left( {\\forall \\,x} \\right)\\,\\,$$\n<br>$$\\,{\\rm P}\\left( x \\right) \\vee \\left( {\\exists \\,x} \\right)Q\\left( x \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following predicate logic formulae/formula is/are CORRECT representation(s) of the statement: \"Everyone has exactly one mother\"?</p>\n<p>The meanings of the predicates used are:</p>\n<p>$\\bullet$ mother $(y, x): y$ is the mother of $x$</p>\n<p>$\\bullet$ noteq $(x, y): x$ and $y$ are not equal</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\forall x \\exists y \\exists z$ (mother $(y, x) \\wedge \\neg \\operatorname{mother}(z, x))$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\forall x \\exists y[\\operatorname{mother}(y, x) \\wedge \\forall z(\\operatorname{noteq}(z, y) \\rightarrow \\neg \\operatorname{mother}(z, x))]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\forall x \\forall y[\\operatorname{mother}(y, x) \\rightarrow \\exists z(\\operatorname{mother}(z, x) \\wedge \\neg \\operatorname{noteq}(z, y))]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\forall x \\exists y[\\operatorname{mother}(y, x) \\wedge \\neg \\exists z(\\operatorname{noteq}(z, y) \\wedge \\operatorname{mother}(z, x))]$"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>The statement \"Everyone has exactly one mother\" can be represented in predicate logic using the following predicates:</p>\n\n<p><p><strong>mother $(y, x)$</strong>: means $y$ is the mother of $x$.</p></p>\n<p><p><strong>noteq $(x, y)$</strong>: means $x$ and $y$ are not equal.</p></p>\n\n<p>In logical terms, the statement can be expressed as: </p>\n<p>\"For every person $x$, there exists exactly one person $y$ such that $y$ is the mother of $x$, and for any person $z$, if $z$ is not $y$, then $z$ is not the mother of $x$.\"</p>\n<p>This can be symbolically written as:</p>\n<p>$$ \\forall x \\exists y [\\operatorname{mother}(y, x) \\wedge \\forall z (\\operatorname{noteq}(z, y) \\rightarrow \\neg \\operatorname{mother}(z, x))] $$</p>\n<p>This representation matches <strong>Option B</strong>.</p>\n<p>A slightly different version that conveys the same meaning is:</p>\n<p>$$ \\forall x \\exists y [\\operatorname{mother}(y, x) \\wedge \\neg \\exists z (\\operatorname{noteq}(z, y) \\wedge \\operatorname{mother}(z, x))] $$</p>\n<p>This representation matches <strong>Option D</strong>.</p>\n<p>Both forms ensure that each person has exactly one unique mother and align with the description in options B and D, respectively.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following predicate formulae is NOT logically valid?\n<br><br>Note that W is a predicate formula without any free occurrence of <i>x</i>.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\forall x$$(p(x) $$ \\vee $$ W) $$ \\equiv $$ $$\\forall x$$ p(x) $$ \\vee $$ W"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\exists x$$(p(x) $$ \\wedge $$ W) $$ \\equiv $$ $$\\exists x$$ p(x) $$ \\wedge $$ W"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\forall x$$(p(x) $$ \\to $$ W) $$ \\equiv $$ $$\\forall x$$ p(x) $$ \\to $$ W"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\exists x$$(p(x) $$ \\to $$ W) $$ \\equiv $$ $$\\exists x$$ p(x) $$ \\to $$ W"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given predicate formulae is <strong>NOT logically valid</strong>, we need to analyze each option carefully. The key point is that $ W $ is a predicate formula without any free occurrence of $ x $; that is, $ W $ is a closed formula (a sentence) and does not depend on $ x $.</p>\n<hr />\n<h3><strong>Option A:</strong></h3>\n<p>$ \\forall x\\, (p(x) \\lor W) \\equiv (\\forall x\\, p(x)) \\lor W $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>Since $ W $ is a closed formula (either true or false), we can consider two cases:</p>\n<p><strong>Case 1:</strong> $ W $ is <strong>true</strong>.</p></p>\n\n<p><p>Then $ p(x) \\lor W $ is <strong>true</strong> for all $ x $, so:</p>\n<p>$     \\forall x\\, (p(x) \\lor W) = \\text{true}     $</p></p>\n<p><p>The right-hand side (RHS) becomes:</p>\n<p>$     (\\forall x\\, p(x)) \\lor W = (\\forall x\\, p(x)) \\lor \\text{true} = \\text{true}     $</p></p>\n<p><p>Therefore, both sides are <strong>true</strong>.</p>\n<p><strong>Case 2:</strong> $ W $ is <strong>false</strong>.</p></p>\n<p><p>Then $ p(x) \\lor W = p(x) \\lor \\text{false} = p(x) $.</p></p>\n<p><p>So:</p>\n<p>$     \\forall x\\, (p(x) \\lor W) = \\forall x\\, p(x)     $</p></p>\n<p><p>The RHS is:</p>\n<p>$     (\\forall x\\, p(x)) \\lor W = (\\forall x\\, p(x)) \\lor \\text{false} = \\forall x\\, p(x)     $</p></p>\n<p><p>Both sides are <strong>equal</strong>.</p></p>\n<p><p><strong>Conclusion:</strong> The equivalence holds in both cases; <strong>Option A is logically valid</strong>.</p></p>\n\n<hr />\n<h3><strong>Option B:</strong></h3>\n<p>$ \\exists x\\, (p(x) \\land W) \\equiv (\\exists x\\, p(x)) \\land W $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>Again, consider two cases for $ W $:</p>\n<p><strong>Case 1:</strong> $ W $ is <strong>true</strong>.</p></p>\n<p><p>Then $ p(x) \\land W = p(x) \\land \\text{true} = p(x) $.</p></p>\n<p><p>So:</p>\n<p>$     \\exists x\\, (p(x) \\land W) = \\exists x\\, p(x)     $</p></p>\n<p><p>RHS:</p>\n<p>$     (\\exists x\\, p(x)) \\land W = (\\exists x\\, p(x)) \\land \\text{true} = \\exists x\\, p(x)     $</p></p>\n<p><p>Both sides are <strong>equal</strong>.</p>\n<p><strong>Case 2:</strong> $ W $ is <strong>false</strong>.</p></p>\n<p><p>Then $ p(x) \\land W = p(x) \\land \\text{false} = \\text{false} $.</p></p>\n<p><p>So:</p>\n<p>$     \\exists x\\, (p(x) \\land W) = \\exists x\\, \\text{false} = \\text{false}     $</p></p>\n<p><p>RHS:</p>\n<p>$     (\\exists x\\, p(x)) \\land W = (\\exists x\\, p(x)) \\land \\text{false} = \\text{false}     $</p></p>\n<p><p>Both sides are <strong>equal</strong>.</p></p>\n<p><p><strong>Conclusion:</strong> The equivalence holds in both cases; <strong>Option B is logically valid</strong>.</p></p>\n\n<hr />\n<h3><strong>Option C:</strong></h3>\n<p>$ \\forall x\\, (p(x) \\to W) \\equiv (\\forall x\\, p(x)) \\to W $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>Consider the two cases for $ W $:</p>\n<p><strong>Case 1:</strong> $ W $ is <strong>true</strong>.</p></p>\n<p><p>$ p(x) \\to W = p(x) \\to \\text{true} = \\text{true} $.</p></p>\n<p><p>So:</p>\n<p>$     \\forall x\\, (p(x) \\to W) = \\forall x\\, \\text{true} = \\text{true}     $</p></p>\n<p><p>RHS:</p>\n<p>$     (\\forall x\\, p(x)) \\to W = (\\forall x\\, p(x)) \\to \\text{true} = \\text{true}     $</p></p>\n<p><p>Both sides are <strong>true</strong>.</p>\n<p><strong>Case 2:</strong> $ W $ is <strong>false</strong>.</p></p>\n<p><p>$ p(x) \\to W = p(x) \\to \\text{false} = \\neg p(x) $.</p></p>\n<p><p>So:</p>\n<p>$     \\forall x\\, (p(x) \\to W) = \\forall x\\, \\neg p(x)     $</p></p>\n<p><p>RHS:</p>\n<p>$     (\\forall x\\, p(x)) \\to W = (\\forall x\\, p(x)) \\to \\text{false} = \\neg (\\forall x\\, p(x))     $</p></p>\n<p><p>The left-hand side (LHS) is $ \\forall x\\, \\neg p(x) $, and the RHS is $ \\neg (\\forall x\\, p(x)) $.</p></p>\n<p><p><strong>These are not equivalent</strong> in general (e.g., when $ p(x) $ is true for some $ x $ and false for others).</p></p>\n<p><p><strong>Conclusion:</strong> The equivalence does <strong>not</strong> hold in all cases; <strong>Option C is NOT logically valid</strong>.</p></p>\n\n<hr />\n<h3><strong>Option D:</strong></h3>\n<p>$ \\exists x\\, (p(x) \\to W) \\equiv (\\exists x\\, p(x)) \\to W $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>Consider the two cases for $ W $:</p>\n<p><strong>Case 1:</strong> $ W $ is <strong>true</strong>.</p></p>\n<p><p>$ p(x) \\to W = p(x) \\to \\text{true} = \\text{true} $.</p></p>\n<p><p>So:</p>\n<p>$     \\exists x\\, (p(x) \\to W) = \\exists x\\, \\text{true} = \\text{true}     $</p></p>\n<p><p>RHS:</p>\n<p>$     (\\exists x\\, p(x)) \\to W = (\\exists x\\, p(x)) \\to \\text{true} = \\text{true}     $</p></p>\n<p><p>Both sides are <strong>true</strong>.</p>\n<p><strong>Case 2:</strong> $ W $ is <strong>false</strong>.</p></p>\n<p><p>$ p(x) \\to W = p(x) \\to \\text{false} = \\neg p(x) $.</p></p>\n<p><p>So:</p>\n<p>$     \\exists x\\, (p(x) \\to W) = \\exists x\\, \\neg p(x)     $</p></p>\n<p><p>RHS:</p>\n<p>$     (\\exists x\\, p(x)) \\to W = (\\exists x\\, p(x)) \\to \\text{false} = \\neg (\\exists x\\, p(x))     $</p></p>\n<p><p>The LHS is $ \\exists x\\, \\neg p(x) $, and the RHS is $ \\neg (\\exists x\\, p(x)) $.</p></p>\n<p><p><strong>These are not equivalent</strong> in general (e.g., when $ p(x) $ is true for some $ x $ and false for others).</p></p>\n<p><p><strong>Conclusion:</strong> The equivalence does <strong>not</strong> hold in all cases; <strong>Option D is NOT logically valid</strong>.</p></p>\n\n<hr />\n<h3><strong>Final Decision:</strong></h3>\n<p>Since <strong>Option C</strong> is among the choices and is <strong>not logically valid</strong>, it is the correct answer.</p>\n<hr />\n<p><strong>Answer:</strong> <strong>Option C</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the first order predicate formula φ:\n<br><br>∀x[(∀z z|x ⇒ ((z = x) ∨ (z = 1))) ⇒ ∃w (w &gt; x) ∧ (∀z z|w ⇒ ((w = z) ∨ (z = 1)))]\n<br><br>Here 'a|b' denotes that 'a divides b', where a and b are integers.<br><br>Consider the following sets:\n\n     <br><br>S1.  {1, 2, 3, ..., 100}\n     <br>S2.  Set of all positive integers\n     <br>S3.  Set of all integers\n<br><br>Which of the above sets satisfy φ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S1 and S3"
+      },
+      {
+        "identifier": "B",
+        "content": "S1, S2 and S3"
+      },
+      {
+        "identifier": "C",
+        "content": "S2 and S3"
+      },
+      {
+        "identifier": "D",
+        "content": "S1 and S2"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve this problem, we need to determine which of the given sets $ S_1 $, $ S_2 $, and $ S_3 $ satisfy the first-order predicate formula $ \\varphi $:</p>\n<p>$ \\varphi: \\quad \\forall x \\left[ \\left( \\forall z \\ (z \\mid x \\implies (z = x) \\lor (z = 1)) \\right) \\implies \\exists w \\ (w > x) \\land \\left( \\forall z \\ (z \\mid w \\implies (z = w) \\lor (z = 1)) \\right) \\right] $</p>\n<p>Here, $ z \\mid x $ denotes that $ z $ divides $ x $. The formula $ \\varphi $ can be interpreted as:</p>\n\n<p>For <strong>every integer $ x $</strong>, if $ x $ is a <strong>prime number</strong>, then there exists an integer $ w $ greater than $ x $ such that $ w $ is also a <strong>prime number</strong>.</p>\n\n<p>This is essentially stating that <strong>there are infinitely many prime numbers</strong>.</p>\n<p>Now, let's analyze each set to see if $ \\varphi $ holds.</p>\n<hr />\n<h3><strong>Set $ S_1 = \\{1, 2, 3, \\ldots, 100\\} $</strong></h3>\n\n<p><p><strong>Primes in $ S_1 $:</strong> All prime numbers less than or equal to 100.</p></p>\n<p><p><strong>Largest Prime in $ S_1 $:</strong> 97.</p></p>\n<p><p><strong>Does $ \\varphi $ hold?</strong></p></p>\n<p><p>For $ x = 97 $, we need a prime $ w > 97 $ within $ S_1 $.</p></p>\n<p><p>The next prime is 101, which is <strong>not</strong> in $ S_1 $.</p></p>\n<p><p><strong>Conclusion:</strong> $ \\varphi $ is <strong>false</strong> in $ S_1 $ because the condition fails for $ x = 97 $.</p></p>\n\n<hr />\n<h3><strong>Set $ S_2 = $ Set of all positive integers</strong></h3>\n\n<p><p><strong>Does $ \\varphi $ hold?</strong></p></p>\n<p><p>For every prime $ x $, there is always a larger prime $ w > x $.</p></p>\n<p><p>This is the statement of <strong>infinitely many primes</strong>, which is <strong>true</strong>.</p></p>\n<p><p><strong>Conclusion:</strong> $ \\varphi $ is <strong>true</strong> in $ S_2 $.</p></p>\n\n<hr />\n<h3><strong>Set $ S_3 = $ Set of all integers</strong></h3>\n\n<p><p><strong>Consideration of Negative Integers:</strong></p></p>\n<p><p>In the context of standard number theory, primes are <strong>positive integers greater than 1</strong>.</p></p>\n<p><p>For negative integers and zero, the antecedent $ P(x) $ is <strong>false</strong> because they are not prime.</p></p>\n<p><p>The formula $ \\varphi $ is vacuously true for these values of $ x $.</p></p>\n<p><p><strong>For Positive Integers in $ S_3 $:</strong></p></p>\n<p><p>Same as in $ S_2 $, the formula holds.</p></p>\n<p><p><strong>Conclusion:</strong> $ \\varphi $ is <strong>true</strong> in $ S_3 $.</p></p>\n\n<hr />\n<h3><strong>Final Conclusion</strong></h3>\n\n<p><p><strong>$ S_2 $:</strong> Satisfies $ \\varphi $.</p></p>\n<p><p><strong>$ S_3 $:</strong> Satisfies $ \\varphi $.</p></p>\n<p><p><strong>$ S_1 $:</strong> Does <strong>not</strong> satisfy $ \\varphi $.</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Option C</p>\n<p><strong>S2 and S3</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the first-order logic sentence \n<br>$$\\varphi  \\equiv \\,\\,\\,\\,\\,\\,\\,\\exists s\\exists t\\exists u\\forall v\\forall w$$ $$\\forall x\\forall y\\psi \\left( {s,t,u,v,w,x,y} \\right)$$ <br>where $$\\psi $$ $$(𝑠,𝑡, 𝑢, 𝑣, 𝑤, 𝑥, 𝑦)$$ is a quantifier-free first-order logic formula using only predicate\nsymbols, and possibly equality, but no function symbols. Suppose $$\\varphi $$ has a model with a universe containing $$7$$ elements. \n<p>Which one of the following statements is necessarily true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "There exists at least one model of $$\\varphi $$ with universe of size less than or equal to $$3.$$"
+      },
+      {
+        "identifier": "B",
+        "content": "There exists no model of $$\\varphi $$ with universe of size less than or equal to $$3.$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "There exists no model of $$\\varphi $$ with universe of size greater than $$7.$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Every model of $$\\varphi $$ has a universe of size equal to $$7.$$  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following well-formed formulae in predicate calculus is <b>NOT</b> valid? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\forall xp\\left( x \\right) \\vee \\forall xq\\left( x \\right)} \\right) \\Rightarrow \\left( {\\exists x\\neg p\\left( x \\right) \\vee \\forall xq\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {\\exists xp\\left( x \\right) \\vee \\exists xq\\left( x \\right)} \\right) \\Rightarrow \\exists x\\left( {p\\left( x \\right) \\vee q\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\exists x\\left( {p\\left( x \\right) \\wedge q\\left( x \\right)} \\right) \\Rightarrow \\left( {\\exists xp\\left( x \\right) \\wedge \\exists xq\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\forall x\\left( {p\\left( x \\right) \\vee q\\left( x \\right)} \\right) \\Rightarrow \\left( {\\forall xp\\left( x \\right) \\vee \\forall xq\\left( x \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following  well formed formulae is a tautology? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\forall x\\,\\exists y\\,R\\left( {x,y} \\right) \\leftrightarrow \\exists y\\forall x\\,R\\left( {x,y} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {\\forall x\\left[ {\\exists y\\,R\\left( {x,y} \\right) \\to S\\left( {x,y} \\right)} \\right]} \\right) \\to \\forall x\\exists y\\,S\\left( {x,y} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\forall x\\,\\exists y\\,\\left( {P\\left( {x,y} \\right)} \\right. \\to R\\left( {x,y} \\right)} \\right] \\leftrightarrow \\left[ {\\forall x\\,\\exists y\\,\\left( {\\neg P\\left( {x,y} \\right)V\\,R\\left( {x,y} \\right)} \\right.} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\forall x\\,\\forall y\\,P\\left( {x,y} \\right) \\to \\forall x\\forall y\\,P\\left( {y,x} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following Boolean expressions is <b>NOT</b> A tautology?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\left( {a \\to b} \\right) \\wedge \\left( {b \\to c} \\right)} \\right) \\to \\left( {a \\to c} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {a \\leftrightarrow c} \\right) \\to \\left( { \\sim b \\to \\left( {a \\wedge c} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {a \\wedge b \\wedge c} \\right) \\to \\left( {c \\vee a} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$A \\to \\left( {b \\to a} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following propositional logic formulas is <b>TRUE</b> when exactly two of $$p, q,$$ and $$r$$ are <b>TRUE</b>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\left( {p \\leftrightarrow q} \\right) \\wedge r} \\right) \\vee \\left( {p \\wedge q \\wedge  \\sim r} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( { \\sim \\left( {p \\leftrightarrow q} \\right) \\wedge r} \\right) \\vee \\left( {p \\wedge q \\wedge  \\sim r} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\left( {p \\to q} \\right) \\wedge r} \\right) \\vee \\left( {p \\wedge q \\wedge  \\sim r} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( { \\sim \\left( {p \\leftrightarrow q} \\right) \\wedge r} \\right) \\wedge \\left( {p \\wedge q \\wedge  \\sim r} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The <b>CORRECT</b> formula for the sentence, \"not all rainy days are cold\" is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\forall d\\left( {Rainy\\left( d \\right) \\wedge  \\sim Cold\\left( d \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\forall d\\left( { \\sim Rainy\\left( d \\right) \\to Cold\\left( d \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\exists d\\left( { \\sim Rainy\\left( d \\right) \\to Cold\\left( d \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\exists d\\left( {Rainy\\left( d \\right) \\wedge  \\sim Cold\\left( d \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is <b>NOT</b> logically equivalent to $$\\neg \\exists x\\left( {\\forall y\\left( \\alpha  \\right) \\wedge \\left( {\\forall z\\left( \\beta  \\right)} \\right)} \\right)?$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\forall x\\left( {\\exists z\\left( {\\neg \\beta } \\right) \\to \\forall y\\left( \\alpha  \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\forall x\\left( {\\forall z\\left( \\beta  \\right) \\to \\exists y\\left( {\\neg \\alpha } \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\forall x\\left( {\\forall y\\left( \\alpha  \\right) \\to \\exists z\\left( {\\neg \\beta } \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\forall x\\left( {\\exists y\\left( {\\neg \\alpha } \\right) \\to \\exists z\\left( {\\neg \\beta } \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D",
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "What is the logical translation of the following statement?\n<br>\"None of my friends are perfect.\"",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\exists x\\left( {F\\left( x \\right) \\wedge \\neg P\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\exists x\\left( {\\neg F\\left( x \\right) \\wedge P\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\exists x\\left( {\\neg F\\left( x \\right) \\wedge \\neg P\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\neg \\exists x\\left( {F\\left( x \\right) \\wedge P\\left( x \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following options is <b>correct</b> given three positive integers $$x,  y$$ and $$z$$, and a predicate\n<br>$$P\\left( x \\right) = \\neg \\left( {x = 1} \\right) \\wedge \\forall y\\left( {\\exists z\\left( {x = y * z} \\right) \\Rightarrow \\left( {y = x} \\right) \\vee \\left( {y = 1} \\right)} \\right)$$\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P(x)$$ being true means that $$x$$ is a prime number"
+      },
+      {
+        "identifier": "B",
+        "content": "$$P(x)$$ being true means that $$x$$ is a number other than 1"
+      },
+      {
+        "identifier": "C",
+        "content": "$$P(x)$$ is always true irrespective of the value of $$x$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$P(x)$$ being true means that $$x$$ has exactly two factors other than 1 and $$x$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose the predicate $$F(x,y,t)$$ is used to represent the statements that person $$x$$ can fool person $$y$$ at time   $$t$$. Which one of the statements below expresses best the meaning of the formula $$\\forall x\\exists y\\exists t\\left( {\\neg F\\left( {x,y,t} \\right)} \\right)?$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Everyone can fool some person at some time."
+      },
+      {
+        "identifier": "B",
+        "content": "No one can fool everyone all the time."
+      },
+      {
+        "identifier": "C",
+        "content": "Everyone cannot fool some person all the time. "
+      },
+      {
+        "identifier": "D",
+        "content": "No one can fool some person at some time."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The binary operation ◻ is defined as follows: \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/2HHoyEcNSOY7bnmrk/IG3h2t1DGtOODAUrS20QzkGuCcXAD/YUXILRnaBKbDuZLBCpkIL3/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2009 Discrete Mathematics - Mathematical Logic Question 19 English\"> \n<p>Which one of the following is equivalence to $$P \\vee Q$$? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\neg \\,Q$$  ◻  $$\\neg \\,P$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$P$$  ◻   $$\\neg \\,Q$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\neg \\,P$$  ◻    $$Q$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\neg \\,P$$    ◻   $$\\neg \\,Q$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following well-formed formulae:\n<p>$${\\rm I}.$$   $$\\,\\,\\neg \\forall x\\left( {P\\left( x \\right)} \\right)$$\n<br>$${\\rm I}{\\rm I}.\\,\\,\\,\\,\\,\\,\\neg \\exists x\\left( {P\\left( x \\right)} \\right)$$\n<br>$${\\rm I}{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,\\,\\neg \\exists x\\left( {\\neg P\\left( x \\right)} \\right)$$\n<br>$${\\rm I}V.\\,\\,\\,\\,\\,\\,\\exists x\\left( {\\neg P\\left( x \\right)} \\right)$$</p>\n<p>Which of the above are equivalent?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}$$ and $${\\rm I}$$$$V$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm I}$$$${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$$${\\rm I}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I}$$$${\\rm I}$$ and $${\\rm I}$$$$V$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is the most appropriate logical formula to represent the statement:\n<p>\"$$Gold\\,and\\,silver\\,ornaments\\,are\\,precious$$\"</p>\n<p>The following notations are used:\n<br>$$G\\left( x \\right):\\,\\,x$$ is a gold ornament.\n<br>$$S\\left( x \\right):\\,\\,x$$ is a silver ornament.\n<br>$$P\\left( x \\right):\\,\\,x$$ is precious.</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\forall x\\left( {P\\left( x \\right) \\to \\left( {G\\left( x \\right) \\wedge S\\left( x \\right)} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\forall x\\left( {\\left( {G\\left( x \\right) \\wedge S\\left( x \\right)} \\right) \\to P\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\exists x\\left( {\\left( {G\\left( x \\right) \\wedge S\\left( x \\right)} \\right) \\to P\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\forall x\\left( {\\left( {G\\left( x \\right) \\vee S\\left( x \\right)} \\right) \\to P\\left( x \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Let fsa and $$pda$$ be two predicates such that fsa$$(x)$$ means $$x$$ is a finite state automation, and pda$$(y)$$ means that $$y$$ is a pushdown automation. Let $$equivalent$$  be another predicate such that $$equivalent$$$$(a,b)$$ means $$a$$ and $$b$$ are equivalent. Which of the following first order logic statements represents the following: \n<p>Each finite state automation has an equivalent pushdown automation.</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\forall x\\,\\,fsa\\left( x \\right)} \\right) \\Rightarrow \\left( {\\exists y\\,\\,pda\\left( y \\right) \\wedge \\,equivalent\\,\\,\\left( {x,\\,y} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ \\sim \\forall y\\left( {\\exists x\\,\\,fsa\\left( x \\right) \\Rightarrow pda\\left( y \\right) \\wedge \\,equivalent\\left( {x,\\,y} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\forall x\\,\\exists y\\left( {fsa\\left( x \\right) \\wedge pda\\left( y \\right) \\wedge \\,equivalent\\left( {x,\\,y} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\forall x\\,\\exists y\\left( {fsa\\left( y \\right) \\wedge pda\\left( x \\right) \\wedge \\,equivalent\\left( {x,\\,y} \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "$$P$$ and $$Q$$ are two propositions. Which of the following logical expressions are equivalent?\n<p>$${\\rm I}.$$ $${\\rm P}\\, \\vee  \\sim Q$$  \n<br>$${\\rm I}{\\rm I}.$$ $$ \\sim \\left( { \\sim {\\rm P} \\wedge Q} \\right)$$\n<br>$${\\rm I}{\\rm I}{\\rm I}.$$ $$\\left( {{\\rm P} \\wedge Q} \\right) \\vee \\left( {{\\rm P} \\wedge  \\sim Q} \\right) \\vee \\left( { \\sim {\\rm P} \\wedge  \\sim Q} \\right)$$ \n<br>$${\\rm I}V.$$ $$\\left( {{\\rm P} \\wedge Q} \\right) \\vee \\left( {{\\rm P} \\wedge  \\sim Q} \\right) \\vee \\left( { \\sim {\\rm P} \\wedge Q} \\right)$$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Only $${\\rm I}$$, $${\\rm I}$$$${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$$${\\rm I}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "Only $${\\rm I}$$, $${\\rm I}$$$${\\rm I}$$ and $${\\rm I}$$$$V$$"
+      },
+      {
+        "identifier": "D",
+        "content": "All of $${\\rm I}$$, $${\\rm I}$$$${\\rm I}$$, $${\\rm I}$$$${\\rm I}$$$${\\rm I}$$ and $${\\rm I}$$$$V$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is the negation of \n$$$\\left[ {\\forall x,\\alpha  \\to \\left( {\\exists y,\\beta  \\to \\left( {\\forall u,\\exists v,\\gamma } \\right)} \\right)} \\right]?$$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\exists x,\\alpha  \\to \\left( {\\forall y,\\beta  \\to \\left( {\\exists u,\\forall v,\\gamma } \\right)} \\right)} \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\exists x,\\alpha  \\to \\left( {\\forall y,\\beta  \\to \\left( {\\exists u,\\forall v,\\neg \\gamma } \\right)} \\right)} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\forall x,\\neg \\alpha  \\to \\left( {\\exists y,\\neg \\beta  \\to \\left( {\\forall u,\\exists v,\\neg \\gamma } \\right)} \\right)} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\exists x,\\alpha  \\wedge \\left( {\\forall y,\\beta  \\wedge \\left( {\\exists u,\\forall v,\\neg \\gamma } \\right)} \\right)} \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following first order formulae is logically valid? Here $$\\alpha \\left( x \\right)$$ is a first order formulae with $$x$$ as a free variable, and $$\\beta $$ is a first order formula with no free variable.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\beta  \\to \\left( {\\exists x,\\alpha \\left( x \\right)} \\right)} \\right] \\to \\left[ {\\forall x,\\beta  \\to \\alpha \\left( x \\right)} \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\exists x,\\beta  \\to \\alpha \\left( x \\right)} \\right] \\to \\left[ {\\beta  \\to \\left( {\\forall x,\\alpha \\left( x \\right)} \\right)} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\left( {\\exists x,\\alpha \\left( x \\right)} \\right) \\to \\beta } \\right] \\to \\left[ {\\forall x,\\alpha \\left( x \\right) \\to \\beta } \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\left( {\\forall x,\\alpha \\left( x \\right)} \\right) \\to \\beta } \\right] \\to \\left[ {\\forall x,\\alpha \\left( x \\right) \\to \\beta } \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "If $$P$$,    $$Q$$,   $$R$$  are  Boolean variables, then $$(P + \\bar{Q}) (P.\\bar{Q} + P.R) (\\bar{P}.\\bar{R} + \\bar{Q})$$ simplifies to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P.\\overline Q $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P.\\overline R $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$P.\\overline Q  + R$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$P.\\overline R  + Q$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of these first-order logic formulae is valid?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\forall x\\left( {P\\left( x \\right) \\Rightarrow Q\\left( x \\right)} \\right) \\Rightarrow \\left( {\\left( {\\forall xP\\left( x \\right)} \\right) \\Rightarrow \\left( {\\forall xQ\\left( x \\right)} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\exists x\\left( {P\\left( x \\right) \\vee Q\\left( x \\right)} \\right) \\Rightarrow \\left( {\\left( {\\exists xP\\left( x \\right)} \\right) \\Rightarrow \\left( {\\exists xQ\\left( x \\right)} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\exists x\\left( {P\\left( x \\right) \\wedge Q\\left( x \\right)} \\right) \\Leftrightarrow \\left( {\\left( {\\exists xP\\left( x \\right)} \\right) \\wedge \\left( {\\exists xQ\\left( x \\right)} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\forall x\\exists yP\\left( {x,y} \\right) \\Rightarrow \\exists y\\forall xP\\left( {x,y} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following first order logic formula in which $$R$$ is a binary relation symbol.\n<br>$$\\forall x\\forall y\\left( {R\\left( {x,\\,y} \\right) \\Rightarrow R\\left( {y,x} \\right)} \\right).$$\n<p>The formula is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Satisfiable and valid"
+      },
+      {
+        "identifier": "B",
+        "content": "Satisfiable and so is its negation"
+      },
+      {
+        "identifier": "C",
+        "content": "Unsatisfiable but its negation is valid "
+      },
+      {
+        "identifier": "D",
+        "content": "Satisfiable but its negation is unsatisfiable"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following propositional statements: \n<p><br>$${\\rm P}1:\\,\\,\\left( {\\left( {A \\wedge B} \\right) \\to C} \\right) \\equiv \\left( {\\left( {A \\to C} \\right) \\wedge \\left( {B \\to C} \\right)} \\right)$$ \n<br>$${\\rm P}2:\\,\\,\\left( {\\left( {A \\vee B} \\right) \\to C} \\right) \\equiv \\left( {\\left( {A \\to C} \\right) \\vee \\left( {B \\to C} \\right)} \\right)$$ Which one of the following is true?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P1$$ is tautology, but not $$P2$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$P2$$ is tautology, but not $$P1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$P1$$  and $$P2$$ are both tautologies"
+      },
+      {
+        "identifier": "D",
+        "content": "Both $$P1$$  and $$P2$$  are not tautologies"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$P, Q$$, and $$R$$ be sets. Let $$\\Delta $$ denote the symmetric difference operator defined as $$P\\Delta Q = \\left( {P \\cup Q} \\right) - \\left( {P \\cap Q} \\right)$$. Using venn diagrams, determine which of the following is/are TRUE.\n<p>($${\\rm I}$$)  $$P\\Delta \\left( {Q \\cap R} \\right) = \\left( {P\\Delta Q} \\right) \\cap \\left( {P\\Delta R} \\right)$$ \n<br>($${\\rm I}{\\rm I}$$)  $$P \\cap \\left( {Q\\Delta R} \\right) = \\left( {P \\cap Q} \\right)\\Delta \\left( {P \\cap R} \\right)$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}$$$${\\rm I}$$ only"
+      },
+      {
+        "identifier": "C",
+        "content": "Neither $${\\rm I}$$ nor $${\\rm I}$$$${\\rm I}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Both $${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A logical binary relation $$ \\odot $$, is defined as follows:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/QSU9Gt5tzXnkf6YOa/rCmHJmrpDLOzRENdQifIzIwmqXVUr/a7CoPo10RO1lVaRZMO1xke/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2006 Discrete Mathematics - Mathematical Logic Question 42 English\"> \n<p>Let ~ be the unary negation (NOT) operator, with higher precedence then  $$ \\odot $$. Which one of the following is equivalent to $$A \\wedge B?$$ </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( { \\sim A \\odot B} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( { \\sim A \\odot  \\sim B} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$ \\sim \\left( { \\sim A \\odot  \\sim B} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ \\sim \\left( { \\sim A \\odot B} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the first order predicate calculus statements given below correctly expresses the following English statement?\n<p><b>Tigers and lion attack if they are hungry of threatened.</b></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\forall x[(tiger(x) \\wedge lion(x)) \\to $$$$\\{ (hungry(x) \\vee threatened(x)) \\to attacks(x)\\} ]$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\forall x[(tiger(x) \\vee lion(x)) \\to $$$$\\{ (hungry(x) \\wedge threatened(x)) \\to attacks(x)\\} ]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\forall x[(tiger(x) \\vee lion(x)) \\to $$$$\\{ attacks(x) \\to (hungry(x)) \\vee threatened(x))\\} ]$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\forall x[(tiger(x) \\vee lion(x)) \\to $$$$\\{ (hungry(x) \\vee threatened(x)) \\to attacks(x)\\} ]$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$P(x)$$ and $$Q(x)$$ be arbitrary predicates. Which of the following statement is always TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\forall x\\left( {P\\left( x \\right) \\vee Q\\left( x \\right)} \\right)} \\right) \\Rightarrow \\left( {\\left( {\\forall xP\\left( x \\right)} \\right) \\vee \\left( {\\forall xQ\\left( x \\right)} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {\\forall x\\left( {P\\left( x \\right) \\Rightarrow Q\\left( x \\right)} \\right)} \\right) \\Rightarrow \\left( {\\left( {\\forall xP\\left( x \\right)} \\right) \\Rightarrow \\left( {\\forall xQ\\left( x \\right)} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\left( {\\forall x\\left( {P\\left( x \\right)} \\right) \\Rightarrow \\left( {\\forall xQ\\left( x \\right)} \\right)} \\right) \\Rightarrow \\left( {\\forall x\\left( {P\\left( x \\right) \\Rightarrow Q\\left( x \\right)} \\right)} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {\\left( {\\forall x\\left( {P\\left( x \\right)} \\right)} \\right)} \\right) \\Leftrightarrow \\left( {\\forall x\\left( {Q\\left( x \\right)} \\right)} \\right) \\Rightarrow \\left( {\\forall x\\left( {P\\left( x \\right) \\Leftrightarrow Q\\left( x \\right)} \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$P, Q$$ and $$R$$ be three atomic prepositional assertions. Let $$X$$ denotes $$\\left( {P \\vee Q} \\right) \\to R$$ and $$Y$$ denote $$\\left( {P \\to R} \\right) \\vee \\left( {Q \\to R} \\right)$$. \n<p>Which one of the following is a tautology?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$X \\equiv Y$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$X \\to Y$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$Y \\to X$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\neg Y \\to X$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "What is the first order predicate calculus statement equivalent to the following? \n<br>Every teacher is liked by some student",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\forall \\left( x \\right)\\left[ {teacher\\left( x \\right) \\to \\exists \\left( y \\right)\\left[ {student\\left( y \\right) \\to likes\\left( {y,\\,x} \\right)} \\right]} \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\forall \\left( x \\right)\\left[ {teacher\\left( x \\right) \\to \\exists \\left( y \\right)\\left[ {student\\left( y \\right) \\wedge likes\\left( {y,\\,x} \\right)} \\right]} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\exists \\left( y \\right)\\forall \\left( x \\right)\\left[ {teacher\\left( x \\right) \\to \\left[ {student\\left( y \\right) \\wedge likes\\left( {y,x} \\right)} \\right]} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\forall \\left( x \\right)\\left[ {teacher\\left( x \\right) \\wedge \\exists \\left( y \\right)\\left[ {student\\left( y \\right) \\to likes\\left( {y,\\,x} \\right)} \\right]} \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The following propositional statement is $$$\\left( {P \\to \\left( {Q \\vee R} \\right)} \\right) \\to \\left( {\\left( {P \\wedge Q} \\right) \\to R} \\right)$$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Satisfiable but not valid "
+      },
+      {
+        "identifier": "B",
+        "content": "Valid "
+      },
+      {
+        "identifier": "C",
+        "content": "A contradiction "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$p, q, r$$ and $$s$$ be four primitive statements. Consider the following arguments:\n<p>$$P:\\left[ {\\left( {\\neg p \\vee q} \\right) \\wedge \\left( {r \\to s} \\right) \\wedge \\left( {p \\vee r} \\right)} \\right] \\to \\left( {\\neg s \\to q} \\right)$$  \n<br>$$Q:\\left[ {\\left( {\\neg p \\wedge q} \\right) \\wedge \\left[ {q \\to \\left( {p \\to r} \\right)} \\right]} \\right] \\to \\neg r$$\n<br>$$R:\\left[ {\\left[ {\\left( {q \\wedge r} \\right) \\to p} \\right] \\wedge \\left( {\\neg q \\vee p} \\right)} \\right] \\to r$$ \n<br>$$S:\\left[ {p \\wedge \\left( {p \\to r} \\right) \\wedge \\left( {q \\vee \\neg r} \\right)} \\right] \\to q$$ </p>\n<p>Which of the above arguments are valid?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P$$ and $$Q$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P$$ and $$R$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$$P$$ and $$S$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$$P, Q, R$$ and $$S$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The following resolution rule is used in logic programming. Derive clause $$\\left( {P \\vee Q} \\right)$$ from clauses $$\\left( {P \\vee R} \\right)$$, $$\\left( {Q \\vee \\neg R} \\right)$$.\n<p>Which of the following statements related to this rule is FALSE? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\left( {P \\vee R} \\right) \\wedge \\left( {Q \\vee \\neg R} \\right)} \\right) \\Rightarrow \\left( {P \\vee Q} \\right)$$ is logically valid"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {P \\vee Q} \\right) \\Rightarrow \\left( {\\left( {P \\vee R} \\right) \\wedge \\left( {Q \\vee \\neg R} \\right)} \\right)$$ is logically valid "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {P \\vee Q} \\right)$$ is satisfiable if and only if $${\\left( {P \\vee R} \\right) \\wedge \\left( {Q \\vee \\neg R} \\right)}$$ is satisfiable "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {P \\vee Q} \\right) \\Rightarrow $$ FALSE if and only if both $$P$$ and $$Q$$ are unsatisfiable"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$a, b, c, d$$ be propositions. Assume that the equivalences $$a \\leftrightarrow \\left( {b \\vee \\neg b} \\right)$$ and $$b \\leftrightarrow c$$ hold. Then the truth value of the formulae $$\\left( {a\\, \\wedge \\,b} \\right) \\to \\left( {\\left( {a \\wedge c} \\right) \\vee d} \\right)$$ is always",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "True "
+      },
+      {
+        "identifier": "B",
+        "content": "False "
+      },
+      {
+        "identifier": "C",
+        "content": "Same as truth value of $$b$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Same as truth value of $$d$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is false? Read $$ \\wedge $$ as AND, $$ \\vee $$ as OR, $$ \\sim $$ as NOT, $$ \\to $$ as one way implication and $$ \\leftrightarrow $$ two way implication. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\left( {x \\to y} \\right) \\wedge x} \\right) \\to y$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {\\left( { \\sim x \\to y} \\right) \\wedge \\left( { \\sim x \\to  \\sim y} \\right)} \\right) \\to x$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {x \\to \\left( {x \\vee y} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {\\left( {x \\vee y} \\right) \\leftrightarrow \\left( { \\sim x \\to  \\sim y} \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "If the proposition $$\\neg p \\Rightarrow q$$ is true, then the truth value of the proposition $$\\neg p \\vee \\left( {p \\Rightarrow q} \\right)$$ where $$'\\neg '$$ is negation, $$' \\vee '$$ is inclusive or and $$' \\Rightarrow '$$ is implication, is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "true "
+      },
+      {
+        "identifier": "B",
+        "content": "multiple-valued "
+      },
+      {
+        "identifier": "C",
+        "content": "false "
+      },
+      {
+        "identifier": "D",
+        "content": "cannot be determined "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$p$$ and $$q$$ be propositions. Using only the truth table decide whether \n$$p \\Leftrightarrow q$$ does not imply $$p \\to  \\sim q$$ is true or false.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Indicate which of the following well-formed formula are valid: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\left( {{\\rm P} \\Rightarrow Q} \\right) \\wedge \\left( {Q \\Rightarrow R} \\right)} \\right) \\Rightarrow \\left( {{\\rm P} \\Rightarrow R} \\right).$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {{\\rm P} \\Rightarrow Q} \\right) \\Rightarrow \\left( { \\sim P \\Rightarrow  \\sim Q} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {{\\rm P}\\, \\wedge \\,\\left( { \\sim {\\rm P}\\,\\,V \\sim Q} \\right)} \\right) \\Rightarrow Q\\left( { \\sim {\\rm P} \\Rightarrow  \\sim Q} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {\\left( {{\\rm P} \\Rightarrow R} \\right) \\vee \\left( {Q \\Rightarrow R} \\right)} \\right) \\Rightarrow \\left( {\\left( {\\left( {{\\rm P} \\vee Q} \\right) \\Rightarrow R} \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Determine whether each of the following is a tautology, a contradiction, or neither (\"$$ \\vee $$\" is disjunction, \"$$ \\wedge $$\"   is    conjuction,     \"$$ \\to $$\"   is   implication,    \"$$\\neg $$\"   is    negation,   and   \"$$ \\leftrightarrow $$\"   is    biconditional (if and only if).\n<p>(i)$$\\,\\,\\,\\,\\,\\,A \\leftrightarrow \\left( {A \\vee A} \\right)$$ \n<br>(ii)$$\\,\\,\\,\\,\\,\\,\\left( {A \\vee B} \\right) \\to B$$ \n<br>(iii)$$\\,\\,\\,\\,\\,\\,A \\vee \\left( {\\neg \\left( {A \\vee B} \\right)} \\right)$$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$\\left( {\\left\\{ {p,\\,q} \\right\\},\\, * } \\right)$$ be a semi group where $$p * p = q$$. \n<b>Show that:</b>    (a) $$p * q = q * p,$$, and (b)  $$q * q = q$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "(a) Show that the formula $$\\left[ {\\left( { \\sim p \\vee Q} \\right) \\Rightarrow \\left( {q \\Rightarrow p} \\right)} \\right]$$ is not a tautology.\n<p>(b) Let $$A$$ be a tautology and $$B$$ be any other formula. Prove that $$\\left( {A \\vee B} \\right)$$ is a tautology.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Show that proposition $$C$$ is a logical consequence of the formula \n$$A \\wedge \\left( {A \\to \\left( {B \\vee C} \\right) \\wedge \\left( {B \\to  \\sim A} \\right)} \\right)$$ using truth tables.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  },
+  {
+    "content": "Uses Modus ponens $$\\left( {A,\\,\\,A \\to B\\,|\\,\\, = B} \\right)$$ or resolution to show that the following set is inconsistent:\n<p>(1) $$Q\\left( x \\right) \\to P\\left( x \\right)V \\sim R\\left( a \\right)$$\n<br>(2)  $$R\\left( a \\right) \\vee  \\sim Q\\left( a \\right)$$\n<br>(3) $$Q\\left( a \\right)$$ \n<br>(4)  $$ \\sim P\\left( y \\right)$$\n<br>where $$x$$ and $$y$$ are universally quantifies variables, $$a$$ is a constant and $$P,  Q,  R$$ are monadic predicates. </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  }
+]

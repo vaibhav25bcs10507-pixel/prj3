@@ -1,0 +1,214 @@
+[
+  {
+    "direction": null,
+    "content": "<p>$$A = \\left[ {\\matrix{\n   1 & 2  \\cr \n   0 & 1  \\cr \n\n } } \\right]$$ then by the principle of mathematical induction, prove that $${A^n} = \\left[ {\\matrix{\n   1 & {2n}  \\cr \n   0 & 1  \\cr \n\n } } \\right]$$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": ".",
+    "explanation": "<p>Let given statement is denoted by P(n)</p>\n<p>So, $$P(n):{A^n} = \\left[ {\\matrix{\n   1 & {2n}  \\cr \n   0 & 1  \\cr \n\n } } \\right]$$ ..... (i)</p>\n<p>Putting n = 1</p>\n<p>$$P(1):{A^1} = \\left[ {\\matrix{\n   1 & {2.1}  \\cr \n   0 & 1  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   1 & 2  \\cr \n   0 & 1  \\cr \n\n } } \\right] = A$$ (given)</p>\n<p>$$\\therefore$$ P(n) is true for n = 1</p>\n<p>Let P(n) is true for n = k</p>\n<p>i.e. $$P(k):{A^k} = \\left[ {\\matrix{\n   1 & k  \\cr \n   0 & 1  \\cr \n\n } } \\right]$$ ..... (ii)</p>\n<p>Now, we prove for n = k + 1 i.e.</p>\n<p>$$P(k + 1):{A^{k + 1}} = \\left[ {\\matrix{\n   1 & {2(k + 1)}  \\cr \n   0 & 1  \\cr \n\n } } \\right]$$ ..... (iii)</p>\n<p>$$\\therefore$$ $${A^{k + 1}} = {A^k} \\times {A^1} = \\left[ {\\matrix{\n   1 & {2k}  \\cr \n   0 & 1  \\cr \n\n } } \\right] \\times \\left[ {\\matrix{\n   1 & 2  \\cr \n   0 & 1  \\cr \n\n } } \\right]$$ (from (ii))</p>\n<p>$$ = \\left[ {\\matrix{\n   {1 \\times 1 + 2k \\times 0} & {1 \\times 2 + 2k \\times 1}  \\cr \n   {0 \\times 1 + 1 \\times 0} & {0 \\times 2 + 1 \\times 1}  \\cr \n\n } } \\right]$$</p>\n<p>$$ = \\left[ {\\matrix{\n   1 & {2 + 2k}  \\cr \n   0 & 1  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   1 & {2(k + 1)}  \\cr \n   0 & 1  \\cr \n\n } } \\right]$$</p>\n<p>$$\\therefore$$ $${A^{k + 1}} = \\left[ {\\matrix{\n   1 & {2(k + 1)}  \\cr \n   0 & 1  \\cr \n\n } } \\right]$$</p>\n<p>$$\\therefore$$ P(n) is true for n = k + 1 $$\\therefore$$ P(n) is true for all n $$\\in$$ N</p>",
+    "topic": "mathematical-induction",
+    "year": 2008,
+    "yearKey": "wb-jee-2008",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Prove by induction that for all n $$\\in$$ N, n<sup>2</sup> + n is an even integer (n $$\\ge$$ 1).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": ".",
+    "explanation": "<p>Let P(n) : n<sup>2</sup> + n is an even integer be the mathematical statement</p>\n<p>For n = 1, 1<sup>2</sup> + 1 = 2 is an even integer</p>\n<p>$$\\therefore$$ P(1) is true</p>\n<p>Let P(r) be true i.e. r<sup>2</sup> + r is an even integer.</p>\n<p>Let r<sup>2</sup> + r = 2k, where k $$\\in$$ N</p>\n<p>Now, $${(r + 1)^2} + (r + 1) = ({r^2} + r) + (2r + 2)$$</p>\n<p>$$ = 2k + 2r + 2 = 2(k + r + 1)$$ is also an even integer</p>\n<p>$$\\therefore$$ P(r + 1) is also true, if P(r) was taken as true. Also, P(1) was true.</p>\n<p>Hence, from principle of mathematical induction we can say that n<sup>2</sup> + n is an even integer (n $$\\ge$$ 1, n $$\\in$$ N)</p>",
+    "topic": "mathematical-induction",
+    "year": 2010,
+    "yearKey": "wb-jee-2010",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Product of any r consecutive natural numbers is always divisible by</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "r!"
+      },
+      {
+        "identifier": "B",
+        "content": "(r + 4)!"
+      },
+      {
+        "identifier": "C",
+        "content": "(r + 1)!"
+      },
+      {
+        "identifier": "D",
+        "content": "(r + 2)!"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Product of r consecutive natural numbers</p>\n<p>= 1 . 2 . 3 . 4 . ...... . r = r! which is divisible by r! .</p>",
+    "topic": "mathematical-induction",
+    "year": 2009,
+    "yearKey": "wb-jee-2009",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>For each n $$\\in$$ N, 2<sup>3n</sup> $$-$$ 1 is divisible by</p>\n<p>here N is a set of natural numbers.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7"
+      },
+      {
+        "identifier": "B",
+        "content": "8"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "16"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let P(n) = 2<sup>3n</sup> $$-$$ 1</p>\n<p>Putting n = 1</p>\n<p>P(1) = 2<sup>3 . 1</sup> $$-$$ 1 = 7 which is divisible by 7</p>\n<p>Putting n = 2</p>\n<p>P(2) = 2<sup>3 . 2</sup> $$-$$ 1 = 2<sup>6</sup> $$-$$ 1 = 63 which is divisible by 7 and so on</p>\n<p>Let P(k) = 2<sup>3k</sup> $$-$$ 1 is also divisible by 7</p>\n<p>$$\\therefore$$ 2<sup>3k</sup> $$-$$ 1 = 7P $$\\Rightarrow$$ 2<sup>3k</sup> = 7P + 1</p>\n<p>P(k + 1) = 2<sup>3(k + 1)</sup> $$-$$ 1 = 2<sup>3k</sup> . 2<sup>3</sup> $$-$$ 1</p>\n<p>= (7P + 1)8 $$-$$ 1 = 7 . 8P + 8 $$-$$ 1 = 7(8P + 1)</p>\n<p>$$\\therefore$$ By process of M.I. P(k) is divisible by 7.</p>\n<p>So, 2<sup>3n</sup> $$-$$ 1 is divisible by 7.</p>",
+    "topic": "mathematical-induction",
+    "year": 2009,
+    "yearKey": "wb-jee-2009",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The number (101)<sup>100</sup> $$-$$ 1 is divisible by</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10<sup>4</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "10<sup>6</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "10<sup>8</sup>"
+      },
+      {
+        "identifier": "D",
+        "content": "10<sup>12</sup>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>(1 + 100)<sup>100</sup> $$-$$ 1 = (1 + <sup>100</sup>C<sub>1</sub> . 100 + <sup>100</sup>C<sub>2</sub> . 100<sup>2</sup> + .......) $$-$$ 1</p>\n<p>= 100 . 100 + <sup>100</sup>C<sub>2</sub> . 100<sup>2</sup> + ......</p>\n<p>= 10<sup>4</sup>(1 + <sup>100</sup>C<sub>2</sub> + .......), which is divisible by 10<sup>4</sup>.</p>",
+    "topic": "mathematical-induction",
+    "year": 2011,
+    "yearKey": "wb-jee-2011",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The expression $2^{4 n}-15 n-1$, where $n \\in \\mathbb{N}$ (the set of natural numbers) is divisible by</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "125"
+      },
+      {
+        "identifier": "B",
+        "content": "225"
+      },
+      {
+        "identifier": "C",
+        "content": "325"
+      },
+      {
+        "identifier": "D",
+        "content": "425"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We need to determine which number $2^{4 n}-15 n-1$ is divisible by for $n \\in N$.</p>\n<p>Let $f(n)=2^{4 n}-15 n-1=16^n-15 n-1$.</p>\n<p>Using the binomial expansion of $(1+15)^n$.</p>\n<p>$$ \\begin{aligned} & 16^n=(1+15)^n=\\binom{n}{0}+\\binom{n}{1} 15+\\binom{n}{2} 15^2 \\\\ & +\\binom{n}{3} 15^3+\\ldots \\\\ & \\Rightarrow 16^n=1+15 n+\\frac{n(n-1)}{2} 225+\\frac{n(n-1)(n-2)}{6} \\\\ & 3375+\\ldots \\end{aligned} $$</p>\n<p>Substituting this into $f(n)$ :</p>\n<p>$$ \\begin{aligned} & f(n)=\\left(1+15 n+\\frac{n(n-1)}{2} 225+\\ldots .\\right)-15 n-1 \\\\ \\Rightarrow & f(n)=\\frac{n(n-1)}{2} 225+\\frac{n(n-1)(n-2)}{6} 3375+\\ldots \\\\ \\Rightarrow & f(n)=15^2\\left(\\frac{n(n-1)}{2}+\\frac{n(n-1)(n-2)}{6} \\times 15+\\ldots .\\right) \\end{aligned} $$</p>\n<p>Since, all terms from $\\binom{n}{2} 15^2$ onwards are multiples of $15^2=225, f(n)$ is divisible by 225.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "wb-jee-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $$P(n) = {3^{2n + 1}} + {2^{n + 2}}$$ where $$n \\in N$$. Then</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P(n) is not divisible by any prime integer."
+      },
+      {
+        "identifier": "B",
+        "content": "there exists prime integer which divides P(n)."
+      },
+      {
+        "identifier": "C",
+        "content": "P(n) is divisible by 5 for all $$n \\in N$$."
+      },
+      {
+        "identifier": "D",
+        "content": "P(n) is divisible by 3 for all $$n \\in N$$."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $${P}(n)=3^{2 n+1}+2^{n+2}, n \\in N$$</p>\n<p>At $$n=1, P(1)=3^3+2^3=35$$</p>\n<p>Which is divisible by $$(3+2)=5$$</p>\n<p>i.e. a prime number.</p>",
+    "topic": "mathematical-induction",
+    "year": 2023,
+    "yearKey": "wb-jee-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "7<sup>2n</sup> + 16n $$-$$1 (n$$ \\in $$ N) is divisible by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "65"
+      },
+      {
+        "identifier": "B",
+        "content": "63"
+      },
+      {
+        "identifier": "C",
+        "content": "61"
+      },
+      {
+        "identifier": "D",
+        "content": "64"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "We have,<br><br>7<sup>2n</sup> + 16n $$-$$ 1<br><br>Put n = 1, we get<br><br>7<sup>2</sup> + 16 $$-$$ 1<br><br>= 49 + 15<br><br>= 64<br><br>which is divisible by 64.",
+    "topic": "mathematical-induction",
+    "year": 2019,
+    "yearKey": "wb-jee-2019",
+    "difficulty": null
+  }
+]

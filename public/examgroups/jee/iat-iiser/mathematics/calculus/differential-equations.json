@@ -1,0 +1,162 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following is the solution of the differential equation</p>\n<p>$$ x^2 \\frac{d y}{d x}+9 x y=x^4(\\text { for } x>0) $$</p>\n<p>given that $y=0$ when $x=1$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\quad 12 y=x^3-\\frac{1}{x^9}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\quad 12 y=x^9-\\frac{1}{x^3}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$9 y=x^{21}-\\frac{1}{x^3}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\quad 9 y=x^3-\\frac{1}{x^{21}}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2025,
+    "yearKey": "iat-iiser-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Consider the differential equation $\\cos (y) \\frac{d y}{d x}+\\frac{1}{x} \\sin (y)=x, \\quad(x>0)$; given that, $y=\\frac{\\pi}{2}$ at $x=\\sqrt{3}$. Which one of the following is the value of $y$ at $x=\\sqrt{\\frac{3}{2}}$ ?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{\\pi}{6}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{\\pi}{3}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{\\pi}{2}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{\\pi}{4}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given the differential equation:</p>\n<p>$ \\cos (y) \\frac{d y}{d x} + \\frac{1}{x} \\sin (y) = x $</p>\n<p>we'll use the substitution $\\sin(y) = t$, which gives us:</p>\n<p>$ \\frac{d t}{d x} = \\cos (y) \\cdot \\frac{d y}{d x} $</p>\n<p>Substituting in the original equation, we obtain:</p>\n<p>$ \\frac{d t}{d x} + \\frac{t}{x} = x $</p>\n<p>This is a linear first-order differential equation, which can be solved using an integrating factor. The integrating factor is $e^{\\int \\frac{1}{x} \\, dx} = e^{\\log(x)} = x$. Multiplying through by the integrating factor gives:</p>\n<p>$ x \\frac{d t}{d x} + t = x^2 $</p>\n<p>Integrating with respect to $x$ yields:</p>\n<p>$ t x = \\int x^2 \\, dx = \\frac{x^3}{3} + c $</p>\n<p>Substitute back for $t$:</p>\n<p>$ \\sin(y) x = \\frac{x^3}{3} + c $</p>\n<p>Given the initial condition $y = \\frac{\\pi}{2}$ at $x = \\sqrt{3}$, we find:</p>\n<p>$ \\sin\\left(\\frac{\\pi}{2}\\right) \\cdot \\sqrt{3} = \\frac{(\\sqrt{3})^3}{3} + c $</p>\n<p>This simplifies to:</p>\n<p>$ \\sqrt{3} = \\frac{3\\sqrt{3}}{3} + c \\quad \\Rightarrow \\quad \\sqrt{3} = \\sqrt{3} + c \\quad \\Rightarrow \\quad c = 0 $</p>\n<p>Thus, the final form of the equation is:</p>\n<p>$ x \\sin (y) = \\frac{x^3}{3} $</p>\n<p>or </p>\n<p>$ y = \\sin^{-1}\\left(\\frac{x^2}{3}\\right) $</p>\n<p>For $x = \\sqrt{\\frac{3}{2}}$, we find:</p>\n<p>$ y = \\sin^{-1}\\left(\\frac{\\frac{3}{2}}{3}\\right) = \\sin^{-1}\\left(\\frac{1}{2}\\right) $</p>\n<p>Thus, the value of $y$ at $x = \\sqrt{\\frac{3}{2}}$ is:</p>\n<p>$ y = \\frac{\\pi}{6} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "iat-iiser-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Which of the following differential equations has $y=e^x$ as one of its particular solutions?\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$y \\frac{d^2 y}{d x^2}+e^x \\frac{d y}{d x}+y^2=e^{2 x}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $y \\frac{d^2 y}{d x^2}-e^x \\frac{d y}{d x}+y^2=e^{2 x}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $y \\frac{d^2 y}{d x^2}-e^x \\frac{d y}{d x}+y^2=e^x$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $y \\frac{d^2 y}{d x^2}+e^x \\frac{d y}{d x}+y^2=e^x$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which differential equation has $ y = e^x $ as a particular solution, we need to verify the expression by substituting $ y = e^x $ and its derivatives into each of the options.</p>\n<p>First, compute the first and second derivatives of $ y = e^x $:</p>\n<p>$ \\frac{d y}{d x} = e^x, \\quad \\frac{d^2 y}{d x^2} = e^x $</p>\n<p>Substitute these derivatives into each differential equation to check if $ y = e^x $ satisfies the expression.</p>\n<h3>Option A</h3>\n<p>For the equation:</p>\n<p>$ y \\frac{d^2 y}{d x^2} + e^x \\frac{d y}{d x} + y^2 = e^{2x} $</p>\n<p>Substitute the values:</p>\n<p>$ e^x \\cdot e^x + e^x \\cdot e^x + (e^x)^2 = e^{2x} $</p>\n<p>$ e^{2x} + e^{2x} + e^{2x} = 3e^{2x} \\neq e^{2x} $</p>\n<h3>Option B</h3>\n<p>For the equation:</p>\n<p>$ y \\frac{d^2 y}{d x^2} - e^x \\frac{d y}{d x} + y^2 = e^{2x} $</p>\n<p>Substitute the values:</p>\n<p>$ e^x \\cdot e^x - e^x \\cdot e^x + (e^x)^2 = e^{2x} $</p>\n<p>$ e^{2x} - e^{2x} + e^{2x} = e^{2x} $</p>\n<p>This matches the right side of the equation, so $ y = e^x $ is indeed a particular solution for this equation.</p>\n<h3>Option C</h3>\n<p>For the equation:</p>\n<p>$ y \\frac{d^2 y}{d x^2} - e^x \\frac{d y}{d x} + y^2 = e^x $</p>\n<p>Substitute the values:</p>\n<p>$ e^x \\cdot e^x - e^x \\cdot e^x + (e^x)^2 = e^x $</p>\n<p>$ e^{2x} - e^{2x} + e^{2x} = e^{2x} \\neq e^x $</p>\n<h3>Option D</h3>\n<p>For the equation:</p>\n<p>$ y \\frac{d^2 y}{d x^2} + e^x \\frac{d y}{d x} + y^2 = e^x $</p>\n<p>Substitute the values:</p>\n<p>$ e^x \\cdot e^x + e^x \\cdot e^x + (e^x)^2 = e^x $</p>\n<p>$ e^{2x} + e^{2x} + e^{2x} = 3e^{2x} \\neq e^x $</p>\n<p>In conclusion, Option B is the differential equation for which $ y = e^x $ is a particular solution.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "iat-iiser-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "For arbitrary constants $\\alpha, \\beta$, the differential equation representing the family of curves $y=$ $(\\alpha x+\\beta) e^x$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$y^{\\prime \\prime}-2 y^{\\prime}+y=0$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$y^{\\prime \\prime}-y^{\\prime}+y=0$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$y^{\\prime \\prime}-2 y^{\\prime}-y=0$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$y^{\\prime \\prime}-y^{\\prime}-y=0$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We can verify by differentiating and then eliminating the two constants α, β:</p>\n\n<p><p>Start with  </p>\n<p>$$y=(\\alpha x+\\beta)e^x.$$</p></p>\n<p><p>Compute its derivatives:  </p>\n<p>$$y'=\\bigl(\\alpha x+(\\alpha+\\beta)\\bigr)e^x,$$  </p>\n<p>$$y''=\\bigl(\\alpha x+(2\\alpha+\\beta)\\bigr)e^x.$$</p></p>\n<p><p>Form the combination  </p>\n<p>$$y''-2y'+y      =\\bigl[\\alpha x+(2\\alpha+\\beta)\\bigr]e^x       -2\\bigl[\\alpha x+(\\alpha+\\beta)\\bigr]e^x       +(\\alpha x+\\beta)e^x      =0.$$</p></p>\n\n<p>Hence the required differential equation is  </p>\n<p>$$\\boxed{y''-2y'+y=0},$$  </p>\n<p>which is Option A.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "iat-iiser-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Consider the differential equation $f^{\\prime \\prime}+p f^{\\prime}+q f=0$ where $p$ and $q$ are constants, $p^2=4 q$ and $q \\neq 0$. If y is a nonzero solution of the equation, then which of the following statements is correct?\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$(1+x) y$ can never be a solution\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $y^2$ can never be a solution\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $y^{\\prime}$ can never be a solution\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $x y$ can never be a solution"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine whether a function is a solution to the differential equation $f'' + p f' + q f = 0$, we need to substitute the function into the differential equation and check if the equation holds true.</p>\n<h3>Steps to Verify:</h3>\n\n<p><p><strong>Substitute the function $f$</strong>: Let's start by substituting the candidate function into the differential equation.</p></p>\n<p><p><strong>Calculate Derivatives</strong>: Compute the first and second derivatives of the function.</p></p>\n<p><p><strong>Substitute Derivatives into the Equation</strong>: Substitute the calculated derivatives back into the differential equation.</p></p>\n<p><p><strong>Simplify</strong>: Simplify the resulting expression and check if it equates to zero.</p></p>\n<p><p><strong>Verify Conditions</strong>: Use given conditions, such as $p^2 = 4q$, to verify if the expression can hold true.</p></p>\n\n<h3>Analysis of Options:</h3>\n<h4>A) $f = (1+x)y$</h4>\n\n<p><p>Compute the derivatives:</p>\n<p>$   f' = y + (1+x)y'    $</p>\n<p>$   f'' = (1+x)y'' + 2y'   $</p></p>\n<p><p>Substitute in the equation:</p>\n<p>$   (1+x)y'' + 2y' + p[y + (1+x)y'] + q(1+x)y = 0   $</p></p>\n<p><p>Simplify and group terms:</p>\n<p>$   (1+x)\\left(y'' + py' + qy\\right) + 2y' + py = 0   $</p></p>\n<p><p>Conclusion: Since $y$ is a solution to the original equation, $y'' + py' + qy = 0$, making $(1+x)y$ a valid solution.</p></p>\n\n<h4>B) $f = y^2$</h4>\n\n<p><p>Compute the derivatives:</p>\n<p>$   f' = 2yy'   $</p>\n<p>$   f'' = 2(y')^2 + 2yy''   $</p></p>\n<p><p>Substitute in the equation:</p>\n<p>$   2(y')^2 + 2yy'' + p(2yy') + qy^2 = 0   $</p></p>\n<p><p>Simplify and consider possible conditions:</p>\n<p>$   2(y')^2 + 2\\left(y'' + py' + qy\\right)y - qy^2 = 0   $</p></p>\n<p><p>This leads to situations where either $q = 0$ or $y = 0$, both contradicting the given conditions ($q \\neq 0$ and $y$ is non-zero). So, $y^2$ cannot be a solution.</p></p>\n\n<h3>Conclusion:</h3>\n<p>Based on this analysis, $y^2$ can never be a solution to the differential equation given the constraints and defined conditions. You can attempt the remaining options using similar procedures to verify their validity.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "iat-iiser-2020",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,1707 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $f(.)$ be a twice differentiable function from $\n\\mathbb{R}^{2} \\rightarrow \\mathbb{R}$. If $P, \\mathbf{x}_{0}\n\\in \\mathbb{R}^{2}$ where $\\vert \\vert \n P\\vert \\vert$ is sufficiently small\n (here $\\vert \\vert . \\vert \\vert$ is the Euclidean norm or distance function), then $f (\\mathbf{x}_{0} + p) =\n f(\\mathbf{x}_{0}) + \\nabla f(\\mathbf{x}_{0})^{T}p + \\dfrac{1}{2} p^{T}\n \\nabla^{2}f(\\psi)p$ where $\\psi \\in \n\\mathbb{R}^{2}$ is a\n point on the line\n segment joining $\\mathbf{x}_{0}$ and\n $\\mathbf{x}_{0} + p$. If $\\mathbf{x}_{0}$ is a strict local minimum of\n $f (\\mathbf{x})$, then which one of the following statements is\n TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\nabla f(x_{0})^{T}p > 0\\ \\ and\\ \\ p^{T} \\nabla^{2} f(\n\\psi)p = 0$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\nabla f(x_{0})^{T}p = 0\\ and\\ p^{T} \\nabla^{2} f(\n\\psi)p > 0$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\nabla f(x_{0})^{T}p = 0\\ and\\ p^{T} \\nabla^{2} f(\n\\psi)p = 0$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\nabla f(x_{0})^{T}p = 0\\ and\\ p^{T} \\nabla^{2} f(\n\\psi)p < 0$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The given problem revolves around understanding the properties of a function $f(\\mathbf{x})$ that is twice differentiable, particularly around a point $\\mathbf{x}_{0}$ which is a strict local minimum. We are provided with a specific second-order Taylor series approximation for $f(\\mathbf{x})$ around $\\mathbf{x}_{0}$:\n\n<p>$$ f(\\mathbf{x}_{0} + p) = f(\\mathbf{x}_{0}) + \\nabla f(\\mathbf{x}_{0})^{T}p + \\dfrac{1}{2} p^{T} \\nabla^{2}f(\\psi)p $$</p>\n\n<p>Where $\\psi$ lies on the line segment joining $\\mathbf{x}_{0}$ and $\\mathbf{x}_{0} + p$.</p>\n\n<p>Given that $\\mathbf{x}_{0}$ is a strict local minimum of $f$, we have the following properties:</p>\n\n<p>1. At a local minimum, the first derivative (gradient) must be zero:\n\n<p>$$ \\nabla f(\\mathbf{x}_{0}) = 0 $$</p></p>\n\n<p>2. Additionally, the second derivative (Hessian) at the local minimum must be positive semi-definite to ensure it's a minimum and not a maximum or saddle point, meaning for any vector $p$, the quadratic form given by $p^{T} \\nabla^{2} f(\\mathbf{x}_{0}) p$ must be non-negative. To be a strict local minimum, this should actually be positive for all non-zero $p$:</p>\n\n<p>$$ p^{T} \\nabla^{2} f(\\mathbf{x}_{0}) p > 0 $$</p>\n\n<p>So, substituting $\\nabla f(\\mathbf{x}_{0}) = 0$ into the Taylor series expansion simplifies to:</p>\n\n<p>$$ f(\\mathbf{x}_{0} + p) = f(\\mathbf{x}_{0}) + \\dfrac{1}{2} p^{T} \\nabla^{2}f(\\psi)p $$</p>\n\n<p>Given that $\\nabla^{2} f (\\mathbf{x})$ is positive definite in a neighborhood around $\\mathbf{x}_{0}$ for $f(\\mathbf{x}_{0})$ to be a strict local minimum, it implies that:</p>\n\n<p>$$ p^{T} \\nabla^{2} f (\\psi) p > 0 $$</p>\n\n<p>for all $p \\neq 0$.</p>\n\n<p>From these properties, we can analyze the options:</p>\n\n<p>Option A: $\\nabla f(\\mathbf{x}_{0})^{T}p > 0$ and $p^{T} \\nabla^{2} f(\\psi)p = 0$</p>\n\n<p>This is incorrect because $\\nabla f(\\mathbf{x}_{0}) = 0$ at a local minimum.</p>\n\n<p>Option B: $\\nabla f(\\mathbf{x}_{0})^{T}p = 0$ and $p^{T} \\nabla^{2} f(\\psi)p > 0$</p>\n\n<p>This is correct because $\\nabla f(\\mathbf{x}_{0}) = 0$ and for $\\mathbf{x}_{0}$ to be a strict local minimum, the Hessian must be positive definite, making $p^{T} \\nabla^{2} f (\\psi) p > 0$ for all non-zero $p$.</p>\n\n<p>Option C: $\\nabla f(\\mathbf{x}_{0})^{T}p = 0$ and $p^{T} \\nabla^{2} f(\\psi)p = 0$</p>\n\n<p>This is incorrect because it contradicts the necessary condition that the Hessian must be positive definite for a strict local minimum.</p>\n\n<p>Option D: $\\nabla f(\\mathbf{x}_{0})^{T}p = 0$ and $p^{T} \\nabla^{2} f(\\psi)p < 0$</p>\n\n<p>This is incorrect because the Hessian must be positive definite, not negative, at a strict local minimum.</p>\n\n<p>Thus, the correct answer is:</p>\n\n<p>Option B: $\\nabla f(x_{0})^{T}p = 0\\ and\\ p^{T} \\nabla^{2} f(\\psi)p > 0$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-me-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>The figure shows the plot of a function over the interval [-4, 4]. Which one of the options given CORRECTLY identifies the function?</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lz5i8dv6/ad641b2d-3d1b-43a1-a2fb-f4b5d8dbb0f5/68f9c120-4cd8-11ef-b0f4-1d4702540ce9/file-jaoe38c1lz5i8dv7.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lz5i8dv6/ad641b2d-3d1b-43a1-a2fb-f4b5d8dbb0f5/68f9c120-4cd8-11ef-b0f4-1d4702540ce9/file-jaoe38c1lz5i8dv7.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ME 2023 Engineering Mathematics - Calculus Question 2 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "|2 − 𝑥|"
+      },
+      {
+        "identifier": "B",
+        "content": "|2 − |𝑥||"
+      },
+      {
+        "identifier": "C",
+        "content": "|2 + |𝑥||"
+      },
+      {
+        "identifier": "D",
+        "content": "2 − |𝑥|"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>At $x=-4$</p>\n\n<p>$$ y=|2-|-4||=2 $$</p>\n\n<p>At $x=-2$</p>\n\n<p>$$ y=|2-|-2||=0 $$</p>\n\n<p>At $x=0$</p>\n\n<p>$$ y=|2-| 01||=2 $$</p>\n\n<p>At $x=2$</p>\n\n<p>$$ y=|2-| 2||=0 $$</p>\n\n<p>At $x=4$</p>\n\n<p>$$ y=|2-| 4||=2 $$</p>\n\n<p>Hence, the correct option is (B).</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-me-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Given&nbsp;<span class=\"math-tex\">$\\int^{\\infty}_{-\\infty}e^{-x^2}dx=\\sqrt{\\pi}$</span></p>\n\n<p>If a and b are positive integers, the value of&nbsp;<span class=\"math-tex\">$\\int^{\\infty}_{-\\infty}e^{-a(x+b)^2}dx$</span>&nbsp;is _________.</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<span class=\"math-tex\">$\\sqrt{\\pi a}$</span>"
+      },
+      {
+        "identifier": "B",
+        "content": "<span class=\"math-tex\">$\\sqrt{\\frac{\\pi}{a}} $</span>"
+      },
+      {
+        "identifier": "C",
+        "content": "<span class=\"math-tex\">$b\\sqrt{\\pi a}$</span>"
+      },
+      {
+        "identifier": "D",
+        "content": "<span class=\"math-tex\">$b\\sqrt{\\frac{\\pi}{a}}$</span>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>Given : </p>\n<p>$$\\int_{-\\infty}^{\\infty} e^{-x^2} dx=\\sqrt{\\pi} \\quad \\text{.... (i)}$$</p>\n<p>We need to find the value of </p>\n<p>$$\\int_{-\\infty}^{\\infty} e^{-a(x+b)^2} dx$$ </p>\n<p>where $a$ and $b$ are positive integers.</p>\n<p>Let:</p>\n<p>$$I=\\int_{-\\infty}^{\\infty} e^{-a(x+b)^2} dx$$</p>\n<p>Substitute $x + b = t$:</p>\n<p>$$dx = dt$$</p>\n<p>When $x = -\\infty \\Rightarrow t = -\\infty$ and $x = \\infty \\Rightarrow t = \\infty$:</p>\n<p>Thus:</p>\n<p>$$I=\\int_{-\\infty}^{\\infty} e^{-a t^2} dt$$</p>\n<p>Next, we make the substitution $a t^2 = p^2$:</p>\n<p>$$2a t dt = 2p dp \\quad \\Rightarrow \\quad dt = \\frac{dp}{a t}$$</p>\n<p>Since $t = \\frac{p}{\\sqrt{a}}$, therefore:</p>\n<p>$$dt = \\frac{1}{\\sqrt{a}} dp$$</p>\n<p>For $t=-\\infty \\Rightarrow p=-\\infty$ and $t=\\infty \\Rightarrow p=\\infty$:</p>\n<p>Thus:</p>\n<p>$$I=\\int_{-\\infty}^{\\infty} e^{-p^2} \\frac{1}{\\sqrt{a}} dp$$</p>\n<p>$$I=\\frac{1}{\\sqrt{a}} \\int_{-\\infty}^{\\infty} e^{-p^2} dp$$</p>\n<p>From equation (i):</p>\n<p>$$I=\\frac{1}{\\sqrt{a}} \\times \\sqrt{\\pi}$$</p>\n<p>$$I=\\sqrt{\\frac{\\pi}{a}}$$</p>\n<p>Hence, the correct value is $\\sqrt{\\frac{\\pi}{a}}$.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "A polynomial&nbsp;ψ(s) = a<sub>n</sub>s<sup>n</sup>&nbsp;+ a<sub>n-1</sub>s<sup>n-1</sup>&nbsp;+ ......+ a<sub>1</sub>s + a<sub>0</sub>&nbsp;of degree n &gt; 3&nbsp;with constant real coefficients a<sub>n</sub>, a<sub>n-1</sub>, ... a<sub>0</sub>&nbsp;has triple roots at s = -σ. Which one of the following conditions must be satisfied?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "ψ(s) = 0&nbsp;at all the three values of s satisfying s<sup>3</sup>&nbsp;+&nbsp;σ<sup>3</sup>&nbsp;= 0"
+      },
+      {
+        "identifier": "B",
+        "content": "ψ(s) = 0,&nbsp;<span class=\"math-tex\">$\\frac{d\\psi(s)}{ds}=0$</span>&nbsp;and&nbsp;<span class=\"math-tex\">$\\frac{d^2\\psi(s)}{ds^2}=0$</span>&nbsp;at s = -σ"
+      },
+      {
+        "identifier": "C",
+        "content": "<span style=\"\">ψ(s) = 0,&nbsp;</span><span class=\"math-tex\">$\\frac{d^2\\psi(s)}{ds^2}=0$</span><span style=\"\">&nbsp;and&nbsp;</span><span class=\"math-tex\">$\\frac{d^4\\psi(s)}{ds^4}=0$</span><span style=\"\">&nbsp;at s = -σ</span>"
+      },
+      {
+        "identifier": "D",
+        "content": "<span style=\"\">ψ(s) = 0,&nbsp;</span><span class=\"math-tex\">$\\frac{d^3\\psi(s)}{ds^3}=0$</span><span style=\"\">&nbsp;</span><span style=\"\">&nbsp;at s = -σ</span>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>The given polynomial is :</p>\n<p>$ \\psi(s) = a_n s^n + a_{n-1} s^{n-1} + \\ldots + a_1 s + a_0 $</p>\n<p>For a stationary point, we need :</p>\n<p>$ \\frac{d \\psi(s)}{ds} = 0 $</p>\n<p>Since $ \\psi(s) $ has triple roots at $ s = -\\sigma $, $ (s + \\sigma)^3 $ is one of its factors, meaning $ \\psi(-\\sigma) = 0 $.</p>\n<p>An inflection point on the curve of $ \\psi(s) $ indicates that both the first order derivative $\\frac{d \\psi(s)}{ds}$ and the second order derivative $\\frac{d^2 \\psi(s)}{ds^2}$ at $ s = -\\sigma $ will be zero.</p>\n<p>Therefore, we must have :</p>\n<p>$ \\psi(s) = 0 $</p>\n<p>$ \\frac{d \\psi(s)}{ds} = 0 $</p>\n<p>$ \\frac{d^2 \\psi(s)}{ds^2} = 0 $</p>\n<p>at $ s = -\\sigma $.</p>\n<p>Hence, the correct condition that must be satisfied is :</p>\n<p>$ \\psi(s) = 0, \\frac{d \\psi(s)}{ds} = 0, \\text{ and } \\frac{d^2 \\psi(s)}{ds^2} = 0 \\text{ at } s = -\\sigma $</p>\n<p>This confirms the correct option is (B).</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>The limit</p>\n\n<p><span class=\"math-tex\">$\\rm p = \\displaystyle\\lim_{x \\rightarrow \\pi} \\left( \\frac{x^2 + α x + 2 \\pi^2}{x - \\pi + 2 \\sin x} \\right)$</span></p>\n\n<p>has a finite value for a real <span style=\"\">α</span>. The value of α&nbsp;and the corresponding limit p&nbsp;are</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<span style=\"\">α = -3π,&nbsp;and p =&nbsp;π</span>"
+      },
+      {
+        "identifier": "B",
+        "content": "<span style=\"\">α = -2π,&nbsp;and p = 2π</span>"
+      },
+      {
+        "identifier": "C",
+        "content": "<span style=\"\">α = π,&nbsp;and p =&nbsp;π</span>"
+      },
+      {
+        "identifier": "D",
+        "content": "<span style=\"\">α = 2π,&nbsp;and p = 3π</span>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "explanation": "<p>To determine the value of <span>$$\\alpha$$</span> and the corresponding limit <span>$$p$$</span>, we need to evaluate the limit:</p>\n\n<p><span>$$p = \\lim\\limits_{x \\rightarrow \\pi} \\left( \\frac{x^2 + \\alpha x + 2 \\pi^2}{x - \\pi + 2 \\sin x} \\right)$$</span></p>\n\n<p>As <span>$$x$$</span> approaches <span>$$\\pi$$</span>, the denominator <span>$$x - \\pi + 2 \\sin x$$</span> approaches <span>$$0$$</span>, since <span>$$\\sin(\\pi) = 0$$</span>. We must ensure that the numerator also approaches zero at <span>$$x = \\pi$$</span> to avoid an undefined expression. So, we equate the numerator to zero at <span>$$x = \\pi$$</span>:</p>\n\n<p><span>$$\\pi^2 + \\alpha \\pi + 2 \\pi^2 = 0$$</span></p>\n\n<p>This simplifies to:</p>\n\n<p><span>$$3\\pi^2 + \\alpha \\pi = 0$$</span></p>\n\n<p>Dividing both sides by <span>$$\\pi$$</span> (assuming <span>$$\\pi \\neq 0$$</span>):</p>\n\n<p><span>$$3\\pi + \\alpha = 0$$</span></p>\n\n<p>Solving for <span>$$\\alpha$$</span>:</p>\n\n<p><span>$$\\alpha = -3\\pi$$</span></p>\n\n<p>So, the correct value of <span>$$\\alpha$$</span> is <span>$$-3\\pi$$</span>. Now, we need to compute the limit with <span>$$\\alpha = -3\\pi$$</span>:</p>\n\n<p><span>$$p = \\lim\\limits_{x \\rightarrow \\pi} \\frac{x^2 - 3\\pi x + 2\\pi^2}{x - \\pi + 2 \\sin x}$$</span></p>\n\n<p>Substitute <span>$$\\alpha = -3\\pi$$</span>:</p>\n\n<p><span>$$p = \\lim\\limits_{x \\rightarrow \\pi} \\frac{x^2 - 3\\pi x + 2\\pi^2}{x - \\pi + 2 \\sin x}$$</span></p>\n\n<p>We factor the numerator:</p>\n\n<p><span>$$= \\lim\\limits_{x \\rightarrow \\pi} \\frac{(x - \\pi)(x - 2\\pi)}{x - \\pi + 2 \\sin x}$$</span></p>\n\n<p>Since <span>$$x$$</span> approaches <span>$$\\pi$$</span>, both numerator and denominator approach <span>$$0$$</span>. We can use L'Hôpital's Rule, which is applied to resolve 0/0 indeterminate forms:</p>\n\n<p>Differentiate the numerator and the denominator:</p>\n\n<p><span>$$p = \\lim\\limits_{x \\rightarrow \\pi} \\frac{(2x - 3\\pi)}{(1 + 2 \\cos x)}$$</span></p>\n\n<p>Substitute <span>$$x = \\pi$$</span>:</p>\n\n<p><span>$$p = \\frac{(2\\pi - 3\\pi)}{(1 + 2 \\cos \\pi)}$$</span></p>\n\n<p>Since <span>$$\\cos \\pi = -1$$</span>:</p>\n\n<p><span>$$p = \\frac{-\\pi}{1 + 2(-1)} = \\frac{-\\pi}{1 - 2} = \\frac{-\\pi}{-1} = \\pi$$</span></p>\n\n<p>So, the correct option is:</p>\n\n<p><strong>Option A</strong><br><br/>\n\n<span>$$\\alpha = -3\\pi$$</span>, and <span>$$p = \\pi$$</span></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Define [x] as the greatest integer less than or equal to x, for each x ϵ (-∞, ∞). If y = [x], then area under y for x ϵ [1,4] is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-me-2020-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The value of $$\\mathop {\\lim }\\limits_{x \\to 0} \\left( {{{{x^3} - \\sin \\left( x \\right)} \\over x}} \\right)$$  is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$-1$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The values of $$x$$ for which the function $$f\\left( x \\right) = {{{x^2} - 3x - 4} \\over {{x^2} + 3x - 4}}$$  is NOT continuous are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4$$ and $$-1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$ and $$1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$-4$$ and $$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$-4$$ and $$-1$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\mathop {Lt}\\limits_{x \\to 0} {{{{\\log }_e}\\left( {1 + 4x} \\right)} \\over {{e^{3x}} - 1}}$$  is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {12}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${4 \\over 3}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The value of $$\\mathop {Lim}\\limits_{x \\to 0} \\,{{1 - \\cos \\left( {{x^2}} \\right)} \\over {2{x^4}}}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{1 \\over 2}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{1 \\over 4}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "undefined "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The value of $$\\mathop {Lim}\\limits_{x \\to 0} \\left( {{{ - \\sin x} \\over {2\\sin x + x\\cos x}}} \\right)\\,\\,\\,$$ is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "-0.33",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "At $$x=0,$$ the function $$f\\left( x \\right) = \\left| x \\right|$$ has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a minimum "
+      },
+      {
+        "identifier": "B",
+        "content": "a maximum "
+      },
+      {
+        "identifier": "C",
+        "content": "a point of inflection "
+      },
+      {
+        "identifier": "D",
+        "content": "neither a maximum nor minimum"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\mathop {Lt}\\limits_{x \\to 0} {{x - \\sin x} \\over {1 - \\cos x}}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "not defined "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the integral $$\\int\\limits_0^2 {{{{{\\left( {x - 1} \\right)}^2}\\sin \\left( {x - 1} \\right)} \\over {{{\\left( {x - 1} \\right)}^2} + \\cos \\left( {x - 1} \\right)}}dx} $$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$-1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-2$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\mathop {Lt}\\limits_{x \\to 0} \\left( {{{{e^{2x}} - 1} \\over {\\sin \\left( {4x} \\right)}}} \\right)\\,\\,$$ is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "If a function is continuous at a point, ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the limit of the function may not exist at the point "
+      },
+      {
+        "identifier": "B",
+        "content": "The function must be derivable at the point "
+      },
+      {
+        "identifier": "C",
+        "content": "the limit of the function at the point tends to infinity "
+      },
+      {
+        "identifier": "D",
+        "content": "the limit must exist the point and the value of limit should be same as the value of the function at the point."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the definite integral $$\\int_1^e {\\sqrt x \\ln \\left( x \\right)dx} $$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${4 \\over 9}\\sqrt {{e^3}}  + {2 \\over 9}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2 \\over 9}\\sqrt {{e^3}}  - {4 \\over 9}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${2 \\over 9}\\sqrt {{e^3}}  + {4 \\over 9}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${4 \\over 9}\\sqrt {{e^3}}  - {2 \\over 9}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-me-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The area enclosed between the straight line $$y=x$$ and the parabola $$y = {x^2}$$ in the $$x-y$$ plane is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/6$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1/3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1/2$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-me-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the function $$f\\left( x \\right) = \\left| x \\right|$$ in the interval $$\\,\\, - 1 \\le x \\le 1.\\,\\,\\,$$ At the point $$x=0, f(x)$$  is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "continuous and differentiable ."
+      },
+      {
+        "identifier": "B",
+        "content": "non-continuous and differentiable."
+      },
+      {
+        "identifier": "C",
+        "content": "continuous and non-differentiable. "
+      },
+      {
+        "identifier": "D",
+        "content": "neither continuous nor differentiable."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-me-2012",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\,\\mathop {Lim}\\limits_{x \\to 0} \\left( {{{1 - \\cos x} \\over {{x^2}}}} \\right)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-me-2012",
+    "difficulty": null
+  },
+  {
+    "content": "At $$x=0,$$ the function $$f\\left( x \\right) = {x^3} + 1$$ has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a maximum value "
+      },
+      {
+        "identifier": "B",
+        "content": "a minimum value "
+      },
+      {
+        "identifier": "C",
+        "content": "a singularity "
+      },
+      {
+        "identifier": "D",
+        "content": "a point of inflection "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-me-2012",
+    "difficulty": null
+  },
+  {
+    "content": "If $$f(x)$$ is even function and a is a positive real number ,  then  $$\\int\\limits_{ - a}^a {f\\left( x \\right)dx\\,\\,} $$ equals ________.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$a$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2a$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2\\int\\limits_0^a {f\\left( x \\right)dx\\,\\,} $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-me-2011",
+    "difficulty": null
+  },
+  {
+    "content": "What is $$\\mathop {Lim}\\limits_{\\theta  \\to 0} {{\\sin \\theta } \\over \\theta }\\,\\,$$ equal to ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\theta $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$sin$$$$\\theta $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-me-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A series expansion for the function $$\\sin \\theta $$ is _______.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1 - {{{\\theta ^2}} \\over {2!}} + {{{\\theta ^4}} \\over {4!}} - ......$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\theta  - {{{\\theta ^3}} \\over {3!}} + {{{\\theta ^5}} \\over {5!}} - ......$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1 + \\theta  + {{{\\theta ^2}} \\over {2!}} + {{{\\theta ^3}} \\over {3!}} + ......$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\theta  + {{{\\theta ^3}} \\over {3!}} + {{{\\theta ^5}} \\over {5!}} + ......$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-me-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The parabolic are $$y = \\sqrt x ,1 \\le x \\le 2$$ is revolved around the $$x$$-axis. The volume of the solid of revolution is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\pi  \\over 4}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\pi  \\over 2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{3\\pi } \\over 4}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{3\\pi } \\over 2}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-me-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the integral $$\\int\\limits_{ - a}^a {{{dx} \\over {1 + {x^2}}}} $$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-\\pi $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{ - \\pi } \\over 2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{  \\pi } \\over 2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pi $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-me-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The function $$y = \\left| {2 - 3x} \\right|$$ \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "is continuous $$\\forall x \\in R$$ and differentiable $$\\forall x \\in R$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "is continuous $$\\forall x \\in R$$ and differentiable $$\\forall x \\in R$$ except at $$x = {3 \\over 2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "is continuous $$\\forall x \\in R$$ and differentiable $$\\forall x \\in R$$ except at $$x = {2 \\over 3}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "is continuous $$\\forall x \\in R$$ and except at $$x=3$$ and differentiable $$\\forall x \\in R$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-me-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The area enclosed between the curves $${y^2} = 4x\\,\\,$$ and $${{x^2} = 4y}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{16} \\over 3}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{32} \\over 3}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$16$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-me-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The distance between the origin and the point nearest to it on the surface $$\\,\\,{z^2} = 1 + xy\\,\\,$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\sqrt 3 } \\over 2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\sqrt 3 }$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-me-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The value of $$\\,\\,\\mathop {Lim}\\limits_{x \\to 8} {{{x^{1/3}} - 2} \\over {x - 8}}\\,\\,$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {16}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {12}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over {8}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over {4}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "In the Taylor series expansion of $${e^x}$$ about $$x=2,$$ the coefficient of $$\\,\\,{\\left( {x - 2} \\right)^4}\\,\\,$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {4!}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{{2^4}} \\over {4!}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{e^2}} \\over {4!}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{{e^4}} \\over {4!}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum value of function $$\\,\\,y = {x^2}\\,\\,$$ in the interval $$\\,\\,\\left[ {1,5} \\right]\\,\\,$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$25$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "undefined "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\int\\limits_{ - a}^a {\\left[ {{{\\sin }^6}\\,x + {{\\sin }^7}\\,x} \\right]dx} $$ is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2\\int\\limits_0^a {Si{n^6}x\\,dx} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2\\int\\limits_0^a {Si{n^7}x\\,dx} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2\\int\\limits_0^a {\\left( {{{\\sin }^6}x + {{\\sin }^7}x} \\right)dx} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "zero "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Changing the order of integration in the double integral \n<br>$${\\rm I} = \\int\\limits_0^8 {\\int\\limits_{{\\raise0.5ex\\hbox{$\\scriptstyle x$}\n\\kern-0.1em/\\kern-0.15em\n\\lower0.25ex\\hbox{$\\scriptstyle 4$}}}^2 {f\\left( {x,\\,y} \\right)dy\\,dx} } $$ leads to $$\\,{\\rm I} = \\int\\limits_r^s {\\int\\limits_p^q {f\\left( {x,\\,y} \\right)dy\\,dx} } .$$ What is $$q$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4y$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${16{y^2}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$x$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$8$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "If $$\\,\\,\\,x = a\\left( {\\theta  + Sin\\theta } \\right)$$ and $$y = a\\left( {1 - Cos\\theta } \\right)$$ then $$\\,\\,{{dy} \\over {dx}} = \\,\\_\\_\\_\\_\\_.$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$Sin{\\theta  \\over 2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$Cos{\\theta  \\over 2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$Tan{\\theta  \\over 2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$Cot{\\theta  \\over 2}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-me-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Value of the function $$\\mathop {Lim}\\limits_{x \\to a} \\,{\\left( {x - a} \\right)^{x - a}}$$ is _______.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\infty $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$a$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-me-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Area bounded by the curve $$y = {x^2}$$ and the lines $$x=4$$ and $$y=0$$ is given by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$64$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{64} \\over 3}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{128} \\over 3}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{128} \\over 4}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-me-1997",
+    "difficulty": null
+  },
+  {
+    "content": "If a function is continuous at a point its first derivative ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "may or may not exist "
+      },
+      {
+        "identifier": "B",
+        "content": "exists always "
+      },
+      {
+        "identifier": "C",
+        "content": "will not exist "
+      },
+      {
+        "identifier": "D",
+        "content": "has a unique value "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-me-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The area bounded by the parabola $$2y = {x^2}$$ and the lines $$x=y-4$$ is equal to _________.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$6$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$18$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\infty $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "None "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-me-1995",
+    "difficulty": null
+  },
+  {
+    "content": "If $$H(x, y)$$ is homogeneous function of degree $$n$$ then $$x{{\\partial H} \\over {\\partial x}} + y{{\\partial H} \\over {\\partial y}} = nH$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-me-1994",
+    "difficulty": null
+  },
+  {
+    "content": "The value of $$\\int\\limits_0^\\infty  {{e^{ - {y^3}}}.{y^{1/2}}} $$ dy is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${{\\sqrt \\pi  } \\over 3}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-me-1994",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\mathop {Lim}\\limits_{x \\to 0} {{x\\left( {{e^x} - 1} \\right) + 2\\left( {\\cos x - 1} \\right)} \\over {x\\left( {1 - \\cos x} \\right)}} = \\_\\_\\_\\_\\_\\_.$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "1 ",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-me-1993",
+    "difficulty": null
+  },
+  {
+    "content": "The function $$f\\left( {x,y} \\right) = {x^2}y - 3xy + 2y + x$$ has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "No local extremum "
+      },
+      {
+        "identifier": "B",
+        "content": "One local maximum but no local minimum "
+      },
+      {
+        "identifier": "C",
+        "content": "One local minimum but no local maximum "
+      },
+      {
+        "identifier": "D",
+        "content": "One local minimum  and one local maximum "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-me-1993",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In the closed interval $[0,3]$, the minimum value of the function $f$ given below is $f(x)=2 x^3-9 x^2+12 x$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "9"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": "0",
+    "explanation": "<p>$$ \\begin{aligned} f(x) &amp; =2 x^3-9 x^2+12 x \\\\ f^{\\prime}(x) &amp; =6 x^3-18 x+12=6\\left(x^2-3 x+2\\right)=0 \\\\ &amp; =6(x-1)(x-2)=0 \\\\ x=1, x=2 ; \\quad f^{\\prime \\prime}(x) &amp; =12 x-18 \\\\ \\left.f^{\\prime \\prime}(x)\\right|_{x=1} &amp; =12 \\times 1-18=-6&lt;0 \\\\ x=1 \\text { maxima point, } &amp; \\\\ \\left.f^{\\prime \\prime}(x)\\right|_{x=2} &amp; =12 x-18=6&gt;0 \\\\ x=2 \\text { minima, } \\quad f(x) &amp; =2 x^3-9 x^2+12 x \\end{aligned} $$</p>\n<p>$$ \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\begin{aligned} &amp; \\left.f(x)\\right|_{x=0}=0 \\\\ &amp; \\left.f(x)\\right|_{x=1}=2\\left(D^3-9(1)^2+12 \\times 1=2-9+12\\right)=5 \\\\ &amp; \\left.f(x)\\right|_{x=2}=2(2)^3-9(2)^2+12 \\times 2=4 \\\\ &amp; \\left.f(x)\\right|_{x=3}=2(3)^3-9(3)^2+12 \\times 3=9 \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbhlonss/1871c9f3-d6da-4d9d-bfdf-1f07e8af03ea/e9529bc0-4111-11f0-bc47-4d169239f4a2/file-jaoe38c1mbhlonst.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbhlonss/1871c9f3-d6da-4d9d-bfdf-1f07e8af03ea/e9529bc0-4111-11f0-bc47-4d169239f4a2/file-jaoe38c1mbhlonst.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ME 2025 Engineering Mathematics - Calculus Question 1 English Explanation\"></p>\n<p>$$ \\text { So, minimum value }=0 $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-me-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If the value of the double integral</p><p>$\\int_{x=3}^{4} \\int_{y=1}^{2} \\frac{dydx}{(x + y)^2}$</p><p>is $\\log_e(\\frac{a}{24})$, then $a$ is __________ (answer in integer).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "25",
+    "explanation": "<p>To determine the value of the double integral</p>\n\n<p>$$ \\int_{x=3}^{4} \\int_{y=1}^{2} \\frac{dydx}{(x + y)^2} $$</p>\n\n<p>we need to evaluate it step-by-step. First, we can rewrite the integral as:</p>\n\n<p>$$ \\int_{x=3}^{4} \\left(\\int_{y=1}^{2} \\frac{dy}{(x + y)^2}\\right) dx $$</p>\n\n<p>We focus on the inner integral:</p>\n\n<p>$$ \\int_{y=1}^{2} \\frac{dy}{(x + y)^2} $$</p>\n\n<p>To solve this, perform a substitution. Let:</p>\n\n<p>$$ u = x + y \\implies du = dy $$</p>\n\n<p>When $ y = 1 $, $ u = x + 1 $. When $ y = 2 $, $ u = x + 2 $. Thus, the integral becomes:</p>\n\n<p>$$ \\int_{y=1}^{2} \\frac{dy}{(x + y)^2} = \\int_{u=x+1}^{u=x+2} \\frac{du}{u^2} $$</p>\n\n<p>We know that:</p>\n\n<p>$$ \\int \\frac{du}{u^2} = -\\frac{1}{u} $$</p>\n\n<p>Thus, evaluating the inner integral gives:</p>\n\n<p>$$ \\int_{x+1}^{x+2} \\frac{du}{u^2} = \\left[ -\\frac{1}{u} \\right]_{x+1}^{x+2} = -\\frac{1}{x+2} + \\frac{1}{x+1} $$</p>\n\n<p>So:</p>\n\n<p>$$ \\int_{y=1}^{2} \\frac{dy}{(x + y)^2} = \\frac{1}{x+1} - \\frac{1}{x+2} $$</p>\n\n<p>Now consider the outer integral:</p>\n\n<p>$$ \\int_{x=3}^{4} \\left( \\frac{1}{x+1} - \\frac{1}{x+2} \\right) dx $$</p>\n\n<p>We can split this into two separate integrals:</p>\n\n<p>$$ \\int_{x=3}^{4} \\frac{1}{x+1} dx - \\int_{x=3}^{4} \\frac{1}{x+2} dx $$</p>\n\n<p>We recognize these as standard integrals of the form $ \\int \\frac{1}{x+c} dx = \\log|x+c| $. Therefore, we have:</p>\n\n<p>$$ \\int_{x=3}^{4} \\frac{1}{x+1} dx = \\left[ \\log(x+1) \\right]_{3}^{4} = \\log(5) - \\log(4) $$</p>\n\n<p>And:</p>\n\n<p>$$ \\int_{x=3}^{4} \\frac{1}{x+2} dx = \\left[ \\log(x+2) \\right]_{3}^{4} = \\log(6) - \\log(5) $$</p>\n\n<p>Thus, the original integral becomes:</p>\n\n<p>$$ \\log(5) - \\log(4) - (\\log(6) - \\log(5)) = \\log(5) - \\log(4) - \\log(6) + \\log(5) $$</p>\n\n<p>Simplifying, we get:</p>\n\n<p>$$ 2\\log(5) - \\log(4) - \\log(6) = \\log(5^2) - \\log(4 \\cdot 6) = \\log(25) - \\log(24) = \\log\\left(\\frac{25}{24}\\right) $$</p>\n\n<p>We are given that the value of the integral is $ \\log_e(\\frac{a}{24}) $. Hence:</p>\n\n<p>$$ \\log\\left(\\frac{25}{24}\\right) = \\log\\left(\\frac{a}{24}\\right) $$</p>\n\n<p>From this, we can equate:</p>\n\n<p>$$ \\frac{a}{24} = \\frac{25}{24} \\implies a = 25 $$</p>\n\n<p>Therefore, the value of $ a $ is <strong>25</strong>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-me-2024",
+    "difficulty": null
+  },
+  {
+    "content": "A parametric curve defined by $$x = \\cos \\left( {{{\\pi u} \\over 2}} \\right),y = \\sin \\left( {{{\\pi u} \\over 2}} \\right)\\,\\,$$ in the range $$0 \\le u \\le 1$$ is rotated about the $$x-$$axis by $$360$$ degrees. Area of the surface generated is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\pi  \\over 2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\pi $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2\\pi }$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${4\\pi }$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the function $$f\\left( x \\right) = 2{x^3} - 3{x^2}\\,\\,$$ in the domain $$\\,\\left[ { - 1,2} \\right].$$ The global minimum of $$f(x)$$ is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "-5",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\mathop {Lt}\\limits_{x \\to \\infty } \\left( {\\sqrt {{x^2} + x - 1}  - x} \\right)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\infty $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1/2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - \\infty $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an ant crawling along the curve $$\\,{\\left( {x - 2} \\right)^2} + {y^2} = 4,$$ where $$x$$ and $$y$$ are in meters. The ant starts at the point $$(4, 0)$$ and moves counter $$-$$clockwise with a speed of $$1.57$$ meters per second. The time taken by the ant to reach the point $$(2, 2)$$ is _________ (in seconds).",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a spatial curve in three -dimensional space given in parametric form by $$\\,\\,x\\left( t \\right)\\,\\, = \\,\\,\\cos t,\\,\\,\\,y\\left( t \\right)\\,\\, = \\,\\,\\sin t,\\,\\,\\,z\\left( t \\right)\\,\\, = \\,\\,{2 \\over \\pi }t,\\,\\,\\,0 \\le t \\le {\\pi  \\over 2}.$$  The length of the curve is ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.86",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the integral $$\\,\\int\\limits_0^2 {\\int\\limits_0^x {{e^{x + y}}\\,\\,dy} } $$ $$dx$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 2}\\left( {e - 1} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 2}{\\left( {{e^2} - 1} \\right)^2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over 2}\\left( {{e^2} - e} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 2}{\\left( {e - {1 \\over e}} \\right)^2}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "A political party orders an arch for the entrance to the ground in which the annual convention is being held. The profile of the arch follows the equation $$y = 2x\\,\\,\\, - 0.1{x^2}$$ where $$y$$ is the height of the arch in meters. The maximum possible height of the arch is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$8$$ meters "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10$$ meters "
+      },
+      {
+        "identifier": "C",
+        "content": "$$12$$ meters "
+      },
+      {
+        "identifier": "D",
+        "content": "$$14$$ meters"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-me-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The infinite series $${\\,f\\left( x \\right) = x - {{{x^3}} \\over {3!}} + {{{x^5}} \\over {5!}} - {{{x^7}} \\over {7!}} +  -  -  - \\,\\,}$$ Converges to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$cos (x)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$sin  (x)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$sin$$ $$h(x)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${e^x}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-me-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following integrals is unbounded? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\int\\limits_0^{\\pi /4} {\\tan xdx} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\int\\limits_0^\\alpha  {{1 \\over {1 + {x^2}}}dx} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\int\\limits_0^\\alpha  {x.{e^{ - x}}dx\\,\\,} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\int\\limits_0^1 {{1 \\over {1 - x}}dx\\,\\,} $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$\\,\\,f = {y^x}.$$ What is $$\\,\\,{{{\\partial ^2}f} \\over {\\partial x\\partial y}}\\,\\,$$       at $$x=2,$$ $$y=1$$? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\ln \\,2$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over {\\ln \\,2}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the shaded triangular region $$P$$ shown in the figure. What is $$\\int\\!\\!\\!\\int\\limits_p {xy\\,dx\\,dy\\,?} $$ \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/ukJCAwlBrG6GIsau7/viKFzo1WP12xqydGtaTpULM6AvVMJ/BCRSQtYL4g1yZ8qWM9x0Uu/image.svg\" loading=\"lazy\" alt=\"GATE ME 2008 Engineering Mathematics - Calculus Question 45 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 6}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2 \\over 9}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${7 \\over {16}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The length of the curve $$\\,y = {2 \\over 3}{x^{3/2}}$$  between $$x=0$$ &amp; $$x=1$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.27$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.67$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.22$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "If $$\\,\\,\\,y = x + \\sqrt {x + \\sqrt {x + \\sqrt {x + .....\\alpha } } } \\,\\,\\,$$ then $$y(2)=$$ __________.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4$$ (or) $$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "Undefined "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\mathop {Lim}\\limits_{x \\to 0} {{{e^x} - \\left( {1 + x + {{{x^2}} \\over 2}} \\right)} \\over {{x^3}}} = $$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 6}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over 3}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  },
+  {
+    "content": "By a change of variables $$x(u, v) = uv,$$ $$\\,\\,y\\left( {u,v} \\right) = {v \\over u}$$  in a double integral, the integral $$f(x, y)$$ changes to $$\\,\\,\\,f\\left( {uv,{\\raise0.5ex\\hbox{$\\scriptstyle v$}\n\\kern-0.1em/\\kern-0.15em\n\\lower0.25ex\\hbox{$\\scriptstyle u$}}} \\right).\\,\\,\\,$$ Then $$\\,\\,\\phi \\left( {u,v} \\right)\\,\\,\\,$$ is ________.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{2v} \\over u}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ $$uv$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{v^2}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The volume of an object expressed in spherical co-ordinates is given by \n<br>$$V = \\int\\limits_0^{2\\pi } {\\int\\limits_0^{{\\raise0.5ex\\hbox{$\\scriptstyle \\pi $}\n\\kern-0.1em/\\kern-0.15em\n\\lower0.25ex\\hbox{$\\scriptstyle 3$}}} {\\int\\limits_0^1 {{r^2}} \\,Sin\\phi \\,drd\\phi \\,d\\theta .} } $$ The value of the integral",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{\\pi  \\over 3}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\pi  \\over 6}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{2\\pi } \\over 3}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\pi  \\over 4}}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-me-2004",
+    "difficulty": null
+  }
+]

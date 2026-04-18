@@ -1,0 +1,2882 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{rrr}1 & -2 & 2 \\\\ 0 & 2 & -3 \\\\ 3 & -2 & 4\\end{array}\\right]$ then $A(I+\\operatorname{adj} A)=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\left[\\begin{array}{ccc}9 & -2 & 2 \\\\ 0 & 10 & -3 \\\\ 3 & -2 & 11\\end{array}\\right]$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\left[\\begin{array}{ccc}8 & -2 & 2 \\\\ 0 & 9 & -3 \\\\ 3 & -2 & 10\\end{array}\\right]$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\left[\\begin{array}{rrr}9 & -2 & 2 \\\\ 0 & 10 & -3 \\\\ 3 & -2 & 12\\end{array}\\right]$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\left[\\begin{array}{ccc}3 & 2 & -2 \\\\ 0 & 10 & 3 \\\\ -3 & 2 & 12\\end{array}\\right]$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & A(I+\\operatorname{adj} A) \\\\ & =A I+A(\\operatorname{adj} A) \\\\ & =A+|A| I \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\quad \\ldots[\\because A(\\operatorname{adj} A)=|A| I]\\end{aligned}  $$</p>\n<p>$$ \\begin{aligned} |A| & =\\left|\\begin{array}{ccc} 1 & -2 & 2 \\\\ 0 & 2 & -3 \\\\ 3 & -2 & 4 \\end{array}\\right| \\\\ & =1(2)+2(9)+2(-6) \\\\ & =8 \\\\ A(I+\\operatorname{adj} A) & =\\left[\\begin{array}{ccc} 1 & -2 & 2 \\\\ 0 & 2 & -3 \\\\ 3 & -2 & 4 \\end{array}\\right]+8\\left[\\begin{array}{ccc} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right] \\\\ & =\\left[\\begin{array}{ccc} 1 & -2 & 2 \\\\ 0 & 2 & -3 \\\\ 3 & -2 & 4 \\end{array}\\right]+\\left[\\begin{array}{ccc} 8 & 0 & 0 \\\\ 0 & 8 & 0 \\\\ 0 & 0 & 8 \\end{array}\\right] \\\\ & =\\left[\\begin{array}{ccc} 9 & -2 & 2 \\\\ 0 & 10 & -3 \\\\ 3 & -2 & 12 \\end{array}\\right] \\end{aligned} $$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-5th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The vectors $\\bar{p}=\\hat{i}+a \\hat{j}+a^2 \\hat{k}, \\bar{q}=\\hat{i}+b \\hat{j}+b^2 \\hat{k}$ and $\\overline{\\mathrm{r}}=\\hat{\\mathrm{i}}+\\mathrm{c} \\hat{\\mathrm{j}}+\\mathrm{c}^2 \\hat{\\mathrm{k}}$ are non-coplanar and $\\left|\\begin{array}{lll}a & a^2 & 1+a^3 \\\\ b & b^2 & 1+b^3 \\\\ c & c^2 & 1+c^3\\end{array}\\right|=0$ then the value of $(a b c)$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>0</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>-1</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>1</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>2</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\text { Since } \\overline{\\mathrm{p}}, \\overline{\\mathrm{q}}, \\overline{\\mathrm{r}} \\text { are non-coplanar, }\\\\ &\\begin{aligned} & \\left|\\begin{array}{lll} 1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2 \\end{array}\\right| \\neq 0 \\quad \\ldots(i) \\\\ & \\left|\\begin{array}{lll} a & a^2 & a^3+1 \\\\ b & b^2 & b^3+1 \\\\ c & c^2 & c^3+1 \\end{array}\\right|=0 \\\\ & \\Rightarrow\\left|\\begin{array}{lll} a & a^2 & a^3 \\\\ b & b^2 & b^3 \\\\ c & c^2 & c^3 \\end{array}\\right|+\\left|\\begin{array}{lll} a & a^2 & 1 \\\\ b & b^2 & 1 \\\\ c & c^2 & 1 \\end{array}\\right|=0 \\end{aligned} \\end{aligned} $$</p>\n<p>By taking $\\mathrm{a}, \\mathrm{b}, \\mathrm{c}$ common from $\\mathrm{R}_1, \\mathrm{R}_2, \\mathrm{R}_3$ respectively in the $1^{\\text {st }}$ det., we get $a b c\\left|\\begin{array}{lll}1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2\\end{array}\\right|+\\left|\\begin{array}{lll}a & a^2 & 1 \\\\ b & b^2 & 1 \\\\ c & c^2 & 1\\end{array}\\right|=0$</p>\n<p>Applying $\\mathrm{C}_2 \\leftrightarrow \\mathrm{C}_3$ in $2^{\\text {nd }}$ det., we get $a b c\\left|\\begin{array}{ccc}1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2\\end{array}\\right|-\\left|\\begin{array}{ccc}a & 1 & a^2 \\\\ b & 1 & b^2 \\\\ c & 1 & c^2\\end{array}\\right|=0$</p>\n<p>Applying $\\mathrm{C}_1 \\leftrightarrow \\mathrm{C}_2$ in $2^{\\text {nd }}$ det., we get</p>\n<p>$$ \\begin{aligned} & a b c\\left|\\begin{array}{ccc} 1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2 \\end{array}\\right|+\\left|\\begin{array}{lll} 1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2 \\end{array}\\right|=0 \\\\ & \\Rightarrow(1+a b c)\\left|\\begin{array}{lll} 1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2 \\end{array}\\right|=0 \\\\ & \\Rightarrow 1+a b c=0 \\,\\,\\,\\,\\,\\,…[From (i)]\\\\ & \\Rightarrow a b c=-1 \\end{aligned} $$</p>\n<p></p>",
+    "topic": "properties-of-determinants",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-5th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A$ is a matrix of order 2 and $I$ is the identity matrix of order 2 such that $A^2-4 A+3 I=0$ then $(A+3 I)^{-1}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{\\mathrm{A}}{24}-\\frac{7}{24} \\mathrm{I}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{\\mathrm{A}}{21}-\\frac{7}{21} \\mathrm{I}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{7 \\mathrm{I}}{24}-\\frac{1}{24} \\mathrm{~A}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>A-3I</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & A^2-4 A+3 I=0 \\\\ & \\Rightarrow A^2+3 A-7 A+3 I=0 \\\\ & \\Rightarrow A^2+3 A-7 A-21 I+24 I=0 \\\\ & \\Rightarrow A(A+3 I)-7 I(A+3 I)=-24 I \\\\ & \\Rightarrow(A+3 I)(A-7 I)=-24 I \\\\ & \\Rightarrow(A+3 I)\\left(\\frac{7 I}{24}-\\frac{A}{24}\\right)=I \\end{aligned} $$</p>\n<p>$$ \\Rightarrow(A+3 I)^{-1}=\\frac{7 I}{24}-\\frac{A}{24} $$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-26th-april-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Matrix A is non-singular matrix and $(A-3 I)(A-5 I)=0$, then $\\frac{15}{8} A^{-1}=\\ldots \\ldots$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\mathrm{I}-8 \\mathrm{~A}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$2 \\mathrm{I}-\\frac{1}{15} \\mathrm{~A}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\mathrm{I}-\\frac{1}{8} \\mathrm{~A}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$8 \\mathrm{I}-15 \\mathrm{~A}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & (A-3 I)(A-5 I)=0 \\\\ & \\Rightarrow A^2-8 A+15 I=0 \\\\ & \\Rightarrow A^2 A^{-1}-8 A A^{-1}+15 I A^{-1}=0 \\\\ & \\Rightarrow A-8 I+15 A^{-1}=0 \\\\ & \\Rightarrow 15 A^{-1}=8 I-A \\\\ & \\Rightarrow \\frac{15}{8} A^{-1}=I-\\frac{1}{8} A \\end{aligned} $$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-26th-april-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $\\mathrm{A}=\\left[\\begin{array}{cc}5 \\mathrm{a} & -\\mathrm{b} \\\\ 3 & 2\\end{array}\\right]$ and A .adj $\\mathrm{A}=\\mathrm{AA}^{\\mathrm{T}}$, then $5 \\mathrm{a}+\\mathrm{b}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7"
+      },
+      {
+        "identifier": "B",
+        "content": "9"
+      },
+      {
+        "identifier": "C",
+        "content": "13"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & A_{11}=(-1)^{1+1}(2)=2, A_{12}=(-1)^{1+2}(3)=-3 \\\\ & A_{21}=(-1)^{2+1}(-b)=b, A_{22}=(-1)^{2+2}(5 a)=5 a \\\\ \\therefore  &\\,\\,\\, \\operatorname{adj} A=\\left[\\begin{array}{cc} 2 & -3 \\\\ b & 5 a \\end{array}\\right]^T=\\left[\\begin{array}{cc} 2 & b \\\\ -3 & 5 a \\end{array}\\right] \\end{aligned} $$</p>\n<p>Given, $\\mathrm{A} \\operatorname{adj} \\mathrm{A}=\\mathrm{AA}^{\\mathrm{T}}$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow\\left[\\begin{array}{cc} 5 \\mathrm{a} & -\\mathrm{b} \\\\ 3 & 2 \\end{array}\\right]\\left[\\begin{array}{cc} 2 & \\mathrm{~b} \\\\ -3 & 5 \\mathrm{a} \\end{array}\\right]=\\left[\\begin{array}{cc} 5 \\mathrm{a} & -\\mathrm{b} \\\\ 3 & 2 \\end{array}\\right]\\left[\\begin{array}{cc} 5 \\mathrm{a} & 3 \\\\ -\\mathrm{b} & 2 \\end{array}\\right] \\\\ & \\Rightarrow\\left[\\begin{array}{cc} 10 \\mathrm{a}+3 \\mathrm{~b} & 0 \\\\ 0 & 3 \\mathrm{~b}+10 \\mathrm{a} \\end{array}\\right]=\\left[\\begin{array}{cc} 25 \\mathrm{a}^2+\\mathrm{b}^2 & 15 \\mathrm{a}-2 \\mathrm{~b} \\\\ 15 \\mathrm{a}-2 \\mathrm{~b} & 13 \\end{array}\\right] \\end{aligned} $$</p>\n<p>$\\therefore$ by the equality of matrices,</p>\n<p>$$ \\begin{aligned} & \\quad 15 a-2 b=0 \\text { and } 3 b+10 a=13 \\\\ & \\quad \\Rightarrow a=\\frac{2}{5} \\text { and } b=3 \\\\ & \\therefore \\quad 5 a+b=5\\left(\\frac{2}{5}\\right)+3=2+3=5 \\end{aligned} $$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-25th-april-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{lll}3 & -3 & 4 \\\\ 2 & -3 & 4 \\\\ 0 & -1 & 1\\end{array}\\right]_{3 \\times 3}$, then $A^{-1}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " A\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\mathrm{A}^2$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\mathrm{A}^3$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\mathrm{A}^4$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ |A|=\\left|\\begin{array}{lll} 3 & -3 & 4 \\\\ 2 & -3 & 4 \\\\ 0 & -1 & 1 \\end{array}\\right|=1 \\neq 0 $$</p>\n<p>$$ \\begin{aligned} \\operatorname{adj} A & =\\left[\\begin{array}{ccc} 1 & -2 & -2 \\\\ -1 & 3 & 3 \\\\ 0 & -4 & -3 \\end{array}\\right]^{\\top} \\\\ & =\\left[\\begin{array}{ccc} 1 & -1 & 0 \\\\ -2 & 3 & -4 \\\\ -2 & 3 & -3 \\end{array}\\right] \\\\ \\therefore \\quad A^{-1} & =\\left[\\begin{array}{ccc} 1 & -1 & 0 \\\\ -2 & 3 & -4 \\\\ -2 & 3 & -3 \\end{array}\\right] \\\\ A^2 & =\\left[\\begin{array}{ccc} 3 & -3 & 4 \\\\ 2 & -3 & 4 \\\\ 0 & -1 & 1 \\end{array}\\right]\\left[\\begin{array}{ccc} 3 & -3 & 4 \\\\ 2 & -3 & 4 \\\\ 0 & -1 & 1 \\end{array}\\right] \\\\ & =\\left[\\begin{array}{ccc} 3 & -4 & 4 \\\\ 0 & -1 & 0 \\\\ -2 & 2 & -3 \\end{array}\\right] \\\\ A^3 & =A^2 \\cdot A=\\left[\\begin{array}{ccc} 3 & -4 & 4 \\\\ 0 & -1 & 0 \\\\ -2 & 2 & -3 \\end{array}\\right]\\left[\\begin{array}{ccc} 3 & -3 & 4 \\\\ 2 & -3 & 4 \\\\ 0 & -1 & 1 \\end{array}\\right] \\\\ & =\\left[\\begin{array}{ccc} 1 & -1 & 0 \\\\ -2 & 3 & -4 \\\\ -2 & 3 & -3 \\end{array}\\right] \\\\ & =A^{-1} \\end{aligned} $$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-25th-april-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{rrr}1 & -1 & 1 \\\\ 0 & 2 & -3 \\\\ 2 & 1 & 0\\end{array}\\right], B=\\operatorname{adj} A$ and $C=5 A$, then $\\frac{|\\operatorname{adjB}|}{|\\mathrm{C}|}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & A=\\left[\\begin{array}{ccc} 1 & -1 & 1 \\\\ 0 & 2 & -3 \\\\ 2 & 1 & 0 \\end{array}\\right] \\\\ & B=\\operatorname{adj} A=\\left[\\begin{array}{ccc} 3 & 1 & 1 \\\\ -6 & -2 & 3 \\\\ -4 & -3 & 2 \\end{array}\\right] \\\\ & \\therefore\\, \\operatorname{adj} B=\\left[\\begin{array}{ccc} 5 & -5 & 5 \\\\ 0 & 10 & -15 \\\\ 10 & 5 & 0 \\end{array}\\right]=5 A \\end{aligned} $$</p>\n<p>$\\therefore \\quad \\operatorname{adj} \\mathrm{B}=\\mathrm{C}$$\\,\\,\\,\\,\\,\\ldots .[\\because \\mathrm{C}=5 \\mathrm{~A}$ (given) $]$</p>\n<p></p>\n<p>$$ \\begin{aligned} & \\Rightarrow|\\operatorname{adj} B|=|C| \\\\ & \\Rightarrow \\frac{|\\operatorname{adj} B|}{|C|}=1 \\end{aligned} $$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-23rd-april-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p><p>If A and B are non-singular matrices of order 2 such that $\\quad(A B)^{-1}=\\frac{1}{6}\\left[\\begin{array}{cc}-1 & -3 \\\\ 2 & 3\\end{array}\\right] \\quad$ and $A^{-1}=\\frac{1}{3}\\left[\\begin{array}{cc}4 & 3 \\\\ -1 & 0\\end{array}\\right]$ then $B^{-1}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{1}{2}\\left[\\begin{array}{cc}2 & 3 \\\\ 1 & -1\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{1}{2}\\left[\\begin{array}{ll}3 & 1 \\\\ 2 & 4\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{1}{2}\\left[\\begin{array}{cc}-1 & 3 \\\\ 1 & 2\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{1}{6}\\left[\\begin{array}{ll}1 & 1 \\\\ 2 & 3\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\begin{aligned} & (\\mathrm{AB})^{-1}=\\frac{1}{6}\\left[\\begin{array}{cc} -7 & -3 \\\\ 2 & 3 \\end{array}\\right] \\\\ & \\Rightarrow \\mathrm{B}^{-1} \\mathrm{~A}^{-1}=\\frac{1}{6}\\left[\\begin{array}{cc} -7 & -3 \\\\ 2 & 3 \\end{array}\\right] \\\\ & \\Rightarrow \\mathrm{B}^{-1}\\left(\\frac{1}{3}\\left[\\begin{array}{cc} 4 & 3 \\\\ -1 & 0 \\end{array}\\right]\\right)=\\frac{1}{6}\\left[\\begin{array}{cc} -7 & -3 \\\\ 2 & 3 \\end{array}\\right] \\end{aligned}\\\\ &\\text { Only option (C) satisfies the above condition. } \\end{aligned} $$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-23rd-april-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If matrix $\\quad A=\\frac{1}{11}\\left[\\begin{array}{rrr}-1 & 7 & -24 \\\\ 2 & a & 4 \\\\ 2 & -3 & 15\\end{array}\\right] \\quad$ and $A^{-1}=\\left[\\begin{array}{rrr}3 & 3 & 4 \\\\ 2 & -3 & 4 \\\\ b & -1 & c\\end{array}\\right]$, then the values of $a, b, c$ respectively are ……</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $3,1,0$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{-6}{11}, 0, \\frac{1}{11}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $-3,0,1$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{-3}{11}, 0, \\frac{1}{11}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\begin{aligned} & \\mathrm{AA}^{-1}=\\mathrm{I} \\\\ & \\Rightarrow \\frac{1}{11}\\left[\\begin{array}{ccc} -1 & 7 & -24 \\\\ 2 & \\mathrm{a} & 4 \\\\ 2 & -3 & 15 \\end{array}\\right]\\left[\\begin{array}{ccc} 3 & 3 & 4 \\\\ 2 & -3 & 4 \\\\ \\mathrm{~b} & -1 & \\mathrm{c} \\end{array}\\right]=\\left[\\begin{array}{ccc} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right] \\\\ & \\Rightarrow \\frac{1}{11}\\left[\\begin{array}{ccc} 11-24 \\mathrm{~b} & 0 & 24-24 \\mathrm{c} \\\\ 6+2 \\mathrm{a}+4 \\mathrm{~b} & 2-3 \\mathrm{a} & 8+4 \\mathrm{a}+4 \\mathrm{c} \\\\ 15 \\mathrm{~b} & 0 & -4+15 \\mathrm{c} \\end{array}\\right]  =\\left[\\begin{array}{ccc} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{array}\\right] \\end{aligned}\\\\ &\\text { By equality of matrices, we get }\\\\ &\\begin{aligned} & 15 b=0 \\Rightarrow b=0 \\\\ & 2-3 a=11 \\Rightarrow a=-3 \\\\ & 24-24 c=0 \\Rightarrow c=1 \\end{aligned} \\end{aligned} $$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-22nd-april-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{cc}1 & \\cot \\frac{\\theta}{2} \\\\ -\\cot \\frac{\\theta}{2} & 1\\end{array}\\right]$ then $A^{-1}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\operatorname{cosec}^2 \\frac{\\theta}{2} \\mathrm{~A}^{\\mathrm{T}}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{-\\sin ^2 \\theta}{2} A^T$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\left(\\frac{1+\\cos \\theta}{2}\\right) A^T$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\left(\\frac{1-\\cos \\theta}{2}\\right) A^T$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & |A|=1+\\cot ^2 \\frac{\\theta}{2}=\\operatorname{cosec}^2 \\frac{\\theta}{2} \\neq 0 \\\\ & \\text { Now, } \\operatorname{adj}(A)=\\left[\\begin{array}{cc} 1 & -\\cot \\frac{\\theta}{2} \\\\ \\cot \\frac{\\theta}{2} & 1 \\end{array}\\right] \\\\ \\therefore \\quad & A^{-1}=\\frac{1}{|A|}(\\operatorname{adj}(A))=\\frac{1}{\\operatorname{cosec}^2 \\frac{\\theta}{2}}\\left[\\begin{array}{cc} 1 & -\\cot \\frac{\\theta}{2} \\\\ \\cot \\frac{\\theta}{2} & 1 \\end{array}\\right] \\\\ & =\\sin ^2 \\frac{\\theta}{2} A^T=\\left(\\frac{1-\\cos \\theta}{2}\\right) A^T \\end{aligned} $$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-22nd-april-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let A be a non-singular matrix of order n and $|A|=k$, then $(\\operatorname{adj} A)^{-1}$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{\\mathrm{A}}{\\mathrm{k}}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\quad \\mathrm{k}^{\\mathrm{n}-1}(\\operatorname{adj} \\mathrm{~A})$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\mathrm{k}^{n-2} \\mathrm{~A}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "kA"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & |A|=k \\neq 0\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, …[Given\\\\ \\therefore \\quad & A^{-1}=\\frac{1}{|A|}(\\operatorname{adj} A) \\\\ & A^{-1}=\\frac{(\\operatorname{adj} A)}{k} \\end{aligned} $$</p>\n<p>]</p>\n<p>k. $\\mathrm{A}^{-1}=(\\operatorname{adj} \\mathrm{A})$</p>\n<p>Taking inverse on both sides, we get</p>\n<p>$$ \\begin{aligned} & \\left(k A^{-1}\\right)^{-1}=(\\operatorname{adj} A)^{-1} \\\\ & \\Rightarrow k^{-1}\\left(A^{-1}\\right)^{-1}=(\\operatorname{adj} A)^{-1} \\end{aligned} $$</p>\n<p>$$ \\Rightarrow \\mathrm{k}^{-1} \\mathrm{~A}=(\\operatorname{adj} \\mathrm{A})^{-1} \\quad \\ldots\\left(\\because\\left(\\mathrm{~A}^{-1}\\right)^{-1}=\\mathrm{A}\\right) $$</p>\n<p>$$ \\Rightarrow \\frac{A}{k}=(\\operatorname{adj} A)^{-1} $$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-21st-april-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The third element in the second row of adjoint of a matrix $A=\\left[a_{i j}\\right]_{3 \\times 3}$ (where $a_{i j}=2 i+j$ ) is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " 2\n"
+      },
+      {
+        "identifier": "B",
+        "content": " -2\n"
+      },
+      {
+        "identifier": "C",
+        "content": " 4\n"
+      },
+      {
+        "identifier": "D",
+        "content": "-4"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{array}{ll}  & \\mathrm{A}=\\left[\\mathrm{a}_{\\mathrm{ij}}\\right]_{3 \\times 3}, \\text { where } \\mathrm{a}_{\\mathrm{ij}}=2 \\mathrm{i}+\\mathrm{j} \\\\ \\therefore& \\mathrm{a}_{11}=2(1)+1=3 \\\\ & \\mathrm{a}_{12}=2(1)+2=4 \\\\ & \\mathrm{a}_{13}=2(1)+3=5 \\\\ & \\mathrm{a}_{21}=2(2)+1=5 \\\\ & \\mathrm{a}_{22}=2(2)+2=6 \\\\ & \\mathrm{a}_{23}=2(2)+3=7 \\\\ & \\mathrm{a}_{31}=2(3)+1=7 \\\\ & \\mathrm{a}_{32}=2(3)+2=8 \\\\ & \\mathrm{a}_{33}=2(3)+3=9 \\\\ \\therefore & \\mathrm{~A}=\\left[\\begin{array}{lll} 3 & 4 & 5 \\\\ 5 & 6 & 7 \\\\ 7 & 8 & 9 \\end{array}\\right] \\end{array} $$</p>\n<p>$\\therefore \\quad$ Third element in the second row of adjoint of matrix A</p>\n<p>$$ =(-1)^{3+2}\\left|\\begin{array}{ll} 3 & 5 \\\\ 5 & 7 \\end{array}\\right|=-1(-4)=4 $$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-21st-april-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $\\left[\\begin{array}{lll}1 & 3 & 3 \\\\ 1 & 4 & 4 \\\\ 1 & 3 & 4\\end{array}\\right]\\left[\\begin{array}{l}x \\\\ y \\\\ z\\end{array}\\right]=\\left[\\begin{array}{l}12 \\\\ 15 \\\\ 13\\end{array}\\right]$, then the value of $x^2+y^2+z^2=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6"
+      },
+      {
+        "identifier": "B",
+        "content": "12"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "14"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\mathrm{AX}=\\mathrm{B} \\\\ & \\Rightarrow\\left[\\begin{array}{lll} 1 & 3 & 3 \\\\ 1 & 4 & 4 \\\\ 1 & 3 & 4 \\end{array}\\right]\\left[\\begin{array}{l} x \\\\ y \\\\ z \\end{array}\\right]=\\left[\\begin{array}{l} 12 \\\\ 15 \\\\ 13 \\end{array}\\right] \\end{aligned} $$</p>\n<p>Applying $\\mathrm{R}_2 \\rightarrow \\mathrm{R}_2-\\mathrm{R}_1$ and $\\mathrm{R}_3 \\rightarrow \\mathrm{R}_3-\\mathrm{R}_1$,</p>\n<p>$$ \\left[\\begin{array}{lll} 1 & 3 & 3 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{array}\\right]\\left[\\begin{array}{l} x \\\\ y \\\\ z \\end{array}\\right]=\\left[\\begin{array}{c} 12 \\\\ 3 \\\\ 1 \\end{array}\\right] $$</p>\n<p>$$ \\begin{array}{ll} \\therefore \\quad & x+3 y+3 z=12 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ & y+z=3 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\\\ & z=1 \\end{array} $$</p>\n<p>From (ii),</p>\n<p>$$ y+1=3 \\Rightarrow y=2 $$</p>\n<p>From (i),</p>\n<p>$$ \\begin{array}{ll}  & x+6+3=12 \\Rightarrow x=3 \\\\ \\therefore & x^2+y^2+z^2=9+4+1=14 \\end{array} $$</p>",
+    "topic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-20th-april-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{cc}1 & \\tan x \\\\ -\\tan x & 1\\end{array}\\right]$, then $A^T A^{-1}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\left[\\begin{array}{cc}\\cos 2 x & -\\sin 2 x \\\\ -\\sin 2 x & \\cos 2 x\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\left[\\begin{array}{ll}\\cos 2 x & -\\sin 2 x \\\\ \\sin 2 x & \\cos 2 x\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\left[\\begin{array}{cc}-\\cos 2 x & \\sin 2 x \\\\ \\sin 2 x & \\cos 2 x\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\left[\\begin{array}{ll}-\\cos 2 x & \\sin 2 x \\\\ -\\sin 2 x & \\cos 2 x\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} \\mathrm{A} & =\\left[\\begin{array}{cc} 1 & \\tan x \\\\ -\\tan x & 1 \\end{array}\\right] \\\\ \\mathrm{A}^{\\top} & =\\left[\\begin{array}{cc} 1 & -\\tan x \\\\ \\tan x & 1 \\end{array}\\right] \\\\ \\mathrm{A}^{-1} & =\\frac{\\operatorname{adjA}}{|\\mathrm{A}|}=\\frac{1}{1+\\tan ^2 x}\\left[\\begin{array}{cc} 1 & -\\tan x \\\\ \\tan x & 1 \\end{array}\\right] \\\\ \\mathrm{A}^{\\mathrm{T}} \\mathrm{~A}^{-1} & =\\frac{1}{1+\\tan ^2 x}\\left[\\begin{array}{cc} 1 & -\\tan x \\\\ \\tan x & 1 \\end{array}\\right]\\left[\\begin{array}{cc} 1 & -\\tan x \\\\ \\tan x & 1 \\end{array}\\right] \\\\ & =\\left[\\begin{array}{ll} \\frac{1-\\tan ^2 x}{1+\\tan ^2 x} & \\frac{-2 \\tan x}{1+\\tan ^2 x} \\\\ \\frac{2 \\tan ^2 x}{1+\\tan ^2 x} & \\frac{1-\\tan ^2 x}{1+\\tan ^2 x} \\end{array}\\right] \\\\ & =\\left[\\begin{array}{ll} \\cos 2 x & -\\sin 2 x \\\\ \\sin 2 x & \\cos 2 x \\end{array}\\right] \\end{aligned} $$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-20th-april-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{rr}1 & 2 \\\\ -1 & 4\\end{array}\\right]$ and $A^{-1}=\\alpha I+\\beta A \\alpha, \\beta \\in R$ where I is the identity matrix of order 2 , then $4(\\alpha+\\beta)=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{8}{3}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{2}{3}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{10}{3}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{1}{3}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\begin{array}{ll}  & \\text { If } A=\\left[\\begin{array}{ll} a & b \\\\ c & d \\end{array}\\right] \\text { and } a d-b c \\neq 0, \\text { then } \\\\ & A^{-1}=\\frac{1}{a d-b c}\\left[\\begin{array}{cc} d & -b \\\\ -c & a \\end{array}\\right] \\\\ & |A|=\\left|\\begin{array}{cc} 1 & 2 \\\\ -1 & 4 \\end{array}\\right|=6 \\neq 0 \\\\ \\therefore & A^{-1}=\\frac{1}{6}\\left[\\begin{array}{cc} 4 & -2 \\\\ 1 & 1 \\end{array}\\right] \\\\ & A^{-1}=\\alpha I+\\beta A \\\\ & \\Rightarrow \\frac{1}{6}\\left[\\begin{array}{cc} 4 & -2 \\\\ 1 & 1 \\end{array}\\right]=\\alpha\\left[\\begin{array}{ll} 1 & 0 \\\\ 0 & 1 \\end{array}\\right]+\\beta\\left[\\begin{array}{cc} 1 & 2 \\\\ -1 & 4 \\end{array}\\right] \\\\ & \\Rightarrow\\left[\\begin{array}{cc} \\frac{4}{6} & \\frac{-2}{6} \\\\ \\frac{1}{6} & \\frac{1}{6} \\end{array}\\right]=\\left[\\begin{array}{cc} \\alpha+\\beta & 2 \\beta \\\\ -\\beta & \\alpha+4 \\beta \\end{array}\\right] \\end{array}\\\\ &\\therefore \\quad \\text { by the equality of matrices, }\\\\ &\\begin{aligned} & \\alpha+\\beta=\\frac{4}{6}=\\frac{2}{3} \\\\ & \\Rightarrow 4(\\alpha+\\beta)=4\\left(\\frac{2}{3}\\right)=\\frac{8}{3} \\end{aligned} \\end{aligned} $$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-19th-april-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If $A=\\left[\\begin{array}{ccc}\\cos \\theta & \\sin \\theta & 0 \\\\ -\\sin \\theta & \\cos \\theta & 0 \\\\ 0 & 0 & 1\\end{array}\\right]$,\nwhere $A_{21}, A_{22}, A_{23}$ are cofactors of $a_{21}, a_{22}, a_{23}$ respectively, then the value of $\\mathrm{a}_{21} \\mathrm{~A}_{21}+\\mathrm{a}_{22} \\mathrm{~A}_{22}+\\mathrm{a}_{23} \\mathrm{~A}_{23}=$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "$-1$"
+      },
+      {
+        "identifier": "C",
+        "content": "0"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& A=\\left[\\begin{array}{ccc}\n\\cos \\theta & \\sin \\theta & 0 \\\\\n-\\sin \\theta & \\cos \\theta & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& A_{21}=(-1)^{2+1} M_{21}=(-1)^3\\left|\\begin{array}{cc}\n\\sin \\theta & 0 \\\\\n0 & 1\n\\end{array}\\right|=-\\sin \\theta \\\\\n& A_{22}=(-1)^{2+2} M_{22}=(-1)^4\\left|\\begin{array}{cc}\n\\cos \\theta & 0 \\\\\n0 & 1\n\\end{array}\\right|=\\cos \\theta \\\\\n& A_{23}=(-1)^{2+3} M_{23}=(-1)^{2+3}\\left|\\begin{array}{cc}\n\\cos \\theta & \\sin \\theta \\\\\n0 & 0\n\\end{array}\\right|=0\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n\\therefore \\quad & a_{21} A_{21}+a_{22} A_{22}+a_{23} A_{23} \\\\\n& =-\\sin \\theta(-\\sin \\theta)+\\cos \\theta \\cos \\theta+0 \\\\\n& =\\sin ^2 \\theta+\\cos ^2 \\theta \\\\\n& =1\n\\end{aligned}$$</p>",
+    "topic": "expansion-of-determinant",
+    "year": 2025,
+    "yearKey": "mht-cet-2025-19th-april-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $A=\\left[\\begin{array}{cc}1 & 2 \\\\ -1 & 4\\end{array}\\right]$ and $A^{-1}=\\alpha \\mathrm{I}+\\beta \\mathrm{A}, \\alpha, \\beta \\in \\mathbb{R}$, I is the identity matrix of order 2 , then $4(\\alpha-\\beta)$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{8}{3}$"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&|A|=\\left|\\begin{array}{cc}\n1 & 2 \\\\\n-1 & 4\n\\end{array}\\right|=4+2=6 \\neq 0\\\\\n&\\text { If } A=\\left[\\begin{array}{ll}\na & b \\\\\nc & d\n\\end{array}\\right] \\text { and } \\mathrm{ad}-\\mathrm{bc} \\neq 0 \\text {, then }\\\\\n&\\begin{array}{l} \n& A^{-1} =\\frac{1}{a d-b c}\\left[\\begin{array}{cc}\nd & -b \\\\\n-c & a\n\\end{array}\\right] \\\\\n\\therefore \\quad A^{-1} & =\\frac{1}{6}\\left[\\begin{array}{cc}\n4 & -2 \\\\\n1 & 1\n\\end{array}\\right]\n\\end{array}\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& A^{-1}=\\alpha I+\\beta A \\\\\n& \\Rightarrow \\frac{1}{6}\\left[\\begin{array}{cc}\n4 & -2 \\\\\n1 & 1\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n\\alpha & 0 \\\\\n0 & \\alpha\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n\\beta & 2 \\beta \\\\\n-\\beta & 4 \\beta\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{cc}\n\\frac{2}{3} & -\\frac{1}{3} \\\\\n\\frac{1}{6} & \\frac{1}{6}\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n\\alpha+\\beta & 2 \\beta \\\\\n-\\beta & \\alpha+4 \\beta\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n&\\therefore \\quad \\text { By the equality of matrices, }\\\\\n&\\begin{array}{ll} \n& \\frac{1}{6}=-\\beta \\text { and } \\alpha+\\beta=\\frac{2}{3} \\\\\n& \\Rightarrow \\beta=\\frac{-1}{6} \\text { and } \\alpha-\\frac{1}{6}=\\frac{2}{3} \\\\\n& \\Rightarrow \\beta=\\frac{-1}{6} \\text { and } \\alpha=\\frac{5}{6} \\\\\n\\therefore \\quad & 4(\\alpha-\\beta)=4\n\\end{array}\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-16th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $\\bar{a}=a_1 \\hat{i}+a_2 \\hat{j}+a_3 \\hat{k}, \\quad \\bar{b}=b_1 \\hat{i}+b_2 \\hat{j}+b_3 \\hat{k}$, $\\bar{c}=c_1 \\hat{i}+c_2 \\hat{j}+c_3 \\hat{k}$ and $\\left[\\begin{array}{lll}3 \\bar{a}+\\bar{b} & 3 \\bar{b}+\\bar{c} & 3 \\bar{c}+\\bar{a}\\end{array}\\right]=\\lambda\\left|\\begin{array}{lll}\\overline{\\mathrm{a}} \\cdot \\hat{\\mathrm{i}} & \\overline{\\mathrm{a}} \\cdot \\hat{\\mathrm{j}} & \\overline{\\mathrm{a}} \\cdot \\hat{\\mathrm{k}} \\\\ \\overline{\\mathrm{b}} \\cdot \\hat{\\mathrm{i}} & \\overline{\\mathrm{b}} \\cdot \\hat{\\mathrm{j}} & \\overline{\\mathrm{b}} \\cdot \\hat{\\mathrm{k}} \\\\ \\overline{\\mathrm{c}} \\cdot \\hat{\\mathrm{i}} & \\overline{\\mathrm{c}} \\cdot \\hat{\\mathrm{j}} & \\overline{\\mathrm{c}} \\cdot \\hat{\\mathrm{k}}\\end{array}\\right|,$ then the value of $\\lambda$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "27"
+      },
+      {
+        "identifier": "B",
+        "content": "28"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$\\lambda\\left|\\begin{array}{lll}\\overline{\\mathrm{a}} \\cdot \\hat{\\mathrm{i}} & \\overline{\\mathrm{a}} \\cdot \\hat{\\mathrm{j}} & \\overline{\\mathrm{a}} \\cdot \\hat{\\mathrm{k}} \\\\ \\overline{\\mathrm{b}} \\cdot \\hat{\\mathrm{i}} & \\overline{\\mathrm{b}} \\cdot \\hat{\\mathrm{j}} & \\overline{\\mathrm{b}} \\cdot \\hat{\\mathrm{k}} \\\\ \\overline{\\mathrm{c}} \\cdot \\hat{\\mathrm{i}} & \\overline{\\mathrm{c}} \\cdot \\hat{\\mathrm{j}} & \\overline{\\mathrm{c}} \\cdot \\hat{\\mathrm{k}}\\end{array}\\right|=\\lambda\\left|\\begin{array}{lll}\\mathrm{a}_1 & \\mathrm{a}_2 & \\mathrm{a}_3 \\\\ \\mathrm{~b}_1 & \\mathrm{~b}_2 & \\mathrm{~b}_3 \\\\ \\mathrm{c}_1 & \\mathrm{c}_2 & \\mathrm{c}_3\\end{array}\\right|=\\lambda\\left[\\begin{array}{lll}\\mathrm{a} & \\mathrm{b} & \\mathrm{c}\\end{array}\\right]$</p>\n<p>$$\\begin{aligned}\n& {[3 \\overline{\\mathrm{a}}+\\overline{\\mathrm{b}} \\quad 3 \\overline{\\mathrm{~b}}+\\overline{\\mathrm{c}} \\quad 3 \\overline{\\mathrm{c}}+\\overline{\\mathrm{a}}]} \\\\\n& =(3 \\overline{\\mathrm{a}}+\\overline{\\mathrm{b}}) \\cdot((3 \\overline{\\mathrm{~b}}+\\overline{\\mathrm{c}}) \\times(3 \\overline{\\mathrm{c}}+\\overline{\\mathrm{a}})) \\\\\n& =(3 \\overline{\\mathrm{a}}+\\overline{\\mathrm{b}}) \\cdot(9(\\overline{\\mathrm{~b}} \\times \\overline{\\mathrm{c}})+3(\\overline{\\mathrm{~b}} \\times \\overline{\\mathrm{a}})+3(\\overline{\\mathrm{c}} \\times \\overline{\\mathrm{c}})+(\\overline{\\mathrm{c}} \\times \\overline{\\mathrm{a}})) \\\\\n& =(3 \\overline{\\mathrm{a}}+\\overline{\\mathrm{b}}) \\cdot(9(\\overline{\\mathrm{~b}} \\times \\overline{\\mathrm{c}})+3(\\overline{\\mathrm{~b}} \\times \\overline{\\mathrm{a}})+0+(\\overline{\\mathrm{c}} \\times \\overline{\\mathrm{a}})) \\\\\n& =27 \\overline{\\mathrm{a}} \\cdot(\\overline{\\mathrm{~b}} \\times \\overline{\\mathrm{c}})+0+0+0+0+\\overline{\\mathrm{b}} \\cdot(\\overline{\\mathrm{c}} \\times \\overline{\\mathrm{a}}) \\\\\n& =27\\left[\\begin{array}{lll}\n\\overline{\\mathrm{a}} & \\overline{\\mathrm{~b}} & \\overline{\\mathrm{c}}]\n\\end{array}\\right]+\\left[\\begin{array}{lll}\n\\overline{\\mathrm{b}} & \\overline{\\mathrm{c}} & \\overline{\\mathrm{a}}\n\\end{array}\\right] \\\\\n& =27\\left[\\begin{array}{lll}\n\\overline{\\mathrm{a}} & \\overline{\\mathrm{~b}} & \\overline{\\mathrm{c}}\n\\end{array}\\right]+\\left[\\begin{array}{lll}\n\\overline{\\mathrm{a}} & \\overline{\\mathrm{~b}} & \\overline{\\mathrm{c}}\n\\end{array}\\right] \\\\\n& =28\\left[\\begin{array}{lll}\n\\overline{\\mathrm{a}} & \\overline{\\mathrm{~b}} & \\overline{\\mathrm{c}}\n\\end{array}\\right] \\\\\n\\therefore\\quad& \\lambda=28\n\\end{aligned}$$</p>",
+    "topic": "properties-of-determinants",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-16th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $A=\\left[\\begin{array}{ll}x & 1 \\\\ 1 & 0\\end{array}\\right], x \\in \\mathbb{R}^{+}$and $A^4=\\left[a_{i j}\\right]_2$.\nIf $a_{11}=109$, then $\\left(A^4\\right)^{-1}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\left[\\begin{array}{rr}109 & 33 \\\\ 33 & 10\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\left[\\begin{array}{ll}10 & 33 \\\\ 33 & 10\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\left[\\begin{array}{cc}10 & 33 \\\\ 33 & 109\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\left[\\begin{array}{cc}10 & -33 \\\\ -33 & 109\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\mathrm{A}=\\left[\\begin{array}{ll}\nx & 1 \\\\\n1 & 0\n\\end{array}\\right] \\\\\n& \\mathrm{A}^2=\\left[\\begin{array}{ll}\nx & 1 \\\\\n1 & 0\n\\end{array}\\right]\\left[\\begin{array}{ll}\nx & 1 \\\\\n1 & 0\n\\end{array}\\right]=\\left[\\begin{array}{cc}\nx^2+1 & x \\\\\nx & 1\n\\end{array}\\right] \\\\\n& \\mathrm{A}^4=\\mathrm{A}^2 \\cdot \\mathrm{~A}^2 \\\\\n&=\\left[\\begin{array}{cc}\nx^2+1 & x \\\\\nx & 1\n\\end{array}\\right]\\left[\\begin{array}{cc}\nx^2+1 & x \\\\\nx & 1\n\\end{array}\\right] \\\\\n&=\\left[\\begin{array}{ll}\n\\left(x^2+1\\right)^2+x^2 & x\\left(x^2+1+1\\right) \\\\\nx\\left(x^2+1+1\\right) & \\left(x^2+1\\right)\n\\end{array}\\right] \\\\\n&=\\left[\\begin{array}{ll}\n\\left(x^2+1\\right)^2+x^2 & x\\left(x^2+2\\right) \\\\\nx\\left(x^2+2\\right) & x^2+1\n\\end{array}\\right] \\\\\n& \\therefore \\quad \\mathrm{A}^4=\\left[\\mathrm{a}_{\\mathrm{ij}}\\right] \\text { and } \\mathrm{a}_{11}=109 \\quad\\text{.... [Given]}\\\\\n& \\mathrm{a}_{11}=109 \\\\\n& \\Rightarrow\\left(x^2+1\\right)^2+x^2=109\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n\\text { i.e. } \\left(x^2+1\\right)^2+x^2 & =100+9 \\\\\n& =(10)^2+3^2=\\left(3^2+1\\right)^2+3^2\n\\end{aligned}$$</p>\n<p>Comparing we get,</p>\n<p>$$x^2=9 \\Rightarrow x=3$$</p>\n<p>$\\mathrm{a}_{12}=x\\left(x^2+2\\right)=3(9+2)=33$</p>\n<p>$\\mathrm{a}_{21}=x\\left(x^2+2\\right)=3(9+2)=33$</p>\n<p>$\\mathrm{a}_{22}=x^2+1=9+1=10$</p>\n<p>$\\therefore \\quad A^4=\\left[\\begin{array}{rr}109 & 33 \\\\ 33 & 10\\end{array}\\right]$</p>\n<p>$\\therefore \\quad\\left|A^4\\right|=1 \\neq 0$</p>\n<p>If $A=\\left[\\begin{array}{ll}a & b \\\\ c & d\\end{array}\\right]$ and $\\mathrm{ad}-\\mathrm{bc} \\neq 0$, then</p>\n<p>$$\\begin{aligned}\n& A^{-1}=\\frac{1}{a d-b c}\\left[\\begin{array}{cc}\nd & -b \\\\\n-c & a\n\\end{array}\\right] \\\\\n\\therefore & \\left(A^4\\right)^{-1}=\\left[\\begin{array}{cc}\n10 & -33 \\\\\n-33 & 109\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-16th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{cc}5 a & -b \\\\ 3 & 2\\end{array}\\right]$ and $A \\cdot \\operatorname{adj} A=A A^T$, then $5 a+b$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$-$1"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "13"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&\\begin{array}{ll}\n& \\mathrm{A}_{11}=(-1)^{1+1}(2)=2, \\mathrm{~A}_{12}=(-1)^{1+2}(3)=-3, \\\\\n& \\mathrm{~A}_{21}=(-1)^{2+1}(-\\mathrm{b})=\\mathrm{b}, \\mathrm{~A}_{22}=(-1)^{2+2}(5 \\mathrm{a})=5 \\mathrm{a} \\\\\n\\therefore & \\text { adj } \\mathrm{A}=\\left[\\begin{array}{cc}\n2 & -3 \\\\\n\\mathrm{~b} & 5 \\mathrm{a}\n\\end{array}\\right]^{\\mathrm{T}}=\\left[\\begin{array}{cc}\n2 & \\mathrm{~b} \\\\\n-3 & 5 \\mathrm{a}\n\\end{array}\\right] \\\\\n& \\text { Given, } \\mathrm{A} \\text { adj } \\mathrm{A}=\\mathrm{AA}^{\\mathrm{T}} \\\\\n& \\Rightarrow\\left[\\begin{array}{cc}\n5 \\mathrm{a} & -\\mathrm{b} \\\\\n3 & 2\n\\end{array}\\right]\\left[\\begin{array}{cc}\n2 & \\mathrm{~b} \\\\\n-3 & 5 \\mathrm{a}\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n5 \\mathrm{a} & -\\mathrm{b} \\\\\n3 & 2\n\\end{array}\\right]\\left[\\begin{array}{cc}\n5 \\mathrm{a} & 3 \\\\\n-\\mathrm{b} & 2\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{cc}\n10 \\mathrm{a}+3 \\mathrm{~b} & 0 \\\\\n0 & 3 \\mathrm{~b}+10 \\mathrm{a}\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n25 \\mathrm{a}^2+\\mathrm{b}^2 & 15 \\mathrm{a}-2 \\mathrm{~b} \\\\\n15 \\mathrm{a}-2 \\mathrm{~b} & 13\n\\end{array}\\right]\n\\end{array}\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n&\\therefore \\quad \\text { by the equality of matrices, }\\\\\n&\\begin{aligned}\n& 15 a-2 b=0 \\text { and } 3 b+10 a=13 \\\\\n& \\Rightarrow a=\\frac{2}{5} \\text { and } b=3 \\\\\n\\therefore \\quad & 5 a+b=5\\left(\\frac{2}{5}\\right)+3=2+3=5\n\\end{aligned}\n\\end{aligned}$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-15th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let A and B be $3 \\times 3$ real matrices such that A is symmetric matrix and B is skew-symmetric matrix. Then the system of linear equations $\\left(A^2 B^2-B^2 A^2\\right) X=O$. where $X$ is $3 \\times 1$ column matrix of unknown variables and $O$ is a $3 \\times 1$ null matrix, has</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " a unique solution\n"
+      },
+      {
+        "identifier": "B",
+        "content": " exactly two solutions\n"
+      },
+      {
+        "identifier": "C",
+        "content": " no solution\n"
+      },
+      {
+        "identifier": "D",
+        "content": " infinitely many solutions"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $\\mathrm{P}=\\mathrm{A}^2 \\mathrm{~B}^2-\\mathrm{B}^2 \\mathrm{~A}^2$</p>\n<p>$$\\begin{aligned}\n\\therefore \\quad \\mathrm{P}^T & =\\left(\\mathrm{A}^2 \\mathrm{~B}^2-\\mathrm{B}^2 \\mathrm{~A}^2\\right)^{\\mathrm{T}} \\\\\n& =\\left(\\mathrm{A}^2 \\mathrm{~B}^2\\right)^{\\mathrm{T}}-\\left(\\mathrm{B}^2 \\mathrm{~A}^2\\right)^{\\mathrm{T}} \\\\\n& =\\left(\\mathrm{B}^2\\right)^{\\mathrm{T}}\\left(\\mathrm{~A}^2\\right)^{\\mathrm{T}}-\\left(\\mathrm{A}^2\\right)^{\\mathrm{T}}\\left(\\mathrm{~B}^2\\right)^{\\mathrm{T}} \\\\\n& =\\mathrm{B}^2 \\mathrm{~A}^2-\\mathrm{A}^2 \\mathrm{~B}^2 \\quad \\cdots\\left[\\because \\mathrm{~A}^{\\mathrm{T}}=\\mathrm{A} \\text { and } \\mathrm{B}^{\\mathrm{T}}=-\\mathrm{B}\\right] \\\\\n& =-\\left(\\mathrm{A}^2 \\mathrm{~B}^2-\\mathrm{B}^2 \\mathrm{~A}^2\\right) \\\\\n& =-\\mathrm{P}\n\\end{aligned}$$</p>\n<p>$\\therefore \\quad P$ is a skew - symmetric matrix.</p>\n<p>$\\therefore \\quad \\operatorname{det}(\\mathrm{P})=0$</p>\n<p>$\\therefore \\quad$ The given system of equations has infinitely many solutions.</p>",
+    "topic": "symmetric-and-skew-symmetric-matrices",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-15th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A\\left[\\begin{array}{ll}2 & 1 \\\\ 7 & 4\\end{array}\\right]$ then $\\left(A^2-5 A\\right)^{-1}$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\left(-\\frac{1}{4}\\right)\\left[\\begin{array}{cc}-3 & 1 \\\\ 7 & -1\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\left(\\frac{1}{4}\\right)\\left[\\begin{array}{cc}-3 & 1 \\\\ 7 & -1\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\left(\\frac{1}{4}\\right)\\left[\\begin{array}{ll}3 & 1 \\\\ 7 & 1\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\left(\\frac{1}{-4}\\right)\\left[\\begin{array}{ll}3 & -1 \\\\ 7 & -1\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& A=\\left[\\begin{array}{ll}\n2 & 1 \\\\\n7 & 4\n\\end{array}\\right] \\\\\n\\therefore\\quad& A^2=\\left[\\begin{array}{ll}\n2 & 1 \\\\\n7 & 4\n\\end{array}\\right] \\times\\left[\\begin{array}{ll}\n2 & 1 \\\\\n7 & 4\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n11 & 6 \\\\\n42 & 23\n\\end{array}\\right] \\\\\n\\therefore\\quad& A^2-5 A=\\left[\\begin{array}{ll}\n1 & 1 \\\\\n7 & 3\n\\end{array}\\right] \\\\\n& \\left|A^2-5 A\\right|=3-7=-4 \\\\\n\\therefore\\quad & \\left(A^2-5 A\\right)^{-1} =\\left(-\\frac{1}{4}\\left[\\begin{array}{cc}\n3 & -1 \\\\\n-7 & 1\n\\end{array}\\right]\\right. \\\\\n& \\quad=\\frac{1}{4}\\left[\\begin{array}{cc}\n-3 & 1 \\\\\n7 & -1\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-11th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $A=\\left[\\begin{array}{ccc}1 & -1 & 1 \\\\ 2 & 1 & -3 \\\\ 1 & 1 & 1\\end{array}\\right]$ and $B=\\left[\\begin{array}{l}4 \\\\ 0 \\\\ 2\\end{array}\\right]$ such that $\\mathrm{AX}=\\mathrm{B}$, then $\\mathrm{X}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\left[\\begin{array}{c}-1 \\\\ 2 \\\\ 1\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\left[\\begin{array}{c}2 \\\\ -1 \\\\ 1\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\left[\\begin{array}{c}-1 \\\\ 1 \\\\ 2\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\left[\\begin{array}{c}-2 \\\\ 1 \\\\ -1\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\mathrm{AX}=\\mathrm{B} \\\\\n& \\Rightarrow\\left[\\begin{array}{ccc}\n1 & -1 & 1 \\\\\n2 & 1 & -3 \\\\\n1 & 1 & 1\n\\end{array}\\right]\\left[\\begin{array}{l}\nx_1 \\\\\nx_2 \\\\\nx_3\n\\end{array}\\right]=\\left[\\begin{array}{l}\n4 \\\\\n0 \\\\\n2\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n&\\text { Applying } R_2 \\rightarrow R_2-2 R_1 \\text { and } R_3 \\rightarrow R_3-R_1 \\text {, }\\\\\n&\\begin{array}{ll} \n& {\\left[\\begin{array}{ccc}\n1 & -1 & 1 \\\\\n0 & 3 & -5 \\\\\n0 & 2 & 0\n\\end{array}\\right]\\left[\\begin{array}{l}\nx_1 \\\\\nx_2 \\\\\nx_3\n\\end{array}\\right]=\\left[\\begin{array}{c}\n4 \\\\\n-8 \\\\\n-2\n\\end{array}\\right]} \\\\\n\\therefore \\quad & x_1-x_2+x_3=4 \\quad\\text{.... (i)}\\\\\n& 3 x_2-5 x_3=-8 \\quad\\text{.... (ii)}\\\\\n& 2 x_2=-2 \\Rightarrow x_2=-1\n\\end{array}\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& \\text { From (ii), } \\\\\n& 3(-1)-5 x_3=-8 \\Rightarrow x_3=1 \\\\\n& \\text { From (i), } \\\\\n& x_1+1+1=4 \\Rightarrow x_1=2 \\\\\n\\therefore \\quad & {\\left[\\begin{array}{l}\nx_1 \\\\\nx_2 \\\\\nx_3\n\\end{array}\\right]=\\left[\\begin{array}{c}\n2 \\\\\n-1 \\\\\n1\n\\end{array}\\right] }\n\\end{aligned}$$</p>",
+    "topic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-11th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $\\mathrm{w}=\\frac{-1-\\mathrm{i} \\sqrt{3}}{2}$ where $\\mathrm{i}=\\sqrt{-1}$, then the value of $\\left|\\begin{array}{ccc}1 & w & w^2 \\\\ w & w^2 & 1 \\\\ w^2 & 1 & w\\end{array}\\right|$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$-1$"
+      },
+      {
+        "identifier": "B",
+        "content": "$0$"
+      },
+      {
+        "identifier": "C",
+        "content": "$1$"
+      },
+      {
+        "identifier": "D",
+        "content": "$3$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\omega=\\frac{-1-\\mathrm{i} \\sqrt{3}}{2}, \\omega^2=\\frac{1-3+2 \\mathrm{i} \\sqrt{3}}{4}=\\frac{-1+\\mathrm{i} \\sqrt{3}}{2}, \\\\\n& \\omega^3=1, \\omega^6=1 \\\\\n& \\left|\\begin{array}{ccc}\n1 & \\omega & \\omega^2 \\\\\n\\omega & \\omega^2 & 1 \\\\\n\\omega^2 & 1 & \\omega\n\\end{array}\\right| \\\\\n& =1\\left(\\omega^3-1\\right)-\\omega\\left(\\omega^2-\\omega^2\\right)+\\omega^2\\left(\\omega-\\omega^4\\right) \\\\\n& =1\\left(\\omega^3-1\\right)+0+\\omega^2\\left(\\omega-\\omega^4\\right)\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& =\\omega^3-1+\\omega^3-\\omega^6 \\\\\n& =2 \\omega^3-\\omega^6-1 \\\\\n& =2(1)-1-1 \\\\\n& =0\n\\end{aligned}$$</p>",
+    "topic": "expansion-of-determinant",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-10th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Inverse of the matrix $\\left[\\begin{array}{cc}0.8 & -0.6 \\\\ 0.6 & 0.8\\end{array}\\right]$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\left[\\begin{array}{cc}0.8 & 0.6 \\\\ -0.6 & 0.8\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\left[\\begin{array}{ll}-0.8 & 0.6 \\\\ -0.6 & 0.8\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\left[\\begin{array}{cc}-0.8 & -0.6 \\\\ 0.6 & 0.8\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\left[\\begin{array}{cc}8 & -6 \\\\ 6 & 8\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $A=\\left[\\begin{array}{cc}0.8 & -0.6 \\\\ 0.6 & 0.8\\end{array}\\right]$</p>\n<p>$$\\begin{array}{rlrl} \n& \\begin{aligned}\n\\therefore \\quad & |\\mathrm{A}|\n\\end{aligned} & =\\left|\\begin{array}{cc}\n0.8 & -0.6 \\\\\n0.6 & 0.8\n\\end{array}\\right| \\\\\n& & =0.64+0.36 \\\\\n& & =1 \\neq 0 \\\\\n\\therefore & \\mathrm{~A}^{-1} & =\\left[\\begin{array}{cc}\n0.8 & 0.6 \\\\\n-0.6 & 0.8\n\\end{array}\\right]\n\\end{array}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-10th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A+B=\\left[\\begin{array}{cc}1 & \\tan \\frac{\\theta}{2} \\\\ -\\tan \\frac{\\theta}{2} & 1\\end{array}\\right]$ where $A$ is symmetric and $B$ is skew-symmetric matrix, then the matrix $\\left(A^{-1} B+A B^{-1}\\right)$ at $\\theta=\\frac{\\pi}{6}$ is given by</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\left[\\begin{array}{cc}1 & 2 \\sqrt{3} \\\\ 2 \\sqrt{3} & 1\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\left[\\begin{array}{cc}-1 & -2 \\sqrt{3} \\\\ 2 \\sqrt{3} & 1\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\left[\\begin{array}{cc}0 & 2 \\sqrt{3} \\\\ 2 \\sqrt{3} & 0\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\left[\\begin{array}{cc}0 & -2 \\sqrt{3} \\\\ 2 \\sqrt{3} & 0\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&\\text { Given, } A+B=\\left[\\begin{array}{cc}\n1 & \\tan \\frac{\\theta}{2} \\\\\n-\\tan \\frac{\\theta}{2} & 1\n\\end{array}\\right]  \\quad\\text{.... (i)}\\\\\n&A^T+B^T=\\left[\\begin{array}{cc}\n1 & -\\tan \\frac{\\theta}{2}\\\\\n\\tan \\frac{\\theta}{2} & 1\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>Since $A$ is symmetric and $B$ is skew symmetric</p>\n<p>$$\\begin{aligned}\n& A^T=A, B^T=-B \\\\\n\\therefore & A-B=\\left[\\begin{array}{cc}\n1 & -\\tan \\frac{\\theta}{2} \\\\\n\\tan \\frac{\\theta}{2} & 1\n\\end{array}\\right]\\quad\\text{.... (ii)}\n\\end{aligned}$$</p>\n<p>Adding (i) and (ii), we get</p>\n<p>$$\\begin{aligned}\n2 A & =\\left[\\begin{array}{cc}\n1 & \\tan \\frac{\\theta}{2} \\\\\n-\\tan \\frac{\\theta}{2} & 1\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n1 & -\\tan \\frac{\\theta}{2} \\\\\n\\tan \\frac{\\theta}{2} & 1\n\\end{array}\\right] \\\\\n2 A & =\\left[\\begin{array}{ll}\n2 & 0 \\\\\n0 & 2\n\\end{array}\\right] \\\\\n\\therefore \\quad A & =\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n&\\text { Now, subtracting (ii) from (i), we get }\\\\\n&\\begin{aligned}\n& 2 B=\\left[\\begin{array}{cc}\n1 & \\tan \\frac{\\theta}{2} \\\\\n-\\tan \\frac{\\theta}{2} & 1\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n1 & -\\tan \\frac{\\theta}{2} \\\\\n\\tan \\frac{\\theta}{2} & 1\n\\end{array}\\right] \\\\\n& 2 B=\\left[\\begin{array}{cc}\n0 & 2 \\tan \\frac{\\theta}{2} \\\\\n-2 \\tan \\frac{\\theta}{2} & 0\n\\end{array}\\right] \\\\\n\\therefore & B=\\left[\\begin{array}{cc}\n0 & \\tan \\frac{\\theta}{2} \\\\\n-\\tan \\frac{\\theta}{2} & 0\n\\end{array}\\right] \\\\\n\\therefore & B^{-1}=\\frac{1}{\\tan ^2 \\frac{\\theta}{2}}\\left[\\begin{array}{cc}\n0 & -\\tan \\frac{\\theta}{2} \\\\\n\\tan \\frac{\\theta}{2} & 0\n\\end{array}\\right]\n\\end{aligned}\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& \\therefore \\quad B^{-1}=\\left[\\begin{array}{cc}\n0 & \\frac{-1}{\\tan \\frac{\\theta}{2}} \\\\\n\\frac{1}{\\tan \\frac{\\theta}{2}} & 0\n\\end{array}\\right] \\\\\n& \\therefore \\quad \\text { Now, }\\left(\\mathrm{A}^{-1} \\mathrm{~B}+\\mathrm{AB}^{-1}\\right)\n\\end{aligned}$$</p>\n<p>$=\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right]\\left[\\begin{array}{cc}0 & \\tan \\frac{\\theta}{2} \\\\ -\\tan \\frac{\\theta}{2} & 0\\end{array}\\right]+\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right]\\left[\\begin{array}{cc}0 & \\frac{-1}{\\tan \\frac{\\theta}{2}} \\\\ \\frac{1}{\\tan \\frac{\\theta}{2}} & 0\\end{array}\\right]$</p>\n<p>$=\\left[\\begin{array}{cc}0 & \\tan \\frac{\\theta}{2} \\\\ -\\tan \\frac{\\theta}{2} & 0\\end{array}\\right]+\\left[\\begin{array}{cc}0 & \\frac{-1}{\\tan \\frac{\\theta}{2}} \\\\ \\frac{1}{\\tan \\frac{\\theta}{2}} & 0\\end{array}\\right]$</p>\n<p>$=\\left[\\begin{array}{cc}0 & \\frac{\\tan ^2 \\frac{\\theta}{2}-1}{\\tan \\frac{\\theta}{2}} \\\\ \\frac{1-\\tan ^2 \\frac{\\theta}{2}}{\\tan \\frac{\\theta}{2}} & 0\\end{array}\\right]$</p>\n<p>$=2\\left[\\begin{array}{cc}0 & (-1) \\frac{1-\\tan ^2 \\frac{\\theta}{2}}{2 \\tan \\frac{\\theta}{2}} \\\\ \\frac{1-\\tan ^2 \\frac{\\theta}{2}}{2 \\tan \\frac{\\theta}{2}} & 0\\end{array}\\right]$</p>\n<p>$$\\begin{aligned}\n& =2\\left[\\begin{array}{cc}\n0 & \\frac{-1}{\\tan \\theta} \\\\\n\\frac{1}{\\tan \\theta} & 0\n\\end{array}\\right] \\\\\n\\therefore & \\left(\\mathrm{A}^{-1} \\mathrm{~B}+\\mathrm{AB}^{-1}\\right) \\text { at } \\theta=\\frac{\\pi}{6} \\\\\n& =2\\left[\\begin{array}{cc}\n0 & \\frac{-1}{\\tan \\frac{\\pi}{6}} \\\\\n\\frac{1}{\\tan \\frac{\\pi}{6}} & 0\n\\end{array}\\right] \\\\\n& =2\\left[\\begin{array}{cc}\n0 & -\\sqrt{3} \\\\\n\\sqrt{3} & 0\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n0 & -2 \\sqrt{3} \\\\\n2 \\sqrt{3} & 0\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "topic": "symmetric-and-skew-symmetric-matrices",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-10th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For the matrix $A=\\left[\\begin{array}{ccc}2 & 0 & -1 \\\\ 3 & 1 & 2 \\\\ -1 & 1 & 2\\end{array}\\right]$, the matrix of cofactors is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\left[\\begin{array}{ccc}0 & 8 & -4 \\\\ -1 & 3 & 2 \\\\ 1 & -7 & 2\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\left[\\begin{array}{ccc}0 & -8 & 4 \\\\ -1 & 3 & -2 \\\\ 1 & -7 & 2\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\left[\\begin{array}{ccc}0 & 8 & -4 \\\\ 1 & -3 & 2 \\\\ -1 & 7 & -2\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\left[\\begin{array}{ccc}0 & -8 & 4 \\\\ -1 & 3 & 2 \\\\ -1 & -7 & 2\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&\\begin{aligned}\n& \\mathrm{A}_{11}=(-1)^{1+1}\\left|\\begin{array}{ll}\n1 & 2 \\\\\n1 & 2\n\\end{array}\\right|=1(0)=0 \\\\\n& \\mathrm{~A}_{12}=(-1)^{1+2}\\left|\\begin{array}{cc}\n3 & 2 \\\\\n-1 & 2\n\\end{array}\\right|=(-1)(8)=-8 \\\\\n& \\mathrm{~A}_{13}=(-1)^{1+3}\\left|\\begin{array}{cc}\n3 & 1 \\\\\n-1 & 1\n\\end{array}\\right|=(1)(4)=4 \\\\\n& \\mathrm{~A}_{21}=(-1)^{2+1}\\left|\\begin{array}{cc}\n0 & -1 \\\\\n1 & 2\n\\end{array}\\right|=(-1)(1)=-1 \\\\\n& \\mathrm{~A}_{22}=(-1)^{2+2}\\left|\\begin{array}{cc}\n2 & -1 \\\\\n-1 & 2\n\\end{array}\\right|=(1)(3)=3 \\\\\n& \\mathrm{~A}_{23}=(-1)^{2+3}\\left|\\begin{array}{cc}\n2 & 0 \\\\\n-1 & 1\n\\end{array}\\right|=(-1)(2)=-2 \\\\\n& \\mathrm{~A}_{31}=(-1)^{3+1}\\left|\\begin{array}{cc}\n0 & -1 \\\\\n1 & 2\n\\end{array}\\right|=(1)(1)=1 \\\\\n& \\mathrm{~A}_{32}=(-1)^{3+2}\\left|\\begin{array}{cc}\n2 & -1 \\\\\n3 & 2\n\\end{array}\\right|=(-1)(7)=-7 \\\\\n& \\mathrm{~A}_{33}=(-1)^{3+3}\\left|\\begin{array}{ll}\n2 & 0 \\\\\n3 & 1\n\\end{array}\\right|=(1)(2)=2\n\\end{aligned}\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n&\\therefore \\quad \\text { The matrix of the cofactors is }\\\\\n&\\left[\\begin{array}{ccc}\n0 & -8 & 4 \\\\\n-1 & 3 & -2 \\\\\n1 & -7 & 2\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-9th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{lll}1 & 1 & 1 \\\\ 1 & a & 3 \\\\ 3 & 2 & 2\\end{array}\\right]$ and $B=\\left[\\begin{array}{ccc}-2 & 0 & b \\\\ 7 & -1 & -2 \\\\ c & 1 & 1\\end{array}\\right]$ and if matrix $B$ is the inverse of matrix $A$, then value of $4 a+2 b-c$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6"
+      },
+      {
+        "identifier": "B",
+        "content": "$-$14"
+      },
+      {
+        "identifier": "C",
+        "content": "14"
+      },
+      {
+        "identifier": "D",
+        "content": "$-$6"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& B=A^{-1} \\\\\n& {\\left[\\begin{array}{ccc}\n-2 & 0 & b \\\\\n7 & -1 & -2 \\\\\nc & 1 & 1\n\\end{array}\\right]=A^{-1}} \\\\\n& {\\left[\\begin{array}{ccc}\n-2 & 0 & b \\\\\n7 & -1 & -2 \\\\\nc & 1 & 1\n\\end{array}\\right] A=A^{-1} A} \\\\\n& {\\left[\\begin{array}{ccc}\n-2 & 0 & b \\\\\n7 & -1 & -2 \\\\\nc & 1 & 1\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n1 & 1 & 1 \\\\\n1 & a & 3 \\\\\n3 & 2 & 2\n\\end{array}\\right]=I} \\\\\n& {\\left[\\begin{array}{ccc}\n-2+3 b & -2+2 b & -2+2 b \\\\\n7-1-6 & 7-a-4 & 7-3-4 \\\\\nc+1+3 & c+a+2 & c+3+2\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]}\n\\end{aligned}$$</p>\n<p>On equality of matrix,</p>\n<p>$$\\begin{aligned}\n& -2+3 b=1,7-a-4=1, c+3+2=1 \\\\\n\\Rightarrow b=1, a & =2, c=-4 \\\\\n\\therefore \\quad 4 a+2 b-c & =4(2)+2(1)+4 \\\\\n& =8+2+4=14\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-9th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $\\mathrm{A}=\\left[\\begin{array}{cc}1 & 2 \\\\ -5 & 1\\end{array}\\right]$ and $\\mathrm{A}^{-1}=x \\mathrm{~A}+y \\mathrm{I}_2$, (where $\\mathrm{I}_2$ is unit matrix of order 2), then</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $x=\\frac{-1}{11}, y=\\frac{2}{11}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $x=\\frac{1}{11}, y=\\frac{-2}{11}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $x=\\frac{-1}{11}, y=\\frac{-2}{11}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $x=\\frac{1}{11}, y=\\frac{2}{11}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&\\begin{array}{rlr} \n& |A|=\\left|\\begin{array}{cc}\n1 & 2 \\\\\n-5 & 1\n\\end{array}\\right|=11 \\neq 0 \\\\\n\\therefore & A^{-1}=\\frac{1}{11}\\left[\\begin{array}{cc}\n1 & -2 \\\\\n5 & 1\n\\end{array}\\right]\n\\end{array}\\\\\n&\\ldots \\text { [ If } A=\\left[\\begin{array}{ll}\na & b \\\\\nc & d\n\\end{array}\\right] \\text { and } a d-b c \\neq 0 \\text {, then }\\\\\n&\\left.\\mathrm{A}^{-1}=\\frac{1}{(\\mathrm{ad}-\\mathrm{bc})}\\left[\\begin{array}{cc}\n\\mathrm{d} & -\\mathrm{b} \\\\\n-\\mathrm{c} & \\mathrm{a}\n\\end{array}\\right] .\\right]\n\\end{aligned}$$</p>\n<p>$$\\begin{array}{ll} \n& \\mathrm{A}^{-1}=x \\mathrm{~A}+y \\mathrm{I} \\\\\n\\therefore \\quad & \\frac{1}{11}\\left[\\begin{array}{cc}\n1 & -2 \\\\\n5 & 1\n\\end{array}\\right]=\\left[\\begin{array}{cc}\nx & 2 x \\\\\n-5 x & x\n\\end{array}\\right]+\\left[\\begin{array}{ll}\ny & 0 \\\\\n0 & y\n\\end{array}\\right] \\\\\n\\therefore \\quad & {\\left[\\begin{array}{cc}\n\\frac{1}{11} & \\frac{-2}{11} \\\\\n\\frac{5}{11} & \\frac{1}{11}\n\\end{array}\\right]=\\left[\\begin{array}{cc}\nx+y & 2 x \\\\\n-5 x & x+y\n\\end{array}\\right]}\n\\end{array}$$</p>\n<p>$\\therefore \\quad$ By the equality of matrices,</p>\n<p>$2 x=\\frac{-2}{11}$ and $x+y=\\frac{1}{11}$</p>\n<p>$\\therefore\\quad x=\\frac{-1}{11}$ and $\\frac{-1}{11}+y=\\frac{1}{11}$</p>\n<p>$\\therefore\\quad x=\\frac{-1}{11}$ and $y=\\frac{2}{11}$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-4th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose A is any $3 \\times 3$ non-singular matrix and $(\\mathrm{A}-3 \\mathrm{I})(\\mathrm{A}-5 \\mathrm{I})=0$ where $\\mathrm{I}=\\mathrm{I}_3$ and $\\mathrm{O}=\\mathrm{O}_3$. Here $\\mathrm{O}_3$ represent zero matrix of order 3 and $\\mathrm{I}_3$ is an identity matrix of order 3 . If $\\alpha A+\\beta A^{-1}=4 I$, then $\\alpha+\\beta$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "13"
+      },
+      {
+        "identifier": "B",
+        "content": "7"
+      },
+      {
+        "identifier": "C",
+        "content": "12"
+      },
+      {
+        "identifier": "D",
+        "content": "8"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{array}{ll} \n& \\text { Given that }(A-3 I)(A-5 I)=0 \\\\\n\\therefore & A^2-3 A-5 A+15 I=0 \\\\\n\\therefore & A^2-8 A+15 I=0 \\\\\n\\therefore & A^2+15 I=8 A\n\\end{array}$$</p>\n<p>Multiplying entire equation by $\\frac{\\mathrm{A}^{-1}}{2}$, we get</p>\n<p>$$\\frac{1}{2} A+\\frac{15}{2} A^{-1}=4 I$$</p>\n<p>Comparing with $\\alpha \\mathrm{A}+\\beta \\mathrm{A}^{-1}=4 \\mathrm{I}$, we get</p> <p>$\\alpha=\\frac{1}{2}$ and $\\beta=\\frac{15}{2}$</p>\n<p>$$\\therefore \\quad \\alpha+\\beta=\\frac{1}{2}+\\frac{15}{2}=8$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-4th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For the system $x-y+z=4,2 x+y-3 z=0$, $x+y+z=2$, the values of $x, y, z$ respectively are given by</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $2,1,1$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $2,1,-1$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $2,-1,1$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $-2,1,1$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given equation in matrix form</p>\n<p>$$\\left[\\begin{array}{ccc}\n1 & -1 & 1 \\\\\n2 & 1 & -3 \\\\\n1 & 1 & 1\n\\end{array}\\right]\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\left[\\begin{array}{l}\n4 \\\\\n0 \\\\\n2\n\\end{array}\\right]$$</p>\n<p>It is of the form $A X=B$</p>\n<p>Now, $|A|=\\left|\\begin{array}{ccc}1 & -1 & 1 \\\\ 2 & 1 & -3 \\\\ 1 & 1 & 1\\end{array}\\right|=10 \\neq 0$</p>\n<p>$$\\begin{array}{ll}\n\\therefore & A^{-1} \\text { exist } \\\\\n& \\operatorname{adj} A=\\left[\\begin{array}{ccc}\n4 & 2 & 2 \\\\\n-5 & 0 & 5 \\\\\n1 & -2 & 3\n\\end{array}\\right]\n\\end{array}$$</p>\n<p>$$\\begin{aligned}\nA^{-1} & =\\frac{1}{|A|} \\operatorname{adj} A \\\\\n& =\\frac{1}{10}\\left[\\begin{array}{ccc}\n4 & 2 & 2 \\\\\n-5 & 0 & 5 \\\\\n1 & -2 & 3\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>$$\\begin{array}{ll} \n& \\text { Now, } A X=B \\\\\n\\therefore \\quad & A^{-1}(A X)=A^{-1} B \\\\\n\\therefore \\quad & X=A^{-1} B\n\\end{array}$$</p>\n<p>$$\\begin{aligned}\n\\therefore \\quad X & =\\frac{1}{10}\\left[\\begin{array}{ccc}\n4 & 2 & 2 \\\\\n-5 & 0 & 5 \\\\\n1 & -2 & 3\n\\end{array}\\right]\\left[\\begin{array}{l}\n4 \\\\\n0 \\\\\n2\n\\end{array}\\right] \\\\\n& =\\frac{1}{10}\\left[\\begin{array}{c}\n16+0+4 \\\\\n-20+0+10 \\\\\n4+0+6\n\\end{array}\\right] \\\\\n& =\\frac{1}{10}\\left[\\begin{array}{c}\n20 \\\\\n-10 \\\\\n10\n\\end{array}\\right]=\\left[\\begin{array}{c}\n2 \\\\\n-1 \\\\\n1\n\\end{array}\\right] \\\\\n\\therefore \\quad & x=2, y=-1, z=1\n\\end{aligned}$$</p>",
+    "topic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-3rd-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{cc}2 & -2 \\\\ 4 & 3\\end{array}\\right]$, then $A^{-1}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $-\\frac{1}{2}\\left[\\begin{array}{cc}3 & 2 \\\\ -4 & 2\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{1}{14}\\left[\\begin{array}{cc}3 & 2 \\\\ -4 & 2\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{1}{14}\\left[\\begin{array}{cc}-3 & -2 \\\\ 4 & -2\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $-\\frac{1}{14}\\left[\\begin{array}{ll}3 & -2 \\\\ 4 & -2\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{array}{rlr} \n& A=\\left[\\begin{array}{cc}\n2 & -2 \\\\\n4 & 3\n\\end{array}\\right] \\\\\n& A^{-1}=\\frac{1}{|A|} \\operatorname{Adj} A \\\\\n\\therefore & A^{-1}=\\frac{1}{14}\\left[\\begin{array}{cc}\n3 & 2 \\\\\n-4 & 2\n\\end{array}\\right]\n\\end{array}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-3rd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $X=\\left[\\begin{array}{l}\\mathrm{a} \\\\ \\mathrm{b} \\\\ \\mathrm{c}\\end{array}\\right], \\mathrm{A}=\\left[\\begin{array}{ccc}1 & -1 & 2 \\\\ 2 & 0 & 1 \\\\ 3 & 2 & 1\\end{array}\\right]$ and $\\mathrm{B}=\\left[\\begin{array}{l}3 \\\\ 1 \\\\ 4\\end{array}\\right]$. If $A X=B$, then the value of $2 a-3 b+4 c$ will be</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "$-$4"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\mathrm{AX}=\\mathrm{B} \\\\\n\\therefore \\quad & {\\left[\\begin{array}{ccc}\n1 & -1 & 2 \\\\\n2 & 0 & 1 \\\\\n3 & 2 & 1\n\\end{array}\\right]\\left[\\begin{array}{l}\n\\mathrm{a} \\\\\n\\mathrm{~b} \\\\\n\\mathrm{c}\n\\end{array}\\right]=\\left[\\begin{array}{l}\n3 \\\\\n1 \\\\\n4\n\\end{array}\\right] } \\\\\n\\therefore \\quad & \\mathrm{a}-\\mathrm{b}+2 \\mathrm{c}=3 \\quad\\text{.... (i)}\\\\\n& 2 \\mathrm{a}+\\mathrm{c}=1 \\quad\\text{... (ii)}\\\\\n& 3 \\mathrm{a}+2 \\mathrm{~b}+\\mathrm{c}=4\\quad\\text{.... (iii)}\n\\end{aligned}$$</p>\n<p>Solving (i), (ii) and (iii), we get</p>\n<p>$$\\begin{aligned}\n& \\begin{aligned}\na=-1, b=2, c & =3 \\\\\n\\therefore\\quad2 a-3 b+4 c & =2(-1)-3(2)+4(3) \\\\\n& =4\n\\end{aligned}\n\\end{aligned}$$</p>",
+    "topic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-2nd-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{cc}3 & -1 \\\\ -4 & 2\\end{array}\\right]$, then $A^{-1}$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\left[\\begin{array}{cc}1 & -\\frac{1}{2} \\\\ 2 & \\frac{3}{2}\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\left[\\begin{array}{cc}1 & \\frac{1}{2} \\\\ -2 & \\frac{3}{2}\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\left[\\begin{array}{cc}1 & -\\frac{1}{2} \\\\ -2 & \\frac{3}{2}\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\left[\\begin{array}{ll}1 & \\frac{1}{2} \\\\ 2 & \\frac{3}{2}\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&\\begin{aligned}\n& A=\\left[\\begin{array}{cc}\n3 & -1 \\\\\n-4 & 2\n\\end{array}\\right] \\\\\n& A^{-1}=\\frac{1}{6-4}\\left[\\begin{array}{ll}\n2 & 1 \\\\\n4 & 3\n\\end{array}\\right]\n\\end{aligned}\\\\\n&\\ldots\\left[\\text { If } A=\\left[\\begin{array}{ll}\na & b \\\\\nc & d\n\\end{array}\\right] \\text { and } \\mathrm{ad}-\\mathrm{bc} \\neq 0\\right. \\text {, then }\\\\\n&\\left.\\mathrm{A}^{-1}=\\frac{1}{(\\mathrm{ad}-\\mathrm{bc})}\\left[\\begin{array}{cc}\n\\mathrm{d} & -\\mathrm{b} \\\\\n-\\mathrm{c} & \\mathrm{a}\n\\end{array}\\right] .\\right]\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& =\\frac{1}{2}\\left[\\begin{array}{ll}\n2 & 1 \\\\\n4 & 3\n\\end{array}\\right] \\\\\nA^{-1} & =\\left[\\begin{array}{ll}\n1 & \\frac{1}{2} \\\\\n2 & \\frac{3}{2}\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2024,
+    "yearKey": "mht-cet-2024-2nd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{ll}1 & -1 \\\\ 2 & -1\\end{array}\\right], B=\\left[\\begin{array}{cc}1 & 1 \\\\ 4 & -1\\end{array}\\right]$$, then $$(A+B)^{-1}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{cc}\\frac{-1}{2} & 0 \\\\ \\frac{-3}{2} & \\frac{1}{2}\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{cc}\\frac{1}{2} & 0 \\\\ \\frac{3}{2} & \\frac{-1}{2}\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{cc}\\frac{1}{2} & 0 \\\\ \\frac{-3}{2} & \\frac{1}{2}\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{ll}\\frac{1}{2} & 0 \\\\ \\frac{3}{2} & \\frac{1}{2}\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$A+B=\\left[\\begin{array}{ll}\n1 & -1 \\\\\n2 & -1\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n1 & 1 \\\\\n4 & -1\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n2 & 0 \\\\\n6 & -2\n\\end{array}\\right]$$</p>\n<p>$$\\therefore \\quad|A+B|=\\left|\\begin{array}{cc}\n2 & 0 \\\\\n6 & -2\n\\end{array}\\right|=-4 \\neq 0$$</p>\n<p>$$\\begin{aligned}\n& \\text { If } A=\\left[\\begin{array}{ll}\na & b \\\\\nc & d\n\\end{array}\\right] \\text { and } a d-b c \\neq 0, \\\\\n& \\text { then } A^{-1}=\\frac{1}{(a d-b c)}\\left[\\begin{array}{cc}\nd & -b \\\\\n-c & a\n\\end{array}\\right] \\\\\n& \\therefore \\quad(A+B)^{-1}=\\frac{1}{-4}\\left[\\begin{array}{cc}\n-2 & 0 \\\\\n-6 & 2\n\\end{array}\\right] \\\\\n&=\\left[\\begin{array}{cc}\n\\frac{1}{2} & 0 \\\\\n\\frac{3}{2} & -\\frac{1}{2}\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-14th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $$A=\\left[\\begin{array}{cc}2 & -1 \\\\ 0 & 2\\end{array}\\right].$$ If $$B=I-{ }^3 C_1(\\operatorname{adj} A)+{ }^3 C_2(\\operatorname{adj} A)^2-{ }^3 C_3(\\operatorname{adj} A)^3$$, then the sum of all elements of the matrix B is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-$$1"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-$$3"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-$$4"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-$$5"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&\\mathrm{B} =\\mathrm{I}-{ }^3 \\mathrm{C}_1(\\operatorname{adj} \\mathrm{A})+{ }^3 \\mathrm{C}_2(\\operatorname{adj} \\mathrm{A})^2-{ }^3 \\mathrm{C}_3(\\operatorname{adj} \\mathrm{A})^3 \\\\\n& =\\mathrm{I}-3 \\operatorname{adj} \\mathrm{A}+3(\\operatorname{adj} \\mathrm{A})^2-1(\\operatorname{adj} \\mathrm{A})^3 \\\\\n& =(\\mathrm{I}-\\operatorname{adj} \\mathrm{A})^3\n\\end{aligned}$$</p>\n<p>$$\\operatorname{adj} A=\\left[\\begin{array}{ll}\n2 & 1 \\\\\n0 & 2\n\\end{array}\\right]$$</p>\n<p>$$\\therefore \\quad B=\\left(\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]-\\left[\\begin{array}{ll}\n2 & 1 \\\\\n0 & 2\n\\end{array}\\right]\\right)^3$$</p>\n<p>$$\\begin{aligned}\n& =\\left[\\begin{array}{cc}\n-1 & -1 \\\\\n0 & -1\n\\end{array}\\right]^3 \\\\\n& =\\left[\\begin{array}{cc}\n-1 & -1 \\\\\n0 & -1\n\\end{array}\\right]\\left[\\begin{array}{cc}\n-1 & -1 \\\\\n0 & -1\n\\end{array}\\right]\\left[\\begin{array}{cc}\n-1 & -1 \\\\\n0 & -1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ll}\n1 & 2 \\\\\n0 & 1\n\\end{array}\\right]\\left[\\begin{array}{cc}\n-1 & -1 \\\\\n0 & -1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n-1 & -3 \\\\\n0 & -1\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>Sum of all elements of the matrix B</p>\n<p>$$=-1-3-1=-5$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-14th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{cc}1 & \\tan x \\\\ -\\tan x & 1\\end{array}\\right]$$, then $$A^T \\cdot A^{-1}=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{ll}-\\cos 2 x & \\sin 2 x \\\\ -\\sin 2 x & \\cos 2 x\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{cc}\\cos 2 x & -\\sin 2 x \\\\ \\sin 2 x & \\cos 2 x\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{cc}\\cos 2 x & \\sin 2 x \\\\ -\\sin 2 x & \\cos 2 x\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{cc}\\cos 2 x & -\\sin 2 x \\\\ -\\sin 2 x & \\cos 2 x\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\text { Here, } A=\\left[\\begin{array}{cc}\n1 & \\tan x \\\\\n-\\tan x & 1\n\\end{array}\\right]$$</p>\n<p>$$\\begin{aligned}\n& \\Rightarrow \\quad|A|=\\sec ^2 x \\\\\n& \\operatorname{adj} A=C^T=\\left[\\begin{array}{cc}\n1 & \\tan x \\\\\n-\\tan x & 1\n\\end{array}\\right]^T\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n\\Rightarrow \\quad \\operatorname{adj} A & =\\left[\\begin{array}{cc}\n\\cos ^2 x & -\\sin x \\cos x \\\\\n\\sin x \\cdot \\cos x & \\cos ^2 x\n\\end{array}\\right] \\\\\n& A^{-1}=\\frac{\\operatorname{adj} A}{|A|}=\\left[\\begin{array}{cc}\n\\cos ^2 x & -\\sin x \\cos x \\\\\n\\sin x \\cdot \\cos x & \\cos ^2 x\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>Now,</p>\n<p>$$\\begin{aligned}\n& A^T A^{-1}=\\left[\\begin{array}{cc}\n1 & -\\tan x \\\\\n\\tan x & 1\n\\end{array}\\right] \\\\\n& {\\left[\\begin{array}{cc}\n\\cos ^2 x & -\\sin x \\cdot \\cos x \\\\\n\\sin x \\cdot \\cos x & \\cos ^2 x\n\\end{array}\\right] }\n\\end{aligned}$$</p>\n<p>$$A^T A^{-1}=\\left[\\begin{array}{cc}\n\\cos 2 x & -\\sin 2 x \\\\\n\\sin 2 x & \\cos 2 x\n\\end{array}\\right]$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-13th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{ccc}1 & 2 & 3 \\\\ -1 & 1 & 2 \\\\ 1 & 2 & 4\\end{array}\\right]$$ and $$A_{i j}$$ is a cofactor of $$a_{i j}$$ then the value of $$a_{21} A_{21}+a_{22} A_{22}+a_{23} A_{23}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-$$2"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n\\mathrm{a}_{21} =-1, \\mathrm{a}_{22}=1, \\mathrm{a}_{23}=2 \\\\\n\\mathrm{~A}_{21}  =(-1)^{2+1}\\left|\\begin{array}{ll}\n2 & 3 \\\\\n2 & 4\n\\end{array}\\right|=(-1)(2)=-2 \\\\\n\\mathrm{~A}_{22} =(-1)^{2+2}\\left|\\begin{array}{ll}\n1 & 3 \\\\\n1 & 4\n\\end{array}\\right|=1(1)=1 \\\\\n\\mathrm{~A}_{23} =(-1)^{2+3}\\left|\\begin{array}{ll}\n1 & 2 \\\\\n1 & 2\n\\end{array}\\right|=(-1)(0)=0 \\\\\n\\therefore \\quad \\mathrm{a}_{21} \\mathrm{~A}_{21}+\\mathrm{a}_{22} \\mathrm{~A}_{22}+\\mathrm{a}_{23} \\mathrm{~A}_{23}\\\\\n=(-1)(-2)+1(1)+2(0)=3\n\\end{aligned}$$</p>",
+    "topic": "expansion-of-determinant",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-13th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{cc}2 a & -3 b \\\\ 3 & 2\\end{array}\\right]$$ and $$A \\cdot \\operatorname{adj} A=A A^T$$, then $$2 a+3 b$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-$$1"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-$$5"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\nA & =\\left[\\begin{array}{cc}\n2 a & -3 b \\\\\n3 & 2\n\\end{array}\\right] \\\\\nA & \\cdot \\operatorname{adj} A=\\left[\\begin{array}{cc}\n2 a & -3 b \\\\\n3 & 2\n\\end{array}\\right]\\left[\\begin{array}{cc}\n2 & 3 b \\\\\n-3 & 2 a\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n4 a+9 b & 0 \\\\\n0 & 9 b+4 a\n\\end{array}\\right] \\\\\n& A \\cdot A^T=\\left[\\begin{array}{cc}\n2 a & -3 b \\\\\n3 & 2\n\\end{array}\\right]\\left[\\begin{array}{cc}\n2 a & 3 \\\\\n-3 b & 2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n4 a^2+9 b^2 & 6 a-6 b \\\\\n6 a-6 b & 13\n\\end{array}\\right] \\\\\n\\therefore & \\quad A \\cdot \\operatorname{adj} A=A \\cdot A^T \\\\\n& \\Rightarrow\\left[\\begin{array}{cc}\n4 a+9 b & 0 \\\\\n0 & 4 a+9 b\n\\end{array}\\right]=\\left[\\begin{array}{c}\n4 a^2+9 b^2 \\\\\n6 a-6 b\n\\end{array}\\right] \\\\\n& \\Rightarrow a=b \\text { and } 4 a+9 b=13 \\\\\n& \\Rightarrow a=b=1 \\\\\n& \\Rightarrow 2 a+3 b=5\n\\end{aligned}$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-12th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If the matrix $$\\mathrm{A}=\\left[\\begin{array}{cc}1 & 2 \\\\ -5 & 1\\end{array}\\right]$$ and $$\\mathrm{A}^{-1}=x \\mathrm{~A}+y \\mathrm{I}$$, when $$I$$ is a unit matrix of order 2 , then the value of $$2 x+3 y$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{8}{11}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{4}{11}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{-8}{11}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{-4}{11}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& A=\\left[\\begin{array}{cc}\n1 & 2 \\\\\n-5 & 1\n\\end{array}\\right] \\\\\n& \\therefore|\\mathrm{A}|=11 \\\\\n& A^{-1}=\\frac{1}{|A|}\\left[\\begin{array}{cc}\n1 & -2 \\\\\n5 & 1\n\\end{array}\\right]=\\frac{1}{11}\\left[\\begin{array}{cc}\n1 & -2 \\\\\n5 & 1\n\\end{array}\\right] \\\\\n& \\mathrm{A}^{-1}=x \\mathrm{~A}+y \\mathrm{I} \\text {, we get } \\\\\n& {\\left[\\begin{array}{cc}\n\\frac{1}{11} & \\frac{-2}{11} \\\\\n\\frac{5}{11} & \\frac{1}{11}\n\\end{array}\\right]=\\left[\\begin{array}{cc}\nx & 2 x \\\\\n-5 x & x\n\\end{array}\\right]+\\left[\\begin{array}{ll}\ny & 0 \\\\\n0 & y\n\\end{array}\\right]} \\\\\n& \\begin{array}{ll}\n\\therefore & {\\left[\\begin{array}{cc}\n\\frac{1}{11} & \\frac{-2}{11} \\\\\n\\frac{5}{11} & \\frac{1}{11}\n\\end{array}\\right]=\\left[\\begin{array}{cc}\nx+y & 2 x \\\\\n-5 x & x+y\n\\end{array}\\right]} \\\\\n\\Rightarrow & x=\\frac{-1}{11} \\text { and } y=\\frac{2}{11} \\\\\n\\therefore & 2 x+3 y=2\\left(\\frac{-1}{11}\\right)+3\\left(\\frac{2}{11}\\right)=\\frac{4}{11}\n\\end{array}\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-12th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$\\mathrm{A}=\\left[\\begin{array}{ll}\\mathrm{i} & 1 \\\\ 1 & 0\\end{array}\\right]$$ where $$\\mathrm{i}=\\sqrt{-1}$$ and $$\\mathrm{B}=\\mathrm{A}^{2029}$$, then $$\\mathrm{B}^{-1}=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-\\mathrm{A}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\operatorname{adj} \\mathrm{A}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\mathrm{-I}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-\\operatorname{adj} \\mathrm{A}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& A=\\left[\\begin{array}{ll}\ni & 1 \\\\\n1 & 0\n\\end{array}\\right] \\\\\n& \\therefore \\quad A^2=\\left[\\begin{array}{ll}\ni & 1 \\\\\n1 & 0\n\\end{array}\\right] \\times\\left[\\begin{array}{ll}\ni & 1 \\\\\n1 & 0\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n0 & i \\\\\ni & 1\n\\end{array}\\right] \\\\\n& \\therefore \\quad A^3=\\left[\\begin{array}{ll}\n0 & i \\\\\ni & 1\n\\end{array}\\right]\\left[\\begin{array}{ll}\ni & 1 \\\\\n1 & 0\n\\end{array}\\right]=\\left[\\begin{array}{ll}\ni & 0 \\\\\n0 & i\n\\end{array}\\right] \\\\\n& \\therefore \\quad \\mathrm{A}^6=\\mathrm{A}^3 \\times \\mathrm{A}^3 \\\\\n& =\\left[\\begin{array}{ll}\n\\mathrm{i} & 0 \\\\\n0 & \\mathrm{i}\n\\end{array}\\right] \\times\\left[\\begin{array}{ll}\n\\mathrm{i} & 0 \\\\\n0 & \\mathrm{i}\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n-1 & 0 \\\\\n0 & -1\n\\end{array}\\right]=(-1) I_2 \\\\\n& \\text { Now, } B=A^{2029}=A^{(6 \\times 338+1)} \\\\\n& \\therefore \\quad \\mathrm{B}=\\left(\\mathrm{A}^6\\right)^{338} \\times \\mathrm{A} \\\\\n& =\\left((-1) I_2\\right)^{338} \\times A \\\\\n& =\\mathrm{I}_2 \\times \\mathrm{A} \\\\\n& \\therefore \\quad \\mathrm{B}=\\mathrm{A} \\\\\n& \\text { Now, }|A|=-1 \\\\\n& \\therefore \\quad \\mathrm{B}^{-1}=\\mathrm{A}^{-1}=\\frac{1}{|\\mathrm{~A}|} \\operatorname{adj} \\mathrm{A} \\\\\n& \\therefore \\quad B^{-1}=-\\operatorname{adj} \\mathrm{A} \\\\\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-11th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$P=\\left[\\begin{array}{lll}1 & \\alpha & 3 \\\\ 1 & 3 & 3 \\\\ 2 & 4 & 4\\end{array}\\right]$$ is the adjoint of a $$3 \\times 3$$ matrix $$A$$ and $$|A|=4$$, then value of $$\\alpha$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "11"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "0"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& P=\\operatorname{adj} A \\quad\\text{.... [Given]}\\\\\n\\therefore \\quad & |P|=|A|^2 \\quad.... [\\because |\\mathrm{adjA|=|A|^{n-1}}]\\\\\n& \\Rightarrow\\left|\\begin{array}{lll}\n1 & \\alpha & 3 \\\\\n1 & 3 & 3 \\\\\n2 & 4 & 4\n\\end{array}\\right|=4^2 \\\\\n& \\Rightarrow 2 \\alpha-6=16 \\\\\n& \\Rightarrow \\alpha=11\n\\end{aligned}$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-11th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $$\\omega \\neq 1$$ be a cube root of unity and $$S$$ be the set of all non-singular matrices of the form $$\\left[\\begin{array}{ccc}1 & a & b \\\\ \\omega & 1 & c \\\\ \\omega^2 & \\omega & 1\\end{array}\\right]$$ where each of $$a, b$$ and $$c$$ is either $$\\omega$$ or $$\\omega^2$$, then the number of distinct matrices in the set $$\\mathrm{S}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "6"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "8"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $$A=\\left[\\begin{array}{ccc}1 & a & b \\\\ \\omega & 1 & c \\\\ \\omega^2 & \\omega & 1\\end{array}\\right]$$</p>\n<p>For non-singular matrix $$|A| \\neq 0$$</p>\n<p>$$\\Rightarrow\\left|\\begin{array}{ccc}\n1 & a & b \\\\\n\\omega & 1 & c \\\\\n\\omega^2 & \\omega & 1\n\\end{array}\\right| \\neq 0$$</p>\n<p>$$\\begin{aligned}\n& \\Rightarrow 1(1-\\omega c)-a\\left(\\omega-\\omega^2 c\\right)+b(0) \\neq 0 \\\\\n& \\Rightarrow 1(1-\\omega c)-a \\omega(1-\\omega c) \\neq 0 \\\\\n& \\Rightarrow(1-\\omega c)(1-a \\omega) \\neq 0 \\\\\n& \\Rightarrow c \\neq \\frac{1}{\\omega} \\text { and } a \\neq \\frac{1}{\\omega} \\\\\n& \\Rightarrow c \\neq \\omega^2 \\text { and } a \\neq \\omega^2 \\quad \\ldots\\left[\\because \\omega^3=1\\right]\n\\end{aligned}$$</p>\n<p>So possible value of $$a$$ and $$c$$ is $$\\omega$$ only and $$b$$ can take values $$\\omega$$ or $$\\omega^2$$.</p>\n<p>$$\\therefore \\quad$$ The possible number of distinct matrices = 2.</p>",
+    "topic": "properties-of-determinants",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-11th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$B=\\left[\\begin{array}{ccc}3 & \\alpha & -1 \\\\ 1 & 3 & 1 \\\\ -1 & 1 & 3\\end{array}\\right]$$ is the adjoint of a $$3 \\times 3$$ matrix $$\\mathrm{A}$$ and $$|\\mathrm{A}|=4$$, then $$\\alpha$$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "0"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-$$1"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-$$2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&\\begin{array}{ll} \n& \\text { Using }|\\operatorname{adj} A|=|A|^{n-1} \\\\\n& B u t \\quad B=\\operatorname{Adj}(A) \\quad ....[\\text{Given}] \\\\\n\\therefore \\quad & |B|=|A|^2 \\\\\n\\Rightarrow & \\left|\\begin{array}{ccc}\n3 & \\alpha & -1 \\\\\n1 & 3 & 1 \\\\\n-1 & 1 & 3\n\\end{array}\\right|=|A|^2 \\\\\n\\Rightarrow & 24-4 \\alpha-4=4^2 \\\\\n\\Rightarrow & 20-4 \\alpha=16 \\\\\n\\Rightarrow & \\alpha=1\n\\end{array}\\\\\n\\end{aligned}$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-10th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$B=\\left[\\begin{array}{lll}1 & \\alpha & 2 \\\\ 1 & 2 & 2 \\\\ 2 & 3 & 3\\end{array}\\right]$$ is the adjoint of a $$3 \\times 3$$ matrix A and $$|A|=5$$, then $$\\alpha$$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "25"
+      },
+      {
+        "identifier": "B",
+        "content": "27"
+      },
+      {
+        "identifier": "C",
+        "content": "3$$\\sqrt3$$"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Using $$|\\operatorname{Adj} A|=|A|^{n-1}$$</p>\n<p>But $$\\mathrm{B}=\\operatorname{Adj}(\\mathrm{A})\\quad$$ .... [Given]</p>\n<p>$$\\therefore \\quad|\\mathrm{B}|=|\\mathrm{A}|^2$$</p>\n<p>$$\\begin{aligned}\n& \\Rightarrow\\left|\\begin{array}{lll}\n1 & \\alpha & 2 \\\\\n1 & 2 & 2 \\\\\n2 & 3 & 3\n\\end{array}\\right|=|\\mathrm{A}|^2 \\\\\n& \\Rightarrow \\alpha-2=5^2 \\\\\n& \\Rightarrow \\alpha-2=25 \\\\\n& \\Rightarrow \\alpha=27\n\\end{aligned}$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-10th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$\\left|\\begin{array}{ccc}\\cos (A+B) & -\\sin (A+B) & \\cos (2 B) \\\\ \\sin A & \\cos A & \\sin B \\\\ -\\cos A & \\sin A & \\cos B\\end{array}\\right|=0$$, then the value of $$B$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\mathrm{n} \\pi, \\mathrm{n} \\in \\mathbb{Z}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$(2 \\mathrm{n}+1) \\frac{\\pi}{2}, \\mathrm{n} \\in \\mathbb{Z}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$(2 \\mathrm{n}+1) \\frac{\\pi}{4}, \\mathrm{n} \\in \\mathbb{Z}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2 \\mathrm{n} \\frac{\\pi}{3}, \\mathrm{n} \\in \\mathbb{Z}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\left|\\begin{array}{ccc}\n\\cos (A+B) & -\\sin (A+B) & \\cos (2 B) \\\\\n\\sin A & \\cos A & \\sin B \\\\\n-\\cos A & \\sin A & \\cos B\n\\end{array}\\right|=0$$</p>\n<p>$$\\therefore \\quad \\cos (\\mathrm{A}+\\mathrm{B})[(\\cos \\mathrm{A} \\cos \\mathrm{B}-\\sin \\mathrm{A} \\sin \\mathrm{B})] +\\sin (A+B)[\\sin A \\cos B+\\sin B \\cos A]  \n+\\cos 2 B\\left[\\sin ^2 A+\\cos ^2 A\\right]=0$$</p>\n<p>$$\\begin{aligned}\n\\therefore \\quad & \\cos (\\mathrm{A}+\\mathrm{B}) \\cdot \\cos (\\mathrm{A}+\\mathrm{B}) \\\\\n& +\\sin (\\mathrm{A}+\\mathrm{B}) \\cdot \\sin (\\mathrm{A}+\\mathrm{B})+\\cos 2 \\mathrm{~B}=0 \\\\\n& \\cos ^2(\\mathrm{~A}+\\mathrm{B})+\\sin ^2(\\mathrm{~A}+\\mathrm{B})+\\cos 2 \\mathrm{~B}=0 \\\\\n& 1+\\cos 2 \\mathrm{~B}=0\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& 2 \\cos ^2 \\mathrm{~B}=0 \\\\\n& \\therefore \\quad \\cos \\mathrm{B}=0\n\\end{aligned}$$</p>\n<p>$$\\therefore \\quad B=(2 n+1) \\frac{\\pi}{2} \\text { for }(n \\in Z)$$</p>",
+    "topic": "properties-of-determinants",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-9th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $$A=\\left[\\begin{array}{ccc}1 & 1 & 1 \\\\ 0 & 1 & 3 \\\\ 1 & -2 & 1\\end{array}\\right], B=\\left[\\begin{array}{c}6 \\\\ 11 \\\\ 0\\end{array}\\right]$$ and $$X=\\left[\\begin{array}{l}a \\\\ b \\\\ c\\end{array}\\right]$$, if $$\\mathrm{AX}=\\mathrm{B}$$, then the value of $$2 \\mathrm{a}+\\mathrm{b}+2 \\mathrm{c}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10"
+      },
+      {
+        "identifier": "B",
+        "content": "8"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "12"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{array}{left} \n A X=B \\\\\n{\\left[\\begin{array}{ccc}\n1 & 1 & 1 \\\\\n0 & 1 & 3 \\\\\n1 & -2 & 1\n\\end{array}\\right]\\left[\\begin{array}{l}\n\\mathrm{a} \\\\\n\\mathrm{b} \\\\\n\\mathrm{c}\n\\end{array}\\right]=\\left[\\begin{array}{c}\n6 \\\\\n11 \\\\\n0\n\\end{array}\\right]} \\\\\n\\therefore \\quad \\mathrm{a}+\\mathrm{b}+\\mathrm{c}=6 \\quad \\text{.... (i)} \\\\\n\\quad \\mathrm{~b}+3 \\mathrm{c}=11 \\quad \\text{.... (ii)}\\\\\n\\quad\\mathrm{a}-2 \\mathrm{~b}+\\mathrm{c}=0 \\\\\n\\quad \\text { i.e., } \\mathrm{a}+\\mathrm{c}=2 \\mathrm{~b} \\quad \\text{.... (iii)}\\\\\n\\quad \\text { From (i) and (ii), we get } \\mathrm{b}=2 \\\\\n\\quad \\text { From (ii), } \\mathrm{c}=3 \\\\\n\\quad \\text { From (i), } \\mathrm{a}=1 \\\\\n\\quad \\therefore \\quad \\mathrm{2a+b+2c}=2(1)+2+2(3)=10\n\\end{array}$$</p>",
+    "topic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-9th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{cc}2 & -1 \\\\ -1 & 3\\end{array}\\right]$$, then the inverse of $$\\left(2 A^2+5 A\\right)$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{95}\\left[\\begin{array}{ll}7 & 3 \\\\ 3 & 4\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{95}\\left[\\begin{array}{cc}-7 & 3 \\\\ 3 & -4\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{95}\\left[\\begin{array}{cc}-7 & -3 \\\\ 3 & 4\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{95}\\left[\\begin{array}{ll}4 & 3 \\\\ 3 & 7\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& A=\\left[\\begin{array}{cc}\n2 & -1 \\\\\n-1 & 3\n\\end{array}\\right] \\\\\n& A^2=\\left[\\begin{array}{cc}\n2 & -1 \\\\\n-1 & 3\n\\end{array}\\right]\\left[\\begin{array}{cc}\n2 & -1 \\\\\n-1 & 3\n\\end{array}\\right] \\\\\n& \\therefore \\quad A^2=\\left[\\begin{array}{cc}\n5 & -5 \\\\\n-5 & 10\n\\end{array}\\right] \\\\\n& \\text { Now, } 2 A^2+5 A=2\\left[\\begin{array}{cc}\n5 & -5 \\\\\n-5 & 10\n\\end{array}\\right]+5\\left[\\begin{array}{cc}\n2 & -1 \\\\\n-1 & 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n20 & -15 \\\\\n-15 & 35\n\\end{array}\\right] \\\\\n& \\text { If } A=\\left[\\begin{array}{ll}\na & b \\\\\nc & d\n\\end{array}\\right] \\text {, then } A^{-1}=\\frac{1}{a d-b c}\\left[\\begin{array}{cc}\nd & -b \\\\\n-c & a\n\\end{array}\\right] \\\\\n& \\therefore \\quad\\left(2 \\mathrm{~A}^2+5 \\mathrm{~A}\\right)^{-1}=\\frac{1}{475}\\left[\\begin{array}{ll}\n35 & 15 \\\\\n15 & 20\n\\end{array}\\right] \\\\\n& =\\frac{1}{95}\\left[\\begin{array}{ll}\n7 & 3 \\\\\n3 & 4\n\\end{array}\\right] \\\\\n&\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2023,
+    "yearKey": "mht-cet-2023-9th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{lll}1 & 2 & 1 \\\\ 3 & 1 & 3\\end{array}\\right]$$ and $$B=\\left[\\begin{array}{ll}2 & 3 \\\\ 1 & 2 \\\\ 1 & 2\\end{array}\\right]$$, then $$(A B)^{-1}=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{ll}\\frac{17}{5} & \\frac{9}{5} \\\\ 2 & 1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{cc}\\frac{-17}{5} & \\frac{9}{5} \\\\ 2 & -1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{ll}\\frac{17}{5} & 2 \\\\ \\frac{9}{5} & 1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{cc}\\frac{-17}{5} & 2 \\\\ \\frac{-9}{5} & -1\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Note : $$\\left[\\begin{array}{ll}a & b \\\\ c & d\\end{array}\\right]^{-1}=\\frac{1}{a d-b c}\\left[\\begin{array}{rr}d & -b \\\\ -c & a\\end{array}\\right]$$</p>\n<p>$$A \\cdot B=\\left[\\begin{array}{lll}1 & 2 & 1 \\\\ 3 & 1 & 3\\end{array}\\right] \\cdot\\left[\\begin{array}{ll}2 & 3 \\\\ 1 & 2 \\\\ 1 & 2\\end{array}\\right]=\\left[\\begin{array}{cc}5 & 9 \\\\ 10 & 17\\end{array}\\right]$$</p>\n<p>$$\\therefore|A B|=85-90=-5$$</p>\n<p>$$\\therefore(A B)^{-1}=\\frac{1}{-5}\\left[\\begin{array}{rr}\n17 & -9 \\\\\n-10 & 5\n\\end{array}\\right]=\\left[\\begin{array}{rr}\n-17 / 5 & 9 / 5 \\\\\n2 & -1\n\\end{array}\\right]$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2022,
+    "yearKey": "mht-cet-2022-11th-august-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Given $$A=\\left[\\begin{array}{ccc}x & 3 & 2 \\\\ 1 & y & 4 \\\\ 2 & 2 & z\\end{array}\\right]$$, if $$x y z=60$$ and $$8 x+4 y+3 z=20$$, then $$A$$.(adjA) </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{ccc}60 & 0 & 0 \\\\ 0 & 60 & 0 \\\\ 0 & 0 & 60\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{ccc}108 & 0 & 0 \\\\ 0 & 108 & 0 \\\\ 0 & 0 & 108\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{ccc}20 & 0 & 0 \\\\ 0 & 20 & 0 \\\\ 0 & 0 & 20\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{ccc}68 & 0 & 0 \\\\ 0 & 68 & 0 \\\\ 0 & 0 & 68\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the matrix product $$A \\cdot (\\text{adj}A)$$, we first need to understand the properties of a matrix and its adjugate (adjoint) matrix. The adjugate of a matrix $$A$$, denoted as $$\\text{adj}A$$, is the transpose of the cofactor matrix of $$A$$. One important property relating a matrix and its adjugate involves the determinant of the matrix, given by the equation:</p>\n\n$$A \\cdot (\\text{adj}A) = (\\text{det}A) \\cdot I$$\n\n<p>where $$I$$ is the identity matrix of the same size as $$A$$, and $$\\text{det}A$$ is the determinant of the matrix $$A$$. This relation tells us that the product of a matrix and its adjugate is a diagonal matrix, where each diagonal element is equal to the determinant of the original matrix.</p>\n\n<p>Given the matrix $$A$$ and the equations $$xyz = 60$$ and $$8x + 4y + 3z = 20$$, we are asked to find $$A \\cdot (\\text{adj}A)$$. According to the property mentioned, this requires us to find the determinant of the given matrix $$A$$.</p>\n\n<p>The determinant of $$A$$, $$\\text{det}A$$, for a 3x3 matrix $$\\left[\\begin{array}{ccc}a & b & c \\\\ d & e & f \\\\ g & h & i\\end{array}\\right]$$ is given by:</p>\n\n$$\\text{det}A = a(ei - fh) - b(di - fg) + c(dh - eg)$$\n\n<p>Substituting the values from matrix $$A$$, we get:</p>\n\n$$\\text{det}A = x(yz - 8) - 3(z - 8) + 2(2 - 2y)$$\n<br/><br/>$$\\text{det}A = xyz - 8x - 3z + 24 + 4 - 4y$$\n<br/><br/>$$\\text{det}A = xyz - ( 8x + 4y + 3z ) + 24 + 4 $$\n\n<p>Since we know that $$xyz = 60$$ and have the equation $$8x + 4y + 3z = 20$$, we can substitute $$xyz = 60$$ and $$8x + 4y + 3z = 20$$ in ours determinant formula:</p>\n\n$$\\text{det}A = 60 - 20 + 28 = 68$$\n\n<p>But to proceed, we notice that directly applying the properties will be more efficient. By knowing that $$\\text{det}A = 68$$ (since it's given by the product $$xyz$$), all we need to use is the derived property of a matrix and its adjugate:</p>\n\n$$A \\cdot (\\text{adj}A) = (\\text{det}A) \\cdot I$$\n\n<p>Given that $$\\text{det}A = 68$$, the right hand side of this equation becomes:</p>\n\n$$A \\cdot (\\text{adj}A) = 68 \\cdot I$$\n\n<p>Where $$I$$ is the identity matrix of the same dimensions as $$A$$, which is a 3x3 matrix. Therefore, </p>\n\n$$A \\cdot (\\text{adj}A) = \\left[\\begin{array}{ccc}68 & 0 & 0 \\\\ 0 & 68 & 0 \\\\ 0 & 0 & 68\\end{array}\\right]$$\n\n<p>This matches with Option D. The correct answer is therefore Option D:</p>\n\n$$\\left[\\begin{array}{ccc}68 & 0 & 0 \\\\ 0 & 68 & 0 \\\\ 0 & 0 & 68\\end{array}\\right]$$",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2022,
+    "yearKey": "mht-cet-2022-11th-august-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$\\mathrm{A}=\\left[\\begin{array}{cc}\\lambda & \\mathrm{i} \\\\ \\mathrm{i} & -\\lambda\\end{array}\\right]$$ and $$\\mathrm{A}^{-1}$$ does not exist, then $$\\lambda=$$ (where $$\\mathrm{i}=\\sqrt{-1}$$)</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\pm 2$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\pm 1$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "0"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pm 3$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$A=\\left[\\begin{array}{cc}\n\\lambda & i \\\\\ni & -\\lambda\n\\end{array}\\right] \\Rightarrow|A|=\\left|\\begin{array}{cc}\n\\lambda & i \\\\\ni & -\\lambda\n\\end{array}\\right|$$</p>\n<p>Since $$A^{-1}$$ does not exist, we write $$|A|=0$$</p>\n<p>$$\\therefore\\left(-\\lambda^2\\right)-\\left(i^2\\right)=0 \\quad \\Rightarrow \\lambda^2=1 \\Rightarrow \\lambda= \\pm 1 \\text {. }$$</p>",
+    "topic": "properties-of-determinants",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-24th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{ccc}1 & 2 & 3 \\\\ -1 & 1 & 2 \\\\ 1 & 2 & 4\\end{array}\\right]$$, and $$A(\\operatorname{adj} A)=k I$$, then the value of $$(k+1)^4$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "256"
+      },
+      {
+        "identifier": "B",
+        "content": "81"
+      },
+      {
+        "identifier": "C",
+        "content": "16"
+      },
+      {
+        "identifier": "D",
+        "content": "625"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$|\\mathrm{A}|=\\left|\\begin{array}{ccc}\n1 & 2 & 3 \\\\\n-1 & 1 & 2 \\\\\n1 & 2 & 4\n\\end{array}\\right|=1(0)-2(-6)+3(-3)=3$$</p>\n<p>We know that $$\\mathrm{A}(\\operatorname{adj} \\mathrm{A})=|\\mathrm{A}| \\mathrm{I}$$</p>\n<p>$$\\begin{aligned}\n& \\therefore \\mathrm{A}(\\operatorname{adj} \\mathrm{A})=3 \\mathrm{I} \\Rightarrow \\mathrm{k}=3 \\\\\n& (\\mathrm{k}+1)^4=(3+1)^4=256\n\\end{aligned}$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-24th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>IF $$A X=B$$, where $$A=\\left[\\begin{array}{ccc}1 & -1 & 1 \\\\ 2 & 1 & -3 \\\\ 1 & 1 & 1\\end{array}\\right], X=\\left[\\begin{array}{l}x \\\\ y \\\\ z\\end{array}\\right], B=\\left[\\begin{array}{l}4 \\\\ 0 \\\\ 2\\end{array}\\right]$$, then $$2 x+y-z=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-$$2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& {\\left[\\begin{array}{ccc}\n1 & -1 & 1 \\\\\n2 & 1 & -3 \\\\\n1 & 1 & 1\n\\end{array}\\right]\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\left[\\begin{array}{l}\n4 \\\\\n0 \\\\\n2\n\\end{array}\\right]} \\\\\n& R_3 \\rightarrow R_3-R_1 \\text { and } R_2 \\rightarrow R_2-2 R_1 \\\\\n& {\\left[\\begin{array}{ccc}\n1 & -1 & 1 \\\\\n0 & 3 & -5 \\\\\n0 & 2 & 0\n\\end{array}\\right]\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\left[\\begin{array}{l}\n4 \\\\\n-8 \\\\\n-2\n\\end{array}\\right]}\n\\end{aligned}$$</p>\n<p>$$\n\\begin{aligned}\n\\therefore x-y+z & =4 \\quad \\text{.... (1)}\\\\\n3 y-5 z & =-8 \\quad \\text{.... (2)}\\\\\n2 y & =-2 \\quad \\text{.... (3)}\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& \\therefore y=-1 \\quad \\text {.....[from (3)]}\\\\\n& \\therefore-3-5 z=-8 \\Rightarrow z=1 \\quad \\text {.....[from (2)]}\\\\\n& \\therefore x-(-1)+1=4 \\Rightarrow x=2 \\quad \\text {.....[from (1)]}\\\\\n& \\therefore 2 x+y-z=2(2)-1-1=2\n\\end{aligned}$$</p>",
+    "topic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-24th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\\text { If } A=\\left[\\begin{array}{ll}\n2 & -2 \\\\\n2 & -3\n\\end{array}\\right], B=\\left[\\begin{array}{cc}\n0 & -1 \\\\\n1 & 0\n\\end{array}\\right] \\text {, then }\\left(B^{-1} A^{-1}\\right)^{-1}=\\text { ? }$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$A=\\left[\\begin{array}{ll}-2 & -2 \\\\ -3 & -2\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$A=\\left[\\begin{array}{cc}2 & 2 \\\\ -2 & -3\\end{array}\\right]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$A=\\left[\\begin{array}{cc}3 & -2 \\\\ 2 & 2\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$A=\\left[\\begin{array}{cc}1 & -1 \\\\ -2 & 3\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\left(B^{-1} A^{-1}\\right)^{-1}=\\left(A^{-1}\\right)^{-1}\\left(B^{-1}\\right)^{-1}=A B \\\\\n& \\therefore\\left(B^{-1} A^{-1}\\right)^{-1}=\\left[\\begin{array}{ll}\n2 & -2 \\\\\n2 & -3\n\\end{array}\\right]\\left[\\begin{array}{cc}\n0 & -1 \\\\\n1 & 0\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n-2 & -2 \\\\\n-3 & -2\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-24th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 1 & 1 & a \\\\ 2 & 4 & 7\\end{array}\\right]$$ and $$B=\\left[\\begin{array}{ccc}13 & 2 & b \\\\ -3 & -1 & 2 \\\\ -2 & 0 & 1\\end{array}\\right]$$ where matrix B is inverse of matrix A, then the value of a and b are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\mathrm{a}=-5, \\mathrm{~b}=7$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\mathrm{a=7, b=-5}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\mathrm{a=-7, b=5}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\mathrm{a}=5, \\mathrm{~b}=-7$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$|A|=\\left|\\begin{array}{lll}\n1 & 2 & 3 \\\\\n1 & 1 & a \\\\\n2 & 4 & 7\n\\end{array}\\right|=(7-4 a)-2(7-2 a)+3(2)=-1$$</p>\n<p>Matrix B is inverse of matrix A. 'b' is element $$(1 \\times 3)$$ in matrix B Here element $$(3 \\times 1)$$ in matrix $$\\mathrm{A}$$ is 2.</p>\n<p>Cofactor of $$2=(-1)^{3+1}\\left|\\begin{array}{ll}2 & 3 \\\\ 1 & \\mathrm{a}\\end{array}\\right|=2 \\mathrm{a}-3$$</p>\n<p>$$\\text { Now } \\frac{2 a-3}{-1}=b \\quad \\Rightarrow \\quad 2 a+b=3 \\quad \\text{.... (1)}$$</p>\n<p>For element $$(1 \\times 2)$$ in matrix A i.e. 2.</p>\n<p>Now cofactor of 2 is $$(-1)^{1+2}\\left|\\begin{array}{ll}1 & a \\\\ 2 & 7\\end{array}\\right|=-(7-2 a)$$ and $$\\frac{-(7-2 a)}{-1}=7-2 a$$</p>\n<p>Here element $$(2 \\times 1)$$ in matrix B is $$-$$3</p>\n<p>$$\\therefore 7-2a=-3$$ .... (2)</p> \n<p>Solving eq. (1) and (2), we get a \n= 5, b = $$-$$7</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-24th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For a $$3 \\times 3$$ matrix $$\\mathrm{A}$$, if $$\\mathrm{A}(\\operatorname{adj} \\mathrm{A})=\\left[\\begin{array}{ccc}-10 & 0 & 0 \\\\ 0 & -10 & 2 \\\\ 0 & 0 & -10\\end{array}\\right]$$, then the value of determinant of A is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "100"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-$$1000"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-$$10"
+      },
+      {
+        "identifier": "D",
+        "content": "20"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We have $$|\\mathrm{A}(\\operatorname{adj} \\mathrm{A})|=\\left|\\begin{array}{ccc}-10 & 0 & 0 \\\\ 0 & -10 & 2 \\\\ 0 & 0 & -10\\end{array}\\right|$$</p>\n<p>$$\\therefore|A||\\operatorname{adj} A|=(-10)(100)=-1000$$</p>\n<p>$$\\therefore|A||A|^{3-1}=-1000 \\Rightarrow|A|^3=-1000 \\Rightarrow|A|=-10$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-24th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{ccc}5 & 6 & 3 \\\\ -4 & 3 & 2 \\\\ -4 & -7 & 3\\end{array}\\right]$$, then cofactors of all elements of second row are respectively.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-39,3,11$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-39,27,11$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$39,-3,-11$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$39,-27,11$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$A=\\left[\\begin{array}{ccc}\n5 & 6 & 3 \\\\\n-4 & 3 & 2 \\\\\n-4 & -7 & 3\n\\end{array}\\right]$$</p>\n<p>Cofactors of elements in second row are</p>\n<p>Cofactor of $$-4=(-1)^{2+1}\\left|\\begin{array}{cc}6 & 3 \\\\ -7 & 3\\end{array}\\right|=-(18+21)=-39$$</p>\n<p>Cofactor of $$3=(-1)^{2+2}\\left|\\begin{array}{cc}5 & 3 \\\\ -4 & 3\\end{array}\\right|=15+12=27$$</p>\n<p>cofactor of $$2=(-1)^{2+3}\\left|\\begin{array}{cc}5 & 6 \\\\ -4 & -7\\end{array}\\right|=-(-35+24)=11$$</p>",
+    "topic": "expansion-of-determinant",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-23rd-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following matrices are invertible?</p>\n<p>$$\\begin{aligned}\n& \\mathrm{A}=\\left[\\begin{array}{cc}\n2 & 3 \\\\\n10 & 15\n\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{ccc}\n1 & 2 & 3 \\\\\n2 & -1 & 3 \\\\\n1 & 2 & 3\n\\end{array}\\right], \\mathrm{C}=\\left[\\begin{array}{lll}\n1 & 2 & 3 \\\\\n3 & 4 & 5 \\\\\n4 & 6 & 8\n\\end{array}\\right], \\mathrm{D}=\\left[\\begin{array}{lll}\n2 & 4 & 2 \\\\\n1 & 1 & 0 \\\\\n1 & 4 & 5\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "both A and B\n"
+      },
+      {
+        "identifier": "B",
+        "content": "only C\n"
+      },
+      {
+        "identifier": "C",
+        "content": "only A\n"
+      },
+      {
+        "identifier": "D",
+        "content": "only D"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& |A|=\\left|\\begin{array}{cc}\n2 & 3 \\\\\n10 & 15\n\\end{array}\\right|=30-30=0 \\\\\n& |B|=\\left|\\begin{array}{ccc}\n1 & 2 & 3 \\\\\n2 & -1 & 3 \\\\\n1 & 2 & 3\n\\end{array}\\right|=0 \\quad \\ldots\\left[R_1 \\text { and } R_3 \\text { are identical }\\right] \\\\\n& |C|=\\left|\\begin{array}{lll}\n1 & 2 & 3 \\\\\n3 & 4 & 5 \\\\\n4 & 6 & 8\n\\end{array}\\right|=1(2)-2(4)+3(2)=0 \\\\\n& |D|=\\left|\\begin{array}{lll}\n2 & 4 & 2 \\\\\n1 & 1 & 0 \\\\\n1 & 4 & 5\n\\end{array}\\right|=2(5)-4(5)+2(3)=-4 \\neq 0\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-23rd-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{rr}2 & 3 \\\\ 5 & -2\\end{array}\\right]$$ and $$A^{-1}=K A$$, then $$K$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "19"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{-1}{19}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-19$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{19}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$A=\\left[\\begin{array}{cc}\n2 & 3 \\\\\n5 & -2\n\\end{array}\\right]$$</p>\n<p>$$\\begin{aligned}\n& |A|=-4-15=-19 \\text { and } \\operatorname{adj} A=\\left[\\begin{array}{cc}\n-2 & -3 \\\\\n-5 & 2\n\\end{array}\\right] \\\\\n& \\therefore A^{-1}=\\frac{-1}{19}\\left[\\begin{array}{cc}\n-2 & -3 \\\\\n-5 & 2\n\\end{array}\\right]=\\frac{1}{19}\\left[\\begin{array}{cc}\n2 & 3 \\\\\n5 & -2\n\\end{array}\\right] \\Rightarrow k=\\frac{1}{19}\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-23th-septeber-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$\\mathrm{A}=\\left[\\begin{array}{ccc}1 & 2 & 3 \\\\ -1 & 1 & 2 \\\\ 1 & 2 & 4\\end{array}\\right]$$, then $$\\mathrm{A}(\\operatorname{adj} \\mathrm{A})=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{ccc}-1 / 3 & 0 & 0 \\\\ 0 & -1 / 3 & 0 \\\\ 0 & & -1 / 3\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{lll}3 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 3\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{ccc}1 & 2 & 3 \\\\ -1 & 1 & 2 \\\\ 1 & 2 & 4\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{ccc}1 & -1 & 1 \\\\ 2 & 1 & 2 \\\\ 3 & 2 & 4\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$A=\\left[\\begin{array}{ccc}\n1 & 2 & 3 \\\\\n-1 & 1 & 2 \\\\\n1 & 2 & 4\n\\end{array}\\right]$$</p>\n<p>$$\\therefore|A|=1(4-4)-2(-4-2)+3(-2-1)=12-9=3$$</p>\n<p>We know that $$A(\\operatorname{adj} A)=|A| I$$</p>\n<p>$$\\therefore A(\\operatorname{adj} A)=3\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n3 & 0 & 0 \\\\\n0 & 3 & 0 \\\\\n0 & 0 & 3\n\\end{array}\\right]$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-23th-septeber-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{ccc}1 & -1 & 1 \\\\ 2 & -1 & 0 \\\\ 3 & 3 & -4\\end{array}\\right], B=\\left[\\begin{array}{l}1 \\\\ 1 \\\\ 2\\end{array}\\right]$$ and $$X=\\left[\\begin{array}{l}x_1 \\\\ x_2 \\\\ x_3\\end{array}\\right]$$ such that $$A X=B$$, then the value of $$x_1+x_2+x_3=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& {\\left[\\begin{array}{ccc}\n1 & -1 & 1 \\\\\n2 & -1 & 0 \\\\\n3 & 3 & -4\n\\end{array}\\right]\\left[\\begin{array}{l}\nx_1 \\\\\nx_2 \\\\\nx_3\n\\end{array}\\right]=\\left[\\begin{array}{l}\n1 \\\\\n1 \\\\\n2\n\\end{array}\\right]} \\\\\n& R_3 \\rightarrow R_3-3 R_1 \\text { and } R_2 \\rightarrow R_2-2 R_1 \\\\\n& {\\left[\\begin{array}{ccc}\n1 & -1 & 1 \\\\\n0 & 1 & -2 \\\\\n0 & 6 & -7\n\\end{array}\\right]\\left[\\begin{array}{l}\nx_1 \\\\\nx_2 \\\\\nx_3\n\\end{array}\\right]=\\left[\\begin{array}{l}\n1 \\\\\n-1 \\\\\n-1\n\\end{array}\\right]} \\\\\n& \\mathrm{R}_3 \\rightarrow \\mathrm{R}_3-6 \\mathrm{R}_2 \\\\\n& {\\left[\\begin{array}{ccc}\n1 & -1 & 1 \\\\\n0 & 1 & -2 \\\\\n0 & 0 & 5\n\\end{array}\\right]\\left[\\begin{array}{l}\nx_1 \\\\\nx_2 \\\\\nx_3\n\\end{array}\\right]=\\left[\\begin{array}{l}\n1 \\\\\n-1 \\\\\n5\n\\end{array}\\right]} \\\\\n& \\therefore \\mathrm{x}_1-\\mathrm{x}_2+\\mathrm{x}_3=1 \\\\\n& \\mathrm{x}_2-2 \\mathrm{x}_3=-1 \\\\\n& 5 x_3=5 \\\\\n& \\therefore \\mathrm{x}_3=1, \\mathrm{x}_2=1, \\mathrm{x}_1=1 \\\\\n\\end{aligned}$$</p>",
+    "topic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-23th-septeber-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{cc}5 a & -b \\\\ 3 & 2\\end{array}\\right]$$ and $$A$$ adj $$A=A A^T$$, then $$5 a+b=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "13"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-$$1"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We have $$A=\\left[\\begin{array}{cc}5 a & -b \\\\ 3 & 2\\end{array}\\right]$$ and $$A(\\operatorname{adj} A)=A A^T$$</p>\n<p>$$\\begin{aligned}\n& \\therefore\\left[\\begin{array}{cc}\n5 a & -b \\\\\n3 & 2\n\\end{array}\\right]\\left[\\begin{array}{cc}\n2 & b \\\\\n-3 & 5 a\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n5 a & -b \\\\\n3 & 2\n\\end{array}\\right]\\left[\\begin{array}{cc}\n5 a & 3 \\\\\n-b & 2\n\\end{array}\\right] \\\\\n& {\\left[\\begin{array}{cc}\n10 a+3 b & 0 \\\\\n0 & 10 a+3 b\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n25 a^2+b^2 & 15 a-2 b \\\\\n15 a-2 b & 9+4\n\\end{array}\\right]} \\\\\n& \\therefore 10 a+3 b=13 \\quad \\text { and } 15 a-2 b=0\n\\end{aligned}$$</p>\n<p>Solving these equations, we get $$a=\\frac{2}{5}$$ and $$b=3$$</p>\n<p>$$\\therefore 5 a+b=2+3=5$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-22th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For an invertible matrix $$A$$, if $$A(\\operatorname{adj} A)=\\left[\\begin{array}{cc}20 & 0 \\\\ 0 & 20\\end{array}\\right]$$, then $$|A|=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-$$200"
+      },
+      {
+        "identifier": "B",
+        "content": "200"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-$$2"
+      },
+      {
+        "identifier": "D",
+        "content": "20"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We have $$A(\\operatorname{adj} A)=\\left[\\begin{array}{cc}20 & 0 \\\\ 0 & 20\\end{array}\\right]$$</p>\n<p>$$\\therefore|A||\\operatorname{adj} A|=\\left|\\begin{array}{cc}\n20 & 0 \\\\\n0 & 20\n\\end{array}\\right| \\Rightarrow|A|\\left(|A|^{2-1}\\right)=400 \\Rightarrow(|A|)^2=(20)^2 \\Rightarrow|A|=20$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-22th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{ccc}1 & 2 & 1 \\\\ -1 & 1 & 3\\end{array}\\right]$$ and $$B=\\left[\\begin{array}{cc}1 & 2 \\\\ -3 & 1 \\\\ 0 & 2\\end{array}\\right]$$, then $$(A B)^{-1}$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{cc}5 & -6 \\\\ -4 & 5\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{ll}5 & 6 \\\\ 4 & 5\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{ll}-5 & 6 \\\\ -4 & 5\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{ll}-5 & -6 \\\\ -4 & -5\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& A B=\\left[\\begin{array}{ccc}\n1 & 2 & 1 \\\\\n-1 & 1 & 3\n\\end{array}\\right]\\left[\\begin{array}{cc}\n1 & 2 \\\\\n-3 & 1 \\\\\n0 & 2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n1-6+0 & 2+2+2 \\\\\n-1-3+0 & -2+1+6\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n-5 & 6 \\\\\n-4 & 5\n\\end{array}\\right] \\\\\n& \\therefore|A B|=-25+24=-1 \\\\\n& \\operatorname{adj}(\\mathrm{AB})=\\left[\\begin{array}{cc}\n5 & -6 \\\\\n4 & -5\n\\end{array}\\right] \\\\\n& \\therefore(A B)^{-1} \\quad=\\frac{\\left[\\begin{array}{ll}\n5 & -6 \\\\\n4 & -5\n\\end{array}\\right]}{(-1)}=\\left[\\begin{array}{ll}\n-5 & 6 \\\\\n-4 & 5\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-22th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 2 & 3 \\\\ 1 & 2 & 1\\end{array}\\right]$$, then the value of determinant of $$A^{-1}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-6$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{-1}{6}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{36}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$36$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We have $$A = \\left[ {\\matrix{\n   1 & 0 & 1  \\cr \n   0 & 2 & 3  \\cr \n   1 & 2 & 1  \\cr \n\n } } \\right]$$</p>\n<p>$$\\therefore$$ |A| = (2 $$-$$ 6) + (0 $$-$$ 2) = $$-$$6</p>\n<p>adj $$A = {\\left[ {\\matrix{\n   { - 4} & 3 & { - 2}  \\cr \n   2 & 0 & { - 2}  \\cr \n   { - 2} & { - 3} & 2  \\cr \n\n } } \\right]^T}$$</p>\n<p>$$\\therefore$$ $${A^{ - 1}} = {{\\left[ {\\matrix{\n   { - 4} & 2 & { - 2}  \\cr \n   3 & 0 & { - 3}  \\cr \n   { - 2} & { - 2} & 2  \\cr \n\n } } \\right]} \\over { - 6}}$$</p>\n<p>$$|{A^{ - 1}}| = {1 \\over {{{( - 6)}^3}}}[( - 4)( - 6) - 2(0) - 2( - 6)] = {{36} \\over { - 216}} = {{ - 1} \\over 6}$$\n<p>This problem can be alternately solved as follows :</p>\n<p>$$|A|=\\left|\\begin{array}{lll}\n1 & 0 & 1 \\\\\n0 & 2 & 3 \\\\\n1 & 2 & 1\n\\end{array}\\right|=(-4)+(-2)=-6$$</p>\n<p>We know that $$\\left|\\mathrm{A}^{-1}\\right|=\\frac{1}{|\\mathrm{~A}|}$$</p>\n<p>$$\\therefore\\left|A^{-1}\\right|=\\frac{1}{-6}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-22th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A = \\left[ {\\matrix{\n   k & 2  \\cr \n   { - 2} & { - k}  \\cr \n\n } } \\right]$$, then A$$^{-1}$$ does not exists if k =</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\pm$$2"
+      },
+      {
+        "identifier": "C",
+        "content": "0"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pm$$1"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine when the inverse of the matrix $ A $ does not exist, we need to find when the determinant of $ A $ is zero. For a 2x2 matrix of the form:</p>\n\n<p>$$ A = \\left[ {\\matrix{    k & 2  \\cr     { - 2} & { - k}  \\cr   } } \\right] $$</p>\n\n<p>the determinant can be calculated using the formula:</p>\n\n<p>$$ \\text{det}(A) = ad - bc $$</p>\n\n<p>where $ a, b, c, $ and $ d $ are the elements of the matrix $ A $. Substituting the values from matrix $ A $:</p>\n\n<p>$$ \\text{det}(A) = k(-k) - (2)(-2) $$</p>\n\n<p>Simplifying this expression, we get:</p>\n\n<p>$$ \\text{det}(A) = -k^2 + 4 $$</p>\n\n<p>For the inverse of $ A $ to not exist, the determinant must be equal to zero:</p>\n\n<p>$$ -k^2 + 4 = 0 $$</p>\n\n<p>Solving for $ k $, we get:</p>\n\n<p>$$ -k^2 + 4 = 0 $$</p>\n\n<p>$$ k^2 = 4 $$</p>\n\n<p>Taking the square root of both sides, we find:</p>\n\n<p>$$ k = \\pm 2 $$</p>\n\n<p>Therefore, the inverse of matrix $ A $ does not exist when $ k = 2 $ or $ k = -2 $. Hence, the correct option is:</p>\n\n<p>Option B $$\\pm$$2</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-22th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The sum of three numbers is 6. Thrice the third number when added to the first number gives 7. On adding three times first number to the sum of second and third number we get 12. The product of these numbers is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "20"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{20}{3}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{5}{3}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let the numbers be x, y, z.</p>\n<p>x + y + z = 6 ....... (1)</p>\n<p>x + 3z = 7 ....... (2)</p>\n<p>3x + y + z = 12 ...... (3)</p>\n<p>Eq. (3) $$-$$ (1), gives</p>\n<p>2x = 6 $$\\Rightarrow$$ x = 3</p>\n<p>From eq. (2), we get</p>\n<p>3 + 3z = 7 $$\\Rightarrow$$ z = $$\\frac{4}{3}$$</p>\n<p>From eq. (1), we get</p>\n<p>$$\\begin{aligned}\n& 3+y+\\frac{4}{3}=6 \\Rightarrow y=\\frac{5}{3} \\\\\n& \\therefore x y z=(3)\\left(\\frac{5}{3}\\right)\\left(\\frac{4}{3}\\right)=\\frac{20}{3}\n\\end{aligned}$$</p>\n<p>Note : This problem can be alternatively solved as follows.</p>\n<p>$$\\begin{aligned}\n& {\\left[\\begin{array}{lll}\n1 & 1 & 1 \\\\\n1 & 0 & 3 \\\\\n3 & 1 & 1\n\\end{array}\\right]\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\left[\\begin{array}{l}\n6 \\\\\n7 \\\\\n12\n\\end{array}\\right]} \\\\\n& R_3 \\rightarrow R_3-R_1 \\\\\n& {\\left[\\begin{array}{lll}\n1 & 1 & 1 \\\\\n1 & 0 & 3 \\\\\n2 & 0 & 0\n\\end{array}\\right]\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\left[\\begin{array}{l}\n6 \\\\\n7 \\\\\n6\n\\end{array}\\right]} \\\\\n& \\therefore x+y+z=6 \\quad \\text{.....(1)}\\\\\n& x+3 z=7 \\quad \\text{.....(2)}\\\\\n& 2 x=6 \\quad \\text{.....(3)}\\\\\n& \\therefore x=3 \\quad \\text{.....[From (3)]}\\\\\n& \\therefore 3+3 z=7 \\quad \\Rightarrow \\quad z=\\frac{4}{3} \\quad \\ldots[\\text { From }(2)]\n\\end{aligned}$$</p>\n<p>$$\\therefore 3+y+\\frac{4}{3}=6 \\Rightarrow y=\\frac{5}{3}$$ .....[From (1)]</p>",
+    "topic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-22th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{ccc}\\cos \\theta & -\\sin \\theta & 0 \\\\ \\sin \\theta & \\cos \\theta & 0 \\\\ 0 & 0 & 1\\end{array}\\right]$$, then $$\\operatorname{adj} A=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{ccc}-\\cos \\theta & -\\sin \\theta & 0 \\\\ \\sin \\theta & \\cos \\theta & 0 \\\\ 0 & 0 & 1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{ccc}\\cos \\theta & \\sin \\theta & 0 \\\\ \\sin \\theta & \\cos \\theta & 0 \\\\ 0 & 0 & 1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{ccc}\\cos \\theta & \\sin \\theta & 0 \\\\ -\\sin \\theta & \\cos \\theta & 0 \\\\ 0 & 0 & 1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{ccc}\\cos \\theta & -\\sin \\theta & 0 \\\\ \\sin \\theta & \\cos \\theta & 0 \\\\ 0 & 0 & 1\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned} & A=\\left[\\begin{array}{ccc}\\cos \\theta & -\\sin \\theta & 0 \\\\ \\sin \\theta & \\cos \\theta & 0 \\\\ 0 & 0 & 1\\end{array}\\right] \\\\ & \\therefore \\operatorname{adj} A=\\left[\\begin{array}{ccc}\\cos \\theta & -\\sin \\theta & 0 \\\\ \\sin \\theta & \\cos \\theta & 0 \\\\ 0 & 0 & 1\\end{array}\\right]^{\\mathrm{T}}=\\left[\\begin{array}{ccc}\\cos \\theta & \\sin \\theta & 0 \\\\ -\\sin \\theta & \\cos \\theta & 0 \\\\ 0 & 0 & 1\\end{array}\\right]\\end{aligned}$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-21th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{lll}0 & 1 & 2 \\\\ 1 & 2 & 3 \\\\ 3 & a & 1\\end{array}\\right]$$ and $$A^{-1}=\\frac{1}{2}\\left[\\begin{array}{ccc}1 & -1 & 1 \\\\ -8 & 6 & 2 c \\\\ 5 & -3 & 1\\end{array}\\right]$$, then values of a and c are respectively</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{2}, \\frac{1}{2}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-1,1$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2, \\frac{-1}{2}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1,-1$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We know that $$\\mathrm{AA}^{-1}=\\mathrm{I}$$</p>\n<p>$$\\begin{aligned}\n& \\therefore\\left[\\begin{array}{lll}\n0 & 1 & 2 \\\\\n1 & 2 & 3 \\\\\n3 & a & 1\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n\\frac{1}{2} & \\frac{-1}{2} & \\frac{1}{2} \\\\\n-4 & 3 & c \\\\\n\\frac{5}{2} & \\frac{-3}{2} & \\frac{1}{2}\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& \\therefore\\left[\\begin{array}{ccc}\n1 & 0 & c+1 \\\\\n0 & 1 & 2+2 c \\\\\n4-4 a & 3 a-3 & 2+a c\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>Thus $$c+1=0 \\Rightarrow c=-1$$ and $$4-4 a=0 \\Rightarrow a=1$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-21th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{lll}0 & 1 & 2 \\\\ 1 & 2 & 3 \\\\ 3 & 1 & 1\\end{array}\\right]$$, then $$A^{-1}=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left(\\frac{1}{2}\\right)\\left[\\begin{array}{lll}0 & 1 & 2 \\\\ 3 & 2 & 1 \\\\ 4 & 2 & 3\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{ccc}\\frac{1}{2} & \\frac{-1}{2} & \\frac{1}{2} \\\\ -4 & 3 & -1 \\\\ \\frac{5}{2} & \\frac{-3}{2} & \\frac{1}{2}\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{ccc}\\frac{1}{2} & -1 & \\frac{5}{2} \\\\ 1 & -6 & 3 \\\\ 1 & 2 & -1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left(\\frac{1}{2}\\right)\\left[\\begin{array}{ccc}1 & -1 & -1 \\\\ -8 & 6 & -2 \\\\ 5 & -3 & 1\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& {\\left[\\begin{array}{lll}\n0 & 1 & 2 \\\\\n1 & 2 & 3 \\\\\n3 & 1 & 1\n\\end{array}\\right] A^{-1}=\\left[\\begin{array}{ccc}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]} \\\\\n& R_1 \\rightarrow R_1+R_2, R_3 \\rightarrow R_3-3 R_2 \\\\\n& {\\left[\\begin{array}{ccc}\n1 & 3 & 5 \\\\\n1 & 2 & 3 \\\\\n0 & -5 & -8\n\\end{array}\\right] A^{-1}=\\left[\\begin{array}{ccc}\n1 & 1 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & -3 & 1\n\\end{array}\\right]} \\\\\n& R_2 \\rightarrow R_2-R_1 \\\\\n& {\\left[\\begin{array}{ccc}\n1 & 3 & 5 \\\\\n0 & -1 & -2 \\\\\n0 & -5 & -8\n\\end{array}\\right] A^{-1}=\\left[\\begin{array}{ccc}\n1 & 1 & 0 \\\\\n-1 & 0 & 0 \\\\\n0 & -3 & 1\n\\end{array}\\right]} \\\\\n& R_1 \\rightarrow R_1+3 R_2 \\text { and } R_3 \\rightarrow R_3-5 R_2 \\\\\n& {\\left[\\begin{array}{ccc}\n1 & 0 & -1 \\\\\n0 & -1 & -2 \\\\\n0 & 0 & 2\n\\end{array}\\right] A^{-1}=\\left[\\begin{array}{ccc}\n-2 & 1 & 0 \\\\\n-1 & 0 & 0 \\\\\n5 & -3 & 1\n\\end{array}\\right]} \\\\\n& R_2 \\rightarrow R_2+R_3 \\text { and } R_1 \\rightarrow 2 R_1+R_3 \\\\\n& {\\left[\\begin{array}{lll}\n2 & 0 & 0 \\\\\n0 & -1 & 0 \\\\\n0 & 0 & 2\n\\end{array}\\right] A^{-1}=\\left[\\begin{array}{ccc}\n1 & -1 & 1 \\\\\n4 & -3 & 1 \\\\\n5 & -3 & 1\n\\end{array}\\right]} \\\\\n& R_1 \\rightarrow \\frac{1}{2} R_1, R_2 \\rightarrow-R_2, R_3 \\rightarrow \\frac{1}{2} R_3 \\\\\n& {\\left[\\begin{array}{ccc}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] A^{-1}=\\left[\\begin{array}{ccc}\n\\frac{1}{2} & \\frac{-1}{2} & \\frac{1}{2} \\\\\n-4 & 3 & -1 \\\\\n\\frac{5}{2} & \\frac{-3}{2} & \\frac{1}{2}\n\\end{array}\\right]}\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-21th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$F(\\propto)=\\left[\\begin{array}{ccc}\\cos \\propto & -\\sin \\propto & 0 \\\\ \\sin \\propto & \\cos \\propto & 0 \\\\ 0 & 0 & 1\\end{array}\\right]$$, where $$\\propto \\in R$$, then $$[F(\\propto)]^{-1}=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$F(-\\propto)$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\mathrm{F}(2 \\propto)$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$F(\\propto)$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$F(3 \\propto)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned} & F(\\alpha)=\\left[\\begin{array}{ccc}\\cos \\alpha & -\\sin \\alpha & 0 \\\\ \\sin \\alpha & \\cos \\alpha & 0 \\\\ 0 & 0 & 1\\end{array}\\right] \\\\ & \\therefore|F(\\alpha)|=\\cos \\alpha(\\cos \\alpha)+\\sin \\alpha(\\sin \\alpha)=\\cos ^2 \\alpha+\\sin ^2 \\alpha=1 \\\\ & \\therefore \\operatorname{adj}[F(\\alpha)]=\\left[\\begin{array}{ccc}\\cos \\alpha & -\\sin \\alpha & 0 \\\\ \\sin \\alpha & \\cos \\alpha & 0 \\\\ 0 & 0 & 1\\end{array}\\right] \\\\ & \\quad=\\left[\\begin{array}{ccc}\\cos \\alpha & \\sin \\alpha & 0 \\\\ -\\sin \\alpha & \\cos \\alpha & 0 \\\\ 0 & 0 & 1\\end{array}\\right]=\\left[\\begin{array}{ccc}\\cos (-\\alpha) & -\\sin (-\\alpha) & 0 \\\\ \\sin (-\\alpha) & \\cos (-\\alpha) & 0 \\\\ 0 & 0 & 1\\end{array}\\right]=F(-\\alpha) \\\\ & {[f(\\alpha)]^{-1}=\\frac{\\operatorname{adj}[F(\\alpha)]}{|F(\\alpha)|}=F(-\\alpha)}\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-21th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{ccc}1 & 0 & 2 \\\\ -1 & 1 & -2 \\\\ 0 & 2 & 1\\end{array}\\right], \\operatorname{adj} A=\\left[\\begin{array}{ccc}5 & x & -2 \\\\ 1 & 1 & 0 \\\\ -2 & -2 & y\\end{array}\\right]$$, then value of $$x+y$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$x$$ is element $$a_{12}$$ in $$\\operatorname{adj}(\\mathrm{A})$$.</p>\n<p>$$\\therefore x=$$ cofactor of $$a_{21}=(-1)^{2+1}\\left|\\begin{array}{ll}0 & 2 \\\\ 2 & 1\\end{array}\\right|=-(-4)=4$$</p>\n<p>Similarly $$y=(-1)^{3+3}\\left|\\begin{array}{cc}1 & 0 \\\\ -1 & 1\\end{array}\\right|=1 \\Rightarrow x+y=5$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-21th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\\mathrm{A}^{-1}=\\frac{-1}{2}\\left[\\begin{array}{cc}1 & -4 \\\\ -1 & 2\\end{array}\\right]$$, then $$2 A+I_2=\\quad$$ \n<br/><br/>where $$I_2$$ is a unit matrix of order 2</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{ll}5 & 8 \\\\ 1 & 2\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{ll}5 & 8 \\\\ 2 & 2\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{ll}2 & 4 \\\\ 1 & 1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{ll}5 & 8 \\\\ 2 & 3\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned} & A^{-1}=\\frac{-1}{2}\\left[\\begin{array}{cc}1 & -4 \\\\ -1 & 2\\end{array}\\right]=\\left[\\begin{array}{cc}\\frac{-1}{2} & 2 \\\\ \\frac{1}{2} & -1\\end{array}\\right] \\\\ & A^{-1}=I \\Rightarrow A\\left[\\begin{array}{cc}\\frac{-1}{2} & 2 \\\\ \\frac{1}{2} & -1\\end{array}\\right]=\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right]\\end{aligned}\n\\begin{aligned} & \\mathrm{R}_2 \\rightarrow \\mathrm{R}_1+\\mathrm{R}_2 \\\\ & \\mathrm{~A}\\left[\\begin{array}{cc}\\frac{-1}{2} & 2 \\\\ 0 & 1\\end{array}\\right]=\\left[\\begin{array}{ll}1 & 0 \\\\ 1 & 1\\end{array}\\right] \\\\ & \\mathrm{R}_1 \\rightarrow \\mathrm{R}_1-2 \\mathrm{R}_2 \\\\ & \\mathrm{~A}\\left[\\begin{array}{cc}\\frac{-1}{2} & 0 \\\\ 0 & 1\\end{array}\\right]=\\left[\\begin{array}{cc}-1 & -2 \\\\ 1 & 1\\end{array}\\right] \\\\ & \\mathrm{R}_1 \\rightarrow-2 \\mathrm{R}_1 \\\\ & \\mathrm{~A}\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right]=\\left[\\begin{array}{ll}2 & 4 \\\\ 1 & 1\\end{array}\\right] \\Rightarrow \\mathrm{A}=\\left[\\begin{array}{ll}2 & 4 \\\\ 1 & 1\\end{array}\\right] \\\\ & \\therefore 2 \\mathrm{~A}+\\mathrm{I}_2=\\left[\\begin{array}{ll}4 & 8 \\\\ 2 & 2\\end{array}\\right]+\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right]=\\left[\\begin{array}{ll}5 & 8 \\\\ 2 & 3\\end{array}\\right]\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-21th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The co-factors of the elements of second column of $$\\left[\\begin{array}{ccc}1 & -1 & 2 \\\\ 3 & 2 & 1 \\\\ -1 & 3 & 4\\end{array}\\right]$$ are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-13,6,5$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$13,5,6$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$13,-6,-5$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-13,-6,5$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Required cofactors are as follows :</p>\n<p>$$\\begin{aligned}\n& A_{12}=(-1)^{1+2}\\left|\\begin{array}{cc}\n3 & 1 \\\\\n-1 & 4\n\\end{array}\\right|=-(12+1)=-13 \\\\\n& A_{22}=(-1)^{2+2}\\left|\\begin{array}{cc}\n1 & 2 \\\\\n-1 & 4\n\\end{array}\\right|=(4+2)=6 \\\\\n& A_{32}=(-1)^{3+2}\\left|\\begin{array}{cc}\n1 & 2 \\\\\n3 & 1\n\\end{array}\\right|=-(1-6)=5\n\\end{aligned}$$</p>",
+    "topic": "expansion-of-determinant",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-20th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A^{-1}=\\left[\\begin{array}{lll}3 & 2 & 6 \\\\ 1 & 1 & 2 \\\\ 2 & 5 & 5\\end{array}\\right]$$, then $$A=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{ccc}-5 & 20 & -2 \\\\ -1 & 3 & 0 \\\\ 3 & -11 & 1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{ccc}-5 & 20 & 2 \\\\ -1 & 3 & 0 \\\\ 3 & 11 & 1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{ccc}-5 & 20 & 2 \\\\ 1 & 3 & 0 \\\\ 3 & 11 & -1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{ccc}-5 & 20 & -2 \\\\ 1 & 3 & 0 \\\\ 3 & 11 & 1\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned} & \\text { Let } A^{-1} A=I \\\\ & \\therefore\\left[\\begin{array}{lll}3 & 2 & 6 \\\\ 1 & 1 & 2 \\\\ 2 & 5 & 5\\end{array}\\right] \\mathrm{A}=\\left[\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right] \\\\ & R_2 \\rightarrow 3 R_2-R_1 \\text { and } R_3 \\rightarrow 3 R_3-2 R_1 \\\\ & {\\left[\\begin{array}{ccc}3 & 2 & 6 \\\\ 0 & 1 & 0 \\\\ 0 & 11 & 3\\end{array}\\right] A=\\left[\\begin{array}{ccc}1 & 0 & 0 \\\\ -1 & 3 & 0 \\\\ -2 & 0 & 3\\end{array}\\right]} \\\\ & \\mathrm{R}_1 \\rightarrow \\mathrm{R}_1-2 \\mathrm{R}_2 \\text { and } \\mathrm{R}_3 \\rightarrow \\mathrm{R}_3-11 \\mathrm{R}_2 \\\\ & {\\left[\\begin{array}{lll}3 & 0 & 6 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 3\\end{array}\\right] A^{-}=\\left[\\begin{array}{ccc}3 & -6 & 0 \\\\ -1 & 3 & 0 \\\\ 9 & -33 & 3\\end{array}\\right]} \\\\ & \\mathrm{R}_1 \\rightarrow \\mathrm{R}_1-2 \\mathrm{R}_3 \\\\ & {\\left[\\begin{array}{lll}3 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 3\\end{array}\\right] \\mathrm{A}=\\left[\\begin{array}{ccc}-15 & 60 & -6 \\\\ -1 & 3 & 0 \\\\ 9 & -33 & 3\\end{array}\\right]} \\\\ & \\mathrm{R}_1 \\rightarrow \\frac{1}{3} \\mathrm{R}_1 \\text { and } \\mathrm{R}_3 \\rightarrow \\frac{1}{3} \\mathrm{R}_3 \\\\ & {\\left[\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right] A=\\left[\\begin{array}{ccc}-5 & 20 & -2 \\\\ -1 & 3 & 0 \\\\ 3 & -11 & 1\\end{array}\\right]} \\\\ & \\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-20th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A^{-1}=\\left[\\begin{array}{cc}2 & -3 \\\\ -1 & 2\\end{array}\\right]$$ and $$B^{-1}=\\left[\\begin{array}{cc}1 & 0 \\\\ -3 & 1\\end{array}\\right]$$, then $$(A B)^{-1}=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{cc}2 & 7 \\\\ 3 & -1\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{cc}2 & -7 \\\\ -3 & 11\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{cc}2 & -3 \\\\ -7 & 11\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{cc}2 & 3 \\\\ 7 & -11\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$(\\mathrm{AB})^{-1}=\\mathrm{B}^{-1} \\mathrm{~A}^{-1}$$</p>\n<p>$$\\begin{aligned} & =\\left[\\begin{array}{cc}1 & 0 \\\\ -3 & 1\\end{array}\\right]\\left[\\begin{array}{cc}2 & -3 \\\\ -1 & 2\\end{array}\\right] \\\\ & =\\left[\\begin{array}{cc}2+0 & -3+0 \\\\ -6-1 & 9+2\\end{array}\\right]=\\left[\\begin{array}{cc}2 & -3 \\\\ -7 & 11\\end{array}\\right]\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-20th-september-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$A(\\propto)=\\left[\\begin{array}{cc}\\cos \\propto & \\sin \\propto \\\\ -\\sin \\propto & \\cos \\propto\\end{array}\\right]$$, then $$\\left[A^2(\\propto)\\right]^{-1}=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\mathrm{A}(\\propto)$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\mathrm{A}^2(\\propto)$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\mathrm{A}(-2 \\propto)$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\mathrm{A}(2 \\propto)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned} & \\begin{aligned} & \\mathrm{A}(\\alpha)=\\left[\\begin{array}{cc}\\cos \\alpha & \\sin \\alpha \\\\ -\\sin \\alpha & \\cos \\alpha\\end{array}\\right] \\Rightarrow|\\mathrm{A}(\\alpha)|=\\cos ^2 \\alpha+\\sin ^2 \\alpha=1 \\\\ & \\mathrm{~A}^2(\\alpha)=\\left[\\begin{array}{cc}\\cos \\alpha & \\sin \\alpha \\\\ -\\sin \\alpha & \\cos \\alpha\\end{array}\\right]\\left[\\begin{array}{cc}\\cos \\alpha & \\sin \\alpha \\\\ -\\sin \\alpha & \\cos \\alpha\\end{array}\\right] \\\\ &=\\left[\\begin{array}{cc}\\cos ^2 \\alpha-\\sin ^2 \\alpha & 2 \\sin \\alpha \\cos \\alpha \\\\ -2 \\sin \\alpha \\cos \\alpha & \\cos ^2 \\alpha-\\sin ^2 \\alpha\\end{array}\\right]=\\left[\\begin{array}{cc}\\cos 2 \\alpha & \\sin 2 \\alpha \\\\ -\\sin 2 \\alpha & \\cos 2 \\alpha\\end{array}\\right] \\\\ & \\therefore \\operatorname{adj}\\left[\\mathrm{A}^2(\\alpha)\\right]=\\left[\\begin{array}{cc}\\cos 2 \\alpha & -\\sin 2 \\alpha \\\\ \\sin 2 \\alpha & \\cos 2 \\alpha\\end{array}\\right] \\\\ & \\therefore\\left[\\mathrm{A}^2(\\alpha)\\right]^{-1} \\quad=\\left[\\begin{array}{cc}\\cos 2 \\alpha & -\\sin 2 \\alpha \\\\ \\sin 2 \\alpha & \\cos 2 \\alpha\\end{array}\\right] \\quad ....[\\because \\mathrm{|A^2|=|A|^2=1]}\\\\ & \\therefore\\left[\\mathrm{A}^2(\\alpha)\\right]^{-1}=\\left[\\begin{array}{cc}\\cos (-2 \\alpha) & \\sin (-2 \\alpha) \\\\ -\\sin (-2 \\alpha) & \\cos (-2 \\alpha)\\end{array}\\right]=\\mathrm{A}(-2 \\alpha)\\end{aligned}\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-20th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If inverse of $$\\left[\\begin{array}{ccc}1 & 2 & x \\\\ 4 & -1 & 7 \\\\ 2 & 4 & -6\\end{array}\\right]$$ does not exist, then $$x=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-$$3"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "0"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned} & \\text { Here }\\left|\\begin{array}{ccc}1 & 2 & x \\\\ 4 & -1 & 7 \\\\ 2 & 4 & -6\\end{array}\\right|=0 \\\\ & \\therefore(6-28)-2(-24-14)+x(16+2)=0 \\\\ & \\therefore-22+76+18 x=0 \\Rightarrow x=-3\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-20th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A = \\left[ {\\matrix{\n   3 & 2 & 4  \\cr \n   1 & 2 & 1  \\cr \n   3 & 2 & 6  \\cr \n\n } } \\right]$$ and A$$_{ij}$$ are cofactors of the elements a$$_{ij}$$ of A, then $${a_{11}}{A_{11}} + {a_{12}}{A_{12}} + {a_{13}}{A_{13}}$$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8"
+      },
+      {
+        "identifier": "B",
+        "content": "6"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "0"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$${a_{11}}{A_{11}} + {a_{12}}{A_{12}} + {a_{13}}{A_{13}} = |A|$$</p>\n<p>$$\\therefore$$ $$|A| = \\left| {\\matrix{\n   3 & 2 & 4  \\cr \n   1 & 2 & 1  \\cr \n   3 & 2 & 6  \\cr \n\n } } \\right|$$</p>\n<p>$$ = 3(12 - 2) - 2(6 - 3) + 4(2 - 6)$$</p>\n<p>$$ = 30 - 6 - 16 = 8$$</p>",
+    "topic": "properties-of-determinants",
+    "year": 2021,
+    "yearKey": "mht-cet-2021-20th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{ll}4 & 5 \\\\ 2 & 1\\end{array}\\right]$ and $A^2-5 A-6 I=0$, then $A^{-1}=$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{1}{6}\\left[\\begin{array}{cc}-1 & 5 \\\\ -2 & -4\\end{array}\\right]$.\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{1}{6}\\left[\\begin{array}{cc}-1 & 5 \\\\ 2 & 4\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{1}{6}\\left[\\begin{array}{cc}-1 & 5 \\\\ 2 & -4\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{1}{6}\\left[\\begin{array}{cc}1 & 5 \\\\ 2 & -4\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $A=\\left[\\begin{array}{ll}4 & 5 \\\\ 2 & 1\\end{array}\\right]$</p>\n<p>$\\begin{gathered}\\text{and}\\quad A^2-5 A-6 I=0 \\\\ 6 I=A^2-5 A\\end{gathered}$</p>\n<p>$$\\begin{aligned}\n&\\text { Multiply by } A^{-1} \\text {, we get }\\\\\n&\\begin{aligned}\n6 A^{-1} & =A-5 I \\\\\n6 A^{-1} & =\\left[\\begin{array}{ll}\n4 & 5 \\\\\n2 & 1\n\\end{array}\\right]-\\left[\\begin{array}{ll}\n5 & 0 \\\\\n0 & 5\n\\end{array}\\right] \\\\\n6 A^{-1} & =\\left[\\begin{array}{cc}\n-1 & 5 \\\\\n2 & -4\n\\end{array}\\right] \\\\\nA^{-1} & =\\frac{1}{6}\\left[\\begin{array}{cc}\n-1 & 5 \\\\\n2 & -4\n\\end{array}\\right]\n\\end{aligned}\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2020,
+    "yearKey": "mht-cet-2020-19th-october-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The cofactors of the elements of the first column of the matrix $A=\\left[\\begin{array}{ccc}2 & 0 & -1 \\\\ 3 & 1 & 2 \\\\ -1 & 1 & 2\\end{array}\\right]$ are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $0,-7,2$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $-1,3,-2$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $0,-8,4$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $0,-1,1$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given matrix $A=\\left[\\begin{array}{ccc}2 & 0 & -1 \\\\ 3 & 1 & 2 \\\\ -1 & 1 & 2\\end{array}\\right]$</p>\n<p>Cofactor of the elements of first column of the matrix</p>\n<p>$$\\begin{aligned}\n& A_{11}=\\left|\\begin{array}{ll}\n1 & 2 \\\\\n1 & 2\n\\end{array}\\right|=2-2=0 \\\\\n& A_{21}=-\\left|\\begin{array}{cc}\n0 & -1 \\\\\n1 & 2\n\\end{array}\\right|=-(0+1)=-1 \\\\\n& A_{31}=\\left|\\begin{array}{cc}\n0 & -1 \\\\\n1 & 2\n\\end{array}\\right|=0+1=1\n\\end{aligned}$$</p>\n<p>$\\therefore$ Cofactor is $(0,-1,1)$</p>",
+    "topic": "expansion-of-determinant",
+    "year": 2020,
+    "yearKey": "mht-cet-2020-19th-october-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The matrix $$A=\\left[\\begin{array}{rrr}a & -1 & 4 \\\\ -3 & 0 & 1 \\\\ -1 & 1 & 2\\end{array}\\right]$$ is not invertible only if $$a=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "17"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-$$16"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-$$17"
+      },
+      {
+        "identifier": "D",
+        "content": "16"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&\\text { We have, }\\\\\n&A=\\left[\\begin{array}{ccc}\na & -1 & 4 \\\\\n-3 & 0 & 1 \\\\\n-1 & 1 & 2\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>$$\n\\begin{aligned}\n&A \\text { is not invertible }\\\\\n&\\begin{aligned}\n& \\therefore \\quad |A|=0\\\\\n& \\left|\\begin{array}{ccc}\na & -1 & 4 \\\\\n-3 & 0 & 1 \\\\\n-1 & 1 & 2\n\\end{array}\\right|=0\n\\end{aligned}\n\\end{aligned}$$</p>\n<p>$$\\begin{array}{l}\na(0-1)+1(-6+1)+4(-3+0) =0 \\\\\n\\Rightarrow -a-5-12 =0 \\\\\n\\Rightarrow a =-17\n\\end{array}$$</p>",
+    "topic": "expansion-of-determinant",
+    "year": 2020,
+    "yearKey": "mht-cet-2020-16th-october-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{ll}2 & 3 \\\\ 1 & 2\\end{array}\\right], \\quad B=\\left[\\begin{array}{ll}1 & 0 \\\\ 3 & 1\\end{array}\\right]$$, then $$B^{-1} A^{-1}=$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{rr}-2 & -3 \\\\ -7 & 11\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{rr}2 & -3 \\\\ -7 & 11\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{rr}2 & 3 \\\\ 7 & 11\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{cc}-2 & -3 \\\\ -7 & -11\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$\\begin{aligned}\n&\\begin{aligned}\n& A=\\left[\\begin{array}{ll}\n2 & 3 \\\\\n1 & 2\n\\end{array}\\right] \\\\\n\\text { and }\\quad & B=\\left[\\begin{array}{ll}\n1 & 0 \\\\\n3 & 1\n\\end{array}\\right]\n\\end{aligned}\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\nA B & =\\left[\\begin{array}{ll}\n2 & 3 \\\\\n1 & 2\n\\end{array}\\right]\\left[\\begin{array}{ll}\n1 & 0 \\\\\n3 & 1\n\\end{array}\\right] \\\\\nA B & =\\left[\\begin{array}{ll}\n11 & 3 \\\\\n7 & 2\n\\end{array}\\right] \\\\\n|A B| & =22-21=1 \\\\\n\\therefore \\quad (A B)^{-1} & =\\left[\\begin{array}{cc}\n2 & -3 \\\\\n-7 & 11\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n&\\therefore \\text { We know that, }\\\\\n&\\begin{array}{ll} \n& B^{-1} A^{-1}=(A B)^{-1} \\\\\n\\therefore & B^{-1} A^{-1}=\\left[\\begin{array}{cc}\n2 & -3 \\\\\n-7 & 11\n\\end{array}\\right]\n\\end{array}\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2020,
+    "yearKey": "mht-cet-2020-16th-october-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The sum of the cofactors of the elements of second row of the matrix $$\\left[\\begin{array}{rrr}1 & 3 & 2 \\\\ -2 & 0 & 1 \\\\ 5 & 2 & 1\\end{array}\\right]$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-$$23"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "23"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$A=\\left[\\begin{array}{ccc}1 & 3 & 2 \\\\ -2 & 0 & 1 \\\\ 5 & 2 & 1\\end{array}\\right]$$</p>\n<p>Cofactor of second row of matrix</p>\n<p>$$\\begin{aligned}\n& \\text { i.e., } A_{21}=-\\left|\\begin{array}{ll}\n3 & 2 \\\\\n2 & 1\n\\end{array}\\right|=-(3-4)=1 \\\\\n& A_{22}=\\left|\\begin{array}{ll}\n1 & 2 \\\\\n5 & 1\n\\end{array}\\right|=1-10=-9 \\\\\n& A_{23}=-\\left|\\begin{array}{ll}\n1 & 3 \\\\\n5 & 2\n\\end{array}\\right|=-(2-15)=13 \\\\\n& \\therefore A_{21}+A_{22}+A_{23}=1-9+13=5\n\\end{aligned}$$</p>",
+    "topic": "expansion-of-determinant",
+    "year": 2020,
+    "yearKey": "mht-cet-2020-16th-october-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{rrr}2 & 0 & -1 \\\\ 5 & 1 & 0 \\\\ 0 & 1 & 3\\end{array}\\right]$$ and $$A^{-1}=\\left[\\begin{array}{rrr}3 & -1 & 1 \\\\ \\alpha & 6 & -5 \\\\ \\beta & -2 & 2\\end{array}\\right]$$, then the values of $$\\alpha$$ and $$\\beta$$ are, respectively.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-15,-5$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-15,5$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$15,-5$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$15,5$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$\\begin{aligned}\n& A=\\left[\\begin{array}{ccc}\n2 & 0 & -1 \\\\\n5 & 1 & 0 \\\\\n0 & 1 & 3\n\\end{array}\\right] \\text { and } A^{-1}=\\left[\\begin{array}{ccc}\n3 & -1, & 1 \\\\\n\\alpha & 6 & -5 \\\\\n\\beta & -2 & 2\n\\end{array}\\right] \\\\\n& A A^{-1}=I \\\\\n& \\therefore \\quad\\left[\\begin{array}{ccc}\n2 & 0 & -1 \\\\\n5 & 1 & 0 \\\\\n0 & 1 & 3\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n3 & -1 & 1 \\\\\n\\alpha & 6 & -5 \\\\\n\\beta & -2 & 2\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{ccc}\n6-\\beta & 0 & 0 \\\\\n15+\\alpha & 1 & 0 \\\\\n\\alpha+3 \\beta & 0 & 1\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& \\therefore \\quad 6-\\beta=1,15+\\alpha=0 \\\\\n& \\therefore \\quad \\beta=5 \\quad \\alpha=-15 \\\\\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2020,
+    "yearKey": "mht-cet-2020-16th-october-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A$ and $B$ are square matrices of order 3 such that $|A|=2,|B|=4$, then $|A(\\operatorname{adj} B)|=\\ldots$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16"
+      },
+      {
+        "identifier": "B",
+        "content": "8"
+      },
+      {
+        "identifier": "C",
+        "content": "64"
+      },
+      {
+        "identifier": "D",
+        "content": "32"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $A$ and $B$ are square matrices of order 3 such that<?p>\n<p>$$\\begin{aligned}\n& \\text { that }|A|=2,|B|=4 \\\\\n& \\begin{array}{l}\n\\text{Now,} |A(\\operatorname{adj}) B|=|A||\\operatorname{adj} j B| \\quad (\\because|A B|=|A||B|)\\\\\n\\left.|A| B\\right|^{3-1}\n\\end{array} \\\\\n& =|A||B|^2=(2)(4)^2=32\n\\end{aligned}$$</p>\n\n\n$$\n\n$$\n</p>",
+    "topic": "properties-of-determinants",
+    "year": 2019,
+    "yearKey": "mht-cet-2019-3rd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A$ is non-singular matrix and $(A+I)(A-I)=0$ then $A+A^{-1}=$ .............</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2A"
+      },
+      {
+        "identifier": "B",
+        "content": "0"
+      },
+      {
+        "identifier": "C",
+        "content": "I"
+      },
+      {
+        "identifier": "D",
+        "content": "3I"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&\\text { We have, } A \\text { is non-singular matrix }\\\\\n&\\begin{aligned}\n& \\therefore \\quad|A|=0 \\\\\n& \\text { and } \\quad(A+1)(A-1)=0 \\\\\n& \\Rightarrow \\quad A^2-I^2=0 \\\\\n& \\Rightarrow \\quad A^2=I^2=1 \\\\\n& \\Rightarrow \\quad A . A=I \\Rightarrow A^{-1}=A \\\\\n& \\therefore \\quad A+A^{-1}=A+A=2 A\n\\end{aligned}\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2019,
+    "yearKey": "mht-cet-2019-2nd-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{cc}1+2 i & i \\\\ -i & 1-2 i\\end{array}\\right]$, where $i=\\sqrt{-1}$, then $A(\\operatorname{adj} A)=\\ldots$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$-2I$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$2I$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$5I$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$4I$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\text { We have, } A=\\left[\\begin{array}{cc}\n1+2 i & i \\\\\n-i & 1-2 i\n\\end{array}\\right] \\\\\n& \\therefore|A|=\\left|\\begin{array}{cc}\n1+2 i & i \\\\\n-i & 1-2 i\n\\end{array}\\right|=(1+2 i)(1-2 i)+i^2 \\\\\n& =1-(2 i)^2+(-1)=1+4-1=4 \\\\\n& \\therefore A(\\operatorname{adj} A)=|A| I=4 I\n\\end{aligned}$$</p>",
+    "topic": "adjoint-of-a-matrix",
+    "year": 2019,
+    "yearKey": "mht-cet-2019-2nd-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{ll}x & 1 \\\\ 1 & 0\\end{array}\\right]$ and $A=A^{-1}$, then $x=\\ldots \\ldots$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $A=\\left[\\begin{array}{ll}x & 1 \\\\ 1 & 0\\end{array}\\right]$</p>\n<p>$$\\begin{aligned}\n\\therefore \\quad|A| & =(x \\times 0-1)=-1 \\\\\n\\operatorname{adj} A & =\\left[\\begin{array}{cc}\n0 & -1 \\\\\n-1 & x\n\\end{array}\\right] \\\\\nA^{-1} & =\\frac{\\operatorname{adj} A}{|A|}=(-1)\\left[\\begin{array}{cc}\n0 & -1 \\\\\n-1 & x\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n0 & 1 \\\\\n1 & -x\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>Since, It is given, $A=A^{-1}$</p>\n<p>$$\\Rightarrow \\quad\\left[\\begin{array}{ll}\nx & 1 \\\\\n1 & 0\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n0 & 1 \\\\\n1 & -x\n\\end{array}\\right]$$</p>\n<p>$\\Rightarrow \\quad x=0 \\quad$ (By equality of matrices)</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2019,
+    "yearKey": "mht-cet-2019-2nd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A$ is non-singular matrix such that $(A-2 l)(A-4 I)=0$ then $A+8 A^{-1}=$ ..........</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I"
+      },
+      {
+        "identifier": "B",
+        "content": "0"
+      },
+      {
+        "identifier": "C",
+        "content": "3I"
+      },
+      {
+        "identifier": "D",
+        "content": "6I"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $|A| \\neq 0$</p>\n<p>$\\Rightarrow A^{-1}$ is exists.</p>\n<p>$$\\begin{aligned}\n& \\text { Since, }(A-2 I)(A-4 I)=0 \\\\\n& \\Rightarrow \\quad A^2-A(4 I)-2 I(A)+8 I \\cdot I=0 \\\\\n& \\Rightarrow \\quad A^2-4 A I-2 A I+8 I=0 \\\\\n& \\Rightarrow \\quad A^2-6 A I+8 I=0 \\\\\n& \\Rightarrow \\quad A^2-6 A+8 I=0\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n&\\text { On pre multiply both sides by } A^{-1} \\text {, we get }\\\\\n&\\begin{array}{rrr} \n& A^{-1} A^2-6 A^{-1} A+8 A^{-1} I=0 \\\\\n\\Rightarrow & I A-6 I+8 A^{-1}=0 \\\\\n\\Rightarrow & A-6 I+8 A^{-1}=0 \\\\\n\\Rightarrow & A+8 A^{-1}=6 I\n\\end{array}\n\\end{aligned}$$</p>",
+    "topic": "inverse-of-a-matrix",
+    "year": 2019,
+    "yearKey": "mht-cet-2019-2nd-may-morning-shift",
+    "difficulty": null
+  }
+]

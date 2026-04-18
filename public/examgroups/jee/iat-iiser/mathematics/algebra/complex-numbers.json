@@ -1,0 +1,130 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $z_1, z_2$, and $z_3$ be complex numbers satisfying the following conditions</p>\n<p>$$ 2=\\left|2 z_1\\right|=\\left|z_2-1\\right|=\\left|z_3+1\\right|=\\left|\\frac{1}{z_1}+\\frac{1}{z_2-1}+\\frac{1}{z_3+1}\\right| . $$</p>\n<p>What is the value of $\\left|4 z_1+z_2+z_3\\right|$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>8</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>4</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{1}{4}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{1}{8}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We are given complex numbers $ z_1, z_2, z_3 $ satisfying</p>\n<p>$ 2 = |2z_1| = |z_2 - 1| = |z_3 + 1| = \\left|\\frac{1}{z_1} + \\frac{1}{z_2 - 1} + \\frac{1}{z_3 + 1}\\right|. $</p>\n<p>We want to find $\\; |4z_1 + z_2 + z_3|.$</p>\n\n<h3>Step 1. Simplify magnitudes</h3>\n<p>From $ |2z_1| = 2 \\Rightarrow |z_1| = 1.$</p>\n<p>So $ z_1 $ lies on the unit circle.</p>\n<p>Also:</p>\n<p>$ |z_2 - 1| = 2, \\quad |z_3 + 1| = 2. $</p>\n<p>Hence,</p>\n<ul>\n<li><p>$z_2$ lies on a circle of radius 2 centered at $1$,</p></li>\n<li><p>$z_3$ lies on a circle of radius 2 centered at $-1$.</p></li>\n</ul>\n\n<h3>Step 2. Introduce new variables</h3>\n<p>Let’s define</p>\n<p>$ a = 2z_1, \\quad b = z_2 - 1, \\quad c = z_3 + 1. $</p>\n<p>Then by the given magnitudes,</p>\n<p>$ |a| = |b| = |c| = 2. $</p>\n<p>We can express the condition on reciprocals:</p>\n<p>$ 2 = \\left|\\frac{1}{z_1} + \\frac{1}{z_2 - 1} + \\frac{1}{z_3 + 1}\\right| = \\left|\\frac{1}{z_1} + \\frac{1}{b} + \\frac{1}{c}\\right|. $</p>\n<p>But $\\frac{1}{z_1} = \\frac{2}{a}$. So the condition becomes:</p>\n<p>$ 2 = \\left|\\frac{2}{a} + \\frac{1}{b} + \\frac{1}{c}\\right|. $</p>\n\n<h3>Step 3. Note all have magnitude 2</h3>\n<p>Let’s divide everything by 2 to normalize to unit circle magnitudes.</p>\n<p>Let’s write:</p>\n<p>$ \\frac{a}{2} = e^{i\\alpha}, \\quad \\frac{b}{2} = e^{i\\beta}, \\quad \\frac{c}{2} = e^{i\\gamma}. $</p>\n<p>Then $a = 2e^{i\\alpha}$, etc.</p>\n<p>The reciprocal condition becomes:</p>\n<p>$ 2 = \\left|\\frac{2}{2 e^{i\\alpha}} + \\frac{1}{2 e^{i\\beta}} + \\frac{1}{2 e^{i\\gamma}}\\right| = \\left| e^{-i\\alpha} + \\frac{1}{2}e^{-i\\beta} + \\frac{1}{2}e^{-i\\gamma}\\right|. $</p>\n<p>Multiply both sides by 2 to simplify the numeric coefficient? Wait, better to keep as is.</p>\n<p>We have:</p>\n<p>$ \\left| e^{-i\\alpha} + \\frac{1}{2}e^{-i\\beta} + \\frac{1}{2}e^{-i\\gamma}\\right| = 2. $</p>\n\n<h3>Step 4. Magnitude constraint bounding</h3>\n<p>Each term has magnitude 1, ½, ½ respectively, so the maximum possible magnitude is $1 + ½ + ½ = 2.$</p>\n<p>To achieve equality $=2$, <strong>all three exponentials must have the same argument</strong>, i.e.</p>\n<p>$ e^{-i\\alpha}, e^{-i\\beta}, e^{-i\\gamma} \\text{ have same direction.} $</p>\n<p>Hence they must be all proportional with positive real coefficients.</p>\n<p>That means $ e^{-i\\alpha} = e^{-i\\beta} = e^{-i\\gamma} $, up to integer multiple of $2\\pi$.</p>\n\n<h3>Step 5. So we can take them equal (since only magnitudes matter)</h3>\n<p>Let $ e^{-i\\alpha} = e^{-i\\beta} = e^{-i\\gamma} = e^{-i\\theta} $.</p>\n<p>Then the condition is automatically satisfied:</p>\n<p>$ \\left| e^{-i\\theta} + \\frac{1}{2}e^{-i\\theta} + \\frac{1}{2}e^{-i\\theta}\\right| = |2 e^{-i\\theta}| = 2. $</p>\n<p>OK.</p>\n\n<h3>Step 6. Return to $a,b,c$</h3>\n<p>Since $ e^{i\\alpha}, e^{i\\beta}, e^{i\\gamma}$ all are equal, say $ e^{i\\theta}. $</p>\n<p>Then:</p>\n<p>$ a = 2 e^{i\\theta}, \\quad b = 2 e^{i\\theta}, \\quad c = 2 e^{i\\theta}. $</p>\n\n<h3>Step 7. Go back to $z_1, z_2, z_3$</h3>\n<p>From definitions:</p>\n<p>$ a = 2z_1 \\Rightarrow z_1 = e^{i\\theta}, $</p>\n<p>$ b = z_2 - 1 \\Rightarrow z_2 = 1 + 2e^{i\\theta}, $</p>\n<p>$ c = z_3 + 1 \\Rightarrow z_3 = -1 + 2e^{i\\theta}. $</p>\n\n<h3>Step 8. Compute the required expression</h3>\n<p>We need $ |4z_1 + z_2 + z_3| $.</p>\n<p>Substitute:</p>\n<p>$ 4z_1 + z_2 + z_3 = 4e^{i\\theta} + (1 + 2e^{i\\theta}) + (-1 + 2e^{i\\theta}) = 4e^{i\\theta} + 1 + 2e^{i\\theta} - 1 + 2e^{i\\theta}. $</p>\n<p>Simplify:</p>\n<p>$ 4z_1 + z_2 + z_3 = (4 + 2 + 2)e^{i\\theta} + (1 - 1) = 8 e^{i\\theta}. $</p>\n<p>Hence</p>\n<p>$ |4z_1 + z_2 + z_3| = |8 e^{i\\theta}| = 8. $</p>\n<p>✅ <strong>Final Answer:</strong></p>\n<p>$ \\boxed{8}. $</p>\n\n<p>✅ Option <strong>A. 8</strong></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "iat-iiser-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following subset of the $X Y$-plane.</p>\n<p>$$ S=\\left\\{\\left(|z-\\mathrm{i} z|,|z|^2\\right): \\quad z \\text { is a complex number }\\right\\} $$</p>\n<p>Which one of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$S$ is a circle\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$S$ is a parabola.\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$S$ is an ellipse but not a circle\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$S$ is a hyperbola."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given the subset $ S $ in the $ XY $-plane:</p>\n<p>$ S = \\left\\{\\left(|z-\\mathrm{i} z|, |z|^2\\right): z \\text{ is a complex number}\\right\\} $</p>\n<p>we need to determine the nature of this subset.</p>\n<p><strong>Step-by-step Breakdown:</strong></p>\n\n<p><strong>Identify Coordinates:</strong></p>\n\n\n<p><p>$ X $-coordinate: $ |z - \\mathrm{i} z| $</p></p>\n<p><p>$ Y $-coordinate: $ |z|^2 $</p></p>\n\n\n<p><strong>Let $ z = x + \\mathrm{i} y $:</strong></p>\n\n\n<p><p>Compute $ X $-coordinate as:</p>\n<p>$      |(x + \\mathrm{i} y) - \\mathrm{i}(x + \\mathrm{i} y)| = |x + \\mathrm{i} y - \\mathrm{i} x - \\mathrm{i}^2 y|      $</p>\n<p>$      = |x + \\mathrm{i} y - \\mathrm{i} x + y| = |x + y + \\mathrm{i}(y - x)|      $</p>\n<p>$      = \\sqrt{(x + y)^2 + (y - x)^2}      $</p>\n<p>$      = \\sqrt{x^2 + y^2 + 2xy + x^2 + y^2 - 2xy} = \\sqrt{2(x^2 + y^2)}      $</p></p>\n<p><p>Compute $ Y $-coordinate as:</p>\n<p>$      |x + \\mathrm{i} y|^2 = x^2 + y^2      $</p></p>\n\n\n<p><strong>Establish the Relationship:</strong></p>\n\n\n<p><p>We have:</p>\n<p>$      X = \\sqrt{2(x^2 + y^2)}      $</p>\n<p>$      Y = x^2 + y^2      $</p></p>\n<p><p>Thus:</p>\n<p>$      X^2 = 2(x^2 + y^2)      $</p>\n<p>$      \\frac{X^2}{2} = x^2 + y^2 = Y      $</p></p>\n\n<p>The equation $\\frac{X^2}{2} = Y$ describes a parabola in the $XY$-plane, which confirms that the correct characterization of the subset $ S $ is that it is a parabola.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "iat-iiser-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<ol start=\"32\">\n<p>Let $\\omega$ be a complex root of the quadratic polynomial $x^2+x+1$. The value of</p>\n\n<p>$$ \\left(\\omega+\\frac{1}{\\omega}\\right) \\cdot\\left(\\omega^2+\\frac{1}{\\omega^2}\\right) \\cdots\\left(\\omega^{100}+\\frac{1}{\\omega^{100}}\\right) $$</p>\n<p>is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$2^{33}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$2^{31}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$-2^{33}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$-2^{31}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Revision Note on $\\omega$ :</p>\n<p>$\\omega$ is a primitive cube root of unity with the following key properties:</p>\n<p><p>$\\omega^3=1$</p></p>\n<p><p>$\\omega+\\omega^2=-1$</p></p>\n<p>$$ \\left(\\omega+\\frac{1}{\\omega}\\right) \\cdot\\left(\\omega^2+\\frac{1}{\\omega^2}\\right) \\cdots\\left(\\omega^{100}+\\frac{1}{\\omega^{100}}\\right) $$</p>\n<p>Let us simplify a few terms by replacing 1 with $\\omega^3$ :</p>\n<p>$$ \\begin{aligned} \\left(\\omega+\\frac{1}{\\omega}\\right) & =\\left(\\omega+\\frac{\\omega^3}{\\omega}\\right)=\\left(\\omega+\\omega^2\\right)=-1 \\\\ \\left(\\omega^2+\\frac{1}{\\omega^2}\\right) & =\\left(\\omega^2+\\frac{\\omega^3}{\\omega^2}\\right)=\\left(\\omega+\\omega^2\\right)=-1 \\\\ & \\left(\\omega^3+\\frac{1}{\\omega^3}\\right)=1+1=2 \\end{aligned} $$</p>\n<p>$$ \\left(\\omega^4+\\frac{1}{\\omega^4}\\right)=\\left(\\omega^3(\\omega)+\\frac{1}{\\omega^3(\\omega)}\\right)=\\left(\\omega+\\frac{1}{\\omega}\\right)=-1 $$</p>\n<p>This will repeat in a cycle of 3 terms; therefore, we can rewrite the original equation as the</p>\n<p>and so on following:</p>\n<p>$$ \\begin{gathered} \\left(\\omega+\\frac{1}{\\omega}\\right) \\cdot\\left(\\omega^2+\\frac{1}{\\omega^2}\\right) \\cdots\\left(\\omega^{100}+\\frac{1}{\\omega^{100}}\\right) \\\\ =\\left[\\left(\\omega+\\frac{1}{\\omega}\\right) \\cdot\\left(\\omega^2+\\frac{1}{\\omega^2}\\right) \\cdot\\left(\\omega^3+\\frac{1}{\\omega^3}\\right)\\right]^{33}\\left(\\omega^{99} \\omega+\\frac{1}{\\omega^{99} \\omega}\\right) \\\\ =[-1 \\times-1 \\times 2]^{33} \\times-1 \\\\ =-2^{33} \\end{gathered} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "iat-iiser-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": " Let $a, b$ be nonzero real numbers. If $p(x)=x^n+c_{n-1} x^{n-1}+\\cdots+c_0$, where $c_{n-1}, \\ldots, c_0$ are integers and $n \\geq 3$, then which of the following statements is correct?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " If $a+i b$ is a root of $p(x)$, then $n$ must be even.\n"
+      },
+      {
+        "identifier": "B",
+        "content": " If $a$ is a root of $p(x)$, then $n$ must be odd.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " If $a+i b$ is a root of $p(x)$, then $(a+i b)^2$ can never be a root of $p(x)$.\n"
+      },
+      {
+        "identifier": "D",
+        "content": " If $a$ is a root of $p(x)$, then $a$ must be an integer."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statement is correct, let's analyse each option given and also carefully observe that $\\boldsymbol{p}(\\boldsymbol{x})=(\\mathbf{1}+\\boldsymbol{x})^n$ where $n \\geq 3$ and $a, b$ are nonzero real numbers.</p>\n<p>Option A: \"I $a+i b$ is a root of $p(x)$, then $n$ must be even.\"</p>\n<p>The roots of $p(x)=(1+x)^n$ are determined by setting $(1+x)^n=0$. Since $n \\geq 3$ and $(1+x)^n=0$ when $1+x=0$, the only root is $x=-1$. For a complex root like $a+i b$ to be a root, $(1+a+i b)^n$ must be 0 , which can only happen if $1+a+i b=0$, leading to $a=-1$ and $b=0$. However, since $b$ is nonzero, this condition cannot be satisfied. Thus, $a+i b$ cannot be a root.</p>\n<p>Therefore, Option A is incorrect.</p>\n<p>Option B: \"If $\\boldsymbol{a}$ is a root of $\\boldsymbol{p}(\\boldsymbol{x})$, then $\\boldsymbol{n}$ must be odd.\"</p>\n<p>If $a$ is a real root, then $(1+a)^n=0$ which leads to $1+a=0$ or $a=-1$. This is true for any $n \\geq 3$, not necessarily odd. Therefore, Option B is incorrect.</p>\n<p>Option C: \"If $a+i b$ is a root of $p(x)$, then $(a+i b)^2$ can never be a root of $p(x)$.\"</p>\n<p>As established earlier, $(1+x)^n=0$ only gives real roots. Thus, if $a+i b$ were a root, $1+a+$ $i b$ would need to equal zero, and $a=-1, b=0$. This makes the question of whether $(a+i b)^2$ can be a root irrelevant because no complex roots exist for $p(x)$.</p>\n<p>Therefore, Option C is irrelevant.</p>\n<p>Option D: \"If $a$ is a root of $p(x)$, then $a$ must be an integer.\"</p>\n<p>If $a$ is a root, $(1+a)^n=0$ leads to $a=-1$. Since -1 is an integer, this statement holds true.</p>\n<p>Option D is correct.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "iat-iiser-2020",
+    "difficulty": null
+  }
+]

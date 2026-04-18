@@ -1,0 +1,1096 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following recurrence relations:</p>\n<p>For all $n>1$,</p>\n<p>$$ \\begin{aligned} & T_1(n)=4 T_1\\left(\\frac{n}{2}\\right)+T_2(n) \\\\ & T_2(n)=5 T_2\\left(\\frac{n}{4}\\right)+\\theta\\left(\\log _2 n\\right) \\end{aligned} $$</p>\n<p>Assume that for all $n \\leq 1, T_1(n)=1$ and $T_2(n)=1$. Which one of the following options is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$T_1(n)=\\theta\\left(n^2\\right)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$T_1(n)=\\theta\\left(n^2 \\log _2 n\\right)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$T_1(n)=\\theta\\left(n^{\\log _4 5}\\right)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$T_1(n)=\\theta\\left(n^{\\log _4 5} \\log _2 n\\right)$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & T_1(n)=4 T_1\\left(\\frac{n}{2}\\right)+T_2(n) \\\\ & T_2(n)=5 T_2\\left(\\frac{n}{4}\\right)+\\theta(\\log n) \\end{aligned} $$</p>\n<p>Apply Master theorem's for $T_2(n)$</p>\n<p>$$ f(n)=\\theta(\\log n), n^{\\log _b^a}=n^{\\log _4^5} $$</p>\n<p>Case (1) applicable</p>\n<p>$$ \\begin{aligned} & T_2(n)=\\theta\\left(n^{\\log _2^5}\\right) \\\\ & T_1(n)=4 T_1\\left(\\frac{n}{2}\\right)+\\theta\\left(n^{\\log _2^5}\\right) \\end{aligned} $$</p>\n<p>Apply Master theorem's for $T_1(n)$</p>\n<p>$$ f(n)=\\theta\\left(n^{\\log _2^5}\\right), n^{\\log _b^a}=n^2 $$</p>\n<p>Case (1) applicable</p>\n<p>$$ T_1(n)=\\theta\\left(n^2\\right) $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Let H be a binary min-heap consisting of n elements implemented as an array. What is the worst case time complexity of an optimal algorithm to find the maximum element in H?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "θ(log n)"
+      },
+      {
+        "identifier": "B",
+        "content": "θ(n)"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>θ(1)</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "θ(n log n)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the worst-case time complexity of an optimal algorithm to find the maximum element in a binary min-heap $ H $ consisting of $ n $ elements, we need to analyze how the elements are organized in a min-heap and what steps are necessary to find the maximum element.</p>\n<hr />\n<h3><strong>Understanding a Binary Min-Heap:</strong></h3>\n\n<p><p><strong>Min-Heap Property:</strong> In a binary <strong>min-heap</strong>, each parent node is less than or equal to its child nodes.</p></p>\n<p><p><strong>Structure:</strong> A binary min-heap is a complete binary tree, meaning all levels are fully filled except possibly for the last level, which is filled from left to right.</p></p>\n<p><p><strong>Implementation:</strong> The heap is implemented as an array where the root element is at index 1 (or 0, depending on the convention).</p></p>\n\n<hr />\n<h3><strong>Characteristics Relevant to Finding the Maximum Element:</strong></h3>\n\n<p><strong>Location of the Maximum Element:</strong></p>\n\n\n<p><p>In a <strong>min-heap</strong>, the smallest element is at the root.</p></p>\n<p><p>The maximum element must be among the <strong>leaf nodes</strong>, because all parent nodes are smaller than their children.</p></p>\n\n\n<p><strong>Number of Leaf Nodes:</strong></p>\n\n\n<p><p>In a complete binary tree with $ n $ nodes:</p>\n\n<p><p>The number of leaf nodes is approximately $ \\left\\lceil \\frac{n}{2} \\right\\rceil $.</p></p>\n<p><p>The leaves are located from indices $ \\left\\lfloor \\frac{n}{2} \\right\\rfloor + 1 $ to $ n $ in the array representation.</p></p></p>\n\n<hr />\n<h3><strong>Algorithm to Find the Maximum Element:</strong></h3>\n\n<p><strong>Identify Leaf Nodes:</strong></p>\n\n\n<p><p>Determine the indices of the leaf nodes in the heap array:</p>\n<p>$      \\text{Start index of leaves} = \\left\\lfloor \\frac{n}{2} \\right\\rfloor + 1      $</p>\n<p>$      \\text{End index of leaves} = n      $</p></p>\n\n\n<p><strong>Scan Leaf Nodes:</strong></p>\n\n\n<p><p>Initialize a variable to store the maximum value found.</p></p>\n<p><p>Iterate over the leaf nodes from index $ \\left\\lfloor \\frac{n}{2} \\right\\rfloor + 1 $ to $ n $:</p>\n\n<p><p>Compare each leaf node's value with the current maximum.</p></p>\n<p><p>Update the maximum value if a larger value is found.</p></p></p>\n\n\n<p><strong>Time Complexity Analysis:</strong></p>\n\n\n<p><p>The number of leaf nodes is approximately $ \\frac{n}{2} $.</p></p>\n<p><p>Scanning all leaf nodes requires $ O\\left(\\frac{n}{2}\\right) $ time.</p></p>\n<p><p>Therefore, the algorithm's time complexity is $ \\theta(n) $.</p></p>\n\n<hr />\n<h3><strong>Conclusion:</strong></h3>\n\n<p><p>The optimal algorithm to find the maximum element in a binary min-heap involves scanning all the leaf nodes.</p></p>\n<p><p>Since there are $ O(n) $ leaf nodes, the worst-case time complexity is $ \\theta(n) $.</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Option B</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "What is the worst-case number of arithmetic operations performed by recursive binary search on a sorted array of size n?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "θ(n)"
+      },
+      {
+        "identifier": "B",
+        "content": "θ(√n)"
+      },
+      {
+        "identifier": "C",
+        "content": "θ(log<sub>2</sub>(n))"
+      },
+      {
+        "identifier": "D",
+        "content": "θ(n<sup>2</sup>)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><strong>Recursive Binary Search Algorithm :</strong></p>\n\n<p><strong>Base Case Check :</strong></p>\n\n\n<p><p>Check if the search interval is valid :</p>\n\n<p><p><strong>Operation :</strong> Compare $ \\text{low} $ and $ \\text{high} $.</p></p>\n<p><p><strong>Cost :</strong> 1 comparison.</p></p></p>\n\n\n<p><strong>Compute Midpoint :</strong></p>\n\n\n<p><p>Calculate the middle index :</p>\n\n<p><p>$ \\text{mid} = \\left\\lfloor \\frac{\\text{low} + \\text{high}}{2} \\right\\rfloor $</p></p>\n<p><p><strong>Operations :</strong> 1 addition, 1 division (integer division).</p></p>\n<p><p><strong>Cost :</strong> 2 arithmetic operations.</p></p></p>\n\n\n<p><strong>Comparison with Target :</strong></p>\n\n\n<p><p>Compare $ \\text{A[mid]} $ with the target value $ x $ :</p>\n\n<p><strong>Operation :</strong> 1 comparison.</p></p>\n\n\n<p><strong>Recursive Call :</strong></p>\n\n\n<p>Depending on the comparison result, adjust $ \\text{low} $ or $ \\text{high} $ and make a recursive call.</p>\n\n<p><strong>Total Operations per Recursive Call :</strong></p>\n\n<p><p><strong>Arithmetic Operations :</strong></p></p>\n<p><p>1 addition (computing mid).</p></p>\n<p><p>1 division (computing mid).</p></p>\n<p><p><strong>Comparisons :</strong></p></p>\n<p><p>1 comparison (base case check).</p></p>\n<p><p>1 comparison (comparing $ \\text{A[mid]} $ with $ x $).</p></p>\n<p><p><strong>Total per Call :</strong> Approximately <strong>constant time</strong> (let's denote it as $ c $).</p></p>\n\n<p><strong>Depth of Recursion :</strong></p>\n\n<p><p>Each recursive call halves the search interval.</p></p>\n<p><p>The maximum number of times we can halve $ n $ elements is $ \\log_2 n $.</p></p>\n<p><p><strong>Worst-Case Depth :</strong> $ \\lceil \\log_2 n \\rceil $</p></p>\n\n<p><strong>Total Worst-Case Operations :</strong></p>\n\n<p><p><strong>Total Operations :</strong> $ c \\times \\lceil \\log_2 n \\rceil $</p></p>\n<p><p><strong>Order of Growth :</strong> $ \\theta(\\log_2 n) $</p></p>\n\n<p><strong>Conclusion :</strong></p>\n\n<p><p>The worst-case number of arithmetic operations is proportional to $ \\log_2 n $.</p></p>\n<p><p>Therefore, the correct answer is <strong>$ \\theta(\\log_2 n) $</strong>.</p></p>\n\n<p><strong>Answer :</strong> Option C</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "A binary search tree T contains n distinct elements. What is the time complexity of picking an element in T that is smaller than the maximum element in T?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Θ(1)"
+      },
+      {
+        "identifier": "B",
+        "content": "Θ(n log n)"
+      },
+      {
+        "identifier": "C",
+        "content": "Θ(log n)"
+      },
+      {
+        "identifier": "D",
+        "content": "Θ(n)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> A Binary search tree T containing n distinct elements.</p>\n<p>In BST maximal element will be in right most leaf node</p>\n<p>If root has right sub tree then root itself is smaller than maximum value</p>\n<p>If root does not have right subtree then root is maximum element and left child of root is the required element.</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a sequence of 14 elements : A = [-5, -10, 6, 3, -1, -2, 13, 4, -9, -1, 4, 12, -3, 0]. The subsequence sum $$S\\left( {i,j} \\right) = \\sum\\limits_{k = 1}^j {A\\left[ k \\right]} $$. Determine the maximum of S(i, j), where 0 ≤  i ≤  j &lt; 14. (Divide and conquer approach may be used)\n<br><br>Answer : ________.\n\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "29",
+    "explanation": "<p>To determine the maximum value of $ S(i, j) $ for the given sequence, we'll interpret $ S(i, j) $ as the sum of a contiguous subsequence from index $ i $ to $ j $ of array $ A $:</p>\n<p>$ S(i, j) = \\sum\\limits_{k=i}^j A[k] $</p>\n<p>Our goal is to find the maximum sum of any contiguous subsequence within $ A $. We can use <strong>Kadane's Algorithm</strong>, an efficient method for this problem with a time complexity of $ O(n) $.</p>\n<h3><strong>Given Sequence:</strong></h3>\n<p>$ A = [-5, -10, 6, 3, -1, -2, 13, 4, -9, -1, 4, 12, -3, 0] $</p>\n<h3><strong>Applying Kadane's Algorithm:</strong></h3>\n<p>We initialize two variables:</p>\n\n<p><p><code>max_so_far</code> — the maximum sum found so far.</p></p>\n<p><p><code>max_ending_here</code> — the maximum sum ending at the current position.</p></p>\n\n<p>We start by setting both to the first element of the array.</p>\n<h4><strong>Step-by-Step Calculation:</strong></h4>\n<table border=\"1\">\n  <tr>\n    <th>Index (i)</th>\n    <th>A[i]</th>\n    <th>max_ending_here = max(A[i], max_ending_here + A[i])</th>\n    <th>max_so_far = max(max_so_far, max_ending_here)</th>\n  </tr>\n  <tr>\n    <td>0</td>\n    <td>-5</td>\n    <td>max(-5, -5) = -5</td>\n    <td>max(-5, -5) = -5</td>\n  </tr>\n  <tr>\n    <td>1</td>\n    <td>-10</td>\n    <td>max(-10, -5 + (-10)) = max(-10, -15) = -10</td>\n    <td>max(-5, -10) = -5</td>\n  </tr>\n  <tr>\n    <td>2</td>\n    <td>6</td>\n    <td>max(6, -10 + 6) = max(6, -4) = 6</td>\n    <td>max(-5, 6) = 6</td>\n  </tr>\n  <tr>\n    <td>3</td>\n    <td>3</td>\n    <td>max(3, 6 + 3) = max(3, 9) = 9</td>\n    <td>max(6, 9) = 9</td>\n  </tr>\n  <tr>\n    <td>4</td>\n    <td>-1</td>\n    <td>max(-1, 9 + (-1)) = max(-1, 8) = 8</td>\n    <td>max(9, 8) = 9</td>\n  </tr>\n  <tr>\n    <td>5</td>\n    <td>-2</td>\n    <td>max(-2, 8 + (-2)) = max(-2, 6) = 6</td>\n    <td>max(9, 6) = 9</td>\n  </tr>\n  <tr>\n    <td>6</td>\n    <td>13</td>\n    <td>max(13, 6 + 13) = max(13, 19) = 19</td>\n    <td>max(9, 19) = 19</td>\n  </tr>\n  <tr>\n    <td>7</td>\n    <td>4</td>\n    <td>max(4, 19 + 4) = max(4, 23) = 23</td>\n    <td>max(19, 23) = 23</td>\n  </tr>\n  <tr>\n    <td>8</td>\n    <td>-9</td>\n    <td>max(-9, 23 + (-9)) = max(-9, 14) = 14</td>\n    <td>max(23, 14) = 23</td>\n  </tr>\n  <tr>\n    <td>9</td>\n    <td>-1</td>\n    <td>max(-1, 14 + (-1)) = max(-1, 13) = 13</td>\n    <td>max(23, 13) = 23</td>\n  </tr>\n  <tr>\n    <td>10</td>\n    <td>4</td>\n    <td>max(4, 13 + 4) = max(4, 17) = 17</td>\n    <td>max(23, 17) = 23</td>\n  </tr>\n  <tr>\n    <td>11</td>\n    <td>12</td>\n    <td>max(12, 17 + 12) = max(12, 29) = 29</td>\n    <td>max(23, 29) = 29</td>\n  </tr>\n  <tr>\n    <td>12</td>\n    <td>-3</td>\n    <td>max(-3, 29 + (-3)) = max(-3, 26) = 26</td>\n    <td>max(29, 26) = 29</td>\n  </tr>\n  <tr>\n    <td>13</td>\n    <td>0</td>\n    <td>max(0, 26 + 0) = max(0, 26) = 26</td>\n    <td>max(29, 26) = 29</td>\n  </tr>\n</table>\n\n<h3><strong>Result:</strong></h3>\n<p>The <strong>maximum subsequence sum</strong> is <strong>29</strong>.</p>\n<hr />\n<p><strong>Answer:</strong> <strong>29</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following correctly determines the solution of the recurrence relation with T(1) = 1?<br>\nT(1) = 2T (n/2) + log n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\theta (n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\theta (n \\log n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\theta (n^2)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\theta (\\log n)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let P be a QuickSort Program to sort numbers in ascending order using the first element as pivot. Let t<sub>1</sub> and t<sub>2</sub> be the number of comparisons made by P for the inputs {1, 2, 3, 4, 5} and {4, 1, 5, 3, 2} respectively. Which one of the following holds?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "t<sub>1</sub> = 5"
+      },
+      {
+        "identifier": "B",
+        "content": "t<sub>1</sub> &lt; t<sub>2</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "t<sub>1</sub> &gt; t<sub>2</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "t<sub>1</sub> = t<sub>2</sub>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "You have an array of n elements. Suppose you implement quicksort by always choosing the central element of the array as the pivot. Then the tightest upper bound for the worst case performance is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(n<sup>2</sup>)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(n log n)"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta (n \\log n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "O(n<sup>3</sup>)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of arithmetic operations required to evaluate the polynomial P(X) = X<sup>5</sup> + 4X<sup>3</sup> + 6X + 5 for a given value of X using only one temporary variable is _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statement(s) is / are correct regarding Bellman-Ford shortest path algorithm?<br>\n<b>P:</b> Always finds a negative weighted cycle, if one exist s.<br>\n<b>Q: </b>Finds whether any negative weighted cycle is reachable \n   from the source. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P Only"
+      },
+      {
+        "identifier": "B",
+        "content": "Q Only"
+      },
+      {
+        "identifier": "C",
+        "content": "Both P and Q"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither P nor Q"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The usual $$\\Theta ({n^2})$$ implementation of Insertion Sort to sort an array uses linear search to identify the position where an element is to be inserted into the already sorted part of the array. If, instead, we use binary search to identify the position, the worst case running time will",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "remain $$\\Theta ({n^2})$$"
+      },
+      {
+        "identifier": "B",
+        "content": "become $$\\Theta (n{(\\log \\,n)^2})$$"
+      },
+      {
+        "identifier": "C",
+        "content": "become $$\\Theta (n\\log \\,n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "become $$\\Theta (n)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The solution to the recurrence equation <br> T(2<sup>k</sup>) = 3 T(2<sup>k-1</sup>) + 1, T (1) = 1, is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2<sup>k</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "(3<sup>k+1</sup> - 1)/2"
+      },
+      {
+        "identifier": "C",
+        "content": "3<sup> log</sup> 2K"
+      },
+      {
+        "identifier": "D",
+        "content": "2<sup> log</sup> 3K"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Randomized quicksort is an extension of quicksort where the pivot is chosen randomly. What is the worst case complexity of sorting n numbers using randomized quicksort?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(n)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(n Log n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(n<sup>2</sup>)"
+      },
+      {
+        "identifier": "D",
+        "content": "O(n!)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Let s be a sorted array of n integers. Let t(n) denote the time taken for the most efficient algorithm to determined if there are two elements with sum less than 1000 in s. which of the following statements is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "t (n) is O(1)"
+      },
+      {
+        "identifier": "B",
+        "content": "n &lt; t (n) &lt; $$n\\log _2^n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$n\\log _2^n$$ &lt; t (n) &lt; $$\\left( {\\matrix{\n   n  \\cr \n   2  \\cr \n\n } } \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "t(n) =  $$\\left( {\\matrix{\n   n  \\cr \n   2  \\cr \n\n } } \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "A sorting technique is called stable if:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It takes O(nlog n)time"
+      },
+      {
+        "identifier": "B",
+        "content": "It maintains the relative order of occurrence of non-distinct elements"
+      },
+      {
+        "identifier": "C",
+        "content": "It uses divide and conquer paradigm"
+      },
+      {
+        "identifier": "D",
+        "content": "It takes O(n) space"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "If one uses straight two-way merge sort algorithm to sort the following elements in ascending order 20, 47, 15, 8, 9, 4, 40, 30, 12, 17\nthen the order of these elements after the second pass of the algorithm is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8, 9, 15, 20, 47, 4, 12, 17, 30, 40"
+      },
+      {
+        "identifier": "B",
+        "content": "8, 15, 20, 47, 4, 9, 30, 40, 12, 17"
+      },
+      {
+        "identifier": "C",
+        "content": "15, 20, 47, 4, 8, 9, 12, 30, 40, 17"
+      },
+      {
+        "identifier": "D",
+        "content": "4, 8, 9, 15, 20, 47, 12, 17, 30, 40"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Merge sort uses",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Divide and conquer strategy"
+      },
+      {
+        "identifier": "B",
+        "content": "Backtracking approach"
+      },
+      {
+        "identifier": "C",
+        "content": "Heuristic search"
+      },
+      {
+        "identifier": "D",
+        "content": "Greedy approach"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "For merging two sorted lists of sizes m and n into a sorted list of size m+n, we require comparisons of ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(m)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(m+n)"
+      },
+      {
+        "identifier": "D",
+        "content": "O(log m + log n)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is true?<br>\nI. As the number of entries in a hash table increases, the number of collisions increases.<br>\nII. Recursive programs are efficient<br>\nIII. The worst case complexity for Quicksort is O(n<sup>2</sup>)<br>\nIV. Binary search using a linear linked list is efficient.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and II"
+      },
+      {
+        "identifier": "B",
+        "content": "II and III"
+      },
+      {
+        "identifier": "C",
+        "content": "I and IV"
+      },
+      {
+        "identifier": "D",
+        "content": "I and III"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements :\n  <br><br>I. The smallest element in a max-heap is always at a leaf node\n <br><br/>II. The second largest element in a max-heap is always a child of the root node\n<br><br/>III. A max-heap can be constructed from a binary search tree in Θ(n) time\n <br><br/>IV. A binary search tree can be constructed from a max-heap in Θ(n) time\n<br><br>Which of the above statements are TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I, II and III\n"
+      },
+      {
+        "identifier": "B",
+        "content": "I, III and IV"
+      },
+      {
+        "identifier": "C",
+        "content": "I, II and IV"
+      },
+      {
+        "identifier": "D",
+        "content": "II, III and IV"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given statements are <strong>TRUE</strong>, let's analyze each one in detail.</p>\n<hr />\n<h3><strong>Statement I:</strong></h3>\n<p><strong>\"The smallest element in a max-heap is always at a leaf node.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>In a <strong>max-heap</strong>, every parent node has a value <strong>greater than or equal to</strong> its children.</p></p>\n<p><p>The root node contains the <strong>maximum</strong> element.</p></p>\n<p><p>As we move down the levels, the values decrease (or remain the same).</p></p>\n<p><p><strong>Leaf nodes</strong> are at the lowest level and have no children.</p></p>\n<p><p>Since all non-leaf nodes have at least one child with a value less than or equal to themselves, the <strong>smallest element cannot be at a non-leaf node</strong> (as it would violate the heap property if its child had a higher value).</p></p>\n\n<p><strong>Conclusion:</strong> The smallest element in a max-heap must be at a <strong>leaf node</strong>.</p>\n<p><strong>Statement I is TRUE.</strong></p>\n<hr />\n<h3><strong>Statement II:</strong></h3>\n<p><strong>\"The second largest element in a max-heap is always a child of the root node.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>The <strong>root node</strong> has the largest element.</p></p>\n<p><p>The children of the root are the next level of nodes.</p></p>\n<p><p>Because of the heap property, these children must have values less than or equal to the root.</p></p>\n<p><p>Any child of the root cannot have a value greater than the root.</p></p>\n<p><p><strong>Could the second largest element be below the root's children?</strong></p></p>\n<p><p>No, because for a node to be below the root's children, it must be less than or equal to its parent (which is already less than the root).</p></p>\n<p><p>Therefore, the values decrease as we move down the heap.</p></p>\n<p><p>The <strong>second largest element</strong> must be one of the root's immediate children.</p></p>\n\n<p><strong>Conclusion:</strong> The second largest element is always a <strong>child of the root</strong> in a max-heap.</p>\n<p><strong>Statement II is TRUE.</strong></p>\n<hr />\n<h3><strong>Statement III:</strong></h3>\n<p><strong>\"A max-heap can be constructed from a binary search tree in $ \\Theta(n) $ time.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>A <strong>binary search tree (BST)</strong> can be traversed in $ O(n) $ time.</p></p>\n<p><p>Collect all elements from the BST during traversal.</p></p>\n<p><p>Building a <strong>max-heap</strong> from an unsorted array of $ n $ elements can be done in $ O(n) $ time using the <strong>heapify</strong> process.</p></p>\n<p><p>Steps:</p></p>\n\n\n<p><p><strong>Traverse the BST</strong> and store elements in an array — $ O(n) $.</p></p>\n<p><p><strong>Build the max-heap</strong> from the array — $ O(n) $.</p></p>\n\n\n<p>Total time complexity: $ O(n) + O(n) = O(n) $.</p>\n\n<p><strong>Conclusion:</strong> A max-heap can be constructed from a BST in $ \\Theta(n) $ time.</p>\n<p><strong>Statement III is TRUE.</strong></p>\n<hr />\n<h3><strong>Statement IV:</strong></h3>\n<p><strong>\"A binary search tree can be constructed from a max-heap in $ \\Theta(n) $ time.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>A <strong>max-heap</strong> does not store elements in any particular order that can be directly used to construct a BST.</p></p>\n<p><p>Extracting elements from a max-heap in sorted order requires <strong>heapsort</strong>, which takes $ O(n \\log n) $ time.</p></p>\n<p><p>Building a BST by inserting $ n $ elements takes:</p></p>\n<p><p><strong>Unsorted input:</strong> $ O(n \\log n) $ time on average.</p></p>\n<p><p><strong>Sorted input:</strong> $ O(n) $ time if we can build a balanced BST from a sorted array.</p></p>\n<p><p>However, since we cannot obtain a sorted array from a heap in less than $ O(n \\log n) $ time, constructing a BST from a max-heap cannot be done in $ \\Theta(n) $ time.</p></p>\n\n<p><strong>Conclusion:</strong> Constructing a BST from a max-heap cannot be done in $ \\Theta(n) $ time.</p>\n<p><strong>Statement IV is FALSE.</strong></p>\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Statements that are TRUE:</strong> <strong>I, II, and III</strong></p></p>\n<p><p><strong>Statement that is FALSE:</strong> <strong>IV</strong></p></p>\n\n<hr />\n<p><strong>Answer:</strong> <strong>Option A</strong></p>\n<p><strong>I, II, and III are TRUE</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "The number of possible min-heaps containing each value from $$\\left\\{ {1,2,3,4,5,6,7} \\right\\}$$ exactly once is _____. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "80",
+    "explanation": "<p>Given : Values : {1, 2, 3, 4, 5, 6, 7} </p>\n<p>Since a min-heap is complete binary tree hence 7 nodes are distributed in 2 levels (root at level 0) </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m598g9v7/124d2d27-ef22-494c-abbb-1ad0e41adabf/97f06430-c5ae-11ef-a4e2-fb8e7cf702cd/file-jaoe38c1m598g9v8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m598g9v7/124d2d27-ef22-494c-abbb-1ad0e41adabf/97f06430-c5ae-11ef-a4e2-fb8e7cf702cd/file-jaoe38c1m598g9v8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2018 Algorithms - Divide and Conquer Method Question 7 English Explanation 1\"></p>\n<p>In min-heap smallest element is in root hence the structure is </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m598hxue/8e640e34-ac24-4bd4-b929-bb1b41d14e72/c6453360-c5ae-11ef-a4e2-fb8e7cf702cd/file-jaoe38c1m598hxuf.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m598hxue/8e640e34-ac24-4bd4-b929-bb1b41d14e72/c6453360-c5ae-11ef-a4e2-fb8e7cf702cd/file-jaoe38c1m598hxuf.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2018 Algorithms - Divide and Conquer Method Question 7 English Explanation 2\"></p>\n<p>In first level, second minimum element is present.</p>\n<p>Hence, we have 2 choices for element 2. </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m598ji2v/69422014-6868-46cd-9ca3-f09b1771d931/f1b5f570-c5ae-11ef-a4e2-fb8e7cf702cd/file-jaoe38c1m598ji2w.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m598ji2v/69422014-6868-46cd-9ca3-f09b1771d931/f1b5f570-c5ae-11ef-a4e2-fb8e7cf702cd/file-jaoe38c1m598ji2w.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2018 Algorithms - Divide and Conquer Method Question 7 English Explanation 3\"></p>\n<p>Now for leaf node of element 2 we have 5 elements</p>\n<p>So total no. of ways $=5 \\times 4=20$</p>\n<p>Since leaf node can be arranged in 2 ways</p>\n<p>We have $20 \\times 2=40$ ways.</p>\n<p>And finally left subtree of 1 i.e. root can be arranged in two ways hence total</p>\n<p>$$ 40 \\times 2=80 \\text { ways } $$</p>\n<p>Hence, the correct answer is 80 .</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following pseudo code. What is the total number of multiplications to be performed?\n<pre><code class=\"psudo\">D = 2\nfor i = 1 to n do\n   for j = i to n do\n      for k = j + 1 to n do\n           D = D * 3</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Half of the product of the 3 consecutive integers."
+      },
+      {
+        "identifier": "B",
+        "content": "One-third of the product of the 3 consecutive integers."
+      },
+      {
+        "identifier": "C",
+        "content": "One-sixth of the product of the 3 consecutive integers."
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of comparisons required to find the minimum and the maximum of 100 numbers is ________",
+    "options": [],
+    "correct_options": [],
+    "answer": "148",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following function:\n<pre><code class=\"c\">int unknown(int n) {\n    int i, j, k = 0;\n    for (i  = n/2; i &lt;= n; i++)\n        for (j = 2; j &lt;= n; j = j * 2)\n            k = k + n/2;\n    return k;\n }</code></pre>\nThe return value of the function is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta ({n^2})$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta(n^2\\log n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta(n^3)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta(n^3\\log n)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following operation along with Enqueue and Dequeue operations on queues, where k is a global parameter.\n<pre><code class=\"c\">MultiDequeue(Q){\n   m = k\n   while (Q is not empty and m  &gt; 0) {\n      Dequeue(Q)\n      m = m - 1\n   }\n}</code></pre>\nWhat is the worst case time complexity of a sequence of n operations on an initially empty queue? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta (n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$Θ(n + k)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$Θ(nk)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$Θ(n^2)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A list of n strings, each of length n, is sorted into lexicographic order using the merge-sort algorithm. The worst case running time of this computation is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(n log n)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(n<sup>2</sup> log n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(n<sup>2</sup> + log n)"
+      },
+      {
+        "identifier": "D",
+        "content": "O(n<sup>2</sup>)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The running time of an algorithm is represented by the following recurrence relation:<br>\n$$T(n) =  \\begin{cases}\n \n  n &amp; n \\leq 3 \\\\\n \n  T(\\frac{n}{3})+cn &amp; \\text{ otherwise }\n \n \\end{cases}$$\n<br>\nWhich one of the following represents the time complexity of the algorithm?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta(n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta(n \\log n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta(n^2)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta(n^2 \\log n)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "In quick sort, for sorting n elements, the (n/4)th smallest element is selected as pivot using an O(n) time algorithm. What is the worst case time complexity of the quick sort?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta(n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta(n \\log n)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta(n^2)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta(n^2 \\log n)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the Quicksort algorithm. Suppose there is a procedure for finding a pivot element which splits the list into two sub-lists each of which contains at least one-fifth of the elements. Let T(n) be the number of comparisons required to sort n elements. Then",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm{T(n)  &lt;  =  2T(n/5)  +  n}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$T\\left( n \\right){\\rm{ }} &lt;  = {\\rm{ }}T\\left( {n/5} \\right){\\rm{ }} + {\\rm{ }}T\\left( {4n/5} \\right){\\rm{ }} + {\\rm{ }}n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$T\\left( n \\right){\\rm{ }} &lt;  = {\\rm{ }}2T\\left( {4n/5} \\right){\\rm{ }} + {\\rm{ }}n$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$T\\left( n \\right){\\rm{ }} &lt;  = {\\rm{ }}2T\\left( {n/2} \\right){\\rm{ }} + {\\rm{ }}n$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "An array of n numbers is given, where n is an even number. The maximum as well as the minimum of these n numbers needs to be determined. Which of the following is TRUE about the number of comparisons needed?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "At least 2n – c comparisons, for some constant c, are needed."
+      },
+      {
+        "identifier": "B",
+        "content": "At most 1.5n – 2 comparisons are needed."
+      },
+      {
+        "identifier": "C",
+        "content": "At least n log<sub>2</sub> n comparisons are needed."
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following recurrence:<br>\n$$T\\left( n \\right){\\rm{ }} = {\\rm{ 2T(}}\\left\\lceil {\\sqrt n } \\right\\rceil {\\rm{) + }}\\,{\\rm{1 T(1)  =  1}}$$ <br>\nWhich one of the following is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$T\\left( n \\right){\\rm{ }} = {\\rm{ }}\\theta \\,{\\rm{(loglogn)}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$T\\left( n \\right){\\rm{ }} = {\\rm{ }}\\theta \\,{\\rm{(logn)}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$T\\left( n \\right){\\rm{ }} = {\\rm{ }}\\theta \\,{\\rm{(}}\\sqrt n {\\rm{)}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$T\\left( n \\right){\\rm{ }} = {\\rm{ }}\\theta \\,{\\rm{(}}n {\\rm{)}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The median of n elements can be found in O(n) time. Which one of the following is correct about the complexity of quick sort, in which median is selected as pivot?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\theta \\,{\\rm{(n)}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\theta \\,{\\rm{(nlogn)}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\theta \\,{\\rm{(n}}{}^2{\\rm{)}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\theta \\,{\\rm{(n}}{}^3{\\rm{)}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose T(n) = 2T (n/2) + n, T(0) = T(1) = 1\n<br>\nWhich one of the following is FALSE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "T(n) = O(n<sup>2</sup>)\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$T\\left( n \\right){\\rm{ }} = {\\rm{ }}\\theta \\left( {n{\\rm{ }}\\,log\\,{\\rm{ }}n} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$T\\left( n \\right){\\rm{ }} = {\\rm{ }}\\Omega ({n^2})$$"
+      },
+      {
+        "identifier": "D",
+        "content": "T(n) = O(n log n)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Let T(n) be the function defined by $$T(1) =1, \\: T(n) = 2T (\\lfloor \\frac{n}{2} \\rfloor ) + \\sqrt{n}$$<br>\nWhich of the following statements is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$T(n) = O \\sqrt{n}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$T(n)=O(n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$T(n) = O (\\log n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$T(n) = O (\\log n)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The recurrence relation<br>\nT(1) = 2<br>\n T(n) = 3T(n/4) + n<br>\nhas the solution, T(n) equals to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(n)"
+      },
+      {
+        "identifier": "B",
+        "content": "O(log n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(n^3/4)"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Quicksort is run on two inputs shown below to sort in ascending order taking first element as pivot<br>\ni) 1, 2, 3,......., n<br>\nii) n, n-1, n-2,......, 2, 1 <br>\nLet C<sub>1</sub> and C<sub>2</sub> be the number of comparisons made for the inputs (i) and (ii) respectively. Then, ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$C_1 &lt; C_2$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$C_1 &gt; C_2$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$C_1 = C_2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "we cannot say anything for arbitrary n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The recurrence relation that arises in relation with the complexity of binary search is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$T(n) = 2T\\left(\\frac{n}{2}\\right)+k, \\text{ k is a constant }$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$T(n) = T\\left(\\frac{n}{2}\\right)+k, \\text{ k is a constant }$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$T(n) = T\\left(\\frac{n}{2}\\right)+\\log n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$T(n) = T\\left(\\frac{n}{2}\\right)+n$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that the last element of the set is used as partition element in Quicksort. If n distinct elements from the set [1…n] are to be sorted, give an input for which Quicksort takes maximum time.",
+    "options": [],
+    "correct_options": [],
+    "answer": "10, 9, 8, 7, 6, 5, 4, 3, 2, 1",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Find a solution to the following recurrence equation<br>\nT(n) = T(n - 1)+ n<br>\nT(1) = 1",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it",
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  },
+  {
+    "content": "Let P be a quicksort program to sort numbers in ascending order. Let t<sub>1</sub> and t<sub>2</sub> be the time taken by the program for the inputs [1 2 3 4] and [5 4 3 2 1], respectively. Which of the following holds?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "t<sub>1</sub> = t<sub>2</sub>"
+      },
+      {
+        "identifier": "B",
+        "content": "t<sub>1</sub> &gt; t<sub>2</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "t<sub>1</sub> &lt; t<sub>2</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "t<sub>1</sub>= t<sub>2</sub> + 5 log 5"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  }
+]

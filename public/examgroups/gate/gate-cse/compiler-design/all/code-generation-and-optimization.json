@@ -1,0 +1,701 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which ONE of the following techniques used in compiler code optimization uses live variable analysis?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " Run-time function call management\n"
+      },
+      {
+        "identifier": "B",
+        "content": " Register assignment to variables\n"
+      },
+      {
+        "identifier": "C",
+        "content": " Strength reduction\n"
+      },
+      {
+        "identifier": "D",
+        "content": " Constant folding\n"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The correct answer is Option B: Register assignment to variables.</p>\n<p>Here's why:</p>\n\n<p><strong>Live Variable Analysis:</strong>  </p>\n\n\n<p><p>This analysis determines which variables hold values that might be needed in the future.  </p></p>\n<p><p>It helps identify variables that are \"live\" at each point in the program.</p></p>\n\n\n<p><strong>Role in Register Assignment:</strong>  </p>\n\n\n<p><p>In register allocation, the compiler assigns a limited number of CPU registers to the many variables used in a program.  </p></p>\n<p><p>Live variable analysis is used to build an interference graph, where variables that are simultaneously live (and therefore interfere with each other) cannot be assigned to the same register.  </p></p>\n<p><p>This optimization ensures efficient use of registers while avoiding incorrect computations due to overlapping variable lifetimes.</p></p>\n\n\n<p><strong>Other Options:</strong>  </p>\n\n\n<p><p><strong>Run-time function call management:</strong> Mainly deals with handling function calls and returns at runtime rather than the static analysis of variable lifetimes.  </p></p>\n<p><p><strong>Strength reduction:</strong> Focuses on replacing expensive operations with equivalent but less costly ones (e.g., replacing multiplication with addition).  </p></p>\n<p><p><strong>Constant folding:</strong> Involves evaluating constant expressions at compile time to simplify the program.</p></p>\n\n<p>Thus, the technique that specifically uses live variable analysis is register assignment to variables.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "In the context of compilers, which of the following is/are NOT an intermediate representation of the source program?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Control Flow Graph (CFG)"
+      },
+      {
+        "identifier": "B",
+        "content": "Symbol table"
+      },
+      {
+        "identifier": "C",
+        "content": "Three address code"
+      },
+      {
+        "identifier": "D",
+        "content": "A bstract Syntax Tree (AST)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the following are <strong>NOT</strong> intermediate representations (IRs) of the source program in the context of compilers, let's analyze each option:</p>\n<hr />\n<h3><strong>Option A: Control Flow Graph (CFG)</strong></h3>\n\n<p><p><strong>Definition:</strong> A Control Flow Graph is a graphical representation of all paths that might be traversed through a program during its execution.</p></p>\n<p><p><strong>Use in Compilers:</strong> CFGs are used in compilers for various analyses and optimizations like data flow analysis, loop detection, and instruction scheduling.</p></p>\n<p><p><strong>Intermediate Representation:</strong> Yes, CFGs are considered an intermediate representation because they abstract the control flow aspects of the program for the compiler's internal use.</p></p>\n\n<hr />\n<h3><strong>Option B: Symbol Table</strong></h3>\n\n<p><p><strong>Definition:</strong> A symbol table is a data structure used by a compiler to keep track of identifiers (such as variable names, function names, object names, etc.) and associated information (like scope, type, memory location).</p></p>\n<p><p><strong>Use in Compilers:</strong> It serves as a repository for information about the symbols used in the program. It is essential for semantic analysis, type checking, and code generation.</p></p>\n<p><p><strong>Intermediate Representation:</strong> <strong>No</strong>, the symbol table is <strong>not</strong> an intermediate representation. It does not represent the program's code or structure but rather supports the compiler by storing metadata about the symbols.</p></p>\n\n<hr />\n<h3><strong>Option C: Three Address Code</strong></h3>\n\n<p><p><strong>Definition:</strong> Three-address code is a form of intermediate code used by compilers where each instruction contains at most three addresses or operands.</p></p>\n<p><p><strong>Use in Compilers:</strong> It simplifies code generation and optimization by breaking down complex operations into simpler ones.</p></p>\n<p><p><strong>Intermediate Representation:</strong> Yes, three-address code is a widely used intermediate representation in compilers.</p></p>\n\n<hr />\n<h3><strong>Option D: Abstract Syntax Tree (AST)</strong></h3>\n\n<p><p><strong>Definition:</strong> An Abstract Syntax Tree is a tree representation of the abstract syntactic structure of source code written in a programming language.</p></p>\n<p><p><strong>Use in Compilers:</strong> ASTs are used for syntax analysis and form the basis for further semantic analysis and code generation.</p></p>\n<p><p><strong>Intermediate Representation:</strong> Yes, ASTs are considered an intermediate representation because they abstract the program's syntax into a hierarchical tree structure.</p></p>\n\n<hr />\n<h3><strong>Conclusion</strong></h3>\n\n<p><p><strong>Symbol Table</strong> (<strong>Option B</strong>) is <strong>not</strong> an intermediate representation of the source program; it is a data structure used to store information about the program's symbols.</p></p>\n<p><p>The other options (<strong>CFG</strong>, <strong>Three-address code</strong>, and <strong>AST</strong>) are intermediate representations used by compilers during the compilation process.</p></p>\n\n<hr />\n<p><strong>Answer:</strong> <strong>Option B</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements.\n<br><br><b>I.</b> Symbol table is accessed only during lexical analysis and syntax analysis.\n<br><br/><b>II.</b> Compilers for programming languages that support recursion necessarily need heap storage for memory allocation in the run-time environment.\n<br/><br><b>III.</b> Errors violating the condition ‘any variable must be declared before its use’ are detected during syntax analysis.\n<br><br>Which of the above statements is/are TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and III only"
+      },
+      {
+        "identifier": "B",
+        "content": "II only"
+      },
+      {
+        "identifier": "C",
+        "content": "I only"
+      },
+      {
+        "identifier": "D",
+        "content": "None of I, II and III"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Statement I :</strong></h3>\n<p><strong>\"Symbol table is accessed only during lexical analysis and syntax analysis.\"</strong></p>\n<p><strong>Analysis :</strong></p>\n\n<p><p><strong>Symbol Table Usage :</strong></p></p>\n<p><p>A <strong>symbol table</strong> is a data structure used by a compiler to store information about identifiers such as variable names, function names, objects, classes, etc.</p></p>\n<p><p>It is utilized throughout various phases of the compilation process, not just during lexical and syntax analysis.</p></p>\n<p><p><strong>Phases Accessing the Symbol Table :</strong></p></p>\n\n\n<p><p><strong>Lexical Analysis (Scanning) :</strong></p>\n\n<p>Identifies tokens and may enter new identifiers into the symbol table.</p></p>\n<p><p><strong>Syntax Analysis (Parsing) :</strong></p>\n\n<p>Uses tokens to build a parse tree but generally doesn't modify the symbol table.</p></p>\n<p><p><strong>**Semantic Analysis :</strong></p>\n\n<p><p><strong>Critically uses the symbol table to perform type checking, scope resolution, and enforce semantic rules.</strong></p></p>\n<p><p>Detects errors like undeclared variables, type mismatches, etc.</p></p></p>\n<p><p><strong>Intermediate Code Generation :</strong></p>\n\n<p>May use symbol table information for generating intermediate representations.</p></p>\n<p><p><strong>Code Optimization :</strong></p>\n\n<p>Accesses symbol table to optimize variable usage and manage scopes.</p></p>\n<p><p><strong>Code Generation :</strong></p>\n\n<p>Utilizes symbol table entries for generating target code, resolving addresses, and storage allocation.</p></p>\n\n\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>The symbol table is <strong>not only accessed during lexical and syntax analysis</strong> but is also heavily used during <strong>semantic analysis</strong>, <strong>intermediate code generation</strong>, <strong>code optimization</strong>, and <strong>code generation</strong> phases.</p></p>\n<p><p><strong>Therefore, Statement I is FALSE.</strong></p></p>\n\n<hr />\n<h3><strong>Statement II:</strong></h3>\n<p><strong>\"Compilers for programming languages that support recursion necessarily need heap storage for memory allocation in the run-time environment.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Recursion and Memory Allocation:</strong></p></p>\n<p><p><strong>Recursion</strong> requires that each recursive call has its own set of parameters, local variables, return address, and other state information.</p></p>\n<p><p>This is typically managed using a <strong>call stack</strong>, where each function call creates an <strong>activation record (stack frame)</strong> on the stack.</p></p>\n<p><p><strong>Stack vs. Heap:</strong></p></p>\n<p><p><strong>Stack Storage:</strong></p>\n\n<p><p>Used for managing function calls, local variables, and control flow.</p></p>\n<p><p>Supports automatic memory management with last-in, first-out (LIFO) order, which is ideal for function call and return sequences.</p></p></p>\n<p><p><strong>Heap Storage:</strong></p>\n\n<p><p>Used for dynamic memory allocation, such as objects or data structures whose size or lifetime isn't known at compile time.</p></p>\n<p><p>Memory is allocated and freed in an arbitrary order, managed by the programmer or garbage collector.</p></p></p>\n<p><p><strong>Requirement for Recursion:</strong></p></p>\n<p><p><strong>Stack storage</strong> is necessary to handle recursive function calls properly.</p></p>\n<p><p><strong>Heap storage is not necessarily required</strong> for recursion unless the language or program specifically uses dynamic memory allocation within recursive functions.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>The statement incorrectly asserts that <strong>heap storage</strong> is necessarily needed for recursion, whereas it is the <strong>stack</strong> that is essential.</p></p>\n<p><p><strong>Therefore, Statement II is FALSE.</strong></p></p>\n\n<hr />\n<h3><strong>Statement III:</strong></h3>\n<p><strong>\"Errors violating the condition ‘any variable must be declared before its use’ are detected during syntax analysis.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Syntax Analysis (Parsing):</strong></p></p>\n<p><p>Checks whether the program's source code follows the grammatical structure defined by the language's context-free grammar.</p></p>\n<p><p>Detects syntactic errors such as missing semicolons, unmatched parentheses, incorrect nesting, etc.</p></p>\n<p><p><strong>Semantic Analysis:</strong></p></p>\n<p><p><strong>Occurs after syntax analysis.</strong></p></p>\n<p><p>Enforces semantic rules of the language, such as type checking, scope resolution, and the use of identifiers.</p></p>\n<p><p><strong>Checks if variables are declared before use</strong>, function calls match their declarations, types are compatible in expressions, etc.</p></p>\n<p><p><strong>Error Detection for Undeclared Variables:</strong></p></p>\n<p><p><strong>Using a variable before it is declared is a semantic error</strong>, not a syntactic one.</p></p>\n<p><p>Detected during <strong>semantic analysis</strong> when the compiler checks the symbol table to ensure that all identifiers are properly declared within their scope.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>The statement incorrectly attributes semantic error detection to syntax analysis.</p></p>\n<p><p><strong>Therefore, Statement III is FALSE.</strong></p></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><strong>None of the statements I, II, and III are TRUE.</strong></p>\n\n<hr />\n<p><strong>Answer:</strong> Option D</p>\n<p><strong>None of I, II, and III</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is FALSE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A basic block is a sequence of instructions where control enters the sequence at the beginning and exits at the end."
+      },
+      {
+        "identifier": "B",
+        "content": "Available expression analysis can be used for common subexpression elimination."
+      },
+      {
+        "identifier": "C",
+        "content": "Live variable analysis can be used for dead code elimination "
+      },
+      {
+        "identifier": "D",
+        "content": "$$x = 4*5 \\Rightarrow x = 20$$ is an example of common subexpression elimination"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which languages necessarily need heap allocation in the runtime environment? \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Those that support recursion "
+      },
+      {
+        "identifier": "B",
+        "content": "Those that use dynamic scoping"
+      },
+      {
+        "identifier": "C",
+        "content": "Those that allow dynamic data structures"
+      },
+      {
+        "identifier": "D",
+        "content": "Those that use global variables"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Some code optimizations are carried out on the intermediate code because",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "They enhance the portability of the compiler to other target processors"
+      },
+      {
+        "identifier": "B",
+        "content": "Program analysis is more accurate on intermediate code than on machine code "
+      },
+      {
+        "identifier": "C",
+        "content": "The information from dataflow analysis cannot otherwise be used for optimization"
+      },
+      {
+        "identifier": "D",
+        "content": "The information from the front end cannot otherwise be used for optimization"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the grammar rule $$E \\to {E_1} - {E_2}$$ for arithmetic expressions. The code generated is targeted to a CPU having a single user register. The subtraction operation requires the first operand to be in the register. If E<sub>1</sub> and E<sub>2</sub> do not have any common sub-expression, in order to get the shortest possible code.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "E<sub>1</sub> should be evaluated first"
+      },
+      {
+        "identifier": "B",
+        "content": "E<sub>2</sub> should be evaluated first"
+      },
+      {
+        "identifier": "C",
+        "content": "Evaluation of E<sub>1</sub> and E<sub>2</sub> should necessarily be interleaved"
+      },
+      {
+        "identifier": "D",
+        "content": "Order to evaluation of E<sub>1</sub> and E<sub>2</sub> is of no consequence"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Match the followings: </p>\n<p> <b>Group-I</b> </p>\n(a) Pointer data type \n<br>(b) Activation Record\n<br>(c) Repeat -Until \n<br>(d) Coercion \n<p> <b>Group-II</b> </p>\n(p) Type Conversion \n<br>(q) Dynamic Data Structure \n<br>(r) Recursion \n<br>(s) Nondeterministic loop",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a - p, b - r, c - s, d - q"
+      },
+      {
+        "identifier": "B",
+        "content": "a - q, b - r, c - s, d - p"
+      },
+      {
+        "identifier": "C",
+        "content": "a - q, b - s, c - r, d - p"
+      },
+      {
+        "identifier": "D",
+        "content": "a - r, b - q, c - s, d - p"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the control flow graph given below.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyvb90r/574b1e4d-d7b6-45db-9911-44c32e2fb709/43e323b0-2457-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvb90s.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyvb90r/574b1e4d-d7b6-45db-9911-44c32e2fb709/43e323b0-2457-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvb90s.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Compiler Design - Code Generation and Optimization Question 2 English\"></p>\n<p>Which one of the following options is the set of live variables at the exit point of each basic block?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>B1: $\\{a, b, c, e, f\\}, B 2:\\{d, e\\}, B 3:\\{b, c, e, f\\}, B 4: \\phi$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>B1: $\\phi, B 2:\\{d, e\\}, B 3:\\{a, c, f\\}, B 4: \\phi$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>B1: $\\{a, b, c, e, f\\}, B 2:\\{d, e\\}, B 3:\\{c, e, f\\}, B 4: \\phi$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>B1: $\\phi, B 2:\\{d, e, f\\}, B 3:\\{a, b, c, e, f\\}, B 4: \\phi$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { The variables that are live in each block are } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyvdcsp/378eb5d3-9465-40c8-a620-d15e4573e880/7e6c2f90-2457-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvdcsq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyvdcsp/378eb5d3-9465-40c8-a620-d15e4573e880/7e6c2f90-2457-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvdcsq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Compiler Design - Code Generation and Optimization Question 2 English Explanation\"></p>\n<p>$$ \\begin{aligned} \\text { Exit of } B 1 &amp; =\\operatorname{IN}(\\mathrm{B} 2) \\cup \\mathrm{IN}(\\mathrm{~B} 3) \\\\ &amp; =\\{\\mathrm{a}, \\mathrm{~b}, \\mathrm{c}, \\mathrm{e}, \\mathrm{f}\\} \\\\ \\text { Out }(B 2) &amp; =\\operatorname{IN}(B 4) \\\\ &amp; =\\{\\mathrm{d}, \\mathrm{e}\\} \\\\ \\text { Out }(B 3) &amp; =\\operatorname{IN}(\\mathrm{B} 1) \\\\ &amp; =\\{\\mathrm{b}, \\mathrm{c}, \\mathrm{e}, \\mathrm{f}\\} \\\\ \\text { Out }(B 4) &amp; =\\text { Empty since no successor node for } \\mathrm{B} 4 \\\\ &amp; =\\phi \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\text { Consider the control flow graph shown in the figure. } $$</p>\n<p><img alt=\"GATE CSE 2026 Set 1 Compiler Design - Code Generation and Optimization Question 1 English\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyogbfs/3ddbefd4-93e4-47ae-8a9f-81c634d805d1/70e57680-243c-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyogbft.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyogbfs/3ddbefd4-93e4-47ae-8a9f-81c634d805d1/70e57680-243c-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyogbft.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p>Which one of the following options correctly lists the set of redundant expressions (common sub-expressions) in the basic blocks B4 and B5?</p>\n<p>Note: All the variables are integers.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$$ \\begin{aligned} & \\text { B4: }\\{b+i\\} \\\\ & \\text { B5: }\\{c+m\\} \\end{aligned} $$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$$ \\begin{aligned} & \\text { B4: }\\{g * k\\} \\\\ & \\text { B4: }\\{c+m\\} \\end{aligned} $$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$$ \\begin{aligned} & \\text { B4: }\\{g * k, b+i\\} \\\\ & \\text { B5: }\\} \\end{aligned} $$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$$ \\begin{aligned} & \\text { B4: }\\{g * k\\} \\\\ & \\text { B5: }\\} \\end{aligned} $$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>In B2 and B3 $g * k$ is evaluated.</p>\n<p>$\\therefore$ In B4 $g * k$ evaluation can be eliminated.</p>\n<p>In B5, $c+m$ has to be evaluated in the path B1 $\\rightarrow \\mathrm{B} 2 \\rightarrow \\mathrm{~B} 4 \\rightarrow \\mathrm{~B} 5$.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Refer to the given 3-address code sequence. This code sequence is split into basic blocks. The number of basic blocks is ________ . (Answer in integer)</p>\n<p>$$\\begin{aligned}\n& \\text { 1001: } \\mathrm{i}=1 \\\\\n& \\text { 1002: } \\mathrm{j}=1 \\\\\n& \\text { 1003: } \\mathrm{t} 1=10 \\text { * } \\mathrm{i} \\\\\n& \\text { 1004: } \\mathrm{t} 2=\\mathrm{t} 1+\\mathrm{j} \\\\\n& \\text { 1005: t3 }=8^* \\text { t2 } \\\\\n& \\text { 1006: } \\mathrm{t} 4=\\mathrm{t} 3-88 \\\\\n& \\text { 1007: a[t4] }=0.0 \\\\\n& \\text { 1008: j = j + } 1 \\\\\n& \\text { 1009: if } \\mathrm{j}<=10 \\text { goto } 1003 \\\\\n& \\text { 1010: } \\mathrm{i}=\\mathrm{i}+1 \\\\\n& \\text { 1011: if } \\mathrm{i}<=10 \\text { goto } 1002 \\\\\n& \\text { 1012: } \\mathrm{i}=1 \\\\\n& \\text { 1013: } \\mathrm{t} 5=\\mathrm{i}-1 \\\\\n& \\text { 1014: t6 = 88 * t5 } \\\\\n& \\text { 1015: } \\mathrm{a}[\\mathrm{t} 6]=1.0 \\\\\n& \\text { 1016: } i=i+1 \\\\\n& \\text { 1017: if } \\mathrm{i}<=10 \\text { goto } 1013\n\\end{aligned}$$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7w3hc0d/143a63e2-2f24-4d9e-815e-fd842d304dbd/9d7402e0-f9d9-11ef-832b-df2b0c5c2220/file-jaoe38c1m7w3hc0e.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7w3hc0d/143a63e2-2f24-4d9e-815e-fd842d304dbd/9d7402e0-f9d9-11ef-832b-df2b0c5c2220/file-jaoe38c1m7w3hc0e.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Compiler Design - Code Generation and Optimization Question 3 English Explanation\"></p>\n<p>The leader statements are 1001, 1002, 103, 1010, 1012, 1013. The number of basic blocks is 6.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following pseudo-code.</p>\n<p>L1:    t1 = -1<br>L2:    t2 = 0<br>L3:    t3 = 0<br>L4:    t4 = 4 * t3<br>L5:    t5 = 4 * t2<br>L6:    t6 = t5 * M<br>L7:    t7 = t4 + t6<br>L8:    t8 = a[t7]<br>L9:    if t8 <= max goto L11<br>L10:    t1 = t8<br>L11:    t3 = t3 + 1<br>L12:    if t3 < M goto L4<br>L13:    t2 = t2 + 1<br>L14:    if t2 < N goto L3<br>L15:    max = t1</p><p>Which one of the following options CORRECTLY specifies the number of basic blocks and the number of instructions in the largest basic block, respectively ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>6 and 6</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>6 and 7</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>7 and 7</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>7 and 6</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the number of basic blocks and the number of instructions in the largest basic block, let's firstly identify the basic blocks in the given pseudo-code. A basic block is a sequence of instructions with the following properties:</p>\n\n<p>1. The flow of control enters the basic block at the beginning and exits at the end without halt or possibility of branching except at the end.</p>\n\n<p>2. A new basic block starts at instructions that are the targets of jumps or instructions immediately following jumps or conditional branches.</p>\n\n<p>We will identify the lines that create boundaries for basic blocks in the pseudo-code:</p>\n\n<p>\n\n<p>L1: t1 = -1<br></p>\n\n<p>L2: t2 = 0<br></p>\n\n<p>L3: t3 = 0<br></p>\n\n<p>L4: t4 = 4 * t3<br></p>\n\n<p>L5: t5 = 4 * t2<br></p>\n\n<p>L6: t6 = t5 * M<br></p>\n\n<p>L7: t7 = t4 + t6<br></p>\n\n<p>L8: t8 = a[t7]<br></p>\n\n<p>L9: if t8 <= max goto L11<br></p>\n\n<p>L10: t1 = t8<br></p>\n\n<p>L11: t3 = t3 + 1<br></p>\n\n<p>L12: if t3 < M goto L4<br></p>\n\n<p>L13: t2 = t2 + 1<br></p>\n\n<p>L14: if t2 < N goto L3<br></p>\n\n<p>L15: max = t1</p>\n\n</p>\n\n<p>A new basic block starts at each point where control may enter. Let's break down the basic blocks:</p>\n\n<p>Basic Block 1: L1, L2, L3 (initialization steps)</p>\n\n<p>Basic Block 2: L4, L5, L6, L7, L8</p>\n\n<p>Basic Block 3: L9</p>\n\n<p>Basic Block 4: L10</p>\n\n<p>Basic Block 5: L11</p>\n\n<p>Basic Block 6: L12, L13</p>\n\n<p>Basic Block 7: L14, L15</p>\n\n<p>We need to identify where the control can branch:</p>\n\n<p>L9: Branches to L11</p>\n\n<p>L12: Branches to L4</p>\n\n<p>L14: Branches to L3</p>\n\n<p>Now, let's count the number of instructions in each basic block:</p>\n\n<p>Basic Block 1: 3 instructions (L1, L2, L3)</p>\n\n<p>Basic Block 2: 5 instructions (L4, L5, L6, L7, L8)</p>\n\n<p>Basic Block 3: 1 instruction (L9)</p>\n\n<p>Basic Block 4: 1 instruction (L10)</p>\n\n<p>Basic Block 5: 1 instruction (L11)</p>\n\n<p>Basic Block 6: 2 instructions (L12, L13)</p>\n\n<p>Basic Block 7: 2 instructions (L14, L15)</p>\n\n<p>The largest basic block is Basic Block 2, which contains 5 instructions.</p>\n\n<p>Therefore, the correct answer is:</p>\n\n<p>Option D: 7 and 6</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the control flow graph shown.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr38o07/7235be0c-b53d-40b9-b3c2-8b7ef84cd57c/cec77970-44ea-11ef-9c19-0f7f09062910/file-jaoe38c1lyr38o08.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr38o07/7235be0c-b53d-40b9-b3c2-8b7ef84cd57c/cec77970-44ea-11ef-9c19-0f7f09062910/file-jaoe38c1lyr38o08.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Compiler Design - Code Generation and Optimization Question 6 English\"></p>\n<p>Which one of the following choices correctly lists the set of live variables at the exit point of each basic block?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "B1: {}, B2: {a}, B3: {a}, B4: {a}"
+      },
+      {
+        "identifier": "B",
+        "content": "B1: {i, j}, B2: {a}, B3: {a}, B4: {i}"
+      },
+      {
+        "identifier": "C",
+        "content": "B1: {a, i, j}, B2: {a, i, j}, B3: {a, i}, B4: {a} "
+      },
+      {
+        "identifier": "D",
+        "content": "B1: {a, i, j}, B2: {a, j}, B3: {a, j}, B4: {a, i, j}"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>A variable ' $V$ ' is live (for statement $b$ ) if there exist a path from this statement to another statement is ' $a$ ' in CFG such that for each $b < =k < a$ and $V$ is defined in any statement $k$ in CFG.</p>\n\n<p>For $B_1$ : There's path to $B_2, B_3$ and $B_4$.</p>\n\n<p>In this path ' $i$ ' and ' $J$ ' are live as they're both used before modifying. ' $a$ ' is not live as it's used in $B_3$ before being used in $B_4$.</p>\n\n<p>Another path is $B_2 \\rightarrow B_4$</p>\n\n<p>Where all 3 ' $a$ ', ' $i$ ' and ' $J$ ' are live so live variable at exit of $B_1=\\{a, i, J\\}$.</p>\n\n<p>For $B_2$ : Similarly for path $B_3, B_4$ ' $J$ ' is live for path $B_4 ' a$ ' and ' $J$ ' are live.</p>\n\n<p>For $B_3:$ Same as $B_1$ as path for exit is same.</p>\n\n<p>So, live variable at exits of $B_4=\\{a, i, J\\}$.</p>\n\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following ANSI C code segment:</p>\n\n<p>z = x + 3 + y -&gt; f1 + y -&gt; f2;</p>\n\n<p>for (i = 0;&nbsp;i &lt; 200;&nbsp;i = i + 2){</p>\n\n<p>if (z &gt; i) {</p>\n\n<p>P = p + x + 3;</p>\n\n<p>q = q + y -&gt; f2;</p>\n\n<p>} else {</p>\n\n<p>p = p + y -&gt; f2;</p>\n\n<p>q&nbsp;= q + x + 3;</p>\n\n<p>}</p>\n\n<p>}</p>\n\n<p>Assume that the variable y points to a struct (allocated on the heap) containing two fields f1 and f2, and the local variables x, y, z, p, g, and i are allotted registers. Common sub-expression elimination (CSE) optimization is applied on the code. The number of addition and dereference operations (of the form y -&gt; f1 or y -&gt; f2 ) in the optimized code, respectively, are:&nbsp;&nbsp;</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "203 and 2"
+      },
+      {
+        "identifier": "B",
+        "content": "403 and 102"
+      },
+      {
+        "identifier": "C",
+        "content": "303 and 102"
+      },
+      {
+        "identifier": "D",
+        "content": "303 and 2"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>z = x + 3 + y -&gt; f1 + y -&gt; f2;</p>\n<p>for (i = 0;&nbsp;i &lt; 200;&nbsp;i = i + 2){</p>\n<p>if (z &gt; i) {</p>\n<p>P = p + x + 3;</p>\n<p>q = q + y -&gt; f2;</p>\n<p>} else {</p>\n<p>p = p + y -&gt; f2;</p>\n<p>q&nbsp;= q + x + 3;</p>\n<p>}</p>\n<p>}</p>\n<p>Let, $a=y \\rightarrow f 1$</p>\n<p>$$ \\begin{aligned} & b=y \\rightarrow f 2 \\\\\\\\ & c=x+3 \\\\\\\\ & z=a+b+c \\\\\\\\ & \\text { for }(i=0 ; i<200 ; i=i+2) \\\\\\\\ & \\{\\quad \\text { if }(z>i) \\\\\\\\ & \\{\\quad p=p+c \\text {; } \\\\\\\\ & q=q+a ; \\\\\\\\ & \\text { \\} } \\\\\\\\ & \\text { else } \\\\\\\\ & \\{\\quad p=p+b \\text {; } \\\\\\\\ & q=q+c ; \\\\\\\\ & \\text { \\} } \\\\\\\\ & \\text { \\} } \\end{aligned} $$</p>\n<p>Total 300 additions (for each iteration 3 addition operations $(p+c, q+a)$ or</p>\n<p>$$ \\begin{aligned} &(p+b, q+c), i+z) \\\\ & c=x+3 ........(i) \\\\\\\\ & z=c+a+b .........(ii) \\end{aligned} $$</p>\n<p>303 addition operations and 2 dereference operations (for $y \\rightarrow f 1, y \\rightarrow f 2$ ).</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>For a statement S in a program, in the context of liveness analysis, the following sets are defined:</p>\n\n<p>USE(S): the set of variables used in S</p>\n\n<p>IN(S): the set of variables that are live at the entry of S</p>\n\n<p>OUT(S): the set of variables that are live at the exit of S</p>\n\n<p>Consider a basic block that consists of two statements, S<sub>1</sub> followed by S<sub>2</sub>.</p>\n\n<p>Which one of the following statements is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "OUT(S<sub>1</sub>) = USE(S<sub>1</sub>)&nbsp;∪ IN(S<sub>2</sub>)"
+      },
+      {
+        "identifier": "B",
+        "content": "OUT(S<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span>) =&nbsp;IN(S<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span>)"
+      },
+      {
+        "identifier": "C",
+        "content": "OUT(S<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span>) = IN(S<span style=\"position: relative; line-height: 0; vertical-align: baseline; bottom: -0.25em; font-size:10.5px;\">1</span>) ∪ USE(S<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span>)"
+      },
+      {
+        "identifier": "D",
+        "content": "OUT(S<span style=\"position: relative; line-height: 0; vertical-align: baseline; bottom: -0.25em; font-size:10.5px;\">1</span>) = IN(S<span style=\"position: relative; line-height: 0; vertical-align: baseline; bottom: -0.25em; font-size:10.5px;\">2</span>) ∪ USE(S<span style=\"position: relative; line-height: 0; vertical-align: baseline; bottom: -0.25em; font-size:10.5px;\">2</span>)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statement is correct, let's understand the concepts involved in <strong>liveness analysis</strong> and how they apply to a basic block containing two statements $ S_1 $ followed by $ S_2 $.</p>\n<h3><strong>Definitions:</strong></h3>\n\n<p><p><strong>USE(S):</strong> The set of variables used (read) in statement $ S $.</p></p>\n<p><p><strong>DEF(S):</strong> The set of variables defined (written) in statement $ S $.</p></p>\n<p><p><strong>IN(S):</strong> The set of variables that are live <strong>at the entry</strong> of $ S $.</p></p>\n<p><p><strong>OUT(S):</strong> The set of variables that are live <strong>at the exit</strong> of $ S $.</p></p>\n\n<h3><strong>Liveness Analysis Equations:</strong></h3>\n<p>For a statement $ S $, the standard data-flow equations for liveness analysis are:</p>\n\n<p><p><strong>IN Equation:</strong></p>\n<p>$    \\text{IN}(S) = \\text{USE}(S) \\cup (\\text{OUT}(S) - \\text{DEF}(S))    $</p></p>\n\n\n<p>Variables are live at the entry of $ S $ if they are used in $ S $ or if they are live at the exit of $ S $ and not redefined in $ S $.</p>\n\n\n<p><p><strong>OUT Equation:</strong></p>\n<p>$    \\text{OUT}(S) = \\bigcup\\limits_{S' \\in \\text{Successors}(S)} \\text{IN}(S')    $</p></p>\n\n\n<p>Variables are live at the exit of $ S $ if they are live at the entry of any of its successor statements.</p>\n\n<h3><strong>Applying to the Basic Block:</strong></h3>\n<p>In a basic block with two statements $ S_1 $ followed by $ S_2 $, the flow of control is straight-line with no branches. Therefore:</p>\n\n<p><p><strong>Successors:</strong></p></p>\n<p><p>The <strong>successor</strong> of $ S_1 $ is $ S_2 $.</p></p>\n<p><p>The <strong>successor</strong> of $ S_2 $ is the statement following the basic block or exit point.</p></p>\n<p><p><strong>OUT Equation for $ S_1 $:</strong></p>\n<p>$   \\text{OUT}(S_1) = \\text{IN}(S_2)   $</p></p>\n<p><p>Since $ S_2 $ is the only successor of $ S_1 $, the variables live at the exit of $ S_1 $ are exactly those that are live at the entry of $ S_2 $.</p></p>\n\n<h3><strong>Analyzing Each Option:</strong></h3>\n<h4><strong>Option A:</strong></h4>\n<p>$ \\text{OUT}(S_1) = \\text{USE}(S_1) \\cup \\text{IN}(S_2) $</p>\n\n<p><p><strong>Incorrect.</strong></p></p>\n<p><p>The <strong>OUT</strong> set of $ S_1 $ does not directly include $ \\text{USE}(S_1) $.</p></p>\n<p><p><strong>OUT</strong> should be equal to $ \\text{IN}(S_2) $ only.</p></p>\n\n<h4><strong>Option B:</strong></h4>\n<p>$ \\text{OUT}(S_1) = \\text{IN}(S_2) $</p>\n\n<p><p><strong>Correct.</strong></p></p>\n<p><p>As per the standard equation in liveness analysis, this is accurate for a straight-line code sequence.</p></p>\n\n<h4><strong>Option C:</strong></h4>\n<p>$ \\text{OUT}(S_1) = \\text{IN}(S_1) \\cup \\text{USE}(S_1) $</p>\n\n<p><p><strong>Incorrect.</strong></p></p>\n<p><p>This equation doesn't align with the liveness analysis rules.</p></p>\n<p><p>The <strong>OUT</strong> set depends on the successors, not on the <strong>IN</strong> or <strong>USE</strong> of the same statement.</p></p>\n\n<h4><strong>Option D:</strong></h4>\n<p>$ \\text{OUT}(S_1) = \\text{IN}(S_2) \\cup \\text{USE}(S_2) $</p>\n\n<p><p><strong>Incorrect.</strong></p></p>\n<p><p>The <strong>OUT</strong> set of $ S_1 $ should be exactly $ \\text{IN}(S_2) $.</p></p>\n<p><p>Including $ \\text{USE}(S_2) $ is unnecessary and incorrect.</p></p>\n\n<h3><strong>Conclusion:</strong></h3>\n\n<p><p><strong>Option B</strong> correctly states that:</p>\n<p>$   \\text{OUT}(S_1) = \\text{IN}(S_2)   $</p></p>\n<p><p>This aligns with the standard liveness analysis equations for a basic block with sequential statements.</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Option B</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The least number of temporary variables required to create a three-address code in static single assignment form for the expression $$q  + r / 3 + s - t * 5 + u * v/w$$ is _______________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "8",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A variable x is said to be live at a statement $${S_i}$$ in a programif the following three conditions hold simultaneously:\n<p>i. There exists a statement $${S_j}$$ that uses x\n<br>ii. There is a path from $${S_i}$$ to $${S_j}$$ in the flow graph corresponding to the program\n<br>iii. The path has no intervening assignment to x including at $${S_i}$$ and $${S_j}$$</p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/IttYl02R9AhbgzTaf/vW1DkxLbtOYhbKMZhAJBRPeqhIImr/D1jjkZ06AZVLzMte9bIMJS/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2015 Set 1 Compiler Design - Code Generation and Optimization Question 13 English\">\n<p>The variables which are live both at the statement in basic block 2 and at the statement in basic block 3 of the above control flow graph are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "p, s, u"
+      },
+      {
+        "identifier": "B",
+        "content": "r, s, u"
+      },
+      {
+        "identifier": "C",
+        "content": "r, u"
+      },
+      {
+        "identifier": "D",
+        "content": "q, v"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the intermediate code given below.\n<pre><code>(1)  i = 1\n(2)  j = 1\n(3)  t1 = 5 ∗ i\n(4)  t2 = t1 + j\n(5)  t3 = 4 ∗ t2\n(6)  t4 = t3\n(7)  a[t4] = -1\n(8)  j = j + 1\n(9)  if j&lt;=5 goto (3)\n(10) i=i+1\n(11) if i&lt;5 goto (2)</code></pre>\n<p>The number of nodes and edges in the control-flow-graph constructed for the above code, respectively, are </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5 and 7 "
+      },
+      {
+        "identifier": "B",
+        "content": "6 and 7 "
+      },
+      {
+        "identifier": "C",
+        "content": "5 and 5 "
+      },
+      {
+        "identifier": "D",
+        "content": "7 and 8"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For a C program accessing X[ i ] [ j ] [ k ], the following intermediate code is generated by a compiler. Assume that the size of an integer is 32 bits and the size of a character is 8 bits.\n<pre><code>t0 = i * 1024 \nt1 = j * 32 \nt2 = k * 4 \nt3 = t1 + t0 \nt4 = t3 + t2 \nt5 = X[t4] </code></pre>\nWhich one of the following statements about the source code for the C program is <b>CORRECT</b>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "X is declared as \"int X[32] [32] [8]\""
+      },
+      {
+        "identifier": "B",
+        "content": "X is declared as \"int X[4] [1024] [32]\""
+      },
+      {
+        "identifier": "C",
+        "content": "X is declared as \"char X[4] [32] [8]\""
+      },
+      {
+        "identifier": "D",
+        "content": "X is declared as \"char X[32] [16] [2]\""
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C code segment.\n<pre><code>for (i = 0; i &lt; n; i++) \n  { \n      for (j=0; j &lt; n; j++) \n      { \n          if (i%2) \n          { \n           x += (4*j + 5*i); \n           y += (7 + 4*j); \n          } \n       } \n  } </code></pre>\nWhich one of the following is <b>false</b>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The code contains loop invariant computation"
+      },
+      {
+        "identifier": "B",
+        "content": "There is scope of common sub-expression elimination in this code"
+      },
+      {
+        "identifier": "C",
+        "content": "There is scope of strength reduction in this code"
+      },
+      {
+        "identifier": "D",
+        "content": "There is scope of dead code elimination in this code"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the following translation scheme.</p>\n$$\\eqalign{\n  &amp; S \\to ER  \\cr \n  &amp; R \\to *E\\left\\{ {pr{\\mathop{\\rm int}} ('*');} \\right\\}R\\,|\\,\\varepsilon   \\cr \n  &amp; E \\to F + E\\left\\{ {pr{\\mathop{\\rm int}} (' + ');} \\right\\}\\,|\\,F  \\cr \n  &amp; F \\to S\\,|\\,id\\,\\left\\{ {pr{\\mathop{\\rm int}} (id.value);} \\right\\} \\cr} $$\n<p>Here id is a token that represents an integer and <i>id.value</i> represents the corresponding integer value. For an input '2 * 3 + 4' this translation scheme prints</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2 * 3 + 4"
+      },
+      {
+        "identifier": "B",
+        "content": "2 * + 3 4"
+      },
+      {
+        "identifier": "C",
+        "content": "2 3 * 4 +"
+      },
+      {
+        "identifier": "D",
+        "content": "2 3 4 + *"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider line number 3 of the following C - program.\n<pre><code class=\"c\">int main ( ) {              /* Line 1 */ \nint I, N;                   /* Line 2 */ \nfro (I = 0, I &lt; N, I++);    /* Line 3 */ \n} </code></pre>\nIdentify the compiler's response about this line while creating the object-module ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "No compilation error"
+      },
+      {
+        "identifier": "B",
+        "content": "Only a lexical error"
+      },
+      {
+        "identifier": "C",
+        "content": "Only syntactic errors"
+      },
+      {
+        "identifier": "D",
+        "content": "Both lexical and syntactic errors"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the syntax directed definition shown below.</p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/DvCmEruI6O7341cPq/mKtKSxCDpClCRAL7ipWlPm604Oh7G/Fjs7VTvWDtk2otPTZFsHDG/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2003 Compiler Design - Code Generation and Optimization Question 19 English\">\n<p>Here, gen is a function that generates the output code, and <i>newtemp</i> is a\nfunction that returns the name of a new temporary variable on every call.\nAssume that ti's are the temporary variable names generated by <i>newtemp</i>. For\nthe statement <b>'X : = Y + Z'</b>, the 3-address code sequence generated by this\ndefinition is \n</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$X = Y + Z$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${t_1} = Y + Z;X = {t_1}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${t_1} = Y;{t_2} = {t_1} + Z;X = {t_2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${t_1} = Y;{t_2} = Z;\\,{t_3} = {t_1} + {t_2};X = {t_3}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is NOT an advantage of using shared, dynamically linked libraries as opposed to using statically linked libraries?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Smaller sizes of executable files "
+      },
+      {
+        "identifier": "B",
+        "content": "Lesser overall page fault rate in the system "
+      },
+      {
+        "identifier": "C",
+        "content": "Faster program startup "
+      },
+      {
+        "identifier": "D",
+        "content": "Existing programs need not be re-linked to take advantage of newer versions of libraries"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  }
+]

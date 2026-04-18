@@ -1,0 +1,47 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\text { On a relation named Loan of a bank: } $$</p>\n<style type=\"text/css\">\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n\n.tg .tg-baqh{text-align:center;vertical-align:top}\n\n</style>\n<table class=\"tg\"><thead>\n\n  <tr>\n\n    <th class=\"tg-baqh\" colspan=\"3\">Loan</th>\n\n  </tr></thead>\n\n<tbody>\n\n  <tr>\n\n    <td class=\"tg-baqh\">Loan_number</td>\n\n    <td class=\"tg-baqh\">Branch_name</td>\n\n    <td class=\"tg-baqh\">Amount</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">L11</td>\n\n    <td class=\"tg-baqh\">Banjra Hills</td>\n\n    <td class=\"tg-baqh\">90000</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">L14</td>\n\n    <td class=\"tg-baqh\">Kondapur</td>\n\n    <td class=\"tg-baqh\">50000</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">L15</td>\n\n    <td class=\"tg-baqh\">SR Nagar</td>\n\n    <td class=\"tg-baqh\">4000</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">L22</td>\n\n    <td class=\"tg-baqh\">SR Nagar</td>\n\n    <td class=\"tg-baqh\">25000</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">L23</td>\n\n    <td class=\"tg-baqh\">Balanagar</td>\n\n    <td class=\"tg-baqh\">80000</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">L25</td>\n\n    <td class=\"tg-baqh\">Kondapur</td>\n\n    <td class=\"tg-baqh\">70000</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">L19</td>\n\n    <td class=\"tg-baqh\">SR Nagar</td>\n\n    <td class=\"tg-baqh\">65000</td>\n\n  </tr>\n\n</tbody></table>\n<p>The following SQL query is executed</p>\n<p>SELECT L1.loan_number</p>\n<p>FROM Loan L1</p>\n<p>WHERE L1.amount &gt; (SELECT MAX</p>\n<p>(L2.amount)</p>\n<p>FROM Loan L2</p>\n<p>WHERE L2.branch_name $=$ 'SR Nagar');</p>\n<p>The number of rows returned by the query is _________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p>.Maximum value of all branches of 'SR Nagar'</p>\n<p>So maximum value of SR Nagar branch = 65000</p>\n<p>Now, loan number which having amount $>$ 65000</p>\n<p>So 3 tuples are returned.</p>\n<p>Hence, the correct answer is 3 .</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a fact table in an OLAP application: Facts (D1, D2, val), where D1 and D2 are its dimension attributes and val is a dependent attribute. Suppose</p>\n<p>attribute D1 takes 3 values and D2 takes 2 values, and all combinations of these values are present in the table Facts. How many tuples are there in the result of the following query?</p>\n<p>SELECT D1, D2, sum(val)</p>\n<p>FROM Facts</p>\n<p>GROUP BY CUBE (D1, D2);</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1\n"
+      },
+      {
+        "identifier": "B",
+        "content": "6\n"
+      },
+      {
+        "identifier": "C",
+        "content": " 9\n"
+      },
+      {
+        "identifier": "D",
+        "content": "12"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Cube $\\left(D_1, D_2\\right)$</p>\n<p>$D \\times D_2, D_1$ alone</p>\n<p>$D_2$ alone</p>\n<p>Entire sum of all possible value $\\rightarrow 1$</p>\n<p>$$ 6+3+2+1=12 $$</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  }
+]

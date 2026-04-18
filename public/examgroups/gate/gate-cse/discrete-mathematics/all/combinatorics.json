@@ -1,0 +1,1113 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider $4 \\times 4$ matrices with their elements from $\\{0,1\\}$. The number of such matrices with even number of 1 s in every row and every column is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>512</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>1025</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>1023</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>255</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Total number of $4 \\times 4$ binary matrices</p>\n<p>In a binary matrix, each entry can be either $0$ or $1$.</p>\n<p>Since there are $16$ entries in a $4 \\times 4$ matrix, total number of matrices is $2^{16}$.</p>\n<p>Even number of $1$s in each row</p>\n<p>Now look at one row at a time.</p>\n<p>Each row has $4$ entries, so total possible rows are $2^4=16$.</p>\n<p>Out of these, exactly half have an even number of $1$s.</p>\n<p>So, number of rows with even parity is $\\frac{2^4}{2}=2^3=8$.</p>\n<p>For 4 rows:</p>\n<p>Each of the $4$ rows can be chosen in $2^3$ ways.</p>\n<p>Therefore, number of matrices with even number of $1$s in every row is $\\left(2^3\\right)^4=2^{12}$.</p>\n<p>Now impose column conditions at this stage: $2^{12}$ matrices satisfy row parity.</p>\n<p>Next, we apply the condition that every column must also have an even number of $1$s.</p>\n<p>Now observe:</p>\n<p>If the first $3$ columns have even number of $1$s, then automatically the $4$th column will also have even number of $1$s.</p>\n<p>Reason:</p>\n<p>Total sum of all entries = Sum of row sums</p>\n<p>Since every row sum is even, the total number of $1$s in the whole matrix is even.</p>\n<p>If the first $3$ columns each have an even number of $1$s, then the total number of $1$s in these $3$ columns is also even.</p>\n<p>So, the remaining $4$th column must also contain an even number of $1$s, so that the total remains even.</p>\n<p>Hence only $3$ independent column conditions.</p>\n<p>Each independent column condition cuts the count to half.</p>\n<p>So the count changes as</p>\n<p>$$ 2^{12} \\rightarrow 2^{11} \\rightarrow 2^{10} \\rightarrow 2^9 $$</p>\n<p>Therefore, the required number of matrices is $2^9=512$.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $S$ be the set of all ternary strings defined over the alphabet $\\{a, b, c\\}$. Consider all strings in $S$ that contain at least one occurrence of two consecutive symbols, that is, \"aa\", \"bb\" or \"cc\". The number of such strings of length 5 that are possible is __________ (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "195",
+    "explanation": "<p>To find the number of ternary strings of length 5 that contain at least one pair of consecutive identical symbols (\"aa\", \"bb\", or \"cc\"), we proceed as follows:</p>\n\n<p><p><strong>Total Number of Strings</strong>:  </p>\n<p>The set of ternary strings is defined over the alphabet $\\{a, b, c\\}$. For a string of length 5, each position can be filled with any of the 3 characters. Thus, the total number of strings is:</p>\n<p>$    3^5 = 243    $</p></p>\n<p><p><strong>Strings With No Consecutive Identical Symbols</strong>:  </p>\n<p>We calculate the number of strings where no two consecutive symbols are the same:</p></p>\n\n\n<p><p>The first position can be filled with any of the 3 characters.</p></p>\n<p><p>From the second position onward, each position has only 2 choices (any character except the previous one).</p>\n<p>Thus, the total number of such strings is:</p>\n<p>$    3 \\times 2 \\times 2 \\times 2 \\times 2 = 48    $</p></p>\n\n\n<p><p><strong>Strings With At Least One Pair of Consecutive Identical Symbols</strong>:  </p>\n<p>To find the number of strings that contain at least one occurrence of \"aa\", \"bb\", or \"cc\", subtract the number of strings with no consecutive identical symbols from the total number of strings:</p>\n<p>$    243 - 48 = 195    $</p></p>\n\n<p>Therefore, there are 195 ternary strings of length 5 that contain at least one occurrence of two consecutive identical symbols.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The number of arrangements of six identical balls in three identical bins is ___________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": "<p>The problem of arranging six identical balls in three identical bins where the bins are also identical is a classic combinatorics problem. It falls under the category of partitioning a number into parts, where the number in question is 6 (the balls), and the parts are the bins.</p>\n<p>To solve this, we consider the different ways we can partition the number 6 into up to three parts. Each part represents the number of balls in each bin. The order of the parts does not matter since the bins are identical. The possible partitions of 6 into up to three parts are :</p>\n<ol>\n<li>6 = 6 (all six balls in one bin)</li>\n<li>6 = 5 + 1 (five balls in one bin, one ball in another)</li>\n<li>6 = 4 + 2 (four balls in one bin, two in another)</li>\n<li>6 = 4 + 1 + 1 (four balls in one bin, one in each of the other two)</li>\n<li>6 = 3 + 3 (three balls in two bins)</li>\n<li>6 = 3 + 2 + 1 (three balls in one bin, two in another, one in the last)</li>\n<li>6 = 2 + 2 + 2 (two balls in each bin)</li>\n</ol>\n<p>Thus, there are 7 different arrangements of six identical balls in three identical bins.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>There are 6 jobs with distinct difficulty levels, and 3 computers with distinct processing speeds. Each job is assigned to a computer such that:</p>\n\n<p>- The fastest computer gets the toughest job and the slowest computer gets the easiest job.</p>\n\n<p>- Every computer gets at least one job.</p>\n\n<p>The number of ways in which this can be done is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "65",
+    "explanation": "<h3><strong>Given:</strong></h3>\n\n<p><p><strong>6 Jobs</strong> with distinct difficulty levels, labeled from easiest to toughest: $ J_1 $ (easiest), $ J_2 $, $ J_3 $, $ J_4 $, $ J_5 $, $ J_6 $ (toughest).</p></p>\n<p><p><strong>3 Computers</strong> with distinct processing speeds: $ C_1 $ (slowest), $ C_2 $ (medium), $ C_3 $ (fastest).</p></p>\n<p><p><strong>Constraints:</strong></p></p>\n<p><p>The <strong>fastest computer</strong> $ C_3 $ must get the <strong>toughest job</strong> $ J_6 $.</p></p>\n<p><p>The <strong>slowest computer</strong> $ C_1 $ must get the <strong>easiest job</strong> $ J_1 $.</p></p>\n<p><p><strong>Every computer must receive at least one job</strong>.</p></p>\n\n<h3><strong>Step 1: Assign the Mandatory Jobs</strong></h3>\n\n<p><p>Assign $ J_1 $ to $ C_1 $.</p></p>\n<p><p>Assign $ J_6 $ to $ C_3 $.</p></p>\n\n<h3><strong>Step 2: Assign the Remaining Jobs</strong></h3>\n\n<p><p><strong>Remaining Jobs:</strong> $ J_2, J_3, J_4, J_5 $.</p></p>\n<p><p><strong>Computers to Assign To:</strong></p></p>\n<p><p>$ C_1 $ (already has $ J_1 $).</p></p>\n<p><p>$ C_2 $ (must get at least one job).</p></p>\n<p><p>$ C_3 $ (already has $ J_6 $).</p></p>\n\n<h3><strong>Step 3: Distribute the Remaining Jobs</strong></h3>\n<p>We need to distribute the 4 jobs $ J_2, J_3, J_4, J_5 $ among the 3 computers $ C_1, C_2, C_3 $, ensuring:</p>\n\n<p><p>Each job is assigned to exactly one computer.</p></p>\n<p><p><strong>$ C_2 $ must receive at least one job</strong>.</p></p>\n\n<p><strong>Total number of ways to assign the jobs without any constraints:</strong></p>\n\n<p><p>Each of the 4 jobs can be assigned to any of the 3 computers.</p></p>\n<p><p>Total ways: $ 3^4 = 81 $.</p></p>\n\n<p><strong>Subtract the assignments where $ C_2 $ receives no jobs:</strong></p>\n\n<p><p>Number of ways where $ C_2 $ gets <strong>no jobs</strong>:</p></p>\n<p><p>Only $ C_1 $ and $ C_3 $ receive jobs.</p></p>\n<p><p>Each job can go to either $ C_1 $ or $ C_3 $.</p></p>\n<p><p>Total ways: $ 2^4 = 16 $.</p></p>\n\n<p><strong>Calculate the valid assignments:</strong></p>\n\n<p><p>Number of ways where $ C_2 $ gets <strong>at least one job</strong>:</p></p>\n<p><p>$ 81 $ total ways minus $ 16 $ invalid ways.</p></p>\n<p><p>$ 81 - 16 = 65 $ ways.</p></p>\n\n<h3><strong>Final Answer:</strong></h3>\n<p><strong>65</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The number of $$4$$ digit numbers having their digits in non-decreasing order (from left to right) constructed by using the digits belonging to the set $${1, 2, 3}$$ is____________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "15",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The recurrence relation capturing the optional execution time of the Towers of Hanoi problem with $$n$$ discs is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$T\\left( n \\right) = 2T\\left( {n - 2} \\right) + 2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$T\\left( n \\right) = 2T\\left( {n - 1} \\right) + n$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$T\\left( n \\right) = 2T\\left( {n/2} \\right) + 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$T\\left( n \\right) = 2T\\left( {n - 1} \\right) + 1$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "In a class of 200 students, 125 students have taken Programming Language course, 85 students have taken Data Structures course, 65 student have taken Computer Organization coures; 50 students have taken both Programming Language and Data Structures, 35 students have taken both Programming Languages and Computer Organization; 30 students have taken both Data Structures and Computer Organization; 15 students have taken all the three course.\n<p>How many students have not taken any of the three courses?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "15"
+      },
+      {
+        "identifier": "B",
+        "content": "20"
+      },
+      {
+        "identifier": "C",
+        "content": "25"
+      },
+      {
+        "identifier": "D",
+        "content": "35"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "$$m$$ identical balls are to be placed in $$n$$ distinct bags. You are given that $$m \\ge kn$$, where $$k$$ is a natural number $$ \\ge 1$$. In how many ways can the balls be placed in the bags if each bag must contain at least $$k$$ balls?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\matrix{\n   {m - k}  \\cr \n   {n - 1}  \\cr \n\n } } \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {\\matrix{\n   {m - kn + n - 1}  \\cr \n   {n - 1}  \\cr \n\n } } \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\matrix{\n   {m - 1}  \\cr \n   {n - k}  \\cr \n\n } } \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {\\matrix{\n   {m - kn + n + k - 2}  \\cr \n   {n - k}  \\cr \n\n } } \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "$$n$$  couples are invited to a party with the condition that every husband should be accompanied by his wife. However, a wife need not be accompanied by her husband. The number of different gatherings possible at the party is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\matrix{\n   {2n}  \\cr \n   n  \\cr \n\n } } \\right) * {2^n}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${3^n}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{\\left( {2n} \\right)!} \\over {{2^n}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {\\matrix{\n   {2n}  \\cr \n   n  \\cr \n\n } } \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$A$$ be a sequence of $$8$$ distinct integers sorted in ascending order. How many distinct pairs of sequence, $$B$$ and $$C$$ are there such that \n<br>i) Each is sorted in ascending order.\n<br>ii) $$B$$ has $$5$$ and $$C$$ has $$3$$ elements, and \n<br> iii) The result of merging $$B$$ $$C$$ gives $$A$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$30$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$56$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$256$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of colors required to color the vertices of a cycle with $$n$$ nodes in such a way that no two adjacent nodes have the same  colour is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$n - 2\\left[ {n/2} \\right] + 2$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of cards to be dealt from an arbitrarily shuffled deck of 52 cards to guarantee that three cards are from same suit is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3 "
+      },
+      {
+        "identifier": "B",
+        "content": "8 "
+      },
+      {
+        "identifier": "C",
+        "content": "9 "
+      },
+      {
+        "identifier": "D",
+        "content": "12"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "The solution to the recurrence equation \n<br>$$T\\left( {{2^k}} \\right)$$ $$ = 3T\\left( {{2^{k - 1}}} \\right) + 1$$, \n<br>$$T\\left( 1 \\right) = 1$$  is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{2^k}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {{3^{k + 1}} - 1} \\right)/2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${3^{\\log {K \\over 2}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{\\log {K \\over 3}}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "The number of binary strings of $$n$$ zeros and $$k$$ ones such that no two ones are adjacent is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${}^{n + 1}{C_k}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${}^n{C_k}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${}^n{C_{k + 1}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let $$U = \\{ 1,2,....,n\\} $$, where n is a large positive integer greater than 1000. Let k be a positive integer less than n. Let A, B be subsets of U with $$|A| = |B| = k$$ and $$A \\cap B = \\phi $$. We say that a permutation of U separates A from B if one of the following is true.</p>\n<p>- All members of A appear in the permutation before any of the members of B.</p>\n<p>- All members of B appear in the permutation before any of the members of A.</p>\n<p>How many permutations of U separate A from B?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n!$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {\\matrix{\n   n  \\cr \n   {2k}  \\cr \n\n } } \\right)(n - 2k)!$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\matrix{\n   n  \\cr \n   {2k}  \\cr \n\n } } \\right)(n - 2k)!{(k!)^2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2\\left( {\\matrix{\n   n  \\cr \n   {2k}  \\cr \n\n } } \\right)(n - 2k)!{(k!)^2}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & U=\\{1,2, \\ldots . . n\\} \\\\\\\\ & k < n < 1000 \\\\\\\\ & |A|=k \\\\\\\\ & |B|=k \\\\\\\\ & A \\cap B=\\phi \\end{aligned} $$</p>\n\n<p>Permutation of $\\cup$ separates of A from B</p>\n\n<p>$$ 2\\binom{n}{2 k}(n-2 k)!(k!)^2 $$</p>\n\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "content": "The number of permutations of the characters in LILAC so that no character appears in its original position, if the two L’s are indistinguishable, is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "12",
+    "explanation": "<p><strong>Given:</strong></p>\n\n<p><p>Original positions:</p></p>\n<p><p>Position 1: L</p></p>\n<p><p>Position 2: I</p></p>\n<p><p>Position 3: L</p></p>\n<p><p>Position 4: A</p></p>\n<p><p>Position 5: C</p></p>\n\n<p><strong>Total permutations without restrictions:</strong></p>\n\n<p><p>Since there are 5 letters with 2 indistinct L's, the total number of permutations is:</p>\n<p>$   N_0 = \\frac{5!}{2!} = 60   $</p></p>\n\n<p><strong>Using the Inclusion-Exclusion Principle:</strong></p>\n\n<p><strong>Calculate the number of permutations where letters are in their original positions:</strong></p>\n\n\n<p><p><strong>Single fixed points ($F_i$):</strong></p>\n\n<p><p>$ |F_1| = 24 $ (Fix L at position 1)</p></p>\n<p><p>$ |F_2| = 12 $ (Fix I at position 2)</p></p>\n<p><p>$ |F_3| = 24 $ (Fix L at position 3)</p></p>\n<p><p>$ |F_4| = 12 $ (Fix A at position 4)</p></p>\n<p><p>$ |F_5| = 12 $ (Fix C at position 5)</p></p>\n<p><p><strong>Total single fixed points:</strong> $ \\sum |F_i| = 84 $</p></p></p>\n<p><p><strong>Pairs of fixed points ($F_i \\cap F_j$):</strong></p>\n\n<p>Total pairs: $ \\sum |F_i \\cap F_j| = 51 $</p></p>\n<p><p><strong>Triplets of fixed points ($F_i \\cap F_j \\cap F_k$):</strong></p>\n\n<p>Total triplets: $ \\sum |F_i \\cap F_j \\cap F_k| = 19 $</p></p>\n<p><p><strong>Quadruplets of fixed points ($F_i \\cap F_j \\cap F_k \\cap F_l$):</strong></p>\n\n<p>Total quadruplets: $ \\sum |F_i \\cap F_j \\cap F_k \\cap F_l| = 5 $</p></p>\n<p><p><strong>All letters fixed ($F_1 \\cap F_2 \\cap F_3 \\cap F_4 \\cap F_5$):</strong></p>\n\n<p>$ |F_{\\text{all}}| = 1 $</p></p>\n\n\n<p><p><strong>Apply the Inclusion-Exclusion Principle:</strong></p>\n<p>$    N_1 = \\sum |F_i| - \\sum |F_i \\cap F_j| + \\sum |F_i \\cap F_j \\cap F_k| - \\sum |F_i \\cap F_j \\cap F_k \\cap F_l| + |F_{\\text{all}}|    $</p>\n<p>$    N_1 = 84 - 51 + 19 - 5 + 1 = 48    $</p></p>\n<p><p><strong>Calculate the number of derangements:</strong></p>\n<p>$    D = N_0 - N_1 = 60 - 48 = 12    $</p></p>\n\n<p><strong>Answer:</strong></p>\n<p><strong>12</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The coefficient of $${x^{12}}$$ in $${\\left( {{x^3} + {x^4} + {x^5} + {x^6} + ...} \\right)^3}\\,\\,\\,\\,\\,\\,$$ is _____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "10",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The number of distinct positive integral factors of 2014 is _______ .",
+    "options": [],
+    "correct_options": [],
+    "answer": "8",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A pennant is a sequence of numbers, each number being 1 or 2. An n-pennant is a sequence of numbers with sum equal to n. For example, (1,1,2) is a 4-pennant. The set of all possible 1-pennants is     {(1)}, the set of all possible 2-pennants is {(2), (1,1)} and the set of all 3-pennants is {(2,1),(1,1,1), (1,2)}. Note that the pennant (1,2) is not the same as the pennant (2,1). The number of 10-pennants is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "89",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "There are 5 bags labeled 1 to 5. All the coins in given bag have the same weight. Some bags have coins of weight 10 gm, other have coins of weight 11 gm. $${\\rm I}$$ pick 1, 2, 4, 8, 16 coins respectively from bags 1 to 5. Their total weight comes out to 323 gm. Then the product of the labels of the bags having 11 gm coin is _______ .",
+    "options": [],
+    "correct_options": [],
+    "answer": "12",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In how many ways can $$b$$ blue balls and $$r$$ red balls be distributed in $$n$$ distinct boxes?   ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{\\left( {n + b - 1} \\right)!\\left( {n + r - 1} \\right)!} \\over {\\left( {n - 1} \\right)!b!\\left( {n - 1} \\right)!r!}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\left( {n + \\left( {b + r} \\right) - 1} \\right)!} \\over {\\left( {n - 1} \\right)!\\left( {n - 1} \\right)!\\left( {b + r} \\right)!}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{n!} \\over {b!r!}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\left( {n + \\left( {b + r} \\right) - 1} \\right)!} \\over {n!\\left( {b + r - 1} \\right)!}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${x_n}$$ denote the number of binary strings of length $$n$$ that contains no consecutive $$0s$$.\n<p>Which of the following recurrences does  $${x_n}$$ satisfy?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${x_n} = 2{x_{n - 1}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${x_n} = {x_{\\left[ {n/2} \\right]}} + 1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${x_n} = {x_{\\left[ {n/2} \\right]}} + n$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${x_n} = {x_{n - 1}} + {x_{n - 2}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${x_n}$$ denote the number of binary strings of length $$n$$ that contain no consecutive $$0s$$.\n<p>The value of $${x_5}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$7$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$13$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The exponent of $$11$$ in the prime factorization of $$300!$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$27$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$28$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$29$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$30$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "When $$n = {2^{2k}}$$ for some $$k \\ge 0$$, the recurrence relation \n$$$T\\left( n \\right) = \\sqrt 2 T\\left( {n/2} \\right) + \\sqrt n ,\\,\\,T\\left( 1 \\right) = 1$$$\n<br>evaluates to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sqrt n \\left( {\\log \\,n + 1} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sqrt n \\,\\log \\,n$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sqrt n \\,\\log \\,\\sqrt n $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$n\\,\\log \\sqrt n $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose that a robot is placed on the Cartesian plane. At each step it is allowed to move either one unit up or one unit right, i.e., if it is at $$(i, j)$$ then it can move to either $$(i+1, j)$$ or $$(i, j+1)$$ \n<p>Suppose that the robot is not allowed to traverse the line segment from $$(4, 4)$$ to $$(5,4)$$. With this constraint, how many distinct path  are there for the robot to reach $$(10, 10)$$ starting from $$(0,0)$$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${2^{9}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^{19}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\matrix{\n   8  \\cr \n   4  \\cr \n\n } } \\right) \\times \\left( {\\matrix{\n   {11}  \\cr \n   5  \\cr \n\n } } \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {\\matrix{\n   {20}  \\cr \n   {10}  \\cr \n\n } } \\right) - \\left( {\\matrix{\n   8  \\cr \n   4  \\cr \n\n } } \\right) \\times \\left( {\\matrix{\n   {11}  \\cr \n   5  \\cr \n\n } } \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose that a robot is placed on the Cartesian plane. At each step it is allowed to move either one unit up or one unit right, i.e., if it is at $$(i, j)$$ then it can move to either $$(i+1, j)$$ or $$(i, j+1)$$\n<p>How many distinct path are there for the robot to reach the point $$(10, 10)$$ starting from the initial position $$(0, 0)$$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\matrix{\n   {20}  \\cr \n   {10}  \\cr \n\n } } \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^{20}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^{10}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the polynomial $$P\\left( x \\right) = {a_0} + {a_1}x + {a_2}{x^2} + {a_3}{x^3},$$  where $${a_i} \\ne 0,\\forall i$$. The minimum number of multiplications needed to evaluate $$p$$ on an input $$x$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$6$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "For each elements in a set of size $$2n$$, an unbiased coin in tossed. The $$2n$$ coin tosses are independent. An element is chhoosen if the corresponding coin toss were head.The probability that exactly $$n$$ elements are chosen is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{\\left( {\\matrix{\n   {2n}  \\cr \n   n  \\cr \n\n } } \\right)} \\over {{4^n}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\left( {\\matrix{\n   {2n}  \\cr \n   n  \\cr \n\n } } \\right)} \\over {{2^n}}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over {\\left( {\\matrix{\n   {2n}  \\cr \n   n  \\cr \n\n } } \\right)}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 2}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "What is the cardinality of the set of integers $$X$$ defined below?\n<br>$$X = $$ {$$n\\left| {1 \\le n \\le 123,\\,\\,\\,\\,\\,n} \\right.$$   is not divisible by either $$2, 3$$ or $$5$$ }",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$28$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$33$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$37$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$44$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$n = {p^2}q,$$ where $$p$$ and $$q$$ are distinct prime numbers. How many numbers $$m$$ satisfy $$1 \\le m \\le n$$ and $$gcd\\left( {m.n} \\right) = 1?$$ Note that $$gcd(m,n)$$ is the greatest common divisor of $$m$$ and $$n$$.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$p(q-1)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$pq$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {{p^2} - 1} \\right)\\left( {q - 1} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$p\\left( {p - 1} \\right)\\left( {q - 1} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "What is the minimum number of ordered pairs of non-negative numbers that should be chosen to ensure that there are two pairs $$(a,  b)$$ and $$(c,  d)$$ in the chosen set such that $$a \\equiv c$$ mod $$3$$ and $$b \\equiv d$$ mode $$5$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$6$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$16$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$24$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G\\left( x \\right) = 1/\\left( {1 - x} \\right)2 = \\sum\\limits_{i = 0}^\\infty  {g\\left( i \\right)\\,{x^1}} \\,\\,\\,,$$ \n<br>where $$\\left| x \\right| &lt; 1$$ What is $$g(i)$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$i + 1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2$$ $$i$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2i$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "In how many ways can we distribute 5 distinct balls, $${B_1},{B_2},......,{B_5}$$ in 5 distinct cells, $${C_1},{C_2},.....,{C_5}$$ such that Ball $${B_i}$$ is not in cell $${C_i}$$, $$\\forall i = 1,2,....,5$$ and each cell contains exactly one ball?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$44$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$96$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$120$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$3125$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The recurrence equation \n<br>$$\\,\\,\\,\\,\\,\\,\\,T\\left( 1 \\right) = 1$$\n<br>$$\\,\\,\\,\\,\\,\\,T\\left( n \\right) = 2T\\left( {n - 1} \\right) + n,\\,n \\ge 2$$ \n<br> evaluates to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${2^{n + 1}} - n - 2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^n} - n$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^{n + 1}} - 2n - 2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^n} + n$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Mala has a colouring book in which each English letter is drawn two times. She wants to paint each of these 52 prints with one of $$k$$ colours, such that the colour-pairs used to colour any two letters are different. Both prints of a letter can also be coloured with the same colour. What is the minimum value of $$k$$ that satisfies this requirement?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "9 "
+      },
+      {
+        "identifier": "B",
+        "content": "8 "
+      },
+      {
+        "identifier": "C",
+        "content": "7 "
+      },
+      {
+        "identifier": "D",
+        "content": "6 "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "How many 4 digit even numbers have all 4 digits distinct? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2240"
+      },
+      {
+        "identifier": "B",
+        "content": "2296"
+      },
+      {
+        "identifier": "C",
+        "content": "2620"
+      },
+      {
+        "identifier": "D",
+        "content": "4536"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Two girls have picked 10 roses, 15 sunflowers and 14 daffodils. What is the number of ways they can divide the flowers among themselves?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1638 "
+      },
+      {
+        "identifier": "B",
+        "content": "2100"
+      },
+      {
+        "identifier": "C",
+        "content": "2640"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Solve the following recurrence relation \n<p>$$\\,\\,\\,\\,\\,\\,\\,{x_n} = 2{x_{n - 1}} - 1\\,\\,n &gt; 1$$\n<br>$$\\,\\,\\,\\,\\,\\,\\,{x_1} = 2$$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${x_n} = {2^{n - 1}} + 1$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "In a room containing 28 people, there are 18 people who speak English, 15 people who speak Hindi and 22 people who speak Kannada, 9 persons speak both English and Hindi, 11 persons speak both Hindi and Kannada where as 13 persons speak both Kannada and English. How many people speak all three languages?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "9 "
+      },
+      {
+        "identifier": "B",
+        "content": "8 "
+      },
+      {
+        "identifier": "C",
+        "content": "7 "
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The recurrence relation $$\\,\\,\\,\\,\\,$$   $$T\\left( 1 \\right) = 2$$ \n<br>$$T\\left( n \\right) = 3T\\left( {{n \\over 4}} \\right) + n$$  has the solution $$T(n)$$ equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$O(n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$O$$ (log n) "
+      },
+      {
+        "identifier": "C",
+        "content": "$$O\\left( {{n^{3/4}}} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The number of substrings (of all length inclusive) that can be formed from a character string of length $$n$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${n^2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{n\\left( {n - 1} \\right)} \\over 2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{n\\left( {n + 1} \\right)} \\over 2}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "How many sub strings can be formed from a character string of length $$n$$? ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${{n\\left( {n + 1} \\right)} \\over 2}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-cse-1989",
+    "difficulty": null
+  },
+  {
+    "content": "Solve the recurrence equations: \n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,T\\left( n \\right) = \\left( {{n \\over 2}} \\right) + 1$$\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,T\\left( 1 \\right) = 1$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\,\\,\\,\\,T\\left( n \\right) = \\log \\matrix{\n   n  \\cr \n   2  \\cr \n\n }  + 1$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-cse-1988",
+    "difficulty": null
+  },
+  {
+    "content": "(a) Solve the recurrence equations \n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,T\\left( n \\right) = T\\left( {n - 1} \\right) + n$$\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,T\\left( 1 \\right) = 1T$$\n<br>(b) What is the generating function?\n<br> $$\\,\\,\\,\\,\\,\\,\\,\\,\\,G\\left( z \\right)$$ for the sequence of Fibonacci numbers?",
+    "options": [],
+    "correct_options": [],
+    "answer": "a) $$\\,\\,\\,\\,T\\left( n \\right) = {{n\\left( {n + 1} \\right)} \\over 2}$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,989 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a continuous-time, real-valued signal $f(t)$ whose Fourier transform $F(\\omega)=$$\\mathop f\\limits_{ - \\infty }^\\infty  $$ f(t) \\exp (-j \\omega t) d t$ exists.</p>\n<p>Which one of the following statements is always TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$|F(\\omega)| \\leq \\mathop f\\limits_{ - \\infty }^\\infty|f(t)| d t$\n\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$|F(\\omega)|>\\mathop f\\limits_{ - \\infty }^\\infty|f(t)| d t$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$|F(\\omega)| \\leq \\mathop f\\limits_{ - \\infty }^\\infty f(t) d t$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$|F(\\omega)| \\geq \\mathop f\\limits_{ - \\infty }^\\infty f(t) d t$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{array}{rlrl}   F(\\omega) & =\\int_{-\\infty}^{\\infty} f(t) e^{-j \\omega t} d t \\\\ \\Rightarrow   |F(\\omega)| & =\\left|\\int_{-\\infty}^{\\infty} f(t) e^{-j \\omega t} d t\\right| \\leq \\int_{-\\infty}^{\\infty}\\left|f(t) e^{-j \\omega t}\\right| d t \\\\ \\Rightarrow   |F(\\omega)| & \\leq \\int_{-\\infty}^{\\infty}|f(t)| d t \\end{array} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let $$m(t)$$ be a strictly band-limited signal with bandwidth B and energy E. Assuming $${\\omega _0} = 10B$$, the energy in the signal $$m(t)\\cos {\\omega _0}t$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${E \\over 4}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${E \\over 2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "E"
+      },
+      {
+        "identifier": "D",
+        "content": "2E"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given that $m(t)$ is a bandlimited signal with bandwidth $B$ and energy $E$.</p>\n\n<p>Let $m(t)$ be represented in frequency domain as shown below,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxei2cr/b2854a45-fa91-4101-9504-62ad1ab91e9b/8c7673b0-4863-11ef-8807-81b9920dce91/file-jaoe38c1lyxei2cs.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxei2cr/b2854a45-fa91-4101-9504-62ad1ab91e9b/8c7673b0-4863-11ef-8807-81b9920dce91/file-jaoe38c1lyxei2cs.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Signals and Systems - Fourier Transform Question 6 English Explanation 1\">\n\n<p>Energy of $m(t)$ will be,</p>\n\n<p>$$ E=\\frac{1}{2 \\pi} \\int\\limits_{-B}^B 1^2 d \\omega=\\frac{2 B}{2 \\pi}=\\frac{B}{\\pi} $$</p>\n\n<p>Let $y(t)=m(t) \\cos \\omega_0 t$</p>\n\n<p>Given : $\\omega_0=10 B$</p>\n\n<p>So, $y(t)=m(t) \\cos 10 B t$</p>\n\n<p>Taking Fourier transform on both sides, we get</p>\n\n<p>$$ Y(\\omega)=\\frac{1}{2}[M(\\omega-10 B)+M(\\omega+10 B)] $$</p>\n\n<p>$Y(\\omega)$ can be plotted as shown below,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxek2nu/11639b75-775a-4ce6-9d07-923ad6222b93/c4519da0-4863-11ef-8807-81b9920dce91/file-jaoe38c1lyxek2nv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxek2nu/11639b75-775a-4ce6-9d07-923ad6222b93/c4519da0-4863-11ef-8807-81b9920dce91/file-jaoe38c1lyxek2nv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Signals and Systems - Fourier Transform Question 6 English Explanation 2\">\n\n<p>Now, energy of $y(t)$ will be,</p>\n\n<p>$$ \\begin{aligned} &amp; E_y=2\\left[\\frac{1}{2 \\pi} \\int\\limits_{9 B}^{11 B} 1^2 d \\omega\\right] \\\\ &amp; E_y=\\frac{1}{\\pi}[11 B-9 B]=\\frac{2 B}{\\pi} \\end{aligned} $$</p>\n\n<p>So, from equation (i) and (ii),</p>\n\n<p>$$ E_y=\\frac{E}{2} $$</p>\n\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The Fourier transform $$x(\\omega )$$ of $$x(t) = {e^{ - {t^2}}}$$ is</p>\n<p>Note : $$\\int\\limits_{ - \\infty }^\\infty  {{e^{ - {y^2}}}dy = \\sqrt \\pi  } $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sqrt \\pi  {e^{{{{\\omega ^2}} \\over 2}}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{{e^{ - {{{\\omega ^2}} \\over 4}}}} \\over {2\\sqrt \\pi  }}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sqrt \\pi  {e^{ - {{{\\omega ^2}} \\over 4}}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sqrt \\pi  {e^{ - {{{\\omega ^2}} \\over 2}}}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The Fourier transform of a function $$x(t)$$ is given by the integral:</p>\n\n<p>\n\n<p>$$X(\\omega) = \\int\\limits_{- \\infty}^{\\infty} x(t) e^{-j\\omega t} dt$$</p>\n\n</p>\n\n<p>\n\n<p>Given the function $$x(t) = e^{-t^2}$$, we need to find its Fourier transform. The integral thus becomes:</p>\n\n</p>\n\n<p>\n\n<p>$$X(\\omega) = \\int\\limits_{- \\infty}^{\\infty} e^{-t^2} e^{-j\\omega t} dt$$</p>\n\n</p>\n\n<p>\n\n<p>Notice that this integrand can be rewritten by combining the exponents:</p>\n\n</p>\n\n<p>\n\n<p>$$X(\\omega) = \\int\\limits_{- \\infty}^{\\infty} e^{-t^2 - j\\omega t} dt$$</p>\n\n</p>\n\n<p>\n\n<p>We can complete the square in the exponent to make it simpler. Start by rewriting the term inside the exponent:</p>\n\n</p>\n\n<p>\n\n<p>$$-t^2 - j\\omega t = -(t^2 + j\\omega t) = -\\left( t^2 + j\\omega t + \\frac{\\omega^2}{4} - \\frac{\\omega^2}{4} \\right) = -\\left( (t + \\frac{j\\omega}{2})^2 - \\frac{\\omega^2}{4} \\right) $$</p>\n\n</p>\n\n<p>\n\n<p>Thus the integral becomes:</p>\n\n</p>\n\n<p>\n\n<p>$$X(\\omega) = \\int\\limits_{- \\infty}^{\\infty} e^{-\\left( (t + \\frac{j\\omega}{2})^2 - \\frac{\\omega^2}{4} \\right)} dt$$</p>\n\n</p>\n\n<p>\n\n<p>Breaking it up, we can factor out the exponential term that does not depend on $$t$$:</p>\n\n</p>\n\n<p>\n\n<p>$$X(\\omega) = e^{\\frac{-\\omega^2}{4}} \\int\\limits_{- \\infty}^{\\infty} e^{-(t + \\frac{j\\omega}{2})^2} dt$$</p>\n\n</p>\n\n<p>\n\n<p>Since the integral is in the form of a Gaussian integral and we know that shifting the integration variable does not affect the value of the integral:</p>\n\n</p>\n\n<p>\n\n<p>$$\\int\\limits_{- \\infty}^{\\infty} e^{-(t + \\frac{j\\omega}{2})^2} dt = \\int\\limits_{- \\infty}^{\\infty} e^{-y^2} dy = \\sqrt{\\pi}$$</p>\n\n</p>\n\n<p>\n\n<p>Therefore,</p>\n\n</p>\n\n<p>\n\n<p>$$X(\\omega) = e^{\\frac{-\\omega^2}{4}} \\sqrt{\\pi}$$</p>\n\n</p>\n\n<p>\n\n<p>So the Fourier transform of $$x(t) = e^{-t^2}$$ is:</p>\n\n</p>\n\n<p>\n\n<p>$$X(\\omega) = \\sqrt{\\pi} e^{-\\frac{\\omega^2}{4}}$$</p>\n\n</p>\n\n<p>\n\n<p>Hence, the correct answer is:</p></p>\n\n<p>Option C: $$\\sqrt \\pi  {e^{ - {{{\\omega ^2}} \\over 4}}}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a real-valued base-band signal $x(t)$. band limited to 10 kHz . The Nyquist rate for the signal $y(t)=x(t) \\times \\left(1+\\frac{t}{2}\\right)$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>20 kHz</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>30 kHz</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>60 kHz</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>15 kHz</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { As mentioned, we have } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0mtpnc/e19908f7-ffd5-4120-af17-d420c45f0c66/5828e090-ae86-11f0-b6ae-17d02adff4da/file-jaoe38c1mh0mtpnd.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0mtpnc/e19908f7-ffd5-4120-af17-d420c45f0c66/5828e090-ae86-11f0-b6ae-17d02adff4da/file-jaoe38c1mh0mtpnd.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Signals and Systems - Fourier Transform Question 2 English Explanation 1\"><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0mtqys/d6606a52-fbba-468e-b417-dad0fc1a3eaf/592d5840-ae86-11f0-b6ae-17d02adff4da/file-jaoe38c1mh0mtqyt.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0mtqys/d6606a52-fbba-468e-b417-dad0fc1a3eaf/592d5840-ae86-11f0-b6ae-17d02adff4da/file-jaoe38c1mh0mtqyt.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Signals and Systems - Fourier Transform Question 2 English Explanation 2\"></p>\n<p>$$ \\begin{aligned} &amp;\\begin{aligned} &amp; \\therefore \\quad \\text { Nyquist rate, } \\\\ &amp; \\text {  } \\\\ &amp; \\text {  } \\quad \\begin{aligned}or,  =2 \\times 15 \\\\ or, =30 \\mathrm{kHz} \\end{aligned} \\end{aligned}\\\\ &amp;\\text { Hence, the correct option is (B). } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "content": "The energy of the signal x(t) =$${{\\sin (4\\pi t)} \\over {4\\pi t}}$$ is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.25",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "If the signal x(t) = $${{\\sin (t)} \\over {\\pi t}}*{{\\sin (t)} \\over {\\pi t}}$$ with * denoting the convolution operation, then x(t) is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{\\sin (t)} \\over {\\pi t}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\sin (2t)} \\over {\\pi t}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{2\\sin (t)} \\over {\\pi t}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\left( {{{\\sin (t)} \\over {\\pi t}}} \\right)^2}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is an eight function of the class of all continuous-time, linear, time- invariant systems u(t) denotes the unit-step function?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${e^{j{\\omega _0}t}}u(t)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\cos ({\\omega _0}t)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${e^{j{\\omega _0}t}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sin ({\\omega _0}t)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let x(t) $$ \\leftrightarrow $$ X($$(j\\omega )$$ BE Fourier transform pair. The Fourier Transform of the signal x(5t - 3) in terms of X($$(j\\omega )$$ is given as",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 5}{e^{ - {{j3\\omega } \\over 5}}}X\\left( {{{j\\omega } \\over 5}} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 5}{e^{{{j3\\omega } \\over 5}}}X\\left( {{{j\\omega } \\over 5}} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over 5}{e^{ - j3\\omega }}X\\left( {{{j\\omega } \\over 5}} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 5}{e^{j3\\omega }}X\\left( {{{j\\omega } \\over 5}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The Fourier transform of a conjugate symmetric function is always ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "imaginary"
+      },
+      {
+        "identifier": "B",
+        "content": "conjugate anti-symmetric   "
+      },
+      {
+        "identifier": "C",
+        "content": "real"
+      },
+      {
+        "identifier": "D",
+        "content": "conjugate symmetric"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The Fourier transform F $$\\left\\{ {{e^{ - t}}u(t)} \\right\\}$$ is equal to $${1 \\over {1 + j2\\pi f}}$$. Therefore, $$F\\left\\{ {{1 \\over {1 + j2\\pi t}}} \\right\\}$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${e^f}u(f)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${e^{ - f}}$$ u(f)"
+      },
+      {
+        "identifier": "C",
+        "content": "$${e^f}u(f)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${e^{ - f}}$$u(-f)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "If a signal f(t) has energy E, the energy of the signal f(2t) is equal to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "E"
+      },
+      {
+        "identifier": "B",
+        "content": "E/2"
+      },
+      {
+        "identifier": "C",
+        "content": "2E"
+      },
+      {
+        "identifier": "D",
+        "content": "4E"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The Fourier Transform of the signal $$x(t) = {e^{ - 3{t^2}}}$$ is of the following form, where A\nand B are constants:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$A{e^{ - B\\left| f \\right|}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$A{e^{ - Bf}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$A + B{\\left| f \\right|^2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$A{e^{ - B{f^2}}}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "A modulated signal is given by s(t)= $${e^{ - at}}$$ cos $$\\left[ {({\\omega _c} + \\Delta \\omega )t} \\right]$$ u (t), where a, $${\\omega _c}$$ and $${\\Delta \\omega }$$ are positive constants, and $${\\omega _c}$$  &gt;&gt;$${\\Delta \\omega }$$. The complex envelope of s(t) is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "exp(-at)exp$$\\left[ {({\\omega _c} + \\Delta \\omega )t} \\right]$$ u(t) "
+      },
+      {
+        "identifier": "B",
+        "content": "exp (-at)exp(j$${\\Delta \\omega t )}$$ u(t)"
+      },
+      {
+        "identifier": "C",
+        "content": "exp(j$${\\Delta \\omega t )}$$ u (t) "
+      },
+      {
+        "identifier": "D",
+        "content": "exp$$\\left[ {j({\\omega _c} + \\Delta \\omega )t} \\right]$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "A signal x(t) has a Fourier transform X ($$\\omega $$). If x(t) is a real and odd function of t, then X($$\\omega $$) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a real and even function of $$\\omega $$"
+      },
+      {
+        "identifier": "B",
+        "content": "an imaginary and odd function of $$\\omega $$"
+      },
+      {
+        "identifier": "C",
+        "content": "an imaginary and even function of $$\\omega $$"
+      },
+      {
+        "identifier": "D",
+        "content": "a real  and odd function of $$\\omega $$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The amplitude spectrum of a Gaussian pulse is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "uniform"
+      },
+      {
+        "identifier": "B",
+        "content": "a sine function"
+      },
+      {
+        "identifier": "C",
+        "content": "Gaussian "
+      },
+      {
+        "identifier": "D",
+        "content": "an impulse function"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The Fourier transform of a function x(t) is X(f). The Fourier transform of  $${{dx(t)} \\over {dt}}$$ will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{dX(f)} \\over {dt}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$j2\\pi fX(f)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$jfX(f)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{X(f)} \\over {jf}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The Fourier transform of a voltage of a voltage signal x(t) is X(f). The unit of |X(f)| is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Volt"
+      },
+      {
+        "identifier": "B",
+        "content": "Volt - sec"
+      },
+      {
+        "identifier": "C",
+        "content": "Volt/sec"
+      },
+      {
+        "identifier": "D",
+        "content": "$$Vol{t^2}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The function f(t) has the Fourier Transform g($$\\omega $$). The Fourier Transform of $$$g(t) = \\left( {\\int\\limits_{ - \\infty }^\\infty  {g(t){e^{ - j\\omega t}}} } \\right)\\,is$$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {2\\pi }}f(\\omega )$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {2\\pi }}f( - \\omega )$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2\\pi \\,f( - \\omega )$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "none of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The Fourier transform of a real valued time signal has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "odd symmetry"
+      },
+      {
+        "identifier": "B",
+        "content": "even symmetry"
+      },
+      {
+        "identifier": "C",
+        "content": "conjugate symmetry"
+      },
+      {
+        "identifier": "D",
+        "content": "no symmetry"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider two continuous time signals $x(t)$ and $y(t)$ as shown below</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxkzsi3o/6fdbb5cc-31ba-496e-bfe0-eac792740e1c/669c1640-2dc4-11ef-ab56-674ed58d7efd/file-jaoe38c1lxkzsi3p.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxkzsi3o/6fdbb5cc-31ba-496e-bfe0-eac792740e1c/669c1640-2dc4-11ef-ab56-674ed58d7efd/file-jaoe38c1lxkzsi3p.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Signals and Systems - Fourier Transform Question 4 English\">\n<p>If $X(f)$ denotes the Fourier transform of $x(t)$, then the Fourier transform of $y(t)$ is ______.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$ -4X(4f)e^{-j\\pi f}$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$ -4X(4f)e^{-j4\\pi f}$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$ -\\frac{1}{4}X(f/4)e^{-j\\pi f}$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$ -\\frac{1}{4}X(f/4)e^{-j4\\pi f}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : The two continuous time signals $x(t)$ and $y(t)$ as shown below.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfdvwtb8/c2fdda74-93bb-4fd4-b9c3-5e3a8c497a7f/a2437240-8e37-11f0-a029-e731836977d4/file-jaoe38c1mfdvwtb9.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfdvwtb8/c2fdda74-93bb-4fd4-b9c3-5e3a8c497a7f/a2437240-8e37-11f0-a029-e731836977d4/file-jaoe38c1mfdvwtb9.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Signals and Systems - Fourier Transform Question 4 English Explanation 1\">If $\\quad x(t) \\stackrel{\\mathrm{FT}}{\\longleftrightarrow} X(f)$</p>\n<p>Step 1 : Length of $x(t)$ is 1 and length of $y(t)$ is 4.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfdvxjo5/1d9fd13a-9677-4979-85ae-8100834efa2e/b6a00050-8e37-11f0-a029-e731836977d4/file-jaoe38c1mfdvxjo6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfdvxjo5/1d9fd13a-9677-4979-85ae-8100834efa2e/b6a00050-8e37-11f0-a029-e731836977d4/file-jaoe38c1mfdvxjo6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Signals and Systems - Fourier Transform Question 4 English Explanation 2\">Step 2 : In this step we will perform time shifting operation.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfdw07tr/aac7af7f-0916-44b3-aa69-0f61de298177/00e732f0-8e38-11f0-a029-e731836977d4/file-jaoe38c1mfdw07ts.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfdw07tr/aac7af7f-0916-44b3-aa69-0f61de298177/00e732f0-8e38-11f0-a029-e731836977d4/file-jaoe38c1mfdw07ts.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Signals and Systems - Fourier Transform Question 4 English Explanation 3\">Step 3 : we will perform amplitude reversal operation.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfdw132c/3b9638f5-851c-4425-b1ed-1ef5edaa7a64/1908b840-8e38-11f0-a029-e731836977d4/file-jaoe38c1mfdw132d.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfdw132c/3b9638f5-851c-4425-b1ed-1ef5edaa7a64/1908b840-8e38-11f0-a029-e731836977d4/file-jaoe38c1mfdw132d.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Signals and Systems - Fourier Transform Question 4 English Explanation 4\">$$ \\text { If } \\begin{aligned} &amp; y(t)=-x\\left(\\frac{t-2}{4}\\right)=-x\\left(\\frac{t}{4}-\\frac{1}{2}\\right) \\\\ &amp; x(t) \\stackrel{\\mathrm{FT}}{\\longleftrightarrow} X(f) \\\\ &amp; x\\left(t-\\frac{1}{2}\\right) \\stackrel{\\mathrm{FT}}{\\longleftrightarrow} e^{-\\frac{j \\omega}{2}} X(\\omega) \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp;\\begin{aligned} &amp; x\\left(t-\\frac{1}{2}\\right) \\stackrel{\\mathrm{FT}}{\\longleftrightarrow} e^{-\\frac{j 2 \\pi f}{2}} X(f) \\\\ &amp; x\\left(\\frac{t}{4}-\\frac{1}{2}\\right) \\stackrel{\\mathrm{FT}}{\\longleftrightarrow} \\frac{1}{\\left|\\frac{1}{4}\\right|} e^{-j \\pi 4 f} X(4 f) \\\\ &amp; x\\left(\\frac{t}{4}-\\frac{1}{2}\\right) \\stackrel{\\mathrm{FT}}{\\longleftrightarrow} 4 e^{-j 4 \\pi f} X(4 f) \\\\ &amp; -x\\left(\\frac{t}{4}-\\frac{1}{2}\\right) \\stackrel{\\mathrm{FT}}{\\longleftrightarrow}-4 e^{-j 4 \\pi f} X(4 f) \\end{aligned}\\\\ &amp;\\text { Hence the correct option is (B). } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$X(\\omega)$ is the Fourier transform of $x(t)$ shown below. The value of $\\int\\limits_{-\\infty}^{\\infty}|X(\\omega)|^2 d \\omega$ (rounded off to two decimal places) is $\\_\\_\\_\\_$ .</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh226vev/4f67f2a6-e93c-4ad3-80d7-7f45785256c0/37b7b970-af4f-11f0-ba93-393527bdf085/file-jaoe38c1mh226vew.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh226vev/4f67f2a6-e93c-4ad3-80d7-7f45785256c0/37b7b970-af4f-11f0-ba93-393527bdf085/file-jaoe38c1mh226vew.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Signals and Systems - Fourier Transform Question 1 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "58.1TO59.1",
+    "explanation": "<p>$$ \\text { Given : Signal } x(t) \\text { is shown in figure. } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh226qul/3be0939f-dd70-4f2a-b657-114b313be300/343151d0-af4f-11f0-ba93-393527bdf085/file-jaoe38c1mh226qum.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh226qul/3be0939f-dd70-4f2a-b657-114b313be300/343151d0-af4f-11f0-ba93-393527bdf085/file-jaoe38c1mh226qum.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Signals and Systems - Fourier Transform Question 1 English Explanation 1\">Method 1</p>\n<p>Using Rayleigh energy theorem,</p>\n<p>Energy of $x(t)$ is given by,</p>\n<p>$$ \\begin{array}{ll}  &amp; E_x=\\int_{-\\infty}^{\\infty}|x(t)|^2 d t=\\frac{1}{2 \\pi} \\int_{-\\infty}^{\\infty}|X(\\omega)|^2 d \\omega \\\\ \\therefore &amp; I=\\int_{-\\infty}^{\\infty}|X(\\omega)|^2 d \\omega=2 \\pi E_x \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{array} $$</p>\n<p>To find energy of $x(t)$, we can consider $x(t)$ to be combination of signals $x_1(t), x_2(t), x_3(t)$ and $x_4(t)$ as shown in figure. $x_1$ and $x_2$ are non overlapping with $x_3$ and $x_4$ but $x_3$ and $x_4$ are overlapping with each other.</p>\n<p>$$ E_x=E\\left[x_1(t)\\right]+E\\left[x_2(t)\\right]+E\\left[\\text { Combination of } x_3(t) \\text { and } x_4(t)\\right]\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii) $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh226ruq/84fbf993-cad1-4625-be3c-29039be405c0/34f7d620-af4f-11f0-ba93-393527bdf085/file-jaoe38c1mh226rur.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh226ruq/84fbf993-cad1-4625-be3c-29039be405c0/34f7d620-af4f-11f0-ba93-393527bdf085/file-jaoe38c1mh226rur.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Signals and Systems - Fourier Transform Question 1 English Explanation 2\">$$ \\begin{aligned} &amp;\\begin{array}{ll} E_{x_3}=A^2 \\tau &amp; E_{x_4}=\\frac{2 A^2 \\tau}{3} \\\\ E_{x_3}=1 \\times 2=2 &amp; E_{x_4}=\\frac{2 \\times 4 \\times 1}{3}=\\frac{8}{3} \\end{array}\\\\ &amp;\\text { Energy in combination of } x_3(t) \\text { and } x_4(t)=E_{x_3}+E_{x_4}+2 \\text { [Area under function } x_3(t) \\cdot x_4(t) \\text { ] } \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh226srk/f45d17d5-ef0d-4d8c-a995-6e9773066537/35ac3200-af4f-11f0-ba93-393527bdf085/file-jaoe38c1mh226srl.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh226srk/f45d17d5-ef0d-4d8c-a995-6e9773066537/35ac3200-af4f-11f0-ba93-393527bdf085/file-jaoe38c1mh226srl.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Signals and Systems - Fourier Transform Question 1 English Explanation 3\">From figure, $\\quad x_3(t) \\cdot x_4(t)=x_4(t)$</p>\n<p>Area</p>\n<p>$$ \\left[x_3(t) \\cdot x_4(t)\\right]=\\text { Area }\\left[x_4(t)\\right]=\\frac{1}{2} \\times 2 \\times 2=2 $$</p>\n<p>Energy in combination of $x_3(t)$ and $x_4(t)=2+\\frac{8}{3}+(2 \\times 2)=6+\\frac{8}{3}$</p>\n<p>From equation (ii), energy of $x(t)$ is</p>\n<p>$$ E_x=\\frac{1}{3}+\\frac{1}{3}+6+\\frac{8}{3}=\\frac{1+1+18+8}{3}=\\frac{28}{3} $$</p>\n<p>From equation (i), value of given integral</p>\n<p>$$ I=\\int_{-\\infty}^{\\infty}|X(\\omega)|^2 d \\omega=2 \\pi \\times \\frac{28}{3}=58.64 $$</p>\n<p>Hence, the value of integral is 58.64 .</p>\n<p>Method 2</p>\n<p>Given : Signal $x(t)$ is shown in figure,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh226ucm/f01cbf8c-2c57-49a1-8b9c-d415d44d4c8f/36e59c60-af4f-11f0-ba93-393527bdf085/file-jaoe38c1mh226ucn.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh226ucm/f01cbf8c-2c57-49a1-8b9c-d415d44d4c8f/36e59c60-af4f-11f0-ba93-393527bdf085/file-jaoe38c1mh226ucn.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Signals and Systems - Fourier Transform Question 1 English Explanation 4\">$$ \\begin{aligned} &amp;\\text { Using Raleigh energy theorem, energy of } x(t)\\\\ &amp;\\begin{aligned} &amp; E_x=\\int_{-\\infty}^{\\infty}|x(t)|^2 d t=\\frac{1}{2 \\pi} \\int_{-\\infty}^{\\infty}|X(\\omega)|^2 d \\omega \\\\ &amp; I=\\int_{-\\infty}^{\\infty}|X(\\omega)|^2 d \\omega=2 \\pi E_x=2 \\pi \\int_{-\\infty}^{\\infty}|x(t)|^2 d t \\\\ &amp; \\int_{-\\infty}^{\\infty}|X(\\omega)|^2 d \\omega=2 \\pi \\times \\int_{-1}^3|x(t)|^2 d t=2 \\pi \\times 2 \\int_{-1}^1|x(t)|^2 d t \\\\ &amp; E_x=4 \\pi\\left[\\int_{-1}^0|x(t)|^2 d t+\\int_0^1|x(t)|^2 d t\\right] \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp;\\text { Equation of line in region }(-1,0) \\text { is given by, }\\\\ &amp;\\begin{aligned} &amp; y-y_1=\\frac{y_2-y_1}{x_2-x_1}\\left(x-x_1\\right) \\\\ &amp; y-0=\\frac{1-0}{0-(-1)}(x-(-1)) \\\\ &amp; y=x+1 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp;\\text { Equation of line in region }(0,1) \\text { is given by, }\\\\ &amp;\\begin{aligned} &amp; y-y_1=\\frac{y_2-y_1}{x_2-x_1}\\left(x-x_1\\right) \\\\ &amp; y-1=\\frac{3-1}{1-0}(x-0) \\\\ &amp; y-1=2 x \\\\ &amp; y=2 x+1 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)\\end{aligned} \\end{aligned} $$</p>\n<p>Put the value from equation (ii) and (iii) in equation (i),</p>\n<p>$$ \\begin{aligned} &amp; E_x=4 \\pi\\left[\\int_{-1}^0(x+1)^2 d x+\\int_0^1(2 x+1)^2 d x\\right] \\\\ &amp; E_x=4 \\pi\\left[\\int_{-1}^0\\left(x^2+2 x+1\\right) d x+\\int_{-1}^0\\left(4 x^2+4 x+1\\right) d x\\right] \\\\ &amp; E_x=4 \\pi\\left[\\left(\\frac{x^3}{3}+\\frac{2 x^2}{2}+x\\right)_{-1}^0+\\left(\\frac{4 x^3}{3}+\\frac{4 x^2}{2}+x\\right)_0^1\\right] \\\\ &amp; E_x=4 \\pi\\left[\\left(\\frac{1}{3}-1+1\\right)+\\left(\\frac{4}{3}+2+1\\right)\\right] \\\\ &amp; E_x=4 \\pi\\left[\\frac{1}{3}+\\frac{13}{3}\\right] \\\\ &amp; E_x=4 \\pi \\times \\frac{14}{3} \\\\ &amp; E_x=58.64 \\\\ &amp; E_x=\\int_{-\\infty}^{\\infty}\\left|x(\\omega)^2\\right| d \\omega=58.64 \\end{aligned} $$</p>\n<p>Hence, the value of integral is 58.64 .</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the integral $$\\int_{ - \\infty }^\\infty  {12\\,\\cos (2\\pi )\\,{{\\sin (4\\pi t)} \\over {4\\pi t}}\\,dt\\,} $$ is",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.2",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The complex envelope of the bandpass signal $$x(t)\\, = \\, - \\sqrt 2 \\left( {{{\\sin (\\pi t/5)} \\over {\\pi t/5}}} \\right)\\sin \\left( {\\pi t - {\\pi  \\over 4}} \\right),$$ centered about f = $${1 \\over {2\\,}}\\,Hz,$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {{{\\sin (\\pi t/5)} \\over {\\pi t/5}}} \\right){e^{j{\\pi  \\over 4}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {{{\\sin (\\pi t/5)} \\over {\\pi t/5}}} \\right){e^{ - j{\\pi  \\over 4}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sqrt 2 \\left( {{{\\sin (\\pi t/5)} \\over {\\pi t/5}}} \\right){e^{j{\\pi  \\over 4}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sqrt 2 \\left( {{{\\sin (\\pi t/5)} \\over {\\pi t/5}}} \\right){e^{ - j{\\pi  \\over 4}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The  value of the integral $$\\int\\limits_{ - \\infty }^\\infty  {\\sin \\,{c^2}} $$ (5t) dt is",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.2",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For a function g(t), it is given that $$\\int_{ - \\infty }^\\infty  {g(t){e^{ - j\\omega t}}dt = \\omega {e^{ - 2{\\omega ^2}}}} $$ for any real value $$\\omega $$. If y(t)=$$\\int_{ - \\infty }^t {g(\\tau )d\\tau ,\\,then\\,\\int_{ - \\infty }^\\infty  {y(t)\\,dt} \\,} $$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 "
+      },
+      {
+        "identifier": "B",
+        "content": "- j"
+      },
+      {
+        "identifier": "C",
+        "content": "$$ - {j \\over 2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${j \\over 2}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The Fourier transform of a signal h(t) is $$H(j\\omega )$$ =(2 cos $$\\omega $$) (sin 2$$\\omega $$) / $$\\omega $$. The value of h(0) is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1/4"
+      },
+      {
+        "identifier": "B",
+        "content": "1/2"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The signal x(t) is described by $$x\\left( t \\right) = \\left\\{ {\\matrix{\n   {1\\,\\,\\,for\\,\\, - 1 \\le t \\le  + 1}  \\cr \n   {0\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,otherwise}  \\cr \n\n } } \\right.$$ \n<p> Two of the angular frequencies at which its Fourier transform becomes zero are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\pi ,\\,2\\pi $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.5\\,\\pi ,\\,1.5\\,\\pi $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0,\\,\\pi $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2\\,\\pi ,\\,2.5\\,\\pi $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "For a signal x(t) the Fourier transform is X(f). Then the inverse Fourier transform of X(3f+2) is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 2}\\,x\\left( {{t \\over 2}} \\right){e^{j3\\pi t}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 3}\\,x\\left( {{t \\over 3}} \\right){e^{ - j4\\pi t/3}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3\\,x(3t){e^{ - j4\\pi t}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$x(3t + 2)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Let x(t) and y(t) (with Fourier transforms X(f) and Y(f) respectively) be related as shown in Fig.(1) &amp; (2).\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/fc48e41d8af22f9bfe667f183f38385652e3960e0f7577a0589d65c4c61a5867.jpg\" loading=\"lazy\" alt=\"GATE ECE 2004 Signals and Systems - Fourier Transform Question 17 English\">\n<p>Then Y(f) is </p> \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - {1 \\over 2}X(f/2){e^{ - j2\\pi f}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - {1 \\over 2}X(f/2){e^{j2\\pi f}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$ - X(f/2){e^{j2\\pi f}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - X(f/2){e^{ - j2\\pi f}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The Hilbert transform of $$\\left[ {\\cos \\,{\\omega _1}t + \\,\\sin {\\omega _2}t\\,} \\right]$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sin \\,{\\omega _1}t + \\,\\cos {\\omega _2}t$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sin \\,{\\omega _1}t + \\,\\cos {\\omega _2}t$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\cos \\,{\\omega _1}t + \\,\\sin {\\omega _2}t$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sin {\\omega _1}t + \\,\\sin {\\omega _2}t$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "The power spectral density of a deterministic signal is given by $${\\left[ {\\sin (f)/f} \\right]^2}$$, where 'f' is frequency. The autocorrelation function of this signal in the time domain is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a rectangular pulse"
+      },
+      {
+        "identifier": "B",
+        "content": "a delta function"
+      },
+      {
+        "identifier": "C",
+        "content": "a sine pulse"
+      },
+      {
+        "identifier": "D",
+        "content": "a triangular pulse"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "If the Fourier Transfrom of a deterministic signal g(t) is G (f), then\n<p> <b> Item-1  </b> \n<br> (1) The Fourier transform of g (t -  2) is\n<br> (2) The Fourier transform of g (t/2) is\n</p><p> <b> Item - 2 </b> \n<br> (A) G(f) $$e^{-j\\left(4\\mathrm{πf}\\right)}$$\n<br> (B) G(2f)\n<br> (C) 2G(2f)\n<br> (D) G(f-2)</p> \n<br> Match each of the items 1, 2 on the left with the most appropriate item A, B, C or D on the right.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(1 - A), (2 - C)"
+      },
+      {
+        "identifier": "B",
+        "content": "(I - B), (2 - C)"
+      },
+      {
+        "identifier": "C",
+        "content": "(1 - D), (2 - C)"
+      },
+      {
+        "identifier": "D",
+        "content": "(1 - A), (2 - D)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The autocorrelation function of an energy signal has",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "no symmetry"
+      },
+      {
+        "identifier": "B",
+        "content": "conjugate symmetry"
+      },
+      {
+        "identifier": "C",
+        "content": "odd symmetry"
+      },
+      {
+        "identifier": "D",
+        "content": "even symmetry"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "If G(f) represents the Fourier transform of a signal g (t) which is real and odd symmetric in time, then",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "G(t) is complex"
+      },
+      {
+        "identifier": "B",
+        "content": "G(t) is imaginary"
+      },
+      {
+        "identifier": "C",
+        "content": "G(t) is real "
+      },
+      {
+        "identifier": "D",
+        "content": "G(t) is real and non- negative"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "The Fourier transform $$G(\\omega )$$ of the signal g(t) in Fig.(1) is given as\n<br> $$G(\\omega ) = {1 \\over {{\\omega ^2}}}({e^{j\\omega }} - j\\omega {e^{j\\omega }} - 1)$$.\n<p> Using this information, and the time-shifting and time-scaling properties, determine and Fourier transform of signals in Fig (2), (3) and (4). </p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ad5ab29bdaf6d15198a4b2408c7d09faa24e584617e509585718286b5ef4df55.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Signals and Systems - Fourier Transform Question 7 English 1\">\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/980d394d5664e5e2d2242ccde50c96209cc50142b29a14c2308beae9d2ea9d2b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Signals and Systems - Fourier Transform Question 7 English 2\">\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/3d6384208738e7d1fb07f434b764adba5758c8b8c3f36ccdad9a1fe41a197848.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Signals and Systems - Fourier Transform Question 7 English 3\">\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8dfac54acb7388e0d105490e7032f894dd8d8a6d6b0c7088b63db3e02c0c24a5.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Signals and Systems - Fourier Transform Question 7 English 4\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br> $${G_1}\\,(\\omega )\\, = \\,{1 \\over {{\\omega ^2}}}\\,\\left( {{e^{ - j\\omega }} + j\\omega {e^{ - j\\omega }} - 1} \\right)$$ \n<br> $${G_2}\\,\\left( \\omega  \\right)\\, = \\,{1 \\over {{\\omega ^2}}}\\,\\left( {1 + j\\omega  - {e^{j\\omega }}} \\right)$$ \n<br>$${G_3}\\,\\left( \\omega  \\right)\\, = \\,{e^{j0.5\\omega }}\\,{G_1}\\,\\left( \\omega  \\right)\\, + {e^{ - j0.5\\omega }}G\\left( \\omega  \\right)$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a rectangular pulse g(t) existing between $$t = \\, - {T \\over 2}\\,and\\,{T \\over 2}$$. Find and sketch the pulse obtained by convolving g(t) with itself. The Fourier transform of g(t) is a sinc function. Write down the Fourier transform of the pulse obtained by the above convolution.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A signal v(t)= [1+ m(t) ] cos $$({\\omega _c}t)$$ is detected using a square law detector, having the characteristic $${v_0}(t) = {v^2}(t)$$. If the Fourier transform of m(t) is constant, $${M_0}$$, extending from - $${f_{m\\,}}\\,to\\, + {f_{m\\,}}$$, sketch the Fourier transform of  $${v_0}(t)$$ in the frequency range-$${f_{m\\,}}\\, &lt; f &lt; {f_{m\\,}}$$.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it. ",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the circuit diagram as shown in the figure. The source has a voltage $V=V_0 \\sin \\omega t$. Both the resistors $A$ and $B$ have the same resistance. The capacitor and the inductor have capacitance $C$ and inductance $L$, respectively. For some frequency $\\omega$, and certain initial charge in the capacitor, the current through the resistor $A$ is in phase with the source. What is the value of $\\omega$ ?</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1madodicz/bd25fec7-1000-4a5e-a850-0aade07dbcbc/14a1a830-2b1d-11f0-92af-11b76e1b311c/file-jaoe38c1madodid0.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1madodicz/bd25fec7-1000-4a5e-a850-0aade07dbcbc/14a1a830-2b1d-11f0-92af-11b76e1b311c/file-jaoe38c1madodid0.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"IAT (IISER) 2024 Physics - Alternating Current Question 1 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{1}{\\sqrt{L C}}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{1}{\\sqrt{2 L C}}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{1}{2 \\sqrt{L C}}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{1}{\\sqrt{3 L C}}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The term $\\frac{j}{\\omega C}$ represents the impedance of the capacitor in the circuit. In AC circuits, capacitive impedance is given by $Z_C=\\frac{j}{\\omega C}$ where $j=\\sqrt{-1}$ and $\\omega$ is the angular frequency of the source.</p>\n<p>Similarly,</p>\n<p>$$ Z_L=j \\omega L $$</p>\n<p>We'll apply Kirchhoff's Current Law (KCL) to both loops of the circuit. By analyzing the phasor (complex) impedances and equating real and imaginary parts, we determine the condition for in-phase current.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1madofaua/19335790-aac7-4797-8309-3699d6625ce7/4670f820-2b1d-11f0-92af-11b76e1b311c/file-jaoe38c1madofaub.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1madofaua/19335790-aac7-4797-8309-3699d6625ce7/4670f820-2b1d-11f0-92af-11b76e1b311c/file-jaoe38c1madofaub.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"IAT (IISER) 2024 Physics - Alternating Current Question 1 English Explanation\"></p>\n<p>KCL in loop 1:</p>\n<p>$$ \\begin{gathered} \\left.i_2 R-\\frac{i_2 j}{\\omega C}-i_1 R=0 \\quad \\text { (equation } 1\\right) \\\\ i_1 R=i_2\\left(R-\\frac{j}{\\omega C}\\right) \\\\ i_1=i_2\\left(1-\\frac{j}{\\omega R C}\\right) \\end{gathered} $$</p>\n<p>KCL in loop 2:</p>\n<p>$$ \\begin{gathered} i_2 R+i_2\\left(\\frac{-j}{\\omega C}\\right)+\\left(i_1+i_2\\right) j \\omega L=V_{\\text {avg }}=0 \\\\ i_2\\left(R-\\frac{j}{\\omega C}\\right)=\\left(i_1+i_2\\right) j \\omega L \\end{gathered} $$</p>\n<p>On substituting,</p>\n<p>$$ i_2\\left(R-\\frac{j}{\\omega C}\\right)=\\left(i_2\\left(1-\\frac{j}{\\omega R C}\\right)+i_2\\right) j \\omega L $$</p>\n<p>Cancelling out $i_2$,</p>\n<p>$$ R-\\frac{j}{\\omega C}=\\left(2-\\frac{j}{\\omega R C}\\right) j \\omega L $$</p>\n<p>Since $j=\\sqrt{-1}, j^2=-1$</p>\n<p>$$ R-\\frac{j}{\\omega C}=2 j \\omega L+\\frac{L}{R C} $$</p>\n<p>In this context, 'in phase' means that the voltage and current waveforms align perfectly over time, without any phase shift between them. For this to happen in an AC circuit, the imaginary (reactive) components of the circuit's impedance must cancel each other out. When this cancellation occurs, the circuit behaves as if it only has resistive components, leading to the current being in sync with the voltage</p>\n<p>$$ \\begin{gathered} \\Rightarrow \\frac{j}{\\omega C}=2 j \\omega L \\\\ \\omega^2=\\frac{1}{2 L C} \\\\ \\omega=\\frac{1}{\\sqrt{2 L C}} \\end{gathered} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "iat-iiser-2024",
+    "difficulty": null
+  }
+]

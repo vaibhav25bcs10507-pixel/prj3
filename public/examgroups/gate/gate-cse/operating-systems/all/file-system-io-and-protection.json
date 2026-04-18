@@ -1,0 +1,983 @@
+[
+  {
+    "content": "A FAT (file allocation table) based file system is being used and the total overhead of each entry in the FAT is $$4$$ bytes in size. Given a $$100\\,\\, \\times \\,\\,{10^6}$$ bytes disk on which the file system is stored and data block size is $${10^3}$$\n bytes, the maximum size of a file that can be stored on this disk in units of $${10^6}$$ bytes is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "99.6",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose a disk has 201 cylinders, numbered from 0 to 200. At some time the disk arm is at cylinder 100, and there is a queue of disk access requests for cylinders 30, 85, 90, 100, 105, 110, 135 and 145. If Shortest-Seek Time First (SSTF) is being used for scheduling the disk access, the request for cylinder 90 is serviced after servicing ____________ number of requests.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "In Shortest Seek Time First (SSTF) Scheduling, the next disk I/O access request which is closest to the current disk arm position will be chosen irrespective of the direction.\n<br><br>It means If you are currently at a particular disk then you will go to the next disk which is closest to you and you do not care which direction you need to go to reach that closest disk.\n<br><br>In this question, the current disk arm is at cylinder no 100 and the pending request of the queue of cylinders are 30, 85, 90, 100, 105, 110, 135 and 145.\n<p>In this queue, the cylinder no 100 itself is present so it will be serviced first. As the current disk arm position at 100</p>\n<p>Then in the queue, the closest cylinder no from cylinder 100 is 105, so cylinder 105 will be serviced next.</p>\n<p>Then in the queue, from cylinder 105 the next closest cylinder is 110, so cylinder 110 will be serviced next.</p>\n<p>Now from cylinder 110 the next closest cylinder is 90, so it will be serviced next.</p>\nSo, before servicing cylinder no 90, cylinder no 100, 105 and 110 is serviced. So total 3 cylinders is serviced before cylinder 90.",
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The data blocks of a very large file in the Unix file system are allocated using",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "contiguous allocation "
+      },
+      {
+        "identifier": "B",
+        "content": "linked allocation "
+      },
+      {
+        "identifier": "C",
+        "content": "indexed allocation "
+      },
+      {
+        "identifier": "D",
+        "content": "an extension of indexed allocation."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a disk pack with 16 surfaces, 128 tracks per surface and 256 sectors per track. 512 bytes of data are stored in a bit serial manner in a sector. The capacity of the disk pack and the number of bits required to specify a particular sector in the disk are respectively:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "256 Mbytes, 19 bits "
+      },
+      {
+        "identifier": "B",
+        "content": "256 Mbytes, 28 bits "
+      },
+      {
+        "identifier": "C",
+        "content": "512 Mbytes, 20 bits "
+      },
+      {
+        "identifier": "D",
+        "content": "64 Gbyte, 28 bits "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Normally user programs are prevented from handling $${\\rm I}/O$$ directly by $${\\rm I}/O$$ instructions in the for $$CPU$$ having explicit $${\\rm I}/O$$ instructions, such $${\\rm I}/O$$ protection is ensured by having the $${\\rm I}/O$$ instructions privilege in $$CPU$$ with memory mapped $${\\rm I}/O$$ there is no explicit $${\\rm I}/O$$ instruction. Which one of the following is true for a $$CPU$$ with memory mapped $${\\rm I}/O$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}/O$$ protection ensured by operating system routines(s) "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}/O$$ protection is ensured by a hardware trap "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm I}/O$$ protection is ensured during system configuration "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I}/O$$ protection is not possible."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an operating system capable of loading and executing a single sequential user process at a time. The disk head scheduling algorithm used is First Come First Served $$(FCFS).$$ If $$FCFS$$ is replaced by Shortest Seek Time First $$(SSTF),$$ claimed by the vendor to give $$50\\% $$ better benchmark results, what is the expected improvement in the $${\\rm I}/O$$ performance of user programs?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$50\\% $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$40\\% $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$25\\% $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$0\\% $$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Using a larger block size in a fixed block size file system leads to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "better disk throughput but poorer disk space utilization "
+      },
+      {
+        "identifier": "B",
+        "content": "better disk throughput and better disk space utilization "
+      },
+      {
+        "identifier": "C",
+        "content": "poorer disk throughput but better disk space utilization "
+      },
+      {
+        "identifier": "D",
+        "content": "poorer disk throughput and poorer disk space utilization "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following requires a device driver?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Register "
+      },
+      {
+        "identifier": "B",
+        "content": "Cache"
+      },
+      {
+        "identifier": "C",
+        "content": "Main memory "
+      },
+      {
+        "identifier": "D",
+        "content": "Disk"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following disk scheduling strategies is likely to give the best throughput? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Farthest cylinder next"
+      },
+      {
+        "identifier": "B",
+        "content": "Nearest cylinder next "
+      },
+      {
+        "identifier": "C",
+        "content": "First come first served "
+      },
+      {
+        "identifier": "D",
+        "content": "Elevator algorithm"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Listed below are some operating system abstractions (in the left column) and the hardware components. Which matching pairs is correct?\n<p>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$<b>List-$${\\rm I}$$</b>\n<br>(a) Thread   $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$(b) Virtual Address space \n<br>(c) File System  $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$(d) Signal</p>\n<p>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$<b>List-$${\\rm II}$$</b>\n<br>(1) Interrupt $$\\,\\,\\,\\,\\,\\,\\,$$$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$(2) Memory\n<br>(3) $$CPU$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$(4) Disk</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$a - 3,\\,\\,b - 2,\\,\\,c - 4,\\,\\,d - 1$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following devices should get higher priority in assigning interrupts?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Hard disk "
+      },
+      {
+        "identifier": "B",
+        "content": "printer "
+      },
+      {
+        "identifier": "C",
+        "content": "Keyboard"
+      },
+      {
+        "identifier": "D",
+        "content": "Floppy disk"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Unless enabled, a $$CPU$$ will not be able to process interrupts."
+      },
+      {
+        "identifier": "B",
+        "content": "Loop instructions cannot be interrupted till they complete."
+      },
+      {
+        "identifier": "C",
+        "content": "A processor checks for interrupts before executing a new instruction."
+      },
+      {
+        "identifier": "D",
+        "content": "Only level triggered interrupts are possible on microprocessors."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The correct matching for the following pairs is \n<p>(a) Disk scheduling $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$(1) Round robin\n<br>(b) Batch processing $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ (2) $$SCAN$$\n<br>(c) Time sharing $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ (3) $$LIFO$$\n<br>(d) Interrupt processing  $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$(4) $$FIFO$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a - 3,\\,\\,b - 4,\\,\\,c - 2,\\,\\,d - 1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$a - 4,\\,\\,b - 3,\\,\\,c - 2,\\,\\,d - 1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$a - 2,\\,\\,b - 4,\\,\\,c - 1,\\,\\,d - 3$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$a - 3,\\,\\,b - 4,\\,\\,c - 3,\\,\\,d - 2$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "$$I/O$$ redirection",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Implies changing the name of a file "
+      },
+      {
+        "identifier": "B",
+        "content": "Can be employed to use an existing file as input file for a program"
+      },
+      {
+        "identifier": "C",
+        "content": "Implies connection $$2$$ programs through a pipe"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The correct matching for the following pairs is \n<br><b>$$\\,\\,\\,\\,\\,$$ List - $${\\rm I}$$</b>\n<br>(a) $$DMA$$ $$\\,\\,$$ $${\\rm I}/O$$\n<br>(b) Cache\n<br>(c) Interrupt $${\\rm I}/O$$\n<br>(d) Condition Code Register\n<p><b>$$\\,\\,\\,\\,\\,$$ List - $${\\rm II}$$</b>\n<br>(1) High speed $$RAM$$\n<br>(2) Disk\n<br>(3) Printer\n<br>(4) $$ALU$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a - 4,\\,\\,b - 3,\\,\\,c - 1,\\,\\,d - 2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$a - 2,\\,\\,b - 1,\\,\\,c - 3,\\,\\,d - 4$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$a - 4,\\,\\,b - 3,\\,\\,c - 2,\\,\\,d - 1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$a - 2,\\,\\,b - 3,\\,\\,c - 4,\\,\\,d - 1$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "When an interrupt occurs, an Operating System",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Ignore the interrupt "
+      },
+      {
+        "identifier": "B",
+        "content": "Always changes state of interrupted process after processing the interrupt"
+      },
+      {
+        "identifier": "C",
+        "content": "Always resumes execution of interrupted process after processing the interrupt"
+      },
+      {
+        "identifier": "D",
+        "content": "May change state of interrupted processes to ''blocked'' and schedule another process."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>To keep track of free blocks in a file system, one of the two approaches is generally used - using bitmaps (bit vectors) or using linked lists. Consider that the linked list approach is used to keep track of free blocks in a file system. Assume that the disk size is 16 GB , block size is 2 KB , and block numbers used are 32-bit long. A single pointer of size 4 bytes is used in each block of the list to point to the next block of the list. The number of blocks required to hold the free disk block numbers is $\\_\\_\\_\\_$ (answer in integer)</p>\n<p>Note: $1 \\mathrm{~K}=2^{10}$ and $1 \\mathrm{G}=2^{30}$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "16417",
+    "explanation": "<p>$$ \\begin{aligned} \\text { Disk size } & =16 \\mathrm{~GB} \\\\ \\text { Block size } & =2 \\mathrm{~KB} \\\\ \\text { Block number } & =32 \\mathrm{bit}=4 \\mathrm{Bytes} \\end{aligned} $$</p>\n<p>Pointer per block : 4 bytes (used to point to next free block)</p>\n<p>$$ \\begin{aligned} \\text { Total number of disk blocks } & =\\frac{\\text { Disk size }}{\\text { Block size }} \\\\ & =\\frac{16 \\mathrm{~GB}}{2 \\mathrm{~KB}}=\\frac{2^4 \\times 2^{30}}{2 \\times 2^{10}}=\\frac{2^{34}}{2^{11}}=2^{23}=8388608 \\end{aligned} $$</p>\n<p>Each free list block store block numbers +1 pointer</p>\n<p>Usable space for block number per block = 2048-4 = 2044 bites</p>\n<p>Block number usable per block $=\\frac{2044}{4}=511$</p>\n<p>$$ \\begin{aligned} \\text { Total free list blocks } & =\\left[\\frac{\\text { Total disk blocks }}{\\text { Block number usable per block }}\\right] \\\\ & =\\left[\\frac{8388608}{511}\\right]=16417 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a hard disk with a rotational speed of 15000 rpm . The time to move the read/ write head from a track to its adjacent track is 1 millisecond. Initially, the head is on track 0 . The number of sectors per track is 400 . The sector size is 1024 bytes. It is necessary to transfer data from 10 randomly located sectors in each of the following tracks in the order: 5,12 and 7.</p>\n<p>The total time for the data transfer (in milliseconds) from the hard disk is $\\_\\_\\_\\_$ . (rounded off to one decimal place)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "77.3",
+    "explanation": "<p><img alt=\"GATE CSE 2026 Set 1 Operating Systems - File System IO and Protection Question 1 English Explanation 1\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyqchdh/d2c00e0a-3acc-4435-ad28-d18ad3abd70d/d880e250-2443-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyqchdi.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyqchdh/d2c00e0a-3acc-4435-ad28-d18ad3abd70d/d880e250-2443-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyqchdi.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p><p>$$ \\begin{aligned} 1 \\text { revolution time } &amp; =\\frac{60}{15000} \\mathrm{sec} \\Rightarrow 4 \\mathrm{~ms} \\\\ \\therefore \\quad \\text { Average rotational latency } &amp; =\\frac{1}{2} \\times 4 \\mathrm{~ms}=2 \\mathrm{~ms} \\end{aligned} $$</p>Seek time:<p></p>\n<p>(1) Upto track ' 5 ' is \" 5 ms \".</p>\n<p>(2) Upto track '12' is \" $7 \\mathrm{~ms}^{\\prime \\prime}$.</p>\n<p>(3) Upto track ' 7 ' is \" 5 ms \".</p>\n<p>1 sector access time is</p>\n<p><img alt=\"GATE CSE 2026 Set 1 Operating Systems - File System IO and Protection Question 1 English Explanation 2\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyqdh0a/d7959acf-c27d-4ea3-88d8-6fe726d6f323/f4078ba0-2443-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyqdh0b.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyqdh0a/d7959acf-c27d-4ea3-88d8-6fe726d6f323/f4078ba0-2443-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyqdh0b.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p>$$ \\begin{aligned} &amp; \\Rightarrow \\quad \\frac{4 \\mathrm{~ms}}{400} \\Rightarrow 0.01 \\mathrm{~ms} \\\\ &amp; \\therefore \\quad \\text { Total time }= {[5 \\mathrm{~ms}+(2 \\mathrm{~ms}+0.01 \\mathrm{~ms}) 10]+[7 \\mathrm{~ms}+(2 \\mathrm{~ms}+0.01) 10] } \\\\ &amp;\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,+[5 \\mathrm{~ms}+(2 \\mathrm{~ms}+0.01 \\mathrm{~ms}) 10] \\\\ &amp;\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,= 77.3 \\mathrm{~ms} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a disk with the following specifications: rotation speed of 6000 RPM, average seek time of 5 milliseconds, 500 sectors/track, 512-byte sectors. A file has content stored in 3000 sectors located randomly on the disk. Assuming average rotational latency, the total time (in seconds, rounded off to 2 decimal places) to read the entire file from the disk is _________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "29.50TO30.50",
+    "explanation": "<p>\nTo find the total time to read the entire file from the disk, we need to consider three main factors: \n</p>\n<ol>\n  <li>Average seek time</li>\n  <li>Average rotational latency</li>\n  <li>Data transfer time</li>\n</ol>\n<p>\nFirst, let’s convert the rotation speed of the disk from RPM (revolutions per minute) to RPS (revolutions per second), which is more useful for calculating time in seconds.\n</p>\n<p>\n$$6000 \\text{ RPM} = 6000 / 60 = 100 \\text{ RPS}$$\n</p>\n<p>\nThe average rotational latency is the time it takes for the disk to rotate halfway on average. Since the disk makes 100 revolutions per second, the time for one revolution is:\n</p>\n<p>\n$$\\text{Time for one revolution} = 1 / 100 = 0.01 \\text{ seconds} = 10 \\text{ milliseconds}$$\n</p>\n<p>\nTherefore, the average rotational latency is half of this time:\n</p>\n<p>\n$$\\text{Average rotational latency} = 10 \\text{ milliseconds} / 2 = 5 \\text{ milliseconds}$$\n</p>\n<p>\nNow, let’s calculate the time required for seeking and rotational latency for each sector read. Each sector read involves an average seek time and an average rotational latency.\n</p>\n<p>\nTotal sectors to read: 3000\n</p>\n<p>\nTotal seek time:\n</p>\n<p>\n$$\\text{Total seek time} = 3000 \\times 5 \\text{ milliseconds}$$\n</p>\n<p>\nTotal rotational latency:\n</p>\n<p>\n$$\\text{Total rotational latency} = 3000 \\times 5 \\text{ milliseconds}$$\n</p>\n<p>\nNow, let’s compute these times in seconds:\n</p>\n<p>\n$$\\text{Total seek time (seconds)} = 3000 \\times 5 \\text{ milliseconds} / 1000 = 3000 \\times 0.005 = 15 \\text{ seconds}$$\n</p>\n<p>\n$$\\text{Total rotational latency (seconds)} = 3000 \\times 5 \\text{ milliseconds} / 1000 = 3000 \\times 0.005 = 15 \\text{ seconds}$$\n</p>\n<p>\nNow let's calculate the total data transfer time. We need to read 3000 sectors, each of 512 bytes. Since the disk is continuously spinning, the transfer time is determined by the disk's rotation speed, not by individual reads:\n</p>\n<p>\nTime to read one entire track (one complete revolution):\n</p>\n<p>\n$$\\text{Time for one revolution} = 0.01 \\text{ seconds}$$\n</p>\n<p>\nNumber of sectors per track: 500\n</p>\n<p>\nTime to read one sector:\n</p>\n<p>\n$$\\text{Time to read one sector} = 0.01 \\text{ seconds} / 500 = 0.00002 \\text{ seconds}$$\n</p>\n<p>\nTotal data transfer time for 3000 sectors:\n</p>\n<p>\n$$\\text{Total data transfer time} = 3000 \\times 0.00002 \\text{ seconds} = 0.06 \\text{ seconds}$$\n</p>\n<p>\nAdding all the times together gives:\n</p>\n<p>\n$$\\text{Total time} = \\text{Total seek time} + \\text{Total rotational latency} + \\text{Total data transfer time}$$\n</p>\n<p>\n$$\\text{Total time} = 15 \\text{ seconds} + 15 \\text{ seconds} + 0.06 \\text{ seconds} = 30.06 \\text{ seconds}$$\n</p>\n<p>\nTherefore, the total time to read the entire file from the disk is approximately 30.06 seconds.\n</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following five disk access requests of the form (request id, cylinder number) that are present in the disk scheduler queue at a given time.\n<br><br>(P, 155), (Q, 85), (R, 110), (S, 30), (T, 115)\n<br><br>Assume the head is positioned at cylinder 100. The scheduler follows Shortest Seek Time First scheduling to service the requests.\n<br><br>Which one of the following statements is FALSE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The head reverses its direction of movement between servicing of Q and P."
+      },
+      {
+        "identifier": "B",
+        "content": "T is serviced before P."
+      },
+      {
+        "identifier": "C",
+        "content": "R is serviced before P."
+      },
+      {
+        "identifier": "D",
+        "content": "Q is serviced after S, but before T."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statement is <strong>FALSE</strong>, let's simulate the servicing of the disk access requests using <strong>Shortest Seek Time First (SSTF)</strong> scheduling.</p>\n<h3><strong>Given:</strong></h3>\n\n<p><p><strong>Initial head position:</strong> 100</p></p>\n<p><p><strong>Disk access requests:</strong></p>\n<table border=\"1\">\n  <tr>\n    <th>Request</th>\n    <th>Cylinder</th>\n  </tr>\n  <tr>\n    <td>P</td>\n    <td>155</td>\n  </tr>\n  <tr>\n    <td>Q</td>\n    <td>85</td>\n  </tr>\n  <tr>\n    <td>R</td>\n    <td>110</td>\n  </tr>\n  <tr>\n    <td>S</td>\n    <td>30</td>\n  </tr>\n  <tr>\n    <td>T</td>\n    <td>115</td>\n  </tr>\n</table>\n\n\n<h3><strong>SSTF Scheduling Simulation:</strong></h3>\n<p>At each step, we select the request closest to the current head position.</p>\n<h4><strong>Step 1:</strong></h4>\n\n<p><p><strong>Current position:</strong> 100</p></p>\n<p><p><strong>Pending requests:</strong> P(155), Q(85), R(110), S(30), T(115)</p></p>\n<p><p><strong>Distances:</strong></p></p>\n<p><p>P: |155 - 100| = 55</p></p>\n<p><p>Q: |85 - 100| = 15</p></p>\n<p><p><strong>R: |110 - 100| = 10</strong> (minimum distance)</p></p>\n<p><p>S: |30 - 100| = 70</p></p>\n<p><p>T: |115 - 100| = 15</p></p>\n<p><p><strong>Selected request:</strong> <strong>R(110)</strong></p></p>\n\n<h4><strong>Step 2:</strong></h4>\n\n<p><p><strong>Current position:</strong> 110</p></p>\n<p><p><strong>Pending requests:</strong> P(155), Q(85), S(30), T(115)</p></p>\n<p><p><strong>Distances:</strong></p></p>\n<p><p>P: |155 - 110| = 45</p></p>\n<p><p>Q: |85 - 110| = 25</p></p>\n<p><p>S: |30 - 110| = 80</p></p>\n<p><p><strong>T: |115 - 110| = 5</strong> (minimum distance)</p></p>\n<p><p><strong>Selected request:</strong> <strong>T(115)</strong></p></p>\n\n<h4><strong>Step 3:</strong></h4>\n\n<p><p><strong>Current position:</strong> 115</p></p>\n<p><p><strong>Pending requests:</strong> P(155), Q(85), S(30)</p></p>\n<p><p><strong>Distances:</strong></p></p>\n<p><p>P: |155 - 115| = 40</p></p>\n<p><p><strong>Q: |85 - 115| = 30</strong> (minimum distance)</p></p>\n<p><p>S: |30 - 115| = 85</p></p>\n<p><p><strong>Selected request:</strong> <strong>Q(85)</strong></p></p>\n\n<h4><strong>Step 4:</strong></h4>\n\n<p><p><strong>Current position:</strong> 85</p></p>\n<p><p><strong>Pending requests:</strong> P(155), S(30)</p></p>\n<p><p><strong>Distances:</strong></p></p>\n<p><p>P: |155 - 85| = 70</p></p>\n<p><p><strong>S: |30 - 85| = 55</strong> (minimum distance)</p></p>\n<p><p><strong>Selected request:</strong> <strong>S(30)</strong></p></p>\n\n<h4><strong>Step 5:</strong></h4>\n\n<p><p><strong>Current position:</strong> 30</p></p>\n<p><p><strong>Pending request:</strong> P(155)</p></p>\n<p><p><strong>Distance:</strong></p></p>\n<p><p>P: |155 - 30| = 125</p></p>\n<p><p><strong>Selected request:</strong> <strong>P(155)</strong></p></p>\n\n<h3><strong>Servicing Order:</strong></h3>\n\n<p><p>R(110)</p></p>\n<p><p>T(115)</p></p>\n<p><p>Q(85)</p></p>\n<p><p>S(30)</p></p>\n<p><p>P(155)</p></p>\n\n<h3><strong>Analyzing the Options:</strong></h3>\n<h4><strong>Option A:</strong></h4>\n<p><strong>Statement:</strong> The head reverses its direction of movement between servicing of Q and P.</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>After servicing Q(85), the head moves to S(30), decreasing from 85 to 30.</p></p>\n<p><p>Then it moves from S(30) to P(155), increasing from 30 to 155.</p></p>\n<p><p><strong>The head reverses direction between Q and P.</strong></p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option A is TRUE.</strong></p>\n<h4><strong>Option B:</strong></h4>\n<p><strong>Statement:</strong> T is serviced before P.</p>\n<p><strong>Analysis:</strong></p>\n\n<p>T(115) is serviced before P(155) in the servicing order.</p>\n\n<p><strong>Conclusion:</strong> <strong>Option B is TRUE.</strong></p>\n<h4><strong>Option C:</strong></h4>\n<p><strong>Statement:</strong> R is serviced before P.</p>\n<p><strong>Analysis:</strong></p>\n\n<p>R(110) is serviced first, and P(155) is serviced last.</p>\n\n<p><strong>Conclusion:</strong> <strong>Option C is TRUE.</strong></p>\n<h4><strong>Option D:</strong></h4>\n<p><strong>Statement:</strong> Q is serviced after S, but before T.</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>Q(85) is serviced <strong>before</strong> S(30) and <strong>after</strong> T(115).</p></p>\n<p><p><strong>Q is serviced before S, not after.</strong></p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option D is FALSE.</strong></p>\n<hr />\n<p><strong>Answer:</strong> Option D is FALSE.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The index node (inode) of a Unix-like file system has 12 direct, one single-indirect and one double-indirect pointers. The disk block size is 4 kB , and the disk block address is 32 -bits long. The maximum possible file size is (rounded off to 1 decimal place) ___________ GB.",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p><strong>Step-by-Step Reasoning :</strong></p>\n\n<p><strong>Given filesystem parameters :</strong></p>\n\n\n<p><p>Number of direct pointers : 12</p></p>\n<p><p>One single-indirect pointer</p></p>\n<p><p>One double-indirect pointer</p></p>\n<p><p>Disk block size = 4 KB</p></p>\n<p><p>Disk block address size = 32 bits (i.e., each pointer is 4 bytes)</p></p>\n\n\n<p><p><strong>Calculating the number of pointers per indirect block :</strong></p>\n<p>Each block is 4 KB = 4096 bytes.  </p>\n<p>Each pointer is 4 bytes.  </p>\n<p>Therefore, the number of pointers that can fit into one block is :</p>\n<p>$    \\frac{4096 \\text{ bytes}}{4 \\text{ bytes/pointer}} = 1024 \\text{ pointers per indirect block}.    $</p></p>\n<p><p><strong>Contribution of the direct pointers :</strong></p>\n<p>Each of the 12 direct pointers points directly to a 4 KB block :</p>\n<p>$    12 \\times 4 \\text{ KB} = 48 \\text{ KB}    $</p></p>\n<p><p><strong>Contribution of the single-indirect pointer :</strong></p>\n<p>The single-indirect pointer points to an indirect block that contains 1024 pointers.  </p>\n<p>Each of these 1024 pointers points to a 4 KB block :</p>\n<p>$    1024 \\text{ pointers} \\times 4 \\text{ KB/block} = 4096 \\text{ KB} = 4 \\text{ MB}    $</p></p>\n<p><p><strong>Contribution of the double-indirect pointer :</strong></p>\n<p>The double-indirect pointer points to a block that contains 1024 pointers.  </p>\n<p>Each of those 1024 pointers points to another indirect block, which again contains 1024 pointers to data blocks.</p>\n<p>Total number of data blocks referenced by the double-indirect pointer:</p>\n<p>$    1024 \\times 1024 = 1,048,576 \\text{ data blocks}    $</p>\n<p>Since each data block is 4 KB, the total storage covered by the double-indirect pointer is:</p>\n<p>$    1,048,576 \\times 4 \\text{ KB} = 4,194,304 \\text{ KB} = 4,096 \\text{ MB} = 4 \\text{ GB}    $</p></p>\n<p><p><strong>Summing up all contributions :</strong></p></p>\n\n\n<p><p>Direct blocks : 48 KB (negligible compared to MB and GB)</p></p>\n<p><p>Single-indirect : 4 MB</p></p>\n<p><p>Double-indirect : 4 GB</p>\n<p>When combined, the largest chunk comes from the double-indirect portion, which is 4 GB. The additional 4 MB and 48 KB add only a very small amount, which won't affect the first decimal place in gigabytes.</p>\n<p>Therefore, the maximum possible file size is approximately :</p>\n<p>$    \\approx 4.0 \\text{ GB}    $</p></p>\n\n<p><strong>Final Answer :</strong></p>\n<p>$ \\boxed{4.0 \\text{ GB}} $</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a storage disk with $$4$$ platters (numbered as $$0, 1, 2$$ and $$3$$), $$200$$ cylinders (numbered as $$0, 1,$$ … , $$199$$), and $$256$$ sectors per track (numbered as $$0, 1, … , 255$$). The following $$6$$ disk requests of the form [sector number, cylinder number, platter number] are received by the disk controller at the same time: $$[120, 72, 2] , [180, 134, 1] , [60, 20, 0] , [212, 86, 3] , [56, 116, 2] , [118, 16, 1]$$ \n<p>Currently the head is positioned at sector number $$100$$ of cylinder $$80,$$ and is moving towards higher cylinder numbers. The average power dissipation in moving the head over $$100$$ cylinders is $$20$$ milliwatts and for reversing the direction of the head movement once is $$15$$ milliwatts. Power dissipation associated with rotational latency and switching of head between different platters is negligible.</p>\n<p>The total power consumption in milliwatts to satisfy all of the above disk requests using the Shortest Seek Time First disk scheduling algorithm is _______.</p>\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "85",
+    "explanation": "<p>We have the following setup :</p>\n\n<p><p>The disk‐head is currently at cylinder $80$, <strong>moving toward higher cylinder numbers</strong> (important for direction changes).</p></p>\n<p><p>We have 6 requests, each denoted as $[\\text{sector},\\,\\text{cylinder},\\,\\text{platter}]$.  For disk‐head movement costs, <strong>sectors and platters do not matter</strong>, and we only focus on cylinders.</p></p>\n\n<p>The requests (with their cylinder numbers in parentheses) are:</p>\n\n<p><p>$[120,\\, 72,\\,2]$   → cylinder = 72  </p></p>\n<p><p>$[180,\\,134,\\,1]$  → cylinder = 134  </p></p>\n<p><p>$[60,\\, 20,\\,0]$   → cylinder = 20  </p></p>\n<p><p>$[212,\\, 86,\\,3]$  → cylinder = 86  </p></p>\n<p><p>$[56,\\,116,\\,2]$   → cylinder = 116  </p></p>\n<p><p>$[118,\\, 16,\\,1]$  → cylinder = 16  </p></p>\n\n<hr />\n<h3>1. Cost model</h3>\n\n<p><p><strong>Moving</strong> over 100 cylinders <strong>costs 20 mW</strong> on average  </p>\n<p>⇒ moving over $\\Delta$ cylinders costs  </p>\n<p>$   \\bigl(20 \\text{ mW}\\bigr)\\times\\frac{\\Delta}{100} \\;=\\; 0.2\\,\\Delta\\text{ mW}.   $</p></p>\n\n<p><p><strong>Reversing</strong> direction of head movement <strong>once</strong> costs <strong>15 mW</strong>.</p></p>\n<p><p>Rotational latency and head‐switching power are <strong>negligible</strong> in this problem.</p></p>\n\n<hr />\n<h3>2. Shortest Seek Time First (SSTF)</h3>\n<p>SSTF chooses, at each step, the <strong>request whose cylinder is nearest</strong> the current cylinder (in absolute distance), <strong>regardless of the current direction</strong>.  If moving to that request’s cylinder requires reversing direction, we add the 15 mW direction‐reversal cost.</p>\n<p>Initially:</p>\n\n<p>Head at cylinder $80$, moving <strong>up</strong> (toward higher cylinders).</p>\n\n<p>Let us label the requests $R_1, R_2, \\dots, R_6$ in the order given:</p>\n<p>$ \\begin{aligned} R_1 &: \\quad 72,\\\\ R_2 &: \\quad 134,\\\\ R_3 &: \\quad 20,\\\\ R_4 &: \\quad 86,\\\\ R_5 &: \\quad 116,\\\\ R_6 &: \\quad 16.\\\\ \\end{aligned} $</p>\n<h4>Step A: First request</h4>\n\n<p><p>Current cylinder = 80</p></p>\n<p><p>Distances to each request:</p></p>\n\n<p>$ \\begin{aligned} R_1 &= |72 - 80| = 8,\\\\ R_2 &= |134 - 80|= 54,\\\\ R_3 &= |20 - 80| = 60,\\\\ R_4 &= |86 - 80| = 6,\\\\ R_5 &= |116 - 80|= 36,\\\\ R_6 &= |16 - 80| = 64. \\end{aligned} $</p>\n<p>The <strong>smallest</strong> distance is $6$ (request $R_4$ at cylinder $86$).</p>\n\n<p><p>Move from $80\\to 86$: $\\Delta = 6$, direction is <strong>still upward</strong> so <strong>no reversal</strong> cost.</p></p>\n<p><p>Movement cost = $0.2\\times 6 = 1.2 \\text{ mW}$.</p></p>\n\n<p>Now at cylinder $86$, still oriented <strong>upward</strong>.</p>\n<h4>Step B: Second request</h4>\n<p>Remaining requests: $R_1, R_2, R_3, R_5, R_6$.  </p>\n<p>Their distances from cylinder $86$:</p>\n<p>$ \\begin{aligned} R_1\\,(72) &= 14\\ (\\text{below } 86),\\\\ R_2\\,(134)&= 48\\ (\\text{above } 86),\\\\ R_3\\,(20) &= 66\\ (\\text{below } 86),\\\\ R_5\\,(116)&= 30\\ (\\text{above } 86),\\\\ R_6\\,(16) &= 70\\ (\\text{below } 86). \\end{aligned} $</p>\n<p>The smallest distance is $14$ (request $R_1$), but it is <strong>below</strong> while we are currently oriented upward. SSTF does not care about orientation; it picks the smallest absolute distance:</p>\n\n<p><p>To move from 86 <strong>down</strong> to 72: $\\Delta=14$, plus a <strong>direction reversal</strong> cost of 15 mW.</p></p>\n<p><p>Movement cost = $0.2 \\times 14=2.8\\text{ mW}$.</p></p>\n<p><p>Reversal cost = 15\\text{ mW}.</p></p>\n<p><p>Total = $17.8\\text{ mW}$.</p></p>\n\n<p>Now at cylinder $72$, direction is <strong>downward</strong>.</p>\n<h4>Step C: Third request</h4>\n<p>Remaining: $R_2\\,(134)$, $R_3\\,(20)$, $R_5\\,(116)$, $R_6\\,(16)$.  </p>\n<p>Distances from $72$:</p>\n<p>$ \\begin{aligned} R_2\\,(134)&=62\\ (\\text{above }72),\\\\ R_3\\,(20) &=52\\ (\\text{below }72),\\\\ R_5\\,(116)&=44\\ (\\text{above }72),\\\\ R_6\\,(16) &=56\\ (\\text{below }72). \\end{aligned} $</p>\n<p>Smallest distance is $44$ for $R_5$ (cyl $116$), which is <strong>above</strong> while we are currently oriented downward → requires direction reversal.</p>\n\n<p><p>Move from $72\\to116$: $\\Delta=44$.</p></p>\n<p><p>Movement cost = $0.2\\times44=8.8\\text{ mW}$.</p></p>\n<p><p>Reversal cost = 15\\text{ mW}.</p></p>\n<p><p>Total = $23.8\\text{ mW}$.</p></p>\n\n<p>Now at cylinder $116$, direction is <strong>upward</strong>.</p>\n<h4>Step D: Fourth request</h4>\n<p>Remaining: $R_2\\,(134)$, $R_3\\,(20)$, $R_6\\,(16)$.  </p>\n<p>Distances from $116$:</p>\n<p>$ R_2=|134-116|=18\\ (\\text{above}),\\quad R_3=|20-116|=96,\\quad R_6=|16-116|=100. $</p>\n<p>The smallest is $18$ (request $R_2$), and it is <strong>above</strong>, matching our current orientation → no reversal.</p>\n\n<p><p>Move from $116\\to134$: $\\Delta=18$.</p></p>\n<p><p>Movement cost = $0.2\\times18=3.6\\text{ mW}$.</p></p>\n<p><p>No reversal cost.</p></p>\n\n<p>Now at cylinder $134$, direction <strong>upward</strong>.</p>\n<h4>Step E: Fifth request</h4>\n<p>Remaining: $R_3\\,(20)$, $R_6\\,(16)$.  </p>\n<p>Distances from $134$:</p>\n<p>$ R_3=|134-20|=114,\\quad R_6=|134-16|=118. $</p>\n<p>The smaller is $114$ (request $R_3$), which is <strong>below</strong> while we are oriented upward → direction reversal.</p>\n\n<p><p>Move from $134\\to20$: $\\Delta=114$.</p></p>\n<p><p>Movement cost = $0.2\\times114=22.8\\text{ mW}$.</p></p>\n<p><p>Reversal cost = 15\\text{ mW}.</p></p>\n<p><p>Total = $37.8\\text{ mW}$.</p></p>\n\n<p>Now at cylinder $20$, direction <strong>downward</strong>.</p>\n<h4>Step F: Last request</h4>\n<p>Remaining: $R_6\\,(16)$.  </p>\n<p>Distance = $|20-16|=4$. Both are <strong>down</strong>, matching orientation → no reversal.</p>\n\n<p><p>Move from $20\\to16$: $\\Delta=4$.</p></p>\n<p><p>Movement cost = $0.2\\times4=0.8\\text{ mW}$.</p></p>\n\n<hr />\n<h3>3. Summation of all costs</h3>\n\n<p><p><strong>80→86</strong>: +$1.2$ (no reversal)  </p></p>\n<p><p><strong>Reverse</strong> + move 86→72: +$15 + 2.8=17.8$  </p></p>\n<p><p><strong>Reverse</strong> + move 72→116: +$15 + 8.8=23.8$  </p></p>\n<p><p><strong>116→134</strong>: +$3.6$ (no reversal)  </p></p>\n<p><p><strong>Reverse</strong> + move 134→20: +$15 + 22.8=37.8$  </p></p>\n<p><p><strong>20→16</strong>: +$0.8$ (no reversal)</p></p>\n\n<p>Now add them:</p>\n\n<p><p>Step 1: $1.2$  </p></p>\n<p><p>Step 2: $+17.8$ → $19.0$  </p></p>\n<p><p>Step 3: $+23.8$ → $42.8$  </p></p>\n<p><p>Step 4: $+3.6$  → $46.4$  </p></p>\n<p><p>Step 5: $+37.8$ → $84.2$  </p></p>\n<p><p>Step 6: $+0.8$  → $85.0$</p></p>\n\n<p>Thus, the <strong>total power consumption</strong> is $\\boxed{85}$ milliwatts.</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a disk queue with requests for $${\\rm I}/O$$ to blocks on cylinders $$47, 38, 121, 191,$$ $$87, 11, 92, 10.$$ The $$C$$-$$LOOK$$ scheduling algorithm is used. The head is initially at cylinder number $$63,$$ moving towards larger cylinder numbers on its servicing pass. The cylinders are numbered from $$0$$ to $$199.$$ The total head movement (in number of cylinders) incurred while servicing these requests is _________________ . ",
+    "options": [],
+    "correct_options": [],
+    "answer": "346",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a main memory with five page frames and the following sequence of page references: 3, 8, 2, 3, 9, 1, 6, 3, 8, 9, 3, 6, 2, 1, 3. Which one of the following is true with respect to page replacement policies First In First Out (FIFO) and Least Recently Used (LRU)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both incur the same number of page faults"
+      },
+      {
+        "identifier": "B",
+        "content": "FIFO incurs 2 more page faults than LRU"
+      },
+      {
+        "identifier": "C",
+        "content": "LRU incurs 2 more page faults than FIFO"
+      },
+      {
+        "identifier": "D",
+        "content": "FIFO incurs 1 more page faults than LRU"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose the following disk request sequence (track numbers) for a disk with 100 tracks is given: <p>45, 20, 90, 10, 50, 60, 80, 25, 70.</p> Assume that the initial position of the R/W head is on track 50. The additional distance that will be traversed by the R/W head when the Shortest Seek Time First (SSTF) algorithm is used compared to the SCAN (Elevator) algorithm (assuming that SCAN algorithm moves towards 100 when it starts execution) is____________ tracks. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "10",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A system contains three programs and each requires three tape units for its operation. The Minimum number of tape units which the system must have such that deadlocks never arise is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A file system with 300 G Byte disk uses a file descriptor with 8 direct block addresses, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3 K Bytes "
+      },
+      {
+        "identifier": "B",
+        "content": "35 K Bytes "
+      },
+      {
+        "identifier": "C",
+        "content": "280 K Bytes "
+      },
+      {
+        "identifier": "D",
+        "content": "dependent on the size of the disk "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "An application loads $$100$$ libraries at startup. Loading each library requires exactly one disk access. The seek time of the disk to random location is given as $$10$$ $$ms$$. Rotational speed of disk is $$6000$$ $$rpm.$$ If all $$100$$ libraries are loaded from random locations on the disk, how long does it take to load all libraries? (The time to transfer data from the disk block once the head has been positioned at the start of the block may be neglected).",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.50s$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1.50s$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1.25s$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.00s$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a disk system with $$100$$ cylinders. The requests to access the cylinders occur in following sequence:\n<br>$$4, 34, 10, 7, 19, 73, 2, 15, 6, 20$$\n<br>Assuming that the head is currently at cylinder $$50,$$ what is the time taken to satisfy all requests if it takes $$1$$ $$ms$$ to move from one cylinder to adjacent one and shortest seek time first policy is used?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$95\\,\\,ms$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$119\\,\\,ms$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$233\\,\\,ms$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$276\\,\\,ms$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "For a magnetic disk with concentric circular tracks, the seek latency is not linearly proportional to the seek distance due to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "non-uniform distribution of requests "
+      },
+      {
+        "identifier": "B",
+        "content": "arm starting and stopping inertia "
+      },
+      {
+        "identifier": "C",
+        "content": "higher capacity of tracks on the periphery of the platter "
+      },
+      {
+        "identifier": "D",
+        "content": "use of unfair arm scheduling policies."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a disk drive with the following specifications:\n<br>$$16$$ surfaces, $$512$$ tracks/surface, $$512$$ sectors/track, $$1$$KB/Sector, rotation speed $$3000$$ rpm. The disk is operated in cycle stealing mode whereby whenever one $$4$$ byte word is ready it it's sent to memory; similarly, for writing, the disk interface reads a $$4$$ byte word from the memory in each $$DMA$$ cycle Memory cycle time is $$40$$nsec. The maximum percentage of time that the $$CPU$$ gets blocked during $$DMA$$ operation is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$25$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$40$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$50$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "In the index allocation scheme of blocks to a file, the maximum possible size of the file depends on ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The size of the blocks, and the size of the address of the blocks. "
+      },
+      {
+        "identifier": "B",
+        "content": "The number of blocks used for the index, and the size of the blocks. "
+      },
+      {
+        "identifier": "C",
+        "content": "The size of the blocks, the number of blocks used for the index, and the size of the address of the blocks."
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Formatting of floppy disk refers to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Arranging the data on the disk in contiguous fashion"
+      },
+      {
+        "identifier": "B",
+        "content": "Writing the directory "
+      },
+      {
+        "identifier": "C",
+        "content": "Erasing the system area"
+      },
+      {
+        "identifier": "D",
+        "content": "Writing identification information on all tracks and sectors."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "If the disk in (a) is rotating at $$3600$$ rpm, determine the effective data transfer rate which is defined as the number of bytes transferred per second between disk and memory.",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$4.8$$ $$MB/S$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The root directory of a disk should be placed: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "At a fixed address in main memory "
+      },
+      {
+        "identifier": "B",
+        "content": "At a fixed location on the disk "
+      },
+      {
+        "identifier": "C",
+        "content": "Any where on the disk"
+      },
+      {
+        "identifier": "D",
+        "content": "At a fixed location on the system disk "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  },
+  {
+    "content": "A certain moving arm disk storage, with one head, has the following specifications. \n<br>Number of track/recording\n<br>Surface $$=200$$\n<br>Disk rotation speed $$=2400$$$$rpm$$\n<br>Track storage capacity $$=62,500$$ $$bits$$\n<br>The average latency of this device is \n<br>$$P$$ $$msec$$ and the data transfer rate is \n<br>$$Q$$ $$bits / sec.$$ Write the value of $$P$$&amp;$$Q$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\eqalign{\n  &amp; P = 12.5\\,\\,ms  \\cr \n  &amp; Q = 2.5\\,\\, \\times \\,\\,{10^6}\\,\\,bits/s \\cr} $$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  },
+  {
+    "content": "State whether the following statement are TRUE or FALSE with reason. The data transfer between memory and $${\\rm I}/O$$ devices using programmed $${\\rm I}/O$$ is fasterthan interrrupt-driven $${\\rm I}/O$$.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Disk requests come to disk driver for cylinders $$10,22,20,2,40,56$$ and $$38,$$ in that order at a time when the disk drive is reading from cylinder $$20.$$ The seek time is $$6msec$$ per cylinder. Compute the total seek time if the disk arm scheduling algorithm is \n<br>(a) First come first served \n<br>(b) Closest cylinder next.",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) $$876$$ $$msec$$\n<br>(b) $$360$$ $$msec$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-cse-1989",
+    "difficulty": null
+  },
+  {
+    "content": "On receiving an interrupt from an $${\\rm I}/O$$ device the $$CPU$$:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "halts for predetermined time."
+      },
+      {
+        "identifier": "B",
+        "content": "hands over control of address bus and data bus to the interrupting device."
+      },
+      {
+        "identifier": "C",
+        "content": "Branches off to the interrupt service routine immediately."
+      },
+      {
+        "identifier": "D",
+        "content": "Branches off to the interrupt service routine after completion of the current instruction."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a disk with following specifications: $$20$$ surface, $$1000$$ tracks/surface, $$16$$ sectors/track, data density $$1$$ $$KB/sector,$$ rotation speed $$3000$$ $$rpm.$$ The operating system initiates the transfer between the disk and the memory sector-wise. Once the head has been placed on the right track, the disk reads a sector in a single scan. It reads bits from the sector while the head is passing over the sector. The read bits are formed into bytes in a serial $$=$$in-parallel-out buffer and each byte is then transferred to memory. The disk writing is exactly a complementary process. For parts $$(c)$$ and $$(d)$$ below, assume memory read-write time $$= 0.1$$ micro-second/ byte, interrupt driven transfer has an interrupt overhead $$= 0.4$$ microseconds, the $$DMA$$ initialization and termination overhead is negligible compared to the total sector transfer time. $$DMA$$ requests are always granted.\n<p>(a) What is the total capacity of the disk?\n<br>(b) What is the data transfer rate?\n<br>(c) What is the percentage of time the $$CPU$$ is required for this disk $${\\rm I}/O$$ for byte-wise interrupts driven transfer?\n<br>(d) What is the maximum percentage of time the $$CPU$$ is held up for this disk $${\\rm I}/O$$ for cycle-stealing $$DMA$$ transfer ?</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) $$500$$ $$MB$$\n<br>(b) $$800$$ $$KB/s$$\n<br>(c) $$25\\% $$\n<br>(d) $$5.4\\% $$",
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a disk with the $$100$$ tracks numbered from $$0$$ to $$99$$ rotating at $$3000$$ $$rpm.$$ The number of sectors per track is $$100.$$ the time to move the head between two successive tracks is $$0.2$$ milliseconds.\n<p>(a) Consider a set of disk requests to read data from tracks $$32, 7, 45, 5$$ and $$10.$$ Assuming that the elevator algorithm is used to schedule disk requests, and the head is initially at track $$25$$ moving up (towards larger track numbers),\nwhat is the total seek time for servicing the requests?\n<br>(b) Consider an initial set of $$100$$ arbitrary disk requests and assume that no new disk requests arrive while servicing these requests. If the head is initially at track $$0$$ and the elevator algorithm is used to schedule disk requests, what is the worst case time to complete all the requests?</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) $$34$$ ms \n<br>(b) $$3.02$$ seconds",
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "A file system with a one-level directory structure is implemented on a disk with disk block size of $$4$$ K bytes. The disk is used as follows:\n<p> Disk-block $$0:$$ File Allocation Table, consisting of one $$8$$-bit entry per date block, representing the data block address of the next date block in the file:</p>\n<p>Disk block $$1:$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ Directory, with one $$32$$ bit entry per file:\n<br>Disk block $$2:$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ Data block $$1;$$\n<br>Disk block $$3:$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ Data block $$2;$$ etc.</p>\n<p>(a) What is the maximum possible number of files?\n<br>(b) What is the maximum possible file size in blocks? </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) Max no of files $$=1024$$\n<br>(b) Max possible file size in blocks $$=254$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The head of a moving head disk with $$100$$ tracks numbered $$0$$ to $$99$$ is currently serving a request at tract $$55.$$ If the queue of requests kept in $$FIFO$$ order is $$10, 70, 75, 23, 65$$ Which of the two disk scheduling algorithms $$FCFS$$ (First Come First Served) and $$SSTF$$ (Shortest Seek Time First) will require less head movement? Find the head movement for each of the algorithms. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$SSTF$$ $$=85$$ movements\n<br>$$FIFO=199$$ movements.",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "If the overhead for formatting a disk is $$96$$ bytes for $$40000$$ bytes sector, Compute the unformatted capacity of the disk of the following parameters:\n<br>Number of surface: $$8$$\n<br>Outer diameter of the disk : $$12cm$$\n<br>Inner diameter of the disk: $$4cm$$\n<br>Inter track space: $$0.1mm$$ \n<br>Number of sectors per track: $$20$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Disk capacity $$=4$$ GB",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Assuming the current disk cylinder to be $$50$$ and the sequence for the cylinders to be\n<br>$$1, 36, 49, 65, 53, 1, 2, 3, 20, 55, 16, 65$$ and $$78$$ find the sequences of servicing using\n<br>(i) shortest-seek time first $$(SSTF)$$\n<br>(ii) elevator disk scheduling polices.",
+    "options": [],
+    "correct_options": [],
+    "answer": "(i) $$49, 53, 55, 65, 78, 36, 20, 16, 12, 3, 1$$\n<br>(ii) $$53, 55, 65, 78, 49, 36, 20, 12, 3, 1$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "A certain moving arm disk-storage device has the following specifications:\n<br>Number of tracks per surface $$=4004$$\n<br>Track storage capacity $$=130030$$ bytes\n<br>Disk speed $$=3600$$ rpm\n<br>Average seek time $$=30$$ m secs.\n<br>Estimate the average latency the disk storage capacity and the data transfer rate.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Disk capacity $$=1.2$$ MB\n<br>Latency $$=9$$ ms\n<br>Data Transfer rate $$=7000$$ Bytes/sec",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  }
+]

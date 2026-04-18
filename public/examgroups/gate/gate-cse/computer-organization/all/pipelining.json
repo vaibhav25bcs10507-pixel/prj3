@@ -1,0 +1,883 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following dependencies among the register operands of different instructions can cause a data hazard in a pipelined processor?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Read-after-read</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Read-after-write</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Write-after-read</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Write-after-write</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>By default program execution sequence is inorder execution.</p>\n<p>So, true data dependency causes the RAW hazard.</p>\n<p>Here, WAR and WAW hazards are not considered because these dependencies are out-of-order execution dependencies.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p><b>An instruction format has the following structure:</b></p><p>Instruction Number: Opcode destination reg, source reg-1, source reg-2</p><p>Consider the following sequence of instructions to be executed in a pipelined processor:</p><p>\nI1: DIV R3, R1, R2\n</p><p>I2: SUB R5, R3, R4</p><p>I3: ADD R3, R5, R6</p><p>I4: MUL R7, R3, R8</p><p>Which of the following statements is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>There is a RAW dependency on R3 between I1 and I2</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>There is a WAR dependency on R3 between I1 and I3</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>There is a RAW dependency on R3 between I2 and I3</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>There is a WAW dependency on R3 between I3 and I4</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>A pipelined processor processes multiple instructions simultaneously at different stages of their execution. Understanding data dependencies in this context is crucial for identifying potential hazards. The common types of dependencies are Read After Write (RAW), Write After Read (WAR), and Write After Write (WAW).</p>\n\n<p>Let's analyze each of the given instructions:</p>\n\n<p>I1: DIV R3, R1, R2<br>\n\n<p>I2: SUB R5, R3, R4<br></p>\n\n<p>I3: ADD R3, R5, R6<br></p>\n\n<p>I4: MUL R7, R3, R8</p></p>\n\n<p>Now, let's evaluate each statement:</p>\n\n<p><b>Option A: There is a RAW dependency on R3 between I1 and I2</b></p>\n\n<p>RAW (Read After Write) dependency occurs when an instruction depends on the result of a previous instruction. Here, I2 reads R3, which is written by I1. Thus, there is a RAW dependency between I1 and I2.<br>\n\n<p>So, this statement is True.</p></p>\n\n<p><b>Option B: There is a WAR dependency on R3 between I1 and I3</b></p>\n\n<p>WAR (Write After Read) dependency occurs when a later instruction overwrites a register that a previous instruction reads. In this case, there is no WAR dependency, as I3 writes to R3, which I1 also writes to, but not reads from.<br>\n\n<p>So, this statement is False.</p></p>\n\n<p><b>Option C: There is a RAW dependency on R3 between I2 and I3</b></p>\n\n<p>This statement examines if I3 reads R3, which is previously affected by I2. However, I3 reads R5 (output of I2), but writes to R3. Thus, there is no RAW dependency on R3 between I2 and I3.<br>\n\n<p>So, this statement is False.</p></p>\n\n<p><b>Option D: There is a WAW dependency on R3 between I3 and I4</b></p>\n\n<p>WAW (Write After Write) dependency occurs when two instructions write to the same register. Here, I3 writes to R3, and the value of R3 is used by I4 (not written by I4). Thus, there is no WAW dependency.<br>\n\n<p>So, this statement is False.</p></p>\n\n<p>Considering all analysis above, only Option A is correct.</p>\n\n<p></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a 5-stage pipelined processor with Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Register Writeback (WB) stages. Which of the following statements about forwarding is/are CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>In a pipelined execution, forwarding means the result from a source stage of an earlier instruction is passed on to the destination stage of a later instruction</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>In forwarding, data from the output of the MEM stage can be passed on to the input of the EX stage of the next instruction</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Forwarding cannot prevent all pipeline stalls</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Forwarding does not require any extra hardware to retrieve the data from the pipeline stages</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze each statement about forwarding in a pipelined processor:</p>\n\n<strong>Option A: In a pipelined execution, forwarding means the result from a source stage of an earlier instruction is passed on to the destination stage of a later instruction.</strong>\n\n<ul>\n\n<br/><li><strong>This statement is CORRECT.</strong> Forwarding is a technique used in pipelined processors to resolve data hazards. It allows the result of an instruction to be forwarded directly to a later instruction that needs it, bypassing the need to wait for it to be written back to the register file.</li>\n\n</ul>\n\n<br/><strong>Option B: In forwarding, data from the output of the MEM stage can be passed on to the input of the EX stage of the next instruction.</strong>\n\n<ul>\n\n<br/><li><strong>This statement is CORRECT.</strong> In a common forwarding scenario, the result of a load instruction (available at the end of the MEM stage) can be forwarded to the EX stage of the next instruction if that instruction depends on the loaded value.</li>\n\n</ul>\n\n<br/><strong>Option C: Forwarding cannot prevent all pipeline stalls.</strong>\n\n<ul>\n\n<br/><li><strong>This statement is CORRECT.</strong> While forwarding is an effective technique for resolving many data hazards, it cannot resolve all types of hazards. For example, hazards caused by load instructions that need to access memory may still require stalls.</li>\n\n</ul>\n\n<br/><strong>Option D: Forwarding does not require any extra hardware to retrieve the data from the pipeline stages.</strong>\n\n<ul>\n\n<br/><li><strong>This statement is INCORRECT.</strong> Forwarding requires additional hardware components called forwarding paths or multiplexers. These components are used to select the appropriate data to be forwarded from the different pipeline stages.</li>\n\n</ul>\n\n<br/><strong>Therefore, the correct statements are Options A, B, and C.</strong>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a 3-stage pipelined processor having a delay of 10 ns (nanoseconds), 20 ns, and 14 ns, for the first, second, and the third stages, respectively. Assume that there is no other delay and the processor does not suffer from any pipeline hazards. Also assume that one instruction is fetched every cycle.</p>\n<p>The total execution time for executing 100 instructions on this processor is ___________ ns.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2040",
+    "explanation": "<p>To determine the total execution time for executing 100 instructions on a 3-stage pipelined processor, where each stage has delays of 10 ns, 20 ns, and 14 ns respectively (with no additional delays or pipeline hazards), we should apply the formula for the total execution time in a pipeline.</p>\n<p>First, we identify the longest stage delay, known as the pipeline cycle time or stage time ($T_p$), which in this case is 20 ns since it's the maximum of the three stage delays (10 ns, 20 ns, 14 ns).</p>\n<p>The total number of instructions is given as 100 ($n$).</p>\n<p>The pipeline depth, which is the number of stages, is 3 ($k$).</p>\n<p>The formula for the total execution time $T$ in a pipeline is given by:</p>\n<p>$$T = (k + (n - 1)) \\times T_p$$</p>\n<p>Substituting the known values:</p>\n<p>$$T = (3 + (100 - 1)) \\times 20$$</p>\n<p>$$T = (3 + 99) \\times 20$$</p>\n<p>$$T = 102 \\times 20$$</p>\n<p>$$T = 2040 \\ ns$$</p>\n<p>Therefore, the total execution time for executing 100 instructions on this processor, when operating ideally as described, is 2040 ns.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "content": "Register renaming is done in pipelined processors",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "as an alternative to register allocation at compile time "
+      },
+      {
+        "identifier": "B",
+        "content": "for efficient access to function parameters and local variables "
+      },
+      {
+        "identifier": "C",
+        "content": "to handle certain kinds of hazards"
+      },
+      {
+        "identifier": "D",
+        "content": "as part of address translation "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "For a pipelined $$CPU$$ with a single $$ALU$$, consider the following situations\n<br>$$1.\\,\\,\\,\\,\\,$$ The $$j+1$$ instruction uses the result of the $$j$$-$$th$$ instruction as an operand\n<br>$$2.\\,\\,\\,\\,\\,$$ The execution of a conditional jump instruction\n<br>$$3.\\,\\,\\,\\,\\,$$ The $$j$$-$$th$$ and $$j+1$$ instruction require the $$ALU$$ at the same time\n<p>Which of the above can cause a hazard?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ and $$2$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ and $$3$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "ALL the three"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Comparing the time $$T1$$ taken for a single instruction on a pipelined $$CPU$$ with time $$T2$$ taken on a non-pipelined but identical $$CPU,$$ we can say that ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$T1 \\le T2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$T1 \\ge T2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$T1 &lt; T2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$T1$$ is $$T2$$ plus the time taken for one instruction fetch cycle"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A non-pipelined instruction execution unit that operates at 1.6 GHz clock takes an average of 5 clock cycles to complete the execution of an instruction. To improve the performance, the system was pipelined with a goal of achieving an average throughput of one instruction per clock cycle. However, it could operate only at 1.2 GHz due to pipeline overheads. While executing a program in the pipelined design, $30 \\%$ of instructions encountered a stall of 2 cycles due to pipeline hazards. The speed-up obtained by the pipelined design over the non-pipelined one for this program is $\\_\\_\\_\\_$ (rounded off to two decimal places)</p>\n<p>Note: $1 \\mathrm{G}=10^9$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.34",
+    "explanation": "<p><b>Step 1: Calculate the execution time per instruction for the non-pipelined unit</b></p>\n<p>\n\nThe clock speed is $1.6$ GHz, which means one clock cycle takes $\\frac{1}{1.6}$ nanoseconds.\n\n</p>\n<p>\n\nEach instruction needs $5$ clock cycles, so\n\n$$ \\text{Execution Time (Non-pipelined)} = 5 \\times \\frac{1}{1.6} \\ \\text{ns} = 3.125 \\ \\text{ns} $$\n\n</p>\n<p><b>Step 2: Calculate the execution time per instruction for the pipelined unit</b></p>\n<p>\n\nThe pipelined unit’s clock speed is $1.2$ GHz, so one clock cycle takes $\\frac{1}{1.2}$ nanoseconds.\n\n</p>\n<p>\n\nThere is a stall of $2$ cycles for $30\\%$ of instructions. So, every instruction, on average, sees $(0.3 \\times 2)$ extra cycles.\n\n</p>\n<p>\n\nTherefore, average cycles per instruction $= 1 + (0.3 \\times 2) = 1.6$ cycles.\n\n</p>\n<p>\n\nAverage execution time per instruction in pipelined system is\n\n$$ \\text{Execution Time (Pipelined)} = 1.6 \\times \\frac{1}{1.2} \\ \\text{ns} = 1.333\\ \\text{ns} $$\n\n</p>\n<p><b>Step 3: Find the speed-up</b></p>\n<p>\n\nSpeed-up $S = \\frac{\\text{Execution Time (Non-pipelined)}}{\\text{Execution Time (Pipelined)}} = \\frac{3.125}{1.333} \\approx 2.34$\n\n</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The EX stage of a pipelined processor performs the memory read operations for LOAD instructions, and the operations for the arithmetic and logic instructions. Let $t_{E X}$ denote the time taken by the EX stage to perform the operation for an instruction. For each instruction type, the values of $t_{E X}$ and $M$ (the number of instructions of that type in a sequence of 100 instructions for a program $P$ ), are given in the table below. The duration of the pipeline clock cycle is 1 nanosecond. Assume that the latch time for the interstage buffers in the pipeline is negligible.</p>\n<style type=\"text/css\">\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n\n.tg .tg-baqh{text-align:center;vertical-align:top}\n\n</style>\n<table class=\"tg\"><thead>\n\n  <tr>\n\n    <th class=\"tg-baqh\">Instruction</th>\n\n    <th class=\"tg-baqh\">$$<br>t_{E X} \\text { in nanoseconds }<br>$$</th>\n\n    <th class=\"tg-baqh\">M</th>\n\n  </tr></thead>\n\n<tbody>\n\n  <tr>\n\n    <td class=\"tg-baqh\">LOAD</td>\n\n    <td class=\"tg-baqh\">1.8</td>\n\n    <td class=\"tg-baqh\">15</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">IMUL</td>\n\n    <td class=\"tg-baqh\">1.5</td>\n\n    <td class=\"tg-baqh\">10</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">IDIV</td>\n\n    <td class=\"tg-baqh\">2.5</td>\n\n    <td class=\"tg-baqh\">5</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">FADD</td>\n\n    <td class=\"tg-baqh\">1.7</td>\n\n    <td class=\"tg-baqh\">10</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">FSUB</td>\n\n    <td class=\"tg-baqh\">1.7</td>\n\n    <td class=\"tg-baqh\">5</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">FMUL</td>\n\n    <td class=\"tg-baqh\">2.8</td>\n\n    <td class=\"tg-baqh\">15</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">FDIV</td>\n\n    <td class=\"tg-baqh\">3.2</td>\n\n    <td class=\"tg-baqh\">5</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-baqh\">All other instruction</td>\n\n    <td class=\"tg-baqh\">Less than 1.0</td>\n\n    <td class=\"tg-baqh\">35</td>\n\n  </tr>\n\n</tbody></table>\n<p>When program $P$ is executed, the number of clock cycles for which the pipeline is stalled due to structural hazards in the EX stage is $\\_\\_\\_\\_$ . (answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "95",
+    "explanation": "<p>Pipeline clock cycle $=1 \\mathrm{~ns}$</p>\n<p>When EX-stage takes more than 1 ns then it takes more than 1 pipeline cycle.</p>\n<table class=\"tabular\">\n\n<tbody>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">Instruction</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">Execution time</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">Number of cycle required</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">LOAD</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">1.8 ns</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \"><span class=\"math-inline \"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>2</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>2</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n</math></mathmlword><asciimath style=\"display: none;\">2=&gt;</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"4.022ex\" height=\"1.561ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -666 1777.8 690\" style=\"vertical-align: -0.054ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(777.8,0)\"><path data-c=\"21D2\" d=\"M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z\"></path></g></g></g></svg></mjx-container></span> stalls <span class=\"math-inline \"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>2</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>1</mn>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>2</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>1</mn>\n\n</math></mathmlword><asciimath style=\"display: none;\">(2-1)=1</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"10.937ex\" height=\"2.262ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 4834 1000\" style=\"vertical-align: -0.566ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><path data-c=\"28\" d=\"M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(389,0)\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(1111.2,0)\"><path data-c=\"2212\" d=\"M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(2111.4,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(2611.4,0)\"><path data-c=\"29\" d=\"M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(3278.2,0)\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(4334,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g></g></g></svg></mjx-container></span></td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">IMUL</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">1.5 ns</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \"><span class=\"math-inline \"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>2</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>2</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>1</mn>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>2</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>2</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>1</mn>\n\n</math></mathmlword><asciimath style=\"display: none;\">2=&gt;(2-1)=1</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15.587ex\" height=\"2.262ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 6889.6 1000\" style=\"vertical-align: -0.566ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(777.8,0)\"><path data-c=\"21D2\" d=\"M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(2055.6,0)\"><path data-c=\"28\" d=\"M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(2444.6,0)\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(3166.8,0)\"><path data-c=\"2212\" d=\"M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(4167,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(4667,0)\"><path data-c=\"29\" d=\"M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(5333.8,0)\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(6389.6,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g></g></g></svg></mjx-container></span></td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">IDIV</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">2.5 ns</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \"><span class=\"math-inline \"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>3</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>3</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>2</mn>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>3</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>3</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>2</mn>\n\n</math></mathmlword><asciimath style=\"display: none;\">3=&gt;(3-1)=2</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15.587ex\" height=\"2.262ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 6889.6 1000\" style=\"vertical-align: -0.566ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><path data-c=\"33\" d=\"M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(777.8,0)\"><path data-c=\"21D2\" d=\"M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(2055.6,0)\"><path data-c=\"28\" d=\"M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(2444.6,0)\"><path data-c=\"33\" d=\"M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(3166.8,0)\"><path data-c=\"2212\" d=\"M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(4167,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(4667,0)\"><path data-c=\"29\" d=\"M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(5333.8,0)\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(6389.6,0)\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g></g></g></svg></mjx-container></span></td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">FADD</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">1.7 ns</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \"><span class=\"math-inline \"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>2</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>2</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>1</mn>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>2</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>2</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>1</mn>\n\n</math></mathmlword><asciimath style=\"display: none;\">2=&gt;(2-1)=1</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15.587ex\" height=\"2.262ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 6889.6 1000\" style=\"vertical-align: -0.566ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(777.8,0)\"><path data-c=\"21D2\" d=\"M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(2055.6,0)\"><path data-c=\"28\" d=\"M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(2444.6,0)\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(3166.8,0)\"><path data-c=\"2212\" d=\"M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(4167,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(4667,0)\"><path data-c=\"29\" d=\"M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(5333.8,0)\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(6389.6,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g></g></g></svg></mjx-container></span></td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">FSUB</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">1.7 ns</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \"><span class=\"math-inline \"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>2</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>2</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>1</mn>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>2</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>2</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>1</mn>\n\n</math></mathmlword><asciimath style=\"display: none;\">2=&gt;(2-1)=1</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15.587ex\" height=\"2.262ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 6889.6 1000\" style=\"vertical-align: -0.566ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(777.8,0)\"><path data-c=\"21D2\" d=\"M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(2055.6,0)\"><path data-c=\"28\" d=\"M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(2444.6,0)\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(3166.8,0)\"><path data-c=\"2212\" d=\"M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(4167,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(4667,0)\"><path data-c=\"29\" d=\"M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(5333.8,0)\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(6389.6,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g></g></g></svg></mjx-container></span></td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">FMUL</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">2.8 ns</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \"><span class=\"math-inline \"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>3</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>3</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>2</mn>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>3</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>3</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>2</mn>\n\n</math></mathmlword><asciimath style=\"display: none;\">3=&gt;(3-1)=2</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15.587ex\" height=\"2.262ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 6889.6 1000\" style=\"vertical-align: -0.566ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><path data-c=\"33\" d=\"M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(777.8,0)\"><path data-c=\"21D2\" d=\"M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(2055.6,0)\"><path data-c=\"28\" d=\"M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(2444.6,0)\"><path data-c=\"33\" d=\"M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(3166.8,0)\"><path data-c=\"2212\" d=\"M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(4167,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(4667,0)\"><path data-c=\"29\" d=\"M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(5333.8,0)\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(6389.6,0)\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g></g></g></svg></mjx-container></span></td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">FDIV</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">3.2 ns</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \"><span class=\"math-inline \"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>4</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>4</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>3</mn>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>4</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>4</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>3</mn>\n\n</math></mathmlword><asciimath style=\"display: none;\">4=&gt;(4-1)=3</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15.587ex\" height=\"2.262ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 6889.6 1000\" style=\"vertical-align: -0.566ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><path data-c=\"34\" d=\"M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(777.8,0)\"><path data-c=\"21D2\" d=\"M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(2055.6,0)\"><path data-c=\"28\" d=\"M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(2444.6,0)\"><path data-c=\"34\" d=\"M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(3166.8,0)\"><path data-c=\"2212\" d=\"M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(4167,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(4667,0)\"><path data-c=\"29\" d=\"M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(5333.8,0)\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(6389.6,0)\"><path data-c=\"33\" d=\"M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z\"></path></g></g></g></svg></mjx-container></span></td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Other instruction</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">Less than 1 ns</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \"><span class=\"math-inline \"><mathml style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>1</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>0</mn>\n\n</math></mathml><mathmlword style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">⇒</mo>\n\n  <mo stretchy=\"false\">(</mo>\n\n  <mn>1</mn>\n\n  <mo>−</mo>\n\n  <mn>1</mn>\n\n  <mo stretchy=\"false\">)</mo>\n\n  <mo>=</mo>\n\n  <mn>0</mn>\n\n</math></mathmlword><asciimath style=\"display: none;\">1=&gt;(1-1)=0</asciimath><mjx-container class=\"MathJax\" jax=\"SVG\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15.587ex\" height=\"2.262ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 6889.6 1000\" style=\"vertical-align: -0.566ex;\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(777.8,0)\"><path data-c=\"21D2\" d=\"M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(2055.6,0)\"><path data-c=\"28\" d=\"M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(2444.6,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(3166.8,0)\"><path data-c=\"2212\" d=\"M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(4167,0)\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(4667,0)\"><path data-c=\"29\" d=\"M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(5333.8,0)\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"mn\" transform=\"translate(6389.6,0)\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></svg></mjx-container></span></td>\n\n</tr>\n\n</tbody>\n\n</table>\n<p>$$ \\begin{aligned} \\therefore \\text { Number of stalls required in EX-stage } & =(15 \\times 1)+(10 \\times 1)+(5 \\times 2)+(10 \\times 1) \\\\ & +(5 \\times 1)+(15 \\times 2)+(5 \\times 3)=(35 \\times 0) \\\\ = & 95 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A 5-stage instruction pipeline has stage delays of $180,250,150,170$, and 250 , respectively, in nanoseconds. The delay of an inter-stage latch is 10 nanoseconds. Assume that there are no pipeline stalls due to branches and other hazards. The time taken to process 1000 instructions in microseconds is ________ . (Rounded off to two decimal places)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "261.04",
+    "explanation": "<p>We begin by determining the clock cycle time for the pipeline. In an ideal pipeline, the clock cycle time is determined by the slowest stage delay plus the inter-stage latch delay.</p>\n\n<p>Identify the stage delays:  </p>\n\n\n<p><p>Stage 1: 180 ns  </p></p>\n<p><p>Stage 2: 250 ns  </p></p>\n<p><p>Stage 3: 150 ns  </p></p>\n<p><p>Stage 4: 170 ns  </p></p>\n<p><p>Stage 5: 250 ns  </p></p>\n\n\n<p><p>Calculate the maximum stage delay:  </p>\n<p>$$\\text{Max stage delay} = 250 \\text{ ns}$$</p></p>\n<p><p>Include the latch delay:  </p>\n<p>$$t_{cycle} = 250 \\text{ ns} + 10 \\text{ ns} = 260 \\text{ ns}$$</p></p>\n\n<p>Next, we consider processing 1000 instructions in the pipeline. In a pipeline with 5 stages, the first instruction takes 5 cycles to complete and each subsequent instruction completes one cycle after the previous one. Thus, the total number of cycles required is:</p>\n<p>$$\\text{Total cycles} = 1000 + (5 - 1) = 1000 + 4 = 1004 \\text{ cycles}$$</p>\n<p>Now, calculate the total processing time:</p>\n<p>$$\\text{Total time} = 1004 \\times 260 \\text{ ns} = 261040 \\text{ ns}$$</p>\n<p>Finally, converting nanoseconds to microseconds:</p>\n<p>$$261040 \\text{ ns} = \\frac{261040}{1000} \\text{ µs} = 261.04 \\text{ µs}$$</p>\n<p>Thus, the time taken to process 1000 instructions is $$\\boxed{261.04 \\text{ microseconds}}.$$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An application executes $6.4 \\times 10^8$ number of instructions in 6.3 seconds. There are four types of instructions, the details of which are given in the table. The duration of a clock cycle in nanoseconds is _________. (rounded off to one decimal place)</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}\n.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}\n.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 574px\"><colgroup>\n<col style=\"width: 124px\">\n<col style=\"width: 200px\">\n<col style=\"width: 250px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-7btt\">Instruction <br>type</th>\n    <th class=\"tg-7btt\">Clock cycles<br> required per <br>instruction (CPI)</th>\n    <th class=\"tg-7btt\">Number of<br>Instructions<br>executed</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-0pky\">Branch</td>\n    <td class=\"tg-c3ow\">2</td>\n    <td class=\"tg-c3ow\">$2.25\\times10^8$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0pky\">Load</td>\n    <td class=\"tg-c3ow\">5</td>\n    <td class=\"tg-c3ow\">$1.20\\times10^8$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0pky\">Store</td>\n    <td class=\"tg-c3ow\">4</td>\n    <td class=\"tg-c3ow\">$1.65\\times10^8$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">Arithmetic</td>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">$1.30\\times10^8$</td>\n  </tr>\n</tbody>\n</table></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p>To determine the duration of a clock cycle in nanoseconds, we follow these steps:</p>\n\n<p><p><strong>Program Execution Time (ET):</strong> The program's execution time is 6.3 seconds.</p></p>\n<p><p><strong>Number of Instructions Executed:</strong> The application executes $6.4 \\times 10^8$ instructions.</p></p>\n<p><p><strong>Clock Cycles Calculation:</strong></p>\n<p>The total number of cycles is calculated using the Clock Cycles Per Instruction (CPI) for each type of instruction:</p>\n<p>$    \\text{Cycles} = [(2 \\times 2.25) + (5 \\times 1.2) + (4 \\times 1.65) + (3 \\times 1.3)] \\times 10^8    $</p>\n<p>Simplifying this gives:</p>\n<p>$    = [4.5 + 6 + 6.6 + 3.9] \\times 10^8 = 21 \\times 10^8 \\text{ cycles}    $</p></p>\n<p><p><strong>Cycle Time Calculation:</strong></p>\n<p>Given the total execution time is 6.3 seconds for $(21 \\times 10^8)$ cycles, we find the duration of one cycle:</p>\n<p>$    \\text{Cycle Time} = \\frac{6.3 \\text{ sec}}{21 \\times 10^8} = 0.3 \\times 10^{-8} \\text{ sec}    $</p>\n<p>Converting seconds to nanoseconds:</p>\n<p>$    = 3 \\times 10^{-9} \\text{ sec} = 3 \\text{ ns}    $</p></p>\n\n<p>Hence, the duration of a clock cycle is 3 nanoseconds.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A non-pipelined instruction execution unit operating at 2 GHz takes an average of 6 cycles to execute an instruction of a program P. The unit is then redesigned to operate on a 5-stage pipeline at 2 GHz. Assume that the ideal throughput of the pipelined unit is 1 instruction per cycle. In the execution of program P, 20% instructions incur an average of 2 cycles stall due to data hazards and 20% instructions incur an average of 3 cycles stall due to control hazards. The speedup (rounded off to one decimal place) obtained by the pipelined design over the non-pipelined design is ________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.9TO3.1",
+    "explanation": "<p>For a non-pipelined unit operating at 2 GHz:</p>\n\n<p></p><p>Time per cycle $ T_n $ is calculated as:</p>\n<p>$   T_n = \\frac{1}{\\text{Frequency}} = \\frac{1}{2 \\text{ GHz}} = \\frac{1}{2 \\times 10^9} \\text{ seconds} = 0.5 \\text{ ns}   $</p><p></p>\n<p></p><p>The average instruction execution time is:</p>\n<p>$   \\text{Non-pipelined Execution Time} = \\text{CPI}_{\\text{non-pipelined}} \\times T_n = 6 \\times 0.5 \\text{ ns} = 3.0 \\text{ ns}   $</p><p></p>\n\n<p>For a pipelined unit also operating at 2 GHz:</p>\n\n<p></p><p>Time per cycle $ T_p $ remains:</p>\n<p>$   T_p = \\frac{1}{\\text{Frequency}} = \\frac{1}{2 \\text{ GHz}} = \\frac{1}{2 \\times 10^9} \\text{ seconds} = 0.5 \\text{ ns}   $</p><p></p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lzz9pmhx/172bacec-be43-4336-9429-d07d94d4a29a/99b81550-5d36-11ef-952d-ff6737af698d/file-jaoe38c1lzz9pmhy.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lzz9pmhx/172bacec-be43-4336-9429-d07d94d4a29a/99b81550-5d36-11ef-952d-ff6737af698d/file-jaoe38c1lzz9pmhy.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 2 Computer Organization - Pipelining Question 6 English Explanation\">\n\n<p></p><p>Considering data hazards and control hazards, the average CPI (Cycles Per Instruction) for the pipelined unit can be calculated as follows:</p>\n<p>$   \\text{CPI}_{\\text{pipelined}} = 0.6(1+0) + 0.2(1+3) + 0.2(1+2)   $</p>\n<p>$   \\text{CPI}_{\\text{pipelined}} = 0.6 \\times 1 + 0.2 \\times 4 + 0.2 \\times 3 = 0.6 + 0.8 + 0.6 = 2.0   $</p><p></p>\n<p></p><p>The average instruction execution time for the pipelined unit is then:</p>\n<p>$   \\text{Pipelined Execution Time} = \\text{CPI}_{\\text{pipelined}} \\times T_p = 2 \\times 0.5 \\text{ ns} = 1 \\text{ ns}   $</p><p></p>\n\n<p>Finally, the speedup obtained by the pipelined design over the non-pipelined design is:</p>\n<p>$ \\text{Speedup} = \\frac{T_n}{T_p} = \\frac{3 \\text{ ns}}{1 \\text{ ns}} = 3 $</p>\n<p>Hence, the speedup is 3.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The baseline execution time of a program on a 2 GHz single core machine is 100 nanoseconds (<b>ns</b>). The code corresponding to 90% of the execution time can be fully parallelized. The overhead for using an additional core is 10 <b>ns</b> when running on a multicore system. Assume that all cores in the multicore system run their share of the parallelized code for an equal amount of time.</p>\n$$\n\\text { The number of cores that minimize the execution time of the program is _______. }\n$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p>To determine the number of cores that minimize the execution time of the program, we need to analyze the effects of parallelizing the code. We'll use Amdahl's Law, which provides the theoretical maximum speedup of a program using multiple processors.</p>\n\n<p>Amdahl's Law is given by:</p>\n\n<p>$$ \\text{Speedup} = \\frac{1}{(1 - P) + \\frac{P}{N}} $$</p>\n\n<p>where:</p>\n\n<ul>\n\n<li><b>P</b> is the fraction of the program that can be parallelized.</li>\n\n<li><b>N</b> is the number of processors (cores).</li>\n\n</ul>\n\n<p>In this problem, we are given:</p>\n\n<ul>\n\n<li>Baseline execution time $T_{\\text{base}} = 100 \\text{ ns}$</li>\n\n<li>The parallelizable fraction $P = 0.9$ (90% of the execution time can be parallelized)</li>\n\n<li>Overhead per additional core = 10 ns</li>\n\n</ul>\n\n<p>First, let's calculate the execution time with <b>N</b> cores. The execution time consists of two parts:</p>\n\n<ol>\n\n<li>The non-parallelizable portion of the program, which remains the same regardless of the number of cores.</li>\n\n<li>The parallelizable portion of the program, which is divided among the cores, plus the overhead.</li>\n\n</ol>\n\n<p>The non-parallelizable portion is:</p>\n\n<p>$$ T_{\\text{non-parallel}} = (1 - P) \\times T_{\\text{base}} $$</p>\n\n<p>The parallelizable portion is:</p>\n\n<p>$$ T_{\\text{parallel}} = \\frac{P \\times T_{\\text{base}}}{N} + \\text{Overhead} \\times (N-1) $$</p>\n\n<p>So, the total execution time with <b>N</b> cores is:</p>\n\n<p>$$ T_{\\text{total}}(N) = T_{\\text{non-parallel}} + T_{\\text{parallel}} $$</p>\n\n<p>Let's substitute the values:</p>\n\n<p>$$ T_{\\text{non-parallel}} = (1 - 0.9) \\times 100 \\text{ ns} = 0.1 \\times 100 \\text{ ns} = 10 \\text{ ns} $$</p>\n\n<p>$$ T_{\\text{parallel}} = \\frac{0.9 \\times 100 \\text{ ns}}{N} + 10 \\text{ ns} \\times (N-1) $$</p>\n\n<p>Therefore, the total execution time is:</p>\n\n<p>$$ T_{\\text{total}}(N) = 10 \\text{ ns} + \\frac{90 \\text{ ns}}{N} + 10 \\text{ ns} \\times (N-1) $$</p>\n\n<p>Let's simplify it:</p>\n\n<p>$$ T_{\\text{total}}(N) = 10 \\text{ ns} + \\frac{90 \\text{ ns}}{N} + 10 N - 10 \\text{ ns} $$</p>\n\n<p>$$ T_{\\text{total}}(N) = \\frac{90 \\text{ ns}}{N} + 10 N \\text{ ns} $$</p>\n\n<p>To minimize the total execution time, we need to find the value of <b>N</b> that minimizes this function. Let’s derive the execution time with respect to <b>N</b> and set the derivative to zero.</p>\n\n<p>$$ \\frac{d}{dN} T_{\\text{total}}(N) = -\\frac{90 \\text{ ns}}{N^2} + 10 \\text{ ns} $$</p>\n\n<p>Set the derivative to zero to find the optimal number of cores:</p>\n\n<p>$$ -\\frac{90 \\text{ ns}}{N^2} + 10 \\text{ ns} = 0 $$</p>\n\n<p>$$ -\\frac{90}{N^2} + 10 = 0 $$</p>\n\n<p>$$ \\frac{90}{N^2} = 10 $$</p>\n\n<p>$$ N^2 = \\frac{90}{10} $$</p>\n\n<p>$$ N^2 = 9 $$</p>\n\n<p>$$ N = \\sqrt{9} = 3 $$</p>\n\n<p>Therefore, the number of cores that minimize the execution time of the program is 3.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A processor X<sub>1</sub> operating at 2 GHz has a standard 5-stage RISC instruction pipeline having a base CPI (cycles per instruction) of one without any pipeline hazards. For a given program P that has 30% branch instructions, control hazards incur 2 cycles stall for every branch. A new version of the processor X<sub>2</sub> operating at same clock frequency has an additional branch predictor unit (BPU) that completely eliminates stalls for correctly predicted branches. There is neither any savings nor any additional stalls for wrong predictions. There are no structural hazards and data hazards for X<sub>1</sub> and X<sub>2</sub>. If the BPU has a prediction accuracy of 80%, the speed up (rounded off to two decimal places) obtained by X<sub>2</sub> over X<sub>1</sub> in executing P is ____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.42TO1.43",
+    "explanation": "<p>Cycle time = $$\\frac{1}{2\\  GHz} \\  sec $$ = 0.5 ns</p>\n<p>X<sub>1</sub> : Without branch prediction</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02mqt2l/4d285136-7592-4e69-8584-7853616c5bfd/2197d5d0-9658-11ec-8a72-632e293a0c47/file-1l02mqt2m.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02mqt2l/4d285136-7592-4e69-8584-7853616c5bfd/2197d5d0-9658-11ec-8a72-632e293a0c47/file-1l02mqt2m.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Computer Organization - Pipelining Question 11 English Explanation 1\"></p>\n<p>E<sub>T</sub> = (1 + Number of stalls/instruction) cycle time = [1 + (0.3) $$\\times$$ 2] 0.5 ns = 0.8 ns</p>\n<p>X<sub>2</sub> : With branch prediction</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02msgk9/182f0a04-b2d8-4cd9-bc65-9a08dfb0cbda/4f8c5c90-9658-11ec-8a72-632e293a0c47/file-1l02msgka.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02msgk9/182f0a04-b2d8-4cd9-bc65-9a08dfb0cbda/4f8c5c90-9658-11ec-8a72-632e293a0c47/file-1l02msgka.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Computer Organization - Pipelining Question 11 English Explanation 2\"></p>\n<p>E<sub>T</sub> = [1 + (0.3 $$\\times$$ 0.2 $$\\times$$ 2)] 0.5 ns = 0.56 ns</p>\n<p>S = $${{0.8} \\over {0.56}} = 1.42$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider a pipelined processor with 5 stages, Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Write Back (WB). Each stage of the pipeline, except the EX stage, takes one cycle. Assume that the ID stage merely decodes the instruction and the register read is performed in the EX stage. The EX stage takes one cycle for ADD instruction and two cycles for MUL instruction. Ignore pipeline register latencies.</p>\n\n<p>Consider the following sequence of 8 instructions:</p>\n\n<p>ADD, MUL, ADD, MUL, ADD, MUL, ADD, MUL</p>\n\n<p>Assume that every MUL instruction is data-dependent on the ADD instruction just before it and every ADD instruction (except the first ADD) is data-dependent on the MUL instruction just before it. The speedup is defined as follows:</p>\n\n<p>$$Speedup = \\frac{{Execution{\\:}time{\\:}without{\\:}operand{\\:}forwarding}}{{Execution{\\:}time{\\:}with{\\:}operand{\\:}forwarding}}$$</p>\n\n<p>The Speedup achieved in executing the given instruction sequence on the pipelined processor (rounded to 2 decimal places) is _______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.87TO1.88",
+    "explanation": "<p>To solve this problem, we'll compute the execution times of the instruction sequence both <strong>without</strong> and <strong>with</strong> operand forwarding, and then calculate the speedup.</p>\n<h3><strong>Given:</strong></h3>\n\n<p><p><strong>Pipeline Stages:</strong></p></p>\n<p><p><strong>IF</strong>: Instruction Fetch (1 cycle)</p></p>\n<p><p><strong>ID</strong>: Instruction Decode (1 cycle)</p></p>\n<p><p><strong>EX</strong>: Execute</p>\n\n<p><p><strong>ADD</strong>: 1 cycle</p></p>\n<p><p><strong>MUL</strong>: 2 cycles</p></p></p>\n<p><p><strong>MEM</strong>: Memory Access (1 cycle)</p></p>\n<p><p><strong>WB</strong>: Write Back (1 cycle)</p></p>\n<p><p><strong>Dependencies:</strong></p></p>\n<p><p>Each <strong>MUL</strong> depends on the previous <strong>ADD</strong>.</p></p>\n<p><p>Each <strong>ADD</strong> (except the first) depends on the previous <strong>MUL</strong>.</p></p>\n<p><p><strong>Register Read:</strong> Performed in the <strong>EX</strong> stage.</p></p>\n<p><p><strong>Operand Forwarding:</strong> Allows results to be forwarded from one stage to another to reduce stalls.</p></p>\n\n<h3><strong>Instruction Sequence:</strong></h3>\n\n<p><p><strong>I₁:</strong> ADD</p></p>\n<p><p><strong>I₂:</strong> MUL (depends on I₁)</p></p>\n<p><p><strong>I₃:</strong> ADD (depends on I₂)</p></p>\n<p><p><strong>I₄:</strong> MUL (depends on I₃)</p></p>\n<p><p><strong>I₅:</strong> ADD (depends on I₄)</p></p>\n<p><p><strong>I₆:</strong> MUL (depends on I₅)</p></p>\n<p><p><strong>I₇:</strong> ADD (depends on I₆)</p></p>\n<p><p><strong>I₈:</strong> MUL (depends on I₇)</p></p>\n\n<hr />\n<h3><strong>Execution Without Operand Forwarding:</strong></h3>\n<p>We need to introduce stalls to ensure that dependent instructions do not proceed until the required data is available.</p>\n<h4><strong>Pipeline Schedule:</strong></h4>\n<table align=\"left\" border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 450px;\" width=\"649\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p align=\"center\"><span style=\"font-weight: 700;\">WB</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width: 30px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">3</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">4</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">5</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">6</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">7</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">8</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p align=\"center\"><span style=\"font-weight: 700;\">MEM</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width: 30px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">3</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">4</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">5</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">6</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">7</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">8</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p align=\"center\"><span style=\"font-weight: 700;\">EX</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width: 30px;\">\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">3</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">4</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">4</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">5</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">6</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">6</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">7</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">8</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">8</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p align=\"center\"><span style=\"font-weight: 700;\">ID</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span></p>\n\t\t\t</td>\n\t\t\t<td style=\"width: 30px;\">\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">3</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">4</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">5</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">6</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">7</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">8</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p align=\"center\"><span style=\"font-weight: 700;\">IF</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span></p>\n\t\t\t</td>\n\t\t\t<td style=\"width: 30px;\">\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">3</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">4</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">5</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">6</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">7</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">8</span></p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<ul>\n\t<li>&nbsp;</li>\n\t<li>&nbsp;</li>\n</ul>\n\n<p>&nbsp;</p>\n\n<br/><p><strong>Total Cycles:</strong> <strong>30</strong></p>\n\n<hr />\n<h3><strong>Execution With Operand Forwarding:</strong></h3>\n<p>Operand forwarding allows dependent instructions to proceed without waiting for the result to be written back.</p>\n<h4><strong>Pipeline Schedule:</strong></h4>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:450px;\" width=\"639\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width:45px;\">\n\t\t\t<p align=\"center\"><strong>WB</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>1</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>2</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>3</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>4</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>5</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>6</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>7</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>8</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:45px;\">\n\t\t\t<p align=\"center\"><strong>MEM</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>1</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>2</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>3</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>4</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>5</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>6</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>7</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>8</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:45px;\">\n\t\t\t<p align=\"center\"><strong>EX</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>1</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>2</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>2</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>3</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>4</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>4</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>5</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>6</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>6</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>7</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>8</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>8</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:45px;\">\n\t\t\t<p align=\"center\"><strong>ID</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>1</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>2</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>3</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>4</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>5</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>6</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>7</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>8</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:45px;\">\n\t\t\t<p align=\"center\"><strong>IF</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>1</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>2</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>3</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>4</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>5</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>6</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>7</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">I<sub>8</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">-</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:45px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">1</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">2</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">3</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">4</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">5</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">6</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">7</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">8</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">9</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">10</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">11</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">12</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">13</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">14</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">15</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">16</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:35px;\">\n\t\t\t<p align=\"center\">&nbsp;</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p><strong>Total Cycles:</strong> <strong>16</strong></p>\n\n<hr />\n<h3><strong>Calculating Speedup:</strong></h3>\n<p>$ \\text{Speedup} = \\frac{\\text{Execution time without operand forwarding}}{\\text{Execution time with operand forwarding}} = \\frac{30}{16} = 1.875 \\approx \\textbf{1.88} $</p>\n<p><strong>Answer:</strong> 1.88</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>A five-stage pipeline has stage delays of 150, 120, 150, 160 and 140 nanoseconds. The registers that are used between the pipeline stages have a delay of 5 nanoseconds each.</p>\n\n<p>The total time to execute 100 independent instructions on this pipeline, assuming there are no pipeline stalls, is ______ nanoseconds.</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "17160",
+    "explanation": "<p>To find the total time required to execute 100 independent instructions on the given pipeline, we'll follow these steps:</p>\n<h3><strong>Given Parameters:</strong></h3>\n\n<p><p><strong>Pipeline Stages and Delays (in nanoseconds):</strong></p>\n<table border=\"1\">\n  <tr>\n    <th>Stage Number</th>\n    <th>Stage Delay (ns)</th>\n  </tr>\n  <tr>\n    <td>Stage 1</td>\n    <td>150</td>\n  </tr>\n  <tr>\n    <td>Stage 2</td>\n    <td>120</td>\n  </tr>\n  <tr>\n    <td>Stage 3</td>\n    <td>150</td>\n  </tr>\n  <tr>\n    <td>Stage 4</td>\n    <td>160</td>\n  </tr>\n  <tr>\n    <td>Stage 5</td>\n    <td>140</td>\n  </tr>\n</table>\n\n<p><p><strong>Pipeline Register Delay:</strong> 5 ns (between each stage)</p></p>\n<p><p><strong>Number of Instructions:</strong> 100</p></p>\n<p><p><strong>No Pipeline Stalls</strong></p></p>\n\n<h3><strong>Step 1: Calculate the Clock Cycle Time</strong></h3>\n<p>In a pipelined processor, the <strong>clock cycle time</strong> is determined by the stage with the <strong>maximum delay</strong>, including the delay of the pipeline registers.</p>\n<p>For each stage, the total delay is:</p>\n<p>$ \\text{Total Stage Delay} = \\text{Stage Delay} + \\text{Pipeline Register Delay} $</p>\n<p>Compute the total delay for each stage:</p>\n\n<p><p><strong>Stage 1:</strong></p>\n<p>$    150 \\text{ ns} + 5 \\text{ ns} = 155 \\text{ ns}    $</p></p>\n<p><p><strong>Stage 2:</strong></p>\n<p>$    120 \\text{ ns} + 5 \\text{ ns} = 125 \\text{ ns}    $</p></p>\n<p><p><strong>Stage 3:</strong></p>\n<p>$    150 \\text{ ns} + 5 \\text{ ns} = 155 \\text{ ns}    $</p></p>\n<p><p><strong>Stage 4:</strong></p>\n<p>$    160 \\text{ ns} + 5 \\text{ ns} = 165 \\text{ ns}    $</p></p>\n<p><p><strong>Stage 5:</strong></p>\n<p>$    140 \\text{ ns} + 5 \\text{ ns} = 145 \\text{ ns}    $</p></p>\n\n<p><strong>Maximum Total Delay:</strong> 165 ns (Stage 4)</p>\n<p><strong>Clock Cycle Time:</strong> 165 ns</p>\n<h3><strong>Step 2: Calculate the Total Execution Time</strong></h3>\n<p>In a pipeline with <strong>no stalls</strong>, the total execution time for $ n $ instructions in a pipeline with $ m $ stages is given by:</p>\n<p>$ \\text{Total Time} = (\\text{Number of Instructions} + \\text{Number of Pipeline Stages} - 1) \\times \\text{Clock Cycle Time} $</p>\n<p>Plugging in the values:</p>\n\n<p><p><strong>Number of Instructions ($ n $)</strong>: 100</p></p>\n<p><p><strong>Number of Pipeline Stages ($ m $)</strong>: 5</p></p>\n<p><p><strong>Clock Cycle Time</strong>: 165 ns</p></p>\n\n<p>Compute:</p>\n<p>$ \\text{Total Time} = (100 + 5 - 1) \\times 165 \\text{ ns} = 104 \\times 165 \\text{ ns} $</p>\n<p>$ \\text{Total Time} = 17,160 \\text{ ns} $</p>\n<h3><strong>Answer:</strong></h3>\n<p><strong>17,160 nanoseconds</strong></p>\n<hr />\n<p><strong>Therefore, the total time to execute 100 independent instructions is 17,160 nanoseconds.</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following instruction sequence where register R1, R2 and R3 are general purpose and MEMORY[X] denotes the content at the memory location X.</p>\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 370px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\"><strong>Instruction</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width: 280px;\">\n\t\t\t<p align=\"center\"><strong>Semantics</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\"><strong>Instruction Size (bytes)</strong></p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">MOV R1, (5000)</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">R1 ← MEMORY[5000]</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">4</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">MOV R2, (R3)</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">R2 ← MEMORY[R3]</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">4</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">ADD R2, R1</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">R2 ← R1 + R2</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">2</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">MOV (R3), R2</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">MEMORY[R3] ← R2</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">4</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">INC R3</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">R3 ← R3 + 1</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">2</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">DEC R1</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">R1 ← R1 – 1</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">2</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">BNZ 1004</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">Branch if not zero to the given absolute address</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">2</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">HALT</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">Stop</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:241px;\">\n\t\t\t<p align=\"center\">1</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>&nbsp;</p>\n\n<p>Assume that the content of the memory location 5000 is 10, and the content of the register R3 is 3000. The content of each of the memory locations from 3000 to 3010 is 50. The instruction sequence starts from the memory location 1000. All the numbers are in decimal format. Assume that the memory is byte addressable.</p>\n\n<p>After the execution of the program, the content of memory location 3010 is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "50",
+    "explanation": "<h3 id=\"-given-information-\"><strong>Given Information:</strong></h3>\n<ul>\n<li><p><strong>Initial Register Values:</strong></p>\n<ul>\n<li><strong>R1:</strong> Will be set to <code>MEMORY[5000]</code> (which is <code>10</code>) in the first instruction.</li>\n<li><strong>R2:</strong> Not initialized.</li>\n<li><strong>R3:</strong> <code>3000</code></li>\n</ul>\n</li>\n<li><p><strong>Memory Contents:</strong></p>\n<ul>\n<li><strong>MEMORY[5000]:</strong> <code>10</code></li>\n<li><strong>MEMORY[3000] to MEMORY[3010]:</strong> Each is initialized to <code>50</code>.</li>\n</ul>\n</li>\n<li><p><strong>Instruction Sequence (Starting at address <code>1000</code>):</strong></p>\n<table border=\"1\">\n  <tr>\n    <th>Address</th>\n    <th>Instruction</th>\n    <th>Semantics</th>\n    <th>Size (Bytes)</th>\n  </tr>\n  <tr>\n    <td>1000</td>\n    <td>MOV R1, (5000)</td>\n    <td>R1 = MEMORY[5000]</td>\n    <td>4</td>\n  </tr>\n  <tr>\n    <td>1004</td>\n    <td>MOV R2, (R3)</td>\n    <td>R2 = MEMORY[R3]</td>\n    <td>4</td>\n  </tr>\n  <tr>\n    <td>1008</td>\n    <td>ADD R2, R1</td>\n    <td>R2 = R1 + R2</td>\n    <td>2</td>\n  </tr>\n  <tr>\n    <td>1010</td>\n    <td>MOV (R3), R2</td>\n    <td>MEMORY[R3] = R2</td>\n    <td>4</td>\n  </tr>\n  <tr>\n    <td>1014</td>\n    <td>INC R3</td>\n    <td>R3 = R3 + 1</td>\n    <td>2</td>\n  </tr>\n  <tr>\n    <td>1016</td>\n    <td>DEC R1</td>\n    <td>R1 = R1 - 1</td>\n    <td>2</td>\n  </tr>\n  <tr>\n    <td>1018</td>\n    <td>BNZ 1004</td>\n    <td>Branch to 1004 if R1 ≠ 0</td>\n    <td>2</td>\n  </tr>\n  <tr>\n    <td>1020</td>\n    <td>HALT</td>\n    <td>Stop execution</td>\n    <td>1</td>\n  </tr>\n</table>\n\n<h3 id=\"-simulation-steps-\"><strong>Simulation Steps:</strong></h3>\n<p><strong>Initialize:</strong></p>\n<ul>\n<li><code>R1</code> is set to <code>10</code> after the first instruction.</li>\n<li><code>R3</code> starts at <code>3000</code>.</li>\n<li>The loop continues while <code>R1</code> is not zero.</li>\n</ul>\n<p><strong>Loop Execution:</strong></p>\n<p>We&#39;ll simulate each iteration of the loop until <code>R1</code> becomes <code>0</code>.</p>\n<h4 id=\"-iteration-details-\"><strong>Iteration Details:</strong></h4>\n<table>\n<thead>\n<tr>\n<th>Iteration</th>\n<th>R1 (Before <code>DEC</code>)</th>\n<th>R3 (Before <code>INC</code>)</th>\n<th>R2 Calculation</th>\n<th>MEMORY[R3] Updated To</th>\n<th>R1 (After <code>DEC</code>)</th>\n<th>R3 (After <code>INC</code>)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>10</td>\n<td>3000</td>\n<td><code>R2 = R1 + MEMORY[3000] = 60</code></td>\n<td><code>MEMORY[3000] = 60</code></td>\n<td>9</td>\n<td>3001</td>\n</tr>\n<tr>\n<td>2</td>\n<td>9</td>\n<td>3001</td>\n<td><code>R2 = R1 + MEMORY[3001] = 59</code></td>\n<td><code>MEMORY[3001] = 59</code></td>\n<td>8</td>\n<td>3002</td>\n</tr>\n<tr>\n<td>3</td>\n<td>8</td>\n<td>3002</td>\n<td><code>R2 = R1 + MEMORY[3002] = 58</code></td>\n<td><code>MEMORY[3002] = 58</code></td>\n<td>7</td>\n<td>3003</td>\n</tr>\n<tr>\n<td>4</td>\n<td>7</td>\n<td>3003</td>\n<td><code>R2 = R1 + MEMORY[3003] = 57</code></td>\n<td><code>MEMORY[3003] = 57</code></td>\n<td>6</td>\n<td>3004</td>\n</tr>\n<tr>\n<td>5</td>\n<td>6</td>\n<td>3004</td>\n<td><code>R2 = R1 + MEMORY[3004] = 56</code></td>\n<td><code>MEMORY[3004] = 56</code></td>\n<td>5</td>\n<td>3005</td>\n</tr>\n<tr>\n<td>6</td>\n<td>5</td>\n<td>3005</td>\n<td><code>R2 = R1 + MEMORY[3005] = 55</code></td>\n<td><code>MEMORY[3005] = 55</code></td>\n<td>4</td>\n<td>3006</td>\n</tr>\n<tr>\n<td>7</td>\n<td>4</td>\n<td>3006</td>\n<td><code>R2 = R1 + MEMORY[3006] = 54</code></td>\n<td><code>MEMORY[3006] = 54</code></td>\n<td>3</td>\n<td>3007</td>\n</tr>\n<tr>\n<td>8</td>\n<td>3</td>\n<td>3007</td>\n<td><code>R2 = R1 + MEMORY[3007] = 53</code></td>\n<td><code>MEMORY[3007] = 53</code></td>\n<td>2</td>\n<td>3008</td>\n</tr>\n<tr>\n<td>9</td>\n<td>2</td>\n<td>3008</td>\n<td><code>R2 = R1 + MEMORY[3008] = 52</code></td>\n<td><code>MEMORY[3008] = 52</code></td>\n<td>1</td>\n<td>3009</td>\n</tr>\n<tr>\n<td>10</td>\n<td>1</td>\n<td>3009</td>\n<td><code>R2 = R1 + MEMORY[3009] = 51</code></td>\n<td><code>MEMORY[3009] = 51</code></td>\n<td>0</td>\n<td>3010</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li><strong>After the 10th iteration:</strong><ul>\n<li><code>R1</code> becomes <code>0</code>.</li>\n<li><code>R3</code> becomes <code>3010</code>.</li>\n<li>The <code>BNZ</code> instruction does not branch since <code>R1</code> is zero.</li>\n<li>The program proceeds to <code>HALT</code>.</li>\n</ul>\n</li>\n</ul>\n<h3 id=\"-final-memory-content-at-location-3010-\"><strong>Final Memory Content at Location 3010:</strong></h3>\n<ul>\n<li><strong>MEMORY[3010]:</strong><ul>\n<li><strong>Initial Value:</strong> <code>50</code>.</li>\n<li><strong>During Execution:</strong> <code>MEMORY[3010]</code> is <strong>never modified</strong> because the loop only updates memory locations from <code>3000</code> to <code>3009</code>.</li>\n<li><strong>Final Value:</strong> Remains <code>50</code>.</li>\n</ul>\n</li>\n</ul>\n<h3 id=\"-answer-\"><strong>Answer:</strong></h3>\n<p><strong>50</strong></p>\n",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a non-pipelined processor operating at 2.5 GHz. It takes 5 clock cycles to complete an instruction. You are going to make a 5-stage pipeline out of this processor. Overheads associated with pipelining force you to operate the pipelined processor at 2 GHz. In a given program, assume that 30% are memory instructions, 60% are ALU instructions and the rest are branch instructions. 5% of the memory instructions cause stalls of 50 clock cycles each due to cache misses and 50% of the branch instructions cause stalls of 2 cycles each. Assume that there are no stalls associated with the execution of ALU instructions. For this program, the speedup achieved by the pipelined processor over the non-pipelined processor (round off to 2 decimal places) is _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.16",
+    "explanation": "<p><b>Given :</b></p>\n<p>For a non-pipelined processor :</p>\n<p>Frequency $=2.5 \\mathrm{GHz}$</p>\n<p>$\\mathrm{CPI}=5$</p>\n<p>For a pipelined processor :</p>\n<p>Number of stages $=5$</p>\n<p>Frequency $=2 \\mathrm{GHz}$</p>\n<p>$30 \\%$ are memory instructions, $60 \\%$ are ALU instructions and the rest are branch instructions. $5 \\%$ of the memory instructions cause stalls of 50 clock cycles each due to cache misses and $50 \\%$ of the branch instructions cause stalls of 2 cycles each.</p>\n<p>Execution time of non-pipelined processor</p>\n<p>$$ =\\frac{5}{2.5}=2 \\mathrm{~ns} $$</p>\n<p>For pipelined processor,</p>\n<p>$30 \\%$ memory instruction, $60 \\%$ ALU, $10 \\%$ branch instruction</p>\n<p>Execution time of pipelined processor</p>\n<p>$$ \\begin{aligned} & =0.6+0.3(0.05(1+50)+0.95) \\\\\\\\ & \\quad+0.1(0.5(1+2)+0.5) \\\\\\\\ & =1.85 \\text { cycle } \\\\\\\\ & =\\frac{1.85}{2} \\mathrm{~ns}=0.925 \\mathrm{~ns} \\end{aligned} $$</p>\n<p>Speed up $=\\frac{2}{0.925}=2.162 \\approx 2.16$</p>\n<p>Hence, the correct answer is 2.16 .</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The instruction pipeline of a $$RISC$$ processor has the following stages: Instruction Fetch $$(IF),$$ Instruction Decode $$(ID),$$ Operand Fetch $$(OF),$$ Perform Operation $$(PO)$$ and Writeback $$(WB).$$ The $$IF,$$ $$ID,$$ $$OF$$ and $$WB$$ stages take $$1$$ clock cycle each for every instruction. Consider a sequence of $$100$$ instructions. In the $$PO$$ stage, $$40$$ instructions take $$3$$ clock cycles each, $$35$$ instructions take $$2$$ clock cycles each, and the remaining $$25$$ instructions take $$1$$ clock cycle each. Assume that there are no data hazards and no control hazards.\n<p>The number of clock cycles required for completion of execution of the sequence of instructions is ______.</p>\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "219",
+    "explanation": "<p>We have a 5‑stage pipeline :</p>\n\n<p><p><strong>IF</strong> (1 cycle)  </p></p>\n<p><p><strong>ID</strong> (1 cycle)  </p></p>\n<p><p><strong>OF</strong> (1 cycle)  </p></p>\n<p><p><strong>PO</strong> (variable cycles: 3, 2, or 1)  </p></p>\n<p><p><strong>WB</strong> (1 cycle)</p></p>\n\n<p>Assume <strong>no hazards</strong>, so instructions can flow through the pipeline back‑to‑back. If every stage were 1 cycle, the total time for $N$ instructions in a 5‑stage pipeline is</p>\n<p>$ (\\text{pipeline latency}) \\;+\\; (N-1)\\times(\\text{one cycle per subsequent instruction}) \\;=\\; 5 + (N-1) \\;=\\; N+4. $</p>\n<p>For $N=100$, that would be $100 + 4 = 104$ cycles <em>if</em> every stage were exactly 1 cycle.</p>\n<hr />\n<h3>Accounting for the longer PO stages</h3>\n<p>The only difference from the standard (1 cycle per stage) scenario is that some instructions spend <strong>more</strong> than 1 cycle in the PO stage:</p>\n\n<p><p>$40$ instructions take $3$ cycles in PO (thus $2$ “extra” cycles each, beyond the base $1$).</p></p>\n<p><p>$35$ instructions take $2$ cycles in PO (thus $1$ “extra” cycle each).</p></p>\n<p><p>$25$ instructions take $1$ cycle in PO (no extra).</p></p>\n\n<p>Hence, total extra cycles :</p>\n<p>$ \\underbrace{40 \\times 2}_{\\text{for 3-cycle PO}}  \\;+\\; \\underbrace{35 \\times 1}_{\\text{for 2-cycle PO}} \\;+\\; \\underbrace{25 \\times 0}_{\\text{for 1-cycle PO}} \\;=\\; 80 + 35 + 0 \\;=\\; 115. $</p>\n<p>Therefore, the total pipeline cycles needed are the base $104$ plus these $115$ extra cycles :</p>\n<p>$ 104 + 115 = 219. $</p>\n<hr />\n<h2>Final Answer</h2>\n<p>$ \\boxed{219} $</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "The stage delays in a $$4$$-stage pipeline are $$800, 500, 400$$ and $$300$$ picoseconds. The first stage (with delay $$800$$ picoseconds) is replaced with a functionally equivalent design involving two stages with respective delays $$600$$ and $$350$$ picoseconds. The throughput increase of the pipeline is percent.  ",
+    "options": [],
+    "correct_options": [],
+    "answer": "33 to 34",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a $$3$$ $$GHz$$ (gigahertz) processor with a three-stage pipeline and stage latencies $${\\tau _1},{\\tau _2},$$ and $${\\tau _3}$$ such that $${\\tau _1} = 3{\\tau _2}/4 = 2{\\tau _3}.$$ If the longest pipeline stage is split into two pipeline stages of equal latency, the new frequency is ____________ $$GHz,$$ ignoring delays in the pipeline registers.\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "3.9 to 4.1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose the functions $$F$$ and $$G$$ can be computed in $$5$$ and $$3$$ nanoseconds by functional units $${U_F}$$ and $${U_G},$$ respectively. Given two instances of $${U_F}$$ and two instances of $${U_G},$$ it is required to implement the computation $$F\\left( {G\\left( {{X_i}} \\right)} \\right)$$ for $$1 \\le i \\le 10.$$ Ignoring all other delays, the minimum time required to complete this computation is _____________ nanoseconds.",
+    "options": [],
+    "correct_options": [],
+    "answer": "28",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following reservation table for a pipeline having three stages $${S_1},{S_2}$$ and $${S_3}.$$\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/zBcorEEnRfCeSwbrT/p9avMCoCzgBSnxbeAui9JyFztjURF/SnMoQ6Zo9sNcepvVlXDLQq/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2015 Set 3 Computer Organization - Pipelining Question 20 English\"> \n<p>The minimum average latency $$(MAL)$$ is ________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a non-pipelined processor with a clock rate of 2.5 gigahertz and average cycles per instruction of four. The same processor is upgraded to a pipelined processor with five stages; but due to the internal pipeline delay, the clock speed is reduced to 2 gigahertz. Assume that there are no stalls in the pipeline. The speed up achieved in this pipelined processor is_________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3.2",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the sequence of machine instructions given below: \n<br><br><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;border:none;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-hgcj{font-weight:bold;text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-hgcj\">MUL</th>\n    <th class=\"tg-s6z2\">  R5, R0, R1</th>\n  </tr>\n  <tr>\n    <td class=\"tg-hgcj\">DIV</td>\n    <td class=\"tg-s6z2\">  R6, R2, R3</td>\n  </tr>\n  <tr>\n    <td class=\"tg-hgcj\">ADD</td>\n    <td class=\"tg-s6z2\">R7, R5, R6</td>\n  </tr>\n  <tr>\n    <td class=\"tg-hgcj\">SUB</td>\n    <td class=\"tg-s6z2\">R8, R7, R4</td>\n  </tr>\n</tbody></table>\n<p>In the above sequence, $$R0$$ to $$R8$$ are general purpose registers. In the instructions shown, the first register stores the result of the operation performed on the second and the third registers. This sequence of instructions is to be executed in a pipelined instruction processor with the following $$4$$ stages: $$(1)$$ Instruction Fetch and Decode $$(IF), (2)$$ Operand Fetch $$(OF), (3)$$ Perform Operation $$(PO)$$ and $$(4)$$ Write back the result $$(WB).$$ The $$IF,$$ $$OF$$ and $$WB$$ stages take $$1$$ clock cycle each for any instruction. The $$PO$$ stage takes $$1$$ clock cycle for $$ADD$$ or $$SUB$$ instruction, $$3$$ clock cycles for $$MUL$$ instruction and $$5$$ clock cycles for $$DIV$$ instruction. The pipelined processor uses operand forwarding from the $$PO$$ stage to the $$OF$$ stage. The number of clock cycles taken for the execution of the above sequence of instructions is _______________________ .</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "13",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a $$6$$-stage instruction pipeline, where all stages are perfectly balanced. Assume that there is no cycle-time overhead of pipelining. When an application is executing on this $$6$$-stage pipeline, the speedup achieved with respect to non-pipelined execution if $$25$$% of the instructions incur $$2$$ pipeline stall cycles is________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following processors ($$ns$$ stands for nanoseconds). Assume that the pipeline registers have zero latency.\n<br>$$P1:$$ Four-stage pipeline with stage latencies $$1$$ $$ns,$$ $$2$$ $$ns,$$ $$2$$ $$ns,$$ $$1$$ $$ns.$$\n<br>$$P2:$$ Four-stage pipeline with stage latencies $$1$$ $$ns,$$ 1$$.5$$ $$ns,$$ $$1.5$$ $$ns,$$ $$1.5$$ $$ns.$$\n<br>$$P3:$$ Five-stage pipeline with stage latencies $$0.5$$ $$ns,$$ $$1$$ $$ns,$$ $$1$$ $$ns,$$ $$0.6$$ $$ns,$$ $$1$$ $$ns.$$\n<br>$$P4:$$ Five-stage pipeline with stage latencies $$0.5$$ $$ns,$$ $$0.5$$ $$ns,$$ $$1$$ $$ns,$$ $$1$$ $$ns,$$ $$1.1$$ $$ns.$$\n<p>Which processor has the highest peak clock frequency?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P2$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$P3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$P4$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "An instruction pipeline has five stages, namely, instruction fetch $$(IF),$$ instruction decode and register fetch $$(ID/RF)$$ instruction execution $$(EX),$$ memory access $$(MEM),$$ and register writeback $$(WB)$$ with stage latencies $$1$$ ns, $$2.2$$ $$ns,$$ $$2$$ $$ns,$$ $$1$$ $$ns,$$ and $$0.75$$ $$ns,$$ respectively ($$ns$$ stands for nanoseconds). To gain in terms of frequency, the designers have decided to split the $$ID/RF$$ stage into three stages $$(ID, RF1, RF2)$$ each of latency $$2.2/3$$ $$ns,$$ Also, the $$EX$$ stage is split into two stages $$(EX1, EX2)$$ each of latency $$1$$ ns. The new design has a total of eight pipeline stages. A program has $$20$$% branch instructions which execute in the $$EX$$ stage and produce the next instruction pointer at the end of the $$EX$$ stage in the old design and at the end of the $$EX2$$ stage in the new design. The IF stage stalls after fetching a branch instruction until the next instruction pointer is computed. All instructions other than the branch instruction have an average $$CPI$$ of one in both the designs. The execution times of this program on the old and the new design are $$P$$ and $$Q$$ nanoseconds, respectively. The value of $$P/Q$$ is  _____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.54",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an instruction pipeline with five stages without any branch prediction: Fetch Instruction $$(FI),$$ Decode Instruction $$(DI),$$ Fetch Operand $$(FO),$$ Execute Instruction $$(EI)$$ and Write Operand $$(WO).$$ The stage delays for $$FI, DI, FO, EI$$ and $$WO$$ are $$5$$ $$ns,$$ $$7$$ $$ns,$$ $$10$$ $$ns,$$ $$8$$ $$ns$$ and $$6$$ $$ns$$, respectively. There are intermediate storage buffers after each stage and the delay of each buffer is $$1$$ $$ns.$$ A program consisting of $$12$$ instructions $${{\\rm I}_1},{{\\rm I}_2},{{\\rm I}_3},......,\\,\\,{{\\rm I}_{12}}$$ is executed in this pipelined processor. Instruction $${{\\rm I}_4}$$ is the only branch instruction and its branch target is $${{\\rm I}_9}$$. If the branch is taken during the execution of this program, the time (in $$ns$$) needed to complete the program is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$132$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$165$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$176$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$328$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an instruction pipeline with four stages $$\\left( {S1,\\,S2,\\,S3,} \\right.$$ and $$\\left. {S4} \\right)$$ each with combinational circuit only. The pipeline registers are required between each stage and at the end of the last stage. Delays for the stages and for the pipeline registers are as given in the figure.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/sUSo1jSGBLQNIEVg5/rExK51MhCzRSUQhauCo6y5XoKy0mQ/ZxsYQVcIjWBC320XGjwusI/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Computer Organization - Pipelining Question 29 English\">\n<p>What is the approximate speed up of the pipeline in steady state under ideal conditions when compared to the corresponding non-pipeline implementation? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4.0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2.5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1.1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$3.0$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A $$5$$-stage pipelined processor has Instruction Fetch $$(IF),$$ Instruction Decode $$(ID),$$ Operand Fetch $$(OF),$$ Perform Operation $$(PO)$$ and Write Operand $$(WO)$$ stages. The $$IF, ID, OF$$ and $$WO$$ stages take $$1$$ clock cycle each for any instruction. The $$PO$$ stage takes $$1$$ clock cycle for $$ADD$$ and $$SUB$$ instructions, $$3$$ clock cycles for $$MUL$$ instruction, and $$6$$ clock cycles for $$DIV$$ instruction respectively. Operand forwarding is used in the pipeline. What is the number of clock cycles needed to execute the following sequence of instructions?\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/xe2D8RcnuEva1x4BO/1IqbDElGeaUWn6ok5A3MuwY7QEdKA/zFBjLLQHS3GXcgyPjNSevz/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2010 Computer Organization - Pipelining Question 30 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$13$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$15$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$17$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$19$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a $$4$$ stage pipeline processor. The number of cycles needed by the four instructions $${\\rm I}1,$$ $${\\rm I}2,$$ $${\\rm I}3,$$ $${\\rm I}4,$$ in stages $$S1, S2, S3, S4$$ is shown below.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/ZOauUn1gi9FDkcYm9/HYHx1oSNuKkbg3baC5Zd3Y6cD1Yog/ZJm8CNrwdRwBHRw3GJ6eD4/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2009 Computer Organization - Pipelining Question 31 English\"> \n<p>What is the number of cycles needed to execute the following loop?\n<br>For $$\\left( {i = 1} \\right.$$ to $$\\left. 2 \\right)$$  $$\\left\\{ {{\\rm I}1;{\\rm I}2;{\\rm I}3;{\\rm I}4;} \\right\\}$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$16$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$23$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$28$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$30$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "In an instruction execution pipeline, the earliest that the data $$TLB$$ (Translation Look aside Buffer) can be accessed is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Before effective address calculation has started"
+      },
+      {
+        "identifier": "B",
+        "content": "During effective address calculation "
+      },
+      {
+        "identifier": "C",
+        "content": "After effective address calculation has completed "
+      },
+      {
+        "identifier": "D",
+        "content": "After data cache lookup has completed  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The following code is to run on a pipelined processor with one branch delay slot\n<br>$$\\eqalign{\n  &amp; {{\\rm I}_1}:\\,\\,ADD\\,\\,{R_2}\\,\\, \\leftarrow \\,\\,{R_7} + {R_8}  \\cr \n  &amp; {{\\rm I}_2}:\\,\\,SUB\\,\\,\\,{R_4}\\,\\, \\leftarrow \\,\\,{R_5} - {R_6}  \\cr \n  &amp; {{\\rm I}_3}:\\,\\,ADD\\,\\,{R_1}\\,\\, \\leftarrow \\,\\,{R_2} + {R_3}  \\cr \n  &amp; {{\\rm I}_4}:\\,\\,STORE\\,\\,Memory\\,\\,\\left[ {{R_4}} \\right]\\,\\, \\leftarrow \\,\\,{R_1}  \\cr \n  &amp; BRANCH\\,\\,to\\,\\,Label\\,\\,if\\,\\,{R_1} =  = 0 \\cr} $$\n<p>Which of the instructions $${{\\rm I}_1},\\,{{\\rm I}_2},\\,{{\\rm I}_3}$$ or $${{\\rm I}_4}$$ can legitimately occupy the delay slot without any other program modification?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{\\rm I}_1}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\rm I}_2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{\\rm I}_3}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\rm I}_4}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following are NOT true in a pipelined processor?\n<br>$$1.$$ Bypassing can handle all RAW hazards\n<br>$$2.$$ Register renaming can eliminate all register carried WAR hazards\n<br>$$3.$$  Control hazard penalties can be eliminated by dynamic branch prediction.\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ and $$2$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ and $$3$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2$$ and $$3$$ only"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1,2$$ and $$3$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The use of multiple register windows with overlap causes a reduction in the number of memory accesses for\n<br>$$1.\\,\\,\\,\\,$$ Function locals and parameters\n<br>$$2.\\,\\,\\,\\,$$ Register saves and restores\n<br>$$3.\\,\\,\\,\\,$$ Instruction fetches\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1,2$$ and $$3$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a pipelined processor with the following four stages\n<br>$$\\,\\,\\,\\,\\,$$$$IF:$$ Instruction Fetch\n<br>$$\\,\\,\\,\\,\\,$$$$ID:$$ Instruction Decode and Operand Fetch\n<br>$$\\,\\,\\,\\,\\,$$$$EX:$$ Execute\n<br>$$\\,\\,\\,\\,\\,$$$$WB:$$ Write Back\n<p>The $$IF, ID$$ and $$WB$$ stages take one clock cycle each to complete the operation. The number of clock cycles for the $$EX$$ stage depends on the instruction. The $$ADD$$ and $$SUB$$ instructions need $$1$$ clock cycle and the $$MUL$$ instruction needs $$3$$ clock\ncycles in the $$EX$$ stage. Operand forwarding is used in the pipelined processor. What is the number of clock cycles taken to complete the following sequence of instructions? </p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/CbmN9krvrHogsxnQL/pNcIYjKqridwWWl4cHfnm2izSr1vM/Dz5sUAHGrUoIZTqvdy9Cpk/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2007 Computer Organization - Pipelining Question 36 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$7$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$14$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A CPU has five stages pipeline and runs at $$1$$ $$GHz$$ frequency. Instruction fetch happens in the first stage of the pipeline. A conditional branch instruction computes the target address and evaluates the condition in the third stage of the pipeline. The processor stops fetching new instruction following a conditional branch until the branch outcome is known. A program executes $${10^9}$$ instructions out of which $$20$$% are conditional branches. If each instruction takes one cycle to complete on average, then total execution time of the program is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1.0$$ second "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1.2$$ seconds "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1.4$$ seconds "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.6$$ seconds "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A $$5$$ stage pipelined $$CPU$$ has the following sequence of stages $$IF$$-Instruction fetch from instruction memory, $$RD$$-Instruction decode and register read, $$EX$$-Execute: $$ALU$$ operation for data and address computation, $$MA$$-Data memory access-for write access the register read and $$RD$$ stage it used, $$WB$$-Register write back.\n<p>Consider the following sequence of instructions:\n<br>$$\\eqalign{\n  &amp; {{\\rm I}_1}:L\\,R0,\\,\\,Loc1;\\,R0 &lt; \\,\\, = M\\,[Loc1]  \\cr \n  &amp; {{\\rm I}_2}:A\\,R0,\\,R0;\\,\\,\\,\\,\\,\\,R0 &lt; \\,\\, = R0 + R0  \\cr \n  &amp; {{\\rm I}_3}:A\\,R2,\\,R0;\\,\\,\\,\\,\\,\\,R2 &lt; \\,\\, = R2 - R0 \\cr} $$</p>\n<p>Let each stage takes one clock cycle. \n<br>What is the number of clock cycles taken to complete the above sequence of instructions starting from the fetch of $${{\\rm I}_1}?$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$12$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$15$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A $$4$$-stage pipeline has the stage delays as $$150, 120,160$$ and $$140$$ nano seconds respectively. Registers that are used between the stages have a delay of $$5$$ nanoseconds each. Assuming constant clocking rate, the total time taken to process $$1000$$ data items on this pipeline will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$120.4$$ microseconds"
+      },
+      {
+        "identifier": "B",
+        "content": "$$160.5$$ microseconds"
+      },
+      {
+        "identifier": "C",
+        "content": "$$165.5$$ microseconds"
+      },
+      {
+        "identifier": "D",
+        "content": "$$590.0$$ microseconds"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The performance of a pipelined processor suffers if",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The pipeline stages have different delays"
+      },
+      {
+        "identifier": "B",
+        "content": "Consecutive instructions are depend on each other"
+      },
+      {
+        "identifier": "C",
+        "content": "The pipeline stages share single hardware resources"
+      },
+      {
+        "identifier": "D",
+        "content": "All of the above "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "An instruction pipeline has five stages where each stage takes $$2$$ nanoseconds and all instructions use all five stages. Branch instructions are not overlapped, i.e., the instruction after the branch is not fetched till the branch instruction is completed. Under ideal conditions.\n<p>(a) Calculate the average instruction execution time assuming that $$20$$% of all instruction executed are branch instructions. Ignore the fact that some branch instructions may be conditional.</p>\n<p>(b) If a branch instruction is a conditional branch instruction, the branch need not be taken. If the branch is not taken, the following instructions can be overlapped. When $$80$$% of all branch instructions are conditional branch instructions, and $$50$$% of the conditional branch instructions are such that the branch is taken, calculate the average instruction execution time.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) Avg instruction execution time $$=3.6$$ $$ns$$\n<p>(b) Avg instruction execution time $$=2.96$$ $$ns$$</p>",
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "An instruction pipeline consists of $$4$$ stages: Fetch (F), Decode field (D), Execute (E), and Result-Write (W). The $$5$$ instructions in a certain instruction sequence need these stages for the different number of clock cycles as shown by the table\nbelow.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/MyxKASoNEPU4ONHCp/7d8oqzm6hwA0Xy2U6tPE4Ma2S0ccI/rvpSYSSMXg4Ki7HyIR2xux/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1999 Computer Organization - Pipelining Question 24 English\">\n<p>Find the number of clock cycles needed to perform the $$5$$ instructions</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$15$$ Clock cycle",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  }
+]

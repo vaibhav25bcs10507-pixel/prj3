@@ -1,0 +1,1984 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\lim _{n \\rightarrow \\infty} \\frac{\\left(2 n(2 n-1) \\ldots .(n+2)(n+1)^{1 / n}\\right.}{n}= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\int_0^1 \\log x d x$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\int_0^1 x \\log x d x$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\int_0^1(x+1) \\log (x+1) d x$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\int_0^1 \\log (1+x) d x$</p>"
+      }
+    ],
+    "correct_options": [],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text { Let } \\lim _{n \\rightarrow \\infty}\\left(\\frac{(n+1)(n+2) \\ldots . .(2 n)}{n^n}\\right)^{\\frac{1}{n}}=y \\\\ & \\Rightarrow \\ln y=\\lim _{n \\rightarrow \\infty} \\frac{1}{n}\\left(\\sum_{r=1}^n \\ln (n+r)-\\sum_{r=1}^n \\ln (n)\\right) \\\\ & \\Rightarrow \\ln y=\\lim _{n \\rightarrow \\infty} \\frac{1}{n}\\left(\\sum_{r=1}^n \\ln \\left(1+\\frac{r}{n}\\right)\\right) \\\\ & \\Rightarrow \\ln y=\\int_0^1 \\ln (1+x) d x \\\\ & \\Rightarrow \\quad y=e^0 \\ln (1+x) d x \\\\ & \\text { Let } P=\\int_0^1 \\ln (1+x) d x \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\begin{array}{ll} \\Rightarrow & P=[x \\cdot \\ln (1+x)]_0^1-\\int_0^1\\left(\\frac{x}{1+x}\\right) d x \\\\ \\Rightarrow & P=\\ln 2-\\int_0^1\\left(\\frac{x}{1+x}\\right) d x \\end{array}\\\\ &\\text { Again, let } 1+x=t\\\\ &\\begin{aligned} d x & =d t \\\\ & =\\int_1^2\\left(\\frac{t-1}{t}\\right) d t=\\int_1^2\\left(1-\\frac{1}{t}\\right) d t \\\\ & =[t-\\ln t]_1^2 \\\\ & =2-\\ln 2-1=1-\\ln 2 \\\\ \\therefore \\quad P & =\\ln 2-(1-\\ln 2) \\\\ \\Rightarrow \\quad P & =\\ln 2-1+\\ln 2 \\\\ \\Rightarrow \\quad P & =2 \\ln 2-1 \\\\ \\Rightarrow \\quad P & =\\ln 4-\\ln e \\\\ \\Rightarrow \\quad P & =\\ln \\frac{4}{e} \\\\ \\Rightarrow \\quad y & =e \\ln \\frac{4}{e} \\\\ y & =\\frac{4}{e} \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-4th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $\\int_0^{\\frac{\\pi}{2}} \\tan ^{14}\\left(\\frac{x}{2}\\right) d x=2\\left[\\sum_{n=1}^7 f(n)-\\frac{\\pi}{4}\\right]$, then $f(n)=$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{(-1)^n}{n-1}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{(-1)^n}{2 n+1}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{(-1)^{n+1}}{2 n-1}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{(-1)^{n+1}}{n+1}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\\\ &\\begin{aligned} & \\text {  Let } I_n=\\int_0^{\\frac{\\pi}{2}} \\tan ^n\\left(\\frac{x}{2}\\right) d x \\\\ & I_{n-2}=\\int_0^{\\pi / 2}\\left(\\tan \\frac{x}{2}\\right)^{n-2} d x \\\\ & \\Rightarrow \\quad I_n+I_{n-2}=\\int_0^{\\frac{\\pi}{2}}\\left(\\tan \\frac{x}{2}\\right)^{n-2} \\times \\sec ^2 \\frac{x}{2} d x \\\\ & \\Rightarrow \\quad I_n+I_{n-2}=2 \\int_0^1 t^{n-2} d t=\\frac{2}{n-1} \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow \\quad I_{14}+I_{12}=\\frac{2}{13}\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i) \\\\ & \\Rightarrow \\quad I_{12}+I_{10}=\\frac{2}{11} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\\\ & \\Rightarrow \\quad I_{10}+I_8=\\frac{2}{9} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)\\\\ & \\Rightarrow \\quad I_8+I_6=\\frac{2}{7} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)\\\\ & \\Rightarrow \\quad I_6+I_4=\\frac{2}{5} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(v)\\\\ & \\Rightarrow \\quad I_4+I_2=\\frac{2}{3}\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(vi) \\\\ & \\Rightarrow \\quad I_2+I_0=2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(vii)\\\\ & \\therefore(\\mathrm{i})-(\\mathrm{ii})+(\\mathrm{iii})-(\\mathrm{iv})+(\\mathrm{v})-(\\mathrm{vi})+(\\mathrm{vii}) \\\\ & I_{14}=2\\left[\\sum_{n=1}^7 f(x)-\\frac{\\pi}{4}\\right] \\\\ & \\therefore f(n)=\\frac{1}{13}-\\frac{1}{11}+\\frac{1}{9}-\\frac{1}{7} \\ldots . .+1 \\\\ & f(n)=\\frac{(-1)^{n+1}}{2 n-1} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-4th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_{-4}^5 \\frac{1}{\\sqrt{20+x-x^2}} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{81 \\pi}{8}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{9 \\pi}{2}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\pi$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{\\pi}{10}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { } \\begin{aligned}  Let\\,\\,I & =\\int_{-4}^5 \\frac{d x}{\\sqrt{20+x-x^2}} \\\\ I & =\\int_{-4}^5 \\frac{d x}{\\sqrt{20-\\left(x^2-x+\\frac{1}{4}-\\frac{1}{4}\\right)}} \\\\ & =\\int_{-4}^5 \\frac{d x}{\\sqrt{\\frac{81}{4}-\\left(x-\\frac{1}{2}\\right)^2}} \\\\ & =\\left[\\sin ^{-1}\\left(\\frac{2 x-1}{9}\\right)+C\\right]_{-4}^5 \\end{aligned} $$</p>\n<p>$$ =\\sin ^{-1}\\left(\\frac{9}{9}\\right)-\\sin ^{-1}(-1)=\\pi $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-4th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^{\\frac{\\pi}{2}} \\frac{d x}{\\cos x-\\sqrt{3} \\sin x}= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>0</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{1}{2} \\log (2-\\sqrt{3})$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{1}{2} \\log (2+\\sqrt{3})$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{1}{2} \\log (2 \\sqrt{3}-3)$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text {  Let } I=\\int_0^{\\pi / 2} \\frac{d x}{\\cos x-\\sqrt{3} \\sin x} \\\\ & =\\int_0^{\\pi / 2} \\frac{d x}{2\\left(\\cos x \\cdot \\frac{1}{2}-\\frac{\\sqrt{3}}{2} \\sin x\\right)} \\\\ & =\\frac{1}{2} \\int_0^{\\pi / 2} \\frac{d x}{\\cos \\left(x+\\frac{\\pi}{3}\\right)} \\\\ & =\\frac{1}{2} \\int_0^{\\pi / 2} \\sec \\left(x+\\frac{\\pi}{3}\\right) d x \\\\ & =\\frac{1}{2} \\ln \\left|\\sec \\left(x+\\frac{\\pi}{3}\\right)+\\tan \\left(x+\\frac{\\pi}{3}\\right)\\right|_0^{\\pi / 2}+C \\\\ & =\\frac{1}{2} \\ln \\left|\\sec \\left(\\frac{5 \\pi}{6}\\right)+\\tan \\left(\\frac{5 \\pi}{6}\\right)\\right| -\\frac{1}{2} \\ln \\left|\\sec \\frac{\\pi}{3}+\\tan \\frac{\\pi}{3}\\right| \\\\ & =\\frac{1}{2} \\ln (2 \\sqrt{3}-3) \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-4th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^{\\frac{\\pi}{2}} \\sqrt{\\tan x d x}= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{\\pi}{\\sqrt{2}}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{\\pi}{2}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\sqrt{2} \\pi$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$2 \\pi$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\\\ &\\begin{aligned} & \\text {  Let } I=\\int_0^{\\pi / 2} \\sqrt{\\tan x} d x \\\\ & \\qquad \\begin{aligned} I & =\\int_0^{\\pi / 2} \\sqrt{\\cot x} d x \\\\ \\Rightarrow 2 I & =\\int_0^{\\pi / 2} \\sqrt{2} \\times \\frac{\\sin x+\\cos x}{\\sqrt{1-(\\sin x-\\cos x)^2}} d x \\\\ \\Rightarrow I & =\\frac{1}{\\sqrt{2}} \\int_0^{\\pi / 2} \\frac{d(\\sin x-\\cos x)}{\\sqrt{1-(\\sin x-\\cos x)^2}} \\\\ & =\\frac{1}{\\sqrt{2}}\\left[\\sin ^{-1}(\\sin x-\\cos x)+C\\right]_0^{\\pi / 2} \\\\ & =\\frac{1}{\\sqrt{2}}\\left(\\sin ^{-1}(1)-\\sin ^{-1}(-1)\\right) \\\\ & =\\frac{1}{\\sqrt{2}} \\times \\frac{\\pi}{2} \\times 2=\\frac{\\pi}{\\sqrt{2}} \\end{aligned} \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-4th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_{-1}^1 \\frac{\\log 2-\\log (1+x)}{\\sqrt{1-x^2}} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{\\pi}{8} \\log 2$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$-\\frac{\\pi}{2} \\log 2$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$-\\frac{\\pi}{4} \\log 2$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$2 \\pi \\log 2$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\\\ &\\begin{aligned} & I=\\int_{-1}^1 \\frac{\\log 2-\\log (1+x)}{\\sqrt{1-x^2}} d x \\\\ & \\Rightarrow I=\\int_{-1}^1 \\frac{\\log 2}{\\sqrt{1-x^2}} d x-\\int_{-1}^1 \\frac{\\log (1+x)}{\\sqrt{1-x^2}} d x \\\\ & \\Rightarrow I=\\left[\\log 2 \\sin ^{-1} x\\right]_{-1}^1-\\int \\frac{\\log (1+x)}{\\sqrt{1-x^2}} d x \\\\ & =\\pi \\log 2-I_1 \\\\ & I_1=\\int_{-1}^1 \\frac{\\log (1+x)}{\\sqrt{1-x^2}} d x \\end{aligned}\\\\ &\\text { Put } \\begin{aligned} x & =\\sin \\theta \\\\ d x & =\\cos \\theta d \\theta \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\begin{aligned} & \\Rightarrow I_1=\\int_{\\frac{-\\pi}{2}}^{\\frac{\\pi}{2}} \\frac{\\log (1+\\sin \\theta)}{\\cos \\theta} \\cos \\theta d \\theta \\\\ & \\Rightarrow I_1=\\int_{\\frac{-\\pi}{2}}^{\\frac{\\pi}{2}} \\log (1+\\sin \\theta) d \\theta \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned}\\\\ &\\text { King's property, }\\\\ &\\Rightarrow \\quad I_1=\\int_{\\frac{-\\pi}{2}}^{\\pi / 2} \\log (1-\\sin \\theta) d \\theta \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} $$</p>\n<p>$$ \\begin{aligned} \\Rightarrow \\quad 2 I_1 & =\\int_{\\frac{-\\pi}{2}}^{\\frac{\\pi}{2}} \\log \\left(1-\\sin ^2 \\theta\\right) d \\theta \\\\ \\Rightarrow \\quad I_1 & =\\int_{\\frac{-\\pi}{2}}^{\\frac{\\pi}{2}} \\log \\cos \\theta d \\theta \\\\ & =2 \\int_0^{\\frac{\\pi}{2}} \\log \\cos \\theta d \\theta \\\\ & =2\\left(\\frac{-\\pi}{2} \\log 2\\right) \\\\ & =-\\pi \\log 2 \\\\ \\therefore \\quad I & =2 \\pi \\log 2 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-3rd-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^{\\frac{\\pi}{4}} \\frac{\\sec x}{3 \\cos x+4 \\sin x} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\log \\left(\\frac{7}{3}\\right)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{1}{4} \\log \\left(\\frac{7}{3}\\right)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{1}{4} \\log 7$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\log 7$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} I & =\\int_0^{\\frac{\\pi}{4}} \\frac{\\sec x}{3 \\cos x+4 \\sin x} d x \\\\ & =\\int_0^{\\frac{\\pi}{4}} \\frac{\\sec ^2 x}{3+4 \\tan x} d x \\end{aligned} $$</p>\n<p>Put $\\tan x=t \\Rightarrow \\sec ^2 x d x=d t$</p>\n<p>$$ \\begin{aligned} \\Rightarrow \\quad I & =\\int_0^1 \\frac{d t}{3+4 t} \\\\ & =\\frac{1}{4}[\\log 4 t+3]_0^1=\\frac{1}{4} \\log \\frac{7}{3} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-3rd-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_{-2}^4\\left|2-x^2\\right| d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{8 \\sqrt{2}}{3}-3$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{16 \\sqrt{2}}{3}+12$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{16 \\sqrt{2}}{3}-3$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{8 \\sqrt{2}}{3}+12$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text {  } \\begin{aligned} I & =\\int_{-2}^4\\left|\\left(2-x^2\\right)\\right| d x \\\\ = & \\int_{-2}^{-\\sqrt{2}}\\left(x^2-2\\right) d x+\\int_{-\\sqrt{2}}^{+\\sqrt{2}}\\left(2-x^2\\right) d x+\\int_{\\sqrt{2}}^{+4}\\left(x^2-2\\right) d x \\\\ = & {\\left[\\frac{x^3}{3}-2 x\\right]_{-2}^{-\\sqrt{2}}+\\left[2 x-\\frac{x^3}{3}\\right]_{-\\sqrt{2}}^{\\sqrt{2}} } +\\left[\\frac{x^3}{3}-2 x\\right]_{\\sqrt{2}}^4 \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & \\begin{aligned} \\Rightarrow & \\left.\\frac{-2 \\sqrt{2}}{3}+2 \\sqrt{2}\\right)-\\left(\\frac{-8}{3}+4\\right) \\\\ + & {\\left[\\left(2 \\sqrt{2}-\\frac{2 \\sqrt{2}}{3}\\right)-\\left(-2 \\sqrt{2}+\\frac{2 \\sqrt{2}}{3}\\right)\\right] } \\\\ + & {\\left[\\left(\\frac{64}{3}-8\\right)-\\left(\\frac{2 \\sqrt{2}}{3}-2 \\sqrt{2}\\right)\\right] } \\end{aligned} \\\\ & \\Rightarrow \\frac{4 \\sqrt{2}}{3}-\\frac{4}{3}+4 \\sqrt{2}-\\frac{4 \\sqrt{2}}{3}+\\frac{40}{3}+\\frac{4 \\sqrt{2}}{3} \\\\ & =12+\\frac{16 \\sqrt{2}}{3} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-3rd-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^{\\pi / 4} \\frac{1}{5 \\cos ^2 x+16 \\sin ^2 x+8 \\sin x \\cos x} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\tan ^{-1}\\left(\\frac{4}{5}\\right)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$2 \\tan ^{-1}\\left(\\frac{3}{5}\\right)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{1}{8} \\tan ^{-1}\\left(\\frac{8}{9}\\right)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{1}{4} \\tan ^{-1}\\left(\\frac{7}{8}\\right)$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\begin{aligned} I & =\\int_0^{\\pi / 4} \\frac{d x}{5 \\cos ^2 x+16 \\sin ^2 x+8 \\sin x \\cos x} \\\\ & =\\int_0^{\\pi / 4} \\frac{\\sec ^2 x d x}{5+16 \\tan ^2 x+8 \\tan x} \\end{aligned}\\\\ &\\text { Put, } \\tan x=t \\Rightarrow \\sec ^2 x d x=d t\\\\ &\\begin{aligned} I & =\\int_0^1 \\frac{d t}{16 t^2+8 t+5} \\\\ & =\\frac{1}{16} \\int_0^1 \\frac{d t}{t^2+\\frac{1}{2} t+\\frac{5}{16}} \\\\ & =\\frac{1}{16} \\int_0^1 \\frac{d t}{\\left(t+\\frac{1}{4}\\right)^2+\\frac{5}{16}-\\frac{1}{16}} \\\\ & =\\frac{1}{16} \\int_0^1 \\frac{d t}{\\left(t+\\frac{1}{4}\\right)^2+\\left(\\frac{1}{2}\\right)^2} \\\\ & =\\frac{1}{16} \\times \\frac{1}{\\frac{1}{2}} \\tan ^{-1}\\left(\\frac{t+\\frac{1}{4}}{\\frac{1}{2}}\\right)_0^1 \\\\ & =\\frac{1}{8}\\left[\\tan ^{-1}\\left(\\frac{\\frac{5}{2}}{2}\\right)-\\tan ^{-1}\\left(\\frac{1}{2}\\right)\\right] \\\\ & =\\frac{1}{8} \\tan ^{-1}\\left(\\frac{\\frac{5}{2}-\\frac{1}{2}}{1+\\frac{5}{4}}\\right)=\\frac{1}{8} \\tan ^{-1}\\left(\\frac{8}{9}\\right) \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-3rd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_8^{18} \\frac{1}{(x+2) \\sqrt{x-3}} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{\\pi}{6 \\sqrt{5}}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{\\pi}{6}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{\\pi}{3}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{\\pi}{3 \\sqrt{5}}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$I=\\int_8^{18} \\frac{1}{(x+2) \\sqrt{x-3}} d x$</p>\n<p></p>\n<p>$$ \\begin{aligned}Put\\,\\,\\, & x-3=t^2 \\\\ & d x=2 t d t \\\\ & I=\\int_{\\sqrt{5}}^{\\sqrt{15}} \\frac{2 d t}{\\left(t^2+5\\right) \\cdot t}=2 \\int_{\\sqrt{5}}^{\\sqrt{15}} \\frac{d t}{t^2+5} \\\\ & =\\frac{2}{\\sqrt{5}}\\left(\\tan ^{-1} \\frac{t}{\\sqrt{5}}\\right)_{\\sqrt{5}}^{\\sqrt{15}} \\\\ & =\\frac{2}{\\sqrt{5}}\\left(\\frac{\\pi}{3}-\\frac{\\pi}{4}\\right)=\\frac{2}{\\sqrt{5}}\\left(\\frac{\\pi}{12}\\right)=\\frac{\\pi}{6 \\sqrt{5}} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-3rd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If [.] denotes the greatest integer function, then $\\int_1^2\\left[x^2\\right] d x=$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$5+\\sqrt{2}+\\sqrt{3}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$5+\\sqrt{2}-\\sqrt{3}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$5-\\sqrt{2}-\\sqrt{3}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$5-\\sqrt{2}+\\sqrt{3}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} I & =\\int_1^2\\left[x^2\\right] d x \\\\ & =\\int_1^{\\sqrt{2}} 1 d x+\\int_{\\sqrt{2}}^{\\sqrt{3}} 2 d x+\\int_{\\sqrt{3}}^2 3 d x \\\\ & =(\\sqrt{2}-1)+2(\\sqrt{3}-\\sqrt{2})+3(2-\\sqrt{3}) \\\\ & =\\sqrt{2}-1+2 \\sqrt{3}-2 \\sqrt{2}+6-3 \\sqrt{3} \\\\ & =5-\\sqrt{2}-\\sqrt{3} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-3rd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\mathop {\\lim }\\limits_{n \\to \\infty } \\frac{1}{n^2}\\left[e^{1 / n}+2 e^{2 / n}+3 e^{3 / n}+\\ldots+2 n e^2\\right]= $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$e^2-1$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$e^2+1$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$2 e^2-2$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$2 e^2+1$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\text { We have, }\\\\ &\\begin{aligned} \\lim _{n \\rightarrow \\infty} & \\frac{1}{n^2}\\left[e^{1 / n}+2 e^{2 / n}+3 e^{3 / n}+\\ldots+2 n e^2\\right] \\\\ & =\\lim _{n \\rightarrow \\infty} \\frac{1}{n^2}\\left[\\sum_{k=1}^{2 n} k e^{k / n}\\right] \\\\ & =\\lim _{n \\rightarrow \\infty} \\frac{1}{n}\\left[\\sum_{k=1}^{2 n}\\left(\\frac{k}{n}\\right) e^{k / n}\\right] \\\\ & =\\int_0^2 x e^x d x=\\left(x e^x-e^x\\right)_0^2 \\\\ & =\\left(2 e^2-e^2\\right)-(0-1)=e^2+1 \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-2nd-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $m, n, p, q$ be four positive integers. If</p>\n<p>$$ \\begin{aligned} & \\int_0^{2 \\pi} \\sin ^m x \\cos ^n x d x=4 \\int_0^{\\pi / 2} \\sin ^m x \\cos ^n x d x \\int_0^{2 \\pi} \\sin ^p x \\cos ^n x d x=0 \\\\ & \\int_0^\\pi \\sin ^p x \\cos ^q x d x=0, a=m+n+p \\text { and } b=m+n+q, \\text { then } \\end{aligned} $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$a$ is even number and $b$ is odd number</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$a$ is odd number and $b$ is even number</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Both $a$ and $b$ are even numbers</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Both $a$ and $b$ are odd numbers</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $m, n, p, q$ be four positive inegers</p>\n<p>$$ \\begin{aligned} & \\int_0^{2 \\pi} \\sin ^m x \\cos ^n x d x=4 \\int_0^{\\pi / 2} \\sin ^m x \\cos ^n x d x \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ & \\int_0^{2 \\pi} \\sin ^p x \\cos ^n x d x=0 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\\\ & \\text { And } \\int_0^{2 \\pi} \\sin ^p x \\cos ^q x d x=0\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii) \\\\ & \\quad a=m+n+p, b=m+n+q \\end{aligned} $$</p>\n<p>From Eq. (i), we know that</p>\n<p>$$ \\int_0^{2 \\pi} f(x) d x=4 \\int_0^{\\pi / 2} f(x) $$</p>\n<p>If $f$ is periodic with $\\pi$ and symmetric in all four quadrants</p>\n<p>$\\Rightarrow \\quad m$ and $n$ are even</p>\n<p>$$ \\int_0^{2 \\pi} \\sin ^p x \\cos ^n x d x=0 $$</p>\n<p>$\\Rightarrow$ Integrand is odd over symmetric interval $[0,2 \\pi]$</p>\n<p>Since, $n$ is even so, $p$ is odd also,</p>\n<p>$$ \\begin{aligned} & \\int_0^\\pi \\sin ^p x \\cos ^q x d x=0 \\\\ & \\Rightarrow \\quad \\sin ^p x \\cos ^q x \\text { is odd about } x=\\frac{\\pi}{2} \\\\ & \\Rightarrow \\quad q \\text { is odd } \\\\ & \\begin{aligned} \\therefore & a=m+n+p \\\\ & =\\text { even }+ \\text { even }+ \\text { odd }=\\text { odd } \\\\ \\text { And } b & =m+n+p \\\\ & =\\text { even }+ \\text { even }+ \\text { odd }=\\text { odd } \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-2nd-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^2 \\sqrt{(x+3)(2-x)} d x= $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{25}{8} \\cos ^{-1}\\left(\\frac{1}{5}\\right)-\\frac{\\sqrt{6}}{4}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{25}{8} \\sin ^{-1}\\left(\\frac{1}{5}\\right)-\\frac{\\sqrt{6}}{4}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{\\pi}{2}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\pi$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$I=\\int_0^2 \\sqrt{(x+3)(2-x)} d x$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow \\quad \\int_0^2 \\sqrt{-x^2-x+6} d x \\\\ & \\Rightarrow \\quad \\int_0^2 \\sqrt{-\\left(x^2+x-6\\right)} d x \\\\ & \\Rightarrow \\quad \\int_0^2 \\sqrt{\\frac{25}{4}-\\left(x+\\frac{1}{2}\\right)^2} d x \\end{aligned} $$</p>\n<p>Put $u=x+\\frac{1}{2} \\Rightarrow d u=d x$</p>\n<p>When $x=0, u=\\frac{1}{2}$ and $x=2$</p>\n<p>$$ \\begin{aligned} & u=2+\\frac{1}{2}=\\frac{5}{2} \\\\ & I=\\int_{\\frac{1}{2}}^{\\frac{5}{2}} \\sqrt{\\left(\\frac{5}{2}\\right)^2-u^2} d u \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow \\quad\\left[\\frac{u}{2} \\sqrt{\\frac{25}{4}-u^2}+\\frac{\\frac{25}{4}}{2} \\sin ^{-1}\\left(\\frac{u}{\\frac{5}{2}}\\right)\\right]_{\\frac{1}{2}}^{\\frac{5}{2}} \\\\ & \\Rightarrow \\quad\\left[\\frac{u}{2} \\sqrt{\\frac{25}{4}-u^2}+\\frac{25}{8} \\sin ^{-1}\\left(\\frac{2 u}{5}\\right)\\right]_{\\frac{1}{2}}^{\\frac{5}{2}} \\\\ & \\Rightarrow \\quad\\left\\{\\frac{\\frac{5}{2}}{2} \\sqrt{\\frac{25}{4}-\\frac{25}{4}}+\\frac{25}{8} \\sin ^{-1}(1)\\right\\} -\\left\\{\\frac{1}{4} \\sqrt{\\frac{25}{4}-\\frac{1}{4}}+\\frac{25}{8} \\sin ^{-1}\\left(\\frac{1}{5}\\right)\\right\\} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow \\quad 0+\\frac{25}{8} \\cdot \\frac{\\pi}{2}-\\frac{1}{4} \\sqrt{6}-\\frac{25}{8} \\sin ^{-1}\\left(\\frac{1}{5}\\right) \\\\ & \\Rightarrow \\quad \\frac{25 \\pi}{16}-\\frac{\\sqrt{6}}{4}-\\frac{25}{8} \\sin ^{-1}\\left(\\frac{1}{5}\\right) \\\\ & \\Rightarrow \\quad \\frac{25}{8}\\left(\\frac{\\pi}{2}-\\sin ^{-1}\\left(\\frac{1}{5}\\right)\\right)-\\frac{\\sqrt{6}}{4} \\\\ & \\Rightarrow \\quad \\frac{25}{8} \\cos ^{-1}\\left(\\frac{1}{5}\\right)-\\frac{\\sqrt{6}}{4} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-2nd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^{\\pi / 4} x^2 \\sin 2 x d x $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{\\pi^2-2}{8}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{\\pi(\\pi-2)}{8}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{\\pi-2}{8}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{\\pi+2}{8}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$\\int_0^{\\frac{\\pi}{4}} x^2 \\sin 2 x d x, I=\\int x^2 \\sin 2 x d x$</p>\n<p>Put $t=2 x \\Rightarrow d t=2 \\cdot d x$</p>\n<p>So, $I=\\int \\frac{t^2 \\sin t}{8} d t=\\frac{1}{8} \\int t^2 \\sin t d t$</p>\n<p>$$ \\begin{aligned} & =\\frac{1}{8}\\left[t^2 \\cdot(-\\cos t)-1 \\cdot(-2) \\cdot \\int t \\cos t d t\\right] \\\\ & =\\frac{1}{8}\\left[-t^2 \\cos t+2 \\int t \\cdot \\cos t d t\\right] \\\\ & =\\frac{1}{8}\\left[-t^2 \\cos t+2(t \\cdot \\sin t-(-\\cos t))\\right] \\\\ & =\\frac{1}{8}\\left[-t^2 \\cos t+2 t \\sin t+2 \\cos t\\right] \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & =\\frac{1}{8}\\left[(2 x)^2 \\cos (2 x)+2(2 x \\cdot \\sin (2 x))\\right.  +2 \\cos (2 x)] \\\\ & =\\frac{-x^2 \\cos (2 x)+x \\sin (2 x)}{2}+\\frac{\\cos (2 x)}{4} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & \\text { So, } \\int_0^{\\frac{\\pi}{4}} x^2 \\sin 2 x d x \\\\ & =\\left[\\frac{-x^2 \\cos (2 x)+x \\sin (2 x)}{2}+\\frac{\\cos (2 x)}{4}\\right]_0^{\\frac{\\pi}{4}} \\\\ & =\\left\\{\\frac{-\\left(\\frac{\\pi}{4}\\right)^2 \\cos \\left(2 \\times \\frac{\\pi}{4}\\right)+\\frac{\\pi}{4} \\sin \\left(2 \\times \\frac{\\pi}{4}\\right)}{2}\\right. \\left.+\\frac{\\cos \\left(\\frac{2 \\pi}{4}\\right)}{4}\\right\\}-\\left\\{\\frac{0}{2}+\\frac{\\cos (0)}{4}\\right\\} \\\\ & \\Rightarrow\\left(0+\\frac{\\pi}{8} \\cdot 1+\\frac{1}{4} \\cdot 0\\right)-\\left(0+\\frac{1}{4}\\right) \\\\ & \\quad=\\frac{\\pi}{8}-\\frac{1}{4}=\\frac{\\pi-2}{8} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-2nd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_{-2 \\pi}^{2 \\pi} \\sin ^4 x \\cos ^6 x d x= $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{3 \\pi}{128}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{9 \\pi}{32}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{9 \\pi}{64}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{3 \\pi}{64}$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\int_{-2 \\pi}^{2 \\pi} \\sin ^4 x \\cos ^6 x d x \\\\ & f(x)=\\sin ^4 x \\cos ^6 x \\end{aligned} $$</p>\n<p>Since, $\\sin x$ is an odd function and $\\sin ^2 x$ is an even function and $\\cos ^6 x$ is an even function.</p>\n<p>So, $f(x)$ is an even function.</p>\n<p>$$ \\begin{gathered} \\therefore \\int_{-2 \\pi}^{2 \\pi} \\sin ^4 x \\cos ^6 x d x=2 \\int_0^{2 \\pi} \\sin ^4 x \\cos ^6 x d x \\\\ {\\left[\\because \\int_{-a}^a f(x) d x=2 \\int_0^a f(x) d x\\right]} \\\\ =2 \\times 2 \\int_0^\\pi \\sin ^4 x \\cos ^6 x d x \\\\ {\\left[\\because \\int_0^{n \\pi} f(x) d x=n \\int_0^T f(x) d x\\right]} \\\\ =4 \\int_0^\\pi \\sin ^4 x \\cos ^6 x d x \\\\ =4 \\times 2 \\int_0^{\\frac{\\pi}{2}} \\sin ^4 x \\cos ^6 x d x \\\\ {\\left[\\because \\int_0^{2 a} f(x) d x=2 \\int_0^a f(x) d x\\right]} \\end{gathered} $$</p>\n<p>$$ \\begin{aligned} &=8 \\int_0^{\\frac{\\pi}{2}} \\sin ^4 x \\cos ^6 x d x\\\\ &[\\because \\text { If } m \\text { and } n \\text { are both even, then }\\\\ &\\int_0^{\\frac{\\pi}{2}} \\sin ^m x \\cos ^n x d x= \\end{aligned} $$</p>\n<p>$$ \\left.\\frac{[(m-1)(m-3) \\ldots 2 \\text { or } 1][(n-1)(n-3) \\ldots 2 \\text { or } 1]}{[(m+n)(m+n-2) \\ldots 2 \\text { or } 1]} \\times \\frac{\\pi}{2}\\right] $$</p>\n<p>$$ \\begin{aligned} & =8 \\times \\frac{3 \\times 1 \\times 5 \\times 3 \\times 1}{10 \\times 8 \\times 6 \\times 4 \\times 2} \\times \\frac{\\pi}{2} \\\\ & =\\frac{3 \\pi}{64} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "tg-eapcet-2025-online-2nd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$\\int_{\\frac{\\pi}{5}}^{\\frac{3 \\pi}{10}} \\frac{d x}{\\sec ^{2} x+\\left(\\tan ^{2024} x-1\\right)\\left(\\sec ^{2} x-1\\right)}=$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{\\pi}{20}$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{2 \\pi}{5}$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{3 \\pi}{20}$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{3 \\pi}{5}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$ \\int_{\\frac{\\pi}{5}}^{\\frac{3 \\pi}{10}} \\frac{d x}{\\sec ^{2} x+\\left(\\tan ^{2024} x-1\\right)\\left(\\sec ^{2} x-1\\right)} $ </p><p>$ \\begin{array}{l}\\int_{\\frac{2 \\pi}{10}}^{\\frac{3 \\pi}{0}} \\frac{d x}{1+\\tan ^{2} x+\\tan ^{2024} x-\\tan ^{2} x} \\\\\\\\ =\\int_{\\frac{2 \\pi}{10}}^{\\frac{3 \\pi}{10}} \\frac{d x}{1+\\tan ^{2024} x} \\\\\\\\ I=\\int_{\\frac{2 \\pi}{10}}^{\\frac{3 \\pi}{0}} \\frac{\\cos ^{2024} x}{\\sin ^{2024} x+\\cos ^{2024} x} d x \\end{array} $ </p><p>Applyh P_IV </p><p>$ I=\\int_{\\frac{\\pi}{10}}^{\\frac{3 \\pi}{10}} \\frac{\\sin ^{2024} x}{\\cos ^{2024} x+\\sin ^{2024} x} d x $ </p><p>On adding Eqs. (i) and (ii), we get </p><p>$ \\begin{array}{l} 2 I=\\int_{\\frac{\\pi}{5}}^{\\frac{3 \\pi}{10}} d x=(x)_{\\pi / 5}^{3 \\pi / 10}=\\frac{3 \\pi}{10}-\\frac{2 \\pi}{10}=\\frac{\\pi}{10} \\\\\\\\ I=\\frac{\\pi}{20} \\end{array} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "tg-eapcet-2024-online-11th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$\\int_{-\\pi / 15}^{\\pi / 5} \\frac{\\cos 5 x}{1+e^{5 x}} d x=$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{1}{5}$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{\\sqrt{3}}{10}$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{1}{15}$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{1}{10}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Apply P - IV </p><p>$ \\begin{aligned} I & =\\int_{\\frac{-\\pi}{15}}^{\\frac{\\pi}{15}} \\frac{\\cos (-5 x)}{1+e^{-5 x}} d x \\\\\\\\ & =\\int_{\\frac{-\\pi}{15}}^{\\frac{\\pi}{15}} \\frac{e^{5 x} \\cos 5 x}{e^{5 x}+1} d x \\end{aligned} $ </p><p>On adding Eqs. (i) and (ii), we get </p><p>$ \\begin{array}{l}  2 I=\\int_{\\frac{-\\pi}{15}}^{\\frac{\\pi}{15}} \\frac{\\cos 5 x\\left(e^{5 x}+1\\right)}{e^{5 x}+1} d x=\\int_{\\frac{-\\pi}{15}}^{\\frac{\\pi}{15}} \\cos 5 x d x \\\\\\\\ =2 \\int_{0}^{\\frac{\\pi}{15}} \\cos 5 x d x \\\\\\\\ 2 I=2 \\frac{1}{5}[\\sin 5 x]_{0}^{\\frac{\\pi}{15}} \\\\\\\\ I=\\frac{1}{5}\\left[\\sin \\frac{\\pi}{3}-0\\right]=\\frac{1}{5} \\times \\frac{\\sqrt{3}}{2}=\\frac{\\sqrt{3}}{10} \\end{array} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "tg-eapcet-2024-online-11th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$\\frac{3}{25} \\int_{0}^{25 \\pi} \\sqrt{\\left|\\cos x-\\cos ^{3} x\\right|} d x=$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "0"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve the given integral problem, we can start by simplifying the expression inside the integral:</p>\n<p>$ \\frac{3}{25} \\int_{0}^{25 \\pi} \\sqrt{\\left|\\cos x - \\cos^3 x\\right|} \\, dx $</p>\n<p>We can rewrite this expression as:</p>\n<p>$ \\frac{3}{25} \\int_{0}^{25 \\pi} \\sqrt{|\\cos x (1 - \\cos^2 x)|} \\, dx $</p>\n<p>Recognizing that $1 - \\cos^2 x = \\sin^2 x$, this becomes:</p>\n<p>$ \\frac{3}{25} \\int_{0}^{25 \\pi} \\sqrt{|\\cos x| \\sin^2 x} \\, dx $</p>\n<p>We further simplify this to:</p>\n<p>$ \\frac{3}{25} \\int_{0}^{25 \\pi} |\\sin x| \\sqrt{|\\cos x|} \\, dx $</p>\n<p>Next, we decompose the integral over the period from $0$ to $25\\pi$ into parts over smaller intervals where the function symmetry and periodicity can be utilized:</p>\n<p>$ = \\frac{3}{25} \\left[13 \\int_{0}^{\\frac{\\pi}{2}} \\sin x \\sqrt{\\cos x} \\, dx + 13 \\int_{\\frac{\\pi}{2}}^{\\pi} \\sin x \\sqrt{-\\cos x} \\, dx - 12 \\int_{\\pi}^{\\frac{3\\pi}{2}} \\sin x \\sqrt{-\\cos x} \\, dx - 12 \\int_{\\frac{3\\pi}{2}}^{2\\pi} \\sin x \\sqrt{\\cos x} \\, dx\\right] $</p>\n<p>For each sub-interval, we compute the integral:</p>\n\n<p><p>For $ \\int_{0}^{\\frac{\\pi}{2}}$, use the substitution $\\cos x$ from 1 to 0.</p></p>\n<p><p>For $ \\int_{\\frac{\\pi}{2}}^{\\pi}$, and similarly mapped intervals $\\int_{\\pi}^{\\frac{3\\pi}{2}}$, $\\int_{\\frac{3\\pi}{2}}^{2\\pi}$, follow similar transformations respecting their respective limits to evaluate each segment.</p></p>\n\n<p>The integrals resolve as follows:</p>\n<p>$ = \\frac{3}{25} \\left[-13 \\left[\\frac{2(\\cos x)^{\\frac{3}{2}}}{3} \\right]_{0}^{\\frac{\\pi}{2}} + 13 \\left[\\frac{2(-\\cos x)^{\\frac{3}{2}}}{3}\\right]_{\\frac{\\pi}{2}}^{\\pi} - 12\\left[\\frac{2(-\\cos x)^{\\frac{3}{2}}}{3}\\right]_{\\pi}^{\\frac{3\\pi}{2}} + 12 \\left[\\frac{2}{3}(\\cos x)^{\\frac{3}{2}} \\right]_{\\frac{3\\pi}{2}}^{2\\pi}\\right] $</p>\n<p>Evaluating each integral gives:</p>\n<p>$ = \\frac{3}{25} \\times \\frac{1}{3}\\left[-26(0-1) + 26(1-0) - 24(0-1) + 24(1-0)\\right] $</p>\n<p>This simplifies to:</p>\n<p>$ = \\frac{1}{25}[26 + 26 + 48] = \\frac{1}{25} \\times 100 = 4 $</p>\n<p>Thus, the final calculated value of the integral is 4.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "tg-eapcet-2024-online-10th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If $m, l, r, s, n$ are integers such that $9 > m > l > s > n > r > 2$ and $\\int_{-2 \\pi}^{2 \\pi} \\sin ^{m} x \\cos ^{n} x d x=4 \\int_{0}^{\\pi} \\sin ^{m} x \\cos ^{n} x d x, \\int_{-\\pi}^{\\pi} \\sin ^{r} x \\cos ^{s} x d x$ $=4 \\int_{0}^{\\pi / 2} \\sin ^{r} x \\cos ^{s} x d x$ and $\\int_{-\\pi / 2}^{\\pi / 2} \\sin ^{l} x \\cos ^{m} x d x=0$, then",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$(s-2)(1-2)=m r$"
+      },
+      {
+        "identifier": "B",
+        "content": "$(s-2)(l+2)=r m+5$"
+      },
+      {
+        "identifier": "C",
+        "content": "$(s-2)(s+2)=\\ln -3$"
+      },
+      {
+        "identifier": "D",
+        "content": "$(I-2)(I+2)=m s-5$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To analyze the integrals, we start by considering the expression $ I = \\int_{-2\\pi}^{2\\pi} \\sin^m x \\cos^n x \\, dx $.</p>\n<p>Since the given condition is:</p>\n<p>$ I = 4 \\int_{0}^{\\pi} \\sin^m x \\cos^n x \\, dx $</p>\n<p>We know that:</p>\n<p>$  \\int_{-a}^{a} f(x) \\, dx = 2 \\int_{0}^{a} f(x) \\, dx  $</p>\n<p>if $ f(x) $ is an even function. This suggests that $ \\sin^m x \\cos^n x $ might be even in this case. To satisfy the condition where the integral over the larger symmetric interval is four times the integral over the smaller positive interval, $ m $ must be even.</p>\n<p>Similarly, consider:</p>\n<p>$ \\int_{-\\pi}^{\\pi} \\sin^r x \\cos^s x \\, dx = 4 \\int_{0}^{\\pi/2} \\sin^r x \\cos^s x \\, dx $</p>\n<p>Here, for a comparable reason, we must have $ r $ as even.</p>\n<p>Finally, for:</p>\n<p>$ \\int_{-\\pi/2}^{\\pi/2} \\sin^l x \\cos^m x \\, dx = 0 $</p>\n<p>the function should be odd because the integral of an odd function over a symmetric interval around zero results in zero. Thus, $ l $ must be odd.</p>\n<p>With the constraints $ 9 > m > l > s > n > r > 2 $, and that $ m $ and $ r $ are even while $ l $ is odd, a possible assignment of these integers could be:</p>\n\n<p><p>$ m = 8 $</p></p>\n<p><p>$ l = 7 $</p></p>\n<p><p>$ s = 6 $</p></p>\n<p><p>$ n = 5 $</p></p>\n<p><p>$ r = 4 $</p></p>\n\n<p>Next, let's test the option that matches this setup:</p>\n<p>For option C, $(s-2)(s+2) = ln - 3$:</p>\n<p>$ (s-2)(s+2) = (6-2)(6+2) = 4 \\times 8 = 32 $</p>\n<p>The expression $ ln - 3 $ was a typo originally intended to test our guess, but $ 32 = 32 $ checks out, confirming this is our desired setup.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "tg-eapcet-2024-online-10th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$\\int_0^\\pi\\left(\\sin ^3 x+\\cos ^2 x\\right)^2 d x=$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{15 \\pi}{16}+\\frac{8}{15}$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{11 \\pi}{16}+\\frac{8}{15}$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{15 \\pi}{16}+\\frac{4}{15}$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{11 \\pi}{16}+\\frac{4}{15}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $ I=\\int_{0}^{\\pi}\\left(\\sin ^{3} x+\\cos ^{2} x\\right)^{2} d x $</p>\n<p>$ \\begin{array}{c} I=\\int_{0}^{\\pi}\\left[\\sin ^{3}(\\pi-x)+\\cos ^{2}(\\pi-x)\\right]^{2} d x \\\\\\\\ I=\\int_{0}^{\\pi}\\left(\\sin ^{3} x+\\cos ^{2} x\\right)^{2} d x \\\\\\\\ \\Rightarrow I=2 \\int_{0}^{\\pi / 2}\\left(\\sin ^{3} x+\\cos ^{2} x\\right)^{2} d x \\end{array} $</p>\n<p>By applying the property,</p>\n<p>$ I=2 \\int_{0}^{\\pi / 2}\\left(\\cos ^{3} x+\\sin ^{2} x\\right)^{2} d x $</p>\n<p>On adding Eqs. from (i) and (ii), we get</p>\n<p>$ \\begin{array}{c} 2 I=2\\left[\\int _ { 0 } ^ { \\pi / 2 } \\left(\\left(\\sin ^{3} x+\\cos ^{2} x\\right)^{2}\\right.\\right. \\\\\\\\ \\left.+\\left(\\cos ^{3} x+\\sin ^{2} x\\right)^{2}\\right] d x \\\\\\\\ I=\\int_{0}^{\\pi / 2} \\sin ^{6} x+\\cos ^{6} x+\\sin ^{4} x+\\cos ^{4} x \\\\\\\\ +2 \\sin ^{3} x \\cos ^{2} x+2 \\cos ^{3} x \\sin ^{2} x d x \\\\\\\\ I=\\int_{0}^{\\pi / 2}\\left(\\sin ^{2} x+\\cos ^{2} x\\right)\\left(\\sin ^{4} x\\right. \\\\\\\\ \\left.+\\cos ^{4} x-\\sin ^{2} x \\cos ^{2} x\\right) \\\\\\\\ +\\sin ^{4} x+\\cos ^{4} x+2 \\sin ^{2} x \\cos ^{2} \\end{array} $</p>\n<p>$ x(\\sin x+\\cos x) d x $</p>\n<p>$ I=\\int_{0}^{\\pi / 2} 2\\left(\\sin ^{4} x+\\cos ^{4} x\\right)+\\sin ^{2} x \\cos ^{2} $</p>\n<p>$ x\\left(2 \\sin x+2 \\cos x^{-1}\\right) $</p>\n<p>$ I=\\int_{0}^{\\pi / 2} 2\\left(1-2 \\sin ^{2} x \\cos ^{2} x\\right)+\\sin ^{2} x \\cos ^{2} $</p>\n<p>$ x(2 \\sin x+2 \\cos x-1) d x $</p>\n<p>$ \\begin{array}{r} I=\\int_{0}^{\\pi / 2} 2-5 \\sin ^{2} x \\cos ^{2} x+2 \\sin ^{3} x \\cos ^{2} \\\\\\\\ x+2 \\sin ^{2} x \\cos ^{3} x d x \\end{array} $</p>\n<p>Let $ I=\\int_{0}^{\\pi / 2} 5 \\sin ^{2} x \\cos ^{2} x d x $</p>\n<p>$ =\\frac{5}{4} \\int_{0}^{\\pi / 2} \\sin ^{2} 2 x d x $</p>\n<p>$ =\\frac{5}{4} \\int_{0}^{\\pi / 2} \\frac{1-\\cos 4 x}{2} d x $</p>\n<p>$ =\\frac{5}{8}\\left(x-\\frac{\\sin 4 x}{4}\\right)_{0}^{\\pi / 2}=\\frac{5}{8}\\left[\\frac{\\pi}{2}\\right]=\\frac{5 \\pi}{16} $</p>\n<p>$ I_{2}=\\int_{0}^{\\pi / 2} 2 \\sin ^{3} x \\cos ^{2} x d x $</p>\n<p>$ =\\int_{0}^{\\pi / 2}\\left(1-\\cos ^{2} x\\right) \\cos ^{2} x \\sin x d x $</p>\n<p>Let $ \\cos x=t $</p>\n<p>$ -\\sin x d x=d t \\Rightarrow \\sin x d x=-d t $</p>\n<p>Also, $ x=0, t=1 $</p>\n<p>$ \\begin{array}{l} x=\\pi / 2, t=0 \\\\\\\\ \\begin{aligned} I_{2} & =2 \\int_{1}^{0}\\left(t^{2}-1\\right) t^{2} d t=2 \\int_{1}^{0}\\left(t^{4}-t^{2}\\right) d t \\\\\\\\ & =2\\left[\\frac{t^{5}}{5}-\\frac{t^{3}}{3}\\right]_{1}^{0}=2\\left[-\\frac{1}{5}+\\frac{1}{3}\\right]=\\frac{4}{15} \\\\\\\\ I_{3} & =2 I=\\int_{0}^{\\pi / 2} \\sin ^{2} x \\cos ^{3} x d x \\\\\\\\ I_{3} & =2 \\int_{0}^{\\pi / 2} \\sin ^{2} x\\left(1-\\sin ^{2} x\\right) \\cos x d x \\end{aligned} \\end{array} $</p>\n<p>Let $ \\sin x=u \\Rightarrow \\cos x d x=d u $</p>\n<p>Also, $ x=0, u=0 \\Rightarrow x=\\pi / 2, u=1 $</p>\n<p>$ \\begin{aligned} I_{3} & =2 \\int_{0}^{1} u^{2}\\left(1-u^{2}\\right) d u \\\\\\\\ & =2\\left[\\frac{u^{3}}{3}-\\frac{u^{5}}{5}\\right]_{0}^{1}=2\\left[\\frac{1}{3}-\\frac{1}{5}\\right]=\\frac{4}{15} \\\\\\\\ I & =[2 x]_{0}^{\\pi / 2}-\\frac{5 \\pi}{16}+\\frac{4}{15}+\\frac{4}{15} \\\\\\\\ & =\\pi-\\frac{5 \\pi}{16}+\\frac{8}{15}=\\frac{11 \\pi}{16}+\\frac{8}{15} \\end{aligned} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "tg-eapcet-2024-online-10th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$\\int_{\\frac{-\\pi}{8}}^{\\frac{\\pi}{8}} \\frac{\\sin ^4(4 x)}{1+e^{4 x}} d x=$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{3 \\pi}{128}$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{3 \\pi}{256}$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{3 \\pi}{64}$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{3 \\pi}{32}$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $ I=\\int_{-\\frac{\\pi}{8}}^{\\pi / 8} \\frac{\\sin ^{4}(4 x)}{1+e^{4 x}} d x $</p>\n<p>$ \\begin{array}{l} I=\\int_{0}^{\\pi / 8}\\left[\\frac{\\sin ^{4}(4 x)}{1+e^{4 x}}+\\frac{\\sin ^{4}(-4 x)}{1+e^{-4 x}}\\right] d x \\\\\\\\ I=\\int_{0}^{\\pi / 8} \\sin ^{4}(4 x)\\left[\\frac{1}{1+e^{4 x}}+\\frac{e^{4 x}}{e^{4 x}+1}\\right] d x \\\\\\\\ I=\\int_{0}^{\\pi / 8} \\sin ^{4} 4 x d x \\end{array} $</p>\n<p>Let $ 4 x=t \\Rightarrow 4 d x=d t $</p>\n<p>If $ x=0 \\Rightarrow t=0 $</p>\n<p>$ \\begin{array}{c} x=\\frac{\\pi}{8} \\Rightarrow t=\\frac{\\pi}{2} \\\\\\\\ I=\\frac{1}{4} \\int_{0}^{\\pi / 2} \\sin ^{4} t d t \\\\\\\\ I=\\frac{1}{4} \\int_{0}^{\\pi / 2} \\sin ^{4}\\left(\\frac{\\pi}{2}-t\\right) \\\\\\\\ =\\frac{1}{4} \\int_{0}^{\\pi / 2} \\cos ^{4} t d t \\end{array} $</p>\n<p>$ \\begin{array}{l} \\quad I=\\frac{1}{4} \\int_{0}^{\\pi / 2} \\sin ^{4}\\left(\\frac{\\pi}{2}-t\\right) d t \\\\\\\\ \\quad=\\frac{1}{4} \\int_{0}^{\\pi / 2} \\cos ^{4} t d t \\end{array} $</p>\n<p>On adding in Eqs (i) and (ii), we get.</p>\n<p>$ \\begin{array}{l} 2 I=\\frac{1}{4} \\int_{0}^{\\pi / 2}\\left(\\sin ^{4} t+\\cos ^{4} t\\right) d t \\\\\\\\ I=\\frac{1}{8} \\int_{0}^{\\pi / 2}\\left[1-\\frac{1}{2}(\\sin 2 t)^{2}\\right] d t \\\\\\\\ I=\\frac{1}{8} \\int_{0}^{\\pi / 2}\\left[1-\\frac{1}{4}(1-\\cos 4 t)\\right] d t \\\\\\\\ I=\\frac{1}{8} \\int_{0}^{\\pi / 2}\\left[\\frac{3}{4}+\\frac{1}{4} \\cos 4 t\\right] d t \\\\\\\\ I=\\frac{1}{8}\\left(\\frac{3 t}{4}+\\frac{\\sin 4 t}{16}\\right)_{0}^{\\pi / 2} \\Rightarrow I=\\frac{1}{8}\\left(\\frac{3 \\pi}{8}\\right)=\\frac{3 \\pi}{64} \\end{array} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "tg-eapcet-2024-online-10th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$ \\int_{\\frac{-3}{4}}^{\\frac{\\pi-6}{8}} \\log (\\sin (4 x+3)) d x= $</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$-\\frac{\\pi}{2} \\log 2$"
+      },
+      {
+        "identifier": "B",
+        "content": "$-\\frac{\\pi}{8} \\log 2$"
+      },
+      {
+        "identifier": "C",
+        "content": "$-\\frac{\\pi}{14} \\log 2$"
+      },
+      {
+        "identifier": "D",
+        "content": "$-\\frac{\\pi}{28} \\log 2$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $I=\\int_{-\\frac{3}{4}}^{\\frac{\\pi-6}{8}} \\log (\\sin (4 x+3)) d x \\quad \\ldots \\text { (i) } $</p>\n<p>$$ \\begin{aligned} & \\Rightarrow I=\\int_{-\\frac{3}{4}}^{\\frac{\\pi-6}{8}} \\log \\left(\\sin \\left(4\\left(\\frac{\\pi-6}{8}+\\left(-\\frac{3}{4}\\right)-x\\right)+3\\right)\\right) d x \\\\\\\\ & \\Rightarrow I=\\int_{-\\frac{3}{4}}^{\\frac{\\pi-6}{8}} \\log \\left(\\sin \\left(\\frac{\\pi}{2}-(4 x+3)\\right)\\right) d x \\\\\\\\ & \\quad \\Rightarrow I=\\int_{-\\frac{3}{4}}^{\\frac{\\pi-6}{8}} \\log (\\cos (4 x+3)) d x \\quad \\ldots \\text { (ii) } \\end{aligned} $$</p>\n<p>On adding Eqs. (i) and (ii), we get</p>\n<p>$$ \\begin{aligned} & 2 I=\\int_{-\\frac{3}{4}}^{\\frac{\\pi-6}{8}} \\log (\\sin (4 x+3) \\cos (4 x+3)) d x \\\\\\\\ & \\Rightarrow 2 I=\\int_{-\\frac{3}{4}}^{\\frac{\\pi-6}{8}} \\log \\left(\\frac{\\sin (2(4 x+3))}{2}\\right) d x \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow 2 I=\\int_{-\\frac{3}{4}}^{\\frac{\\pi-6}{8}} \\log (\\sin (2(4 x+3))) d x \\\\\\\\ & \\qquad-\\int_{-\\frac{3}{4}}^{\\frac{\\pi-6}{8}}(\\log 2) d x \\\\\\\\ & \\Rightarrow 2 I=I-(\\log 2)\\left[\\frac{\\pi-6}{8}-\\left(-\\frac{3}{4}\\right)\\right] \\\\\\\\ & \\Rightarrow I=-\\frac{\\pi}{8} \\log 2 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "tg-eapcet-2024-online-9th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$\\int_0^{16} \\frac{\\sqrt{x}}{1+\\sqrt{x}} d x=$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$8+2 \\log 2$"
+      },
+      {
+        "identifier": "B",
+        "content": "$8+\\log 2$"
+      },
+      {
+        "identifier": "C",
+        "content": "$8+2 \\log 5$"
+      },
+      {
+        "identifier": "D",
+        "content": "$4+\\log 5$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text {Let } I=\\int_0^{16} \\frac{\\sqrt{x}}{1+\\sqrt{x}} d x \\\\\\\\ & \\text { Put } 1+\\sqrt{x}=t \\\\\\\\ & \\Rightarrow \\quad \\frac{1}{2 \\sqrt{x}} d x=d t \\\\\\\\ & \\Rightarrow \\quad d x=2(t-1) d t \\\\\\\\ & \\text { When } x=0, t=1 \\\\\\\\ & \\text { When } x=16, t=5 \\\\\\\\ & \\begin{aligned} \\therefore I & =\\int_1^{5 t-1} \\\\\\\\ t & (2(t-1)) d t \\\\\\\\ & =2 \\int_1^{5 t^2-2 t+1} \\\\\\\\ & =2 \\int_1^5\\left(t-2+\\frac{1}{t}\\right) d t \\\\\\\\ & =2\\left[\\frac{t^2}{2}-2 t+\\log t\\right]_1^5 \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & =2\\left[\\left\\{\\frac{25}{2}-10+\\log 5\\right\\}-\\left\\{\\frac{1}{2}-2+\\log 1\\right\\}\\right] \\\\\\\\ & =2\\left[\\frac{5}{2}+\\log 5+\\frac{3}{2}+0\\right] \\\\\\\\ & =8+2 \\log 5 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "tg-eapcet-2024-online-9th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$\\int_0^{32 \\pi} \\sqrt{1-\\cos 4 x} d x=$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$16 \\sqrt{2}$"
+      },
+      {
+        "identifier": "B",
+        "content": "$32 \\sqrt{2}$"
+      },
+      {
+        "identifier": "C",
+        "content": "$128 \\sqrt{2}$"
+      },
+      {
+        "identifier": "D",
+        "content": "$64 \\sqrt{2}$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text { Let } I=\\int_0^{32 \\pi} \\sqrt{1-\\cos 4 x} d x \\\\\\\\ & =\\int_0^{32 \\pi} \\sqrt{1-\\left(1-2 \\sin ^2 2 x\\right)} d x \\\\\\\\ & =\\int_0^{32 \\pi} \\sqrt{2}|\\sin 2 x| d x \\end{aligned} $$</p>\n<p>The period of $|\\sin 2 x|$ is $\\frac{\\pi}{2}$</p>\n<p>$$ \\begin{aligned} \\therefore \\quad I & =64 \\int_0^{\\pi / 2} \\sqrt{2} \\sin 2 x d x \\\\\\\\ & =64 \\sqrt{2}\\left[\\frac{-\\cos 2 x}{2}\\right]_0^{\\pi / 2} \\\\\\\\ & =32 \\sqrt{2}[-\\cos \\pi+\\cos 0] \\\\\\\\ & =32 \\sqrt{2}[-(-1)+1]=64 \\sqrt{2} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "tg-eapcet-2024-online-9th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If $f(x)=\\int \\frac{\\sin 2 x+2 \\cos x}{4 \\sin ^2 x+5 \\sin x+1} d x$ and $f(0)=0$, then $f(\\pi / 6)=$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\log \\frac{3}{4}$"
+      },
+      {
+        "identifier": "B",
+        "content": "$2 \\log 2$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{1}{2} \\log 3$"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$ \\begin{aligned} f(x)= & \\int \\frac{\\sin 2 x+2 \\cos x}{4 \\sin ^2 x+5 \\sin x+1} d x \\\\\\\\ & =\\int \\frac{2 \\cos x(\\sin x+1)}{(4 \\sin x+1)(\\sin x+1)} d x \\\\\\\\ & =\\int \\frac{2 \\cos x}{4 \\sin x+1} d x \\end{aligned} $$</p>\n<p>$\\begin{aligned} & \\text { Let } 4 \\sin x+1=t \\Rightarrow 4 \\cos x d x=d t \\\\\\\\ & \\begin{aligned} \\Rightarrow & f(x)=\\frac{1}{2} \\int \\frac{d t}{t}=\\frac{1}{2} \\log t+C \\\\\\\\ & =\\frac{1}{2} \\log (4 \\sin x+1)+C\\end{aligned} \\\\\\\\ & \\begin{aligned} \\because & f(0)=0 \\Rightarrow C=0 \\\\\\\\ \\therefore & f(x)=\\frac{1}{2} \\log (4 \\sin x+1)\\end{aligned} \\\\\\\\ & f\\left(\\frac{\\pi}{6}\\right)=\\frac{1}{2} \\log \\left(\\frac{4}{2}+1\\right)=\\frac{1}{2} \\log 3\\end{aligned}$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "ts-eamcet-2024-online-9th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$\\int_{-2}^2 x^4\\left(4-x^2\\right)^{\\frac{7}{2}} d x=$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$4 \\pi$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{\\pi}{16}$"
+      },
+      {
+        "identifier": "C",
+        "content": "$28 \\pi$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{3 \\pi}{128}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $I=\\int_{-2}^2 x^4\\left(4-x^2\\right)^{7 / 2} d x$</p>\n<p>$$ \\begin{aligned} & I=2 \\int_0^2 x^4\\left(4-x^2\\right)^{7 / 2} d x \\\\\\\\ & \\qquad \\quad[\\because f(x) \\text { is even function }] \\\\\\\\ & \\text { put } x=2 \\sin \\theta \\Rightarrow d x=2 \\cos \\theta d \\theta \\\\\\\\ & \\text { when } x=0, \\theta=0 \\text { and } x=2, \\theta=\\frac{\\pi}{2} \\\\\\\\ & \\therefore I=2 \\int_0^{\\pi / 2} 2^4 \\sin ^4 \\theta(2 \\cos \\theta)^7 \\cdot 2 \\cos \\theta d \\theta \\\\\\\\ & I=2 \\cdot 2^4 \\cdot 2^8 \\int_0^{\\pi / 2} \\sin ^4 \\theta \\cos ^8 \\theta d \\theta \\\\\\\\ & I=2^{13} . \\end{aligned} $$</p>\n<p>$$ \\frac{(4-1)(4-3)(8-1)(8-3)(8-5)(8-7)}{12 \\times 10 \\times 8 \\times 6 \\times 4 \\times 2} \\times \\frac{\\pi}{2} $$</p>\n<p>(by Wall's formulae)</p>\n<p>$$ \\begin{aligned} & =\\frac{2^{13} \\times 3 \\times 1 \\times 7 \\times 5 \\times 3 \\times 1 \\times \\frac{\\pi}{2}}{12 \\times 10 \\times 8 \\times 6 \\times 4 \\times 2} \\\\\\\\ & =\\frac{2^6 \\times 3 \\times 7 \\times 5 \\times 3 \\times \\pi}{6 \\times 5 \\times 4 \\times 3 \\times 2}=28 \\pi \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "ts-eamcet-2024-online-9th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^{\\pi / 2} \\frac{x \\tan x \\sec ^2 x}{\\tan ^4 x+1} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\pi^2 / 16$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\pi^2 / 4$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\pi^2 / 8$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\pi^2 / 32$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text {  } \\begin{aligned} \\int_0^{\\pi / 2} \\frac{x \\tan x \\sec ^2 x}{\\tan ^4 x+1} d x  \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\\\ =\\int_0^{\\pi / 2} \\frac{x \\sin x}{\\frac{\\cos ^3 x}{\\sin ^4 x+\\cos ^4 x} x} d x \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\\\ =\\int_0^{\\pi / 2} \\frac{x \\sin x \\cos x}{\\sin ^4 x+\\cos ^4 x} d x \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ =\\int_0^{\\pi / 2} \\frac{\\left(\\frac{\\pi}{2}-x\\right) \\sin \\left(\\frac{\\pi}{2}-x\\right) \\cos \\left(\\frac{\\pi}{2}-x\\right)}{\\sin ^4\\left(\\frac{\\pi}{2}-x\\right)+\\cos ^4\\left(\\frac{\\pi}{2}-x\\right)} d x \\\\ =\\int_0^{\\pi / 2} \\frac{\\left(\\frac{\\pi}{2}-x\\right) \\cos x \\sin x}{\\sin ^4 x+\\cos ^4 x} d x \\end{aligned} $$</p>\n<p>On adding Eqs. (i) and (ii), we get</p>\n<p>$$ 2 I=\\frac{\\pi}{2} \\int_0^{\\pi / 2} \\frac{\\sin x \\cos x}{\\sin ^4 x+\\cos ^4 x} d x $$</p>\n<p>Put, $\\sin ^2 x=t$</p>\n<p>$$ \\Rightarrow 2 \\sin x \\cos x=d t $$</p>\n<p>When, $x=0, t=0$</p>\n<p>and $x=\\frac{\\pi}{2}, t=1$</p>\n<p>$$ \\begin{aligned} I & =\\frac{\\pi}{4} \\int_0^1 \\frac{\\frac{1}{2} d t}{2 t^2-2 t+1} \\\\ \\Rightarrow I & =\\frac{\\pi}{8} \\int_0^1 \\frac{d t}{\\left(t-\\frac{1}{2}\\right)^2+\\left(\\frac{1}{2}\\right)^2} \\\\ & =\\frac{\\pi}{8}\\left[\\tan ^{-1}\\left(\\frac{t-\\frac{1}{2}}{\\frac{1}{2}}\\right)\\right]_0^1 \\\\ & =\\frac{\\pi}{8}\\left[\\tan ^{-1}(1)-\\tan ^{-1}(-1)\\right] \\\\ & =\\frac{\\pi}{8}\\left(\\frac{\\pi}{4}+\\frac{\\pi}{4}\\right)=\\frac{\\pi^2}{16} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-14th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_3^6 \\frac{\\sqrt{x}}{\\sqrt{9-x}+\\sqrt{x}} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$1 / 2$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$3 / 2$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>2</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>1</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $I=\\int_3^6 \\frac{\\sqrt{x}}{\\sqrt{9-x}+\\sqrt{x}} d x\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)$</p>\n<p>Using properties</p>\n<p>$$ \\begin{aligned} \\int_a^b f(x) d x & =\\int_a^b f(a+b-x) d x \\\\ I & =\\int_3^6 \\frac{\\sqrt{9-x}}{\\sqrt{x}+\\sqrt{9-x}} d x \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} $$</p>\n<p>On adding Eqs. (i) and (ii), we get</p>\n<p>$$ 2 I=\\int_3^6 d x \\Rightarrow I=\\frac{1}{2}[x]_3^6=\\frac{3}{2} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-14th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\lim _{n \\rightarrow \\infty}\\left[\\left(1+\\frac{1}{n^2}\\right)\\left(1+\\frac{2^2}{n^2}\\right) \\ldots(2)\\right]^{1 / n}= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$2 e^{\\pi-4}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$e^{\\frac{\\pi-4}{2}}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$2 e^{\\frac{\\pi-4}{2}}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{1}{2} e^{\\frac{\\pi-4}{2}}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$\\ln P=$</p>\n<p>$$ \\begin{aligned} & \\frac{1}{n}\\left[\\begin{array}{r} \\ln \\left(1+\\frac{1}{n^2}\\right)+\\ln \\left(1+\\frac{2^2}{n^2}\\right)+\\ln \\left(1+\\frac{3^2}{n^2}\\right) \\\\ \\ldots \\ln \\left(1+\\frac{n^2}{n^2}\\right) \\end{array}\\right] \\\\ & \\Rightarrow \\ln P=\\sum_{r=1}^n \\ln \\left(1+\\frac{r^2}{n^2}\\right) \\frac{1}{n} \\\\ & \\Rightarrow \\ln P=\\int_0^1 \\ln \\left(1+x^2\\right) d x\\left\\{\\begin{array}{l} r / n=x \\\\ 1 / n=d x \\end{array}\\right. \\end{aligned} $$</p>\n<p>Using by parts,</p>\n<p>$$ \\begin{aligned} & \\ln P=\\left[\\ln \\left(1+x^2\\right) \\cdot x-\\int \\frac{1}{1+x^2} \\cdot 2 x \\cdot x d x\\right]_0^1 \\\\ & \\Rightarrow \\ln P=\\ln 2-0-2 \\int_0^1 \\frac{1+x^2-1}{1+x^2} d x \\\\ & =\\ln 2-2\\left[x-\\tan ^{-1} x\\right]_0^1=\\ln 2-2+\\frac{\\pi}{2} \\\\ & \\Rightarrow P=e^{\\left(\\ln 2+\\frac{\\pi}{2}-2\\right)}=2 e^{\\frac{\\pi-4}{2}} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-14th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_{-1}^1 x|x| d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>1</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$1 / 2$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>0</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$2 / 3$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text {  Let } I=\\int_{-1}^1 x|x| d x \\\\ & |x|=\\left\\{\\begin{array}{cc} -x & ; x<0 \\\\ x & ; x>0 \\end{array}\\right. \\\\ & I=\\int_{-1}^0-x^2 d x+\\int_0^1 x^2 d x=\\left[\\frac{-x^3}{3}\\right]_{-1}^0+\\left[\\frac{x^3}{3}\\right]_0^1 \\\\ & =0-\\left[\\frac{-(-1)^3}{3}\\right]+\\left[\\frac{1}{3}\\right] \\\\ & I=\\frac{-1}{3}+\\frac{1}{3}=0 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-14th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_{-\\pi / 2}^{\\pi / 2} \\sin ^2 x \\cos ^2 x(\\sin x+\\cos x) d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$2 / 3$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$3 / 10$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$4 / 15$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$5 / 18$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let</p>\n<p>$$ \\begin{aligned} I & =\\int_{-\\pi / 2}^{\\pi / 2} \\sin ^2 x \\cos ^2 x(\\sin x+\\cos x) d x \\\\ & =\\int_{-\\pi / 2}^{\\pi / 2} \\sin ^3 x \\cos ^2 x d x+\\int_{-\\pi / 2}^{\\pi / 2} \\sin ^2 x \\cos ^3 x d x \\end{aligned} $$</p>\n<p>Now, we know that for an odd function</p>\n<p>$$ f(x)=\\int_{-a}^a f(x) d x=0 $$</p>\n<p>And for an even function $g(x)$,</p>\n<p>$$ \\int_{-a}^a g(x) d x=2 \\int_0^a g(x) d x $$</p>\n<p>Now, $f(x)=\\sin ^3 x \\cdot \\cos ^2 x$ is an odd function and $g(x)=\\sin ^2 x \\cdot \\cos ^3 x$ is an even function.</p>\n<p>Hence, first integration is 0 .</p>\n<p>For second part, we get</p>\n<p>$$ \\begin{aligned} & =2 \\int_0^{\\pi / 2} \\sin ^2 x \\cos ^3 x d x \\\\ & =2 \\int_0^{\\pi / 2} \\sin ^2 x\\left(1-\\sin ^2 x\\right) \\cos x d x \\end{aligned} $$</p>\n<p>Now, let $t=\\sin x$</p>\n<p>$$ d t=\\cos x d x $$</p>\n<p>And for $x=0, t=0$ and for $x=\\frac{\\pi}{2}, t=1$</p>\n<p>Hence, integration becomes,</p>\n<p>$$ \\begin{aligned} 2 \\int_0^1 t^2\\left(1-t^2\\right) & d t=2 \\int_0^1\\left(t^2-t^4\\right) d t \\\\ = & 2\\left[\\frac{t^3}{3}-\\frac{t^5}{5}\\right]_0^1=2\\left[\\frac{1}{3}-\\frac{1}{5}\\right]=\\frac{4}{15} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-14th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $\\int_0^3\\left(3 x^2-4 x+2\\right) d x=k$, then an integer root of $3 x^2-4 x+2=3 k / 5$ is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>1</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>0</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>15</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>-1</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\\\ &\\text {  } \\begin{aligned} & \\int_0^3\\left(3 x^2-4 x+2\\right) d x=k \\\\ & \\quad\\left\\{\\because \\int x^n d x=\\frac{x^{n+1}}{n+1}+C\\right\\} \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow \\quad 3 \\int_0^3 x^2 d x-4 \\int_0^3 x d x+2 \\int_0^3 d x=k \\\\ & \\Rightarrow \\quad 3\\left[\\frac{x^3}{3}\\right]_0^3-4\\left[\\frac{x^2}{2}\\right]_0^3+2[x]_0^3=k \\\\ & \\Rightarrow \\quad 3\\left[\\frac{3^3}{3}-0\\right]-4\\left[\\frac{3^2}{2}-0\\right]+2[3-0]=k \\\\ & \\Rightarrow \\quad 27-18+6=k \\Rightarrow k=15 \\\\ & \\Rightarrow \\quad 3 x^2-4 x+2=3 k / 5 \\\\ & \\Rightarrow \\quad 3 x^2-4 x+2=\\frac{3 \\times 15}{5} \\\\ & \\Rightarrow \\quad 3 x^2-4 x+2=9 \\\\ & \\Rightarrow \\quad 3 x^2-4 x-7=0 \\\\ & \\Rightarrow \\quad 3 x^2-7 x+3 x-7=0 \\\\ & \\Rightarrow \\quad(3 x-7)(x+1)=0 \\\\ & \\Rightarrow \\quad x=\\frac{7}{3}, x=-1 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-14th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^\\pi \\frac{x \\cos ^2 x}{1+\\sin x} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{\\pi(\\pi-2)}{2}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>1</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{\\pi(\\pi+2)}{2}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{\\pi}{4}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text { Let } I=\\int_0^\\pi \\frac{x \\cos ^2 x}{1+\\sin x} d x \\\\ & =\\int_0^\\pi \\frac{x\\left(1-\\sin ^2 x\\right)}{1+\\sin x} d x \\\\ & =\\int_0^\\pi \\frac{x(1-\\sin x)(1+\\sin x)}{1+\\sin x} d x \\\\ & =\\int_0^\\pi x(1-\\sin x) d x \\\\ & =\\int_0^\\pi x d x+\\int_0^\\pi x(-\\sin x) d x \\\\ & =\\left|\\frac{x^2}{2}\\right|_0^\\pi+\\left|x \\cos x-\\int \\cos x d x\\right|_0^\\pi \\\\ & =\\left|\\frac{x^2}{2}\\right|_0^\\pi+|x \\cos x-\\sin x d x|_0^\\pi \\\\ & =\\frac{\\pi^2}{2}+\\pi \\cos \\pi-\\sin \\pi-0+\\sin 0 \\\\ & =\\frac{\\pi^2}{2}-\\pi-0+0=\\frac{\\pi^2-2 \\pi}{2}=\\frac{\\pi(\\pi-2)}{2} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-13th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $[x]$ represents greatest integer function, then</p>\n<p>$$ \\int_{-2}^2[2-x] d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>10</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>6</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>4</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>3</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text {  Let } I=\\int_{-2}^2[2-x] d x \\\\ & =\\int_{-2}^{-1} 3 d x+\\int_{-1}^0 2 d x+\\int_0^1 1 d x+\\int_1^2 0 d x \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & =|3 x|_{-2}^1+|2 x|_{-1}^0+|x|_0^1+0 \\\\ & =3(-1+2)+2(0+1)+(1-0) \\\\ & =3 \\times 1+2 \\times 1+1=3+2+1=6 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-13th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^2 \\frac{x}{(2-x)^{\\frac{3}{4}}} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{24}{5} 2^{\\frac{1}{4}}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{5}{24} 2^{\\frac{3}{4}}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{32}{5} 2^{\\frac{1}{4}}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{5}{12} 2^{\\frac{3}{4}}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $I=\\int_0^2 \\frac{x}{(2-x)^{3 / 4}} d x$</p>\n<p>Let $2-x=v$</p>\n<p>$$ \\Rightarrow-d x=d v \\Rightarrow d x=-d v $$</p>\n<p>If $\\quad x=0 \\Rightarrow v=2$</p>\n<p>and if $x=2 \\Rightarrow v=0$</p>\n<p>$$ \\begin{aligned} & \\therefore \\quad I=-\\int_2^0 \\frac{2-v}{v^{3 / 4}} d v \\\\ & =\\int_0^2\\left[\\frac{2}{v^{3 / 4}}-\\frac{v}{v^{3 / 4}}\\right] d v \\\\ & =2 \\int_0^2 v^{-3 / 4} d v-\\int_0^2 v^{1 / 4} d v \\\\ & =2\\left|\\frac{v^{1 / 4}}{1 / 4}\\right|_0^2-\\left|\\frac{v^{5 / 4}}{5 / 4}\\right|_0^2=8(2)^{1 / 4}-\\frac{4}{5}(2)^{5 / 4} \\\\ & =2^{1 / 4}\\left[8-\\frac{4 \\times 2}{5}\\right]=2^{1 / 4}\\left[\\frac{40-8}{5}\\right]=(32 / 5) 2^{1 / 4} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-13th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^2 x^3(2-x)^4 d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{128}{105}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{16}{35}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{256}{105}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{32}{35}$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $\\int_0^2 x^3(2-x)^4 d x$</p>\n<p>Let $2-x=z \\Rightarrow-d x=d z \\Rightarrow d x=-d z$</p>\n<p>If $\\quad 2-0=z$</p>\n<p>$$ \\Rightarrow \\quad z=2 \\text { and } 2-2=z \\Rightarrow z=0 $$</p>\n<p>$$ \\therefore-\\int_2^0(2-z)^3 z^4 d z=\\int_0^2(2-z)^3 z^4 d z $$</p>\n<p>$$ =\\int_0^2\\left(8-z^3-12 z+6 z^2\\right) z^4 d z $$</p>\n<p>$$ =\\int_0^2\\left(8 z^4-z^7-12 z^5+6 z^6\\right) d z $$</p>\n<p>$$ =\\left|\\frac{8 z^5}{5}-\\frac{z^8}{8}-\\frac{12 z^6}{6}+\\frac{6 z^7}{7}\\right|_0^2 $$</p>\n<p>$$ =\\left|\\frac{8}{5} z^5-\\frac{z^8}{8}-2 z^6+\\frac{6}{7} z^7\\right|_0^2 $$</p>\n<p>$$ =\\frac{8}{5}(2)^5-\\frac{(2)^8}{8}-2(2)^6+\\frac{6}{7}(2)^7 $$</p>\n<p>$$ =\\frac{256}{5}-32-128+\\frac{6}{7} \\times 128 $$</p>\n<p>$$ =\\frac{7 \\times 256-160 \\times 5 \\times 7+5 \\times 6 \\times 128}{35}=\\frac{32}{35} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-13th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^3\\left|x^2-3 x+2\\right| d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{11}{6}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{5}{6}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{3}{2}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{2}{3}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text {Let } I=\\int_0^3\\left|x^2-3 x+2\\right| d x \\\\ & \\begin{array}{r} x^2-3 x+2=\\left\\{\\begin{array}{cc} x^2-3 x+2, & 0 < x < 1 \\\\ -\\left(x^2-3 x+2\\right), & 1 < x < 2 \\\\ \\left(x^2-3 x+2\\right), & 2 < x < 3 \\end{array}\\right. \\\\ =\\int_0^1\\left(x^2-3 x+2\\right) d x-\\int_1^2\\left(x^2-3 x+2\\right) \\\\ d x+\\int_2^3\\left(x^2-3 x+2\\right) d x \\end{array} \\\\ & =\\left(\\frac{x^3}{3}-\\frac{3 x^2}{2}+2 x\\right)_0^1-\\left(\\frac{x^3}{3}-\\frac{3 x^2}{2}+2 x\\right)_1^2  +\\left(\\frac{x^3}{3}-\\frac{3 x^2}{2}+2 x\\right)_2^3 \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & =\\left(\\frac{1}{3}-\\frac{3}{2}+2\\right)-\\left(\\frac{8}{3}-\\frac{12}{2}+4\\right)+  \\left(\\frac{1}{3}-\\frac{3}{2}+2\\right)+\\left(\\frac{27}{3}-\\frac{27}{2}+6\\right)-\\left(\\frac{8}{3}-\\frac{12}{2}+4\\right) \\\\ & =11 / 6 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-13th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_{-\\frac{\\pi}{8092}}^{\\frac{\\pi}{8092}} \\frac{\\sec (2023 x)}{1+(2023)^{(2023 x)}} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{1}{2023 \\sqrt{2}}+C$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{\\log (\\sqrt{2}+1)}{2023}+C$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{\\log 2}{4046}+C$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{\\sqrt{2}}{2023}+C$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let</p>\n<p>$$ \\begin{aligned} & I=\\int_{\\frac{-\\pi}{8092}}^{\\frac{\\pi}{8092}} \\frac{\\sec (2023) x}{1+(2023)^{(2023 x)}} d x \\\\ & \\int_a^b f(x) d x=\\int_a^b f(a+b-x) d x \\\\ & I=\\int_{\\frac{\\pi}{8092}}^{\\frac{\\pi}{8092}} \\frac{(2023)^{(2023 x)} \\sec (2023) x}{1+(2023)^{2023 x}} d x \\ldots \\end{aligned} $$</p>\n<p>On adding Eqs. (i) and (ii), we get</p>\n<p>$$ \\begin{aligned} &2I=\\int_{-\\frac{\\pi}{8092}}^{\\frac{\\pi}{8092}} \\sec (2023 x) d x \\\\ & I=\\int_0^{\\frac{\\pi}{8092}} \\sec (2023 x) d x \\\\ = & {\\left[\\frac{\\log / \\sec (2023 x)+\\tan (2023 x)}{2023}\\right]_0^{\\frac{\\pi}{8092}}+C } \\\\ = & \\frac{\\log (\\sqrt{2}+1)}{2023}+C \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-13th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^2 x^{\\frac{5}{2}} \\sqrt{2-x} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{5 \\pi}{16}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{5}{4}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{5 \\pi}{8}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{5}{8}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { } \\begin{aligned} I & =\\int_0^2 x^{5 / 2} \\sqrt{2-x} d x \\\\ \\text { Let } x & =2 \\sin ^2 \\theta \\\\ d x & =4 \\sin \\theta \\cos \\theta d \\theta \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & \\text { At } x=0, \\theta=0 \\\\ & \\text { At } x=2, \\theta=\\pi / 2 \\\\ & \\begin{aligned} \\therefore \\quad & =\\int_0^{\\pi / 2}\\left(2 \\sin ^2 \\theta\\right)^{5 / 2} \\sqrt{2-2 \\sin ^2 \\theta} \\\\ & 4 \\sin \\theta \\cos \\theta d \\theta \\\\ = & \\int_0^{\\pi / 2} 2^{5 / 2} \\sin ^5 \\theta \\cdot 2^{1 / 2} \\cos \\theta 4 \\sin \\theta \\cos \\theta d \\theta \\\\ = & 32 \\int_0^{\\pi / 2} \\sin ^6 \\theta \\cos ^2 \\theta d \\theta \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\text { Using Walli's formula, }\\\\ &\\begin{aligned} \\int_0^{\\pi / 2} & \\sin ^m x \\cos ^n x d x \\\\ & =\\frac{[(m-1)(m-3)(m-5) \\ldots \\ldots][(n-1)(n-3) \\ldots .]}{[(m+n)(m+n-2)(m+n-4) \\ldots . . k]} \\cdot k \\\\ k & =\\left\\{\\begin{array}{l} \\frac{\\pi}{2}, m \\text { and } n \\text { are even } \\\\ 1, \\text { otherwise } \\end{array}\\right. \\\\ & =32 \\cdot \\frac{(5 \\cdot 3 \\cdot 1)(1)}{8 \\cdot 6 \\cdot 4 \\cdot 2} \\times \\frac{\\pi}{2}=\\frac{5 \\pi}{8} \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-13th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^{\\pi / 4} \\frac{\\sec x}{1+2 \\sin ^2 x} d x= $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{1}{3} \\log (\\sqrt{2}+1)+\\frac{\\pi \\sqrt{2}}{12}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{2}{3} \\log (\\sqrt{2}+1)+\\frac{\\pi \\sqrt{2}}{6}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{1}{6} \\log (\\sqrt{2}-1)+\\frac{\\pi}{12}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{1}{4} \\log (\\sqrt{2}-1)-\\frac{\\pi \\sqrt{3}}{6}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text {  } \\begin{aligned} & \\int_0^{\\frac{\\pi}{4}} \\frac{\\sec x d x}{1+2 \\sin ^2 x} \\\\ & =\\int_0^{\\pi / 4} \\frac{\\cos x d x}{\\cos ^2 x\\left(1+2 \\sin ^2 x\\right)} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &=\\int_0^{\\pi / 4} \\frac{\\cos x d x}{\\left(1-\\sin ^2 x\\right)\\left(1+2 \\sin ^2 x\\right)}\\\\ &\\text { Let } \\sin x=t \\Rightarrow \\cos x d x=d t\\\\ &\\begin{aligned} & =\\int_0^{1 / \\sqrt{2}} \\frac{d t}{\\left(1-t^2\\right)\\left(1+2 t^2\\right)} \\\\ & =\\int_0^{1 / \\sqrt{2}}\\left(\\frac{A}{1-t}+\\frac{B}{1+t}+\\frac{C t+D}{1+2 t^2}\\right) d t \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & \\begin{array}{r} =\\int_0^{\\frac{1}{\\sqrt{2}}} \\frac{1}{6}\\left(\\frac{1}{1-t}\\right) d t+\\frac{1}{6} \\int_0^{\\frac{1}{\\sqrt{2}}} \\frac{d t}{t+1}+\\frac{2}{3} \\int_0^{\\frac{1}{\\sqrt{2}}} \\frac{d t}{1+2 t^2} \\\\ \\left(\\because A=\\frac{1}{6}=B \\text { and } C=0, D=\\frac{2}{3}\\right) \\end{array} \\\\ & \\Rightarrow-\\frac{1}{6}[\\ln (1-t)]_0^{\\frac{1}{\\sqrt{2}}}+\\frac{1}{6}[\\ln (1+t)]_0^{\\frac{1}{\\sqrt{2}}} \\\\ & \\quad+\\frac{2}{3} \\cdot \\frac{1}{2} \\cdot \\frac{1}{\\sqrt{2}}\\left[\\tan ^{-1}(\\sqrt{2} t)\\right] \\\\ & =-\\frac{1}{6} \\ln \\left(1-\\frac{1}{\\sqrt{2}}\\right)+\\frac{1}{6}\\left(\\ln \\left(1+\\frac{1}{\\sqrt{2}}\\right)\\right)+\\frac{1}{3 \\sqrt{2}} \\tan ^{-1}(1) \\\\ & =\\frac{1}{3} \\ln (\\sqrt{2}+1)+\\frac{1}{3 \\sqrt{2}} \\cdot \\frac{\\pi}{4} \\\\ & =\\frac{1}{3} \\ln (\\sqrt{2}+1)+\\frac{\\pi \\sqrt{2}}{12} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-12th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\lim\\limits_{n \\rightarrow \\infty}\\left[\\frac{1}{n^2} \\sec ^2 \\frac{1}{n^2}+\\frac{2}{n^2} \\sec ^2 \\frac{4}{n^2}+\\ldots \\ldots+\\frac{1}{n} \\sec ^2 1\\right]= $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{1}{2} \\sec (1)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{1}{2} \\operatorname{cosec}(1)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\tan (1)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{1}{2} \\tan (1)$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\text { Now, }\\\\ &\\begin{aligned} & \\lim _{n \\rightarrow \\infty}\\left[\\frac{1}{n^2} \\sec ^2 \\frac{1}{n^2}+\\frac{2}{n^2} \\sec ^2 \\frac{4}{n^2}+\\ldots+\\frac{1}{n} \\sec ^2 1\\right] \\\\ & =\\lim _{n \\rightarrow \\infty} \\frac{1}{n} \\cdot \\frac{n}{n} \\cdot \\sec ^2 \\frac{n^2}{n^2}=\\int_0^1 x \\sec ^2 x^2 d x \\\\ & =\\frac{1}{2} \\int_0^1 2 x \\sec ^2 x^2 d x \\\\ & \\text { Let } x^2=z \\Rightarrow 2 x d x=d z \\\\ & \\qquad=\\frac{1}{2} \\int_0^1 \\sec ^2 z d z=\\frac{1}{2}(\\tan z)_0^1 \\\\ & =\\frac{1}{2} \\tan 1 \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-12th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int\\limits_2^5 \\sqrt{\\frac{5-x}{x-2}} d x= $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\pi$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{\\pi}{2}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{3 \\pi}{2}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{\\pi}{4}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $\\int_2^5 \\sqrt{\\frac{5-x}{x-2}} d x$</p>\n<p>Let $x$</p>\n<p>$$ \\begin{aligned} x-2 & =z^2 \\Rightarrow d x=2 z d z \\\\ & =\\int_0^{\\sqrt{3}} \\frac{\\sqrt{5-\\left(z^2+2\\right.}}{z} 2 z d z \\\\ & =2 \\int_0^{\\sqrt{3}} \\sqrt{3-z^2} d z \\\\ & =2\\left[\\frac{z \\sqrt{3-z^2}}{2}=\\frac{3}{2} \\sin ^{-1} \\frac{z}{\\sqrt{3}}\\right]_0^{\\sqrt{3}} \\\\ & =2\\left[\\frac{3}{2} \\sin ^{-1}(1)\\right]-3 \\sin ^{-1}(1)=\\frac{3 \\pi}{2} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-12th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int\\limits_0^{\\frac{\\pi}{2}} \\sin ^6 x \\cos ^4 x d x= $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{\\pi}{256}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{\\pi}{512}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{3 \\pi}{512}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{5 \\pi}{512}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $\\int_0^{\\frac{\\pi}{2}} \\sin ^6 x \\cos ^4 x d x$</p>\n<p>Using Wallis formula,</p>\n<p>$$ \\begin{aligned} & \\int_0^{\\frac{\\pi}{2}} \\sin ^m x \\cos ^n x d x, m, n \\in z \\\\ & (m-1)(m-3) \\ldots 2 \\text { or } \\cdot(n-1) \\\\ & =\\frac{(n-3) \\ldots 2 \\text { or } 1}{(m+n)(m+n-2) \\ldots 2 \\text { or } 1} \\times \\lambda \\end{aligned} $$</p>\n<p>where, $\\lambda=\\frac{\\pi}{2}, m$ and $n$ both even.</p>\n<p>$$ \\text { So, Let } \\begin{aligned} \\mathrm{I} & =\\int_0^{\\frac{\\pi}{2}} \\sin ^6 x \\cos ^4 x d x \\\\ & =\\frac{5 \\times 3 \\times 1 \\times 3 \\times 1}{10 \\times 8 \\times 6 \\times 4 \\times 2} \\times \\frac{\\pi}{2} \\\\ & =\\frac{3 \\pi}{512} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-12th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$$\n\\int_{1 / 2}^2\\left|\\log _{10} x\\right| d x=\n$$\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\log _{10}\\left(\\frac{8}{e}\\right)$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{1}{2} \\log _{10}\\left(\\frac{8}{e}\\right)$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\log _{10}\\left(\\frac{2}{e}\\right)$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\log _e\\left(\\frac{3}{e}\\right)$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\ \\int_{1 / 2}^2\\left|\\log _{10} x\\right| d x=\\int_{1 / 2}^1\\left(-\\log _{10} x\\right) d x \\\\ & +\\int_1^2 \\log _{10} x d x \\\\ & =-\\int_{1 / 2}^1\\left(\\log _e x \\cdot \\log _{10} e\\right) d x \\\\ & +\\int_1^2\\left(\\log _e x \\cdot \\log _{10} e\\right) d x \\\\ & =-\\log _{10} e \\int_{1 / 2}^1(\\log x) d x+\\log _{10} e \\int_1^2(\\log x) d x \\\\ & =-\\log _{10} e[x(\\log x-1)]_{\\frac{1}{2}}^1 \\\\ & +\\log _{10} e[x(\\log x-1)]_1^2 \\quad \\text { (using by parts) } \\\\ & =-\\log _{10} e\\left[1(0-1)-\\frac{1}{2}\\left(\\log \\frac{1}{2}-1\\right)\\right] \\\\ & +\\log _{10} e[2(\\log 2-1)-1(0-1)] \\\\ & =\\log _{10} e\\left[\\left(1+\\frac{1}{2} \\log \\frac{1}{2}-\\frac{1}{2}\\right)+(2 \\log 2-1)\\right] \\\\ & =\\left(\\log _{10} e\\right)\\left(-\\frac{1}{2} \\log 2+2 \\log 2-\\frac{1}{2}\\right) \\\\ & =\\log _{10} e\\left(\\frac{3}{2} \\log 2-\\frac{1}{2}\\right) \\\\ & =\\left(\\log _{10} e\\right)\\left(\\frac{3}{2} \\log _e 2-\\frac{1}{2} \\log _e e\\right) \\\\ & =\\frac{1}{2} \\log _{10} e\\left(\\log _e 8-\\log _e e\\right) \\\\ & =\\frac{1}{2}\\left(\\log _{10} e\\right)\\left(\\log _e\\left(\\frac{8}{e}\\right)\\right)=\\frac{1}{2} \\log _{10}\\left(\\frac{8}{e}\\right) \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-12th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "$$\n\\int_0^{\\pi / 2} \\frac{\\sin ^2 x}{\\sin x+\\cos x} d x=\n$$\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\sqrt{2} \\log (\\sqrt{2}+1)$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{1}{\\sqrt{2}} \\log (\\sqrt{2}+1)$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\log (\\sqrt{2}+1)$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{1}{\\sqrt{2}} \\log (\\sqrt{2}-1)$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} I & =\\int_0^{\\pi / 2} \\frac{\\sin ^2 x}{\\sin x+\\cos x} d x \\\\ I & =\\int_0^{\\pi / 2} \\frac{\\sin ^2\\left(\\frac{\\pi}{2}-x\\right)}{\\sin \\left(\\frac{\\pi}{2}-x\\right)+\\cos \\left(\\frac{\\pi}{2}-x\\right)} d x \\\\ & =\\int_0^{\\pi / 2} \\frac{\\cos ^2 x}{\\cos x+\\sin x} d x \\end{aligned} $$</p>\n<p>Adding Eqs. (i) and (ii), we get</p>\n<p>$$ \\begin{aligned} & 2 I=\\int_0^{\\pi / 2} \\frac{1}{\\sin x+\\cos x} d x \\\\ & 2 I=\\int_0^{\\pi / 2} \\frac{1}{\\sqrt{2}\\left(\\frac{\\sin x}{\\sqrt{2}}+\\frac{\\cos x}{\\sqrt{2}}\\right)} d x \\\\ & 2 I=\\int_0^{\\pi / 2} \\frac{1}{\\sqrt{2} \\cos \\left(x-\\frac{\\pi}{4}\\right)^2} d x \\\\ & 2 I=\\int_0^{\\pi / 2} \\frac{\\sec \\left(x-\\frac{\\pi}{4}\\right)}{\\sqrt{2}} d x \\\\ & 2 I=\\frac{\\ln \\left|\\sec \\left(x-\\frac{\\pi}{4}\\right)+\\tan \\left(x-\\frac{\\pi}{4}\\right)\\right|_0^{\\frac{\\pi}{2}}}{\\sqrt{2}} \\\\ & I=\\frac{1}{2 \\sqrt{2}}[\\ln (\\sqrt{2}+1)-\\ln (\\sqrt{2}-1)] \\\\ & =\\frac{1}{2 \\sqrt{2}} \\ln \\left(\\frac{\\sqrt{2}+1}{\\sqrt{2}-1} \\times \\frac{\\sqrt{2}+1}{\\sqrt{2}+1}\\right) \\\\ & I=\\frac{1}{\\sqrt{2}} \\ln (\\sqrt{2}+1) \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-12th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>[.] is the greatest integer function, then</p>\n<p>$$ \\int_0^{2 \\pi}[|\\sin x|+|\\cos x|] d x= $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{\\pi}{2}$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\pi$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{3 \\pi}{2}$"
+      },
+      {
+        "identifier": "D",
+        "content": "$2 \\pi$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$ I=\\int_0^{2 \\pi}[|\\sin x|+|\\cos x|] d x$</p>\n<p>$$ \\begin{aligned} & \\text { Period of }|\\sin x|+|\\cos x| \\text { is } \\frac{\\pi}{2} \\\\ & \\Rightarrow \\quad I=4 \\int_0^{\\frac{\\pi}{2}}[|\\sin x|+|\\cos x|] d x \\\\ & \\text { For } x \\in\\left(0, \\frac{\\pi}{2}\\right), \\sin x>0 \\text { and } \\cos x>0 \\\\ & \\Rightarrow \\quad I=4 \\int_0^{\\frac{\\pi}{2}}[\\sin x+\\cos x] d x \\\\ & \\Rightarrow \\quad[\\sin x+\\cos x]=1 \\\\ & \\Rightarrow \\quad I=4 \\int_0^{\\frac{\\pi}{2}} d x=\\left.4 x\\right|_0 ^{\\frac{\\pi}{2}}=2 \\pi \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-12th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If $f$ is defined on $R$ such that $f(x) f(-x)=9$, then\n\n$$\n\\int_{-23}^{23} \\frac{d x}{3+f(x)}=\n$$\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{51}{3}$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{49}{3}$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{46}{3}$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{46}{6}$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $f(x) \\cdot f(-x)=9$</p>\n<p>$$ \\begin{aligned} & f(-x)= \\frac{9}{f(x)} \\\\ & I=\\int_{-23}^{23} \\frac{d x}{3+f(x)} \\\\ & I=\\int_{-23}^{23} \\frac{d x}{3+f(-x)} \\\\ &\\left\\{\\because \\int_a^b f(x) d x=\\int_a^b f(a+b-x) d x\\right\\} \\\\ & I=\\int_{-23}^{23} \\frac{d x}{3+\\frac{9}{f(x)}} \\quad \\text { [from Eq. (i)] } \\\\ & I=\\frac{1}{3} \\int_{-23}^{23} \\frac{f(x)}{3+f(x)} d x \\end{aligned} $$</p>\n<p>Adding Eqs. (ii) and (iii), we get</p>\n<p>$$ \\begin{aligned} 2 I & =\\int_{-23}^{23}\\left(\\frac{1}{3+f(x)}+\\frac{1}{3} \\frac{f(x)}{3+f(x)}\\right) d x \\\\ & =\\int_{-23}^{23} \\frac{3+f(x)}{3(3+f(x))} d x=\\frac{1}{3} \\int_{-23}^{23} d x \\\\ 2 I & =\\frac{46}{3} \\\\ \\Rightarrow I & =\\frac{46}{6} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "ts-eamcet-2023-online-12th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^4| | x-2|-x| d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>2</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>3</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>6</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>12</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { } \\begin{aligned} & \\text {  Let } I=\\int_0^4 \\| x-2|-x| d x \\\\ & I=\\int_0^2|-(x-2)-x| d x+\\int_2^4|x-2-x| d x \\\\ &=\\int_0^2|2-2 x| d x+\\int_2^4 2 d x \\\\ &=\\int_0^1(2-2 x) d x+\\int_1^2-(2-2 x) d x+\\int_2^4 2 d x \\\\ &=\\left[2 x-x^2\\right]_0^1-\\left[2 x-x^2\\right]_1^2+2[x]_2^4 \\\\ &=[2-1-0]-[4-4-2+1]+2[4-2] \\\\ &=1+1+4 \\\\ &=6 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-20th-july-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $\\int_{-a}^a f(x) d x=\\int_0^a f(x) d x+\\int_0^a g(x) d x$, then $g(x)=$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$-f(x)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$f(x)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$f(-x)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$f(x)+f(-x)$.</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$\\int_{-a}^a f(x) \\cdot d x=\\int_0^a f(x) d x+\\int_0^a g(x) d x$</p>\n<p>As we know,</p>\n<p>$$ \\int_{-a}^a f(x) d x=\\int_{-a}^0 f(x) d x+\\int_0^a f(x) d x $$</p>\n<p>In 2nd term, on putting $x=-t$</p>\n<p>$$ \\Rightarrow \\quad d x=-d t $$</p>\n<p>Limits when $x=0, t=0$</p>\n<p>When $x=-a, t=a$</p>\n<p>$$ \\begin{aligned} \\therefore \\quad \\int_{-a}^a f(x) d x & =\\int_a^0 f(-t),(-d t)+\\int_0^a f(x) d x \\\\ & =\\int_0^a f(x) d x-\\int_a^0 f(-t) d t \\\\ & =\\int_0^a f(x)+\\int_0^a f(-t) d t \\\\ & =\\int_0^a f(x)+\\int_0^a f(-x) d x \\\\ \\therefore g(x)=f(-x) . & \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-20th-july-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<ol start=\"76\">\n<li>Given that $\\lim _{n \\rightarrow \\infty} \\frac{1}{n} \\sum_{r=1}^{n p} f\\left(\\frac{r}{n}\\right)=\\int_0^p f(x) d x$. If $f: R \\rightarrow R$ is defined by $f(x)=x^2+2$, then</li>\n</ol>\n<p>$$ \\lim _{n \\rightarrow \\infty} \\frac{3}{n}\\left[f\\left(\\frac{7}{n}\\right)+f\\left(\\frac{14}{n}\\right)+f\\left(\\frac{21}{n}\\right)+\\ldots+f(7)\\right]= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>55</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>57</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>104</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>7</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\text {  Given, }\\\\ &\\begin{aligned} & \\lim _{n \\rightarrow \\infty} \\frac{1}{n} \\sum_{r=1}^{n p} f\\left(\\frac{r}{n}\\right)=\\int_0^p f(x) d x \\\\ & f: R \\rightarrow R, f(x)=x^2+2 \\\\ & \\text { Now, } \\lim _{n \\rightarrow \\infty} \\frac{3}{n}\\left[\\begin{array}{r} f\\left(\\frac{7}{n}\\right)+f\\left(\\frac{14}{n}\\right)+f\\left(\\frac{21}{n}\\right) \\\\ +\\ldots+f(7) \\end{array}\\right] \\\\ & =\\lim _{n \\rightarrow \\infty} \\frac{3}{n}\\left[\\begin{array}{r} \\left(\\frac{7}{n}\\right)^2+2+\\left(\\frac{14}{n}\\right)^2+2+\\left(\\frac{21}{n}\\right)^2 \\\\ +2+\\ldots+\\left(\\frac{7 n}{n}\\right)^2+2 \\end{array}\\right] \\\\ & =\\lim _{n \\rightarrow \\infty} \\frac{3}{n}\\left[\\begin{array}{r} 2 n+\\left(\\frac{7}{n}\\right)^2\\left(1^2+2^2+3^2\\right. \\\\ +\\ldots+n^2 \\end{array}\\right] \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & =\\lim _{n \\rightarrow \\infty} \\frac{3}{n}\\left[2 n+\\frac{49}{n^2} \\frac{n(n+1)(2 n+1)}{6}\\right] \\\\ & =\\lim _{n \\rightarrow \\infty} 3\\left[2+\\frac{49}{6} \\frac{n^2\\left(1+\\frac{1}{n}\\right)\\left(2+\\frac{1}{n}\\right)}{n^2}\\right] \\\\ & =3\\left[2+\\frac{49}{6} \\times 2\\right] \\\\ & =55 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-20th-july-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $f(x)=\\left|\\begin{array}{ccc}2 \\cos ^2 x & \\sin 2 x & \\sin x \\\\ \\sin 2 x & 2 \\sin ^2 x & -\\cos x \\\\ \\sin x & -\\cos x & 0\\end{array}\\right|$, then</p>\n<p>$$ \\left.\\int_0^{\\pi / 4}|2| f(x) \\mid+5 f^{\\prime}(x)\\right) d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>0</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{\\pi}{4}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{\\pi}{2}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\pi$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given,</p>\n<p>$$ \\begin{aligned} & f(x)=\\left|\\begin{array}{ccc} 2 \\cos ^2 x & \\sin 2 x & \\sin x \\\\ \\sin 2 x & 2 \\sin ^2 x & -\\cos x \\\\ \\sin x & -\\cos x & 0 \\end{array}\\right| \\\\ & \\text { Applying } R_2 \\rightarrow R_2-2 \\cos x R_3 \\\\ & f(x)=\\left|\\begin{array}{ccc} 2 \\cos ^2 x & \\sin 2 x & \\sin x \\\\ 0 & 2 & -\\cos x \\\\ \\sin x & -\\cos x & 0 \\end{array}\\right| \\end{aligned} $$</p>\n<p>Expanding along $R_2$,</p>\n<p>$$ \\begin{aligned} & f(x)=\\left[0+2\\left(0-\\sin ^2 x\\right)\\right. \\\\ &+ \\cos x\\left(-2 \\cos ^3 x-\\sin x \\sin 2 x\\right] \\\\ & \\Rightarrow f(x)=-2 \\sin ^2 x \\\\ &-2 \\cos ^2 x\\left(\\sin ^2 x+\\cos ^2 x\\right)=-2 \\\\ & \\Rightarrow f^{\\prime}(x)=0 \\\\ & \\therefore \\int_0^{\\pi / 4}\\left[2|f(x)|+5 f^{\\prime}(x)\\right] d x \\\\ &=\\int_0^{\\pi / 4}(4+0) d x=\\pi \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-20th-july-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$\\int_0^3\\left(\\sin \\left(\\frac{\\pi}{3} x\\right)-\\cos \\left(\\frac{\\pi}{3} x\\right)\\right) d x=$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{-6}{\\pi}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>0</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{-3}{\\pi}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{6}{\\pi}$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { } \\begin{aligned}Let \\,\\,\\, I & =\\int_0^3\\left(\\sin \\left(\\frac{\\pi}{3} x\\right)-\\cos \\left(\\frac{\\pi}{3} x\\right)\\right) d x \\\\ \\quad I & =\\left[\\frac{-\\cos \\frac{\\pi}{3} x}{\\frac{\\pi}{3}}-\\frac{\\sin \\left(\\frac{\\pi}{3} x\\right)}{\\frac{\\pi}{3}}\\right]_0^3 \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & =-\\frac{3}{\\pi}\\left[\\cos \\frac{\\pi}{3} x+\\sin \\left(\\frac{\\pi x}{3}\\right)\\right]_0^3 \\\\ & =-\\frac{3}{\\pi}[(\\cos \\pi+\\sin \\pi)-(\\cos 0+\\sin 0)] \\\\ & =-\\frac{3}{\\pi}[-1-1]=\\frac{6}{\\pi} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-19th-july-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^{\\pi / 2} \\sin ^4 \\theta \\cos ^3 \\theta d \\theta= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{1}{35}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{2}{35}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{4}{35}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{8}{35}$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text { Let } I=\\int_0^{\\pi / 2} \\sin ^4 \\theta \\cos ^3 \\theta d \\theta \\\\ & =\\int_0^{\\pi / 2} \\sin ^4 \\theta+\\left(1-\\sin ^2 \\theta\\right) \\cos \\theta d \\theta \\end{aligned} $$</p>\n<p>Let $\\sin \\theta=t$, then $\\cos \\theta d \\theta=d t$</p>\n<p>When $\\theta \\rightarrow 0, t \\rightarrow 0$</p>\n<p>$$ \\begin{aligned} & \\text { and } \\theta \\rightarrow \\frac{\\pi}{2}, t \\rightarrow 1 \\\\ & \\qquad \\begin{aligned} I & =\\int_0^1 t^4\\left(1-t^2\\right) d t \\\\ & =\\int_0^1\\left(t^4-t^6\\right) d t \\\\ & =\\left[\\frac{t^5}{5}-\\frac{t^7}{7}\\right]_0^1=\\frac{1}{5}-\\frac{1}{7} \\\\ & =\\frac{2}{35} \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-19th-july-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>It is given that $\\frac{d}{d t}(t \\log t-t)=\\log t$, then $\\exp \\left(\\int_0^1 2 x \\log \\left(1+x^2\\right) d x\\right)=$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$e$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>2</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{4}{e}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{e}{4}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $1+x^2=t$</p>\n<p>$2 x d x=d t$</p>\n<p>When $x=0$ and $t=1$, when $x=1, t=2$</p>\n<p>$$ \\begin{aligned} \\therefore \\exp \\left[\\int_1^2 \\log t\\right] & =\\exp \\left[[t \\log t-t]_1^2\\right] \\\\ & =\\exp [2 \\log 2-2+1] \\\\ & =\\exp [\\log 4-1] \\\\ & =e^{\\log 4} \\times e^{-1}=\\frac{4}{e} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-19th-july-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_0^{2 a} f(x) d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$2 \\int_0^a f(x) d x$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\int_0^a(f(x)+f(x+a)) d x$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>0</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\int_0^{2 a} f(2 a+x) d x$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text {  } \\begin{aligned}Let\\,\\, I & =\\int_0^{2 a} f(x) d x \\\\ & =\\int_0^a f(x) d x+\\int_a^{2 a} f(x) d x \\ldots \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\text {  }\\\\ &\\begin{aligned}Let\\,\\, I_1 & =\\int_a^{2 a} f(x) d x \\\\ Let\\,\\,\\,x & =t+a \\\\ d x & =d t \\end{aligned} \\end{aligned} $$</p>\n<p>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, I_1=\\int_0^a f(t+a) d t=\\int_0^a f(a+x) d x $$</p>\n<p>$$ \\therefore \\quad I=\\int_0^a f(x) d x+\\int_0^a f(a+x) d x $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-19th-july-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_1^2 x \\sqrt{4-x^2} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\sqrt{3}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>2</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$1 / \\sqrt{3}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$1 / 2$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $I=\\int_1^2 x \\sqrt{4-x^2} d x$</p>\n<p>On putting $4-x^2=1$,</p>\n<p>$$ \\begin{aligned} & -2 x d x  =d t \\\\ \\Rightarrow &\\,\\,\\,\\, x d x  =-\\frac{d t}{2} \\end{aligned} $$</p>\n<p>When $x \\rightarrow 1, t \\rightarrow 3$</p>\n$$\n\\begin{aligned}\n& x \\rightarrow 2, t \\rightarrow 0 \\\\\n& I=\\frac{-1}{2} \\int_3^0 \\sqrt{t} d t \\\\\n&=\\frac{1}{2}\\left[\\frac{2}{3}\\left(t^{\\frac{3}{2}}\\right)\\right]_0^3 \\\\\n&=\\frac{1}{2} \\times \\frac{2}{3} \\times 3 \\sqrt{3}=\\sqrt{3}\n\\end{aligned}\n$$",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-18th-july-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $[x]$ denotes the greatest integer function of $x$ and</p>\n<p>$$ \\int_{-3 / 2}^{3 / 2}[2 x-3] d x=k, \\text { then }\\left|k+\\frac{1}{2}\\right|= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>7</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>8</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>10</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>12</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\\\ &\\begin{aligned} \\text { } k= & \\int_{\\frac{-3}{2}}^{\\frac{3}{2}}[2 x-3] d x=\\int_{\\frac{-3}{2}}^{\\frac{3}{2}}([2 x]-3) d x \\\\ = & \\int_{-3 / 2}^{-1}(-3) d x+\\int_{-1}^{-1 / 2}(-2) d x+\\int_{\\frac{-1}{2}}^0(-1) d x+\\int_0^{1 / 2}(0) d x +\\int_{\\frac{1}{2}}^1 d x+\\int_1^{3 / 2} 2 d x-\\int_{\\frac{-3}{2}}^{3 / 2} 3 d x \\\\ = & \\frac{-3}{2}-1-\\frac{1}{2}+\\frac{1}{2}+1-9=\\frac{-3}{2}-9 \\\\ \\therefore & \\left|k+\\frac{1}{2}\\right|=\\left|-\\frac{3}{2}-9+\\frac{1}{2}\\right|=10 \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-18th-july-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_1^4\\left(x+\\sqrt{x}+\\frac{1}{x}\\right) d x-\\int_1^{2 \\log 2} d x= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{79}{6}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{643}{6}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{321}{5}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>64</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & \\text { Given, } \\int_1^4\\left(x+\\sqrt{x}+\\frac{1}{x}\\right) d x-\\int_1^{2 \\log 2} 1 d x \\\\ & =\\left[\\frac{x^2}{2}+\\frac{2}{3} x^{\\frac{3}{2}}+\\ln x\\right]_1^4-[x]_1^{2 \\log 2} \\\\ & =\\left(8+\\frac{16}{3}+\\ln 4\\right)-\\left(\\frac{1}{2}+\\frac{2}{3}+0\\right) \\\\ & -(2 \\log 2-1)=\\frac{17}{2}+\\frac{14}{3}=\\frac{79}{6} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-18th-july-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $I=\\int_{-\\pi / 4}^{\\pi / 4} \\frac{1}{2-\\cos 2 x}\\left(\\frac{\\beta}{\\pi}+\\log \\left(\\frac{4+\\sin x}{4-\\sin x}\\right)\\right) d x$. Given that $\\int \\frac{d x}{1+k x^2}=\\frac{1}{\\sqrt{k}} \\tan ^{-1}(\\sqrt{k} x)+c, \\tan ^{-1}(0)=0$ and $\\tan ^{-1}(\\sqrt{3})=\\pi / 3$. Then, $3 I^2=$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>4</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>9</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>16</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>1</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let</p>\n<p>$$ I=\\int_{-\\pi / 4}^{\\pi / 4} \\frac{1}{2-\\cos 2 x}\\left(\\frac{3}{\\pi}+\\log \\left(\\frac{4+\\sin x}{4-\\sin x}\\right)\\right) d x $$</p>\n<p>Let</p>\n<p>$$ \\begin{aligned} f(x) & =\\frac{1}{2-\\cos 2 x}\\left(\\frac{3}{\\pi}+\\log \\left(\\frac{4+\\sin x}{4-\\sin x}\\right)\\right) \\\\ f(-x) & =\\frac{1}{2-\\cos 2 x}\\left(\\frac{3}{\\pi}+\\log \\left(\\frac{4-\\sin x}{4+\\sin x}\\right)\\right) \\\\ & =\\frac{1}{2-\\cos 2 x}\\left(\\frac{3}{\\pi}-\\log \\left(\\frac{4+\\sin x}{4-\\sin x}\\right)\\right) \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} f(x) & +f(-x)=\\frac{6}{\\pi(2-\\cos 2 x)} \\\\ I & =\\int_{-\\pi / 4}^{\\pi / 4} f(x) d x \\\\ & =\\int_0^{\\pi / 4} f(x)+f(-x) d x \\\\ & =\\frac{6}{\\pi} \\int_0^{\\pi / 4} \\frac{1}{2-\\cos 2 x} d x \\\\ I & =\\frac{6}{\\pi} \\int_0^{\\pi / 4} \\frac{1}{2-\\left(\\frac{1-\\tan ^2 x}{1+\\tan ^2 x}\\right)} d x \\\\ & =\\frac{6}{\\pi} \\int_0^{\\pi / 4} \\frac{1+\\tan ^2 x}{1+3 \\tan ^2 x} d x \\\\ & =\\frac{6}{\\pi} \\int_0^{\\pi / 4} \\frac{\\sec ^2 x}{1+3 \\tan ^2 x} d x \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\text { On putting } \\tan x=t\\\\ &\\begin{aligned} & \\sec ^2 x d x=d t \\\\ & I=\\frac{6}{\\pi} \\int_0^1 \\frac{d t}{1+(\\sqrt{3} t)^2}=\\frac{6}{\\pi} \\cdot \\frac{1}{\\sqrt{3}}\\left[\\tan ^{-1} \\sqrt{3} t\\right]_0^1 \\\\ & =\\frac{2 \\sqrt{3}}{\\pi}\\left[\\tan ^{-1} \\sqrt{3}-0\\right] \\\\ & \\quad I=\\frac{2 \\sqrt{3}}{\\pi} \\times \\frac{\\pi}{3}=\\frac{2}{\\sqrt{3}} \\\\ & \\Rightarrow \\quad I^2=\\frac{4}{3} \\\\ & \\quad 3 I^2=4 \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "ts-eamcet-2022-online-18th-july-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\mathop {\\lim }\\limits_{x \\to \\infty }\\left[\\left(1+\\frac{1}{n^2}\\right)\\left(1+\\frac{2^2}{n^2}\\right) \\ldots \\ldots\\left(1+\\frac{n^2}{n^2}\\right)\\right]^{1 / n}= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>e</p>\n\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$2 e$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$2 e^{\\frac{\\pi-2}{2}}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$2 e^{\\frac{\\pi-4}{2}}$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\text { Let }\\\\ &\\begin{aligned} & L=\\lim _{n \\rightarrow \\infty}\\left[\\left(1+\\frac{1}{n^2}\\right)\\left(1+\\frac{2^2}{n^2}\\right) \\ldots\\left(1+\\frac{n^2}{n^2}\\right)\\right]^{\\frac{1}{n}} \\\\ & \\therefore \\quad \\log L=\\lim _{n \\rightarrow \\infty} \\frac{1}{n} \\\\ & \\quad\\left[\\log \\left(1+\\frac{1}{n^2}\\right)+\\log \\left(1+\\frac{2^2}{n^2}\\right)\\right.\\left.+\\ldots . \\log \\left(1+\\frac{n^2}{n^2}\\right)\\right] \\\\ & =\\lim _{n \\rightarrow \\infty} \\frac{1}{n} \\sum_{r=1}^n \\log \\left(1+\\left(\\frac{r}{n}\\right)^2\\right) \\\\ & =\\int_0^1 \\log \\left(1+x^2\\right) d x \\\\ & =\\left[x \\log \\left(1+x^2\\right)\\right]_0^1-\\int_0^1 x \\cdot \\frac{1}{1+x^2} \\cdot 2 x d x \\\\ & =\\log 2-2 \\int_0^1 \\frac{x^2}{1+x^2} d x \\\\ & =\\log 2-2 \\int_0^1\\left(1-\\frac{1}{1+x^2}\\right) d x \\\\ & =\\log 2-2\\left[x-\\tan ^{-1} x\\right]_0^1 \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & =\\log 2-2\\left[1-\\frac{\\pi}{4}\\right] \\\\ & =\\log 2-2+\\frac{\\pi}{2}=\\log 2-2+\\frac{\\pi}{2} \\\\ & \\therefore L=e^{e \\log 2} \\cdot e^{\\frac{\\pi}{2}-2}=2 e^{\\frac{\\pi-4}{2}} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "ts-eamcet-2020-online-10th-september-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\int_{\\pi / 4}^{\\pi / 2} \\frac{3 d x}{1+e^{\\sqrt{8} \\sin \\left(x-\\frac{3 \\pi}{8}\\right)}}= $$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{3 \\sqrt{2}}{4} \\pi$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{3}{4} \\pi$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{\\pi}{8}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{3}{8} \\pi$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\text { Let }\\\\ &\\begin{aligned} I & =\\int_{\\pi / 4}^{\\pi / 2} \\frac{3 d x}{1+e^{\\sqrt{8} \\sin \\left(x-\\frac{3 \\pi}{8}\\right)}} \\ldots(\\mathrm{i}) \\\\ & =\\int_{\\pi / 4}^{\\pi / 2} \\frac{3 d x}{1+e^{\\sqrt{8} \\sin \\left(\\frac{\\pi}{2}+\\frac{\\pi}{4}-x-\\frac{3 \\pi}{8}\\right)}} \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & {\\left[\\int_a^b f(x) d x=\\int_a^b f(a+b-x) d x\\right] } \\\\ = & \\int_{\\pi / 4}^{\\pi / 2} \\frac{3 d x}{1+e^{\\sqrt{8} \\sin \\left(\\frac{3 \\pi}{8}-x\\right)}} \\\\ = & \\int_{\\pi / 4}^{\\pi / 2} \\frac{3 d x}{1+e^{-\\sqrt{8} \\sin \\left(x-\\frac{3 \\pi}{8}\\right)}} \\\\ = & \\int_{\\pi / 4}^{\\pi / 2} \\frac{3 e^{\\sqrt{8} \\sin \\left(x-\\frac{3 \\pi}{8}\\right)} d x}{e^{\\sqrt{8} \\sin \\left(x-\\frac{3 \\pi}{8}\\right)+1}} \\quad \\ldots \\text { (i) } \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\text { On adding Eq. (i) and Eq. (ii), we get }\\\\ &\\begin{aligned} 2 I & =3 \\int_{\\pi / 4}^{\\pi / 2} 1 d x=3[x]_{\\pi / 4}^{\\pi / 2} \\\\ & =3\\left[\\frac{\\pi}{2}-\\frac{\\pi}{4}\\right]=\\frac{3 \\pi}{4} \\\\ \\therefore \\quad I & =\\frac{3 \\pi}{8} \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "ts-eamcet-2020-online-10th-september-morning-shift",
+    "difficulty": null
+  }
+]

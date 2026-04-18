@@ -1,0 +1,349 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose $X$ and $Y$ are random variables. The conditional expectation of $X$ given $Y$ is denoted by $E[X \\mid Y]$. Then $E[E[X \\mid Y]]$ equals</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $E[X \\mid Y]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{E[X]}{E[Y]}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $E[X]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $E[Y]$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $X$ and $Y$ are random variables Conditional probability density function $X$ given $Y$ is</p>\n<p>$$ f\\left(\\frac{x}{y}\\right)=\\frac{f(x, y)}{f(y)} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)$$</p>\n<p>Conditional expectation of $X$ given $Y$ is,</p>\n<p>$$ E\\left[\\frac{X}{Y}\\right]=\\int_{-\\infty}^{\\infty} x f\\left(\\frac{x}{y}\\right) d x $$</p>\n<p>After integration with respect to $x$ the $E[X / Y]$ is the function of $y$.</p>\n<p>$$ E\\left[\\frac{X}{Y}\\right]=\\int_{-\\infty}^{\\infty} x f\\left(\\frac{x}{y}\\right) d x=\\phi(y) $$</p>\n<p>Then</p>\n<p>$$ \\begin{aligned} E\\left[E\\left(\\frac{X}{Y}\\right)\\right] & =E\\{\\phi(y)\\} \\\\ & =\\int_{-\\infty}^{\\infty} \\phi(y) f(y) d y \\end{aligned} $$</p>\n<p>Substituting the value of $\\phi(y)$ from equation (ii)</p>\n<p>$$ E\\left[E\\left(\\frac{X}{Y}\\right)\\right]=\\int_{-\\infty}^{\\infty} \\int_{-\\infty}^{\\infty} x f\\left(\\frac{x}{y}\\right) d x f(y) d y $$</p>\n<p>From equation (i)</p>\n<p>$$ f\\left(\\frac{x}{y}\\right) f(y)=f(x, y) $$</p>\n<p>Then,</p>\n<p>$$ E\\left[E\\left(\\frac{X}{Y}\\right)\\right]=\\int_{-\\infty}^{\\infty} \\int_{-\\infty}^{\\infty} x f(x, y) d x d y $$</p>\n<p>Rearranging terms in the above integration,</p>\n<p>$$ \\begin{aligned} & E\\left[E\\left(\\frac{X}{Y}\\right)\\right]=\\int_{-\\infty}^{\\infty} x\\left(\\int_{-\\infty}^{\\infty} f(x, y) d y\\right) d x \\\\ & =\\int_{-\\infty}^{\\infty} x f(x) d x \\\\ & E\\left[E\\left(\\frac{X}{Y}\\right)\\right]=E[X] \\end{aligned} $$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let X be a continuous random variable whose cumulative distribution function (CDF) $F_X(x)$, for some $t$, is given as follows:</p>\n<p>$$ F_X(x)=\\left\\{\\begin{array}{cc} 0 & x \\leq t \\\\ \\frac{x-t}{4-t} & t \\leq x \\leq 4 \\\\ 1 & x \\geq 4 \\end{array}\\right. $$</p>\n<p>If the median of X is 3 , then what is the value of $t$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2\n"
+      },
+      {
+        "identifier": "B",
+        "content": "1\n"
+      },
+      {
+        "identifier": "C",
+        "content": "-1\n"
+      },
+      {
+        "identifier": "D",
+        "content": " 0"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>The cumulative distribution function (CDF) :</p>\n<p>$$ F_X(x)=\\left\\{\\begin{array}{cc} 0 & x \\leq t \\\\ \\frac{x-t}{4-t} & t \\leq x \\leq 4 \\\\ 1 & x \\geq 4 \\end{array}\\right. $$</p>\n<p>The median of a continuous random variable $X$ is the value $m$ for which $F_X(m)=0.5$.</p>\n<p>Given that the median is 3 :</p>\n<p>From the given CDF for $t \\leq x \\leq 4$.</p>\n<p>$$ \\begin{aligned} & F_X(3)=\\frac{3-t}{4-t} \\\\ & \\frac{3-t}{4-t}=0.5 \\\\ & 3-t=2-0.5 t \\\\ & 3-2=(-0.5 t)+t \\\\ & 1=0.5 t \\\\ & t=2 \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $X=a Z+b$, where Z is a standard normal random variable, and $a, b$ are two unknown constants. It is given that</p>\n<p>$$ \\begin{aligned} E[X] & =1, E[(X-E[X]) Z] \\\\ & =-2, E\\left[(X-E[X])^2\\right]=4 \\end{aligned} $$</p>\n<p>Where $E[X]$ denotes the expectation of random variable X . The values of $a, b$ are:</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$a=-2, b=1$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$a=2, b=-1$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$a=-2, b=-1$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$a=1, b=1$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>Let $X=a Z+b$</p>\n<p>Where $z$ is a standard normal random variable and $a, b$ are two unknown constants.</p>\n<p>$E[X]=1$</p>\n<p>$$ \\begin{aligned} & E[(X-E[X]) Z]=-2 \\\\ & E\\left[(X-E[X])^2\\right]=4 \\\\ & E[X]=E[a Z+b] \\\\ & E[X]=a E[Z]+b \\\\ & E[X]=a+b=1 \\end{aligned} $$</p>\n<p>So, $\\quad b=1$</p>\n<p>$$ \\text {  } \\quad \\begin{aligned} & E[X-E[X] Z] \\\\ & X-E[X]=a Z+b-1 \\\\ & X-E[X]=a Z+1-1 \\\\ & X-E[X]=a Z \\end{aligned} $$</p>\n<p>$$ \\text { } E[(X-E[X]) Z]=E[a Z Z]=a E\\left[Z^2\\right] $$</p>\n<p>From standard normal properties :</p>\n<p>$$ \\begin{aligned} & E\\left[Z^2\\right]=\\operatorname{Var}(Z)+(E[Z])^2 \\\\ & E\\left[Z^2\\right]=1+0=1 \\end{aligned} $$</p>\n<p>Thus</p>\n<p>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, E[(X-E[X]) Z]=a(1)=a $$</p>\n<p>$$ \\begin{aligned} &Given\\,\\,\\, E[(X-E[X]) Z]=-2 \\\\ &\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,  a=-2 \\end{aligned} $$</p>\n<p>Hence, the correct option is (A)</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>It is given that $P(X \\geq 2)=0.25$ for an exponentially distributed random variable $X$ with $E[X]=\\frac{1}{\\lambda}$, where $E[X]$ denotes the expectation of $X$. What is the value of $\\lambda$ ? (ln denotes natural logarithm)</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\ln 2$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\ln 4$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\ln 3$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\ln 0.25$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $X$ is a exponential distributed random variable.</p>\n<p>$$ \\begin{aligned} & P(X \\geq 2)=0.25 \\\\ & E[X]=\\frac{1}{\\lambda} \\end{aligned} $$</p>\n<p>For exponential distribution random variable probability density function is</p>\n<p>$$ f_X(x)=\\left\\{\\begin{array}{cl} \\lambda e^{-\\lambda x} ; & x \\geq 0 \\\\ 0 ; & x<0 \\end{array}\\right. $$</p>\n<p>Probability of random variable $X$ greater than equal to 2 is given by,</p>\n<p>$$ \\begin{aligned} & P(X \\geq 2)=\\int_2^{\\infty} f_X(x) d x \\\\ & P(X \\geq 2)=\\int_2^{\\infty} \\lambda e^{-\\lambda x} d x \\\\ & =\\lambda\\left[\\frac{e^{-\\lambda x}}{-\\lambda}\\right]_2^{\\infty} \\\\ & =-\\left[e^{-\\infty}-e^{-2 \\lambda}\\right] \\\\ & =-\\left[0-e^{-2 \\lambda}\\right] \\\\ & P[X \\geq 2]=e^{-2 \\lambda} \\end{aligned} $$</p>\n<p>Given that $P(X \\geq 2)=0.25$</p>\n<p>$$ \\begin{aligned} e^{-2 \\lambda} & =0.25 \\\\ e^{-2 \\lambda} & =\\frac{1}{4} \\\\ e^{-2 \\lambda} & =\\frac{1}{4} \\\\ e^{2 \\lambda} & =4 \\end{aligned} $$</p>\n<p>Taking natural $\\log$ both sides</p>\n<p>$$ \\begin{aligned} & 2 \\lambda=\\ln (4) \\\\ & \\lambda=\\frac{\\ln (4)}{2}=\\ln (2) \\\\ & \\lambda=\\ln (2) \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>There are three boxes containing white balls and black balls.</p>\n<p>Box-1 contains 2 black and 1 white balls.</p>\n<p>Box-2 contains 1 black and 2 white balls.</p>\n<p>Box-3 contains 3 black and 3 white balls.</p>\n<p>In a random experiment, one of these boxes is selected, where the probability of choosing Box-1 is $\\frac{1}{2}$, Box-2 is $\\frac{1}{6}$, and Box-3 is $\\frac{1}{3}$. A ball is drawn at random from the selected box. Given that the ball drawn is white, the probability that it is drawn from Box-2 is ____________. (Round off to two decimal places)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.25",
+    "explanation": "<p>There are three boxes containing white balls and black balls.</p>\n<p>Box-1 : 2 black balls and 1 white ball $\\rightarrow$ Total $=3$ balls</p>\n<p>Box-2 : 1 black balls and 2 white ball $\\rightarrow$ Total $=3$ balls</p>\n<p>Box-3 : 3 black balls and 3 white balls $\\rightarrow$ Total $=6$ balls</p>\n<p>Also given the probability of choosing each box</p>\n<p>$$ \\begin{aligned} & P(\\text { Box } 1)=\\frac{1}{2} \\\\ & P(\\text { Box } 2)=\\frac{1}{6} \\\\ & P(\\text { Box } 3)=\\frac{1}{3} \\end{aligned} $$</p>\n<p>Using Bayes theorem :</p>\n<p>$$ \\begin{aligned} & P\\left(\\frac{\\text { Box } 2}{\\text { White }}\\right)=\\frac{P\\left(\\frac{\\text { White }}{\\text { Box }-2}\\right) \\times P(\\text { Box }-2)}{P(\\text { White })} \\\\ & P(\\text { White })=P\\left(\\frac{\\text { White }}{\\text { Box }-1}\\right) \\times P(\\text { Box }-1) \\\\ & +P\\left(\\frac{\\text { White }}{\\text { Box }-2}\\right) \\times P(\\text { Box }-2) \\\\ & +P\\left(\\frac{\\text { White }}{\\text { Box }-3}\\right) \\times P(\\text { Box }-3) \\\\ & P(\\text { White })=\\left(\\frac{1}{3} \\times \\frac{1}{2}\\right)+\\left(\\frac{2}{3} \\times \\frac{1}{6}\\right)+\\left(\\frac{1}{2} \\times \\frac{1}{3}\\right) \\\\ & P(\\text { White })=\\frac{1}{6}+\\frac{1}{9}+\\frac{1}{4}=\\frac{3}{18}+\\frac{2}{18}+\\frac{3}{18}=\\frac{4}{9} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\begin{aligned} & P\\left(\\frac{\\text { Box }-2}{\\text { White }}\\right)=\\frac{\\left(\\frac{2}{3}\\right) \\times\\left(\\frac{1}{6}\\right)}{\\left(\\frac{4}{9}\\right)}=\\frac{\\left(\\frac{2}{18}\\right)}{\\left(\\frac{4}{9}\\right)} \\\\ & P\\left(\\frac{\\text { Box }-2}{\\text { White }}\\right)=\\frac{18}{72}=\\frac{1}{4}=0.25 \\end{aligned}\\\\ &\\text { Hence, the correct answer is } 0.25 \\text {. } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $Y=Z^2, Z=\\frac{X-\\mu}{\\sigma}$, where $X$ is a normal random variable with mean $\\mu$ and variance $\\sigma^2$. The variance of $Y$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Method 1:</p>\n<p>Given :</p>\n<p>Let $\\quad Y=Z^2, Z=\\frac{X-\\mu}{\\sigma}$</p>\n<p>Where $X$ is a normal random variable with mean $\\mu$ and variance $\\sigma^2$.</p>\n<p>$$ X \\sim N\\left(\\mu, \\sigma^2\\right) $$</p>\n<p>Since $Z$ is a standard normal variance</p>\n<p>$$ \\begin{aligned} & Z \\sim N(0,1) \\\\ & Y=Z^2 \\end{aligned} $$</p>\n<p>[Given]</p>\n<p>Which follows a chi-square distribution with 1 degree of freedom.</p>\n<p>$$ Y \\sim X^2(1) $$</p>\n<p>For a chi-square distribution with k degrees of freedom the variance is given by</p>\n<p>$$ \\operatorname{Var}\\left(X_k^2\\right)=2 k $$</p>\n<p>Since $k=1$</p>\n<p>$$ \\operatorname{Var}(Y)=2 \\times 1=2 $$</p>\n<p>Hence, the correct option is (B).</p>\n<p>Method 2:</p>\n<p>Given :</p>\n<p>$X$ is a normal random variable with mean $\\mu$ and variance $\\sigma^2$ and $Z=\\frac{X-\\mu}{\\sigma}$</p>\n<p>Here, $Z$ is the standard normal random variable For standard normal random variable, mean is zero and variance is 1 .</p>\n<p>i.e $\\quad E[Z]=0$</p>\n<p>$$ \\operatorname{Var}[Z]=1 $$</p>\n<p>Given</p>\n<p>$$ Y=Z^2 $$</p>\n<p>Variance of random variable $Y$ is given by</p>\n<p>$$ \\operatorname{Var}(Y)=E\\left[Y^2\\right]-[E(Y)]^2 $$</p>\n<p></p>\n<p>$$ \\begin{aligned} & Now\\,\\,\\,\\operatorname{Var}[z]=1 \\\\ & E\\left[Z^2\\right]-[E[Z]]^2=1 \\quad(\\because E(Z)=0) \\\\ & E\\left[Z^2\\right]-0=1 \\\\ & E\\left[Z^2\\right]=1 \\end{aligned} $$</p>\n<p>And</p>\n<p>$$ Y=Z^2 $$</p>\n<p>i.e</p>\n<p>$$ E[Y]=1 $$</p>\n<p>And</p>\n<p>$$ \\begin{aligned} & E\\left[Y^2\\right]=E\\left[\\left(Z^2\\right)^2\\right] \\\\ & E\\left[Y^2\\right]=E[24] \\end{aligned} $$</p>\n<p>Since,</p>\n<p>$$ \\begin{aligned} & E\\left[Z^{2 k}\\right]=\\frac{(2 k)!}{2 k \\cdot k!} \\\\ & E[24]=E\\left[Z^{22}\\right]=\\frac{(2 \\times 2)!}{2^2 \\times 2!}=\\frac{24}{8}=3 \\\\ & E[24]=3 \\\\ & E\\left[Y^2\\right]=E[24]=3 \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\begin{aligned} \\text { From equation } & =3 \\\\ \\operatorname{Var}(Y) & =E\\left[Y^2\\right]-(E[Y])^2 \\\\ \\operatorname{Var}(Y) & =3-(1)^2 \\\\ \\operatorname{Var}(Y) & =3-1 \\\\ \\operatorname{Var}(Y) & =2 \\end{aligned}\\\\ &\\text { Hence, the correct option is (B). } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the cumulative distribution function (CDF) of a random variable X :</p>\n<p>$$ F_X(x)=\\left\\{\\begin{array}{cc} 0 & x \\leq-1 \\\\ \\frac{1}{4}(x+1)^2 & -1 \\leq x \\leq 1 \\\\ 1 & x \\geq 1 \\end{array}\\right. $$</p>\n<p>The value of $P\\left(X^2 \\leq 0.25\\right)$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.625\n"
+      },
+      {
+        "identifier": "B",
+        "content": "0.25\n"
+      },
+      {
+        "identifier": "C",
+        "content": "0.5\n"
+      },
+      {
+        "identifier": "D",
+        "content": "0.5625"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>The cumulative distribution function (CDF) of a random variable $X$.</p>\n<p>$$ F_X(x)=\\left\\{\\begin{array}{cc} 0, & x \\leq-1 \\\\ \\frac{1}{4}(x+1)^2, & -1 \\leq x \\leq 1 \\\\ 1, & x \\geq 1 \\end{array}\\right. $$</p>\n<p>The value of $P\\left(X^2 \\leq 0.25\\right)$</p>\n<p>Since</p>\n<p>$$ \\begin{aligned} & X^2 \\leq 0.25 \\\\ & -\\sqrt{0.25} \\leq X \\leq \\sqrt{0.25} \\\\ & -0.5 \\leq X \\leq 0.5 \\\\ & P(-0.5 \\leq X \\leq 0.5)=F_X(0.5)-F_X(-0.5) \\\\ & P(-0.5 \\leq X \\leq 0.5)=\\frac{1}{4}(0.5+1)^2-\\frac{1}{4}(-0.5+1)^2 \\\\ & P(-0.5 \\leq X \\leq 0.5)=\\left(\\frac{1}{4} \\times 2.25\\right)-\\left(\\frac{1}{4} \\times 0.25\\right) \\\\ & P(-0.5 \\leq X \\leq 0.5)=0.5625-0.0625 \\\\ & P(-0.5 \\leq X \\leq 0.5)=0.5 \\end{aligned} $$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A random variable X is said to be distributed as $\\operatorname{Bernoulli}(\\theta)$, denoted by $X \\sim \\operatorname{Bernoulli}(\\theta)$, if</p>\n<p>$$ P(X=1)=\\theta, P(X=0)=1-\\theta $$</p>\n<p>for $0<\\theta<1$. Let $Y=\\sum_{i=1}^{300} X_i$. Where $X_i \\sim \\operatorname{Bernoulli}(\\theta), i=1,2, \\ldots \\ldots, 300$ be independent and identically distributed random variables with $\\theta=0.25$. The value of $P(60 \\leq \\mathrm{Y} \\leq 90)$, after approximation through Central Limit Theorem, is given by</p>\n<p>(Recall that $\\phi(x)=\\frac{1}{\\sqrt{2 \\pi}} \\int_{-\\infty}^x e^{-\\frac{t^2}{2}} d t$ )</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\phi(2)-\\phi(-2)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\phi(1)-\\phi(-1)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\phi(3)-\\phi(-3)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\phi(90)-\\phi(60)$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Mean $(\\mu)$ of Bernoulli distribution $=P$</p>\n<p>And variance $=P(1-P)$</p>\n<p>So, $\\mu=P=0.25$</p>\n<p>Variance $\\left(\\sigma^2\\right)=0.25 \\times 0.75$</p>\n<p>$$ \\sigma^2=0.25 \\times 0.75 $$</p>\n<p>$Y$ follows normal distribution</p>\n<p>$$ \\begin{aligned} Y & \\sim N(n \\mu, \\sqrt{n} \\sigma) \\\\ Y & \\sim N(300 \\times 0.25, \\sqrt{300} \\times \\sqrt{0.25 \\times 0.75}) \\\\ Y & \\sim N(75,7.5) \\\\ & =P(60 \\leq Y \\leq 90) \\\\ & =P\\left(\\frac{60-75}{7.5} \\leq Z \\leq \\frac{90-75}{7.5}\\right) \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\begin{aligned} & =P(-2 \\leq 2 \\leq 2) \\\\ & =P(2 \\leq 2)-P(2 \\leq 2) \\\\ & \\phi(2)-\\phi(-2) \\end{aligned}\\\\ &\\text { Hence, the correct option is (A). } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For $x \\in \\mathbb{R}$, the floor function is denoted by $f(x)=\\lfloor x\\rfloor$ and defined as follows $\\lfloor x\\rfloor=k, k \\leq x<k+1$,</p>\n<p>where $k$ is an integer. Let $Y=\\lfloor X\\rfloor$, where $X$ is an exponentially distributed random variable with mean $\\frac{1}{\\ln 10}$, where In denotes natural logarithm. For any positive integer $l$, one can write the probability of the event $Y=l$ as follows</p>\n<p>$$ P(Y=l)=q^l(1-q) $$</p>\n<p>The value of $q$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.1\n"
+      },
+      {
+        "identifier": "B",
+        "content": "0.01\n"
+      },
+      {
+        "identifier": "C",
+        "content": "0.5\n"
+      },
+      {
+        "identifier": "D",
+        "content": "0.434"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & E(X)=\\frac{1}{\\ln 10}=\\frac{1}{\\lambda} \\\\ & X=\\ln 10 \\end{aligned} $$</p>\n<p>As $X$ is exponential distribution functions</p>\n<p>$$ \\begin{aligned} & f(X)=X e^{-\\lambda x}, x>0 \\\\ & =\\ln 10 e^{-\\ln 10 \\times x} \\\\ & =10^{-x} \\times \\ln 10 \\\\ & =\\frac{\\ln 10}{10^x} \\\\ & P(Y=l)=P([X]=l) \\\\ & =P(l \\leq X \\leq l+1) \\\\ & =\\int_l^{l+1} \\frac{\\ln 10}{10^x} d x \\\\ & =\\frac{1}{10^h}-\\frac{1}{10^{l+1}} \\\\ & =\\left(\\frac{1}{10}\\right)^l\\left(1-\\frac{1}{10}\\right) \\\\ & q=\\frac{1}{10}=0.1 \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "A random experiment consists of throwing 100 fair dice, each die having six faces numbered 1 to 6 . An event $A$ represents the set of all outcomes where at least one of the dice shows a 1 . Then, $\\mathrm{P}(\\mathrm{A})=$\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0\n"
+      },
+      {
+        "identifier": "B",
+        "content": "1\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $1-\\left(\\frac{5}{6}\\right)^{100}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\left(\\frac{5}{6}\\right)^{100}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : A random experiment consists of throwing 100 fair dice</p>\n<p>$$ n=100 $$</p>\n<p>$X=$ Outcome of random experiment where at least one of the dice shows one</p>\n<p>On throwing one dice</p>\n<p>$$ \\begin{aligned} & P(\\text { getting } 1)=\\frac{1}{6}=p(\\text { success }) \\\\ & P(\\text { getting not } 1)=\\frac{5}{6}=q(\\text { failure }) \\end{aligned} $$</p>\n<p>Probability of getting at least one of the dice shows 1</p>\n<p>By binomial distribution</p>\n<p>$$ \\begin{aligned} &\\begin{aligned} P(X \\geq 1) & =1-P(X=0) \\\\ & =1-\\left[{ }^{100} C_0 p^0 q^{100-0}\\right] \\\\ & =1-\\left[1\\left(\\frac{1}{6}\\right)^0\\left(\\frac{5}{6}\\right)^{100}\\right] \\\\ & =1-\\left(\\frac{5}{6}\\right)^{100} \\end{aligned}\\\\ &\\text { Hence, the correct option is (C). } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a coin-toss experiment where the probability of head showing up is $p$. In the $i^{\\text {th }}$ coin toss, let $X_i=1$ if head appears, and $X_i=0$ if tail appears.</p>\n<p>Consider</p>\n<p>$$ \\hat{p}=\\frac{1}{n} \\sum_{i=1}^n X_i $$</p>\n<p>where $n$ is the total number of independent coin tosses.</p>\nWhich of the following statements is/are correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $E[\\hat{p}]=p$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$E[\\hat{p}]=\\frac{p}{n}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "As $n$ increases, variance of $\\hat{p}$ decreases\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Variance of $\\hat{p}$ does not depend on $n$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>(i) A Coin toss experiment with probability of head $=\\mathrm{P}$</p>\n<p>(ii) $\\quad \\mathrm{X}_{\\mathrm{i}}=1$ if head appears</p>\n<p>(iii) $\\quad \\mathrm{X}_{\\mathrm{i}}=0$ if tail appears</p>\n<p>(iv) $\\quad \\hat{\\mathrm{P}}=\\frac{1}{\\mathrm{n}} \\sum_{\\mathrm{i}=1}^{\\mathrm{n}} \\mathrm{X}_{\\mathrm{i}}$</p>\n<p>Where n is the total number of independent coin tosses.</p>\n<p>From option (A) : $\\mathrm{E}[\\hat{\\mathrm{P}}]=\\mathrm{P}$</p>\n<p>Expected value of sample proportion is true probability.</p>\n<p>$$ \\begin{aligned} & \\mathrm{E}[\\hat{\\mathrm{P}}]=\\frac{1}{\\mathrm{n}} \\sum_{\\mathrm{i}=1}^{\\mathrm{n}} \\mathrm{E}\\left[\\mathrm{X}_{\\mathrm{i}}\\right] \\\\ & \\mathrm{E}[\\hat{\\mathrm{P}}]=\\frac{1}{\\mathrm{n}} \\times \\mathrm{n} \\cdot \\mathrm{E}\\left[\\mathrm{X}_{\\mathrm{i}}\\right] \\\\ & \\mathrm{E}[\\hat{\\mathrm{P}}]=\\mathrm{E}\\left[\\mathrm{X}_{\\mathrm{i}}\\right]=\\mathrm{P} \\end{aligned} $$</p>\n<p>So, option (A) is correct.</p>\n<p>From option (B) :</p>\n<p>$$ \\mathrm{E}[\\hat{\\mathrm{P}}]=\\frac{\\mathrm{P}}{\\mathrm{n}} $$</p>\n<p>As we just calculated</p>\n<p>$$ \\mathrm{E}[\\hat{\\mathrm{P}}]=\\mathrm{P} $$</p>\n<p>So, option (B) is incorrect.</p>\n<p>From option (C) : As n increases, Variance of $\\hat{\\mathrm{P}}$ decrease</p>\n<p>Variance of a Bernoulli Variable</p>\n<p>$$ \\begin{aligned} & \\operatorname{Var}\\left(\\mathrm{X}_{\\mathrm{i}}\\right)=\\mathrm{P}(1-\\mathrm{P}) \\\\ & \\operatorname{Var}(\\hat{\\mathrm{P}})=\\operatorname{Var}\\left(\\frac{1}{\\mathrm{n}} \\sum_{\\mathrm{i}=1}^{\\mathrm{n}} \\mathrm{X}_{\\mathrm{i}}\\right) \\end{aligned} $$</p>\n<p>Because the tosses are independent</p>\n<p>$$ \\begin{aligned} & \\operatorname{Var}(\\hat{\\mathrm{P}})=\\frac{1}{\\mathrm{n}^2} \\times \\mathrm{n} \\operatorname{Var}\\left(\\mathrm{X}_{\\mathrm{i}}\\right) \\\\ & \\operatorname{Var}(\\hat{\\mathrm{P}})=\\operatorname{Var}\\left(\\mathrm{X}_{\\mathrm{i}}\\right)=\\frac{\\mathrm{P}(1-\\mathrm{P})}{\\mathrm{n}} \\end{aligned} $$</p>\n<p>As n increase, the denominator increases, So variance decreases.</p>\n<p>$\\mathrm{X}_{\\mathrm{i}}$ is a Bernoulli random variable</p>\n<p>With</p>\n<p><p>$\\mathrm{P}\\left(\\mathrm{X}_{\\mathrm{i}}=1\\right)=\\mathrm{P}$</p></p>\n<p><p>$\\mathrm{P}\\left(\\mathrm{X}_{\\mathrm{i}}=0\\right)=1-\\mathrm{P}$</p></p>\n<p>Expected value of a Bernoulli Variable</p>\n<p>$$ \\mathrm{E}\\left[\\mathrm{X}_{\\mathrm{i}}\\right]=1 \\times \\mathrm{P}+0(1-\\mathrm{P})=\\mathrm{P} $$</p>\n<p>Now,</p>\n<p>$$ \\hat{\\mathrm{P}}=\\frac{1}{\\mathrm{n}} \\sum_{\\mathrm{i}=1}^{\\mathrm{n}} \\mathrm{X}_{\\mathrm{i}} $$</p>\n<p>By linearity of expectation</p>\n<p>$$ \\mathrm{E}[\\hat{\\mathrm{P}}]=\\mathrm{E}\\left[\\frac{1}{\\mathrm{n}} \\sum_{\\mathrm{i}=1}^{\\mathrm{n}} \\mathrm{X}_{\\mathrm{i}}\\right] $$</p>\n<p>So, option (C) is correct.</p>\n<p>From option (D) : Variance of $\\hat{\\mathrm{P}}$ does not depend on n .</p>\n<p>$$ \\operatorname{Var}(\\hat{P})=\\frac{P(1-P)}{n} $$</p>\n<p>It does depend on n .</p>\n<p>So, option (D) is incorrect Hence the correct option are (A) and (C).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A bag contains 5 white balls and 10 black balls. In a random experiment, $n$ balls are drawn from the bag one at a time with replacement. Let $S_n$ denote the total number of black balls drawn in the experiment.</p>\n<p>The expectation of $S_{100}$ denoted by $E\\left[S_{100}\\right]=$ ___________ (Round off to one decimal place)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "66.7",
+    "explanation": "<p>Given :</p>\n<p>(i) Number of white balls $=5$</p>\n<p>(ii) Number of black balls $=10$</p>\n<p>(iii) Number of trials $=100$</p>\n<p>(iv) In a random experiment n balls are drawn from the bag one at a time with replacement.</p>\n<p>The probability of drawing a black ball in a single trial.</p>\n<p>$$ \\begin{aligned} & P(\\text { drawing a black ball })=\\frac{10}{15} \\\\ & P(\\text { drawing a black ball })=\\frac{2}{3} \\end{aligned} $$</p>\n<p>The expected value of a binomial distribution is</p>\n<p>$$ E[x]=n P $$</p>\n<p>Where $n$ is the number of trials and P is the probability of success in a single trial.</p>\n<p>Here, number of trails $n=100$</p>\n<p>$$ \\begin{aligned} & E[s]=n P=100 \\times \\frac{2}{3} \\\\ & E[s]=\\frac{200}{3} \\approx 66.7 \\end{aligned} $$</p>\n<p>The expected value of the number of block balls drawn in 100 trails is approximately 66.7.</p>\n<p>Hence, the correct answer is 66.7 .</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,1824 @@
+[
+  {
+    "direction": null,
+    "content": "<p>The synchronous sequential circuit shown below works at a clock frequency of 1 GHz. The throughput, in Mbits/s, and the latency, in ns, respectively, are</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywoziw5/d4508e09-2960-4016-9504-ecff65737937/c4a2c950-47ff-11ef-a812-8332c7889a1e/file-jaoe38c1lywoziw6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywoziw5/d4508e09-2960-4016-9504-ecff65737937/c4a2c950-47ff-11ef-a812-8332c7889a1e/file-jaoe38c1lywoziw6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Digital Circuits - Sequential Circuits Question 7 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1000, 3"
+      },
+      {
+        "identifier": "B",
+        "content": "333.33, 1"
+      },
+      {
+        "identifier": "C",
+        "content": "2000, 3"
+      },
+      {
+        "identifier": "D",
+        "content": "333.33, 3"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>The given circuit is a Serial In Serial Out (SISO) shift register.</p>\n\n<p>The clock frequency is provided as $1 \\text{ GHz}$.</p>\n\n<p>The clock period ($T_{\\text{clk}}$) can be calculated as follows:</p>\n\n<p>$ T_{\\text{clk}} = \\frac{1}{f_{\\text{clk}}} = \\frac{1}{10^9} \\text{ seconds} = 10^{-9} \\text{ seconds} = 1 \\text{ ns} $</p>\n\n<p>For a SISO shift register, the latency is determined by $N T_{\\text{clk}}$, where $N$ represents the number of flip-flops.</p>\n\n<p>$ \\text{Latency} = N T_{\\text{clk}} = 3 \\times 1 \\text{ ns} = 3 \\text{ ns} $</p>\n\n<p>The throughput is defined as the number of bits processed per second.</p>\n\n<p>In this circuit, we obtain 1 bit of output every $T_{\\text{clk}} = 1 \\text{ ns}$.</p>\n\n<p>Thus, the throughput is :</p>\n\n<p>$ \\text{Throughput} = 10^9 \\text{ bits per second} = 10^3 \\text{ Mbits per second} $</p>\n\n<p>Therefore, the correct options are throughput of 1000 Mbits/s and latency of 3 ns.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "content": "A traffic signal cycles from GREEN to YELLOW, YELLOW to RED and RED to GREEN.\nIn each cycle, GREEN is turned on for 70 seconds, YELLOW is turned on for\n5 seconds and the RED is turned on for 75 seconds. This traffic light has to be implemented\nusing a finite state machine (FSM). The only input to this FSM is a clock of 5 second period.\nThe minimum number of flip-flops required to implement this FSM is _______.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "5 to 5",
+    "explanation": "According to the question,\n<br><br>Green is turned ON for 70 seconds\n <br><br>Yellow is turned ON for 5 seconds.\n <br><br>Red is turned ON for 75 seconds\n<br><br>$$ \\therefore $$ Total time to complete one cycle for all 3 lights = (70 + 5 +75) seconds = 150 seconds\n<br><br>Available time period of clock = 5 seconds\n<br><br>Total number of clock cycles in one complete cycle = $${{150} \\over 5}$$ = 30\n<br><br>Assume number of flip-flops required = n\n<br><br>We know possible number of states using n flip-flops = $${2^n}$$\n<br><br>So to get 30 clock cycle or 30 states,\n<br><br>$${2^n}$$ $$ \\ge $$ 30\n<br><br>$$ \\Rightarrow $$ n $$ \\ge $$ 4.90\n<br><br>$$ \\therefore $$ Minimum number of required flip-flops is = 5",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the D-Latch shown in the figure, which is transparent when its clock input <b>CK</b> is high and has zero propagation delay. In the figure, the clock signal <b>CLK1</b> has a 50% duty cycle and <b>CLK2</b> is a one-fifth period delayed version of <b>CLK1</b>. The duty cycle at the output latch in percentage is ___________.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/d2b8547a4d55f85e4c94a9a82f640618f9d96c5ea5534ca4230f3e01d67a9704.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Digital Circuits - Sequential Circuits Question 53 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/45a66553ad4c6e3b8842f528fe2d4d6c10f84d54b24b35f20453ce481d2a5763.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Digital Circuits - Sequential Circuits Question 53 English 2\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "30",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the latch circuit shown, the NAND gates have non-zero, but unequal propagation delays. The present input condition is: P = Q = \"0‟. If the input condition is changed simultaneously to P = Q = \"1\", the outputs X and Y are\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/14c2e0fa5fbd5fb08eb856fdb19bde9392ba5c96643ae5868a2f3cb494824ebf.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Digital Circuits - Sequential Circuits Question 52 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "X = '1', Y = '1'"
+      },
+      {
+        "identifier": "B",
+        "content": "either X = '1', Y = '0' or X = '0', Y = '1'"
+      },
+      {
+        "identifier": "C",
+        "content": "either X = '1', Y = '1' or X = '0', Y = '0'"
+      },
+      {
+        "identifier": "D",
+        "content": "X = '0', Y = '0'"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that all the digital gates in the circuit shown in the figure are ideal, the resistor 𝑅 = 10 𝑘Ω and the supply voltage is 5 𝑉. The D flip-flops D<sub>1</sub>, D<sub>2</sub>, D<sub>3</sub>, D<sub>4</sub> and D<sub>5</sub> are initialized with logic\nvalues 0, 1, 0,1 and 0, respectively. The clock has a 30% duty cycle.  \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/31e6988b138336f7079dcf4c12cf2aa8623f955fb685d0ea334ede618183477c.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 2 Digital Circuits - Sequential Circuits Question 56 English\"> \n<p>The average power dissipated (in mW) in resistor R is ______.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.5",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A mod-n counter using a synchronous binary up-counter with synchronous clear input is shown in the figure. The value of n is _______.  \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ec28fa0aaedaa360f3dc513d5410660562c0d2300eafb4d2671cb66f1c77512a.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 2 Digital Circuits - Sequential Circuits Question 55 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The circuit shown consists of J-K flip-flops, each with an active low asynchronous reset ($$\\overline {{R_d}} $$ input).\nThe counter corresponding to this circuit is  \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/0977af6699d277abb31af113b3f2f9c7f4f45fa37960874e5be792d252d9e623.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 3 Digital Circuits - Sequential Circuits Question 54 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a modulo-5 binary up counter "
+      },
+      {
+        "identifier": "B",
+        "content": "a modulo-6 binary down counter "
+      },
+      {
+        "identifier": "C",
+        "content": "a modulo-5 binary down counter "
+      },
+      {
+        "identifier": "D",
+        "content": "a modulo-6 binary up counter  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Five JK flip - flops are cascaded to form circuit shown in figure. Clock pulses at a frequency of 1 MHz are applied as shown. The frequency (in kHz) of the waveform at Q<sub>3</sub> is ______.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/5d16ef2f12547d00953d3f650abf7ea290fc8547870c8531aab809f091c828b9.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 1 Digital Circuits - Sequential Circuits Question 61 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "62.5",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The circuit shown in the figure is a\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/df0fd28a793aed0be2b00c90f22619937e03bd4f3f9793940eb3993fe34d349f.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 3 Digital Circuits - Sequential Circuits Question 60 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Toggle Flip Flop "
+      },
+      {
+        "identifier": "B",
+        "content": "JK Flip Flop "
+      },
+      {
+        "identifier": "C",
+        "content": "SR Latch "
+      },
+      {
+        "identifier": "D",
+        "content": "Master-Slave D Flip Flop  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the multiplexer based logic circuit shown in the figure. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/23a33536da1a82009f029e3d8341fb642524830046a9c5694756a5c5626c06e4.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 3 Digital Circuits - Sequential Circuits Question 57 English\"> \n<p>Which one of the following Boolean functions is realized by the circuit?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "F = $$W\\overline {{S_1}} \\overline {{S_2}} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "F = $$W{S_1}\\, + W{S_2}\\, + {S_1}{S_2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "F = $$\\overline W  + \\,{S_1} + {S_2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "F = $$W \\oplus {S_1} \\oplus {S_2}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the given circuit. In this circuit, the race around<br><br>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxftgegp/35fbab5b-df03-454d-bede-3e7241470d30/ea6d5290-6233-11ec-9136-3784e46d890d/file-1kxftgegq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxftgegp/35fbab5b-df03-454d-bede-3e7241470d30/ea6d5290-6233-11ec-9136-3784e46d890d/file-1kxftgegq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2012 Digital Circuits - Sequential Circuits Question 58 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "does not occur "
+      },
+      {
+        "identifier": "B",
+        "content": "occurs when CLK = 0 "
+      },
+      {
+        "identifier": "C",
+        "content": "occurs when CLK = 1 and A = B = 1 "
+      },
+      {
+        "identifier": "D",
+        "content": "occurs when CLK = 1 and A = B = 0 "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "The circuit shown is that of an active-HIGH\nclocked R-S flip–flop with S = A and R = B. The race\ncondition does not occur in these flip–flops.",
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "When the output Y in the circuit below is ‘1’, it implies that data has <br><br>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxftlnf7/41a3bb65-8b4f-4e95-87bb-ed8c47bf5f3a/7c649230-6234-11ec-9136-3784e46d890d/file-1kxftlnf8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxftlnf7/41a3bb65-8b4f-4e95-87bb-ed8c47bf5f3a/7c649230-6234-11ec-9136-3784e46d890d/file-1kxftlnf8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2011 Digital Circuits - Sequential Circuits Question 59 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "changed from 0 to 1 "
+      },
+      {
+        "identifier": "B",
+        "content": "changed from 1 to 0 "
+      },
+      {
+        "identifier": "C",
+        "content": "changed in either direction "
+      },
+      {
+        "identifier": "D",
+        "content": "not changed "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "Presently, Y = 1. This implies that prior to clock pulse; both the D-inputs were in logic ‘1’ state. This further implies that Q-output of the first flip–flop was in logic ‘0’ state. This can result from its D-input being previously in logic ‘0’ state. Hence, the data input has\nchanged from 0 to 1.",
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Assuming that all flip-flops are in reset condition initially, the count sequence\nobserved at Q<sub>A</sub> in the circuit shown is <br><br>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxftpplo/73abd795-60f1-41d8-8a6e-46f30be79b12/ed5031c0-6234-11ec-9136-3784e46d890d/file-1kxftpplp.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxftpplo/73abd795-60f1-41d8-8a6e-46f30be79b12/ed5031c0-6234-11ec-9136-3784e46d890d/file-1kxftpplp.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2010 Digital Circuits - Sequential Circuits Question 62 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0010111..."
+      },
+      {
+        "identifier": "B",
+        "content": "0001011..."
+      },
+      {
+        "identifier": "C",
+        "content": "0101111... "
+      },
+      {
+        "identifier": "D",
+        "content": "0110100..."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "Initially, Q<sub>A</sub>, Q<sub>B</sub>, Q<sub>C</sub> are ‘0’. This makes D<sub>A</sub> = ‘1’.\nWith the first clock pulse, Q<sub>A</sub> becomes ‘1’. Q<sub>B</sub> and Q<sub>C</sub>\nremain in logic ‘0’ state. D<sub>A</sub> is still ‘1’.With the second\nclock pulse, Q<sub>A</sub> remains in logic ‘1’ state. Q<sub>B</sub> becomes\n‘1’. Q<sub>C</sub> remains ‘0’. D<sub>A</sub> becomes ‘0’. With the third\nclock pulse, Q<sub>A</sub> becomes ‘0’. The first four entries of Q<sub>A</sub>\ntherefore are 0110. This matches with only the answer given in option (d).",
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The present output Q<sub>n</sub> of an edge triggered JK flip-flop is logic 0. If J=1, then\nQ<sub>n+1</sub> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "can not be determined"
+      },
+      {
+        "identifier": "B",
+        "content": "will be logic 0 "
+      },
+      {
+        "identifier": "C",
+        "content": "will be logic 1 "
+      },
+      {
+        "identifier": "D",
+        "content": "will race around "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The given figure shows a ripple counter using positive edge triggered flip-flops. If the\npresent state of counter is Q<sub>2</sub> Q<sub>1</sub> Q<sub>0</sub>  = 011, then its next state ( Q<sub>2</sub> Q<sub>1</sub> Q<sub>0</sub> ) will be  \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/788c86e62971e28ef5385b71892aa32b8af7c464a965a72a6c25a8065bea1dc5.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Digital Circuits - Sequential Circuits Question 63 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "010 "
+      },
+      {
+        "identifier": "B",
+        "content": "100 "
+      },
+      {
+        "identifier": "C",
+        "content": "111 "
+      },
+      {
+        "identifier": "D",
+        "content": "101 "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Choose the correct one from among the alternatives A, B, C, D after matching an\nitem from Group 1 with the most appropriate item in Group 2.\n<p><b>Group1</b>\n<br>P. shift register\n<br>Q. Counter \n<br>R. Decoder</p>\n<p><b>Group2</b>\n<br>1. Frequency division\n<br>2. Addressing in memory chips \n<br>3. Serial to parallel data conversion</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P-3, Q-2, R-1 "
+      },
+      {
+        "identifier": "B",
+        "content": "P-3, Q-1, R-2 "
+      },
+      {
+        "identifier": "C",
+        "content": "P-2, Q-1, R-3 "
+      },
+      {
+        "identifier": "D",
+        "content": "P-1, Q-3, R-2 "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A master slave flip-flop has the characteristic that ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "change in the input immediately reflected in the output "
+      },
+      {
+        "identifier": "B",
+        "content": "change in the output occurs when the state of the master is affected "
+      },
+      {
+        "identifier": "C",
+        "content": "change in the output occurs when the state of the slave is affected "
+      },
+      {
+        "identifier": "D",
+        "content": "both the master and the slave states are affected at the same time "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A 0 to 6 counter consist of 3 flip-flops and a combination circuit of 2 input gate(s). The combination circuit consists of",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "one AND gate "
+      },
+      {
+        "identifier": "B",
+        "content": "one OR gate "
+      },
+      {
+        "identifier": "C",
+        "content": "one AND gate and one OR gate "
+      },
+      {
+        "identifier": "D",
+        "content": "two AND gates"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Figure shows a mod-K counter, Here K is equal to \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/be331210862b555bd6c2f754d023baef699397eaf7d68a5ca88cc4fa47e035e0.jpg\" loading=\"lazy\" alt=\"GATE ECE 1998 Digital Circuits - Sequential Circuits Question 68 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 "
+      },
+      {
+        "identifier": "B",
+        "content": "2 "
+      },
+      {
+        "identifier": "C",
+        "content": "3 "
+      },
+      {
+        "identifier": "D",
+        "content": "4 "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "In a J_K flip-flop, we have J=$$\\overline Q $$ and K=1 (see figure). Assuming the flip-flop was intially cleared and then clocked for 6 pulses, the sequence at the Q output will be\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/10e0fd422a990e18322384002989556942106d0a8cd42c849d4cf61cddd2926d.jpg\" loading=\"lazy\" alt=\"GATE ECE 1997 Digital Circuits - Sequential Circuits Question 69 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "010000 "
+      },
+      {
+        "identifier": "B",
+        "content": "011001"
+      },
+      {
+        "identifier": "C",
+        "content": "010010"
+      },
+      {
+        "identifier": "D",
+        "content": "010101 "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "An R-S latch is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Combinational circuit"
+      },
+      {
+        "identifier": "B",
+        "content": "Synchronous sequential circuit. "
+      },
+      {
+        "identifier": "C",
+        "content": "One bit memory element"
+      },
+      {
+        "identifier": "D",
+        "content": "One clock delay element."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "A switch-tail ring counter is made by using a single D flip-flop. The resulting circuit is a",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "SR flip-flop "
+      },
+      {
+        "identifier": "B",
+        "content": "JK flip-flop "
+      },
+      {
+        "identifier": "C",
+        "content": "D flip-flop "
+      },
+      {
+        "identifier": "D",
+        "content": "T flip-flop"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Synchronous counters are _____ than the ripple counters.",
+    "options": [],
+    "correct_options": [],
+    "answer": "faster",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "content": "A pulse train with a frequency of 1 MHz is counted using a modulo-1024 ripple-counter built with J-K flip flops. For proper operation of the counter, the maximum permissible propagation delay per flip flop stage is ______ n sec.  ",
+    "options": [],
+    "correct_options": [],
+    "answer": "100",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "content": "The initial contents of the 4-bit serial-in-parallel-out, right-shift, Shift Register shown in figure is 0110. After three clock pulses are applied, the contents of the Shift Register will be \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8e2c337407ba5c77bf6fb14c6b1da3dbd7b24e57f7f5e7205034039d84e9722d.jpg\" loading=\"lazy\" alt=\"GATE ECE 1992 Digital Circuits - Sequential Circuits Question 74 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0000 "
+      },
+      {
+        "identifier": "B",
+        "content": "0101 "
+      },
+      {
+        "identifier": "C",
+        "content": "1010 "
+      },
+      {
+        "identifier": "D",
+        "content": "1111"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "A SR FLIP-FLOP can be converted into a T FLIP-FLOP by connecting ___ to Q and ___ to $$\\overline Q $$.",
+    "options": [],
+    "correct_options": [],
+    "answer": "R, S",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "A 4 bit modulo-16 ripple counter uses JK flip-flops. If the propagation delay of each FF is 50ns, the maximum clock frequency that can be used is equal to:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "20 MHz "
+      },
+      {
+        "identifier": "B",
+        "content": "10 MHz "
+      },
+      {
+        "identifier": "C",
+        "content": "5 MHz "
+      },
+      {
+        "identifier": "D",
+        "content": "4 MHz "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-ece-1990",
+    "difficulty": null
+  },
+  {
+    "content": "The circuit given below is a\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/gpCMoVA1tmVYQKn4g/4qgUhYZw8aJQNPrQNYoYMbIbn6HKW/47E3Jb00fkYkrFa5iR9I2A/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1988 Digital Circuits - Sequential Circuits Question 14 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "J-K Flip-flop "
+      },
+      {
+        "identifier": "B",
+        "content": "Johnson's counter "
+      },
+      {
+        "identifier": "C",
+        "content": "R-S latch "
+      },
+      {
+        "identifier": "D",
+        "content": "None of above "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "A ripple counter using negative edge-triggered D-flip flops is shown in Fig.1. The flip-flops are cleared to '0' by a '0' at the R input. The feedback logic is to be designed to obtain the count sequence shown in the same figure. The correct feedback logic is:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/E0ATxJ59Mo4dGqDG1/RNf4g9abFnXbib5Yoxvm2UFFqzL4L/vt85UJ2nbMixGUrG8R0EsJ/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1987 Digital Circuits - Sequential Circuits Question 17 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/687dd47b54a8ff711fd9ba5f4255986ba1b572aaba1b32a910db73be1a8de02c.jpg\" loading=\"lazy\" alt=\"GATE ECE 1987 Digital Circuits - Sequential Circuits Question 17 English 2\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$F\\, = \\overline {{Q_2}{Q_1}\\overline {{Q_0}} } $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$F\\, = \\,{Q_2}\\,\\overline {{Q_1}} \\overline {{Q_0}} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$F\\, = \\,\\overline {{Q_2}} \\overline {{Q_1}} {Q_0}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$F\\, = \\,\\overline {{Q_2}} \\overline {{Q_1}} \\overline {{Q_0}} $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "content": "Choose the correct statements relating to the circuit of figure \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/ElrS6wmfZLOyiQWp2/4PLbQxyaXzy1Tm8nOsJXiP5zk3Uww/bpiYcRKBX4BMtx08VOJEAn/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1987 Digital Circuits - Sequential Circuits Question 13 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "For V<sub>i</sub> = -2V, P=0 "
+      },
+      {
+        "identifier": "B",
+        "content": "For V<sub>i</sub> = +3V, P=0 "
+      },
+      {
+        "identifier": "C",
+        "content": "For V<sub>i</sub> = 0V, P=0 always "
+      },
+      {
+        "identifier": "D",
+        "content": "For V<sub>i</sub> = 0V, P can be either 0 or 1. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A positive-edge-triggered sequential circuit is shown below. There are no timing violations in the circuit. Input $P 0$ is set to logic ' 0 ' and $P 1$ is set to logic ' 1 ' at all times. The timing diagram of the inputs SEL and $S$ are also shown below.</p>\n<p>The sequence of output $Y$ from time $T_0$ to $T_3$ is $\\qquad$ .</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbey82zw/a6fff839-8f15-4097-aaed-43782126eca2/9909a6c0-3f9c-11f0-a491-e768f614f5b9/file-jaoe38c1mbey82zx.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbey82zw/a6fff839-8f15-4097-aaed-43782126eca2/9909a6c0-3f9c-11f0-a491-e768f614f5b9/file-jaoe38c1mbey82zx.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Digital Circuits - Sequential Circuits Question 4 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1011\n"
+      },
+      {
+        "identifier": "B",
+        "content": "0100\n"
+      },
+      {
+        "identifier": "C",
+        "content": "0010\n"
+      },
+      {
+        "identifier": "D",
+        "content": "1101"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given: } P 0=0 ; \\quad P 1=1 $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbeyao19/e8f214a7-6de6-4916-bc51-8d0d3fa9c4d0/e0e83dd0-3f9c-11f0-a491-e768f614f5b9/file-jaoe38c1mbeyao1a.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbeyao19/e8f214a7-6de6-4916-bc51-8d0d3fa9c4d0/e0e83dd0-3f9c-11f0-a491-e768f614f5b9/file-jaoe38c1mbeyao1a.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Digital Circuits - Sequential Circuits Question 4 English Explanation 1\"></p>\n<p>$$ Output,\\,\\,\\,\\,Y=\\overline{Q_2} \\oplus \\overline{Q_1}\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, ...(i)$$</p>\n<p>Timing Diagram:</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbeycaa8/b7a2add7-e4ff-41d2-bf5b-a36e36d769d8/0de74100-3f9d-11f0-a491-e768f614f5b9/file-jaoe38c1mbeycaa9.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbeycaa8/b7a2add7-e4ff-41d2-bf5b-a36e36d769d8/0de74100-3f9d-11f0-a491-e768f614f5b9/file-jaoe38c1mbeycaa9.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Digital Circuits - Sequential Circuits Question 4 English Explanation 2\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In the circuit shown below, the AND gate has a propagation delay of 1 ns . The edgetriggered flip-flops have a set-up time of 2 ns , a hold-time of 0 ns , and a clock-to-Q delay of 2 ns .</p>\n<p>The maximum clock frequency (in MHz , rounded off to the nearest integer) such that there are no setup violations is___________ .</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbf065aa/34168288-4749-43a1-8da7-a62c28fe18b5/35721220-3fa4-11f0-a491-e768f614f5b9/file-jaoe38c1mbf065ab.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbf065aa/34168288-4749-43a1-8da7-a62c28fe18b5/35721220-3fa4-11f0-a491-e768f614f5b9/file-jaoe38c1mbf065ab.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Digital Circuits - Sequential Circuits Question 5 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "200",
+    "explanation": "<p>In the given circuit, we need to determine the maximum clock frequency to avoid setup violations.</p>\n<h3>Parameters:</h3>\n\n<p><p><strong>Propagation delay of AND gate</strong>: 1 ns</p></p>\n<p><p><strong>Setup time of flip-flops</strong>: 2 ns</p></p>\n<p><p><strong>Hold time of flip-flops</strong>: 0 ns</p></p>\n<p><p><strong>Clock-to-Q delay of flip-flops</strong>: 2 ns</p></p>\n\n<h3>Calculation:</h3>\n\n<p><p><strong>Total clock-to-data path delay for Flip-Flop 1 ($ T_{\\text{clkD1}} $):</strong></p>\n<p>$    T_{\\text{clkD1}} = t_{\\text{p}} + t_{\\text{s}} + t_{\\text{comb}}    $</p>\n<p>Plug in the values:</p>\n<p>$    T_{\\text{clkD1}} = 2\\, \\text{ns} + 2\\, \\text{ns} + 1\\, \\text{ns} = 5\\, \\text{ns}    $</p></p>\n<p><p><strong>Clock-to-data path delay for Flip-Flop 2 ($ T_{\\text{clkD2}} $):</strong></p>\n<p>$    T_{\\text{clkD2}} = t_{\\text{s}} + t_{\\text{p}}    $</p>\n<p>Plug in the values:</p>\n<p>$    T_{\\text{clkD2}} = 2\\, \\text{ns} + 2\\, \\text{ns} = 4\\, \\text{ns}    $</p></p>\n\n<h3>Determine the Required Clock Period:</h3>\n<p>The clock period must be the maximum of the calculated delays to ensure there are no setup violations:</p>\n<p>$ T_{\\text{clk}} = \\max(T_{\\text{clkD1}}, T_{\\text{clkD2}}) = \\max(5\\, \\text{ns}, 4\\, \\text{ns}) = 5\\, \\text{ns} $</p>\n<h3>Calculate Maximum Clock Frequency:</h3>\n<p>Finally, the maximum clock frequency is given by the reciprocal of the clock period:</p>\n<p>$ f_{\\text{max}} = \\frac{1}{T_{\\text{clk}}} = \\frac{1}{5\\, \\text{ns}} = 200\\, \\text{MHz} $ </p>\n<p>Thus, the maximum clock frequency is <strong>200 MHz</strong>.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The sequence of states $(Q_1 Q_0)$ of the given synchronous sequential circuit is ________.</p><p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxkzpj69/6bf94b34-7dd8-40aa-bb34-92cd7ed4cb7c/14029c10-2dc4-11ef-ab56-674ed58d7efd/file-jaoe38c1lxkzpj6a.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxkzpj69/6bf94b34-7dd8-40aa-bb34-92cd7ed4cb7c/14029c10-2dc4-11ef-ab56-674ed58d7efd/file-jaoe38c1lxkzpj6a.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Digital Circuits - Sequential Circuits Question 6 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>00 &rarr; 10 &rarr; 11 &rarr; 00</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>11 &rarr; 00 &rarr; 10 &rarr; 01 &rarr; 00</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>01 &rarr; 10 &rarr; 11 &rarr; 00 &rarr; 01</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>00 &rarr; 01 &rarr; 10 &rarr; 00</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given : Sequential Circuit is shown below } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfdwv5n3/771d2dd8-42db-4147-9c81-329c1746a33d/5d4c6df0-8e3b-11f0-a029-e731836977d4/file-jaoe38c1mfdwv5n4.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfdwv5n3/771d2dd8-42db-4147-9c81-329c1746a33d/5d4c6df0-8e3b-11f0-a029-e731836977d4/file-jaoe38c1mfdwv5n4.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Digital Circuits - Sequential Circuits Question 6 English Explanation\">Input to each $T$ flip flop is given below : $T_1=Q_1+\\bar{Q}_0$ and $T_0=Q_0+Q_1$</p>\n<p>State table of the give sequential circuit is,</p>\n<p>$$ \\begin{array}{|c|c|c|c|c|} \\hline \\text { Clock } &amp; T_1=Q_1+\\bar{Q}_0 &amp; T_0=Q_0+Q_1 &amp; Q_1^{+} &amp; Q_0^{+} \\\\ \\hline \\text { Initially } &amp; - &amp; - &amp; 0 &amp; 0 \\\\ \\hline \\uparrow &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\\\ \\hline \\uparrow &amp; 1 &amp; 1 &amp; 0 &amp; 1 \\\\ \\hline \\uparrow &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\\\ \\hline \\end{array} $$</p>\n<p>So, sequence of state of given sequential circuit is, $00 \\rightarrow 10 \\rightarrow 01 \\rightarrow 00$. Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>In a given sequential circuit, initial states are Q$$_1$$ = 1 and Q$$_2$$ = 0. For a clock frequency of 1 MHz, the frequency of signal Q$$_2$$ in kHz, is ___________ (rounded off to the nearest integer).</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxa3e2j/9f87badc-9b0b-4573-b4b7-f83909f2ecc0/4fdc71e0-4852-11ef-aa12-5796018ad811/file-jaoe38c1lyxa3e2n.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxa3e2j/9f87badc-9b0b-4573-b4b7-f83909f2ecc0/4fdc71e0-4852-11ef-aa12-5796018ad811/file-jaoe38c1lyxa3e2n.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Digital Circuits - Sequential Circuits Question 8 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "250",
+    "explanation": "<p>Given circuit is</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxa3e2j/9f87badc-9b0b-4573-b4b7-f83909f2ecc0/4fdc71e0-4852-11ef-aa12-5796018ad811/file-jaoe38c1lyxa3e2n.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxa3e2j/9f87badc-9b0b-4573-b4b7-f83909f2ecc0/4fdc71e0-4852-11ef-aa12-5796018ad811/file-jaoe38c1lyxa3e2n.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Digital Circuits - Sequential Circuits Question 8 English Explanation\">\n\n<p>$$ D_1=Q_2, D_2=\\bar{Q}_1 $$</p>\n\n<p>Initially $Q_1=1, Q_2=0$</p>\n\n<p>$$ \\begin{array}{|c|c|c|c|c|c|} \\hline \\text { CLK } &amp; \\boldsymbol{D}_{\\mathbf{1}}=\\boldsymbol{Q}_{\\mathbf{2}} &amp; \\boldsymbol{D}_{\\mathbf{2}}=\\overline{\\boldsymbol{Q}}_1 &amp; \\boldsymbol{Q}_1 &amp; \\boldsymbol{Q}_2 &amp; \\\\ \\hline \\text { Initially } &amp; &amp; &amp; 1 &amp; 0 &amp; \\\\ \\hline 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \\\\ \\hline 2 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; \\\\ \\hline 3 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; \\\\ \\hline 4 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\rightarrow &amp; \\text { repeat } \\\\ \\hline \\end{array} $$</p>\n\n<p>Hence, given counter having MOD-4 output frequency,</p>\n\n<p>$$ f_0=\\frac{f_i}{4}=\\frac{1000 k}{4}=250 \\mathrm{kHz} $$</p>\n\n<p>Hence, the correct answer is 250 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>for the circuit shown, the clock frequency is f<sub>0</sub> and the duty cycle is 25%. For the signal at the Q output of the Flip-Flop, ___________.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7j76zi2/7222fa6f-2519-45e5-85c1-9d5b0e0b9c89/2821d9a0-2a0a-11ed-8dda-b7a06b81f81b/file-1l7j76zi3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7j76zi2/7222fa6f-2519-45e5-85c1-9d5b0e0b9c89/2821d9a0-2a0a-11ed-8dda-b7a06b81f81b/file-1l7j76zi3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Digital Circuits - Sequential Circuits Question 10 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "frequency is f<sub>0</sub>/4 and duty cycle is 50%"
+      },
+      {
+        "identifier": "B",
+        "content": "frequency is f<sub>0</sub>/4 and duty cycle is 25%"
+      },
+      {
+        "identifier": "C",
+        "content": "frequency is f<sub>0</sub>/2 and duty cycle is 50%"
+      },
+      {
+        "identifier": "D",
+        "content": "frequency is f<sub>0</sub> and duty cycle is 25%"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>2 bit counter $$\\matrix{\n   {MSB} &amp; {LSB(J,K)}  \\cr \n   0 &amp; 0  \\cr \n   0 &amp; 1  \\cr \n   1 &amp; 0  \\cr \n   1 &amp; 1  \\cr \n\n } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7j7839x/a4462d3a-8128-4dec-bcb9-5bdcda235e0a/46db4c50-2a0a-11ed-8dda-b7a06b81f81b/file-1l7j7839y.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7j7839x/a4462d3a-8128-4dec-bcb9-5bdcda235e0a/46db4c50-2a0a-11ed-8dda-b7a06b81f81b/file-1l7j7839y.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Digital Circuits - Sequential Circuits Question 10 English Explanation\"></p>\n<p>$$\\therefore$$ Duty cycle = 50%</p>\n<p>Out put frequency = $${{{f_0}} \\over 4}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A state transition diagram with states A, B, and C, and transition probabilities p<sub>1</sub>, p<sub>2</sub>, ....., \n p<sub>7</sub> is shown in the figure (e.g., p<sub>1</sub> denotes the probability of transition from state A to B). For this state diagram, select the statements which is/are universally true.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7j7a81o/def23730-abe6-4b1d-97a3-f021d4d8dc68/822907c0-2a0a-11ed-8dda-b7a06b81f81b/file-1l7j7a81p.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7j7a81o/def23730-abe6-4b1d-97a3-f021d4d8dc68/822907c0-2a0a-11ed-8dda-b7a06b81f81b/file-1l7j7a81p.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Digital Circuits - Sequential Circuits Question 9 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "p<sub>2</sub> + p<sub>3</sub> = p<sub>5</sub> + p<sub>6</sub>"
+      },
+      {
+        "identifier": "B",
+        "content": "p<sub>1</sub> + p<sub>3</sub> = p<sub>4</sub> + p<sub>6</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "p<sub>1</sub> + p<sub>4</sub> + p<sub>7</sub> = 1"
+      },
+      {
+        "identifier": "D",
+        "content": "p<sub>2</sub> + p<sub>5</sub> + p<sub>7</sub> = 1"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\left. \\matrix{\n  {p_2} + {p_3} = 1 \\hfill \\cr \n  {p_5} + {p_6} = 1 \\hfill \\cr}  \\right\\}{p_2} + {p_3} = {p_5} + {p_6}$$</p>\n<p>Option (a) is correct.</p>\n<p>$${p_1} + {p_4} + {p_7} = 1$$</p>\n<p>Option (c) is correct.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The propagation delay of the exclusive-OR (XOR) gate in the circuit in the figure is 3 ns . The propagation delay of all the flip-flops is assumed to be Zero. The clock (Clk) frequency provided to the circuit is 500 MHz .</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0u6ut0/dd2cf6f9-99b5-4295-8732-ba73f1f3c69e/2590e340-aea3-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0u6ut1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0u6ut0/dd2cf6f9-99b5-4295-8732-ba73f1f3c69e/2590e340-aea3-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0u6ut1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Digital Circuits - Sequential Circuits Question 3 English\">Starting from the initial value of the flip-flop outputs $Q_2 Q_1 Q_0=111$ with $D_2=1$, the minimum number of triggering clock edges after which the flip-flop outputs $Q_2 Q_1 Q_0$ becomes 100 (in integer) is $\\_\\_\\_\\_$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p>$$ \\begin{aligned} &amp;\\text {  As mentioned in the question, we have }\\\\ &amp;\\begin{aligned} &amp; f_{\\text {clock }}=500 \\mathrm{MHZ} \\\\ &amp; \\text {  } \\begin{aligned} T &amp; =\\frac{1}{f}=\\frac{1}{100} \\times 10^{-6} \\\\ Also,&amp; =0.2 \\times 10^{-8} \\\\ &amp; =2 \\mathrm{~ms} \\end{aligned} \\end{aligned} \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0u6u2a/cb48a0e4-8382-444e-8620-b0b4061c4634/24fe1920-aea3-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0u6u2b.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0u6u2a/cb48a0e4-8382-444e-8620-b0b4061c4634/24fe1920-aea3-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0u6u2b.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Digital Circuits - Sequential Circuits Question 3 English Explanation\">Now, we get the minimum number of triggering clock edges after the output of flip flop, $Q_2 Q_1 Q_0$ become $100=4$. Hence, the correct answer is $(4$ to 4$)$.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For the components in the sequential circuit shown below, $t_{p d}$ is the propagation delay, $t_{\\text {secup }}$ is the setup time and $t_{\\text {hold }}$ is the hold time. The maximum clock frequency (rounded off to the nearest integer), at which the given circuit can operate reliably, is $\\_\\_\\_\\_$ MHz.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh241thu/56ccf2bd-c9ca-4136-a810-abed8862260d/7d72f720-af56-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh241thv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh241thu/56ccf2bd-c9ca-4136-a810-abed8862260d/7d72f720-af56-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh241thv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Digital Circuits - Sequential Circuits Question 1 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "77",
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh241rv9/a1568ca7-17eb-4eb5-b72b-c510e86bab37/7c312850-af56-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh241rva.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh241rv9/a1568ca7-17eb-4eb5-b72b-c510e86bab37/7c312850-af56-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh241rva.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Digital Circuits - Sequential Circuits Question 1 English Explanation 1\">Setup time $\\left(t_{s u}\\right)$ is the time required to set the input at proper level before the application of clock active edge. Hold time $\\left(t_h\\right)$ is the minimum time required to maintain input at its level after the application of clock for proper output</p>\n<p>Given for Flip flop-1,</p>\n<p>$$ \\begin{aligned} &amp; t_{p d_1}=3 \\mathrm{~ns} \\\\ &amp; t_{s u_1}=5 \\mathrm{~ns} \\\\ &amp; t_{h_1}=1 \\mathrm{~ns} \\end{aligned} $$</p>\n<p>For flip flop-2,</p>\n<p>$$ \\begin{aligned} &amp; t_{p d_2}=8 \\mathrm{~ns} \\\\ &amp; t_{s u_2}=4 \\mathrm{~ns} \\end{aligned} $$</p>\n<p>$$ t_{h_2}=3 \\mathrm{~ns} $$</p>\n<p>The operations that are required to perform in between two clock active edges decides the clock frequency for proper operation. It can be assumed to be divided between two stages for cross coupled flip flops.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh241sts/eace7340-2c13-4441-ba60-7be50fdfbc94/7ceed300-af56-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh241stt.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh241sts/eace7340-2c13-4441-ba60-7be50fdfbc94/7ceed300-af56-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh241stt.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Digital Circuits - Sequential Circuits Question 1 English Explanation 2\"></p>\n<p>The operations required are as follows :</p>\n<p>If we start from flip flop-2 after $t_{p d_2}=8 \\mathrm{~ns}$ of active edge of clock, output of flip flop-2 gets settled this output is feeded as input to flip flop- 1 , So it must be stable for at least $t_{s u_1}=5 \\mathrm{~ns}$.</p>\n<p>So the total time required during this process,</p>\n<p>$$ T_1=t_{p d_2}+t_{s u_1}=8+5=13 \\mathrm{~ns} $$</p>\n<p>Now starting from flip flop 1 ,</p>\n<p>After $t_{p d_1}=3 \\mathrm{~ns}$ of application of clock active edge, the output of flip flop- 1 will get settled. So after 3 ns , the input is ready to be applied at the EXOR gate which has a propagation delay of 2 ns .</p>\n<p>Hence after $3+2=5 \\mathrm{~ns}$, the input is ready to be applied at the NAND gate which has $t_{p d}=2 \\mathrm{~ns}$.</p>\n<p>So finally after $5+2=7 \\mathrm{~ns}$ of clock, input of flip flop- 2 is ready but it must be stable for $t_{s u_2}=4 \\mathrm{~ns}$. The total time required during this process.</p>\n<p>$$ \\begin{aligned} &amp; T_2=t_{p d_1}+\\left(t_{p d}\\right)_{E X O R}+\\left(t_{p d}\\right)_{N A N D}+t_{s u_2} \\\\ &amp; T_2=3+2+2+4=11 \\mathrm{nsec} \\end{aligned} $$</p>\n<p>For proper operation minimum difference time between active edges of clock, i.e.</p>\n<p>$$ \\begin{aligned} &amp; \\left(T_{c l k}\\right)_{\\min }=\\text { Maximum of }\\left(T_1 \\text { and } T_2\\right)=13 \\mathrm{nsec} \\\\ &amp; \\left(f_{c l k}\\right)_{\\max }=\\frac{1}{13 \\mathrm{~ns}}=\\frac{1000}{13} \\mathrm{MHz}=76.92 \\mathrm{MHz} \\end{aligned} $$</p>\n<p>Nearest integer $=77$</p>\n<p>Hence, the maximum clock frequency (rounded off to the nearest integer), at which the given circuit can operate reliably, is $\\mathbf{7 7 ~ M H z}$.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The state diagram of a sequence detector is shown below. State $S_0$ is the initial state of the sequence detector. If the output is 1 , then</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh25pm9f/8e5f350a-c087-4061-b1aa-360b16281464/fc68e430-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25pm9g.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh25pm9f/8e5f350a-c087-4061-b1aa-360b16281464/fc68e430-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25pm9g.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Digital Circuits - Sequential Circuits Question 2 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>the sequence 01110 is detected.</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>the sequence 01001 is detected.</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>the sequence 01011 is detected.</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>the sequence 01010 is detected.</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given state diagram is shown in below figure, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh25pjoc/d633399c-2ae1-4a4a-81c4-a4f4ab1d3709/fa6991c0-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25pjod.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh25pjoc/d633399c-2ae1-4a4a-81c4-a4f4ab1d3709/fa6991c0-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25pjod.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Digital Circuits - Sequential Circuits Question 2 English Explanation 1\">Checking from options,</p>\n<p>(A)For 01110,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh25pkkq/ad17d2f1-40a0-4044-8975-e97397417cd1/fb1b7ca0-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25pkkr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh25pkkq/ad17d2f1-40a0-4044-8975-e97397417cd1/fb1b7ca0-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25pkkr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Digital Circuits - Sequential Circuits Question 2 English Explanation 2\">Hence final output $=0$</p>\n<p>(B) For 01001,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh25pkyy/93b367f3-0f95-4029-ae02-dc8bd123b72e/fb699ca0-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25pkyz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh25pkyy/93b367f3-0f95-4029-ae02-dc8bd123b72e/fb699ca0-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25pkyz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Digital Circuits - Sequential Circuits Question 2 English Explanation 3\">$$ \\begin{aligned} &amp; \\text { Final output }=0 \\\\ &amp; \\text { (C) For } 01011 \\text {, } \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh25pld0/ff6eebb7-fbf6-4396-ae9b-69033964fbf5/fbb6d240-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25pld1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh25pld0/ff6eebb7-fbf6-4396-ae9b-69033964fbf5/fbb6d240-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25pld1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Digital Circuits - Sequential Circuits Question 2 English Explanation 4\">Final output $=0$</p>\n<p>(D) For 01010,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh25plsk/34aa5d1b-471c-43e6-bdc5-42cbf847737d/fc0c4540-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25plsl.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh25plsk/34aa5d1b-471c-43e6-bdc5-42cbf847737d/fc0c4540-af5c-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25plsl.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Digital Circuits - Sequential Circuits Question 2 English Explanation 5\">Final output $=1$</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit shown below, a positive edge-triggered D Flip-Flop is used for sampling input\ndata D<sub>in</sub> using clock CK. The XOR gate outputs 3.3 volts for logic HIGH and 0 volts for\nlogic LOW levels. The data bit and clock periods are equal and the value of $${{\\Delta T} \\over {{T_{CK}}}}$$ = 0.15,\nwhere the parameters $$\\Delta T$$ and T<sub>CK</sub> are shown in the figure. Assume that the Flip-Flop and the\nXOR gate are ideal.\n<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/jf769xsjziqk279/19ac074e-ae28-47ed-86f1-9805c9850daf/93de8550-c2af-11e9-bec9-eb7a83e2b7e4/file-jf769xsjziqk27a-320w.png\"><source media=\"(max-width: 500px)\" srcset=\"https://imagex.cdn.examgoal.net/jf769xsjziqk279/19ac074e-ae28-47ed-86f1-9805c9850daf/93de8550-c2af-11e9-bec9-eb7a83e2b7e4/file-jf769xsjziqk27a-500w.png\"><source media=\"(max-width: 680px)\" srcset=\"https://imagex.cdn.examgoal.net/jf769xsjziqk279/19ac074e-ae28-47ed-86f1-9805c9850daf/93de8550-c2af-11e9-bec9-eb7a83e2b7e4/file-jf769xsjziqk27a-680w.png\"><img src=\"https://imagex.cdn.examgoal.net/jf769xsjziqk279/19ac074e-ae28-47ed-86f1-9805c9850daf/93de8550-c2af-11e9-bec9-eb7a83e2b7e4/file-jf769xsjziqk27a-860w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE ECE 2018 Digital Circuits - Sequential Circuits Question 11 English\"></picture>\n<br><br>If the probability of input data bit (D<sub>in</sub>) transition in each clock period is 0.3, the average\nvalue (in volts, accurate to two decimal places) of the voltage at node X, is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.82 to 0.86",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "A finite state machine (FSM) is implemented using the D flip-flops A and B and logic gates, as shown in the figure below. The four possible states of the FSM are Q<sub>A</sub> Q<sub>B</sub> = 00, 01, 10, and 11. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/f572d2ee83b5acdaf66b10cf0210b53b848e6c16fdbb258da9c25f0046fe4d68.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Digital Circuits - Sequential Circuits Question 27 English\"> \n<p>Assume that X<sub>I</sub>N is held at a logic level throughout the operation of the FSM. When the FSM is initialized to the state Q<sub>A</sub> Q<sub>B</sub> = 100 and clocked, after a few clock cycles, it starts cycling through</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "all of the four possible states if X<sub>IN</sub> = 1"
+      },
+      {
+        "identifier": "B",
+        "content": "three of the four possible states if X<sub>IN</sub> = 0"
+      },
+      {
+        "identifier": "C",
+        "content": "only two of the four possible states if  X<sub>IN</sub> =1 "
+      },
+      {
+        "identifier": "D",
+        "content": "only two of the possible states if X<sub>IN</sub> = 0"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A 4-bit shift register circuit configured for right-shift operation is $${D_{in}}\\, \\to \\,A,\\,A\\, \\to B,\\,B \\to C,\\,C \\to D,$$ is shown. If the present state of the shift register is ABCD = 1101, the number of clock cycles required to reach the state ABCD = 1111 is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/9dbd7ce93c8f575cef8669cb5467584889908ba7b15f0442e82b449e076742e4.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Digital Circuits - Sequential Circuits Question 28 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "10",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The state diagram of a finite state machine (FSM) designed to detect an overlapping sequence of three bits is shown in the figure. The FSM has an input 'In' and an output 'Out'. The initial state of the FSM is S<sub>0</sub>.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/d6d347ee28961565d8058c5f0c7cd5d1f4f9b2a148f221e554e3acd40d5d275d.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 2 Digital Circuits - Sequential Circuits Question 26 English\"> \n<p>If the input sequence is 10101101001101, starting with the left-most bit, then the number of times 'Out' will be 1 is __________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For the circuit shown in the figure, the delay of the bubbled NAND gate is 2ns and that of the counter is assumed to be zero\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/39bc24e9c898b8285e131655d30500d787c2bba39814887f23bb3358332a73ba.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 2 Digital Circuits - Sequential Circuits Question 29 English\"> \n<p>If the clock (Clk) frequency is 1 GHz, then the counter behaves as a</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "mod-5 counter"
+      },
+      {
+        "identifier": "B",
+        "content": "mod-6 counter "
+      },
+      {
+        "identifier": "C",
+        "content": "mod-7 counter "
+      },
+      {
+        "identifier": "D",
+        "content": "mod-8 counter  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The state transition diagram for a finite state machine with states A, B and C, and binary inputs X, Y and Z, is shown in the figure. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/7aff18be30eb05981af8b5d73a481bd6d08a26e1c77228b3b946816f1955f033.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 2 Digital Circuits - Sequential Circuits Question 30 English\"> \n<p>Which one of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Transitions from State A are ambiguously defined.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Transitions from State B are ambiguously defined. "
+      },
+      {
+        "identifier": "C",
+        "content": "Transitions from State C are ambiguously defined. "
+      },
+      {
+        "identifier": "D",
+        "content": "All of the state transitions are defined unambiguously."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The figure shows a binary counter with synchronous clear input. With the decoding logic shown,\nthe counter works as a \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/3e9d4d95ad996aedb698355b06474fdd44474380a38ebff7f571343d4c4c137a.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 2 Digital Circuits - Sequential Circuits Question 33 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "mod - 2 counter "
+      },
+      {
+        "identifier": "B",
+        "content": "mod - 4 counter "
+      },
+      {
+        "identifier": "C",
+        "content": "mod - 5 counter "
+      },
+      {
+        "identifier": "D",
+        "content": "mod - 6 counter "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "An SR latch is implemented using TTL gates as shown in the figure. The set and reset pulse inputs are provided using the push-button switches. It is observed that the circuit fails to work as desired. The SR latch can be made functional by changing\n <img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/af7137ba2b5e24f9cceb7640215f9816617b927937f4df4d071e3bdad1e2da04.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 3 Digital Circuits - Sequential Circuits Question 31 English\"> \n \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "NOR gates to NAND gates "
+      },
+      {
+        "identifier": "B",
+        "content": "inverts to buffers "
+      },
+      {
+        "identifier": "C",
+        "content": "NOR gates to NAND gates and inverters to buffers "
+      },
+      {
+        "identifier": "D",
+        "content": "5 V to ground"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A three bit pseudo random number generator is shown. Initially the value of output Y = Y<sub>2</sub> Y<sub>1</sub> Y<sub>0</sub> is set to 111. The value of output Y after three clock cycles is \n <img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/d5e89362ccb02e236fd2247b8e2ca50835834827b4d324ee0f95f4ea959fb778.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 3 Digital Circuits - Sequential Circuits Question 32 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "000 "
+      },
+      {
+        "identifier": "B",
+        "content": "001"
+      },
+      {
+        "identifier": "C",
+        "content": "010 "
+      },
+      {
+        "identifier": "D",
+        "content": "100"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit shown, choose the correct timing diagram of the output (y) from the given waveforms\nW<sub>1</sub>, W<sub>2</sub>, W<sub>3</sub> and W<sub>4</sub>. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/da054a1d0c9f1726c1cc389970053e08978464f62ac9157db5c2438dbae3ed07.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 2 Digital Circuits - Sequential Circuits Question 37 English 1\">\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/fdc8d86d0c386bb48aca6b2911fe0cbbd6dbc4108393f0d16ac376e50d8d3931.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 2 Digital Circuits - Sequential Circuits Question 37 English 2\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "W<sub>1</sub> "
+      },
+      {
+        "identifier": "B",
+        "content": "W<sub>2</sub> "
+      },
+      {
+        "identifier": "C",
+        "content": "W<sub>3</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "W<sub>4</sub> "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The outputs of the two flip-flops Q<sub>1</sub>, Q<sub>2</sub> in the figure shown are initialized to 0, 0. The sequence\ngenerated  at Q<sub>1</sub> upon application of clock signal is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/f9fb0b2e2d222d41b40364d87c943e9e6b6c855ef2fed5dd1394404f4febe67d.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 2 Digital Circuits - Sequential Circuits Question 36 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "01110 "
+      },
+      {
+        "identifier": "B",
+        "content": "01010 "
+      },
+      {
+        "identifier": "C",
+        "content": "00110 "
+      },
+      {
+        "identifier": "D",
+        "content": "01100"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The digital logic shown in the figure satisfies the given state diagram when Q<sub>1</sub> is connected to\ninput A of the XOR gate. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/bce4919328fad44af10dc600210360e6c1812df4e0b94438beb366abc5340d32.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 1 Digital Circuits - Sequential Circuits Question 38 English\"> \n<p>Suppose the XOR gate is replaced by an XNOR gate. Which one of the following options preserves the state diagram?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Input A is connected to $${\\overline Q _2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Input A is connected to $${Q_2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "Input A is connected to $${\\overline Q _1}$$ and S is complemented "
+      },
+      {
+        "identifier": "D",
+        "content": "Input A is connected to  $${\\overline Q _1}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The state transition diagram for the logic circuit shown is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/199ca9de31b29247f13d24e2ef3976eb2ba2e017ef78c4aeda5039aec1f7f58d.jpg\" loading=\"lazy\" alt=\"GATE ECE 2012 Digital Circuits - Sequential Circuits Question 39 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/9edc8abb881c1215fff0d1d0bb2b568133d5135ed54d06947e9d4156cb99ab38.jpg\" loading=\"lazy\" alt=\"GATE ECE 2012 Digital Circuits - Sequential Circuits Question 39 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/009d89b009906cddafa96fd4af49107a6793d8a982a4e5066e081193ba472e7d.jpg\" loading=\"lazy\" alt=\"GATE ECE 2012 Digital Circuits - Sequential Circuits Question 39 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/1a6a0e7bef926bf580954ea8dab676bea4e6a94746fbfea9174925ce04ac201b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2012 Digital Circuits - Sequential Circuits Question 39 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b339368936447fb8559b4f692aafbb2596937533fe64ad4bd5960abf01b80a81.jpg\" loading=\"lazy\" alt=\"GATE ECE 2012 Digital Circuits - Sequential Circuits Question 39 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The output of a 3-stage Johnson (twisted-ring) counter is fed to a digital-to-analog (D/A) converter as shown in the figure below. Assume all the states of the counter to be unset initially. The waveform which represents the D/A converter output V<sub>o</sub> is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/85b11d0622f4390930598a02ded0fdf25d05f98a0906f5c6ed5c2d08133f685d.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Digital Circuits - Sequential Circuits Question 40 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/46436c8f345a2669eb892040ae36907cfe11dc125301cb980b7835406cb61648.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Digital Circuits - Sequential Circuits Question 40 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/09ab645e7192fa81480d02645bd9f54f15e8bab21ef231c19216c0883889251b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Digital Circuits - Sequential Circuits Question 40 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/0ea0c714c154843a21e5a0295f3f6e69facf5669f53856353a1aece5e9d81530.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Digital Circuits - Sequential Circuits Question 40 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b0ecec490f704ed9f36c8eabc4fd256d25f83f8771af2a9222a02d0fa83fdaba.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Digital Circuits - Sequential Circuits Question 40 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Two D flip-flops are connected as a synchronous counter that goes through the following Q<sub>B</sub> Q<sub>A</sub> sequence $$00 \\to 11 \\to 01 \\to 10 \\to 00 \\to ......$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${D_A} = {Q_{B,}}\\,{D_B} = {Q_A}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${D_A} = {\\overline Q _A},\\,{D_B} = {\\overline Q _B}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${D_A} = \\left( {{Q_A}\\,{{\\overline Q }_B}\\, + {{\\overline Q }_A}\\,{Q_B}} \\right),\\,\\,{D_B} = {Q_A}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${D_A} = \\left( {{Q_A}{Q_B} + {{\\overline Q }_A}{{\\overline Q }_B}} \\right),\\,\\,{D_B} = {\\overline Q _B}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "What are the counting states (Q<sub>1</sub>, Q<sub>2</sub>) for the counter shown in the figure below? \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ee018dc0c3ab18fdb841fb1305ddeb90ba2365e285e5ff84b259ad9247980123.jpg\" loading=\"lazy\" alt=\"GATE ECE 2009 Digital Circuits - Sequential Circuits Question 42 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "11, 10, 00, 11, 10,......"
+      },
+      {
+        "identifier": "B",
+        "content": "01,1011,00,01........,"
+      },
+      {
+        "identifier": "C",
+        "content": "00,11,01,10,00........"
+      },
+      {
+        "identifier": "D",
+        "content": "01,10,00,01,10........"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "For each of the positive edge-triggered J-K flip flop used in the following future, the propagation delay is $$\\Delta $$T\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/606d934bbaf8d096dac86be2de29f78a6ba389a536df524d050d1c8780648214.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Digital Circuits - Sequential Circuits Question 44 English\"> \n<p>Which of the following waveforms correctly represents the output at Q<sub>1</sub>?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/1a1fbecdd2b2406738be72056f3f3ca730c0b351eb7f941957dde3680bec13b5.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Digital Circuits - Sequential Circuits Question 44 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8ae769a56164750b04d9565faa48dd0aacd7a0e14c2ddad6a72896c6fbb465cb.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Digital Circuits - Sequential Circuits Question 44 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/9f66f1bd694ec9273b0ffcef58ce9df3d4e386bab383531a135611b2395962ce.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Digital Circuits - Sequential Circuits Question 44 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/0dbfe7dfcaa814ed8c7f393a530472b8fa889b0cf048876b02704cafcfefe5f9.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Digital Circuits - Sequential Circuits Question 44 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The following binary values were applied to the X and Y inputs of the NAND latch\nshown in the figure in the sequence indicated below: X=0, Y=1; X=0, Y=0; X=1, Y=1. The corresponding stable P, Q outputs will be\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/6dd33991eec6179719a068a59d772ad8e74d39e0833e8c83a9ffc304ebbdb8d1.jpg\" loading=\"lazy\" alt=\"GATE ECE 2007 Digital Circuits - Sequential Circuits Question 34 English\">  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P = 1, Q = 0; P = 1, Q = 0; P = 1, Q = 0 or P = 0, Q = 1"
+      },
+      {
+        "identifier": "B",
+        "content": "P = 1, Q = 0; P = 0, Q = 1; or P = 0, Q = 1; P = 0, Q = 1"
+      },
+      {
+        "identifier": "C",
+        "content": "P = 1, Q = 0; P = 1, Q = 1; P = 1, Q = 0 or P = 0, Q = 1 "
+      },
+      {
+        "identifier": "D",
+        "content": "P = 1, Q = 0; P = 1, Q = 1; P = 1, Q = 1  "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "For the circuit shown, the counter state (Q<sub>1</sub> Q<sub>0</sub>) follows the sequence \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c34e1dd295283e3d9ccb05a2dc7c9be7c125a73bba4c0e2d79b2d853361bc4c8.jpg\" loading=\"lazy\" alt=\"GATE ECE 2007 Digital Circuits - Sequential Circuits Question 43 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "00,01,10,11,00...... "
+      },
+      {
+        "identifier": "B",
+        "content": "00,01,10,00,01......."
+      },
+      {
+        "identifier": "C",
+        "content": "00,01,11,00,01....."
+      },
+      {
+        "identifier": "D",
+        "content": "00,10,11,00,10......"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Two D-flip-flops, as shown below, are to be connected as a synchronous counter that goes through the following Q<sub>1</sub>Q<sub>0</sub> sequence $$00 \\to 01 \\to 11 \\to 10 \\to 00 \\to ......$$ \n<br>The inputs D<sub>0</sub> and D<sub>1</sub> respectively should be connected as<br>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a8ab07716edde6129bcffc2e46cac9da15857db64188447cf92ff611b74a1d6b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2006 Digital Circuits - Sequential Circuits Question 45 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline {{Q_1}} \\,and\\,\\ {{Q_0}} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline {{Q_0}} \\,and\\,\\ {{Q_1}} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\,\\overline {{Q_1}} {Q_0}\\,and\\,\\overline {{Q_1}} {Q_0}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\,\\overline {{Q_1}} \\overline {{Q_0}} \\,and\\,{Q_1}{Q_0}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "In the modulo-6 ripple counter shown in the figure, the output of the 2-input gate is\nused to clear the J-K flip-flops. The 2-input gate is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/7b6136bcae0a7f7a82248741c5a54de936bc53dc5a004f3ff7bb5bc07e055916.jpg\" loading=\"lazy\" alt=\"GATE ECE 2004 Digital Circuits - Sequential Circuits Question 46 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a NAND gate "
+      },
+      {
+        "identifier": "B",
+        "content": "a NOR gate "
+      },
+      {
+        "identifier": "C",
+        "content": "an OR gate "
+      },
+      {
+        "identifier": "D",
+        "content": "an AND gate "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A 4 bit ripple counter and a 4 bit synchronous counter are made using flip-flops having a propagation delay of 10 ns each. If the worst case delay in the ripple counter and the synchronous counter be R and S respectively, then \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "R = 10ns, S = 40ns"
+      },
+      {
+        "identifier": "B",
+        "content": "R = 40ns, S = 10ns"
+      },
+      {
+        "identifier": "C",
+        "content": "R = 10ns, S = 30ns "
+      },
+      {
+        "identifier": "D",
+        "content": "R = 30ns, S = 10ns"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The digital block in the figure is realized using two positive edge triggered D flip-flops. Assume that for t &lt; t<sub>0</sub>, Q<sub>1</sub> = Q<sub>2</sub> =0. The circuit in the digital block is given by <br><br>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwpa0jw0/e29f0fa2-4cc2-4fcd-8848-bc891cb90db1/83553b00-539b-11ec-bfd6-3905384ffb4d/file-1kwpa0jw1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwpa0jw0/e29f0fa2-4cc2-4fcd-8848-bc891cb90db1/83553b00-539b-11ec-bfd6-3905384ffb4d/file-1kwpa0jw1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2001 Digital Circuits - Sequential Circuits Question 48 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwpa252t/f85fd596-7287-4835-a25f-82ea3c10ab57/af829650-539b-11ec-bfd6-3905384ffb4d/file-1kwpa252u.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwpa252t/f85fd596-7287-4835-a25f-82ea3c10ab57/af829650-539b-11ec-bfd6-3905384ffb4d/file-1kwpa252u.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2001 Digital Circuits - Sequential Circuits Question 48 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwpa30n6/386a8bb2-0bad-4b24-9963-f3e5c9d2f650/c7e4ce20-539b-11ec-bfd6-3905384ffb4d/file-1kwpa30n7.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwpa30n6/386a8bb2-0bad-4b24-9963-f3e5c9d2f650/c7e4ce20-539b-11ec-bfd6-3905384ffb4d/file-1kwpa30n7.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2001 Digital Circuits - Sequential Circuits Question 48 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwpa44i3/5597ee7a-8c2f-4a96-b3cd-86af8870dec2/e6af09b0-539b-11ec-bfd6-3905384ffb4d/file-1kwpa44i4.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwpa44i3/5597ee7a-8c2f-4a96-b3cd-86af8870dec2/e6af09b0-539b-11ec-bfd6-3905384ffb4d/file-1kwpa44i4.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2001 Digital Circuits - Sequential Circuits Question 48 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kwpa56hr/53a4a009-bf42-496a-a5e9-7435f25af5fc/0407daf0-539c-11ec-bfd6-3905384ffb4d/file-1kwpa56hs.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kwpa56hr/53a4a009-bf42-496a-a5e9-7435f25af5fc/0407daf0-539c-11ec-bfd6-3905384ffb4d/file-1kwpa56hs.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2001 Digital Circuits - Sequential Circuits Question 48 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "In the figure, the J and K inputs of all the four Flip-Flops are made high. The frequency of the signal at output Y is <img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ee0c8b28ca32da78da1005b4162dff04f9717ef779c5430e33193fc18c3c7bb6.jpg\" loading=\"lazy\" alt=\"GATE ECE 2000 Digital Circuits - Sequential Circuits Question 49 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.833 KHz"
+      },
+      {
+        "identifier": "B",
+        "content": "1.0 KHz "
+      },
+      {
+        "identifier": "C",
+        "content": "0.91 KHz "
+      },
+      {
+        "identifier": "D",
+        "content": "0.77 KHZ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "A sequential circuit using D flip-flop and logic gates is shown in the figure, where X and Y are the inputs and Z is the output. The circuit is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/da5b36e35c662c9a203d50aa4a1002e9b948d2996a7adef10590739a548931f1.jpg\" loading=\"lazy\" alt=\"GATE ECE 2000 Digital Circuits - Sequential Circuits Question 50 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S–R Flip-Flop with inputs X = R and Y = S"
+      },
+      {
+        "identifier": "B",
+        "content": "S–R Flip-Flop with inputs X = S and Y = R"
+      },
+      {
+        "identifier": "C",
+        "content": "J–K Flip-Flop with inputs X = J and Y = K "
+      },
+      {
+        "identifier": "D",
+        "content": "J–K Flip-Flop with inputs X = K and Y = J   "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "The ripple counter shown in the figure works as a \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/28a22a3f344c5c894db63c89815b04c0ecc59eeeedabf5dd20e6c70ed35d394a.jpg\" loading=\"lazy\" alt=\"GATE ECE 1999 Digital Circuits - Sequential Circuits Question 51 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "mod – 3 up counter"
+      },
+      {
+        "identifier": "B",
+        "content": "mod – 5 up counter "
+      },
+      {
+        "identifier": "C",
+        "content": "mod – 3 down counter "
+      },
+      {
+        "identifier": "D",
+        "content": "mod – 5 down counter"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "In figure, A = 1 and B = 1. The input B is now replaced by a sequence 101010 ___, the outputs x and y will be\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a2940518e3010e819b352252039817ff2f87e5b53bbc6201434b6269e01ee069.jpg\" loading=\"lazy\" alt=\"GATE ECE 1998 Digital Circuits - Sequential Circuits Question 35 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "fixed at 0 and 1, respectively "
+      },
+      {
+        "identifier": "B",
+        "content": "x = 1010 ------while y = 0101 ------"
+      },
+      {
+        "identifier": "C",
+        "content": "x = 1010 ----and y = 1010 ----"
+      },
+      {
+        "identifier": "D",
+        "content": "fixed at 1 and 0, respectively"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "It is required to design a binary mod-5 synchronus counter using AB flip-flops such that the output Q<sub>2</sub>Q<sub>1</sub>Q<sub>0</sub> changes as $$000 \\to 001 \\to 010$$    ........and so on. The excitation table for the AB flip-flops is given in the table \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a2c36629e771b537fc821fdc64117636f6fbbbe9e36cd3c97deeebf108dcf29c.jpg\" loading=\"lazy\" alt=\"GATE ECE 2002 Digital Circuits - Sequential Circuits Question 18 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/62dd67a913f6aaf89b4b006d0c4811bc7aafd24fb8a739eaf1d5e9e139e0b7b2.jpg\" loading=\"lazy\" alt=\"GATE ECE 2002 Digital Circuits - Sequential Circuits Question 18 English 2\"> \n<p>(a) Write down the state table for the mod-5 counter.\n<br>(b)Obtain simplified SOP expressions for the inputs A<sub>2</sub>, B<sub>2</sub>, A<sub>1</sub>, B<sub>1</sub>, A<sub>0</sub> and B<sub>0</sub> in terms of Q<sub>2</sub>, Q<sub>1</sub>, Q<sub></sub> and their complements.\n<br>(c) Hence, complete the circuit diagram for the mod-5 counter given in the figure using minimum number of 2-input NAND-gate only. </p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "<p>(b)</p>\n $$\\eqalign{\n  &amp; {A_2}\\, = \\,\\overline {{Q_2}{Q_0}}   \\cr \n  &amp; {B_2}\\, = \\,1  \\cr \n  &amp; {A_1}\\, = \\,\\overline {{Q_0}}   \\cr \n  &amp; {B_1}\\, = \\,{Q_0}  \\cr \n  &amp; {A_0}\\, = \\,{Q_2}  \\cr \n  &amp; {B_0}\\, = \\,1 \\cr} $$",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The circuit diagram of a synchronous counter is shown in the figure. Determine the\nsequence of states of the counter assuming that the initial state is ‘000’. Give\nyour answer in a tabulor form showing the present state Q<sub>A(n)</sub>, Q<sub>B(n)</sub>, Q<sub>C(n)</sub>, J-K inputs ( J<sub>A</sub>, K<sub>A</sub>, J<sub>B</sub>,  K<sub>B</sub>, J<sub>C</sub>, K,) and the next state $${Q_{A\\left( {n + 1} \\right)}},\\,{Q_{B\\left( {n + 1} \\right)}},{Q_{C\\left( {n + 1} \\right)}}$$ From the table, determine the modulus of the counter.",
+    "options": [],
+    "correct_options": [],
+    "answer": "It is mod 6 counter",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The mod-5 counter shown in figure counts through states Q<sub>2</sub>  Q<sub>1</sub>  Q<sub>0</sub> = 000, 001, 010, 011 and 100.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/0e160e519faa6be33a4664bd9161bc52b7610ff23bbe50384eb42cfdeb3d667b.jpg\" loading=\"lazy\" alt=\"GATE ECE 1998 Digital Circuits - Sequential Circuits Question 20 English\"> \n<p>(a) Will the counter lockout if it happens to be in any one of the unused states?</p>\n<p>(b) Find the maximum rate at which the counter will operate satisfactorily. Assume the propagation delays of flip-flop and AND gate to be t<sub>F</sub> and t<sub>A</sub></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) Counter is lockout free\n<br>(b) Maximum clock rate = $${1 \\over {2{t_F} + {t_A}}}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A sequence generator is shown in figure. The counter status (Q<sub>0</sub> Q<sub>1</sub> Q<sub>3</sub>) is intialized to 010 using preset/clear inputs.\n<br>The Clock has a period of 50ns and transitions take place at the rising clock edge.\n<br>(a) Give the sequence generated at Q<sub>0</sub> till it repeats.\n<br>(b) What is the repetition rate for the generated sequence?\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/d119723df4f31b394ae15d35bb54606284289eeddbb18832850f76105f176d74.jpg\" loading=\"lazy\" alt=\"GATE ECE 1997 Digital Circuits - Sequential Circuits Question 21 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) Sequence generated at Q<sub>0</sub> is \n <img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/3b560ce3a7055f6425a7009093896b5ab8871761e7f1c6d19cfb547b04fbac40.jpg\" loading=\"lazy\" alt=\"GATE ECE 1997 Digital Circuits - Sequential Circuits Question 21 English Answer\"> \n<p>(b) 4MHz</p>",
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "A state machine is required to cycle through the following sequence of states:\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/26448d9a8dfbf9959fad8ca3db37cfa21484faf03a41d38d68dc6637afbd5572.jpg\" loading=\"lazy\" alt=\"GATE ECE 1996 Digital Circuits - Sequential Circuits Question 22 English 1\"> \n<p>One possible implementation of the state machine is shown figure. Specify what signals should be applied to each of the multiplexer inputs</p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/28ab5fd6f7cab34527f8dd6b34de3453f7135f52f7b4a409c1245dec1c7ad82e.jpg\" loading=\"lazy\" alt=\"GATE ECE 1996 Digital Circuits - Sequential Circuits Question 22 English 2\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A 4-bit shift register, which shifts 1 bit to the right at every clock pulse, is intialized to values (1000) for (Q<sub>0</sub>Q<sub>1</sub>Q<sub>2</sub>Q<sub>3</sub>). The D input is derived from Q<sub>0</sub>, Q<sub>2</sub> and Q<sub>3</sub> through two XOR gates as shown in figure. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/9fca99e036e9d950b8198d5b5b2207a38aa91d29072620b0273d6675653076e2.jpg\" loading=\"lazy\" alt=\"GATE ECE 1996 Digital Circuits - Sequential Circuits Question 23 English\"> \n<p>(a) Write the 4-bit values (Q<sub>0</sub>Q<sub>1</sub>Q<sub>2</sub>Q<sub>3</sub>) after each clock pulse till the pattern (1000) reappears on (Q<sub>0</sub>Q<sub>1</sub>Q<sub>2</sub>Q<sub>3</sub>).</p>\n<p>(b) To what values should the shift register be intialized so that the pattern (1001) occurs after the first clock pulse?</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(b) Shift register should intialized to 1100",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A new clocked \"X-Y\" flip-flop is defined with two inputs, X and Y in addition to the clock input. The flip-flop functions as follows:\n<p>If XY=00, the flip-flop changes stage with each clock pulse.</p>\n<p>If XY=01, the flip-flop state Q becomes 1 with the next clock pulse.</p>\n<p>If XY=10, the flip-flop state Q becomes 0 with the next clock pulse.</p>\n<p>If XY=11, no change of state occurs with the clock pulse.</p>\n<p>(a) Write the Truth table for the X-Y flip flop</p>\n<p>(b) Write the Excitation table for the X-Y flip flop</p>\n<p>(c) It is desired to convert a J-K flip flop into the X-Y flip flop by adding some external gates, if necessary. Draw a circuit to show how you will implement the X-Y flip-flop using a J-K flip-flop.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "The circuit shown below uses TTL flip-flops. The flip-flops are triggered at the negative transitions of the clock. It is desired that when M = 1 the circuit should function as an up-counter (in 8421 BCD) and when M=0, as a down-counter. Design the combinational circuit interposed between the flip-flops so that the circuit works as desired. (i.e. find F as a function of Q,$$\\overline Q $$, M, $$\\overline M $$).\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/j36jkWZdE0dOwevdL/iol8GwG54pvWaOGjBaf5szgOOoB1J/IJS4VTyqZSovr4aZWZE2Hq/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1988 Digital Circuits - Sequential Circuits Question 16 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "For the circuit shown in the figure below, sketch V<sub>0</sub> against time. Assume that all flip-flops are reset to zero before the clock is applied.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/ABROzVWL2x5uS4YAf/EoBsvRwcgSxJcZuHl8n5tbmwuLChM/FKIm6ZknmLh6nCF3yyqErM/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1988 Digital Circuits - Sequential Circuits Question 15 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "A 2-input up/down synchrconous counter using two toggle flip-flops is shown in Fig.1. The counter's sequence is to be controlled by the input M as follows:\n<br>For M=1, sequence of Q<sub>1</sub>, Q<sub>0</sub> is ..00, 01, 10, 11, 00, 01.......\n<br>For M=0, sequence of Q<sub>1</sub>, Q<sub>0</sub> is ..00, 11, 10, 01, 00, 11......\n<p>(a)Design the necessary feedback logic for T<sub>1</sub> and T<sub>0</sub>.</p>\n<p>(b)Realize the feesback logic using inverters and 4-input multiplexers only. Use Q<sub>1</sub> and Q<sub>0</sub> as the control inputs of the multiplexer with  Q<sub>1</sub> as the MSB.</p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/QtLCfJE9CySlnM3XT/TzEhxA3txiB1yxJ4LVAxfezs2dWKl/1inkCa5OfdvGodq9WIPhQY/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1987 Digital Circuits - Sequential Circuits Question 24 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  }
+]

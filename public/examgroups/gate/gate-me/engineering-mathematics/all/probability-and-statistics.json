@@ -1,0 +1,1161 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>P and Q play chess frequently against each other. Of these matches, P has won $80 \\%$ of the matches, drawn $15 \\%$ of the matches and lost $5 \\%$ of the matches. If they play 3 more matches, what is the probability of $P$ winning exactly 2 of these 3 matches?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{48}{125}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{16}{125}$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{16}{25}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{16}{48}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>(i) P and Q play chess frequently against each other.</p>\n<p>(ii) P wins $80 \\%$ of matches.</p>\n<p>$$ P(W)=0.8 $$</p>\n<p>(iii) Drawn 15\\% of the matches and lost 5\\% of the matches.</p>\n<p>(iv) Probability of losing $=1-0.8$.</p>\n<p>$$ P(L)=0.2 $$</p>\n<p>According to binomial distribution, the probability of $r$ trails is given by,</p>\n<p>$$ P(r)={ }^n C_r \\times(P)^r \\times(q)^{n-r} $$</p>\n<p>Here,</p>\n<p>$$ \\begin{aligned} & n=3, r=2, P=0.8, q=0.2 \\\\ & P(X=r)={ }^n C_r(P)^r(q)^{n-r} \\\\ & P(X=2)={ }^3 C_2(0.8)^2(0.2)^{3-2} \\\\ & P(X=2)=3 \\times 0.64 \\times 0.2 \\\\ & P(X=2)=0.384=\\frac{48}{125} \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-me-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If two unbiased coins are tossed, then what is the probability of having at least one head?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.25\n"
+      },
+      {
+        "identifier": "B",
+        "content": "0.5\n"
+      },
+      {
+        "identifier": "C",
+        "content": "0.675\n"
+      },
+      {
+        "identifier": "D",
+        "content": "0.75"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><p>Sample space for two unbiased coins:  </p>\n<p>$$\\{HH,\\;HT,\\;TH,\\;TT\\}$$  </p>\n<p>(4 equally likely outcomes)</p></p>\n<p><p>“At least one head” occurs in  </p>\n<p>$$\\{HH,\\;HT,\\;TH\\}$$  </p>\n<p>(3 outcomes)</p></p>\n\n<p>So  </p>\n<p>$$P(\\text{at least one head}) = \\frac{3}{4} = 0.75$$</p>\n<p>Answer: Option D (0.75).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-me-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "A machine produces a defective component with a probability of 0.015. The number of defective components in a packed box containing 200 components produced by the machine follows a Poisson distribution. The mean and the variance of the distribution are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3 and 3, respectively"
+      },
+      {
+        "identifier": "B",
+        "content": "√3 and √3 , respectively"
+      },
+      {
+        "identifier": "C",
+        "content": "0.015 and 0.015, respectively"
+      },
+      {
+        "identifier": "D",
+        "content": "3 and 9, respectively"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "explanation": "<p>To determine the mean and the variance of the distribution, we need to understand the relationship between the given probability and the Poisson distribution properties.</p>\n\n<p>Given:</p>\n\n<p>Probability of a defective component, $ p = 0.015 $</p>\n\n<p>Number of components in a box, $ n = 200 $</p>\n\n<p>The Poisson distribution is typically applied when dealing with rare events in a large sample size. However, we can approximate the binomial distribution (with parameters $ n $ and $ p $) to a Poisson distribution if $ n $ is large and $ p $ is small. The Poisson distribution has a parameter $ \\lambda $, which is the mean of the distribution.</p>\n\n<p>The parameter $ \\lambda $ of the Poisson distribution is given by:</p>\n\n<p>$$ \\lambda = n \\cdot p $$</p>\n\n<p>Substituting the values:</p>\n\n<p>$$ \\lambda = 200 \\cdot 0.015 = 3 $$</p>\n\n<p>For a Poisson distribution, both the mean and the variance are equal to $ \\lambda $. Therefore, the mean $ \\mu $ and the variance $ \\sigma^2 $ of the distribution are:</p>\n\n<p>$$ \\mu = 3 $$</p>\n\n<p>$$ \\sigma^2 = 3 $$</p>\n\n<p>Thus, the correct option is:</p>\n\n<p><b>Option A</b> 3 and 3, respectively</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-me-2023",
+    "difficulty": null
+  },
+  {
+    "content": "A six-face fair dice is rolled a large number of times. The mean value of the outcomes is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3.5",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Two coins are tossed simultaneously. The probability (upto two decimal points accuracy) of getting at least one head is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.75",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A simple of $$15$$ data is as follows; $$17,18,17,17,13,18,5,5,6,7,8,9,20,17,3.$$  The mode of the data is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$13$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$17$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$20$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a Poisson distribution for the tossing of a biased coin. The mean for this distribution is $$\\mu $$.\n<p>The standard deviation for this distribution is given by</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sqrt \\mu  $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\mu ^2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\mu $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1/\\mu $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The area (in percentage) under standard normal distribution curve of variable $$Z$$ within limits from $$-3$$ to $$+3$$  is ________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "9973",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Among the four normal distributions with probability density functions as shown below, which one has the lowest variance? \n <img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/2LnW3e7QGXZilMiar/bo1TtbRuaV2mqpHLiNnHA3Rwc685v/HtRg9KP8rE4J3RL4sVXm40/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ME 2015 Set 1 Engineering Mathematics - Probability and Statistics Question 13 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}$$$${\\rm I}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm I}$$$${\\rm I}$$$${\\rm I}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I}$$$$V$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Ram and Ramesh appeared in an interview for two vacancies in the same department. The probability of Ram's selection is $$1/6$$ and that of Ramesh is $$1/8$$.  What is the probability that only one of them will be selected? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$47/48$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$13/48$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$35/48$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The probability of obtaining at least two $$'SIX'$$ in throwing a fair dice $$4$$ times is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$425/432$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$19/144$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$13/144$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$125/432$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "If $$P(X)$$ $$ = $$ $$1/4,$$  $$P(Y) = 1/3,$$ and $$\\,\\,P\\left( {X \\cap Y} \\right) = 1/12,\\,\\,$$ the value of $$P(Y/X)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 4}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${4 \\over 25}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over 3}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${29 \\over 30}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A nationalized bank has found that the daily balance available in its savings accounts follows a normal distribution with a mean of Rs. $$500$$ and a standard deviation of Rs. $$50.$$ The percentage of savings account holders, who maintain an average daily balance more  than Rs. $$500$$ is ",
+    "options": [],
+    "correct_options": [],
+    "answer": "50",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "The  number of accidents occurring in a plant in a month follows Poisson distribution with mean as $$5.2.$$ The probability of occurrence of less than $$2$$ accidents in the plant during a randomly selected month is _________.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.029$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.034$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.039$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.044$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "A group consists of equal number of men and women. Of this group $$20$$% of the men and $$50$$% of the women are unemployed. If a person is selected at random from this group, the probability of the selected person being employed is ",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.65",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$X$$ be a normal random variable with mean $$1$$ and variance $$4.$$ The probability $$P\\left\\{ {X &lt; 0} \\right\\}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.5$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "greater than zero and less than $$0.5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "greater than $$0.5$$ and less than $$1.0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.0$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-me-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A box contains $$2$$ washers, $$3$$ nuts and  $$4$$ bolts. Items are drawn from the box at random one at a time without replacement.  The probability of drawing $$2$$ washers first followed by $$3$$ nuts and subsequently the $$4$$ bolts is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2/315$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/630$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1/1260$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1/2520$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-me-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The standard deviation of a uniformly distributed random variable $$b/w$$ $$0$$ and $$1$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {\\sqrt {12} }}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {\\sqrt {3} }}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${5 \\over {\\sqrt {12} }}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${7 \\over {\\sqrt {12} }}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-me-2009",
+    "difficulty": null
+  },
+  {
+    "content": "If three coins are tossed simultaneously, the probability of getting at least one head is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/8$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3/8$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1/2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$7/8$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-me-2009",
+    "difficulty": null
+  },
+  {
+    "content": "A coin is tossed $$4$$ times. What is the probability of getting heads exactly $$3$$  times?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3/8$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1/2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$3/4$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Using given data points tabulated below, a straight line passing through the origin is fitted using least squares method. The slope of the line is \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/5cWSL9pU2tUCLtpKf/4P13XrXOe7TYqUIrKEjPFByVuu0yf/lXrZ3UkSN7U8Q7VBbTXstE/image.svg\" loading=\"lazy\" alt=\"GATE ME 2005 Engineering Mathematics - Probability and Statistics Question 34 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.9$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1.1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.5$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A lot had $$10$$% defective items. Ten items are chosen randomly from this lot. The probability that exactly $$2$$ of the chosen items are defective is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.0036$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.1937$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.2234$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.3874$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A regression model is used to express a variable $$Y$$ as a function of another variable $$X.$$ This implies that ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "There is a causal relationship between $$Y$$ and $$X$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "A value of $$X$$ may be used to estimate a value of $$Y$$  "
+      },
+      {
+        "identifier": "C",
+        "content": "Values of $$X$$ exactly determine values of $$Y$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "There is no causal relationship between $$Y$$ and $$X$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-me-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The probability that two friends share the same birth-month is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/6$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/12$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1/144$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1/24$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-me-1998",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $X$ be a continuous random variable defined on $[0, 1]$ such that its probability density function $f(x) = 1$ for $0 \\leq x \\leq 1$ and $0$ otherwise. Let $Y = \\log_e (X + 1)$. Then the expected value of $Y$ is _____ . (rounded off to 2 decimal places)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.38TO0.39",
+    "explanation": "<p>To find the expected value of the random variable $Y = \\log_e (X + 1)$, we need to use the expectation formula for a continuous random variable. Given that $X$ is uniformly distributed on the interval $[0, 1]$, its probability density function (pdf) is:</p>\n\n<p>$$f(x) = 1 \\text{ for } 0 \\leq x \\leq 1 \\text{ and } 0 \\text{ otherwise}.$$</p>\n\n<p>The expected value of $Y$ can be found using the transformation $Y = \\log_e (X + 1)$. Since $Y$ is a function of $X$, the expected value of $Y$ is:</p>\n\n<p>$$E[Y] = E[\\log_e (X + 1)] = \\int_{0}^{1} \\log_e (x + 1) f(x) \\, dx.$$</p>\n\n<p>Given that $f(x) = 1$ for $0 \\leq x \\leq 1$, the expression simplifies to:</p>\n\n<p>$$E[Y] = \\int_{0}^{1} \\log_e (x + 1) \\, dx.$$</p>\n\n<p>To solve this integral, we use integration by parts. Let:</p>\n\n<p>$$u = \\log_e (x + 1) \\quad \\text{and} \\quad dv = dx.$$</p>\n\n<p>Then, we have:</p>\n\n<p>$$du = \\frac{1}{x + 1} \\, dx \\quad \\text{and} \\quad v = x.$$</p>\n\n<p>Using integration by parts, given by the formula:</p>\n\n<p>$$\\int u \\, dv = uv - \\int v \\, du,$$</p>\n\n<p>we get:</p>\n\n<p>$$\\int_{0}^{1} \\log_e (x + 1) \\, dx = \\left[x \\log_e (x+1) \\right]_{0}^{1} - \\int_{0}^{1} x \\left( \\frac{1}{x + 1} \\right) \\, dx.$$</p>\n\n<p>Evaluating the first term, we have:</p>\n\n<p>$$\\left[x \\log_e (x+1) \\right]_{0}^{1} = 1 \\cdot \\log_e (2) - 0 \\cdot \\log_e (1) = \\log_e (2).$$</p>\n\n<p>For the integral on the right, we make a substitution. Let $u = x + 1 \\Rightarrow du = dx$. When $x = 0, u = 1$ and when $x = 1, u = 2$. Thus:</p>\n\n<p>$$\\int_{0}^{1} \\frac{x}{x + 1} \\, dx = \\int_{1}^{2} \\frac{u - 1}{u} \\, du = \\int_{1}^{2} \\left(1 - \\frac{1}{u}\\right) \\, du.$$</p>\n\n<p>Integrating this expression, we get:</p>\n\n<p>$$\\int_{1}^{2} \\left(1 - \\frac{1}{u}\\right) \\, du = \\left[ u - \\log_e (u) \\right]_{1}^{2} = (2 - \\log_e (2)) - (1 - \\log_e (1)) = 2 - \\log_e (2) - 1 + 0 = 1 - \\log_e (2).$$</p>\n\n<p>Therefore, the expected value is:</p>\n\n<p>$$E[Y] = \\log_e (2) - (1 - \\log_e (2)) = 2\\log_e (2) - 1.$$</p>\n\n<p>Naturally, $\\log_e (2) \\approx 0.693$. Therefore:</p>\n\n<p>$$E[Y] \\approx 2 \\cdot 0.693 - 1 = 1.386 - 1 = 0.386.$$</p>\n\n<p>Rounded off to 2 decimal places, the expected value of $Y$ is:</p>\n\n<p>$$E[Y] \\approx 0.39.$$</p>\n\n<p>Thus, the expected value of $Y$ is approximately 0.39.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-me-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p style=\"\">Let a random variable X follow Poisson distribution such that</p>\n\n<p style=\"\">Prob(X&nbsp;= 1) = Prob(X&nbsp;= 2).</p>\n\n<p style=\"\">The value of Prob(X&nbsp;= 3) is __________ (round off to 2 decimal places).</p>\n",
+    "options": [],
+    "correct_options": [],
+    "explanation": "<p>To solve for $$\\text{Prob}(X = 3)$$ when a random variable $ X $ follows a Poisson distribution with the condition that $$\\text{Prob}(X = 1) = \\text{Prob}(X = 2)$$, let's first recall the probability mass function (PMF) of a Poisson distribution:</p>\n\n<p>The PMF of a Poisson-distributed random variable $ X $ with mean $ \\lambda $ is given by:</p>\n\n<p>$$\\text{Prob}(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}$$</p>\n\n<p>Given: $$\\text{Prob}(X = 1) = \\text{Prob}(X = 2)$$.</p>\n\n<p>This implies:</p>\n\n<p>$$\\frac{\\lambda^1 e^{-\\lambda}}{1!} = \\frac{\\lambda^2 e^{-\\lambda}}{2!}$$</p>\n\n<p>We can simplify this equation as follows:</p>\n\n<p>1. Cancel out $ e^{-\\lambda} $ from both sides since it is present in both terms:</p>\n\n<p>$$\\frac{\\lambda}{1} = \\frac{\\lambda^2}{2}$$</p>\n\n<p>2. Simplify further:</p>\n\n<p>$$\\lambda = \\frac{\\lambda^2}{2}$$</p>\n\n<p>3. Multiply both sides by 2 to clear the fraction:</p>\n\n<p>$$2\\lambda = \\lambda^2$$</p>\n\n<p>4. Rearrange the equation to standard quadratic form:</p>\n\n<p>$$\\lambda^2 - 2\\lambda = 0$$</p>\n\n<p>5. Factor the quadratic equation:</p>\n\n<p>$$(\\lambda)(\\lambda - 2) = 0$$</p>\n\n<p>This gives two solutions: $$\\lambda = 0$$ or $$\\lambda = 2$$.</p>\n\n<p>However, $$\\lambda = 0$$ does not make sense in the context of a Poisson distribution (it would mean that $ X $ is always 0). Therefore, $$\\lambda = 2$$.</p>\n\n<p>Now, we need to find $$\\text{Prob}(X = 3)$$ using $ \\lambda = 2 $:</p>\n\n<p>$$\\text{Prob}(X = 3) = \\frac{2^3 e^{-2}}{3!} = \\frac{8 e^{-2}}{6} = \\frac{4 e^{-2}}{3}$$</p>\n\n<p>To calculate the exact value, we find $ e^{-2} \\approx 0.1353 $:</p>\n\n<p>Therefore:</p>\n\n<p>$$\\text{Prob}(X = 3) = \\frac{4 \\times 0.1353}{3} \\approx \\frac{0.5412}{3} \\approx 0.18$$</p>\n\n<p>So, the value of $$\\text{Prob}(X = 3)$$ is approximately 0.18 when rounded to 2 decimal places.</p>",
+    "answer": "0.17TO0.19",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The probability that a screw manufactured by a company is defective is $$0.1$$.  The company sells screws in packets containing $$5$$ screws and gives a guarantee of replacement if one or more screws in the packet are found to be defective. The probability that a packet would have to be replaced is _________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.41",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Three cards were drawn from a pack of $$52$$ cards. The probability that they are a king, a queen, and a jack is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{16} \\over {5525}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{64} \\over {2197}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${3 \\over {13}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${8 \\over {16575}}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A coin is tossed thrice. Let $$X$$ be the event that head occurs in each of the first two tosses. Let $$Y$$ be the event that a tail occurs on the third toss. Let $$Z$$ be the event that two tails occur in three tosses. Based on the above information, which one of the following statements is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$X$$ and $$Y$$ are not independent "
+      },
+      {
+        "identifier": "B",
+        "content": "$$Y$$ and $$Z$$ are dependent "
+      },
+      {
+        "identifier": "C",
+        "content": "$$Y$$ and $$Z$$ are independent "
+      },
+      {
+        "identifier": "D",
+        "content": "$$X$$ and $$Z$$ are independent "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The chance of a student passing an exam is $$20$$% The chance of a student passing the exam and getting above $$90$$% marks in it is $$5$$%. Given that a student passes the examination, the probability that the student gets above $$90$$% marks is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {18}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {4}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2 \\over {9}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${5 \\over {18}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In the following table, $$x$$ is a discrete random variable and  $$p(x)$$ is the probability density. The standard deviation of $$x$$ is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/argK3qiduQjLp1eeD/B9SsaqFs11eo7h0shEbmexNCurKOe/9d7hMiQ9i3FzSOA194YQZl/image.svg\" loading=\"lazy\" alt=\"GATE ME 2014 Set 1 Engineering Mathematics - Probability and Statistics Question 25 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.18$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.36$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.54$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.6$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an unbiased cubic die with opposite faces coloured identically and each face coloured red, blue or green such that each color appears only two times on the die. If the die is thrown thrice, the probability of obtaining red colour on top face of the die at least twice is ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.26",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A box contains $$25$$ parts of which $$10$$ are defective. Two parts are being drawn simultaneously in a random manner from the box. The probability of both the parts being good is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${7 \\over {20}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${42 \\over {125}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${25 \\over {29}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${5 \\over {9}}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A machine produces $$0, 1$$ or $$2$$ defective pieces in a day with associated probability of $${1 \\over 6},{2 \\over 3}$$ and $${1 \\over 6}$$, respectively. Then mean value and the variance of the number of defective pieces produced by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ and $$1/3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/3$$ and $$1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ and $$4/3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1/3$$ and $$4/3$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The probability that a student knows the correct answer to a multiple choice question is $${2 \\over 3}$$.  If the student does not know the answer, then the student guesses the answer.  The probability of the guessed answer being correct is $${1 \\over 4}$$.  Given that the student has answered the question correctly, the conditional probability that the student knows the correct answer is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${2 \\over 3}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${3 \\over 4}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${5 \\over 6}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${8 \\over 9}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-me-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A box contains $$4$$ red balls and $$6$$ black balls. Three balls are selected randomly from the box one after another, without replacement. The probability that the selected set contains one red ball and two black balls is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/20$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/12$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3/10$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\raise0.5ex\\hbox{$\\scriptstyle 1$}\n\\kern-0.1em/\\kern-0.15em\n\\lower0.25ex\\hbox{$\\scriptstyle 2$}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-me-2012",
+    "difficulty": null
+  },
+  {
+    "content": "An  automobile plant contracted to buy shock absorbers from two suppliers $$X$$ and $$Y$$.  $$X$$ supplies $$60$$% and $$Y$$ supplies $$40$$% of the shock absorbers. All shock absorbers are subjected to a quality test. The ones that pass the quality test are considered reliable.  Of $$X'$$ s shock absorbers, $$96$$% are reliable. Of $$Y'$$ s shock absorbers, $$72$$% are reliable. The probability that a randomly choosen shock absorber, which is found to reliable, is made by $$Y$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.288$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.334$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.667$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.720$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-me-2012",
+    "difficulty": null
+  },
+  {
+    "content": "An unbiased coin is tossed five times. The outcome of each loss is either a head or a tail. Probability of getting at least one head is _______. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {32}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${13 \\over {32}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${16 \\over {32}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${31 \\over {32}}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-me-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$X$$ and $$Y$$ be two independent random variables. Which one of the relations $$b/w$$ expectation $$(E),$$ variance $$\\left( {{V_{ar}}} \\right)$$ and  covariance $$\\left( {{C_{ov}}} \\right)$$  given below is FALSE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$E\\left( {XY} \\right) = E\\left( X \\right)E\\left( Y \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\mathop{\\rm cov}} \\left( {X,Y} \\right) = 0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$Var\\left( {X + Y} \\right) = Var\\left( X \\right) + Var\\left( Y \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\,E\\left( {{X^2}{Y^2}} \\right) = {\\left( {E\\left( X \\right)} \\right)^2}\\,{\\left( {E\\left( Y \\right)} \\right)^2}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A single die is thrown two times. What is the probability that the sum is neither $$8$$ nor $$9?$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 9}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${5 \\over 36}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over 4}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${3 \\over 4}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "From a pack of regular playing cards, two cards are drawn at random. What is the probability that both cards will be kings, if the card is NOT replaced? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/26$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/52$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1/169$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1/221$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-me-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The following data about the flow of liquid was observed in a continuous chemical process plant \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/Y9xgNKKyJYiqhGada/qhvbbCnyGWylpwf5duGJroHQSrdrc/vmQNwzZGx2EcDLImWiwr42/image.svg\" loading=\"lazy\" alt=\"GATE ME 2004 Engineering Mathematics - Probability and Statistics Question 37 English\"> \n<p> Mean flow rate of the liquid is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$8.00$$ liters/sec"
+      },
+      {
+        "identifier": "B",
+        "content": "$$8.06$$ liters/sec"
+      },
+      {
+        "identifier": "C",
+        "content": "$$8.16$$ liters/sec "
+      },
+      {
+        "identifier": "D",
+        "content": "$$8.26$$ liters/sec "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-me-2004",
+    "difficulty": null
+  },
+  {
+    "content": "In a manufacturing plant, the probability of making a defective bolts is $$0.1$$. The mean and standard deviation of defective bolts in a total of $$900$$ bolts are respectively",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$90$$ and $$9$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$9$$ and $$90$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$81$$ and $$9$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$9$$ and $$81$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-me-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Four arbitrary points $$\\,\\,\\,\\left( {{x_1},{y_1}} \\right),\\,\\,\\left( {{x_2},{y_2}} \\right),\\,\\,\\left( {{x_3},{y_3}} \\right),\\,\\,\\left( {{x_4},{y_4}} \\right),\\,\\,\\,\\,$$ are given in the $$xy$$ $$-$$ plane using the method of least squares. If regression of $$y$$ upon $$x$$ gives the fitted line $$y=ax+b;$$ and regression of $$x$$ upon $$y$$ gives the fitted line $$x=cy+d,$$ then ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the two fitted lines must coincide"
+      },
+      {
+        "identifier": "B",
+        "content": "the two fitted lines need not coincide "
+      },
+      {
+        "identifier": "C",
+        "content": "it is possible that $$ac=0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "a must be $$1/c$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-me-1999",
+    "difficulty": null
+  }
+]

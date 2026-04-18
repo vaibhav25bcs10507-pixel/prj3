@@ -1,0 +1,226 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The sum of the series $1 \\cdot 2^2+2 \\cdot 4^2+3 \\cdot 6^2+\\ldots$ upto 10 terms is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " 11300\n"
+      },
+      {
+        "identifier": "B",
+        "content": " 12100\n"
+      },
+      {
+        "identifier": "C",
+        "content": " 12300\n"
+      },
+      {
+        "identifier": "D",
+        "content": "11200"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the sum of the series $1 \\cdot 2^2 + 2 \\cdot 4^2 + 3 \\cdot 6^2 + \\ldots$ up to 10 terms, we start by identifying the pattern of the series. The series involves terms like:</p>\n<p>$ n^{\\text{th}} \\text{ term} = n(2n)^2 $</p>\n<p>This can be rewritten as:</p>\n<p>$ n \\cdot (2n)^2 = n \\cdot 4n^2 = 4n^3 $</p>\n<p>The sum of the series up to $ n $ terms would be:</p>\n<p>$ \\sum\\limits_{n=1}^{n} 4n^3 = 4 \\sum_{n=1}^{n} n^3 $</p>\n<p>The formula for the sum of cubes of the first $ n $ natural numbers is:</p>\n<p>$ \\sum\\limits_{n=1}^{n} n^3 = \\left( \\frac{n(n+1)}{2} \\right)^2 $</p>\n<p>Substituting this into our series sum, we have:</p>\n<p>$ 4 \\left( \\frac{n(n+1)}{2} \\right)^2 = (n(n+1))^2 $</p>\n<p>For $ n = 10 $:</p>\n<p>$ (10 \\times 11)^2 = (110)^2 = 12100 $</p>\n<p>Thus, the sum of the series up to 10 terms is 12100.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "viteee-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Sum of first ' $n$ ' terms of a series $a_1+a_2+\\ldots+a_n$ is given by $S_n=\\frac{n\\left(n^2-1\\right)(n+2)}{4}$, then the value of $\\lim _\\limits{n \\rightarrow \\infty} \\sum_\\limits{r=2}^n \\frac{1}{a_r}$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{1}{4}$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{1}{2}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the sum of the first ' $ n $ ' terms of a series, we are given:</p>\n<p>$  S_n = \\frac{n(n^2-1)(n+2)}{4}  $</p>\n<p>We can express this as:</p>\n<p>$  S_n = \\frac{n(n+1)(n-1)(n+2)}{4}  $</p>\n<p>This expands to:</p>\n<p>$  S_n = \\frac{n(n+1)}{4}\\left(n^2+n-2\\right)  $</p>\n<p>Splitting the sum:</p>\n<p>$  S_n = \\frac{n(n+1)}{4}\\left(n^2+n\\right) - \\frac{n(n+1)}{4}\\times(2)  $</p>\n<p>Simplifying further:</p>\n<p>$  S_n = \\frac{n^2(n+1)^2}{4} - \\frac{n(n+1)}{2}  $</p>\n<p>Given the relationships:</p>\n<p>$  \\frac{n^2(n+1)^2}{4} = \\Sigma n^3 \\quad \\text{and} \\quad \\frac{n(n+1)}{4} = \\Sigma n  $</p>\n<p>Therefore, we have:</p>\n<p>$  S_n = \\Sigma(n^3-n)  $</p>\n<p>Thus, the term $ a_n $ is:</p>\n<p>$  a_n = n^3 - n  $</p>\n<p>Which can be rewritten as:</p>\n<p>$  a_r = r^3 - r = r(r^2-1) = r(r-1)(r+1)  $</p>\n<p>Now, considering the sum:</p>\n<p>$  \\sum\\limits_{r=2}^n \\frac{1}{a_r} = \\sum_{r=2}^n \\frac{1}{r(r+1)(r-1)} = \\frac{1}{2}\\left(\\frac{1}{2} - \\frac{1}{n(n+1)}\\right)  $</p>\n<p>Taking the limit as $ n $ approaches infinity:</p>\n<p>$  \\lim\\limits_{n \\rightarrow \\infty} \\sum\\limits_{r=2}^n \\frac{1}{a_r} = \\frac{1}{2}\\left(\\frac{1}{2} - 0\\right) = \\frac{1}{4}  $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "viteee-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The sum of $1+\\frac{1}{4}+\\frac{1 \\cdot 3}{4 \\cdot 8}+\\frac{1 \\cdot 3 \\cdot 5}{4 \\cdot 8 \\cdot 12}+\\ldots \\infty$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\sqrt{3}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{1}{\\sqrt{2}}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\sqrt{2}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $2^{\\frac{3}{2}}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the sum of the series $ 1 + \\frac{1}{4} + \\frac{1 \\cdot 3}{4 \\cdot 8} + \\frac{1 \\cdot 3 \\cdot 5}{4 \\cdot 8 \\cdot 12} + \\ldots \\infty $, we compare it with the general series expansion:</p>\n<p>$ 1 + nx + \\frac{n(n-1)}{2!} x^2 + \\ldots $</p>\n<p>From the series, we identify:</p>\n<p>$ nx = \\frac{1}{4} \\quad \\text{(i)} $</p>\n<p>And,</p>\n<p>$ \\frac{n(n-1)}{2!} x^2 = \\frac{1 \\cdot 3}{4 \\cdot 8} $</p>\n<p>This leads to:</p>\n<p>$ \\begin{aligned} & \\frac{n x (n-1) x}{2!} = \\frac{1 \\cdot 3}{4 \\cdot 8} \\\\ \\text{Substitute } & nx = \\frac{1}{4} \\\\ \\Rightarrow & \\frac{1}{4} \\frac{(n-1) x}{2!} = \\frac{1 \\cdot 3}{4 \\cdot 8} \\\\ \\Rightarrow & \\frac{(n-1) x}{2} = \\frac{3}{8} \\\\ \\Rightarrow & \\frac{n x}{2} - \\frac{x}{2} = \\frac{3}{8} \\\\ \\Rightarrow & \\frac{1}{8} - \\frac{x}{2} = \\frac{3}{8} \\\\ \\Rightarrow & \\frac{x}{2} = -\\frac{2}{8} \\\\ \\Rightarrow & x = -\\frac{1}{2} \\end{aligned} $</p>\n<p>Next, substitute the value of $ x $ back into Eq. (i):</p>\n<p>$ n \\left(-\\frac{1}{2}\\right) = \\frac{1}{4} $</p>\n<p>This gives:</p>\n<p>$ n = -\\frac{1}{2} $</p>\n<p>Therefore, the sum of the series is:</p>\n<p>$ (1 + x)^n = \\left(1 - \\frac{1}{2}\\right)^{-\\frac{1}{2}} = \\left(\\frac{1}{2}\\right)^{-\\frac{1}{2}} = \\sqrt{2} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "viteee-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $$a_n$$ be a sequence of numbers which is defined by relation $$a_1=2, \\frac{a_n}{a_{n+1}}=3^{-n}$$, then $$\\log _2\\left(a_{50}\\right)$$ is equal to (take $$\\log _2 3=1.6$$ )</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1960"
+      },
+      {
+        "identifier": "B",
+        "content": "1275"
+      },
+      {
+        "identifier": "C",
+        "content": "1961"
+      },
+      {
+        "identifier": "D",
+        "content": "1276"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\because \\frac{a_n}{a_{n+1}}=3^{-n} \\Rightarrow \\frac{a_{n+1}}{a_n}=3^n$$</p>\n<p>Put, $$n \\rightarrow(n-1), \\quad \\frac{a_n}{a_{n-1}}=3^{n-1}$$</p>\n<p>Similarly, $$\\frac{a_{n-1}}{a_{n-2}}=3^{n-2} \\ldots \\ldots \\ldots \\frac{a_2}{a_1}=3$$</p>\n<p>Therefore, $$\\frac{a_{n+1}}{a_n} \\cdot \\frac{a_n}{a_{n-1}} \\ldots \\ldots \\ldots \\frac{a_2}{a_1}=3^{(n+(n-1)+\\ldots . .1)}$$</p>\n<p>$$\\Rightarrow \\frac{a_{n+1}}{a_1}=3^{\\frac{(n(n+1)}{2}} \\Rightarrow a_{n+1}=a_1 \\times 3^{\\frac{n(n+1)}{2}}$$</p>\n<p>$$=2 \\times 3^{\\frac{n(n+1)}{2}}$$</p>\n<p>$$\\begin{aligned}\n\\text{Put}, n & =49 \\\\\\\\\na_{50} & =2 \\times 3^{\\left(\\frac{49 \\times 50}{2}\\right)}=2 \\times 3^{1225}\n\\end{aligned}$$</p>\n<p>Now,</p>\n<p>$$\\begin{aligned}\n& \\log _2\\left(a_{50}\\right)=\\log _2\\left(2 \\times 3^{1225}\\right)=\\log _2(2)+\\log _2\\left(3^{1225}\\right) \\\\\\\\\n& =1+\\log _2(3) \\cdot \\log _3\\left(3^{1225}\\right)=1+1.6 \\times 1225=1961\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "viteee-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The value of $$\\frac{1}{2}\\left(\\frac{1}{5}\\right)^2+\\frac{2}{3}\\left(\\frac{1}{5}\\right)^3+\\frac{3}{4}\\left(\\frac{1}{5}\\right)^4+\\ldots . . \\infty$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{4}+\\log _e\\left(\\frac{4}{5}\\right)$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{20}+\\log _e\\left(\\frac{4}{5}\\right)$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{20}-\\log _e\\left(\\frac{4}{5}\\right)$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{20}+\\log _e\\left(\\frac{6}{5}\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\text { Let } S=\\frac{1}{2}\\left(\\frac{1}{5}\\right)^2+\\frac{2}{3}\\left(\\frac{1}{5}\\right)^3+\\frac{3}{4}\\left(\\frac{1}{5}\\right)^4+\\ldots \\ldots \\infty \\\\\n& \\Rightarrow S=\\left[\\frac{1}{5}+\\left(1-\\frac{1}{2}\\right)\\left(\\frac{1}{5}\\right)^2+\\left(1-\\frac{1}{3}\\right)\\left(\\frac{1}{5}\\right)^3 +\\left(1-\\frac{1}{4}\\right)\\left(\\frac{1}{5}\\right)^4+\\ldots \\ldots\\right]-\\frac{1}{5} \\\\\n& \\Rightarrow S=\\left[\\frac{1}{5}+\\frac{1}{5^2}+\\frac{1}{5^3}+\\ldots\\right]-\\left[\\frac{1}{5}+\\frac{1}{2}\\left(\\frac{1}{5}\\right)^2\\right. \\left.+\\left(\\frac{1}{3}\\right)\\left(\\frac{1}{5}\\right)^3+\\ldots\\right] \\\\\n& \\Rightarrow S=\\left[\\frac{1 / 5}{1-\\frac{1}{5}}\\right]-\\left[-\\log _e\\left(1-\\frac{1}{5}\\right)\\right] \\\\\n& \\left\\{\\because \\log (1-x)=-x-\\frac{x^2}{2}-\\frac{x^3}{3} \\ldots . .\\right\\} \\\\\n& \\Rightarrow S=1 \\times \\frac{1}{4}+\\log _e\\left(\\frac{4}{5}\\right)=\\frac{1}{4}+\\log _e\\left(\\frac{4}{5}\\right) \\\\\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "viteee-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If the real numbers $$x, y, z, t$$ be in GP then the value of $$(x^2+y^2+z^2)(y^2+z^2+t^2)$$ is euqal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(x y+y z+z t)^2$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$(x t+t y+x y)^2$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$(z t+x y+y t)^2$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$(x t+z t+x z)^2$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $$r$$ be the common ratio of the GP and express each term as a function of $$r$$ and $$x$$ be the first term.</p>\n<p>$$\\begin{aligned}\n& y=x r, z=x r^2 \\text { and } t=x r^3 \\\\\n& \\begin{aligned}\n& \\text { Now, }\\left(x^2+y^2+z^2\\right)\\left(y^2+z^2+t^2\\right) \\\\\n&=\\left(x^2+x^2 r^2+x^2 r^4\\right)\\left(x^2 r^2+x^2 r^4+x^2 r^6\\right) \\\\\n&=x^2\\left(1+r^2+r^4\\right) \\cdot x^2 r^2\\left(1+r^2+r^4\\right) \\\\\n&=x^4 r^2\\left(1+r^2+r^4\\right)^2 \\\\\n&=\\left(x^2 r+x^2 r^3+x^2 r^5\\right)^2 \\\\\n&=\\left[x(x r)+(x r)\\left(x r^2\\right)+\\left(x r^2\\right)\\left(x r^3\\right)\\right]^2 \\\\\n&=[x y+y z+z t]^2\n\\end{aligned}\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "viteee-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The value of $$\\frac{4}{1 !}+\\frac{11}{2 !}+\\frac{22}{3 !}+\\frac{37}{4 !}+\\frac{56}{5 !}+\\ldots \\infty$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5 e-1$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$4 e-1$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$6 e-1$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$3 e-1$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let us first find $$n$$th term $$T_n$$ of the series $$4,11 , 22,37, \\ldots \\ldots$$</p>\n<p>$$\\begin{aligned}\nS_n=4+11+22 & +37+56+\\ldots+T_n \\\\\n4 & +11+22+37+\\ldots+T_{n-1} \\times T_n\n\\end{aligned}$$</p>\n<p>$$\\frac{(-) S_n=(-) \\quad(-) \\quad(-) \\quad(-) \\quad(-) \\quad(-) \\quad(-) \\quad(-)}{0=4+7+11+15+19+\\ldots+\\left(T_n-T_{n-1}\\right)-T_n}$$</p>\n<p>$$\\begin{aligned}\n\\Rightarrow T_n & =4+7+11+15+19+\\ldots \\text { upto } n \\text {th term } \\\\\n& =4+(7+11+15+19+\\ldots \\text { upto }(n-1) \\text { term})\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& =4+\\frac{n-1}{2}[14+(n-2) 4] \\\\\n& =4+(n-1)[2 n+3] \\\\\n& =2 n^2+n+1\n\\end{aligned}$$</p>\n<p>Hence, $$n$$th term of given series is</p>\n<p>$$\\begin{aligned}\nT_n & =\\frac{2 n^2+n+1}{n !} \\\\\n& =\\frac{2 n}{(n-1) !}+\\frac{1}{(n-1) !}+\\frac{1}{n !} \\\\\n\\therefore S_n=2 \\sum_{n=2}^{\\infty} & {\\left[\\frac{1}{(n-2) !}\\right]+3 \\sum_{n=1}^{\\infty} \\frac{1}{(n-1) !}+\\sum_{n=1}^{\\infty} \\frac{1}{n !} } \\\\\n& =2 e+3 e+e-1 \\\\\n& =6 e-1\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "viteee-2022",
+    "difficulty": null
+  }
+]

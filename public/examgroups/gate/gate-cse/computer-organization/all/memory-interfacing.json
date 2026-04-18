@@ -1,0 +1,1540 @@
+[
+  {
+    "direction": null,
+    "content": "<p>Let WB and WT be two set associative cache organizations that use LRU algorithm for cache block replacement. WB is a write back cache and WT is a write through cache. Which of the following statements is/are FALSE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Each cache block in WB and WT has a dirty bit."
+      },
+      {
+        "identifier": "B",
+        "content": "Every write hit in WB leads to a data transfer from cache to main memory."
+      },
+      {
+        "identifier": "C",
+        "content": "Eviction of a block from WT will not lead to data transfer from cache to main memory."
+      },
+      {
+        "identifier": "D",
+        "content": "A read miss in WB will never lead to eviction of a dirty block from WB."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We know that,</p>\n<p>Write back cache (WB Cache)</p>\n<p>Update the cache Block do not Result updated to the main memory immediately Burst writes are preferred for higher throughput and those needing higher write performance.</p>\n<p>Write through cache (WT cache)</p>\n<p>Update to the cache Block are reflected on main memory before carring out other process consistency is preferred.</p>\n<p>(A) A dirty bit is necessary for WB in order to avoid the Redundant writes to the main memory But it is not required in WT as all changes are Reflected after a write operations is done (FALSE)</p>\n<p>(B) The primary use of WB cache memory is to increase the throughput and for the speed mismatch between main memory and processor. However when the multiple writes are done for the same cache block, these are not reflected immediately. So every hit in WB does not necessarily lead to the data transfer from cache to main memory. (FALSE)</p>\n\n<p>(C) The goal of WT cache is to maintain the consistency overwrite performance while as cache Block is used to Reflect the changes to the main memory (TRUE)</p>\n<p>(D) There are Replacement strategies in LRU for dirty and regular blocks which means that a read miss might or might not remove a dirty block (FALSE)</p>\n<p>Hence, the correct options are (A), (B) and (D).</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Consider a set-associative cache of size 2 KB (1 KB = 2<sup>10 </sup>bytes) with cache block size of 64 bytes. Assume that the cache is byte-addressable and a 32-bit address is used for accessing the cache. If the width of the tag field is 22 bits, the associativity of the cache is _______",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>32 bit address is used for accessing the cache.</p>\n<p>It is given that cache is Set-Associative.</p>\n<p>The address bits get split as follows :</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2m2gvjq/2dfbd432-5b73-4903-9104-bdd0f81441bb/bc37d560-9158-11ef-b857-fbe2b727506e/file-jaoe38c1m2m2gvjr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2m2gvjq/2dfbd432-5b73-4903-9104-bdd0f81441bb/bc37d560-9158-11ef-b857-fbe2b727506e/file-jaoe38c1m2m2gvjr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Computer Organization - Memory Interfacing Question 16 English Explanation\"></p>\n<p>Block Size $=64 B \\Rightarrow$ Block offset $=6$ bits.</p>\n<p>Given that Tag field width $=22$ bits.</p>\n<p>Therefore, width of Set Index field</p>\n<p>$$ \\begin{aligned} &amp; =32-22-6=4 \\\\\\\\ &amp; \\Rightarrow 2^4=16 \\text { sets in the cache } \\end{aligned} $$</p>\n<p>Cache size is 2 KB and Block size $=64 \\mathrm{~B}$</p>\n<p>$\\Rightarrow 2^5=32$ blocks present in the cache.</p>\n<p>16 sets contain 32 blocks</p>\n<p>$\\Rightarrow 2$ blocks per set or associativity $=2$</p>\n<p>Hence, the correct answer is 2.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider a computer system with a byte-addressable primary memory of size 2<sup>32</sup>&nbsp;bytes. Assume the computer system has a direct-mapped cache of size 32 KB (1 KB = 2<sup>10</sup>&nbsp;bytes), and each cache block is of size 64 bytes.</p>\n\n<p>The size of the tag field is ______ bits.</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "17",
+    "explanation": "<p>To determine the size of the tag field in bits for the given cache configuration, we'll follow these steps:</p>\n<h3><strong>Given Parameters:</strong></h3>\n\n<p><p><strong>Physical Address Space:</strong> $ 2^{32} $ bytes (since it's byte-addressable).</p></p>\n<p><p><strong>Cache Size:</strong> 32 KB $ = 32 \\times 2^{10} $ bytes $ = 32,768 $ bytes.</p></p>\n<p><p><strong>Block Size (Cache Line Size):</strong> 64 bytes.</p></p>\n<p><p><strong>Cache Mapping:</strong> Direct-mapped cache.</p></p>\n\n<h3><strong>Step 1: Calculate Block Offset Bits</strong></h3>\n<p>The block offset bits determine the specific byte within a cache block.</p>\n\n<p><p><strong>Block Size:</strong> 64 bytes.</p></p>\n<p><p><strong>Number of Block Offset Bits ($ b $)</strong>:</p>\n<p>$   b = \\log_2(\\text{Block Size}) = \\log_2(64) = 6 \\text{ bits}   $</p></p>\n\n<h3><strong>Step 2: Calculate Index Bits</strong></h3>\n<p>The index bits determine the cache line where a particular block is stored.</p>\n\n<p><p><strong>Cache Size:</strong> 32,768 bytes.</p></p>\n<p><p><strong>Block Size:</strong> 64 bytes.</p></p>\n<p><p><strong>Number of Cache Lines ($ N $)</strong>:</p>\n<p>$   N = \\frac{\\text{Cache Size}}{\\text{Block Size}} = \\frac{32,768}{64} = 512 \\text{ cache lines}   $</p></p>\n<p><p><strong>Number of Index Bits ($ i $)</strong>:</p>\n<p>$   i = \\log_2(N) = \\log_2(512) = 9 \\text{ bits}   $</p></p>\n\n<h3><strong>Step 3: Calculate Tag Bits</strong></h3>\n<p>The tag bits are the remaining bits after accounting for the index and block offset bits.</p>\n\n<p><p><strong>Total Physical Address Bits ($ A $)</strong>: 32 bits.</p></p>\n<p><p><strong>Number of Tag Bits ($ t $)</strong>:</p>\n<p>$   t = A - i - b = 32 - 9 - 6 = 17 \\text{ bits}   $</p></p>\n\n<h3><strong>Visualization of Address Fields</strong></h3>\n<p>The 32-bit physical address is divided as follows:</p>\n\n<p><p><strong>[31          15]  [14    6]  [5  0]</strong></p></p>\n<p><p><strong>Tag Field (17 bits)</strong>   <strong>Index Field (9 bits)</strong>  <strong>Block Offset (6 bits)</strong></p></p>\n\n<h3><strong>Answer:</strong></h3>\n<p><strong>17</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A direct mapped cache memory of 1 MB has a block ize of 256 bytes. The cache has an access time of 3 ns and a hit rate of 94%. During a cache miss, it takes 20 ns to bring the first word of a block from the main memory, while each subsequent word takes 5 ns. The word size is 64 bits. The average memory access time in ns (round off to 1 decimal place) is _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "13.5",
+    "explanation": "<p>Here’s how to work it out step by step:</p>\n\n<p><p>Compute words per block:  </p>\n<p>$$N=\\frac{\\text{block size}}{\\text{word size}}=\\frac{256\\ \\text{bytes}}{8\\ \\text{bytes/word}}=32\\ \\text{words}$$</p></p>\n<p><p>Find the miss penalty (time to bring in the entire block):  </p></p>\n\n\n<p><p>First word: 20 ns  </p></p>\n<p><p>Remaining $N-1=31$ words at 5 ns each  </p>\n<p>$$P=20 + (32-1)\\times5 = 20 + 31\\times5 = 175\\ \\text{ns}$$</p></p>\n\n\n<p>Compute average memory access time (AMAT):  </p>\n\n\n<p><p>Hit time $T_{\\text{hit}}=3$ ns  </p></p>\n<p><p>Miss rate $MR=1 - 0.94 = 0.06$  </p>\n<p>$$\\text{AMAT}=T_{\\text{hit}} + MR\\cdot P    =3 + 0.06\\times175    =3 + 10.5    =13.5\\ \\text{ns}$$</p></p>\n\n<p>Answer: <strong>13.5 ns</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "A certain processor uses a fully associative cache of size 16 kB. The cache block size is 16 bytes. Assume that the main memory is byte addressable and uses a 32-bit address. How many bits are required for the Tag and the Index fields resectively in the addresses generated by the processor?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "28 bits and 4 bits"
+      },
+      {
+        "identifier": "B",
+        "content": "24 bits and 4 bits"
+      },
+      {
+        "identifier": "C",
+        "content": "24 bits and 0 bits"
+      },
+      {
+        "identifier": "D",
+        "content": "28 bits and 0 bits"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "Cache size = 16 KB\n<br><br> Block Size = 16 B = 2<sup>4</sup> B\n<br><br> Block offset = 4  bits\n <br><br>Main memory address = 32  bits\n<br><br>In fully associative cache main memory address format there is no index bits.\n<br><br>$$ \\therefore $$ Tag bits =\nTotal bits - Offset bits = 32 - 4 = 28\n<br><br>So, tag bits = 28, Index bits = 0\n",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "The chip select logic for a certain DRAM chip in a memory system design is shown below. Assume that the memory system has 16 address lines denoted by A<sub>15</sub> to A<sub>0</sub>. What is the range of addresses (in hexadecimal) of the memory system that can get enabled by the chip select (CS) signal?\n<img src=\"https://imagex.cdn.examgoal.net/jf76htyjzvxcdum/19a25764-b53e-46cf-ad93-2434721c55f8/4ebdb3e0-c9f0-11e9-8a74-7f4f47aa0c85/file-jf76htyjzvxcdun-320w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Computer Organization - Memory Interfacing Question 21 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "C800 to CFFF"
+      },
+      {
+        "identifier": "B",
+        "content": "C800 to C8FF"
+      },
+      {
+        "identifier": "C",
+        "content": "DA00 to DFFF"
+      },
+      {
+        "identifier": "D",
+        "content": "CA00 to CAFF"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "According to the question, to enable chip select (CS),\n<br><br>A<sub>13</sub> and A<sub>12</sub> should be 0 (zero).\n<br><br>And A<sub>15</sub>, A<sub>14</sub> and A<sub>11</sub> should be '1\n(one).\n<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/jf76htyjzvyjguo/f8e8f63e-0b81-4d40-9ee7-cf50ebf6852f/fcda5100-c9f4-11e9-8a74-7f4f47aa0c85/file-jf76htyjzvyjgup-320w.jpg\"><source media=\"(max-width: 500px)\" srcset=\"https://imagex.cdn.examgoal.net/jf76htyjzvyjguo/f8e8f63e-0b81-4d40-9ee7-cf50ebf6852f/fcda5100-c9f4-11e9-8a74-7f4f47aa0c85/file-jf76htyjzvyjgup-500w.jpg\"><img src=\"https://imagex.cdn.examgoal.net/jf76htyjzvyjguo/f8e8f63e-0b81-4d40-9ee7-cf50ebf6852f/fcda5100-c9f4-11e9-8a74-7f4f47aa0c85/file-jf76htyjzvyjgup-680w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Computer Organization - Memory Interfacing Question 21 English Explanation\"></picture>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "A $$32$$-bit wide main memory unit with a capacity of $$1$$ $$GB$$ is built using $$256M\\,\\, \\times \\,\\,4$$-bit $$DRAM$$ chips. The number of rows of memory cells in the $$DRAM$$ chip is $${2^{14}}.$$ The time taken to perform one refresh operation is $$50$$ nanoseconds. The refresh period is $$2$$ milliseconds. The percentage (rounded to the closest integer) of the time available for performing the memory read/write operations in the main memory unit is __________.\n \n",
+    "options": [],
+    "correct_options": [],
+    "answer": "59 to 60",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "A processor can support a maximum memory of $$4$$ $$GB,$$ where the memory is word-addressable (a word consists of two bytes). The size of the address bus of the processor is at least ___________ bits. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "31",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a machine with a byte addressable main memory of $${2^{20}}$$ bytes, block size of $$16$$ bytes and a direct mapped cache having $${2^{12}}$$ cache lines. Let the addresses of two consecutive bytes in main memory be $${\\left( {E201F} \\right)_{16}}$$ and $${\\left( {E2020} \\right)_{16}}$$. What are the tag and cache line address (in $$hex$$) for main memory address $${\\left( {E201F} \\right)_{16}}$$? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$E, 201$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$F, 201$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$E, E20$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2, 01F$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that for a certain processor, a read request takes $$50$$ nanoseconds on a cache miss and $$5$$ nanoseconds on a cache hit. Suppose while running a program, it was observed that $$80\\% $$ of the processor's read requests result in a cache hit. The average read access time in nanoseconds is __________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "14",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "An access sequence of cache block addresses is of length $$N$$ and contains $$n$$ unique block address. The number of unique block addresses between two consecutive accesses to the same block address is bounded above by $$k.$$ What is the miss ratio if the access sequence is passed through a cache of associativity $$A\\, \\ge \\,k$$ exercising least-recently-used replacement policy?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n/N$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/N$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1/A$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$k/n$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In a $$k$$-way set associative cache, the cache is divided into $$v$$ sets, each of which consists of $$k$$ lines. The lines of a set are placed in sequence one after another. The lines in set $$s$$ are sequenced before the lines in set $$(s+1).$$ The main memory blocks are numbered $$0$$ onwards. The main memory block numbered $$j$$ must be mapped to any one of the cache lines from \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\left( {j\\,\\,\\bmod \\,\\,v} \\right)^ * }k\\,\\,$$ to $${\\left( {j\\,\\,\\bmod \\,\\,v} \\right)^ * }k\\, + \\,\\,\\,\\,\\,\\,\\left( {k - 1} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\left( {j\\,\\,\\bmod \\,\\,v} \\right)}\\,\\,$$ to $$\\left( {j\\,\\,\\bmod \\,\\,v} \\right)\\, + \\,\\left( {k - 1} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\left( {j\\,\\,\\bmod \\,\\,k} \\right) }\\,\\,$$  to $$\\left( {j\\,\\,\\bmod \\,\\,k} \\right)\\, + \\,\\left( {v - 1} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\left( {j\\,\\,\\bmod \\,\\,k} \\right)^ * }v\\,\\,$$ to $${\\left( {j\\,\\,\\bmod \\,\\,k} \\right)^ * }\\,v + \\,\\left( {v - 1} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The amount of $$ROM$$ needed to implement a $$4$$ bit multiplier is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$64$$ bits "
+      },
+      {
+        "identifier": "B",
+        "content": "$$128$$ bits "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ $$K$$bits "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2$$ $$K$$bits "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "A main memory unit with a capacity of $$4$$ megabytes is built using $$1M \\times 1$$-bit $$DRAM$$ chips. Each $$DRAM$$ chip has $$1K$$ rows of cells with $$1K$$ cells in each row. The time taken for a single refresh operation is $$100$$ nanoseconds. The time required to perform one refresh operation on all the cells in the memory unit is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$100$$ nanoseconds "
+      },
+      {
+        "identifier": "B",
+        "content": "$$100 * {2^{10}}$$ nanoseconds "
+      },
+      {
+        "identifier": "C",
+        "content": "$$100 * {2^{20}}$$ nanoseconds "
+      },
+      {
+        "identifier": "D",
+        "content": "$$3200 * {2^{20}}$$ nanoseconds "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "How many $$32k$$ <b>x</b> $$1$$ $$RAM$$ chips are needed to provide a memory capacity of $$256$$ $$K$$-bytes?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$32$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$64$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$128$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a $$4$$-way set associative cache consisting of $$128$$ lines with a line size of $$64$$ words. The $$CPU$$ generates a $$20$$-bit address of a word in main memory. The numbers of bits in the TAG, LINE and WORD fields are respectively",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$9,6,5$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$7,7,6$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$7,5,8$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$9, 5, 6$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Increasing the $$RAM$$ of a computer typically improves performance because",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Virtual memory increases "
+      },
+      {
+        "identifier": "B",
+        "content": "Larger $$RAM$$s are faster"
+      },
+      {
+        "identifier": "C",
+        "content": "Fewer page faults occur"
+      },
+      {
+        "identifier": "D",
+        "content": "Fewer segmentation faults occur"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "More than one word are put in one cache block to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Exploit the temporal locality of reference in a program\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Exploit the spatial locality of reference in a program "
+      },
+      {
+        "identifier": "C",
+        "content": "Reduce the miss penalty "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The main memory of a computer has $$2$$ $$cm$$ blocks while the cache has $$2$$ $$c$$ blocks. If the cache uses the set associative mapping scheme with $$2$$ blocks per set, then block $$k$$ of the main memory maps to the set:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "($$k$$ mod $$m$$) of the cache"
+      },
+      {
+        "identifier": "B",
+        "content": "($$k$$ mod $$c$$) of the cache "
+      },
+      {
+        "identifier": "C",
+        "content": "($$k$$ mod $$2c$$) of the cache "
+      },
+      {
+        "identifier": "D",
+        "content": "($$k$$ mod $$2cm$$) of the cache"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "A $$ROM$$ is used to store the table for multiplication of two $$8$$ bit unsigned integers. The size of $$ROM$$ required is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$256 \\times 16$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$64K \\times 8$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$4K \\times 16$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$64K \\times 16$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A $$ROM$$ is used to store a truth table for a binary multiplier unit that will multiply two $$4$$ bit numbers. The size of the $$ROM$$ (number of words $$ \\times $$ number of bits) that is required to accommodate the truth table is $$M$$ words $$ \\times $$ $$N$$ bits. Write the values of $$M$$ and $$N$$.",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$M=256$$ and $$N=8$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "A computer system has a $$4K$$ word cache organized in block set associative manner with $$4$$ blocks per set, $$64$$ words per block. The number of bits in the $$SET$$ and $$WORD$$ fields of the main memory address format is \n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$15,40$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$6,4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$7,2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$4,6$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The capacity of a memory unit is defined by the number of words multiplied by the number of bits/word. How many separate address and data lines are needed for a memory of $$4K$$  $$ \\times $$ $$16?$$  ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$12$$ address lines and $$16$$ data lines.",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a system with a processor and a 4 KB direct mapped cache with block size of 16 bytes. The system has a 16 MB physical memory. Four words $\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}$, and S are accessed by the processor in the same order 10 times. That is, there are a total of 40 memory references in the sequence $\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}, \\mathrm{S}, \\mathrm{P}, \\mathrm{Q}, \\mathrm{R}, \\mathrm{S}, \\ldots$</p>\n<p>Assume that the cache memory is initially empty. The physical addresses of the words are given below (1 word $=1$ byte).</p>\n<p>P: 0x845B32, Q: 0x845B26, R: 0x845B36, S: 0x846B32</p>\n<p>Which of the following statements is/are true?</p>\n<p>Note: $1 \\mathrm{~K}=2^{10}$ and $1 \\mathrm{M}=2^{20}$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Every access to P results in a cache miss</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Every access to R results in a cache hit</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Every access to $Q$ results in a cache miss</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Except the first access to S , all subsequent accesses to S result in cache hits</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Direct Cache Address format: } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyvvk3d/ae7db17d-8585-4738-bd3f-6a042b823280/789f9690-2459-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvvk3e.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyvvk3d/ae7db17d-8585-4738-bd3f-6a042b823280/789f9690-2459-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvvk3e.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Computer Organization - Memory Interfacing Question 1 English Explanation\"></p>\n<p>$P$ and $R$ both are in the same block $P, R$ and $S$ both are having different tags but mapped to same line.</p>\n<p>$\\therefore \\quad \\mathrm{P}, \\mathrm{R}$ block is replaced by Block S .</p>\n<p>$$ \\begin{aligned} &amp;\\text { }\\\\ &amp;\\begin{aligned}  Accessing:&amp; \\mathrm{P}-\\mathrm{miss} \\\\ &amp; \\mathrm{Q}-\\mathrm{miss} \\\\ &amp; \\mathrm{R}-\\mathrm{hit} \\\\ &amp; \\mathrm{S}-\\mathrm{miss} \\\\ &amp; \\mathrm{P}-\\mathrm{miss} \\end{aligned}\\\\\\ &amp;\\,\\,\\,\\begin{aligned} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,&amp; \\mathrm{Q}-\\text { hit } \\\\ &amp; \\mathrm{R}-\\text { hit } \\\\ &amp; \\mathrm{S}-\\text { miss and soon } \\end{aligned} \\end{aligned} $$</p>\n<p>So, (P, R) block is replaced by block S . So, $S$ block replaced by block $P$.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a system with 1 MB physical memory and a word length of 1 byte. The system uses a direct mapped cache, with block numbers starting from 0 . The word with physical address 0xA2C28 is mapped to the cache block number $176_{10}$. The maximum possible size of the cache (in KB ) for this configuration is $\\_\\_\\_\\_$ . (answer in integer)</p>\n<p>Note: $1 \\mathrm{~K}=2^{10}$ and $1 \\mathrm{M}=2^{20}$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "128",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmywbaw3/e353126c-c0c4-4563-a9c9-1d0441378851/2e761330-245b-11f1-8c18-217b38cc9d70/file-jaoe38c1mmywbaw4.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmywbaw3/e353126c-c0c4-4563-a9c9-1d0441378851/2e761330-245b-11f1-8c18-217b38cc9d70/file-jaoe38c1mmywbaw4.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Computer Organization - Memory Interfacing Question 3 English Explanation\"></p>\n<p></p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$Here\\,\\,\\, (176)_{10}=\\underbrace{00010110000}_{11 \\text { bit }} $$</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Word offset $=6$ bit</p>\n<p>$\\therefore \\quad$ Cache address $=\\mathrm{LO}+\\mathrm{WO}$</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ =11+6=17 \\text { bit } $$</p>\n<p></p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$So, &nbsp;&nbsp;\\text { Cache size }=2^{17} \\mathrm{~B}=128 \\mathrm{~KB} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The size of the physical address space of a processor is $2^{32}$ bytes. The capacity of a cache memory unit is $2^{23}$ bytes. The cache block size is 128 bytes. The cache memory unit can be built as a direct mapped cache or as a $K$-way set-associative cache, where $K=2^L$ and $L \\in\\{1,2,3\\}$. Let the length of the TAG field be $M$ bits for the direct mapped cache, and $N$ bits for the set-associative cache.</p>\n<p>Which one of the following options is true?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p> $N=M+L$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p> $N=M-L$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p> $N=M+K$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p> $N=M-K$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Direct cache address format:</p>\n<p><img alt=\"GATE CSE 2026 Set 1 Computer Organization - Memory Interfacing Question 2 English Explanation 1\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyo99cx/e17b6bd1-fb1c-47b0-9cf1-87aa163f4e8d/aca04110-243b-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyo99cy.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyo99cx/e17b6bd1-fb1c-47b0-9cf1-87aa163f4e8d/aca04110-243b-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyo99cy.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p>Set associative cache address format:</p>\n<p><img alt=\"GATE CSE 2026 Set 1 Computer Organization - Memory Interfacing Question 2 English Explanation 2\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyo99z2/0d25fded-66c0-4dba-be04-b10288bee3a8/ad19dde0-243b-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyo99z3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyo99z2/0d25fded-66c0-4dba-be04-b10288bee3a8/ad19dde0-243b-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyo99z3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p>Here, N-value increases depends on the associativity of a cache.</p>\n<p>i.e.,</p>\n<p>$$ S=\\frac{\\text { Number of lines }}{P \\text {-way }}=\\frac{\\text { Number of lines }}{2^L}=2^{(L O-L)} $$</p>\n<p>So, index value decreases w.r.t. $P$-value.</p>\n<p>$\\therefore \\quad$ Tag space increases w.r.t. associativity.</p>\n<p>Hence,</p>\n<p>$$ N=(M+L) $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For a direct-mapped cache, 4 bits are used for the tag field and 12 bits are used to index into a cache block. The size of each cache block is one byte. Assume that there is no other information stored for each cache block.\nWhich ONE of the following is the CORRECT option for the sizes of the main memory and the cache memory in this system (byte addressable), respectively?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " 64 KB and 4 KB\n"
+      },
+      {
+        "identifier": "B",
+        "content": " 128 KB and 16 KB\n"
+      },
+      {
+        "identifier": "C",
+        "content": " 64 KB and 8 KB\n"
+      },
+      {
+        "identifier": "D",
+        "content": " 128 KB and 6 KB"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$\\bullet$ Direct map</p>\n<p>$\\bullet$ 4 bit tag field</p>\n<p>$\\bullet$ Cache index = 12 bit</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yrjc27/2e8095a4-9e8e-42a8-a917-9f5637674e9e/418235f0-fb51-11ef-9115-8db426cbf786/file-jaoe38c1m7yrjc28.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yrjc27/2e8095a4-9e8e-42a8-a917-9f5637674e9e/418235f0-fb51-11ef-9115-8db426cbf786/file-jaoe38c1m7yrjc28.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Computer Organization - Memory Interfacing Question 4 English Explanation\"></p>\n<p>$$\\begin{aligned}\n\\therefore \\quad \\text { Cache memory } &amp; =2^{12} \\text { cells } \\\\\n&amp; =4 \\mathrm{~K} \\text { cells } \\\\\n&amp; =4 \\mathrm{~KB}\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n\\therefore \\quad \\text { MM size } &amp; =2^{16} \\text { cells } \\\\\n&amp; =64 \\mathrm{~K} \\text { cells } \\\\\n&amp; =64 \\mathrm{~KB}\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Given a computing system with two levels of cache (L1 and L2) and a main memory. The first level (L1) cache access time is 1 nanosecond (ns) and the \"hit rate\" for L1 cache is $90 \\%$ while the processor is accessing the data from L1 cache. Whereas, for the second level (L2) cache, the \"hit rate\" is $80 \\%$ and the \"miss penalty\" for transferring data from L2 cache to L1 cache is 10 ns . The \"miss penalty\" for the data to be transferred from main memory to L2 cache is 100 ns .\nThen the average memory access time in this system in nanoseconds is (rounded off to one decimal place)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p>To calculate the average memory access time for a computing system with two levels of cache (L1 and L2) and a main memory, we consider the cache hit and miss rates along with their respective penalties. Here's the breakdown:</p>\n\n<p><p><strong>L1 Cache:</strong></p></p>\n<p><p>Access time: 1 nanosecond (ns)</p></p>\n<p><p>Hit rate: 90% or 0.9</p></p>\n<p><p><strong>L2 Cache:</strong></p></p>\n<p><p>Hit rate: 80% or 0.8</p></p>\n<p><p>Miss penalty (L2 to L1): 10 ns</p></p>\n<p><p><strong>Main Memory:</strong></p></p>\n<p><p>Miss penalty (Memory to L2): 100 ns</p></p>\n\n<p>The formula to compute average memory access time ($T_{\\text{avg}}$) is:</p>\n<p>$ T_{\\text{avg}} = H_1 \\cdot T_1 + (1 - H_1) \\cdot H_2 \\cdot (T_2 + T_1) + (1 - H_1) \\cdot (1 - H_2) \\cdot (T_3 + T_2 + T_1) $</p>\n<p>Where:</p>\n\n<p><p>$H_1$ is the hit rate for L1 cache.</p></p>\n<p><p>$T_1$ is the access time for L1 cache.</p></p>\n<p><p>$H_2$ is the hit rate for L2 cache.</p></p>\n<p><p>$T_2$ includes the miss penalty for L2 cache.</p></p>\n<p><p>$T_3$ includes the miss penalty for main memory.</p></p>\n\n<p>Substituting the given values:</p>\n<p>$ \\begin{aligned} T_{\\text{avg}} & = (0.9 \\cdot 1) + (1 - 0.9) \\cdot 0.8 \\cdot (10 + 1) + (1 - 0.9) \\cdot (1 - 0.8) \\cdot (100 + 10 + 1) \\\\ & = 0.9 + 0.08 \\cdot 11 + 0.02 \\cdot 111 \\\\ & = 0.9 + 0.88 + 2.22 \\\\ & = 4 \\, \\text{ns} \\end{aligned} $</p>\n<p>Thus, the average memory access time is 4 nanoseconds.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a memory system with 1 M bytes of main memory and 16 K bytes of cache memory. Assume that the processor generates 20-bit memory address, and the cache block size is 16 bytes. If the cache uses direct mapping, how many bits will be required to store all the tag values?</p>\n<p>[Assume memory is byte addressable, $1 \\mathrm{~K}=2^{10}$, $1 \\mathrm{M}=2^{20}$]</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $6 \\times 2^{10}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$8 \\times 2^{10}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$2^{12}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "214"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s break down the problem step by step.</p>\n\n<p><p>Main memory is 1 M byte, which is $$2^{20}$$ bytes, corresponding to a 20-bit address space.</p></p>\n<p><p>The cache memory is 16 K bytes, which is $$16 \\times 2^{10} = 2^{14}$$ bytes.</p></p>\n<p><p>The cache block size is 16 bytes, or $$2^4$$ bytes per block.</p></p>\n<p><p>To determine how many blocks (or lines) the cache has, divide the total cache size by the block size:</p>\n<p>$$\\text{Number of blocks} = \\frac{2^{14}}{2^4} = 2^{10} = 1024 \\text{ blocks}.$$</p></p>\n<p><p>In a direct-mapped cache, a memory address is divided into three parts:</p></p>\n\n\n<p><p><strong>Block offset:</strong> Identifies the specific byte in the block. Since the block size is 16 bytes, $$\\log_2(16) = 4$$ bits are needed.</p></p>\n<p><p><strong>Cache index:</strong> Identifies the cache block. With 1024 blocks, $$\\log_2(1024) = 10$$ bits are required.</p></p>\n<p><p><strong>Tag:</strong> The remaining bits from the 20-bit address. Therefore, the tag size is:</p>\n<p>$$20 - (10+4) = 6 \\text{ bits.}$$</p></p>\n\n\n<p><p>The total number of bits required to store <em>all</em> the tag values in the cache is:</p>\n<p>$$\\text{Total tag bits} = \\text{Number of cache blocks} \\times \\text{Tag bits per block} = 2^{10} \\times 6 = 6 \\times 2^{10} \\text{ bits.}$$</p></p>\n\n<p>Thus, the answer is Option A:</p>\n<p>$$6 \\times 2^{10}.$$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A computer has a memory hierarchy consisting of two-level cache (L1 and L2) and a main memory. If the processor needs to access data from memory, it first looks into L1 cache. If the data is not found in L1 cache, it goes to L2 cache. If it fails to get the data from L2 cache, it goes to main memory, where the data is definitely available. Hit rates and access times of various memory units are shown in the figure. The average memory access time in nanoseconds (ns) is _________ . (Rounded off to two decimal places)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7w3wk5l/1382258e-eda2-410e-b222-73691d073295/44e1af90-f9db-11ef-832b-df2b0c5c2220/file-jaoe38c1m7w3wk5m.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7w3wk5l/1382258e-eda2-410e-b222-73691d073295/44e1af90-f9db-11ef-832b-df2b0c5c2220/file-jaoe38c1m7w3wk5m.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Computer Organization - Memory Interfacing Question 7 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\nT_{\\text {avg }} & =H_1 T_1+\\left(1-H_1\\right) H_2\\left(T_2+T_1\\right)+\\left(1-H_1\\right)\\left(1-H_2\\right) H_3\\left(T_3+T_2+T_1\\right) \\\\\n& =(0.95 \\times 10)+(1-0.95) 0.85 \\times 20+(1-0.95)(1-0.85) 200 \\\\\n& =9.5+0.85+1.5=11.85\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider two set-associative cache memory architectures: <b>WBC</b>, which uses the write back policy, and <b>WTC</b>, which uses the write through policy. Both of them use the <b>LRU</b> (<i>Least Recently Used</i>) block replacement policy. The cache memory is connected to the main memory. Which of the following statements is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>A read miss in <b>WBC</b> never evicts a dirty block</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>A read miss in <b>WTC</b> never triggers a write back operation of a cache block to main memory</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>A write hit in <b>WBC</b> can modify the value of the dirty bit of a cache block</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>A write miss in <b>WTC</b> always writes the victim cache block to main memory before loading the missed block to the cache</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze each statement one by one to determine its accuracy with respect to the given cache memory architectures: WBC (Write Back Cache) and WTC (Write Through Cache), both using the LRU (Least Recently Used) replacement policy.</p>\n\n<p><b>Option A: A read miss in WBC never evicts a dirty block</b></p>\n<p>This statement is <i>false</i>. In a Write Back Cache (WBC), a read miss can indeed evict a dirty block. If the cache block being replaced is dirty, it means that it has been modified and hence, must be written back to the main memory before the new data is loaded into the cache to prevent the loss of modified data.</p>\n\n<p><b>Option B: A read miss in WTC never triggers a write back operation of a cache block to main memory</b></p>\n<p>This statement is <i>true</i>. In a Write Through Cache (WTC), every write operation is directly written to main memory as well as to the cache. Therefore, there is no need for a write back operation during a read miss, since there are no dirty blocks that require writing back to main memory. The data in the main memory is always consistent with the cache contents.</p>\n\n<p><b>Option C: A write hit in WBC can modify the value of the dirty bit of a cache block</b></p>\n<p>This statement is <i>true</i>. In a Write Back Cache (WBC), a write hit updates the data in the cache and sets the dirty bit to indicate that the cache block has been modified. This dirty bit serves as a flag that the block needs to be written back to main memory when it is eventually evicted.</p>\n\n<p><b>Option D: A write miss in WTC always writes the victim cache block to main memory before loading the missed block to the cache</b></p>\n<p>This statement is <i>false</i>. In a Write Through Cache (WTC), since all write operations go directly to main memory, there are no dirty blocks in the cache. Therefore, on a write miss, there is no need to write the evicted (victim) cache block back to main memory because it is guaranteed to be clean. The missed block can be directly loaded into the cache without extra write back operations.</p>\n\n<p>Based on the analysis above, the statements that are true are:</p>\n<ul>\n<li>Option B: A read miss in WTC never triggers a write back operation of a cache block to main memory</li>\n<li>Option C: A write hit in WBC can modify the value of the dirty bit of a cache block</li>\n</ul>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A given program has 25% load/store instructions. Suppose the ideal CPI (cycles per instruction) without any memory stalls is 2. The program exhibits 2% miss rate on instruction cache and 8% miss rate on data cache. The miss penalty is 100 cycles. The speedup <b>(rounded off to two decimal places)</b> achieved with a perfect cache (i.e., with NO data or instruction cache misses) is ______</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "3.0",
+    "explanation": "<p>To solve this problem, we need to calculate the original and improved CPU times based on the given information, and then find the speedup ratio.</p>\n\n<p>First, let's define the parameters:</p>\n\n<p>- Load/store instructions: 25% of the instructions</p>\n\n<p>- Ideal CPI (without memory stalls): 2 cycles</p>\n\n<p>- Instruction cache miss rate: 2%</p>\n\n<p>- Data cache miss rate: 8%</p>\n\n<p>- Miss penalty: 100 cycles</p>\n\n<p>Let's calculate the effective CPI when there are cache misses. The cycles per instruction (CPI) can be expressed as:</p>\n\n<p>\n\n<p>$$ CPI_{\\text{effective}} = CPI_{\\text{ideal}} + \\text{Instruction miss penalty} + \\text{Data miss penalty} $$</p>\n\n</p>\n\n<p>First, we calculate the penalty due to instruction cache misses:</p>\n\n<p>\n\n<p>$$ \\text{Instruction miss penalty} = \\text{Instruction miss rate} \\times \\text{Miss penalty} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ = 0.02 \\times 100 = 2 \\text{ cycles/instruction} $$</p>\n\n</p>\n\n<p>Next, we calculate the penalty due to data cache misses. Since 25% of the instructions are load/store, the miss penalty should be calculated only for these instructions:</p>\n\n<p>\n\n<p>$$ \\text{Data miss penalty} = \\text{Data miss rate} \\times \\text{Miss penalty} \\times \\text{Percentage of load/store instructions} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ = 0.08 \\times 100 \\times 0.25 = 2 \\text{ cycles/instruction} $$</p>\n\n</p>\n\n<p>Now we add these penalties to the ideal CPI:</p>\n\n<p>\n\n<p>$$ CPI_{\\text{effective}} = 2 + 2 + 2 = 6 \\text{ cycles/instruction} $$</p>\n\n</p>\n\n<p>If there were a perfect cache (no misses), the CPI would remain at the ideal rate of 2 cycles per instruction.</p>\n\n<p>Next, we'll determine the speedup achieved with the perfect cache. The speedup is defined as the ratio of the old execution time to the new execution time. Given that the number of instructions remains constant, the speedup is equal to the ratio of the original CPI to the improved CPI:</p>\n\n<p>\n\n<p>$$ \\text{Speedup} = \\frac{CPI_{\\text{effective}}}{CPI_{\\text{ideal}}} $$</p>\n\n</p>\n\n<p>Substituting the values, we get:</p>\n\n<p>\n\n<p>$$ \\text{Speedup} = \\frac{6}{2} = 3 $$</p>\n\n</p>\n\n<p>The speedup achieved with a perfect cache, rounded off to two decimal places, is:</p>\n\n<p><strong>3.00</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A 4 kilobyte (KB) byte-addressable memory is realized using four 1 KB memory blocks. Two input address lines (IA4 and IA3) are connected to the chip select (CS) port of these memory blocks through a decoder as shown in the figure. The remaining ten input address lines from IA11-IA0 are connected to the address port of these blocks. The chip select (CS) is active high.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr4z6pw/07d6454f-a45f-4fda-a2ba-55a60d20982d/99673660-44f1-11ef-8439-d5993f38be4e/file-jaoe38c1lyr4z6py.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr4z6pw/07d6454f-a45f-4fda-a2ba-55a60d20982d/99673660-44f1-11ef-8439-d5993f38be4e/file-jaoe38c1lyr4z6py.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Computer Organization - Memory Interfacing Question 12 English\"></p>\n<p>The input memory address (IA11-IA0), in decimal, for the starting locations (Addr=0) of each block (indicated as X1, X2, X3, X4 in the figure) are among the options given below. Which one of the following options is CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(0, 1, 2, 3)"
+      },
+      {
+        "identifier": "B",
+        "content": "(0, 1024, 2048, 3072)"
+      },
+      {
+        "identifier": "C",
+        "content": "(0, 8, 16, 24)"
+      },
+      {
+        "identifier": "D",
+        "content": "(0, 0, 0, 0)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The addresses are of length 12 bits.</p>\n\n<p>The 2:4 decoder with input $I A_3$ and $I A_4$ decides which chip is selected.</p>\n\n<p>Possible values of $I A_4 I A_3$ ate 4 .</p>\n\n<p>For starting address the valued $I_{11} \\ldots \\ldots I_5$ remains ' 0 ' and we're focused on value from $I_4 \\ldots \\ldots . I_0$.</p>\n\n<p>So,</p>\n\n<p>$$ \\begin{array}{|c|c|c|} \\hline \\boldsymbol{I}_4 & \\boldsymbol{I}_{\\mathbf{2}} & \\text { Resulting value/Starting address } \\\\ \\hline 0 & 0\\left(X_0\\right) & 0(00000) \\\\ \\hline 0 & 1\\left(X_1\\right) & 8(01000) \\\\ \\hline 1 & 0\\left(X_2\\right) & 16(10000) \\\\ \\hline 1 & 1\\left(X_3\\right) & 24(11000) \\\\ \\hline \\end{array} $$</p>\n\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>An 8-way set associative cache of size 64 KB (1 KB = 1024 bytes) is used in a system with 32-bit address. The address is sub-divided into TAG, INDEX, and BLOCK OFFSET.</p>\n<p>The number of bits in the TAG is __________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "19",
+    "explanation": "To determine the number of bits in the TAG part of the address for the cache, we need to break down the address and calculate the size of each component. Here's how to do it:\n\n<br/>1. Compute the number of cache sets.\n<br/>2. Calculate the number of bits for the index.\n<br/>3. Determine the size of the block (or cache line).\n<br/>4. Calculate the number of bits for the block offset.\n<br/>5. Use the remaining bits as the TAG.\n\nLet's go through the steps:\n\n<p><strong>Step 1: Compute the number of cache sets.</strong></p>\n<p>An 8-way set associative cache means there are 8 blocks in each set. The total cache size is 64 KB, and we are given that 1 KB = 1024 bytes. First, calculate the total number of blocks in the cache:</p>\n<p>$$ \\text{Total number of blocks} = \\frac{\\text{Total cache size}}{\\text{Size of one block}} $$</p>\n\n<p>The size of one block isn't given, but we don't need it to calculate the number of sets. The number of sets is the total number of blocks divided by the number of blocks per set:</p>\n<p>$$ \\text{Number of sets} = \\frac{\\text{Total number of blocks}}{\\text{Blocks per set}} = \\frac{\\text{Total cache size in bytes}}{\\text{Block size in bytes} \\times \\text{Blocks per set}} $$</p>\n\n<p>Let's denote the block size in bytes as $ B $. So:</p>\n<p>$$ \\text{Number of sets} = \\frac{64 \\times 1024}{B \\times 8} $$</p>\n\n<p>Since we still don't know $ B $, we'll leave the number of sets in terms of $ B $ for now.</p>\n\n<p><strong>Step 2: Calculate the number of bits for the index.</strong></p>\n<p>The index bits are used to identify which set an address refers to. The number of index bits is the base-2 logarithm of the number of sets:</p>\n<p>$$ \\text{Index bits} = \\log_2(\\text{Number of sets}) $$</p>\n\n<p>Substitute the expression for the number of sets we found in Step 1:</p>\n<p>$$ \\text{Index bits} = \\log_2\\left(\\frac{64 \\times 1024}{B \\times 8}\\right) $$</p>\n\n<p><strong>Step 3: Determine the size of the block (or cache line).</strong></p>\n<p>The block size would determine the block offset. However, since we don't know the block size, we'll denote the block size as $ B $ bytes and later see how it cancels out.</p>\n\n<p><strong>Step 4: Calculate the number of bits for the block offset (BLOCK OFFSET).</strong></p>\n<p>The block offset bits are needed to identify which byte within a block the address refers to. The number of bits for the block offset is the base-2 logarithm of the block size:</p>\n<p>$$ \\text{Block offset bits} = \\log_2(B) $$</p>\n\n<p><strong>Step 5: Use the remaining bits as the TAG.</strong></p>\n<p>The total number of bits in the address is given as 32 since it's a 32-bit address. The remaining bits after accounting for the index and block offset will be the TAG bits:</p>\n<p>$$ \\text{TAG bits} = \\text{Total address bits} - (\\text{Index bits} + \\text{Block offset bits}) $$</p>\n<p>$$ \\text{TAG bits} = 32 - (\\log_2\\left(\\frac{64 \\times 1024}{B \\times 8}\\right) + \\log_2(B)) $$</p>\n\n<p>Notice that the $ B $ terms will cancel out:</p>\n<p>$$ \\text{TAG bits} = 32 - (\\log_2\\left(\\frac{64 \\times 1024}{8}\\right) + \\log_2(B) - \\log_2(B)) $$</p>\n<p>$$ \\text{TAG bits} = 32 - \\log_2(64 \\times 1024 / 8) $$</p>\n<p>$$ \\text{TAG bits} = 32 - \\log_2(8192) $$</p>\n<p>$$ \\text{TAG bits} = 32 - 13 $$</p>\n<p>$$ \\text{TAG bits} = 19 $$\n</p>\n<p>Therefore, the number of bits in the TAG is 19.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a system with 2 KB direct mapped data cache with a block size of 64 bytes. The system has a physical address space of 64 KB and a word length of 16 bits. During the execution of a program, four data words P, Q, R, and S are accessed in that order 10 times (i.e., PQRSPQRS .....). Hence, there are 40 accesses to data cache altogether. Assume that the data cache is initially empty and no other data words are accessed by the program. The addresses of the first bytes of P, Q, R, and S are 0$$\\times$$A248, 0$$\\times$$C28A, 0$$\\times$$CA8A, and 0$$\\times$$A262, respectively. For the execution of the above program, which of the following statements is/are TRUE with respect to the data cache?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Every access to S is a hit."
+      },
+      {
+        "identifier": "B",
+        "content": "Once P is brought to the cache it is never evicted."
+      },
+      {
+        "identifier": "C",
+        "content": "At the end of the execution only R and S reside in the cache."
+      },
+      {
+        "identifier": "D",
+        "content": "Every access to R evicts Q from the cache."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\bullet$$ Direct Mapping</p>\n<p>CM size = 2 KB</p>\n<p>MM size = 64 KB</p>\n<p>Block size = 64 B</p>\n<p>Number of lines = $${{2K} \\over {64}} \\Rightarrow {{{2^{11}}} \\over {{2^6}}} = {2^5}$$</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02nblt2/531dfe3c-d706-4fb9-9a8f-0530afa0c9bb/63f92c60-965a-11ec-8a72-632e293a0c47/file-1l02nblt3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02nblt2/531dfe3c-d706-4fb9-9a8f-0530afa0c9bb/63f92c60-965a-11ec-8a72-632e293a0c47/file-1l02nblt3.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2022 Computer Organization - Memory Interfacing Question 13 English Explanation\"></p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Assume a two-level inclusive cache hierarchy, L1 and L2, where L2 is the larger of the two. Consider the following statements.</p>\n\n<p>S<sub>1</sub> : Read misses in a write through L1 cache do not result in writebacks of dirty lines to the L2.</p>\n\n<p>S<sub>2</sub> : Write allocate policy must be used in conjunction with write through caches and no-write allocate policy is used with writeback caches.</p>\n\n<p>Which of the following statements is correct?&nbsp;</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S<sub>1</sub>&nbsp;is true and S<sub>2</sub>&nbsp;is true"
+      },
+      {
+        "identifier": "B",
+        "content": "S<sub>1</sub>&nbsp;is false and S<sub>2</sub>&nbsp;is true"
+      },
+      {
+        "identifier": "C",
+        "content": "S<sub>1</sub>&nbsp;is false and S<sub>2</sub>&nbsp;is false"
+      },
+      {
+        "identifier": "D",
+        "content": "S<sub>1</sub>&nbsp;is true and S<sub>2</sub>&nbsp;is false"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Understanding Cache Concepts :</strong></h3>\n\n<p><p><strong>Write Policies :</strong></p></p>\n<p><p><strong>Write-Through :</strong> Data is written to both the cache and the next level of memory hierarchy (e.g., L2 cache or main memory) simultaneously.</p></p>\n<p><p><strong>Write-Back :</strong> Data is written only to the cache. The modified cache line (dirty line) is written back to the next level when it is evicted.</p></p>\n<p><p><strong>Write Allocate Policies :</strong></p></p>\n<p><p><strong>Write Allocate (Fetch on Write) :</strong> On a <strong>write miss</strong>, the cache line is loaded into the cache, and then the write is performed.</p></p>\n<p><p><strong>No-Write Allocate (Write No Allocate) :</strong> On a <strong>write miss</strong>, the write is directly sent to the next level without loading the cache line into the cache.</p></p>\n<p><p><strong>Inclusive Cache Hierarchy :</strong></p></p>\n<p><p>An <strong>inclusive cache</strong> hierarchy ensures that all data in the L1 cache is also present in the L2 cache.</p></p>\n\n<hr />\n<h3><strong>Statement S₁ :</strong></h3>\n<p><strong>\"Read misses in a write-through L1 cache do not result in writebacks of dirty lines to the L2.\"</strong></p>\n<p><strong>Analysis :</strong></p>\n\n<p><strong>Write-Through Cache Behavior :</strong></p>\n\n\n<p><p>In a <strong>write-through</strong> cache, every write operation updates both the L1 cache and the next level (L2 cache).</p></p>\n<p><p><strong>Dirty Lines in L1 :</strong></p>\n\n<p><p>Since all writes are immediately propagated to L2, the L1 cache <strong>does not have dirty lines</strong>.</p></p>\n<p><p>There is no need to write back data from L1 to L2 upon eviction because L2 already has the most recent data.</p></p></p>\n\n\n<p><strong>Read Miss Handling :</strong></p>\n\n\n<p><p>On a <strong>read miss</strong> in L1 :</p>\n\n<p><p>The cache line is fetched from L2 (or main memory) and loaded into L1.</p></p>\n<p><p><strong>Evicting a Cache Line :</strong></p></p>\n<p><p>If a cache line needs to be evicted from L1 to make room, it does not need to be written back to L2 because it is <strong>clean</strong> (no dirty lines).</p></p></p>\n\n\n<p><strong>Conclusion :</strong></p>\n\n\n<p><p><strong>Read misses</strong> in a write-through L1 cache <strong>do not result</strong> in writebacks of dirty lines to L2 since there are <strong>no dirty lines</strong> in L1.</p></p>\n<p><p><strong>Statement S₁ is true.</strong></p></p>\n\n<hr />\n<h3><strong>Statement S₂ :</strong></h3>\n<p><strong>\"Write allocate policy must be used in conjunction with write-through caches and no-write allocate policy is used with write-back caches.\"</strong></p>\n<p><strong>Analysis :</strong></p>\n\n<p><strong>Write-Through Cache and Write Allocate :</strong></p>\n\n\n<p><p><strong>Typical Policy :</strong></p>\n\n<p><p><strong>No-Write Allocate</strong> is commonly used with <strong>write-through</strong> caches.</p></p>\n<p><p>On a <strong>write miss</strong>, data is written directly to L2 or memory without bringing it into L1.</p></p></p>\n<p><p><strong>Reasoning :</strong></p>\n\n<p>Since writes go through to the next level, there is less benefit in loading the cache line into L1 on a write miss.</p></p>\n<p><p><strong>Statement Error :</strong></p>\n\n<p>The statement claims that <strong>write allocate must be used</strong> with write-through caches, which is incorrect.</p></p>\n\n\n<p><strong>Write-Back Cache and No-Write Allocate :</strong></p>\n\n\n<p><p><strong>Typical Policy :</strong></p>\n\n<p><p><strong>Write Allocate</strong> is commonly used with <strong>write-back</strong> caches.</p></p>\n<p><p>On a <strong>write miss</strong>, the cache line is loaded into L1, and subsequent writes update the cache (dirty lines), deferring writebacks to L2 until eviction.</p></p></p>\n<p><p><strong>Reasoning :</strong></p>\n\n<p>Loading the cache line on a write miss allows the write-back cache to efficiently handle multiple writes to the same line.</p></p>\n<p><p><strong>Statement Error :</strong></p>\n\n<p>The statement claims that <strong>no-write allocate</strong> is used with write-back caches, which is incorrect.</p></p>\n\n\n<p><strong>Conclusion :</strong></p>\n\n\n<p><p><strong>Statement S₂ is false</strong> because :</p>\n\n<p><p><strong>No-Write Allocate</strong> is typically used with <strong>write-through</strong> caches.</p></p>\n<p><p><strong>Write Allocate</strong> is typically used with <strong>write-back</strong> caches.</p></p></p>\n\n<hr />\n<h3><strong>Final Answer :</strong></h3>\n\n<p><p><strong>Statement S₁ is true.</strong></p></p>\n<p><p><strong>Statement S₂ is false.</strong></p></p>\n\n<hr />\n<p><strong>Answer :</strong> Option D</p>\n<p><strong>S₁ is true and S₂ is false</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A computer system with a word length of 32 bits has a 16 MB byte-addressable main memory and a 64 KB, 4-way set associative cache memory with a block size of 256 bytes. Consider the following four physical addresses represented in hexadecimal notation.\n<br><br>A1 = 0x42C8A4, A2 = 0x546888, A3 = 0x6A289C, A4 = 0x5E4880\n<br><br>Which one of the following is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A1 and A4 are mapped to different cache sets."
+      },
+      {
+        "identifier": "B",
+        "content": "A1 and A3 are mapped to the same cache set."
+      },
+      {
+        "identifier": "C",
+        "content": "A3 and A4 are mapped to the same cache set."
+      },
+      {
+        "identifier": "D",
+        "content": "A2 and A3 are mapped to the same cache set."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>Cache memory size $=64 \\mathrm{~KB}=2^{16} \\mathrm{~B}$</p>\n<p>Block size $=256 \\mathrm{~B}=2^8 \\mathrm{~B}$</p>\n<p>$\\begin{aligned} &amp; \\Rightarrow \\text { Block offset }=8 \\text { bits } \\\\ &amp; \\text { Number of lines }=\\frac{2^{16}}{2^8}=2^8 \\\\ &amp; \\text { Number of sets }=\\frac{\\text { Number of lines }}{\\mathrm{P}-\\text { way }} \\\\ &amp; \\qquad=\\frac{2^8}{4}=2^6 \\\\ &amp; \\Rightarrow \\text { set offset }=6 \\text { bits }\\end{aligned}$</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mahw6w08/5c47777c-494a-4e2f-a15d-78f8b06286b2/c823b080-2d6e-11f0-857f-7513726195ee/file-jaoe38c1mahw6w09.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mahw6w08/5c47777c-494a-4e2f-a15d-78f8b06286b2/c823b080-2d6e-11f0-857f-7513726195ee/file-jaoe38c1mahw6w09.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Computer Organization - Memory Interfacing Question 18 English Explanation\">\n<p>$$ \\left.\\begin{array}{l} \\mathrm{A} 1=0 x 42 \\mathrm{C} 8 \\mathrm{~A} 4 \\rightarrow \\mathrm{C} 8=11001000 \\\\ \\mathrm{~A} 2=0 x 546888 \\rightarrow 68=01 \\underline{101000} \\\\ \\mathrm{~A} 3=0 x 6 \\mathrm{~A} 289 \\mathrm{C} \\rightarrow 28=00 \\underline{101000} \\end{array}\\right\\} \\quad \\text { LSB } 6 $$</p>\n<p>bits are same</p>\n<p>$$ \\mathrm{A} 4=0 x 5 \\mathrm{E} 4880 \\rightarrow 48=01001000 $$</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "A certain processor deploys a single-level cache. The cache block size is 8 words and the word size is 4 bytes. The memory system uses a $60-\\mathrm{MHz}$ clock. To service a cache miss, the memory controller first takes 1 cycle to accept the starting address of the block, it then takes 3 cycles to fetch all the eight words of the block, and finally transmits the words of the requested block at the rate of 1 word per cycle. The maximum bandwidth for the memory system when the program running on the processor issues a series of read operations is\n_________ $\\times 10^6$ bytes $/ \\mathrm{sec}$.",
+    "options": [],
+    "correct_options": [],
+    "answer": "160",
+    "explanation": "<p><strong>Determine the block size in bytes:</strong>  </p>\n\n\n<p><p>Word size = 4 bytes</p></p>\n<p><p>Block size = 8 words</p>\n<p>Therefore,  </p>\n<p>$    \\text{Block size in bytes} = 8 \\times 4 = 32 \\text{ bytes}.    $</p></p>\n\n\n<p><strong>Timing details:</strong></p>\n\n\n<p><p>The memory system clock = 60 MHz (which means one cycle = 1/60,000,000 seconds).</p></p>\n<p><p>To service a cache miss (to fetch one block):</p>\n\n<p><p>1 cycle to accept the starting address.</p></p>\n<p><p>3 cycles to fetch all 8 words internally.</p></p>\n<p><p>After that, the words are transmitted at a rate of 1 word per cycle.</p></p>\n<p>In total, for one block transfer:</p></p>\n<p><p>Overhead cycles (address + fetch) = 1 + 3 = 4 cycles</p></p>\n<p><p>Data transfer cycles (8 words, 1 word per cycle) = 8 cycles</p>\n<p>Total cycles per block = 4 (overhead) + 8 (transfer) = 12 cycles.</p></p>\n\n\n<p><p><strong>Calculating the bandwidth:</strong></p>\n<p>Each block of 32 bytes takes 12 cycles to transfer.</p>\n<p>Each cycle = 1/60 MHz = 1/60,000,000 s = (approximately 1.6667e-8 s).</p>\n<p>The number of bytes transferred per cycle is $\\frac{32 \\text{ bytes}}{12 \\text{ cycles}} \\approx 2.6667 \\text{ bytes/cycle}$.</p>\n<p>At 60 MHz (60 million cycles per second):</p>\n<p>$    \\text{Bandwidth} = 2.6667 \\times 60,000,000 \\text{ bytes/s} = 160,000,000 \\text{ bytes/s}.    $</p>\n<p>In terms of $ \\times 10^6 $ bytes/sec:</p>\n<p>$    160,000,000 \\text{ bytes/s} = 160 \\times 10^6 \\text{ bytes/s}.    $</p></p>\n\n<p><strong>Final Answer:</strong></p>\n<p>$ \\boxed{160 \\times 10^6 \\text{ bytes/s}} $</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "The size of the physical address space of a processor is $${2^P}$$ bytes. The word length is $${2^W}$$ bytes. The capacity of cache memory is $${2^N}$$ bytes. The size of each cache block is $${2^M}$$ words. For a $$K$$-way set-associative cache memory, the length (in number of bits) of the tag field is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P - N - lo{g_2}K$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P - N + lo{g_2}K$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$P - N - M - W - lo{g_2}\\,\\,K$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$P - N - M - W + lo{g_2}\\,\\,K$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>A physical address is composed of three fields:</p>\n<ol>\n<li><p><strong>Block Offset (BO)</strong>: Identifies a specific byte within a cache block.</p></li>\n<li><p><strong>Set Index (SI)</strong>: Identifies which set in the cache the block resides in.</p></li>\n<li><p><strong>Tag (T)</strong>: Identifies a unique block within the main memory that maps to a particular set.</p></li>\n</ol>\n<p>The total length of the physical address is $P$ bits, derived from the physical address space size of $2^P$ bytes.</p>\n<p>Let's calculate the length of each field:</p>\n<p><strong>1. Block Offset (BO)</strong></p>\n<p>The size of each cache block is given as $2^M$ words.</p>\n<p>The word length is $2^W$ bytes.</p>\n<p>Therefore, the size of each cache block in bytes is:</p>\n<p>Block Size (B) = ($2^M$ words) * ($2^W$ bytes/word) = $2^{M+W}$ bytes.</p>\n<p>The number of bits required for the block offset is $log_2(\\text{Block Size in bytes})$.</p>\n<p>Length of Block Offset = $log_2(2^{M+W}) = M+W$ bits.</p>\n<p><strong>2. Set Index (SI)</strong></p>\n<p>The capacity of the cache memory is $2^N$ bytes.</p>\n<p>The number of blocks (or lines) in the cache is:</p>\n<p>Total Number of Blocks = Cache Capacity / Block Size</p>\n<p>Total Number of Blocks = $2^N / 2^{M+W} = 2^{N-(M+W)}$ blocks.</p>\n<p>For a K-way set-associative cache, these blocks are organized into sets, with K blocks per set.</p>\n<p>Number of Sets = Total Number of Blocks / K</p>\n<p>Number of Sets = $2^{N-(M+W)} / K$.</p>\n<p>The number of bits required for the set index is $log_2(\\text{Number of Sets})$.</p>\n<p>Length of Set Index = $log_2(2^{N-(M+W)} / K)$</p>\n<p>Length of Set Index = $log_2(2^{N-M-W}) - log_2(K)$</p>\n<p>Length of Set Index = $(N-M-W) - log_2(K)$ bits.</p>\n<p><strong>3. Tag (T)</strong></p>\n<p>The total length of the physical address is $P$ bits. The Tag field comprises the remaining bits after accounting for the Set Index and Block Offset fields.</p>\n<p>Length of Tag = Total Physical Address Length - Length of Set Index - Length of Block Offset</p>\n<p>Length of Tag = $P - [(N-M-W) - log_2(K)] - [M+W]$</p>\n<p>Length of Tag = $P - (N-M-W) + log_2(K) - (M+W)$</p>\n<p>Length of Tag = $P - N + M + W + log_2(K) - M - W$</p>\n<p>Length of Tag = $P - N + log_2(K)$ bits.</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "The width of the physical address on a machine is $$40$$ bits. The width of the tag field in a $$512$$ $$KB$$ $$8$$-way set associative cache is _____________ bits.\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "24",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A file system uses an in-memory cache to cache disk blocks. The miss rate of the cache is shown in the figure. The latency to read a block from the cache is $$1$$ $$ms$$ and to read a block from the disk is $$10$$ $$ms.$$ Assume that the cost of checking whether a block exists in the cache is negligible. Available cache sizes are in multiples of $$10$$ $$MB.$$\n <img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/FvNqOwkoOYkKrAX5V/HrWWoaOP7QJbDKNGpXmP9kvN25OAO/AkhGflBC5Gx1c9AIR78QoK/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2016 Set 2 Computer Organization - Memory Interfacing Question 24 English\"> \n<p>The smallest cache size required to ensure an average read latency of less than $$6$$ $$ms$$ is _________ $$MB.$$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "30",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In designing a computer’s cache system, the cache block (or cache line) size is an important parameter. Which one of the following statements is correct in this context?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A smaller block size implies better spatial locality"
+      },
+      {
+        "identifier": "B",
+        "content": "A smaller block size implies a smaller cache tag and hence lower cache tag overhead\n "
+      },
+      {
+        "identifier": "C",
+        "content": "A smaller block size implies a larger cache tag and hence lower cache hit time "
+      },
+      {
+        "identifier": "D",
+        "content": "A smaller block size incurs a lower cache miss penalty "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A $$4$$-way set-associative cache memory unit with a capacity of $$16KB$$ is built using a block size of $$8$$ words. The word length is $$32$$ bits. The size of the physical address space is $$4$$ $$GB.$$ The number of bit for the TAG field is ____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "20",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "If the associativity of a processor cache is doubled while keeping the capacity and block size unchanged, which one of the following is guaranteed to be NOT affected?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Width of tag comparator "
+      },
+      {
+        "identifier": "B",
+        "content": "Width of set index decoder \n"
+      },
+      {
+        "identifier": "C",
+        "content": "Width of way selection multiplexor "
+      },
+      {
+        "identifier": "D",
+        "content": "Width of processor to main memory data bus  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a main memory system that consists of 8 memory modules attached to the system bus, which is one word wide. When a write request is made, the bus is occupied for $$100$$ nanoseconds ($$ns$$) by the data, address, and control signals. During the same $$100$$ $$ns$$, and for $$500$$ $$ns$$ thereafter, the addressed memory module executes one cycle accepting and storing the data. The (internal) operation of different memory modules may overlap in time, but only one request can be on the bus at any time. The maximum number of stores (of one word each) that can be initiated in $$1$$ millisecond is ____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "10000",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The memory access time is $$1$$ nanosecond for a read operation with a hit in cache, $$5$$ nanoseconds for a read operation with a miss in cache, $$2$$ nanoseconds for a write operation with a hit in cache and $$10$$ nanoseconds for a write operation with a miss in cache. Execution of a sequence of instructions involves $$100$$ instruction fetch operations, $$60$$ memory operand read operations and $$40$$ memory operand write operations. The cache hit-ratio is $$0.9.$$ The average memory access time (in nanoseconds) in executing the sequence of instructions is___________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.68",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A $$RAM$$ chip has a capacity of $$1024$$ words of $$8$$ bits each $$\\left( {1K \\times 8} \\right).$$ The number of $$2 \\times 4$$ decoders with enable line needed to construct a $$16K \\times 16\\,\\,RAM$$ from $$1K \\times 8\\,\\,RAM$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$6$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$7$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A computer has a $$256$$ $$K$$ Byte, $$4$$-way set associative, write back data cache with block size of $$32$$ Bytes. The processor sends $$32$$ bit addresses to the cache controller. Each cache tag director $$y$$ entry contains, in addition to address tag, $$2$$ valid bits. $$1$$ modified bit and $$1$$ replacement bit.\n<p>The size of the cache tag directory is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$160$$ $$K$$ bits"
+      },
+      {
+        "identifier": "B",
+        "content": "$$136$$ $$K$$ bits"
+      },
+      {
+        "identifier": "C",
+        "content": "$$40$$ $$K$$ bits"
+      },
+      {
+        "identifier": "D",
+        "content": "$$32$$ $$K$$ bits"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "A computer has a $$256$$ $$K$$ Byte, $$4$$-way set associative, write back data cache with block size of $$32$$ Bytes. The processor sends $$32$$ bit addresses to the cache controller. Each cache tag director $$y$$ entry contains, in addition to address tag, $$2$$ valid bits. $$1$$ modified bit and $$1$$ replacement bit.\n<p>The number of bit in the tag field of an address is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$11$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$14$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$16$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$27$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "An $$8KB$$ direct-mapped write-back cache is organized as multiple blocks, each of size $$32$$-bytes. The processor generates $$32$$-bit addresses. The cache controller maintains the tag information for each cache block comprising of the following.\n<br>$$\\,\\,\\,\\,$$$$1$$ Valid bit\n<br>$$\\,\\,\\,\\,$$$$1$$ Modified bit\n<p>As many bits as the minimum needed to identify the memory block mapped in the cache.</p>\n<p>What is the total size of memory needed at the cache controller to store meta-data (tags) for the cache?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4864$$ bits "
+      },
+      {
+        "identifier": "B",
+        "content": "$$6144$$ bits "
+      },
+      {
+        "identifier": "C",
+        "content": "$$6656$$ bits "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5376$$ bits "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A computer system has an $$L1$$ cache, an $$L2$$ cache, and a main memory unit connected as shown below. The block size in $$L1$$ cache is $$4$$ words. The block size in $$L2$$ cache is $$16$$ words. The memory access times are $$2$$ nanoseconds, $$20$$ nanoseconds and $$200$$ nanoseconds for $$L1$$ cache, $$L2$$ cache and main memory unit respectively. \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/fU2Bzp3qkmVwuW4YC/Tc2gHrRosfVXFUjbPFvf1VLNA9P5x/vbAaBHcNydeSEchKVXm1Bv/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2010 Computer Organization - Memory Interfacing Question 29 English\"> \n<p>When there is a miss in both $$L1$$ cache and $$L2$$ cache, first a block is transferred from main memory to $$L2$$ cache, and then a block is transferred from $$L2$$ cache to $$L1$$ cache. \n<br>What is the total time taken for these transfers?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$222$$ nanoseconds "
+      },
+      {
+        "identifier": "B",
+        "content": "$$888$$ nanoseconds "
+      },
+      {
+        "identifier": "C",
+        "content": "$$902$$ nanoseconds"
+      },
+      {
+        "identifier": "D",
+        "content": "$$968$$ nanoseconds"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "A computer system has an $$L1$$ cache, an $$L2$$ cache, and a main memory unit connected as shown below. The block size in $$L1$$ cache is $$4$$ words. The block size in $$L2$$ cache is $$16$$ words. The memory access times are $$2$$ nanoseconds, $$20$$ nanoseconds and $$200$$ nanoseconds for $$L1$$ cache, $$L2$$ cache and main memory unit respectively. \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/fU2Bzp3qkmVwuW4YC/Tc2gHrRosfVXFUjbPFvf1VLNA9P5x/vbAaBHcNydeSEchKVXm1Bv/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2010 Computer Organization - Memory Interfacing Question 30 English\"> \n<p>When there is a miss in $$L1$$ cache and a hit in $$L2$$ cache, a block is transferred from $$L2$$ cache to $$L1$$ cache. What is the time taken for this transfer?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ nanoseconds"
+      },
+      {
+        "identifier": "B",
+        "content": "$$20$$ nanoseconds"
+      },
+      {
+        "identifier": "C",
+        "content": "$$22$$ nanoseconds"
+      },
+      {
+        "identifier": "D",
+        "content": "$$88$$ nanoseconds"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a $$4$$-way set associative cache (initially empty) with total $$16$$ cache blocks. The main memory consists of $$256$$ blocks and the request for memory blocks is in the following order: \n<br>0, 255, 1, 4, 3, 8, 133, 159, 216, 129, 63, 8, 48, 32, 73, 92, 155.\n<p>Which one of the following memory block will NOT be in cache if $$LRU$$ replacement policy is used?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$129$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$216$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "For inclusion to hold between two cache levels $$L1$$ and $$L2$$ in a multilevel cache hierarchy, which of the following are necessary?\n<p>$$1.$$ $$L1$$ must be a write-through cache\n<br>$$2.$$ $$L2$$ must be a write-through cache\n<br>$$3.$$ The associativity of $$L2$$ must be greater than that of $$L1$$\n<br>$$4.$$ The $$L2$$ cache must be at least as large as the $$L1$$ cache</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ and $$2$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1,2$$ and $$4$$ only"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1,2,3$$ and $$4$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a machine with a byte addressable main memory of $${2^{16}}$$ bytes. Assume that a direct mapped data cache consisting of $$32$$ lines of $$64$$ bytes each is used in the system. $$A\\,\\,50 \\times 50$$ two-dimensional array of bytes is stored in the main memory starting from memory location $$1100H.$$ Assume that the data cache is initially empty. The complete array is accessed twice. Assume that the contents of the data cache do not change in between the two accesses. \n<p>Which of the following lines of the data cache will be replaced by new blocks in accessing the array?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "line $$4$$ to line $$11$$"
+      },
+      {
+        "identifier": "B",
+        "content": "line $$4$$ to line $$12$$"
+      },
+      {
+        "identifier": "C",
+        "content": "line $$0$$ to line $$7$$"
+      },
+      {
+        "identifier": "D",
+        "content": "line $$0$$ to line $$8$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a machine with a byte addressable main memory of $${2^{16}}$$ bytes. Assume that a direct mapped data cache consisting of $$32$$ lines of $$64$$ bytes each is used in the system. $$A\\,\\,50 \\times 50$$ two-dimensional array of bytes is stored in the main memory starting from memory location $$1100H.$$ Assume that the data cache is initially empty. The complete array is accessed twice. Assume that the contents of the data cache do not change in between the two accesses. \n<p>How many data cache misses will occur in total?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$48$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$50$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$56$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$59$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A $$CPU$$ has a cache with block size $$64$$ bytes. The main memory has $$k$$ banks, each bank being $$c$$ bytes wide. Consecutive $$c$$-byte chunks are mapped on consecutive banks with wrap-around. All the $$k$$ banks can be accessed in parallel, but two accesses to the same bank must be serialized. A cache block access may involve multiple iterations of parallel bank accesses depending on the amount of data obtained by accessing all the $$k$$ banks in parallel. Each iteration requires decoding the bank numbers to be accessed in parallel and this takes $$k/2$$ $$ns.$$ The latency of one bank access is $$80$$ $$ns.$$ If $$c=2$$ and $$k=24,$$ then latency of retrieving a cache block starting at address zero from main memory is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$92$$ $$ns$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$104$$  $$ns$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$172$$ $$ns$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$184$$ $$ns$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two cache organization: The first one is $$32$$ $$KB$$ $$2$$-way set associate with $$32$$-byte block size. The second one is of the same size but direct mapped. The size of an address is $$32$$ bits in both cases. $$A$$ $$2$$-to-$$1$$ multiplexer has latency. of $$0.6$$ $$ns$$ while a $$k$$-bit comparator has a latency of $$k/10$$ $$ns.$$ The bit latency of the set associative organization is $${h_1}$$ while that of the direct mapped one is $${h_2}.$$\n<p>The value of $${h_1}$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2.4$$ $$ns$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2.3$$ $$ns$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1.8$$ $$ns$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.7$$ $$ns$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two cache organization: The first one is $$32$$ $$KB$$ $$2$$-way set associate with $$32$$-byte block size. The second one is of the same size but direct mapped. The size of an address is $$32$$ bits in both cases. $$A$$ $$2$$-to-$$1$$ multiplexer has latency. of $$0.6$$ $$ns$$ while a $$k$$-bit comparator has a latency of $$k/10$$ $$ns.$$ The bit latency of the set associative organization is $${h_1}$$ while that of the direct mapped one is $${h_2}.$$\n<p>The value of $${h_2}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2.4$$ $$ns$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$2.3$$ $$ns$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$1.8$$ $$ns$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.7$$ $$ns$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a direct mapped cache of size $$32$$ $$KB$$ with block size $$32$$ bytes. The $$CPU$$ generates $$32$$ bit addresses. The number of bits needed for cache indexing and the number of tag bits are respectively",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10, 17$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10,22$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$15,17$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5, 17$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a small two-way set-associative cache memory, consisting of four blocks. For choosing the block to be replaced, uses the least recently used $$(LRU)$$ scheme. The number of cache misses for the following sequence of blocks addresses is $$8,12,0,12,8$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A block -set associative cache memory consists of $$128$$ blocks divided into four block sets. The main memory consists of $$16,384$$ blocks and each blocks contains $$256$$ eight bit words. \n<p>(i) How many bits are required for addressing the main memory?</p> \n<p>(ii) How many bits are needed to represent the TAG, SET and WORD fields?</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(i) $$22$$ bits\n<p>(ii) TAG $$=9$$ bits\n<br>SET $$=5$$ bits\n<br>WORD $$=8$$ bits</p>\n",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "A $$CPU$$ has $$32$$-bit memory address and a $$256$$ $$KB$$ cache memory. The cache is organized as a $$4$$-way set associative cache with cache block size of $$16$$ bytes.\n<p>(a)$$\\,\\,\\,\\,$$ What is the number of sets in the cache?\n<br>(b)$$\\,\\,\\,\\,$$ What is the size (in bits) of the tag field per cache block?\n<br>(c)$$\\,\\,\\,\\,$$ What is the number and size of comparators required for tag matching?\n<br>(d)$$\\,\\,\\,\\,$$ How many address bits are required to find the byte offset within a cache block?\n<br>(e)$$\\,\\,\\,\\,$$ What is the total amount of extra memory (in bytes) required for the tag bits?</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a)$$\\,\\,\\,\\,$$ $$4$$ $$K$$ Sets\n<br>(b)$$\\,\\,\\,\\,$$ Size of the tag field $$=16$$ \n<br>(c)$$\\,\\,\\,\\,$$ $$4$$ comparators required and each size is $$16$$ bits\n<br>(d)$$\\,\\,\\,\\,$$ $$4$$ bits\n<br>(e)$$\\,\\,\\,\\,$$ $$256$$ $$K$$ bits.",
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "A computer system has a three level memory hierarchy, with access time and hit ratios as shown below:\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/rRPIHKA28OEvctbsn/Iic0kTTMZtEto1Ivgw4YwU2tJx9at/s3TxAHpnLoVrqzxnsM6U3p/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1996 Computer Organization - Memory Interfacing Question 31 English 1\">\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/dfU4fXiY0Jgzf0ro7/mYzuD9smPNRMx4ZBNui3nBmuWEi7d/oEEusTuuoylNwwtdFpKEtr/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1996 Computer Organization - Memory Interfacing Question 31 English 2\"> \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/TI8WtKevKaZI6HFNP/d8A0HdVJS9FzckU7LQUDrMOmrcqWB/bmRN8UYr32Ffi6FDwABgjR/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1996 Computer Organization - Memory Interfacing Question 31 English 3\"> \n<p>(i) What should be the minimum size of level  $$1$$ and $$2$$ memories to achieve an average access time of less than $$100$$ nsec? </p>\n<p>(ii) What is the average access time achieved using the chosen sizes of level $$1$$ and level $$2$$ memories?</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  }
+]

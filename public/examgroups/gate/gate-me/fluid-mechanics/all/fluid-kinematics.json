@@ -1,0 +1,1239 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The velocity field of a two-dimensional,\n incompressible flow is given by $\\overrightarrow{V} = \n\\ 2sin{h}\\,x\\,\\hat{i} + v(x,y)\\hat{j}$ where $\n\\hat{i}$ and $\\underset{\\dot{}}{j}$ denote the unit vectors in x and y \ndirections, respectively. If $v(x, 0) = cosh\\ x$, then $v(0,-1)$\n is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>1</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>2</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>3</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>4</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve for $ v(0, -1) $, we first utilize the continuity equation for incompressible flow in two dimensions:</p>\n\n<p>$$ \\frac{\\partial u}{\\partial x} + \\frac{\\partial v}{\\partial y} = 0 $$</p>\n\n<p>Given the velocity field:</p>\n\n<p>$$ \\overrightarrow{V} = 2 \\sinh{x} \\, \\hat{i} + v(x,y) \\hat{j} $$</p>\n\n<p>we identify $ u = 2 \\sinh{x} $ and $ v = v(x,y) $. Now substituting $ u $ into the continuity equation, we get:</p>\n\n<p>$$ \\frac{\\partial (2 \\sinh{x})}{\\partial x} + \\frac{\\partial v}{\\partial y} = 0 $$</p>\n\n<p>The partial derivative of $ u $ with respect to $ x $ is:</p>\n\n<p>$$ \\frac{\\partial (2 \\sinh{x})}{\\partial x} = 2 \\cosh{x} $$</p>\n\n<p>Thus, the continuity equation becomes:</p>\n\n<p>$$ 2 \\cosh{x} + \\frac{\\partial v}{\\partial y} = 0 $$</p>\n\n<p>Solving for $ \\frac{\\partial v}{\\partial y} $, we get:</p>\n\n<p>$$ \\frac{\\partial v}{\\partial y} = -2 \\cosh{x} $$</p>\n\n<p>To find $ v(x, y) $, we integrate the above equation with respect to $ y $:</p>\n\n<p>$$ v(x, y) = \\int -2 \\cosh{x} \\, dy $$</p>\n\n<p>Since $\\cosh{x}$ is independent of $ y $, we can treat it as a constant during integration:</p>\n\n<p>$$ v(x, y) = -2 \\cosh{x} \\cdot y + f(x) $$</p>\n\n<p>where $ f(x) $ is a function of $ x $ only. Given the boundary condition $ v(x, 0) = \\cosh{x} $, we substitute $ y = 0 $ into the equation:</p>\n\n<p>$$ \\cosh{x} = -2 \\cosh{x} \\cdot 0 + f(x) $$</p>\n\n<p>Therefore, $ f(x) = \\cosh{x} $ and hence:</p>\n\n<p>$$ v(x, y) = -2 \\cosh{x} \\cdot y + \\cosh{x} $$</p>\n\n<p>Now, we substitute $ x = 0 $ and $ y = -1 $ to find $ v(0, -1) $:</p>\n\n<p>$$ v(0, -1) = -2 \\cosh{0} \\cdot (-1) + \\cosh{0} $$</p>\n\n<p>Since $ \\cosh{0} = 1 $, this simplifies to:</p>\n\n<p>$$ v(0, -1) = -2 \\cdot 1 \\cdot (-1) + 1 = 2 + 1 = 3 $$</p>\n\n<p>Therefore, the answer is:</p>\n\n<p>Option C</p>\n\n<p>3</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-me-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "The velocity field in a fluid is given to be&nbsp;<span class=\"math-tex\">$\\vec{V}=(4xy)\\hat{i}+2(x^2-y^2)\\hat{j}$</span> Which of the following statement(s) is/are correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The velocity field is one-dimensional."
+      },
+      {
+        "identifier": "B",
+        "content": "The flow is incompressible."
+      },
+      {
+        "identifier": "C",
+        "content": "The flow is irrotational."
+      },
+      {
+        "identifier": "D",
+        "content": "The acceleration experienced by a fluid particle is zero at (x = 0, y = 0)."
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "<p><p><strong>Incompressibility Check</strong> :</p>\n\n<p>To check if the flow is incompressible, we evaluate the divergence of the velocity field :</p>\n<p>$$     \\vec{\\nabla} \\cdot \\vec{V} = \\frac{\\partial u}{\\partial x} + \\frac{\\partial v}{\\partial y} + \\frac{\\partial w}{\\partial z}     $$</p>\n<p>Given :</p>\n\n<p><p>$ u = 4xy $</p></p>\n<p><p>$ v = 2(x^2 - y^2) $</p></p>\n<p><p>$ w = 0 $</p></p>\n<p>Hence,</p>\n<p>$$     \\frac{\\partial u}{\\partial x} = 4y, \\quad \\frac{\\partial v}{\\partial y} = -4y, \\quad \\text{and} \\quad \\frac{\\partial w}{\\partial z} = 0     $$</p>\n<p>So,</p>\n<p>$$     \\vec{\\nabla} \\cdot \\vec{V} = 4y - 4y = 0     $$</p>\n<p>Since the divergence is zero, the flow is incompressible.</p></p>\n<p><p><strong>Irrotational Flow Check</strong> :</p>\n\n<p>To check if the flow is irrotational, we compute the vorticity component $ \\omega_z $ :</p>\n<p>$$     \\omega_z = \\frac{1}{2} \\left( \\frac{\\partial v}{\\partial x} - \\frac{\\partial u}{\\partial y} \\right)     $$</p>\n<p>Calculating the partial derivatives :</p>\n<p>$$     \\frac{\\partial v}{\\partial x} = \\frac{\\partial}{\\partial x} \\left[ 2(x^2 - y^2) \\right] = 4x     $$</p>\n<p>$$     \\frac{\\partial u}{\\partial y} = \\frac{\\partial}{\\partial y} (4xy) = 4x     $$</p>\n<p>Therefore,</p>\n<p>$$     \\omega_z = \\frac{1}{2}(4x - 4x) = 0     $$</p>\n<p>Since $ \\omega_z = 0 $, the flow is irrotational.</p></p>\n<p><p><strong>Acceleration at $ (x = 0, y = 0) $</strong> :</p>\n\n<p>The acceleration components are given by :</p>\n<p>$$     a_x = u \\frac{\\partial u}{\\partial x} + v \\frac{\\partial u}{\\partial y} + \\text{{other terms}}     $$</p>\n<p>$$     a_y = u \\frac{\\partial v}{\\partial x} + v \\frac{\\partial v}{\\partial y} + \\text{{other terms}}     $$</p>\n<p>Calculating $ a_x $ :</p>\n<p>$$     a_x = (4xy) \\frac{\\partial (4xy)}{\\partial x} + \\left(2(x^2 - y^2)\\right) \\frac{\\partial (4xy)}{\\partial y}     $$</p>\n<p>$$     = 4xy \\cdot 4y + 2(x^2 - y^2) \\cdot 4x     $$</p>\n<p>$$     = 16 xy^2 + 8y^3 - 8x^2 y     $$</p>\n<p>At $ (x = 0, y = 0) $ :</p>\n<p>$$     a_x = 0     $$</p>\n<p>Calculating $ a_y $ :</p>\n<p>$$     a_y = (4xy) \\frac{\\partial (2(x^2 - y^2))}{\\partial x} + \\left(2(x^2 - y^2)\\right) \\frac{\\partial (2(x^2 - y^2))}{\\partial y}     $$</p>\n<p>$$     = 4xy \\cdot 4x + 2(x^2 - y^2) \\cdot (-4y)     $$</p>\n<p>$$     = 16 x^2y - 8y^3 - 8x^2 y     $$</p>\n<p>At $ (x = 0, y = 0) $ :</p>\n<p>$$     a_y = 0     $$</p>\n<p>Therefore, the total acceleration $ a_{\\text{total}} $ is :</p>\n<p>$$     a_{\\text{total}} = \\sqrt{a_x^2 + a_y^2} = \\sqrt{0 + 0} = 0     $$</p>\n<p>Hence, the acceleration experienced by a fluid particle is zero at $ (x = 0, y = 0) $.</p></p>\n\n<p>Given that the velocity field exhibits non-zero components in both $ \\hat{i} $ and $ \\hat{j} $ directions, the velocity field is two-dimensional.</p>\n<h3>Correct Options :</h3>\n\n<p><p><strong>Option B</strong> : The flow is incompressible.</p></p>\n<p><p><strong>Option C</strong> : The flow is irrotational.</p></p>\n<p><p><strong>Option D</strong> : The acceleration experienced by a fluid particle is zero at $ (x = 0, y = 0) $.</p></p>\n",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "A tiny temperature probe is fully immersed in a flowing fluid and is moving with zero relative velocity with respect to the fluid. The velocity field in the fluid is&nbsp;<span class=\"math-tex\">$\\vec V = (2x) \\hat i + (y + 3t) \\hat j,$</span>&nbsp;and the temperature field in the fluid is&nbsp;T = 2x<sup>2</sup> + xy + 4t, where x and y are the spatial coordinates, and t is the time. The time rate of change of temperature recorded by the probe at (x = 1, y = 1, t = 1) is _______.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "0"
+      },
+      {
+        "identifier": "C",
+        "content": "18"
+      },
+      {
+        "identifier": "D",
+        "content": "14"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>To determine the time rate of change of temperature recorded by the probe, we need to calculate the material derivative of the temperature field, which is given by:</p>\n\n<p>$$\\frac{dT}{dt} = \\frac{\\partial T}{\\partial t} + \\vec{V} \\cdot \\nabla T$$</p>\n\n<p>Given the velocity field:</p>\n\n<p>$$\\vec{V} = (2x) \\hat{i} + (y + 3t) \\hat{j}$$</p>\n\n<p>and the temperature field:</p>\n\n<p>$$T = 2x^2 + xy + 4t$$</p>\n\n<p>we first compute the partial derivatives of $ T $.</p>\n\n<p>1. Partial derivative with respect to time t:</p>\n\n<p>$$\\frac{\\partial T}{\\partial t} = 4$$</p>\n\n<p>2. Partial derivatives with respect to spatial coordinates x and y:</p>\n\n<p>$$\\frac{\\partial T}{\\partial x} = 4x + y$$</p>\n\n<p>$$\\frac{\\partial T}{\\partial y} = x$$</p>\n\n<p>Next, we compute the gradient of T:</p>\n\n<p>$$\\nabla T = \\frac{\\partial T}{\\partial x} \\hat{i} + \\frac{\\partial T}{\\partial y} \\hat{j} = (4x + y) \\hat{i} + x \\hat{j}$$</p>\n\n<p>Now, we calculate the dot product of the velocity vector $ \\vec{V} $ and the gradient of $ T $:</p>\n\n<p>$$\\vec{V} \\cdot \\nabla T = [(2x) \\hat{i} + (y + 3t) \\hat{j}] \\cdot [(4x + y) \\hat{i} + x \\hat{j}] = (2x)(4x + y) + (y + 3t)x$$</p>\n\n<p>This simplifies to:</p>\n\n<p>$$\\vec{V} \\cdot \\nabla T = 8x^2 + 2xy + xy + 3tx = 8x^2 + 3xy + 3tx$$</p>\n\n<p>Now, substituting the point $ (x = 1, y = 1, t = 1) $:</p>\n\n<p>$$\\vec{V} \\cdot \\nabla T = 8(1)^2 + 3(1)(1) + 3(1)(1) = 8 + 3 + 3 = 14$$</p>\n\n<p>Adding the partial derivative with respect to time:</p>\n\n<p>$$\\frac{dT}{dt} = 4 + 14 = 18$$</p>\n\n<p>Therefore, the time rate of change of temperature recorded by the probe is <b>18</b>.</p>\n\n<p><b>Option C is the correct answer.</b></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the two-dimensional velocity field given by \n<br>$$\\overrightarrow V  = \\left( {5 + {a_1}x + {b_1}y} \\right)\\widehat i + \\left( {4 + {a_2}x + {b_2}y} \\right)\\widehat j,$$ \n<br>where $${a_1},\\,\\,{b_1},\\,\\,{a_2}$$  and $${b^2}$$ are constants. Which one of the following conditions needs to be satisfied for the flow to be incompressible? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${a_1} + {b_1} = 0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${a_1} + {b_2} = 0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${a_2} + {b_2} = 0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${a_2} + {b_1} = 0$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The volume tric flow rate (per unit depth) between two streamlines having stream functions $${\\psi _1}$$ &amp; $${\\psi _2}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left| {{\\psi _1} + {\\psi _2}} \\right|$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\psi _1}{\\psi _2}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{\\psi _1}/{\\psi _2}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left| {{\\psi _1} - {\\psi _2}} \\right|$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For a certain two-dimensional incompressible flow, velocity field is given by $$2xy\\widehat i - {y^2}\\widehat j.$$ The streamlines for this flow are given by the family of curves",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${x^2}{y^2} = $$ constant "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x{y^2} = $$ constant "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2xy - {y^2}$$ $$=$$ constant "
+      },
+      {
+        "identifier": "D",
+        "content": "$$xy = $$ constant "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A channel of width $$450$$ $$mm$$ branches into two sub-channels having width $$300$$ $$mm$$ and $$200$$ $$mm$$ as shown in figure. If the volumetric flow rate (taking unit depth) of an incompressible flow through the main channel is $$0.9$$ $$3$$ $$m/s,$$ and the velocity in the sub-channel of width $$200$$ $$mm$$ is $$3$$ $$m/s,$$ the\nvelocity in the sub-channel of width $$300$$ $$mm$$ is _____________  $$m/s$$.\n<p>Assume both inlet and outlet to be at the same elevation.</p>\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/X3SPl1dM3dfYhPKCF/DWFlA3D2H0kwP4OMJbF0ThHY1jBFf/zusQxzmXvgcUP8eIruASJ7/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ME 2016 Set 3 Fluid Mechanics - Fluid Kinematics Question 27 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.99 to 1.01",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "If the fluid velocity for a potential flow is given by $$V\\left( {x,y} \\right) = u\\left( {x,y} \\right)i + v\\left( {x,y} \\right)j$$ with usual notations, then the slope of potential line at $$(x, y)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${v \\over u}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - {u \\over v}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{v^2}} \\over {{u^2}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${u \\over v}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A flow field which has only convective acceleration is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a steady uniform flow "
+      },
+      {
+        "identifier": "B",
+        "content": "an unsteady uniform flow "
+      },
+      {
+        "identifier": "C",
+        "content": "a steady non-uniform flow"
+      },
+      {
+        "identifier": "D",
+        "content": "an unsteady non-uniform flow"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "A flow field which has only convective acceleration is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a steady uniform flow "
+      },
+      {
+        "identifier": "B",
+        "content": "an unsteady uniform flow "
+      },
+      {
+        "identifier": "C",
+        "content": "a steady non-uniform flow"
+      },
+      {
+        "identifier": "D",
+        "content": "an unsteady non-uniform flow"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "For an incompressible flow field , $$\\overrightarrow {V,} $$ which one of the following conditions must be satisfied? \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\nabla .\\overrightarrow V  = 0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\nabla  \\times \\overrightarrow V  = 0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\overrightarrow V .\\nabla } \\right)\\overrightarrow V  = 0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\partial \\overrightarrow V } \\over {\\partial t}} + \\left( {\\overrightarrow V .\\nabla } \\right)\\overrightarrow V  = 0$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A streamline and an equipotential line in a flow field ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "are parallel to each other "
+      },
+      {
+        "identifier": "B",
+        "content": "are perpendicular to each other "
+      },
+      {
+        "identifier": "C",
+        "content": "intersect at an acute angle "
+      },
+      {
+        "identifier": "D",
+        "content": "are identical "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-me-2011",
+    "difficulty": null
+  },
+  {
+    "content": "For a continuity equation given $$\\nabla .\\overrightarrow V  = 0$$ to be valid, $$\\overrightarrow V $$ where is the velocity vector, which one of the folllowing is a necessary condition ? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Steady flow "
+      },
+      {
+        "identifier": "B",
+        "content": "Irrotational flow "
+      },
+      {
+        "identifier": "C",
+        "content": "Inviscid flow"
+      },
+      {
+        "identifier": "D",
+        "content": "Incompressible flow"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "In a steady flow through a nozzle, the flow velocity on the nozzle axis is given by $$u = {u_0}\\left( {1 + 3x/L} \\right),\\,\\,$$ where $$x$$ is the distance along the axis of the nozzle from its inlet plane and $$L$$ is the length of the nozzle. The time required for a fluid particle on the axis to travel from the inlet to the exit plane of the nozzle is .",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${L \\over {{u_0}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${L \\over {3{u_0}}}ln4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${L \\over {4{u_0}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${L \\over {2.5{u_0}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  },
+  {
+    "content": "In a two-dimensional velocity field with velocities $$u$$ and $$v$$ along $$x$$ and $$y$$ directions respectively, the convective acceleration along the $$x$$-direction is given by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$u{{\\partial u} \\over {\\partial x}} + v{{\\partial u} \\over {\\partial y}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$u{{\\partial u} \\over {\\partial x}} + v{{\\partial v} \\over {\\partial y}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$u{{\\partial v} \\over {\\partial x}} + v{{\\partial u} \\over {\\partial y}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$v{{\\partial u} \\over {\\partial x}} + u{{\\partial u} \\over {\\partial y}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-me-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A two-dimensional flow field has velocities along the $$x$$ and $$y$$ directions given by $$u = {x^2}t$$ and $$v =  - 2xyt$$ respectively, where $$t$$ is time. The equation of streamline is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${x^2}y = $$ constant "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x\\,{y^2} = $$ constant "
+      },
+      {
+        "identifier": "C",
+        "content": "$$x$$ $$y$$ $$=$$ constant"
+      },
+      {
+        "identifier": "D",
+        "content": "not possible to determine "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-me-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The velocity components in the $$x$$ and $$y$$ directions of a two dimensional potential flow are $$u$$ and $$v$$, respectively. Then $${{\\partial u} \\over {\\partial y}}$$ is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{\\partial v} \\over {\\partial x}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - {{\\partial v} \\over {\\partial x}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{\\partial v} \\over {\\partial y}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - {{\\partial v} \\over {\\partial y}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A fluid flow is represented by the velocity field $$\\overrightarrow V  = ax\\,\\overrightarrow i  + ay\\,\\overrightarrow j ,$$ where a constant . The equation of stream line passing through a point $$(1, 2)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$x-2y=0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2x+y=0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2x-y=0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$x+2y=0$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-me-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Existence of velocity potential implies that ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Fluid is in continuum"
+      },
+      {
+        "identifier": "B",
+        "content": "Fluid is irrotational"
+      },
+      {
+        "identifier": "C",
+        "content": "Fluid is ideal "
+      },
+      {
+        "identifier": "D",
+        "content": "Fluid is compressible "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-me-1994",
+    "difficulty": null
+  },
+  {
+    "content": "In a flow field, the streamlines and equipotential lines",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Are parallel"
+      },
+      {
+        "identifier": "B",
+        "content": "Cut at any angle "
+      },
+      {
+        "identifier": "C",
+        "content": "Are orthogonal everywhere in the flow field "
+      },
+      {
+        "identifier": "D",
+        "content": "Cut orthogonally except at the stagnation points "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-me-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Circulation is defined as line integral of tangential component of velocity about a _________ (fill in the blank) ",
+    "options": [],
+    "correct_options": [],
+    "answer": "closed counter ",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-me-1994",
+    "difficulty": null
+  },
+  {
+    "content": "For a fluid element in a two dimensional flow field ($$x-y$$ plane), it will undergo",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Translation only "
+      },
+      {
+        "identifier": "B",
+        "content": "Translation and rotation "
+      },
+      {
+        "identifier": "C",
+        "content": "Translation and deformation "
+      },
+      {
+        "identifier": "D",
+        "content": "Deformation only "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-me-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Streamlines, path lines and streak lines are virtually identical for \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Uniform flow "
+      },
+      {
+        "identifier": "B",
+        "content": "Flow of ideal fluids "
+      },
+      {
+        "identifier": "C",
+        "content": "Steady flow "
+      },
+      {
+        "identifier": "D",
+        "content": "Non uniform flow "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-me-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a velocity field $\\vec{V}=3 z \\hat{i}+0 \\hat{j}+C x \\hat{k}$, where $C$ is a constant. if the flow is irrotational, the value of C is ________ (rounded off to 1 decimal place).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.9TO3.1",
+    "explanation": "<p>To determine the value of $ C $ for an irrotational flow in the given velocity field $\\vec{V} = 3z \\hat{i} + 0 \\hat{j} + Cx \\hat{k}$, we use the concept that an irrotational flow satisfies $\\nabla \\times \\vec{V} = 0$.</p>\n<p>For the velocity field, the components are:</p>\n\n<p><p>$ u = 3z $</p></p>\n<p><p>$ v = 0 $</p></p>\n<p><p>$ w = Cx $</p></p>\n\n<p>The condition for irrotational flow involves the z-component of the vorticity vector, $\\omega_{xz}$:</p>\n<p>$ \\omega_{xz} = \\frac{1}{2}\\left(\\frac{\\partial w}{\\partial x} - \\frac{\\partial u}{\\partial z}\\right) $</p>\n<p>Substitute the partial derivatives:</p>\n<p>$ \\frac{\\partial w}{\\partial x} = \\frac{\\partial}{\\partial x}(Cx) = C $</p>\n<p>$ \\frac{\\partial u}{\\partial z} = \\frac{\\partial}{\\partial z}(3z) = 3 $</p>\n<p>Plug these derivatives into the expression for $\\omega_{xz}$ and set it to zero for irrotational flow:</p>\n<p>$ \\frac{1}{2}(C - 3) = 0 $</p>\n<p>Solving for $ C $:</p>\n<p>$ C - 3 = 0 $</p>\n<p>$ C = 3 $</p>\n<p>Thus, the value of $ C $ that makes the flow irrotational is $ C = 3 $.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-me-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p style=\"\">A steady two-dimensional flow field is specified by the stream function</p>\n\n<p style=\"\">ψ = kx<span style=\" line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;font-size:10.5px;\">3</span>y,</p>\n\n<p style=\"\">where x&nbsp;and y&nbsp;are in meters and the constant k = 1 m<span style=\" line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;font-size:10.5px;\">-2</span>s<span style=\" line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;font-size:10.5px;\">-1</span>. The magnitude of&nbsp;acceleration at a point (x, y) = (1 m, 1 m) is ________ m/s<span style=\" line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;font-size:10.5px;\">2</span>&nbsp;(round off to 2 decimal&nbsp;places).</p>\n",
+    "options": [],
+    "correct_options": [],
+    "explanation": "<p>A steady two-dimensional flow field is described by the stream function</p>\n\n<p style=\"font-style: italic;\">ψ = kx<sup>3</sup>y,</p>\n\n<p>where x and y are in meters and the constant k = 1 m<sup>-2</sup>s<sup>-1</sup>. The task is to find the acceleration at the point (x, y) = (1 m, 1 m).</p>\n\n<p>Given stream function:</p>\n\n<p style=\"font-style: italic; text-indent: 20px;\">$\\psi = kx^3y$</p>\n\n<p>The velocities in the x and y directions can be derived as follows:</p>\n\n<ul style=\"list-style-type: none;\">\n\n<li style=\"text-indent: 20px;\">$u = -\\frac{\\partial \\psi}{\\partial y} = -kx^3$</li>\n\n<li style=\"text-indent: 20px;\">$v = \\frac{\\partial \\psi}{\\partial x} = 3kx^2y$</li>\n\n</ul>\n\n<p>Next, we calculate the components of acceleration:</p>\n\n<p style=\"text-indent: 20px;\">$a_x = u \\frac{\\partial u}{\\partial x} + v \\frac{\\partial u}{\\partial y}$</p>\n\n<p style=\"text-indent: 20px; margin-left: 20px;\">$= (-kx^3)(-3kx^2)$</p>\n\n<p style=\"text-indent: 20px; margin-left: 20px;\">$= 3$ (since k = 1, x = 1, and y = 1)</p>\n\n<p style=\"text-indent: 20px;\">$a_y = u \\frac{\\partial v}{\\partial x} + v \\frac{\\partial v}{\\partial y}$</p>\n\n<p style=\"text-indent: 20px; margin-left: 20px;\">$= (-kx^3)(6kxy) + (3kx^2y)(3kx^2)$</p>\n\n<p style=\"text-indent: 20px; margin-left: 20px;\">$= -6 + 9 = 3$</p>\n\n<p>The total acceleration is given by:</p>\n\n<p style=\"text-indent: 20px;\">$a_{\\text{total}} = \\sqrt{a_x^2 + a_y^2}$</p>\n\n<p style=\"text-indent: 20px; margin-left: 20px;\">$= \\sqrt{3^2 + 3^2}$</p>\n\n<p style=\"text-indent: 20px; margin-left: 20px;\">$= \\sqrt{18}$</p>\n\n<p style=\"text-indent: 20px; margin-left: 20px;\">$\\approx 4.24$</p>\n\n<p>Therefore, the magnitude of the acceleration at the point (1 m, 1 m) is approximately 4.24 m/s<sup>2</sup>.</p>",
+    "answer": "4.20TO4.28",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "For a steady flow, the velocity field is $$\\overrightarrow V  = \\left( { - {x^2} + 3y} \\right)\\widehat i + \\left( {2xy} \\right)\\widehat j.$$ The magnitude of the acceleration of the particle at $$(1, -1)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2\\sqrt 5 $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "For a two-dimensional flow, the velocity field is $$\\overrightarrow u  = {x \\over {{x^2} + {y^2}}}\\widehat i + {y \\over {{x^2} + {y^2}}}\\widehat j,$$ where $$\\widehat i$$ and $$\\widehat j\\,\\,$$ are the basis vectors in the $$x$$-$$y$$ Cartesian coordinate system . \n<br>Identify the <b>CORRECT</b> statements from below. \n<br>(1) The flow is incompressible\n<br>(2) The flow is unsteady \n<br>(3) $$y$$-component of acceleration, $${a_y} = {{ - y} \\over {{{\\left( {{x^2} + {y^2}} \\right)}^2}}}$$\n<br>(4) $$x$$-component of acceleration , $${a_x} = {{ - \\left( {x + y} \\right)} \\over {{{\\left( {{x^2} + {y^2}} \\right)}^2}}}$$<p></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(2)$$ and $$(3)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$(1)$$ and $$(3)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$(1)$$ and $$(2)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$(3)$$ and $$(4)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The velocity field on an incompressible flow is given by \n<br>$$V = \\left( {{a_1}x + {a_2}y + {a_3}z} \\right)i + \\left( {{b_1}x + {b_2}y + {b_3}z} \\right)j$$\n$$$ + \\left( {{c_1}x + {c_2}y + {c_3}z} \\right)k,$$$\n<p>Where $${a_1} = 2$$ and $${c_3} =  - 4.$$ The value of $${b_2}$$ is _____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.9 to 2.1",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Match the following pairs: \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/Wm4R1kVwRCWElo4Am/p4dIZgnCtE5HlqfZ026fnlg0dLjsn/hd1E8AYnjoTQgqpmRUWfHF/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ME 2015 Set 1 Fluid Mechanics - Fluid Kinematics Question 9 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P - {\\rm I}V,\\,\\,Q - {\\rm I},\\,\\,R - {\\rm I}{\\rm I},\\,\\,S - {\\rm I}{\\rm I}{\\rm I}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$P - {\\rm I}V,\\,\\,Q - {\\rm I}{\\rm I}{\\rm I},\\,\\,R - {\\rm I},\\,\\,S - {\\rm I}{\\rm I}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$P - {\\rm I}{\\rm I}{\\rm I},\\,\\,Q - {\\rm I},\\,\\,R - {\\rm I}V,\\,\\,S - {\\rm I}{\\rm I}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "v$$P - {\\rm I}{\\rm I}{\\rm I},\\,\\,Q - {\\rm I},\\,\\,R - {\\rm I}{\\rm I},\\,\\,S - {\\rm I}V$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a velocity field $$\\overrightarrow V  = K\\left( {y\\widehat i + x\\widehat k} \\right),$$ where $$K$$ is a constant. The vorticity, $${\\Omega _z},$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-K$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$K$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$-K/2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$K/2$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements regarding streamline(s):\n<br>(i) It is a continuous line such that the tangent at any point on it shows the velocity vector at that point\n<br>(ii) There is no flow across streamlines\n<br>(iii) $${{dx} \\over u} = {{dy} \\over v} = {{dz} \\over w}$$ is the differential equation  of a streamline, where $$u,v$$ and $$w$$ are velocities in directions $$x,y$$ and $$z,$$ respectively\n<br>In an unsteady flow, the path of a particle is a streamline\n<p>Which one of the following combinations of the statements is true?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( i \\right),\\,\\,\\left( {ii} \\right),\\,\\,\\left( {iv} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {ii} \\right),\\,\\,\\left( {iii} \\right),\\,\\,\\left( {iv} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( i \\right),\\,\\,\\left( {iii} \\right),\\,\\,\\left( {iv} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( i \\right),\\,\\,\\left( {ii} \\right),\\,\\,\\left( {iii} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "Velocity vector of a flow fields is given as $$\\overrightarrow V  = 2xy\\widehat i - {x^2}z\\widehat j.$$ The vorticity vector at $$(1,1,1)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4\\,\\,\\widehat i - \\widehat j$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4\\,\\,\\widehat i - \\widehat k$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\widehat i - 4\\widehat j$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\widehat i - 4\\widehat k$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-me-2010",
+    "difficulty": null
+  },
+  {
+    "content": "You are asked to evaluate assorted fluid flows for their suitability in a given laboratory application. The following three flow choices. Expressed in terms of the two - dimensional velocity fields in the $$x-$$ $$y$$ plane, are made available. \n<br>$$P:$$ $$u = 2y,\\,\\,\\,v =  - 3x$$ \n<br>$$Q:$$ $$u=3xy,$$ $$\\,\\,\\,\\,$$$$v=0$$ \n<br>$$R:$$ $$u=-2x,$$ $$\\,\\,\\,\\,$$$$v=2y$$ \n<p>Which flows should be recommended when the application requires the flow to be incompressible and irrotational?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P$$ and $$R$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$R$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$$Q$$ and $$R$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$R$$ only "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-me-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The gap between a moving circular plate and a stationary surface is being continuously reduced, as the circular plate comes down at a uniform speed $$V$$ towards the stationary bottom  surface, as shown in the figure. In the process, the fluid contained between the two plates flows out radially. The fluid is assumed to be incompressible and inviscid.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/cir1X1h4oknWIm5lL/3lR60QCaXnDV5QgiyyXWmtrYWGP31/kgJ5cW3wApUN9cBRiTXowd/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ME 2008 Fluid Mechanics - Fluid Kinematics Question 15 English\"> \n<p>The radial velocity $${V_r},$$ at any radius $$r$$, when the gap width is $$h,$$ is </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${V_r} = {{V\\,r} \\over {2h}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${V_r} = {{V\\,r} \\over h}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${V_r} = {{2Vh} \\over r}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${V_r} = {{Vh} \\over r}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The gap between a moving circular plate and a stationary surface is being continuously reduced, as the circular plate comes down at a uniform speed $$V$$ towards the stationary bottom  surface, as shown in the figure. In the process, the fluid contained between the two plates flows out radially. The fluid is assumed to be incompressible and inviscid.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/fFxQBeaOvw8hcdC2l/V2755tmcd5f5cLdJe8wD4teA80KKS/rJAFIDVlxheXKIr0zKN7fd/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ME 2008 Fluid Mechanics - Fluid Kinematics Question 14 English\"> \n<p>The radial component of the fluid acceleration at $$r=R$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{3{V^2}R} \\over {4{h^2}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{{V^2}R} \\over {4{h^2}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{V^2}R} \\over {2{h^2}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{{V^2}h} \\over {4{R^2}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which combination of the following statements about steady incompressible forced vortex flow is correct? \n<p>P: Shear stress is zero at all points in the flow. \n<br>Q: Velocity is directly proportional to the radius from the centre of the vortex.  \n<br>R: Total mechanical energy per unit mass is constant in the entire flow field.\n<br>S: Total mechanical energy per unit mass is constant in the entire flow field.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P$$ and $$Q$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$R$$ and $$S$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$P$$ and $$R$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$P$$ and $$S$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A leaf is caught in a whirlpool. At a given instant, the leaf is at a distance of $$120$$ $$m$$ from the centre of the whirlpool. The whirlpool can be described by the following velocitry distribution ; \n<br>$${V_r} =  - \\left( {{{60 \\times {{10}^3}} \\over {2\\pi r}}} \\right)m/s$$\n<br>and $${V_\\theta } =  - \\left( {{{300 \\times {{10}^3}} \\over {2\\pi r}}} \\right)m/s.$$\n<p>Where $$r$$ (in meters) is the distance from the centre of the whirlpool . What will be the distance of the leaf from the centre when it has moved through half a revolution?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$48$$ $$m$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$64$$ $$m$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$120$$ $$m$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$142$$ $$m$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "For a fluid flow through a divergent pipe of length $$L$$ having inlet and outlet radii of $${R_1}$$ and $${R_2}$$ respectively and a constant flow rate of $$Q,$$ assuming the velocity to be axial and uniform at any cross- section , the acceleration at the exit is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{2Q\\left( {{R_1} - {R_2}} \\right)} \\over {\\pi LR_2^3}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{2{Q^2}\\left( {{R_1} - {R_2}} \\right)} \\over {\\pi LR_2^3}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{2{Q^2}\\left( {{R_1} - {R_2}} \\right)} \\over {{\\pi ^2}L{R_2}^5}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{2{Q^2}\\left( {{R_2} - {R_1}} \\right)} \\over {{\\pi ^2}L{R_2}^5}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-me-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A closed cylinder having a radius $$R$$ and height $$H$$ is filled with oil of density $$\\rho .$$ If the cylinder is rotated about its axis at an angular velocity of $$\\omega $$ , then thrust at the bottom of the cylinder is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\pi {R^2}\\,\\rho gH$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\pi {R^2} + {{\\rho {\\omega ^2}{R^2}} \\over 4}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\pi {R^2} + \\left( {\\rho {\\omega ^2}\\,{R^2} + \\rho gH} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pi {R^2}\\left( {{{\\rho {\\omega ^2}{R^2}} \\over 4} + \\rho gH} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-me-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The $$2$$ - $$D$$ flow with, velocity  $$\\overrightarrow v  = \\left( {x + 2y + 2} \\right)\\overrightarrow i  + \\left( {4 - y} \\right)\\overrightarrow j $$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Compressible  and irrotational"
+      },
+      {
+        "identifier": "B",
+        "content": "Compressible  and not irrotational"
+      },
+      {
+        "identifier": "C",
+        "content": "Inompressible  and "
+      },
+      {
+        "identifier": "D",
+        "content": "Inompressible and not irrotational"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-me-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The velocity components in the $$x$$ and $$y$$ directions are given by $$u = \\lambda x{y^3} - {x^2}y,$$ $$v = x{y^2} - {3 \\over 4}{y^4}.$$ The value of $$\\lambda $$ for a possible flow field involving an incompressible fluid is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - {3 \\over 4}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - {4 \\over 3}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${4 \\over 3}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$3$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-me-1995",
+    "difficulty": null
+  },
+  {
+    "content": "A velocity field is given as \n$$$\\overrightarrow V  = 3{x^2}y\\widehat i - 6xyz\\widehat k$$$\n<br>Where $$x,y,z$$ are in $$m$$ and $$V$$ $$m/s.$$ Determine if \n<p>(i) It represents an incompressible flow\n<br>(ii) The flow is irrotational \n<br>(iii) The flow is steady .</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) and (iii) "
+      },
+      {
+        "identifier": "B",
+        "content": "(i) and (ii) "
+      },
+      {
+        "identifier": "C",
+        "content": "(ii) and (iii) "
+      },
+      {
+        "identifier": "D",
+        "content": "(i) only "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-me-1993",
+    "difficulty": null
+  },
+  {
+    "content": "The stream function in a two dimensional flow field is given by $$\\Psi  = {x^2} - {y^2}$$ \n<br>The magnitude of the velocity at point $$(1,1)$$  is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2\\sqrt 2 $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$8$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-me-1989",
+    "difficulty": null
+  },
+  {
+    "content": "A Newtonian fluid has the following velocity field : \n$$$\\overrightarrow V  = {x^2}y\\widehat i + 2x{y^2}z\\widehat j - y{z^3}\\widehat k$$$\n<p>The rate of shear deformation $${\\varepsilon _{yz}}$$ at the point $$x=-2, y=-1$$ and $$z=2$$ for the given flow is : </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-6$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$-12$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$4$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-me-1988",
+    "difficulty": null
+  }
+]

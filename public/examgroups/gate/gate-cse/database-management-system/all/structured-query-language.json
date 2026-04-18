@@ -1,0 +1,1150 @@
+[
+  {
+    "content": "Consider a relational database containing the following schemas.\n<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/1da9i2ynkcrnimcm/9261c36c-f76a-4f39-b301-b0e28a5f7fb1/8e32fb70-c8f5-11ea-b796-4745b429ed6f/file-1da9i2ynkcrnimcn-320w.png\"><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcrnimcm/9261c36c-f76a-4f39-b301-b0e28a5f7fb1/8e32fb70-c8f5-11ea-b796-4745b429ed6f/file-1da9i2ynkcrnimcn-500w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Database Management System - Structured Query Language Question 6 English\"></picture>\n<br>The primary key of each table is indicated by underlying the constituent fields.\n<br><br><pre><code class=\"sql\">SELECT s.sno, s.sname\n\nFROM Suppliers s, Catalogue c\n\nWHERE s.sno = c.sno AND\n\n      Cost &gt; (SELECT AVG (cost)\n\n                 FROM Catalogue\n\n                 WHERE pno = ‘P4’\n\n                 GROUP BY pno);</code></pre>\n<br><br>The number of rows returned by the above SQL query is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "0"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b></p>\n<p>Following relational database scheme :</p>\n<table border=\"1\">\n\n  <caption><strong>Catalogue</strong></caption>\n\n  <tr>\n\n    <th>sno</th>\n\n    <th>pno</th>\n\n    <th>cost</th>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>P1</td>\n\n    <td>150</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>P2</td>\n\n    <td>50</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>P3</td>\n\n    <td>100</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>P4</td>\n\n    <td>200</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>P5</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P1</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P2</td>\n\n    <td>150</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P5</td>\n\n    <td>300</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P4</td>\n\n    <td>250</td>\n\n  </tr>\n\n</table>\n<table border=\"1\">\n\n  <caption><strong>Suppliers</strong></caption>\n\n  <tr>\n\n    <th>sno</th>\n\n    <th>sname</th>\n\n    <th>location</th>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>M/s Royal furniture</td>\n\n    <td>Delhi</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>M/s Balaji furniture</td>\n\n    <td>Bangalore</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>M/s Premium furniture</td>\n\n    <td>Chennai</td>\n\n  </tr>\n\n</table>\n<p>Query :</p>\n<p>Select AVG (cost) from Catalogue where Pno = 'P4' GROUPBY Pno.</p>\n<p>Results in:</p>\n<table border=\"1\">\n\n  <tr>\n\n    <th>sno</th>\n\n    <th>pno</th>\n\n    <th>cost</th>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>P1</td>\n\n    <td>150</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>P2</td>\n\n    <td>50</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>P3</td>\n\n    <td>100</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>P4</td>\n\n    <td>200</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>P5</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P1</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P2</td>\n\n    <td>150</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P5</td>\n\n    <td>300</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P4</td>\n\n    <td>250</td>\n\n  </tr>\n\n</table>\n<p>First, we will apply group by P4 and the table will become as shown below :</p>\n<table border=\"1\">\n\n  <tr>\n\n    <th>sno</th>\n\n    <th>pno</th>\n\n    <th>cost</th>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>P1</td>\n\n    <td>150</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>P2</td>\n\n    <td>50</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>P3</td>\n\n    <td>100</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>P4</td>\n\n    <td>200</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>P5</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P1</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P2</td>\n\n    <td>150</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P5</td>\n\n    <td>300</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>P4</td>\n\n    <td>250</td>\n\n  </tr>\n\n</table>\n<p>Now applying group by we will select all rows having $\\mathrm{Pno}=\\mathrm{P} 4$ and then find the average cost.</p>\n<p>$$ \\begin{array}{|c|c|c|} \\hline \\text { sno } & \\text { pno } & \\text { cost } \\\\ \\hline \\text { S2 } & \\text { P4 } & 200 \\\\ \\hline \\text { S3 } & \\text { P4 } & 250 \\\\ \\hline \\end{array} $$</p>\n<p>Average cost $=\\frac{200+250}{2}=225$</p>\n<p>Therefore, inner query will return 225.</p>\n<p>So, Now Query will become</p>\n<p>Select s.sno, s.sname from Supplier s, Catalogue c where s.sno = c. sno AND cost $>225$</p>\n<p>So, here we need to do cross product of Supplier table s and Catalogue table c and from the cross product we will select those rows </p>\n<p>where s.sno = c.sno AND cost &gt; 225 .</p>\n<p>Since it is given that cost $>225$ so we do not need to consider rows from Catalogue table having cost $>225$ while doing cross product.</p>\n<p>Hence row number $5,6,8,9$ would only be taken while doing cross product.</p>\n<p>So, after doing cross product the table will become :</p>\n<table border=\"1\">\n\n  <tr>\n\n    <th>s.sno</th>\n\n    <th>s.name</th>\n\n    <th>s.location</th>\n\n    <th>c.sno</th>\n\n    <th>c.pno</th>\n\n    <th>c.cost</th>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>M/S Royal furniture</td>\n\n    <td>Delhi</td>\n\n    <td>S2</td>\n\n    <td>P5</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>M/S Royal furniture</td>\n\n    <td>Delhi</td>\n\n    <td>S3</td>\n\n    <td>P1</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>M/S Royal furniture</td>\n\n    <td>Delhi</td>\n\n    <td>S3</td>\n\n    <td>P5</td>\n\n    <td>300</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S1</td>\n\n    <td>M/S Royal furniture</td>\n\n    <td>Delhi</td>\n\n    <td>S3</td>\n\n    <td>P4</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>M/S Balaji furniture</td>\n\n    <td>Bangalore</td>\n\n    <td>S2</td>\n\n    <td>P5</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>M/S Balaji furniture</td>\n\n    <td>Bangalore</td>\n\n    <td>S3</td>\n\n    <td>P1</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>M/S Balaji furniture</td>\n\n    <td>Bangalore</td>\n\n    <td>S3</td>\n\n    <td>P5</td>\n\n    <td>300</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>M/S Balaji furniture</td>\n\n    <td>Bangalore</td>\n\n    <td>S3</td>\n\n    <td>P4</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>M/S Premium furniture</td>\n\n    <td>Chennai</td>\n\n    <td>S2</td>\n\n    <td>P5</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>M/S Premium furniture</td>\n\n    <td>Chennai</td>\n\n    <td>S3</td>\n\n    <td>P1</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>M/S Premium furniture</td>\n\n    <td>Chennai</td>\n\n    <td>S3</td>\n\n    <td>P5</td>\n\n    <td>300</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>M/S Premium furniture</td>\n\n    <td>Chennai</td>\n\n    <td>S3</td>\n\n    <td>P4</td>\n\n    <td>250</td>\n\n  </tr>\n\n</table>\n<p>Now after doing cross product only 4 would be selected from the table due to the condition</p>\n<p>s.sno = c.sno</p>\n<p>Final Result :</p>\n<table border=\"1\">\n\n  <tr>\n\n    <th>s.sno</th>\n\n    <th>s.name</th>\n\n    <th>s.location</th>\n\n    <th>c.sno</th>\n\n    <th>c.pno</th>\n\n    <th>c.cost</th>\n\n  </tr>\n\n  <tr>\n\n    <td>S2</td>\n\n    <td>M/S Balaji furniture</td>\n\n    <td>Bangalore</td>\n\n    <td>S2</td>\n\n    <td>P5</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>M/S Premium furniture</td>\n\n    <td>Chennai</td>\n\n    <td>S3</td>\n\n    <td>P1</td>\n\n    <td>250</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>M/S Premium furniture</td>\n\n    <td>Chennai</td>\n\n    <td>S3</td>\n\n    <td>P5</td>\n\n    <td>300</td>\n\n  </tr>\n\n  <tr>\n\n    <td>S3</td>\n\n    <td>M/S Premium furniture</td>\n\n    <td>Chennai</td>\n\n    <td>S3</td>\n\n    <td>P4</td>\n\n    <td>250</td>\n\n  </tr>\n\n</table>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following two tables and four queries in SQL.\n<pre><code>Book (<u>isbn</u>, bname), Stock (<u>isbn</u>, copies)</code></pre><b>Query 1:</b> <pre><code>SELECT B.isbn, S.copies\n FROM Book B INNER JOIN Stock S\n ON B.isbn = S.isbn;</code></pre><p></p>\n<b>Query 2:</b> <pre><code>SELECT B.isbn, S.copies\n FROM Book B LEFT OUTER JOIN Stock S\n ON B.isbn = S.isbn;</code></pre>\n<b>Query 3:</b> <pre><code>SELECT B.isbn, S.copies\n FROM Book B RIGHT OUTER JOIN Stock S\n ON B.isbn = S.isbn;</code></pre>\n<b>Query 4:</b> <pre><code>SELECT B.isbn, S.copies\n FROM Book B FULL OUTER JOIN Stock S\n ON B.isbn = S.isbn;</code></pre>\nWhich one of the queries above is certain to have an output that is a superset of the outputs\nof the other three queries?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Query 1"
+      },
+      {
+        "identifier": "B",
+        "content": "Query 2"
+      },
+      {
+        "identifier": "C",
+        "content": "Query 3"
+      },
+      {
+        "identifier": "D",
+        "content": "Query 4"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following relation\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,$$ Cinema(theater, address, capacity)\n<br>Which of the following options will be needed at the end of the $$SQL$$ query<p></p>\n <p>$$\\,\\,\\,\\,\\,\\,\\,\\,$$ SELECT $$P1.$$address\n <br>$$\\,\\,\\,\\,\\,\\,\\,\\,$$ FROM Cinema $$P1$$</p>\n<p>such that it always finds the addresses of theaters with maximum capacity?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "WHERE $$P1$$.capacity &gt;= All (select $$P2$$.capacity from Cinema $$P2$$) "
+      },
+      {
+        "identifier": "B",
+        "content": "WHERE $$P1$$.capacity &gt;= Any (select $$P2$$.capacity from Cinema $$P2$$) "
+      },
+      {
+        "identifier": "C",
+        "content": "WHERE $$P1$$.capacity &gt; All (select max($$P2$$.capacity) from Cinema $$P2$$) "
+      },
+      {
+        "identifier": "D",
+        "content": "WHERE $$P1$$.capacity &gt; Any (select max($$P2$$.capacity) from Cinema $$P2$$) "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "SELECT operation in SQL is equivalent to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the selection operation in relational algebra"
+      },
+      {
+        "identifier": "B",
+        "content": "the selection operation in relational algebra, except that SELECT in SQL retains duplicates"
+      },
+      {
+        "identifier": "C",
+        "content": "the projection operation in relational algebra"
+      },
+      {
+        "identifier": "D",
+        "content": "the projection operation in relational algebra, except that SELECT in SQL retains duplicates"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Given the following statements:\n<p><b>S1:</b> A foreign key declaration can always be replaced by an equivalent check assertion in SQL.</p>\n<p><b>S2:</b> Given the table R(a,b,c) where a and b together form the primary key, the following is a valid table definition.\n</p><pre><code class=\"sql\">CREATE TABLE S (\n a INTEGER,\n d INTEGER,\n e INTEGER,\n PRIMARY KEY (d),\n FOREIGN KEY (a) references R)</code></pre>\n<p></p>\n<p>Which one of the following statements is <b>CORRECT</b>?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S1 is TRUE and S2 is FALSE."
+      },
+      {
+        "identifier": "B",
+        "content": "Both S1 and S2 are TRUE."
+      },
+      {
+        "identifier": "C",
+        "content": "S1 is FALSE and S2 is TRUE."
+      },
+      {
+        "identifier": "D",
+        "content": "Both S1 and S2 are FALSE."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements are TRUE about an SQL query?\n<p><b>P:</b> An SQL query can contain a HAVING clause even if it does not have a GROUP BY clause\n<br><b>Q:</b> An SQL query can contain a HAVING clause only if it has a GROUP BY clause\n<br><b>R:</b> All attributes used in the GROUP BY clause must appear in the SELECT clause\n<br><b>S:</b> Not all attributes used in the GROUP BY clause need to appear in the SELECT clause</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P and R"
+      },
+      {
+        "identifier": "B",
+        "content": "P and S"
+      },
+      {
+        "identifier": "C",
+        "content": "Q and R"
+      },
+      {
+        "identifier": "D",
+        "content": "Q and S"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "<p>A relational schema for a train reservation database is given below:</p>\n<p>Passenger ( pid, pname, age)\n <br>Reservation (pid, cass, tid)</p> \n<p><b>Table: Passenger</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-yw4l{vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-yw4l\">pid</th>\n    <th class=\"tg-yw4l\">pname</th>\n    <th class=\"tg-yw4l\">age</th>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">'Sachin'</td>\n    <td class=\"tg-baqh\">65</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">'Rahul'</td>\n    <td class=\"tg-baqh\">66</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">2</td>\n    <td class=\"tg-baqh\">'Sourav'</td>\n    <td class=\"tg-baqh\">67</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">'Anil'</td>\n    <td class=\"tg-baqh\">69</td>\n  </tr>\n</tbody></table>\n<p><b>Table: Reservation</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-yw4l{vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-yw4l\">pid</th>\n    <th class=\"tg-baqh\">class</th>\n    <th class=\"tg-baqh\">tid</th>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">'AC'</td>\n    <td class=\"tg-baqh\">8200</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">'AC'</td>\n    <td class=\"tg-baqh\">8201</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">2</td>\n    <td class=\"tg-baqh\">'SC'</td>\n    <td class=\"tg-baqh\">8201</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">5</td>\n    <td class=\"tg-baqh\">'AC'</td>\n    <td class=\"tg-baqh\">8203</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">'SC'</td>\n    <td class=\"tg-baqh\">8204</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">'AC'</td>\n    <td class=\"tg-baqh\">8202</td>\n  </tr>\n</tbody></table>\n<p>What pids are returned by the following SQL query for the above instance of the tables?</p>\n<pre><code class=\"sql\">SELECT   pid\nFROM   Reservation\nWHERE   class 'AC' AND \nEXISTS (SELECT * \nFROM Passenger \nWHERE age &gt; 65 \nAND Passenger.pid = Reservation.pid);</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1, 0"
+      },
+      {
+        "identifier": "B",
+        "content": "1, 2"
+      },
+      {
+        "identifier": "C",
+        "content": "1, 3"
+      },
+      {
+        "identifier": "D",
+        "content": "1, 5"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following relation schema pertaining to a students database:\n<pre><code class=\"sql\">Students (<u>rollno</u>, name, address)\nEnroll(<u>rollno,courseno</u>, coursename)</code></pre>\nWhere the primary keys are shown underlined. The number of tuples in the student and Enroll tables are 120 and 8 respectively. What are the maximum and minimum number of tuples that can be present in (Student * Enroll), where '*' denotes natural join?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8, 8"
+      },
+      {
+        "identifier": "B",
+        "content": "120, 8"
+      },
+      {
+        "identifier": "C",
+        "content": "960, 8"
+      },
+      {
+        "identifier": "D",
+        "content": "960, 120"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following relational schema:</p>\n<p>Students ($$\\mathrm{\\underline {rollno:integer}}$$, name: string, age: integer, cgpa: real)</p>\n<p>Courses ($$\\mathrm{\\underline {courseno:integer}}$$, cname: string, credits: integer)</p>\n<p>Enrolled ($$\\mathrm{\\underline {rollno:integer}}$$, $$\\mathrm{\\underline {courseno:integer}}$$, grade: string)</p>\n<p>Which of the following options is/are correct SQL query/queries to retrieve the names of the students enrolled in course number (i.e., courseno) $1470 ?$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7zsv743/24ab1ae3-8547-435f-b1d1-de9784c2819e/3d2cd130-fbe3-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zsv744.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7zsv743/24ab1ae3-8547-435f-b1d1-de9784c2819e/3d2cd130-fbe3-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zsv744.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Database Management System - Structured Query Language Question 1 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7zsvnxx/abd7a7dd-3579-467d-a5c2-de406e76fcb8/4a2cc250-fbe3-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zsvnxy.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7zsvnxx/abd7a7dd-3579-467d-a5c2-de406e76fcb8/4a2cc250-fbe3-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zsvnxy.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Database Management System - Structured Query Language Question 1 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7zsw01m/21a62b5e-40c0-40e1-8011-7986e9b3a4aa/538619a0-fbe3-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zsw01n.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7zsw01m/21a62b5e-40c0-40e1-8011-7986e9b3a4aa/538619a0-fbe3-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zsw01n.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Database Management System - Structured Query Language Question 1 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7zswaha/e6880024-92f1-40ee-b2a1-928a2240b851/5b95d9f0-fbe3-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zswahb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7zswaha/e6880024-92f1-40ee-b2a1-928a2240b851/5b95d9f0-fbe3-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zswahb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Database Management System - Structured Query Language Question 1 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$\\bullet$ EXISTS fun behaves like any/some</p>\n<p>(A correct query)</p>\n<p>$\\bullet$ Retrieve name his enrolled courses of cid 1470 are more than 0</p>\n<p>(C correct query)</p>\n<p>$\\bullet$ Using natural join</p>\n<p>(D correct query)</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following database tables of a sports league.</p>\n<p>player(pid, pname, age)</p>\n<p>team(tid, tname, city, cid)</p>\n<p>coach(cid, cname)</p>\n<p>members(pid, tid)</p>\n<p>An instance of the table and an SQL query are given.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7wk4lja/d4688238-3a29-4906-9068-3e91447da682/b67cca60-fa1a-11ef-9d2b-0be52cb40b6b/file-jaoe38c1m7wk4ljb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7wk4lja/d4688238-3a29-4906-9068-3e91447da682/b67cca60-fa1a-11ef-9d2b-0be52cb40b6b/file-jaoe38c1m7wk4ljb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Database Management System - Structured Query Language Question 2 English\"></p>\n<p>The value returned by the given SQL query is ________ . (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "26",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7wkm9qj/32d348a5-22d9-42e3-bf39-70a2f444e564/a1f019b0-fa1c-11ef-9d2b-0be52cb40b6b/file-jaoe38c1m7wkm9qk.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7wkm9qj/32d348a5-22d9-42e3-bf39-70a2f444e564/a1f019b0-fa1c-11ef-9d2b-0be52cb40b6b/file-jaoe38c1m7wkm9qk.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Database Management System - Structured Query Language Question 2 English Explanation\"></p>\n<p>Minimum age of pid's 1, 3 is 26.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the following table named Student in a relational database. The primary key of this table is rollNum.</p>\n<p>Student</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-lqy6{text-align:right;vertical-align:top}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 422px\">\n<colgroup>\n<col style=\"width: 106px\">\n<col style=\"width: 131px\">\n<col style=\"width: 95px\">\n<col style=\"width: 90px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-baqh\">rollNum</th>\n    <th class=\"tg-baqh\">name</th>\n    <th class=\"tg-baqh\">gender</th>\n    <th class=\"tg-baqh\">marks</th>\n  </tr>\n</thead>\n<tbody>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-0lax\">Naman</td>\n    <td class=\"tg-baqh\">M</td>\n    <td class=\"tg-lqy6\">62</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">2</td>\n    <td class=\"tg-0lax\">Aliya</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-lqy6\">70</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-0lax\">Aliya</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-lqy6\">80</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">4</td>\n    <td class=\"tg-0lax\">James</td>\n    <td class=\"tg-baqh\">M</td>\n    <td class=\"tg-lqy6\">82</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">5</td>\n    <td class=\"tg-0lax\">Swati</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-lqy6\">65</td>\n  </tr>\n</tbody>\n</table></p>\n<p>The SQL query below is executed on this database.</p>\n<p>SELECT *</p>\n<p>FROM Student</p>\n<p>WHERE gender = 'F' AND</p>\n<p>marks > 65;</p>\n<p>The number of rows returned by the query is _____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>The given SQL query filters the rows in the \"Student\" table based on two conditions: the gender should be 'F' (female), and the marks should be greater than 65. Let's break down the query and check each row to see if it meets these conditions.</p>\n\n<p>Here is the \"Student\" table:</p>\n\n<p><style type=\"text/css\">\n\n<p>.tg  {border-collapse:collapse;border-spacing:0;}</p>\n\n<p>.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;</p>\n\n<p>overflow:hidden;padding:10px 5px;word-break:normal;}</p>\n\n<p>.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;</p>\n\n<p>font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}</p>\n\n<p>.tg .tg-baqh{text-align:center;vertical-align:top}</p>\n\n<p>.tg .tg-lqy6{text-align:right;vertical-align:top}</p>\n\n<p>.tg .tg-0lax{text-align:left;vertical-align:top}</p>\n\n</style>\n\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 422px\">\n\n<colgroup>\n\n<col style=\"width: 106px\">\n\n<col style=\"width: 131px\">\n\n<col style=\"width: 95px\">\n\n<col style=\"width: 90px\">\n\n</colgroup>\n\n<thead>\n\n<tr>\n\n<th class=\"tg-baqh\">rollNum</th>\n\n<th class=\"tg-baqh\">name</th>\n\n<th class=\"tg-baqh\">gender</th>\n\n<th class=\"tg-baqh\">marks</th>\n\n</tr>\n\n</thead>\n\n<tbody>\n\n<tr>\n\n<td class=\"tg-baqh\">1</td>\n\n<td class=\"tg-0lax\">Naman</td>\n\n<td class=\"tg-baqh\">M</td>\n\n<td class=\"tg-lqy6\">62</td>\n\n</tr>\n\n<tr>\n\n<td class=\"tg-baqh\">2</td>\n\n<td class=\"tg-0lax\">Aliya</td>\n\n<td class=\"tg-baqh\">F</td>\n\n<td class=\"tg-lqy6\">70</td>\n\n</tr>\n\n<tr>\n\n<td class=\"tg-baqh\">3</td>\n\n<td class=\"tg-0lax\">Aliya</td>\n\n<td class=\"tg-baqh\">F</td>\n\n<td class=\"tg-lqy6\">80</td>\n\n</tr>\n\n<tr>\n\n<td class=\"tg-baqh\">4</td>\n\n<td class=\"tg-0lax\">James</td>\n\n<td class=\"tg-baqh\">M</td>\n\n<td class=\"tg-lqy6\">82</td>\n\n</tr>\n\n<tr>\n\n<td class=\"tg-baqh\">5</td>\n\n<td class=\"tg-0lax\">Swati</td>\n\n<td class=\"tg-baqh\">F</td>\n\n<td class=\"tg-lqy6\">65</td>\n\n</tr>\n\n</tbody>\n\n</table></p>\n\n<p>Now let's evaluate each row against the conditions:</p>\n\n<ul>\n\n<li>Row 1: Naman, M, 62. This row does not meet the gender condition ('M' instead of 'F').</li>\n\n<li>Row 2: Aliya, F, 70. This row meets both conditions (gender 'F' and marks 70 > 65).</li>\n\n<li>Row 3: Aliya, F, 80. This row meets both conditions (gender 'F' and marks 80 > 65).</li>\n\n<li>Row 4: James, M, 82. This row does not meet the gender condition ('M' instead of 'F').</li>\n\n<li>Row 5: Swati, F, 65. This row does not meet the marks condition (65 is not greater than 65).</li>\n\n</ul>\n\n<p>Therefore, the number of rows returned by the query is 2.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the relational database with the following four schemas and their respective instances.</p>\n<p>Student( $$\\underline {sNo} $$ , sName, dNo) Dept( $$\\underline {dNo} $$ , dName)</p>\n<p>Course( $$\\underline {cNo} $$ , cName, dNo) Register( $$\\underline {sNo} $$ , $$\\underline {cNo} $$ )</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l0111lth/6bedc89a-c734-45c1-a1d6-cfd257cd6ad6/7c664740-9576-11ec-be9f-cb8174b7a38c/file-1l0111lti.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l0111lth/6bedc89a-c734-45c1-a1d6-cfd257cd6ad6/7c664740-9576-11ec-be9f-cb8174b7a38c/file-1l0111lti.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Database Management System - Structured Query Language Question 4 English\"></p>\n<p>SQL Query :</p>\n<p>SELECT * FROM Student AS S WHERE NOT EXIST</p>\n<p>(SELECT cNo FROM Course WHERE dNo = \"D01\"</p>\n<p>EXCEPT</p>\n<p>SELECT cNo FROM Register WHERE sNo = S.sNo)</p>\n<p>The number of rows returned by the above SQL query is _____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>$$\\bullet$$ Given SQL query retrieves student records who register for all courses of dno = D01.</p>\n<p>$$\\bullet$$ Course id's and dept D01 are {C<sub>11</sub>C<sub>12</sub>}.</p>\n<p>$$\\bullet$$ Result students who register and all C<sub>11</sub>C<sub>12</sub> courses which are SO1, S04 students records.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>The relation scheme given below is used to store information about the employees of a company, where <strong>empId </strong>is the key and <strong>deptId </strong>indicates the department to which the employee is assigned. Each employee is assigned to exactly one department.</p>\n\n<p>emp(empId, name, gender, salary, deptId)</p>\n\n<p>Consider the following SQL query:</p>\n\n<p>select deptId, count(⋆)</p>\n\n<p>from emp</p>\n\n<p>where gender = \"female\" and salary &gt; (select avg(salary) from emp)</p>\n\n<p>group by deptId;</p>\n\n<p>The above query gives, for each department in the company, the number of female employees whose salary is greater than the average salary of</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "female employees in the department."
+      },
+      {
+        "identifier": "B",
+        "content": "employees in the department."
+      },
+      {
+        "identifier": "C",
+        "content": "employees in the company."
+      },
+      {
+        "identifier": "D",
+        "content": "female employees in the company."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>&nbsp;(select avg(salary) from emp)</p>\n\n<p>This part of the Query will get evaluated first and gives \" Average Salary of all employees in the company.\"</p>\n\n<p>select deptId, count(⋆)</p>\n\n<p>from emp</p>\n\n<p>where gender = \"female\" and salary &gt; (select avg(salary) from emp)</p>\n\n<p>group by deptId;</p>\n\n<p>this will count for each department no of employees who are female and whose salary is greater than the average salary.</p>\n\n<p>Lets take an example&nbsp;</p>\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:350px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\"><strong>Empid</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\"><strong>Name</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\"><strong>Gender</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\"><strong>Salary</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\"><strong>deptid</strong></p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:26px;\">\n\t\t\t<p style=\"text-align: center;\">1</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:26px;\">\n\t\t\t<p style=\"text-align: center;\">A</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:26px;\">\n\t\t\t<p style=\"text-align: center;\">Male</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:26px;\">\n\t\t\t<p style=\"text-align: center;\">2000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:26px;\">\n\t\t\t<p style=\"text-align: center;\">CSE</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">2</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">B</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Female</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">3000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">CSE</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:26px;\">\n\t\t\t<p style=\"text-align: center;\">3</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:26px;\">\n\t\t\t<p style=\"text-align: center;\">C</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:26px;\">\n\t\t\t<p style=\"text-align: center;\">Male</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:26px;\">\n\t\t\t<p style=\"text-align: center;\">4000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:26px;\">\n\t\t\t<p style=\"text-align: center;\">CSE</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">4</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">D</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Female</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">5000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">CSE</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">5</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">E</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Male</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">3000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">ME</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">6</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">F</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Female</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">4000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">ME</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">7</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">G</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Male</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">4000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">ME</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">8</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">H</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Female</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">2000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">ME</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">9</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">I</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Male</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">1000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">CE</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">10</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">J</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Female</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">2000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">CE</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">11</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">K</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Male</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">4000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">CE</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">12</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">L</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Female</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">5000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">CE</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">13</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">M</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Male</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">3000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">EC</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">14</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">N</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Female</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">4000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">EC</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">15</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">O</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">Female</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">5000</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:103px;height:27px;\">\n\t\t\t<p style=\"text-align: center;\">EC</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>&nbsp;</p>\n\n<p>(select avg(salary) from emp) this will return 3400 as the average salary.</p>\n\n<p>and final Query result will be</p>\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 200px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width:210px;height:18px;\">\n\t\t\t<p style=\"text-align: center;\"><strong>Deptid</strong></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:210px;height:18px;\">\n\t\t\t<p style=\"text-align: center;\"><strong>count</strong></p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:210px;height:18px;\">\n\t\t\t<p style=\"text-align: center;\">CSE</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:210px;height:18px;\">\n\t\t\t<p style=\"text-align: center;\">1</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:210px;height:18px;\">\n\t\t\t<p style=\"text-align: center;\">ME</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:210px;height:18px;\">\n\t\t\t<p style=\"text-align: center;\">1</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:210px;height:18px;\">\n\t\t\t<p style=\"text-align: center;\">CE</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:210px;height:18px;\">\n\t\t\t<p style=\"text-align: center;\">1</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:210px;height:18px;\">\n\t\t\t<p style=\"text-align: center;\">EC</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:210px;height:18px;\">\n\t\t\t<p style=\"text-align: center;\">2</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A relational database contains two tables Student and Performance as shown below :\n<br><picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/7kejek275py43/6938fb91-f6cb-4cb2-842a-9eb5fbfdddf6/1ed8e430-f7b6-11e9-a7bc-b7b08ce8d541/file-7kejek275py44-320w.jpg\"><source media=\"(max-width: 500px)\" srcset=\"https://imagex.cdn.examgoal.net/7kejek275py43/6938fb91-f6cb-4cb2-842a-9eb5fbfdddf6/1ed8e430-f7b6-11e9-a7bc-b7b08ce8d541/file-7kejek275py44-500w.jpg\"><img src=\"https://imagex.cdn.examgoal.net/7kejek275py43/6938fb91-f6cb-4cb2-842a-9eb5fbfdddf6/1ed8e430-f7b6-11e9-a7bc-b7b08ce8d541/file-7kejek275py44-680w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Database Management System - Structured Query Language Question 7 English\"></picture>\n<br>The primary key of the Student table is Roll_no. For the Performance table, the columns Roll_no. and Subject_code together from the primary key. Consider the SQL query given below:\n<br><br><pre><code class=\"sql\">SELECT S.Student_name, sum (P.Marks)\n       FROM Student S, Performance P\n       WHERE P.Marks &gt; 84\n       GROUP BY S.Student_name;</code></pre>\n<br><br>The number of rows returned by the above SQL query is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": "<p><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/7kejek275py43/6938fb91-f6cb-4cb2-842a-9eb5fbfdddf6/1ed8e430-f7b6-11e9-a7bc-b7b08ce8d541/file-7kejek275py44-320w.jpg\"><source media=\"(max-width: 500px)\" srcset=\"https://imagex.cdn.examgoal.net/7kejek275py43/6938fb91-f6cb-4cb2-842a-9eb5fbfdddf6/1ed8e430-f7b6-11e9-a7bc-b7b08ce8d541/file-7kejek275py44-500w.jpg\"><img src=\"https://imagex.cdn.examgoal.net/7kejek275py43/6938fb91-f6cb-4cb2-842a-9eb5fbfdddf6/1ed8e430-f7b6-11e9-a7bc-b7b08ce8d541/file-7kejek275py44-680w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Database Management System - Structured Query Language Question 7 English Explanation\"></p>\n<p>First, it will do cross product of student and performance where marks $&gt;84$.</p>\n<p>After grouping the output will be -</p>\n<p>$$ \\begin{array}{|c|c|} \\hline \\text { S.Student_name } &amp; \\text { Sum (P.marks) } \\\\ \\hline \\text { Amit } &amp; 452 \\\\ \\hline \\text { Priya } &amp; 452 \\\\ \\hline \\text { Vinit } &amp; 452 \\\\ \\hline \\text { Rohan } &amp; 452 \\\\ \\hline \\text { Smita } &amp; 452 \\\\ \\hline \\end{array} $$</p>\n<p>Hence , the correct answer is 5 . </p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following database table named $$water$$_$$schemes :$$\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;border-width:1px;border-style:solid;border-color:#999;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}\n.tg .tg-p7ly{font-weight:bold;font-size:20px;text-align:center}\n.tg .tg-fbrz{font-weight:bold;font-size:20px;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-p7ly\"></th>\n    <th class=\"tg-p7ly\">water_schemes </th>\n    <th class=\"tg-p7ly\"></th>\n  </tr>\n  <tr>\n    <td class=\"tg-p7ly\">scheme_no </td>\n    <td class=\"tg-p7ly\">district_name </td>\n    <td class=\"tg-p7ly\">capacity </td>\n  </tr>\n  <tr>\n    <td class=\"tg-fbrz\">1</td>\n    <td class=\"tg-fbrz\">Ajmer</td>\n    <td class=\"tg-fbrz\">20</td>\n  </tr>\n  <tr>\n    <td class=\"tg-fbrz\">1</td>\n    <td class=\"tg-fbrz\">Bikaner</td>\n    <td class=\"tg-fbrz\">10</td>\n  </tr>\n  <tr>\n    <td class=\"tg-fbrz\">2</td>\n    <td class=\"tg-fbrz\">Bikaner</td>\n    <td class=\"tg-fbrz\">10</td>\n  </tr>\n  <tr>\n    <td class=\"tg-fbrz\">3</td>\n    <td class=\"tg-fbrz\">Bikaner</td>\n    <td class=\"tg-fbrz\">20</td>\n  </tr>\n  <tr>\n    <td class=\"tg-fbrz\">1</td>\n    <td class=\"tg-fbrz\">Churu</td>\n    <td class=\"tg-fbrz\">10</td>\n  </tr>\n  <tr>\n    <td class=\"tg-fbrz\">2</td>\n    <td class=\"tg-fbrz\">Churu</td>\n    <td class=\"tg-fbrz\">20</td>\n  </tr>\n  <tr>\n    <td class=\"tg-fbrz\">1</td>\n    <td class=\"tg-fbrz\">Dungargarh</td>\n    <td class=\"tg-fbrz\">10</td>\n  </tr>\n</tbody></table></p>\n<p>The number of tuples returned by the following $$SQL$$ query is _______________.</p>\n<pre><code>with total(name, capacity) as\n    select district_name, sum(capacity)\n    from water_schemes\n    group by district_name\nwith total_avg(capacity) as\n    select avg(capacity)\n    from total\nselect name\n    from total, total_avg\n    where total.capacity ≥ total_avg.capacity</code></pre> \n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the following relation:\n</p>\n<p><b>Student</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\">Roll_No</th>\n    <th class=\"tg-s6z2\">Student_Name</th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">1</td>\n    <td class=\"tg-s6z2\">Raj</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">2</td>\n    <td class=\"tg-s6z2\">Rohit</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">3</td>\n    <td class=\"tg-s6z2\">Raj</td>\n  </tr>\n</tbody></table>\n<p><b>Performance</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\">Roll_No</th>\n    <th class=\"tg-s6z2\">Course</th>\n    <th class=\"tg-baqh\">Marks</th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">1</td>\n    <td class=\"tg-s6z2\">Math</td>\n    <td class=\"tg-baqh\">80</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">1</td>\n    <td class=\"tg-s6z2\">English</td>\n    <td class=\"tg-baqh\">70</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">2</td>\n    <td class=\"tg-s6z2\">Math</td>\n    <td class=\"tg-baqh\">75</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-0lax\">English</td>\n    <td class=\"tg-baqh\">80</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">2</td>\n    <td class=\"tg-baqh\">Physics</td>\n    <td class=\"tg-baqh\">65</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">Math</td>\n    <td class=\"tg-baqh\">80</td>\n  </tr>\n</tbody></table>\n<p>Consider the following SQL query.</p>\n<pre><code class=\"sql\">SELECT S.Student_Name, Sum(P.Marks) \nFROM Student S, Performance P\nWHERE S.Roll_No= P.Roll_No\nGROUP BY S.STUDENT_Name</code></pre>\nThe numbers of rows that will be returned by the SQL query is___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "SQL allows duplicate tuples in relations, and correspondingly defines the multiplicity of tuples in the result of joins. Which one of the following queries always gives the same answer as the nested query shown below:\n<pre><code class=\"sql\">Select * from R where a in (select S.a from S)</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<pre><code class=\"sql\">Select R.* from R, S where R.a = S.a</code></pre>"
+      },
+      {
+        "identifier": "B",
+        "content": "<pre><code class=\"sql\">Select distinct R.* from R, S where R.a = S.a</code></pre>"
+      },
+      {
+        "identifier": "C",
+        "content": "<pre><code class=\"sql\">Select R.* from R, (select distinct a from S) as S1 where R.a = S1.a</code></pre>"
+      },
+      {
+        "identifier": "D",
+        "content": "<pre><code class=\"sql\">Select R.* from R, S where R.a = S.a and is unique R</code></pre>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Given the following schema:</p>\n<p><b>employees(emp-id, first-name, last-name, hire-date, dept-id, salary)</b></p> \n<p><b>departments(dept-id, dept-name, manager-id, location-id)</b></p>\nYou want to display the last names and hire dates of all latest hires in their respective departments in the location ID 1700. You issue the following query:\n<pre><code class=\"sql\">SQL&gt; SELECT last-name, hire-date \nFROM employees WHERE (dept-id, hire-date) IN \n(SELECT dept-id, MAX(hire-date) \nFROM employees JOIN departments USING(dept-id) \nWHERE location-id = 1700\nGROUP BY dept-id);</code></pre>\nWhat is the outcome?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It executes but does not give the correct result."
+      },
+      {
+        "identifier": "B",
+        "content": "It executes and gives the correct result."
+      },
+      {
+        "identifier": "C",
+        "content": "It generates an error because of pairwise comparison."
+      },
+      {
+        "identifier": "D",
+        "content": "It generates an error because the GROUP BY clause cannot be used with table joins in a sub-query."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the following relational schema:</p>\n<p><b>employee (<u>empId,</u> empName, empDept )</b></p> <p><b>customer (<u>custId,</u> custName, salesRepId, rating)</b></p> \n<b>SalesRepId</b> is a foreign key referring to <b>empId</b> of the employee relation. Assume that each employee makes a sale to at least one customer. What does the following query return?\n<pre><code class=\"sql\">SELECT empName \nFROM employee E \nWHERE NOT EXISTS (SELECT custId \n       FROM customer C \n       WHERE C.salesRepId = E.empId \n       AND C.rating &lt;&gt; 'GOOD');</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Names of all the employees with at least one of their customers having a 'GOOD' rating."
+      },
+      {
+        "identifier": "B",
+        "content": "Names of all the employees with at most one of their customers having a 'GOOD' rating."
+      },
+      {
+        "identifier": "C",
+        "content": "Names of all the employees with none of their customers having a 'GOOD' rating."
+      },
+      {
+        "identifier": "D",
+        "content": "Names of all the employees with all their customers having a 'GOOD' rating."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the following relational schema.</p>\n<p>Students(<u>rollno: integer,</u> sname: string)</p> <p>Courses(<u>courseno: integer,</u> cname: string)</p> <p>Registration(<u>rollno: integer, courseno: integer,</u> percent: real)</p>\nWhich of the following queries are equivalent to this query in English? \n<p>\"Find the distinct names of all students who score more than 90% in the course numbered 107\"</p>\n<pre><code class=\"sql\">(I) SELECT DISTINCT S.sname \nFROM Students as S, Registration as R \nWHERE R.rollno=S.rollno AND \nR.courseno=107 AND R.percent &gt;90</code></pre>\n<p>(II) ∏<sub>sname</sub>(σ<sub>courseno</sub> = 107 ∧ percent &gt; 90 (Registration ⋈ Students))</p>\n<p>(III) { T | ∃S ∈ Students, ∃R ∈ Registration ( S.rollno=R.rollno ∧ R.courseno=107 ∧ R.percent &gt; 90 ∧ T.sname=S.sname)}</p>\n<p>(iv) { &lt; S<sub>N</sub> &gt;| ∃S<sub>R</sub>∃R<sub>P</sub> ( &lt; S<sub>R</sub>, S<sub>N</sub> &gt; ∈ Students ∧ ∈ Registration ∧ R<sub>P</sub> &gt; 90)}</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I, II, III and IV "
+      },
+      {
+        "identifier": "B",
+        "content": "I, II and III only"
+      },
+      {
+        "identifier": "C",
+        "content": "I, II and IV only"
+      },
+      {
+        "identifier": "D",
+        "content": "II, III and IV only"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider a database table T containing two columns X and Y each of type integer. After the creation of the table, one record (X = 1, Y = 1) is inserted in the table.</p>\n<p>Let MX and MY denote the respective maximum values of X and Y among all records in the table at any point in time. Using MX and MY, new records are inserted in the table 128 times with X and Y values being MX + 1, 2*MY + 1 respectively. It may be noted that each time after the insertion, values of MX and MY change.</p>\n<p>What will be the output of the following SQL query after the steps mentioned above are carried out?</p>\n<pre><code class=\"sql\">SELECT Y FROM T WHERE X=7; </code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "127"
+      },
+      {
+        "identifier": "B",
+        "content": "255"
+      },
+      {
+        "identifier": "C",
+        "content": "129"
+      },
+      {
+        "identifier": "D",
+        "content": "257"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Database table by name Loan_Records is given below.</p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-uys7{border-color:inherit;text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-uys7\"><span style=\"font-weight:bold;color:rgb(98, 0, 201)\">Borrower</span></th>\n    <th class=\"tg-uys7\"><span style=\"font-weight:bold;color:rgb(98, 0, 201)\">Bank_Manager</span></th>\n    <th class=\"tg-uys7\"><span style=\"font-weight:bold;color:rgb(98, 0, 201)\">Loan_Amount</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-uys7\">Ramesh</td>\n    <td class=\"tg-uys7\">Sunderajan</td>\n    <td class=\"tg-uys7\">10000.00</td>\n  </tr>\n  <tr>\n    <td class=\"tg-uys7\">Suresh</td>\n    <td class=\"tg-uys7\">Ramgopal</td>\n    <td class=\"tg-uys7\">5000.00</td>\n  </tr>\n  <tr>\n    <td class=\"tg-uys7\">Mahesh</td>\n    <td class=\"tg-uys7\">Sunderajan</td>\n    <td class=\"tg-uys7\">7000.00</td>\n  </tr>\n</tbody></table>\n<p>What is the output of the following SQL query?</p>\n<pre><code class=\"sql\">SELECT count(*) \nFROM ( \n(SELECT Borrower. Bank_Manager FROM Loan_Records) AS S \nNATURAL JOIN \n(SELECT Bank_Manager, Loan_Amount FROM Loan_Records) AS T );</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "9"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following relational schema:\n<p>Suppliers(sid : integer, sname : string, city : string, street : string)</p>\n<p>Parts(pid : integer, pname : string, color : string)</p>\n<p>Catalog(sid : integer, pid : integer, cost : real)</p> \nConsider the following relational query on the above database:\n<pre><code class=\"sql\">SELECT S.sname \nFROM Suppliers S \nWHERE S.sid NOT IN \n     (SELECT C.sid \n      FROM Catalog C \n      WHERE C.pid NOT IN \n        (SELECT P.pid \n         FROM Parts P \n         WHERE P.color&lt;&gt; 'blue'))</code></pre>\nAssume that relations corresponding to the above schema are not empty. Which one of the following is the correct interpretation of the above query?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Find the names of all suppliers who have supplied a non-blue part."
+      },
+      {
+        "identifier": "B",
+        "content": "Find the names of all suppliers who have not supplied a non-blue part."
+      },
+      {
+        "identifier": "C",
+        "content": "Find the names of all suppliers who have supplied only blue parts."
+      },
+      {
+        "identifier": "D",
+        "content": "Find the names of all suppliers who have not supplied only blue parts."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following relational schema:\n<p>Suppliers(sid : integer, sname : string, city : string, street : string)</p>\n<p>Parts(pid : integer, pname : string, color : string)</p>\n<p>Catalog(sid : integer, pid : integer, cost : real)</p> \nAssume that, in the suppliers relation above, each supplier and each street within a city has a unique name, and (sname, city) forms a candidate key. No other functional dependencies are implied other than those implied by primary and candidate keys. Which one of the following is TRUE about the above schema?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The schema is in BCNF"
+      },
+      {
+        "identifier": "B",
+        "content": "The schema is in 3NF but not in BCNF"
+      },
+      {
+        "identifier": "C",
+        "content": "The schema is in 2NF but not in 3NF"
+      },
+      {
+        "identifier": "D",
+        "content": "The schema is not in 2NF"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider The Following Relational Scheme</p>\n<p>Student (<u>school-id, sch-roll-no</u>, sname, saddress)\n<br>School (<u>school-id</u>, sch-name, sch-address, sch-phone)\n<br>Enrolment (<u>school-id, sch-roll-no,</u> erollno, examname)\n<br>ExamResult (<u>Erollno, examname,</u> marks)</p>\nWhat does the following SQL query output?\n<pre><code class=\"sql\">SELECT sch-name, COUNT (*) \nFROM School C, Enrolment E, \nExamResult R \nWHERE E.school-id = C.school-id \nAND E.examname = R.examname \nAND E.erollno = R.erollno\nAND R.marks = 100 AND S.school-id IN \n(SELECT school-id \n FROM student \n GROUP BY school-id \n HAVING COUNT (*) &gt; 200) \nGROUP BY school-id;</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "for each school with more than 200 students appearing in exams, the name of the school and the number of 100s scored by its students"
+      },
+      {
+        "identifier": "B",
+        "content": "for each school with more than 200 students in it, the name of the school and the number of 100s scored by its students"
+      },
+      {
+        "identifier": "C",
+        "content": "for each school with more than 200 students in it, the name of the school and the number of its students scoring 100 in at least one exam"
+      },
+      {
+        "identifier": "D",
+        "content": "nothing; the query has a syntax error"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider The Following Relational Scheme</p>\n<p>Student (<u>school-id, sch-roll-no</u>, sname, saddress)\n<br>School (<u>school-id</u>, sch-name, sch-address, sch-phone)\n<br>Enrolment (<u>school-id, sch-roll-no,</u> erollno, examname)\n<br>ExamResult (<u>Erollno, examname,</u> marks)</p>\n<p>Consider the following tuple relational calculus query</p>\n<pre><code class=\"sql\">{ t | ∃E ∈ Enrolment t = E.school-id ∧ \n| { x | x ∈ ExamResult B.school-id = \nt ∧ ( ∃B ∈ ExamResult B.erollno = \nx.erollno ∧ B.examname = x.examname ∧ \nB.marks &gt; 35 } | ÷ | \n{ x | x ∈ Enrolment ∧ x.school-id = t } \n| * 100 &gt; 35 }</code></pre>\nIf a student needs to score more than 35 marks to pass an exam what does the query return?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The empty set"
+      },
+      {
+        "identifier": "B",
+        "content": "Schools with more than 35% of it's student enrolled in some exam or the other"
+      },
+      {
+        "identifier": "C",
+        "content": "Schools with a pass percentage above 35% over all exams taken together"
+      },
+      {
+        "identifier": "D",
+        "content": "Schools with a pass percentage above 35% over each exam."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the table <b>employee(empId, name, department, salary)</b> and the two queries Q<sub>1</sub>, Q<sub>2</sub> below. Assuming that department 5 has more than one employee, and we want to find the employees who get higher salary than anyone in the department 5, which one of the statements is TRUE for any arbitrary employee table?\n<pre><code class=\"sql\">Q<sub>1</sub>:\nSelect e.empId \nFrom employee e \nWhere not exists \n  (Select * From employee s\n   where s.department = \"5\" and \n   s.salary &gt;=e.salary);</code></pre>\n<pre><code class=\"sql\">Q<sub>2</sub>:\nSelect e.empId \nFrom employee e \nWhere e.salary &gt; Any \n( Select distinct salary \nFrom employee s \nWhere s.department = \"5\");</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Q<sub>1</sub> is the correct query."
+      },
+      {
+        "identifier": "B",
+        "content": "Q<sub>2</sub> is the correct query."
+      },
+      {
+        "identifier": "C",
+        "content": "Both Q<sub>1</sub> and Q<sub>2</sub> produce the same answer."
+      },
+      {
+        "identifier": "D",
+        "content": "Neither Q<sub>1</sub> nor Q<sub>2</sub> is the correct query."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the relation <b>account (customer, balance)</b> where customer is a primary key and there are no null values. We would like to rank customers according to decreasing balance. The customer with the largest balance gets rank 1. Ties are not broke but ranks are skipped: if exactly two customers have the largest balance they each get rank 1 and rank 2 is not assigned.\n<pre><code class=\"sql\">Query1:\n  Select A.customer, count(B.customer)\n  From account A, account B\n  Where A.balance &lt;=B.balance\n  Group by A.customer\n\nQuery2:\n  Select A.customer, 1+count(B.customer)\n  From account A, account B\n  Where A.balance &lt; B.balance\n  Group by A.customer</code></pre>\n<p>Consider these statements about Query1 and Query2.\n</p><p> 1. Query1 will produce the same row set as Query2 for some but not all databases.</p>\n<p> 2. Both Query1 and Query2 are correct implementation of the specification</p>\n<p> 3. Query1 is a correct implementation of the specification but Query2 is not</p>\n <p>4. Neither Query1 nor Query2 is a correct implementation of the specification</p>\n<p> 5. Assigning rank with a pure relational query takes less time than scanning in decreasing balance order assigning ranks using ODBC.</p>\nWhich two of the above statements are correct?<p></p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2 and 5"
+      },
+      {
+        "identifier": "B",
+        "content": "1 and 3"
+      },
+      {
+        "identifier": "C",
+        "content": "1 and 4"
+      },
+      {
+        "identifier": "D",
+        "content": "3 and 5"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider a database with three relation instances shown below. The primary keys for the <b>Drivers</b> and <b>Cars</b> relation are Did and cid respectively and the records are stored in ascending order of these primary keys as given in the tables. No indexing is available in the database.</p>\n<p><b>D: Drivers Relation</b>\n</p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-lap0{font-size:100%;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">Did</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">Dname</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">rating</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">Age</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">Karthikeyan</td>\n    <td class=\"tg-baqh\">7</td>\n    <td class=\"tg-baqh\">25</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">29</td>\n    <td class=\"tg-s6z2\">Salman</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">33</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">31</td>\n    <td class=\"tg-s6z2\">Boris</td>\n    <td class=\"tg-baqh\">8</td>\n    <td class=\"tg-lap0\">55</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">32</td>\n    <td class=\"tg-baqh\">Amoldt</td>\n    <td class=\"tg-baqh\">8</td>\n    <td class=\"tg-baqh\">25</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">58</td>\n    <td class=\"tg-baqh\">Schumacher</td>\n    <td class=\"tg-baqh\">10</td>\n    <td class=\"tg-baqh\">35</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">64</td>\n    <td class=\"tg-baqh\">Sachin</td>\n    <td class=\"tg-baqh\">7</td>\n    <td class=\"tg-baqh\">35</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">71</td>\n    <td class=\"tg-baqh\">Senna</td>\n    <td class=\"tg-baqh\">10</td>\n    <td class=\"tg-baqh\">16</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">74</td>\n    <td class=\"tg-baqh\">Sachin</td>\n    <td class=\"tg-baqh\">9</td>\n    <td class=\"tg-baqh\">35</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">85</td>\n    <td class=\"tg-baqh\">Rahul</td>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">25</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">95</td>\n    <td class=\"tg-baqh\">Ralph</td>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">53</td>\n  </tr>\n</tbody></table>\n<p><b>R: Reserves Relation</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(0, 153, 1)\">Did</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(0, 153, 1)\">cid</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(0, 153, 1)\">Day</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">101</td>\n    <td class=\"tg-s6z2\">10/10/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">102</td>\n    <td class=\"tg-s6z2\">10/10/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">103</td>\n    <td class=\"tg-s6z2\">8/10/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">104</td>\n    <td class=\"tg-s6z2\">7/10/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">31</td>\n    <td class=\"tg-s6z2\">102</td>\n    <td class=\"tg-s6z2\">10/11/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">31</td>\n    <td class=\"tg-s6z2\">103</td>\n    <td class=\"tg-s6z2\">6/11/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">31</td>\n    <td class=\"tg-s6z2\">104</td>\n    <td class=\"tg-031e\">12/11/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">64</td>\n    <td class=\"tg-s6z2\">101</td>\n    <td class=\"tg-s6z2\">5/9/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">64</td>\n    <td class=\"tg-s6z2\">102</td>\n    <td class=\"tg-s6z2\">8/9/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">74</td>\n    <td class=\"tg-s6z2\">103</td>\n    <td class=\"tg-s6z2\">8/9/06</td>\n  </tr>\n</tbody></table>\n<p><b>C: Cars relation</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(98, 0, 201)\">cid</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(98, 0, 201)\">Cname</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(98, 0, 201)\">Color</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">101</td>\n    <td class=\"tg-s6z2\">Renault<br></td>\n    <td class=\"tg-s6z2\">Blue</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">102</td>\n    <td class=\"tg-s6z2\">Renault<br></td>\n    <td class=\"tg-s6z2\">Red</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">103</td>\n    <td class=\"tg-s6z2\">Ferrari</td>\n    <td class=\"tg-s6z2\">Green</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">104</td>\n    <td class=\"tg-s6z2\">Jaguar</td>\n    <td class=\"tg-s6z2\">Red</td>\n  </tr>\n</tbody></table>\n<pre><code class=\"sql\">Select D.dname \nFrom Drivers D \nWhere D.did in (SELECT R.did \n                From Cars C,Reserves R \n                WHERE R.cid = C.cid and C.color = 'green')</code></pre>\n<p>Let n be the number of comparisons performed when the above SQL query is optimally executed. If linear search is used to locate a tuple in a relation using primary key, then n lies in the range</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "36 - 40"
+      },
+      {
+        "identifier": "B",
+        "content": "44 - 48"
+      },
+      {
+        "identifier": "C",
+        "content": "60 - 64"
+      },
+      {
+        "identifier": "D",
+        "content": "100 - 104"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the relation <b>\"enrolled (student, course)\"</b> in which (student, course) is the primary key, and the relation <b>\"paid (student, amount)\"</b> where student is the primary key. Assume no null values and no foreign keys or integrity constraints. Given the following four queries:</p> \n<p><b>Query 1:</b></p><pre><code class=\"sql\">Select student \nfrom enrolled \nwhere student in (select student from paid)</code></pre> <p></p>\n<p> <b>Query 2:</b></p><pre><code class=\"sql\">Select student \nfrom paid \nwhere student in (select student from enrolled)</code></pre> <p></p>\n <p><b>Query 3:</b></p><pre><code class=\"sql\">Select E.student \nfrom enrolled E, paid P \nwhere E.student = P.student</code></pre> <p></p>\n<p><b>Query 4:</b></p><pre><code class=\"sql\">Select student \nfrom paid \nwhere exists (Select * \n              from enrolled \n              where enrolled.student = paid.student)</code></pre> <p></p>\n<p>Which one of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "All queries return identical row sets for any database"
+      },
+      {
+        "identifier": "B",
+        "content": "Query 2 and Query 4 return identical row sets for all databases but there exist databases for which Query 1 and Query 2 return different row sets."
+      },
+      {
+        "identifier": "C",
+        "content": "There exist databases for which Query 3 returns strictly fewer rows than Query 2"
+      },
+      {
+        "identifier": "D",
+        "content": "There exist databases for which Query 4 will encounter an integrity violation at runtime."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider a database with three relation instances shown below. The primary keys for the <b>Drivers</b> and <b>Cars</b> relation are Did and cid respectively and the records are stored in ascending order of these primary keys as given in the tables. No indexing is available in the database.</p>\n<p><b>D: Drivers Relation</b>\n</p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-lap0{font-size:100%;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">Did</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">Dname</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">rating</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">Age</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">Karthikeyan</td>\n    <td class=\"tg-baqh\">7</td>\n    <td class=\"tg-baqh\">25</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">29</td>\n    <td class=\"tg-s6z2\">Salman</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">33</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">31</td>\n    <td class=\"tg-s6z2\">Boris</td>\n    <td class=\"tg-baqh\">8</td>\n    <td class=\"tg-lap0\">55</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">32</td>\n    <td class=\"tg-baqh\">Amoldt</td>\n    <td class=\"tg-baqh\">8</td>\n    <td class=\"tg-baqh\">25</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">58</td>\n    <td class=\"tg-baqh\">Schumacher</td>\n    <td class=\"tg-baqh\">10</td>\n    <td class=\"tg-baqh\">35</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">64</td>\n    <td class=\"tg-baqh\">Sachin</td>\n    <td class=\"tg-baqh\">7</td>\n    <td class=\"tg-baqh\">35</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">71</td>\n    <td class=\"tg-baqh\">Senna</td>\n    <td class=\"tg-baqh\">10</td>\n    <td class=\"tg-baqh\">16</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">74</td>\n    <td class=\"tg-baqh\">Sachin</td>\n    <td class=\"tg-baqh\">9</td>\n    <td class=\"tg-baqh\">35</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">85</td>\n    <td class=\"tg-baqh\">Rahul</td>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">25</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">95</td>\n    <td class=\"tg-baqh\">Ralph</td>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">53</td>\n  </tr>\n</tbody></table>\n<p><b>R: Reserves Relation</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(0, 153, 1)\">Did</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(0, 153, 1)\">cid</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(0, 153, 1)\">Day</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">101</td>\n    <td class=\"tg-s6z2\">10/10/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">102</td>\n    <td class=\"tg-s6z2\">10/10/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">103</td>\n    <td class=\"tg-s6z2\">8/10/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">104</td>\n    <td class=\"tg-s6z2\">7/10/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">31</td>\n    <td class=\"tg-s6z2\">102</td>\n    <td class=\"tg-s6z2\">10/11/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">31</td>\n    <td class=\"tg-s6z2\">103</td>\n    <td class=\"tg-s6z2\">6/11/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">31</td>\n    <td class=\"tg-s6z2\">104</td>\n    <td class=\"tg-031e\">12/11/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">64</td>\n    <td class=\"tg-s6z2\">101</td>\n    <td class=\"tg-s6z2\">5/9/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">64</td>\n    <td class=\"tg-s6z2\">102</td>\n    <td class=\"tg-s6z2\">8/9/06</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">74</td>\n    <td class=\"tg-s6z2\">103</td>\n    <td class=\"tg-s6z2\">8/9/06</td>\n  </tr>\n</tbody></table>\n<p><b>C: Cars relation</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(98, 0, 201)\">cid</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(98, 0, 201)\">Cname</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(98, 0, 201)\">Color</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">101</td>\n    <td class=\"tg-s6z2\">Renault<br></td>\n    <td class=\"tg-s6z2\">Blue</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">102</td>\n    <td class=\"tg-s6z2\">Renault<br></td>\n    <td class=\"tg-s6z2\">Red</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">103</td>\n    <td class=\"tg-s6z2\">Ferrari</td>\n    <td class=\"tg-s6z2\">Green</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">104</td>\n    <td class=\"tg-s6z2\">Jaguar</td>\n    <td class=\"tg-s6z2\">Red</td>\n  </tr>\n</tbody></table>\n<p>What is the output of the following SQL query?</p>\n<pre><code class=\"sql\">Select D.dname \nFrom Drivers D \nWhere D.did in (SELECT R.did \n                From Cars C,Reserves R \n                WHERE R.cid = C.cid and C.color = 'green')</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Karthikeyan, Boris"
+      },
+      {
+        "identifier": "B",
+        "content": "Sachin, Salman"
+      },
+      {
+        "identifier": "C",
+        "content": "Karthikeyan, Boris, Sachin"
+      },
+      {
+        "identifier": "D",
+        "content": "Schumacher, Seena"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "In an inventory management system implemented at a trading corporation, there are several tables designed to hold all the information. Amongst these, the following two tables hold information on which items are supplied by which suppliers, and which warehouse keeps which items along with the stock-level of these items.\n<p>Supply = (supplierid, itemcode) \n<br>Inventory = (itemcode, warehouse, stocklevel)</p>\n<p>For a specific information required by the management, following SQL query has been written</p>\n<pre><code class=\"sql\">Select distinct STMP.supplierid \nFrom Supply as STMP \nWhere not unique (Select ITMP.supplierid \n    From Inventory, Supply as ITMP \n    Where STMP.supplierid = ITMP.supplierid \n    And ITMP.itemcode = Inventory.itemcode \n    And Inventory.warehouse = 'Nagpur');</code></pre>\nFor the warehouse at Nagpur, this query will find all suppliers who",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "do not supply any item"
+      },
+      {
+        "identifier": "B",
+        "content": "supply exactly one item"
+      },
+      {
+        "identifier": "C",
+        "content": "supply one or more items"
+      },
+      {
+        "identifier": "D",
+        "content": "supply two or more items"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "<p>A company maintains records of sales made by its salespersons and pays them commission based on each individual’s total sales made in a year. This data is maintained in a table with following schema:</p>\nsalesinfo = (salespersonid, totalsales, commission)\n<p>In a certain year, due to better business results, the company decides to further reward its salespersons by enhancing the commission paid to them as per the following formula:</p>\n<p>If commission &lt; = 50000, enhance it by 2%\n <br>If 50000 &lt; commission &lt; = 100000, enhance it by 4%\n <br>If commission &gt; 100000, enhance it by 6%</p> \n<p>The IT staff has written three different SQL scripts to calculate enhancement for each slab, each of these scripts is to run as a separate transaction as follows:</p>\n<pre><code>T1: Update salesinfo\n Set commission = commission * 1.02\n Where commission &lt; = 50000;\n\nT2: Update salesinfo\n Set commission = commission * 1.04\n Where commission &gt; 50000 and commission is &lt; = 100000;\n\nT3: Update salesinfo\n Set commission = commission * 1.06\n Where commission &gt; 100000;</code></pre>\nWhich of the following options of running these transactions will update the commission of all salespersons correctly?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Execute T1 followed by T2 followed by T3"
+      },
+      {
+        "identifier": "B",
+        "content": "Execute T2, followed by T3; T1 running concurrently throughout"
+      },
+      {
+        "identifier": "C",
+        "content": "Execute T3 followed by T2; T1 running concurrently throughout"
+      },
+      {
+        "identifier": "D",
+        "content": "Execute T3 followed by T2 followed by T1"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The relation book (title, price) contains the titles and prices of different books. Assuming that no two books have the same price, what does the following SQL query list?\n<pre><code class=\"sql\">Select title\n From book as B\n Where (select count(*)\n   From book as T\n   Where T.price &gt; B.price) &lt; 5;</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Titles of the four most expensive books"
+      },
+      {
+        "identifier": "B",
+        "content": "Title of the fifth most inexpensive book"
+      },
+      {
+        "identifier": "C",
+        "content": "Title of the fifth most expensive book"
+      },
+      {
+        "identifier": "D",
+        "content": "Titles of the five most expensive books"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A relational database contains two table <b>student</b> and <b>department</b> in which student table has columns <b>roll_no, name</b> and <b>dept_id</b> and department table has columns <b>dept_id</b> and <b>detp_name</b>. the following insert statements were executed successfully to populate the empty tables:\n<pre><code clsaa=\"sql\"> Insert into department values (1, ‘Mathematics’)\n Insert into department values (2, ‘Physics’)\n Insert into student values (1, ‘Navin’,1)\n Insert into student values (2, ‘Mukesh’,2)\n Insert into student values (3, ‘Gita’,1)</code></pre>\nHow many rows and columns will be retrieved by the following SQL statement?\n<pre><code class=\"sql\">Select * from student, department;</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 row and 4 columns"
+      },
+      {
+        "identifier": "B",
+        "content": "3 rows and 4 columns"
+      },
+      {
+        "identifier": "C",
+        "content": "3 rows and 5 columns"
+      },
+      {
+        "identifier": "D",
+        "content": "6 rows and 5 columns"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two tables in a relational database with columns and rows as follows:\n<p>&nbsp;<b>Table: Student</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-88nc{font-weight:bold;border-color:inherit;text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-88nc\">Roll_no</th>\n    <th class=\"tg-88nc\">Name</th>\n    <th class=\"tg-88nc\">Dept_id</th>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">ABC</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">2</td>\n    <td class=\"tg-baqh\">DEF</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">GHI</td>\n    <td class=\"tg-baqh\">2</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">4</td>\n    <td class=\"tg-baqh\">JKL</td>\n    <td class=\"tg-baqh\">3</td>\n  </tr>\n</tbody></table>\n<p>&nbsp;<b>Table: Department</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-88nc{font-weight:bold;border-color:inherit;text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-88nc\">Dept_id</th>\n    <th class=\"tg-88nc\">Dept_name</th>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">A</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">2</td>\n    <td class=\"tg-baqh\">B</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">C</td>\n  </tr>\n</tbody></table>\n<p>Roll_no is the primary key of the Student table, Dept_id is the primary key of the\nDepartment table and Studetn.Dept_id is a foreign key from<br>\nDepartment. Dept_id.<br></p>\nWhat will happen if we try to execute the following two SQL statements?\n<pre><code class=\"sql\">(i) update Student set Dept_id = Null where Roll_no =1\n(ii) update Department set Dept_id = Null where Dept_id =1</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both (i) and (ii) will fail"
+      },
+      {
+        "identifier": "B",
+        "content": "(i) will fail but (ii) will succeed"
+      },
+      {
+        "identifier": "C",
+        "content": "(i) will succeed but (ii) will fail"
+      },
+      {
+        "identifier": "D",
+        "content": "Both (i) and (ii) will succeed"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "<p>The employee information in a company is stored in the relation</p>\nEmployee (name, sex, salary, deptName)\n<p>Consider the following SQL query</p>\n<pre><code class=\"sql\">  Select deptName\n  From Employee\n  Where sex = ‘M’\n  Group by deptName\n  Having avg(salary) &gt;\n  (Select avg (salary) From Employee);\n</code></pre>\nIt returns the names of the department in which",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the average salary is more than the average salary in the company"
+      },
+      {
+        "identifier": "B",
+        "content": "the average salary of male employees is more than the average salary of all male employees in the company"
+      },
+      {
+        "identifier": "C",
+        "content": "the average salary of male employees is more than the average salary of employees in the same department."
+      },
+      {
+        "identifier": "D",
+        "content": "the average salary of male employees is more than the average salary in the company"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the set of relations shown below and the SQL query that follows.\n<p>Students: (Roll_number, Name, Date_of_birth)\n<br>Courses: (Course number, Course_name, Instructor)\n<br>Grades: (Roll_number, Course_number, Grade)</p> \n<pre><code class=\"sql\">Select distinct Name\nFrom Students, Courses, Grades\nWhere Students.Roll_number = Grades.Roll_number\n      and Courses.Instructor = 'Korth'\n      and Courses.Course_number = Grades.Course_number\n      and Grades.grade = 'A';</code></pre>\nWhich of the following sets is computed by the above query?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Names of students who have got an A grade in all courses taught by Korth"
+      },
+      {
+        "identifier": "B",
+        "content": "Names of students who have got an A grade in all courses"
+      },
+      {
+        "identifier": "C",
+        "content": "Names of students who have got an A grade in at least one of the courses taught by Korth"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Given relations r( w, x ) and s( y, z ), the result of\n<pre><code class=\"sql\">\nselect distinct w,x\nfrom r, s;</code></pre>\nis guaranteed to be same as r, provided",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "r has no duplicates and s is non-empty"
+      },
+      {
+        "identifier": "B",
+        "content": "r and s have no duplicates"
+      },
+      {
+        "identifier": "C",
+        "content": "s has no duplicates and r is non-empty"
+      },
+      {
+        "identifier": "D",
+        "content": "r and s have the same number of tuples"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "In SQL, relations can contain null values, and comparisons with null values are treated as unknown. Suppose all comparisons with a null value are treated as false. Which of the following pairs is not equivalent?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x = 5    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not (not (x = 5)"
+      },
+      {
+        "identifier": "B",
+        "content": "x = 5  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  x &gt; 4 and x &lt; 6, \n<br>where x is an integer"
+      },
+      {
+        "identifier": "C",
+        "content": "x ≠ 5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    not (x = 5)"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is/are correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "An SQL query automatically eliminates duplicates."
+      },
+      {
+        "identifier": "B",
+        "content": "An SQL query will not work if there are no indexes on the relations."
+      },
+      {
+        "identifier": "C",
+        "content": "SQL permits attribute names to be repeated in the same relation."
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the set of relations\n<p>EMP (Employee-no, Dept-no, Employee-name, Salary)\n<br>DEPT (Dept-no, Dept-name, Location)</p>\n<p>Write an SQL query to:</p>\n<p>(a) Find all employee names who work in departments located at \"Calcutta\" and whose salary is greater than Rs.50,000.</p>\n<p>(b) Calculate, for each department number, the number of employees with a   salary greater than Rs.1,00,000.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) <pre><code class=\"sql\">SELECT Employee-name\nFROM EMP, DEPT\nWHERE EMP.Dept-no = DEPT.Dept-no\n      and EMP.Salary &gt; 50,000 and\n      DEPT.Location=\"Calcutta\";</code></pre>\n(b) <pre><code class=\"sql\">SELECT count(Employee-no)\nFROM EMP\nGROUP BY Dept-no\nHAVING Salary &gt; 1,00,000;</code></pre>",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Suppose we have a database consisting of the following three relations.</p>\n<p><b>FREQUENTS (student, parlor)</b> giving the parlors each student visits.</p>\n<p><b>SERVES (parlor, ice-cream)</b> indicating what kind of ice-creams each parlor serves.</p>\n<p><b>LIKES (student, ice-cream)</b> indicating what ice-creams each student likes.</p>\n(Assume that each student likes at least one ice-cream and frequents at least one parlor)\n<p>Express the following in SQL:\n<br>Print the students that frequent at least one parlor that serves some ice-cream that they like.</p> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "<pre><code class=\"sql\">SELECT student \nFROM FREQUENT\nWHERE parlor in ( SELECT parlor \n                FROM SERVES\n                WHERE ice-cream in ( SELECT ice-cream\n                                     FROM LIKES\n                                     WHERE\n                                     LIKE.student = FREQUENT.student ));</code></pre>",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  }
+]

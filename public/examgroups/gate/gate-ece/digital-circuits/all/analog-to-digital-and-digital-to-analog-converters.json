@@ -1,0 +1,582 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "A 4-bit weighted-resistor DAC with inputs $b_3, b_2, b_1$, and $b_0$ (MSB to LSB) is designed using an ideal opamp, as shown below. The switches are closed when the corresponding input bits are logic ' 1 ' and open otherwise.\nWhen the input $b_3 b_2 b_1 b_0$ changes from 1110 to 1101, the magnitude of the change in the output voltage $V_O$ (in mV , rounded off to the nearest integer) is ____________.\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbewt9ca/5eead59d-1ff6-427f-ae94-4a5909d5d3eb/13ac0ea0-3f97-11f0-a491-e768f614f5b9/file-jaoe38c1mbewt9cb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbewt9ca/5eead59d-1ff6-427f-ae94-4a5909d5d3eb/13ac0ea0-3f97-11f0-a491-e768f614f5b9/file-jaoe38c1mbewt9cb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 3 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "250",
+    "explanation": "<p>For the given 4-bit weighted-resistor DAC with inputs $ b_3, b_2, b_1 $, and $ b_0 $ (from most significant bit to least significant bit), the output voltage $ V_o $ is calculated using the formula:</p>\n<p>$  V_o = -R\\left[\\frac{b_0}{8R} + \\frac{b_1}{4R} + \\frac{b_2}{2R} + \\frac{b_3}{R}\\right] \\times V_{\\mathrm{REF}}  $</p>\n<p>Simplifying this, we have:</p>\n<p>$  V_o = -\\left[\\frac{b_0}{8} + \\frac{b_1}{4} + \\frac{b_2}{2} + \\frac{b_3}{1}\\right] \\times 2  $</p>\n<p>For input $ 1110 $:</p>\n<p>$  V_{O_1} = -\\left[0 + \\frac{1}{4} + \\frac{1}{2} + \\frac{1}{1}\\right] \\times 2 = -3.5  $</p>\n<p>For input $ 1101 $:</p>\n<p>$  V_{O_2} = -\\left[\\frac{1}{8} + 0 + \\frac{1}{2} + \\frac{1}{1}\\right] \\times 2 = -3.25  $</p>\n<p>The magnitude of the change in the output voltage is calculated as:</p>\n<p>$  |V_{O_1} - V_{O_2}| = |-3.5 - (-3.25)| = 0.25 = 250 \\, \\mathrm{mV}  $</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The signal-to-noise ratio (SNR) of an ADC with a full-scale sinusoidal input is given to be 61.96 dB. The resolution of the ADC is __________ bits (rounded off to the nearest integer).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "10",
+    "explanation": "<p>The relationship between Signal-to-Noise Ratio (SNR) and the resolution (number of bits) of an Analog-to-Digital Converter (ADC) is given by:</p>\n\n<p> $$SNR = 6.02N + 1.76$$ </p>\n\n<p>where:</p>\n\n<ul>\n\n<li>SNR is the Signal-to-Noise Ratio in dB</li>\n\n<li>N is the number of bits in the ADC</li>\n\n</ul>\n\n<p>We are given that SNR = 61.96 dB.  We can solve for N using the equation:</p>\n\n<p> $$61.96 = 6.02N + 1.76$$</p>\n\n<p>Subtracting 1.76 from both sides gives:</p>\n\n<p> $$60.2 = 6.02N$$</p>\n\n<p>Dividing both sides by 6.02 gives:</p>\n\n<p> $$N = 10$$</p>\n\n<p>Therefore, the resolution of the ADC is <strong>10 bits</strong> (rounded off to the nearest integer). </p>\n\n<p></p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A 10 bit D/A converter is calibrated over the full range 0 to 10 V . If the input to the D/A converter is 13 A (in hex), the output (rounded off to three decimal places) is $\\_\\_\\_\\_$ V.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.95TO3.15",
+    "explanation": "<p>Given : Full scale reading $=10 \\mathrm{~V}$</p>\n<p>$$ n=10 $$</p>\n<p>Digital input $=(13 \\mathrm{~A})_{\\mathrm{H}}$</p>\n<p>Analog output $=($ Resolution $) \\times($ Decimal equivalent of digital input data $)$</p>\n<p>Resolution $(R)=\\frac{V_r}{2^n-1}=\\frac{10}{2^{10}-1}=9.77 \\times 10^{-3}$</p>\n<p>Decimal equivalent of Hexadecimal input data is,</p>\n<p>$$ \\begin{array}{ll}  & (13 \\mathrm{~A})_{16}=1 \\times 16^2+3 \\times 16^1+10 \\times 16^0=(314)_{10} \\\\ \\therefore & V_0=9.77 \\times 10^{-3} \\times 314=3.069 \\end{array} $$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a four bit D to A converter. The analog value corresponding to digital signals of values 0000 and 0001 are 0 V and 0.0625 V respectively. The analog value (in  Volts ) corresponding to the digitals signal 1111 is ______________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.93",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The number of comparators required in a 3-bit comparator type ADC is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "7"
+      },
+      {
+        "identifier": "D",
+        "content": "8"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The number of comparators in 4-bit flash ADC is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "15"
+      },
+      {
+        "identifier": "D",
+        "content": "16"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "The resolution of a 4-bit counting ADC is 0.5 Volts. For an analog input of 6.6 Volts, the digital output of the ADC will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1011"
+      },
+      {
+        "identifier": "B",
+        "content": "1101"
+      },
+      {
+        "identifier": "C",
+        "content": "1100"
+      },
+      {
+        "identifier": "D",
+        "content": "1110"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "For an ADC, match the following : if\n<br><b>List 1</b>\n<br> A. Flash converter\n<br> B. Dual slope converter\n<br> C. Successive  approximation Converter <p></p>\n <b> List 2</b>\n<br> 1. requires a conversion time of the order of a few seconds\n<br> 2.  requires a digital- to- analog converter \n<br> 3. minimizes the effect of power supply interference.\n<br> 4. requires a very complex hardware.\n<br> 5. It is a tracking A/D converter.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "A-4, B-3, C-2",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The advantage of using a dual slope ADC in a digital voltmeter is that",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "its conversion time is small"
+      },
+      {
+        "identifier": "B",
+        "content": "its accuracy is high"
+      },
+      {
+        "identifier": "C",
+        "content": "it gives output in BCD format"
+      },
+      {
+        "identifier": "D",
+        "content": "it does not require a comparator."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A 12-bit ADC is operating with a 1$$\\mu $$ sec clock period and the total conversion time is seen to be 14 $$\\mu $$ sec. The ADC must br of the ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "flash type"
+      },
+      {
+        "identifier": "B",
+        "content": "counting type"
+      },
+      {
+        "identifier": "C",
+        "content": "integrating type"
+      },
+      {
+        "identifier": "D",
+        "content": "successive approximation type."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Match the List-1 (type of 8-bit ADC) with List-2(Minimum conversion time in clock cycles)\n<p> <b> List - 1 </b></p><b> </b>\n<br> A. Successive approximation \n<br> B. Dual-slope\n<br> C. Parallel Comparator\n<p> <b> List - 2 </b></p><b> </b>\n<br> 1)  1\n<br> 2) 8\n<br> 3) 16\n<br> 4) 256\n<br> 5) 512",
+    "options": [],
+    "correct_options": [],
+    "answer": "A- 2, B- 5, C- 1",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the resistance networks of figure can be used as 3 bit R-2R ladder DAC. Assume $${V_0}$$ corresponds to LSB.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/qwAutUhMzmK3s6ZxW/J9xpRXo4mynwYrWfqCRI3QURoeYhp/zzi56yI5wghwUYqjgSfyB1/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1990 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 14 English 1\">\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/6MgdLdftXpUkjcc8q/iAJoaOh709C9xnhimue9wQxUgUBPG/oCisbGvcljwAoJ9ANMxYXd/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1990 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 14 English 2\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/qeIWIPstpwR2WKWQE/6svrdq4j4PCLk4pHKNgEHA1HStXa1/MITr2qjr1jtR8vbAmR43Xj/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1990 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 14 English 3\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both (i) and (ii)"
+      },
+      {
+        "identifier": "B",
+        "content": "Both (i) and (iii)"
+      },
+      {
+        "identifier": "C",
+        "content": "Only (iii)"
+      },
+      {
+        "identifier": "D",
+        "content": "Only (ii)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-ece-1990",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "A 10-bit analog-to-digital converter (ADC) has a sampling frequency of 1 MHz and a full scale voltage of 3.3 V .\nFor an input sinusoidal signal with frequency 500 kHz , the maximum SNR (in dB, rounded off to two decimal places) and the data rate (in Mbps) at the output of the ADC are\n_________ , respectively.\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "61.96 and 10\n"
+      },
+      {
+        "identifier": "B",
+        "content": "61.96 and 5\n"
+      },
+      {
+        "identifier": "C",
+        "content": "33.36 and 10\n"
+      },
+      {
+        "identifier": "D",
+        "content": "33.36 and 5"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given the parameters of a 10-bit analog-to-digital converter (ADC), we can calculate the signal-to-noise ratio (SNR) and the data rate using the following information:</p>\n\n<p><p>Number of bits, $ n = 10 $</p></p>\n<p><p>Sampling frequency, $ f_s = 1 \\text{ MHz} $</p></p>\n<p><p>Full-scale voltage = $ 3.3 \\text{ V} $</p></p>\n<p><p>Input signal frequency, $ f_m = 500 \\text{ kHz} $</p></p>\n\n<h3>Calculating SNR:</h3>\n<p>The formula for the SNR in dB for an $ n $-bit ADC is:</p>\n<p>$ \\text{SNR} = 1.76 + 6.02 \\times n $</p>\n<p>Substituting the given values:</p>\n<p>$ \\text{SNR} = 1.76 + 6.02 \\times 10 = 61.96 \\text{ dB} $</p>\n<h3>Calculating Data Rate:</h3>\n<p>The data rate $ R_b $ in Mbps can be calculated as:</p>\n<p>$ R_b = n \\times f_s $</p>\n<p>Substituting the given values:</p>\n<p>$ R_b = 10 \\times 1 \\text{ MHz} = 10 \\text{ Mbps} $</p>\n<p>Therefore, the maximum SNR is 61.96 dB, and the data rate is 10 Mbps.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A full scale sinusoidal signal is applied to a 10-bit ADC. The fundamental signal component in the ADC output has a normalized power of 1 W, and the total noise and distortion normalized power is 10 $\\mu$W. The effective number of bits (rounded off to the nearest integer) of the ADC is _______.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>7</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>8</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>9</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>10</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The effective number of bits (ENOB) of an ADC can be calculated using the Signal-to-Noise and Distortion Ratio (SINAD). The formula for SINAD in decibels (dB) is:</p>\n\n<p>\n\n<p>$$ \\text{SINAD} = 10 \\log_{10} \\left( \\frac{P_\\text{signal}}{P_\\text{noise+distortion}} \\right) $$</p>\n\n</p>\n\n<p>where $ P_\\text{signal} $ is the power of the fundamental signal and $ P_\\text{noise+distortion} $ is the total power of the noise and distortion.</p>\n\n<p>Given that $ P_\\text{signal} = 1 \\, \\text{W} $ and $ P_\\text{noise+distortion} = 10 \\, \\mu\\text{W} = 10 \\times 10^{-6}\\, \\text{W} $, we can calculate SINAD as follows:</p>\n\n<p>\n\n<p>$$ \\text{SINAD} = 10 \\log_{10} \\left( \\frac{1}{10 \\times 10^{-6}} \\right) = 10 \\log_{10} (10^5) = 10 \\times 5 = 50\\, \\text{dB} $$</p>\n\n</p>\n\n<p>The ENOB can be related to SINAD using the following formula:</p>\n\n<p>\n\n<p>$$ \\text{ENOB} = \\frac{\\text{SINAD} - 1.76}{6.02} $$</p>\n\n</p>\n\n<p>Substituting the SINAD value we calculated:</p>\n\n<p>\n\n<p>$$ \\text{ENOB} = \\frac{50 - 1.76}{6.02} \\approx \\frac{48.24}{6.02} \\approx 8.01 $$</p>\n\n</p>\n\n<p>Rounding this to the nearest integer, we get an ENOB of 8. Therefore, the effective number of bits of the ADC is:</p>\n\n<p>Option B: <strong>8</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the circuit shown with an ideal OPAMP. The output voltage V<sub>0</sub> is __________ V (rounded off to two decimal places).</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7j7f3kx/687e23e1-5882-44b7-825c-9eb52f6afe65/09c1b510-2a0b-11ed-8dda-b7a06b81f81b/file-1l7j7f3ky.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7j7f3kx/687e23e1-5882-44b7-825c-9eb52f6afe65/09c1b510-2a0b-11ed-8dda-b7a06b81f81b/file-1l7j7f3ky.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 7 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "-0.5",
+    "explanation": "<p>Analog output V<sub>0</sub> = $$-$$Resolution $$\\times$$ Gain $$\\times$$ Decimal equivalent of binary data</p>\n<p>Resolution = $${{{v_r}} \\over {{2^n}}} = {{1.6} \\over {{2^4}}} = 0.1$$</p>\n<p>Decimal equivalent = 5</p>\n<p>Gain = 1</p>\n<p>v<sub>0</sub> = $$-$$(0.1) (5) (1) = $$-$$0.5 V</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An 8-bit unipolar (all analog output values are positive) digital-to-analog converter (DAC) has a full-scale voltage range from 0 V to 7.68 V . If the digital input code is 10010110 (the leftmost bit is MSB). Then the analog output voltage of the DAC (rounded off to one decimal place) is</p>\n<p>$\\_\\_\\_\\_$ V.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4.5",
+    "explanation": "<h3>Given:</h3>\n<ul>\n<li><p><strong>DAC resolution:</strong> 8 bits  </p></li>\n<li><p><strong>Output range:</strong> 0 V to 7.68 V (unipolar)</p></li>\n<li><p><strong>Digital input code:</strong> 10010110₂  </p>\n<p>(MSB on the left)</p></li>\n</ul>\n\n<h3>Step 1. Determine the decimal value of the input code</h3>\n<p>Binary <code>10010110</code> =  </p>\n<p>= $ 1×2^7 + 0×2^6 + 0×2^5 + 1×2^4 + 0×2^3 + 1×2^2 + 1×2^1 + 0×2^0 $  </p>\n<p>= $ 128 + 16 + 4 + 2 = 150 $.</p>\n<p>So, <strong>Digital code = 150 (decimal)</strong>.</p>\n\n<h3>Step 2. Find the value per bit (LSB size)</h3>\n<p>For an 8-bit unipolar DAC:</p>\n<p>$ \\text{Number of levels} = 2^8 = 256 $</p>\n<p>The output varies from 0 V (for 00000000₂) to full-scale − 1 LSB (for 11111111₂), depending on convention.  </p>\n<p>Typical DAC convention:  </p>\n<p>$ V_{\\text{out}} = \\frac{\\text{Digital code}}{2^N - 1} \\times V_{\\text{FS}} $</p>\n<p>where $ V_{\\text{FS}} $ is the full-scale voltage (7.68 V in this case).</p>\n\n<h3>Step 3. Compute $ V_{\\text{out}} $</h3>\n<p>$ V_{\\text{out}} = \\frac{150}{255} \\times 7.68 $</p>\n<p>$ V_{\\text{out}} = 0.5882 \\times 7.68 = 4.52\\,\\text{V} $</p>\n<p>Rounded to <strong>one decimal place → 4.5 V</strong>.</p>\n\n<p>✅ <strong>Final Answer:</strong>  </p>\n<p>$ \\boxed{4.5\\ \\text{V}} $</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "content": "In an N bit flash ADC, the analog voltage is fed simultaneously to 2<sup>N</sup>− 1 comparators. The\noutput of the comparators is then encoded to a binary format using digital circuits. Assume that\nthe analog voltage source V<sub>in</sub>(whose output is being converted to digital format) has a source\nresistance of 75 Ω\nas shown in the circuit diagram below and the input capacitance of each comparator is 8 pF. The input must settle to an accuracy of 1/2 LSB even for a full scale input change for properconversion. Assume that the time taken by the thermometer to binary\nencoder is negligible.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/0d6bb6db9d4479363e1503f7f2e35e14fdca64c8d7d00e05ec22234b7de91718.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 2 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 13 English\">\nIf the flash ADC has 8 bit resolution, which one of the following alternatives is closest to the maximum sampling rate?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 megasamples per second"
+      },
+      {
+        "identifier": "B",
+        "content": "6 megasamples per second\n"
+      },
+      {
+        "identifier": "C",
+        "content": "64 megasamples per second"
+      },
+      {
+        "identifier": "D",
+        "content": "256 megasamples per second "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In the following circuit, the comparator output is logic “I” if V<sub>1</sub> &gt; V<sub>2</sub> and is logic “0” otherwise. The D/A conversion is done as per the relation\n$$${V_{DAC}} = \\sum\\limits_{n = 0}^3 {{2^{n - 1}}{b_n}\\,\\,} Volts,$$$\nwhere b<sub>3</sub>(MSB), b<sub>2</sub>, b<sub>1</sub> and b<sub>0</sub> (LSB) are the counter outputs.\n<p>The counter starts from the clear state.</p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b4e4281d9153f270f25292f592a788fe5de7d737b3791e8df385e9c2bb1a4954.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 9 English\"> \n<p> The stable reading of the LED display is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "06 "
+      },
+      {
+        "identifier": "B",
+        "content": "07 "
+      },
+      {
+        "identifier": "C",
+        "content": "12 "
+      },
+      {
+        "identifier": "D",
+        "content": "13 "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "In the following circuit, the comparator output is logic “I” if V<sub>1</sub> &gt; V<sub>2</sub> and is logic “0” otherwise. The D/A conversion is done as per the relation\n$$${V_{DAC}} = \\sum\\limits_{n = 0}^3 {{2^{n - 1}}{b_n}\\,\\,} Volts,$$$\nwhere b<sub>3</sub>(MSB), b<sub>2</sub>, b<sub>1</sub> and b<sub>0</sub> (LSB) are the counter outputs.\n<p>The counter starts from the clear state.</p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b4e4281d9153f270f25292f592a788fe5de7d737b3791e8df385e9c2bb1a4954.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 8 English\"> \n<p>The magnitude of the error between V<sub>DAC</sub> and V<sub>in</sub> at steady state in volts is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.2  "
+      },
+      {
+        "identifier": "B",
+        "content": "0.3 "
+      },
+      {
+        "identifier": "C",
+        "content": "0.5 "
+      },
+      {
+        "identifier": "D",
+        "content": "1 "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "In the digital-to-Analog converter circuit shown in the figure below,\n<br>$${V_{R\\,}}\\, = \\,10V$$ and $$R\\, = \\,10k\\Omega $$\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c1ff9e1102de17b74404462610f2a259e4d343c6c5e90a8f59a0a80365b6e1bc.jpg\" loading=\"lazy\" alt=\"GATE ECE 2007 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 11 English\"> \n<p> The current i is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$31.25\\,\\mu {\\rm A}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$62.5\\,\\mu {\\rm A}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$125\\,\\mu {\\rm A}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$250\\,\\mu {\\rm A}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "In the digital-to-Analog converter circuit shown in the figure below,\n<br>$${V_{R\\,}}\\, = \\,10V$$ and $$R\\, = \\,10k\\Omega $$\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c1ff9e1102de17b74404462610f2a259e4d343c6c5e90a8f59a0a80365b6e1bc.jpg\" loading=\"lazy\" alt=\"GATE ECE 2007 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 10 English\">  \n<p> The voltage V<sub>0</sub> is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-0.781V"
+      },
+      {
+        "identifier": "B",
+        "content": "-1.562V"
+      },
+      {
+        "identifier": "C",
+        "content": "-3.125V "
+      },
+      {
+        "identifier": "D",
+        "content": "-6.250V "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A 4-bit D/A converter is connected to a free-running 3-bit UP counter, as shown in the following figure. Which of the following waveforms will be observed at V<sub>0</sub>=?\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c4afa5c813dafe036e715a3455c539ac8d8df90ab67321ace63d77cf3077b54e.jpg\" loading=\"lazy\" alt=\"GATE ECE 2006 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 12 English\"> \n<p>In the figure shown above, the ground has been shown by the symbol $$\\nabla $$ </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/9301bbcdb963623e116cea756cc553cfddf5913282cd5e5a53cc1c35cfa434b6.jpg\" loading=\"lazy\" alt=\"GATE ECE 2006 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 12 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a9a03dff3fbb7ba39edca7e45846fca60254a5578e009da21c3d684dbbd29370.jpg\" loading=\"lazy\" alt=\"GATE ECE 2006 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 12 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/542d1c30deba56ed6cbfb3557dc900ac99ba12f8f7404e79f231035ee9a0627b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2006 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 12 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/f511cf9cbfb936965487b2146a845ea1753b0cff669ddcb7e0f6c78e79336057.jpg\" loading=\"lazy\" alt=\"GATE ECE 2006 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 12 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The circuit shown in figure is a 4-bit DAC\n\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/6ef6a8e29fb445e9c73c9605ee756a427f19eda3de4b1a64c9cf6f00ad2a335e.jpg\" loading=\"lazy\" alt=\"GATE ECE 2003 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 16 English\">\n\nThe input bits 0 and 1 are represented by 0 and 5 V respectively. The OP- AMP is ideal, but all the resistances and the 5V inputs have a tolerance of ±10%. \n<br>The specification (rounded to the nearest multiple of 5%) for the tolerance of the DAC is\n\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "± 35% "
+      },
+      {
+        "identifier": "B",
+        "content": "± 20%"
+      },
+      {
+        "identifier": "C",
+        "content": "± 10%"
+      },
+      {
+        "identifier": "D",
+        "content": "± 5% "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "For the 4 bit DAC shown in Figure, the output voltage $${V_0}$$ is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/e5ab1be2a3e95af600dc2af8d8c0d229bacf8c10c89ef20075da44e453d0007c.jpg\" loading=\"lazy\" alt=\"GATE ECE 2000 Digital Circuits - Analog to Digital and Digital to Analog Converters Question 17 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10V"
+      },
+      {
+        "identifier": "B",
+        "content": "5V"
+      },
+      {
+        "identifier": "C",
+        "content": "4V"
+      },
+      {
+        "identifier": "D",
+        "content": "8V"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  }
+]

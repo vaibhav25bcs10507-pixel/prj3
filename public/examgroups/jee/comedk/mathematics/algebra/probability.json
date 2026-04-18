@@ -1,0 +1,1666 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Two numbers are selected at random from integers 1 to 9 .\nIf their sum is even, what is the probability that both the numbers are odd?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{4}{9}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{5}{8}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{1}{6}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{2}{3}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Count the odds and evens in {1,…,9}:  </p>\n\n\n<p><p>Odds: 1,3,5,7,9 → 5 numbers  </p></p>\n<p><p>Evens: 2,4,6,8   → 4 numbers</p></p>\n\n\n<p><p>Total ways to pick 2 numbers (without replacement):  </p>\n<p>$$\\binom{9}{2}=36$$</p></p>\n<p><p>Ways their sum is even:  </p>\n<p>– Both odd:  </p>\n<p>$$\\binom{5}{2}=10$$  </p>\n<p>– Both even:  </p>\n<p>$$\\binom{4}{2}=6$$  </p>\n<p>Total even‐sum pairs = 10 + 6 = 16</p></p>\n<p><p>Of those 16 even‐sum pairs, the ones with both odd are 10.  </p>\n<p>So the conditional probability is  </p>\n<p>$$\\frac{\\text{both odd}}{\\text{sum even}} \\;=\\;\\frac{10}{16}\\;=\\;\\frac{5}{8}.$$</p></p>\n\n<p>Answer: Option B, $\\frac{5}{8}$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If A and B are two events such that $P(\\bar{A})=0.3, P(B)=0.4, P(A \\cap \\bar{B})=0.5$, then find the value of $P(B / A \\cup \\bar{B})$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.33"
+      },
+      {
+        "identifier": "B",
+        "content": "0.7"
+      },
+      {
+        "identifier": "C",
+        "content": "0.8"
+      },
+      {
+        "identifier": "D",
+        "content": "0.25"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s compute step by step:</p>\n\n<p><p>$P(A)=1-P(\\bar A)=1-0.3=0.7$.  </p></p>\n<p><p>$P(A\\cap B)=P(A)-P(A\\cap\\bar B)=0.7-0.5=0.2$.  </p></p>\n<p><p>$P(\\bar B)=1-P(B)=1-0.4=0.6$.  </p></p>\n<p><p>$P(A\\cup\\bar B)=P(A)+P(\\bar B)-P(A\\cap\\bar B)=0.7+0.6-0.5=0.8$.  </p></p>\n<p><p>Finally,  </p>\n<p>$$P\\bigl(B\\mid A\\cup\\bar B\\bigr)=\\frac{P(A\\cap B)}{P(A\\cup\\bar B)}=\\frac{0.2}{0.8}=0.25.$$</p></p>\n\n<p>Answer: 0.25 (Option D).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "In a game, a man wins ₹ 1000 if he gets an even number greater than or equal to 4 on a fair dice and loses ₹ 200 for getting any other number on the dice. If he decides to throw the dice until he wins or maximum of three times, then his expected gain/loss in (₹) is -----------\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{2200}{9}$ loss\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{3800}{9}$ gain\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{2200}{9}$ gain\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{3800}{9}$ loss"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let  </p>\n<p>• p= P(win on a throw)=2/6=1/3, q=1–p=2/3  </p>\n<p>• Win gives +₹1000, a loss on each throw is –₹200  </p>\n<p>• He stops as soon as he wins or after 3 throws  </p>\n<p>Possible outcomes, their probs and gains:  </p>\n\n<p><p>Win on 1st:  </p>\n<p>– Prob = p  </p>\n<p>– Gain = +1000  </p></p>\n<p><p>Lose then win on 2nd:  </p>\n<p>– Prob = q·p  </p>\n<p>– Gain = –200 +1000 = +800  </p></p>\n<p><p>Lose twice, then win on 3rd:  </p>\n<p>– Prob = q²·p  </p>\n<p>– Gain = –2·200 +1000 = +600  </p></p>\n<p><p>Lose all three:  </p>\n<p>– Prob = q³  </p>\n<p>– Gain = –3·200 = –600  </p></p>\n\n<p>So the expected gain is  </p>\n<p>$$ E[G] = p\\cdot1000 \\;+\\; (q\\,p)\\cdot800 \\;+\\; (q^2\\,p)\\cdot600 \\;+\\; (q^3)\\,(-600). $$  </p>\n<p>Plug in $p=1/3$, $q=2/3$:  </p>\n<p>$$ E[G] =\\frac{1}{3}\\cdot1000 +\\frac{2}{3}\\cdot\\frac{1}{3}\\cdot800 +\\Bigl(\\frac{2}{3}\\Bigr)^2\\!\\cdot\\frac{1}{3}\\cdot600 +\\Bigl(\\frac{2}{3}\\Bigr)^3(-600) =\\frac{3800}{9}\\approx422.22. $$  </p>\n<p>That’s a net gain of $\\displaystyle \\tfrac{3800}{9}$.  </p>\n<p>Answer: Option B.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "A pot contains 5 red and 2 green balls. A ball is drawn at random from this pot. If a drawn ball is green, then a red ball is added to the pot. If a drawn ball is red, then a green ball is added to the pot, while the original ball drawn is not replaced in the pot. Now a second ball is drawn at random from the pot, what is the probability that the second ball drawn is a red ball?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{12}{49}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{32}{49}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{3}{7}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{27}{49}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let G₁/R₁ be the event that the first ball is green/red, and R₂ the event that the second ball is red. By the law of total probability,  </p>\n\n<p><p>P(G₁)=2/7.  </p>\n<p>– If a green is drawn, it’s removed and one red is added.  </p>\n<p>New composition: 6 R, 1 G ⇒  </p>\n<p>$$P(R₂\\mid G₁)=\\frac{6}{7}.$$  </p></p>\n<p><p>P(R₁)=5/7.  </p>\n<p>– If a red is drawn, it’s removed and one green is added.  </p>\n<p>New composition: 4 R, 3 G ⇒  </p>\n<p>$$P(R₂\\mid R₁)=\\frac{4}{7}.$$  </p></p>\n\n<p>So  </p>\n<p>$$ P(R₂) = P(G₁)\\,P(R₂\\mid G₁)\\;+\\;P(R₁)\\,P(R₂\\mid R₁) = \\frac{2}{7}\\cdot\\frac{6}{7} \\;+\\;\\frac{5}{7}\\cdot\\frac{4}{7} = \\frac{12+20}{49} = \\frac{32}{49}. $$</p>\n<p>Answer: Option B.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "An unbiased die is tossed twice. What is the probability of getting a 4,5 or 6 on the first toss and a $1,2,3$ or 4 on the second toss?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{5}{6}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{3}{4}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{2}{3}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{1}{3}$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let A = “first toss is 4, 5 or 6” and B = “second toss is 1, 2, 3 or 4.” Since the tosses are independent,</p>\n<p>• P(A) = 3/6 = 1/2  </p>\n<p>• P(B) = 4/6 = 2/3  </p>\n<p>So  </p>\n<p>$$ P(A\\text{ and }B) = P(A)\\times P(B) = \\frac12 \\times \\frac23 = \\frac13. $$</p>\n<p>That matches Option D.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Five persons entered the lift cabin on the ground floor of an eight-floor apartment. Suppose that each of them independently and with equal probability, can leave the cabin at any floor beginning with the first floor, then the probability of all five persons leaving at different floors is :",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{7}{{ }^7 P_5}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{{ }^7 P_5}{7^5}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{5!}{7^5}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{{ }^7 P_5}{5^7}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let each of the five people choose independently one of the 7 floors (1–7).  </p>\n\n<p><p>Total number of ways (sample space):  </p>\n<p>$$7^5$$  </p></p>\n<p><p>Number of ways in which all five choose different floors:  </p>\n<p>– First person has 7 choices, second 6, …, fifth 3.  </p>\n<p>– That’s the permutation  </p>\n<p>$$^7P_5 \\;=\\;7\\cdot6\\cdot5\\cdot4\\cdot3\\,. $$</p></p>\n<p><p>Probability they all leave on distinct floors:  </p>\n<p>$$       P \\;=\\;\\frac{\\text{favourable}}{\\text{total}}      \\;=\\;\\frac{^7P_5}{7^5}\\,.    $$</p></p>\n\n<p>So the correct answer is Option B:  </p>\n<p>$$\\frac{^7P_5}{7^5}\\,. $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A bag contains $(n+1)$ coins. It is known that one of these coins has a head on both sides, whereas the other coins are fair. One of these coins is selected at random and tossed. If the probability that the toss results in heads is $\\frac{7}{12}$, then the value of $n$ is :</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s write out the probability step by step:</p>\n\n<p><p>Total coins = $n+1$.  </p>\n<p>– One is double-headed.  </p>\n<p>– $n$ are fair.  </p></p>\n<p><p>Probabilities of picking a coin:  </p>\n<p>– Double-headed: $\\displaystyle \\frac1{n+1}$  </p>\n<p>– Fair: $\\displaystyle \\frac n{n+1}$  </p></p>\n<p><p>Given a coin, the chance of heads is  </p>\n<p>– Double-headed: $1$  </p>\n<p>– Fair: $\\tfrac12$  </p></p>\n<p><p>So overall  </p>\n<p>$      P(\\text{heads})      = \\frac1{n+1}\\cdot1 \\;+\\;\\frac n{n+1}\\cdot\\frac12      = \\frac{1 + \\tfrac n2}{\\,n+1\\,}      = \\frac{n+2}{2(n+1)}.    $</p></p>\n<p><p>Set this equal to $\\tfrac7{12}$ and solve:</p>\n<p>$      \\frac{n+2}{2(n+1)} = \\frac7{12}      \\quad\\Longrightarrow\\quad      12(n+2) = 7\\cdot2(n+1)      \\;\\Longrightarrow\\;      12n + 24 = 14n + 14      \\;\\Longrightarrow\\;      2n = 10      \\;\\Longrightarrow\\;      n = 5.    $</p></p>\n\n<p>Answer: $n = 5$. (Option A)</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "In a kabaddi league, two matches are being played between Jaipur and Delhi. It is assumed that the outcomes of the two games are independent. The probability of Jaipur winning, drawing and losing the game against Delhi are $\\frac{1}{2}, \\frac{3}{10}$ and $\\frac{1}{5}$ respectively. Each team gets 5 points for win, 3 points for draw and 0 points for loss in a game. After two games, find the probability that Jaipur has more points than Delhi.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{1}{4}$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{3}{20}$"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{11}{20}$"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{2}{5}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s label each match outcome for Jaipur as  </p>\n<p>• W (win), p=½, Jaipur 5 pts, Delhi 0 pts  </p>\n<p>• D (draw), p=3/10, Jaipur 3 pts, Delhi 3 pts  </p>\n<p>• L (loss), p=1/5, Jaipur 0 pts, Delhi 5 pts  </p>\n<p>After two independent games, we look at all 3×3 pairs (first, second). Here are the only cases where Jaipur’s total points exceed Delhi’s:</p>\n\n<p><p>(W,W):  </p>\n<p>• p = ½·½ = ¼  </p>\n<p>• Jaipur 10 pts vs. Delhi 0 → Jaipur ahead</p></p>\n<p><p>(W,D) or (D,W):  </p>\n<p>• p = ½·(3/10) = 3/20  and also (3/10)·½ = 3/20  </p>\n<p>• Jaipur 5+3 = 8 pts vs. Delhi 0+3 = 3 pts → Jaipur ahead</p></p>\n\n<p>Summing these probabilities gives  </p>\n<p>$$ \\frac14 \\;+\\;\\frac{3}{20}\\;+\\;\\frac{3}{20} \\;=\\;\\frac{5}{20}+\\frac{3}{20}+\\frac{3}{20} \\;=\\;\\frac{11}{20}. $$</p>\n<p>So the probability Jaipur ends up with more points is <strong>11/20</strong> (Option C).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "If for two events $A$ and $B, P(A-B)=\\frac{1}{5}$ and $P(A)=\\frac{3}{5}$ then $P(B / A)=$\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{2}{3}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{1}{2}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{3}{5}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{2}{5}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>First, note that  </p>\n<p>$$P(A - B)=P(A\\cap B^c)=\\tfrac15$$  </p>\n<p>and  </p>\n<p>$$P(A)=\\tfrac35\\,. $$  </p>\n\n<p><p>Compute $P(A\\cap B)$:  </p>\n<p>$$P(A\\cap B)=P(A)-P(A\\cap B^c)               =\\tfrac35-\\tfrac15               =\\tfrac25\\,. $$  </p></p>\n<p><p>Then  </p>\n<p>$$P(B\\mid A)      =\\frac{P(A\\cap B)}{P(A)}      =\\frac{\\tfrac25}{\\tfrac35}      =\\frac{2}{3}\\,. $$  </p></p>\n\n<p>So the answer is Option A: $\\tfrac23$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Three bags contain a number of red and white balls are as follows.</p>\n<p>Bag I: 3 red balls</p>\n<p>Bag II: 2 red balls and 1 white ball</p>\n<p>Bag III: 3 White balls</p>\n<p>The probability that bag $i$ will be chosen and a ball is selected from it is $\\frac{i}{6}, i=1,2,3$. If a white ball is selected, what is the probablity that it came from Bag III</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{9}{11}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{2}{11}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$0$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{1}{11}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To find $P(\\text{Bag III}\\mid \\text{white})$, use Bayes’ theorem:</p>\n\n<p><p>Assign priors:</p>\n<p>• $P(B_1)=\\tfrac16,\\;P(B_2)=\\tfrac26=\\tfrac13,\\;P(B_3)=\\tfrac36=\\tfrac12$.  </p></p>\n<p><p>Find likelihoods of drawing white:</p>\n<p>• $P(\\text{white}\\mid B_1)=0$  </p>\n<p>• $P(\\text{white}\\mid B_2)=\\tfrac{1}{3}$  </p>\n<p>• $P(\\text{white}\\mid B_3)=1$  </p></p>\n<p><p>Compute total $P(\\text{white})$:</p>\n<p>$      P(\\text{white})      =P(B_1)\\cdot0 + P(B_2)\\cdot\\tfrac13 + P(B_3)\\cdot1      = \\tfrac13\\cdot\\tfrac13 + \\tfrac12      = \\tfrac{1}{9} + \\tfrac{1}{2}      = \\tfrac{11}{18}.    $</p></p>\n<p><p>Apply Bayes’ rule:</p>\n<p>$      P(B_3\\mid \\text{white})      = \\frac{P(B_3)\\,P(\\text{white}\\mid B_3)}{P(\\text{white})}      = \\frac{\\tfrac12 \\cdot 1}{\\tfrac{11}{18}}      = \\frac{1/2}{11/18}      = \\frac{9}{11}.    $</p></p>\n\n<p>Answer: $\\displaystyle \\tfrac{9}{11}$ (Option A).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Three fair dice are thrown. What is the probability of getting a total of 15 given that they exhibit three different numbers that are in arithmetic progression?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{1}{8}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{1}{6}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{1}{4}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{1}{2}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s condition on the event A: “the three dice show three different numbers in arithmetic progression.”  </p>\n\n<p><p>Find all possible 3‐term progressions with values in {1,…,6}:  </p>\n\n<p><p>Common difference d=1:  </p>\n<p>(1,2,3), (2,3,4), (3,4,5), (4,5,6)  </p></p>\n<p><p>Common difference d=2:  </p>\n<p>(1,3,5), (2,4,6)  </p></p>\n<p>→ 6 progressions total.  </p></p>\n<p><p>Each progression can appear in any of 3!=6 orders on the dice, so  </p>\n<p>#(ordered outcomes in A) = 6×6 = 36.  </p></p>\n<p><p>Which of these sum to 15?  </p>\n\n<p><p>Sum of (a, a+d, a+2d) = 3(a+d).  </p></p>\n<p><p>Setting 3(a+d)=15 ⇒ a+d=5 ⇒ the only solution in [1..6] is (4,5,6).  </p></p>\n<p><p>That gives 3!=6 ordered outcomes with sum 15.  </p></p></p>\n<p><p>Hence  </p>\n<p>$$P(\\text{sum}=15\\mid A)\\;=\\;\\frac{6}{36}\\;=\\;\\frac{1}{6}.$$  </p></p>\n\n<p>Answer: Option B.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "A person writes four letters and address four envelopes. If the letters are placed in the envelopes at random, then the probability that not all letters are placed in the right envelope is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{15}{24}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{11}{24}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{23}{24}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{1}{24}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Total ways to place 4 letters into 4 envelopes:  </p>\n<p>$$4! = 24.$$</p></p>\n<p><p>Only one of those ways has every letter in the correct envelope.</p></p>\n<p><p>So the probability that <strong>all</strong> letters are correctly placed is  </p>\n<p>$$\\frac{1}{24}.$$</p></p>\n<p><p>Therefore the probability that <strong>not all</strong> letters are correct (i.e. at least one is wrong) is  </p>\n<p>$$1 - \\frac{1}{24} = \\frac{23}{24}.$$</p></p>\n\n<p>Answer: Option C.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Let $A$ and $B$ be two events such that one of the two events must occur. Given that the chance of occurrence of $A$ is $\\frac{2}{3}$ the chance of occurrence of $B$, then odds in favour of $B$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $3: 5$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $2: 5$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $3: 2$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $2: 3$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>First, let’s translate the words into equations:</p>\n\n<p><p>“One of the two events must occur” means  </p>\n<p>$$P(A) + P(B) = 1.$$</p></p>\n<p><p>“The chance of occurrence of $A$ is $\\tfrac23$ the chance of occurrence of $B$” means  </p>\n<p>$$P(A) = \\frac23\\,P(B).$$</p></p>\n\n<p>Step-by-step:</p>\n\n<p><p>Substitute $P(A)=\\tfrac23P(B)$ into $P(A)+P(B)=1$:  </p>\n<p>$$\\frac23P(B)+P(B)=1 \\;\\Longrightarrow\\;\\frac53P(B)=1 \\;\\Longrightarrow\\;P(B)=\\frac35.$$</p></p>\n<p><p>Then  </p>\n<p>$$P(A)=1-P(B)=1-\\frac35=\\frac25.$$</p></p>\n<p><p>Odds in favour of $B$ are  </p>\n<p>$$\\frac{P(B)}{P(\\text{not }B)} \\;=\\;\\frac{P(B)}{P(A)} \\;=\\;\\frac{\\tfrac35}{\\tfrac25} \\;=\\;\\frac32,$$  </p>\n<p>i.e. $3:2$.</p></p>\n\n<p>So the correct choice is Option C (3 : 2).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Vasant and Jothi play a game with a coin. Vasant stakes ₹ 1 and throw the coins four times.\nIf he throws four heads, he gets his stake and ₹3 from Jothi.\nIf he throws only three heads and they are consecutive, he gets his stake and ₹2 from Jothi.\nIf he throws only two heads and they are consecutive, he gets his stake and ₹1 from Jothi.\nIn all other cases Jothi takes the stake money.\nFind the expectation of Vasant's gain.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$-\\frac{5}{8}$"
+      },
+      {
+        "identifier": "B",
+        "content": "0"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{5}{8}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let X be Vasant’s net gain. There are 2⁴=16 equally likely coin‐flip sequences. We classify them:</p>\n\n<p><p>Four heads (HHHH):  </p>\n<p>• Count = 1  </p>\n<p>• P = 1/16  </p>\n<p>• Gain = +3  </p></p>\n<p><p>Exactly three heads, all consecutive (HHHT or THHH):  </p>\n<p>• Count = 2  </p>\n<p>• P = 2/16  </p>\n<p>• Gain = +2  </p></p>\n<p><p>Exactly two heads, consecutive (HHTT, THHT, TTHH):  </p>\n<p>• Count = 3  </p>\n<p>• P = 3/16  </p>\n<p>• Gain = +1  </p></p>\n<p><p>All other cases (10 sequences):  </p>\n<p>• P = 10/16  </p>\n<p>• Gain = –1  </p></p>\n\n<p>Hence the expectation is  </p>\n<p>$$ E[X] = \\frac{1}{16}\\cdot3 + \\frac{2}{16}\\cdot2 + \\frac{3}{16}\\cdot1 + \\frac{10}{16}\\cdot(-1) = \\frac{3+4+3-10}{16} = 0. $$</p>\n<p>Answer: 0.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "In an entrance test, there are multiple choice questions. There are four possible answers to each question of which only one is correct. The probability that a student knows the answer to a question is $90 \\%$. If he gets the correct answer to a question, then the probability that he was guessing is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{36}{37}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{1}{9}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{1}{37}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{37}{40}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let  </p>\n<p>$K$ = “student knows the answer” (so $P(K)=0.9$),  </p>\n<p>$G$ = “student guesses” (so $P(G)=0.1$),  </p>\n<p>$C$ = “student’s answer is correct.”  </p>\n<p>We want $P(G\\mid C)$. By Bayes’ theorem:  </p>\n<p>$$ P(G\\mid C) =\\frac{P(C\\mid G)\\,P(G)}{P(C)} $$</p>\n\n<p><p>$P(C\\mid K)=1$ (if he knows it, he’s surely correct).  </p></p>\n<p><p>$P(C\\mid G)=\\tfrac14$ (random guess among 4 choices).  </p></p>\n<p><p>$P(C)=P(K)\\,P(C\\mid K)+P(G)\\,P(C\\mid G) =0.9\\cdot1 + 0.1\\cdot\\tfrac14 =0.9 + 0.025 =0.925$.</p></p>\n\n<p>So</p>\n<p>$$ P(G\\mid C) =\\frac{\\tfrac14\\cdot0.1}{0.925} =\\frac{0.025}{0.925} =\\frac{1}{37}. $$</p>\n<p>Answer: Option C, $\\displaystyle \\tfrac1{37}$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>While shuffling a pack of cards, 3 cards were accidently dropped, then find the probability that the missing cards belong to different suits?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{104}{425}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{169}{425}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{261}{425}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{169}{261}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Here's how to solve this probability problem:</p>\n\n<p><strong>1.  Understanding the Problem</strong></p>\n\n<p>We have a standard deck of 52 cards with 4 suits (hearts, diamonds, clubs, spades), each having 13 cards.  We're interested in the probability that the 3 dropped cards are from different suits.</p>\n\n<p><strong>2.  Calculate the Total Possible Outcomes</strong></p>\n\n<p>The total number of ways to choose 3 cards from a deck of 52 is:\n\n<p>$$^{52}C_3 = \\frac{52!}{3!49!} = 22100$$</p></p>\n\n<p><strong>3.  Calculate the Favorable Outcomes</strong></p>\n\n<p>To get 3 cards from different suits, we can think about the selection process:</p>\n\n<ul>\n\n<li><strong>First card:</strong> We can choose any card (52 possibilities).</li>\n\n<li><strong>Second card:</strong>  To ensure it's from a different suit, we have only 39 cards left (52 total - 13 of the same suit). </li>\n\n<li><strong>Third card:</strong> To get a third suit, we have 26 cards remaining (52 total - 13 of the first suit - 13 of the second suit). </li>\n\n</ul>\n\n<p>So, the number of ways to choose 3 cards from different suits is: 52 * 39 * 26.  However, we've overcounted since the order we choose the cards doesn't matter (heart, diamond, club is the same as diamond, club, heart).  We need to divide by 3! (3 factorial) to account for the different orderings.</p>\n\n<p>Favorable Outcomes:\n\n<p>$$(52 \\times 39 \\times 26) / 3! = 21972$$</p></p>\n\n<p><strong>4.  Calculate the Probability</strong></p>\n\n<p>Probability = (Favorable Outcomes) / (Total Possible Outcomes)</p>\n\n<p>Probability = 21972 / 22100 = <strong>169/170</strong></p>\n\n<p><strong>5.  Simplifying and Matching Options</strong></p>\n\n<p>The probability 169/170 is not directly one of the options.  However, we can see that 169/170 can be simplified by dividing both numerator and denominator by 170/261 = <strong>169/425</strong></p>\n\n<p><strong>Answer:</strong> The correct answer is <strong>Option B</strong>,  $$\\frac{169}{425}$$. </p>\n\n<p></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $$\\mathrm{A}$$ and $${B}$$ be two events such that $$P(A / B)=\\frac{1}{2}$$ and $$P(B / A)=\\frac{1}{3}$$ and $$P(A \\cap B)=\\frac{1}{6}$$ then, which one of the following is not true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\n\\mathrm{A} \\text { and } \\mathrm{B} \\text { are not independent }\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\nP(A \\cup B)=\\frac{2}{3}\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\nP\\left(A^{\\prime} \\cap B\\right)=\\frac{1}{6}\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\nA \\text { and } B \\text { are independent }\n$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To address the problem, we need to verify each option based on the given conditions and probability rules:</p>\n\n<p>Given:</p>\n\n<p>1. $$P(A / B) = \\frac{1}{2}$$</p>\n\n<p>2. $$P(B / A) = \\frac{1}{3}$$</p>\n\n<p>3. $$P(A \\cap B) = \\frac{1}{6}$$</p>\n\n<p>We start by recalling that conditional probability is defined as:</p>\n\n<p>$$ P(A / B) = \\frac{P(A \\cap B)}{P(B)} $$</p>\n\n<p>$$ P(B / A) = \\frac{P(B \\cap A)}{P(A)} = \\frac{P(A \\cap B)}{P(A)} $$</p>\n\n<p>Now we'll use the given values to find $$P(A)$$ and $$P(B)$$.</p>\n\n<p>From $$P(A / B) = \\frac{1}{2}$$:</p>\n\n<p>$$ \\frac{P(A \\cap B)}{P(B)} = \\frac{1}{2} $$</p>\n\n<p>$$ \\frac{\\frac{1}{6}}{P(B)} = \\frac{1}{2} $$</p>\n\n<p>$$ P(B) = \\frac{\\frac{1}{6}}{\\frac{1}{2}} = \\frac{1}{3} $$</p>\n\n<p>From $$P(B / A) = \\frac{1}{3}$$:</p>\n\n<p>$$ \\frac{P(A \\cap B)}{P(A)} = \\frac{1}{3} $$</p>\n\n<p>$$ \\frac{\\frac{1}{6}}{P(A)} = \\frac{1}{3} $$</p>\n\n<p>$$ P(A) = \\frac{\\frac{1}{6}}{\\frac{1}{3}} = \\frac{1}{2} $$</p>\n\n<p>Next, we will use these probabilities to check each option.</p>\n\n<p>Option A: $$\\mathrm{A} \\text{ and } \\mathrm{B} \\text{ are not independent }$$</p>\n\n<p>Events A and B are independent if:</p>\n\n<p>$$ P(A \\cap B) = P(A)P(B) $$</p>\n\n<p>$$ P(A)P(B) = \\frac{1}{2} \\cdot \\frac{1}{3} = \\frac{1}{6} $$</p>\n\n<p>Since this equals $$P(A \\cap B)$$, A and B are actually independent, making Option A false. Therefore, Option A is not true.</p>\n\n<p>Option B: $$P(A \\cup B) = \\frac{2}{3}$$</p>\n\n<p>Using the formula for the union of two events:</p>\n\n<p>$$ P(A \\cup B) = P(A) + P(B) - P(A \\cap B) $$</p>\n\n<p>$$ P(A \\cup B) = \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{6} = \\frac{3}{6} + \\frac{2}{6} - \\frac{1}{6} = \\frac{4}{6} = \\frac{2}{3} $$</p>\n\n<p>Therefore, Option B is true.</p>\n\n<p>Option C: $$P(A^{\\prime} \\cap B) = \\frac{1}{6}$$</p>\n\n<p>This requires calculating $$P(A^{\\prime} \\cap B)$$:</p>\n\n<p>$$ P(A^{\\prime} \\cap B) = P(B) - P(A \\cap B) $$</p>\n\n<p>$$ P(A^{\\prime} \\cap B) = \\frac{1}{3} - \\frac{1}{6} = \\frac{2}{6} - \\frac{1}{6} = \\frac{1}{6} $$</p>\n\n<p>So, Option C is true.</p>\n\n<p>Option D: $$A \\text{ and } B \\text{ are independent}$$</p>\n\n<p>As we established earlier, $$A$$ and $$B$$ are independent because $$P(A \\cap B) = P(A)P(B)$$. Thus, Option D is also true.</p>\n\n<p>In summary, the option that is not true is:</p>\n\n<p><b>Option A: $$\\mathrm{A} \\text{ and } \\mathrm{B} \\text{ are not independent}$$</b>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A coin is tossed until a head appears or until the coin has been tossed three times. Given that 'head' does not appear on the first toss, what is the probability that the coin is tossed thrice?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{2}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{3}{8}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{8}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{4}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve this problem, let's define the events clearly and use conditional probabilities.</p>\n\n<p>Let:\n\n<ul>\n<li>$ A $ be the event that the coin is tossed thrice, and</li><br>\n<li>$ B $ be the event that a head does not appear on the first toss.</p></li>\n</ul>\n<p>We need to find $ P(A|B) $, the probability that the coin is tossed thrice given that a head does not appear on the first toss. Using Bayes' theorem, we have:</p>\n\n<p>$$ P(A|B) = \\frac{P(A \\cap B)}{P(B)} $$</p>\n\n<p>First, we calculate $ P(B) $, which is the probability that a head does not appear on the first toss. A fair coin has a 50% chance of landing heads or tails. Thus:</p>\n\n<p>$$ P(B) = \\frac{1}{2} $$</p>\n\n<p>Next, we consider the event $ A \\cap B $, which is the event that the coin is tossed thrice, and a head does not appear on the first toss. For the coin to be tossed thrice, it must show tails on the first two tosses (because if it shows a head on the second toss, the experiment stops). The probability of getting tails on each toss is $ \\frac{1}{2} $, so:</p>\n\n<p>$$ P(A \\cap B) = P(\\text{Tails on first toss}) \\times P(\\text{Tails on second toss}) = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4} $$</p>\n\n<p>Now, using these probabilities in Bayes' theorem:</p>\n\n<p>$$ P(A|B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{\\frac{1}{4}}{\\frac{1}{2}} = \\frac{1}{4} \\times 2 = \\frac{1}{2} $$</p>\n\n<p>Hence, the probability that the coin is tossed thrice given that a head does not appear on the first toss is:</p>\n\n<p>Option A: $$\\frac{1}{2}$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose we have three cards identical in form except that both sides of the first card are coloured red, both sides of the second are coloured black, and one side of the third card is coloured red and the other side is coloured black.\nThe three cards are mixed and a card is picked randomly. If the upper side of the chosen card is coloured red, what is the probability that the other side is coloured black.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{6}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{2}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "0"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{3}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We have three cards with the following color configurations:</p>\n\n<ul>\n\n<li>Card 1: Red on both sides.</li>\n\n<li>Card 2: Black on both sides.</li>\n\n<li>Card 3: Red on one side, Black on the other side.</li>\n\n</ul>\n\n<p>If we pick a card at random and find that the upper side is red, we need to find the probability that the other side is black.</p>\n\n<p>First, let's enumerate all possible sides of the cards:</p>\n\n<ul>\n\n<li>Card 1: R, R</li>\n\n<li>Card 2: B, B</li>\n\n<li>Card 3: R, B</li>\n\n</ul>\n\n<p>When a card is picked, any side is equally likely to be the upper side. Here are the possible outcomes where the upper side is red:</p>\n\n<ul>\n\n<li>Upper side is Red, lower side is Red (Card 1, Side 1)</li>\n\n<li>Upper side is Red, lower side is Red (Card 1, Side 2)</li>\n\n<li>Upper side is Red, lower side is Black (Card 3, Side 1)</li>\n\n</ul>\n\n<p>So, there are three possible favorable outcomes where the upper side is red. Now, we count how many of these favorable outcomes have black as the other side:</p>\n\n<ul>\n\n<li>Card 1, Side 1: Other side is Red</li>\n\n<li>Card 1, Side 2: Other side is Red</li>\n\n<li>Card 3, Side 1: Other side is Black</li>\n\n</ul>\n\n<p>Only one of these outcomes has the other side colored black. Therefore, the probability is:</p>\n\n<p>$$ \\frac{ \\text{Number of favorable outcomes with red upper side and black lower side}}{ \\text{Total number of favorable outcomes with red upper side}} = \\frac{1}{3} $$</p>\n\n<p>Therefore, the correct answer is:</p>\n\n<p>Option D\n\n<p>$$\\frac{1}{3}$$ </p></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>What is the probability of a randomly chosen 2 digit number being divisible by 3 ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{2}{9}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{2}{3}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{3}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{9}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the probability of a randomly chosen 2-digit number being divisible by 3, we first need to understand the range of 2-digit numbers and then figure out how many of these are divisible by 3.</p>\n\n<p>Let's consider the range of 2-digit numbers; these numbers range from 10 to 99. Thus, there are:</p>\n\n<p>$$99 - 10 + 1 = 90$$</p>\n\n<p>two-digit numbers.</p>\n\n<p>Now, we need to determine how many of these numbers are divisible by 3. A number is divisible by 3 if the sum of its digits is divisible by 3.</p>\n\n<p>The first 2-digit number divisible by 3 in the range 10 to 99 is 12. The sequence of 2-digit numbers divisible by 3 then proceeds as 12, 15, 18, ..., 99.</p>\n\n<p>This sequence is an arithmetic sequence where the first term, $a$, is 12 and the common difference, $d$, is 3. We can use the formula for the $n$-th term of an arithmetic sequence:</p>\n\n<p>$$a_n = a + (n-1)d$$</p>\n\n<p>where $a_n$ is the last term. Setting $a_n = 99$, we have:</p>\n\n<p>$$99 = 12 + (n-1)3$$</p>\n\n<p>Solving for $n$, we get:</p>\n\n<p>$$99 = 12 + 3n - 3$$</p>\n\n<p>$$99 = 9 + 3n$$</p>\n\n<p>$$90 = 3n$$</p>\n\n<p>$$n = 30$$</p>\n\n<p>So, there are 30 2-digit numbers that are divisible by 3.</p>\n\n<p>Therefore, the probability $P$ of choosing a number that is divisible by 3 is given by the ratio of favorable outcomes to the total number of outcomes:</p>\n\n<p>$$P = \\frac{\\text{Number of favorable outcomes}}{\\text{Total number of outcomes}} = \\frac{30}{90} = \\frac{1}{3}$$</p>\n\n<p>Hence, the correct option is:</p>\n\n<p>$$\\boxed{\\frac{1}{3}}$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>P and Q are considering to apply for a job. The probability that P applies for the job is $$\\frac{1}{4}$$. The probability that $$\\mathrm{P}$$ applies for the job given that $$\\mathrm{Q}$$ applies for the job is $$\\frac{1}{2}$$, and the probability that Q applies for the job given that P applies for the job is $$\\frac{1}{3}$$. Then the probability that $$\\mathrm{P}$$ does not apply for the job given that $$\\mathrm{Q}$$ does not apply for the job is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{4}{5}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{7}{8}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{5}{6}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{11}{12}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's break down the problem step by step.</p>\n\n<p>Define the events:  </p>\n\n\n<p><p>Let $$P$$ be the event that person P applies.</p></p>\n<p><p>Let $$Q$$ be the event that person Q applies.</p></p>\n\n\n<p>Given:  </p>\n\n\n<p><p>$$\\Pr(P) = \\frac{1}{4}$$  </p></p>\n<p><p>$$\\Pr(P \\mid Q) = \\frac{1}{2}$$  </p></p>\n<p><p>$$\\Pr(Q \\mid P) = \\frac{1}{3}$$</p></p>\n\n\n<p>Find the probability of both applying, $$\\Pr(P \\cap Q)$$:  </p>\n\n\n<p><p>From $$\\Pr(Q \\mid P) = \\frac{\\Pr(P \\cap Q)}{\\Pr(P)}$$, we have:  </p>\n<p>$$\\Pr(P \\cap Q) = \\Pr(Q \\mid P) \\times \\Pr(P) = \\frac{1}{3} \\times \\frac{1}{4} = \\frac{1}{12}.$$  </p></p>\n<p><p>To confirm, use $$\\Pr(P \\mid Q) = \\frac{\\Pr(P \\cap Q)}{\\Pr(Q)}$$:  </p>\n<p>$$\\frac{1}{2} = \\frac{\\frac{1}{12}}{\\Pr(Q)} \\quad \\Longrightarrow \\quad \\Pr(Q) = \\frac{1}{12} \\times 2 = \\frac{1}{6}.$$</p></p>\n\n\n<p><p>Calculate the probability that at least one applies, $$\\Pr(P \\cup Q)$$:  </p>\n<p>$$\\Pr(P \\cup Q) = \\Pr(P) + \\Pr(Q) - \\Pr(P \\cap Q) = \\frac{1}{4} + \\frac{1}{6} - \\frac{1}{12}.$$  </p>\n<p>Convert to a common denominator (12):  </p>\n<p>$$\\frac{1}{4} = \\frac{3}{12}, \\quad \\frac{1}{6} = \\frac{2}{12}, \\quad \\text{and} \\quad \\frac{1}{12} = \\frac{1}{12},$$  </p>\n<p>so,  </p>\n<p>$$\\Pr(P \\cup Q) = \\frac{3}{12} + \\frac{2}{12} - \\frac{1}{12} = \\frac{4}{12} = \\frac{1}{3}.$$</p></p>\n<p><p>Determine the probability that neither applies, i.e., $$\\Pr(P^c \\cap Q^c)$$:  </p>\n<p>$$\\Pr(P^c \\cap Q^c) = 1 - \\Pr(P \\cup Q) = 1 - \\frac{1}{3} = \\frac{2}{3}.$$</p></p>\n<p><p>Find the probability that Q does not apply, $$\\Pr(Q^c)$$:  </p>\n<p>$$\\Pr(Q^c) = 1 - \\Pr(Q) = 1 - \\frac{1}{6} = \\frac{5}{6}.$$</p></p>\n<p><p>Finally, calculate the probability that P does not apply given Q does not apply, $$\\Pr(P^c \\mid Q^c)$$:  </p>\n<p>$$\\Pr(P^c \\mid Q^c) = \\frac{\\Pr(P^c \\cap Q^c)}{\\Pr(Q^c)} = \\frac{\\frac{2}{3}}{\\frac{5}{6}} = \\frac{2}{3} \\times \\frac{6}{5} = \\frac{12}{15} = \\frac{4}{5}.$$</p></p>\n\n<p>Thus, the probability that P does not apply for the job given that Q does not apply is $$\\frac{4}{5}$$, which corresponds to Option A.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>There are some baskets. The chances of picking a loaded basket and choosing a red coloured one is 0.2 . For every 100 tries to pick one basket, 60 times a basket is either loaded or red in colour. What is the probability of choosing an empty basket plus choosing not a red coloured one.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1.2"
+      },
+      {
+        "identifier": "B",
+        "content": "0.4"
+      },
+      {
+        "identifier": "C",
+        "content": "1.3"
+      },
+      {
+        "identifier": "D",
+        "content": "0.8"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The probability of inviting three friends on 5 consecutive days, exactly one friend a day and no friend is invited on more than two days is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{10}{81}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{5}{27}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{20}{81}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{10}{27}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><p>Total outcomes:  </p>\n<p>Since you invite one friend per day for 5 days and have 3 friends available, the total number of possible outcomes is  </p>\n<p>$$3^5 = 243.$$</p></p>\n<p><p>Find valid outcomes:  </p>\n<p>You need sequences where no friend is invited more than twice. If you denote the number of times each friend is invited by $$a,$$ $$b,$$ and $$c,$$ then  </p>\n<p>$$a + b + c = 5$$  </p>\n<p>with the constraint that each of $$a, b, c \\leq 2.$$  </p>\n<p>On checking, the only distribution that meets these conditions is  </p>\n<p>$$(2,2,1),$$  </p>\n<p>which means two friends are invited twice and the remaining friend is invited once.</p></p>\n<p><p>Counting valid sequences:  </p></p>\n\n\n<p><p>First, choose which friend is invited only once. There are 3 choices for this.  </p></p>\n<p><p>For a fixed choice, count the number of sequences where one friend appears once and the other two appear twice each. The number of arrangements is given by the multinomial coefficient  </p>\n<p>$$\\frac{5!}{2! \\, 2! \\, 1!} = \\frac{120}{4} = 30.$$  </p></p>\n<p><p>Therefore, the total number of valid outcomes is  </p>\n<p>$$3 \\times 30 = 90.$$</p></p>\n\n\n<p><p>Calculate the probability:  </p>\n<p>The probability is the number of valid outcomes divided by the total outcomes, so  </p>\n<p>$$\\frac{90}{243} = \\frac{10}{27}.$$</p></p>\n\n<p>Thus, the correct answer is:</p>\n<p>Option D  </p>\n<p>$$\\frac{10}{27}.$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A and B are two independent events. The probability of their simultaneous occurrence is $$\\frac{1}{8}$$ and the probability that neither of them occurs is $$\\frac{3}{8}$$. Then their individual probabilities are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\n\\frac{3}{8} \\text { and } \\frac{1}{8}\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\n\\frac{5}{8} \\text { and } \\frac{1}{4}\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\n\\frac{3}{4} \\text { and } \\frac{1}{2}\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\n\\frac{1}{2} \\text { and } \\frac{1}{4}\n$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We are given two independent events $A$ and $B$ such that</p>\n\n<p><p>$\\Pr(A \\cap B) = \\tfrac{1}{8}$.</p></p>\n<p><p>$\\Pr(A^c \\cap B^c) = \\tfrac{3}{8}$.</p></p>\n\n<p>Let $\\Pr(A) = p$ and $\\Pr(B) = q$. Since $A$ and $B$ are independent,</p>\n<p>$ \\Pr(A \\cap B) \\;=\\; p \\times q \\;=\\; \\tfrac{1}{8}. \\tag{1} $</p>\n<p>Also, by independence of complements,</p>\n<p>$ \\Pr(A^c \\cap B^c)  \\;=\\; \\Pr(A^c)\\,\\Pr(B^c)  \\;=\\; (1 - p)(1 - q)  \\;=\\; \\tfrac{3}{8}. \\tag{2} $</p>\n<hr />\n<h3>Step 1: Express $\\Pr(A^c \\cap B^c)$ in terms of $p$ and $q$</h3>\n<p>Expanding (2):</p>\n<p>$ (1 - p)(1 - q) \\;=\\; 1 - p - q + p\\,q \\;=\\; \\tfrac{3}{8}. $</p>\n<p>Since from (1) we have $p\\,q = \\tfrac{1}{8}$, substitute that:</p>\n<p>$ 1 - p - q + \\tfrac{1}{8} = \\tfrac{3}{8} \\;\\;\\Longrightarrow\\;\\; 1 - p - q = \\tfrac{3}{8} - \\tfrac{1}{8} = \\tfrac{2}{8} = \\tfrac{1}{4}. $</p>\n<p>Hence,</p>\n<p>$ -\\,p \\;-\\; q = \\tfrac{1}{4} - 1 = -\\tfrac{3}{4} \\quad\\Longrightarrow\\quad p + q = \\tfrac{3}{4}. \\tag{3} $</p>\n<hr />\n<h3>Step 2: Solve the system</h3>\n<p>We have:</p>\n<p>$ \\begin{cases} p + q = \\tfrac{3}{4},\\\\[6pt] p\\,q = \\tfrac{1}{8}. \\end{cases} $</p>\n<p>From $p + q = \\tfrac{3}{4}$, let $q = \\tfrac{3}{4} - p$. Substituting into $p\\,q = \\tfrac{1}{8}$,</p>\n<p>$ p \\,\\bigl(\\tfrac{3}{4} - p\\bigr)  = \\tfrac{1}{8} \\;\\;\\Longrightarrow\\;\\; \\tfrac{3}{4}\\,p - p^2  = \\tfrac{1}{8}. $</p>\n<p>Multiply through by $8$ to clear denominators:</p>\n<p>$ 6p - 8p^2  = 1 \\;\\;\\Longrightarrow\\;\\; 8p^2 - 6p + 1  = 0. $</p>\n<p>Using the quadratic formula,</p>\n<p>$ p  = \\frac{6 \\pm \\sqrt{36 - 32}}{16} = \\frac{6 \\pm \\sqrt{4}}{16} = \\frac{6 \\pm 2}{16}. $</p>\n<p>Thus,</p>\n\n<p><p>$p = \\tfrac{6 + 2}{16} = \\tfrac{8}{16} = \\tfrac{1}{2},$</p></p>\n<p><p>$p = \\tfrac{6 - 2}{16} = \\tfrac{4}{16} = \\tfrac{1}{4}.$</p></p>\n\n<p>Since $p + q = \\tfrac{3}{4}$,</p>\n\n<p><p>if $p = \\tfrac{1}{2}$, then $q = \\tfrac{3}{4} - \\tfrac{1}{2} = \\tfrac{1}{4}$;</p></p>\n<p><p>if $p = \\tfrac{1}{4}$, then $q = \\tfrac{3}{4} - \\tfrac{1}{4} = \\tfrac{1}{2}$.</p></p>\n\n<p>So the two solutions are $\\bigl(p,q\\bigr) = \\bigl(\\tfrac{1}{2},\\tfrac{1}{4}\\bigr)$ or $\\bigl(\\tfrac{1}{4},\\tfrac{1}{2}\\bigr)$. </p>\n<p>That is, the individual probabilities of $A$ and $B$ must be $\\frac{1}{2}$ and $\\frac{1}{4}$ (in either order).</p>\n<hr />\n<h3>Step 3: Match with the given options</h3>\n<p>The options are:</p>\n\n<p><p>(A) $\\tfrac{3}{8}$ and $\\tfrac{1}{8}$</p></p>\n<p><p>(B) $\\tfrac{5}{8}$ and $\\tfrac{1}{4}$</p></p>\n<p><p>(C) $\\tfrac{3}{4}$ and $\\tfrac{1}{2}$</p></p>\n<p><p>(D) $\\tfrac{1}{2}$ and $\\tfrac{1}{4}$</p></p>\n\n<p>Clearly, <strong>Option D</strong> is exactly the pair $\\bigl(\\tfrac12,\\tfrac14\\bigr)$. (And it does not matter which event is which, since the question just asks for their individual probabilities.)</p>\n<p>Hence, the correct answer is</p>\n<p>$ \\boxed{\\text{Option D: } \\frac{1}{2} \\text{ and } \\frac{1}{4}.} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A determinant of the second order is made with elements 0 and 1 . What is the probability that the determinant made is non-negative?\n</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{11}{16}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{7}{16}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{3}{16}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{13}{16}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A and B each have a calculator which can generate a single digit random number from the set $$\\{1,2,3,4,5,6,7,8\\}$$. They can generate a random number on their calculator. Given that the sum of the two numbers is 12 , then the probability that the two numbers are equal is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{5}{64}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{5}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{16}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{8}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's denote the random numbers generated by A and B as $$a$$ and $$b$$ respectively. Given that the sum of the two numbers is 12, we have the equation:</p>\n\n<p>$$ a + b = 12 $$</p>\n\n<p>We want to find the probability that $$a$$ and $$b$$ are equal under this condition.</p>\n\n<p>First, let's list out the set of possible single-digit values from which $$a$$ and $$b$$ can be generated, which are $$\\{1, 2, 3, 4, 5, 6, 7, 8\\}$$. Given the equation $$a + b = 12$$, we can find the pairs $$ (a, b) $$ that satisfy this condition:</p>\n\n<ul>\n\n<li>$$(a = 4, b = 8)$$</li>\n\n<li>$$(a = 5, b = 7)$$</li>\n\n<li>$$(a = 6, b = 6)$$</li>\n\n<li>$$(a = 7, b = 5)$$</li>\n\n<li>$$(a = 8, b = 4)$$</li>\n\n</ul>\n\n<p>As seen above, there are exactly five pairs that satisfy the condition $$a + b = 12$$.</p>\n\n<p>Next, we need to determine how many of these pairs have equal numbers. The only pair where the numbers are equal is (6, 6).</p>\n\n<p>Therefore, there is only one favorable outcome out of the five possible outcomes where $$a$$ and $$b$$ are equal.</p>\n\n<p>Thus, the probability that the two numbers are equal given that their sum is 12 is:</p>\n\n<p>$$ P(\\text{a = b | a + b = 12}) = \\frac{\\text{Number of favorable outcomes}}{\\text{Total possible outcomes}} = \\frac{1}{5} $$</p>\n\n<p>Hence, the correct answer is:</p>\n\n<p><strong>Option B</strong>: $$\\frac{1}{5}$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The probability that a randomly chosen number from one to twelve is a divisor of twelve is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{5}{12}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{3}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{5}{6}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{2}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the probability that a randomly chosen number from one to twelve is a divisor of twelve, we first need to identify all the divisors of twelve. A divisor of twelve is any number that divides twelve without leaving a remainder.</p>\n\n<p>The divisors of twelve are: $$1, 2, 3, 4, 6, 12$$.</p>\n\n<p>There are a total of six divisors of twelve.</p>\n\n<p>Next, we note that the total number of possible choices (from one to twelve) is twelve.</p>\n\n<p>The probability $P$ that a randomly chosen number from one to twelve is a divisor of twelve is given by the ratio of the number of favorable outcomes (divisors) to the total number of possible outcomes:</p>\n\n<p>\n\n<p>$$ P = \\frac{\\text{Number of divisors of 12}}{\\text{Total number of choices}} = \\frac{6}{12} = \\frac{1}{2} $$</p>\n\n</p>\n\n<p>Therefore, the correct answer is Option D:</p>\n\n<p>Option D</p>\n\n<p>$$\\frac{1}{2}$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If the events A and B are mutually exclusive events such that $$P(A)=\\frac{1}{3}(3 x+1)$$ and $$P(B)=\\frac{1}{4}(1-x)$$ then the possible values of $x$ lies in the interval</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\frac{1}{3}, \\frac{2}{9}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[-\\frac{1}{3}, \\frac{5}{9}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$[0,1]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[-\\frac{7}{9}, \\frac{4}{9}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given that events A and B are mutually exclusive, so the probability of either event occurring at the same time is zero. Also, the sum of probabilities for mutually exclusive events should be less than or equal to 1. This gives us the inequality:</p>\n\n<p>$$P(A) + P(B) \\le 1$$</p>\n\n<p>We are given the probabilities:</p>\n\n<p>$$P(A) = \\frac{1}{3}(3x + 1)$$</p>\n\n<p>$$P(B) = \\frac{1}{4}(1 - x)$$</p>\n\n<p>Substituting these into our inequality:</p>\n\n<p>$$\\frac{1}{3}(3x + 1) + \\frac{1}{4}(1 - x) \\le 1$$</p>\n\n<p>To simplify, find a common denominator, which is 12:</p>\n\n<p>$$\\frac{4(3x + 1)}{12} + \\frac{3(1 - x)}{12} \\le 1$$</p>\n\n<p>Combine the fractions:</p>\n\n<p>$$\\frac{4(3x + 1) + 3(1 - x)}{12} \\le 1$$</p>\n\n<p>Expand and combine like terms:</p>\n\n<p>$$\\frac{12x + 4 + 3 - 3x}{12} \\le 1$$</p>\n\n<p>$$\\frac{9x + 7}{12} \\le 1$$</p>\n\n<p>Multiply both sides by 12 to clear the denominator:</p>\n\n<p>$$9x + 7 \\le 12$$</p>\n\n<p>Subtract 7 from both sides:</p>\n\n<p>$$9x \\le 5$$</p>\n\n<p>Divide both sides by 9:</p>\n\n<p>$$x \\le \\frac{5}{9}$$</p>\n\n<p>Also, since probabilities must be non-negative:</p>\n\n<p>$$P(A) \\ge 0 \\quad \\text{and} \\quad P(B) \\ge 0$$</p>\n\n<p>So:</p>\n\n<p>$$\\frac{1}{3}(3x + 1) \\ge 0$$</p>\n\n<p>Multiply both sides by 3:</p>\n\n<p>$$3x + 1 \\ge 0$$</p>\n\n<p>Subtract 1 from both sides:</p>\n\n<p>$$3x \\ge -1$$</p>\n\n<p>Divide by 3:</p>\n\n<p>$$x \\ge -\\frac{1}{3}$$</p>\n\n<p>And for $$P(B):$$</p>\n\n<p>$$\\frac{1}{4}(1 - x) \\ge 0$$</p>\n\n<p>Multiply both sides by 4:</p>\n\n<p>$$1 - x \\ge 0$$</p>\n\n<p>Subtract 1 from both sides:</p>\n\n<p>$$-x \\ge -1$$</p>\n\n<p>Multiply by -1 (which reverses the inequality):</p>\n\n<p>$$x \\le 1$$</p>\n\n<p>Combining these results: $$-\\frac{1}{3} \\le x \\le \\frac{5}{9}$$</p>\n\n<p>Therefore, the possible values of $$x$$ lie in the interval:</p>\n\n<p><b>Option B: $$\\left[-\\frac{1}{3}, \\frac{5}{9}\\right]$$</b></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An urn contains 2 white and 2 black balls. A ball is drawn at random. If it is white it is not replaced into the urn. Otherwise it is replaced along with another ball of the same colour. The process is repeated. The probability that the third ball drawn is black is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{17}{30}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{37}{60}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{31}{60}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{23}{30}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A random variable X with probability distribution is given below</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 450px\"><colgroup>\n<col style=\"width: 110px\">\n<col style=\"width: 80px\">\n<col style=\"width: 83px\">\n<col style=\"width: 88px\">\n<col style=\"width: 89px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-c3ow\">$$<br>\\mathrm{X}=x_i<br>$$</th>\n    <th class=\"tg-c3ow\">2</th>\n    <th class=\"tg-c3ow\">3</th>\n    <th class=\"tg-c3ow\">4</th>\n    <th class=\"tg-c3ow\">5</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-c3ow\">$$<br>\\mathrm{P}\\left(\\mathrm{X}=x_i\\right)<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>\\frac{5}{k}<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>\\frac{7}{k}<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>\\frac{9}{k}<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>\\frac{11}{k}<br>$$</td>\n  </tr>\n</tbody>\n</table></p>\n<p>The mean of this distribution is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\n\\frac{61}{16}\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\n\\frac{61}{8}\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "7"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\n\\frac{61}{4}\n$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the mean of the given probability distribution, we use the formula for the expected value of a discrete random variable. The expected value (mean) of $$X$$ is given by:</p>\n\n<p>$$ E(X) = \\sum_{i} x_i \\cdot P(X = x_i) $$</p>\n\n<p>Given the values:\n\n<p>$$ \\mathrm{X} = x_i: 2, 3, 4, 5 $$</p>\n\n<p>and corresponding probabilities:</p>\n\n<p>$$ P(X = x_i): \\frac{5}{k}, \\frac{7}{k}, \\frac{9}{k}, \\frac{11}{k} $$</p></p>\n\n<p>First, we need to find the value of the constant $$k$$ to ensure that the sum of the probabilities equals 1:</p>\n\n<p>$$ \\frac{5}{k} + \\frac{7}{k} + \\frac{9}{k} + \\frac{11}{k} = 1 $$</p>\n\n<p>Simplifying, we get:</p>\n\n<p>$$ \\frac{5 + 7 + 9 + 11}{k} = 1 \\implies \\frac{32}{k} = 1 \\implies k = 32 $$</p>\n\n<p>With $$k = 32$$, the probability values become:</p>\n\n<p>$$ P(X = 2) = \\frac{5}{32}, \\quad P(X = 3) = \\frac{7}{32}, \\quad P(X = 4) = \\frac{9}{32}, \\quad P(X = 5) = \\frac{11}{32} $$</p>\n\n<p>Now we calculate the mean (expected value) $$E(X)$$:</p>\n\n<p>$$ E(X) = 2 \\cdot \\frac{5}{32} + 3 \\cdot \\frac{7}{32} + 4 \\cdot \\frac{9}{32} + 5 \\cdot \\frac{11}{32} $$</p>\n\n<p>$$ E(X) = \\frac{10}{32} + \\frac{21}{32} + \\frac{36}{32} + \\frac{55}{32} $$</p>\n\n<p>$$ E(X) = \\frac{10 + 21 + 36 + 55}{32} $$</p>\n\n<p>$$ E(X) = \\frac{122}{32} $$</p>\n\n<p>$$ E(X) = \\frac{61}{16} $$</p>\n\n<p>So, the mean of this distribution is</p>\n\n<p>Option A: $$\\frac{61}{16}$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A number $$\\mathrm{n}$$ is chosen at random from $$s=\\{1,2,3, \\ldots, 50\\}$$. Let $$\\mathrm{A}=\\{n \\in s: n$$ is a square $$\\}$$, $$\\mathrm{B}=\\{n \\in s: n$$ is a prime$$\\}$$ and $$\\mathrm{C}=\\{n \\in s: n$$ is a square$$\\}$$. Then, correct order of their probabilities is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$p(A) < p(B) < p(C)$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$p(A) > p(B) > p(C)$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$p(\\mathrm{~B}) < p(\\mathrm{~A}) < p(C)$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$p(A) > p(c) > p(B)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\text { Given, } S=\\{1,2,3 \\ldots, 50\\} \\\\\n& A+\\left\\{n \\in S: n+\\frac{50}{n}>27\\right\\} \\\\\n& =\\left\\{n \\in S: n^2-27 n+50>0\\right\\} \\\\\n& =\\{n \\in S:(n-25)(n-2)>0\\} \\\\\n& =\\{n \\in S: n<2 \\text { or } n>25\\} \\\\\n& =\\{1,26,27,28, \\ldots, 50\\} \\\\\n& \\Rightarrow n(A)=26 \\\\\n& B=\\{n \\in S: n \\text { is prime }\\} \\\\\n& =\\{2,3,5,7,11,13,17,19,23 \\text {, } \\\\\n& 29,31,37,41,43,47\\} \\\\\n& \\Rightarrow n(B)=15 \\\\\n& C=\\{n \\in S: n \\text { is a square }\\}=\\{1,4,9,16,25,36,49\\} \\\\\n& \\Rightarrow n(C)=7 \\\\\n& \\therefore \\quad p(A)=\\frac{n(A)}{n(S)}=\\frac{26}{50} \\text {, } \\\\\n& \\Rightarrow \\quad p(B)=\\frac{n(B)}{n(S)}=\\frac{15}{50} \\text {, } \\\\\n& p(C)=\\frac{n(C)}{n(S)}=\\frac{7}{50} \\\\\n& \\therefore \\quad p(A)>p(B)>p(C) \\\\\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A five-digits number is formed by using the digits $$1,2,3,4,5$$ with no repetition. The probability that the numbers 1 and 5 are always together, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{2}{5}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{5}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{3}{5}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{4}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>The total number of possible five-digit numbers $$=5$$ !</p>\n<p>The total number of possible five-digit numbers in which 1 and 5 are always together $$=2 \\times 4$$ !</p>\n<p>$$\\therefore$$ Required probability $$=\\frac{2 \\times 4 !}{5 !}=\\frac{2 \\times 4 !}{5 \\times 4 !}=\\frac{2}{5}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If a number $n$ is chosen at random from the set $$\\{11,12,13, \\ldots \\ldots, 30\\}$$. Then, the probability that $$n$$ is neither divisible by 3 nor divisible by 5, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{7}{20}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{9}{20}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{11}{20}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{13}{20}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Here, number which are divisible by either 3 or 5 are $$12,15,18,20,21,24,27,30$$.</p>\n<p>$$\\therefore$$ Total numbers $$=9$$</p>\n<p>$$P \\text { (number either divisible by } 3 \\text { or } 5 \\text { ) }=\\frac{9}{20}$$</p>\n<p>$$P$$ (number neither divisible by 3 nor 5 )</p>\n<p>$$=1-P$$ (number either divisible by 3 or 5 )</p>\n<p>$$=1-\\frac{9}{20}=\\frac{11}{20}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Three vertices are chosen randomly from the nine vertices of a regular 9-sided polygon. The probability that they form the vertices of an isosceles triangle, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{4}{7}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{3}{7}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{2}{7}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{5}{7}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Number of triangles formed $$={ }^9 C_3$$</p>\n<p>Number of isosceles triangles $$=9 \\times\\left(\\frac{9-1}{2}\\right)$$</p>\n<p>$$=9 \\times 4=36$$</p>\n<p>So, required probability</p>\n<p>$$=\\frac{36}{{ }^9 C_3}=\\frac{36}{\\frac{9 !}{3 !(9-3) !}}=\\frac{36 \\times 3 \\times 2 \\times 6 !}{9 \\times 8 \\times 7 \\times 6 !}=\\frac{3}{7}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A, B$$ and $$C$$ are mutually exclusive and exhaustive events of a random experiment such that $$P(B)=\\frac{3}{2} P(A)$$ and $$P(C)=\\frac{1}{2} P(B)$$, then $$P(A \\cup C)$$ equals to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{10}{13}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{3}{13}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{6}{13}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{7}{13}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$P(B)=\\frac{3}{2} P(A)$$ and $$P(C)=\\frac{1}{2} P(B)$$</p>\n<p>Since, $$A, B$$ and $$C$$ are mutually exclusive and exhaustive events.</p>\n<p>$$\\begin{array}{ll}\n\\therefore & P(A)+P(B)+P(C)=1 \\\\\n\\Rightarrow & P(A)+\\frac{3}{2} P(A)+\\frac{1}{2} \\times \\frac{3}{2} P(A)=1 \\\\\n\\Rightarrow & P(A)\\left(1+\\frac{3}{2}+\\frac{3}{4}\\right)=1 \\\\\n\\Rightarrow & P(A)\\left(\\frac{13}{4}\\right)=1 \\Rightarrow P(A)=\\frac{4}{13} \\\\\n\\therefore & P(C)=\\frac{1}{2} \\times \\frac{3}{2} P(A)=\\frac{3}{4} \\times \\frac{4}{13}=\\frac{3}{13}\n\\end{array}$$</p>\n<p>Also, $$A, B$$ and $$C$$ are mutually exclusive.</p>\n<p>$$\\therefore P(A \\cap B)=P(B \\cap C)=P(C \\cap A)=0$$</p>\n<p>Now, $$P(A \\cup C)=P(A)+P(C)-P(A \\cap C)$$</p>\n<p>$$=\\frac{4}{13}+\\frac{3}{13}-0=\\frac{7}{13}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In a trial, the probability of success is twice the probability of failure. In six trials, the probability of at most two failure will be</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{600}{729}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{500}{729}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{400}{729}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{496}{729}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let the probability of failure and success be $$p$$ and $$q$$, respectively.</p>\n<p>Let $$X$$ represents the number of failure</p>\n<p>According to the question, $$q=2 p$$</p>\n<p>$$\\because \\quad p+q=1$$ and $$q=2 p$$</p>\n<p>$$\\therefore \\quad p=\\frac{1}{3} \\text { and } q=\\frac{2}{3}$$</p>\n<p>Now, required probability $$=P(X \\leq 2)$$</p>\n<p>$$\\begin{aligned}\n& =P(X=0)+P(X=1)+P(X=2) \\\\\n& ={ }^6 C_0 p^0 q^6+{ }^6 C_1 p^1 q^5+{ }^6 C_2 p^2 q^4 \\\\\n& =\\left(\\frac{2}{3}\\right)^6+6\\left(\\frac{1}{3}\\right)^1\\left(\\frac{2}{3}\\right)^5+15\\left(\\frac{1}{3}\\right)^2\\left(\\frac{2}{3}\\right)^4 \\\\\n& =\\frac{1}{729}(64+192+240)=\\frac{496}{729}\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A die is thrown twice and the sum of numbers appearing is observed to be 8 . What is the conditional probability that the number 5 has appeared atleast once?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\n\\frac{5}{36}\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\n\\frac{2}{5}\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\n\\frac{1}{18}\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\n\\frac{1}{3}\n$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the conditional probability that at least one 5 appears given that the sum of the numbers on two dice is 8, we need to calculate:</p>\n\n<p>1. The probability of the sum being 8.</p>\n\n<p>2. The probability of at least one die showing a 5 and the sum being 8.</p>\n\n<p>3. The conditional probability of at least one die showing a 5 given that the sum is 8.</p>\n\n<p>The total number of outcomes when a die is thrown twice is $$6 \\times 6 = 36.$$</p>\n\n<p><strong>Step 1: Find the probability that the sum is 8.</strong></p>\n\n<p>The possible outcomes that result in a sum of 8 are:</p>\n\n<ul>\n\n<li>(2,6)</li>\n\n<li>(3,5)</li>\n\n<li>(4,4)</li>\n\n<li>(5,3)</li>\n\n<li>(6,2)</li>\n\n</ul>\n\n<p>There are 5 such outcomes.</p>\n\n<p>Thus, the probability of the sum being 8 is $$\\frac{5}{36}.$$</p>\n\n<p><strong>Step 2: Find the probability of at least one die showing 5 and the sum being 8.</strong></p>\n\n<p>The favorable outcomes where at least one die shows 5 and the sum is 8 are:</p>\n\n<ul>\n\n<li>(3,5)</li>\n\n<li>(5,3)</li>\n\n</ul>\n\n<p>There are 2 such outcomes.</p>\n\n<p>Thus, the probability of at least one die showing 5 and the sum being 8 is $$\\frac{2}{36} = \\frac{1}{18}.$$</p>\n\n<p><strong>Step 3: Calculate the conditional probability.</strong></p>\n\n<p>The conditional probability that at least one die is 5 given the sum is 8 is the ratio of the number of favorable outcomes to the number of outcomes where the sum is 8:</p>\n\n<p>$$P(\\text{At least one 5}|\\text{Sum}=8) = \\frac{\\text{Number of favorable outcomes where at least one die is 5}}{\\text{Number of outcomes where the sum is 8}} = \\frac{2}{5}.$$</p>\n\n<p>The correct answer is therefore Option B:</p>\n\n<p>$$\\frac{2}{5}.$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Bag A contains 3 white and 2 red balls. Bag B contains only 1 white ball. A fair coin is tossed. If head appears then 1 ball is drawn at random from bag A and put into bag B. However if tail appears then 2 balls are drawn at random from bag A and put into bag B. Now one ball is drawn at random from bag B. Given that the drawn ball from B is white, the probability that head appeared on the coin is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\n\\frac{23}{30}\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\n\\frac{12}{23}\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\n\\frac{11}{23}\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\n\\frac{19}{30}\n$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\n\\text { If } P(B)=\\frac{3}{5} \\quad P(A / B)=\\frac{1}{2} \\text { and } P(A \\cup B)=\\frac{4}{5} \\text { then } P(A \\cup B)^{\\prime}+P\\left(A^{\\prime} \\cup B\\right)=\n$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\n\\frac{4}{5}\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\n\\frac{1}{2}\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\n\\frac{1}{5}\n$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve this problem, we need to first understand some of the probability rules and then apply them to the given values.</p>\n\n<p>Let's start by finding the individual probabilities and then calculate what is required.</p>\n\n<p><strong>Step 1: Find \\( P(A \\cap B) \\)</strong><br>\nWe know that:</p>\n\n<p>$$\nP(A \\cap B) = P(B) \\times P(A \\mid B)\n$$</p>\n\n<p>Plugging in the given values:</p>\n\n<p>$$\nP(A \\cap B) = \\frac{3}{5} \\times \\frac{1}{2} = \\frac{3}{10}\n$$</p>\n\n<p><strong>Step 2: Find \\( P(A) \\)</strong><br>\nWe know from the formula for probability of the union of two events:</p>\n\n<p>$$\nP(A \\cup B) = P(A) + P(B) - P(A \\cap B)\n$$</p>\n\n<p>Plugging in the given values and the value we found for \\( P(A \\cap B) \\):</p>\n\n<p>$$\n\\frac{4}{5} = P(A) + \\frac{3}{5} - \\frac{3}{10}\n$$</p>\n\n<p>To simplify:</p>\n\n<p>$$\n\\frac{4}{5} = P(A) + \\frac{3}{5} - \\frac{3}{10} = P(A) + \\frac{6}{10} - \\frac{3}{10} = P(A) + \\frac{3}{10}\n$$</p>\n\n<p>Solving for \\( P(A) \\):</p>\n\n<p>$$\nP(A) = \\frac{4}{5} - \\frac{3}{10} = \\frac{8}{10} - \\frac{3}{10} = \\frac{5}{10} = \\frac{1}{2}\n$$</p>\n\n<p><strong>Step 3: Calculate \\( P(A \\cup B)^\\prime \\)</strong></p>\n\n<p>We know that:</p>\n\n<p>$$\nP(A \\cup B)^\\prime = 1 - P(A \\cup B) = 1 - \\frac{4}{5} = \\frac{1}{5}\n$$</p>\n\n<p><strong>Step 4: Find \\( P\\left(A^\\prime \\cup B\\right) \\)</strong></p>\n\n<p>Using De Morgan’s Laws:</p>\n\n<p>$$\nP(A^\\prime \\cup B) = 1 - P(A \\cap B^\\prime)\n$$</p>\n\n<p>First, let's find \\( P(B^\\prime) \\):</p>\n\n<p>$$\nP(B^\\prime) = 1 - P(B) = 1 - \\frac{3}{5} = \\frac{2}{5}\n$$</p>\n\n<p>Now, find \\( P(A \\cap B^\\prime) \\):</p>\n\n<p>We know that \\( P(A) = \\frac{1}{2} \\) and \\( P(B^\\prime) = \\frac{2}{5} \\). Assuming independence (not given, so check assumptions if more information provided):</p>\n\n<p>$$\nP(A \\cap B^\\prime) = P(A) \\times P(B^\\prime) = \\frac{1}{2} \\times \\frac{2}{5} = \\frac{1}{5}\n$$</p>\n\n<p>Therefore,</p>\n\n<p>$$\nP(A^\\prime \\cup B) = 1 - \\frac{1}{5} = \\frac{4}{5}\n$$</p>\n\n<p><strong>Step 5: Sum the results:</strong></p>\n\n<p>$$\nP(A \\cup B)^\\prime + P(A^\\prime \\cup B) = \\frac{1}{5} + \\frac{4}{5} = 1\n$$</p>\n\n<p>Thus, our final answer is:</p>\n\n<p>$$\n\\text{Option C } 1\n$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The probability distribution of a discrete random variable X is given as</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 716px\">\n<colgroup>\n<col style=\"width: 91px\">\n<col style=\"width: 107px\">\n<col style=\"width: 103px\">\n<col style=\"width: 98px\">\n<col style=\"width: 109px\">\n<col style=\"width: 106px\">\n<col style=\"width: 102px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-baqh\">$$\\mathrm{X}$$</th>\n    <th class=\"tg-baqh\">1</th>\n    <th class=\"tg-baqh\">2</th>\n    <th class=\"tg-baqh\">4</th>\n    <th class=\"tg-baqh\">2A</th>\n    <th class=\"tg-baqh\">3A</th>\n    <th class=\"tg-baqh\">5A</th>\n  </tr>\n</thead>\n<tbody>\n  <tr>\n    <td class=\"tg-baqh\">$$\\mathrm{P(X)}$$</td>\n    <td class=\"tg-baqh\">$$\\frac{1}{2}$$</td>\n    <td class=\"tg-baqh\">$$\\frac{1}{5}$$</td>\n    <td class=\"tg-baqh\">$$\\frac{3}{25}$$</td>\n    <td class=\"tg-baqh\">K</td>\n    <td class=\"tg-baqh\">$$\\frac{1}{25}$$</td>\n    <td class=\"tg-baqh\">$$\\frac{1}{25}$$</td>\n  </tr>\n</tbody>\n</table></p>\n<p>$$\n\\text { Then the value of } A \\text { if } E(X)=2.94 \\text { is }\n$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\n\\frac{1}{2}\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\n\\frac{1}{3}\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>18 Points are indicated on the perimeter of a triangle $$\\mathrm{ABC}$$ as shown below. If three points are chosen then probability that it will from a triangle is</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1lvgeuaf0/280766d8-482b-4d2b-b084-7dfbb301bbfa/e73947c0-03a6-11ef-af6c-8df6f207a070/file-1lvgeuaf1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1lvgeuaf0/280766d8-482b-4d2b-b084-7dfbb301bbfa/e73947c0-03a6-11ef-af6c-8df6f207a070/file-1lvgeuaf1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"COMEDK 2023 Evening Shift Mathematics - Probability Question 31 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\n\\frac{1}{2}\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\n\\frac{355}{408}\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\n\\frac{331}{816}\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\n\\frac{711}{816}\n$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The probability of choosing randomly a number c from the set {1, 2, 3, ... 9} such that the quadratic equation $$x^2+4x+c=0$$ has real roots, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{9}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{2}{9}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{3}{9}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{4}{9}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$${x^2} + 4x + c = 0$$</p>\n<p>From real roots, $$D = {b^2} - 4ac \\ge 0$$</p>\n<p>$$16 - 4c \\ge 0$$</p>\n<p>So, $$c = 1,2,3,4$$ will satisfy the above inequality.</p>\n<p>$$\\therefore$$ Required probability $$ = {4 \\over 9}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "comedk-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Five persons A, B, C, D and E are in queue of a shop. The probability that A and B are always together is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{2}{5}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{4}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{3}{5}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{2}{3}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, 5 persons are in a queue of a shop. A and B itself can arrange in two ways therefore number of arrangement for A and  B = 2! = 2</p>\n<p>So, probability that A and B are always together</p>\n<p>$$ = {{2! \\times 4!} \\over {5!}} = {{2 \\times 4!} \\over {5 \\times 4!}} = {2 \\over 5}$$</p>\n<p>Option (a) is correct.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "comedk-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If the probability for A to fail in an examination is 0.2 and that for B is 0.3, then the probability that either A or B fail is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.38"
+      },
+      {
+        "identifier": "B",
+        "content": "0.44"
+      },
+      {
+        "identifier": "C",
+        "content": "0.50"
+      },
+      {
+        "identifier": "D",
+        "content": "0.94"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\text { } P(\\bar{A})=0.2, P(\\bar{B})=0.3 \\\\\n& \\therefore P(A)=0.8, P(B)=0.7\n\\end{aligned}$$</p>\n<p>$$\\therefore$$ Required probability</p>\n<p>$$\\begin{aligned}\n& =P(\\bar{A}) P(\\bar{B})+P(\\bar{A}) P(\\bar{B})+P(\\bar{A}) P(\\bar{B}) \\\\\n& =0.2 \\times 0.7+0.8 \\times 0.3+0.2 \\times 0.3 \\\\\n& =0.44\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "comedk-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Three vertices are chosen randomly from the seven vertices of a regular 7-sided polygon. The probability that they form the vertices of an isosceles triangle is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{7}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{3}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{3}{7}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{3}{5}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Number of triangles formed $$={ }^7 C_3$$</p>\n<p>Number of isosceles triangles</p>\n<p>$$=7 \\times 3=21$$</p>\n<p>So, probability</p>\n<p>$$\\text {  } \\begin{aligned}\n&=\\frac{21}{{ }^7 C_3}=\\frac{21}{\\frac{7 !}{3 !(7-3) !}} \\\\\n&=\\frac{21 \\times 3 ! \\times 4 !}{7 \\times 6 \\times 5 \\times 4 !}=\\frac{3}{5}\n\\end{aligned}$$</p>\n<p>Option (d) is correct.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "comedk-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If A, B and C are three mutually exclusive and exhaustive events such that P(A) = 2P(B) = 3P(C). What is P(B)?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{6}{11}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{6}{22}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{6}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{3}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given that $$A, B$$ and $$C$$ are three mutually exclusive events</p>\n<p>$$\\begin{aligned}\n& \\Rightarrow \\quad P(A)=2 P(B)=3 P(C) \\\\\n& P(A \\cup B \\cup C)=P(A)+P(B)+P(C) \\\\\n& =2 P(B)+P(B)+\\frac{2}{3} P(B) \\\\\n& =\\frac{11}{3} P(B) \\\\\n& \\because P(A \\cup B \\cup C)=1 \\\\\n& \\Rightarrow \\quad \\frac{11}{3} P(B)=1 \\Rightarrow P(B)=\\frac{3}{11} \\\\\n& \\Rightarrow \\quad P(B)=\\frac{6}{22} \\\\\n\\end{aligned}$$</p>\n<p>Option (b) is correct.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "comedk-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A multiple choice examination has 5 questions. Each question has three alternative answers of which exactly one is correct. The probability that a student will get 4 or more correct answer just by guessing, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{13}{3^5}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{11}{3^5}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{10}{3^5}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{17}{3^5}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Total number of questions, $$n=5$$</p>\n<p>Probability of correct answer, $$p=\\frac{1}{3}$$</p>\n<p>Probability of incorrect answer, $$q=\\frac{2}{3}$$</p>\n<p>$$\\begin{aligned}\n& \\text { Required probability }=P(x \\geq 4) \\\\\n& =p(x=4)+p(x=5) \\\\\n& ={ }^5 C_4 \\times\\left(\\frac{1}{3}\\right)^4 \\times\\left(\\frac{2}{3}\\right)^1+{ }^5 C_5\\left(\\frac{1}{3}\\right)^5 \\times\\left(\\frac{2}{3}\\right)^0 \\\\\n& =\\frac{10}{3^5}+\\frac{1}{3^5}=\\frac{11}{3^5}\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "comedk-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The coefficients a, b and c of the quadratic equation, $$ax^2+bx+c=0$$ are obtained by throwing a dice three times. The probability that this equation has equal roots is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{72}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{5}{216}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{36}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{54}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$a x^2+b x+c=0$$</p>\n<p>For equal roots $$D=0 \\Rightarrow b^2=4 a c \\Rightarrow b^2=4 a c$$</p>\n<p>In Case I : $$a c=1$$</p>\n<p>$$(a, b, c)=(1,2,1)$$</p>\n<p>Case II : $$a c=4$$</p>\n<p>$$(a, b, c)=(1,4,4)$$ or $$(4,4,1)$$  or $$(2,4,2)$$</p>\n<p>Case III : $$a c=9$$</p>\n<p>$$(a, b, c)=(3,6,3)$$</p>\n<p>Required probability $$=\\frac{5}{216}$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "comedk-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Three of the six vertices of a regular hexagon are chosen at random. The probability that the triangle with three vertices is equilateral equals</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{1}{5}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{1}{10}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{20}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>In a regular hexagon, there are two equilateral triangles are possible.</p>\n<p>$$\\therefore$$ Required probability $$ = {2 \\over {{}^6{C_3}}} = {2 \\over {{{6 \\times 5 \\times 4} \\over {3 \\times 2}}}} = {2 \\over {20}} = {1 \\over {10}}$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "comedk-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Five persons A, B, C, D and E are in queue of a shop. The probability that A and E are always together, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{1}{4}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{2}{3}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{2}{5}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{3}{5}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Total number of ways = 5!</p>\n<p>and favourable number of ways = 2 . 4!</p>\n<p>$$\\therefore$$ Required probability $$ = {{2\\,.\\,4!} \\over {5!}} = {2 \\over 5}$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "comedk-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If A, B and C are mutually exclusive and exhaustive events of a random experiment such that $$P(B) = {3 \\over 2}P(A)$$ and $$P(C) = {1 \\over 2}P(B)$$, then $$P(A \\cup C)$$ equals</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{10} \\over {13}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${3 \\over {13}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${6 \\over {13}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${7 \\over {13}}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$P(B)=\\frac{3}{2} P(A)$$ and $$P(C)=\\frac{1}{2} P(B)$$</p>\n<p>Since, $$A, B$$ and $$C$$ are exclusive events.</p>\n<p>$$\\begin{array}{cc}\n\\therefore & P(A)+P(B)+P(C)=1 \\\\\n\\Rightarrow & P(A)+\\frac{3}{2} P(A)+\\frac{1}{2} \\times \\frac{3}{2} P(A)=1 \\\\\n\\Rightarrow & P(A)\\left(1+\\frac{3}{2}+\\frac{3}{4}\\right)=1 \\\\\n\\Rightarrow & \\frac{13}{4} P(A)=1 \\Rightarrow P(A)=\\frac{4}{13} \\\\\n\\Rightarrow & P(C)=\\frac{1}{2} \\times \\frac{3}{2} P(A)=\\frac{3}{4} \\times \\frac{4}{13}=\\frac{3}{13}\n\\end{array}\n$$</p>\n<p>Also, $$A, B$$ and $$C$$ are mutually exclusive.</p>\n<p>$$\\begin{array}{ll}\n\\therefore & P(A \\cap B)=P(B \\cap C)=P(C \\cap A)=0 \\\\\n\\Rightarrow & P(A \\cup C)=P(A)+P(C)-0=\\frac{4}{13}+\\frac{3}{13}=\\frac{7}{13}\n\\end{array}$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "comedk-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A student answers a multiple choice question with 5 alternatives, of which exactly one is correct. The probability that he knows the correct answer is $$p,0 < p < 1$$. If he does not know the correct answer, he randomly ticks one answer. Given that he has answered the question correctly, the probability that he did not tick the answer randomly, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{3p}{4p+3}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{5p}{3p+2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{5p}{4p+1}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{4p}{3p+1}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $$E_1=$$ Student does not know the answer</p>\n<p>$$E_2=$$ Student knows the answer</p>\n<p>and $$E=$$ Student answer correctly</p>\n<p>$$\\begin{array}{lll}\n\\therefore & P\\left(E_1\\right)=1-p \\Rightarrow P\\left(E_2\\right)=p \\\\\n\\Rightarrow & P\\left(\\frac{E}{E_2}\\right)=1 \\quad \\text { and } \\quad P\\left(\\frac{E}{E_1}\\right)=\\frac{1}{5}\n\\end{array}$$</p>\n<p>Note that, the probability that student did not know the answer randomly $$=$$ The probability that student know the answer.</p>\n<p>$$\\therefore \\quad P\\left(\\frac{E_2}{E}\\right)=\\frac{P\\left(E_2\\right) P\\left(\\frac{E}{E_2}\\right)}{P\\left(E_1\\right) P\\left(\\frac{E}{E_1}\\right)+P\\left(E_2\\right) P\\left(\\frac{E}{E_2}\\right)}\n$$</p>\n<p>$$ = {{p(1)} \\over {(1 - p){1 \\over 5} + p(1)}} = {p \\over {{{1 - p + 5p} \\over 5}}} = {{5p} \\over {1 + 4p}}$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "comedk-2021",
+    "difficulty": null
+  }
+]

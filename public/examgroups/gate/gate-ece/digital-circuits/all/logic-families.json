@@ -1,0 +1,760 @@
+[
+  {
+    "direction": null,
+    "content": "<p>Select the correct statement(s) regarding CMOS implementation of NOT gates.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Noise Margin High (NM<sub>H</sub>) is always equal to the Noise Margin Low (NM<sub>L</sub>), irrespective of the sizing of transistors."
+      },
+      {
+        "identifier": "B",
+        "content": "Dynamic power consumption during switching is zero."
+      },
+      {
+        "identifier": "C",
+        "content": "For a logical high input under steady state, the nMOSFET is in the linear regime of operation."
+      },
+      {
+        "identifier": "D",
+        "content": "Mobility of electrons never influences the switching speed of the NOT gate."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) NM<sub>L</sub> = V<sub>IL</sub> $$-$$ V<sub>OL</sub></p>\n<p>NM<sub>H</sub> = V<sub>OH</sub> $$-$$ V<sub>IH</sub></p>\n<p>when, V<sub>TN</sub> = | V<sub>TP</sub> |</p>\n<p>and K<sub>n</sub> = K<sub>p</sub></p>\n<p>V<sub>IT</sub> = $${{{V_{DD}}} \\over 2}$$ and NM<sub>L</sub> = NM<sub>H</sub></p>\n<p>when $$ \\uparrow {{{K_p}} \\over {{K_n}}}$$ > 1, V<sub>IL</sub> $$\\uparrow$$, V<sub>IH</sub> $$\\uparrow$$</p>\n<p>NM<sub>H</sub> $$\\downarrow$$ and NM<sub>L</sub> $$\\uparrow$$</p>\n<p>When, $$ \\downarrow {{{K_p}} \\over {{K_n}}}$$ < 1, V<sub>IL</sub> $$\\downarrow$$, V<sub>IH</sub> $$\\uparrow$$</p>\n<p>NM<sub>H</sub> $$\\uparrow$$ and NM<sub>L</sub> $$\\uparrow$$</p>\n<p>i.e. NM<sub>L</sub> and NM<sub>H</sub> depends on transistor sizing and they are equal for certain condition only.</p>\n<p>(b) Dynamic power consumption during switching is non-zero due to capacitive loading of next state.</p>\n<p>(c) For $$\\matrix{\n   {\\mathop {{V_{DD}} - \\left| {{V_{TP}}} \\right| \\le {V_{in}} \\le {V_{DD}}}\\limits_{(logic\\,high\\,input)}  \\Rightarrow } & {PMOS \\to Cut - off}  \\cr \n   {} & {NMOS \\to \\,Linear}  \\cr \n\n } $$</p>\n<p>(d) Switching speed depends on charging and discharging of load capacitor for pull up and pull down of output voltage respectively.</p>\n<p>Fast charging and discharging of capacitor depends on mobility of charge carrier.</p>\n<p>$$\\tau$$<sub>charging</sub> = R<sub>PMOS</sub> C<sub>L</sub> (to bring o/p at logic high)</p>\n<p>$$\\tau$$<sub>discharging</sub> = R<sub>NMOS</sub> C<sub>L</sub> (to bring o/p at logic low)</p>\n<p>and also propagation delay,</p>\n<p>$${\\tau _p} = {{{\\tau _{PLH}} + {\\tau _{PHL}}} \\over 2}$$</p>\n<p>where, $${T_{PLH}} = {{{C_L}\\,{V_{DD}}} \\over {{\\mu _p}{C_{ox}}\\left( {{W \\over L}} \\right){{({V_{GS}} - {V_{Tp}})}^2}}}$$</p>\n<p>$${T_{PHL}} = {{{C_L}\\,{V_{DD}}} \\over {{\\mu _p}{C_{ox}}\\left( {{W \\over L}} \\right){{({V_{GS}} - {V_{TN}})}^2}}}$$</p>\n<p>Using average charge model.</p>\n<p>Hence, (c) is only correct statement.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "The output (Y) of the circuit shown in the figure is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b5d8f7c437b08fcff4451770774722cddec55f00cc6c13745cd2dda59c853840.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 4 Digital Circuits - Logic Families Question 9 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline A  + \\overline B  + \\overline C $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$A + \\overline B \\,\\overline {.\\,C}  + A.\\,\\overline C $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline A  + B + \\overline C $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$A.B.\\overline C $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "The full forms of the abbreviations TTL and COMS in reference to  logic families are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Triple Transistor Logic and chip metal oxide semiconductor."
+      },
+      {
+        "identifier": "B",
+        "content": "Tri-state Transistor Logic and chip metal oxide semiconductor."
+      },
+      {
+        "identifier": "C",
+        "content": "Transistor Transistor Logic and chip metal oxide semiconductor."
+      },
+      {
+        "identifier": "D",
+        "content": "Tri-state Transistor Transistor Logic and complementary metal oxide oxide silicon.\n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The transistors used in a portion of the TTL gate shown in figure have β=100. the base-emitter voltage of is 0.7V for a transistor in active  region and 0.75V for a transistor in saturation . If the sink current  I=1mA and the output is at logic 0,\nthen the current $${I_R}$$ I will be equal to\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/3a9f282547dc94830e272205df13934395d659024fb2d8e23e35d4994312a9a1.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Digital Circuits - Logic Families Question 12 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.65 mA \n"
+      },
+      {
+        "identifier": "B",
+        "content": "0.70 mA"
+      },
+      {
+        "identifier": "C",
+        "content": "0.75 mA"
+      },
+      {
+        "identifier": "D",
+        "content": "1.00 mA"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Both transistors T1 and T2 in figure have a threshold voltage of 1 Volt. The device parameters $${K_1}$$ and $${K_2}$$ of $${T_1}$$ and $${T_2}$$ are, respectively, 36 µA/ $${V^2}$$ and \n and 9$$9\\,A/{V^2}$$. The output voltage $${V_0}$$ IS\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/d009e1bafc8f4eaa7ab9b1f17eeb76297fbb3aec0884cbcafa8295a326fea0eb.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Digital Circuits - Logic Families Question 10 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1V"
+      },
+      {
+        "identifier": "B",
+        "content": "2V"
+      },
+      {
+        "identifier": "C",
+        "content": "3V"
+      },
+      {
+        "identifier": "D",
+        "content": "4V"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Figure shows the internal schematic of a TTL AND-OR-Invert (AOI) gate. For the inputs shown in Figure, the output Y is\n\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/47942f053a8a55a4c70e4b68d97238a62d99b6ff1130041e048ff7c793212361.jpg\" loading=\"lazy\" alt=\"GATE ECE 2004 Digital Circuits - Logic Families Question 13 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 "
+      },
+      {
+        "identifier": "B",
+        "content": "1V "
+      },
+      {
+        "identifier": "C",
+        "content": "AB"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline {AB} $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The output of the 74 series of TTL gates is taken from a BJT in",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Totem pole and common collector configuration"
+      },
+      {
+        "identifier": "B",
+        "content": "either totem pole or open collector configuration"
+      },
+      {
+        "identifier": "C",
+        "content": "common base configuration"
+      },
+      {
+        "identifier": "D",
+        "content": "common collector configuration"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "A Darlington Emitter follower circuit is sometimes used in the output stage of a TTL gate in order to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "increase its $${I_{OL}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Reduce its $${I_{OH}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "Increase its speed of operation."
+      },
+      {
+        "identifier": "D",
+        "content": "Reduce power Dissipation."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Commercially available ECL gates use two ground lines and one negative supply in order to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "reduce power dissipation"
+      },
+      {
+        "identifier": "B",
+        "content": "increase fan-out"
+      },
+      {
+        "identifier": "C",
+        "content": "reduce loading effect"
+      },
+      {
+        "identifier": "D",
+        "content": "eliminate the effect of power line glitches or the biasing circuit."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The threshold voltage for each transistor in Fig.2.5, is 2V. For this circuit to work as an inverter, Vi must take the values\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/f3aa1f510aefcf8f9952f8375d899304a43ff382f4c8dc50b0e561ecf7c4747c.jpg\" loading=\"lazy\" alt=\"GATE ECE 1998 Digital Circuits - Logic Families Question 18 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-5 V and 0 V"
+      },
+      {
+        "identifier": "B",
+        "content": "-5 V and 5 V"
+      },
+      {
+        "identifier": "C",
+        "content": "-0 V and 3 V"
+      },
+      {
+        "identifier": "D",
+        "content": "3 V and 5 V "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The noise margin of a TTL gate is about ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.2V"
+      },
+      {
+        "identifier": "B",
+        "content": "0.4V"
+      },
+      {
+        "identifier": "C",
+        "content": "0.6V"
+      },
+      {
+        "identifier": "D",
+        "content": "0.8V"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "For the NMOS logic gate shown in figure, the logic function implemented is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c512adeb494adc143cf01085384f0231d1a78ce206f74cba61b8a4980af55403.jpg\" loading=\"lazy\" alt=\"GATE ECE 1997 Digital Circuits - Logic Families Question 20 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline {ABCDE} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$(AB + \\overline C ).(\\overline {D + E} )$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline {A.(B + C) + D.E} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$(\\overline {A + B} ).C + \\overline D .\\overline E $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The inverter 74AL SO4 has the following specifications:\n<br>  $${I_{OH}}{\\,_{\\max \\,}} = \\, - $$ 0.4mA,  $${I_{OL}}$$ max = 8mA, $${I_{IH}}$$ max = $$\\mu $$A , $${I_{IL\\,}}_{\\max \\,}$$=0.1mA. The fan out based on the above will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10"
+      },
+      {
+        "identifier": "B",
+        "content": "20"
+      },
+      {
+        "identifier": "C",
+        "content": "60"
+      },
+      {
+        "identifier": "D",
+        "content": "100"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "In standard TTL the 'totem pole' stage refers to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the multi-emitteer input stage"
+      },
+      {
+        "identifier": "B",
+        "content": "the phase splitter"
+      },
+      {
+        "identifier": "C",
+        "content": "the output buffer"
+      },
+      {
+        "identifier": "D",
+        "content": "open collector output stage"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The gate delay of an NMOS inverter is dominated by charge time rather than discharge time because ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the driver transistor has a larger threshold voltage than the load transistor."
+      },
+      {
+        "identifier": "B",
+        "content": "the driver transistor has larger  leakage currents compared to the load  transistor."
+      },
+      {
+        "identifier": "C",
+        "content": "the load  transistor has a smaller W/L ratio compared to  the driver  transistor"
+      },
+      {
+        "identifier": "D",
+        "content": "none of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The figure shows the circuit of a gate in the Resistor Transistor Logic (RTL) family. The circuit represents a\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/281821c12955f799960f2285637b4fe7314be0b2dd365a7074effc1e5f4b0ebe.jpg\" loading=\"lazy\" alt=\"GATE ECE 1992 Digital Circuits - Logic Families Question 23 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "NAND"
+      },
+      {
+        "identifier": "B",
+        "content": "AND"
+      },
+      {
+        "identifier": "C",
+        "content": "NOR"
+      },
+      {
+        "identifier": "D",
+        "content": "OR"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "In figure, the Boolean expression for the output in terms of inputs A, B and C when the clock ‘CK’ is high, is given by _______.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/401dfad96f64c1f0d76545f26f2107fa4b501bcdb4fbfe8c6d3cdf045864a3f2.jpg\" loading=\"lazy\" alt=\"GATE ECE 1991 Digital Circuits - Logic Families Question 24 English\">\n\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "C(A+B)",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "The CMOS equivalent of the following n MOS gate (figure) is ________  (draw the circuit ).\n\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/6d2430497772fa0ed1214e7db11befda4995d0d76f1543f36f8296fcc8519048.jpg\" loading=\"lazy\" alt=\"GATE ECE 1991 Digital Circuits - Logic Families Question 25 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\overline {A + BC} $$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "Among the digital IC-families-ECL, TTL and CMOS: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "ECL has the least propagation delay"
+      },
+      {
+        "identifier": "B",
+        "content": "TTL has the largest fan-out"
+      },
+      {
+        "identifier": "C",
+        "content": "CMOS has the biggest noise margin"
+      },
+      {
+        "identifier": "D",
+        "content": "TTL has the lowest power consumption "
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "A logic family has threshold voltage $${V_T}$$= 2V, minimum guaranteed output high voltage $${V_{OH}}$$= 4V, minimum accepted input high voltage $${V_{IH}}$$ = 3V, maximum guaranteed output low voltage $${V_{OL}}$$ = 1V, and maximum accepted input low voltage N $${V_{IL}}$$ =1.5V. Its noise margin is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2V"
+      },
+      {
+        "identifier": "B",
+        "content": "1V"
+      },
+      {
+        "identifier": "C",
+        "content": "1.5V"
+      },
+      {
+        "identifier": "D",
+        "content": "0.5V"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "Fill in the blanks of the statements below concerning the following Logic Families:\n<br> Standard TTL (74XX), Low power TTL(74LXX) Low power schottky TTL(74LSXX), schottky TTL(74 SXXX), Emitter coupled Logic (ECL), CMOS <br>\n<p> (a) Among the TTL Families, ________ family requires considerably less power than the standard TTL (74XX) and also  has com parable proparation delay.\n<br> (b) Only the _______ family can operate over a wide range of power supply voltages. <br></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "<p> (a) 74LS\n</p><p> (a) CMOS</p>",
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit shown below, Q<sub>1</sub> has negligible collector-to-emitter saturation voltage and the diode\ndrops negligible voltage across it under forward bias. If V<sub>CC</sub> is +5 V, X and Y are digital signals\nwith 0 V as logic 0 and V<sub>CC</sub> as logic 1, then the Boolean expression for Z is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c5eb5fb13999bcf37cc77ba59b2fa5b2eb768b4f8dbfdb3696faa96f60b8b77d.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Digital Circuits - Logic Families Question 11 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "XY"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline XY$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$X\\overline Y$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline{XY}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The logic function implemented by the following circuit at the terminal OUT is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/276a16bd68c97ea0fb18f26bf55be9e2e7c1d65819179e2e643068e4fd03dd03.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Digital Circuits - Logic Families Question 3 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P NOR Q"
+      },
+      {
+        "identifier": "B",
+        "content": "P NAND Q"
+      },
+      {
+        "identifier": "C",
+        "content": "P OR Q"
+      },
+      {
+        "identifier": "D",
+        "content": "P AND Q "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The circuit diagram of a standard TTL NOT gate is shown in the figure. When $${V_i}$$= 2.5V,  the modes of operation of the transistors will be: \n\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/605f792127b171a0bcdc12c0cf8c1e72095af5acc958bb865725d5c6adf5d22e.jpg\" loading=\"lazy\" alt=\"GATE ECE 2007 Digital Circuits - Logic Families Question 2 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>  $${Q_1}$$ :reverse active\n</p><p> $${Q_2}$$; normal active  \n</p><p> $${Q_3}$$; :saturation; \n</p><p> $${Q_4}$$ :cut-off </p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>  $${Q_1}$$ :reverse active\n</p><p> $${Q_2}$$:  saturation\n</p><p> $${Q_3}$$: saturation \n</p><p> $${Q_4}$$ : cut-off </p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>  $${Q_1}$$ : normal active\n</p><p> $${Q_2}$$; cut-off \n</p><p> $${Q_3}$$; cut-off \n</p><p> $${Q_4}$$ : saturation</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>  $${Q_1}$$ : :saturation   \n</p><p> $${Q_2}$$:  :saturation    \n</p><p> $${Q_3}$$ :saturation \n</p><p> $${Q_4}$$ : normal active</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The DTL, TTL, ECL and CMOS families of digital ICs are compared in the following 4 columns\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/84e2f6ee47c341de64ea3711e6685706f1334a3973755cb944737cd95df0528e.jpg\" loading=\"lazy\" alt=\"GATE ECE 2003 Digital Circuits - Logic Families Question 4 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P"
+      },
+      {
+        "identifier": "B",
+        "content": "Q"
+      },
+      {
+        "identifier": "C",
+        "content": "R"
+      },
+      {
+        "identifier": "D",
+        "content": "S"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "In the output stage of a standard TTL, we have a diode between the emitter of the pull up transistor and the collector of the pull-down transistor. The purpose of this diode  is to isolate the output node from the power supply $${V_{cc}}$$.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Given that for a logic family,\n<p> $${V_{OH}}$$  is the minimum output high-level voltage\n<br> $${V_{OL}}$$ is the minimum output low-level voltage\n<br> $${V_{IH}}$$ is the minimum output high-level voltage and\n<br> $${V_{IL}}$$ is the minimum output low-level voltage.\n<br> The correct relationship is:<br>\n </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${V_{IH}}$$ &gt;$${V_{OH}}$$ &gt;$${V_{IL}}$$ &gt;$${V_{OL}}$$   "
+      },
+      {
+        "identifier": "B",
+        "content": "$${V_{OH}}$$ &gt;  $${V_{IH}}$$&gt; $${V_{IL}}$$ &gt;$${V_{OL}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${V_{IH}}$$&gt;$${V_{OH}}$$ &gt;$${V_{OL}}$$ &gt;$${V_{IL}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${V_{OH}}$$ &gt; $${V_{IH}}$$&gt;$${V_{OL}}$$ &gt;$${V_{IL}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "content": "Implement the function $$F=\\left(\\overline A+\\overline B\\right)\\left(\\overline C+\\overline D\\right)$$ using two open collector TTL 2-input NAND gates.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve It.",
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  }
+]

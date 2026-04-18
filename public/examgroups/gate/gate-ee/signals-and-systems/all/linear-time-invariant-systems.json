@@ -1,0 +1,1586 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a discrete-time linear time-invariant (LTI) system, $\\boldsymbol{S}$, where</p>\n<p>$$ y[n]=S\\{x(\\mathrm{n})\\} $$</p>\n<p></p>\n<p>$$Let\\,\\,\\,\\, S\\{\\delta[n]\\}=\\left\\{\\begin{array}{lc} 1, & n \\in\\{0,1,2\\} \\\\ 0, & \\text { otherwise } \\end{array}\\right. $$</p>\n<p>where $\\delta[n]$ is the discrete-time unit impulse function. For an input signal $x[n]$, the output $y[n]$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$x[n]+x[n-1]+x[n-2]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$x[n-1]+x[n]+x[n+1]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$x[n]+x[n+1]+x[n+2]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$x[n+1]+x[n+2]+x[n+3]$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given that the system is LTI and for $i / p \\delta(n) \\xrightarrow{\\text { system }} \\mathrm{O} / \\mathrm{P}=\\{1,1,1\\}$ i.e.,</p>\n<p>$$ \\begin{aligned} h(n) & =\\text { impulse response of system } \\\\ & =\\delta(n)+\\delta(n-1)+\\delta(n-2) \\end{aligned} $$</p>\n<p></p>\n<p>$$ \\begin{aligned}As\\, we \\,know,\\,\\,\\, y(n) & =x(n) * h(n) \\\\ & =x(n) *[\\delta(n)+\\delta(n-1)+\\delta(n-2)] \\\\ & =x(n)+x(n-1)+x(n-2) \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ee-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose signal $y(t)$ is obtained by the time-reversal of signal $x(t)$, i.e., $y(t) = x(-t)$, $-\\infty < t < \\infty$. Which one of the following options is always true for the convolution of $x(t)$ and $y(t)$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>It is an even signal.</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>It is an odd signal.</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>It is a causal signal.</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>It is an anti-causal signal.</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ee-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which of the following statement(s) is/are true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "If an LTI system is causal, it is stable"
+      },
+      {
+        "identifier": "B",
+        "content": "A discrete time LTI system is causal if and only if its response to a step input u[n] is 0 for n < 0"
+      },
+      {
+        "identifier": "C",
+        "content": "If a discrete time LTI system has an impulse response h[n] of finite duration the system is stable"
+      },
+      {
+        "identifier": "D",
+        "content": "If the impulse response $$0 < |h[n]| < 1$$ for all n, then the LTI system is stable."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<ol>\n<li>No information about amplitude of $h(n)$ is given. So, option (C) is wrong.</li><br>\n<li>$h(n)$ can have any amplitude less than infinity for the LTI system to be stable. So, option (D) is wrong.</li><br>\n<li>A causal LTI system can also be unstable. So, option (A) is wrong.</li><br>\n<li>If the response to a step input $u[n]$ is 0 for $n<0$, then the discrete time LTI system will be causal. So, option (B) is true.</li>\n</ol>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>For the signals $$x(t)$$ and $$y(t)$$ shown in the figure, $$z(t)=x(t)*y(t)$$ is maximum at $$t=T_1$$. Then $$T_1$$ in seconds is __________ (Round off to the nearest integer)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lz2b67ln/079aebf0-218d-4783-a031-b02f98ad91e1/72aa6cb0-4b16-11ef-9e04-a317aee71f54/file-jaoe38c1lz2b67lo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lz2b67ln/079aebf0-218d-4783-a031-b02f98ad91e1/72aa6cb0-4b16-11ef-9e04-a317aee71f54/file-jaoe38c1lz2b67lo.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2023 Signals and Systems - Linear Time Invariant Systems Question 8 English 1\">\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lz2b7qfh/a04dcae0-21b4-406d-a75d-a137950cb079/9d0503d0-4b16-11ef-9e04-a317aee71f54/file-jaoe38c1lz2b7qfi.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lz2b7qfh/a04dcae0-21b4-406d-a75d-a137950cb079/9d0503d0-4b16-11ef-9e04-a317aee71f54/file-jaoe38c1lz2b7qfi.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2023 Signals and Systems - Linear Time Invariant Systems Question 8 English 2\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p>Given signal y(t) and x(t) is shown in figure below,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lz2b67ln/079aebf0-218d-4783-a031-b02f98ad91e1/72aa6cb0-4b16-11ef-9e04-a317aee71f54/file-jaoe38c1lz2b67lo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lz2b67ln/079aebf0-218d-4783-a031-b02f98ad91e1/72aa6cb0-4b16-11ef-9e04-a317aee71f54/file-jaoe38c1lz2b67lo.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2023 Signals and Systems - Linear Time Invariant Systems Question 8 English Explanation 1\">\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lz2b7qfh/a04dcae0-21b4-406d-a75d-a137950cb079/9d0503d0-4b16-11ef-9e04-a317aee71f54/file-jaoe38c1lz2b7qfi.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lz2b7qfh/a04dcae0-21b4-406d-a75d-a137950cb079/9d0503d0-4b16-11ef-9e04-a317aee71f54/file-jaoe38c1lz2b7qfi.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2023 Signals and Systems - Linear Time Invariant Systems Question 8 English Explanation 2\">\n\n<p>Given : $z(t)=x(t) * y(t)=\\int\\limits_{-\\infty}^{\\infty} y(\\tau) x(t-\\tau) d \\tau$</p>\n\n<p>$x(t-\\tau)$ can be plotted as shown below,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lz2bcjgl/b75f8122-36cf-46f9-b2d4-aa212b22a495/22ae8b50-4b17-11ef-9e04-a317aee71f54/file-jaoe38c1lz2bcjgm.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lz2bcjgl/b75f8122-36cf-46f9-b2d4-aa212b22a495/22ae8b50-4b17-11ef-9e04-a317aee71f54/file-jaoe38c1lz2bcjgm.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2023 Signals and Systems - Linear Time Invariant Systems Question 8 English Explanation 3\">\n\n<p>Maximum value of convolution will be obtained when positive portion of $y(\\tau)$ is multiplied with $x(t-\\tau)$</p>\n\n<p>$$ \\begin{aligned} &amp; \\therefore 1+t=5 \\\\\\\\ &amp; t=4 \\mathrm{sec} \\end{aligned} $$</p>\n\n<p>At $t=4 \\mathrm{sec}$, maximum value of convolution will be obtained.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If the input $x(t)$ and output $y(t)$ of a system are related as $y(t)=\\max [0, x(t)]$, then the system is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Linear and time-variant</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Linear and time-invariant</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Non-linear and time-variant</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Non-linear and time-invariant</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given input output relationship is } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh637vyl/4e9c7874-dcc0-437d-808b-43466643e999/5fad6ae0-b186-11f0-9ec5-a735814724b3/file-jaoe38c1mh637vym.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh637vyl/4e9c7874-dcc0-437d-808b-43466643e999/5fad6ae0-b186-11f0-9ec5-a735814724b3/file-jaoe38c1mh637vym.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2021 Signals and Systems - Linear Time Invariant Systems Question 1 English Explanation\">$$ \\begin{aligned} &amp; y(t)=\\operatorname{Max}[0, x(t)] \\\\ &amp; y(t)=\\left\\{\\begin{array}{cc} 0, &amp; x(t) \\leq 0 \\\\ x(t), &amp; x(t)&gt;0 \\end{array}\\right. \\end{aligned} $$</p>\n<p>As output is splitted not in time but for values of $x(t)$, hence the system will not follow superposition, so it is not a linear system.</p>\n<p>As there is no time scaling or any coefficient multiplied that is function A time and no extra terms other than $x(t)$ and $y(t)$, so the system is time invariant.</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ee-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Two discrete-time linear time-invariant systems with impulse responses $h_1\\lfloor n\\rfloor=\\delta\\lfloor n-1\\rfloor+\\delta\\lfloor n+1\\rfloor$ and $h_2[n]=\\delta[n]+\\delta[n-1]$ are connected in cascade. Where $\\delta[n]$ in the Kronecker delta. The impulse response of the cascade system</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\delta[n-2]+\\delta[n+1]$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\delta[n-1] \\delta[n]+\\delta[n+1] \\delta[n-1]$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\delta[n-2]+\\delta[n-1]+\\delta[n]+\\delta[n+1]$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\delta[n] \\delta[n-1]+\\delta[n-2] \\delta[n+1]$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : The two systems being cascaded are having impulse responses</p>\n<p>$$ \\begin{aligned} &amp; h_1[n]=\\delta[n-1]+\\delta[n+1] \\\\ &amp; h_2[n]=\\delta[n]+\\delta[n+1] \\end{aligned} $$</p>\n<p>Impulse response of the cascaded equivalent system is given as</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh65akzu/3bcf3b40-abdc-4025-ab1a-8bb36ec69d73/7ce462a0-b18e-11f0-9ec5-a735814724b3/file-jaoe38c1mh65akzv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh65akzu/3bcf3b40-abdc-4025-ab1a-8bb36ec69d73/7ce462a0-b18e-11f0-9ec5-a735814724b3/file-jaoe38c1mh65akzv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2021 Signals and Systems - Linear Time Invariant Systems Question 2 English Explanation\"></p>\n<p>$$ \\begin{aligned} &amp;\\begin{aligned} &amp; h[n]=h_1[n] * h_2[n]=\\{\\delta[n-1]+\\delta[n+1]\\} *\\{\\delta[n]+\\delta[n-1]\\} \\\\ &amp; h[n]=\\delta[n-2]+\\delta[n-1]+\\delta[n]+\\delta[n+1] \\\\ &amp; h[n]=\\delta[n-1]+\\delta[n]+\\delta[n-1]+\\delta[n-2] \\end{aligned}\\\\ &amp;\\text { Hence, the correct option is (C). } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ee-2021",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a continuous-time system with input x(t) and output y(t) given by\n$$y\\left(t\\right)=x\\left(t\\right)\\cos\\left(t\\right)$$. This system is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "linear and time-invariant"
+      },
+      {
+        "identifier": "B",
+        "content": "Non-linear and time-invariant"
+      },
+      {
+        "identifier": "C",
+        "content": "linear and time-varying"
+      },
+      {
+        "identifier": "D",
+        "content": "Non-linear and time-varying"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ee-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The impulse response g(t) of a system G, is as shown in Figure (a). What is the maximum\nvalue attained by the impulse response of two cascaded blocks of G as shown in Figure (b)?\n<img alt=\"GATE EE 2015 Set 1 Signals and Systems - Linear Time Invariant Systems Question 55 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/57993af41c26cae6e75005dd82552a5b195022b2de169cbaff6fccf5bff41114.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac23$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac34$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac45$$"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "x(t) is nonzero only for $$T_x\\;&lt;\\;t\\;&lt;\\;T_x^1$$ , and similarly, y(t) is nonzero only for $$T_y\\;&lt;\\;t\\;&lt;\\;T_y^1$$ . Let\nz(t) be convolution of x(t) and y(t). Which one of the following statements is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "z(t) can be nonzero over an unbounded interval"
+      },
+      {
+        "identifier": "B",
+        "content": "z(t) is nonzero for $$t\\;&lt;\\;T_x+T_y$$"
+      },
+      {
+        "identifier": "C",
+        "content": "z(t) is zero outside of $$T_x+T_y\\;&lt;\\;t\\;&lt;\\;T_x^1+T_y^1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "z(t) is nonzero for $$t\\;&gt;\\;T_x^1+T_y^1$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ee-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an LTI system with impulse response $$h\\left(t\\right)=e^{-5t}u\\left(t\\right)$$ . If the output of the system is\n$$y\\left(t\\right)=e^{-3t}u\\left(t\\right)-e^{-5t}u\\left(t\\right)$$ then the input, x(t), is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$e^{-3t}u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$2e^{-3t}u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$e^{-5t}u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2e^{-5t}u\\left(t\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ee-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an LTI system with transfer function $$H\\left(s\\right)=\\frac1{s\\left(s+4\\right)}$$.If the input to the system is cos(3t) and the steady state output is $$A\\sin\\left(3t+\\alpha\\right)$$, then the value\nof A is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1/30"
+      },
+      {
+        "identifier": "B",
+        "content": "1/15"
+      },
+      {
+        "identifier": "C",
+        "content": "3/4"
+      },
+      {
+        "identifier": "D",
+        "content": "4/3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ee-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Two systems with impulse responses h<sub>1</sub>(t) and h<sub>2</sub>(t) are connected in cascade.\nThen the overall impulse response of the cascaded system is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "product of h<sub>1</sub>(t) and h<sub>2</sub>(t)"
+      },
+      {
+        "identifier": "B",
+        "content": "Sum of h<sub>1</sub>(t) and h<sub>2</sub>(t)"
+      },
+      {
+        "identifier": "C",
+        "content": "Convolution of h<sub>1</sub>(t) and h<sub>2</sub>(t)"
+      },
+      {
+        "identifier": "D",
+        "content": "subtraction of h<sub>2</sub>(t) and h<sub>1</sub>(t)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ee-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Assuming zero initial condition, the response y(t) of the system given below to a\nunit step input u(t) is\n<img alt=\"GATE EE 2013 Signals and Systems - Linear Time Invariant Systems Question 49 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/1c7cd2357233e5ce75f240ce2c6dd64597a4285187e8626719ffa995450a89dc.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "u(t)"
+      },
+      {
+        "identifier": "B",
+        "content": "tu(t)"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{t^2}2u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$e^{-t}u\\left(t\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ee-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The impulse response of a system is h(t) = tu(t). For an input u(t − 1), the output\nis",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{t^2}2u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{t\\left(t-1\\right)}2u\\left(t-1\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{\\left(t-1\\right)^2}2u\\left(t-1\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{t^2-1}2u\\left(t-1\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ee-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A low–pass filter with a cut-off frequency of 30 Hz is cascaded with a high-pass\nfilter with a cut-off frequency of 20 Hz. The resultant system of filters will function\nas",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "an all-pass filter"
+      },
+      {
+        "identifier": "B",
+        "content": "an all-stop filter"
+      },
+      {
+        "identifier": "C",
+        "content": "an band stop (band-reject) filter"
+      },
+      {
+        "identifier": "D",
+        "content": "a band–pass filter"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ee-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Given two continuous time signals $$x\\left(t\\right)=e^{-t}$$ and $$y\\left(t\\right)=e^{-2t}$$ which exist for t &gt; 0,\nthe convolution z(t) = x(t)*y(t) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$e^{-t}-e^{-2t}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$e^{-3t}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$e^{+t}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$e^{-t}\\;+\\;e^{-2t}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ee-2011",
+    "difficulty": null
+  },
+  {
+    "content": "For the system $$\\frac2{\\left(s+1\\right)}$$,\nthe approximate time taken for a step response to reach 98%\nof its final value is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 s"
+      },
+      {
+        "identifier": "B",
+        "content": "2 s"
+      },
+      {
+        "identifier": "C",
+        "content": "4 s"
+      },
+      {
+        "identifier": "D",
+        "content": "8 s"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ee-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The system represented by the input-output relationship $$y\\left(t\\right)=\\int_{-\\infty}^{5t}x\\left(\\tau\\right)d\\tau$$, t &gt; 0 is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Linear and causal"
+      },
+      {
+        "identifier": "B",
+        "content": "Linear but not causal"
+      },
+      {
+        "identifier": "C",
+        "content": "Causal but not linear"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither linear nor causal"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ee-2010",
+    "difficulty": null
+  },
+  {
+    "content": "A linear Time Invariant system with an impulse response $$h(t)$$ produces output $$y(t)$$ when input $$x(t)$$ is applied. When the input $$x\\left( {t - \\tau } \\right)$$ is applied to a system with response $$h\\left( {t - \\tau } \\right)$$, the output will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y\\left( t \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$y\\left( {2\\left( {t - \\tau } \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$y\\left( {t - \\tau } \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$y\\left( {t - 2\\tau } \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ee-2009",
+    "difficulty": null
+  },
+  {
+    "content": "A signal $${e^{ - \\alpha t}}\\,\\sin \\left( {\\omega t} \\right)$$ is the input to a real Linear Time Invariant system. Given $$K$$ and $$\\phi $$ are constants, the output of the system will be of the form $$K{e^{ - \\beta t}}\\,\\sin \\,\\left( {\\upsilon t + \\phi } \\right)$$ where ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\beta $$ need not be equal to $$\\alpha $$ but $$\\upsilon $$ equal to "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\upsilon $$ need not be equal to $$\\omega $$ but $$\\beta $$ equal to $$\\alpha $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\beta $$ equal to $$\\alpha $$ and $$\\upsilon $$ equal to $$\\omega $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\beta $$ need not be equal to $$\\alpha $$ and $$\\upsilon $$ need not be equal to $$\\omega $$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A signal $${e^{ - \\alpha t}}\\,\\sin \\left( {\\omega t} \\right)$$ is the input to a real Linear Time Invariant system. Given $$K$$ and $$\\phi $$ are constants, the output of the system will be of the form $$K{e^{ - \\beta t}}\\,\\sin \\,\\left( {\\upsilon t + \\phi } \\right)$$ where ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\beta $$ need not be equal to $$\\alpha $$ but $$\\upsilon $$ equal to "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\upsilon $$ need not be equal to $$\\omega $$ but $$\\beta $$ equal to $$\\alpha $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\beta $$ equal to $$\\alpha $$ and $$\\upsilon $$ equal to $$\\omega $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\beta $$ need not be equal to $$\\alpha $$ and $$\\upsilon $$ need not be equal to $$\\omega $$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The impulse response of a causal linear time-invariant system is given as $$h(t)$$. Now consider the following two statements: \n<p><b>Statement-$$\\left( {\\rm I} \\right)$$:</b> Principle of superposition holds\n<br><b>Statement-$$\\left( {\\rm II} \\right)$$:</b> $$h\\left( t \\right) = 0$$ for $$t &lt; 0$$</p>\n<p>Which one of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Statement $$\\left( {\\rm I} \\right)$$ is correct and Statement $$\\left( {\\rm II} \\right)$$ is wrong"
+      },
+      {
+        "identifier": "B",
+        "content": "Statement $$\\left( {\\rm II} \\right)$$ is correct and Statement $$\\left( {\\rm I} \\right)$$ is wrong"
+      },
+      {
+        "identifier": "C",
+        "content": "Both Statement $$\\left( {\\rm I} \\right)$$ and Statement $$\\left( {\\rm II} \\right)$$ are wrong "
+      },
+      {
+        "identifier": "D",
+        "content": "Both Statement $$\\left( {\\rm I} \\right)$$ and Statement $$\\left( {\\rm II} \\right)$$ are correct"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Let a signal $${a_1}\\,\\sin \\left( {{\\omega _1}t + {\\phi _1}} \\right)$$  be applied to a stable linear time-invariant system. Let the corresponding steady state output be represented as $${a_2}F\\left( {{\\omega _2}t + {\\phi _2}} \\right).$$ Then which of the following statements is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$F$$ is not necessarily a ''sine'' or ''cosine'' function but must be periodic with $${\\omega _1} = {\\omega _2}.$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$F$$ must be a ''sine'' or ''cosine'' function with $${a_1} = {a_2}.$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$F$$ must be a ''sine'' function with $${\\omega _1} = {\\omega _2}.$$  and $${\\phi _1} = {\\phi _2}.$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$F$$ must be a ''sine'' or ''cosine'' function with $${\\omega _1} = {\\omega _2}.$$  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ee-2007",
+    "difficulty": null
+  },
+  {
+    "content": "$$s(t)$$ is step response and $$h(t)$$ is impulse response of a system. Its response $$y(t)$$ for any input $$u(t)$$ is given by  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${d \\over {d\\,t}}\\int\\limits_0^t s \\left( {t - \\tau } \\right)\\,u\\left( \\tau  \\right)\\,d\\,\\tau $$  "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\int\\limits_0^t s \\left( {t - \\tau } \\right)\\,u\\left( \\tau  \\right)\\,d\\,\\tau $$  "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\int\\limits_0^t {\\int\\limits_0^\\tau  s \\left( {t - {\\tau _1}} \\right)\\,u\\left( {{\\tau _1}} \\right)\\,d{\\tau _1}} \\,d\\tau $$  "
+      },
+      {
+        "identifier": "D",
+        "content": "$${d \\over {d\\,t}}\\int\\limits_0^t h \\left( {t - \\tau } \\right)\\,u\\left( \\tau  \\right)\\,d\\,\\tau $$  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ee-2002",
+    "difficulty": null
+  },
+  {
+    "content": "If $$f(t)$$ is the step-response of a linear time-invariant system, then its impulse response is given by ___________",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$h\\left( t \\right) = {{df\\left( t \\right)} \\over {dt}}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ee-1994",
+    "difficulty": null
+  },
+  {
+    "content": "$$s(t)$$ is step response and $$h(t)$$ is impulse response of a system. Its response $$y(t)$$ for any input $$u(t)$$ is given by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${d \\over {d\\,t}}\\int\\limits_0^t s \\left( {t - \\tau } \\right)\\,u\\left( \\tau  \\right)\\,d\\,\\tau $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\int\\limits_0^t s \\left( {t - \\tau } \\right)\\,u\\left( \\tau  \\right)\\,d\\,\\tau $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\int\\limits_0^t {\\int\\limits_0^\\tau  s \\left( {t - {\\tau _1}} \\right)\\,u\\left( {{\\tau _1}} \\right)\\,d{\\tau _1}} \\,d\\tau $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${d \\over {d\\,t}}\\int\\limits_0^t h \\left( {t - \\tau } \\right)\\,u\\left( \\tau  \\right)\\,d\\,\\tau $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ee-1993",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The continuous-time unit impulse signal is applied as an input to a continuous-time linear time-invariant system $S$. The output is observed to be the continuous-time unit step signal $u(t)$. Which one of the following statements is true?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Every bounded input signal applied to $S$ results in a bounded output signal.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "It is possible to find a bounded input signal which when applied to $S$ results in an unbounded output signal.\n"
+      },
+      {
+        "identifier": "C",
+        "content": "On applying any input signal to $S$, the output signal is always bounded.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "On applying any input signal to $S$ the output signal is always unbounded."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>In this scenario, the continuous-time unit impulse signal is applied as an input to the continuous-time linear time-invariant system $S$, and the resulting output is the continuous-time unit step signal $ u(t) $.</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbiec4pa/649790ea-6a54-4d8a-972b-b46bc4810f6a/f59b2ee0-4181-11f0-af75-17fe4a86196b/file-jaoe38c1mbiec4pb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbiec4pa/649790ea-6a54-4d8a-972b-b46bc4810f6a/f59b2ee0-4181-11f0-af75-17fe4a86196b/file-jaoe38c1mbiec4pb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2025 Signals and Systems - Linear Time Invariant Systems Question 3 English Explanation\">\n<p><strong>Given:</strong></p>\n\n<p></p><p>The impulse response of the system is $ h(t) = u(t) $.</p><p></p>\n<p></p><p>The input-output relationship for the system is described by:</p>\n<p>$   y(t) = \\int_{-\\infty}^{t} x(\\tau) \\, d\\tau   $</p><p></p>\n\n<p><strong>Analysis of Options:</strong></p>\n\n<p></p><p><strong>Option A:</strong> Claims that every bounded input signal applied to $ S $ results in a bounded output signal.</p><p></p>\n<p></p><p>Counterexample: When a step input $ u(t) $ is applied, the output is a ramp signal $ r(t) $. The output for a step input, calculated as:</p>\n<p>$     y(t) = \\int_{-\\infty}^{t} u(\\tau) \\, d\\tau = r(t)     $</p><p></p>\n<p></p><p>This ramp output is unbounded, hence not all bounded inputs produce bounded outputs. Therefore, Option A is incorrect.</p><p></p>\n<p></p><p><strong>Option B:</strong> States that it's possible to find a bounded input which, when applied to $ S $, results in an unbounded output.</p><p></p>\n<p></p><p>Example: A step input $ u(t) $ is bounded, but as previously shown, it yields an unbounded ramp output $ r(t) $.</p><p></p>\n<p></p><p>Therefore, Option B is correct since a bounded input (the step) produces an unbounded output.</p><p></p>\n<p></p><p><strong>Option C:</strong> Suggests that for any input signal applied to $ S $, the output is always bounded.</p><p></p>\n<p></p><p>Again, the step input example contradicts this, as it produces a ramp, which is unbounded. Thus, Option C is incorrect.</p><p></p>\n<p></p><p><strong>Option D:</strong> Proposes that applying any input signal to $ S $ always results in an unbounded output.</p><p></p>\n<p></p><p>Counterexample: If a finite-duration rectangular pulse is used as input, the output remains bounded.</p><p></p>\n<p></p><p>Thus, not all inputs lead to unbounded outputs, making Option D incorrect.</p><p></p>\n\n<p>Hence, the correct statement is encapsulated in Option B: a bounded input can indeed result in an unbounded output in this system.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ee-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The input $x(t)$ and the output $y(t)$ of a system are related as</p>\n<p>\n$$\n y(t) = e^{-t} \n \\int\\limits_{-\\infty}^{t} e^{\\tau} x(\\tau) d\\tau, \\quad - \\infty < t < \\infty.\n$$\n</p>\n<p>The system is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>nonlinear.</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>linear and time-invariant.</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>linear but not time-invariant.</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>noncausal.</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ee-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the discrete-time systems $T_1$ and $T_2$ defined as follows:</p><p>{ $T_1 x[ n ] = x[ 0 ] + x[ 1 ] + \\cdots + x[ n ] $}</p> <p>{ $T_2 x[ n ] = x[ 0 ] + \\frac{1}{2} x[ 1 ] + \\cdots + \\frac{1}{2^n} x[ n ] $}</p><p>Which one of the following statements is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$T_1$ and $T_2$ are BIBO stable.</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$T_1$ and $T_2$ are not BIBO stable.</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$T_1$ is BIBO stable but $T_2$ is not BIBO stable.</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$T_1$ is not BIBO stable but $T_2$ is BIBO stable.</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ee-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let a causal LTI system be governed by the following differential equation $$y(t) + {1 \\over 4}{{dy} \\over {dt}} = 2x(t)$$, where x(t) and y(t) are the input and output respectively. Its impulse response is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2{e^{ - {1 \\over 4}t}}u(t)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$2{e^{ - 4t}}u(t)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$8{e^{ - {1 \\over 4}t}}u(t)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$8{e^{ - 4t}}u(t)$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>By applying Laplace-transform on given differential equation,</p>\n<p>$$y(s) + {1 \\over 4}s\\,.Y(s) = 2X(s)$$</p>\n<p>$$ \\Rightarrow {{Y(s)} \\over {X(s)}} = {2 \\over {1 + {s \\over 4}}} = {8 \\over {s + 4}}$$</p>\n<p>$$ \\Rightarrow H(s) = {8 \\over {s + 4}}$$</p>\n<p>By taking inverse LT,</p>\n<p>$$h(t) = 8{e^{ - 4t}}u(t)$$</p>\n<p>= Impulse response of system.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ee-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the system as shown below:</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l73ju719/ead38f11-4c8b-48e0-844f-1be47123e523/10b8b3e0-216f-11ed-ad74-e5ccca68eaaa/file-1l73ju71a.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l73ju719/ead38f11-4c8b-48e0-844f-1be47123e523/10b8b3e0-216f-11ed-ad74-e5ccca68eaaa/file-1l73ju71a.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE EE 2022 Signals and Systems - Linear Time Invariant Systems Question 10 English\"></p>\n<p>where y(t) = x(e<sup>t</sup>). The system is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "linear and causal."
+      },
+      {
+        "identifier": "B",
+        "content": "linear and non-causal."
+      },
+      {
+        "identifier": "C",
+        "content": "non-linear and causal."
+      },
+      {
+        "identifier": "D",
+        "content": "non-linear and non-causal."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Part - 1</p>\n<p>The given system will satisfy law of superposition. So the system will be linear.</p>\n<p>Part - 2</p>\n<p>y(t) = x(e<sup>t</sup>)</p>\n<p>Put, t = 0,</p>\n<p>y(0) = x(1)</p>\n<p>Since output is depending on future value of input. So the system is non-causal.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ee-2022",
+    "difficulty": null
+  },
+  {
+    "content": "For linear time invariant systems, that are Bounded Input Bounded stable, which one of\nthe following statement is TRUE?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The impulse response will be integral, but may not be absolutely integrable."
+      },
+      {
+        "identifier": "B",
+        "content": "The unit impulse response will have finite support."
+      },
+      {
+        "identifier": "C",
+        "content": "The unit step response will be absolutely integrable."
+      },
+      {
+        "identifier": "D",
+        "content": "The unit step response will be bounded."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The impulse response of a continuous time system is given by\nh(t) = $$\\delta$$(t − 1) + $$\\delta$$(t − 3). The value of the step response at t = 2 is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ee-2013",
+    "difficulty": null
+  },
+  {
+    "content": "L et y[n] denote the convolution of h[n] and g[n], where $$h\\left[n\\right]=\\left(1/2\\right)^nu\\left[n\\right]$$ and g[n] is a causal\nsequence. If y[0] = 1 and y[1] = 1/2, then g[1] equals",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "1/2"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "3/2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ee-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The input x(t) and output y(t) of a system are related as $$\\int_{-\\infty}^tx\\left(\\tau\\right)\\cos\\left(3\\tau\\right)d\\tau$$.The system is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "time-invariant and stable"
+      },
+      {
+        "identifier": "B",
+        "content": "stable and not time-invariant"
+      },
+      {
+        "identifier": "C",
+        "content": "time-invariant and not stable"
+      },
+      {
+        "identifier": "D",
+        "content": "not time-invariant and not stable"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ee-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The response h(t) of a linear time invariant system to an impulse $$\\delta\\left(t\\right)$$, under\ninitially relaxed condition is $$h\\left(t\\right)=e^{-t}\\;+\\;e^{-2t}$$. The response of this system for a\nunit step input u(t) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$u\\left(t\\right)\\;+\\;e^{-t}\\;+\\;e^{-2t}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left(e^{-t}\\;+\\;e^{-2t}\\right)u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left(1.5\\;-\\;e^{-t}\\;-\\;0.5e^{-2t}\\right)u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\;e^{-t}\\delta\\left(t\\right)\\;+\\;e^{-2t}u\\left(t\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ee-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Given the finite length input x[n] and the corresponding finite length output y[n]\nof an LTI system as shown below, the impulse response h[n] of the system is\n<img alt=\"GATE EE 2010 Signals and Systems - Linear Time Invariant Systems Question 39 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/6711dea7ecd28aad2d4f2fec873fc50c389500cfefdff07078bb91aba8feb9a5.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\begin{array}{l}h\\left[n\\right]=\\left\\{1,\\;0,\\;0,\\;1\\right\\}\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\end{array}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\begin{array}{l}h\\left[n\\right]=\\left\\{1,\\;0,\\;1\\right\\}\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\end{array}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\begin{array}{l}h\\left[n\\right]=\\left\\{1,\\;1,\\;1,\\;1\\right\\}\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\end{array}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\begin{array}{l}h\\left[n\\right]=\\left\\{1,\\;1,\\;1\\right\\}\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\end{array}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ee-2010",
+    "difficulty": null
+  },
+  {
+    "content": "A cascade of 3 Linear Time Invariant systems is casual and unstable. From this, we conclude that ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "each system in the cascade is individually casual and unstable"
+      },
+      {
+        "identifier": "B",
+        "content": "at least one system is unstable and atleast one system is casual"
+      },
+      {
+        "identifier": "C",
+        "content": "at least one system is casual and all systems are unstable"
+      },
+      {
+        "identifier": "D",
+        "content": "the majority are unstable and the majority are casual"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ee-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The $$z$$$$-$$ transform of a signal $$x\\left[ n \\right]$$ is given by $$4{z^{ - 3}} + 3{z^{ - 1}} + 2 - 6{z^2} + 2{z^3}.$$ It is applied to a system, with a transfer function $$H\\left( z \\right) = 3{z^{ - 1}} - 2.$$ Let the output be $$y(n)$$.  Which of the following is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y\\left( n \\right)$$ is non causal with finite support "
+      },
+      {
+        "identifier": "B",
+        "content": "$$y\\left( n \\right)$$ is causal with infinite support "
+      },
+      {
+        "identifier": "C",
+        "content": "$$y\\left( n \\right)$$ $$ = 0;\\,|n| &gt; 3$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\eqalign{\n  &amp; {\\mathop{\\rm Re}\\nolimits} {\\left[ {Y\\left( z \\right)} \\right]_{z = {e^{j0}}}} =  - {\\mathop{\\rm Re}\\nolimits} {\\left[ {Y\\left( z \\right)} \\right]_{z = {e^{j0}}}};  \\cr \n  &amp; {\\rm I}m{\\left[ {Y\\left( z \\right)} \\right]_{z = {e^{j0}}}}\\, = {\\rm I}m{\\left[ {Y\\left( z \\right)} \\right]_z} = {e^{j0}};\\,\\, - \\pi  \\le \\theta  &lt; \\pi  \\cr} $$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ee-2009",
+    "difficulty": null
+  },
+  {
+    "content": "A system with input $$x(t)$$ and output $$y(t)$$ is defined by the input $$-$$ output relation: \n<br>$$y\\left( t \\right) = \\int\\limits_{ - \\infty }^{ - 2t} {x\\left( \\tau  \\right)} d\\tau .$$ The system will be \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "causal, time $$-$$ invariant and unstable"
+      },
+      {
+        "identifier": "B",
+        "content": "causal, time $$-$$ invariant and stable"
+      },
+      {
+        "identifier": "C",
+        "content": "non $$-$$ causal, time $$-$$ invariant and unstable "
+      },
+      {
+        "identifier": "D",
+        "content": "non $$-$$ causal, time $$-$$ variant and unstable "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A signal $$x\\left( t \\right) = \\sin c\\left( {\\alpha t} \\right)$$ where $$\\alpha $$ is a real constant $$\\left( {\\sin \\,c\\left( x \\right) = {{\\sin \\left( {\\pi x} \\right)} \\over {\\pi x}}} \\right)$$ is the input to a linear Time invariant system whose impulse response $$h\\left( t \\right) = \\sin c\\left( {\\beta t} \\right)$$ where $$\\beta $$ is a real constant. If $$\\min \\left( {\\alpha ,\\,\\,\\beta } \\right)$$ denotes the minimum of $$\\alpha $$ and $$\\beta $$, and similarly $$\\max \\left( {\\alpha ,\\,\\,\\beta } \\right)$$ denotes the maximum of $$\\alpha $$ and $$\\beta $$, and $$K$$ is a constant,  which one of the following statements is true about the output of the system?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It will be of the form $$K$$ $$sinc$$$$\\left( {\\gamma t} \\right)$$ where $$\\gamma  = \\,\\min \\left( {\\alpha ,\\,\\,\\beta } \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "It will be of the form $$K$$ $$sinc$$$$\\left( {\\gamma t} \\right)$$ where $$\\gamma  = \\,\\max \\left( {\\alpha ,\\,\\,\\beta } \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "It will be of the form $$K$$ $$\\sin c\\left( {\\alpha t} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "It cannot be a $$sinc$$ type of signal"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function of a linear time invariant system is given as $$G\\left( s \\right) = {1 \\over {{s^2} + 3s + 2}}.$$ The steady state value of the output of this system for a unit impulse input applied at time instant $$t=1$$ will be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A signal is processed by a causal filter with transfer function $$G(s).$$ For a distortion free output signal waveform, $$G(s)$$ must.\n<p>$$G\\left( z \\right) = a{z^{ - 1}} + \\beta \\,\\,{z^{ - 3}}$$ is a low-pass digital filter with a phase characteristic same as that of the above question if</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\alpha  = \\beta $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\alpha  =  - \\beta $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\alpha  = {\\beta ^{\\left( {1/3} \\right)}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\alpha  = {\\beta ^{ - \\left( {1/3} \\right)}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ee-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A signal is processed by a causal filter with transfer function $$G(s).$$ For a distortion free output signal waveform, $$G(s)$$ must ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "provide zero phase shift for all frequencies "
+      },
+      {
+        "identifier": "B",
+        "content": "provide constant phase shift for all frequencies "
+      },
+      {
+        "identifier": "C",
+        "content": "provide linear phase shift that is proportional to frequency "
+      },
+      {
+        "identifier": "D",
+        "content": "provide a phase shift that is inversely proportional to frequency "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ee-2007",
+    "difficulty": null
+  },
+  {
+    "content": "$$X\\left( z \\right) = 1 - 3\\,\\,{z^{ - 1}},\\,\\,Y\\left( z \\right) = 1 + 2\\,\\,{z^{ - 2}}$$ are $$Z$$-transforms of two signals $$x\\left[ n \\right],\\,\\,y\\left[ n \\right]$$ respectively. A linear time invariant system has the impulse response $$h\\left[ n \\right]$$ defined by these two signals as $$h\\left[ n \\right] = x\\left[ {n - 1} \\right] * y\\left[ n \\right]$$ where $$ * $$ denotes discrete time convolution. Then the output of the system for the input $$\\delta \\left[ {n - 1} \\right]$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "has $$Z$$-transforms $${z^{ - 1}}X\\left( z \\right)Y\\left( z \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "equals \n<br>$$\\delta \\left[ {n - 2} \\right] - 3\\delta \\left[ {n - 3} \\right] + 2\\delta \\left[ {n - 4} \\right] - 6\\delta \\left[ {n - 5} \\right]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "has $$Z$$-transform $$1 - 3\\,{z^{ - 1}} + 2\\,{z^{ - 2}} - 6\\,{z^{ - 3}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "does not satisfy any of the above three. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ee-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the discrete-time system shown in the figure where the impulse response of $$G\\left( z \\right)$$ is \n<br>$$g\\left( 0 \\right) = 0,\\,\\,g\\left( 1 \\right) = g\\left( 2 \\right) = 1,\\,g\\left( 3 \\right) = g\\left( 4 \\right) = .... = 0$$\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/WSbNU9N0VhFvn5PkJ/mBhVjCVBQFfGUOh3QE3V23n5qeHAW/pXk1wsN9R8G4uxeAgza4PA/image.png\" loading=\"lazy\" alt=\"GATE EE 2007 Signals and Systems - Linear Time Invariant Systems Question 14 English\"> \n<p>This system is stable for range of values of $$K$$</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ { - 1,1/2} \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ { - 1,1} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ { - 1/2,1} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ { - 1/2,2} \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ee-2007",
+    "difficulty": null
+  },
+  {
+    "content": "$$y\\left[ n \\right]$$ denotes the output and $$x\\left[ n \\right]$$ denotes the input of a discrete-time system given by the difference equation $$y\\left[ n \\right] - 0.8y\\left[ {n - 1} \\right] = x\\left[ n \\right] + 1.25\\,x\\left[ {n + 1} \\right].$$ Its right-sided impulse response is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "causal "
+      },
+      {
+        "identifier": "B",
+        "content": "unbounded "
+      },
+      {
+        "identifier": "C",
+        "content": "periodic "
+      },
+      {
+        "identifier": "D",
+        "content": "non-negative "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ee-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A continuous-time system is described by $$y\\left( t \\right) = {e^{ - |x\\left( t \\right)|}},$$ where $$y(t)$$ is the output and $$x(t)$$ is the input. $$y(t)$$ is bounded ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "only when $$x(t)$$ is bounded "
+      },
+      {
+        "identifier": "B",
+        "content": "only when $$x(t)$$ is non-negative "
+      },
+      {
+        "identifier": "C",
+        "content": "only for $$t \\ge 0$$ if $$x(t)$$ is bounded for $$t \\ge 0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "even when $$x(t)$$ is not bounded "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ee-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A discrete real all pass system has a pole at $$z = 2\\angle {30^ \\circ };\\,$$ it, therefore,",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "also has a pole at $$1/2\\angle {30^ \\circ }$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "has a constant phase response over the $$z$$-plane: $$\\arg |H\\left( z \\right)| = const$$"
+      },
+      {
+        "identifier": "C",
+        "content": "is stable only if it is anticausal"
+      },
+      {
+        "identifier": "D",
+        "content": "has a constant phase response over the unit circle: $$\\arg |H\\left( {{e^{j\\Omega }}} \\right)| = const$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ee-2006",
+    "difficulty": null
+  },
+  {
+    "content": "$$x\\left[ n \\right] = 0;\\,n &lt;  - 1,\\,n &gt; 0,\\,x\\left[ { - 1} \\right] =  - 1,\\,x\\left[ 0 \\right]$$\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, = 2$$ is the input and \n<br>$$y\\left[ n \\right] = 0;\\,n &lt;  - 1,\\,n &gt; 2,\\,y\\left[ { - 1} \\right] =  - 1,\\, = y\\left[ 1 \\right],\\,y\\left[ 0 \\right] = 3,\\,y\\left[ 2 \\right]$$\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, =- 2$$ is the output of a discrete-time $$LTI$$ system. The system impulse response $$h\\left[ n \\right]$$ will be\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\eqalign{\n  &amp; h\\left[ n \\right] = 0;\\,\\,n &lt; 0,\\,\\,n &gt; 2,  \\cr \n  &amp; h\\left[ 0 \\right] = 1,\\,h\\left[ 1 \\right] = h\\left[ 2 \\right] =  - 1 \\cr} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\eqalign{\n  &amp; h\\left[ n \\right] = 0;\\,\\,n &lt;  - 1,\\,\\,n &gt; 1,  \\cr \n  &amp; h\\left[ { - 1} \\right] = 1,\\,h\\left[ 0 \\right] = h\\left[ 1 \\right] = 2 \\cr} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\eqalign{\n  &amp; h\\left[ n \\right] = 0;\\,\\,n &lt; 0,\\,\\,n \\ge 3,\\,h\\left[ 0 \\right] =  - 1,  \\cr \n  &amp; h\\left[ 1 \\right] = 2,\\,h\\left[ 2 \\right] = 1 \\cr} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\eqalign{\n  &amp; h\\left[ n \\right] = 0;\\,\\,n &lt;  - 2,\\,\\,n &gt; 1,\\,  \\cr \n  &amp; h\\left[ { - 2} \\right] = h\\left[ 1 \\right] =  - 2,\\,h\\left[ { - 1} \\right] =  - h\\left[ 0 \\right] = 3 \\cr} $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ee-2006",
+    "difficulty": null
+  },
+  {
+    "content": "In the system shown in Fig. the input $$x\\left( t \\right) = \\sin t.$$ In the steady-state, the response $$y(t)$$ will be\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/keVkGkrqGmHxv7I5S/EST47Vy9WmtpCepDuKsndevR8pQ0V/Qzu94K1KB8etUdHKt2KhHH/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2004 Signals and Systems - Linear Time Invariant Systems Question 28 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {\\sqrt 2 }}\\,\\sin \\left( {t - {{45}^ \\circ }} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {\\sqrt 2 }}\\,\\sin \\left( {t + {{45}^ \\circ }} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sin \\left( {t - {{45}^ \\circ }} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sin \\left( {t + {{45}^ \\circ }} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ee-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Given the relationship between the input $$u(t)$$ and the output $$y(t)$$ to be\n<br>$$y\\left( t \\right) = \\int\\limits_0^t {\\left( {2 + t - \\tau } \\right){e^{ - 3\\left( {t - \\tau } \\right)}}} u\\left( \\tau  \\right)d\\tau $$ \n<br>the transfer function $$Y\\left( s \\right)/U\\left( s \\right)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{2{e^{ - 2s}}} \\over {s + 3}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{s + 2} \\over {{{\\left( {s + 3} \\right)}^2}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{2s + 5} \\over {s + 3}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{2s + 7} \\over {{{\\left( {s + 3} \\right)}^2}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ee-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Match the following transfer functions and impulse responses\n<p><b>Transfer functions</b>\n<br>$$\\eqalign{\n  &amp; \\left( a \\right)\\,\\,\\,\\,\\,\\,\\,\\,{1 \\over {s\\left( {s + 1} \\right)}}  \\cr \n  &amp; \\left( b \\right)\\,\\,\\,\\,\\,\\,\\,\\,{1 \\over {{{\\left( {s + 1} \\right)}^2}}}  \\cr \n  &amp; \\left( c \\right)\\,\\,\\,\\,\\,\\,\\,\\,{1 \\over {s\\left( {s + 1} \\right) + 1}}  \\cr \n  &amp; \\left( d \\right)\\,\\,\\,\\,\\,\\,\\,\\,{1 \\over {{s^2} + 1}} \\cr} $$</p>\n<p><b>Impulse Responses</b>\n<br><img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/EtgpNenLyBUyPty3i/MSez8nzWJkguyTm6EcQFVsFn24Mua/mFryiqX4goq0JH51LF99On/image.png\" loading=\"lazy\" alt=\"GATE EE 1992 Signals and Systems - Linear Time Invariant Systems Question 15 English 1\"> \n<br><img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/YJgHfmTt6mDUOFwDY/FfJ2D0eBpror2dyZZepMo13C2AK3m/mY8U9obVcYoN2v7xTrWvEc/image.png\" loading=\"lazy\" alt=\"GATE EE 1992 Signals and Systems - Linear Time Invariant Systems Question 15 English 2\">\n<br><img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/98nu0FBa0wDrzSjjS/mQv4qf53pnFEoZkPEsyncK6Een3Wn/ijNnouJFi3NOYBum7ExteJ/image.png\" loading=\"lazy\" alt=\"GATE EE 1992 Signals and Systems - Linear Time Invariant Systems Question 15 English 3\">\n<br><img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/78gV9ainIvysyDT5x/007xH1rohqqPv7kPgLEy4wOQJPPWs/S3HsYnyrATnWwDMhiTkKbj/image.png\" loading=\"lazy\" alt=\"GATE EE 1992 Signals and Systems - Linear Time Invariant Systems Question 15 English 4\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\left( {a - Q} \\right),\\,\\,\\left( {b - P} \\right),\\,\\,\\left( {c - S} \\right),\\,\\,\\left( {d - R} \\right)$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ee-1992",
+    "difficulty": null
+  },
+  {
+    "content": "A single input single output system with $$y$$ as output and $$u$$ as input, is described by \n$$${{{d^2}y} \\over {d{t^2}}} + 2{{dy} \\over {dt}} + 10y = 5{{d\\,u} \\over {dt}} - 3\\,u$$$ \n<br>For the above system find an input $$u(t),$$ with zero initial condition, that produces the same output as with no input and with the initial conditions. \n<br>$${{d\\,y\\left( {{0^ - }} \\right)} \\over {dt}} =  - 4,\\,\\,\\,y\\left( {{0^ - }} \\right) = 1$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$4\\left( t \\right) = 0.2\\left[ {\\delta \\left( t \\right) - 1.4{e^{0.6t}}u\\left( t \\right)} \\right]$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ee-2002",
+    "difficulty": null
+  },
+  {
+    "content": "A first order system is initially at rest and excited by a step input at time $$t=0.$$ Its output becomes $$1.1$$ $$V$$ is in $$4$$ seconds and eventually reaches a steady state value of $$2V$$. Determine its time",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$5$$ $$sec$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ee-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The impulse response  of a network is $$h\\left( t \\right) = 1$$ for $$0 \\le t &lt; 1$$ and zero otherwise. Sketch the impulse response of two such networks in cascade, neglecting loading effects.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ee-1992",
+    "difficulty": null
+  }
+]

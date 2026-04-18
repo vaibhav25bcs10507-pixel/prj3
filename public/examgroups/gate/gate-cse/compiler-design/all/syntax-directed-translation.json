@@ -1,0 +1,565 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following statements about the use of backpatching in a compiler for</p>\n<p>(I) Backpatching can be used to generate code for Boolean expression in one pass.</p>\n<p>(II) Backpatching can be used to generate code for flow-of-control statements in one pass.</p>\n<p>Which ONE of the following options is CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only (I) is correct.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Only (II) is correct.\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Both (I) and (II) are correct.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither (I) nor (II) is correct.\n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Backpatching is a technique where jump addresses are left unspecified and later “patched” once the target addresses are known. This is particularly useful in a one-pass compiler for handling constructs that involve jumps, such as Boolean expressions and flow-of-control statements.</p>\n<p>Here's how it applies to both statements:</p>\n\n<p>$$\\textbf{Boolean Expressions:}$$  </p>\n\n\n<p><p>When translating Boolean expressions (especially those with short-circuit behavior), we often create lists for true and false jump addresses.  </p></p>\n<p><p>Backpatching lets us fill in these addresses later, once the complete control flow is determined.  </p></p>\n<p><p>This allows the code for Boolean expressions to be generated in one pass.</p></p>\n\n\n<p>$$\\textbf{Flow-of-Control Statements:}$$  </p>\n\n\n<p><p>Statements like if, while, and for involve jumps to different parts of the code.  </p></p>\n<p><p>By using backpatching, the compiler can defer specifying the jump targets until it has processed the entire structure of the statement.  </p></p>\n<p><p>This, too, enables one-pass code generation for these constructs.</p></p>\n\n<p>Since backpatching serves both purposes:</p>\n\n<p><p>Statement (I) is correct.</p></p>\n<p><p>Statement (II) is also correct.</p></p>\n\n<p>Thus, the correct answer is:</p>\n<p>Option C: Both (I) and (II) are correct.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Given the following syntax directed translation rules :</p>\n<p>Rule 1 : $R \\rightarrow A B\\{B . i=R . i-1 ; A . i=B . i R . i=A . i+1 ;\\}$</p>\n<p>Rule 2 : $P \\rightarrow C D\\{P . i=C . i+D . i ; D . i=C . i+2\\}$</p>\n<p>Rule 3 : $Q \\rightarrow E F\\{Q . i=E . i+F . i ;\\}$</p>\n<p>Which ONE is the CORRECT option among the following?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Rule 1 is S -attributed and L-attributed; Rule 2 is S -attributed and not L-attributed; Rule 3 is neither S -attributed nor L-attributed\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Rule 1 is neither S-attributed nor L-attributed: Rule 2 is S-attributed and L-attributed: Rule 3 is S-attributed and L-attributed\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Rule 1 is neither S-attributed nor L-attributed; Rule 2 is not S -attributed and is Lattributed; Rule 3 is S -attributed and L-attributed\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Rule 1 is S-attributed and not L-attributed; Rule 2 is not S-attributed and is Lattributed: Rule 3 is S -attributed and L-attributed\n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s analyze each rule step by step.</p>\n<p>──────────────────────────────</p>\n\n<p>Rule 1: </p>\n\n<p>$$ R \\rightarrow A \\; B \\; \\{\\, B.i = R.i - 1;\\quad A.i = B.i;\\quad R.i = A.i + 1;\\,\\} $$</p>\n<p>• In this rule, the first action sets </p>\n<p>$$ B.i = R.i - 1. $$  </p>\n<p>That means the attribute for B is computed from a value in the parent (R), which makes it an inherited attribute. (Recall: an S‑attributed grammar uses only synthesized attributes and does not compute values from the parent.)  </p>\n<p>• The next action is </p>\n<p>$$ A.i = B.i. $$  </p>\n<p>Now, note that A appears to the left of B in the production. In an L‑attributed grammar, any inherited attribute of a symbol can depend only on the inherited attributes of the parent and on the attributes of symbols already processed to its left. Here, A’s attribute is computed using B’s attribute—even though B is to the right of A. This is not allowed in L‑attributed definitions.</p>\n<p>Thus, Rule 1 involves an inherited attribute and violates the left-to-right condition; it is neither S‑attributed (because S‑attributed grammars allow only synthesized attributes) nor L‑attributed.</p>\n<p>──────────────────────────────</p>\n<ol start=\"2\">\n<p>Rule 2:</p>\n\n<p>$$ P \\rightarrow C \\; D \\; \\{\\, P.i = C.i + D.i; \\quad D.i = C.i + 2;\\,\\} $$</p>\n<p>• Here, the action </p>\n<p>$$ D.i = C.i + 2 $$  </p>\n<p>computes an attribute for D using the attribute of C. Since C appears to the left of D in the production, this dependency is acceptable for an L‑attributed grammar (inherited attributes are allowed to depend on the left siblings and on attributes from the parent).</p>\n<p>• However, because the rule assigns an attribute value to D (which is computed from a left sibling rather than solely from information in its own subtree), it is not purely synthesized. In S‑attributed grammars only synthesized attributes are allowed, so this rule is not S‑attributed.</p>\n<p>Thus, Rule 2 is not S‑attributed but is L‑attributed.</p>\n<p>──────────────────────────────</p>\n<ol start=\"3\">\n<p>Rule 3:</p>\n\n<p>$$ Q \\rightarrow E \\; F \\; \\{\\, Q.i = E.i + F.i; \\,\\} $$</p>\n<p>• In this rule, the only semantic action computes </p>\n<p>$$ Q.i = E.i + F.i. $$  </p>\n<p>This uses only the attributes of the children E and F to compute the synthesized attribute for Q.  </p>\n<p>Since no inherited attribute is used, this rule is S‑attributed. (And every S‑attributed rule is trivially L‑attributed as well.)</p>\n<p>──────────────────────────────</p>\n<p>Summary of classifications:</p>\n<p>• Rule 1 is neither S‑attributed (because it uses parent's attribute to compute a child’s attribute) nor L‑attributed (because it uses a right sibling’s attribute to compute an attribute for an earlier symbol).  </p>\n<p>• Rule 2 is not S‑attributed (inherited computation is present) but is L‑attributed (dependencies are only on the parent and left sibling).  </p>\n<p>• Rule 3 is S‑attributed (and hence also L‑attributed).</p>\n<p>──────────────────────────────</p>\n<p>Thus, the correct option is:</p>\n<p>Option C</p>\n<p>──────────────────────────────</p>\n<p>Final answer: Option C.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following ANSI C program:</p>\n\n<pre><code class =‘c’>int main() {\n\nInteger x;\n\nreturn 0;\n\n}</code></pre>\n\n<p>Which one of the following phases in a seven-phase C compiler will throw an error?&nbsp;&nbsp;</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Syntax analyzer"
+      },
+      {
+        "identifier": "B",
+        "content": "Semantic analyzer"
+      },
+      {
+        "identifier": "C",
+        "content": "Machine dependent optimizer"
+      },
+      {
+        "identifier": "D",
+        "content": "Lexical analyzer"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Given ANSI C Program:</strong></h3>\n<pre><code class=\"c language-c\">int main() {\n\n    Integer x;\n\n    return 0;\n\n}\n</code></pre>\n<hr />\n<h3><strong>Analysis of the Code:</strong></h3>\n\n<p><p><strong>Issue in the Code:</strong></p></p>\n<p><p>The line <code>Integer x;</code> is declaring a variable <code>x</code> with a type <code>Integer</code>.</p></p>\n<p><p>In standard C, <code>Integer</code> is <strong>not</strong> a valid built-in data type. The correct keyword for declaring an integer variable is <code>int</code>.</p></p>\n<p><p><strong>Implication:</strong></p></p>\n<p><p>Using <code>Integer</code> as a type without prior definition leads to an error.</p></p>\n<p><p>The compiler needs to detect that <code>Integer</code> is not a valid or declared type.</p></p>\n\n<hr />\n<h3><strong>Compiler Phases and Their Functions:</strong></h3>\n<p>A typical seven-phase compiler includes the following phases:</p>\n\n<p><strong>Lexical Analysis (Lexer):</strong></p>\n\n\n<p><p>Reads the source code character by character.</p></p>\n<p><p>Groups characters into tokens (identifiers, keywords, operators, literals, etc.).</p></p>\n<p><p><strong>Example:</strong> Recognizes <code>int</code>, <code>main</code>, <code>Integer</code>, <code>x</code>, <code>return</code>, <code>0</code>, etc., as tokens.</p></p>\n\n\n<p><strong>Syntax Analysis (Parser):</strong></p>\n\n\n<p><p>Takes tokens from the lexical analyzer.</p></p>\n<p><p>Checks if the tokens form a valid grammatical structure according to the language's grammar (syntax rules).</p></p>\n<p><p>Builds a parse tree representing the syntactic structure.</p></p>\n\n\n<p><strong>Semantic Analysis:</strong></p>\n\n\n<p><p>Uses the parse tree to identify the meaning of the code.</p></p>\n<p><p>Performs type checking and ensures that all identifiers are declared before use.</p></p>\n<p><p>Checks for semantic consistency (e.g., variable types, function calls with correct arguments).</p></p>\n\n\n<p><strong>Intermediate Code Generation:</strong></p>\n\n\n<p><p>Converts the parse tree into an intermediate representation (IR), such as three-address code.</p></p>\n<p><p>This IR is a low-level code that is independent of the machine architecture.</p></p>\n\n\n<p><strong>Machine-Independent Optimization:</strong></p>\n\n\n<p><p>Performs optimizations on the intermediate code without considering the target machine architecture.</p></p>\n<p><p>Examples include constant folding, dead code elimination, and loop optimization.</p></p>\n\n\n<p><strong>Code Generation:</strong></p>\n\n\n<p><p>Translates the optimized intermediate code into target machine code.</p></p>\n<p><p>Allocates memory and registers, translates operations into machine instructions.</p></p>\n\n\n<p><strong>Machine-Dependent Optimization:</strong></p>\n\n\n<p><p>Performs optimizations specific to the target machine architecture.</p></p>\n<p><p>Examples include instruction scheduling and register allocation optimizations.</p></p>\n\n<hr />\n<h3><strong>Determining Which Phase Will Throw the Error:</strong></h3>\n<h4><strong>Option D: Lexical Analyzer</strong></h4>\n\n<p><p><strong>Role:</strong></p></p>\n<p><p>The lexical analyzer tokenizes the input code.</p></p>\n<p><p>It does not validate whether an identifier is a valid type.</p></p>\n<p><p><strong>In this code:</strong></p></p>\n<p><p><code>Integer</code> is recognized as an identifier token.</p></p>\n<p><p>No error is thrown at this phase.</p></p>\n<p><p><strong>Conclusion:</strong> <strong>Lexical analyzer will not throw an error.</strong></p></p>\n\n<h4><strong>Option A: Syntax Analyzer</strong></h4>\n\n<p><p><strong>Role:</strong></p></p>\n<p><p>The syntax analyzer checks if the sequence of tokens follows the grammatical rules of the language.</p></p>\n<p><p><strong>In this code:</strong></p></p>\n<p><p>The parser sees <code>Integer x;</code> as a declaration statement.</p></p>\n<p><p>Syntactically, it's correct to declare a variable with an identifier as its type.</p></p>\n<p><p>The parser assumes that <code>Integer</code> could be a valid type name (possibly defined elsewhere).</p></p>\n<p><p><strong>Conclusion:</strong> <strong>Syntax analyzer will not throw an error.</strong></p></p>\n\n<h4><strong>Option B: Semantic Analyzer</strong></h4>\n\n<p><p><strong>Role:</strong></p></p>\n<p><p>The semantic analyzer ensures that the code makes sense semantically.</p></p>\n<p><p>It checks for:</p>\n\n<p><p>Undeclared variables or types.</p></p>\n<p><p>Type compatibility.</p></p>\n<p><p>Correct use of operations on data types.</p></p></p>\n<p><p><strong>In this code:</strong></p></p>\n<p><p><code>Integer</code> is used as a type but has not been declared or defined.</p></p>\n<p><p>The semantic analyzer looks up <code>Integer</code> in the symbol table and fails to find it as a valid type.</p></p>\n<p><p>This results in a semantic error: <strong>\"Unknown type name 'Integer'\"</strong>.</p></p>\n<p><p><strong>Conclusion:</strong> <strong>Semantic analyzer will throw an error.</strong></p></p>\n\n<h4><strong>Option C: Machine-Dependent Optimizer</strong></h4>\n\n<p><p><strong>Role:</strong></p></p>\n<p><p>Optimizes the machine code considering the specific architecture.</p></p>\n<p><p>Operates after code generation.</p></p>\n<p><p><strong>In this code:</strong></p></p>\n<p><p>Errors related to undeclared types would have been caught earlier.</p></p>\n<p><p>The code would not reach this phase if semantic errors exist.</p></p>\n<p><p><strong>Conclusion:</strong> <strong>Machine-dependent optimizer will not throw an error in this scenario.</strong></p></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p>The <strong>semantic analyzer</strong> is responsible for detecting undeclared or undefined types and variables.</p></p>\n<p><p>Since <code>Integer</code> is not a valid or declared type in standard C, the semantic analyzer will report an error.</p></p>\n\n<hr />\n<p><strong>Answer:</strong> <strong>Option B — Semantic analyzer</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following code segment.\n<pre><code>x = u - t;\ny = x * v;\nx = y + w;\ny = t - z;\ny = x * y;</code></pre>\nThe minimum number of total variables required to convert the above code segment to static\nsingle assignment form is .",
+    "options": [],
+    "correct_options": [],
+    "answer": "10",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the context of abstract-syntax-tree $$(AST)$$ and control-flow-graph $$(CFG),$$ which one of the following is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "In both $$AST$$ and $$CFG,$$ let node $${N_2}$$ be the successor of node $${N_1}.$$ In the input program, the code  corresponding to $${N_2}$$ is present after the code corresponding to $${N_1}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "For any input program, neither $$AST$$ nor $$CFG$$ will contain a cycle"
+      },
+      {
+        "identifier": "C",
+        "content": "The maximum number of successors of a node in an $$AST$$ and a $$CFG$$ depends on the input  program"
+      },
+      {
+        "identifier": "D",
+        "content": "Each node in $$AST$$ and $$CFG$$ corresponds to at most one statement in the input program "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "One of the purposes of using intermediate code in compilers is to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "make parsing and semantic analysis simpler."
+      },
+      {
+        "identifier": "B",
+        "content": "improve error recovery and error reporting."
+      },
+      {
+        "identifier": "C",
+        "content": "increase the chances of reusing the machine-independent code optimizer in other compilers."
+      },
+      {
+        "identifier": "D",
+        "content": "improve the register allocation."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is <b>FALSE</b>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "In statically typed languages, each variable in a program has a fixed type"
+      },
+      {
+        "identifier": "B",
+        "content": "In un-typed languages, values do not have any types"
+      },
+      {
+        "identifier": "C",
+        "content": "In dynamically typed languages, variables have no types"
+      },
+      {
+        "identifier": "D",
+        "content": "In all statically typed languages, each variable in a program is associated with values of only a single type during the execution of the program"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "<p>In the following grammar:</p>\n$$\\eqalign{\n  &amp; X:: = X \\oplus {Y \\over Y}  \\cr \n  &amp; Y:: = Z*{Y \\over Z}  \\cr \n  &amp; Z:: = id \\cr} $$\n<p>Which of the following is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$' \\oplus '$$ is left associative while $$'*'$$ is right associative"
+      },
+      {
+        "identifier": "B",
+        "content": "Both $$' \\oplus '$$and $$'*'$$ is left associative"
+      },
+      {
+        "identifier": "C",
+        "content": "$$' \\oplus '$$ is right associative while $$'*'$$ is left associative"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "A linker is given object modules for a set of programs that were compiled separately. What information need to be included in an object module? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Object code"
+      },
+      {
+        "identifier": "B",
+        "content": "Relocation bits"
+      },
+      {
+        "identifier": "C",
+        "content": "Names and locations of all external symbols defined in the object module"
+      },
+      {
+        "identifier": "D",
+        "content": "Absolute addresses of internal symbols"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Generation of intermediate code based on an abstract machine model is useful in compilers because ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "it makes implementation of lexical analysis and syntax analysis easier"
+      },
+      {
+        "identifier": "B",
+        "content": "syntax-directed translations can be written for intermediate code generation"
+      },
+      {
+        "identifier": "C",
+        "content": "it enhances the portability of the front end of the compiler"
+      },
+      {
+        "identifier": "D",
+        "content": "it is not possible to generate code for real machines directly from high level language programs"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\text { Consider the following two syntax-directed definitions SDD1 and SDD2 for type declarations. } $$</p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\"><thead>\n  <tr>\n    <th class=\"tg-baqh\" colspan=\"2\">SDD1</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-baqh\">Grammar(G1)</td>\n    <td class=\"tg-baqh\">$$<br>\\text { Semantic Rules }<br>$$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">$$<br>\\mathrm{D} \\rightarrow \\mathrm{TV}<br>$$</td>\n    <td class=\"tg-baqh\">$$<br>\\begin{aligned}<br>&amp; \\text { D.type = T.type } \\\\<br>&amp; \\text { V.type = T.type }<br>\\end{aligned}<br>$$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">$$<br>\\mathrm{T} \\rightarrow \\mathrm{int}<br>$$</td>\n    <td class=\"tg-baqh\">$$<br>\\text { T.type = int }<br>$$<br></td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">$$<br>\\mathrm{T} \\rightarrow \\text { float }<br>$$</td>\n    <td class=\"tg-baqh\">$$<br>\\text { T.type = float }<br>$$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">$$<br>\\mathrm{V} \\rightarrow \\mathrm{~V}_1 \\mathrm{id}<br>$$</td>\n    <td class=\"tg-baqh\">$$<br>\\begin{aligned}<br>&amp; V_1 \\cdot \\text { type }=\\text { V.type } \\\\<br>&amp; \\text { put(id.entry, V.type) }<br>\\end{aligned}<br>$$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">$$<br>\\mathrm{V} \\rightarrow \\mathrm{id}<br>$$</td>\n    <td class=\"tg-baqh\">$$<br>\\text { put(id.entry, V.type) }<br>$$</td>\n  </tr>\n</tbody></table><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\"><thead>\n  <tr>\n    <th class=\"tg-baqh\" colspan=\"2\">SDD2</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-baqh\">Grammar(G2)</td>\n    <td class=\"tg-baqh\">$$<br>\\text { Semantic Rules }<br>$$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">$$<br>\\mathrm{D} \\rightarrow D_1 \\mathrm{id}<br>$$</td>\n    <td class=\"tg-baqh\">$$<br>\\begin{aligned}<br>&amp; \\text { D.type }=D_1 \\cdot \\text { type } \\\\<br>&amp; \\text { put(id.entry, } D_1 \\cdot \\text { type) }<br>\\end{aligned}<br>$$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">$$<br>\\mathrm{D} \\rightarrow \\mathrm{~T} \\text { id }<br>$$</td>\n    <td class=\"tg-baqh\">$$<br>\\begin{aligned}<br>&amp; \\text { D.type = T.type } \\\\<br>&amp; \\text { put(id.entry, T.type) }<br>\\end{aligned}<br>$$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">$$<br>\\mathrm{T} \\rightarrow \\text { int }<br>$$</td>\n    <td class=\"tg-baqh\">$$<br>\\text { T.type = int }<br>$$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">$$<br>\\mathrm{T} \\rightarrow \\text { float }<br>$$</td>\n    <td class=\"tg-baqh\">$$<br>\\text { T.type = float }<br>$$</td>\n  </tr>\n</tbody></table>$D$ is the start symbol, and int, float and id are the three terminals. The non-terminal $V_1$ is the same as $V$ and the non-terminal $D_1$ is the same as $D$. Here, the subscript is used to differentiate the grammar symbols on the two sides of a production. The function put updates the symbol table with the type information for an identifier.\nLet $P$ and $Q$ be the languages specified by grammars G1 and G2, respectively. Which of the following statements is/are true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>The languages P and Q are the same</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>SDD2 is S-attributed and contains only synthesized attributes</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>SDD1 is L-attributed and contains only inherited attributes</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The specifications of SDD1 and SDD2 are such that the same entries get added to the symbol table</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) True: Both the grammars generate the same language, that is, declarations of the form $$ (\\text{int} \\; / \\; \\text{float}) \\; (\\text{id})^{+} $$ This means one type name is followed by one or more identifiers.</p>\n<p>In SDD1, the grammar is $$ D \\rightarrow TV $$ where $$ T \\rightarrow \\text{int} \\; | \\; \\text{float} $$ and $$ V \\rightarrow V_1 \\; \\text{id} \\; | \\; \\text{id} $$ So, after choosing a type, we get one or more identifiers.</p>\n<p>In SDD2 also, the grammar gives the same form. Here, identifiers are built using $$ D \\rightarrow D_1 \\; \\text{id} $$ and the base case is $$ D \\rightarrow T \\; \\text{id} $$ Therefore, this grammar also generates one type followed by one or more identifiers. So, $$ P = Q $$.</p>\n<p>(c) False: SDD1 is not S-attributed. It is L-attributed because it uses both synthesized and inherited attributes.</p>\n<p>In SDD1, $$ T.type $$ is synthesized from $$ T $$. Then this type is passed from $$ D $$ to $$ V $$ using $$ V.type = T.type $$. After that, in the production $$ V \\rightarrow V_1 \\; \\text{id} $$, the rule $$ V_1.type = V.type $$ passes the type information downwards. This is an inherited attribute.</p>\n<p>Since inherited attributes are used in SDD1, it cannot be S-attributed. Therefore, statement (c) is false.</p>\n<p>(b) True: SDD2 is S-attributed because it uses only synthesized attributes.</p>\n<p>In SDD2, the rules are:</p>\n<p>$$ T.type = \\text{int} \\quad \\text{or} \\quad T.type = \\text{float} $$</p>\n<p>Then, in $$ D \\rightarrow T \\; \\text{id} $$, we get $$ D.type = T.type $$, and in $$ D \\rightarrow D_1 \\; \\text{id} $$, we get $$ D.type = D_1.type $$.</p>\n<p>Here, type information always moves upward from child to parent. No attribute is passed from parent to child or from left to right. So, only synthesized attributes are used. Hence SDD2 is S-attributed.</p>\n<p>(d) True: Both SDD1 and SDD2 make the same symbol table entries.</p>\n<p>In SDD1, after the type is known, every identifier in $$ V $$ gets entered into the symbol table using $$ \\text{put}(\\text{id.entry}, V.type) $$.</p>\n<p>In SDD2 also, each identifier is entered using either $$ \\text{put}(\\text{id.entry}, T.type) $$ or $$ \\text{put}(\\text{id.entry}, D_1.type) $$. Since $$ D_1.type $$ is ultimately the same type obtained from $$ T $$, all identifiers receive the same correct type.</p>\n<p>So, for any valid declaration, both SDD1 and SDD2 insert exactly the same identifier-type pairs into the symbol table.</p>\n<p>∴ (a), (b), (d) are true and (c) is false.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following expression: $x[i] = (p + r) * -s[i] + \\frac{u}{w}$. The following sequence shows the list of triples representing the given expression, with entries missing for triples (1), (3), and (6).</p>\n<style>table { width: 100%; border-collapse: collapse; margin: 20px 0; } th { background-color: blue; color: white; border: 1px solid lightgrey; padding: 10px; } td { border: 1px solid lightgrey; padding: 10px; text-align: left; }</style><table><tbody><tr><td>(0)</td><td> + </td><td> p </td><td> r </td></tr><tr><td>(1)</td><td></td><td></td><td></td></tr><tr><td>(2)</td><td> uminus </td><td>(1)</td><td></td></tr><tr><td>(3)</td><td></td><td></td><td></td></tr><tr><td>(4)</td><td> / </td><td> u </td><td> w </td></tr><tr><td>(5)</td><td> + </td><td>(3)</td><td>(4)</td></tr><tr><td>(6)</td><td></td><td></td><td></td></tr><tr><td>(7)</td><td> = </td><td>(6)</td><td>(5)</td></tr></tbody></table>\n<p>Which one of the following options fills in the missing entries CORRECTLY?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>(1) = [] s i &nbsp;&nbsp;&nbsp;&nbsp;(3) * (0) (2) &nbsp;&nbsp;&nbsp;&nbsp;(6) []= x i</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>(1) []= s i &nbsp;&nbsp;&nbsp;&nbsp;(3) - (0) (2) &nbsp;&nbsp;&nbsp;&nbsp;(6) =[] x (5)</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>(1) =[] s i &nbsp;&nbsp;&nbsp;&nbsp;(3) * (0) (2) &nbsp;&nbsp;&nbsp;&nbsp;(6) []= x (5)</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>(1) []= s i &nbsp;&nbsp;&nbsp;&nbsp;(3) - (0) (2) &nbsp;&nbsp;&nbsp;&nbsp;(6) =[] x i</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's break down the given expression <code>x[i] = (p + r) * -s[i] + u/w</code> and fill in the missing triples following the common structure <code>(result_register) operator operand1 operand2</code>.</p>\n<ol>\n<li><p><strong><code>p + r</code></strong>:</p>\n<p>The triple <code>(0) + p r</code> correctly computes <code>p + r</code>. Let's denote its result as <code>t0</code>. So, <code>t0 = p + r</code>.</p></li>\n<li><p><strong><code>s[i]</code></strong>:</p>\n<p>The expression needs <code>-s[i]</code>, so <code>s[i]</code> must be fetched first. This value will be stored in <code>(1)</code>.</p>\n<p>Looking at the options for <code>(1)</code>:</p>\n<ul>\n<li><p><code>= [] s i</code>: This implies an assignment (<code>=</code>) where the right-hand side <code>[] s i</code> means \"fetch array <code>s</code> at index <code>i</code>.\" So <code>(1)</code> gets <code>s[i]</code>. This is a plausible interpretation of the syntax.</p></li>\n<li><p><code>[]=</code> <code>s</code> <code>i</code>: This typically means \"store to array.\" If <code>(1)</code> is the result register, this syntax (<code>(1) []= s i</code>) is unusual for fetching a value, as <code>[]=</code> usually takes a value to store as well.</p></li></ul></li>\n<li><p><strong><code>-s[i]</code></strong>:</p>\n<p>The triple <code>(2) uminus (1)</code> computes the unary minus of <code>(1)</code>. If <code>(1)</code> holds <code>s[i]</code>, then <code>(2)</code> holds <code>-s[i]</code>. Let <code>t2 = -s[i]</code>.</p></li>\n<li><p><strong><code>(p + r) * -s[i]</code></strong>:</p>\n<p>This is <code>(0) * (2)</code>. This value will be stored in <code>(3)</code>.</p>\n<p>Looking at the options for <code>(3)</code>:</p>\n<ul>\n<li><p><code>* (0) (2)</code>: This correctly computes <code>(0) * (2)</code>. This matches the expression and is standard triple syntax.</p></li>\n<li><p><code>- (0) (2)</code>: This computes <code>(0) - (2)</code>, which is incorrect as we need multiplication.</p></li></ul>\n<p>Therefore, <code>(3) * (0) (2)</code> is the correct operation. Let <code>t3 = (p + r) * -s[i]</code>. This eliminates options B and D.</p></li>\n<li><p><strong><code>u / w</code></strong>:</p>\n<p>The triple <code>(4) / u w</code> correctly computes <code>u / w</code>. Let <code>t4 = u / w</code>.</p></li>\n<li><p><strong><code>(p + r) * -s[i] + u/w</code></strong>:</p>\n<p>The triple <code>(5) + (3) (4)</code> correctly computes <code>(3) + (4)</code>. This sums the product part and the division part. <code>(5)</code> now holds the complete right-hand side of the expression. Let <code>t5 = (p + r) * -s[i] + u/w</code>.</p></li>\n<li><p><strong><code>x[i] = RHS</code></strong>:</p>\n<p>The final expression is an assignment to <code>x[i]</code>. The value to be assigned is <code>(5)</code>. The assignment instruction is given by <code>(7) = (6) (5)</code>.</p>\n<p>This triple <code>(7) = (6) (5)</code> follows the pattern <code>(destination) = (source)</code>. It means the value <code>(5)</code> is assigned to the destination represented by <code>(6)</code>.</p>\n<p>Therefore, <code>(6)</code> must represent the <em>assignable location</em> <code>x[i]</code>.</p>\n<p>Now let's compare Option A and C for <code>(1)</code> and <code>(6)</code>:</p>\n<p><strong>Option A:</strong></p>\n<ul>\n<li><p><strong>(1) = [] s i</strong>: As interpreted before, <code>(1)</code> is assigned the result of <code>[] s i</code>, which is <code>s[i]</code>. So <code>t1 = s[i]</code>. This makes <code>(2) uminus (1)</code> work correctly.</p></li>\n<li><p><strong>(6) []= x i</strong>: This triple defines <code>(6)</code>. If <code>(6)</code> needs to represent the assignable location <code>x[i]</code>, then <code>[]=</code> <code>x i</code> means \"reference to <code>x[i]</code>\" or \"address of <code>x[i]</code>\" (L-value). This is a plausible specific notation. So, <code>t6</code> is the L-value for <code>x[i]</code>.</p></li>\n<li><p><strong>(7) = (6) (5)</strong>: This means assign <code>(5)</code> (R-value) to <code>(6)</code> (L-value), effectively <code>x[i] = t5</code>.</p></li></ul>\n<p><strong>Option C:</strong></p>\n<ul>\n<li><p><strong>(1) =[] s i</strong>: This can be interpreted as <code>(1) = s[i]</code> where <code>=[]</code> is the \"fetch array element\" operator. This part seems plausible.</p></li>\n<li><p><strong>(6) []= x (5)</strong>: Here <code>[]=</code> is the operator, <code>x</code> is the array, and <code>(5)</code> is the index. However, the index for <code>x</code> should be <code>i</code>, not the calculated RHS value <code>(5)</code>. Using <code>(5)</code> as the index <code>x[(5)]</code> is incorrect based on the original expression <code>x[i]</code>. This definitively makes Option C incorrect.</p></li></ul></li>\n</ol>\n<p>Based on this detailed analysis, Option A consistently and correctly fills in the missing entries.</p>\n<p>The final answer is $\\boxed{A}$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following syntax-directed definition (SDD).</p>\n<style>table { width: 100%; border-collapse: collapse; margin: 20px 0; } th { background-color: blue; color: white; border: 1px solid lightgrey; padding: 10px; } td { border: 1px solid lightgrey; padding: 10px; text-align: left; }</style> <table> <thead> <tr> <th></th> <th></th> </tr> </thead> <tbody> <tr> <td>S → DHTU</td> <td>{ S.val = D.val + H.val + T.val + U.val; }</td> </tr> <tr> <td>D → “M” D<sub>1</sub></td> <td>{ D.val = 5 + D<sub>1</sub>.val; }</td> </tr> <tr> <td>D → ε </td> <td>{ D.val = –5; } </td> </tr> <tr> <td>H → “L” H<sub>1</sub></td> <td>{ H.val = 5 * 10 + H<sub>1</sub>.val; }</td> </tr> <tr> <td>H → ε </td> <td>{ H.val = –10; } </td> </tr> <tr> <td>T → “C” T<sub>1</sub></td> <td>{ T.val = 5 * 100 + T<sub>1</sub>.val; }</td> </tr> <tr> <td>T → ε</td> <td>{ T.val = –5; }</td> </tr> <tr> <td>U → “K”</td> <td>{ U.val = 5; }</td> </tr> </tbody> </table> Given “MMLK” as the input, which one of the following options is the CORRECT value computed by the SDD (in the attribute S.val)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>45</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>50</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>55</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>65</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To calculate the value of the attribute $$S.val$$ for the input string \"MMLK\", we will use the given syntax-directed definition (SDD) rules step by step.</p>\n\n<p>1. <strong>Parsing the input \"MMLK\":</strong></p>\n\n<ul>\n\n<li>S → DHTU</li>\n\n<li>D → “M” D<sub>1</sub></li>\n\n<li>D<sub>1</sub> → “M” D<sub>2</sub></li>\n\n<li>D<sub>2</sub> → ε</li>\n\n<li>H → “L” H<sub>1</sub></li>\n\n<li>H<sub>1</sub> → ε</li>\n\n<li>T → ε</li>\n\n<li>U → “K”</li>\n\n</ul>\n\n<p>2. <strong>Applying the semantic rules:</strong></p>\n\n<ul>\n\n<li>Starting from the innermost $$D$$ production: $$D_2$$<br>\n\n<p>$$D_2.val = -5$$ as $$D_2 → ε$$</li></p>\n\n<li>Moving one level up to $$D_1$$:<br>\n\n<p>$$D_1.val = 5 + D_2.val = 5 + (-5) = 0$$ as $$D_1 → “M” D_2$$</li></p>\n\n<li>Then up to $$D$$:<br>\n\n<p>$$D.val = 5 + D_1.val = 5 + 0 = 5$$ as $$D → “M” D_1$$</li></p>\n\n<li>For $$H₁$$:<br>\n\n<p>$$H_1.val = -10$$ as $$H_1 → ε$$</li></p>\n\n<li>Then $$H$$:<br>\n\n<p>$$H.val = 5 * 10 + H_1.val = 50 + (-10) = 40$$ as $$H → “L” H_1$$</li></p>\n\n<li>For $$T$$:<br>\n\n<p>$$T.val = -5$$ as $$T → ε$$</li></p>\n\n<li>For $$U$$:<br>\n\n<p>$$U.val = 5$$ as $$U → “K”$$</li></p>\n\n</ul>\n\n<p>Finally, combining all these values for $$S$$:<br>\n\n<p>$$S.val = D.val + H.val + T.val + U.val = 5 + 40 + (-5) + 5 = 45$$</p></p>\n\n<p>Thus, the correct value computed by the SDD for the input \"MMLK\" is:</p>\n\n<p><strong>Option A: 45</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the syntax directed translation given by the following grammar and semantic rules. Here N, I, F and B are non-terminals. N is the starting non-terminal, and #, 0 and 1 are lexical tokens corresponding to input letters \"#\", \"0\" and \"1\", respectively. X.val denotes the synthesized attribute (a numeric value) associated with a non-terminal X. I$$_1$$ and F$$_1$$ denote occurrences of I and F on the right hand side of a production, respectively. For the tokens 0 and 1, 0.val = 0 and 1.val = 1.</p>\n$\\begin{array}{llll}N & \\rightarrow & I \\# F & \\text { N.val }=I . v a l+F . v a l \\\\ I & \\rightarrow & I_1 B & I . v a l=\\left(2 I_1 \\cdot v a l\\right)+\\text { B.val } \\\\ I & \\rightarrow & B & I . v a l=B . v a l \\\\ F & \\rightarrow & B F_1 & F . v a l=\\frac{1}{2}\\left(B . v a l+F_1 \\cdot v a l\\right) \\\\ F & \\rightarrow & B & F . v a l=\\frac{1}{2} B . v a l \\\\ B & \\rightarrow & 0 & \\text { B.val }=\\mathbf{0} . \\mathrm{val} \\\\ B & \\rightarrow & 1 & \\text { B.val }=\\mathbf{1} . \\mathrm{val}\\end{array}$\n<p>The value computed by the translation scheme for the input string</p>\n<p>$$10 \\# 011$$</p>\n<p>is ____________. (Rounded off to three decimal places)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.375",
+    "explanation": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr7bjrf/79e1cee8-3024-4fac-a3f8-a784af933b7c/c371e9b0-44fa-11ef-b8e7-e36aaf4aa694/file-jaoe38c1lyr7bjrg.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr7bjrf/79e1cee8-3024-4fac-a3f8-a784af933b7c/c371e9b0-44fa-11ef-b8e7-e36aaf4aa694/file-jaoe38c1lyr7bjrg.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Compiler Design - Syntax Directed Translation Question 7 English Explanation\">\n\n<p>Hence, the correct answer is 2.375.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the following grammar along with translation rules.</p>\n<p>S $$\\to$$ S<sub>1</sub> # T {S.val = S<sub>1</sub>.val * T.val}</p>\n<p>S $$\\to$$ T {S.val = T.val}</p>\n<p>T $$\\to$$ T<sub>1</sub> %R {T.val = T<sub>1</sub>.val $$ \\div $$ R.val}</p>\n<p>T $$\\to$$ R {T.val = R.val}</p>\n<p>R $$\\to$$ id {R.val = id.val}</p>\n<p>Here # and % are operators and id is a token that represents an integer and id.val represents the corresponding integer value. The set of non-terminals is {S, T, R, P} and a subscripted non-terminal indicates an instance of the non-terminal. Using this translation scheme, the computed value of S.val for root of the parse tree for the expression 20#10%5#8%2%2 is ___________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "80",
+    "explanation": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lzho0kp5/5112b0fb-1f82-4eb4-81ec-6e3dc36de106/6e592b90-5388-11ef-b253-8d218b2e7a53/file-jaoe38c1lzho0kp6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lzho0kp5/5112b0fb-1f82-4eb4-81ec-6e3dc36de106/6e592b90-5388-11ef-b253-8d218b2e7a53/file-jaoe38c1lzho0kp6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Compiler Design - Syntax Directed Translation Question 8 English Explanation\">\n\n<p>$\\therefore \\quad S$. val $=80$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following grammar (that admits a series of declarations, followed by expressions) and the associated syntax directed translation (SDT) actions, given as pseudo-code:</p>\n\n<p>P&nbsp;→ D* E*</p>\n\n<p>D&nbsp;→ int ID {record that ID.lexeme is of type int}</p>\n\n<p>D&nbsp;→ bool ID { record that ID.lexeme is of type bool}</p>\n\n<p>E&nbsp;→ E<sub>1</sub> + E<sub>2</sub> {check that E<sub>1</sub>.type = E<sub>2</sub>.type = int; set E.type := int}</p>\n\n<p>E&nbsp;→ !E<sub>1</sub> {check that E<sub>1</sub>.type = bool; set E.type := bool}</p>\n\n<p>E&nbsp;→ ID {set E.type := int}</p>\n\n<p>With respect to the above grammar; which one of the following choices is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The actions will lead to infinite loop."
+      },
+      {
+        "identifier": "B",
+        "content": "The actions can be used to correctly type-check any syntactically correct program."
+      },
+      {
+        "identifier": "C",
+        "content": "The actions can be used to type-check syntactically correct boolean variable declarations and boolean expressions."
+      },
+      {
+        "identifier": "D",
+        "content": "The actions can be used to type-check syntactically correct integer variable declarations and integer expressions."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the correct option, we'll analyze the given grammar and its associated syntax-directed translation (SDT) actions, focusing on how they handle variable declarations and expressions.</p>\n<h3><strong>Given Grammar and SDT Actions:</strong></h3>\n\n<p><strong>Grammar:</strong></p>\n\n\n<p><p><strong>P → D* E*</strong></p>\n\n<p>A program <code>P</code> consists of zero or more declarations (<code>D*</code>) followed by zero or more expressions (<code>E*</code>).</p></p>\n<p><p><strong>D → int ID { record that ID.lexeme is of type int }</strong></p></p>\n<p><p><strong>D → bool ID { record that ID.lexeme is of type bool }</strong></p>\n\n<p>Declarations <code>D</code> can declare variables of type <code>int</code> or <code>bool</code>.</p></p>\n<p><p><strong>E → E₁ + E₂ { check that E₁.type = E₂.type = int; set E.type := int }</strong></p></p>\n<p><p><strong>E → !E₁ { check that E₁.type = bool; set E.type := bool }</strong></p></p>\n<p><p><strong>E → ID { set E.type := int }</strong></p>\n\n<p>Expressions <code>E</code> can be additions, logical NOT operations, or identifiers.</p></p>\n\n\n<p><strong>SDT Actions:</strong></p>\n\n\n<p><p>In the action for <code>E → ID</code>, we have <code>{ set E.type := int }</code>.</p>\n\n<p><strong>Issue Identified:</strong> This action sets <code>E.type</code> to <code>int</code> <strong>regardless</strong> of the actual type of <code>ID</code>.</p></p>\n\n<h3><strong>Analysis of the Actions:</strong></h3>\n\n<p><p><strong>Declaration Handling:</strong></p></p>\n<p><p>Declarations correctly record the type of each <code>ID</code> in a symbol table.</p>\n\n<p><p><code>int ID</code> records <code>ID</code> as type <code>int</code>.</p></p>\n<p><p><code>bool ID</code> records <code>ID</code> as type <code>bool</code>.</p></p></p>\n<p><p><strong>Expression Handling:</strong></p></p>\n<p><p><strong>Addition (<code>E → E₁ + E₂</code>):</strong></p>\n\n<p><p>Checks that both <code>E₁.type</code> and <code>E₂.type</code> are <code>int</code>.</p></p>\n<p><p>Sets <code>E.type</code> to <code>int</code>.</p></p></p>\n<p><p><strong>Logical NOT (<code>E → !E₁</code>):</strong></p>\n\n<p><p>Checks that <code>E₁.type</code> is <code>bool</code>.</p></p>\n<p><p>Sets <code>E.type</code> to <code>bool</code>.</p></p></p>\n<p><p><strong>Identifier (<code>E → ID</code>):</strong></p>\n\n<p><p><strong>Problematic Action:</strong> Sets <code>E.type</code> to <code>int</code> <strong>without</strong> considering <code>ID</code>'s actual type.</p></p>\n<p><p>This means that even if <code>ID</code> is declared as <code>bool</code>, <code>E.type</code> will incorrectly be set to <code>int</code>.</p></p></p>\n\n<h3><strong>Consequences of the Actions:</strong></h3>\n\n<p><p><strong>Integer Variables and Expressions:</strong></p></p>\n<p><p>For variables declared as <code>int</code>, the actions correctly set <code>E.type</code> to <code>int</code>.</p></p>\n<p><p>The addition operation checks for <code>int</code> types and proceeds correctly.</p></p>\n<p><p>Thus, integer variable declarations and integer expressions are <strong>correctly type-checked</strong>.</p></p>\n<p><p><strong>Boolean Variables and Expressions:</strong></p></p>\n<p><p>For variables declared as <code>bool</code>, the action <code>E → ID { set E.type := int }</code> incorrectly sets <code>E.type</code> to <code>int</code>.</p></p>\n<p><p>When using a boolean variable in a logical NOT expression (<code>!ID</code>), the type check <code>E₁.type = bool</code> fails because <code>E₁.type</code> is incorrectly set to <code>int</code>.</p></p>\n<p><p>Therefore, boolean variable declarations and expressions <strong>cannot be correctly type-checked</strong> with the given actions.</p></p>\n\n<h3><strong>Evaluating the Options:</strong></h3>\n\n<p><p><strong>Option A:</strong> <em>The actions will lead to infinite loop.</em></p></p>\n<p><p><strong>Incorrect:</strong> There is no indication of any looping behavior in the actions.</p></p>\n<p><p><strong>Option B:</strong> <em>The actions can be used to correctly type-check any syntactically correct program.</em></p></p>\n<p><p><strong>Incorrect:</strong> The actions fail to correctly type-check programs involving boolean variables and expressions due to the issue with <code>E → ID</code>.</p></p>\n<p><p><strong>Option C:</strong> <em>The actions can be used to type-check syntactically correct boolean variable declarations and boolean expressions.</em></p></p>\n<p><p><strong>Incorrect:</strong> The actions incorrectly handle boolean variables in expressions, as they always set <code>E.type</code> to <code>int</code>.</p></p>\n<p><p><strong>Option D:</strong> <em>The actions can be used to type-check syntactically correct integer variable declarations and integer expressions.</em></p></p>\n<p><p><strong>Correct:</strong> The actions handle integer variable declarations and expressions properly, allowing for correct type-checking in these cases.</p></p>\n\n<h3><strong>Final Answer:</strong></h3>\n<p><strong>Option D:</strong> The actions can be used to type-check syntactically correct integer variable declarations and integer expressions.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following grammar and the semantic actions to support the inherited type declaration attributes. Let $X_1, X_2, X_3, X_4, X_5$, and $X_6$ be the placeholders for the nonterminals $\\mathrm{D}, \\mathrm{T}, \\mathrm{L}$ or $\\mathrm{L}_1$ in the following table :</p>\n<table border=\"1\">\n\n  <tr>\n\n    <th>Production rule</th>\n\n    <th>Semantic action</th>\n\n  </tr>\n\n  <tr>\n\n    <td>D → T L</td>\n\n    <td>X<sub>1</sub>.type = X<sub>2</sub>.type</td>\n\n  </tr>\n\n  <tr>\n\n    <td>T → int</td>\n\n    <td>T.type = int</td>\n\n  </tr>\n\n  <tr>\n\n    <td>T → float</td>\n\n    <td>T.type = float</td>\n\n  </tr>\n\n  <tr>\n\n    <td>L → L<sub>1</sub>, id</td>\n\n    <td>\n\n      X<sub>3</sub>.type = X<sub>4</sub>.type<br>\n\n      addType(id.entry, X<sub>5</sub>.type)\n\n    </td>\n\n  </tr>\n\n  <tr>\n\n    <td>L → id</td>\n\n    <td>addType(id.entry, X<sub>6</sub>.type)</td>\n\n  </tr>\n\n</table>\n<p>Which one of the following are the appropriate choices for $X_1, X_2, X_3$ and $X_4$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$X_1=L, X_2=T, X_3=L_1, X_4=L$"
+      },
+      {
+        "identifier": "B",
+        "content": "$X_1=T, X_2=L, X_3=L_1, X_4=T$"
+      },
+      {
+        "identifier": "C",
+        "content": "$X_1=L, X_2=L, X_3=L_1, X_4=T$"
+      },
+      {
+        "identifier": "D",
+        "content": "$X_1=T, X_2=L, X_3=T, X_4=L_1$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "Given\n<table border=\"1\">\n\n  <tr>\n\n    <th>Production rule</th>\n\n    <th>Semantic action</th>\n\n  </tr>\n\n  <tr>\n\n    <td>D → T L</td>\n\n    <td>X<sub>1</sub>.type = X<sub>2</sub>.type</td>\n\n  </tr>\n\n  <tr>\n\n    <td>T → int</td>\n\n    <td>T.type = int</td>\n\n  </tr>\n\n  <tr>\n\n    <td>T → float</td>\n\n    <td>T.type = float</td>\n\n  </tr>\n\n  <tr>\n\n    <td>L → L<sub>1</sub>, id</td>\n\n    <td>\n\n      X<sub>3</sub>.type = X<sub>4</sub>.type<br>\n\n      addType(id.entry, X<sub>5</sub>.type)\n\n    </td>\n\n  </tr>\n\n  <tr>\n\n    <td>L → id</td>\n\n    <td>addType(id.entry, X<sub>6</sub>.type)</td>\n\n  </tr>\n\n</table>\n<p>A node in a parse tree can inherit an attribute either from its parent or siblings. This means for a production.</p>\n<p>$$ S \\rightarrow A B $$</p>\n<p>A can inherit values from either S or B and similarly B can inherit values from either S or A.</p>\n<p>In the given productions for $L \\rightarrow L_1$, id</p>\n<p>$L_1$ can inherit from $L$ or, or id with only $L$ being a non-terminal. So this means $X_3$ must be $L_1$ and $X_4$ must be $L$ as $X_i$ is a placeholder for non-terminals.</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following Syntax Directed Translation Scheme $$(SDTS),$$ with non-terminals $$\\left\\{ {S,A} \\right\\}$$ and terminals $$\\left\\{ {A,B} \\right\\}.$$\n<br>$$S \\to aA$$ $$\\,\\,\\,\\,\\,$${ print $$1$$ }\n<br>$$S \\to a$$ $$\\,\\,\\,\\,$$$$\\,\\,\\,\\,\\,$${ print $$2$$ }\n<br>$$A \\to Sb$$ $$\\,\\,\\,\\,\\,$${ print $$3$$ }\n<p>Using the above $$SDTS,$$ the output printed by a bottom-up parser, for the input $$aab$$ is:</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1\\,\\,3\\,\\,2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2\\,\\,2\\,\\,3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2\\,\\,3\\,\\,1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "syntax error "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the basic block given below.</p>\n<pre><code class=\"c\">a = b + c \nc = a + d \nd = b + c \ne = d - b \na = e + b</code></pre>\n<p>The minimum number of nodes and edges present in the DAG representation of the above basic block respectively are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6 and 6"
+      },
+      {
+        "identifier": "B",
+        "content": "8 and 10"
+      },
+      {
+        "identifier": "C",
+        "content": "9 and 12"
+      },
+      {
+        "identifier": "D",
+        "content": "4 and 4"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "<p>The program below uses six temporary variables a, b, c, d, e, f.</p>\n<pre><code class=\"c\">a = 1 \nb = 10 \nc = 20 \nd = a + b \ne = c + d \nf = c + e \nb = c + e \ne = b + f \nd = 5 + e \nreturn d + f</code></pre>\n<p>Assuming that all operations take their operands from registers, what is the minimum number of registers needed to execute this program without spilling?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  }
+]

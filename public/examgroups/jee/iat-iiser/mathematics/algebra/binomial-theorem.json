@@ -1,0 +1,66 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $n=\\sum\\limits_{r=0}^{10}(-1)^r{ }^{10} C_r\\left(\\frac{2}{3}\\right)^{2 r} 3^{20}$. Which one of the following statements is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$n$ is divisible by 5</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$n$ is divisible by 6</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$n$ is divisible by 8</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$n$ is divisible by 9</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's restate the problem carefully:</p>\n<p>$ n = \\sum_{r=0}^{10} (-1)^r {10 \\choose r} \\left( \\frac{2}{3} \\right)^{2r} 3^{20} $</p>\n<p>We are asked to determine which of the given statements about divisibility is <strong>true</strong>.</p>\n\n<h3>Step 1: Simplify the power expression</h3>\n<p>$ \\left( \\frac{2}{3} \\right)^{2r} = \\frac{2^{2r}}{3^{2r}} = \\frac{4^r}{3^{2r}} $</p>\n<p>So,</p>\n<p>$ n = 3^{20} \\sum_{r=0}^{10} (-1)^r {10 \\choose r} \\frac{4^r}{3^{2r}} $</p>\n<p>$ n = 3^{20} \\sum_{r=0}^{10} {10 \\choose r} (-1)^r \\left( \\frac{4}{9} \\right)^r $</p>\n\n<h3>Step 2: Recognize as a binomial expansion</h3>\n<p>$ (1 - x)^{10} = \\sum_{r=0}^{10} (-1)^r {10 \\choose r} x^r $</p>\n<p>Compare: here $ x = \\frac{4}{9} $</p>\n<p>$ \\implies \\sum_{r=0}^{10} (-1)^r {10 \\choose r} \\left( \\frac{4}{9} \\right)^r = (1 - \\frac{4}{9})^{10} = \\left( \\frac{5}{9} \\right)^{10} $</p>\n\n<h3>Step 3: Substitute back</h3>\n<p>$ n = 3^{20} \\left( \\frac{5}{9} \\right)^{10} = 3^{20} \\cdot \\frac{5^{10}}{9^{10}} $</p>\n<p>But $ 9^{10} = (3^2)^{10} = 3^{20} $.</p>\n<p>So:</p>\n<p>$ n = 3^{20} \\cdot \\frac{5^{10}}{3^{20}} = 5^{10} $</p>\n\n<h3>Step 4: Now we know $ n = 5^{10} $</h3>\n<p>Let's check divisibility:</p>\n<ul>\n<li><p>$5^{10}$ is divisible by <strong>5</strong></p></li>\n<li><p>Not divisible by 6 (needs factor 2,3)</p></li>\n<li><p>Not divisible by 8 (no factor 2)</p></li>\n<li><p>Not divisible by 9 (no factor 3)</p></li>\n</ul>\n<p>✅ <strong>Therefore, $n$ is divisible by 5 only.</strong></p>\n\n<p>✅ <strong>Final Answer: Option A — $n$ is divisible by 5.</strong></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "iat-iiser-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": " What is the value of ${ }^{23} C_0+{ }^{23} C_2+{ }^{23} C_4+\\cdots+{ }^{23} C_{22}$ ?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $2^{23}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $2^{22}-1$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $2^{23}+1$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $2^{22}$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "\n<p>$$ (1+x)^n={ }^n C_0+{ }^n C_1 x+\\cdots+{ }^n C_n x^n $$</p>\n<p>Let $\\mathrm{x}=1$</p>\n<p>$$ \\begin{gathered} \\Rightarrow C_0+C_1 \\cdot 1+C_2 \\cdot 1^2+\\cdots+C_n \\cdot 1^n=(1+1)^n=2^n \\\\ \\Rightarrow C_0+C_1+C_2 \\cdot 1+\\cdots+C_n=(1+1)^n=2^n \\end{gathered} $$</p>\n<p>So, ${ }^{23} C_0+{ }^{23} C_2+{ }^{23} C_4+\\cdots+{ }^{23} C_{22}=2^{22}$</p>\n<ol start=\"40\">\n<p>Given,</p>\n\n<p>$$ \\begin{gathered} f(x+y)=f(x)+f(y) \\\\ f(1+1)=f(1)+f(1) \\rightarrow f(2)=20 \\\\ f(1+1)=f(1)+f(1+1)=3 f(1) \\rightarrow f(3)=30 \\end{gathered} $$</p>\n<p>Clearly, $f(x)=10 x$ which is one-and onto</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "iat-iiser-2024",
+    "difficulty": null
+  }
+]

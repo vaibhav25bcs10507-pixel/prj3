@@ -1,0 +1,836 @@
+[
+  {
+    "direction": null,
+    "content": "<p>Let x<sub>1</sub>(t) = e<sup>$$-$$t</sup> u(t) and x<sub>2</sub>(t) = u(t) $$-$$ u(t $$-$$ 2), where u( . ) denotes the unit step function. If y(t) denotes the convolution of x<sub>1</sub>(t) and x<sub>2</sub>(t), then $$\\mathop {\\lim }\\limits_{t \\to \\infty } y(t)$$ = __________ (rounded off to one decimal place).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": "<p>Given that,</p>\n<p>$${x_1}(t) = {e^{ - 2t}}u(t)$$</p>\n<p>$${x_2}(t) = u(t) - u(t - 2)$$</p>\n<p>$$y(t) = {x_1}(t)\\,*\\,{x_2}(t)$$</p>\n<p>By applying Laplace transform</p>\n<p>$$Y(s) = {X_1}(s)\\,.\\,{X_2}(s) = {1 \\over {(s + 1)}}{{(1 - {e^{ - 2s}})} \\over s}$$</p>\n<p>By applying final value theorem,</p>\n<p>$${\\left. {y(t)} \\right|_{t = \\infty }} = \\mathop {\\lim }\\limits_{s \\to 0} sY(s) = \\mathop {\\lim }\\limits_{s \\to 0} \\left( {{{1 - {e^{ - 2s}}} \\over {s + 1}}} \\right)$$</p>\n<p>$$ = 0$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "A continuous-time sinusoid of frequency 33 Hz is multiplied with a periodic Dirac impulse train of frequency 46 Hz. The resulting signal is passed through an ideal analog low-pass filter with a cutoff frequency of 23Hz. The fundamental frequency (in Hz) of the output is _____________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "13",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A real - values signal x(t) limited to the frequency band $$\\left| f \\right| \\le {W \\over 2}$$ is passed through a linear time invariant system whose frequency response is\n<br> $$H(f) = \\left\\{ {\\matrix{\n   {{e^{ - j4\\pi f}},} &amp; {\\left| f \\right| \\le \\,{W \\over 2}}  \\cr \n   {0,} &amp; {\\left| f \\right| &gt; \\,{W \\over 2}}  \\cr \n\n } } \\right.$$\n<p> The output of the system is </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x(t + 4)"
+      },
+      {
+        "identifier": "B",
+        "content": "x(t - 4)"
+      },
+      {
+        "identifier": "C",
+        "content": "x(t + 2)"
+      },
+      {
+        "identifier": "D",
+        "content": "x(t - 2)"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "Let g(t) = $${e^{ - \\pi {t^2}}}$$, and h(t) is a filter  matched to g(t). If g(t) is applied as input to h(t), then the Fourier transform of the output is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${e^{ - \\pi {f^2}}}\\,$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${e^{ - \\pi {f^2}/2}}\\,$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${e^{ - \\pi \\left| f \\right|}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${e^{ - 2\\pi {f^2}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Assuming zero initial condition, the response y (t) of the system given below to a unit step input u(t) is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/27bd3a3827cb68cfa87e8b27516fe478dc9af12822eea53d8ad75a31395c3c7b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 29 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "u (t)"
+      },
+      {
+        "identifier": "B",
+        "content": "tu (t)"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{t^2}} \\over 2}(t)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${e^{ - t}}u(t)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the pulse shape s(t) as shown. The impulse response h(t) of the filter matched to this pulse is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/4f11168b013e8a1cbdd530bc7c3f7c284a49175442a2c364d4971addd3fd092d.jpg\" loading=\"lazy\" alt=\"GATE ECE 2010 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 30 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/cad8db366e920d00296913cd9e9879f9950287b54e51518f447f391b7209beb0.jpg\" loading=\"lazy\" alt=\"GATE ECE 2010 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 30 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/90bd881966a15d00693da34eafed2d1e54dc4e827bf83b4351efc74df8e3a72a.jpg\" loading=\"lazy\" alt=\"GATE ECE 2010 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 30 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/743b555715e8f23e1aca2a29cc912af2e1b44ceb729e446bbacc87db0156bb8b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2010 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 30 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/eba6a485fc4ce75309fb755fce6662eeb9cef21a54edcd83b8ee71568e4cb8d5.jpg\" loading=\"lazy\" alt=\"GATE ECE 2010 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 30 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "A system with the transfer function $${{Y(s)} \\over {X(s)}} = {s \\over {s + p}}\\,\\,$$ has an output \n<br> $$y(t) = \\cos \\left( {2t - {\\pi  \\over 3}} \\right)\\,$$ for the input signal \n<br> $$x(t) = p\\cos \\left( {2t - {\\pi  \\over 2}} \\right)$$. Then, the system parameter 'p' is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sqrt 3 $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\,{2 \\over {\\sqrt 3 \\,}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "1 "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\sqrt 3 \\,} \\over 2}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "A low-pass filter having a frequency response $$H(j\\omega )$$ = $$A(\\omega ){e^{j\\Phi (\\omega )}}$$, does not product any phase distortion if",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$A(\\omega ) = C{\\omega ^2},\\,\\,\\phi (\\omega ) = K{\\omega ^3}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$A(\\omega ) = C{\\omega ^2},\\,\\,\\phi (\\omega ) = K\\omega $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$A(\\omega ) = C\\omega ,\\,\\,\\phi (\\omega ) = K{\\omega ^2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$A(\\omega ) = C,\\,\\,\\phi (\\omega ) = K{\\omega ^{ - 1}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "In the system shown below, \n<br> x(t) = (sint)u(t). In steady-state, the response y(t) will be \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/f13586fe07204aa91e34a264dcc08de372c7eb11f9eee54b75af11737eb71f22.jpg\" loading=\"lazy\" alt=\"GATE ECE 2006 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 31 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {\\sqrt 2 }}\\sin \\left( {t - {\\pi  \\over 4}} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {\\sqrt 2 }}\\sin \\left( {t + {\\pi  \\over 4}} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over {\\sqrt 2 }}{e^{ - t}}\\sin (t)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sin (t) - \\cos (t)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A linear phase channel with phase delay $${\\tau _p}$$ and group delay $${\\tau _g}$$ must have ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\,{\\tau _p} = {\\tau _g} = $$ constant"
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\tau _p}\\infty \\,\\,f\\,and\\,{\\tau _g}\\infty \\,f$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\tau _p}$$ = constant and $${\\tau _g}\\infty \\,f$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\tau _p}\\infty \\,f\\,and\\,\\,{\\tau _g}$$  =constant ($$f$$denotes frequency)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The input to a channel is a band pass signal. It is obtained by linearly modulating a sinusoidal carrier with a signal- tone signal. The output of the channel due to this input is given by y(t) = (1/100) cos$$(100t - {10^{ - 6}})\\,$$ cos$$({10^6}t - 1.56)$$. The group delay $$({t_g})$$ and the phase delay $$({t_p})$$, in seconds, of the channel are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${t_g} = {10^{ - 6}},\\,{t_p} = 1.56$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${t_g} = 1.56,\\,\\,{t_p} = {10^{ - 6}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${t_g} = \\,\\,{10^{ - 8}},\\,\\,{t_p} = 1.56 \\times {10^{ - 6}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${t_g} = {10^{ - 8}},\\,{t_p} = 1.56$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "A rectangular pulse of duration T is applied to a filter matched to this input. The output of the filter is a  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "rectangular pulse of duration T."
+      },
+      {
+        "identifier": "B",
+        "content": "rectangular pulse of duration 2T."
+      },
+      {
+        "identifier": "C",
+        "content": "triangular pulse."
+      },
+      {
+        "identifier": "D",
+        "content": "sine function."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let $$x(t) = 100\\cos (10.5Wt)$$ be passed through an LTI system having  impulse response $$h(t) = \\pi {\\left( {{{\\sin Wt} \\over {\\pi t}}} \\right)^2}\\cos 10Wt$$. The output of the system is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {{{15W} \\over 4}} \\right)\\cos (10.5Wt)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {{{15W} \\over 2}} \\right)\\cos (10.5Wt)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {{{15W} \\over 8}} \\right)\\cos (10.5Wt)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$(15W)\\cos(10.5Wt)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> $x(t)=10 \\cos (10.5 \\mathrm{Wt})$</p>\n\n<p>$$ h(t)=\\pi\\left(\\frac{\\sin W t}{\\pi t}\\right)^2 \\cos (10 \\mathrm{Wt}) $$</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxdk6ti/63b8b58e-c38e-4b35-90e8-777539172509/de668b50-485f-11ef-8807-81b9920dce91/file-jaoe38c1lyxdk6tj.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxdk6ti/63b8b58e-c38e-4b35-90e8-777539172509/de668b50-485f-11ef-8807-81b9920dce91/file-jaoe38c1lyxdk6tj.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 1 English Explanation 1\">\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxdn324/1c5eff96-ded4-4a57-abdc-8744ed141473/2eec67c0-4860-11ef-8807-81b9920dce91/file-jaoe38c1lyxdn325.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxdn324/1c5eff96-ded4-4a57-abdc-8744ed141473/2eec67c0-4860-11ef-8807-81b9920dce91/file-jaoe38c1lyxdn325.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 1 English Explanation 2\">\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxdmzgh/d40f0789-6da6-402e-8c64-a8df27495844/2c244710-4860-11ef-8807-81b9920dce91/file-jaoe38c1lyxdmzgi.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxdmzgh/d40f0789-6da6-402e-8c64-a8df27495844/2c244710-4860-11ef-8807-81b9920dce91/file-jaoe38c1lyxdmzgi.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 1 English Explanation 3\">\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxdmw2f/073d1ab8-2f04-47af-bac0-2dccf1ee8996/2985f580-4860-11ef-8807-81b9920dce91/file-jaoe38c1lyxdmw2g.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxdmw2f/073d1ab8-2f04-47af-bac0-2dccf1ee8996/2985f580-4860-11ef-8807-81b9920dce91/file-jaoe38c1lyxdmw2g.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 1 English Explanation 4\">\n\n<p>$$ \\begin{aligned} &amp; |H(10.5 \\mathrm{~W})|=\\frac{1.5 \\mathrm{~W}}{4} \\text { and } \\angle H(10.5 \\mathrm{~W})=0^{\\circ} \\\\\\\\ &amp; \\therefore  y(t)=|H(10.5 \\mathrm{~W})| x(t) \\\\\\\\ &amp; y(t)=\\frac{1.5 \\mathrm{~W}}{4} \\times 10 \\cos (10.5 \\mathrm{Wt})=\\frac{15 \\mathrm{~W}}{4} \\cos (10.5 \\mathrm{Wt}) \\end{aligned} $$</p>\n\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The outputs of four systems (S<sub>1</sub>, S<sub>2</sub>, S<sub>3</sub> and S<sub>4</sub>) corresponding to the input signal sin(t), for all time t, are shown in the figure.</p>\n<p>Based on the given information, which of the four systems is/are definitely NOT LTI (linear and time-invariant)?</p><p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7keczgx/10339b3f-b987-4b81-8809-161c03c3d8b7/f783f900-2ab2-11ed-ac06-93878138b969/file-1l7keczgy.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7keczgx/10339b3f-b987-4b81-8809-161c03c3d8b7/f783f900-2ab2-11ed-ac06-93878138b969/file-1l7keczgy.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 2 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S<sub>1</sub>"
+      },
+      {
+        "identifier": "B",
+        "content": "S<sub>2</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "S<sub>3</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "S<sub>4</sub>"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kedv4x/8d67f5a5-74c1-4f68-9547-507ee271a6ad/0ffa5510-2ab3-11ed-ac06-93878138b969/file-1l7kedv4y.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kedv4x/8d67f5a5-74c1-4f68-9547-507ee271a6ad/0ffa5510-2ab3-11ed-ac06-93878138b969/file-1l7kedv4y.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 2 English Explanation\"></p>\n<p>Since, LTI system does not change the frequency of sinusoidal input. So S<sub>3</sub> and S<sub>4</sub> are definitely not LTI as input and output sinusoidal frequencies are differnent.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "A continuous-time filter with transfer function $$\\,H(S) = {{2s + 6} \\over {{s^2} + 6s + 8}}$$ is converted to a discrete time filter with transfer function $$G(Z) = {{2{z^2} - 0.5032\\,z} \\over {{z^2} - 0.5032z + k}}$$ so that the impulse response of the continuous-time filter, sampled at 2 Hz, is identical at the sampling  instants to the impulse response of the discrete time filter, The  value of k is _________________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.05",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A first-order low-pass filter of time constant T is excited with different input signals (with zero initial conditions up to t = 0). Match the excitation signals X, Y, Z with the corresponding time responses for $$t\\, \\ge 0$$:\n<br> X: Impulse                    P: 1 $$ - {e^{ - t/T}}$$\n<br> Y: Unit step                   Q: t $$ - T(1 - {e^{ - t/T}})$$\n<br> Z: Ramp                         R:  $${e^{ - t/T}}$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$X \\to R,\\,Y \\to Q,\\,\\,Z \\to P$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$X \\to Q,\\,Y \\to P,\\,\\,Z \\to R$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$X \\to R,\\,Y \\to P,\\,\\,Z \\to Q$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$X \\to P,\\,Y \\to R,\\,\\,Z \\to Q$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the system shown in Figure (a), m(t) is a low-pass signal with bandwidth W Hz. The frequency response of the band-pass filter H(f) is shown in Figure (b). If it is desired that the output signal z(t) = 10x(t), the maximum value of W (in Hz) should be strictly less than ___________________________\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/4db1617061d2efc4b9d75250a5915b749d8b987c568b86d8a46b587bf927d988.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 1 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 11 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "350",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The 3 - dB bandwidth of the low - pass signal $${e^{ - 1}}$$ u(t), where u(t) is the unit step function, is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {2\\pi }}Hz$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {2\\pi }}\\sqrt {\\sqrt 2  - 1\\,} Hz$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\infty $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "1 Hz"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the signal x(t) shown in Fig. Let h(t) denote the impulse response of the filter matched to x(t), with h(t) being non-zero only in the interval 0 to 4 sec. The slope of h(t) in the interval 3 &lt; t &lt; 4 sec is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/e27f4fe0d166f5a1a22b98ac451be9dc532e7ba67bfb76987880d49137fdce71.jpg\" loading=\"lazy\" alt=\"GATE ECE 2004 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 20 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/2\\,{\\sec ^{ - 1}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-1\\,{\\sec ^{ - 1}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-1/2\\,{\\sec ^{ - 1}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1\\,{\\sec ^{ - 1}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A system has poles at 0.01 Hz, 1 Hz and 80 Hz; zeros at 5 Hz, 100 Hz and 200 Hz. The approximate phase of the system response at 20 Hz is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - {90^ \\circ }$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$ {0^ \\circ }$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$  {90^ \\circ }$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - {180^ \\circ }$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The system under consideration is an RC low -pass filter (RC-LPF) with R = 1.0 $$k\\Omega $$ and C = 1.0 $$\\mu F$$.\n<p> Let H(t) denote the frequency response of the RC-LPF. Let $${f_1}$$ be the highest frequency such that $$0 \\le \\left| f \\right| \\le {f_1},{{\\left| {H({f_1})} \\right|} \\over {H(0)}} \\ge 0.95$$. Then $${f_1}$$ (in Hz) is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "327.8"
+      },
+      {
+        "identifier": "B",
+        "content": "163.9"
+      },
+      {
+        "identifier": "C",
+        "content": "52.2"
+      },
+      {
+        "identifier": "D",
+        "content": "104.4"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The system under consideration is an RC low -pass filter (RC-LPF) with R = 1.0 $$k\\Omega $$ and C = 1.0 $$\\mu F$$.\n<p> Let $${t_g}$$ (f) be the group delay function of the given RC-LPF and $${f_2}$$ = 100 Hz. Then $${t_g}$$$${(f_2)}$$ in ms, is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.717"
+      },
+      {
+        "identifier": "B",
+        "content": "7.17"
+      },
+      {
+        "identifier": "C",
+        "content": "71.7"
+      },
+      {
+        "identifier": "D",
+        "content": "4.505"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "In Fig. m(t) = $$ = {{2\\sin 2\\pi t} \\over t}$$, $$s(t) = \\cos \\,200\\pi t\\,\\,andn(t) = {{\\sin 199\\pi t} \\over t}$$.\n<p> The output y(t) will be </p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/81faaed4e03f4de1ce64080326c3f276e9a3a612c23f709ea2b8c96b65049441.jpg\" loading=\"lazy\" alt=\"GATE ECE 2002 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 12 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{\\sin 2\\pi \\,t} \\over t}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\sin 2\\pi \\,t} \\over t}\\, + {{\\sin \\pi \\,t} \\over t}\\cos \\,3\\pi t$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{\\sin 2\\pi \\,t} \\over t}\\, + {{\\sin 0.5\\,\\pi \\,t} \\over t}\\cos \\,1.5\\pi t$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\sin 2\\pi \\,t} \\over t}\\, + {{\\sin \\pi \\,t} \\over t}\\,\\cos \\,0.75\\pi t\\,\\,$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "A system has a phase response given by $$\\phi \\,(\\omega )$$ where $$\\omega $$ is the angular frequency. The phase delay and group delay at $$\\omega $$ = $${\\omega _0}$$ are respectively given by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - {{\\phi ({\\omega _0})} \\over {{\\omega _0}}}, - {{d\\phi (\\omega )} \\over {d\\omega }}\\left| {\\omega  = {\\omega _0}} \\right.$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\phi ({\\omega _0}), - {{{d^2}\\phi (\\omega )} \\over {d{\\omega ^2}}}\\left| {\\omega  = {\\omega _0}} \\right.$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{\\omega _0}} \\over {\\phi ({\\omega _0})}}, - {{d\\phi (\\omega )} \\over {d\\omega }}\\left| {\\omega  = {\\omega _0}} \\right.$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\omega _0}\\,\\phi \\,({\\omega _0})\\,,\\,\\int_{ - \\infty }^{{\\omega _0}} \\phi  (\\lambda )\\,d\\,\\lambda $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "The input to a matched filter is given by $$s(t) = \\left\\{ {\\matrix{\n   {10\\sin (2\\pi  \\times {{10}^6}t),} &amp; {0 &lt; \\left| t \\right| &lt; {{10}^{ - 4}}\\sec }  \\cr \n   0 &amp; {Otherwise}  \\cr \n\n } } \\right.$$ \n<p> The peak amplitude of the filter output is </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10 Volts"
+      },
+      {
+        "identifier": "B",
+        "content": "5 Volts"
+      },
+      {
+        "identifier": "C",
+        "content": "10 millivolts"
+      },
+      {
+        "identifier": "D",
+        "content": "5 millivolts"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Sketch the waveform (with properly marked axes) at the output of a matched filter matched for a signal s(t), of duration T, given by $$s(t) = \\left\\{ {\\matrix{\n   {A\\,\\,\\,\\,for} &amp; {0 \\le t &lt; {2 \\over 3}T}  \\cr \n   {0\\,\\,\\,\\,\\,\\,for} &amp; {{2 \\over 3}T \\le t &lt; T}  \\cr \n\n } } \\right.$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "content": "The pole-zero pattern of a certain filter is shown in the Fig. The filter must be of the following type. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/75d103e36b8e9975dc67cc918081f44d0ec60d51502602295b222981c6ba33b5.jpg\" loading=\"lazy\" alt=\"GATE ECE 1991 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 28 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "low pass "
+      },
+      {
+        "identifier": "B",
+        "content": "high pass "
+      },
+      {
+        "identifier": "C",
+        "content": "all pass "
+      },
+      {
+        "identifier": "D",
+        "content": "band pass "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "The magnitude and phase transfer functions for a distortionless filter should respectively be:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Magnitude = Linear, Phase = Constant"
+      },
+      {
+        "identifier": "B",
+        "content": "Magnitude = Constant, Phase = Constant\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Magnitude =Constant , Phase = Linear "
+      },
+      {
+        "identifier": "D",
+        "content": "Magnitude = Linear, Phase = Linear"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-ece-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Specify the filter type if its voltage transfer function H(s) is given by \n<p> H(s) = $${{K({s^2} + {\\omega _0}^2)} \\over {{s^2} + ({\\omega _0}/Q)s + {\\omega _0}^2}}$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "all pass filter"
+      },
+      {
+        "identifier": "B",
+        "content": "low pass filter"
+      },
+      {
+        "identifier": "C",
+        "content": "band pass filter"
+      },
+      {
+        "identifier": "D",
+        "content": "notch filter"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "A base band signal g(t) band limited to 100 Hz modulates a carrier of frequency $${{f_0}}$$ Hz. The modulated signal g(t) $$\\cos 2\\,\\pi \\,{f_0}t$$ is transmitted over a channel whose input x and output y are related by $$y = 2x + {x^2}$$. The  spectrum of g(t) is shown in Fig. Sketch the spectrum of the transmitted signal and the spectrum of the received signal.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/e7bdec67c29818dc165515eb753610b38bec42d5f2cb75a1c5694e9d8a9884e7.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 5 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "An input signal A exp $$\\left( { - \\alpha \\,t} \\right)$$ u(t) with $$\\alpha  &gt; 0$$ is applied to a causal filter, the impulse response of which is A exp  $$\\,( - \\alpha \\,\\,t)$$. Determine the filter output, sketch it as a function of time and lable the important points.",
+    "options": [],
+    "correct_options": [],
+    "answer": "solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A signal 3 sin $$\\left( {\\pi \\,\\,{f_0}t} \\right) + \\,5\\,\\,\\cos \\,\\,\\,(3\\pi \\,\\,{f_0}t)$$ is applied to an RC low pass filter of 3 dB cutoff frequency $${f_0}$$. Determine and plot the output power spectrum and aslo calculate the total input and output normalized power.",
+    "options": [],
+    "correct_options": [],
+    "answer": "solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A signal, f(t) = $${e^{ - at}}$$ u(t), where u(t) is the unit step function, is applied to the input of a low-pass filter having $$\\left| {H(\\omega )} \\right| = {b \\over {\\sqrt {{\\omega ^2} + {b^2}} }}$$. \n<p> Calculate the value of the ratio, $${a \\over b}$$, for which 50% of the input signal energy is transferred to the output. </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${\\raise0.5ex\\hbox{$\\scriptstyle a$}\n\\kern-0.1em/\\kern-0.15em\n\\lower0.25ex\\hbox{$\\scriptstyle b$}} = 1$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Obtain an expression for the signal  in figure, for the signal $${v_3}(t)$$ in Fig for  $${v_1}(t) = 100\\cos (2000\\pi t) + 4\\sin (200\\pi t)$$. Assume that $${v_2}(t)$$=$${v_1}(t)$$+0.1 $$v_1^2(t)$$ and that the BPF is an ideal unity gain filter with pass band from 800 Hz to 1200 Hz.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/7468c3db1db217f434537af60f7725d80fdf4d690a24986a1853be8d233e03e9.jpg\" loading=\"lazy\" alt=\"GATE ECE 1993 Signals and Systems - Transmission of Signal Through Continuous Time LTI Systems Question 9 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\,{v_3}(t) = 10\\cos \\,(2000\\pi t) + 8\\,\\cos \\,(2000\\,\\pi t)\\sin \\,(200\\pi t)$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  }
+]

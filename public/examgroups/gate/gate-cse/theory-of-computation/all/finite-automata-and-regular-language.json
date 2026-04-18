@@ -1,0 +1,3074 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $M$ be a non-deterministic finite automaton (NFA) with 6 states over a finite alphabet. Which of the following options CANNOT be the number of states in the minimal deterministic finite automaton (DFA) that is equivalent to $M$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>32</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>65</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>1</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>128</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>For an NFA with $n$ states, the equivalent DFA obtained by the subset construction can have at most $2^n$ states.</p>\n<p>Here, $n=6$. So the maximum possible number of states in an equivalent DFA is</p>\n<p>$$ 2^6 = 64 $$</p>\n<p>Now the minimal DFA equivalent to the given NFA cannot have more than $64$ states.</p>\n<p>Let us check the options:</p>\n<ul>\n<li><p>Option A: $32$  </p>\n<p>Possible, since $32 \\le 64$</p></li>\n<li><p>Option B: $65$  </p>\n<p>Not possible, since $65 > 64$</p></li>\n<li><p>Option C: $1$  </p>\n<p>Possible, because an NFA may accept either all strings or no strings, and then the minimal DFA can have $1$ state</p></li>\n<li><p>Option D: $128$  </p>\n<p>Not possible, since $128 > 64$</p></li>\n</ul>\n<p>So the numbers that cannot be the number of states in the minimal DFA are</p>\n<p>$$ 65 \\text{ and } 128 $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A regular language $L$ is accepted by a non-deterministic finite automaton (NFA) with $n$ states. Which of the following statement(s) is/are FALSE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $L$ may have an accepting NFA with $< n$ states.\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $L$ may have an accepting DFA with $< n$ states.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " There exists a DFA with $\\leq 2^n$ states that accepts $L$.\n"
+      },
+      {
+        "identifier": "D",
+        "content": " Every DFA that accepts $L$ has $>2^n$ states."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We’re given that a regular language $$L$$ is accepted by an NFA with $$n$$ states. Let’s check each option step by step.</p>\n\n<p>Option A: “$$L$$ may have an accepting NFA with $$< n$$ states.”  </p>\n\n\n<p><p>An NFA with $$n$$ states that accepts $$L$$ is not necessarily minimal. In many cases, there exists another NFA recognizing $$L$$ using fewer than $$n$$ states.  </p></p>\n<p><p>Therefore, Option A is true.</p></p>\n\n\n<p>Option B: “$$L$$ may have an accepting DFA with $$< n$$ states.”  </p>\n\n\n<p><p>Although converting an NFA to a DFA via the subset construction may result in up to $$2^n$$ states, this is an upper bound. For some languages, the minimal DFA can in fact have fewer than $$n$$ states. For example, consider a language like $$\\Sigma^*$$ which can be accepted by a nonminimal NFA with several states while its minimal DFA has only 1 state.  </p></p>\n<p><p>Hence, Option B is also true.</p></p>\n\n\n<p>Option C: “There exists a DFA with $$\\leq 2^n$$ states that accepts $$L$$.”  </p>\n\n\n<p><p>This is a well-known result: every NFA with $$n$$ states can be converted into an equivalent DFA with no more than $$2^n$$ states by the subset (or powerset) construction.  </p></p>\n<p><p>So, Option C is true.</p></p>\n\n\n<p>Option D: “Every DFA that accepts $$L$$ has $$>2^n$$ states.”  </p>\n\n\n<p><p>This statement contradicts Option C. Since we know a DFA can be constructed with $$\\leq 2^n$$ states, it is false to claim that every DFA for $$L$$ must have more than $$2^n$$ states.  </p></p>\n<p><p>Thus, Option D is false.</p></p>\n\n<p>In summary, the only false statement is:</p>\n<p>Option D.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following regular expressions is equivalent to the language accepted by the DFA given below?</p><p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1lwuf9pi7/60b84ed5-5851-47d2-8989-f849da2a7a9f/c47cbef0-1f27-11ef-8550-0da304e4fbcd/file-6y3zli1lwuf9pi8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/6y3zli1lwuf9pi7/60b84ed5-5851-47d2-8989-f849da2a7a9f/c47cbef0-1f27-11ef-8550-0da304e4fbcd/file-6y3zli1lwuf9pi8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 2 Theory of Computation - Finite Automata and Regular Language Question 14 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>0*1(0 + 10*1)*</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>0*(10*11)*0*</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>0*1(010*1)*0*</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>0(1 + 0*10*1)*0*</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>The given DFA accepts all and only binary strings containing an odd number of 1's.</p>\n<p>To reach the final state, start by reading $0^* 1$. Once in the final state, you can stay there by making either a loop on $0$ or a loop on $10^* 1$ in any order, any number of times.</p>\n<p>The regular expression representing this language is :</p>\n<p>$0^* 1(0 + 10^*1)^*$</p>\n<h3>Counterexamples for Incorrect Options</h3>\n\n<p></p><p><strong>Option B</strong> : This option generates an empty string, which does not have an odd number of 1's.</p><p></p>\n<p></p><p><strong>Option C</strong> : This option does not generate the string \"11\".</p><p></p>\n<p></p><p><strong>Option D</strong> : This option does not generate the string \"1\".</p><p></p>\n\n<p>Therefore, the correct option is (A).</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/image/6y3zli1lwuf9pi7/60b84ed5-5851-47d2-8989-f849da2a7a9f/c47cbef0-1f27-11ef-8550-0da304e4fbcd/file-6y3zli1lwuf9pi8.png\" alt=\"GATE CSE 2024 Set 2 Theory of Computation - Finite Automata and Regular Language Question 14 English Explanation\"></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $L_1, L_2$ be two regular languages and $L_3$ a language which is not regular. Which of the following statements is/are always TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$L_1 = L_2$ if and only if $L_1 \\cap \\overline{L_2} = \\emptyset$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$L_1 \\cup L_3$ is not regular</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\overline{L_3}$ is not regular</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$L_1 \\cup \\overline{L_2}$ is regular</p>"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze each option:</p>\n\n<strong>Option A: FALSE</strong>\n\n<p>This statement is incorrect. Consider the following counterexample:</p>\n\n<ul>\n<li>Let $L_1 = \\{a\\}$ and $L_2 = \\{a, b\\}$.</li><br>\n<li>$L_1 \\cap \\overline{L_2} = \\{a\\} \\cap \\{\\} = \\emptyset$</li><br>\n<li>However, $L_1 \\neq L_2$</li>\n</ul>\n<br/><strong>Option B: FALSE</strong>\n\n<p>This statement is also incorrect. Consider the following counterexample:</p>\n\n<ul>\n<li>Let $L_1 = \\Sigma^*$ (the language of all strings over the alphabet) and $L_3$ be any non-regular language.</li><br>\n<li>$L_1 \\cup L_3 = \\Sigma^*$, which is regular.</li>\n</ul>\n<br/><strong>Option C: TRUE</strong>\n\n<p>If $L_3$ is not regular, then its complement, $\\overline{L_3}$, is also not regular. This is a property of regular languages.</p>\n\n<strong>Option D: TRUE</strong>\n\n<p>Regular languages are closed under union and complement. Therefore:</p>\n\n<ul>\n<li>$\\overline{L_2}$ is regular (closure under complement)</li><br>\n<li>$L_1 \\cup \\overline{L_2}$ is regular (closure under union)</li>\n</ul>\n<br/><strong>Therefore, the correct options are C and D.</strong>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the Deterministic Finite-state Automation (DFA) $$A$$ shown below. The DFA runs on the alphabet {0, 1}, and has the set of states {$$s,p,q,r$$}, with $$s$$ being the start state and $$p$$ being the only final state.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr73mh0/e6bec059-f5ab-41e6-a414-40452c9309aa/e7120cc0-44f9-11ef-b8e7-e36aaf4aa694/file-jaoe38c1lyr73mh8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr73mh0/e6bec059-f5ab-41e6-a414-40452c9309aa/e7120cc0-44f9-11ef-b8e7-e36aaf4aa694/file-jaoe38c1lyr73mh8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Theory of Computation - Finite Automata and Regular Language Question 21 English\"></p>\n<p>Which one of the following regular expressions correctly describes the language accepted by $$A$$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1(0^*11)^*$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$0(0+1)^*$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$1(0+11)^*$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1(110^*)^*$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The given F.A. generate strings like :</p>\n\n<p>$$ \\Sigma=\\{1,10,110,100,1011,1000 \\ldots\\} $$</p>\n\n<p>So, start with 1 to reach final state from where wave two choices os $(0+11)^*$ Hence R.E. is $1(0+11)^*$.</p>\n\n<p>Checking options :</p>\n\n<p>(a) Dosen't generate 10</p>\n\n<p>(b) Dosen't generate any os it starts with 0 .</p>\n\n<p>(d) Dosen't generate 10 .</p>\n\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the following definition of a lexical token id for an identifier in a programming language, using extended regular expressions:</p>\n<p>$$\\mathrm{letter\\to[A-Za-z]}$$</p>\n<p>$$\\mathrm{letter\\to[0-9]}$$</p>\n<p>$$\\mathrm{id\\to letter(letter\\,|\\,digit)^*}$$</p>\n<p>Which one of the following Non-deterministic Finite-state Automata with $$\\varepsilon $$-transmissions accepts the set of valid identifiers? (A double-circle denotes a final state)</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr41fin/0c00dd4a-1ba6-4a46-978c-4d251a38eb3b/eeb015f0-44ed-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr41fio.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr41fin/0c00dd4a-1ba6-4a46-978c-4d251a38eb3b/eeb015f0-44ed-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr41fio.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Theory of Computation - Finite Automata and Regular Language Question 19 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr41bv3/bb77f271-f8e5-4211-9a75-2a0316db9d05/ebdd6df0-44ed-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr41bv4.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr41bv3/bb77f271-f8e5-4211-9a75-2a0316db9d05/ebdd6df0-44ed-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr41bv4.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Theory of Computation - Finite Automata and Regular Language Question 19 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr418id/2db075fc-daaf-4ca2-b50f-a38f4d3b3863/e9464850-44ed-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr418ie.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr418id/2db075fc-daaf-4ca2-b50f-a38f4d3b3863/e9464850-44ed-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr418ie.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Theory of Computation - Finite Automata and Regular Language Question 19 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr4159p/dd6cf12c-6457-4230-b755-74fb05884326/e6c569d0-44ed-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr4159q.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr4159p/dd6cf12c-6457-4230-b755-74fb05884326/e6c569d0-44ed-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr4159q.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Theory of Computation - Finite Automata and Regular Language Question 19 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The regular expression is :</p>\n\n<p>Letter (letter+digit)*.</p>\n\n<p>The R.E. accepts strings starting with \"letter\" and followed by any number of \"letter\" \"digits\".</p>\n\n<p>Checking all options :</p>\n\n<p>(a) is false as it also accepts empty string $\\in$.</p>\n\n<p>(b) is false as it dosen't accept letter. Digit.letter.</p>\n\n<p>(d) is false as letter digit not accepted.</p>\n\n<p>Only option \"c\" is true.</p>\n\n<p>Hence, the correct option is $(\\mathrm{C})$.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which of the following statements is/are CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The intersection of two regular languages is regular."
+      },
+      {
+        "identifier": "B",
+        "content": "The intersection of two context-free languages is context-free."
+      },
+      {
+        "identifier": "C",
+        "content": "The intersection of two recursive languages is recursive."
+      },
+      {
+        "identifier": "D",
+        "content": "The intersection of two recursively enumerable languages is recursively enumerable."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statements are correct, let's analyze them one by one :</p>\n\n<p><strong>Option A: The intersection of two regular languages is regular.</strong></p>\n\n<p>This statement is correct. The class of regular languages is closed under intersection. This means that if you have two regular languages, their intersection will also be a regular language. More formally, if $$L_1$$ and $$L_2$$ are regular languages, then $$L_1 \\cap L_2$$ is also regular.</p>\n\n<p><strong>Option B: The intersection of two context-free languages is context-free.</strong></p>\n\n<p>This statement is incorrect. Context-free languages are <em>not</em> closed under intersection. There are counterexamples where the intersection of two context-free languages is not context-free. As an example, the languages $$L_1 = \\{a^n b^n c^m \\mid n \\geq 0, m \\geq 0 \\}$$ and $$L_2 = \\{a^m b^n c^n \\mid m \\geq 0, n \\geq 0 \\}$$ are both context-free, but their intersection $$L_1 \\cap L_2 = \\{a^n b^n c^n \\mid n \\geq 0 \\}$$ is not context-free.</p>\n\n<p><strong>Option C: The intersection of two recursive languages is recursive.</strong></p>\n\n<p>This statement is correct. Recursive languages (also known as decidable languages) are closed under intersection. This means that if you have two recursive languages, their intersection will also be a recursive language. Formally, if $$L_1$$ and $$L_2$$ are recursive languages, then $$L_1 \\cap L_2$$ is also recursive.</p>\n\n<p><strong>Option D: The intersection of two recursively enumerable languages is recursively enumerable.</strong></p>\n\n<p>This statement is correct. Recursively enumerable languages (also known as Turing-recognizable languages) are closed under intersection. If you have two recursively enumerable languages, their intersection will also be recursively enumerable. Formally, if $$L_1$$ and $$L_2$$ are recursively enumerable languages, then $$L_1 \\cap L_2$$ is also recursively enumerable.</p>\n\n<p>In summary, the correct statements are :</p>\n\n<p><strong>Option A, Option C, and Option D</strong></p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which one of the following regular expressions correctly represents the language of the finite automation given below?</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l01cimwz/471a690f-643e-4bf2-a56c-e8b88df4e4f1/5a6c7d30-95a3-11ec-ba8b-9f4a6be45eac/file-1l01cimx0.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l01cimwz/471a690f-643e-4bf2-a56c-e8b88df4e4f1/5a6c7d30-95a3-11ec-ba8b-9f4a6be45eac/file-1l01cimx0.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Theory of Computation - Finite Automata and Regular Language Question 22 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "ab*bab* + ba*aba*"
+      },
+      {
+        "identifier": "B",
+        "content": "(ab*b)* ab* + (ba*a)*ba*"
+      },
+      {
+        "identifier": "C",
+        "content": "(ab*b + ba*a)* (a* + b*)"
+      },
+      {
+        "identifier": "D",
+        "content": "(ba*a + ab*b)* (ab* + ba*)"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l01ckdsi/8eccbf55-2d9e-49cc-92c4-082d60032018/8afe6b20-95a3-11ec-ba8b-9f4a6be45eac/file-1l01ckdsj.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l01ckdsi/8eccbf55-2d9e-49cc-92c4-082d60032018/8afe6b20-95a3-11ec-ba8b-9f4a6be45eac/file-1l01ckdsj.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Theory of Computation - Finite Automata and Regular Language Question 22 English Explanation\"></p>\n<p>Resolving the loops on A and solving A completely,</p>\n<p>We get, r<sub>A</sub> = (ba*a + ab*b)*</p>\n<p>Now, r = r<sub>B</sub> + r<sub>C</sub> = r<sub>A</sub>(ab* + ba*)</p>\n<p>= (ba*a + ab*b)* (ab* + ba*)</p>\n<p>Which is choice (d).</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Let L ⊆ {0,1}* be an arbitrary regular language accepted by a minimal DFA with k states. Which one of the following languages must necessarily be accepted by a minimal DFA with k states?&nbsp;",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "{0,1}* - L"
+      },
+      {
+        "identifier": "B",
+        "content": "L.L"
+      },
+      {
+        "identifier": "C",
+        "content": "L - {01}"
+      },
+      {
+        "identifier": "D",
+        "content": "L&nbsp;∪ {01}"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ L \\subseteq\\{0,1\\}^* $$</p>\n<p>Since given language L has k states in its minimal DFA and we can convert the given DFA to a complemented DFA just by changing the non-final states to a final state and the final state to non-final state, keeping number of states constant.</p>\n<p>Therefore $\\bar{L}$ must be accepted by a minimal DFA with K states.</p>\n<p>$$ \\bar{L}=\\{0,1\\}^*-L $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following deterministic finite automaton (DFA).</p>\n\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2m2s8hj/447e3cc5-c822-4578-8bde-2f964debf4cd/f81d2070-9159-11ef-b857-fbe2b727506e/file-jaoe38c1m2m2s8hk.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2m2s8hj/447e3cc5-c822-4578-8bde-2f964debf4cd/f81d2070-9159-11ef-b857-fbe2b727506e/file-jaoe38c1m2m2s8hk.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Theory of Computation - Finite Automata and Regular Language Question 26 English\"></p>\n\n<p>The number of strings of length 8 accepted by&#160; the above automaton is __________</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "256",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2m2s8hj/447e3cc5-c822-4578-8bde-2f964debf4cd/f81d2070-9159-11ef-b857-fbe2b727506e/file-jaoe38c1m2m2s8hk.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2m2s8hj/447e3cc5-c822-4578-8bde-2f964debf4cd/f81d2070-9159-11ef-b857-fbe2b727506e/file-jaoe38c1m2m2s8hk.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Theory of Computation - Finite Automata and Regular Language Question 26 English Explanation\"></p>\n<p>The language accepted by this DFA is</p>\n<p>$$ L=\\left\\{w\\left|w \\in\\{0,1\\}^*,|w| \\geq 3\\right\\}\\right. $$</p>\n<p>Regular expression for DFA is : $(0+1)^3(0+1)^*$</p>\n<p>Therefore, number of 8 length string that can be accepted is $=$ Number of 8 length string that can be formed using $\\{0,1\\}=2^8=256$</p>\n<p>Hence, the correct answer is 256 .</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements.\n<br><br><b>I.</b> If L<sub>1</sub> $$ \\cup $$ L<sub>2</sub> is regular, then both L<sub>1</sub> and L<sub>2</sub> must be regular.\n<br><br/><b>II.</b> The class of regular languages is closed under infinite union.\n<br><br>Which of the above statements is/are <b>TRUE</b>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I only"
+      },
+      {
+        "identifier": "B",
+        "content": "II only"
+      },
+      {
+        "identifier": "C",
+        "content": "Both I and II"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither I nor II"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the statements are <strong>TRUE</strong>, we'll analyze each one individually.</p>\n<hr />\n<h3><strong>Statement I:</strong></h3>\n<p><strong>\"If $ L_1 \\cup L_2 $ is regular, then both $ L_1 $ and $ L_2 $ must be regular.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n<p><p><strong>Regular Language Closure Properties:</strong></p></p>\n<p><p>Regular languages are <strong>closed under union</strong>, meaning the union of two regular languages is regular.</p></p>\n<p><p>However, the converse is <strong>not necessarily true</strong>: if the union of two languages is regular, it does <strong>not</strong> imply that each language is regular.</p></p>\n<p><p><strong>Counterexample:</strong></p></p>\n<p><p>Let $ \\Sigma = \\{a\\} $.</p></p>\n<p><p>Define:</p>\n\n<p><p>$ L_1 = \\{ a^n \\mid n \\text{ is a prime number} \\} $ — <strong>non-regular language</strong>.</p></p>\n\n<p><p>$ L_2 = \\{ a^n \\mid n \\text{ is not a prime number} \\} $ — may also be non-regular.</p></p></p>\n<p><p>The union $ L_1 \\cup L_2 = \\{ a^n \\mid n \\geq 1 \\} = a^+ $, which is a <strong>regular language</strong>.</p></p>\n<p><p><strong>Conclusion:</strong> $ L_1 \\cup L_2 $ is regular, but $ L_1 $ and $ L_2 $ are not necessarily regular.</p></p>\n<p><strong>Conclusion:</strong> <strong>Statement I is FALSE.</strong></p>\n<hr />\n<h3><strong>Statement II:</strong></h3>\n<p><strong>\"The class of regular languages is closed under infinite union.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n<p><p><strong>Closure Under Finite Union:</strong></p></p>\n<p><p>Regular languages are <strong>closed under finite union</strong>, meaning the union of a finite number of regular languages is regular.</p></p>\n<p><p><strong>Infinite Union:</strong></p></p>\n<p><p>Regular languages are <strong>not closed</strong> under infinite union.</p></p>\n<p><p><strong>Counterexample:</strong></p>\n\n<p><p>Consider the set of languages $ L_n = \\{ a^n \\} $, which are regular since they are finite.</p></p>\n\n<p><p>Define $ L = \\bigcup_{n=1}^{\\infty} L_n = \\{ a^n \\mid n \\geq 1 \\} = a^+ $, which is regular.</p></p>\n\n<p><p>However, consider $ L = \\{ a^{p} \\mid p \\text{ is a prime number} \\} $.</p></p>\n\n<p><p>Each $ L_n = \\{ a^{p} \\mid p \\text{ is a prime number less than or equal to } n \\} $ is finite and regular.</p></p>\n\n<p><p>The infinite union $ L = \\bigcup_{n=1}^{\\infty} L_n $ is <strong>non-regular</strong>, as the set of strings of prime length is non-regular.</p></p></p>\n<p><p><strong>Conclusion:</strong> There exist infinite unions of regular languages that are <strong>not regular</strong>.</p></p>\n<p><strong>Conclusion:</strong> <strong>Statement II is FALSE.</strong></p>\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n<p><strong>Neither Statement I nor Statement II is TRUE.</strong></p>\n<hr />\n<p><strong>Answer:</strong> Option D</p>\n<p><strong>Neither I nor II</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following regular expressions represents the set of all binary strings with an odd number of 1’s?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10*(0*10*10*)*"
+      },
+      {
+        "identifier": "B",
+        "content": "((0 + 1)*1(0 + 1)*1)*10*"
+      },
+      {
+        "identifier": "C",
+        "content": "(0*10*10*)*10*"
+      },
+      {
+        "identifier": "D",
+        "content": "(0*10*10*)*0*1"
+      }
+    ],
+    "correct_options": [],
+    "answer": null,
+    "explanation": "<p>Consider each option one by one : </p>\n<p><b>Option (A) :</b> $10^*\\left(0^* 10^* 10^*\\right)^*$</p>\n<p>The language generated by regular expression is</p>\n<p>$$ L(C)=\\{1,10,100,111,1000,1011 \\ldots .\\} $$</p>\n<p>Since $01,001 \\notin L(C)$, hence this option is false.</p>\n<p><b>Option (B) :</b> $\\left((0+1)^* 1(0+1)^* 1\\right)^* 10^*$</p>\n<p>The language generated by regular expression is</p>\n<p>$$ L(A)=\\{1,10,100,111,11110, \\ldots .\\} $$</p>\n<p>Since $001 \\notin L(A)$, hence this option is false</p>\n<p><b>Option (C) :</b> $\\left(0^* 10^* 10^*\\right)^* 10^*$</p>\n<p>The language generated by regular expressions is</p>\n<p>$$ L(D)=\\{1,10,100,111,1000,1011,1101, \\ldots .\\} $$</p>\n<p>Since $01,001 \\notin L(D)$, hence this option is false.</p>\n<p><b>Option (D) :</b> $10^*\\left(0^* 10^* 10^*\\right)^*$</p>\n<p>The language generated by regular expression is</p>\n<p>$$ L(C)=\\{1,10,100,111,1000,1011 \\ldots . $$</p>\n<p>Since $01,001 \\notin L(C)$, hence this option is false.</p>\n<p>None of the given option is correct . </p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "If L is a regular language over Σ = {a, b}, which one of the following languages is NOT regular?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Suffix (L) = {y ∈ Σ* such that xy ∈ L}"
+      },
+      {
+        "identifier": "B",
+        "content": "{ww<sup>R</sup> │w ∈ L}"
+      },
+      {
+        "identifier": "C",
+        "content": "Prefix (L) = {x ∈ Σ*│∃y ∈ Σ* such that xy ∈ L}"
+      },
+      {
+        "identifier": "D",
+        "content": "L ∙ L<sup>R</sup> = {xy │ x ∈ L, y<sup>R</sup> ∈ L}"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given languages is <strong>NOT regular</strong>, we need to analyze each option considering that $ L $ is a <strong>regular language over the alphabet $ \\Sigma = \\{ a, b \\} $</strong>.</p>\n<hr />\n<h3><strong>Option A: Suffix $ (L) = \\{ y \\in \\Sigma^* \\mid \\exists x \\in \\Sigma^*, xy \\in L \\} $</strong></h3>\n<p><strong>Explanation:</strong></p>\n\n<p><p><strong>Suffixes of a Regular Language:</strong></p></p>\n<p><p>The set of all suffixes of strings in a regular language $ L $ is <strong>regular</strong>.</p></p>\n<p><p>Regular languages are closed under <strong>quotient</strong> operations, including taking suffixes.</p></p>\n<p><p><strong>Construction:</strong></p></p>\n<p><p>Given a DFA for $ L $, we can construct an NFA that accepts all suffixes by:</p>\n\n<p><p>Including epsilon transitions from the start state to all other states.</p></p>\n<p><p>This allows the NFA to \"jump\" into any point in the DFA and accept suffixes.</p></p></p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p><strong>Suffix $ (L) $ is regular.</strong></p>\n\n<hr />\n<h3><strong>Option B: $ \\{ ww^R \\mid w \\in L \\} $</strong></h3>\n<p><strong>Explanation:</strong></p>\n\n<p><p><strong>Understanding $ ww^R $:</strong></p></p>\n<p><p>$ w^R $ is the reverse of string $ w $.</p></p>\n<p><p>The language consists of strings where a word from $ L $ is concatenated with its reverse.</p></p>\n<p><p><strong>Regularity Analysis:</strong></p></p>\n<p><p>Even if $ L $ is regular, $ \\{ ww^R \\mid w \\in L \\} $ is <strong>not necessarily regular</strong>.</p></p>\n<p><p><strong>Known Non-Regular Language:</strong></p>\n\n<p>When $ L = \\Sigma^* $, $ \\{ ww^R \\mid w \\in L \\} = \\{ ww^R \\mid w \\in \\Sigma^* \\} $ is a classic example of a <strong>non-regular</strong> language.</p></p>\n<p><p><strong>Reason:</strong></p>\n\n<p>Regular languages cannot enforce the condition that a string is followed by its reverse due to their limited memory (cannot count or compare arbitrary lengths).</p></p>\n<p><p><strong>Closure Properties:</strong></p></p>\n<p><p>Regular languages are <strong>not closed</strong> under certain operations, including some forms of concatenation that require matching patterns (like palindromes).</p></p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p><strong>$ \\{ ww^R \\mid w \\in L \\} $ is not necessarily regular and, in general, is non-regular.</strong></p>\n\n<hr />\n<h3><strong>Option C: Prefix $ (L) = \\{ x \\in \\Sigma^* \\mid \\exists y \\in \\Sigma^*, xy \\in L \\} $</strong></h3>\n<p><strong>Explanation:</strong></p>\n\n<p><p><strong>Prefixes of a Regular Language:</strong></p></p>\n<p><p>The set of all prefixes of strings in a regular language $ L $ is <strong>regular</strong>.</p></p>\n<p><p>Regular languages are closed under taking prefixes.</p></p>\n<p><p><strong>Construction:</strong></p></p>\n<p><p>Given a DFA for $ L $, we can construct an NFA that accepts all prefixes by:</p>\n\n<p><p>Modifying the DFA so that any state that is reachable becomes an accepting state.</p></p>\n<p><p>This accepts any string that leads to any state in the DFA.</p></p></p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p><strong>Prefix $ (L) $ is regular.</strong></p>\n\n<hr />\n<h3><strong>Option D: $ L \\cdot L^R = \\{ xy \\mid x \\in L, y^R \\in L \\} $</strong></h3>\n<p><strong>Explanation:</strong></p>\n\n<p><p><strong>Reversal of Regular Language:</strong></p></p>\n<p><p>The reversal $ L^R $ of a regular language $ L $ is <strong>regular</strong>.</p></p>\n<p><p>Regular languages are closed under reversal.</p></p>\n<p><p><strong>Concatenation:</strong></p></p>\n<p><p>The concatenation of two regular languages is <strong>regular</strong>.</p></p>\n<p><p>Since both $ L $ and $ L^R $ are regular, their concatenation $ L \\cdot L^R $ is regular.</p></p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p><strong>$ L \\cdot L^R $ is regular.</strong></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n<p>Among the given options, <strong>Option B</strong> represents a language that is <strong>not regular</strong>.</p>\n<p><strong>Answer: Option B</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "For Σ = {a, b}, let us consider the regular language L = {x | x = a<sup>2+3k</sup> or x = b<sup>10+12k</sup>, k ≥ 0}. Which one of the following can be a pumping length (the constant guaranteed by the pumping lemma) for L?\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "9"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "24"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "According to the Pumping Lemma for Regular Languages, every string w present in the infinite regular language L should be divide into three parts w = xyz, where\n<br><br>(i) y $$ \\ne $$ $$\\varepsilon $$\n<br><br>(ii) |xy| $$ \\le $$ n , where n is some positive integer and |w| $$ \\ge $$ n\n<br><br>(iii) for every i $$ \\ge $$ 0, the string xy<sup>i</sup>z is also in L.\n<br><br>From the question,\n<br><br>when x = b<sup>10+12k</sup>\n<br><br>then minimum possible string is = b<sup>10</sup> or 'bbbbbbbbbb'.\n<br><br> we cannot divide this into three parts x, y, z.\n<br><br>So pumping length should must be more than 10 so that we can divide any string into three parts.",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following regular expressions represents the language: the set of all binary strings having two consecutive $$0s$$ and two consecutive $$1s?$$\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {0 + 1} \\right){}^ * 0011\\left( {0 + 1} \\right){}^ *  + \\left( {0 + 1} \\right){}^ * 1100\\left( {0 + 1} \\right){}^ * $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {0 + 1} \\right){}^ * \\left( {00\\left( {0 + 1} \\right){}^ * 11 + 11\\left( {0 + 1} \\right){}^ * \\left. {00} \\right)} \\right.\\left( {0 + 1} \\right){}^ * $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {0 + 1} \\right){}^ * 00\\left( {0 + 1} \\right){}^ *  + \\left( {0 + 1} \\right){}^ * 11\\left( {0 + 1} \\right){}^ * $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$00\\left( {0 + 1} \\right){}^ * 11 + 11\\left( {0 + 1} \\right){}^ * 00$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which regular expression represents the language of all binary strings having two consecutive 0s and two consecutive 1s (in any order and anywhere in the string), let's analyze each option:</p>\n<hr />\n<h3><strong>Option A:</strong></h3>\n<p>$ (0 + 1)^*\\, 0011\\, (0 + 1)^* + (0 + 1)^*\\, 1100\\, (0 + 1)^* $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>This expression represents all strings that contain either \"0011\" or \"1100\" as substrings.</p></p>\n<p><p>It <strong>does not</strong> capture strings where \"00\" and \"11\" are separated or occur in a different order.</p></p>\n<p><p><strong>Example:</strong> The string \"10011\" contains \"0011\", so it is included.</p></p>\n<p><p><strong>Counterexample:</strong> The string \"0010011\" has both \"00\" and \"11\" but not the substring \"0011\" or \"1100\"; thus, it's <strong>not included</strong>, which means Option A <strong>is not correct</strong>.</p></p>\n\n<hr />\n<h3><strong>Option B:</strong></h3>\n<p>$ (0 + 1)^*\\, (00\\, (0 + 1)^*\\, 11 + 11\\, (0 + 1)^*\\, 00)\\, (0 + 1)^* $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>This expression represents all strings that:</p></p>\n<p><p>Contain \"00\" followed (possibly after some characters) by \"11\", or</p></p>\n<p><p>Contain \"11\" followed (possibly after some characters) by \"00\".</p></p>\n<p><p>The $ (0 + 1)^* $ before, between, and after allows any sequence of 0s and 1s.</p></p>\n<p><p><strong>Example:</strong> The string \"1001011\" contains \"00\" and later \"11\", so it's included.</p></p>\n<p><p><strong>Example:</strong> The string \"1100101\" contains \"11\" and later \"00\", so it's included.</p></p>\n<p><p><strong>This option correctly represents all strings that have both \"00\" and \"11\" in any order and position.</strong></p></p>\n\n<hr />\n<h3><strong>Option C:</strong></h3>\n<p>$ (0 + 1)^*\\, 00\\, (0 + 1)^* + (0 + 1)^*\\, 11\\, (0 + 1)^* $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>This expression represents all strings that <strong>contain \"00\" or \"11\"</strong>.</p></p>\n<p><p>It uses the union operator $ + $, so strings need to have <strong>either</strong> \"00\" <strong>or</strong> \"11\".</p></p>\n<p><p><strong>Example:</strong> The string \"1001\" contains neither \"00\" nor \"11\" and is excluded.</p></p>\n<p><p><strong>Counterexample:</strong> The string \"1001\" has neither \"00\" nor \"11\", but the language requires both \"00\" and \"11\" to be present.</p></p>\n<p><p><strong>Thus, Option C is incorrect because it does not require both \"00\" and \"11\" to be present in the strings.</strong></p></p>\n\n<hr />\n<h3><strong>Option D:</strong></h3>\n<p>$ 00\\, (0 + 1)^*\\, 11 + 11\\, (0 + 1)^*\\, 00 $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>This expression represents strings that:</p></p>\n<p><p>Start with \"00\", followed by any sequence, and contain \"11\" somewhere after, or</p></p>\n<p><p>Start with \"11\", followed by any sequence, and contain \"00\" somewhere after.</p></p>\n<p><p><strong>Limitations:</strong></p></p>\n<p><p>Strings where \"00\" and \"11\" are in the middle or not in this specific order are <strong>not included</strong>.</p></p>\n<p><p><strong>Counterexample:</strong> The string \"1001100\" contains both \"00\" and \"11\", but since it does not start with \"00\" or \"11\", it is <strong>not included</strong>.</p></p>\n<p><p><strong>Therefore, Option D does not represent all strings containing both \"00\" and \"11\" and is incorrect.</strong></p></p>\n\n<hr />\n<h3><strong>Conclusion:</strong></h3>\n<p>Option <strong>B</strong> is the correct regular expression that represents the language of all binary strings having two consecutive 0s and two consecutive 1s, in any order and position within the string.</p>\n<hr />\n<p><strong>Answer: Option B</strong></p>",
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The number of states in the minimum sized $$DFA$$ that accepts the language defined by the regular expression \n$$${\\left( {0 + 1} \\right)^ * }\\left( {0 + 1} \\right){\\left( {0 + 1} \\right)^ * }$$$ \n<br>is ___________________.\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Language $${L_1}$$ is defined by the grammar: $$S{}_1 \\to a{S_1}b|\\varepsilon $$\n<br>Language $${L_2}$$ is defined by the grammar: $$S{}_2 \\to ab{S_2}|\\varepsilon $$\n<p>Consider the following statements:\n<br>$$P:$$ $${L_1}$$ is regular\n<br>$$Q:$$ $${L_2}$$ is regular</p>\n<p>Which one of the following is <b>TRUE</b>?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both $$P$$ and $$Q$$ are true "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P$$ is true and $$Q$$ is false "
+      },
+      {
+        "identifier": "C",
+        "content": "$$P$$ is false and $$Q$$ is true"
+      },
+      {
+        "identifier": "D",
+        "content": "Both $$P$$ and $$Q$$ are false "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$L$$ be the language represented by the regular expression $$\\sum {^ * 0011\\sum {^ * } } $$ where $$\\sum { = \\left\\{ {0,1} \\right\\}} .$$ What is the minimum number of states in a $$DFA$$ that recognizes $$\\overline L $$ (complement of $$L$$)? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$6$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$8$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "If $${L_1} = \\left\\{ {{a^n}\\left| {n \\ge \\left. 0 \\right\\}} \\right.} \\right.$$ and $${L_2} = \\left\\{ {{b^n}\\left| {n \\ge \\left. 0 \\right\\}} \\right.} \\right.,$$ consider\n<br>$$\\left. {\\rm I} \\right)$$ $$\\,\\,\\,{L_{1 \\bullet }}{L_2}$$ is a regular language\n<br>$$\\left. {\\rm II} \\right)$$ $$\\,\\,\\,{L_{1 \\bullet }}{L_2} = \\left\\{ {{a^n}{b^n}\\left| {n \\ge \\left. 0 \\right\\}} \\right.} \\right.$$\n<br>Which one of the following is CORRECT?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $$\\left( {\\rm I} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "Only $$\\left( {\\rm II} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "Both $$\\left( {\\rm I} \\right)$$ and $$\\left( {\\rm II} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $$\\left( {\\rm I} \\right)$$ nor $$\\left( {\\rm II} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the finite automation in the following figure.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/FUGmWTebVFJxJ0UV9/BCqtvcAPJuduvZpuBrqriPfWHPDsg/vKWgcM39nQjWQNYQjTUSHW/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 1 Theory of Computation - Finite Automata and Regular Language Question 94 English\"> \n<p>What is the set of reachable states for the input string $$0011?$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{ {{q_0},\\,{q_1},\\,{q_2}} \\right\\}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{ {{q_0},\\,{q_1}} \\right\\}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\{ {{q_0},\\,{q_1},\\,{q_2},\\,{q_3}} \\right\\}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{ {{q_3}} \\right\\}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is <b>TRUE?</b>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The language $$L = \\left\\{ {{a^n}\\,{b^n}\\left| {n \\ge 0} \\right.} \\right\\}$$ is regular."
+      },
+      {
+        "identifier": "B",
+        "content": "The language $$L = \\,\\,\\left\\{ {{a^n}\\,\\left| n \\right.\\,} \\right.$$ is prime$$\\left. \\, \\right\\}$$ is regular. "
+      },
+      {
+        "identifier": "C",
+        "content": "The language $$L = \\left\\{ {w\\left| {w\\,\\,} \\right.} \\right.$$ has $$3k+1$$ $$b'$$ $$s$$ for some $$k \\in N$$ with $$\\sum { = \\left\\{ {a,\\,\\,b} \\right\\}\\left. \\, \\right\\}} $$ is regular."
+      },
+      {
+        "identifier": "D",
+        "content": "The language $$L = \\left\\{ {ww\\,\\left| {w \\in \\sum {{}^ * } } \\right.} \\right.$$ with $$\\sum { = \\left. {\\left\\{ {0,\\,\\,1} \\right\\}} \\right\\}} $$ is regular. "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The length of the shortest string NOT in the language (over $$\\sum { = \\left\\{ {a,\\,\\,b} \\right\\}} $$) of the following regular expression is ____________.\n$$$a{}^ * b{}^ * \\left( {ba} \\right){}^ * a{}^ * $$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "3 to 3",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the languages $${L_1} = \\phi $$ and $${L_2} = \\left\\{ a \\right\\}.$$ Which one of the following represents $${L_1}\\,L_2^ * UL_1^ * ?$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{ \\varepsilon  \\right\\}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\phi $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${a^ * }$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{ {\\varepsilon ,a} \\right\\}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "What is the complement of the language accepted by the $$NFA$$ shown below? \n<br>Assume $$\\sum { = \\left\\{ a \\right\\}\\,\\,} $$ and $$\\varepsilon $$ is the empty string.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/oH41u6734uzghrsqO/a68VppbNDoX5b4xPpCGabCt3KW0cQ/4x4LI3h1UHc49nqwZHJgt4/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Theory of Computation - Finite Automata and Regular Language Question 97 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\phi $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{ \\varepsilon  \\right\\}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$a{}^ * $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{ {a,\\,\\,\\varepsilon } \\right\\}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${L_1}$$ recursive language. Let $${L_2}$$ and $${L_3}$$ be languages that are recursively enumerable but not recursive. Which of the following statement is not necessarily true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${L_2}$$ $$-$$ $${L_1}$$ is recursively enumerable."
+      },
+      {
+        "identifier": "B",
+        "content": "$${L_1}$$ $$-$$ $${L_3}$$ recursively enumerable. "
+      },
+      {
+        "identifier": "C",
+        "content": "$${L_2} \\cap {L_1}$$ is recursively enumerable. "
+      },
+      {
+        "identifier": "D",
+        "content": "$${L_2} \\cup {L_1}$$ is recursively enumerable."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following languages over the alphabet $$\\left\\{ {0,\\left. 1 \\right)} \\right.$$ is described by the regular expression $${\\left( {0 + 1} \\right)^ * }0{\\left( {0 + 1} \\right)^ * }0{\\left( {0 + 1} \\right)^ * }$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The set of all strings containing the substring $$00$$"
+      },
+      {
+        "identifier": "B",
+        "content": "The set of all strings containing at most two $$0’$$s"
+      },
+      {
+        "identifier": "C",
+        "content": "The set of all strings containing at least two $$0’$$s\n"
+      },
+      {
+        "identifier": "D",
+        "content": "The set of all strings that begin and end with either $$0$$ or $$1$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the set $$\\sum {^ * } $$ of all strings over the alphabet $$\\,\\sum { = \\,\\,\\,\\left\\{ {0,\\,\\,\\,1} \\right\\}.\\sum {^ * } } $$ with the concatenation operator for strings",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Does not from a group "
+      },
+      {
+        "identifier": "B",
+        "content": "Forms a non-commutative group "
+      },
+      {
+        "identifier": "C",
+        "content": "Does not have a right identity element"
+      },
+      {
+        "identifier": "D",
+        "content": "Forms a group if the empty string is removed from $${\\sum {^ * } }$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The regular expression $${0^ * }\\left( {{{10}^ * }} \\right){}^ * $$denotes the same set as",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {{1^ * }0} \\right){}^ * {1^ * }$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0 + \\left( {0 + 10} \\right){}^ * $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {0 + 1} \\right){}^ * 10\\left( {0 + 1} \\right){}^ * $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following two statements;\n<br>$${S_1}\\,\\,:\\,\\,\\left\\{ {{0^{2n}}\\left| {n \\ge 1} \\right.} \\right\\}$$ is a regular language\n<br>$${S_2}\\,\\,:\\,\\,\\left\\{ {{0^m}{1^n}{0^{m + n}}\\left| {m \\ge 1} \\right.\\,\\,and\\,\\,n \\ge \\left. 1 \\right\\}} \\right.$$ is a regular language\n<p>Which of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $${S_1}$$ is correct "
+      },
+      {
+        "identifier": "B",
+        "content": "Only $${S_2}$$ is correct "
+      },
+      {
+        "identifier": "C",
+        "content": "Both $${S_1}$$ and $${S_2}$$ are correct"
+      },
+      {
+        "identifier": "D",
+        "content": "None of $${S_1}$$ and $${S_2}$$ is correct "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Given an arbitrary non-deterministic finite automaton $$(NFA)$$ with $$N$$ states, the maximum number of states in an equivalent minimized $$DFA$$ is at least",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${N^2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^N}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2N$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$N!$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$L$$ denote the language generated by the grammar $$S \\to 0S\\left. 0 \\right|00.$$ Which one of the following is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$L = {0^ + }$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$L$$ is regular but not $${0^ + }$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$L$$ is context free but not regular "
+      },
+      {
+        "identifier": "D",
+        "content": "$$L$$ is not context free "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which option is correct for the language $ L $ generated by the grammar $ S \\to 0S0 \\ \\vert \\ 00 $, let's analyze the grammar step by step.</p>\n<h3>Understanding the Grammar</h3>\n<p>The given grammar is:</p>\n\n<p><strong>Production Rules</strong>:</p>\n\n\n<p><p>$ S \\to 0S0 $</p></p>\n<p><p>$ S \\to 00 $</p></p>\n\n\n<p><strong>Terminal Symbol</strong>:</p>\n\n\n<p>$ 0 $</p>\n\n<h3>Generating Strings from the Grammar</h3>\n<p>Let's generate some strings to understand the pattern:</p>\n\n<p><strong>Base Case</strong>:</p>\n\n\n<p><p>$ S \\to 00 $</p></p>\n<p><p>Generated string: <strong>\"00\"</strong></p></p>\n\n\n<p><strong>Recursive Case</strong>:</p>\n\n\n<p><p>$ S \\to 0S0 $</p></p>\n<p><p>We can apply the production recursively.</p></p>\n\n<h4>First Iteration</h4>\n\n<p><p>$ S \\to 0S0 $</p></p>\n<p><p>Substitute $ S $ with $ 00 $:</p>\n\n<p><p>$ S \\to 0(00)0 $</p></p>\n<p><p>Generated string: <strong>\"0000\"</strong></p></p></p>\n\n<h4>Second Iteration</h4>\n\n<p><p>$ S \\to 0S0 $</p></p>\n<p><p>Substitute $ S $ with $ 0S0 $:</p>\n\n<p><p>$ S \\to 0(0S0)0 $</p></p>\n<p><p>Now, substitute $ S $ with $ 00 $:</p></p>\n<p><p>$ S \\to 0(0(00)0)0 $</p></p>\n<p><p>Generated string: <strong>\"000000\"</strong></p></p></p>\n\n<h4>General Pattern</h4>\n\n<p><p>The strings generated are of the form:</p></p>\n<p><p><strong>\"00\"</strong></p></p>\n<p><p><strong>\"0000\"</strong></p></p>\n<p><p><strong>\"000000\"</strong></p></p>\n<p><p>And so on.</p></p>\n\n<h3>Observations</h3>\n\n<p><strong>String Length</strong>:</p>\n\n\n<p><p>All strings have lengths that are multiples of <strong>2</strong>.</p></p>\n<p><p>Specifically, the lengths are $ 2n $, where $ n \\geq 1 $.</p></p>\n\n\n<p><strong>Pattern</strong>:</p>\n\n\n<p><p>The strings consist exclusively of the terminal symbol $ 0 $.</p></p>\n<p><p>There are no strings of odd length generated by this grammar.</p></p>\n\n\n<p><strong>Language $ L $</strong>:</p>\n\n\n<p><p>$ L = \\{ 0^{2n} \\mid n \\geq 1 \\} $</p></p>\n<p><p>This is the set of all strings of $ 0 $s where the length is an even positive integer.</p></p>\n\n<h3>Determining the Nature of $ L $</h3>\n<h4>Is $ L $ Equal to $ \\{0^+\\} $?</h4>\n\n<p><p>$ \\{0^+\\} $ includes all strings of one or more $ 0 $s, including odd lengths.</p></p>\n<p><p>Since $ L $ only contains strings of even length, <strong>$ L \\ne \\{0^+\\} $</strong>.</p></p>\n\n<h4>Is $ L $ Regular?</h4>\n\n<p><p>A regular expression for $ L $ is $ (00)+ $.</p></p>\n<p><p>This expression generates strings of even length consisting of $ 0 $s.</p></p>\n<p><p>Since there exists a regular expression for $ L $, <strong>$ L $ is a regular language</strong>.</p></p>\n\n<h4>Is $ L $ Context-Free but Not Regular?</h4>\n\n<p><p>While $ L $ is context-free (all regular languages are also context-free), it is <strong>also regular</strong>.</p></p>\n<p><p>Therefore, stating that $ L $ is context-free but not regular is incorrect.</p></p>\n\n<h4>Is $ L $ Not Context-Free?</h4>\n\n<p>This is false because $ L $ is both regular and context-free.</p>\n\n<h3>Conclusion</h3>\n\n<p><p><strong>Option A</strong>: Incorrect because $ L \\ne \\{0^+\\} $.</p></p>\n<p><p><strong>Option B</strong>: Correct because $ L $ is regular but not equal to $ \\{0^+\\} $.</p></p>\n<p><p><strong>Option C</strong>: Incorrect because $ L $ is regular, not just context-free.</p></p>\n<p><p><strong>Option D</strong>: Incorrect because $ L $ is context-free (and regular).</p></p>\n\n<p><strong>Answer:</strong> Option B</p>\n<p>$ L $ is regular but not $ \\{0^+\\} $.</p>",
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$S$$ and $$T$$ be languages over $$\\sum { = \\left\\{ {a,b} \\right\\}} $$ represented by the regular expressions $${\\left( {a + {b^ * }} \\right)^ * }$$ and $$\\,{\\left( {a + b} \\right)^ * },$$  respectively. Which of the following is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$S \\subset T$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$T \\subset S$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$S=T$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$S \\cap T = \\phi $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the regular expression $$(0+1)(0+1).......n$$ times. The minimum state finite automation that recognizes the language represented by this regular expression contains: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n$$ states "
+      },
+      {
+        "identifier": "B",
+        "content": "$$n+1$$ states "
+      },
+      {
+        "identifier": "C",
+        "content": "$$n+2$$ states "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<a href=\"https://www.gatequestions.com/images/59ac72bacc99a.jpg\"> <img src=\"https://www.gatequestions.com/images/59ac72bacc99a.jpg\" loading=\"lazy\" alt=\"GATE CSE 1999 Theory of Computation - Finite Automata and Regular Language Question 106 English Explanation\"></a>",
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following sets can be recognized by a Deterministic Finite-state Automation? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The numbers $$1, 2, 4, 8, $$ ...... $${2^n},$$ ............. written in binary. "
+      },
+      {
+        "identifier": "B",
+        "content": "The numbers $$1, 2, 4, ..... $$ $${2^n},$$ $$.....$$ written in unary. "
+      },
+      {
+        "identifier": "C",
+        "content": "The set of binary strings in which the numbers of zeros is the same as the numbers of ones. "
+      },
+      {
+        "identifier": "D",
+        "content": "The set $$\\left\\{ {1,101,11011,1110111,...} \\right\\}.$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<a href=\"https://www.gatequestions.com/images/59ac589467ba3.jpg\">\n<img src=\"https://www.gatequestions.com/images/59ac589467ba3.jpg\" loading=\"lazy\" alt=\"GATE CSE 1998 Theory of Computation - Finite Automata and Regular Language Question 109 English Explanation\">\n</a>",
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "If the regular set $$A$$ is represented by $$A = {\\left( {01 + 1} \\right)^ * }$$ and the regular set $$'B'$$ is represented by $$B = \\left( {{{\\left( {01} \\right)}^ * }{1^ * }} \\right),$$ which of the following is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$A \\subset B$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$B \\subset A$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$A$$ and $$B$$ are incomparable "
+      },
+      {
+        "identifier": "D",
+        "content": "$$A=B$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/jf762sdjyvdrrcw/6afbc1f1-be1e-4a7e-a683-4b613121bf3c/8c59c400-b5d7-11e9-a092-5b9aaf57c6e8/file-jf762sdjyvdrrcx-320w.jpg\"><source media=\"(max-width: 500px)\" srcset=\"https://imagex.cdn.examgoal.net/jf762sdjyvdrrcw/6afbc1f1-be1e-4a7e-a683-4b613121bf3c/8c59c400-b5d7-11e9-a092-5b9aaf57c6e8/file-jf762sdjyvdrrcx-500w.jpg\"><source media=\"(max-width: 680px)\" srcset=\"https://imagex.cdn.examgoal.net/jf762sdjyvdrrcw/6afbc1f1-be1e-4a7e-a683-4b613121bf3c/8c59c400-b5d7-11e9-a092-5b9aaf57c6e8/file-jf762sdjyvdrrcx-680w.jpg\"><source media=\"(max-width: 860px)\" srcset=\"https://imagex.cdn.examgoal.net/jf762sdjyvdrrcw/6afbc1f1-be1e-4a7e-a683-4b613121bf3c/8c59c400-b5d7-11e9-a092-5b9aaf57c6e8/file-jf762sdjyvdrrcx-860w.jpg\"><img src=\"https://imagex.cdn.examgoal.net/jf762sdjyvdrrcw/6afbc1f1-be1e-4a7e-a683-4b613121bf3c/8c59c400-b5d7-11e9-a092-5b9aaf57c6e8/file-jf762sdjyvdrrcx-1040w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 1998 Theory of Computation - Finite Automata and Regular Language Question 110 English Explanation\"></picture>",
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "How many substrings of different lengths (non-zero) can be formed from a character string of length $$n$$ ? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${n^2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^n}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$n\\left( {n + 1} \\right)/2$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "Example: <br>Let w = GAT be a string then |w|= 3 <br>The substrings possible are = { ε,G,A,T,GA,AT,GAT} <br>So,the substring of length 0 = 1  { the string is = ε }  <br>the substring of length 1 = 3  { the strings are = G,A,T } <br>the substring of length 2 = 2  { the strings are = GA,AT } <br>the substring of length 3 = 1  { the strings are = GAT } <br>So total substrings for string length 3 are = (1 + 2 + 3) + 1   <br>Similarly total substrings for string length n are = (1 + 2 + 3 + ................. n times) + 1 = (n(n+1)/2) + 1<br><br>Here substrings of length 0 is excluded.<br>So total substrings are = (n(n+1)/2).",
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The string $$1101$$ does not belong to the set represented by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${110^ * }\\,\\,\\left( {0 + 1} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\,1\\,{\\left( {0 + 1} \\right)^ * }101$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\left( {10} \\right)^ * }\\,{\\left( {01} \\right)^ * }\\,{\\left( {00 + 11} \\right)^ * }$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\left( {00 + {{\\left( {11} \\right)}^ * }0} \\right)^ * }$$ "
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "To solve this kind of question check each option and find the answer.",
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\sum { = \\left\\{ {a,b} \\right\\},\\,\\,} $$ which one of the following sets is not countable.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Set of all strings over $$\\sum {} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Set of all languages over $$\\sum {} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "Set of all regular languages over $$\\sum {} $$"
+      },
+      {
+        "identifier": "D",
+        "content": "Set of all languages over $$\\sum {} $$ accepted by Turing Machines. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "Only option B is correct as set of all languages are uncountable.<br>Remember: As set of all Turing Machine are countable.So we can say that <br>(1) Set of all Recursively Enumerable Language are countable.<br>(2) Set of all Recursively Language are countable.<br>(3) Set of all Context-Sensitive Language are countable.<br>(4) Set of all Context Free Language are countable.<br>(5) Set of all Regular Language are countable.",
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Which two of the following four regular expressions are equivalent? \n<br>(i) $${\\left( {00} \\right)^ * }\\left( {\\varepsilon  + 0} \\right)$$\n<br>(ii) $${\\left( {00} \\right)^ * }$$ \n<br>(iii) $${0^ * }$$ \n<br>(iv) $$0\\,\\,{\\left( {00} \\right)^ * }$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) and (ii) "
+      },
+      {
+        "identifier": "B",
+        "content": "(ii) and (iii) "
+      },
+      {
+        "identifier": "C",
+        "content": "(i) and (iii) "
+      },
+      {
+        "identifier": "D",
+        "content": "(iii) and (vi)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "0<sup>*</sup>= { ε ,0,00,000,............} <br>(00)<sup>*</sup>(ε+0)= (00)<sup>*</sup> + (00)<sup>*</sup>0 = even + odd = 0<sup>*</sup> <br>So,0<sup>*</sup> = (00)<sup>*</sup>(ε+0)",
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$L \\subseteq \\sum {^{^ * }\\,} $$ where $$\\,\\sum { = \\,\\,\\left\\{ {a,b} \\right\\}\\,\\,} $$ which of the following is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$L = \\,\\,\\,\\left\\{ {\\left. x \\right|\\,\\,\\,x} \\right.$$ has an equal number of $$a's$$ and $$\\,\\left. {b's} \\right\\}$$ is regular "
+      },
+      {
+        "identifier": "B",
+        "content": "$$L = \\left\\{ {{a^n}{b^n}\\left| {n \\ge 1} \\right.} \\right\\}$$ is regular "
+      },
+      {
+        "identifier": "C",
+        "content": "$$L = \\,\\,\\,\\left\\{ {\\left. x \\right|\\,\\,\\,x} \\right.\\,$$ has more $$a's$$ than $$\\left. {b's} \\right\\}$$ is regular "
+      },
+      {
+        "identifier": "D",
+        "content": "$$L = \\left\\{ {{a^m}{b^n}\\left| {m \\ge 1,\\,n \\ge 1} \\right.} \\right\\}$$ is regular "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "For only option \"D\" we can draw a Finite Automata<br><img src=\"https://gatequestions.com/images/5953f104343d6.jpg\" style=\"max-width:100%;height:auto;\" loading=\"lazy\" alt=\"GATE CSE 1996 Theory of Computation - Finite Automata and Regular Language Question 112 English Explanation\"><br>So, Option D is correct.",
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "State True or False with one line explanation: <br><br>A FSM (Finite State Machine) can be designed to add two integers of any arbitrary length (arbitrary number of digits). ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "As FSM has a finite memory then it can not store carry bit to add arbitary length strings.",
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following two finite automata $D_1$ and $D_2$.<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyvg45k/5ea20c24-e27e-47f0-8c2b-22f0b079eff2/cb2c7880-2457-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvg45l.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyvg45k/5ea20c24-e27e-47f0-8c2b-22f0b079eff2/cb2c7880-2457-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvg45l.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Theory of Computation - Finite Automata and Regular Language Question 1 English\"></p>\n<p>Which of the following statements is/are true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\angle\\left(D_1\\right)=\\angle\\left(D_2\\right)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\angle\\left(D_1\\right)$ is a proper subset of $\\angle\\left(D_2\\right)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\angle\\left(D_1\\right) \\cap L\\left(D_2\\right)=\\{\\in\\}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\left(L\\left(D_1\\right) \\cup L\\left(D_2\\right)\\right)^*$ consists of all strings in $\\{0,1\\}^*$ whose length is divisible by 3 .</p>"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Accepting $\\epsilon$:</b></p>\n<p>Both $D_1$ and $D_2$ accept the empty string ($\\epsilon$).</p>\n<p><b>Intersection of $D_1$ and $D_2$:</b></p>\n<p>\n\n$$L(D_1) \\cap L(D_2) = \\{\\epsilon\\}$$\n\nThis means that the only string accepted by both automata is $\\epsilon$.\n\n</p>\n<p><b>Strings of Length 3 Accepted by $D_1$:</b></p>\n<p>\n\n$D_1$ accepts these strings of length 3: $000$, $001$, $010$, $101$.\n\n</p>\n<p><b>Strings of Length 3 Accepted by $D_2$:</b></p>\n<p>\n\n$D_2$ accepts these strings of length 3: $011$, $100$, $110$, $111$.\n\n</p>\n<p><b>Union Covers All Possibilities:</b></p>\n<p>\n\nTogether, these cover all possible strings of length 3, because every string with 3 digits is accepted by either $D_1$ or $D_2$.\n\n</p>\n<p><b>Set of All Strings:</b></p>\n<p>\n\nSo, the language $\\left[L(D_1) \\cup L(D_2)\\right]^*$ includes all strings whose lengths are multiples of 3.\n\n</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The determinant of a $4 \\times 4$ matrix $A$ is 3 . The value of the determinant of $2 A$ is</p>\n<p>$\\_\\_\\_\\_$ . (answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "48",
+    "explanation": "<p>When every entry of a $4 \\times 4$ matrix $A$ is multiplied by $2$, the determinant also gets multiplied by $2^4$ (because there are 4 rows).</p>\n<p>This means:\n\n$$|2A_{4 \\times 4}| = 2^4|A|$$\n\n</p>\n<p>Given $|A| = 3$,\n\n$$|2A| = 16 \\times 3 = 48$$\n\n</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $L_1$ and $L_2$ be two languages over a finite alphabet, such that $L_1 \\cap L_2$ and $L_2$ are regular languages.</p>\n<p>Which of the following statements is/are always true?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$L_1$ is regular</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$L_1 \\cup L_2$ is regular</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\overline{L_2}$ is context free</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$L_1$ is context free</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We are given two languages, $L_1$ and $L_2$, over a finite alphabet such that:</p>\n<ol>\n<li><p>$L_2$ is a regular language.</p></li>\n<li><p>$L_1 \\cap L_2$ is a regular language.</p></li>\n</ol>\n<p><strong>Analysing Option C: $\\overline{L_2}$ is context free</strong></p>\n<ul>\n<li><p>We are given that $L_2$ is a regular language.</p></li>\n<li><p>According to the closure properties of regular languages, the complement of a regular language is always regular. Therefore, $\\overline{L_2}$ is a regular language. </p></li>\n<li><p>We also know from the Chomsky hierarchy that every regular language is inherently a context-free language. </p></li>\n<li><p>Thus, $\\overline{L_2}$ is a context-free language. </p></li>\n</ul>\n<p><strong>Statement C is always true.</strong></p>\n<p><strong>Analysing Options A, B, and D using a Counterexample</strong></p>\n<p>Let us construct a counterexample where the given conditions are satisfied, but we test if $L_1$ is forced to be regular or context-free.</p>\n<ul>\n<li><p>Let $L_2 = \\emptyset$ (the empty language). The empty language is a finite language, hence it is regular.</p></li>\n<li><p>Let $L_1 = \\{a^p \\mid p \\text{ is a prime number} \\}$. We know this language is neither regular nor context-free.</p></li>\n<li><p>Now, let us check their intersection: $L_1 \\cap L_2 = L_1 \\cap \\emptyset = \\emptyset$. Since the empty set is regular, the condition \"$L_1 \\cap L_2$ is regular\" is satisfied perfectly.</p></li>\n</ul>\n<p>Now let us check the remaining options with this counterexample:</p>\n<ul>\n<li><p><strong>Option A:</strong> \"$L_1$ is regular\". In our counterexample, $L_1$ is not regular. So, this statement is not always true.</p></li>\n<li><p><strong>Option B:</strong> \"$L_1 \\cup L_2$ is regular\". Here, $L_1 \\cup L_2 = L_1 \\cup \\emptyset = L_1$. Since $L_1$ is not regular, $L_1 \\cup L_2$ is not regular. So, this statement is not always true.</p></li>\n<li><p><strong>Option D:</strong> \"$L_1$ is context-free\". In our counterexample, $L_1$ is not context-free. So, this statement is not always true.</p></li>\n</ul>\n<p>Therefore, verified by exact theoretical properties, only Option C holds true under all circumstances.</p>\n<p><strong>Correct Answer:</strong></p>\n<p>Option C</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $\\Sigma=\\{a, b, c\\}$. For $x \\in \\Sigma^{\\star}$, and $\\alpha \\in \\Sigma$, let $\\#_\\alpha(x)$ denote the number of occurrences of a in $x$. Which one or more of the following option(s) define(s) regular language(s)?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\left\\{a^m b^n \\mid m, n \\geq 0\\right\\}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\{a, b\\}^* \\cap\\left\\{a^m b^n c^{m-n} \\mid m \\geq n \\geq 0\\right\\}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\left\\{w \\mid w \\in\\{a, b\\}^*, \\#_a(w) \\equiv 2(\\bmod 7)\\right.$, and $\\left.\\#_b(w) \\equiv 3(\\bmod 9)\\right\\}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\left\\{w \\mid w \\in\\{a, b\\}^*, \\#_a(w) \\equiv 2(\\bmod 7)\\right.$, and $\\left.\\#_a(w)=\\#_b(w)\\right\\}$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze each option one by one.</p>\n\n<p>$$\\textbf{Option A: } \\{a^m b^n \\mid m, n \\geq 0\\}$$  </p>\n\n\n<p><p>This language consists of any number of a’s followed by any number of b’s.  </p></p>\n<p><p>It can be written with the regular expression $$a^*b^*.$$  </p></p>\n<p><p>Since regular expressions describe regular languages, this language is regular.</p></p>\n\n\n<p>$$\\textbf{Option B: } \\{a, b\\}^* \\cap \\{a^m b^n c^{m-n} \\mid m \\geq n \\geq 0\\}$$  </p>\n\n\n<p><p>First, note that $\\{a, b\\}^*$ contains strings composed only of a’s and b’s; it does not include the letter c.  </p></p>\n<p><p>In the set $\\{a^m b^n c^{m-n} \\mid m \\geq n \\geq 0\\}$, if a string has no c’s then we must have $$c^{m-n}$$ as the empty string. This happens if and only if $$m - n = 0,$$ that is, $$m = n.$$  </p></p>\n<p><p>Therefore, the intersection yields:  </p>\n<p>$$\\{a^m b^n \\mid m = n\\} = \\{a^n b^n \\mid n\\ge0\\}.$$  </p></p>\n<p><p>The language $$\\{a^n b^n \\mid n\\ge 0\\}$$ is a classic example of a non-regular language.  </p></p>\n<p><p>So, Option B is not regular.</p></p>\n\n\n<p>$$\\textbf{Option C: } \\{w \\mid w \\in\\{a, b\\}^*, \\#_a(w) \\equiv 2\\;(\\bmod\\;7) \\text{ and } \\#_b(w) \\equiv 3\\;(\\bmod\\;9)\\}$$  </p>\n\n\n<p><p>Here, the language consists of strings over the alphabet $\\{a, b\\}$ where:</p>\n\n<p><p>The number of a's is congruent to 2 modulo 7.</p></p>\n<p><p>The number of b's is congruent to 3 modulo 9.</p></p></p>\n<p><p>Finite automata can keep track of counts modulo any fixed number because there are only finitely many remainders. In this case, the automaton would have 7 states for tracking a’s (mod 7) and 9 states for tracking b’s (mod 9), leading to a product automaton with 63 states.</p></p>\n<p><p>Therefore, Option C is regular.</p></p>\n\n\n<p>$$\\textbf{Option D: } \\{w \\mid w \\in\\{a, b\\}^*, \\#_a(w) \\equiv 2\\;(\\bmod\\;7) \\text{ and } \\#_a(w) = \\#_b(w)\\}$$  </p>\n\n\n<p><p>This language imposes two conditions on strings over $\\{a, b\\}$:</p>\n\n<p><p>The number of a's is congruent to 2 modulo 7.</p></p>\n<p><p>The number of a's equals the number of b's.</p></p></p>\n<p><p>While the modular condition (first requirement) is something that a finite automaton can handle, the condition of having an equal number of a's and b's is known to require unbounded memory (as in the classic language $$\\{a^n b^n \\mid n\\ge0\\}$$), which is not possible with a finite automaton.</p></p>\n<p><p>Consequently, Option D is not regular.</p></p>\n\n<p>Summarizing, the regular languages among the given options are:</p>\n\n<p><p>Option A: Regular  </p></p>\n<p><p>Option C: Regular  </p></p>\n\n<p>Options B and D are not regular.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $\\Sigma=\\{1,2,3,4\\}$ For $x \\in \\Sigma^*$, let prod $(x)$ be the product of symbols in $x$ modulo 7 . We take $\\operatorname{prod}(\\varepsilon)=1$, where $\\varepsilon$ is the null string.</p>\n<p>For example, $\\operatorname{prod}(124)=(1 \\times 2 \\times 4) \\bmod 7=1$.</p>\n<p>Define $L=\\left\\{x \\in \\Sigma^{\\star} \\mid \\operatorname{prod}(x)=2\\right\\}$.</p>\n<p>The number of states in a minimum state DFA for $L$ is _________ (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m8crfp2f/ae7311f4-7e15-4e33-95c0-312384b158cc/d5697990-0303-11f0-a59e-93d5a1de48f3/file-jaoe38c1m8crfp2h.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m8crfp2f/ae7311f4-7e15-4e33-95c0-312384b158cc/d5697990-0303-11f0-a59e-93d5a1de48f3/file-jaoe38c1m8crfp2h.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Theory of Computation - Finite Automata and Regular Language Question 5 English Explanation\">",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following two languages over the alphabet $\\{a, b\\}$ :</p>\n<p>$$\\begin{aligned}\n& L_1=\\left\\{\\alpha \\beta \\alpha \\mid \\alpha \\in\\{a, b\\}^{+} \\text {AND } \\beta \\in\\{a, b\\}^{+}\\right\\} \\\\\n& L_2=\\left\\{\\alpha \\beta \\alpha \\mid \\alpha \\in\\{a\\}^{+} \\text {AND } \\beta \\in\\{a, b\\}^{+}\\right\\}\n\\end{aligned}$$</p>\n<p>Which ONE of the following statements is CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both $L_1$ and $L_2$ are regular languages.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$L_1$ is a regular language but $L_2$ is not a regular language.\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$L_1$ is not a regular language but $L_2$ is a regular language.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $L_1$ nor $L_2$ is a regular language."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To analyze the regularity of the languages $ L_1 $ and $ L_2 $, consider the following:</p>\n<h3>Language $ L_1 $:</h3>\n\n<p><p>Definition: $ L_1 = \\{\\alpha \\beta \\alpha \\mid \\alpha \\in \\{a, b\\}^{+} \\text{ and } \\beta \\in \\{a, b\\}^{+}\\} $.</p></p>\n<p><p>Analysis: This language requires a comparison between the prefix $\\alpha$ and the suffix $\\alpha$. Such comparisons typically cannot be performed by a finite automaton, implying that the language is not regular.</p></p>\n\n<h3>Language $ L_2 $:</h3>\n\n<p><p>Definition: $ L_2 = \\{\\alpha \\beta \\alpha \\mid \\alpha \\in \\{a\\}^{+} \\text{ and } \\beta \\in \\{a, b\\}^{+}\\} $.</p></p>\n<p><p>Analysis: Here, $\\alpha$ is a string composed only of the character 'a', and the same sequence appears at both the start and end of any string in the language. Between these sequences, any string $\\beta$ of characters from $\\{a, b\\}$ can occur. As the pattern just involves repetition of a specific character 'a' and does not require any comparison between two arbitrary patterns, a finite automaton can recognize it. Thus, $ L_2 $ is considered a regular language. </p></p>\n\n<p>In summary:</p>\n\n<p><p>$ L_1 $ requires recognizing patterns that standard finite automata cannot compare, rendering it non-regular.</p></p>\n<p><p>$ L_2 $ involves a construct that a finite automaton can manage, making it regular.</p></p>\n",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following deterministic finite automaton (DFA) defined over the alphabet, $\\Sigma=\\{a, b\\}$. Identify which of the following language(s) is/are accepted by the given DFA.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7w2wh0u/f024b957-5bb7-4722-b40f-eb2ff07c968d/595544e0-f9d7-11ef-832b-df2b0c5c2220/file-jaoe38c1m7w2wh0v.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7w2wh0u/f024b957-5bb7-4722-b40f-eb2ff07c968d/595544e0-f9d7-11ef-832b-df2b0c5c2220/file-jaoe38c1m7w2wh0v.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Theory of Computation - Finite Automata and Regular Language Question 7 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " The set of all strings containing an even number of $b$ 's.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "  The set of all strings containing the pattern bab.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " The set of all strings ending with the pattern bab.\n"
+      },
+      {
+        "identifier": "D",
+        "content": " The set of all strings not containing the pattern aba."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The given DFA accepts all the strings ending with bab.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a finite state machine (FSM) with one input $X$ and one output $f$, represented by the given state transition table. The minimum number of states required to realize this FSM is ________ . (Answer in integer)</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 426px\"><colgroup>\n<col style=\"width: 161px\">\n<col style=\"width: 63px\">\n<col style=\"width: 64px\">\n<col style=\"width: 72px\">\n<col style=\"width: 66px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-amwm\">Present state</th>\n    <th class=\"tg-amwm\" colspan=\"2\">Next state</th>\n    <th class=\"tg-amwm\" colspan=\"2\">Output $f$</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-amwm\"></td>\n    <td class=\"tg-amwm\">$X = 0$</td>\n    <td class=\"tg-amwm\">$X = 1$</td>\n    <td class=\"tg-amwm\">$X = 0$</td>\n    <td class=\"tg-amwm\">$X = 1$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">A</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">B</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">B</td>\n    <td class=\"tg-baqh\">D</td>\n    <td class=\"tg-baqh\">C</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">C</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">E</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">D</td>\n    <td class=\"tg-baqh\">G</td>\n    <td class=\"tg-baqh\">A</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">E</td>\n    <td class=\"tg-baqh\">D</td>\n    <td class=\"tg-baqh\">C</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">B</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">G</td>\n    <td class=\"tg-baqh\">G</td>\n    <td class=\"tg-baqh\">H</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">H</td>\n    <td class=\"tg-baqh\">G</td>\n    <td class=\"tg-baqh\">A</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n</tbody></table></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": "<p>By checking the given transition table, we can merge the $B$ and $E, D$ and $H$. Then the result FSM will be as follows :</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 425px\"><colgroup>\n<col style=\"width: 160px\">\n<col style=\"width: 63px\">\n<col style=\"width: 64px\">\n<col style=\"width: 72px\">\n<col style=\"width: 66px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-amwm\">Present state</th>\n    <th class=\"tg-amwm\" colspan=\"2\">Next state</th>\n    <th class=\"tg-amwm\" colspan=\"2\">Output $f$</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-amwm\"></td>\n    <td class=\"tg-amwm\">0</td>\n    <td class=\"tg-amwm\">1</td>\n    <td class=\"tg-amwm\">0</td>\n    <td class=\"tg-amwm\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">A</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">BE</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">BE</td>\n    <td class=\"tg-baqh\">DH</td>\n    <td class=\"tg-baqh\">C</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">C</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">BE</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">DH</td>\n    <td class=\"tg-baqh\">G</td>\n    <td class=\"tg-baqh\">A</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">BE</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">G</td>\n    <td class=\"tg-baqh\">G</td>\n    <td class=\"tg-baqh\">DH</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n</tbody></table></p>\n<p>Now again in the above FSM we can merge the states A and C then the final FSM will be will 5 states as follows :</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 421px\"><colgroup>\n<col style=\"width: 160px\">\n<col style=\"width: 62px\">\n<col style=\"width: 63px\">\n<col style=\"width: 71px\">\n<col style=\"width: 65px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-amwm\">Present state</th>\n    <th class=\"tg-amwm\" colspan=\"2\">Next state</th>\n    <th class=\"tg-amwm\" colspan=\"2\">Output</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-amwm\"></td>\n    <td class=\"tg-amwm\">0</td>\n    <td class=\"tg-amwm\">1</td>\n    <td class=\"tg-amwm\">0</td>\n    <td class=\"tg-amwm\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">AC</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">BE</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">BE</td>\n    <td class=\"tg-baqh\">DH</td>\n    <td class=\"tg-baqh\">AC</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">DH</td>\n    <td class=\"tg-baqh\">G</td>\n    <td class=\"tg-baqh\">AC</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">F</td>\n    <td class=\"tg-baqh\">BE</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">G</td>\n    <td class=\"tg-baqh\">G</td>\n    <td class=\"tg-baqh\">DH</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n</tbody></table></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let <i>M</i> be the 5-state NFA with ε-transitions shown in the diagram below.</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1lwug14iu/097d303e-8a05-4f40-a6d1-704bb307186d/beef5c60-1f2a-11ef-b236-4f75b99a7f02/file-6y3zli1lwug14iv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/6y3zli1lwug14iu/097d303e-8a05-4f40-a6d1-704bb307186d/beef5c60-1f2a-11ef-b236-4f75b99a7f02/file-6y3zli1lwug14iv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 2 Theory of Computation - Finite Automata and Regular Language Question 13 English\">\n<p>Which one of the following regular expressions represents the language accepted by <i>M</i>?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>(00)* + 1(11)*</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>0* + (1 + 0(00)*)(11)*</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>(00)* + (1 + (00)*)(11)*</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>0+ + 1(11)* + 0(11)*</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<h3>Analysis of Options :</h3>\n\n<p><p><strong>Option A :</strong></p></p>\n<p><p>Regular Expression: (00)* + 1(11)* </p></p>\n<p><p>Counterexample: The string <code>011</code> is not generated by this regular expression.</p></p>\n<p><p><strong>Option C :</strong></p></p>\n<p><p>Regular Expression : (00)* + (1 + (00)*)(11)*</p></p>\n<p><p>Counterexample : The string <code>000</code> is not generated by this regular expression.</p></p>\n<p><p><strong>Option D :</strong></p></p>\n<p><p>Regular Expression : 0+ + 1(11)* + 0(11)*</p></p>\n<p><p>Counterexample : The empty string is not generated by this regular expression.</p></p>\n\n<h3>Conclusion :</h3>\n<p>Option B is the correct choice as it accurately represents the language accepted by the 5-state NFA $ M $.</p>\n\n<p><p><strong>Option B :</strong></p></p>\n<p><p>Regular Expression : 0* + (1 + 0(00)*)(11)*</p></p>\n\n<p>Based on the counterexamples and the analysis, the correct regular expression that represents the language accepted by $ M $ is <strong>Option B</strong>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let <i>L<sub>1</sub></i> be the language represented by the regular expression <i>b<sup>*</sup>ab<sup>*</sup>(ab<sup>*</sup>ab<sup>*</sup>)<sup>*</sup></i> and <i>L<sub>2</sub> = { w ∈ (a + b)<sup>*</sup> | |w| ≤ 4 }</i>, where |w| denotes the length of string <i>w</i>. The number of strings in <i>L<sub>2</sub></i> which are also in <i>L<sub>1</sub></i> is __________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "15",
+    "explanation": "\n$$\nb^* a b^*\\left(a b^* a b^*\\right)^*\n$$\n\n\n<br/><br/>Length $1 \\rightarrow a$ ........(i)\n<br/><br/>Length $2 \\rightarrow b a, a b$ ........(ii)\n<br/><br/>Length $3 \\rightarrow b b a, a b b, b a b$, $a a a$ ..........(ii)\n<br/><br/>Length $4 \\rightarrow \\frac{4!}{3!}=4(3 b \\mid a)$\n<br/><br/>Length $4 \\rightarrow 3 a \\left\\lvert\\, b=\\frac{4!}{3!}=4\\right.$\n<br/><br/>Total $1+2+4+4+4=(15)$\n<br/><br/>Hence, the correct answer is 15 .",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the 5-state DFA $M$ accepting the language $L(M) \\subseteq (0+1)^*$ shown below. For any string $w \\in (0+1)^*$ let $n_0(w)$ be the number of 0's in $w$ and $n_1(w)$ be the number of 1's in $w$.</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1lwudgsa3/5967e0f4-529b-4f25-a913-7a26e7bb4b18/b7094fb0-1f20-11ef-b5e1-abf5eb713f23/file-6y3zli1lwudgsa4.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/6y3zli1lwudgsa3/5967e0f4-529b-4f25-a913-7a26e7bb4b18/b7094fb0-1f20-11ef-b5e1-abf5eb713f23/file-6y3zli1lwudgsa4.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 1 Theory of Computation - Finite Automata and Regular Language Question 16 English\"><p>Which of the following statements is/are FALSE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>States 2 and 4 are distinguishable in $M$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>States 3 and 4 are distinguishable in $M$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>States 2 and 5 are distinguishable in $M$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Any string $w$ with $n_0(w) = n_1(w)$ is in $L(M)$</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<h4>Minimized DFA</h4>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m00b8vak/4dceff55-8b81-48e9-8aef-8ff3c212a298/62aa6ac0-5dc9-11ef-bb88-35dfd9856ada/file-jaoe38c1m00b8val.png?format=png\" alt=\"GATE CSE 2024 Set 1 Theory of Computation - Finite Automata and Regular Language Question 16 English Explanation\"></p>\n<p>From the minimized DFA, we can conclude that statements B and C are false.</p>\n<p>Hence, the correct options are B and C.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following two regular expressions over the alphabet {0,1} :</p><p>$$r = 0^* + 1^*$$</p><p>$$s = 01^* + 10^*$$</p><p>The total number of strings of length less than or equal to 5, which are neither in <i>r</i> nor in <i>s</i>, is ________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "44",
+    "explanation": "<p><p>$ r = 0^* + 1^* $ means the string consists of either all zeros or all ones.</p></p>\n<p><p>$ s = 01^* + 10^* $ means the string starts with a zero followed by any number of ones, or starts with a one followed by any number of zeros.</p></p>\n\n<p>Examining these regular expressions, we can identify strings that fall into either $ r $ or $ s $.</p>\n<p>For strings of length 2 :</p>\n\n<p><p>$\\{00, 11\\} $ are in $ r $ (all zeros or all ones).</p></p>\n<p><p>$\\{01, 10\\} $ are in $ s $ (start with 0 followed by 1 or start with 1 followed by 0).</p></p>\n\n<p>For strings of length 3 :</p>\n\n<p><p>$\\{000, 111\\} $ are in $ r $ (all zeros or all ones).</p></p>\n<p><p>$\\{011, 100\\} $ are in $ s $ (start with 0 followed by ones or start with 1 followed by zeros).</p></p>\n\n<p>For strings of length 4 :</p>\n\n<p><p>$\\{0000, 1111\\} $ are in $ r $ (all zeros or all ones).</p></p>\n<p><p>$\\{0111, 1000\\} $ are in $ s $ (start with 0 followed by ones or start with 1 followed by zeros).</p></p>\n\n<p>For strings of length 5 :</p>\n\n<p><p>$\\{00000, 11111\\}$ are in $ r $ (all zeros or all ones).</p></p>\n<p><p>$\\{01111, 10000\\}$ are in $ s $ (start with 0 followed by ones or start with 1 followed by zeros).</p></p>\n\n<p>Next, we calculate the number of strings not in $ r $ and not in $ s $ for each string length and sum them.</p>\n<p>$ \\begin{aligned}   & =\\left(2^2 - 4\\right) + \\left(2^3 - 4\\right) + \\left(2^4 - 4\\right) + \\left(2^5 - 4\\right) \\\\\\\\   & =(4-4) + (8-4) + (16-4) + (32-4) \\\\\\\\   & = 0 + 4 + 12 + 28 = 44 \\end{aligned} $</p>\n<p>Thus, the total number of strings of length less than or equal to 5, which are neither in $ r $ nor in $ s $ is 44.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the language L over the alphabet {0, 1}, given below:</p>\n<p>$$L = \\{ w \\in {\\{ 0,1\\} ^ * }|w$$ does not contain three or more consecutive $$1's\\} $$.</p>\n<p>The minimum number of states in a Deterministic Finite-State Automaton (DFA) for L is ___________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p>Say L : set of strings containing 3 consecutive is. </p>\n<p>The MDFA for $\\mathrm{L} \\rightarrow$</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1lsa6ea0z/a9512b03-1ff2-4894-b8dd-bf0007e8ef55/86e92040-c4d4-11ee-8949-5dbd6f9cccc6/file-6y3zli1lsa6ea10.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/6y3zli1lsa6ea0z/a9512b03-1ff2-4894-b8dd-bf0007e8ef55/86e92040-c4d4-11ee-8949-5dbd6f9cccc6/file-6y3zli1lsa6ea10.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Theory of Computation - Finite Automata and Regular Language Question 18 English Explanation 1\">\n<p>I: set of strings not containing 3 consecutive</p> <p>So, no. of state remains same i.e. 4</p> <p>MDFA For $I \\rightarrow$</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1lsa6kj59/63a00f5f-5df3-49c3-89f6-d9dabc271cb8/34cf19d0-c4d5-11ee-8949-5dbd6f9cccc6/file-6y3zli1lsa6kj5a.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/6y3zli1lsa6kj59/63a00f5f-5df3-49c3-89f6-d9dabc271cb8/34cf19d0-c4d5-11ee-8949-5dbd6f9cccc6/file-6y3zli1lsa6kj5a.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Theory of Computation - Finite Automata and Regular Language Question 18 English Explanation 2\">\n<p>Hence, the correct answer is 4 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Which of the following regular expressions represent(s) the set of all binary numbers that are divisible by three? Assume that the string&nbsp;∈ divisible by three.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(0 + 1(01*0)*1)*"
+      },
+      {
+        "identifier": "B",
+        "content": "(0*(1(01*0)*1)*)*"
+      },
+      {
+        "identifier": "C",
+        "content": "(0 + 11 + 10(1 + 00)*01)*"
+      },
+      {
+        "identifier": "D",
+        "content": "( 0+ 11 + 11(1 + 00)*00)*"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>DFA for the given language is</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2exkggs/ecbcdb0f-bdf8-438b-abb0-d75ffaef2eda/159cd9c0-8d6c-11ef-ac43-89f0e1ef45d6/file-jaoe38c1m2exkggt.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2exkggs/ecbcdb0f-bdf8-438b-abb0-d75ffaef2eda/159cd9c0-8d6c-11ef-ac43-89f0e1ef45d6/file-jaoe38c1m2exkggt.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Theory of Computation - Finite Automata and Regular Language Question 25 English Explanation\">\n<p>Given :</p>\n<p>$$ \\begin{aligned} L= &amp; \\{\\text { all binary numbers that are } \\text { divisible by } 3\\} \\\\\\\\ L= &amp; \\{\\varepsilon, 0,11,00,000,011,110, \\ldots\\} \\end{aligned} $$</p>\n<p>Consider each option :</p>\n<p><b>Option (A) :</b> $\\left(0+1\\left(01^* 0\\right)^* 1\\right)^*$</p>\n<p>The language generated by this regular expression is</p>\n<p>$$ L(A)=\\{\\varepsilon, 0,11,00,000,011,110,1100, \\ldots\\} $$</p>\n<p>It generates all strings that are divisible by 3 .</p>\n<p><b>Option (B) :</b> $\\left(0+11+10(1+00)^* 01\\right)^*$</p>\n<p>The language generated by this regular expression is</p>\n<p>$$ L(B)=\\{\\varepsilon, 0,00,11,011,000,110, \\ldots\\} $$</p>\n<p>It generates all the numbers that are divisible by 3</p>\n<p><b>Option (C) :</b> $\\left(0^*\\left(1\\left(01^* 0\\right)^* 1\\right)^*\\right)^*$</p>\n<p>The language generated by this regular expression is</p>\n<p>$$ L(C)=\\{\\varepsilon, 0,00,11,000,110,011, \\ldots\\} $$</p>\n<p>It generates all the numbers that are divisible by 3 .</p>\n<p><b>Option (D) :</b> $\\left(0+11+11(1+00)^* 00\\right)^*$</p>\n<p>The language generated by this regular expression is</p>\n<p>$$ L(D)=\\{\\varepsilon, 0,00,11,000,011, \\ldots, 1111100, \\ldots\\} $$</p>\n<p>It generates $1111100=124$ which is not divisible by 3 ,</p>\n<p>Hence, the correct options are (A), (B), (C).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Consider a network using the pure ALOHA medium access control protocol, where each frame is of length 1,000 bits. The channel transmission rate is 1 Mbps (= 10<span style=\"position: relative;  line-height: 0; vertical-align: baseline; top: -0.5em;font-size:10.5px;\">6</span>&nbsp;bits per second). The aggregate number of transmissions across all the nodes (in-cluding new frame transmissions and retransmitted frames due to collisions) is modelled as a Poisson process with a rate of 1,000 frames per second. Throughput is defined as the average number of frames successfully transmitted per second. The throughput of the network (rounded to the nearest integer) is&nbsp;&nbsp;",
+    "options": [],
+    "correct_options": [],
+    "answer": "135",
+    "explanation": "<p>A pure ALOHA medium access control protocol,</p>\n<p>Frame size $=1,000$ bits</p>\n<p>Bandwidth $=1 \\mathrm{Mbps}$</p>\n<p>The aggregate number of transmissions across all the nodes is modelled as a Poisson process with a rate of 1,000 frame per second.</p>\n<p>Now,</p>\n<p>Transmission time of 1 frame $=\\frac{1000}{10^6}=1 \\mathrm{~ms}$</p>\n<p>Transmission time of 1000 frame</p>\n<p>$$ =1000 \\times 1 \\mathrm{~ms}=1 \\text { second } $$</p>\n<p>In 1 second, we are using the full load $G=1$.</p>\n<p>$$ \\begin{aligned} & \\eta=G \\times e^{-2 G} \\\\ & \\eta=0.1353 \\end{aligned} $$</p>\n<p>According to question throughput is defined as average number of frames successfully transmitted per second</p>\n<p>$$ \\text { Throughput }=0.1353 \\times 1000=135.3 $$</p>\n<p>The given answer range was 130 to 140 .</p>\n<p>Hence, the correct answer is 135.3 .</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following two statements about regular languages:</p>\n\n<p>S<sub>1</sub>: Every infinite regular language contains an undecidable language as a subset.</p>\n\n<p>S<sub>2</sub>: Every finite language is regular.</p>\n\n<p>Which one of the following choices is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only S<sub>2</sub> is true.<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">&nbsp;</span>"
+      },
+      {
+        "identifier": "B",
+        "content": "Neither S<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span> nor S<span style=\"font-size: 10.5px;\">2</span>&nbsp;is true."
+      },
+      {
+        "identifier": "C",
+        "content": "Only S<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span> is true."
+      },
+      {
+        "identifier": "D",
+        "content": "Both S<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span> and S<span style=\"font-size: 10.5px;\">2</span>&nbsp;are true."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Statement S₁ :</strong></h3>\n<p><strong>Every infinite regular language contains an undecidable language as a subset.</strong></p>\n<p><strong>Analysis :</strong></p>\n\n<p><strong>Understanding Regular Languages :</strong></p>\n\n\n<p><p>A <strong>regular language</strong> is a set of strings that can be recognized by a finite automaton.</p></p>\n<p><p>Regular languages are <strong>decidable</strong>, meaning there exists an algorithm (finite automaton) that can determine whether any given string is in the language.</p></p>\n\n\n<p><strong>Infinite Regular Languages :</strong></p>\n\n\n<p><p>An infinite regular language contains infinitely many strings.</p></p>\n<p><p>Examples include $ (a+b)^* $, the set of all strings over the alphabet $ \\{a, b\\} $.</p></p>\n\n\n<p><strong>Subsets of Regular Languages :</strong></p>\n\n\n<p><p>The <strong>power set</strong> (set of all subsets) of an infinite set is <strong>uncountably infinite</strong>.</p></p>\n<p><p>However, the number of possible algorithms (Turing machines) is <strong>countably infinite</strong>.</p></p>\n<p><p>Therefore, <strong>most subsets</strong> of an infinite language are <strong>undecidable</strong> because there aren't enough algorithms to decide all of them.</p></p>\n\n\n<p><strong>Conclusion for S₁ :</strong></p>\n\n\n<p><p>Every infinite regular language must contain subsets that are undecidable.</p></p>\n<p><p>Thus, <strong>Statement S₁ is true</strong>.</p></p>\n\n<hr />\n<h3><strong>Statement S₂ :</strong></h3>\n<p><strong>Every finite language is regular.</strong></p>\n<p><strong>Analysis :</strong></p>\n\n<p><strong>Understanding Finite Languages :</strong></p>\n\n\n<p><p>A <strong>finite language</strong> contains a finite number of strings.</p></p>\n<p><p>Examples include $ \\{a, ab, abc\\} $.</p></p>\n\n\n<p><strong>Regularity of Finite Languages :</strong></p>\n\n\n<p><p>Any finite language can be recognized by a finite automaton that explicitly accepts each string.</p></p>\n<p><p>Constructing such an automaton is straightforward :</p>\n\n<p><p>Create a separate path for each string in the language.</p></p>\n<p><p>The automaton has a finite number of states and transitions.</p></p></p>\n\n\n<p><strong>Conclusion for S₂ :</strong></p>\n\n\n<p><p>Since finite automata can recognize any finite language, <strong>every finite language is regular</strong>.</p></p>\n<p><p>Thus, <strong>Statement S₂ is true</strong>.</p></p>\n\n<hr />\n<h3><strong>Final Answer :</strong></h3>\n\n<p><strong>Both statements S₁ and S₂ are true.</strong></p>\n\n<hr />\n<p><strong>Answer :</strong> Option D</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following language.</p>\n\n<p>L = { w&nbsp;∈ {0, 1}* | w ends with the substring 011}</p>\n\n<p>Which one of the following deterministic finite automata accepts L?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxrifqnc/33d8b15b-eed2-4c30-8e23-609c0087e8a6/3b670280-68a2-11ec-8e1c-9d7eec231c22/file-1kxrifqnd.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxrifqnc/33d8b15b-eed2-4c30-8e23-609c0087e8a6/3b670280-68a2-11ec-8e1c-9d7eec231c22/file-1kxrifqnd.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 1 Theory of Computation - Finite Automata and Regular Language Question 28 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxrigfrp/89cac8f7-bb61-43d8-a7cf-8b65de406913/4eced050-68a2-11ec-82e6-0be640f829f2/file-1kxrigfrq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxrigfrp/89cac8f7-bb61-43d8-a7cf-8b65de406913/4eced050-68a2-11ec-82e6-0be640f829f2/file-1kxrigfrq.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 1 Theory of Computation - Finite Automata and Regular Language Question 28 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxrihhhc/ffec5369-3ffc-46fa-bcf4-a5b13f09f6b2/6bf08c00-68a2-11ec-82e6-0be640f829f2/file-1kxrihhhd.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxrihhhc/ffec5369-3ffc-46fa-bcf4-a5b13f09f6b2/6bf08c00-68a2-11ec-82e6-0be640f829f2/file-1kxrihhhd.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 1 Theory of Computation - Finite Automata and Regular Language Question 28 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxriiblr/40cadcac-2183-4787-a822-f0c03e6b1515/83356cf0-68a2-11ec-82e6-0be640f829f2/file-1kxriibls.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxriiblr/40cadcac-2183-4787-a822-f0c03e6b1515/83356cf0-68a2-11ec-82e6-0be640f829f2/file-1kxriibls.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 1 Theory of Computation - Finite Automata and Regular Language Question 28 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>$L=\\left\\{w \\in\\{0,1\\}^* \\mid w\\right.$ ends with the substring 011$\\}$</p>\n<p><b>Consider option (A) :</b></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxrifqnc/33d8b15b-eed2-4c30-8e23-609c0087e8a6/3b670280-68a2-11ec-8e1c-9d7eec231c22/file-1kxrifqnd.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxrifqnc/33d8b15b-eed2-4c30-8e23-609c0087e8a6/3b670280-68a2-11ec-8e1c-9d7eec231c22/file-1kxrifqnd.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 1 Theory of Computation - Finite Automata and Regular Language Question 28 English Explanation 1\"></p>\n<p>Due to self loop of alphabet 1 on state $q_3$, the DFA can accept strings ending with 111 therefore, this option is false</p>\n<p><b>Consider option (B) :</b></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxrigfrp/89cac8f7-bb61-43d8-a7cf-8b65de406913/4eced050-68a2-11ec-82e6-0be640f829f2/file-1kxrigfrq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxrigfrp/89cac8f7-bb61-43d8-a7cf-8b65de406913/4eced050-68a2-11ec-82e6-0be640f829f2/file-1kxrigfrq.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 1 Theory of Computation - Finite Automata and Regular Language Question 28 English Explanation 2\"></p>\n<p>Due to self loop of alphabet 0,1 on state $q_3$ this DFA can accept strings ending with $(0+1)^*$ therefore this option is false. </p>\n<p><b>Consider option (C) :</b></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxrihhhc/ffec5369-3ffc-46fa-bcf4-a5b13f09f6b2/6bf08c00-68a2-11ec-82e6-0be640f829f2/file-1kxrihhhd.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxrihhhc/ffec5369-3ffc-46fa-bcf4-a5b13f09f6b2/6bf08c00-68a2-11ec-82e6-0be640f829f2/file-1kxrihhhd.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 1 Theory of Computation - Finite Automata and Regular Language Question 28 English Explanation 3\"></p>\n<p>Due to the indirect loop of alphabet 1 on state $q_2, q_3$ this DFA can accept string ending with 111 , Therefore this option is FALSE.</p>\n<p><b>Consider option (D) :</b></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxriiblr/40cadcac-2183-4787-a822-f0c03e6b1515/83356cf0-68a2-11ec-82e6-0be640f829f2/file-1kxriibls.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxriiblr/40cadcac-2183-4787-a822-f0c03e6b1515/83356cf0-68a2-11ec-82e6-0be640f829f2/file-1kxriibls.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 1 Theory of Computation - Finite Automata and Regular Language Question 28 English Explanation 4\"></p>\n<p>This DFA accepts only those strings which ends with substring 011 , Therefore this is the required answer.</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following language.\n<br><br>L = {x $$ \\in $$ {a, b}* | number of a’s in x is divisible by 2 but not divisible by 3}\n<br><br>The minimum number of states in a DFA that accepts L is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p>Given :</p>\n<p>$$ \\begin{aligned} &amp; L=\\left\\{\\begin{array}{l} x \\in\\{a, b\\}^* \\mid \\text { number of } a \\text { 's in } x \\text { is } \\\\ \\text { divisible by } 2 \\text { but not divisible by } 3 \\end{array}\\right\\} \\\\ &amp; \\Rightarrow \\quad L=\\left\\{x \\in\\{a, b\\}^* \\mid \\text { number of } a\\right. \\text { 's can be 2, } \\\\ &amp; 4,8,10,14,16, \\ldots\\} \\\\ &amp; \\Rightarrow L=\\left\\{a^2, a^4 a^8, a^{10}, a^{14}, \\ldots .\\right\\} \\end{aligned} $$</p>\n<p>DFA for above language can be constructed as-</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2rchz6k/65d5fd2e-8787-4f2e-a4e0-a60fe0617229/e15f89c0-943f-11ef-a8d5-63ca7b556a43/file-jaoe38c1m2rchz6l.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2rchz6k/65d5fd2e-8787-4f2e-a4e0-a60fe0617229/e15f89c0-943f-11ef-a8d5-63ca7b556a43/file-jaoe38c1m2rchz6l.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Theory of Computation - Finite Automata and Regular Language Question 29 English Explanation 1\"></p>\n<p>State transition table for above DFA is</p>\n<table border=\"1\">\n\n  <tbody><tr>\n\n    <th>Current state</th>\n\n    <th colspan=\"2\">Next state</th>\n\n  </tr>\n\n  <tr>\n\n    <td></td>\n\n    <td>Input = a</td>\n\n    <td>Input = b</td>\n\n  </tr>\n\n  <tr>\n\n    <td>→ q<sub>0</sub></td>\n\n    <td>q<sub>1</sub></td>\n\n    <td>q<sub>0</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>1</sub></td>\n\n    <td>q<sub>1</sub></td>\n\n    <td>q<sub>1</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>*q<sub>2</sub></td>\n\n    <td>q<sub>3</sub></td>\n\n    <td>q<sub>2</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>3</sub></td>\n\n    <td>q<sub>4</sub></td>\n\n    <td>q<sub>3</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>*q<sub>4</sub></td>\n\n    <td>q<sub>5</sub></td>\n\n    <td>q<sub>4</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>5</sub></td>\n\n    <td>q<sub>6</sub></td>\n\n    <td>q<sub>5</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>6</sub></td>\n\n    <td>q<sub>1</sub></td>\n\n    <td>q<sub>6</sub></td>\n\n  </tr>\n\n</tbody></table>\n<p>Now, to minimize the DFA, we use equivalence theorem, partitioning the set of states, we have</p>\n<p>$$ P_0=\\underbrace{\\left\\{q_0, q_1, q_3, q_5, q_6\\right\\}}_{G_1}, \\underbrace{\\left\\{q_2, q_4\\right\\}}_{\\sigma_2} $$</p>\n<p>New state transition table is</p>\n<table border=\"1\">\n\n  <tbody><tr>\n\n    <th>Current State</th>\n\n    <th colspan=\"2\">Next State</th>\n\n  </tr>\n\n  <tr>\n\n    <td></td>\n\n    <td>Input = a</td>\n\n    <td>Input = b</td>\n\n  </tr>\n\n  <tr>\n\n    <td>→ q<sub>0</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>1</sub></td>\n\n    <td>G<sub>2</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>*q<sub>2</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n    <td>G<sub>2</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>3</sub></td>\n\n    <td>G<sub>2</sub></td>\n\n    <td>G<sub>2</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>*q<sub>4</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n    <td>G<sub>2</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>5</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>6</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n  </tr>\n\n</tbody></table>\n<p>By observing above state transition table, new partition will be,</p>\n<p>$$ P_1=\\underbrace{\\left\\{q_0, q_5, q_6\\right\\}}_{G_1}, \\underbrace{\\left\\{q_1, q_3\\right\\}}_{G_2}, \\underbrace{\\left\\{q_2, q_4\\right\\}}_{G_3} $$</p>\n<p>Now, new state transition table is</p>\n<table border=\"1\">\n\n  <tbody><tr>\n\n    <th>Current state</th>\n\n    <th colspan=\"2\">Next state</th>\n\n  </tr>\n\n  <tr>\n\n    <td></td>\n\n    <td>Input = a</td>\n\n    <td>Input = b</td>\n\n  </tr>\n\n  <tr>\n\n    <td>→ q<sub>0</sub></td>\n\n    <td>G<sub>2</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>1</sub></td>\n\n    <td>G<sub>3</sub></td>\n\n    <td>G<sub>2</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>2</sub></td>\n\n    <td>G<sub>2</sub></td>\n\n    <td>G<sub>3</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>3</sub></td>\n\n    <td>G<sub>3</sub></td>\n\n    <td>G<sub>2</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>4</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n    <td>G<sub>3</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>5</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n  </tr>\n\n  <tr>\n\n    <td>q<sub>6</sub></td>\n\n    <td>G<sub>2</sub></td>\n\n    <td>G<sub>1</sub></td>\n\n  </tr>\n\n</tbody></table>\n<p>By observing above state transition table, new partition will be,</p>\n<p>$$ P_2=\\left\\{q_0, q_6\\right\\},\\left\\{q_1, q_3\\right\\},\\left\\{q_2\\right\\},\\left\\{q_4\\right\\},\\left\\{q_5\\right\\} $$</p>\n<p>Similarly in the next iteration, new partition will be</p>\n<p>$$ P_3=\\left\\{q_0, q_6\\right\\},\\left\\{q_1\\right\\},\\left\\{q_2\\right\\},\\left\\{q_3\\right\\},\\left\\{q_4\\right\\},\\left\\{q_5\\right\\} $$</p>\n<p>This is the set of states in minimized DFA.</p>\n<p>So, the minimized DFA is</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2rcy5vs/b7133bac-cba1-4c4d-a0d0-dfa90778c828/a37edc80-9441-11ef-8741-9747ab238763/file-jaoe38c1m2rcy5vt.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2rcy5vs/b7133bac-cba1-4c4d-a0d0-dfa90778c828/a37edc80-9441-11ef-8741-9747ab238763/file-jaoe38c1m2rcy5vt.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Theory of Computation - Finite Automata and Regular Language Question 29 English Explanation 2\"></p>\n<p>Number of states = 6 </p>\n<p>Hence, the correct answer is 6 . </p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Let $\\Sigma$ be the set of all bijections from $\\{1, \\ldots, 5\\}$ to $\\{1, \\ldots, 5\\}$, where id denotes the identity function, i.e. $\\operatorname{id}(j)=j, \\forall j$. Let $\\circ$ denote composition on functions. For a string $x=$ $x_1 x_2 \\cdots x_n \\in \\Sigma^n, n \\geq 0$, let $\\pi(x)=x_1 \\circ x_2 \\circ \\cdots \\circ x_n$. Consider the language $L=\\left\\{x \\in \\Sigma^* \\mid \\pi(x)=i d\\right\\}$. The minimum number of states in any DFA accepting $L$ is $\\qquad$",
+    "options": [],
+    "correct_options": [],
+    "answer": "120",
+    "explanation": "<p><p>The alphabet $\\Sigma$ is the set of all bijections (permutations) from $\\{1, 2, 3, 4, 5\\}$ to itself.</p></p>\n<p><p>This set of permutations is precisely the symmetric group $ S_5 $, whose size (cardinality) is $5! = 120$.</p></p>\n\n\n<p><strong>Structure of the Language $L$ :</strong></p>\n\n\n<p><p>Each string $ x \\in \\Sigma^* $ is a sequence of permutations: $ x = x_1 x_2 \\cdots x_n $.</p></p>\n<p><p>The function $\\pi(x)$ is defined as the composition of all these permutations:</p>\n<p>$      \\pi(x) = x_1 \\circ x_2 \\circ \\cdots \\circ x_n.      $</p></p>\n<p><p>The language $ L $ consists of all strings $ x $ such that $\\pi(x) = \\text{id}$, the identity permutation.</p></p>\n\n\n<p><strong>Automaton Construction Idea :</strong></p>\n\n\n<p><p>Consider building a DFA (Deterministic Finite Automaton) to accept $ L $.</p></p>\n<p><p>A natural approach to recognizing when the composition returns to the identity is to use the group structure of $ S_5 $.</p></p>\n<p><p>We can represent each state of the automaton by one of the 120 elements of $ S_5 $.</p></p>\n\n\n<p><strong>States as Elements of the Group :</strong></p>\n\n\n<p><p>Start state: the identity permutation $ \\text{id} $.</p></p>\n<p><p>For each input symbol (which is a permutation $ \\sigma \\in S_5 $), the transition function would map the current state (a permutation $\\tau$) to $\\tau \\circ \\sigma$.</p></p>\n<p><p>This construction is a group action on itself.</p></p>\n\n\n<p><strong>Accepting States :</strong></p>\n\n\n<p>The only accepting state is the identity permutation, since the language includes those strings whose overall composition results in $\\text{id}$.</p>\n\n\n<p><strong>Minimal Number of States :</strong></p>\n\n\n<p><p>In a group-based automaton like this, distinct permutations must correspond to distinct states. If any two distinct permutations were merged into a single state, we would lose the ability to distinguish future sequences that might lead back to the identity.</p></p>\n<p><p>Thus, the minimal DFA cannot have fewer states than the number of distinct permutations, i.e., 120 states.</p></p>\n\n\n<p><strong>Conclusion :</strong></p>\n\n\n<p><p>The minimal DFA that recognizes $ L $ must have a state for each element of $ S_5 $.</p></p>\n<p><p>Hence, the minimum number of states in any DFA accepting $ L $ is $ |S_5| = 5! = 120 $.</p></p>\n\n<p><strong>Final Answer :</strong></p>\n<p>$ \\boxed{120} $</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Given a language $$𝐿,$$ define $${L^i}$$ as follows: $${L^0} = \\left\\{ \\varepsilon  \\right\\}$$ \n<br>$${L^i} = {L^{i - 1}}.\\,\\,L$$ for all $$i &gt; 0$$  \n<p>The order of a language $$L$$ is defined as the smallest k such that $${L^k} = {L^{k + 1}}.$$ Consider the language $${L_1}$$ (over alphabet $$0$$) accepted by the following automaton.</p>\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/BmaaYEPG0RHbPqsWW/c32wm37WqR4o8DmlYw9WaAd1HijtO/QpeWSftexyaCIK0WyXS76J/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2018 Theory of Computation - Finite Automata and Regular Language Question 34 English\"> \n<p>The order of $${L_1}$$ is _____.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>A language $L$, define $L^i$ as follows :</p>\n<p>$$ \\begin{aligned} &amp; L^0=\\{\\varepsilon\\} \\\\\\\\ &amp; L^i=L^{i-1} \\cdot L \\text { for all } i&gt;0 \\end{aligned} $$</p>\n<p>The order of a language $L$ is defined as the smallest $k$ such that $L^k=L^{k+1}$.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m597mwp0/58d65638-858d-4ef5-8b56-d09a22f95820/674c7c40-c5ab-11ef-a4e2-fb8e7cf702cd/file-jaoe38c1m597mwp1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m597mwp0/58d65638-858d-4ef5-8b56-d09a22f95820/674c7c40-c5ab-11ef-a4e2-fb8e7cf702cd/file-jaoe38c1m597mwp1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2018 Theory of Computation - Finite Automata and Regular Language Question 34 English Explanation\"></p>\n<p>$$ \\begin{aligned} &amp; L_1=\\varepsilon+0(00)^* \\\\\\\\ &amp; L_1^0=\\{\\varepsilon\\} \\end{aligned} $$</p>\n<p>Now,</p>\n<p>$$ \\begin{aligned} &amp; L_1^1=L_1^0 \\cdot L_1 \\\\\\\\ &amp; L_1^1=\\{\\varepsilon\\} \\cdot\\left\\{\\varepsilon+0(00)^*\\right\\} \\\\\\\\ &amp; L_1^1=\\left\\{\\varepsilon+0(00)^*\\right\\} \\\\\\\\ &amp; L_1^1=L_1 \\end{aligned} $$</p>\n<p>Since, $L_1^0 \\neq L_1^1$</p>\n<p>$\\Rightarrow$ Order of $L_1 \\neq 0$</p>\n<p>$$ \\begin{aligned} &amp; L_1^2=L_1^1 \\cdot L_1 \\\\\\\\ &amp; L_1^2=\\left\\{\\varepsilon+0(00)^*\\right\\} \\cdot\\left\\{\\varepsilon+0(00)^*\\right\\} \\\\\\\\ &amp; L_1^2=\\left\\{\\varepsilon+0(00)^*+0(00)^* 0(00)^*\\right\\} \\\\\\\\ &amp; L_1^2=\\left\\{0^*\\right\\} \\end{aligned} $$</p>\n<p>Clearly, $L_1^1 \\neq L_1^2$</p>\n<p>$$ \\begin{array}{ll} \\Rightarrow &amp; \\text { Order of } L_1 \\neq 1 \\\\\\\\ &amp; L_1^3=L_1^2 \\cdot L_1 \\\\\\\\ &amp; L_1^3=\\left\\{0^*\\right\\} \\cdot\\left\\{\\varepsilon+0(00)^*\\right\\} \\\\\\\\ &amp; L_1^3=\\left\\{0^*+0^* 0(00)^*\\right\\} \\\\\\\\ &amp; L_1^3=\\left\\{0^*\\right\\} \\\\\\\\ &amp; \\text { Clearly, } L_1^2=L_1^3 \\\\\\\\ \\Rightarrow &amp; \\text { Order of } L_1=2 \\end{array} $$</p>\n<p>Hence, the correct answer is 2 .</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$N$$ be an $$NFA$$ with $$n$$ states. Let $$k$$ be the number of states of a minimal $$DFA$$ which is equivalent to $$N.$$ Which one of the following is necessarily true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$k \\ge {2^n}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$k \\ge n$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$k \\le {n^2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$k \\le {2^n}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Understanding NFAs and DFAs:</strong></h3>\n\n<p><p><strong>NFA (Non-deterministic Finite Automaton):</strong></p></p>\n<p><p>An NFA with $ n $ states can have multiple transitions for the same symbol and can include ε-transitions.</p></p>\n<p><p><strong>DFA (Deterministic Finite Automaton):</strong></p></p>\n<p><p>A DFA has exactly one transition for each symbol in the alphabet from every state.</p></p>\n<p><p><strong>Subset Construction:</strong></p></p>\n<p><p>Converts an NFA to an equivalent DFA by creating states that represent subsets of NFA states.</p></p>\n<p><p>The resulting DFA may have up to $ 2^n $ states, corresponding to all possible subsets of the NFA's states.</p></p>\n\n<hr />\n<h3><strong>Analyzing Each Option:</strong></h3>\n<h4><strong>Option A: $ k \\geq 2^n $</strong></h4>\n\n<p><p><strong>Analysis:</strong></p></p>\n<p><p>The subset construction can produce up to $ 2^n $ states, but the minimal DFA may have <strong>fewer</strong> states.</p></p>\n<p><p><strong>Counterexample:</strong></p>\n\n<p><p>Consider an NFA that recognizes a language accepted by a DFA with fewer than $ 2^n $ states.</p></p>\n<p><p>For example, an NFA with $ n $ states that accepts a simple language like $ a^* $ can have a minimal DFA with just <strong>one</strong> state.</p></p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p><strong>Not necessarily true.</strong></p></p>\n\n<h4><strong>Option B: $ k \\geq n $</strong></h4>\n\n<p><p><strong>Analysis:</strong></p></p>\n<p><p>The minimal DFA can have <strong>fewer</strong> states than the NFA.</p></p>\n<p><p><strong>Counterexample:</strong></p>\n\n<p><p>An NFA with $ n $ states that is overkill for a simple language.</p></p>\n<p><p>For instance, an NFA with multiple redundant states accepting a basic language may have a minimal DFA with fewer states.</p></p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p><strong>Not necessarily true.</strong></p></p>\n\n<h4><strong>Option C: $ k \\leq n^2 $</strong></h4>\n\n<p><p><strong>Analysis:</strong></p></p>\n<p><p>While $ n^2 $ is less than $ 2^n $ for $ n > 4 $, the subset construction can produce a DFA with up to $ 2^n $ states, which can be greater than $ n^2 $.</p></p>\n<p><p><strong>Counterexample:</strong></p>\n\n<p>For larger $ n $, $ 2^n $ exceeds $ n^2 $, so the minimal DFA may have more than $ n^2 $ states.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p><strong>Not necessarily true.</strong></p></p>\n\n<h4><strong>Option D: $ k \\leq 2^n $</strong></h4>\n\n<p><p><strong>Analysis:</strong></p></p>\n<p><p>The subset construction method guarantees that the equivalent DFA will have at most $ 2^n $ states.</p></p>\n<p><p>The minimal DFA cannot have more states than the DFA produced by the subset construction.</p></p>\n<p><p><strong>Reasoning:</strong></p>\n\n<p><p>Every state in the DFA corresponds to a subset of NFA states.</p></p>\n<p><p>Therefore, the total number of possible subsets (and hence DFA states) is $ 2^n $.</p></p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p><strong>Necessarily true.</strong></p></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n<p>Only <strong>Option D</strong> is necessarily true for any NFA with $ n $ states:</p>\n\n<p><strong>$ k \\leq 2^n $</strong></p>\n\n<p><strong>Answer: Option D</strong></p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the transition diagram of a $$PDA$$ given below with input alphabet $$\\sum {\\, = \\left\\{ {a,b} \\right\\}} $$ and stack alphabet $$\\Gamma  = \\left\\{ {X,Z} \\right\\}.$$ $$Z$$ is the initial stack symbol. Let $$L$$ denote the language accepted by the $$PDA.$$\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/Hdz2WTN4RD2stL3xx/v1kerT30NJEPhyx1OX1DfVoDO1pir/jVXoiWgIRPd356qJzNlkux/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2016 Set 1 Theory of Computation - Finite Automata and Regular Language Question 40 English\"> \n<p>Which one of the following is <b>TRUE</b>?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$L = \\left\\{ {{a^n}{b^n}|n \\ge 0} \\right\\}$$ and is not accepted by any finite automata "
+      },
+      {
+        "identifier": "B",
+        "content": "$$L = \\left\\{ {{a^n}|n \\ge 0} \\right\\} \\cup \\left\\{ {{a^n}{b^n}|n \\ge 0} \\right\\}$$  and is not accepted by any deterministic $$PDA$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$L$$ is not accepted by any Turing machine that halts on every input "
+      },
+      {
+        "identifier": "D",
+        "content": "$$L = \\left\\{ {{a^n}|n \\ge 0} \\right\\} \\cup \\left\\{ {{a^n}{b^n}|n \\ge 0} \\right\\}$$ and is deterministic context-free\n "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following languages : \n$$$\\eqalign{\n  &amp; {L_1} = \\left\\{ {{a^n}{b^m}{c^{n + m}}:m,n \\ge 1} \\right\\}  \\cr \n  &amp; {L_2} = \\left\\{ {{a^n}{b^n}{c^{2n}}:n \\ge 1} \\right\\} \\cr} $$$\n<p>Which one of the following is <b>TRUE</b>?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both $${L_1}$$ and $${L_2}$$ are context-free. "
+      },
+      {
+        "identifier": "B",
+        "content": "$${L_1}$$ is context-free while $${L_2}$$ is not context-free. "
+      },
+      {
+        "identifier": "C",
+        "content": "$${L_2}$$ is context-free while $${L_1}$$ is not context-free. "
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $${L_1}$$ nor $${L_2}$$ is context-free. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following two statements :\n<p>$$\\,\\,\\,\\,\\,\\,\\,{\\rm I}.\\,\\,\\,\\,\\,$$ If all states of an $$NFA$$ are accepting states then the language accepted by the \n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$NFA$$ is $$\\sum {^ * } .$$\n<br>$$\\,\\,\\,\\,\\,{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,$$ There exists a regular language $$A$$ such that for all languages $$B,A \\cap B$$ is \n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ regular.</p>\n<p>Which one of the following is <b>CORRECT</b>?</p> \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $${\\rm I}$$ is true "
+      },
+      {
+        "identifier": "B",
+        "content": "Only $${\\rm II}$$ is true "
+      },
+      {
+        "identifier": "C",
+        "content": "Both $${\\rm I}$$ and $${\\rm II}$$ are true "
+      },
+      {
+        "identifier": "D",
+        "content": "Both $${\\rm I}$$ and $${\\rm II}$$ are false "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/NFARklqwJkxQqBCeC/hwc9XAVr4zDmUElbbXMBblPjpfY5M/GxENBuBIu8j6byTDezbRQ6/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2015 Set 1 Theory of Computation - Finite Automata and Regular Language Question 47 English\">\n<p>Consider the DFAs M and N given above. The number of states in a minimal DFA that accepts the language L(M) ∩ L(N) is___________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the NPDA $$\\left\\langle {Q = \\left\\{ {{q_0},{q_1},{q_2}} \\right\\}} \\right.,$$ $$\\Sigma = \\left \\{ 0, 1 \\right \\},$$ $$\\Gamma = \\left \\{ 0, 1, \\perp  \\right \\},$$ $$\\delta, q_{0}, \\perp,$$ $$\\left. {F = \\left\\{ {{q_2}} \\right\\}} \\right\\rangle $$ , where (as per usual convention) $$Q$$ is the set of states, $$\\Sigma$$ is the input alphabet, $$\\Gamma$$ is the stack alphabet, $$\\delta $$ is the state transition function q<sub>0</sub> is the initial state, $$\\perp$$ is the initial stack symbol, and F is the set of accepting states. The state transition is as follows:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/7uMw3oZdHu8QfiICT/YWg3dk91cqIrPG1NCoVBcBhi8ipYj/z5lPYbZIKe0z1tIPTwHP4r/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2015 Set 1 Theory of Computation - Finite Automata and Regular Language Question 46 English\">\n<p>Which one of the following sequences must follow the string 101100 so that the overall string is accepted by the automaton?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10110"
+      },
+      {
+        "identifier": "B",
+        "content": "10010"
+      },
+      {
+        "identifier": "C",
+        "content": "01010"
+      },
+      {
+        "identifier": "D",
+        "content": "01001"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The number of states in the minimal deterministic finite automaton corresponding to the regular expression $${\\left( {0 + 1} \\right)^{\\,\\, * }}\\left( {10} \\right)$$  is ________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the alphabet $$\\sum { = \\left\\{ {0,1} \\right\\},} $$ the null/empty string $$\\lambda $$ and the sets of strings $${X_0},\\,{X_1},$$ and $${X_2}$$  generated by the corresponding non-terminals of a regular grammar. $${X_0},\\,\\,{X_1},\\,$$ and $${X_2}$$ are related as follows.\n$$$\\eqalign{\n  &amp; {X_0} = 1\\,X{}_1  \\cr \n  &amp; {X_1} = 0{X_1} + 1\\,{X_2}  \\cr \n  &amp; {X_2} = 0\\,{X_1} + \\left\\{ \\lambda  \\right\\} \\cr} $$$\n<br>Which one of the following choices precisely represents the strings in $${X_0}$$? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10\\left( {{0^ * } + {{\\left( {10} \\right)}^ * }} \\right)1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10\\left( {{0^ * } + \\left( {10} \\right){}^ * } \\right){}^ * 1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1\\left( {0 + 10} \\right){}^ * 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$10\\left( {0 + 10} \\right){}^ * 1 + 110\\left( {0 + 10} \\right){}^ * 1$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following languages is/are regular?\n<p>$${L_1}:\\left\\{ {wx{w^R}|w,x\\, \\in \\left\\{ {a,b} \\right\\}{}^ * } \\right.$$ and $$\\left. {\\left| w \\right|,\\left| x \\right| &gt; 0} \\right\\},\\,{w^R}$$ is the reverse of string $$w$$\n<br>$${L_2}:\\left\\{ {{a^n}{b^m}\\left| {m \\ne n} \\right.} \\right.$$ and $$m,n \\ge \\left. 0 \\right\\}$$\n<br>$${L_3}:\\left\\{ {{a^p}{b^q}{c^r}\\left| {p,q,r \\ge 0} \\right.} \\right\\}$$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${L_1}$$ and $${L_3}$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$${L_2}$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$${L_2}$$ and $${L_3}$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$${L_3}$$ only "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${L_1} = \\left\\{ {w \\in \\left\\{ {0,1} \\right\\}{}^ * \\left| w \\right.} \\right.$$  has at least as many occurrences of $$(110)'s$$ as $$(011)'s$$$$\\left. \\, \\right\\}$$. Let $${L_2} = \\left\\{ {w \\in \\left\\{ {0,\\,\\,1} \\right\\}{}^ * \\left| w \\right.} \\right.$$ has at least as many occurrences of $$(000)'s$$ as $$(111)'s$$$$\\left. \\, \\right\\}$$. Which one of the following is TRUE? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${L_1}$$ is regular but not $${L_2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${L_2}$$ is regular but not $${L_1}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "Both $${L_1}$$ and $${L_2}$$ are regular "
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $${L_1}$$ nor $${L_2}$$ are regular"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${L_1} = \\left\\{ {w \\in \\left\\{ {0,1} \\right\\}{}^ * \\left| w \\right.} \\right.$$  has at least as many occurrences of $$(110)'s$$ as $$(011)'s$$$$\\left. \\, \\right\\}$$. Let $${L_2} = \\left\\{ {w \\in \\left\\{ {0,\\,\\,1} \\right\\}{}^ * \\left| w \\right.} \\right.$$ has at least as many occurrences of $$(000)'s$$ as $$(111)'s$$$$\\left. \\, \\right\\}$$. Which one of the following is TRUE? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${L_1}$$ is regular but not $${L_2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${L_2}$$ is regular but not $${L_1}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "Both $${L_1}$$ and $${L_2}$$ are regular "
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $${L_1}$$ nor $${L_2}$$ are regular"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the regular expression given below represent the following $$DFA?$$ \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/MHR3cCMyXKNf5fYKT/hffrLN93dBiZqoSJd0q1FRAvwi60E/KLdNvGii2pTRRY1qRYSLbp/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 1 Theory of Computation - Finite Automata and Regular Language Question 59 English 1\"> \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/sQfxu7AtnOXITx1Dy/xpfoHt7V8PFhWHiY1la3nSNLPf93R/VJNnDPrCWMFxRAN73NvQGn/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 1 Theory of Computation - Finite Automata and Regular Language Question 59 English 2\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ and $${\\rm II}$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}$$ and $${\\rm III}$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm II}$$ and $${\\rm III}$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I}$$, $${\\rm II}$$ and $${\\rm III}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following languages \n<br>$${L_1} = \\left\\{ {{0^p}{1^q}{0^r}\\left| {p,q,r \\ge 0} \\right.} \\right\\}$$\n<br>$${L_2} = \\left\\{ {{0^p}{1^q}{0^r}\\left| {p,q,r \\ge 0,p \\ne r} \\right.} \\right\\}$$ \n<p>Which one of the following statements is <b>FALSE?</b></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${L_2}$$ is context-free "
+      },
+      {
+        "identifier": "B",
+        "content": "$${L_1} \\cap {L_2}$$ is context-free "
+      },
+      {
+        "identifier": "C",
+        "content": "Complement of $${L_2}$$ is recursive "
+      },
+      {
+        "identifier": "D",
+        "content": "Complement of $${L_1}$$ is context-free  but not regular "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the set of strings on $$\\left\\{ {0,1} \\right\\}$$ in which, every substring of $$3$$ symbols has at most two zeros. For example, $$001110$$ and $$011001$$ are in the language, but $$100010$$ is not. All strings of length less than $$3$$ are also in the language. A partially completed $$DFA$$ that accepts this language is shown below. \n<p>The missing arcs in the $$DFA$$ are</p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/olFQCr7IZufQ1Np4b/Hu0yW4b9SYPwYGRPdHYWXzKLhZIWj/IEa6joCWF62KW7YdtXrmes/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Theory of Computation - Finite Automata and Regular Language Question 61 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/aaRF4EhxZaWh4R7VJ/Z5VSxgzhjv21iSxKZgYqcw9dRmsbI/yYkDru3pxZ3W5doffxGKfl/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Theory of Computation - Finite Automata and Regular Language Question 61 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/URlFsRbkdo65JTYim/ukueGtV5BhUXTeHVjXb0iHfkMljXj/QaqwsRF6Bd3jaGMwIDNtog/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Theory of Computation - Finite Automata and Regular Language Question 61 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/urtd03cGraEqbsvL3/MmwAUXteLuYpklnUpSmk5HwDZ81Ob/gCKAbBlmwgLJLX3KgYxb8W/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Theory of Computation - Finite Automata and Regular Language Question 61 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/bCEtQckC2CLdh0MM8/2WnBRNIg16fIB1KppFCm9x8R356Qy/zq6IifPLfpzvc6YGHngA1Q/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Theory of Computation - Finite Automata and Regular Language Question 61 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Definition of the language $$L$$ with alphabet $$\\left\\{ a \\right\\}$$ is given as following. $$L = \\left\\{ {{a^{nk}}} \\right.\\left| {k &gt; 0,\\,n} \\right.$$ is a positive integer constant$$\\left. \\, \\right\\}$$ \n<p>What is the minimum number of states needed in a $$DFA$$ to recognize $$L$$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$k+1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$n+1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^{n + 1}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{k + 1}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A deterministic finite automation $$(DFA)$$ $$D$$ with alphabet $$\\sum { = \\left\\{ {a,b} \\right\\}} $$ is given below\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/aK5yFBH50OEf3kKvn/JLMSqy0upz3NTpnMlnr7kaAzZqOaj/6IfZSOWC4gHIp3ccQwwulc/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Theory of Computation - Finite Automata and Regular Language Question 48 English\"> \n<p>Which of the following finite state machines is a valid minimal $$DFA$$ which accepts the same languages as $$D?$$ </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/Kp2dseMqMlR8LIPF4/AjviwLrEC5WCDJlFsDaqEwV5r36MN/9TcLaLku2pnpshORstI0oY/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Theory of Computation - Finite Automata and Regular Language Question 48 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/5x7YxdEFnELpJ6eWO/GPB9Lh9G50mngwrYOr9UYmAuBQCMn/F2pq36H83sCLKj0oh0dnGC/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Theory of Computation - Finite Automata and Regular Language Question 48 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/RS7Lynk6vDhgfAgHg/MQqGL8HCYrQo423yEUY1Kzek3f0bq/zcAehxEaBRPK17TE1DzmDe/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Theory of Computation - Finite Automata and Regular Language Question 48 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/7TyoEDMAM7ybkNgwZ/JZRa09n11qgFzhrtaYxF6c4D4AGRK/eyKeoXu43CXRAWaeiYfh6Y/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Theory of Computation - Finite Automata and Regular Language Question 48 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$L = \\left\\{ {w \\in {{\\left( {0 + 1} \\right)}^ * }\\left| {\\,w} \\right.} \\right.$$ has even number of $$\\,\\left. {1's} \\right\\},$$ i.e $$L$$ is the set of all bit strings with even number of $$1's.$$ which one of rhe regular expression below represents $$L.$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {{0^ * }{{10}^ * }1} \\right){}^ * $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${0^ * }\\left( {{{10}^ * }{{10}^ * }} \\right){}^ * $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${0^ * }\\left( {{{10}^ * }1} \\right){}^ * {0^ * }$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${0^ * }\\,\\,1\\left( {{{10}^ * }1} \\right){}^ * {10^ * }$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$w$$ be any string of length $$n$$ in $${\\left\\{ {0,1} \\right\\}^ * }$$. Let $$L$$ be the set of all substrings of $$w.$$ What is the minimum number of states in a non-deterministic finite automation that accepts $$L$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n-1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$n$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$n+1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{n + 1}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/3ZcK95dL87OSk3OX4/jdJdjzZSMfNXGown3g8Ypc7WgZkf3/WnGRrCbql7ZV3tN9tlZ8Uw/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2009 Theory of Computation - Finite Automata and Regular Language Question 65 English\"> \n<p>The above $$DFA$$ accepts the set of all strings over $$\\left\\{ {0,\\,\\,1} \\right\\}$$ that</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Begin either with $$0$$ or $$1$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "End with $$0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "End with $$00.$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Contain the substring $$00.$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "$$L = {L_1} \\cap {L_2}$$  where $${L_1}$$ and $${L_2}$$ are languages defined as follows. \n<br>$${L_1} = \\left\\{ {{a^m}{b^m}\\,c\\,{a^n}{b^n}\\left| {m,n \\ge 0} \\right.} \\right\\}$$\n<br>$${L_2} = \\left\\{ {{a^i}{b^i}{c^k}\\left| {i,j,k \\ge 0} \\right.} \\right\\}$$ Then $$L$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Not recursive "
+      },
+      {
+        "identifier": "B",
+        "content": "Regular "
+      },
+      {
+        "identifier": "C",
+        "content": "Context free but  not regular "
+      },
+      {
+        "identifier": "D",
+        "content": "Recursively enumerable but not context free "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Given below are two finite state automata ($$ \\to $$ indicates the start state and $$F$$ indicates a final state) \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/rk8gLG5ZWYCpRAGTL/llDiFQ68AViQcRdfhizDN6ZfoYeYs/gNxdyEQSvdCbFrK4p7lEY7/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 69 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/KYoX9WUMVNiXRAQtu/Ct8y7K2XZJqekszsUDx1p6kfcoVSZ/l6F1MXzPNlcKIViySC3c8P/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 69 English 2\"> \n<p>Which of the following represents the product automation $$ZY$$? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/oShf4msVxc5v2RDTa/1muY7iMgSMs6KweXCKtQdaaFhSyFW/68ro3etCP1oCeipgLsl5U8/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 69 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/uEwz8nsly2XkPF72f/uaWVYxcnuhiyMz12JmuCEUdoK6lqD/nyMeyQRETQb6ZZbywIEOzW/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 69 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/GMJbDixLb0GBI5YFf/UXasOCGksN5f99PugjyE9Dse7uyOp/qEODRDf4xte7rhjWrYb2sG/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 69 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/3RjlDLo9rR841ICyK/yLVoy66qwJs86p4hxRJ0lqtlMf2wO/6RKWvqhWupJ23tTXZb8Li8/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 69 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Match the following $$NFAs$$ with the regular expressions they correspond to \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/1ONpV6rnEgXUS7sph/MhW3kt6qvrRM55iAWtQrR91IGv3hM/Qg8yLPubsbh8xuijEFktyD/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 68 English 1\">\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/h1tq142N7EnchavWm/GmytkEMhAqmXVb8wap0S3PrEsIOOp/ebkUpROYPBWVLgHAf2nGOh/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 68 English 2\">\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/RY3T1JQ9ATktG8u7f/i19NLStgOVEX9YQ7vXSQ6kVEoiWu7/SA1ROLrjSwR85Uk5bD48L9/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 68 English 3\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/Vg3W6MVyzg1lLUHsh/ezq2fYaGAGmseNI0UnLnrX5XmF3fd/qpsV0O4neAqeiVtSNvfhoO/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 68 English 4\"> \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/P7hGqDjMDvahB5LGi/Ti4czx5VHLPVtQy4IatEdbLN44CkU/qO6NxCWDGrHRXTShajbHVy/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 68 English 5\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P - 2,\\,Q - 1,\\,R - 3,\\,S - 4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P - 1,\\,Q - 3,\\,R - 2,\\,S - 4$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$P - 1,\\,Q - 2,\\,R - 3,\\,S - 4$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$P - 3,\\,Q - 2,\\,R - 1,\\,S - 4$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following are regular sets? \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/72jgANAWVKElLBoOP/MlWY26rKpYICxL24AijR7Zjrxlwnz/hW5QSGRJZd8UmQPZpmFCEA/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Theory of Computation - Finite Automata and Regular Language Question 67 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ &amp; $${\\rm I}V$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}$$ &amp; $${\\rm III}$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm I}$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I}V$$ only "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following languages is regular? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{ {w{w^R}} \\right.\\left| {w \\in \\left\\{ {0,\\,1} \\right\\}\\left. {^ + } \\right\\}} \\right.$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{ {w{w^R}} \\right.x\\left| {x,w \\in \\left\\{ {0,\\,1} \\right\\}\\left. {^ + } \\right\\}} \\right.$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\{ {wx{w^R}} \\right.\\left| {x,w \\in \\left\\{ {0,\\,1} \\right\\}\\left. {^ + } \\right\\}} \\right.$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{ {xw{w^R}} \\right.\\left| {x,w \\in \\left\\{ {0,\\,1} \\right\\}\\left. {^ + } \\right\\}} \\right.$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following finite state automation\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/8n3Jm9VE9nIITvGyc/gIQk8XJVUWY8DgUaruWU7PjRhSX11/a6P5RDbmaTDvhmQwYHyVKj/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2007 Theory of Computation - Finite Automata and Regular Language Question 70 English\"> \n<p>The minimum state automation equivalent to the above $$FSA$$ has the following number of states</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3$$  "
+      },
+      {
+        "identifier": "D",
+        "content": "$$4$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following finite state automation\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/8n3Jm9VE9nIITvGyc/gIQk8XJVUWY8DgUaruWU7PjRhSX11/a6P5RDbmaTDvhmQwYHyVKj/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2007 Theory of Computation - Finite Automata and Regular Language Question 71 English\"> \n<p>The language accepted by this automation is given by the regular expression</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${b^ * }a{b^ * }a{b^ * }a{b^ * }$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\left( {a + b} \\right)^ * }$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${b^ * }a{\\left( {a + b} \\right)^ * }$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${b^ * }a{b^ * }a{b^ * }$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A minimum state deterministic finite automation accepting the language $$L = \\left\\{ {w\\left| {w \\in } \\right.\\,\\,{{\\left\\{ {0,1} \\right\\}}^ * },\\,\\,} \\right.$$ number of $$0'$$s and $$1'$$s in $$w$$ are divisible by $$3$$ and $$5$$, respectively$$\\left. \\, \\right\\}$$ has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$15$$ states"
+      },
+      {
+        "identifier": "B",
+        "content": "$$11$$ states "
+      },
+      {
+        "identifier": "C",
+        "content": "$$10$$ states "
+      },
+      {
+        "identifier": "D",
+        "content": "$$9$$ states "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "If $$s$$ is a string over $${\\left( {0 + 1} \\right)^ * }$$ then let $${n_0}\\left( s \\right)$$ denote the number of $$0'$$ s in $$s$$ and $${n_1}\\left( s \\right)$$ the number of $$1'$$s in $$s.$$ Which one of the following languages is not regular? \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$L = \\left\\{ {s \\in {{\\left( {0 + 1} \\right)}^ * }\\left| {{n_0}\\left( s \\right)\\,\\,} \\right.} \\right.$$ is a $$3$$-digit prime$$\\left. \\, \\right\\}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$L = \\left\\{ {s \\in {{\\left( {0 + 1} \\right)}^ * }\\left| {\\,\\,} \\right.} \\right.$$ for every prefix $$s'$$ of $$s.$$ $$\\,\\left| {{n_0}\\left( {{s^,}} \\right) - {n_1}\\left( {{s^,}} \\right)\\left| { \\le \\left. 2 \\right\\}} \\right.} \\right.$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$L = \\left\\{ {s \\in {{\\left( {0 + 1} \\right)}^*}\\left\\| {{n_0}\\left( s \\right) - {n_1}\\left( s \\right)\\left| { \\le \\left. 4 \\right\\}} \\right.} \\right.} \\right.$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$L = \\left\\{ {s \\in {{\\left( {0 + 1} \\right)}^ * }} \\right.\\left| {{n_0}\\left( s \\right)} \\right.$$ mod $$7 = {n_1}\\left( s \\right)$$ mod $$5 = \\left. 0 \\right\\}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the regular language $$L = {\\left( {111 + 11111} \\right)^ * }.$$ The minimum number of states in any $$DFA$$ accepting this language is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$9$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the machine $$M:$$ The language recognized by $$M$$ is:\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/xH9bl6DwGZNo2iaHe/rf4KHAmEmSd70vFclR8HssecHQOu3/I5DVqzyWKvNs8Mu2fhM8X5/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2005 Theory of Computation - Finite Automata and Regular Language Question 52 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{ {w\\,\\, \\in \\,\\left\\{ {a,b} \\right\\}{}^ * \\left| \\, \\right.} \\right.$$ every $$a$$ in $$w$$ is followed by exactly two $$\\left. {b's} \\right\\}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{ {w\\,\\, \\in \\,\\left\\{ {a,b} \\right\\}{}^ * \\left| \\, \\right.} \\right.$$ every $$a$$ in $$w$$ is followed by at least two $$\\left. {b's} \\right\\}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\{ {w\\,\\, \\in \\,\\left\\{ {a,b} \\right\\}{}^ * \\left| \\, \\right.} \\right.$$  $$w$$ contains the substring $$\\,\\left. {'abb'\\,\\,} \\right\\}\\,$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{ {w\\,\\, \\in \\,\\left\\{ {a,b} \\right\\}{}^ * \\left| \\, \\right.} \\right.$$  $$w$$ does not contain $$'aa'$$ as a substring$$\\left. \\, \\right\\}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The following finite state machine accepts all those binary strings in which the number of $$1's$$ and $$0's$$ are respectively\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/BO96qadkl9NaLtpKD/lzkf65j2kqVG0DCsvcyMlUQRF8q6e/dZKuhPjLVhqfCiE4Vv7aI6/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2004 Theory of Computation - Finite Automata and Regular Language Question 51 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Divisible by $$3$$ and $$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Odd and even "
+      },
+      {
+        "identifier": "C",
+        "content": "Even and odd "
+      },
+      {
+        "identifier": "D",
+        "content": "Divisible by $$2$$ and $$3$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the $$NFA$$ $$M$$ shown below.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/jN3YtDb3SacubCokS/v748d7q1a8unuDfkl6Of2FFsXc3X8/0JCTSBOPaHGV04mmz2yUnD/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2003 Theory of Computation - Finite Automata and Regular Language Question 50 English\"> \n<p>Let the language accepted by $$M$$ be $$L.$$ Let $${L_1}$$ be the language accepted by the $$NFA$$, $${M_1}$$ obtained by changing the accepting state of $$M$$ to a non accepting state and by changing the non accepting state of $$M$$ to accepting states. Which of the following statements is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${L_1} = \\left\\{ {0,\\,1} \\right\\}{}^ *  - L$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${L_1} = \\left\\{ {0,\\,1} \\right\\}{}^ * $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${L_1} \\subseteq \\,L$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${L_1} = \\,L$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following deterministic finite state automation $$M.$$ \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/7ksCpvYdKFSAayGsp/thdTtPkWltehotAzNxp3WPyHdKha7/cAUgb7Rpv0UAOscgrZHBKP/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2003 Theory of Computation - Finite Automata and Regular Language Question 49 English\"> \n<p>Let $$S$$ denote the set of seven bit binary strings in which the first, the fourth, and the last bits are $$1$$. The number of strings in $$S$$ that are accepted by $$M$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$7$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$8$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The Finite state machine described by the following state diagram with $$A$$ as starting state, where an arc label is $$x/y$$ and $$x$$ stands for $$1-bit$$ input and $$y$$ stands for $$2$$-bit output\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/ygrPpI74eS8KwBtwn/wf8r5O8nbt0YwLDDRxkr3dQpoZexD/iknXs0TwLpZCItWDJiYR8g/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2002 Theory of Computation - Finite Automata and Regular Language Question 77 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Outputs the sum of the present and the previous bits of the input."
+      },
+      {
+        "identifier": "B",
+        "content": "Outputs $$01$$ whenever the input sequence contains $$11$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "Outputs $$00$$ whenever the input sequence contains $$10$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The smallest finite automaton which accepts the language  \n<br>$$L = \\left. {\\left\\{ x \\right.} \\right|$$ length of $$x$$ is divisible by $$\\left. 3 \\right\\}$$ has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ states"
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ states "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ states "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5$$ states "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following languages:\n<br>$${L_1} = \\left\\{ {w\\,w\\left| {w \\in {{\\left\\{ {a,\\,b} \\right\\}}^ * }} \\right.} \\right\\}$$\n<br>$${L_2} = \\left\\{ {w\\,{w^R}\\left| {w \\in {{\\left\\{ {a,\\,b} \\right\\}}^ * },} \\right.{w^R}\\,\\,} \\right.$$ is the reverse of $$\\left. w \\right\\}$$\n<br>$${L_3} = \\left\\{ {{0^{2i}}\\left| {i\\,\\,} \\right.} \\right.$$ is an integer$$\\left. \\, \\right\\}$$\n<br>$${L_4} = \\left\\{ {{0^{{i^2}}}\\left| {i\\,\\,} \\right.} \\right.$$ is an integer$$\\left. \\, \\right\\}$$\n<p>Which of the languages are regular?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $${L_1}$$ and $${L_2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "Only $${L_2},$$ $${L_3}$$ and $${L_4}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "Only $${L_3}$$ and $${L_4}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Only $${L_3}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a $$DFA$$ over $$\\sum { = \\left\\{ {a,\\,\\,b} \\right\\}} $$ accepting all strings which have number of $$a'$$s divisible by $$6$$ and number of $$b'$$s divisible by $$8$$. What is the minimum number of states that the $$DFA$$ will have?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$14$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$15$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$48$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "What can be said about a regular language $$L$$ over $$\\left\\{ a \\right\\}$$  whose minimal finite state automation has two states? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Must be $$\\left\\{ {{a^n}\\left| n \\right.\\,\\,} \\right.$$ is odd $$\\left. \\, \\right\\}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "Must be $$\\left\\{ {{a^n}\\left| n \\right.\\,\\,} \\right.$$ is even $$\\left. \\, \\right\\}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "Must be $$\\left\\{ {{a^n}\\left| {n \\ge } \\right.\\,\\,} \\right.0\\left. \\, \\right\\}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Either $$L$$ must be $$\\left\\{ {{a^n}\\left| n \\right.\\,\\,} \\right.$$ is odd$$\\left. \\, \\right\\}\\,\\,$$ or $$L$$ must be $$\\left\\{ {{a^n}\\left| n \\right.} \\right.$$ is even$$\\left. \\, \\right\\}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$L$$ be the set of all binary strings whose last two symbols are the same. The number of states in the minimum state deterministic finite-state automaton accepting $$L$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$3$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following regular expressions over $$\\left\\{ {0,\\,\\,1} \\right\\}$$ denotes the set of all strings not containing $$100$$ as substring?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${0^ * }{\\left( {1 + 0} \\right)^ * }$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${0^ * }\\,\\,{1010^ * }$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${0^ * }\\,\\,{1^ * }\\,\\,{01^ * }$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${0^ * }{\\left( {10 + 1} \\right)^ * }$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following definitions below generates the same language as $$L$$ \n<br>Where $$L = {\\left\\{ x \\right.^n}{y^n}\\left| {n \\ge \\left. 1 \\right\\}} \\right.$$\n<br>i) $$\\,\\,E \\to xEy\\left| {xy} \\right.$$ \n<br>ii) $$\\,\\,xy\\left| {\\left( {{x^ + }xy{y^ + }} \\right)} \\right.$$\n<br>iii) $${\\,\\,{x^ + }{y^ + }}$$\n<br>$$L = \\left\\{ {xn\\,{y^n}\\left| {n \\ge 1} \\right.} \\right\\} - $$ generates string where equal no. of $$x$$ and equal no. of $$y's.$$\n<br>$$E \\to XBy\\left| {xy\\,abo} \\right.$$ generators tips same.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) only "
+      },
+      {
+        "identifier": "B",
+        "content": "(i) and (ii) "
+      },
+      {
+        "identifier": "C",
+        "content": "(ii) and (iii) "
+      },
+      {
+        "identifier": "D",
+        "content": "(ii) only"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "A finite state machine with the following state table has a single input $$X$$ and a single out $$Z$$.\n <img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/X9pJo1DqrDk3RUmu8/uTKZEytxtf9WF587Oct9I0hP8gkCW/ZxAOvJsCuiI6yDiwx3WQED/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1995 Theory of Computation - Finite Automata and Regular Language Question 83 English\"> \n<p>If the initial state is unknown, then the shortest input sequence to reach the final state $$C$$ is here, since initial make unknown $$m$$ $$10$$ input we can each final state $$C$$ with shortest path.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$01$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$101$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$110$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The regular expression for the language recognized by the finite state automation of is _________.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/5hd8LgYrJ6dLio66W/AOcth2GgVMQLWZlUr6gM3bJUyZFty/yf4GFbOuu2musnCZe1bMdI/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1994 Theory of Computation - Finite Automata and Regular Language Question 85 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${0^ * } + {0^ * }{11^ * }$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "The number of sub-strings (of all lengths inclusive) that can be formed from a character string of length $$n$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${n^2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{n\\left( {n - 1} \\right)} \\over 2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{n\\left( {n + 1} \\right)} \\over 2}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "If $$G$$ is a context-free grammar and $$w$$ is a string of length $$n$$ in $$L(G),$$ how long is a derivation of $$w$$ in $$G,$$ if $$G$$ is Chomsky normal form?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2n$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2n+1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2n-1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$n$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following regular expression identities are true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$r\\left( {^ * } \\right) = r{}^ * $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {r{}^ * s{}^ * } \\right){}^ *  = \\left( {r + s} \\right){}^ * $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\,\\left( {r + s} \\right){}^ *  = r{}^ *  + s{}^ * $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$r{}^ * s{}^ *  = r{}^ *  + s{}^ * $$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$r = 1\\,{\\left( {1 + 0} \\right)^ * },s = {11^ * }\\,0$$ and $$\\,t = {1^ * }\\,0$$ be three regular expressions. Which one of the following is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$L\\left( s \\right) \\subseteq L\\left( r \\right)\\,\\,$$ and $$L\\left( s \\right) \\subseteq L\\left( t \\right)\\,\\,$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$L\\left( r \\right) \\subseteq L\\left( s \\right)\\,\\,$$ and $$L\\left( s \\right) \\subseteq L\\left( t \\right)\\,\\,$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$L\\left( s \\right) \\subseteq L\\left( t \\right)\\,\\,$$ and $$L\\left( s \\right) \\subseteq L\\left( r \\right)\\,\\,$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$L\\left( t \\right) \\subseteq L\\left( s \\right)\\,\\,$$ and $$L\\left( s \\right) \\subseteq L\\left( r \\right)\\,\\,$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${R_1}$$ and $${R_2}$$ be regular sets defined over the alphabet $$\\sum \\, $$ then:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${R_1} \\cap R{}_2$$ is not regular."
+      },
+      {
+        "identifier": "B",
+        "content": "$${R_1} \\cup R{}_2$$ is regular."
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sum {^{^ * }} $$ $$-$$ $${R_1}$$ is regular. "
+      },
+      {
+        "identifier": "D",
+        "content": "$${R_1}{}^ * $$ is not regular."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "How many substrings (of all lengths inclusive ) can be formed from a character string of length $$n$$? Assume all characters to be distinct. Prove your answer.",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${{n\\left( {n + 1} \\right)} \\over 2} + 1$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-cse-1989",
+    "difficulty": null
+  },
+  {
+    "content": "Given that language $${L_1}$$ is regular and that the language $${L_1} \\cap {L_2}$$ is regular is the language $${L_2}$$ is always regular? ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Is the class of regular sets closed under infinite union? Explain. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it",
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-cse-1989",
+    "difficulty": null
+  },
+  {
+    "content": "Give the regular expression over $${\\left\\{ {0,\\,\\,1} \\right\\}}$$ to denote the set of proper non-null substrings of the string $$0110$$. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it ",
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  },
+  {
+    "content": "Give minimal $$DFA$$ that performs as a Mod-$$3$$ $$1's$$ counter, i.e., outputs a $$1$$ each time the number of $$1's$$ in the input sequence is a sequence is a multiple of $$3.$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it ",
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,1881 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The Nyquist plot of a system is given in the figure below. Let $\\omega_{\\mathrm{P}}, \\omega_Q, \\omega_R$, and $\\omega_{\\mathrm{S}}$ be the positive frequencies at the points $P, Q, R$, and $S$, respectively. Which one of the following statements is TRUE?</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mberj06v/67856dd8-f49a-416b-82a4-1f95f59866cf/68ddcc70-3f82-11f0-8c45-9940f0f1d7bd/file-jaoe38c1mberj06w.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mberj06v/67856dd8-f49a-416b-82a4-1f95f59866cf/68ddcc70-3f82-11f0-8c45-9940f0f1d7bd/file-jaoe38c1mberj06w.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Control Systems - Frequency Response Analysis Question 2 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\omega_s$ is the gain crossover frequency and $\\omega_p$ is the phase crossover frequency\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\omega_Q$ is the gain crossover frequency and $\\omega_R$ is the phase crossover frequency\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\omega_Q$ is the gain crossover frequency and $\\omega_S$ is the phase crossover frequency\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\omega_S$ is the gain crossover frequency and $\\omega_Q$ is the phase crossover frequency"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "$\\omega_S$ is the gain crossover frequency and $\\omega_Q$ is the phase crossover frequency",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In the context of Bode magnitude plots, 40 dB/decade is the same as ______.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>12 dB/octave</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>6 dB/octave</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>20 dB/octave</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>10 dB/octave</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To understand the relationship between decibels per decade (dB/decade) and decibels per octave (dB/octave), we need to recall that a decade represents a tenfold increase in frequency, whereas an octave represents a twofold increase in frequency.</p>\n\n<p>First, let's define the relationship between these units. The ratio of a decade to an octave is given by:</p>\n\n<p>\n\n<p>$$\\text{Number of octaves in a decade} = \\log_2(10) \\approx 3.32$$</p>\n\n</p>\n\n<p>This means that a change by 1 decade is equivalent to approximately 3.32 octaves.</p>\n\n<p>If we have a slope of 40 dB/decade, we can determine its equivalent in dB/octave by dividing by the number of octaves in a decade:</p>\n\n<p>\n\n<p>$$\\text{dB/octave} = \\frac{40 \\, \\text{dB/decade}}{3.32 \\, \\text{octaves/decade}} \\approx 12.05 \\, \\text{dB/octave}$$</p>\n\n</p>\n\n<p>Therefore, 40 dB/decade is approximately equal to 12 dB/octave. Thus, the correct answer is:</p>\n\n<p><strong>Option A: 12 dB/octave</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The open loop transfer function of a unity negative feedback system is $$G(s) = {k \\over {s(1 + s{T_1})(1 + s{T_2})}}$$, where $$k,T_1$$ and $$T_2$$ are positive constants. The phase cross-over frequency, in rad/s, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {\\sqrt {{T_1}{T_2}} }}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {{T_1}{T_2}}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over {{T_1}\\sqrt {{T_2}} }}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over {{T_2}\\sqrt {{T_1}} }}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>The given open loop transfer function of the unity negative feedback system is</p>\n\n<p>\n\n<p>$$G(s) = \\frac{k}{s(1 + sT_1)(1 + sT_2)}$$</p>\n\n</p>\n\n<p>To find the phase cross-over frequency, we need to determine the frequency at which the phase angle of the open loop transfer function is $$-180^\\circ$$.</p>\n\n<p>The phase angle of $$G(j\\omega)$$ can be determined as follows:</p>\n\n<p>\n\n<p>At $$s = j\\omega:$$</p>\n\n<p>$$G(j\\omega) = \\frac{k}{j\\omega (1 + j\\omega T_1)(1 + j\\omega T_2)}$$</p>\n\n</p>\n\n<p>The phase angle contributed by each term is:</p>\n\n<ul>\n\n<li>For $$\\frac{1}{j\\omega}$$, the phase angle is $$-90^\\circ$$.</li>\n\n<li>For $$\\frac{1}{1 + j\\omega T_1}$$, the phase angle is $$-\\tan^{-1}(\\omega T_1)$$.</li>\n\n<li>For $$\\frac{1}{1 + j\\omega T_2}$$, the phase angle is $$-\\tan^{-1}(\\omega T_2)$$.</li>\n\n</ul>\n\n<p>Thus, the total phase angle of $$G(j\\omega)$$ is:</p>\n\n<p>\n\n<p>$$\\angle G(j\\omega) = -90^\\circ - \\tan^{-1}(\\omega T_1) - \\tan^{-1}(\\omega T_2)$$</p>\n\n</p>\n\n<p>For phase cross-over frequency, the total phase angle is $$-180^\\circ$$:</p>\n\n<p>\n\n<p>$$-90^\\circ - \\tan^{-1}(\\omega T_1) - \\tan^{-1}(\\omega T_2) = -180^\\circ$$</p>\n\n</p>\n\n<p>This simplifies to:</p>\n\n<p>\n\n<p>$$-90^\\circ - \\tan^{-1}(\\omega T_1) - \\tan^{-1}(\\omega T_2) = -90^\\circ$$</p>\n\n</p>\n\n<p>Which leads to:</p>\n\n<p>\n\n<p>$$\\tan^{-1}(\\omega T_1) + \\tan^{-1}(\\omega T_2) = 90^\\circ$$</p>\n\n</p>\n\n<p>We know that:</p>\n\n<p>\n\n<p>$$\\tan^{-1}(\\omega T_1) + \\tan^{-1}(\\omega T_2) = 90^\\circ$$</p>\n\n</p>\n\n<p>Using the trigonometric identity $$\\tan(A + B) = \\frac{\\tan(A) + \\tan(B)}{1 - \\tan(A)\\tan(B)}$$, we can simplify the above equation :</p>\n\n<p>$$ \\tan[\\tan^{-1}(\\omega T_1) + \\tan^{-1}(\\omega T_2)] = \\tan(90^\\circ) $$</p>\n\n<p>$$ \\frac{\\omega T_1 + \\omega T_2}{1 - \\omega ^2T_1T_2} = \\infty $$</p>\n\n<p>This implies that the denominator must be zero :</p>\n\n<p>$$ 1 - \\omega ^2T_1T_2 = 0 $$</p>\n\n<p>Solving for s, we get :</p>\n\n<p>$$ \\omega ^2 = \\frac{1}{T_1T_2} $$</p>\n\n<p>Therefore, the phase crossover frequency is :</p>\n\n<p>$$ \\omega  = \\sqrt{\\frac{1}{T_1T_2}} = \\frac{1}{\\sqrt{T_1T_2}} $$</p>\n\n<p>Therefore, the correct answer is <strong>Option A</strong> : $$ {1 \\over {\\sqrt {{T_1}{T_2}} }} $$.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a closed-loop control system with unity negative feedback and KG(s) in the forward path, where the gain K = 2. The complete Nyquist plot of the transfer function G(s) is shown in the figure. Note that the Nyquist contour has been chosen to have the clockwise sense. Assume G(s) has no poles on the closed right-half of the complex plane. The number of poles of the closed-loop transfer function in the closed right-half of the complex plane is ___________.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7ie59ng/eac06ea2-7039-41c9-83b4-7bacfe72e6fe/8f9c0cd0-2998-11ed-bc1c-a3a2358ae168/file-1l7ie59nh.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7ie59ng/eac06ea2-7039-41c9-83b4-7bacfe72e6fe/8f9c0cd0-2998-11ed-bc1c-a3a2358ae168/file-1l7ie59nh.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Control Systems - Frequency Response Analysis Question 6 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>For, K = 1</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7ie6p9n/c6147609-ec8b-40e0-a1fd-c0764fa7f2b1/b77b43b0-2998-11ed-bc1c-a3a2358ae168/file-1l7ie6p9o.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7ie6p9n/c6147609-ec8b-40e0-a1fd-c0764fa7f2b1/b77b43b0-2998-11ed-bc1c-a3a2358ae168/file-1l7ie6p9o.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Control Systems - Frequency Response Analysis Question 6 English Explanation 1\"></p>\n<p>For K = 2, the plot will be</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7ie7fsm/37b90150-77dc-4a65-bd46-8dde5c17f5b5/cbf91560-2998-11ed-bc1c-a3a2358ae168/file-1l7ie7fsn.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7ie7fsm/37b90150-77dc-4a65-bd46-8dde5c17f5b5/cbf91560-2998-11ed-bc1c-a3a2358ae168/file-1l7ie7fsn.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Control Systems - Frequency Response Analysis Question 6 English Explanation 2\"></p>\n<p>N = No. of encirclement about ($$-$$1, 0) in anticlockwise.</p>\n<p>P = Total number of open loop poles, in R.H.S.</p>\n<p>Z = P $$-$$ N</p>\n<p>N = $$-$$2, P = 0</p>\n<p>Z = 0 $$-$$ ($$-$$2) = 2</p>\n<p>Z = 2</p>\n<p>Two poles lies in right side.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "The number and direction of encirclements around the point −1 + j0 in the complex plane by the\nNyquist plot of G(s) =$${{1 - s} \\over {4 + 2s}}$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "zero "
+      },
+      {
+        "identifier": "B",
+        "content": "one, anti-clockwise "
+      },
+      {
+        "identifier": "C",
+        "content": "one, clockwise "
+      },
+      {
+        "identifier": "D",
+        "content": "two, clockwise"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A closed-loop control system is stable if the Nyquist plot of the corresponding open-loop transfer\nfunction ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "encircles the s-plane point (−1 + j0) in the counterclockwise direction as many times as the\nnumber of right-half s-plane poles. "
+      },
+      {
+        "identifier": "B",
+        "content": "encircles the s-plane point (0 − j1) in the clockwise direction as many times as the number of\nright-half s-plane poles. "
+      },
+      {
+        "identifier": "C",
+        "content": "encircles the s-plane point (−1 + j0) in the counterclockwise direction as many times as the\nnumber of left-half s-plane poles. "
+      },
+      {
+        "identifier": "D",
+        "content": "encircles the s-plane point (−1 + j0) in the counterclockwise direction as many times as the\nnumber of right-half s-plane zeros. "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The popular plot of the transfer function\nG(s)=$${{10\\left( {s + 1} \\right)} \\over {\\left( {s + 10} \\right)}}$$ for $$0 \\le \\omega  &lt; \\infty $$ will be in the",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "first quadrant"
+      },
+      {
+        "identifier": "B",
+        "content": "second quadrant "
+      },
+      {
+        "identifier": "C",
+        "content": "third quadrant "
+      },
+      {
+        "identifier": "D",
+        "content": "fourth quadrant"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The phase margin (in degrees) of the system \nG(s)=$${{10} \\over {\\left( {s + 10} \\right)}}$$ is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "84.32",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the Bode plot shown in the figure. Assume that all the poles and zeroes are real-valued. \nThe value of f<sub>H</sub> - f<sub>L</sub> (in Hz) is ______.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/000147af552cb1caf7fcda7a3febff96c5a9b8a80a63c9076c9706abff160ae8.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 3 Control Systems - Frequency Response Analysis Question 51 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "8970",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the feedback system shown in the figure. The Nyquist plot of G(s) is also shown. Which\none of the following conclusions is correct?  \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8c26b46330b202c458f6f87eb38b941fe5c84d2d3b622e167251128fd6dfcb1d.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 1 Control Systems - Frequency Response Analysis Question 55 English 1\"> \n\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/daab4af06a80b567a47eb06449c9f2be5aff7720e48c961bb2c2804364ee6d6a.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 1 Control Systems - Frequency Response Analysis Question 55 English 2\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "G(s) is an all-pass filter."
+      },
+      {
+        "identifier": "B",
+        "content": "G(s) is a strictly proper transfer function."
+      },
+      {
+        "identifier": "C",
+        "content": "G(s) is a stable and minimum-phase transfer function. "
+      },
+      {
+        "identifier": "D",
+        "content": "The closed-loop system is unstable for sufficiently large and positive k."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In a Bode magnitude plot, which one of the following slopes would be exhibited at high\nfrequencies by a 4<sup>th</sup> order all-pole system? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "– 80 dB/decade "
+      },
+      {
+        "identifier": "B",
+        "content": "– 40 dB/decade "
+      },
+      {
+        "identifier": "C",
+        "content": "+40 dB/decade "
+      },
+      {
+        "identifier": "D",
+        "content": "+80 dB/decade "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "The Bode plot of a transfer function G (s) is shown in the figure below.  \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/d2894f5ba748537c110e2d2289642e77eddfaa766cb83bb7d583f2f7aff1a58e.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Control Systems - Frequency Response Analysis Question 56 English\"> \nThe gain (20 log $$\\left| {G(s)} \\right|$$ ) is 32 dB and -8dB at 1rad/s and 10rad/s respectively. The phase is negative for all $$\\omega .$$ Then G(s) is \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\textstyle{{39.8} \\over s}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\textstyle{{39.8} \\over {{s^2}}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\textstyle{{32} \\over {{s}}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\textstyle{{32} \\over {{s^2}}}}$$  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A system with transfer function \ng(s) = $${{\\left( {{s^2} + 9} \\right)\\left( {s + 2} \\right)} \\over {\\left( {s + 1} \\right)\\left( {s + 3} \\right)\\left( {s + 4} \\right)}},$$ is excited by $$\\sin \\left( {\\omega t} \\right).$$ The steady-state output of the system is zero at",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\omega  = 1rad/\\sec $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\omega  = 2rad/\\sec $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\omega  = 3rad/\\sec $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\omega  = 4rad/\\sec $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "For the transfer function G$$\\left( {j\\omega } \\right) = 5 + j\\omega ,$$  the corresponding Nyquist plot for\npositive frequency has the form\n \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/7a8ed940a4fde71992a1873b80e405206a687b02474d478701a4eccea7b96cb4.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Frequency Response Analysis Question 58 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8411193d4c81ea988784b3674e1c035fb8e77e8be2b65c05b7dbced0e2ee1b1b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Frequency Response Analysis Question 58 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b38ecb857f0cbdec983759ef41a3ab257f86fb46395a0d6e53384900aa5b009c.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Frequency Response Analysis Question 58 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/2f8af504b4b0fb8cfd7e3f65369f58fe37b113f4c79168a2ddf4ffb8dbb103e9.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Frequency Response Analysis Question 58 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A system with the transfer function\n $${{Y(s)} \\over {X(s)}} = {s \\over {s + p}},$$ has an output\ny(t)=$$\\cos \\left( {2t - {\\pi  \\over 3}} \\right),$$ for input signal \nx(t)=$$p\\cos \\left( {2t - {\\pi  \\over 2}} \\right).$$ Then the system parameter 'p' is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sqrt 3 $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2 \\over {\\sqrt 3 }}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\sqrt 3 } \\over 2}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "For the asymptotic Bode magnitude plot shown below, the system transfer function\ncan be\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b536423cb417fc60b3bf8077d3f421e52b0c0635cedcc65f7dccca17194e368b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2010 Control Systems - Frequency Response Analysis Question 59 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{10s + 1} \\over {0.1s + 1}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{100s + 1} \\over {0.1s + 1}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{100s} \\over {10s + 1}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{0.1s + 1} \\over {10s + 1}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "If the closed-loop transfer function of a control system is given as\nT(s)=$${{s - 5} \\over {(s + 2)(s + 3)}},$$ then it is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "an unstable system"
+      },
+      {
+        "identifier": "B",
+        "content": "an uncontrollable system "
+      },
+      {
+        "identifier": "C",
+        "content": "a minimum phase system "
+      },
+      {
+        "identifier": "D",
+        "content": "a non-minimum phase system  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The open-loop transfer function of a unity-gain feedback control system is given\nby\n$$G(s) = {K \\over {(s + 1)(s + 2)}},$$ the gain margin of the system in dB is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 "
+      },
+      {
+        "identifier": "B",
+        "content": "1 "
+      },
+      {
+        "identifier": "C",
+        "content": "20 "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\infty $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "In the system shown below, x(t)=(sin t). In steady-state, the response y(t) will be\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/bf37d68d6682167865d6857bc674c7ce707be8fa1a750422061dc5ee9a013e54.jpg\" loading=\"lazy\" alt=\"GATE ECE 2006 Control Systems - Frequency Response Analysis Question 63 English\"> \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {\\sqrt 2 }}\\sin \\left( {t - {\\pi  \\over 4}} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {\\sqrt 2 }}\\sin \\left( {t + {\\pi  \\over 4}} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over {\\sqrt 2 }}{e^{ - t}}\\sin t$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sin t - \\cos t$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following polar diagrams corresponds to a lag network? \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ebcb6d925c7a420a8b140fbaf3928b95a90238f97930c7908db740530e81d7c1.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Control Systems - Frequency Response Analysis Question 64 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/52c13ea238805898cfa05d99bec772b1346cd7a117b8157a80a8e09f187229ca.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Control Systems - Frequency Response Analysis Question 64 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/2995af190fd395e2ad89164f8bdafe9a00841c9f69860203cb15e7a89f0c0cb9.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Control Systems - Frequency Response Analysis Question 64 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/690c586a31aa88bda87e4cf361201739992b42bd7110bf1ac9d3819c263d4d34.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Control Systems - Frequency Response Analysis Question 64 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The gain margin for the system with open-loop transfer function G(s)H(s)=$${{2(1 + s)} \\over {{s^2}}}$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\infty $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "0 "
+      },
+      {
+        "identifier": "C",
+        "content": "1 "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - \\infty $$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Figure shows the Nyquist plot of the open-loop transfer function G(s)H(s) of a\nsystem. If G(s)H(s) has one right hand pole, the closed loop system is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/d2bcaf9ad14d88a6965e155c79834a603977756716dd195788842b740e4e54d5.jpg\" loading=\"lazy\" alt=\"GATE ECE 2003 Control Systems - Frequency Response Analysis Question 66 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "always stable "
+      },
+      {
+        "identifier": "B",
+        "content": "unstable with one closed-loop right hand pole"
+      },
+      {
+        "identifier": "C",
+        "content": "unstable with two closed-loop right hand poles "
+      },
+      {
+        "identifier": "D",
+        "content": "unstable with three closed-loop right hand poles "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The phase margin of a system with the open-loop transfer function \nG(s)H(s)=$${{(1 - s)} \\over {(1 + s)(2 + s)}}$$ is?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0^\\circ $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$63.4^\\circ $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$90^\\circ $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\infty $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The Nyquist plot for the open-loop transfer function G(s) of a unity negative\nfeedback system is shown in figure. if G(s) has no pole in the right half of s-plane,\nthe number of roots of the system characteristic equation in the right half\nof s-plane is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/67758b38420a272b3121690db19445cc834eee7318bc1646fc7a9be473054c25.jpg\" loading=\"lazy\" alt=\"GATE ECE 2001 Control Systems - Frequency Response Analysis Question 68 English\">\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 "
+      },
+      {
+        "identifier": "B",
+        "content": "1 "
+      },
+      {
+        "identifier": "C",
+        "content": "2 "
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The phase margin (in degrees) of a system having the loop transfer function is $$G(s)H(s) = {{2\\sqrt 3 } \\over {s(s + 1)}}$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$45^\\circ $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-30^\\circ $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$60^\\circ $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$30^\\circ $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The gain margin of a system having the loop transfer function G(s)H(s) =$${{\\sqrt 2 } \\over {s(s + 1)}}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 "
+      },
+      {
+        "identifier": "B",
+        "content": "3 "
+      },
+      {
+        "identifier": "C",
+        "content": "6 "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\infty $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The Nyquist plot of a loop transfer function G$$(j\\omega )$$ H$$(j\\omega )$$, of a system encloses the (-1, j0) point. The gain margin of the system is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "less than zero"
+      },
+      {
+        "identifier": "B",
+        "content": "zero"
+      },
+      {
+        "identifier": "C",
+        "content": "greater than zero"
+      },
+      {
+        "identifier": "D",
+        "content": "infinity"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "In the Bode-plot of a unity feedback control system, the value of phase of G($$j\\omega $$) at the gain cross over frequency is $$ - 125^\\circ $$. The phase margin of the system is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - 125^\\circ $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - 55^\\circ $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$ 55^\\circ $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$  125^\\circ $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Non - minimum phase transfer function is defined as the transfer function",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "which has zeroes in the right - half of S-plane."
+      },
+      {
+        "identifier": "B",
+        "content": "which has zeroes only in the left - half of S-plane."
+      },
+      {
+        "identifier": "C",
+        "content": "which has poles in the right - half of S-plane."
+      },
+      {
+        "identifier": "D",
+        "content": "which has poles in the left - half of S-plane."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The 3-dB bandwidth of a typical second- order system with the transfer function\n$${{C\\left( s \\right)} \\over {R(s)}} = {{\\omega _n^2} \\over {{s^2} + 2\\xi {\\omega _n}s + \\omega _n^2}}$$, is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\omega _n}\\sqrt {1 - 2{\\xi ^2}} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\omega _n}\\sqrt {(1 - {\\xi ^2}) + \\sqrt {{\\xi ^4} - {\\xi ^2} + 1} }$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\omega _n}\\sqrt {(1 - 2{\\xi ^2}) + \\sqrt {4{\\xi ^4} - 4{\\xi ^2} + 2} } $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\omega _n}\\sqrt {(1 - 2{\\xi ^2}) - \\sqrt {4{\\xi ^4} - 4{\\xi ^2} + 2} } $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "content": "The open loop frequency response of a system at two particular frequencies are given by: 1.2 $$\\angle  - 180^\\circ $$  and 1.0 $$\\angle  - 190^\\circ $$. The closed loop unity feedback control system is then",
+    "options": [],
+    "correct_options": [],
+    "answer": "Unstable",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The asymptotic magnitude Bode plot of a minimum phase system is shown in the figure. The transfer function of the system is $$(s) = {{k{{(s + z)}^a}} \\over {{s^b}{{(s + p)}^c}}}$$, where $$k,z,p,z,b$$ and $$c$$ are positive constants. The value of $$(a + b + c)$$ is ___________ (rounded off to the nearest integer)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyvayuup/b5debc59-f4e0-49cf-b118-390b0966525c/299c8c70-473c-11ef-a235-c911985ec818/file-jaoe38c1lyvayuuv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyvayuup/b5debc59-f4e0-49cf-b118-390b0966525c/299c8c70-473c-11ef-a235-c911985ec818/file-jaoe38c1lyvayuuv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Control Systems - Frequency Response Analysis Question 4 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p>Given bode plot is,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyvayuup/b5debc59-f4e0-49cf-b118-390b0966525c/299c8c70-473c-11ef-a235-c911985ec818/file-jaoe38c1lyvayuuv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyvayuup/b5debc59-f4e0-49cf-b118-390b0966525c/299c8c70-473c-11ef-a235-c911985ec818/file-jaoe38c1lyvayuuv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Control Systems - Frequency Response Analysis Question 4 English Explanation\">\n\n<p>and $G(s)=\\frac{k(s+z)^a}{s^b(s+p)^c}$</p>\n\n<p>Initial slope is $-20 \\mathrm{~dB} / \\mathrm{dec}$</p>\n\n<p>From bode plot, it is clear that there is one pole at origin.</p>\n\n<p>Hence, $b=1$</p>\n\n<p>At $\\omega=\\omega_1$, slope becomes $0 \\mathrm{~dB} / \\mathrm{dec}$, hence there is a zero at $\\omega=\\omega_1$.</p>\n\n<p>Hence, $a=1$</p>\n\n<p>At $\\omega=\\omega_1$, slope becomes $-40 \\mathrm{~dB} / \\mathrm{dec}$, hence there is two pole at $\\omega=\\omega_2$</p>\n\n<p>Hence, $c=2$</p>\n\n<p>$$ a+b+c=1+1+2=4 $$</p>\n\n<p>Hence, the correct answer is 4 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A system with transfer function $G(s)=\\frac{1}{(s+1)(s+a)}, a>0$ is subjected to input $5 \\cos 3 t$. The steady state output of the system is $\\frac{1}{\\sqrt{10}} \\cos (3 t-1.892)$. The value of $a$ is</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "<p>4</p>",
+    "explanation": "<p>Method 1</p>\n<p>$$ \\begin{aligned} &amp; \\text { Given : } G(s)=\\frac{1}{(s+1)(s+a)}, a&gt;0 \\\\ &amp; \\text { Response }=\\frac{1}{\\sqrt{10}} \\cos \\left(3 t-1.892^0\\right) \\\\ &amp; \\qquad G(j \\omega)=\\frac{1}{(j \\omega+1)(j \\omega+a)} \\\\ &amp; \\text { Input }=5 \\cos 3 t \\\\ &amp; \\qquad \\begin{array}{l} \\omega=3 \\mathrm{rad} / \\mathrm{s} \\\\ G(j 3)=\\frac{1}{(j 3+1)(j 3+a)} \\\\ |G(j 3)|=\\frac{1}{\\sqrt{(9+1)} \\sqrt{\\left(9+a^2\\right)}} \\end{array} \\end{aligned} $$</p>\n<p>Sinusoidal Response,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh23x5d1/783ba926-69ba-4d3f-b238-53565c6c1483/fb921060-af55-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh23x5d2.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh23x5d1/783ba926-69ba-4d3f-b238-53565c6c1483/fb921060-af55-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh23x5d2.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Control Systems - Frequency Response Analysis Question 1 English Explanation\">$$ \\begin{aligned} &amp;\\text { Comparing amplitudes, }\\\\ &amp;\\begin{aligned} &amp; 5 \\times \\frac{1}{\\sqrt{3^2+1^2} \\sqrt{9+a^2}}=\\frac{1}{\\sqrt{10}} \\\\ &amp; \\frac{5}{\\sqrt{9+a^2}}=1 \\\\ &amp; 25=9+a^2 \\\\ &amp; a^2=16 \\end{aligned} \\end{aligned} $$</p>\n<p>$$ a= \\pm 4 \\quad(\\text { as } a&gt;0) $$</p>\n<p>So, $\\quad \\quad a=4$</p>\n<p>Hence, the value of $a$ is $\\mathbf{4}$.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The figure below shows the Bode magnitude and phase plots of a stable transfer function\n<br><br>$$G(s) = {{{n_0}} \\over {{s^3} + {d_2}{s^2} + {d_1}s + {d_0}}}$$.\n<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/jf769xsjzj5o8ic/8b51f109-92ed-4f39-8597-7b3e205dc8fb/b0ea6d40-c2ea-11e9-bec9-eb7a83e2b7e4/file-jf769xsjzj5o8id-320w.png\"><source media=\"(max-width: 500px)\" srcset=\"https://imagex.cdn.examgoal.net/jf769xsjzj5o8ic/8b51f109-92ed-4f39-8597-7b3e205dc8fb/b0ea6d40-c2ea-11e9-bec9-eb7a83e2b7e4/file-jf769xsjzj5o8id-500w.png\"><source media=\"(max-width: 680px)\" srcset=\"https://imagex.cdn.examgoal.net/jf769xsjzj5o8ic/8b51f109-92ed-4f39-8597-7b3e205dc8fb/b0ea6d40-c2ea-11e9-bec9-eb7a83e2b7e4/file-jf769xsjzj5o8id-680w.png\"><img src=\"https://imagex.cdn.examgoal.net/jf769xsjzj5o8ic/8b51f109-92ed-4f39-8597-7b3e205dc8fb/b0ea6d40-c2ea-11e9-bec9-eb7a83e2b7e4/file-jf769xsjzj5o8id-860w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE ECE 2018 Control Systems - Frequency Response Analysis Question 8 English\"></picture>\n<br><br>Consider the negative unity feedback configuration with gain k in the feedforward path.\nThe closed loop is stable for k &lt; k<sub>0</sub>. The maximum value of k<sub>0</sub> is ______.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.1 to 0.1",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "For a unity feedback control system with the forward path transfer function\n<br><br>$$G(s) = {K \\over {s\\left( {s + 2} \\right)}}$$\n<br><br>The peak resonant magnitude M<sub>r</sub>\nof the closed-loop frequency response is 2. The\ncorresponding value of the gain\nK\n(correct to two decimal places) is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "14 to 17",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "The Nyquist plot of the transfer function\n$$G(s) = {k \\over {\\left( {{s^2} + 2s + 2} \\right)\\left( {s + 2} \\right)}}$$ \ndoes not encircle the point (-1+j0) for K = 10 but does encircle the point (-1+j0) for K = 100. Then the closed loop system (having unity gain feedback) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "stable for K = 10 and stable for K = 100 "
+      },
+      {
+        "identifier": "B",
+        "content": "stable for K = 10 and unstable for K = 100 "
+      },
+      {
+        "identifier": "C",
+        "content": "unstable for K = 10 and stable for K =100"
+      },
+      {
+        "identifier": "D",
+        "content": "unstable for K = 10 and unstable for K = 100 "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A unity feedback control system is characterized by the open loop transfer function\n\n$$G(s) = {{10k\\left( {s + 2} \\right)} \\over {\\left( {{s^3} + 3{s^2} + 10} \\right)}}$$ \nThe Nyquist path and the corresponding Nyquist plot of g(s) are shown in the figures below.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/e88184e8c61d818e0c9fe08f72fc4f29db1691713ea090b532c28273bd29a4fa.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 2 Control Systems - Frequency Response Analysis Question 16 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a742731e2839b066ce759d9357f6703e99ffb5cc7f89dbaf0590e9ca4f45e15b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 2 Control Systems - Frequency Response Analysis Question 16 English 2\"> \nIf 0 &lt; K &lt; 1, then number of poles of the closed loop transfer function that lie in the right half of the s-plane is \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 "
+      },
+      {
+        "identifier": "B",
+        "content": "1 "
+      },
+      {
+        "identifier": "C",
+        "content": "2 "
+      },
+      {
+        "identifier": "D",
+        "content": "3 "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The asymptotic Bode phase plot of \n$${\\rm{G(s) = }}{k \\over {\\left( {s + 0.1} \\right)\\left( {s + 10} \\right)\\left( {s + {p_1}} \\right)}},$$ \nwith k and p<sub>1 both positive, is shown below.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/345c155762c4d525e3e0e0b708d0b1c9d79a9f8dc999aedae1597afd995d125f.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 2 Control Systems - Frequency Response Analysis Question 18 English\"> \nThe value of p<sub>1</sub> is ________</sub>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In the feedback  system shown below \n$${\\rm{G(s) = }}{1 \\over {\\left( {s + 1} \\right)\\left( {s + 2} \\right)\\left( {s + 3} \\right)}}$$ \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/f625b94e992e7e93c0dbebd4d1046329e32da65a2c563c4035210dddb23ccc7e.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 2 Control Systems - Frequency Response Analysis Question 19 English\"> \nThe positive value of 𝑘 for which the gain margin of the loop is exactly 0 dB and the phase margin\nof the loop is exactly zero degree is ____",
+    "options": [],
+    "correct_options": [],
+    "answer": "60",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function of a mass-spring damper system is given by\n$${\\rm{G(s) = }}{1 \\over {M{s^2} + Bs + K}}$$ \nThe frequency response data for the system are given in the following table.\n\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/3b4caa2de1669d40fa76c2415136c50bc7b1c825ebcb7bc107e35b8616805951.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 2 Control Systems - Frequency Response Analysis Question 20 English\"> \nThe unit step response of the system approaches a steady state value of ______.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.12",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The Bode asymptotic magnitude plot of a minimum phase system is shown in the figure. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/5c64540e8b5ad8e7ca7a25f4dddef7c6f42ea17dd53bcf2f7a2b6b93839c8109.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 2 Control Systems - Frequency Response Analysis Question 21 English\"> \n<p>If the system is connected in a unity negative feedback configuration, the steady state error of the closed loop system, to a unit ramp input, is</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.5",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The phase margin in degrees of G(s)=$${{10} \\over {\\left( {s + 0.1} \\right)\\left( {s + 1} \\right)\\left( {s + 10} \\right)}},$$ \nusing the asymptotic Bode plot is ______",
+    "options": [],
+    "correct_options": [],
+    "answer": "45",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The input-output transfer function of a plant is h(s)=$${{100} \\over {s{{\\left( {s + 10} \\right)}^2}}}$$. The plant is placed in a unity negative feedback configuration as shown in the figure below.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8bc612c197f48f4c425170902bf527ccf7488a77b2ea647682e14afb8225cf42.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Frequency Response Analysis Question 31 English\"> \nThe signal flow graph that DOES NOT model the plant transfer function H(s) is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8ba9f4dbf928d0e6b230fea0aab1a0dafe2b4370b02b05289ebd04fe5610e917.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Frequency Response Analysis Question 31 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/e14156196a0939d2fc862a23c2cb6838bea2f57bcd9e41cd0981bed3e1bd1b40.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Frequency Response Analysis Question 31 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/37e3747af6c2d02dfa138943bc88666163fc7594a1c02d85a1c9e9e158320365.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Frequency Response Analysis Question 31 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/9ea03ab552edc29d9f13eaf926445486d271b426b7e3d599a33a16709ad6dc40.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Frequency Response Analysis Question 31 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The input-output transfer function of a plant is h(s)=$${{100} \\over {s{{\\left( {s + 10} \\right)}^2}}}$$. The plant is placed in a unity negative feedback configuration as shown in the figure below.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8bc612c197f48f4c425170902bf527ccf7488a77b2ea647682e14afb8225cf42.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Frequency Response Analysis Question 30 English\">\nThe gain margin of the system under closed loop unity negative feedback is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 dB"
+      },
+      {
+        "identifier": "B",
+        "content": "20 dB"
+      },
+      {
+        "identifier": "C",
+        "content": "26 dB"
+      },
+      {
+        "identifier": "D",
+        "content": "46 dB"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The Nyquist plot of a stable transfer function G(s) is shown in the figure. We are interested in the stability of the closed loop system in the feedback configuration shown.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a19b15e6fd3d75a62dc94b5049248c0a6c3f58b34432eee5ea30cc162b431d52.jpg\" loading=\"lazy\" alt=\"GATE ECE 2009 Control Systems - Frequency Response Analysis Question 32 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8fce67b754321740ba090f7578a3ee8a9fc906009532f583274a46529e69df62.jpg\" loading=\"lazy\" alt=\"GATE ECE 2009 Control Systems - Frequency Response Analysis Question 32 English 2\">  \nThe gain and phase margins of G(s) for closed loop stability are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6 dB and  $$180^\\circ $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "3 dB and  $$180^\\circ $$  "
+      },
+      {
+        "identifier": "C",
+        "content": "6 dB and  $$90^\\circ $$  "
+      },
+      {
+        "identifier": "D",
+        "content": "3 dB and  $$90^\\circ $$  "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The Nyquist plot of a stable transfer function G(s) is shown in the figure. We are interested in the stability of the closed loop system in the feedback configuration shown.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a19b15e6fd3d75a62dc94b5049248c0a6c3f58b34432eee5ea30cc162b431d52.jpg\" loading=\"lazy\" alt=\"GATE ECE 2009 Control Systems - Frequency Response Analysis Question 33 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8fce67b754321740ba090f7578a3ee8a9fc906009532f583274a46529e69df62.jpg\" loading=\"lazy\" alt=\"GATE ECE 2009 Control Systems - Frequency Response Analysis Question 33 English 2\"> \nWhich of the foloowing statements is true?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "G(s) is is an all-pass filter."
+      },
+      {
+        "identifier": "B",
+        "content": "G(s) has a zero in the right-half of S-plane. "
+      },
+      {
+        "identifier": "C",
+        "content": "G(s) is the impedance of a passive network. "
+      },
+      {
+        "identifier": "D",
+        "content": "G(s) is marginally stable. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The magnitude of frequency response of an underdamped second order system is 5 at 0 rad/sec and peaks to $${{10} \\over {\\sqrt 3 }}$$ at 5 $$\\sqrt 2 $$ rad/sec. The transfer function of the system is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{500} \\over {{s^2} + 10s + 100}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{375} \\over {s2 + 5s + 75}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{720} \\over {s2 + 12s + 144}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{1125} \\over {s2 + 25s + 225}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The impulse response h(t) of a linear time invariant system is given by h(t) = $${e^{ - 2t}}u(t),$$ where u(t) denotes the unit step function. \n<p>The output of this system to the sinusoidal input x(t) = 2cos(t) for all time 't' is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^{ - 0.25}}\\cos \\left( {2t - 0.125\\pi } \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^{ - 0.5}}\\cos \\left( {2t - 0.125\\pi } \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{ - 0.5}}\\cos \\left( {2t - 0.25\\pi } \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The impulse response h(t) of a linear time invariant system is given by h(t) = $${e^{ - 2t}}u(t),$$ where u(t) denotes the unit step function.\n<p>The frequency response H(ω) of the system in terms of angular frequency 'ω' is given by h( ω)</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {1 + j2\\omega }}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\sin \\omega } \\over \\omega }$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over {2 + j\\omega }}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{j\\omega } \\over {2 + j\\omega }}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The asymptotic Bode plot of a transfer function is shown in the figure. the transfer function G(s) corresponding to this bode plot is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/24943d31db60ef6f2d7f36efc8ad49be45626fe5240c39ce3e4a41b1e66c744d.jpg\" loading=\"lazy\" alt=\"GATE ECE 2007 Control Systems - Frequency Response Analysis Question 26 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {\\left( {s + 1} \\right)\\left( {s + 20} \\right)}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {s\\left( {s + 1} \\right)\\left( {s + 20} \\right)}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{100} \\over {s\\left( {s + 1} \\right)\\left( {s + 20} \\right)}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{100} \\over {s\\left( {s + 1} \\right)\\left( {1 + 0.05s} \\right)}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two transfer functions\n$${G_1}\\left( s \\right) = {1 \\over {{s^2} + as + b}}$$ and $${G_2}\\left( s \\right) = {s \\over {{s^2} + as + b}}.$$ \nThe 3-dB bandwidths of their frequency responses are, respectively",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sqrt {{a^2} - 4b,} $$ $$\\sqrt {{a^2} + 4b,} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sqrt {{a^2} - 4b,} $$ $$\\sqrt {{a^2} - 4b,} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sqrt {{a^2} + 4b,} $$ $$\\sqrt {{a^2} - 4b,} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sqrt {{a^2} + 4b,} $$ $$\\sqrt {{a^2} + 4b,} $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a unity-gain feedback control system whose open-loop transfer function is \nG(s)=$${{as + 1} \\over {{s^2}}}$$.\n<p>With the value of \"a\" set for phase-margin  of $$\\pi $$/4, the value of unit-impulse response of the open-loop system at t = 1 second is equal to </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3.40"
+      },
+      {
+        "identifier": "B",
+        "content": "2.40"
+      },
+      {
+        "identifier": "C",
+        "content": "1.84 "
+      },
+      {
+        "identifier": "D",
+        "content": "1.74"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The Nyquist plot of G(jω)H(jω) for a closed loop control system, passes through (-1,j0) point in the GH plane. The gain margin of the system in dB is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "infinite "
+      },
+      {
+        "identifier": "B",
+        "content": "greater than zero "
+      },
+      {
+        "identifier": "C",
+        "content": "less than zero "
+      },
+      {
+        "identifier": "D",
+        "content": "zero"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a unity-gain feedback control system whose open-loop transfer function is G(s)=$${{as + 1} \\over {{s^2}}}$$ \n\nThe value of 'a', so that the system has a phase-margin equal to  $$\\pi $$/4 is approximately equal to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2.40 "
+      },
+      {
+        "identifier": "B",
+        "content": "1.40"
+      },
+      {
+        "identifier": "C",
+        "content": "0.84"
+      },
+      {
+        "identifier": "D",
+        "content": "0.74 "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The open loop transfer function of a unity feedback system is given by\ng(s)=$${{3{e^{ - 2s}}} \\over {s\\left( {s + 2} \\right)}}.$$ \nBased on the above results, the gain and phase margins of the system will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - 7.09$$ dB and $${87.5^0}$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ 7.09$$ dB and $${87.5^0}$$  "
+      },
+      {
+        "identifier": "C",
+        "content": "$$ 7.09$$ dB and $${-87.5^0}$$  "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - 7.09$$ dB and $${-87.5^0}$$  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The polar diagram of a conditionally stable system for open loop gain K=1 is\nshown in figure. The open loop transfer function of the system is known to be\nstable. The closed loop system is stable for \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b75277098e178be7bb6fceb07857854caeaea36f50fe453923b343abbc1f3633.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Control Systems - Frequency Response Analysis Question 37 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$K &lt; 5$$ and $${1 \\over 2} &lt; K &lt; {1 \\over 8}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$K &lt; {1 \\over 8}and{1 \\over 2} &lt; K &lt; 5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$K &lt; {1 \\over 8}$$ and 5 &lt; K "
+      },
+      {
+        "identifier": "D",
+        "content": "$$K &gt; {1 \\over 8}$$ and K &lt; 5"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The open loop transfer function of a unity feedback system is given by \nG(s)=$${{3{e^{ - 2s}}} \\over {s\\left( {s + 2} \\right)}}.$$ \nThe gain and phase crossover frequencies in rad/sec are, respectively",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.632 and 1.26"
+      },
+      {
+        "identifier": "B",
+        "content": "0.632 and 0.485"
+      },
+      {
+        "identifier": "C",
+        "content": "0.485 and 0.632"
+      },
+      {
+        "identifier": "D",
+        "content": "1.26 and 0.632"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the Bode magnitude plot shown in figure. The transfer function H(s) is  \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/cd8a2e164eba827bd1140a40b8b48bd304bd791d643d33e72ad24b1d4c6060cc.jpg\" loading=\"lazy\" alt=\"GATE ECE 2004 Control Systems - Frequency Response Analysis Question 39 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{\\left( {s + 10} \\right)} \\over {\\left( {s + 1} \\right)\\left( {s + 100} \\right)}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{10\\left( {s + 1} \\right)} \\over {\\left( {s + 10} \\right)\\left( {s + 100} \\right)}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{{10}^2}\\left( {s + 1} \\right)} \\over {\\left( {s + 10} \\right)\\left( {s + 100} \\right)}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{{{10}^3}\\left( {s + 100} \\right)} \\over {\\left( {s + 1} \\right)\\left( {s + 10} \\right)}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A system has poles at 0.01 Hz, 1Hz and 80 Hz; zeroes at 5hz, 100 Hz and 200 Hz. The approximate phase of the system response at 20 Hz is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - {90^0}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$  {0^0}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$  {90^0}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$  {-180^0}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The gain margin and the phase margin of a feedback system with \nG(s)H(s)=$${s \\over {{{\\left( {s + 100} \\right)}^3}}}$$ are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 dB, $${0^0}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\infty ,\\infty $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\infty ,{0^0}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "88.5 dB, $$\\infty $$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The approximate Bode magnitude plot of a minimum-phase system is shown in\nfigure. The transfer function of the system is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/49c8f14f03c531c5820cf8f7eb974fa64f3207c4b9ab2a47bcc3f43f072e4f99.jpg\" loading=\"lazy\" alt=\"GATE ECE 2003 Control Systems - Frequency Response Analysis Question 40 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${10^8}{{{{\\left( {s + 0.1} \\right)}^3}} \\over {{{\\left( {s + 10} \\right)}^2}\\left( {s + 100} \\right)}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${10^7}{{{{\\left( {s + 0.1} \\right)}^3}} \\over {{{\\left( {s + 10} \\right)}}\\left( {s + 100} \\right)}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${10^8}{{{{\\left( {s + 0.1} \\right)}^2}} \\over {{{\\left( {s + 10} \\right)}^2}\\left( {s + 100} \\right)}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${10^9}{{{{\\left( {s + 0.1} \\right)}^3}} \\over {\\left( {s + 10} \\right){{\\left( {s + 100} \\right)}^2}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The system with the open loop transfer function G(s)H(s)=$${1 \\over {s\\left( {{s^2} + s + 1} \\right)}},$$ has a gain margin of",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-6 dB"
+      },
+      {
+        "identifier": "B",
+        "content": "0 dB"
+      },
+      {
+        "identifier": "C",
+        "content": "3.5 dB"
+      },
+      {
+        "identifier": "D",
+        "content": "6 dB"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The open-loop DC gain of a unity negative feedback system with closed-loop\ntransfer function $${{s + 4} \\over {{s^2} + 7s + 13}}$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${4 \\over {13}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${4 \\over 9}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$13$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Bode plot of a stable system is shown in fig. The transfer function of the system is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/e0c35541a4c711a5f8b0b2952f0ba090148cc10614675f756df00e5315d3a4b6.jpg\" loading=\"lazy\" alt=\"GATE ECE 1992 Control Systems - Frequency Response Analysis Question 44 English\"> \n",
+    "options": [],
+    "correct_options": [],
+    "answer": "T.F=$${{10} \\over {\\left( {1 + s} \\right)}}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "The open-loop transfer function of a feedback control system is\n G(s)=$${1 \\over {{{\\left( {s + 1} \\right)}^3}}}$$<br>The gain margin of the system is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2 "
+      },
+      {
+        "identifier": "B",
+        "content": "4 "
+      },
+      {
+        "identifier": "C",
+        "content": "8 "
+      },
+      {
+        "identifier": "D",
+        "content": "16"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "From the Nicholas chart, one can determine the following quantities pertaining to a closed loop system:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Magnitude and phase "
+      },
+      {
+        "identifier": "B",
+        "content": "band width "
+      },
+      {
+        "identifier": "C",
+        "content": "only magnitude "
+      },
+      {
+        "identifier": "D",
+        "content": "only phase"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "A system has fourteen poles and two zeroes. Its high frequency asymptote, in its magnitude plot, has having a slope of",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - 40$$ dB / decade "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - 240$$ dB / decade "
+      },
+      {
+        "identifier": "C",
+        "content": "$$ - 280$$ dB / decade "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - 320$$ dB / decade."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "content": "The popular plot of G(s)=$${{10} \\over {s{{\\left( {s + 1} \\right)}^2}}},$$ intercepts real axix at $$\\omega  = {\\omega _0}$$ Then, the real part and $${\\omega _0}$$ are respectively given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-25, 1"
+      },
+      {
+        "identifier": "B",
+        "content": "-5, 0.5"
+      },
+      {
+        "identifier": "C",
+        "content": "-5, 1"
+      },
+      {
+        "identifier": "D",
+        "content": "-5, 2"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "content": "The Nyquist plot of an all-pole second order open-loop system is shown in Figure.\n Obtain the transfer function of the system.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/4f2f0018240c39ccdf46caffe5b772ffc7138ea97e7c65af8566de24e03c88ed.jpg\" loading=\"lazy\" alt=\"GATE ECE 2002 Control Systems - Frequency Response Analysis Question 12 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$G(s) = {8 \\over {\\left( {{s^2} + 2s + 4} \\right)}}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The asymptotic bode plot of the minimum phase open-loop transfer function G(s)H(s) is as shown in the figure. Obtain the transfer function G(s)H(s)\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a469d1a0cd3205246761be0061111be6770166827cd437aaa9e84a276cffc963.jpg\" loading=\"lazy\" alt=\"GATE ECE 1999 Control Systems - Frequency Response Analysis Question 14 English\"> \n",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$G(s)H(s) = {{10\\left( {s + 0.1} \\right)} \\over {{s^2}\\left( {s + 10} \\right)}}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a feedback system with the open loop transfer function given by\n$$G(s)H(s) = {K \\over {s\\left( {2s + 1} \\right)}}.$$\nExamine the stability of the closed-loop system using Nyquist stability.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it. ",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The loop transfer function of a single loop control system is given by\n$$G(s)H(s) = {{100} \\over {s\\left( {1 + 0.01s} \\right)}}{e^{ - ST}}$$ \nUsing Nyquist criterion, find the condition for the closed loop system to be stable.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "When T &gt; 0.011 see system is stable. ",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A unity feedback system has open-loop transfer function\n$$G(s) = {1 \\over {s\\left( {2s + 1} \\right)\\left( {s + 1} \\right)}}$$ \n<p>Sketch Nyquist plot for the system and there from obtain the gain margin and the\nphase margin.</p> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Gain Margin = $$1.49^\\circ $$ \nPhase Margin =$$11.57^\\circ $$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "The magnitude plot of the open loop transfer function G(s), of a certain system is given in fig,\n<p><br> (a) Determine G(s), if it is known that the system is of minimum phase type.<br></p>\n<br> (b) Estimate the phase at each of the corner frequencies.<br>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/e0NXQTqYtesc7mKtS/xjq3oH0xHm3OcQ5CmYu1xlCIhXSk6/ImpxBuMagVHmlpDyNiHR4K/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1987 Control Systems - Frequency Response Analysis Question 9 English\"> \n",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) G(s)=$${{8 \\times {{10}^{10}}} \\over {\\left( {s + 5} \\right){{\\left( {s + 40} \\right)}^2}\\left( {5 + 100} \\right)}}$$ \n<br> (b) Phase at ω = 5 rad/sec  = -62.11<sup>o</sup>\n<br> Phase at  ω =40 rad/sec = -194.67<sup>o</sup>\n<br> Phase at  ω = 100 rad/sec = -268.54<sup>o</sup> \n\n",
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "content": "Nyquist plot consider a feed back system where the OLTF is:\n$$G(s) = {1 \\over {s\\left( {2s + 1} \\right)\\left( {s + 1} \\right)}}.$$ \nDetermine the asymptote which the nyquist plot approaches as $$\\omega  \\to 0.$$    Find also the range of 'k' in terms of the cross over frequency $${\\omega _{PC}}$$ for stability.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  }
+]

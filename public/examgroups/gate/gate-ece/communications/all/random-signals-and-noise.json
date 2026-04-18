@@ -1,0 +1,1416 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A white Gaussian noise $w(t)$ with zero mean and power spectral density $\\frac{N_0}{2}$,</p> <p>when applied to a first-order RC low pass filter produces an output $n(t)$. At a particular time $t = t_k$, the variance of the random variable $n(t_k)$ is ________.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{N_0}{4RC}$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{N_0}{2RC}$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{N_0}{RC}$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{2N_0}{RC}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : White Gaussian noise $W(t)$ with zero mean and power spectral density $\\frac{N_0}{2}$.</p>\n<p>(i) $\\quad E[w(t)]=0$</p>\n<p>(ii) $\\quad S_W(f)=\\frac{N_0}{2}$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfh7cg15/4fd5904c-1106-48da-8041-7b3673536d66/b351f190-900a-11f0-8a29-d1d739f0bc87/file-jaoe38c1mfh7cg16.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfh7cg15/4fd5904c-1106-48da-8041-7b3673536d66/b351f190-900a-11f0-8a29-d1d739f0bc87/file-jaoe38c1mfh7cg16.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Communications - Random Signals and Noise Question 6 English Explanation 1\"></p>\n<p>$$ \\begin{aligned} &amp;\\text { Transfer function of RC Low pass filter is }\\\\ &amp;H(f)=\\frac{1}{1+j 2 \\pi f R C} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} $$</p>\n<p>Mean of output noise $n(t)$ is</p>\n<p>$$ E[n(t)]=E[w(t)] H(0) $$</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Given $E[w(t)]=0]$</p>\n<p>$$ E[n(t)]=0 $$</p>\n<p>Hence, mean of output noise is also zero.</p>\n<p>Variance of output noise $n(t)$ is,</p>\n<p>$$ \\operatorname{Var}[n(t)]=E\\left[n^2(t)\\right]-[E\\{n(t)\\}]^2 $$</p>\n<p>$$ \\begin{aligned} &amp; \\operatorname{Var}[n(t)]=E\\left[n^2(t)\\right]-0 \\\\ &amp; \\operatorname{Var}[n(t)]=E\\left[n^2(t)\\right] \\end{aligned} $$</p>\n<p>At $t=t_k$,</p>\n<p>$$ \\operatorname{Var}\\left[n\\left(t_k\\right)\\right]=E\\left[n^2\\left(t_k\\right)\\right] $$</p>\n<p>Thus, Variance of output noise at $t=t_k$ is the mean square value of output noise at $t=t_k$</p>\n<p>Since mean square value is equal to power of output noise.</p>\n<p>$\\operatorname{Var}\\left[n\\left(t_k\\right)\\right]=E\\left[n^2\\left(t_k\\right)\\right]=$ Power of output noise &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...(ii)</p>\n<p>Calculation of power spectral density of output noise</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfh7gvtv/1e67f486-e6c2-4f03-909d-8d37b5cf7c28/2ec29730-900b-11f0-8a29-d1d739f0bc87/file-jaoe38c1mfh7gvtw.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfh7gvtv/1e67f486-e6c2-4f03-909d-8d37b5cf7c28/2ec29730-900b-11f0-8a29-d1d739f0bc87/file-jaoe38c1mfh7gvtw.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Communications - Random Signals and Noise Question 6 English Explanation 2\">$$ \\begin{aligned} &amp;\\text { Power spectral density of output noise is }\\\\ &amp;\\begin{aligned} &amp; S_n(f)=S_w(f)|H(f)|^2 \\\\ &amp; S_n(f)=\\frac{N_0}{2}|H(f)|^2 \\\\ &amp; S_n(f)=\\frac{N_0}{2}\\left[\\frac{1}{1+4 \\pi^2 f^2 R^2 C^2}\\right] \\\\ &amp; S_n(f)=\\frac{N_0}{2} \\frac{1}{4 \\pi^2 R^2 C^2}\\left[\\frac{1}{\\frac{1}{4 \\pi^2 R^2 C^2}+f^2}\\right] \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)\\end{aligned} \\end{aligned} $$</p>\n<p>Power of output noise is, $P_n=\\int_{-\\infty}^{\\infty} S_n(f) d f$</p>\n<p>Substituting the value of $S_n(f)$ from equation</p>\n<p>(ii),</p>\n<p>$$ \\begin{aligned} &amp; P_n=\\int_{-\\infty}^{\\infty} \\frac{N_0}{2} \\frac{1}{4 \\pi^2 R^2 C^2}\\left[\\frac{1}{\\frac{1}{4 \\pi^2 R^2 C^2}+f^2}\\right] d f \\\\ &amp; P_n=\\frac{N_0}{2} \\frac{1}{4 \\pi^2 R^2 C^2} \\int_{-\\infty}^{\\infty}\\left[\\frac{1}{\\frac{1}{(2 \\pi R C)^2+f^2}}\\right] d f \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} P_n &amp; =\\frac{N_0}{2} \\frac{1}{4 \\pi^2 R^2 C^2} \\frac{1}{\\frac{1}{2 \\pi R C}} \\tan ^{-1}\\left[\\frac{f}{2 \\pi R C}\\right]_{-\\infty}^{\\infty} \\\\ P_n &amp; =\\frac{N_0}{2} \\frac{1}{2 \\pi R C}[\\pi]=\\frac{N_0}{4 R C} \\\\ P_n &amp; =\\frac{N_0}{4 R C} \\end{aligned} $$</p>\n<p>From equation (ii),</p>\n<p>$$ \\begin{aligned} &amp; \\operatorname{Var}\\left[n\\left(t_k\\right)\\right]=E\\left[n^2\\left(t_k\\right)\\right]=\\text { Power of output noise } \\\\ &amp; \\operatorname{Var}\\left[n\\left(t_k\\right)\\right]=\\frac{N_0}{4 R C} \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>For a real signal, which of the following is/are valid power spectral density/densities?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${S_x}(\\omega ) = {2 \\over {9 + {\\omega ^2}}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${S_x}(\\omega ) = {e^{ - {\\omega ^2}}}{\\cos ^2}\\omega $$"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywmzi04/d29b41c4-517c-4435-95f6-23f00cd297c9/f1b0ba40-47f7-11ef-a44d-8fba9a2e13ab/file-jaoe38c1lywmzi05.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywmzi04/d29b41c4-517c-4435-95f6-23f00cd297c9/f1b0ba40-47f7-11ef-a44d-8fba9a2e13ab/file-jaoe38c1lywmzi05.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Communications - Random Signals and Noise Question 8 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywmzelh/14761a46-ffca-431f-ba95-24009af81ae9/ef0f0d50-47f7-11ef-a44d-8fba9a2e13ab/file-jaoe38c1lywmzeli.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywmzelh/14761a46-ffca-431f-ba95-24009af81ae9/ef0f0d50-47f7-11ef-a44d-8fba9a2e13ab/file-jaoe38c1lywmzeli.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Communications - Random Signals and Noise Question 8 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Based on the properties of power spectral density, $ S_X(-\\omega) = S_X(\\omega) $ for all $\\omega$, and $ S_X(\\omega) \\geq 0 $ for all $\\omega$.</p>\n\n<strong>Consider option (A):</strong>\n\n<p>$  S_X(\\omega) = \\frac{2}{9 + \\omega^2}  $</p>\n\n<p>For any value of $\\omega$,</p>\n\n<p>$  S_X(\\omega) \\text{ is positive}, \\text{ so } S_X(\\omega) &gt; 0  $</p>\n\n<p>$  S_X(-\\omega) = \\frac{2}{9 + (-\\omega)^2} = \\frac{2}{9 + \\omega^2} = S_X(\\omega)  $</p>\n\n<p>Therefore, option (A) is a valid power spectral density.</p>\n\n<p><b>Consider option (B) :</b></p>\n\n<p>$$ S_X(\\omega)=e^{-\\omega^2} \\cos ^2 \\omega $$</p>\n\n<p>At $\\omega=\\frac{\\pi}{2}, S_X\\left(\\frac{\\pi}{2}\\right)=e^{-\\left(\\frac{\\pi}{2}\\right)^2} \\cos ^2 \\frac{\\pi}{2}=0$</p>\n\n<p>For any other value of $\\omega$, $S_X(\\omega)$ is positive. So, $S_X(\\omega) \\geq 0$</p>\n\n<p>$$ \\begin{aligned} &amp; S_X(-\\omega)=e^{-(-\\omega)^2} \\cos ^2(\\omega)=e^{-\\omega^2} \\cos ^2 \\omega \\\\\\\\ &amp; S_X(-\\omega)=S_X(\\omega) \\end{aligned} $$</p>\n\n<p>So, option (B) is a valid power spectral density.</p>\n\n<p><b>Consider option (C) :</b></p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywmzi04/d29b41c4-517c-4435-95f6-23f00cd297c9/f1b0ba40-47f7-11ef-a44d-8fba9a2e13ab/file-jaoe38c1lywmzi05.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywmzi04/d29b41c4-517c-4435-95f6-23f00cd297c9/f1b0ba40-47f7-11ef-a44d-8fba9a2e13ab/file-jaoe38c1lywmzi05.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Communications - Random Signals and Noise Question 8 English Explanation 1\">\n\n<p>From the above plot, $S_X(\\omega)$ is negative for some values of $\\omega$ and odd function.</p>\n\n<p>So, option $(\\mathrm{C})$ is not a valid power spectral density.</p>\n\n<p><b>Consider option (D) :</b></p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywmzelh/14761a46-ffca-431f-ba95-24009af81ae9/ef0f0d50-47f7-11ef-a44d-8fba9a2e13ab/file-jaoe38c1lywmzeli.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywmzelh/14761a46-ffca-431f-ba95-24009af81ae9/ef0f0d50-47f7-11ef-a44d-8fba9a2e13ab/file-jaoe38c1lywmzeli.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Communications - Random Signals and Noise Question 8 English Explanation 2\">\n\n<p>From the above plot, $S_X(\\omega)$ is positive but not an even function, that is $S_X(\\omega) \\geq 0$ but $S_X(-\\omega) \\neq S_X(\\omega)$.</p>\n\n<p>So, option (D) is not a valid power spectral density.</p>\n\n<p>Hence, the correct options are (A) and (B).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The frequency response H(f) of a linear time-invariant system has magnitude as shown in the figure.</p>\n<p>Statement I : The system is necessarily a pure delay system for inputs which are bandlimited to $$-$$$$\\alpha$$ $$\\le$$ f $$\\le$$ $$\\alpha$$.</p>\n<p>Statement II : For any wide-sense stationary input process with power spectral density S<sub>X</sub>(f), the output power spectral density S<sub>Y</sub>(f) obeys S<sub>Y</sub>(f) = S<sub>X</sub>(f) for $$-$$$$\\alpha$$ $$\\le$$ f $$\\le$$ $$\\alpha$$.</p>\n<p>Which one of the following combinations is true?</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kersej/413d8d60-64a2-4e2c-9927-93e243d90f63/9331fcc0-2ab4-11ed-ac06-93878138b969/file-1l7kersek.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kersej/413d8d60-64a2-4e2c-9927-93e243d90f63/9331fcc0-2ab4-11ed-ac06-93878138b969/file-1l7kersek.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Random Signals and Noise Question 11 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Statement I is correct, Statement II is correct"
+      },
+      {
+        "identifier": "B",
+        "content": "Statement I is correct, Statement II is incorrect"
+      },
+      {
+        "identifier": "C",
+        "content": "Statement I is incorrect, Statement II is correct"
+      },
+      {
+        "identifier": "D",
+        "content": "Statement I is incorrect, Statement II is incorrect"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7ket9ox/83e35c58-fba3-4f51-849b-0bd09ce6a4bc/bc5bdc10-2ab4-11ed-ac06-93878138b969/file-1l7ket9oy.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7ket9ox/83e35c58-fba3-4f51-849b-0bd09ce6a4bc/bc5bdc10-2ab4-11ed-ac06-93878138b969/file-1l7ket9oy.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Random Signals and Noise Question 11 English Explanation 1\"></p>\n<p>$$Y(f) = X(f)\\,.\\,{e^{ - j2\\pi f{T_d}}}$$</p>\n<p>$$H(f) = {{Y(f)} \\over {X(f)}} = {e^{ - j2\\pi f{T_d}}}$$</p>\n<p>$$|H(f)|\\, = \\,1$$</p>\n<p>$$\\angle H(f) =  - 2\\pi f{T_d}$$</p>\n<p>Given that input is bandlimited to $$ - \\alpha  \\le f \\le \\alpha $$.</p>\n<p>Magnitude response of the system given</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kersej/413d8d60-64a2-4e2c-9927-93e243d90f63/9331fcc0-2ab4-11ed-ac06-93878138b969/file-1l7kersek.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kersej/413d8d60-64a2-4e2c-9927-93e243d90f63/9331fcc0-2ab4-11ed-ac06-93878138b969/file-1l7kersek.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Random Signals and Noise Question 11 English Explanation 2\"></p>\n<p>Based on the magnitude response given ; statement (I) is correct.</p>\n<p>Note : Phase response of the system is not given in the question without knowing phase response of the system we can't comment about exact nature of the system.</p>\n<p>$${(PSD)_{o/p}} = {(PSD)_{i/p}}\\,.\\,|H(f){|^2}$$</p>\n<p>$${S_Y}(f) = {S_X}(f)$$ ; $$ - \\alpha  \\le f \\le \\alpha $$</p>\n<p>Statement (II) is correct.</p>\n<p>Hence option (a) is correct.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The autocorrelation function $R_X(\\tau)$ of a wide-sense stationary random process $X(t)$ is shown in the figure.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0n05uj/c187fbe5-e086-4a2e-9550-c2c7b2fb0af8/0b8726b0-ae87-11f0-b6ae-17d02adff4da/file-jaoe38c1mh0n05uk.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0n05uj/c187fbe5-e086-4a2e-9550-c2c7b2fb0af8/0b8726b0-ae87-11f0-b6ae-17d02adff4da/file-jaoe38c1mh0n05uk.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Communications - Random Signals and Noise Question 2 English\">$$ \\text { The average power of } X(t) \\text { is ___________} $$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>$$ \\text { From question, we have } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0n34v2/af2ede62-f0cb-42ce-8c46-8ae18f3a4392/5e31b7e0-ae87-11f0-b6ae-17d02adff4da/file-jaoe38c1mh0n34v3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0n34v2/af2ede62-f0cb-42ce-8c46-8ae18f3a4392/5e31b7e0-ae87-11f0-b6ae-17d02adff4da/file-jaoe38c1mh0n34v3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Communications - Random Signals and Noise Question 2 English Explanation\"></p>\n<p>We can say that the Average power of $x(t)$ is given as $=$ ?</p>\n<p>$$ \\begin{array}{rlrl}  &amp; &amp; R_{x x}(\\tau) &amp; =E[x(t) \\times(t+\\tau)] \\\\ \\text { or, } &amp; &amp; R_{x x}(0) &amp; =E\\left[x^2(t)\\right] \\\\ \\text { or, } &amp; &amp;&amp; =P_{\\text {avg }}=2 \\text { watts. } \\end{array} $$</p>\n<p>Hence, the correct answer is (2).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The random variable</p>\n<p>$$ Y=\\int_{-\\infty}^{\\infty} W(t) \\phi(t) d t, \\quad \\text { where } \\phi(t)=\\left\\{\\begin{array}{cc} 1, & 5 \\leq t \\leq 7 \\\\ 0, & \\text { otherwise } \\end{array}\\right. $$</p>\n<p>and $W(t)$ is a real white Gaussian noise process with two-sided power spectral density $S_W(f)=3 \\mathrm{~W} / \\mathrm{Hz}$, for all $f$. The variance of $Y$ is $\\_\\_\\_\\_$ .</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p>$$ \\begin{gathered} \\text { Given : } Y=\\int_{-\\infty}^{\\infty} W(t) \\phi(t) d t \\quad \\text { where } \\phi(t)= \\begin{cases}1, &amp; 5 \\leq t \\leq 7 \\\\ 0, &amp; \\text { otherwise }\\end{cases} \\\\ S_W(f)=3 \\mathrm{~W} / \\mathrm{Hz} \\end{gathered} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh21893o/0c4526d1-ba02-4d82-a349-9abc38fbb5a4/74f8dd40-af4b-11f0-ba93-393527bdf085/file-jaoe38c1mh21893p.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh21893o/0c4526d1-ba02-4d82-a349-9abc38fbb5a4/74f8dd40-af4b-11f0-ba93-393527bdf085/file-jaoe38c1mh21893p.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Communications - Random Signals and Noise Question 1 English Explanation\">As $\\phi(t)$ exists only for $5 \\leq t \\leq 7$, so the product of $W(t)$ and $\\phi(t)$ will also exist for this duration only.</p>\n<p>$$ \\therefore \\quad Y=\\int_5^7 W(t) d t $$</p>\n<p>Where, $W(t)=$ white Gaussian Noise with PSD $\\frac{\\eta}{2}=3 \\mathrm{~W} / \\mathrm{Hz}$.</p>\n<p>So $Y$ represents a white Gaussian noise truncated in interval 5 to 7 .</p>\n<p>As mean of WGN is zero, so the power will be equal to the variance of $Y$.</p>\n<p>Variance of WGN truncated in interval $T_1$ to $T_1+T$,</p>\n<p>Variance $\\left[\\int_{T_1}^{T_1+T} W(t) d t\\right]=\\frac{\\eta}{2} \\times T$</p>\n<p>Variance $\\left[\\int_5^{5+2} W(t) d t\\right]=$ Variance $[Y]=3 \\times 2=6$</p>\n<p>Hence, the variance of $Y$ is 6 .</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the random process\n<br> x(t) = U + Vt.\n<br> Where U is a zero mean Gaussian random variable and V is a random variable uniformly distributed between 0 and 2. Assume that U and V are statistically independent. The mean value of the random process at t = 2 is _________________",
+    "options": [],
+    "correct_options": [],
+    "answer": "2 ",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "If calls arrive at a telephone exchange such that the time of arrival of any call is independent of the time of arrival of earlier or future calls, the probability distribution function of the total number of calls in a fixed time interval will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Poisson "
+      },
+      {
+        "identifier": "B",
+        "content": "Gaussian "
+      },
+      {
+        "identifier": "C",
+        "content": "Exponential  "
+      },
+      {
+        "identifier": "D",
+        "content": "Gamma  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "The power spectral density of a real process X(t) for positive frequencies is shown below. The value of $$E\\,\\left[ {{X^2}\\,(t)} \\right]$$ and $$E\\,\\left[ {X\\,(t)} \\right]$$, respectively, are  \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/nAcVzfmOWVuzMdS8e/SE4STj7TLiOMzSG8fVTvXDaguVNHG/FY5PbOXpXjGnNy72Jz2cER/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2012 Communications - Random Signals and Noise Question 21 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$6000/\\,\\pi ,\\,0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$6400/\\,\\pi ,\\,0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\,6400/\\,\\pi ,\\,\\,20\\,\\left( {\\pi \\sqrt 2 } \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\,6000/\\,\\pi ,\\,\\,20\\,\\left( {\\pi \\sqrt 2 } \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Two independent random variable X and Y are uniformly distributed in the interval [ - 1, 1]. The probability that max [X, Y] is less than 1/2 is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3/4"
+      },
+      {
+        "identifier": "B",
+        "content": "9/16"
+      },
+      {
+        "identifier": "C",
+        "content": "1/4"
+      },
+      {
+        "identifier": "D",
+        "content": "2/3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "If E denotes expectation, the variance of a random variable X is given by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$E\\,\\left[ {{X^2}} \\right] - \\,{E^2}\\left[ X \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$E\\,\\left[ {{X^2}} \\right] + \\,{E^2}\\left[ X \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$E\\,\\left[ {{X^2}} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${E^2}\\left[ X \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The PDF of a Gaussian random variable X is given by $${p_x}(x) = \\,{1 \\over {3\\sqrt {2\\pi } }}\\,\\exp \\,[ - \\,{(x - 4)^2}/18]$$.\n<p> The probability of the event {X = 4} is </p> \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1/2"
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/\\left( {3\\sqrt {2\\,\\pi } } \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "0"
+      },
+      {
+        "identifier": "D",
+        "content": "1/4"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The ACF of a rectangular pulse of duration T is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a rectangular pulse of duration T"
+      },
+      {
+        "identifier": "B",
+        "content": "a rectangular pulse of duration 2T"
+      },
+      {
+        "identifier": "C",
+        "content": "a triangular pulse of duration T"
+      },
+      {
+        "identifier": "D",
+        "content": "a triangular pulse of duration 2T"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The amplitude spectrum of a Gaussian pulse is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "uniform"
+      },
+      {
+        "identifier": "B",
+        "content": "a sine function"
+      },
+      {
+        "identifier": "C",
+        "content": "Gaussian"
+      },
+      {
+        "identifier": "D",
+        "content": "an impulse function"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The probability density function of the envelope of  narrow band Gaussian noise is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "poisson"
+      },
+      {
+        "identifier": "B",
+        "content": "Gaussian"
+      },
+      {
+        "identifier": "C",
+        "content": "Rayleigh"
+      },
+      {
+        "identifier": "D",
+        "content": "Rician "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A probability density function is given by $$p(x) = \\,K\\,\\,\\exp \\,\\,( - \\,{x^2}/2),\\,\\, - \\,\\infty \\, &lt; \\,x &lt; \\,\\infty $$. \n<p> The value of K should be </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/\\sqrt {2\\,\\pi } $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sqrt {2\\,/\\pi } $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1/2\\sqrt \\pi  $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1/\\pi \\sqrt 2 $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "For a narrow band noise with Gaussian quadrature and inphase components, the probability density function of its enveolope will be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "uniform"
+      },
+      {
+        "identifier": "B",
+        "content": "Gaussian"
+      },
+      {
+        "identifier": "C",
+        "content": "exponential"
+      },
+      {
+        "identifier": "D",
+        "content": "Rayleigh"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a real-valued random process</p>\n<p>$$ f(t)=\\sum\\limits_{n=1}^N a_n p(t-n T), $$</p>\n<p>where $T>0$ and $N$ is a positive integer. Here, $p(t)=1$ for $t \\in[0,0.5 T]$ and 0 otherwise. The coefficients $a_n$ are pairwise independent, zero-mean unit-variance random variables. Read the following statements about the random process and choose the correct option.</p>\n<p>(i) The mean of the process $f(t)$ is independent of time $t$.</p>\n<p>(ii) The autocorrelation function $E[f(t) f(t+\\tau)]$ is independent of time $t$ for all $\\tau$. (Here, $E[\\cdot]$ is the expectation operation.)</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) is TRUE and (ii) is FALSE\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Both (i) and (ii) are TRUE\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Both (i) and (ii) are FALSE\n"
+      },
+      {
+        "identifier": "D",
+        "content": "(i) is FALSE and (ii) is TRUE"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given Random process } f(t)=\\sum_{n=1}^N a_n p(t-n T) $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbexyuk9/48ec644d-ba0c-457c-b636-61053f215623/983d7290-3f9b-11f0-a491-e768f614f5b9/file-jaoe38c1mbexyuka.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbexyuk9/48ec644d-ba0c-457c-b636-61053f215623/983d7290-3f9b-11f0-a491-e768f614f5b9/file-jaoe38c1mbexyuka.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Communications - Random Signals and Noise Question 3 English Explanation\"></p>\n<p>$\\left\\{a_n\\right\\}$ specifies set of independent random variables each having zero mean and unit variance.</p>\n<p>Mean:</p>\n<p>$$ E[f(t)]=\\sum_{n=1}^N E\\left[a_n\\right] p(t-n T) $$</p>\n<p>Given that $E\\left[a_n\\right]=0$</p>\n<p>$$ E[f(t)]=0 $$</p>\n<p>$E[f(t)]$ is independent of $t$.</p>\n<p>ACF:</p>\n<p>$$ \\operatorname{ACF}[f(t)]=\\sum_{n=1}^n \\operatorname{ACF}\\left[a_n\\right] \\cdot \\operatorname{ACF}[p(t-n T)] $$</p>\n<p>Let $p(t-n T)=g(t)$ where $g(t)$ is a deterministic signal.</p>\n<p>$$ \\operatorname{ACF}[p(t-n T)]=\\operatorname{ACF}[g(t)]=\\int_{-\\infty}^{\\infty} g(t) \\cdot g(t+\\tau) d t $$</p>\n<p>From observation $\\operatorname{ACF}[g(t)]$ is function of $t$. i.e., $\\operatorname{ACF}[f(t)]$ is function of $t$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A source transmits a symbol $s$, taken from $\\\\{-4, 0, 4\\\\}$ with equal probability, over an additive white Gaussian noise channel. The received noisy symbol $r$ is given by $r = s + w$, where the noise $w$ is zero mean with variance 4 and is independent of $s$.</p>\n<p>Using $Q(x) = \\frac{1}{\\sqrt{2\\pi}} \\int\\limits_{x}^{\\infty} e^{-\\frac{t^{2}}{2}} dt$, the optimum symbol error probability is _______.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{2}{3} Q(2)$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{4}{3} Q(1)$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{2}{3} Q(1)$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{4}{3} Q(2)$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : Source transmit symbol $s$</p>\n<p>Symbol set $s\\{-4,0,4\\}$</p>\n<p>$$ s_1=-4, s_2=0, s_3=4 $$</p>\n<p>and $P\\left(s_1\\right)=P\\left(s_2\\right)=P\\left(s_3\\right)=\\frac{1}{3}$</p>\n<p>Received noisy symbol $r$</p>\n<p>$$ r=s+w $$</p>\n<p>where ' $w$ ' is zero mean with variance 4 Gaussian random variable</p>\n<p>$$ \\sigma^2=4, \\sigma=2 $$</p>\n<p>Conditional probability density function for the transmitted symbols</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfh7svtt/e813703b-ec8c-443c-aed6-d37679329e72/7c77f910-900c-11f0-8a29-d1d739f0bc87/file-jaoe38c1mfh7svtu.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfh7svtt/e813703b-ec8c-443c-aed6-d37679329e72/7c77f910-900c-11f0-8a29-d1d739f0bc87/file-jaoe38c1mfh7svtu.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Communications - Random Signals and Noise Question 5 English Explanation\">$$ \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\, \\,\\,\\,\\,\\,V_{t h}=-2 \\quad V_{t h}=2 $$</p>\n<p>Since, all the symbols are equiprobable, decision boundaries will be intersection points.</p>\n<p>$$ \\begin{aligned} &amp; P_e\\left[s_1\\right]=P\\left[r / s_1&gt;-2\\right]=Q\\left(\\frac{-2-\\mu_{r / s_1}}{\\sigma}\\right)[\\because \\sigma=2] \\\\ &amp; P\\left[r / s_1&gt;-2\\right]=Q\\left[\\frac{-2-(-4)}{2}\\right] \\\\ &amp; P\\left[r / s_1&gt;-2\\right]=Q\\left(\\frac{-2+4}{2}\\right) \\\\ &amp; P\\left[r / s_1&gt;-2\\right]=Q(1) \\\\ &amp; P_e\\left[s_2\\right]=P\\left[r / s_2&lt;-2\\right]+P\\left[r / s_2&gt;2\\right] \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp;\\begin{aligned} = &amp; {\\left[1-Q\\left(\\frac{-2-\\mu_{r / s_2}}{2}\\right)\\right]+Q\\left[\\frac{2-\\mu_{r / s_2}}{2}\\right] } \\\\ = &amp; {[1-Q(-1)]+Q(1)=2 Q(1) } \\\\ P_e\\left[s_3\\right]= &amp; P\\left[r / s_3&lt;2\\right]=1-Q\\left[\\frac{2-\\mu_{r / s_3}}{2}\\right] \\\\ = &amp; 1-Q(-1)=Q(1) \\end{aligned}\\\\ &amp;\\text { Optimum symbol error probability, }\\\\ &amp;\\begin{array}{r} P_e=\\frac{1}{3} P_e\\left(s_1\\right)+\\frac{1}{3} P_e\\left(s_2\\right)+\\frac{1}{3} P_e\\left(s_3\\right) \\\\ =\\frac{1}{3} Q(1)+\\frac{1}{3} 2 Q(1)+\\frac{1}{3} Q(1) \\end{array} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp;P_e=\\frac{4}{3} Q(1)\\\\ &amp;\\text { Hence, the correct option is (B). } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $X(t) = A\\cos(2\\pi f_0 t+\\theta)$ be a random process, where amplitude $A$ and phase $\\theta$ are independent of each other, and are uniformly distributed in the intervals $[-2,2]$ and $[0, 2\\pi]$, respectively. $X(t)$ is fed to an 8-bit uniform mid-rise type quantizer.</p> <p>Given that the autocorrelation of $X(t)$ is $R_X(\\tau) = \\frac{2}{3} \\cos(2\\pi f_0 \\tau)$, the signal to quantization noise ratio (in dB, <b>rounded off to two decimal places</b>) at the output of the quantizer is <u>_________</u>.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "45TO45.30",
+    "explanation": "<p>First, we need to determine the necessary parameters for the signal and the quantizer to find the Signal to Quantization Noise Ratio (SQNR) for the given scenario.</p>\n\n<p>The signal $X(t) = A\\cos(2\\pi f_0 t+\\theta)$, where $A$ is uniformly distributed in the range $[-2, 2]$ and $\\theta$ is uniformly distributed in the range $[0, 2\\pi]$. This implies the amplitude $A$ ranges from -2 to 2, covering a total range of 4 units.</p>\n\n<p>The quantizer is an 8-bit uniform mid-rise type, meaning it can encode the signal into $2^8 = 256$ levels. The mid-rise type quantizer implies the step size $\\Delta$ between quantization levels can be found with:</p>\n\n<p>$$\\Delta = \\frac{\\text{Range of } A}{2^8} = \\frac{4}{256} = \\frac{1}{64}$$</p>\n\n<p>Now, we need to calculate the power of the original signal and the quantization noise. Given the autocorrelation function:</p>\n\n<p>$$R_X(\\tau) = \\frac{2}{3} \\cos(2\\pi f_0 \\tau)$$</p>\n\n<p>To find the signal power $P_X$, evaluate the autocorrelation function at $\\tau = 0$:</p>\n\n<p>$$P_X = R_X(0) = \\frac{2}{3} \\cos(0) = \\frac{2}{3}$$</p>\n\n<p>The quantization noise power $P_Q$ for a uniform quantizer is:</p>\n\n<p>$$P_Q = \\frac{\\Delta^2}{12} = \\frac{\\left(\\frac{1}{64}\\right)^2}{12} = \\frac{1}{4096 \\cdot 12} = \\frac{1}{49152}$$</p>\n\n<p>The Signal to Quantization Noise Ratio (SQNR) can be calculated by taking the ratio of the signal power to the noise power:</p>\n\n<p>$$\\text{SQNR} = \\frac{P_X}{P_Q} = \\frac{\\frac{2}{3}}{\\frac{1}{49152}} = \\frac{2}{3} \\cdot 49152 = 32768$$</p>\n\n<p>Finally, convert this SQNR to decibels (dB):</p>\n\n<p>$$\\text{SQNR (dB)} = 10 \\log_{10} \\left( 32768 \\right)$$</p>\n\n<p>Using a calculator to find the logarithm:</p>\n\n<p>$$\\text{SQNR (dB)} = 10 \\log_{10} \\left( 32768 \\right) \\approx 10 \\times 4.515 \\approx 45.15 \\, \\text{dB}$$</p>\n\n<p>Thus, the signal to quantization noise ratio (in dB, rounded off to two decimal places) at the output of the quantizer is <u>45.15</u>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A random variable X, distributed normally as N(0, 1), undergoes the transformation Y = h(X), given in the figure. The form of the probability density function of Y is</p>\n<p>(In the options given below, a, b, c are non-zero constants and g(y) is piece-wise continuous function)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxb2h7j/c943dd4e-f644-42f9-a8f1-bafb4f331c48/1f9aa2f0-4856-11ef-b529-abeccbcae568/file-jaoe38c1lyxb2h7k.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxb2h7j/c943dd4e-f644-42f9-a8f1-bafb4f331c48/1f9aa2f0-4856-11ef-b529-abeccbcae568/file-jaoe38c1lyxb2h7k.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Communications - Random Signals and Noise Question 9 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a\\delta (y - 1) + b\\delta (y + 1) + g(y)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$a\\delta (y + 1) + b\\delta (y) + c\\delta (y - 1) + g(y)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$a\\delta (y + 2) + b\\delta (y) + c\\delta (y - 2) + g(y)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$a\\delta (y + 2) + b\\delta (y - 2) + g(y)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given that the random variable $X$, undergoes the transformation $Y=h(X)$.</p>\n\n<p>From the given figure, it can be concluded that, $Y$ takes the discrete set of values $\\{-1,0,1\\}$. So, probability density function of $Y$ will consist of impulses at $y=-1, y=0$ and $y=1$.</p>\n\n<p>$\\therefore$ The probability density function of $Y$ can be represented as,</p>\n\n<p>$$ f(y)=a \\delta[y+1]+b \\delta[y]+c \\delta[y-1]+g[y] $$</p>\n\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let X(t) be a white Gaussian noise with power spectral density $$\\frac{1}{2}$$W/Hz. If X(t) is input to an LTI system with impulse response $$e^{-t}u(t)$$. The average power of the system output is ____________ W (rounded off to two decimal places).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.24TO0.26",
+    "explanation": "<p>To determine the average power of the system output, we need to follow these steps:</p>\n\n<p>1. <strong>Understand the input and the system</strong>: We are given that the input $ X(t) $ is a white Gaussian noise with a power spectral density (PSD) $$\\frac{1}{2}$$ W/Hz. The LTI system has an impulse response $$h(t) = e^{-t}u(t)$$, where $ u(t) $ is the unit step function.</p>\n\n<p>2. <strong>Find the system's frequency response</strong>: The frequency response $ H(f) $ of an LTI system is the Fourier transform of the impulse response $ h(t) $.</p>\n\n<p>For the given impulse response $ h(t) = e^{-t}u(t) $, the Fourier transform is:</p>\n\n<p>$$ H(f) = \\int\\limits_{-\\infty}^{\\infty} h(t) e^{-j2\\pi ft} \\, dt = \\int\\limits_{0}^{\\infty} e^{-t} e^{-j2\\pi ft} \\, dt $$</p>\n\n<p>Solving the integral:</p>\n\n<p>$$ H(f) = \\int\\limits_{0}^{\\infty} e^{-t(1 + j2\\pi f)} \\, dt = \\left[ \\frac{e^{-t(1 + j2\\pi f)}}{-(1 + j2\\pi f)} \\right]_{0}^{\\infty} = \\frac{1}{1 + j2\\pi f} $$</p>\n\n<p>3. <strong>Determine the output power spectral density</strong>: The PSD of the output $ Y(t) $ of the system can be found using the input PSD and the magnitude square of the frequency response $ H(f) $. The output PSD $ S_Y(f) $ is given by:</p>\n\n<p>$$ S_Y(f) = S_X(f) |H(f)|^2 $$</p>\n\n<p>Given $ S_X(f) = \\frac{1}{2} $ W/Hz, and from the previous step:</p>\n\n<p>$$ |H(f)|^2 = \\left| \\frac{1}{1 + j2\\pi f} \\right|^2 = \\frac{1}{(1 + (2\\pi f)^2)} $$</p>\n\n<p>Thus, the output PSD is:</p>\n\n<p>$$ S_Y(f) = \\frac{1}{2} \\cdot \\frac{1}{1 + (2\\pi f)^2} $$</p>\n\n<p>4. <strong>Calculate the average power of the system output</strong>: The average power of the system output can be found by integrating the output PSD over all frequencies:</p>\n\n<p>$$ P_Y = \\int\\limits_{-\\infty}^{\\infty} S_Y(f) \\, df = \\int\\limits_{-\\infty}^{\\infty} \\frac{1}{2} \\cdot \\frac{1}{1 + (2\\pi f)^2} \\, df $$</p>\n\n<p>To solve this integral, we can use the substitution $ u = 2\\pi f $, $ du = 2\\pi df $, so $ \\frac{1}{2\\pi} du = df $. Thus, the integral becomes:</p>\n\n<p>$$ P_Y = \\frac{1}{2} \\cdot \\int\\limits_{-\\infty}^{\\infty} \\frac{1}{1 + (2\\pi f)^2} \\, df = \\frac{1}{2} \\cdot \\int\\limits_{-\\infty}^{\\infty} \\frac{1}{1 + u^2} \\cdot \\frac{du}{2\\pi} = \\frac{1}{4\\pi} \\cdot \\int\\limits_{-\\infty}^{\\infty} \\frac{1}{1 + u^2} \\, du $$</p>\n\n<p>We know that:</p>\n\n<p>$$ \\int\\limits_{-\\infty}^{\\infty} \\frac{1}{1 + u^2} \\, du = \\pi $$</p>\n\n<p>Therefore, the average power is:</p>\n\n<p>$$ P_Y = \\frac{1}{4\\pi} \\cdot \\pi = \\frac{1}{4} = 0.25 \\text{ W} $$</p>\n\n<p>So, the average power of the system output is <b>0.25 W</b> (rounded off to two decimal places).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a real valued source whose samples are independent and identically distributed random variables with the probability density function, f(x), as shown in the figure.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kexkxq/e9dfe74f-1b2c-4b48-af59-0fd34428d171/344815e0-2ab5-11ed-ac06-93878138b969/file-1l7kexkxr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kexkxq/e9dfe74f-1b2c-4b48-af59-0fd34428d171/344815e0-2ab5-11ed-ac06-93878138b969/file-1l7kexkxr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Random Signals and Noise Question 10 English\"></p>\n<p>Consider a 1 bit quantizer that maps positive samples to value $$\\alpha$$ and others to value $$\\beta$$. If $$\\alpha$$* and $$\\beta$$* are the respective choices for $$\\alpha$$ and $$\\beta$$ that minimize the mean square quantization error, then ($$\\alpha$$* $$-$$ $$\\beta$$*) = ___________ (rounded off to two decimal places).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.167",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7keyn2y/19f9a963-6485-45b5-b969-654e77021005/51bf6ba0-2ab5-11ed-ac06-93878138b969/file-1l7keyn2z.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7keyn2y/19f9a963-6485-45b5-b969-654e77021005/51bf6ba0-2ab5-11ed-ac06-93878138b969/file-1l7keyn2z.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Random Signals and Noise Question 10 English Explanation\"></p>\n<p>$${1 \\over 2} \\times K \\times 2 + 1 \\times K = 1 \\Rightarrow K = {1 \\over 2} = 0.5$$</p>\n<p>$$ - 2 \\le x \\le 0 \\to {f_X}(x) = mx + C$$</p>\n<p>$${f_X}(x) = 0.25x + C$$</p>\n<p>when $$x =  - 2 \\to {f_X}(x) = 0$$</p>\n<p>$$0 = 0.25 \\times  - 2 + C \\Rightarrow C = 0.5$$</p>\n<p>$${f_X}(x) = {1 \\over 4}x + {1 \\over 2} =  - 2 \\le x \\le 0$$</p>\n<p>Quantizer output,</p>\n<p>f<sub>X</sub>(x) = 0.5 ; 0 $$\\le$$ x $$\\le$$ 1</p>\n<p>x<sub>q</sub> = $$\\alpha$$ ; for  0 $$\\le$$ x $$\\le$$ 1</p>\n<p>x<sub>q</sub> = $$\\beta$$ ; for $$-$$2 $$\\le$$ x $$\\le$$ 0</p>\n<p>Mean square quantization error,</p>\n<p>$$MSQ[{Q_e}] = E[Q_e^2]$$</p>\n<p>Q<sub>e</sub> = (Sampled value) $$-$$ (quantized value)</p>\n<p>= X $$-$$ x<sub>q</sub></p>\n<p>$$MSQ[{Q_e}] = E[{(X - {x_q})^2}]$$</p>\n<p>Quantization noise power, $${N_0} = MSQ[{Q_e}] = \\int {{{(X - {x_q})}^2}{f_x}(x)dx} $$</p>\n<p>For, $$ - 2 \\le x \\le 0 \\to $$</p>\n<p>$${N_Q} = \\int\\limits_{ - 2}^0 {{{(x - \\beta )}^2} \\times \\left( {{1 \\over 4}x + {1 \\over 2}} \\right)dx} $$</p>\n<p>$$ = \\int\\limits_{ - 2}^0 {({x^2} + {\\beta ^2} - 2x\\beta )\\left( {{x \\over 4} + {1 \\over 2}} \\right)dx} $$</p>\n<p>$${N_Q} = {{{\\beta ^2}} \\over 2} + {2 \\over 3}\\beta  - {1 \\over 3}$$</p>\n<p>To find $$\\beta$$ value for which N<sub>Q</sub> will be minimum $$\\to$$</p>\n<p>$${{{d_{NQ}}} \\over {{d_\\beta }}} = 0 \\Rightarrow {1 \\over 2} \\times 2\\beta  + {2 \\over 3} = 0$$</p>\n<p>$$\\beta  = {{ - 2} \\over 3}$$</p>\n<p>For, $$0 \\le x \\le 1 \\to $$</p>\n<p>$${N_Q} = \\int\\limits_0^1 {{{(x - \\alpha )}^2} \\times {1 \\over 2}dx} $$</p>\n<p>$${N_Q} = {1 \\over 6}\\left[ {{{(1 - \\alpha )}^3} + {\\alpha ^3}} \\right]$$</p>\n<p>To find '$$\\alpha$$' value for which N<sub>Q</sub> is minimum</p>\n<p>$${{{d_{NQ}}} \\over {d\\alpha }} = 0 \\Rightarrow {1 \\over 6}\\left[ {3{{(1 - \\alpha )}^2}( - 1) + 3{\\alpha ^2}} \\right] = 0$$</p>\n<p>$$\\alpha  = {1 \\over 2}$$</p>\n<p>Chosen $$\\alpha$$* and $$\\beta$$* for which mean square quantization error (N<sub>Q</sub>) is minimum will be $${1 \\over 2}$$ and $${{ - 2} \\over 3}$$ respectively.</p>\n<p>$$\\alpha * - \\beta * = {1 \\over 2} + {2 \\over 3} = {7 \\over 6} = 1.167$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$X(t)$$ be a wide sense stationary random process with the power spectral density $${S_x}\\left( f \\right)$$ as shown in figure (a), where $$f$$ is in Hertz $$(Hz)$$. The random process $$X(t)$$ is input to an ideal low pass filter with the frequency response \n $$$H\\left( f \\right) = \\left\\{ {\\matrix{\n   {1,} &amp; {\\left| f \\right| \\le {1 \\over 2}Hz}  \\cr \n   {0,} &amp; {\\left| f \\right| &gt; {1 \\over 2}Hz}  \\cr \n\n } } \\right.$$$\n<p>As shown in Figure (b). The output of the low pass filter is $$y(t)$$.</p> \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/RpHMgH488BS0NUhW5/p2vbfffe0gms4DFaCxvxR6siCgo04/6d1BSNuEfGPa58udtuHzSy/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Communications - Random Signals and Noise Question 31 English 1\">\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/cpUV6fKlYc9mpCMLg/QWO75ybMCNi0PbktCWGouTZ0570Ti/ujjFZwLGcGKjAvowZy7kQB/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Communications - Random Signals and Noise Question 31 English 2\"> \n<p>Let $$E$$ be the expectation operator and consider the following statements : \n<br>$$\\left( {\\rm I} \\right)$$  $$E\\left( {X\\left( t \\right)} \\right) = E\\left( {Y\\left( t \\right)} \\right)$$ \n<br>$$\\left( {{\\rm I}{\\rm I}} \\right)$$ $$\\,\\,\\,\\,\\,\\,\\,\\,E\\left( {{X^2}\\left( t \\right)} \\right) = E\\left( {{Y^2}\\left( t \\right)} \\right)$$ \n<br>$$\\left( {{\\rm I}{\\rm I}{\\rm I}} \\right)\\,$$ $$\\,\\,\\,\\,\\,\\,E\\left( {{Y^2}\\left( t \\right)} \\right) = 2$$</p>\n<p>Select the correct option:</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "only $${\\rm I}$$ is true "
+      },
+      {
+        "identifier": "B",
+        "content": "only $${\\rm I}$$$${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$$${\\rm I}$$ are true  "
+      },
+      {
+        "identifier": "C",
+        "content": "only $${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$ are true "
+      },
+      {
+        "identifier": "D",
+        "content": "only $${\\rm I}$$  and $${\\rm I}$$$${\\rm I}$$$${\\rm I}$$ are true "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An information source generates a binary sequence $$\\left\\{ {{\\alpha _n}} \\right\\}.{\\alpha _n}$$ can take one of the two possible values −1 and +1 with equal probability and are statistically independent and identically distributed. This sequence is pre-coded to obtain another sequence $$\\left\\{ {{\\beta _n}} \\right\\},$$ as $${\\beta _n} = {\\alpha _n} + k{\\mkern 1mu} {\\alpha _{n - 3}}$$ . The sequence $$\\left\\{ {{\\beta _n}} \\right\\}$$  is used to modulate a pulse $$g(t)$$ to generate the baseband signal\n<p>$$x\\left( t \\right) = \\sum\\limits_{n =  - \\infty }^\\infty  {{\\beta _n}g\\left( {t - nT} \\right),} $$ where $$g\\left( t \\right) = \\left\\{ {\\matrix{\n   {1,} &amp; {0 \\le t \\le T}  \\cr \n   0 &amp; {otherwise}  \\cr \n\n } } \\right.$$ </p>\n<p>If there is a null at $$f = {1 \\over {3T}}$$ in the power spectral density of $$X(t)$$, then $$k$$ is _________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "-1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider random process $$X(t) = 3V(t) - 8$$, where $$V$$ $$(t)$$ is a zero mean stationary random process with autocorrelation $${R_v}\\left( \\tau  \\right) = 4{e^{ - 5\\left| \\tau  \\right|}}$$. The power of $$X(t)$$ is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "100",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A wide sense stationary random process $$X(t)$$ passes through the $$LTI$$ system shown in the figure. If the autocorrelation function of $$X(t)$$  is  $${R_x}\\left( \\tau  \\right),$$ then the autocorrelation function $${R_x}\\left( \\tau  \\right),$$ of the output $$Y(t)$$ is equal to \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/gHkrsq1vuwYuCANx7/lbXcrYIja03ltAlZSIr8BvbogyIWq/Uk0LmySG6oW8tmNIHcO9Tk/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 3 Communications - Random Signals and Noise Question 32 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2{R_X}\\left( \\tau  \\right) + {R_X}\\left( {\\tau  - {T_0}} \\right) + {R_X}\\left( {\\tau  + {T_0}} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2{R_X}\\left( \\tau  \\right) - {R_X}\\left( {\\tau  - {T_0}} \\right) - {R_X}\\left( {\\tau  + {T_0}} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2{R_X}\\left( \\tau  \\right) + 2{R_X}\\left( {\\tau  - 2{T_0}} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2{R_X}\\left( \\tau  \\right) - 2{R_X}\\left( {\\tau  - 2{T_0}} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "An antenna pointing in a certain direction has a noise temperature of 50K. The ambient\ntemperature is 290K. The antenna is connected to a pre-amplifier that has a noise figure of 2dB\nand an available gain of 40 dB over an effective bandwidth of 12 MHz. The effective input noise\ntemperature T<sub>e</sub> for the amplifier and the noise power P<sub>ao</sub> at the output of the preamplifier,\nrespectively, are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${T_e} = 169.36K\\,\\,\\,$$ and $${P_{ao}} = 3.73 \\times {10^{ - 10}}\\,\\,W$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${T_e} = 170.8K\\,\\,\\,$$ and $${P_{ao}} = 4.56 \\times {10^{ - 10}}\\,\\,W$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${T_e} = 182.5K\\,\\,\\,$$ and $${P_{ao}} = 3.85 \\times {10^{ - 10}}\\,\\,W$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${T_e} = 160.62K\\,\\,\\,$$ and $${P_{ao}} = 4.6 \\times {10^{ - 10}}\\,\\,W$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\mathop {\\left\\{ {{X_n}} \\right\\}}\\nolimits_{n =  - \\infty }^{n = \\infty } $$ is an independent and identically distributed (i.i.d) random process with $${X_n}$$ equally likely to be $$+1$$ or $$-1$$. $$\\mathop {\\left\\{ {{Y_n}} \\right\\}}\\nolimits_{n =  - \\infty }^{n = \\infty } \\,$$ is another random process obtained as $${Y_n} = {X_n} + 0.5{X_{n - 1}}.\\,\\,\\,$$ \n<br>The autocorrelation function of $$\\mathop {\\left\\{ {{Y_n}} \\right\\}}\\nolimits_{n =  - \\infty }^{n = \\infty } $$, denoted by $${r_y}\\left[ K \\right],$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/xkhcIsIQsO521MDz6/qSymSoYJkwY4il1EM37M6RaomyhEn/85wlr09bI4Xr13oIfwHdZi/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 2 Communications - Random Signals and Noise Question 38 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/fZMV92u6kU77eDsuM/PXzRV6jJ9fm9sFqbJCFLkFzucLFCQ/UcEvxwUza8PAh8z3bOY99E/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 2 Communications - Random Signals and Noise Question 38 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/labIou1J7ZLmgCUJh/xzbR02qjxH4THdT6S3OdUqZ84e53G/0J8rigDPRYFoittGeP1Drb/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 2 Communications - Random Signals and Noise Question 38 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/cuA3zwOQuiGaXE26M/FnBfSt6ialGSJX6gmlkg6WM9aVZVX/QecL5Q3wxJDVJyaeFjEOaf/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 2 Communications - Random Signals and Noise Question 38 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$X \\in \\left\\{ {0,1} \\right\\}$$ and $$Y \\in \\left\\{ {0,1} \\right\\}$$ be two independent binary random variables.\n<p>If $$P\\left( {X\\,\\, = 0} \\right)\\,\\, = p$$ and $$P\\left( {Y\\,\\, = 0} \\right)\\,\\, = q,$$ then $$P\\left( {X + Y \\ge 1} \\right)$$ is equal to </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$pq + \\left( {1 - p} \\right)\\left( {1 - q} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$pq$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$p\\left( {1 - q} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1 - pq$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A zero mean white Gaussian noise having power spectral density $${{{N_0}} \\over 2}$$ is passed through an $$ LTI $$\nfilter whose impulse response $$h(t)$$ is shown in the figure. The variance of the filtered noise at $$t = 4$$ is  \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/cCu1jmSvKuH89DZVJ/iJJpVRfmmyFl89qGH8sAneJl4lVxB/zFUzyXLLDhjr8FCxFTb9ut/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 2 Communications - Random Signals and Noise Question 39 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${3 \\over 2}{A^2}{N_0}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${3 \\over 4}{A^2}{N_0}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${A^2}{N_0}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 2}{A^2}{N_0}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A random binary wave $$y(t)$$ is given by \n$$$y\\left( t \\right) = \\sum\\limits_{n =  - \\infty }^\\infty  {{X_n}p\\left( {t - nT - \\phi } \\right)} $$$\n<p>where $$p(t) = u(t) - u(t - T)$$, $$u(t)$$ is the unit step function and $$\\phi $$ is an independent random variable with uniform distribution in $$[0,  T]$$. The sequence  $$\\left\\{ {{X_n}} \\right\\}$$ consists of independent and identically distributed binary valued random variables with $$P\\left\\{ {{X_n} =  + 1} \\right\\} = P\\left\\{ {{X_n} =  - 1} \\right\\} = 0.5$$ for each $$n$$. </p>\n<p>The value of the autocorrelation $${R_{yy}}\\left( {{{3T} \\over 4}} \\right)\\underline{\\underline \\Delta } E\\left[ {y\\left( t \\right)y\\left( {t - {{3T} \\over 4}} \\right)} \\right]\\,\\,$$</p>\n<br> equals ------------ .\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.25",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The power spectral density of a real stationary random process X(t) is given by \n$$${S_x}\\left( f \\right) = \\left\\{ {\\matrix{\n   {{1 \\over W},\\left| f \\right| \\le W}  \\cr \n   {0,\\left| f \\right| &gt; W}  \\cr \n\n } } \\right.$$$\n<p>The value of the expectation \n$$$E\\left[ {\\pi X\\left( t \\right)X\\left( {t - {1 \\over {4W}}} \\right)} \\right]$$$ \n<br> is ---------------.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4 ",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$Q\\left( {\\sqrt y } \\right)$$ be the BER of a BPSK system over an AWGN channel with two - sided noise power spectral density N<sub>0</sub>/2. The parameter 𝛾 is a function of bit energy and noise power spectral density. A system with two independent and identical AWGN channels with noise power spectral density N<sub>0</sub>/2 is    shown in the figure. The BPSK demodulator receives the sum of outputs of both the channels \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/H1S8OFYW5jyGjiIYu/A4vFhy6Jw1imW9fhAS2eM8ryby7cz/wQZEaIggr0PWTrJH8N3guF/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 1 Communications - Random Signals and Noise Question 44 English\"> \n<p> If the BER of this system is $$Q\\left( {b\\sqrt y } \\right),$$ then the value of b is -----------.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.414",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider    a    random    process $$X\\left( t \\right) = \\sqrt 2 \\sin \\left( {2\\pi t + \\varphi } \\right),$$ where the random phase $$\\varphi $$ is uniformly distributed in the interval $$\\left[ {0,\\,\\,2\\pi } \\right].$$ The auto   -  correlation $$E\\left[ {X\\left( {{t_1}} \\right)X\\left( {{t_2}} \\right)} \\right]$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\cos \\left( {2\\pi \\left( {{t_1} + {t_2}} \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sin \\left( {2\\pi \\left( {{t_1} - {t_2}} \\right)} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sin \\left( {2\\pi \\left( {{t_1} + {t_2}} \\right)} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\cos \\left( {2\\pi \\left( {{t_1} - {t_2}} \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${X_1},\\,{X_2},$$ and $${X_3}$$ be independent and identically distributed random variables with the uniform distribution on $$\\left[ {0,\\,1} \\right]$$. The probability $$P\\left\\{ {{X_1} + {X_2} \\le {X_3}} \\right\\}$$ is ___________ .",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.17",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A real band-limited random process $$X( t )$$ has two -sided power spectral density\n$$${S_x}\\left( f \\right) = \\left\\{ {\\matrix{\n   {{{10}^{ - 6}}\\left( {3000 - \\left| f \\right|} \\right)Watts/Hz} &amp; {for\\left| f \\right| \\le 3kHz}  \\cr \n   0 &amp; {otherwise}  \\cr \n\n } } \\right.$$$\n<p>Where f is the frequency expressed in $$Hz$$. The signal $$X( t )$$ modulates a carrier cos $$16000$$   $$\\pi t$$ and the resultant signal is passed through an ideal band-pass filter of unity gain with centre frequency of $$8kHz$$ and band-width of $$2kHz$$. The output power (in Watts) is ______.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.5",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$X(t)$$ be a wide sense stationary $$(WSS)$$ random procfess with power spectral density $${S_x}\\left( f \\right)$$. If $$Y(t)$$ is the process defined as $$Y(t) = X(2t - 1)$$, the power spectral density $${S_y}\\left( f \\right)$$ is \n.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${S_y}\\left( f \\right) = {1 \\over 2}{S_x}\\left( {{f \\over 2}} \\right){e^{ - j\\pi f}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${S_y}\\left( f \\right) = {1 \\over 2}{S_x}\\left( {{f \\over 2}} \\right){e^{ - j\\pi f/2}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${S_y}\\left( f \\right) = {1 \\over 2}{S_x}\\left( {{f \\over 2}} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${S_y}\\left( f \\right) = {1 \\over 2}{S_x}\\left( {{f \\over 2}} \\right){e^{ - j2\\pi f}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Bits 1 and 0 are transmitted with equal probability. At the receiver, the pdf of the respective received signals for both bits are as shown below.  \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/qi2KunidDnzgd51R3/DSboiJbKkuDptHlbiJfTkCCgcCGKD/saosmcy6I1wYG1uOPHF2Qb/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Communications - Random Signals and Noise Question 47 English\"> \n<p>If the detection threshold is 1, the BER will be </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 4}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over 8}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 16}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Bits 1 and 0 are transmitted with equal probability. At the receiver, the pdf of the respective received signals for both bits are as shown below.  \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/qi2KunidDnzgd51R3/DSboiJbKkuDptHlbiJfTkCCgcCGKD/saosmcy6I1wYG1uOPHF2Qb/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Communications - Random Signals and Noise Question 46 English\">  \n<p>The optimum threshold to achieve minimum bit error rate (BER) is </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${4 \\over 5}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "1 "
+      },
+      {
+        "identifier": "D",
+        "content": "$${3 \\over 2}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "X(t) is a stationary random process with autocorrelation function R<sub>x</sub>$$\\left( \\tau  \\right)$$= exp$$\\left( { - \\pi {\\tau ^2}} \\right)$$. This process is passed through the system shown below. The power spectral density of the output process Y(t) is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/b2cWld40UhoVH5imb/UIjvqCbg6IM6mAeTPwocXppDWUj2i/RvJjiusWPiBBUxtwFyUslU/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Communications - Random Signals and Noise Question 48 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {4\\,{\\pi ^2}{f^2} + 1} \\right)\\,\\exp \\left( { - \\pi {f^2}} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {4\\,{\\pi ^2}{f^2} - 1} \\right)\\,\\exp \\left( { - \\pi {f^2}} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {4\\,{\\pi ^2}{f^2} + 1} \\right)\\,\\exp \\left( { - \\pi f} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {4\\,{\\pi ^2}{f^2} - 1} \\right)\\,\\exp \\left( { - \\pi f} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "X(t) is a stationary process with the power spectral density S<sub>x</sub>(f)  &gt;  0 for all f. The process is passed through a system shown below. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/TxRLG9pZjmLD0ZjG9/EGRpNdnkA2ymgDBjYJmZrkVjaPXAb/1qvqSH6ZcHI6b4Gi90IAXw/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2010 Communications - Random Signals and Noise Question 49 English\"> \n<p>Let S<sub>y</sub>(f) be the power spectral density of Y(t). Which one of the following statements is correct? </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S<sub>y</sub>(f) &gt; 0 for all f"
+      },
+      {
+        "identifier": "B",
+        "content": "S<sub>y</sub>(f) &gt; 0 for $$\\left| f \\right|$$ &gt; 1 kH"
+      },
+      {
+        "identifier": "C",
+        "content": "S<sub>y</sub>(f) &gt; 0 for f = nf<sub>0</sub>, f<sub>0</sub> = 2kHz, n any integer  "
+      },
+      {
+        "identifier": "D",
+        "content": "S<sub>y</sub>(f) &gt; 0 for f = (2n + 1)f<sub>0</sub>, f<sub>0</sub> = 1 kHz, n any integer "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Noise with double-sided power spectral density of K over all frequencies is passed through a RC low pass filter with 3-dB cut-off frequency of f<sub>c</sub>. The noise power at the filter output is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "K "
+      },
+      {
+        "identifier": "B",
+        "content": "K   f<sub>c</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "K  $$\\pi $$   f<sub>c</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\infty $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The following      question refer to wide sense stationary stochastic process:\n<p>The parameters of the system obtained in Q. 12 would be</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "first order R-L low pass filter would have $$R = 4\\Omega \\,L = 1\\,H$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "first order R-C high pass filter would have $$R = 4\\Omega \\,C = 0.25F$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "tuned L-C filter would have $$L = 4H\\,\\,C = 4F.$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "series R-L-C low pass filter would have $$R = 1\\Omega ,\\,L = 4H,\\,\\,C = 4F.$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The following      question refer to wide sense stationary stochastic process:\n<p> It is desired to generate a stochastic process (as voltage process) with power\nspectral density</p>\n$$$S\\left( \\omega  \\right) = {{16} \\over {16 + {\\omega ^2}}}$$$\n<p>By driving a Linear-Time-Invariant system by zero mean white noise (as voltage process) with power spectral density being constant equal to 1. The system which can perform the desired task could be</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "first order lowpass R-L filter"
+      },
+      {
+        "identifier": "B",
+        "content": "first order highpass R-c filter "
+      },
+      {
+        "identifier": "C",
+        "content": "tuned L-C filter  "
+      },
+      {
+        "identifier": "D",
+        "content": "series R-L-C filter "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A zero-mean white Gaussian noise is passed through an ideal low-pass filter of bandwidth 10 kHz. The output is then uniformly sampled with sampling period t<sub>s</sub> = 0.03 msec. The samples so obtained would be  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "correlated"
+      },
+      {
+        "identifier": "B",
+        "content": "statistically independent"
+      },
+      {
+        "identifier": "C",
+        "content": "uncorrelated"
+      },
+      {
+        "identifier": "D",
+        "content": "orthogonal"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "An output of a communication channel is a random variable 'V' with the probability density function as shown in the figure. The mean square value of 'V' is\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/pMvj1eGzB2mIu5AEK/FOB1ZWDdzdrO8D1mloNQ68bOUZwL4/S5Cxfu0eXmV0Rn3huZW9i2/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2005 Communications - Random Signals and Noise Question 54 English\"> \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4 "
+      },
+      {
+        "identifier": "B",
+        "content": "6 "
+      },
+      {
+        "identifier": "C",
+        "content": "8 "
+      },
+      {
+        "identifier": "D",
+        "content": "9"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Noise with uniform power spectral density of N<sub>0</sub>  W/Hz is passed through a filter H(ω ) = 2exp (-jωt<sub>d</sub>) followed by an ideal low pass filter of bandwidth B Hz. The output noise power in Watts is  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2N<sub>0</sub>B"
+      },
+      {
+        "identifier": "B",
+        "content": "4 N<sub>0</sub>B"
+      },
+      {
+        "identifier": "C",
+        "content": "8N<sub>0</sub>B"
+      },
+      {
+        "identifier": "D",
+        "content": "16N<sub>0</sub>B"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A 1 mW video signal having a bandwidth of 100 MHz is transmitted to a receiver through a cable that has 40 dB loss. If the effective one-sided noise spectral density at the receiver is 10<sup>-20</sup>   Watt/Hz, then the signal-to-noise ratio at the\nreceiver is \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "50 dB "
+      },
+      {
+        "identifier": "B",
+        "content": "30 dB"
+      },
+      {
+        "identifier": "C",
+        "content": "40 dB"
+      },
+      {
+        "identifier": "D",
+        "content": "60 dB"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "If the variance $$\\sigma _d^2$$ of d(n) = x(n - 1) is one-tenth the variance $$\\sigma _x^2$$ of a stationary zero-mean discrete-time signal x(n), then the normalized autocorrelation function $${R_{xx}}\\,(k)\\,/\\,\\,\\sigma _x^2\\,at\\,\\,k\\,\\, = \\,1$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.95"
+      },
+      {
+        "identifier": "B",
+        "content": "0.90"
+      },
+      {
+        "identifier": "C",
+        "content": "0.10"
+      },
+      {
+        "identifier": "D",
+        "content": "0.05"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "For a random variable 'X' following the probability density function, p (x), shown in figure, the mean and the variance are, respectively.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/RHPqVO8rZfCtjKsZv/TDHZzoIxoE2tdVnJ43BFt56PIj9MJ/3qHLhPz84aM000DDOYqKfB/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 1992 Communications - Random Signals and Noise Question 19 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1/2 and 2/3"
+      },
+      {
+        "identifier": "B",
+        "content": "1 and 4/3"
+      },
+      {
+        "identifier": "C",
+        "content": "1 and 2/3"
+      },
+      {
+        "identifier": "D",
+        "content": "2 and 4/3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Two resistors $$\\,{R_1}$$ and $$\\,{R_2}$$ (in ohms) at temperatures $${T_1}{}^ \\circ K$$ and $${T_2}{}^ \\circ K$$ respectively, are connected in series. Their equivalent noise temperature is.",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$Te = {{{R_1}{T_1}\\, + \\,{R_2}{T_1}} \\over R}\\,\\,{}^ \\circ K$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "A part of a communication system consists of an amplifier of effective noise temperature, $$Te = \\,\\,21\\,\\,{}^ \\circ K\\,$$, and a gain of 13 dB, followed by a cable with a loss of 3 dB. Assuming the ambient temperature to be $$300{}^ \\circ \\,K$$, we have for this part of the communication system,",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "effective noise temperature $$ = 30{}^ \\circ \\,K$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "effective noise temperature $$ = 36{}^ \\circ \\,K$$  "
+      },
+      {
+        "identifier": "C",
+        "content": "noise figure = 0.49 dB "
+      },
+      {
+        "identifier": "D",
+        "content": "noise figure = 1.61 dB "
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "Zero mean Gaussian noise of variance N is applied to a half wave rectifier. The mean squared value of the rectifier output will be:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Zero "
+      },
+      {
+        "identifier": "B",
+        "content": "N/2"
+      },
+      {
+        "identifier": "C",
+        "content": "$$N/\\sqrt 2 $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "N "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "White  Gaussian noise is passed through a linear narrow band filter. The probability density function of the envelope of the noise at the filter output is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Uniform "
+      },
+      {
+        "identifier": "B",
+        "content": "Poisson"
+      },
+      {
+        "identifier": "C",
+        "content": "Gaussian"
+      },
+      {
+        "identifier": "D",
+        "content": "Rayleigh"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "content": "The variance of a random variable X is $$\\sigma _x^2\\,.$$ Then the variance of - kx (where k is a positive constant ) is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sigma _x^2\\,$$"
+      },
+      {
+        "identifier": "B",
+        "content": "- k $$\\sigma _x^2\\,$$"
+      },
+      {
+        "identifier": "C",
+        "content": "k $$\\sigma _x^2\\,$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${k^2}\\,\\sigma _x^2\\,$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "content": "White Gaussian noise with zero mean and double - sided power spectral density $$\\eta /2$$ is the input $$x(t)$$ to a linear system with impulse response $$h(t)$$ $$ = exp\\left( { - t/RC} \\right)\\,\\,\\,\\,\\,\\,\\,\\,u\\left( t \\right)$$. The output is $$y(t)$$ . Evaluate $$E\\left[ {x\\left( {t + \\tau } \\right)y\\left( t \\right)} \\right]$$ for $$\\tau  &gt; 0.$$ (Note: $$u(t)$$ is the unit step function)",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  }
+]

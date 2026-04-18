@@ -1,0 +1,1460 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider an array $A=[10,7,8,19,41,35,25,31]$. Suppose the merge sort algorithm is executed on array $A$ to sort it in increasing order. The merge sort algorithm will carry out a total of 7 merge operations.</p>\n<p>A merge operation on sorted left array $L$ and sorted right array $R$ is said to be void if the output of the merge operation is the elements of array $L$ followed by the elements of array $R$.</p>\n<p>The number of void merge operations among these 7 merge operations is $\\_\\_\\_\\_$ . (answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyuoh76/cf1ee1b7-268d-4a48-a99d-7c669efb871c/ca985630-2454-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyuoh77.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyuoh76/cf1ee1b7-268d-4a48-a99d-7c669efb871c/ca985630-2454-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyuoh77.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Algorithms - Searching and Sorting Question 1 English Explanation\">",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\\text { The pseudocode of a function fun( ) is given below : }$$</p>\n<pre><code class=\"c\"> fun(int A[0, .., n-1]) {\n    for i = 0 to n-2\n        for j=0 to n-i-2\n            if (A[]]>A[j + 1])\n                then swap A[j] and A[j+1]\n}\n</code></pre>\n<p>Let $A[0, \\ldots, 29]$ be an array storing 30 distinct integers in descending order. The number of swap operations that will be performed, if the function fun( ) is called with $A[0, \\ldots, 29]$ as argument, is _________. (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "435",
+    "explanation": "<p>Given that the array $A[0, \\ldots, 29]$ contains 30 distinct integers in descending order, we know that every pair of adjacent elements will need to be swapped.  Let's calculate the number of swaps :</p>\n\n<p><p>When <code>i = 0</code>, the inner loop runs from <code>j = 0</code> to <code>29 - 0 - 2 = 27</code>.  This results in 28 swaps.</p></p>\n<p><p>When <code>i = 1</code>, the inner loop runs from <code>j = 0</code> to <code>29 - 1 - 2 = 26</code>.  This results in 27 swaps.</p></p>\n<p><p>This pattern continues until <code>i = 28</code>, when the inner loop runs from <code>j = 0</code> to <code>29 - 28 - 2 = -1</code>. This results in 0 swaps.</p></p>\n\n<p>So, the total number of swaps is the sum of integers from 1 to 29. We can calculate this using the formula for the sum of the first $n$ natural numbers: $$S = \\frac{n(n+1)}{2}$$.</p>\n<p>In our case, $n = 29$, so :</p>\n<p>$$S = \\frac{29 \\times (29 + 1)}{2} = \\frac{29 \\times 30}{2} = 29 \\times 15 = 435$$</p>\n<p>Therefore, the number of swap operations that will be performed is 435.</p>\n<p><strong>Answer :</strong> 435</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $A$ be an array containing integer values. The distance of $A$ is defined as the minimum number of elements in $A$ that must be replaced with another integer so that the resulting array is sorted in non-decreasing order. The distance of the array [2, 5, 3, 1, 4, 2, 6] is __________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p>To find the distance of the array, we need to determine how many elements need to be replaced to turn the given array into a non-decreasing order array. This problem can be approached by finding the Longest Increasing Subsequence (LIS). The elements not in the LIS will be the ones that need replacement.</p>\n\n<p>Given the array $ A = [2, 5, 3, 1, 4, 2, 6] $, we will first find the LIS and then calculate how many elements are left out.</p>\n\n<p>Let’s determine the LIS step-by-step:</p>\n\n<ul>\n\n<li>Start with the first element: 2. So, the LIS is [2].</li>\n\n<li>Next element is 5. Since 5 > 2, LIS now is [2, 5].</li>\n\n<li>Next element is 3. Since 3 cannot be appended to the end of [2, 5] to form an increasing sequence, we need to replace 5 with 3 to maintain updating the LIS. So, LIS is [2, 3].</li>\n\n<li>Next element is 1. As 1 < 2, it cannot extend the LIS and is ignored at this point.</li>\n\n<li>Next element is 4. Since 4 > 3, LIS now is [2, 3, 4].</li>\n\n<li>Next element is 2. It does not extend the LIS, ignored at this point.</li>\n\n<li>Next element is 6. Since 6 > 4, LIS now is [2, 3, 4, 6].</li>\n\n</ul>\n\n<p>We can see the LIS found is of length 4: [2, 3, 4, 6].</p>\n\n<p>To find the distance of the array, we subtract the length of the LIS from the total number of elements in the array:</p>\n\n<p>$$ \\text{Distance} = \\text{Length of the array} - \\text{Length of LIS} $$</p>\n\n<p>The length of the array $ A $ is 7.</p>\n\n<p>$$ \\text{Distance} = 7 - 4 = 3 $$</p>\n\n<p>So, the distance of the array $[2, 5, 3, 1, 4, 2, 6]$ is 3. This means 3 elements need to be replaced to turn the array into a non-decreasing order.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following array.</p>\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width:28px;height:31px;\">\n\t\t\t<p align=\"center\">23</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:31px;\">\n\t\t\t<p align=\"center\">32</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:31px;\">\n\t\t\t<p align=\"center\">45</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:31px;\">\n\t\t\t<p align=\"center\">69</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:31px;\">\n\t\t\t<p align=\"center\">72</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:31px;\">\n\t\t\t<p align=\"center\">73</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:31px;\">\n\t\t\t<p align=\"center\">89</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:31px;\">\n\t\t\t<p align=\"center\">97</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n<br>\nWhich algorithm out of the following options uses the least number of comparisons (among the array elements) to sort above array in ascending order?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Insertion sort"
+      },
+      {
+        "identifier": "B",
+        "content": "Selection sort"
+      },
+      {
+        "identifier": "C",
+        "content": "Quicksort using the last element as pivot"
+      },
+      {
+        "identifier": "D",
+        "content": "Merge sort"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which algorithm uses the least number of comparisons to sort the given array, let's analyze each of the sorting algorithms provided.</p>\n<p><strong>Given Array:</strong></p>\n<p>$23,\\ 32,\\ 45,\\ 69,\\ 72,\\ 73,\\ 89,\\ 97$</p>\n<p>The array is already sorted in ascending order.</p>\n<hr />\n<h3><strong>Option A: Insertion Sort</strong></h3>\n\n<p><p><strong>Characteristics:</strong></p></p>\n<p><p>Efficient for nearly sorted data.</p></p>\n<p><p>In the best case (already sorted), it performs minimal comparisons.</p></p>\n\n<p><p><strong>Operation on the Given Array:</strong></p></p>\n<p><p>For each element from index 1 to $ n-1 $, it compares the current element with the previous elements and inserts it in the correct position.</p></p>\n<p><p>Since the array is already sorted, each element will be compared once with its predecessor.</p></p>\n<p><p><strong>Total Comparisons:</strong></p></p>\n<p><p>$ n - 1 = 8 - 1 = 7 $ comparisons.</p></p>\n\n<hr />\n<h3><strong>Option B: Selection Sort</strong></h3>\n\n<p><p><strong>Characteristics:</strong></p></p>\n<p><p>Always performs the same number of comparisons, regardless of the initial order.</p></p>\n\n<p><p><strong>Operation on the Given Array:</strong></p></p>\n<p><p>For each position $ i $ from $ 0 $ to $ n-2 $, it finds the minimum element from positions $ i $ to $ n-1 $ and swaps it with position $ i $.</p></p>\n\n<p><p><strong>Total Comparisons:</strong></p></p>\n<p><p>$ \\frac{n(n - 1)}{2} = \\frac{8 \\times 7}{2} = 28 $ comparisons.</p></p>\n\n<hr />\n<h3><strong>Option C: Quicksort Using the Last Element as Pivot</strong></h3>\n\n<p><p><strong>Characteristics:</strong></p></p>\n<p><p>Performance depends on the pivot selection and initial array order.</p></p>\n<p><p>For an already sorted array with the last element as pivot, it results in the worst-case scenario.</p></p>\n<p><p><strong>Operation on the Given Array:</strong></p></p>\n<p><p>Partitioning will compare each element with the pivot.</p></p>\n<p><p>Recursive calls will result in unbalanced partitions.</p></p>\n<p><p><strong>Total Comparisons:</strong></p></p>\n<p><p>Comparisons per partitioning step:</p>\n\n<p><p>First call: 7 comparisons</p></p>\n<p><p>Second call: 6 comparisons</p></p>\n<p><p>Third call: 5 comparisons</p></p>\n<p><p>Fourth call: 4 comparisons</p></p>\n<p><p>Fifth call: 3 comparisons</p></p>\n<p><p>Sixth call: 2 comparisons</p></p>\n<p><p>Seventh call: 1 comparison</p></p></p>\n<p><p><strong>Total comparisons:</strong> $ 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28 $ comparisons.</p></p>\n\n<hr />\n<h3><strong>Option D: Merge Sort</strong></h3>\n\n<p><p><strong>Characteristics:</strong></p></p>\n<p><p>Divides the array into halves recursively and merges them.</p></p>\n<p><p>Does not take advantage of pre-sortedness in standard implementation.</p></p>\n<p><p><strong>Operation on the Given Array:</strong></p></p>\n<p><p>Divides and merges in multiple levels.</p></p>\n<p><p>Merging two sorted arrays of sizes $ m $ and $ n $ requires up to $ m + n - 1 $ comparisons.</p></p>\n<p><p><strong>Total Comparisons:</strong></p></p>\n<p><p>Level 3 merges (1 element each): $ 4 $ comparisons.</p></p>\n<p><p>Level 2 merges (2 elements each): $ 6 $ comparisons.</p></p>\n<p><p>Level 1 merge (4 elements each): $ 7 $ comparisons.</p></p>\n<p><p><strong>Total comparisons:</strong> $ 4 + 6 + 7 = 17 $ comparisons.</p></p>\n\n<hr />\n<h3><strong>Conclusion</strong></h3>\n\n<p><p><strong>Insertion Sort:</strong> $ \\mathbf{7} $ comparisons.</p></p>\n<p><p><strong>Selection Sort:</strong> $ 28 $ comparisons.</p></p>\n<p><p><strong>Quicksort:</strong> $ 28 $ comparisons.</p></p>\n<p><p><strong>Merge Sort:</strong> $ 17 $ comparisons.</p></p>\n\n<p><strong>Therefore, Insertion Sort uses the least number of comparisons to sort the given array.</strong></p>\n<hr />\n<p><strong>Answer:</strong> Option <strong>A</strong>: Insertion sort</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An array of 25 distinct elements is to be sorted using quicksort. Assume that the pivot element is chosen uniformly at random. The probability that the pivot element gets placed in the worst possible location in the first round of partitioning (rounded off to 2 decimal places) is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.08",
+    "explanation": "<p>The worst case scenario for the quicksort algorithm is when the pivot element, chosen randomly, is either the smallest or the largest element of the array. In such a case, the pivot does not split the array into reasonably balanced parts, leading to a skewed partition.</p>\n<p>Consider an array with 25 distinct elements. For the random pivot choice to result in the worst case, it must be either the minimum or maximum element in the array. This can happen in the following ways:</p>\n\n<p><p>Choose the smallest element as pivot.</p></p>\n<p><p>Choose the largest element as pivot.</p></p>\n\n<p>Since there are 25 distinct elements in the array, the probability of selecting the smallest element as pivot is:</p>\n<p>$$ P(\\text{smallest}) = \\frac{1}{25} $$</p>\n<p>Similarly, the probability of selecting the largest element as pivot is:</p>\n<p>$$ P(\\text{largest}) = \\frac{1}{25} $$</p>\n<p>Since these two events are mutually exclusive, the total probability that the pivot is in the worst possible position (either smallest or largest) is the sum of these two probabilities:</p>\n<p>$$ P(\\text{worst case}) = P(\\text{smallest}) + P(\\text{largest}) = \\frac{1}{25} + \\frac{1}{25} = \\frac{2}{25} $$</p>\n<p>Converting this to a decimal and rounding off to two decimal places yields:</p>\n<p>$$ P(\\text{worst case}) = 0.08 $$</p>\n<p>Therefore, the probability that the pivot element gets placed in the worst possible location in the first round of partitioning is <strong>0.08</strong>.</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "The worst case running times of Insertion sort, Merge sort and Quick sort, respectively, are: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\left( {n\\,\\log n} \\right),\\Theta \\left( {n\\,\\log n} \\right),\\,\\,$$ and $$\\,\\,\\Theta \\left( {{n^2}} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\left( {{n^2}} \\right),\\Theta \\left( {{n^2}} \\right),\\,\\,$$ and $$\\,\\,\\Theta \\left( {n\\,\\log n} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\left( {{n^2}} \\right),\\,\\,\\Theta \\left( {n\\,\\log n} \\right),\\,\\,$$ and $$\\,\\,\\Theta \\left( {n\\,\\log n} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\left( {{n^2}} \\right),\\Theta \\left( {n\\,\\log n} \\right),\\,\\,$$ and $$\\,\\,\\Theta \\left( {{n^2}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that the algorithms considered here sort the input sequences in ascending order. If the input is already in ascending order, which of the following are <b>TRUE</b>? \n<p>$$\\,\\,\\,\\,\\,\\,\\,{\\rm I}.\\,\\,\\,\\,\\,\\,\\,$$ Quicksort runs in $$\\Theta \\left( {{n^2}} \\right)$$ time\n<br>$$\\,\\,\\,\\,\\,{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,\\,\\,$$ Bubblesort runs in $$\\Theta \\left( {{n^2}} \\right)$$ time\n<br>$$\\,\\,\\,{\\rm I}{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,\\,\\,$$ Mergesort runs in $$\\Theta \\left( n \\right)$$ time\n<br>$$\\,\\,\\,{\\rm I}V.\\,\\,\\,\\,\\,\\,\\,$$ Insertion sort runs in $$\\Theta \\left( n \\right)$$ time</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ and $${\\rm II}$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}$$ and $${\\rm III}$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm II}$$ and $${\\rm IV}$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I}$$ and $${\\rm IV}$$ only "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following array of elements.\n<p>$$\\,\\,\\,\\,\\,\\,\\,\\,$$$$〈89, 19, 50, 17, 12, 15, 2, 5, 7, 11, 6, 9, 100〉$$</p>\nThe minimum number of interchanges needed to convert it into a max-heap is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$3$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is the recurrence equation for the worst case time complexity of the Quicksort algorithm for sorting n ( $$ \\ge 2$$ )  numbers? In the recurrence equations given in the options below, c is a constant.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "T(n) = 2T(n/2) + cn"
+      },
+      {
+        "identifier": "B",
+        "content": "T(n) = T(n - 1) + T(1) + cn"
+      },
+      {
+        "identifier": "C",
+        "content": "T(n) = 2T(n - 1) + cn"
+      },
+      {
+        "identifier": "D",
+        "content": "T(n) = T(n/2) + cn"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An unordered list contains $$n$$ distinct elements. The number of comparisons to find an element in this list that is neither maximum nor minimum is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\left( {n\\,\\,\\log \\,\\,n} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\left( n \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\left( {\\log \\,\\,n} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\left( 1 \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A priority queue is implemented as a Max-Heap. Initially, it has 5 elements. The level-order\ntraversal of the heap is: 10, 8, 5, 3, 2. Two new elements 1 and 7 are inserted into the heap in that\norder. The level-order traversal of the heap after the insertion of the elements is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10, 8, 7, 3, 2, 1, 5"
+      },
+      {
+        "identifier": "B",
+        "content": "10, 8, 7, 2, 3, 1, 5"
+      },
+      {
+        "identifier": "C",
+        "content": "10, 8, 7, 1, 2, 3, 5"
+      },
+      {
+        "identifier": "D",
+        "content": "10, 8, 7, 5, 3, 2, 1"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A max-heap is a heap where the value of each parent is greater than or equal to the value of its children. Which of the following is a max-heap?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/x2dqdRsUZJ2tM7CwY/KmHlRoBeGRG5OJDaPdJwQCOyg41om/d60L0byHh5RElbhzVDf2IO/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2011 Algorithms - Searching and Sorting Question 35 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/WCDiY1mNpoOxUuPsF/KhCZNiCzi6Wle1G8vv5Q9Ab2AzSMN/2y1c5Vp2D7FzOxQnJdYG10/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2011 Algorithms - Searching and Sorting Question 35 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/sY5jmCR491KSLaMxw/OB6r6pN7VDnVMGhybV8SxNRQFM01Q/qOicEVB9dIKHO7ZaVjUYVF/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2011 Algorithms - Searching and Sorting Question 35 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/sQl4nE8jZLNiIvr3x/9qpGp10AFK5CKzd1Cu5IGIFztB607/QHQPuteEsZNS2MlVHJ84Hf/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2011 Algorithms - Searching and Sorting Question 35 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "What is the number of swaps required to sort n elements using selection sort, in\nthe worst case?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta(n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta(n \\log  n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta(n^2)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta(n^2 \\log  n)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The Breadth First Search algorithm has been implemented using the queue data\nstructure. One possible order of visiting the nodes of the following graph is\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/JKtZyZJB00TuPiZVV/lhMomNxemJMNjef1jHip2lm4L7HsE/cf5s7JDhtSAzHEm91uAMv5/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Algorithms - Searching and Sorting Question 39 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "MNOPQR"
+      },
+      {
+        "identifier": "B",
+        "content": "NQMPOR"
+      },
+      {
+        "identifier": "C",
+        "content": "QMNPRO"
+      },
+      {
+        "identifier": "D",
+        "content": "QMNPOR"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The most efficient algorithm for finding the number of connected components in\nan undirected graph on n vertices and m edges has time complexity",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta (n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta (m)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta (n+m)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta (mn)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following sorting algorithms has the lowest worst-case complexity?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Merge sort"
+      },
+      {
+        "identifier": "B",
+        "content": "Bubble sort"
+      },
+      {
+        "identifier": "C",
+        "content": "Quick sort"
+      },
+      {
+        "identifier": "D",
+        "content": "Selection sort"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the DAG with $$V = \\{1,2,3,4,5,6\\}$$, shown below.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/tx5fIEpbcED9aB5WT/5COxB73efZ8DppTbL5PyVptl2DGLK/mGrJcc0SEVW440Pd3Bokn7/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2007 Algorithms - Searching and Sorting Question 42 English\">\nWhich of the following is <b>NOT</b> a topological ordering?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 2 3 4 5 6"
+      },
+      {
+        "identifier": "B",
+        "content": "1 3 2 4 5 6"
+      },
+      {
+        "identifier": "C",
+        "content": "1 3 2 4 6 5"
+      },
+      {
+        "identifier": "D",
+        "content": "3 2 4 1 6 5"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "In a binary max heap containing n numbers, the smallest element can be found\nin time",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$O(n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$O(\\log n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$O(\\log \\log n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$O(1)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "In max heap, the smallest element should not have any children so it will be present in the leaf node. And to find the smallest element you have to go to the leaf and find minimum among them. \n<p>In a heap leaf node starts from $$\\left\\lfloor {{n \\over 2}} \\right\\rfloor  + 1$$  and end at  $$n$$. So no of leaf nodes present in the heap is $${\\rm O}\\left( {{n \\over 2}} \\right)$$. So total no of comparison needed in order to find the smallest element is $$O(n)$$ and the time taken for that will be $$O(n)$$.</p>",
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following in place sorting algorithms needs the minimum\nnumber of swaps?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Quick sort"
+      },
+      {
+        "identifier": "B",
+        "content": "Insertion sort"
+      },
+      {
+        "identifier": "C",
+        "content": "Selection sort"
+      },
+      {
+        "identifier": "D",
+        "content": "Heap sort"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "An element in an array X is called a leader if it is greater than all elements to the\nright of it in X. The best algorithm to find all leaders in an array ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Solves it in linear time using a left to right pass of the array"
+      },
+      {
+        "identifier": "B",
+        "content": "Solves it in linear time using a right to left pass of the array"
+      },
+      {
+        "identifier": "C",
+        "content": "Solves it using divide and conquer in time $$\\theta \\left( {n\\log n} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Solves it in time $$\\theta \\left( {{n^2}} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The tightest lower bound on the number of comparisons, in the worst case, for\ncomparison-based sorting is of the order of",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${n^2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$n\\log n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$n{\\log ^2}n$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "In a heap with n elements with the smallest element at the root, the 7<sup>th</sup> smallest\nelement can be found in time",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta (n \\log n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta (n)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta(\\log n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta(1)$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "In a min heap 7<sup>th</sup> smallest element must be in the first 7 levels(level 0 to level 6). So we need to find 7<sup>th</sup> smallest element among the nodes from level 0 to level 6 and total number of nodes in any Binary Heap in level 0 to level 6 is at most 1 + 2 + 4 + 8 + 16 + 32 + 64 = 2<sup>7</sup> - 1 which is a constant. So in $$\\Theta(1)$$ time we can find 7<sup>th</sup> smallest element.",
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider any array representation of an n element binary heap where the\nelements are stored from index 1 to index n of the array. For the element stored\nat index i of the array $$\\left( {i \\le n} \\right)$$, the index of the parent is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "i - 1"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\lfloor \\frac{i}{2} \\rfloor$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\lceil \\frac{i}{2} \\rceil$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{i + 1} \\over 2}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The number of articulation points of the following graph is\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/o5Y4rxJ6EJwQjnUze/8bTigCXkIhu63VOoJ7bpvNUDXtgQu/2c1fv2Rd4jEQHACQpmhKM9/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1999 Algorithms - Searching and Sorting Question 49 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "Articulation Point is a point in a graph if we remove that point from the graph then the graph gets disconnected.\n<p>2, 3 and 5 are articulation point in this graph.</p>\n<p>When we remove the vertex 2 from the graph, vertex 4 gets disconnected. See the below diagram.</p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/fSAye5oUVVkWuqK9U/hYXCI3cYU3l0QH2jJo9jqS9H1J80m/pB43HC4GVIHgO1Rz1JQZzh/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1999 Algorithms - Searching and Sorting Question 49 English Explanation 1\">\n<p>When we remove the vertex 3 from the graph, two differnt subgraph created. See the below diagram.</p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/FL0s5aH0NNUK46Eim/S3a0sy438G6Oot0ykj2ZqQ6XcukDb/0G8lN9v6AQaEYTZurVPLrp/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1999 Algorithms - Searching and Sorting Question 49 English Explanation 2\">\n<p>When we remove the vertex 5 from the graph, vertex 6 and 7 gets disconneted from the graph. See the below diagram.</p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/4djyjwtf23riJwwqI/hVtZiwzvKn1iCFCZXEneKKLgTD1Ha/33s9BmK7mbnaxoiS87demj/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1999 Algorithms - Searching and Sorting Question 49 English Explanation 3\">",
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose we want to arrange the n numbers stored in any array such that all\nnegative values occur before all positive ones. Minimum number of exchanges\nrequired in the worst case is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n - 1"
+      },
+      {
+        "identifier": "B",
+        "content": "n"
+      },
+      {
+        "identifier": "C",
+        "content": "n + 1"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "Worst case happens when all the positive numbers occur before the negative numbers.\n<p>In this case, take a positive number from the left side and negative number from the right side and do exchange operation. Then after n/2 exchanges operation, you will reach middle of the array and all the negative value will be present before positive value.</p>\n<p>so in worst case n/2 exchanges required.</p>",
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Give the correct matching for the following pairs:</p>\n<p><b>Group - 1</b></p>\n(A) $${\\rm O}(\\log n)$$\n<br>(B) $${\\rm O}(n)$$\n<br>(C) $${\\rm O}(n\\log n)$$\n<br>(D) $${\\rm O}({n^2})$$\n<p><b>Group - 2</b></p>\n(P) Selection\n<br>(Q) Insertion sort\n<br>(R) Binary search\n<br>(S) Merge sort",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A – R B – P C – Q D – S "
+      },
+      {
+        "identifier": "B",
+        "content": "A – R B – P C – S D – Q"
+      },
+      {
+        "identifier": "C",
+        "content": "A – P B – R C – S D – Q"
+      },
+      {
+        "identifier": "D",
+        "content": "A – P B – S C – R D – Q"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "Selection sort : $${\\rm O}({n^2})$$\n<br>Merge sort : $${\\rm O}(n\\log n)$$\n<br>Binary search : $${\\rm O}(\\log n)$$\n<br>Insertion sort : $${\\rm O}(n)$$ \n<p> So the correct pair is A – R B – Q C – S D – P</p>\nBut this option is not present  so you should go with option (B) as A – R and C – S only matches with (B).",
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The correct matching for the following pairs is\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;border:none;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}\n.tg .tg-l711{border-color:inherit}\n.tg .tg-yw4l{vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-yw4l\"></th>\n    <th class=\"tg-yw4l\"></th>\n  </tr>\n  <tr>\n    <td class=\"tg-l711\">A. All pairs shortest path</td>\n    <td class=\"tg-l711\">1. Greedy</td>\n  </tr>\n  <tr>\n    <td class=\"tg-l711\">B. Quick Sort</td>\n    <td class=\"tg-l711\">2. Depth-First Search</td>\n  </tr>\n  <tr>\n    <td class=\"tg-l711\">C. Minimum weight spanning tree</td>\n    <td class=\"tg-l711\">3. Dynamic Programming</td>\n  </tr>\n  <tr>\n    <td class=\"tg-l711\">D. Connected Components</td>\n    <td class=\"tg-l711\">4. Divide and Conquer</td>\n  </tr>\n</tbody></table>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\text{A-2 B-4 C-1 D-3}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\text{A-3 B-4 C-1 D-2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\text{A-3 B-4 C-2 D-1}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\text{A-4 B-1 C-2 D-3}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider an array $A$ of integers of size $n$. The indices of $A$ run from 1 to $n$. An algorithm is to be designed to check whether $A$ satisfies the condition given below.</p>\n<p>$\\forall i, j \\in\\{1, \\ldots, n-1\\}$ such that $i>j,(A[i+1]-A[i])>(A[j+1]-A[j])$</p>\n<p>Which one of the following gives the worst case time complexity of the fastest algorithm that can be designed for the problem?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\theta(n)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\theta(\\log (n))$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\theta(n \\log (n))$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\theta\\left(n^2\\right)$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>The array $A$ has $n$ numbers, and the indices go from 1 to $n$.</p>\n<p>The question asks you to check this condition:</p>\n<p>For all $i$ and $j$ from $1$ to $n-1$, if $i > j$, then $(A[i+1]-A[i]) > (A[j+1]-A[j])$.</p>\n<p>Let us define $D[k] = A[k+1] - A[k]$, where $k$ goes from 1 to $n-1$.</p>\n<p>The condition now means that for any $i>j$, $D[i] > D[j]$.</p>\n<p>This tells us that $D[1], D[2], \\ldots, D[n-1]$ must be in strictly increasing order:</p>\n<p>$$ D[1] < D[2] < D[3] < \\ldots < D[n-1] $$</p>\n<p>So, the difference array needs to be strictly increasing.</p>\n<p><b>Step 1:</b> Calculate the difference array. For every $k$ from 1 to $n-1$, find $D[k] = A[k+1] - A[k]$. This takes linear time, or $O(n)$ steps, because we go through the array once.</p>\n<p><b>Step 2:</b> Check if $D[1] < D[2] < D[3] < ... < D[n-1]$. This also takes linear time, or $O(n)$ steps.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An array $A$ of length $n$ with distinct elements is said to be bitonic if there is an index $1=i=n$ such that $A[1 . . i]$ is sorted in the non-decreasing order and $A[i+1 . . n]$ is sorted in the non-increasing order.</p>\n<p>Which ONE of the following represents the best possible asymptotic bound for the worstcase number of comparisons by an algorithm that searches for an element in a bitonic array $A$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\Theta(n)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\Theta(1)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\Theta\\left(\\log ^2 n\\right)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\Theta(\\log n)$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yroxky/e2caacb5-2dae-46e6-a989-a873a50f8e93/dd2dbe20-fb51-11ef-9115-8db426cbf786/file-jaoe38c1m7yroxkz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yroxky/e2caacb5-2dae-46e6-a989-a873a50f8e93/dd2dbe20-fb51-11ef-9115-8db426cbf786/file-jaoe38c1m7yroxkz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Algorithms - Searching and Sorting Question 3 English Explanation 1\"></p>\n<p>Using Binary Search</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yrpgq2/6e28ce0b-eaf8-4be5-96cf-e88e8b01b0eb/ebf724a0-fb51-11ef-9115-8db426cbf786/file-jaoe38c1m7yrpgq3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yrpgq2/6e28ce0b-eaf8-4be5-96cf-e88e8b01b0eb/ebf724a0-fb51-11ef-9115-8db426cbf786/file-jaoe38c1m7yrpgq3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Algorithms - Searching and Sorting Question 3 English Explanation 2\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "An operator $$delete(i)$$ for a binary heap data structure is to be designed to delete the item in the $$i$$-th node. Assume that the heap is implemented in an array and i refers to the $$i$$-th index of the array. If the heap tree has depth $$d$$ (number of edges on the path from the root to the farthest leaf), then what is the time complexity to re-fix the heap efficiently after the removal of the element?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$O\\left( 1 \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$O\\left( d \\right)$$ but not $$O\\left( 1 \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$O\\left( {{2^d}} \\right)$$ but not $$O\\left( d \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$O\\left( {d{2^d}} \\right)$$ but not $$O\\left( {{2^d}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A complete binary min-heap is made by including each integer in $$[1,1023]$$ exactly once. The depth of a node in the heap is the length of the path from the root of the heap to that node. Thus, the root is at depth $$0.$$ The maximum depth at which integer $$9$$ can appear is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "8",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that a mergesort algorithm in the worst case takes $$30$$ seconds for an input of size $$64.$$ Which of the following most closely approximates the maximum input size of a problem that can be solved in $$6$$ minutes? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$256$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$512$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1024$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2048$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a max heap, represented by the array: 40, 30, 20, 10, 15, 16, 17, 8, 4.\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\">Array Index</th>\n    <th class=\"tg-s6z2\">1</th>\n    <th class=\"tg-baqh\">2</th>\n    <th class=\"tg-baqh\">3</th>\n    <th class=\"tg-baqh\">4</th>\n    <th class=\"tg-baqh\">5</th>\n    <th class=\"tg-baqh\">6</th>\n    <th class=\"tg-baqh\">7</th>\n    <th class=\"tg-baqh\">8</th>\n    <th class=\"tg-baqh\">9</th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">Value</td>\n    <td class=\"tg-s6z2\">40</td>\n    <td class=\"tg-0lax\">30</td>\n    <td class=\"tg-baqh\">20</td>\n    <td class=\"tg-baqh\">10</td>\n    <td class=\"tg-baqh\">15</td>\n    <td class=\"tg-baqh\">16</td>\n    <td class=\"tg-baqh\">17</td>\n    <td class=\"tg-baqh\">8</td>\n    <td class=\"tg-baqh\">4</td>\n  </tr>\n</tbody></table>\n<p>Now consider that a value 35 is inserted into this heap. After insertion, the new heap is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "40, 30, 20, 10, 15, 16, 17, 8, 4, 35"
+      },
+      {
+        "identifier": "B",
+        "content": "40, 35, 20, 10, 30, 16, 17, 8, 4, 15"
+      },
+      {
+        "identifier": "C",
+        "content": "40, 30, 20, 10, 35, 16, 17, 8, 4, 15"
+      },
+      {
+        "identifier": "D",
+        "content": "40, 35, 20, 10, 15, 16, 17, 8, 4, 30"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose you are provided with the following function declaration in the C programming language.\n\n<pre><code class=\"c\">int partition(int a[], int n);</code></pre>\nThe function treats the first element of a[ ] as a pivot and rearranges the array so that all elements less than or equal to the pivot is in the left part of the array, and all elements greater than the pivot is in the right part. In addition, it moves the pivot so that the pivot is the last element of the left part. The return value is the number of elements in the left part.\n\nThe following partially given function in the C programming language is used to find the k<sup>th</sup> smallest element in an array a[ ] of size n using the partition function. We assume k≤n.\n\n<pre><code class=\"c\">int kth_smallest (int a[], int n, int k)\n{\n    int left_end = partition (a, n);\n    if (left_end+1==k) {\n        return a[left_end];\n    }\n    if (left_end+1 &gt; k) {\n        return kth_smallest (___________);\n    } else {\n        return kth_smallest (___________);   \n    }\n}</code></pre>\nThe missing arguments lists are respectively",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(a, left_end, k) and (a + left_end + 1, n - left_end - 1, k - left_end - 1)"
+      },
+      {
+        "identifier": "B",
+        "content": "(a, left_end, k) and (a, n - left_end - 1, k - left_end-1)"
+      },
+      {
+        "identifier": "C",
+        "content": "(a + left_end + 1, n - left_end - 1, k - left_end - 1) and (a, left_end, k)"
+      },
+      {
+        "identifier": "D",
+        "content": "(a, n - left_end - 1, k - left_end - 1) and (a, left_end, k) "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a binary max-heap implemented using an array. What is the content of the array {25, 14, 16, 13, 10, 8, 12} after two delete operations?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "{14, 13, 12, 10, 8}"
+      },
+      {
+        "identifier": "B",
+        "content": "{14, 12, 13, 8, 10}"
+      },
+      {
+        "identifier": "C",
+        "content": "{14, 13, 8, 12, 10}"
+      },
+      {
+        "identifier": "D",
+        "content": "{14, 13, 12, 8 10}"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a binary max-heap implemented using an array. Which one of the following array represents a binary max-heap?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{25,12,16,13,10,8,14\\right\\}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{25,14,13,16,10,8,12\\right\\}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\{25,14,16,13,10,8,12\\right\\}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{25,14,12,13,10,8,16\\right\\}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "We have a binary heap on n elements and wish to insert n more elements (not\nnecessarily one after another) into this heap. The total time required for this is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta(\\log n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta(n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta(n\\log n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta(n^2)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the process of inserting an element into a Max Heap, where the Max\nHeap is represented by an array. Suppose we perform a binary search on the\npath from the new leaf to the root to find the position for the newly inserted\nelement, the number of comparisons performed is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta(\\log_2n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta(\\log_2\\log_2n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta(n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta(n\\log_2n)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Given two arrays of numbers a<sub>1</sub>,......,a<sub>n</sub> and b<sub>1</sub>,......, b<sub>n</sub> where each number is 0 or 1,\nthe fastest algorithm to find the largest span (i, j) such that\na<sub>i</sub>+a<sub>i+1</sub>......a<sub>j</sub> = b<sub>i</sub>+b<sub>i+1</sub>......b<sub>j</sub> or report that there is not such span,",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Takes O(3<sup>n</sup>) and $$\\Omega(2^{n})$$ time if hashing is permitted"
+      },
+      {
+        "identifier": "B",
+        "content": "Takes O(n<sup>3</sup>) and $$\\Omega(n^{2.5})$$ time in the key comparison model "
+      },
+      {
+        "identifier": "C",
+        "content": "Takes θ(n) time and space"
+      },
+      {
+        "identifier": "D",
+        "content": "Takes $$O(\\sqrt n)$$ time only if the sum of the 2n elements is an even number"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p>A 3-ary max heap is like a binary max heap, but instead of 2 children, nodes have 3\nchildren. A 3-ary heap can be represented by an array as follows: The root is stored in\nthe first location, a[0], nodes in the next level, from left to right, is stored from a[1] to\na[3]. The nodes from the second level of the tree from left to right are stored from a[4]\nlocation onward. An item x can be inserted into a 3-ary heap containing n items by\nplacing x in the location a[n] and pushing it up the tree to satisfy the heap property.</p>\n<p>Suppose the elements 7, 2, 10 and 4 are inserted, in that order, into the valid 3-\nary max heap found in the previous question. Which one of the following is\nthe sequence of items in the array representing the resultant heap?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10, 7, 9, 8, 3, 1, 5, 2, 6, 4"
+      },
+      {
+        "identifier": "B",
+        "content": "10, 9, 8, 7, 6, 5, 4, 3, 2, 1"
+      },
+      {
+        "identifier": "C",
+        "content": "10, 9, 4, 5, 7, 6, 8, 2, 1, 3"
+      },
+      {
+        "identifier": "D",
+        "content": "10, 8, 6, 9, 7, 2, 3, 4, 1, 5"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p>A 3-ary max heap is like a binary max heap, but instead of 2 children, nodes have 3\nchildren. A 3-ary heap can be represented by an array as follows: The root is stored in\nthe first location, a[0], nodes in the next level, from left to right, is stored from a[1] to\na[3]. The nodes from the second level of the tree from left to right are stored from a[4]\nlocation onward. An item x can be inserted into a 3-ary heap containing n items by\nplacing x in the location a[n] and pushing it up the tree to satisfy the heap property.</p>\n<p>Which one of the following is a valid sequence of elements in an array\nrepresenting 3-ary max heap?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1, 3, 5, 6, 8, 9"
+      },
+      {
+        "identifier": "B",
+        "content": "9, 6, 3, 1, 8, 5"
+      },
+      {
+        "identifier": "C",
+        "content": "9, 3, 6, 8, 5, 1"
+      },
+      {
+        "identifier": "D",
+        "content": "9, 5, 6, 8, 3, 1"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose there are $$\\lceil \\log n \\rceil$$ sorted lists of $$\\left\\lfloor {{n \\over {\\log n}}} \\right\\rfloor $$ elements each. The time complexity of producing a sorted list of all these elements is :\n<br>(Hint : Use a heap data structure) ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$O(n \\log \\log n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta(n \\log n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Omega(n \\log n)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Omega\\left(n^{3/2}\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Let G(V, E) an undirected graph with positive edge weights. Dijkstra's single-source shortest path algorithm can be implemented using the binary heap data structure with time complexity:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$O\\left( {{{\\left| V \\right|}^2}} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$O\\left(|E|+|V|\\log |V|\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$O\\left(|V|\\log|V|\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$O\\left(\\left(|E|+|V|\\right)\\log|V|\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The elements 32, 15, 20, 30, 12, 25, 16, are inserted one by one in the given\norder into a max Heap. The resultant max Heap is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/Ia0GKch4tAcFwS8B3/0XfgDpoQTAfx7HrN8lJr2Z4MRyrOq/RsWFSZOHxYwhmdKXKZYBLW/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2004 Algorithms - Searching and Sorting Question 26 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/HNGZG2F6hf20g2WAD/soE2RDsx7tx26dpG0FCBIUNOIDAI6/o7fMzWQCsyrirKaFjvW5UE/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2004 Algorithms - Searching and Sorting Question 26 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/URnlwJHXfB12bEC6b/cWlet9HAOyzgh15DwBx05PRRJQI9m/Tu0QOhLpBpB1qZkX6SyNyv/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2004 Algorithms - Searching and Sorting Question 26 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/5grvnHw5v2Wkf2KFY/xK1qhowSTMFVV6eMuKeahEVazd3q2/oPsRrBqFxIjz24dwK6mZmn/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2004 Algorithms - Searching and Sorting Question 26 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "If T<sub>1</sub> = O(1), give the correct matching for the following pairs:\n<p><b>List - I</b></p>\n(M) T<sub>n</sub> = T<sub>n - 1</sub> + n\n<br>(N) T<sub>n</sub> = T<sub>n/2</sub> + n\n<br>(O) T<sub>n</sub> = T<sub>n/2</sub> + nlog n\n<br>(P) T<sub>n</sub> = T<sub>n - 1</sub> + log n\n<p><b>List - II</b></p>\n(U) T<sub>n</sub>= O(n)\n<br>(V) T<sub>n</sub> = O(nlogn)\n<br>(W) T<sub>n</sub> = O(n<sup>2</sup>)\n<br>(X) T<sub>n</sub> = O(log<sup>2</sup>n)\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "M – W N – V O – U P – X"
+      },
+      {
+        "identifier": "B",
+        "content": "M – W N – U O – X P – V"
+      },
+      {
+        "identifier": "C",
+        "content": "M – V N – W O – X P – U"
+      },
+      {
+        "identifier": "D",
+        "content": "M – W N – U O – V P – X"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of interchanges needed to convert the array\n<p>89, 19, 40, 17, 12, 10, 2, 5, 7, 11, 6, 9, 70</p>\ninto a heap with the maximum element at the root is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The average number of key comparisons done on a successful sequential search\nin list of length n is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "log n"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{n - 1} \\over 2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${n \\over 2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{n + 1} \\over 2}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following statements is false?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Optimal binary search tree construction can be performed efficiently using\ndynamic programming."
+      },
+      {
+        "identifier": "B",
+        "content": "Breadth-first search cannot be used to find connected components of a graph"
+      },
+      {
+        "identifier": "C",
+        "content": "Given the prefix and postfix walks over a binary tree, the binary tree cannot\nbe uniquely constructed."
+      },
+      {
+        "identifier": "D",
+        "content": "Depth-first search can be used to find connected components of a graph."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Following algorithm(s) can be used to sort n integers in the range [1....... n<sup>3</sup>] in O(n) time",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Heapsort"
+      },
+      {
+        "identifier": "B",
+        "content": "Quicksort"
+      },
+      {
+        "identifier": "C",
+        "content": "Merge sort"
+      },
+      {
+        "identifier": "D",
+        "content": "Radix sort"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Minimum number of comparisons required to sort 5 elements",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": "Formula is = $$\\left\\lceil {{{\\log }_2}\\left( {n!} \\right)} \\right\\rceil $$\n<br>Here n = no of elements\n<br>So for 5 elements minimum no of comparisons required = $$\\left\\lceil {{{\\log }_2}\\left( {5!} \\right)} \\right\\rceil $$ = $$\\left\\lceil {{{\\log }_2}\\left( {120} \\right)} \\right\\rceil $$ = 7",
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "Match the pairs in the following:\n<p><b>List - I</b></p>\n(a) Heap construction\n<br>(b) Constructing hash table witn linear probing\n<br>(c) AVL Tree construction\n<br>(d) Digital tree construction\n<p><b>List - II</b></p>\n(p) $$\\Omega \\left( {n\\log _{10}^n} \\right)$$\n<br>(q) O(n)\n<br>(r) O(n<sup>2</sup>)\n<br>(s) $$\\Omega \\left( {n\\log _2^n} \\right)$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a - r, b - q, c - s, d - p"
+      },
+      {
+        "identifier": "B",
+        "content": "a - q, b - r, c - p, d - s"
+      },
+      {
+        "identifier": "C",
+        "content": "a - q, b - r, c - s, d - p"
+      },
+      {
+        "identifier": "D",
+        "content": "a - q, b - s, c - r, d - p"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Match the pairs in the following:\n<p><b>List - I</b></p>\n(a) Straseen's matrix multiplication algorithm\n<br>(b) Kruskal's minimum spanning tree algorithm\n<br>(c) Bioconnected components algorithm\n<br>(d) Floyd's shortest path algorithm\n<p><b>List - II</b></p>\n(p) Greedy method\n<br>(q) Dynamic programming\n<br>(r) Divide and Conquer\n<br>(s) Depth first search",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a - r, b - p, c - s, d - q"
+      },
+      {
+        "identifier": "B",
+        "content": "a - r, b - p, c - q, d - s"
+      },
+      {
+        "identifier": "C",
+        "content": "a - r, b - s, c - p, d - q"
+      },
+      {
+        "identifier": "D",
+        "content": "a - q, b - p, c - s, d - r"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Suppose the mean and the standard deviation of the data $\\left\\{x_1, x_2, \\cdots, x_9\\right\\}$ are $\\mu$ and $\\sigma(\\neq 0)$, respectively. After including one more data value $x_{10}$, the mean of the data $\\left\\{x_1, x_2, \\cdots, x_9, x_{10}\\right\\}$ remains $\\mu$. What is the standard deviation of the data $\\left\\{x_1, x_2, \\cdots, x_9, x_{10}\\right\\}$ ?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{\\sqrt{10}}{3} \\sigma$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{3}{\\sqrt{10}} \\sigma$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{10}{9} \\sigma$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{9}{10} \\sigma$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To simplify and clarify the explanation on updating the standard deviation when a new data point is added, consider the following:</p>\n<h3>Mean Calculation:</h3>\n\n<p><p><strong>Original Data Mean:</strong></p>\n\n<p>The mean of the original data set $\\left\\{x_1, x_2, \\cdots, x_9\\right\\}$ is given by:</p>\n<p>$     \\mu = \\frac{1}{9} \\sum_{i=1}^9 x_i \\implies \\sum_{i=1}^9 x_i = 9\\mu     $</p></p>\n<p><p><strong>New Data Set Mean:</strong></p>\n\n<p>When a new data point $x_{10}$ is added, maintaining the same mean $\\mu$:</p>\n<p>$     \\mu = \\frac{1}{10} \\sum_{i=1}^{10} x_i = \\frac{1}{10}\\left(9\\mu + x_{10}\\right)     $</p>\n\n<p>Solving for $x_{10}$:</p>\n<p>$     10\\mu = 9\\mu + x_{10} \\implies x_{10} = \\mu     $</p></p>\n\n<h3>Standard Deviation Calculation:</h3>\n\n<p><p><strong>Original Standard Deviation:</strong></p>\n\n<p>The standard deviation of the original data set is:</p>\n<p>$     \\sigma = \\sqrt{\\frac{1}{9} \\sum_{i=1}^9 (x_i - \\mu)^2}     $</p></p>\n<p><p><strong>Calculate Variance of the New Data Set:</strong></p>\n\n<p>The variance for the new data set is:</p>\n<p>$     \\text{Var} = \\frac{1}{10} \\sum_{i=1}^{10} (x_i - \\mu)^2     $</p>\n\n<p>Breaking it down:</p>\n<p>$     \\sum_{i=1}^{10} (x_i - \\mu)^2 = \\sum_{i=1}^9 (x_i - \\mu)^2 + (x_{10} - \\mu)^2     $</p>\n\n<p>Since $x_{10} = \\mu$, $(x_{10} - \\mu)^2 = 0$. Thus:</p>\n<p>$     \\sum_{i=1}^{10} (x_i - \\mu)^2 = \\sum_{i=1}^9 (x_i - \\mu)^2     $</p></p>\n<p><p><strong>Equating Variance Values:</strong></p>\n\n<p>Since $\\sigma^2 = \\frac{1}{9} \\sum_{i=1}^9 (x_i - \\mu)^2$, we have:</p>\n<p>$     \\sum_{i=1}^9 (x_i - \\mu)^2 = 9\\sigma^2     $</p>\n\n<p>Substitute in new variance formula:</p>\n<p>$     \\text{Var} = \\frac{1}{10} \\cdot 9\\sigma^2 = \\frac{9}{10}\\sigma^2     $</p></p>\n<p><p><strong>New Standard Deviation:</strong></p>\n\n<p>The new standard deviation is:</p>\n<p>$     \\sqrt{\\text{Var}} = \\sqrt{\\frac{9}{10}\\sigma^2} = \\frac{3}{\\sqrt{10}}\\sigma = \\frac{3\\sigma}{\\sqrt{10}}     $</p></p>\n\n<p>Thus, the standard deviation of the updated data set $\\left\\{x_1, x_2, \\cdots, x_9, x_{10}=\\mu\\right\\}$ is $\\frac{3\\sigma}{\\sqrt{10}}$.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "iat-iiser-2023",
+    "difficulty": null
+  }
+]

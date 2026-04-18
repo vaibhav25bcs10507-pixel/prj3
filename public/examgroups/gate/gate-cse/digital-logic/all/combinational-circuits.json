@@ -1,0 +1,551 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following logic circuit diagram.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yqweno/7ca5fb70-e6dc-42c7-bb0b-3c1e4960509b/c3e79650-fb4e-11ef-9115-8db426cbf786/file-jaoe38c1m7yqwenp.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yqweno/7ca5fb70-e6dc-42c7-bb0b-3c1e4960509b/c3e79650-fb4e-11ef-9115-8db426cbf786/file-jaoe38c1m7yqwenp.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Digital Logic - Combinational Circuits Question 2 English\"></p>\n<p>Which is/are the CORRECT option(s) for the output function?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\overline{X Y}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\bar{X}+\\bar{Y}+X \\bar{Y}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\overline{X Y}+\\bar{X}+X \\bar{Y}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $X+\\bar{Y}$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>In the given logic circuit, we need to determine the correct expression for the output function.</p>\n<p>The solution involves simplifying the given logical expression:</p>\n\n<p><p>Start with the expression: </p>\n<p>$    F = \\overline{XY} + \\bar{X} + X \\bar{Y}    $</p></p>\n<p><p>Apply the distributive and absorption laws:</p>\n<p>$    F = \\bar{X} + \\bar{Y} + \\bar{X} + X \\bar{Y}    $</p></p>\n<p><p>Combine like terms:</p>\n<p>$    F = \\bar{X} + \\bar{Y} + X \\bar{Y}    $</p></p>\n<p><p>Simplify further using absorption:</p>\n<p>$    F = \\bar{X} + \\bar{Y}(1 + X)    $</p>\n<p>Since $1 + X = 1$, it simplifies to:</p>\n<p>$    F = \\bar{X} + \\bar{Y}    $</p></p>\n<p><p>Recognizing the simplification:</p>\n<p>$    F = \\overline{XY}    $</p></p>\n\n<p>This confirms that the simplified expression for the output function of the logic circuit is $\\overline{XY}$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the circuit shown below where the gates may have propagation delays. Assume that all signal transitions occur instantaneously and that wires have no delays. Which of the following statements about the circuit is/are CORRECT?</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1lwu9hax1/d38bf6e0-0499-4166-8577-77026dd59eab/20eaab50-1f11-11ef-bff5-43fce3d5dce9/file-6y3zli1lwu9hax2.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/6y3zli1lwu9hax1/d38bf6e0-0499-4166-8577-77026dd59eab/20eaab50-1f11-11ef-bff5-43fce3d5dce9/file-6y3zli1lwu9hax2.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 1 Digital Logic - Combinational Circuits Question 4 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>With no propagation delays, the output <b>Y</b> is always logic Zero</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>With no propagation delays, the output <b>Y</b> is always logic One</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>With propagation delays, the output <b>Y</b> can have a transient logic One after <b>X</b> transitions from logic Zero to logic One</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>With propagation delays, the output <b>Y</b> can have a transient logic Zero after <b>X</b> transitions from logic One to logic Zero</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) If there are no propagation delays, due to the NOT gate, one of the inputs will always be zero, resulting in the output <b>Y</b> being always zero. </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m00rsl8w/68e59be1-7f00-4e68-ad0e-739cb28aa05b/19278900-5e0a-11ef-bb72-4f38b5372e09/file-jaoe38c1m00rsl8x.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m00rsl8w/68e59be1-7f00-4e68-ad0e-739cb28aa05b/19278900-5e0a-11ef-bb72-4f38b5372e09/file-jaoe38c1m00rsl8x.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 1 Digital Logic - Combinational Circuits Question 4 English Explanation\"></p>\n<p>(c) If there are propagation delays, the NOT gate output will temporarily hold the value of $\\bar{X}$. Thus, a transient logic high (1) can be observed after <b>X</b> transitions from logic zero (0) to logic one (1).</p>\n<p>Therefore, the correct options are (A) and (C).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Which one of the following circuits implements the Boolean function given below?</p>\n\n<p>f(x, y, z) = m<sub>0</sub> + m<sub>1</sub> + m<sub>3</sub> + m<sub>4 </sub> + m<sub>5</sub> + m<sub>6</sub>, where m<sub>i</sub> is the i<sup>th</sup> minterm.</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxtgx2i4/98ee6774-d9b4-4909-ae87-087fc271144f/dc5b22c0-69b5-11ec-b4a7-97d0e07b6768/file-1kxtgx2i5.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxtgx2i4/98ee6774-d9b4-4909-ae87-087fc271144f/dc5b22c0-69b5-11ec-b4a7-97d0e07b6768/file-1kxtgx2i5.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 2 Digital Logic - Combinational Circuits Question 6 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxtgzwlv/ea6d7eda-1e95-496d-9de8-ef316c204752/2b3aa230-69b6-11ec-b4a7-97d0e07b6768/file-1kxtgzwlw.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxtgzwlv/ea6d7eda-1e95-496d-9de8-ef316c204752/2b3aa230-69b6-11ec-b4a7-97d0e07b6768/file-1kxtgzwlw.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 2 Digital Logic - Combinational Circuits Question 6 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxth1bwt/4051fcd5-1271-4ad3-b500-a1186a5deb0f/52dc33d0-69b6-11ec-b4a7-97d0e07b6768/file-1kxth1bwu.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxth1bwt/4051fcd5-1271-4ad3-b500-a1186a5deb0f/52dc33d0-69b6-11ec-b4a7-97d0e07b6768/file-1kxth1bwu.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 2 Digital Logic - Combinational Circuits Question 6 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxth1w5z/fa41536c-13f7-4989-9af4-0fd715667c4c/6281a270-69b6-11ec-b4a7-97d0e07b6768/file-1kxth1w60.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxth1w5z/fa41536c-13f7-4989-9af4-0fd715667c4c/6281a270-69b6-11ec-b4a7-97d0e07b6768/file-1kxth1w60.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 2 Digital Logic - Combinational Circuits Question 6 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A multiplexer is placed between a group of 32 registers and an accumulator to regulate data movement such that at any given point in time the content of only one register will move to the accumulator. The minimum number of select lines needed for the multiplexer is _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": "<p>To determine the minimum number of select lines needed for the multiplexer, we need to figure out how many bits are required to uniquely select one register out of 32.</p>\n<h3><strong>Understanding the Multiplexer:</strong></h3>\n\n<p><p>A <strong>multiplexer (MUX)</strong> is a combinational circuit that selects one of many input signals and forwards the selected input into a single line.</p></p>\n<p><p>The number of <strong>select lines</strong> determines how many inputs the multiplexer can handle. Specifically, a multiplexer with $ n $ select lines can select from $ 2^n $ input lines.</p></p>\n\n<h3><strong>Calculating the Number of Select Lines:</strong></h3>\n\n<p><p><strong>Total Registers:</strong> 32</p></p>\n<p><p>We need to select one out of 32 registers.</p></p>\n<p><p>We need to find the smallest integer $ n $ such that:</p>\n<p>$   2^n \\geq 32   $</p></p>\n<p><p><strong>Compute $ n $:</strong></p>\n<p>$   2^5 = 32   $</p></p>\n<p><p>Therefore, <strong>5 select lines</strong> are sufficient to select any one of the 32 registers.</p></p>\n\n<h3><strong>Conclusion:</strong></h3>\n\n<p>The <strong>minimum number of select lines</strong> needed for the multiplexer is <strong>5</strong>.</p>\n\n<p><strong>Answer:</strong> <strong>5</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "If there are m input lines and n output lines for a decoder that is used to uniquely address a byte addressable 1 KB RAM, then the minimum value of m + n is ____.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "1034",
+    "explanation": "<p>To address a 1 KB (1024-byte) memory uniquely, you need one output per byte, so:</p>\n\n<p><p>Total addresses = 1024 = $2^{10}$.  </p></p>\n<p><p>A decoder with $m$ inputs can produce up to $2^m$ outputs.  </p></p>\n<p><p>Thus we require  </p>\n<p>$     2^m \\;\\ge\\; 1024 \\;=\\; 2^{10}     \\quad\\Longrightarrow\\quad m \\ge 10.   $</p></p>\n<p><p>Taking the minimum $m=10$ gives $n = 2^{10} = 1024$.  </p></p>\n\n<p>Hence</p>\n<p>$   m + n \\;=\\; 10 + 1024 \\;=\\; 1034. $</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "In the following truth table $$V=1$$ if and only if the input is valid.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/X1lnM9vN7lc5F67Na/zif6CffYgggHHnud2U9THZSGWZ21B/4mZZyOLRHEuQjtjwpHETLd/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2013 Digital Logic - Combinational Circuits Question 19 English\"> \n<p>What function does the truth table represent?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Priority encoder "
+      },
+      {
+        "identifier": "B",
+        "content": "Decoder "
+      },
+      {
+        "identifier": "C",
+        "content": "Multiplexer "
+      },
+      {
+        "identifier": "D",
+        "content": "Demultiplexer "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The Boolean expression for the output $$f$$ of the multiplexer shown below is\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/5d763dJwZtbMClkwy/3NH70D9dPG8QjblWbCPdpHwG9Hi2h/W8usS3FCy9W9OjgVYv3yzB/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2010 Digital Logic - Combinational Circuits Question 20 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline {P \\oplus Q \\oplus R} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${P \\oplus Q \\oplus R}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$P+Q+R$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline {P + Q + R} $$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "How many $$3$$ to $$8$$ decodes with an enable input are needed to construct to constant $$6$$ to $$64$$ line decoder without using any other logic gates",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$7$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$8$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$9$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$10$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the digital circuit shown below with two input lines A and B, two select lines S 0 and S 1 , and an output line Y . The blocks Q and M represent active high $2: 4$ decoder and 4-to-1 multiplexer, respectively. Out of 16 possible input combinations, the number of combinations that produce $\\mathrm{Y}=1$ is $\\_\\_\\_\\_$ . (answer in integer)</p>\n<p>Note: One input combination is an instance of [A B S1 S0].</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyxg6i0/1b4c52d7-e0ee-485a-9583-a4ab5049002c/9f3e7680-245f-11f1-b399-8d95003d7d74/file-jaoe38c1mmyxg6i1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyxg6i0/1b4c52d7-e0ee-485a-9583-a4ab5049002c/9f3e7680-245f-11f1-b399-8d95003d7d74/file-jaoe38c1mmyxg6i1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Digital Logic - Combinational Circuits Question 1 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyxf88v/143e44a3-c295-42b2-8aca-8ca6abe2999f/84c8c800-245f-11f1-b399-8d95003d7d74/file-jaoe38c1mmyxf88w.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyxf88v/143e44a3-c295-42b2-8aca-8ca6abe2999f/84c8c800-245f-11f1-b399-8d95003d7d74/file-jaoe38c1mmyxf88w.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Digital Logic - Combinational Circuits Question 1 English Explanation 1\"></p>\n<p>$$ \\text { To provide } 4=1 \\text {; the set of }\\left(A, B, S, S_0\\right) \\text { is } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyxhaea/6bf161ff-d842-40cb-8f04-5f31a6cdbe76/be102c20-245f-11f1-b399-8d95003d7d74/file-jaoe38c1mmyxhaeb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyxhaea/6bf161ff-d842-40cb-8f04-5f31a6cdbe76/be102c20-245f-11f1-b399-8d95003d7d74/file-jaoe38c1mmyxhaeb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Digital Logic - Combinational Circuits Question 1 English Explanation 2\"></p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a digital logic circuit consisting of three 2-to-1 multiplexers M1, M2, and M3 as shown below. X1 and X2 are inputs of M1. X3 and X4 are inputs of M2. A, B, and C are select lines of M1, M2, and M3, respectively.</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1lwue4qfr/69d79342-2f7f-483a-9024-215f90906dd0/51084e70-1f23-11ef-a538-9dce63b3efcd/file-6y3zli1lwue4qfs.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/6y3zli1lwue4qfr/69d79342-2f7f-483a-9024-215f90906dd0/51084e70-1f23-11ef-a538-9dce63b3efcd/file-6y3zli1lwue4qfs.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 1 Digital Logic - Combinational Circuits Question 3 English\">\n<p>For an instance of inputs <b>X1=1</b>, <b>X2=1</b>, <b>X3=0</b>, and <b>X4=0</b>, the number of combinations of A, B, C that give the output <b>Y=1</b> is ______________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p>Given inputs : </p>\n\n<p></p><p>X1 = 1</p><p></p>\n<p></p><p>X2 = 1</p><p></p>\n<p></p><p>X3 = 0</p><p></p>\n<p></p><p>X4 = 0</p><p></p>\n\n<p>We need to determine the number of combinations of select lines A, B, and C that result in an output Y = 1.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m009r5qa/fd7167cd-9d2e-4f96-95a4-a10a24c4f151/8d08ba20-5dc3-11ef-8fef-e90dcfcab979/file-jaoe38c1m009r5qb.png\" alt=\"GATE CSE 2024 Set 1 Digital Logic - Combinational Circuits Question 3 English Explanation\"></p>\n<p>Here, we calculate the intermediate outputs P and Q :</p>\n<p>$ P = \\bar{A}X_1 + AX_2 = \\bar{A}\\cdot1 + A\\cdot1 = \\bar{A} + A = 1 $</p>\n<p>$ Q = \\bar{B}X_3 + BX_4 = \\bar{B}\\cdot0 + B\\cdot0 = 0 + 0 = 0 $</p>\n<p>The final output Y is determined by :</p>\n<p>$ \\therefore Y = \\bar{C}P + CQ = \\bar{C}\\cdot1 + C\\cdot0 = \\bar{C} $</p>\n<p>Since $\\bar{C}$ determines that Y = 1 when C = 0, we now consider the combinations of A and B :</p>\n<p>$ Y = \\bar{C}(A + \\bar{A})(B + \\bar{B}) $</p>\n<p>$ = \\bar{C}(1)(1) $</p>\n<p>$ = \\bar{C} $</p>\n<p>Evaluating for Y = 1 (i.e., $\\bar{C} = 1$), we have :</p>\n<p>$ C = 0 $</p>\n<p>This leads to 4 possible combinations for A and B :</p>\n<p>| A | B | C |</p>\n<p>| 0 | 0 | 0 |</p>\n<p>| 0 | 1 | 0 |</p>\n<p>| 1 | 0 | 0 |</p>\n<p>| 1 | 1 | 0 |</p>\n<p>Therefore, there are 4 combinations of (A, B, C) that produce an output Y = 1.</p>\n<p>Hence, the correct answer is 4.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A Boolean digital circuit is composed using two 4-input multiplexers (M1 and M2) and one 2-input multiplexer (M3) as shown in the figure. X0-X7 are the inputs of the multiplexers M1 and M2 and could be connected to either 0 or 1. The select lines of the multiplexers are connected to Boolean variables A, B and C as shown.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr5qgux/b3e4c5a2-d387-4fe8-adff-8cb4cb2d64c2/9014b580-44f4-11ef-a86f-d385dcd87d97/file-jaoe38c1lyr5qguy.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr5qgux/b3e4c5a2-d387-4fe8-adff-8cb4cb2d64c2/9014b580-44f4-11ef-a86f-d385dcd87d97/file-jaoe38c1lyr5qguy.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Digital Logic - Combinational Circuits Question 5 English\"></p>\n<p>Which one of the following set of values of (X0, X1, X2, X3, X4, X5, X6, X7) will realise the Boolean function $$\\overline A  + \\overline A \\,.\\,\\overline C  + A\\,.\\,\\overline B \\,.\\,C$$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(1, 1, 0, 0, 1, 1, 1, 0)"
+      },
+      {
+        "identifier": "B",
+        "content": "(1, 1, 0, 0, 1, 1, 0, 1)"
+      },
+      {
+        "identifier": "C",
+        "content": "(1, 1, 0, 1, 1, 1, 0, 0)"
+      },
+      {
+        "identifier": "D",
+        "content": "(0, 0, 1, 1, 0, 1, 1, 1)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b></p>\n\n<p>$$ F=\\bar{A}+\\bar{A} \\cdot \\bar{C}+A \\bar{B} C $$</p>\n\n<p>Since final output is given by $2 \\times 1$ mux $m_3$</p>\n\n<p>So, MSB (most significant bit) is selection line of $m_3$ i.e. $B$.</p>\n\n<p>Also we can observe from $M_1$ and $M_2$, that the selection lines $\\left(S_1, S_0\\right)=(A, C)$ so the function has $C$ as LSB</p>\n\n<p>The function $F(B, A, C)=\\bar{A}+\\bar{A} \\bar{C}+A \\bar{B} C$ is implemented using inputs as :</p>\n\n<p>$$ \\begin{array}{|c|c|c|c|c|} \\hline & \\boldsymbol{B} & \\boldsymbol{A} & \\boldsymbol{C} & \\\\ \\hline X_0 & 0 & 0 & 0 & 1 \\rightarrow \\text { Due to } A^{\\prime} \\\\ \\hline X_1 & 0 & 0 & 1 & 1 \\rightarrow \\text { Due to } A^{\\prime} \\\\ \\hline X_2 & 0 & 1 & 0 & 0 \\\\ \\hline X_3 & 0 & 1 & 1 & 1 \\rightarrow \\text { Due to } A B^{\\prime} C \\\\ \\hline X_4 & 1 & 0 & 0 & 1 \\rightarrow \\text { Due to } A^{\\prime} \\\\ \\hline X_5 & 1 & 0 & 1 & 1 \\rightarrow \\text { Due to } A^{\\prime} \\\\ \\hline X_6 & 1 & 1 & 0 & 0 \\\\ \\hline X_7 & 1 & 1 & 1 & 0 \\\\ \\hline \\end{array} $$</p>\n\n<p>So, $\\left(X_0, X_1 \\ldots \\ldots \\ldots . X_7\\right)=(11011100)$</p>\n\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the two cascaded $$2$$-to-$$1$$ multiplexers as shown in the figure.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/De3LS1dPiPYqhdxbf/3EBIfXymY1bhN5dohn4LE5QbzBxu2/4TeJEcWjE3mXKuNprNNJav/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2016 Set 1 Digital Logic - Combinational Circuits Question 9 English\"> \n<p>The minimal sum of products form of the output $$X$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline P \\overline Q  + PQR$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline P Q + QR$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$PQ + \\overline P \\overline Q R$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline Q \\overline R  + PQR$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the $$4$$-to-$$1$$ multiplexer with two select lines $${S_1}$$ and $${S_0}$$ given below\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/IglwhDk4L7qtKS38b/2VJjNctKpxwu3XXRdjZXOQJjUytJO/MJC5ywucsIzJMMSA9Bt4Rj/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 1 Digital Logic - Combinational Circuits Question 10 English\"> \n<p>The minimal sum-of-products form of the Boolean expression for the output $$F$$ of the multiplexer is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline P Q + Q\\overline R  + P\\overline Q R$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline P Q + \\overline P Q\\overline R  + PQ\\overline R  + P\\overline Q R$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline P QR + \\overline P Q\\overline R  + Q\\overline R  + P\\overline Q R$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$PQ\\overline R $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose only one multiplexer and one inverter are allowed to be used to implement any Boolean function of $$n$$ variables. What is the minimum size of the multiplexer needed?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${2^n}$$ line to $$1$$ line"
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^{n + 1}}$$ line to $$1$$ line "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^{n - 1}}$$ line to $$1$$ line "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{n - 2}}$$ line to $$1$$ line"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the circuit above. Which one of the following options correctly represents $$f(x,y,z)?$$\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/RjUx8H8FUV5GvUZAZ/NX3z4loseTt9GUg74UQOuMn8py7yJ/H9SYHoSAjUIzwCh4kDqYFm/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2006 Digital Logic - Combinational Circuits Question 11 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$x\\overline z  + xy + \\overline y z$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x\\overline z  + xy + \\overline {yz} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$xz + xy + \\overline {yz} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$xz + x\\overline y  + \\overline y z$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the $$ALU$$ shown below\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/gTSqcAu0jwYUk7Aby/EIzuhMjDHtlhp5vbhiVHSYkreivXL/fM2gGoG3ghKQLB0TlIoXwn/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2003 Digital Logic - Combinational Circuits Question 12 English\"> \n<p>If the operands are in $$2's$$ complement representation, which of the following operations can be performed by suitably setting the control lines $$K$$ and $${C_0}$$ only ( + and - denote addition and subtraction respectively)?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$A+B,$$ and $$A-B,$$ but not $$A+1$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$A+B,$$ and $$A+1,$$ but not $$A-B$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$A+B,$$ but not $$A-B,$$ or $$A+1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$A+B,$$  and $$A-B,$$ and $$A+1$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following multiplexer where $$10, 11, 12, 13$$ are four data input lines selected by two address line combinations $${A_1}\\,{A_0} = 00,01,10,11$$ respectively and $$f$$ is the output of the multiplex (or). $$EN$$ is the Enable input.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/tGhn2Ql1paQPD6HFh/K44YLuJIVhuUgHORxXFxusLFIbCTb/WtAgKmyyHwIx7zm9w3hmiA/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2002 Digital Logic - Combinational Circuits Question 17 English\">\n<p>The function $$f(x,y,z)$$ implemented by the above circuit is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ xyz'$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$ xy+z$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$x+y$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the circuit shown below. The output of a $$2:1$$ Mux is given by the function $$(ac+bc)$$\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/5SN7VUpdoVD34qUYy/cwI8ugiGbnGqIaxuDsVOsoPkTaSPR/oSgToyFm95pBhFEQcHH0xi/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2001 Digital Logic - Combinational Circuits Question 18 English\"> \n<p>Which of the following is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$f = x_1^1 + {x_2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$f = x_1^{\\,1} + {x_2} + {x_1}x_2^{\\,1}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$f = {x_1}{x_2} + {x_1}^1{x_2}^1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$f = {x_1} + x_2^1$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the circuit in fig shown $$f$$ implements \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/z23n8rlNoCaRyFt5g/XFatcUCKdPrXtluQXM6jJJwmqENbB/mJxT4dfRJm9FiymkwpqM3Y/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1996 Digital Logic - Combinational Circuits Question 13 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline A \\overline B C + \\overline A B\\overline C  + ABC$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$A+B+C$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$A \\oplus B \\oplus C$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$AB + BC + CA$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the circuit in Fig. Which has a four bit binary number $${b_3}\\,{b_2}\\,{b_1}\\,{b_0}\\,$$ as input and a five bit binary number $${d_3}\\,{d_2}\\,{d_1}\\,{d_0}\\,$$ as output. The circuit implements:\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/juqvFfoKlHlTStJm2/dAh2GZx7UYk8sYM1i7rf5BWEXufhV/CnGtvDC8HF52evJIjzdG2h/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1996 Digital Logic - Combinational Circuits Question 14 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Binary to Hex conversion"
+      },
+      {
+        "identifier": "B",
+        "content": "Binary to $$BCD$$ conversion"
+      },
+      {
+        "identifier": "C",
+        "content": "Binary to grey code conversion "
+      },
+      {
+        "identifier": "D",
+        "content": "Binary to radix -$$12$$ conversion"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Fill in the blanks:\n<br>In the two bit full-adder/sub tractor unit shown in Fig., when the switch is in position $$2.$$   $$.....$$ using $$.....$$ arithmetic.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/EALKTecUqCXtUFzzS/VMWaN4qXF93Ydg4sWG478m4KLpppr/fsVUrA95cKMtEAkfZx7yHr/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1990 Digital Logic - Combinational Circuits Question 15 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$B$$ is substracted from $$A,$$ \n<br>$$2's$$ complement",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  }
+]

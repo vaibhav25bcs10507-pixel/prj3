@@ -1,0 +1,2485 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The set T represents various traversals over binary tree. The set S represents the order of visiting nodes during a traversal.</p>\n<p>$$ \\begin{array}{ll}\\,\\,\\,\\,\\, \\text {  T } &\\,\\,\\,\\,\\,\\, \\text { S } \\\\ \\text { I: } \\text { Inorder } & \\text { L: left subtree, node, right subtree } \\\\ \\text { II: } \\text { Preorder } & \\text { M: node, left subtree, right subtree } \\\\ \\text { III: } \\text { Postorder } & \\text { N: left subtree, right subtree, node } \\end{array} $$</p>\n<p>Which one of the following is the correct match from $T$ to $S$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\mathrm{I}-\\mathrm{L}$, $\\mathrm{II}-\\mathrm{M}$, III -N</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$I -M , II -L , III -N$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$I-N$, II $-M$, III $-L$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$ I - L, II - N, III - M$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>For binary tree traversals, the standard orders are:</p>\n<ul>\n<li><p><strong>Inorder</strong>: left subtree, node, right subtree</p></li>\n<li><p><strong>Preorder</strong>: node, left subtree, right subtree</p></li>\n<li><p><strong>Postorder</strong>: left subtree, right subtree, node</p></li>\n</ul>\n<p>Now match with the given symbols:</p>\n<ul>\n<li><p>$L =$ left subtree, node, right subtree</p></li>\n<li><p>$M =$ node, left subtree, right subtree</p></li>\n<li><p>$N =$ left subtree, right subtree, node</p></li>\n</ul>\n<p>So,</p>\n<ul>\n<li><p>$\\mathrm{I}$ : Inorder $\\to L$</p></li>\n<li><p>$\\mathrm{II}$ : Preorder $\\to M$</p></li>\n<li><p>$\\mathrm{III}$ : Postorder $\\to N$</p></li>\n</ul>\n<p>Hence, the correct match is:</p>\n<p>$$ \\mathrm{I}-L,\\ \\mathrm{II}-M,\\ \\mathrm{III}-N $$</p>\n<p>So, the correct answer is <strong>Option A</strong>.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $n$ be an odd number greater than 100 . Consider a binary minheap with $n$ elements stored in an array $P$ whose index starts from 1. Which of the following indices of $P$ do/does NOT correspond to any leaf node of the minheap?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{n+1}{2}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{n-1}{2}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{n-3}{2}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$n$</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ n \\text { is odd and greater than } 100 \\text { binary minheap array index start from } 1 . $$</p>\n<p></p><p></p>\n<p></p>\n<p><img alt=\"GATE CSE 2026 Set 1 Data Structures - Trees Question 3 English Explanation\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmylrjfo/cab0e03d-daf7-472c-96ae-896c40afcd18/ed963e40-2431-11f1-b7e5-21f0116021ce/file-jaoe38c1mmylrjfp.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmylrjfo/cab0e03d-daf7-472c-96ae-896c40afcd18/ed963e40-2431-11f1-b7e5-21f0116021ce/file-jaoe38c1mmylrjfp.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\">$$ \\text { Index: } \\frac{n+1}{2}=\\left\\lfloor\\frac{n}{2}\\right\\rfloor+1 \\quad: \\quad \\text { First leaf node } $$</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ \\begin{array}{lll} \\frac{n-1}{2}=\\left\\lfloor\\frac{n}{2}\\right\\rfloor &amp; : &amp; \\text { Last internal node } \\\\ \\frac{n-3}{2} &amp; : &amp; \\text { Internal node }\\left[&lt;\\frac{n-1}{2}\\right] \\\\ n &amp; : &amp; \\text { Last leaf node } \\end{array} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The height of a binary tree is the number of edges in the longest path from the root to a leaf in the tree. The maximum possible height of a full binary tree with 23 nodes is $\\_\\_\\_\\_$ . (answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "11",
+    "explanation": "<p>Full binary tree: Every internal node must have 2 childs.</p>\n<p>Maximum height for 23 nodes: Tree must be skewed one end and because of full binary tree every internal nodes must have two childs.</p>\n<p><img alt=\"GATE CSE 2026 Set 1 Data Structures - Trees Question 4 English Explanation\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmynkopz/37ddbaa3-1473-473e-9463-bb7df6efdf92/0143ea80-2439-11f1-b51d-29f27efe72cc/file-jaoe38c1mmynkoq0.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmynkopz/37ddbaa3-1473-473e-9463-bb7df6efdf92/0143ea80-2439-11f1-b51d-29f27efe72cc/file-jaoe38c1mmynkoq0.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a binary tree $T$ in which every node has either zero or two children. Let $n>0$ be the number of nodes in $T$.\nWhich ONE of the following is the number of nodes in $T$ that have exactly two children?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{n-2}{2}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{n-1}{2}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{n}{2}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{n+1}{2}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yigocp/8613f955-5ca5-426b-8a0c-586163460d4e/c569f390-fb2d-11ef-92b3-cfedd026c8fa/file-jaoe38c1m7yigocq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yigocp/8613f955-5ca5-426b-8a0c-586163460d4e/c569f390-fb2d-11ef-92b3-cfedd026c8fa/file-jaoe38c1m7yigocq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Data Structures - Trees Question 8 English Explanation\"></p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}\n</style>\n</p><table class=\"tg\" style=\"undefined;table-layout: fixed; width: 418px\"><colgroup>\n<col style=\"width: 185px\">\n<col style=\"width: 233px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-amwm\">Number of nodes (n)</th>\n    <th class=\"tg-amwm\">Number of nodes of two childs</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">3</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">5</td>\n    <td class=\"tg-baqh\">2</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">7</td>\n    <td class=\"tg-baqh\">3</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">$n$</td>\n    <td class=\"tg-baqh\">$\\frac{n-1}{2}$</td>\n  </tr>\n</tbody>\n</table><p></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose the values $10,-4,15,30,20,5,60,19$ are inserted in that order into an initially empty binary search tree. Let $T$ be the resulting binary search tree. The number of edges in the path from the node containing 19 to the root node of $T$ is ________ (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yraclf/90e2eae6-d250-4e08-bdb3-72417e3170de/47a3b040-fb50-11ef-9115-8db426cbf786/file-jaoe38c1m7yraclg.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yraclf/90e2eae6-d250-4e08-bdb3-72417e3170de/47a3b040-fb50-11ef-9115-8db426cbf786/file-jaoe38c1m7yraclg.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Data Structures - Trees Question 9 English Explanation\"></p>\n<p>Number of edges from 19 to root node = 4.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following $B^{+}$tree with 5 nodes, in which a node can store at most 3 key values. The value 23 is now inserted in the $B^{+}$tree. Which of the following options(s) is/are CORRECT?</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7u92ppn/8761d417-8da7-4ce8-8e78-3c56817c6525/ec606ec0-f8d5-11ef-a121-ad93c3fc235c/file-jaoe38c1m7u92ppo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7u92ppn/8761d417-8da7-4ce8-8e78-3c56817c6525/ec606ec0-f8d5-11ef-a121-ad93c3fc235c/file-jaoe38c1m7u92ppo.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Data Structures - Trees Question 12 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " None of the nodes will split.\n"
+      },
+      {
+        "identifier": "B",
+        "content": " At least one node will split and redistribute.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " The total number of nodes will remain same.\n"
+      },
+      {
+        "identifier": "D",
+        "content": " The height of the tree will increase."
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7u93uaq/25302bd6-e911-4ab8-b823-04d4f561b407/0bba4020-f8d6-11ef-a121-ad93c3fc235c/file-jaoe38c1m7u93uar.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7u93uaq/25302bd6-e911-4ab8-b823-04d4f561b407/0bba4020-f8d6-11ef-a121-ad93c3fc235c/file-jaoe38c1m7u93uar.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Data Structures - Trees Question 12 English Explanation\"></p>\n<p>$\\bullet$ Leaf node and root node split required.</p>\n<p>$\\bullet$ Results increases tree height from 1 to 2.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statement(s) is/are TRUE for any binary search tree (BST) having $n$ distinct integers?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "  The maximum length of a path from the root node to any other node is $(n-1)$.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "An inorder traversal will always produce a sorted sequence of elements.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " Finding an element takes $\\mathrm{O}\\left(\\log _2 n\\right)$ time in the worst case.\n"
+      },
+      {
+        "identifier": "D",
+        "content": " Every BST is also a Min-Heap.\n"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>BST can be skewed tree also</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7urivbp/9579053c-49a8-453e-a0e5-0cf953a7c95e/11fb9450-f91e-11ef-8373-477d63a98bd3/file-jaoe38c1m7urivbq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7urivbp/9579053c-49a8-453e-a0e5-0cf953a7c95e/11fb9450-f91e-11ef-8373-477d63a98bd3/file-jaoe38c1m7urivbq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Data Structures - Trees Question 11 English Explanation\"></p>\n<p>In order traversal of BST is sorted sequence. Worst case search cost of BST is $\\theta(n)$. Not every BST is min-heap.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The height of any rooted tree is defined as the maximum number of edges in the path from the root node to any leaf node.</p>\n<p>Suppose a Min-Heap $T$ stores 32 keys. The height of $T$ is ________ (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": "<p>Let's break down the reasoning step by step:</p>\n\n<p><p>A min-heap is implemented as a complete binary tree. This means every level of the tree is fully filled except possibly the last, which is filled from left to right.</p></p>\n<p><p>The height of a tree is defined as the maximum number of edges from the root node to any leaf node. For a single-node tree (the root only), the height is 0.</p></p>\n<p><p>In a complete binary tree with height $$h$$, the maximum number of nodes is given by:</p>\n<p>$$2^{h+1} - 1$$</p></p>\n<p><p>For a tree of height 4:</p>\n<p>$$\\text{Maximum nodes} = 2^{4+1} - 1 = 2^5 - 1 = 32 - 1 = 31$$</p>\n<p>Since 31 is less than 32, a tree of height 4 cannot hold 32 keys.</p></p>\n<p><p>Therefore, the tree must have a height of 5 to accommodate 32 keys.</p></p>\n\n<p>So, the height of the min-heap that stores 32 keys is: $$\\boxed{5}$$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which one of the following sequences when stored in an array at locations $$A[1],....,A[10]$$ forms a max-heap?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$23,17,10,6,13,14,1,5,7,12$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$23,17,14,7,13,10,1,5,6,12$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$23,17,14,6,13,10,1,5,7,15$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$23,14,17,1,10,13,16,12,7,5$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>A max-heap is a complete binary tree where every node has a value greater than or equal to the values of its children. For an array representation of a max-heap (index starting from 1), the property can be described with the following conditions for each index $$i$$:</p>\n\n<p>If the value of the node at index $$i$$ is $$A[i]$$, then for max-heap:</p>\n\n<ul>\n\n<li>The left child is at index $$2i$$ (if it exists) and $$A[i] \\geq A[2i]$$</li>\n\n<li>The right child is at index $$2i + 1$$ (if it exists) and $$A[i] \\geq A[2i + 1]$$</li>\n\n</ul>\n\n<p>Let's check each option to see if it forms a max-heap:</p>\n\n<p><strong>Option A: $$23,17,10,6,13,14,1,5,7,12$$</strong></p>\n\n<p>For array $$A = [23,17,10,6,13,14,1,5,7,12]$$:</p>\n\n<ul>\n\n<li>$$A[1] = 23$$: left child is $$A[2] = 17$$ and right child is $$A[3] = 10$$ ✅</li>\n\n<li>$$A[2] = 17$$: left child is $$A[4] = 6$$ and right child is $$A[5] = 13$$ ✅</li>\n\n<li>$$A[3] = 10$$: left child is $$A[6] = 14$$ and right child is $$A[7] = 1$$ ❌ (10 is not greater than 14)</li>\n\n</ul>\n\n<p>Option A does not form a max-heap.</p>\n\n<p><strong>Option B: $$23,17,14,7,13,10,1,5,6,12$$</strong></p>\n\n<p>For array $$A = [23,17,14,7,13,10,1,5,6,12]$$:</p>\n\n<ul>\n\n<li>$$A[1] = 23$$: left child is $$A[2] = 17$$ and right child is $$A[3] = 14$$ ✅</li>\n\n<li>$$A[2] = 17$$: left child is $$A[4] = 7$$ and right child is $$A[5] = 13$$ ✅</li>\n\n<li>$$A[3] = 14$$: left child is $$A[6] = 10$$ and right child is $$A[7] = 1$$ ✅</li>\n\n<li>$$A[4] = 7$$: left child is $$A[8] = 5$$ and right child is $$A[9] = 6$$ ✅</li>\n\n<li>$$A[5] = 13$$: left child is $$A[10] = 12$$ ✅</li>\n\n</ul>\n\n<p>Option B forms a max-heap.</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr5zm4q/6ba13f25-e1aa-439c-9bfc-52c0a96a8e84/8e6fc2a0-44f5-11ef-a86f-d385dcd87d97/file-jaoe38c1lyr5zm4r.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr5zm4q/6ba13f25-e1aa-439c-9bfc-52c0a96a8e84/8e6fc2a0-44f5-11ef-a86f-d385dcd87d97/file-jaoe38c1lyr5zm4r.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Data Structures - Trees Question 17 English Explanation\">\n\n<p><strong>Option C: $$23,17,14,6,13,10,1,5,7,15$$</strong></p>\n\n<p>For array $$A = [23,17,14,6,13,10,1,5,7,15]$$:</p>\n\n<ul>\n\n<li>$$A[1] = 23$$: left child is $$A[2] = 17$$ and right child is $$A[3] = 14$$ ✅</li>\n\n<li>$$A[2] = 17$$: left child is $$A[4] = 6$$ and right child is $$A[5] = 13$$ ✅</li>\n\n<li>$$A[3] = 14$$: left child is $$A[6] = 10$$ and right child is $$A[7] = 1$$ ✅</li>\n\n<li>$$A[4] = 6$$: left child is $$A[8] = 5$$ and right child is $$A[9] = 7$$ ❌ (6 is not greater than 7)</li>\n\n</ul>\n\n<p>Option C does not form a max-heap.</p>\n\n<p><strong>Option D: $$23,14,17,1,10,13,16,12,7,5$$</strong></p>\n\n<p>For array $$A = [23,14,17,1,10,13,16,12,7,5]$$:</p>\n\n<ul>\n\n<li>$$A[1] = 23$$: left child is $$A[2] = 14$$ and right child is $$A[3] = 17$$ ✅</li>\n\n<li>$$A[2] = 14$$: left child is $$A[4] = 1$$ and right child is $$A[5] = 10$$ ✅</li>\n\n<li>$$A[3] = 17$$: left child is $$A[6] = 13$$ and right child is $$A[7] = 16$$ ❌ (17 is not greater than 16)</li>\n\n</ul>\n\n<p>Option D does not form a max-heap.</p>\n\n<p>Therefore, <strong>Option B</strong> is the correct answer.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Suppose a binary search tree with 1000 distinct elements is also a complete binary tree. The tree is stored using the array representation of binary heap trees. Assuming that the array indices start with 0, the 3<sup>rd</sup> largest element of the tree is stored at index ___________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "509",
+    "explanation": "<p>Given a binary search tree with 1000 distinct elements that is also a complete binary tree, it is stored using an array representation similar to that of binary heap trees, with array indices starting from 0.</p>\n<p>The largest element in the binary search tree (BST) is located at the rightmost position in the tree. In the context of a complete binary tree with 1000 elements, the rightmost element is at index 510, calculated using $2^9 - 2$, considering that the array index starts at 0.</p>\n<p>The second largest element is the parent of the largest element, and the third largest is the left child of the largest. Therefore, the third largest element is stored at index 509, which is $510 - 1$.</p>\n<p>Thus, the third largest element in the tree is located at index 509.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider a complete binary tree with 7 nodes. Let A denote the set of first 3 elements obtained by performing Breadth-First Search (BFS) starting from the root. Let B denote the set of first 3 elements obtained by performing Depth-First Search (DFS) starting from the root.</p>\n\n<p>The value of |A - B| is _______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": "<p><b>Given :</b> Binary tree with 7 nodes consider the following complete binary tree</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2bhku5y/a4aac753-1230-457b-a882-58f1eebf7230/342e2560-8b87-11ef-ba39-b5a5b3cabf23/file-jaoe38c1m2bhku5z.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2bhku5y/a4aac753-1230-457b-a882-58f1eebf7230/342e2560-8b87-11ef-ba39-b5a5b3cabf23/file-jaoe38c1m2bhku5z.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Data Structures - Trees Question 20 English Explanation\"></p>\n<p>$$ \\begin{aligned} &amp; \\mathrm{A}=\\text { set of first } 3 \\text { elements obtained by BFS } \\\\\\\\ &amp; \\mathrm{A}=\\{\\mathrm{a}, \\mathrm{~b}, \\mathrm{c}\\} \\\\\\\\ &amp; \\mathrm{B}=\\text { set of first } 3 \\text { elements obtained by DFS } \\\\\\\\ &amp; \\mathrm{B}=\\{a, b, d\\} \\\\\\\\ &amp; \\mathrm{A}-\\mathrm{B}=\\{\\mathrm{c}\\} \\\\\\\\ &amp; |\\mathrm{A}-\\mathrm{B}|=1 \\end{aligned} $$</p>\n<p>Hence, the correct answer is 1.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following statements.</p>\n\n<p>S<sub>1</sub> : The sequence of procedure calls corresponds to a preorder traversal of the activation tree.</p>\n\n<p>S<sub>2</sub> : The sequence of procedure returns corresponds to a postorder traversal of the activation tree.</p>\n\n<p>Which one of the following options is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S<sub>1</sub> is true and S<sub>2</sub> is true"
+      },
+      {
+        "identifier": "B",
+        "content": "S<sub>1</sub> is false and S<sub>2</sub> is true"
+      },
+      {
+        "identifier": "C",
+        "content": "S<sub>1</sub> is false and S<sub>2</sub> is false"
+      },
+      {
+        "identifier": "D",
+        "content": "S<sub>1</sub> is true and S<sub>2</sub> is false"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the correctness of statements S₁ and S₂, let's analyze each one in the context of activation trees and traversal orders.</p>\n<h3><strong>Understanding Activation Trees</strong></h3>\n<p>An <strong>activation tree</strong> represents the execution of procedures (or functions) in a program. Each node in the tree corresponds to a specific activation (or call) of a procedure, and the edges represent the caller-callee relationships. The root of the tree is typically the initial procedure (like the <code>main</code> function), and the tree reflects the dynamic call structure during program execution.</p>\n<h3><strong>Statement S₁:</strong></h3>\n<p><strong>S₁</strong>: <em>The sequence of procedure calls corresponds to a preorder traversal of the activation tree.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Preorder Traversal</strong>: In preorder traversal, we visit a node before its children. The order is: <strong>Node → Left Subtree → Right Subtree</strong>.</p></p>\n<p><p><strong>Procedure Calls</strong>: When a procedure is called, it may call other procedures before completing. The sequence of calls unfolds as follows:</p></p>\n\n\n<p><p>A procedure is called (visit the node).</p></p>\n<p><p>It may call another procedure (traverse to the child).</p></p>\n<p><p>This process continues recursively.</p></p>\n\n\n<p><p><strong>Correspondence</strong>: The sequence of procedure calls naturally aligns with a preorder traversal because:</p></p>\n<p><p>We \"visit\" (call) a procedure before calling its sub-procedures.</p></p>\n<p><p>The call stack grows as we go deeper into nested calls, mirroring the preorder traversal order.</p></p>\n\n<p><strong>Conclusion</strong>: <strong>S₁ is true</strong>.</p>\n<h3><strong>Statement S₂:</strong></h3>\n<p><strong>S₂</strong>: <em>The sequence of procedure returns corresponds to a postorder traversal of the activation tree.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Postorder Traversal</strong>: In postorder traversal, we visit the children before the node itself. The order is: <strong>Left Subtree → Right Subtree → Node</strong>.</p></p>\n<p><p><strong>Procedure Returns</strong>: A procedure cannot return until all the procedures it called have returned. The sequence of returns unfolds as follows:</p></p>\n\n\n<p><p>The deepest nested procedure completes execution and returns (visit the deepest child first).</p></p>\n<p><p>Control returns to the caller procedure, which may then complete and return.</p></p>\n<p><p>This process continues up the call stack.</p></p>\n\n\n<p><p><strong>Correspondence</strong>: The sequence of procedure returns aligns with a postorder traversal because:</p></p>\n<p><p>We complete (return from) all sub-procedures before completing the current procedure.</p></p>\n<p><p>The call stack unwinds in the reverse order of calls, visiting children before the parent, consistent with postorder traversal.</p></p>\n\n<p><strong>Conclusion</strong>: <strong>S₂ is true</strong>.</p>\n<h3><strong>Final Answer:</strong></h3>\n<p>Both statements S₁ and S₂ are true. Therefore, the correct option is:</p>\n<hr />\n<p><strong>Option A: S₁ is true and S₂ is true</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "What is the worst case time complexity of inserting n<sup>2</sup> elements into an AVL-tree with n elements initially?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\left( {{n^2}} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\left( {{n^2}\\log n} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\left( {{n^4}} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\left( {{n^3}} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the worst-case time complexity of inserting $ n^2 $ elements into an AVL tree that initially contains $ n $ elements, we'll analyze the time it takes to insert each element and sum these times.</p>\n<hr />\n<h3><strong>Understanding AVL Trees:</strong></h3>\n\n<p><p><strong>AVL Tree Properties:</strong></p></p>\n<p><p><strong>Height-Balanced Binary Search Tree</strong>: Ensures that the heights of the two child subtrees of any node differ by at most one.</p></p>\n<p><p><strong>Operations Time Complexity</strong>:</p>\n\n<p><p><strong>Insertion</strong>: $ O(\\log k) $, where $ k $ is the number of nodes in the tree at the time of insertion.</p></p>\n<p><p><strong>Balancing</strong>: After insertion, rebalancing the tree requires at most $ O(1) $ rotations, which is $ O(1) $ time.</p></p></p>\n\n<hr />\n<h3><strong>Analyzing the Insertion of $ n^2 $ Elements:</strong></h3>\n\n<p><p><strong>Initial Tree Size</strong>: $ n $</p></p>\n<p><p><strong>Total Number of Insertions</strong>: $ n^2 $</p></p>\n<p><p><strong>Tree Size After Insertions</strong>: $ n + n^2 = n^2 + n $</p></p>\n\n<p><strong>Time to Insert Each Element:</strong></p>\n\n<p><p>The time to insert the $ i^{th} $ element is $ O(\\log(N_i)) $, where $ N_i $ is the size of the tree before the $ i^{th} $ insertion.</p></p>\n<p><p>Since the tree grows by one with each insertion, $ N_i = n + i - 1 $.</p></p>\n\n<p><strong>Total Time Complexity ($ T $)</strong>:</p>\n<p>$ T = \\sum_{i=1}^{n^2} O\\left( \\log (n + i - 1) \\right) $</p>\n<hr />\n<h3><strong>Calculating the Total Time Complexity:</strong></h3>\n<p><strong>Step 1: Estimate the Range of $ \\log (n + i - 1) $</strong></p>\n\n<p><p><strong>Minimum Value</strong>:</p></p>\n<p><p>When $ i = 1 $:</p>\n<p>$     \\log (n + 1 - 1) = \\log n     $</p></p>\n<p><p><strong>Maximum Value</strong>:</p></p>\n<p><p>When $ i = n^2 $:</p>\n<p>$     \\log (n + n^2 - 1) \\approx \\log n^2 = 2 \\log n     $</p></p>\n\n<p><strong>Step 2: Approximate the Sum</strong></p>\n\n<p><p>The logarithm function increases slowly, so over the range from $ n $ to $ n^2 + n - 1 $, $ \\log (n + i - 1) $ is between $ \\log n $ and $ 2 \\log n $.</p></p>\n<p><p><strong>Average Value of $ \\log (n + i - 1) $</strong>:</p></p>\n<p><p>Approximately $ \\frac{1}{2} ( \\log n + 2 \\log n ) = \\frac{3}{2} \\log n $</p></p>\n\n<p><strong>Step 3: Compute the Total Time</strong></p>\n\n<p><p><strong>Total Time</strong>:</p>\n<p>$   T = n^2 \\times O(\\log n) = O(n^2 \\log n)   $</p></p>\n\n<hr />\n<h3><strong>Conclusion:</strong></h3>\n\n<p><p>The total worst-case time complexity for inserting $ n^2 $ elements into an AVL tree that initially contains $ n $ elements is $ \\Theta(n^2 \\log n) $.</p></p>\n<p><p>This is because each insertion takes $ O(\\log k) $ time, where $ k $ is the size of the tree at that point, and we sum this over all $ n^2 $ insertions.</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Option B</p>\n<p>    $\\Theta\\left(n^2 \\log n\\right)$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The preorder traversal of a binary search tree is 15, 10, 12, 11, 20, 18, 16, 19.\nWhich one of the following is the postorder traversal of the tree?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "20, 19, 18, 16, 15, 12, 11, 10"
+      },
+      {
+        "identifier": "B",
+        "content": "10, 11, 12, 15, 16, 18, 19, 20"
+      },
+      {
+        "identifier": "C",
+        "content": "11, 12, 10, 16, 19, 18, 20, 15"
+      },
+      {
+        "identifier": "D",
+        "content": "19, 16, 18, 20, 11, 12, 10, 15"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> Pre-order traversal :</p>\n<p>$$ 15,10,12,11,20,18,16,19 $$</p>\n<p>In-order traversal of BST is ascending order $10,11,12,15,16,1,19,20$.</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3k74188/58cbb4d2-43c7-4c90-95f9-0df9f1dfb7b7/8ad02b80-a41d-11ef-b2d5-1df44d27db4c/file-jaoe38c1m3k74189.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3k74188/58cbb4d2-43c7-4c90-95f9-0df9f1dfb7b7/8ad02b80-a41d-11ef-b2d5-1df44d27db4c/file-jaoe38c1m3k74189.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Data Structures - Trees Question 25 English Explanation 1\">\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3k73ycw/7287e379-6cb5-4591-b5d5-c7c6ddca8553/88988b00-a41d-11ef-b2d5-1df44d27db4c/file-jaoe38c1m3k73ycx.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3k73ycw/7287e379-6cb5-4591-b5d5-c7c6ddca8553/88988b00-a41d-11ef-b2d5-1df44d27db4c/file-jaoe38c1m3k73ycx.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Data Structures - Trees Question 25 English Explanation 2\">\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3k73ua5/9c3c8ee2-e434-4fbf-b74a-4ef80a5fb1d5/85726bd0-a41d-11ef-b2d5-1df44d27db4c/file-jaoe38c1m3k73ua6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3k73ua5/9c3c8ee2-e434-4fbf-b74a-4ef80a5fb1d5/85726bd0-a41d-11ef-b2d5-1df44d27db4c/file-jaoe38c1m3k73ua6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Data Structures - Trees Question 25 English Explanation 3\">",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The postorder traversal of a binary tree is $$8,9,6,7,4,5,2,3,1.$$ The inorder traversal of the same tree is $$8,6,9,4,7,2,5,1,3.$$ The height of a tree is the length of the longest path from the root to any leaf. The height of the binary tree above is ______.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $T$ be a binary search tree with 15 nodes. The minimum and maximum possible heights of $T$ are : </p>\n<p>Note : The height of a tree with a single node is 0.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4 and 15 respectively"
+      },
+      {
+        "identifier": "B",
+        "content": "3 and 14 respectively"
+      },
+      {
+        "identifier": "C",
+        "content": "4 and 14 respectively"
+      },
+      {
+        "identifier": "D",
+        "content": "3 and 15 respectively"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> Binary search tree with 15 nodes. \n\n<br>So maximum possible height of tree with 15 \n\n<br>node is 14 , when it left or right skewed tree and \n\n<br>height is minimum when it is complete binary \n\n<br>search tree with 15 node height.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mckid7pu/d6f71c17-b165-4f66-ae16-c3e4bcaf38e5/80f06320-5677-11f0-82d7-5950cfe6f087/file-jaoe38c1mckid7pv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mckid7pu/d6f71c17-b165-4f66-ae16-c3e4bcaf38e5/80f06320-5677-11f0-82d7-5950cfe6f087/file-jaoe38c1mckid7pv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2017 Set 1 Data Structures - Trees Question 7 English Explanation\"></p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-cse-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "While inserting the elements $$71, 65, 84, 69, 67, 83$$ in an empty binary search tree $$(BST)$$ in the sequence shown, the element in the lowest level is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$65$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$67$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$69$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$83$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a binary tree $$T$$ that has $$200$$ leaf nodes. Then, the number of nodes in $$T$$ that have exactly two children are ________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "199",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The height of a tree is the length of the longest root-to-leaf path in it. The maximum and minimum number of nodes in a binary tree of height 5 are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "63 and 6, respectively "
+      },
+      {
+        "identifier": "B",
+        "content": "64 and 5, respectively"
+      },
+      {
+        "identifier": "C",
+        "content": "32 and 6, respectively"
+      },
+      {
+        "identifier": "D",
+        "content": "31 and 5, respectively"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "What are the worst-case complexities of insertion and deletion of a key in a binary search tree?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\left( {\\log n} \\right)$$ for both insertion and deletion"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\left( n \\right)$$ for both insertion and deletion"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\left( n \\right)$$ for insertion and $$\\Theta \\left( {\\log n} \\right)$$for deletion"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\left( {\\log n} \\right)$$ for insertion and $$\\Theta \\left( n \\right)$$ for deletion"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is/are correct inorder traversal sequence(s) of binary search tree(s)?\n<p>I. 3, 5, 7, 8, 15, 19, 25\n<br>II. 5, 8, 9, 12, 10, 15, 25\n<br>III. 2, 7, 10, 8, 14, 16, 20\n<br>IV. 4, 6, 7, 9 18, 20, 25</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and IV only"
+      },
+      {
+        "identifier": "B",
+        "content": "II and III only"
+      },
+      {
+        "identifier": "C",
+        "content": "II and IV only"
+      },
+      {
+        "identifier": "D",
+        "content": "II only"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A binary tree $$T$$ has $$20$$ leaves. The number of nodes in $$T$$ having two children is _______________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "19",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a complete binary tree where the left and the right sub-trees of the root are max-heaps. The lower bound for the number of operations to convert the tree to a heap is  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Omega \\left( {\\log \\,\\,n} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Omega \\left( n \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Omega \\left( {n\\,\\,\\log \\,\\,n} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Omega \\left( {{n^2}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a rooted n node binary tree represented using pointers. The best upper bound on the time required to determine the number of subtrees having exactly 4 nodes O(n<sup>a</sup> Log<sup>b</sup>n ). Then the value of a + 10b is _________",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following rooted tree with the vertex labelled P as the root\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/NCQ5YvfA68jz8zQrr/COn7EU4Jx9qaHsBLHsHtFYg1pF5KW/IcNKVNgKH7Gk13ddQnVTN8/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 3 Data Structures - Trees Question 76 English\">\nThe order in which the nodes are visited during an in-order traversal of the tree is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "SQPTRWUV"
+      },
+      {
+        "identifier": "B",
+        "content": "SQPTRUWRV"
+      },
+      {
+        "identifier": "C",
+        "content": "SQPTWUVR"
+      },
+      {
+        "identifier": "D",
+        "content": "SQPTRUWV"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A max-heap is a heap where the value of each parent is greater than or equal to the value of its children. Which of the following is a max-heap?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/uNlGNrTgpPynxshDZ/SPFyBmYCH9zKRSQvVOmX2CTkiebKP/lcsz8aBT3i6N8UhxSkw2qg/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Data Structures - Trees Question 77 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/ELoSeKxfdYc60ya6Y/hCGtGUx9tbwvQK8szjAb5PBWJS3wt/NrzUc4ivkss7kTALckih3V/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Data Structures - Trees Question 77 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/sbeGFhnCI3CUFfF0p/648hDginUe14Cq8QmxGBSBIu5E6XM/eJppcHKYGWzdqzECKFUGq7/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Data Structures - Trees Question 77 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/12vqDp1nmlsotvIW2/Q2TZpnge2W7vfHESOmMFrqJGkNH5k/BoE1LPvS7h7FaJ9FX0pHVy/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Data Structures - Trees Question 77 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The cost of searching an AVL tree is θ (log n) but that of a binary search tree is O(n)"
+      },
+      {
+        "identifier": "B",
+        "content": "The cost of searching an AVL tree is θ (log n) but that of a complete binary tree is θ (n log n) "
+      },
+      {
+        "identifier": "C",
+        "content": "The cost of searching a binary search tree is O (log n ) but that of an AVL tree is θ(n)"
+      },
+      {
+        "identifier": "D",
+        "content": "The cost of searching an AVL tree is θ (n log n) but that of a binary search tree is O(n)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The height of a binary tree is the maximum number of edges in any root to leaf path. The maximum number of nodes in a binary tree of height h is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2<sup>h</sup>-1"
+      },
+      {
+        "identifier": "B",
+        "content": "2<sup>h</sup>-1-1 "
+      },
+      {
+        "identifier": "C",
+        "content": "2<sup>h+1</sup>-1"
+      },
+      {
+        "identifier": "D",
+        "content": "2<sup>h+1</sup>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The maximum number of binary trees that can be formed with three unlabeled nodes is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A scheme for storing binary trees in an array X is as follows. Indexing of X starts at 1 instead of 0. the root is stored at X[1]. For a node stored at X[i], the left child, if any, is stored in X[2i] and the right child, if any, in X[2i+1]. To be able to store any binary tree on n vertices the minimum size of X should be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "log<sub>2</sub> n"
+      },
+      {
+        "identifier": "B",
+        "content": "n "
+      },
+      {
+        "identifier": "C",
+        "content": "2n + 1"
+      },
+      {
+        "identifier": "D",
+        "content": "2<sup>n</sup>-1"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "In a binary tree, the number of internal nodes of degree 1 is 5, and the number of internal nodes of degree 2 is 10. The number of leaf nodes in the binary tree is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10"
+      },
+      {
+        "identifier": "B",
+        "content": "11"
+      },
+      {
+        "identifier": "C",
+        "content": "12"
+      },
+      {
+        "identifier": "D",
+        "content": "15"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The numbers 1, 2, ........, n are inserted in a binary search tree in some order. In the resulting tree, the right subtree of the root contains p nodes. The first number to be inserted in the tree must be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "p"
+      },
+      {
+        "identifier": "B",
+        "content": "p + 1"
+      },
+      {
+        "identifier": "C",
+        "content": "n – p"
+      },
+      {
+        "identifier": "D",
+        "content": "n – p + 1"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The following numbers are inserted into an empty binary search tree in the given order: 10, 1, 3, 5, 15, 12, 16. What is the height of the binary search tree (the height is the maximum distance of a leaf node from the root)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Level order traversal of a rooted tree can be done by starting from the root and performing",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "preorder traversal "
+      },
+      {
+        "identifier": "B",
+        "content": "in-order traversal "
+      },
+      {
+        "identifier": "C",
+        "content": "depth first search "
+      },
+      {
+        "identifier": "D",
+        "content": "breadth first search"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an\ninitially empty binary search tree. The binary search tree uses the usual ordering\non natural numbers. What is the in-order traversal sequence of the resultant\ntree?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7 5 1 0 3 2 4 6 8 9 "
+      },
+      {
+        "identifier": "B",
+        "content": "0 2 4 3 1 6 5 9 8 7"
+      },
+      {
+        "identifier": "C",
+        "content": "0 1 2 3 4 5 6 7 8 9"
+      },
+      {
+        "identifier": "D",
+        "content": "9 8 6 4 2 3 0 1 5 7"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following nested representation of binary trees: (X Y Z) indicates Y and Z are the left and right sub stress, respectively, of node X. Note that Y and Z may be NULL, or further nested. Which of the following represents a valid binary tree?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(1 2 (4 5 6 7))"
+      },
+      {
+        "identifier": "B",
+        "content": "(1 (2 3 4) 5 6) 7) "
+      },
+      {
+        "identifier": "C",
+        "content": "(1 (2 3 4)(5 6 7))"
+      },
+      {
+        "identifier": "D",
+        "content": "(1 (2 3 NULL) (4 5))"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is false?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A tree with a n nodes has (n – 1) edges "
+      },
+      {
+        "identifier": "B",
+        "content": "A labeled rooted binary tree can be uniquely constructed given its postorder and preorder traversal results. "
+      },
+      {
+        "identifier": "C",
+        "content": "A complete binary tree with n internal nodes has (n + 1) leaves. "
+      },
+      {
+        "identifier": "D",
+        "content": "The maximum number of nodes in a binary tree of height h is ( 2<sup>h+1</sup> - 1 )."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following sequences denotes the post order traversal sequence of the tree of previous question?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "f e g c d b a"
+      },
+      {
+        "identifier": "B",
+        "content": "g c b d a f e"
+      },
+      {
+        "identifier": "C",
+        "content": "g c d b f e a"
+      },
+      {
+        "identifier": "D",
+        "content": "f e d g c b a"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "In the balanced binary tree in Fig. given below, how many nodes will become unbalanced when a node is inserted as a child of the node “g”?\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/FLM1mZ554Ns2rN2nV/sjDRo3jiZPVHYHaPjrrS2FRHzJ5wN/9STmf9UQm9NEku4241o8YD/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1996 Data Structures - Trees Question 89 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "7"
+      },
+      {
+        "identifier": "D",
+        "content": "8"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A binary tree T has n leaf nodes. The number of nodes of degree 2 in T is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "log<sub>2</sub>n "
+      },
+      {
+        "identifier": "B",
+        "content": "n − 1"
+      },
+      {
+        "identifier": "C",
+        "content": "n "
+      },
+      {
+        "identifier": "D",
+        "content": "2n"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "It is possible to construct a binary tree uniquely whose pre-order and post-order traversals are given.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  },
+  {
+    "content": "If the no of leaves in a tree is not a power of 2,then the tree is not a binary tree.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a binary search tree (BST) with $n$ leaf nodes ( $n>0$ ). Given any node $V$, the key present in the node is denoted as $\\operatorname{Val}(V)$. All the keys present in the given BST are distinct. The keys belong to the set of real numbers.</p>\n<p>For a node $V$, let $\\operatorname{Suc}(V)$ denote the node that is its inorder successor. If a node $V$ does not have an inorder successor, then $\\operatorname{Suc}(V)$ is NULL. As there are no duplicates, if $\\operatorname{Suc}(V)$ is not NULL, then $\\operatorname{Val}(V)<\\operatorname{Val}(\\operatorname{Suc}(V))$.</p>\n<p>Corresponding to every leaf node $L_i$ that has a non-NULL $\\operatorname{Suc}\\left(L_i\\right)$, a new key $k_i$ with the following property is to be inserted into the BST.</p>\n<p>$$ \\operatorname{Val}\\left(L_i\\right) < k_i < \\operatorname{Val}\\left(\\operatorname{Suc}\\left(L_i\\right)\\right) $$</p>\n<p>Let $K$ represent the list of all such new keys to be inserted into the BST.</p>\n<p>Which of the following statements is/are true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$K$ cannot have any duplicates</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$K$ will have at least one element</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>After inserting all keys from $K$, the height of the BST can increase at most by one</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Number of nodes in the BST will double after inserting all keys from $K$</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Check duplicates in $K$</p>\n<ul>\n\n<li><p>Each $k_i$ is strictly between a leaf node $L_i$ and its inorder successor $\\operatorname{Suc}\\left(L_i\\right)$.</p></li>\n\n<li><p>Since all keys in the BST are distinct and the real numbers are dense, you can always pick a unique $k_i$ in each interval.</p></li>\n\n<li><p>Therefore, $K$ cannot have duplicates.</p></li>\n\n</ul>\n<p>Statement (a) is true.</p>\n<p>Will $K$ have at least one element?</p>\n<ul>\n\n<li><p>Only leaf nodes $L_i$ with a non-NULL successor generate a new key.</p></li>\n\n<li><p>If the BST has only one node, or the largest leaf has no successor, it may happen that no leaf has a successor.</p></li>\n\n<li><p>So $K$ may be empty in some cases.</p></li>\n\n</ul>\n<p>Statement (b) is not necessarily true.</p>\n<p>Effect on height of BST</p>\n<ul>\n\n<li><p>Inserting a key $k_i$ between Li and $\\operatorname{Suc}\\left(L_i\\right)$ means $k_i$ will always be a child of some leaf $L_i$ (or somewhere along the path to the successor).</p></li>\n\n<li><p>Since each new key is inserted as a new leaf, the height can increase by at most 1.</p></li>\n\n<li><p>Example: if $L_i$ is at the maximum depth, adding $k_i$ as its child increases height by 1 .</p></li>\n\n<li><p>Other insertions do not increase the height further.</p></li>\n\n</ul>\n<p>Statement (c) is true.</p>\n<p>Number of nodes doubling</p>\n<ul>\n\n<li><p>Let's denote:</p></li>\n\n<li><p>Number of original leaf nodes $=n$</p></li>\n\n<li><p>Number of new keys inserted = number of leaves with non-NULL successor = $n$</p></li>\n\n<li><p>The total number of nodes after insertion $=$ original nodes +n (may be less if some leaves have no successor).</p></li>\n\n</ul>\n<ul>\n<li>So the number of nodes does not necessarily double. Statement (d) is false.</li>\n</ul>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $P$ be the set of all integers from 1 to 15 . Consider any order of insertion of the elements of $P$ into a binary search tree that creates a complete binary tree. Which one of the following elements can NEVER be the third element that is inserted?</p><img alt=\"GATE CSE 2026 Set 1 Data Structures - Trees Question 1 English\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyocovz/d1d18b3b-40f4-4cc1-bdb6-c7480187f487/0c0cd000-243c-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyocow0.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyocovz/d1d18b3b-40f4-4cc1-bdb6-c7480187f487/0c0cd000-243c-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyocow0.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>4</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>2</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>10</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>5</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Complete binary tree with keys 1 to 15 is binary search tree</p>\n<ul>\n<li><p>First key to insert is 8 .</p></li>\n<li><p>$2^{\\text {nd }}$ keys must be 4 or 12 .</p></li>\n<li><p>If $2^{\\text {nd }}$ key 4 then 3rd key can be any of $2,6,12$.</p></li>\n<li><p>If $2^{\\text {nd }}$ key 12 then 3rd key can be any of $4,10,14$.</p></li>\n</ul>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The following sequence corresponds to the preorder traversal of a binary search tree:</p>\n<p>$$ 50,25,13,40,30,47,75,60,70,80,77 $$</p>\n<p>The position of the element 60 in the postorder traversal of $T$ is $\\_\\_\\_\\_$ . (answer in integer)</p>\n<p>Note: The position begins with 1.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": "<p>$$ \\text { Preorder: } 50,25,13,40,30,47,75,60,70,80,77 $$</p>\n<p><img alt=\"GATE CSE 2026 Set 1 Data Structures - Trees Question 2 English Explanation 1\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyqph3m/3674b88e-b682-4ffd-94dc-ab63585fdbce/41cf8b20-2445-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyqph3n.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyqph3m/3674b88e-b682-4ffd-94dc-ab63585fdbce/41cf8b20-2445-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyqph3n.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\">$$ \\text { Postorder ⇒ Left, right, node } $$</p><img alt=\"GATE CSE 2026 Set 1 Data Structures - Trees Question 2 English Explanation 2\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyqti1h/8f5033de-d14c-4d7e-8f5e-78ea207491ac/b1c61c50-2445-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyqti1i.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyqti1h/8f5033de-d14c-4d7e-8f5e-78ea207491ac/b1c61c50-2445-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyqti1i.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\">\n<p>$$ \\text { The position of element } 60 \\text { in the postorder }=7 \\text {. } $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A meld operation on two instances of a data structure combines them into one single instance of the same data structure. Consider the following data structures:</p>\n<p>P: Unsorted doubly linked list with pointers to the head node and tail node of the list.</p>\n<p>Q: Min-heap implemented using an array.</p>\n<p>R: Binary Search Tree.</p>\n<p>Which ONE of the following options gives the worst-case time complexities for meld operation on instances of size $n$ of these data structures?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " P: $\\Theta(1), \\mathrm{Q}: \\Theta(n), \\mathrm{R}: \\Theta(n)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\mathrm{P}: \\Theta(1), \\mathrm{Q}: \\Theta(n \\log n), \\mathrm{R}: \\Theta(n)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\mathrm{P}: \\Theta(n), \\mathrm{Q}: \\Theta(n \\log n), \\mathrm{R}: \\Theta\\left(n^2\\right)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\mathrm{P}: \\Theta(1), \\mathrm{Q}: \\Theta(n), \\mathrm{R}: \\Theta(n \\log n)$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s analyze each data structure and the natural way to \"meld\" (combine) two instances of size $$n$$.</p>\n\n<p>(P) Unsorted Doubly Linked List  </p>\n\n\n<p><p>Because we have pointers to both the head and tail, we can merge two lists by simply linking the tail of one to the head of the other.</p></p>\n<p><p>This pointer adjustment takes only a constant number of steps, so the meld runs in  </p>\n<p>$$\\Theta(1).$$</p></p>\n\n\n<p>(Q) Min‑heap Implemented Using an Array  </p>\n\n\n<p><p>A straightforward approach is to concatenate the two arrays (each of size $$n$$) to form an array of size $$2n$$.</p></p>\n<p><p>Then we can use the bottom‑up “build‑heap” algorithm, which runs in linear time with respect to the number of elements.</p></p>\n<p><p>Hence, the melding takes  </p>\n<p>$$\\Theta(n).$$</p></p>\n\n\n<p>(R) Binary Search Tree  </p>\n\n\n<p><p>One optimal method is:</p>\n\n<p><p>Perform an in‑order traversal of each BST (costing $$\\Theta(n)$$ each) to obtain two sorted lists.</p></p>\n<p><p>Merge the two sorted lists in $$\\Theta(n)$$ time.</p></p>\n<p><p>Use the sorted array to build a balanced BST in $$\\Theta(n)$$ time.</p></p></p>\n<p><p>Overall, this approach takes  </p>\n<p>$$\\Theta(n).$$</p></p>\n\n<p>Putting it together, the worst‑case time complexities for meld on instances of size $$n$$ are:</p>\n<p>  P: $$\\Theta(1)$$, Q: $$\\Theta(n)$$, R: $$\\Theta(n)$$.</p>\n<p>Thus, the correct answer is Option A.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>You are given a set $V$ of distinct integers. A binary search tree $T$ is created by inserting all elements of $V$ one by one, starting with an empty tree. The tree $T$ follows the convention that, at each node, all values stored in the left subtree of the node are smaller than the value stored at the node. You are not aware of the sequence in which these values were inserted into $T$, and you do not have access to $T$.<br/><br/> Which one of the following statements is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Inorder traversal of $T$ can be determined from $V$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Root node of $T$ can be determined from $V$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Preorder traversal of $T$ can be determined from $V$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Postorder traversal of $T$ can be determined from $V$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given a set of distinct integers $V$ and a binary search tree $T$ formed by inserting the elements one by one, let's evaluate which statement about the traversals or the root node of $T$ is true:</p>\n\n<p>Firstly, let’s review the properties and characteristics of the binary search tree and its traversals:</p>\n\n<p>1. <strong>Inorder Traversal:</strong> In a binary search tree, performing an inorder traversal (left, root, right) will result in a sorted sequence of the elements. Therefore, no matter the insertion sequence, the inorder traversal will always be the sorted version of $V$. Hence, if we know set $V$, we can determine the inorder traversal of $T$ by simply sorting $V$.</p>\n\n<p>2. <strong>Root Node:</strong> The root node of the tree $T$ primarily depends on the first element inserted into the tree. Since we do not know the sequence of insertions, we cannot determine the root node just from knowing the set $V$.</p>\n\n<p>3. <strong>Preorder Traversal:</strong> The preorder traversal (root, left, right) depends on the order in which elements are inserted into the tree. Since we do not know the insertion sequence, we cannot determine the preorder traversal from $V$ alone.</p>\n\n<p>4. <strong>Postorder Traversal:</strong> Similarly, the postorder traversal (left, right, root) also depends on the sequence of insertions. Without knowing that sequence, we cannot determine the postorder traversal from $V$ alone.</p>\n\n<p>Given these points, the only statement that is definitively true is:</p>\n\n<p><strong>Option A: Inorder traversal of $T$ can be determined from $V$.</strong></p>\n\n<p>To summarize, the inorder traversal of a binary search tree for a set of distinct integers will always be the sorted version of that set.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a binary min-heap containing 105 distinct elements. Let <i>k</i> be the index (in the underlying array) of the maximum element stored in the heap. The number of possible values of <i>k</i> is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>53</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>52</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>27</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>1</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>In a binary min-heap, the smallest element is at the root, and each parent node is smaller than its children. This property ensures that the maximum element will always be located at one of the leaf nodes because if it were an internal node, at least one of its children would have to be larger than it, contradicting the min-heap property.</p>\n\n<p>For a binary heap stored in a 1-indexed array, the indices of the leaf nodes can be determined by considering the height of the heap. For a complete binary tree with <i>n</i> nodes, leaf nodes start from index $$\\left\\lceil \\frac{n}{2} \\right\\rceil$$ to $$n$$.</p>\n\n<p>Given that we have 105 distinct elements, the leaf nodes start from: $$\\left\\lceil \\frac{105}{2} \\right\\rceil = 53$$. Therefore, the leaf nodes are located from index 53 to 105.</p>\n\n<p>The number of leaf nodes (and hence the possible positions of the maximum element) is therefore: $$105 - 53 + 1 = 53$$.</p>\n\n<p>So, the number of possible values of <i>k</i> is <strong>53</strong>, making the correct answer:</p>\n\n<p><strong>Option A</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let A be a priority queue for maintaining a set of elements. Suppose A is implemented using a max-heap data structure. The operation EXTRACT-MAX(A) extracts and deletes the maximum element from A. The operation INSERT(A, key) inserts a new element key in A. The properties of a max-heap are preserved at the end of each of these operations.</p>\n<p>When A contains n elements, which one of the following statements about the worst case running time of these two operations is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both EXTRACT-MAX(A) and INSERT(A, key) run in $$O(1)$$."
+      },
+      {
+        "identifier": "B",
+        "content": "Both EXTRACT-MAX(A) and INSERT(A, key) run in $$O(\\log(n))$$."
+      },
+      {
+        "identifier": "C",
+        "content": "EXTRACT-MAX(A) runs in $$O(1)$$ whereas INSERT(A, key) runs in $$O(n)$$."
+      },
+      {
+        "identifier": "D",
+        "content": "EXTRACT-MAX(A) runs in $$O(1)$$ whereas INSERT(A, key) runs in $$O(\\log(n))$$."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the correct answer regarding the worst-case running times for the operations EXTRACT-MAX(A) and INSERT(A, key) on a max-heap, let's analyze each operation in detail.</p>\n\n<p><strong>EXTRACT-MAX(A):</strong></p>\n\n<p>The <code>EXTRACT-MAX(A)</code> operation involves the following steps:</p>\n\n<ul>\n\n<li>Remove the root element of the max-heap, which is the maximum element. This step itself takes $$O(1)$$ time.</li>\n\n<li>Move the last element of the heap to the root position.</li>\n\n<li>Restore the max-heap property by \"heapifying\" the root element, which ensures the new root is correctly placed. Heapifying an element takes $$O(\\log(n))$$ time because it may need to be compared and swapped down through the height of the heap (which is $$\\log(n)$$ for a complete binary tree).</li>\n\n</ul>\n\n<p>Therefore, the worst-case running time for EXTRACT-MAX(A) is $$O(\\log(n))$$.</p>\n\n<p><strong>INSERT(A, key):</strong></p>\n\n<p>The <code>INSERT(A, key)</code> operation involves the following steps:</p>\n\n<ul>\n\n<li>Add the new element at the end of the heap.</li>\n\n<li>Restore the max-heap property by \"bubbling up\" the new element, which ensures it is correctly placed. Bubbling up could potentially involve comparing and swapping elements up through the height of the heap. This process also takes $$O(\\log(n))$$ time in the worst case.</li>\n\n</ul>\n\n<p>Therefore, the worst-case running time for INSERT(A, key) is $$O(\\log(n))$$.</p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p>The correct choice is:</p>\n\n<p>Option B<br>\n\n<p>Both EXTRACT-MAX(A) and INSERT(A, key) run in $$O(\\log(n))$$.</p></p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the C function foo and the binary tree shown.</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr4baio/72d79ddd-40f1-433a-a253-f51a1839d92e/00eae000-44ef-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr4baip.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr4baio/72d79ddd-40f1-433a-a253-f51a1839d92e/00eae000-44ef-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr4baip.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Data Structures - Trees Question 16 English\">\n\n<pre><code>typedef struct node {\n    int val;\n    struct node *left, *right;\n} node;\nint foo(node *p) {\n    int retval;\n    if (p == NULL)\n        return 0;\n    else {\n        retval = p-&gt;val + foo(p-&gt;left) + foo(p-&gt;right);\n        printf(\"%d \", retval);\n        return retval;\n    }\n}</code></pre>\n<p>When foo is called with a pointer to the root node of the given binary tree, what will it print?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3 8 5 13 11 10"
+      },
+      {
+        "identifier": "B",
+        "content": "3 5 8 10 11 13"
+      },
+      {
+        "identifier": "C",
+        "content": "3 8 16 13 24 50"
+      },
+      {
+        "identifier": "D",
+        "content": "3 16 8 50 24 13"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : Retval $=P \\rightarrow$ val $+foo(P \\rightarrow$ left $)+foo(P \\rightarrow$ right $)$</p>\n\n<p>Now, considering given tree with root 10 .</p>\n\n<p>$$ \\text { Retval }=10+foo(P \\rightarrow \\text { left })+foo(P \\rightarrow \\text { right }) $$</p>\n\n<p>So, until we execute leaf node we won't get to return to root node.</p>\n\n<p>Also child-Nodes 3,8 and 13 will return value of leaf nodes, i.e. 3,8 and 13 only.</p>\n\n<p>So, 5 node will return $5+3+8=16$.</p>\n\n<p>11 node will return $11+13=24$</p>\n\n<p>10 node will return $10+16+24=50$</p>\n\n<p>Since there's no rule about evaluation order of parameters of ' + ' but considering/assuming left right rule by default we get output as : <br/><br/>$3,8,16,13,24,50$.</p>\n\n<p>Hence, the correct option is $(\\mathrm{C})$.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the array representation of a binary min-heap containing 1023 elements. The minimum number of comparisons required to find the maximum in the heap is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "511",
+    "explanation": "<p>Given : A binary min-heap containing 1023 elements.</p>\n<p><b>Key Point :</b></p>\n<p>Min-heap means, parents should be minimum or equal to its children so, max children could be either left or right one.</p>\n<p>Following this logic maximum can be definitely at leaf node.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2rnmnkh/d811438e-c882-4615-9988-5dfdd0228d8b/67de5410-946b-11ef-af5a-37220589a393/file-jaoe38c1m2rnmnki.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2rnmnkh/d811438e-c882-4615-9988-5dfdd0228d8b/67de5410-946b-11ef-af5a-37220589a393/file-jaoe38c1m2rnmnki.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Data Structures - Trees Question 22 English Explanation\"></p>\n<p>No. of element in leaf</p>\n<p>$$ \\left\\lceil\\frac{n}{2}\\right\\rceil=\\left\\lceil\\frac{1023}{2}\\right\\rceil=511.5 \\approx 512 $$</p>\n<p>To find maximum among 512 elements, no. of comparison needed is 511 .</p>\n<p>Hence, the correct answer is 511 .</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "In a balanced binary search tree with n elements, what is the worst case time complexity of reporting all elements in range [a, b]? Assume that the number of reported elements is k.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\left( {\\log n} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\left( {\\log n + k} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\left( {k\\log n} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\left( {n\\log k} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Understanding the Problem</strong></h3>\n\n<p><p><strong>Balanced BST</strong>: A binary search tree where the height is $ O(\\log n) $.</p></p>\n<p><p><strong>Objective</strong>: Report all elements between $ a $ and $ b $.</p></p>\n<p><p><strong>Constraints</strong>:</p></p>\n<p><p>The number of elements to report is $ k $.</p></p>\n<p><p>We need to find the time complexity in terms of $ n $ and $ k $.</p></p>\n\n<hr />\n<h3><strong>Algorithm to Report Elements in Range $[a, b]$</strong></h3>\n\n<p><strong>Search for the Starting Point</strong>:</p>\n\n\n<p><p>Find the node with the smallest key <strong>greater than or equal to</strong> $ a $.</p></p>\n<p><p>This can be done using a standard BST search algorithm.</p></p>\n<p><p><strong>Time Complexity</strong>: $ O(\\log n) $ (since the tree is balanced).</p></p>\n\n\n<p><strong>Traverse and Report Elements</strong>:</p>\n\n\n<p><p>Perform an <strong>in-order traversal</strong> starting from the node found in step 1.</p></p>\n<p><p>Continue the traversal and report nodes until a node with a key <strong>greater than</strong> $ b $ is encountered.</p></p>\n<p><p>Since an in-order traversal of a BST visits nodes in sorted order, this ensures all keys in $[a, b]$ are reported.</p></p>\n<p><p><strong>Time Complexity</strong>:</p>\n\n<p><p>Each node visited during traversal contributes to the time complexity.</p></p>\n<p><p>We visit and process <strong>only</strong> the nodes within the range $[a, b]$.</p></p>\n<p><p><strong>Total Nodes Visited</strong>: $ k $ (the number of elements to report).</p></p></p>\n\n\n<p><strong>Combining the Steps</strong>:</p>\n\n\n<p><strong>Total Time Complexity</strong>: $ O(\\log n) + O(k) $.</p>\n\n<hr />\n<h3><strong>Worst-Case Analysis</strong></h3>\n\n<p><p><strong>Initial Search</strong>:</p></p>\n<p><p>Even in the worst case, the time to find the starting node is $ O(\\log n) $.</p></p>\n<p><p><strong>Traversal</strong>:</p></p>\n<p><p>In the worst case, we may need to report <strong>all</strong> $ n $ elements (if $ k = n $).</p></p>\n<p><p>However, since we only traverse nodes within the range, the traversal time is $ O(k) $.</p></p>\n<p><p><strong>Total Worst-Case Time Complexity</strong>:</p></p>\n<p><p>$ O(\\log n + k) $.</p></p>\n\n<hr />\n<h3><strong>Answering the Options</strong></h3>\n\n<p><p><strong>Option A: $ \\Theta(\\log n) $</strong></p></p>\n<p><p><strong>Incorrect</strong>: Ignores the time to report $ k $ elements.</p></p>\n<p><p><strong>Option B: $ \\Theta(\\log n + k) $</strong></p></p>\n<p><p><strong>Correct</strong>: Accounts for both the initial search and the reporting time.</p></p>\n<p><p><strong>Option C: $ \\Theta(k \\log n) $</strong></p></p>\n<p><p><strong>Incorrect</strong>: Implies we perform $ \\log n $ time for each of the $ k $ elements, which is not necessary.</p></p>\n<p><p><strong>Option D: $ \\Theta(n \\log k) $</strong></p></p>\n<p><p><strong>Incorrect</strong>: Suggests the time depends on $ n $ multiplied by $ \\log k $, which overestimates the complexity.</p></p>\n\n<hr />\n<h3><strong>Final Answer</strong></h3>\n<p><strong>Option B: $ \\Theta(\\log n + k) $</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Let T be a full binary tree with 8 leaves. (A full binary tree has every level full). Suppose two leaves a and b of T are chosen uniformly and independently at random. The expected value of the distance between a and b in T (i.e., the number of edges in the unique path between a and b) is (rounded off to 2 decimal places) _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "4.25",
+    "explanation": "<p>To find the expected distance between two randomly selected leaves $ a $ and $ b $ in a full binary tree $ T $ with 8 leaves, we need to calculate the average distance over all possible pairs.</p>\n<h3><strong>Understanding the Tree Structure:</strong></h3>\n\n<p><p><strong>Height of the tree:</strong> Since there are 8 leaves and the tree is perfect, the height $ h $ is 3 (levels are numbered from 0 at the root).</p></p>\n<p><p><strong>Levels:</strong></p></p>\n<p><p>Level 0: Root</p></p>\n<p><p>Level 1: 2 nodes</p></p>\n<p><p>Level 2: 4 nodes</p></p>\n<p><p>Level 3: 8 leaves (numbered from 0 to 7)</p></p>\n\n<h3><strong>Calculating Distances Between Leaves:</strong></h3>\n\n<p><p><strong>Distance Formula:</strong></p>\n<p>$   \\text{Distance}(a, b) = 2 \\times (\\text{Depth}(a) + \\text{Depth}(b) - 2 \\times \\text{Depth}(\\text{LCA}(a, b)))   $</p>\n<p>Since all leaves are at depth 3:</p>\n<p>$   \\text{Distance}(a, b) = 6 - 2 \\times \\text{Depth}(\\text{LCA}(a, b))   $</p></p>\n<p><p><strong>Possible Distances:</strong></p></p>\n<p><p><strong>Distance 0:</strong> When $ a = b $</p></p>\n<p><p><strong>Distance 2:</strong> When $ a $ and $ b $ are siblings (LCA at depth 2)</p></p>\n<p><p><strong>Distance 4:</strong> When $ a $ and $ b $ are cousins (LCA at depth 1)</p></p>\n<p><p><strong>Distance 6:</strong> When $ a $ and $ b $ are in different subtrees of the root (LCA at depth 0)</p></p>\n\n<h3><strong>Counting Ordered Pairs for Each Distance:</strong></h3>\n\n<p><p><strong>Total Ordered Pairs:</strong> $ 8 \\times 8 = 64 $</p></p>\n<p><p><strong>Pairs where $ a = b $:</strong> 8 pairs (Distance 0)</p></p>\n<p><p><strong>Distance 2:</strong> 8 pairs</p></p>\n<p><p><strong>Distance 4:</strong> 16 pairs</p></p>\n<p><p><strong>Distance 6:</strong> 32 pairs</p></p>\n\n<h3><strong>Calculating Expected Distance:</strong></h3>\n<p>$ \\begin{align*} \\text{E}[D] &= \\frac{1}{64} \\left( (8 \\times 0) + (8 \\times 2) + (16 \\times 4) + (32 \\times 6) \\right) \\\\ &= \\frac{1}{64} (0 + 16 + 64 + 192) \\\\ &= \\frac{272}{64} \\\\ &= 4.25 \\end{align*} $</p>\n<p><strong>Rounded off to 2 decimal places, the expected distance is $ \\boxed{4.25} $.</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following $$New-order$$ strategy for traversing a binary tree: \n<p>$$\\,\\,\\,\\,\\,\\,\\, \\bullet \\,\\,\\,\\,\\,$$ Visit the root; \n<br>$$\\,\\,\\,\\,\\,\\,\\, \\bullet \\,\\,\\,\\,\\,$$ Visit the right subtree using $$New-order;$$\n<br>$$\\,\\,\\,\\,\\,\\,\\, \\bullet \\,\\,\\,\\,\\,$$ Visit the left subtree using $$New-order;$$ </p>\n<p>The New-order traversal of the expression tree corresponding to the reverse polish expression 3 4 * 5 - 2 ^ 6 7 * 1 + - is given by: </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "+ - 1 6 7 * 2 ^ 5 - 3 4 *"
+      },
+      {
+        "identifier": "B",
+        "content": "- + 1 * 6 7 ^ 2 - 5 * 3 4"
+      },
+      {
+        "identifier": "C",
+        "content": "- + 1 * 7 6 ^ 2 - 5 * 4 3\n "
+      },
+      {
+        "identifier": "D",
+        "content": "1 7 6 * + 2 5 4 3 * - ^ - \nNew-order;"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The number of ways in which the numbers $$1, 2, 3, 4, 5, 6, 7$$ can be inserted in an empty binary search tree, such that the resulting tree has height $$6,$$ is _____________. \n<p>$$Note:\\,\\,\\,The\\,\\,height\\,\\,of\\,\\,a\\,tree\\,\\,with\\,\\,a\\,\\,\\sin gle\\,\\,node\\,\\,is\\,\\,0$$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "64",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the expression tree shown. Each leaf represents a numerical value, which can either be 0 or 1. Over all possible choices of the values at the leaves, the maximum possible value of the expression represented by the tree is ___.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/g3CdGD4Nj4l70vFix/8h2GVGPLlIgDDNyPc8vribzxnpRBm/qHsFirF6ZLYGDEUHWoL7ss/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 2 Data Structures - Trees Question 44 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the C function given below. Assume that the array listA contains n (&gt; 0) elements, sored in ascending order.\n<pre><code>int ProcessArray(int *listA, int x, int n) \n{ \n      int i, j, k; \n      i = 0; \n      j = n-1; \n      do \n      { \n         k = (i+j)/2; \n         if (x &lt;= listA[k]) \n           j = k-1; \n         if (listA[k] &lt;= x) \n           i = k+1; \n      } \n      while (i &lt;= j); \n      if (listA[k] == x) \n           return(k); \n      else \n           return -1; \n}</code></pre>\nWhich one of the following statements about the function ProcessArray is CORRECT?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It will run into an infinite loop when x is not in listA"
+      },
+      {
+        "identifier": "B",
+        "content": "It is an implementation of binary search. "
+      },
+      {
+        "identifier": "C",
+        "content": "It will always find the maximum element in listA. "
+      },
+      {
+        "identifier": "D",
+        "content": "It will return −1 even when X is present in listA."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose we have a balanced binary search tree T holding n numbers. We are given two\nnumbers L and H and wish to sum up all the numbers in T that lie between L and H. Suppose\nthere are m such numbers in T. If the tightest upper bound on the time to compute the sum is\nO( n<sup>a</sup> log<sup>b</sup> n + m<sup>c</sup> log<sup>d</sup> n ), the value of a + 10b + 100c + 1000d is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "110",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the pseudocode given below. The function Dosomething () takes as argument a pointer to the root of an arbitrary tree represented by the leftMostChild-rightSibling representation. Each node of the tree is of type treeNode.\n<pre><code>typedef struct treeNode* treeptr; \nStruct treeNode \n{ \n    Treeptr leftMostchild, rightSibiling; \n}; \nInt Dosomething (treeptr tree) \n{ \n    int value =0; \n    if (tree ! = NULL) { \n      If (tree -&gt; leftMostchild = = NULL) \n          value=1; \n    else \n        value = Dosomething (tree-&gt;leftMostchild); \n        value = value + Dosometing (tree-&gt;rightsibiling); \n    } \n    return (value); \n}</code></pre>\nWhen the pointer to the root of a tree is passed as the argument to DoSomething, the value returned by the function corresponds to the ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "number of internal nodes in the tree."
+      },
+      {
+        "identifier": "B",
+        "content": "height of the tree"
+      },
+      {
+        "identifier": "C",
+        "content": "number of nodes without a right sibling in the tree. "
+      },
+      {
+        "identifier": "D",
+        "content": "number of leaf nodes in the tree."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The height of a tree is defined as the number of edges on the longest path in the tree. The function shown in the pseudocode below is invoked as height (root) to compute the height of a binary tree rooted at the tree pointer root. \n<pre><code>int height (treeptr n) \n  { if (n== NULL) return -1; \n  if (n-&gt; left == NULL) \n  if (n-&gt; right ==NULL) return 0; \n  else return B1 ;             // Box 1 \n  else {h1 = height (n -&gt; left); \n      if (n -&gt; right == NULL) return (1 + h1); \n      else {h2 = height (n -&gt; right); \n          return B2 ;          // Box 2 \n          } \n      } \n}</code></pre>\nThe appropriate expression for the two boxes B1 and B2 are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "B1 : (1 + height(n-&gt;right)), B2 : (1 + max(h1,h2)) "
+      },
+      {
+        "identifier": "B",
+        "content": "B1 : (height(n-&gt;right)), B2 : (1 + max(h1,h2)) "
+      },
+      {
+        "identifier": "C",
+        "content": "B1 : height(n-&gt;right), B2 : max(h1,h2) "
+      },
+      {
+        "identifier": "D",
+        "content": "B1 : height(n-&gt;right), B2 : max(h1,h2) "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "We are given a set of n distinct elements and an unlabeled binary tree with n nodes. In how many ways can we populate the tree with the given set so that it becomes a binary search tree? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "n!"
+      },
+      {
+        "identifier": "D",
+        "content": "(1/n+1) * <sup>2n</sup>C<sub>n</sub>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "What is the maximum height of any AVL-tree with 7 nodes? Assume that the height of a tree with a single node is 0.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "3 "
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The following three are known to be the preorder, inorder and postorder sequences of a binary tree. But it is not known which is which. \nMBCAFHPYK \nKAMCBYPFH \nMABCKYFPH \nPick the true statement from the following.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and II are preorder and inorder sequences, respectively "
+      },
+      {
+        "identifier": "B",
+        "content": "I and III are preorder and postorder sequences, respectively "
+      },
+      {
+        "identifier": "C",
+        "content": "II is the inorder sequence, but nothing more can be said about the other two sequences "
+      },
+      {
+        "identifier": "D",
+        "content": "II and III are the preorder and inorder sequences, respectively"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A Binary Search Tree (BST) stores values in the range 37 to 573. Consider the following sequence of keys. \n <br>I. 81, 537, 102, 439, 285, 376, 305 <br>\nII. 52, 97, 121, 195, 242, 381, 472  <br>\nIII. 142, 248, 520, 386, 345, 270, 307  <br>\nIV. 550, 149, 507, 395, 463, 402, 270  <br>\nSuppose the BST has been unsuccessfully searched for key 273. Which all of the above sequences list nodes in the order in which we could have encountered them in the search? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "II and III only "
+      },
+      {
+        "identifier": "B",
+        "content": "I and III only "
+      },
+      {
+        "identifier": "C",
+        "content": "III and IV only "
+      },
+      {
+        "identifier": "D",
+        "content": "III only"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "You are given the postorder traversal, P, of a binary search tree on the n elements 1, 2,..........., n. You have to determine the unique binary search tree that has P as its postorder traversal. What is the time complexity of the most efficient algorithm for doing this?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(Logn) "
+      },
+      {
+        "identifier": "B",
+        "content": "O(n) "
+      },
+      {
+        "identifier": "C",
+        "content": "O(nLogn) "
+      },
+      {
+        "identifier": "D",
+        "content": "none of the above, as the tree cannot be uniquely determined."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "How many distinct BSTs can be constructed with 3 distinct keys? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "9"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A Binary Search Tree (BST) stores values in the range 37 to 573. Consider the following sequence of keys.<br> \nI. 81, 537, 102, 439, 285, 376, 305 <br>\nII. 52, 97, 121, 195, 242, 381, 472 <br>\nIII. 142, 248, 520, 386, 345, 270, 307 <br>\nIV. 550, 149, 507, 395, 463, 402, 270<br>\nWhich of the following statements is TRUE? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I, II and IV are inorder sequences of three different BSTs "
+      },
+      {
+        "identifier": "B",
+        "content": "I is a preorder sequence of some BST with 439 as the root "
+      },
+      {
+        "identifier": "C",
+        "content": "II is an inorder sequence of some BST where 121 is the root and 52 is a leaf "
+      },
+      {
+        "identifier": "D",
+        "content": "IV is a postorder sequence of some BST with 149 as the root"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "When searching for the key value 60 in a binary search tree, nodes containing the key values 10, 20, 40, 50, 70 80, 90 are traversed, not necessarily in the order given. How many different orders are possible in which these key values can occur on the search path from the root to the node containing the value 60?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "35"
+      },
+      {
+        "identifier": "B",
+        "content": "64"
+      },
+      {
+        "identifier": "C",
+        "content": "128"
+      },
+      {
+        "identifier": "D",
+        "content": "5040"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program segment where CellNode represents a node in a binary tree: \n<pre><code>struct CellNode \n{ \n     struct CellNOde *leftChild; \n     int element; \n     struct CellNode *rightChild; \n}; \n\nint GetValue(struct CellNode *ptr) \n{ \n     int value = 0; \n     if (ptr != NULL) \n     { \n       if ((ptr-&gt;leftChild == NULL) &amp;&amp; \n        (ptr-&gt;rightChild == NULL)) \n       value = 1; \n       else \n         value = value + GetValue(ptr-&gt;leftChild) \n             + GetValue(ptr-&gt;rightChild); \n     } \n     return(value); \n} </code></pre>\nThe value returned by GetValue() when a pointer to the root of a binary tree is passed as its argument is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the number of nodes in the tree "
+      },
+      {
+        "identifier": "B",
+        "content": "the number of internal nodes in the tree"
+      },
+      {
+        "identifier": "C",
+        "content": "the number of leaf nodes in the tree "
+      },
+      {
+        "identifier": "D",
+        "content": "the height of the tree"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A complete n-ary tree is a tree in which each node has n children or no children. Let I be the number of internal nodes and L be the number of leaves in a complete n-ary tree. If L = 41, and I = 10, what is the value of n?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The inorder and preorder traversal of a binary tree are d b e a f c g and a b d e c f g, respectively. The postorder traversal of the binary tree is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "d e b f g c a"
+      },
+      {
+        "identifier": "B",
+        "content": "e d b g f c a "
+      },
+      {
+        "identifier": "C",
+        "content": "e d b f g c a"
+      },
+      {
+        "identifier": "D",
+        "content": "d e f g b c a"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose that we have numbers between 1 and 100 in a binary search tree and want to search for the number 55. Which of the following sequences CANNOT be the sequence of nodes examined?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "{10, 75, 64, 43, 60, 57, 55}"
+      },
+      {
+        "identifier": "B",
+        "content": "{90, 12, 68, 34, 62, 45, 55} "
+      },
+      {
+        "identifier": "C",
+        "content": "{9, 85, 47, 68, 43, 57, 55}"
+      },
+      {
+        "identifier": "D",
+        "content": "{79, 14, 72, 56, 16, 53, 55}"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "An array X of n distinct integers is interpreted as a complete binary tree. The index of the first element of the array is 0. If only the root node does not satisfy the heap property, the algorithm to convert the complete binary tree into a heap has the best asymptotic time complexity of",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "O(n) "
+      },
+      {
+        "identifier": "B",
+        "content": "O(log n)"
+      },
+      {
+        "identifier": "C",
+        "content": "O(nlog n) "
+      },
+      {
+        "identifier": "D",
+        "content": "O(n log log n)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following sequences of array elements forms a heap?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "{23, 17, 14, 6, 13, 10, 1, 12, 7, 5} "
+      },
+      {
+        "identifier": "B",
+        "content": "{23, 17, 14, 6, 13, 10, 1, 5, 7, 12}"
+      },
+      {
+        "identifier": "C",
+        "content": "{23, 17, 14, 7, 13, 10, 1, 5, 6, 12} "
+      },
+      {
+        "identifier": "D",
+        "content": "{23, 17, 14, 7, 13, 10, 1, 12, 5, 7}"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "An array X of n distinct integers is interpreted as a complete binary tree. The index of the first element of the array is 0. If the root node is at level 0, the level of element X[i], i ≠ 0, is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "⌊log<sub>2</sub> i⌋ "
+      },
+      {
+        "identifier": "B",
+        "content": "⌈log<sub>2</sub> (i + 1)⌉ "
+      },
+      {
+        "identifier": "C",
+        "content": "⌊log<sub>2</sub> (i + 1)⌋ "
+      },
+      {
+        "identifier": "D",
+        "content": "⌈log<sub>2</sub> i⌉"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "An array X of n distinct integers is interpreted as a complete binary tree. The index of the first element of the array is 0. The index of the parent of element X[i],i≠0 is?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "⌊ i/2 ⌋ "
+      },
+      {
+        "identifier": "B",
+        "content": "⌈ (i-1)/2 ⌉ "
+      },
+      {
+        "identifier": "C",
+        "content": "⌈ i/2 ⌉"
+      },
+      {
+        "identifier": "D",
+        "content": "⌈ i/2 - 1 ⌉"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A binary search tree contains the numbers 1, 2, 3, 4, 5, 6, 7, 8. When the tree is traversed in pre-order and the values in each node printed out, the sequence of values obtained is 5, 3, 1, 2, 4, 6, 8, 7. If the tree is traversed in post-order, the sequence obtained would be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8, 7, 6, 5, 4, 3, 2, 1"
+      },
+      {
+        "identifier": "B",
+        "content": "1, 2, 3, 4, 8, 7, 6, 5"
+      },
+      {
+        "identifier": "C",
+        "content": "2, 1, 4, 3, 6, 7, 8, 5 "
+      },
+      {
+        "identifier": "D",
+        "content": "2, 1, 4, 3, 7, 8, 6, 5"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "How many distinct binary search trees can be created out of 4 distinct keys?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5"
+      },
+      {
+        "identifier": "B",
+        "content": "14"
+      },
+      {
+        "identifier": "C",
+        "content": "24"
+      },
+      {
+        "identifier": "D",
+        "content": "42"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "In a binary tree, for every node the difference between the number of nodes in the left and right subtrees is at most 2. If the height of the tree is h &gt; 0, then the minimum number of nodes in the tree is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2<sup>h – 1</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "2<sup>h – 1</sup> + 1 "
+      },
+      {
+        "identifier": "C",
+        "content": "2<sup>h</sup> – 1"
+      },
+      {
+        "identifier": "D",
+        "content": "2<sup>h</sup>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "In a complete k-ary tree, every internal node has exactly k children. The number of leaves in such a tree with n internal nodes is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "nk"
+      },
+      {
+        "identifier": "B",
+        "content": "(n – 1)k + 1"
+      },
+      {
+        "identifier": "C",
+        "content": "n(k – 1) + 1 "
+      },
+      {
+        "identifier": "D",
+        "content": "n(k – 1)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Postorder traversal of a given binary search tree T produces the following sequence of keys \n10, 9, 23, 22, 27, 25, 15, 50, 95, 60, 40, 29 \nWhich one of the following sequences of keys can be the result of an inorder traversal of the tree T?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "9, 10, 15, 22, 23, 25, 27, 29, 40, 50, 60, 95"
+      },
+      {
+        "identifier": "B",
+        "content": "9, 10, 15, 22, 40, 50, 60, 95, 23, 25, 27, 29 "
+      },
+      {
+        "identifier": "C",
+        "content": "29, 15, 9, 10, 25, 22, 23, 27, 40, 60, 50, 95"
+      },
+      {
+        "identifier": "D",
+        "content": "95, 50, 60, 40, 27, 23, 22, 25, 10, 9, 15, 29"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A Priority-Queue is implemented as a Max-Heap. Initially, it has 5 elements. The level-order traversal of the heap is given below: \n10, 8, 5, 3, 2 \nTwo new elements ”1‘ and ”7‘ are inserted in the heap in that order. The level-order traversal of the heap after the insertion of the elements is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10, 8, 7, 5, 3, 2, 1 "
+      },
+      {
+        "identifier": "B",
+        "content": "10, 8, 7, 2, 3, 1, 5"
+      },
+      {
+        "identifier": "C",
+        "content": "10, 8, 7, 1, 2, 3, 5 "
+      },
+      {
+        "identifier": "D",
+        "content": "10, 8, 7, 3, 2, 1, 5"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the label sequences obtained by the following pairs of traversals on a labeled binary tree. Which of these pairs identify a tree uniquely? <br>\ni) preorder and postorder <br>\nii) inorder and postorder <br>\niii) preorder and inorder <br>\niv) level order and postorder <br>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) only "
+      },
+      {
+        "identifier": "B",
+        "content": "(ii), (iii)"
+      },
+      {
+        "identifier": "C",
+        "content": "(iii) only "
+      },
+      {
+        "identifier": "D",
+        "content": "(iv) only"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program segment \n<pre><code class=\"c\">struct CellNode{ \n    struct CellNode *leftChild; \n    int element; \n    struct CellNode *rightChild; \n  };\n \nint Dosomething (struct CellNode *ptr) { \n      int value = 0; \n      if (ptr ! = NULL) \n          { if (ptr - &gt; leftChild ! = NULL) \n            value = 1 + DoSomething (ptr - &gt; leftChild); \n          if (ptr - &gt; rightChild ! = NULL) \n            value = max(value,1 + DoSomething (ptr - &gt; rightChild)); \n          } \n      return (value); \n} </code></pre>\nThe value returned by the function DoSomething when a pointer to the root of a non-empty tree is passed as argument is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The number of leaf nodes in the tree "
+      },
+      {
+        "identifier": "B",
+        "content": "The number of nodes in the tree "
+      },
+      {
+        "identifier": "C",
+        "content": "The number of internal nodes in the tree "
+      },
+      {
+        "identifier": "D",
+        "content": "The height of the tree"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A program takes as input a balanced binary search tree with n leaf nodes and computes the value of a function g(x) for each node x. If the cost of computing g(x) is <b>min{ no. of leaf-nodes in left-subtree of x, no. of leaf-nodes in right-subtree of x }</b> then the worst-case time complexity of the program is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta (n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta (n \\log n)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta(n^2)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta (n^2\\log n)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The number of leaf nodes in a rooted tree of n nodes, with each node having 0 or 3 children is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n/2 "
+      },
+      {
+        "identifier": "B",
+        "content": "(n-1)/3 "
+      },
+      {
+        "identifier": "C",
+        "content": "(n-1)/2 "
+      },
+      {
+        "identifier": "D",
+        "content": "(2n+1)/3"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Let LASTPOST, LASTIN and LASTPRE denote the last vertex visited in a postorder, inorder and preorder traversal. Respectively, of a complete binary tree. Which of the following is always tree?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "LASTIN = LASTPOST "
+      },
+      {
+        "identifier": "B",
+        "content": "LASTIN = LASTPRE "
+      },
+      {
+        "identifier": "C",
+        "content": "LASTPRE = LASTPOST "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "A complete n-ary tree is one in which every node has O or n sons. If x is the number of internal nodes of a complete n-ary tree, the number of leaves in it is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x(n – 1) +1 "
+      },
+      {
+        "identifier": "B",
+        "content": "xn - 1"
+      },
+      {
+        "identifier": "C",
+        "content": "xn + 1"
+      },
+      {
+        "identifier": "D",
+        "content": "x(n+1)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A binary search tree contains the value 1, 2, 3, 4, 5, 6, 7, 8. The tree is traversed in pre-order and the values are printed out. Which of the following sequences is a valid output?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5 3 1 2 4 7 8 6 "
+      },
+      {
+        "identifier": "B",
+        "content": "5 3 1 2 6 4 8 7 "
+      },
+      {
+        "identifier": "C",
+        "content": "5 3 2 4 1 6 7 8 "
+      },
+      {
+        "identifier": "D",
+        "content": "5 3 1 2 4 7 6 8"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "A binary search tree is used to locate the number 43. Which of the following\nprobe sequences are not possible?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "61   52   14   17   40   43"
+      },
+      {
+        "identifier": "B",
+        "content": "2    3   50   40   60   43"
+      },
+      {
+        "identifier": "C",
+        "content": "10   65   31   48   37   43"
+      },
+      {
+        "identifier": "D",
+        "content": "17   77   27   66   18   43"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A binary search tree is generated by inserting in order the following integers: \n50, 15, 62, 5, 20, 58, 91, 3, 8, 37, 60, 24 \nThe number of nodes in the left subtree and right subtree of the root respectively is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(4, 7) "
+      },
+      {
+        "identifier": "B",
+        "content": "(7, 4) "
+      },
+      {
+        "identifier": "C",
+        "content": "(8, 3) "
+      },
+      {
+        "identifier": "D",
+        "content": "(8, 3) "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "If the binary tree in figure is traversed in inorder, then the order in which the nodes will be visited is ______\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/TRdoicUd571lfLtE1/GySYo13acehdsQsdKhFCos0lEJJeF/b92cHAjZtCyzI0HSbwbUwZ/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1991 Data Structures - Trees Question 75 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "4,16,7,3,2,5,8",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>On January 1st, 2023, a person saved ₹1. On January 2nd, 2023, he saved ₹2 more than that on the previous day. On January 3rd, 2023, he saved ₹2 more than that on the previous day and so on. At the end of which date was his total savings a perfect square as well a perfect cube?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>7th January, 2023</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>8th January, 2023</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>9th January, 2023</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Not possible</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<ol>\n<li><p>Savings on the $k$-th day  </p>\n<p>He saves ₹1 on 1st Jan, and then ₹2 more each day.  </p>\n<p>Thus, on day $k$:  </p>\n<p>$      a_k = 1 + (k-1)\\times 2 = 2k - 1.    $</p></li>\n<li><p>Total savings after $n$ days  </p>\n<p>Sum of first $n$ odd numbers:  </p>\n<p>$      S_n = \\sum_{k=1}^n a_k           = \\sum_{k=1}^n (2k - 1)           = n^2.    $</p></li>\n<li><p>Condition “perfect square as well as perfect cube”  </p>\n<p>A number which is both a perfect square and a perfect cube is a perfect sixth power.  </p>\n<p>$      S_n = n^2 = m^6       \\quad\\Longrightarrow\\quad      n = m^3 \\quad(\\text{$n$ must be a perfect cube}).    $</p></li>\n<li><p>Smallest $n>1$ giving both square and cube  </p>\n<p>Cubes: $1^3=1$, $2^3=8$, $3^3=27$, …  </p></li>\n</ol>\n<ul>\n<li><p>$n=1$ gives $S_1=1$ (trivial).  </p></li>\n<li><p>Next is $n=8$:  </p>\n<p>$        S_8 = 8^2 = 64 = 2^6 = 4^3.      $</p></li>\n</ul>\n<ol>\n<li><p>Conclusion  </p>\n<p>After 8 days (i.e., on 8th January 2023), total savings $=64$ is both a perfect square and a perfect cube.</p></li>\n</ol>\n<p>Answer: Option B (8th January, 2023).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2024-csat",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>What is the sum of the first 28 terms in the following sequence?</p><p>1, 1, 2, 1, 3, 2, 1, 4, 3, 2, 1, 5, 4, 3, 2,  ...</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>83</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>84</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>85</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>86</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the sum of the first 28 terms in the given sequence, let's first identify the pattern and structure of the sequence. The sequence is:</p>\n\n<p>1, 1, 2, 1, 3, 2, 1, 4, 3, 2, 1, 5, 4, 3, 2, 1, 6, 5, 4, 3, 2, 1, 7, 6, 5, 4, 3, 2, 1, ...</p>\n\n<p>Observe that the sequence can be broken down into groups. Each group starts with a number 'n' and continues down to 1. For example:</p>\n\n<p>Group 1: 1</p>\n\n<p>Group 2: 1, 2</p>\n\n<p>Group 3: 1, 3, 2</p>\n\n<p>Group 4: 1, 4, 3, 2</p>\n\n<p>and so on.</p>\n\n<p>This means that the nth group has n terms. The sum of the terms for each group can be noted as follows:</p>\n\n<p>Sum of Group 1: $$1$$</p>\n\n<p>Sum of Group 2: $$1+2$$ = $$3$$</p>\n\n<p>Sum of Group 3: $$1+3+2$$ = $$6$$</p>\n\n<p>Sum of Group 4: $$1+4+3+2$$ = $$10$$</p>\n\n<p>We can see that the sum of the nth group is the sum of the first n natural numbers, which can be expressed as: </p>\n\n<p>$$S_n = \\frac{n(n+1)}{2}$$</p>\n\n<p>First, we need to determine which groups these 28 terms lie in. The cumulative number of terms at the end of each complete group is:</p>\n\n<p>Group 1: 1 term</p>\n\n<p>Group 2: 3 terms (1 + 2)</p>\n\n<p>Group 3: 6 terms (1 + 2 + 3)</p>\n\n<p>Group 4: 10 terms (1 + 2 + 3 + 4)</p>\n\n<p>Group 5: 15 terms (1 + 2 + 3 + 4 + 5)</p>\n\n<p>Group 6: 21 terms (1 + 2 + 3 + 4 + 5 + 6)</p>\n\n<p>Group 7: 28 terms (1 + 2 + 3 + 4 + 5 + 6 + 7)</p>\n\n<p>This tells us that the 28th term is at the end of Group 7.</p>\n\n<p>Now, let's find the sum of the terms of the first 7 groups. The sum of the terms in each group up to Group 7 can be written as:</p>\n\n<p>$$S_{\\text{total}} = S_1 + S_2 + S_3 + S_4 + S_5 + S_6 + S_7$$</p>\n\n<p>From the formula for the sum of the first n natural numbers:</p>\n\n<p>$$S_1 = \\frac{1(1+1)}{2} = 1$$</p>\n\n<p>$$S_2 = \\frac{2(2+1)}{2} = 3$$</p>\n\n<p>$$S_3 = \\frac{3(3+1)}{2} = 6$$</p>\n\n<p>$$S_4 = \\frac{4(4+1)}{2} = 10$$</p>\n\n<p>$$S_5 = \\frac{5(5+1)}{2} = 15$$</p>\n\n<p>$$S_6 = \\frac{6(6+1)}{2} = 21$$</p>\n\n<p>$$S_7 = \\frac{7(7+1)}{2} = 28$$</p>\n\n<p>Adding these values together:</p>\n\n<p>$$S_{\\text{total}} = 1 + 3 + 6 + 10 + 15 + 21 + 28 = 84$$</p>\n\n<p>Therefore, the sum of the first 28 terms in the given sequence is 84. Thus, the correct answer is:</p>\n\n<p>Option B: 84</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2024-csat",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>What will come in place of * in the sequence 3, 14, 39, 84, *, 258?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>150</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>155</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>160</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>176</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the missing number in the sequence 3, 14, 39, 84, *, 258, we need to identify the pattern or formula governing the sequence.</p>\n\n<p>Let's denote the terms of the sequence as $$a_1, a_2, a_3, a_4, a_5, a_6$$ with known values as follows:</p>\n\n<ul>\n\n<li>$$a_1 = 3$$</li>\n\n<li>$$a_2 = 14$$</li>\n\n<li>$$a_3 = 39$$</li>\n\n<li>$$a_4 = 84$$</li>\n\n<li>$$a_6 = 258$$</li>\n\n</ul>\n\n<p>To deduce the pattern, let's investigate the differences between consecutive terms:</p>\n\n<ul>\n\n<li>$$a_2 - a_1 = 14 - 3 = 11$$</li>\n\n<li>$$a_3 - a_2 = 39 - 14 = 25$$</li>\n\n<li>$$a_4 - a_3 = 84 - 39 = 45$$</li>\n\n</ul>\n\n<p>Now, we need to determine the missing term $$a_5$$. Given the differences, let's calculate the next difference:</p>\n\n<ul>\n\n<li>$$a_5 - a_4 = \\Delta$$</li>\n\n</ul>\n\n<p>Let's analyze these differences: 11, 25, 45. The pattern of these differences is not perfectly clear at first glance. To further analyze, consider the second differences:</p>\n\n<ul>\n\n<li>$$25 - 11 = 14$$</li>\n\n<li>$$45 - 25 = 20$$</li>\n\n</ul>\n\n<p>It appears that differences between the differences themselves (14, 20) are increasing by 6. We can extend this pattern to predict the next difference:</p>\n\n<ul>\n\n<li>The next second difference could be $$26$$ (i.e., $$20 + 6$$)</li>\n\n</ul>\n\n<p>Adding the calculated second difference to the previous first difference:</p>\n\n<ul>\n\n<li>$$45 + 26 = 71$$</li>\n\n</ul>\n\n<p>Therefore, $$a_5 - a_4 = 71$$.</p>\n\n<p>From this, we can find $$a_5$$:</p>\n\n<ul>\n\n<li>$$a_5 = a_4 + 71 = 84 + 71 = 155$$</li>\n\n</ul>\n\n<p>Thus, the number that comes in place of * is 155.</p>\n\n<p>Therefore, the correct answer is:</p>\n\n<p>Option B: 155</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2024-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "40 children are standing in a circle and one of them (say child-1) has a ring. The ring is passed clockwise. Child-1 passes on to child-2, child-2 passes on to child-4, child-4 passes on to child-7 and so on. After how many such changes (including child-1) will the ring be in the hands of child-1 again?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "14"
+      },
+      {
+        "identifier": "B",
+        "content": "15"
+      },
+      {
+        "identifier": "C",
+        "content": "16"
+      },
+      {
+        "identifier": "D",
+        "content": "17"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>To solve the problem of how many changes it will take for the ring to return to child-1, we need to determine the pattern of passing the ring. The sequence of passing increases by an increasing number of steps each time:</p>\n\n<p>Child-1 passes to child-2.</p>\n\n<p>Child-2 passes to child-4 (2 positions ahead).</p>\n\n<p>Child-4 passes to child-7 (3 positions ahead).</p>\n\n<p>Child-7 passes to the next child by 4 positions, and so forth.</p>\n\n<p>We notice that the number of positions the ring is passed increases progressively by 1 each time. If we express the number of positions passed as a summation of arithmetic sequences, we can investigate when the ring returns to child-1 by finding the smallest number of passes such that the total positions passed is a multiple of 40 (since there are 40 children standing in a circle).</p>\n\n<p>Let $ S_n $ be the sum of the first $ n $ terms of the sequence of differences starting from 1. This sum will be given by:</p>\n\n<p>$$ S_n = (1 + 2 + 3 + ... + n) = \\frac{n(n+1)}{2} $$</p>\n\n<p>We want the smallest $ n $ such that $ S_n $ is a multiple of 40. In other words, we need:</p>\n\n<p>$$ \\frac{n(n+1)}{2} \\equiv 0 \\ (\\text{mod} \\ 40) $$</p>\n\n<p>This implies $ n(n+1) $ must be divisible by 80. We start testing for values of $ n $ until we find a suitable one:</p>\n\n<ul>\n\n<li>For $ n = 10 $: $\\frac{10(11)}{2} = 55 $ (not a multiple of 40)</li>\n\n<li>For $ n = 15 $: $\\frac{15(16)}{2} = 120 $ (divisible by 40)</li>\n\n</ul>\n\n<p>Thus, after 15 changes, the ring will be passed around back to child-1.</p>\n\n<p>The correct answer is:</p>\n\n<p><strong>Option B: 15</strong></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>For five children with ages a &lt; b &lt; c &lt; d &lt; e; any two successive ages differ by 2 years.</p>\n\n<p><strong>Question: </strong>What is the age of the youngest child ?</p>\n\n<p><strong>Statement-1: </strong>The age of the eldest is 3 times the youngest.</p>\n\n<p><strong>Statement-2: </strong>The average age of the children is 8 years.</p>\n\n<p>Which one of the following is correct in respect of the above Question and the Statements?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The Question can be answered by using one of the Statements alone, but cannot be answered using the other Statement alone."
+      },
+      {
+        "identifier": "B",
+        "content": "The Question can be answered by using either Statement alone."
+      },
+      {
+        "identifier": "C",
+        "content": "The Question can be answered by using both the Statements together, but cannot be answered using either Statement alone."
+      },
+      {
+        "identifier": "D",
+        "content": "<span style=\"\">The Question cannot be answered even by using both the Statements together.</span>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>To determine the age of the youngest child, let's analyze both statements individually and together.</p>\n\n<p><strong>Statement-1: </strong>The age of the eldest is 3 times the age of the youngest.</p>\n\n<p>Let's denote the age of the youngest child as $$a$$. According to the information given, the ages of the children are arithmetically spaced by 2 years. Thus, the ages can be represented as follows:</p>\n\n<p>$$a, a + 2, a + 4, a + 6, a + 8$$</p>\n\n<p>According to Statement-1, the age of the eldest (which is $$e$$) is 3 times the age of the youngest.</p>\n\n<p>So, we have:</p>\n\n<p>$$a + 8 = 3a$$</p>\n\n<p>Solving for $$a$$:</p>\n\n<p>$$a + 8 = 3a$$</p>\n\n<p>$$8 = 2a$$</p>\n\n<p>$$a = 4$$</p>\n\n<p>Therefore, using Statement-1 alone, we can determine that the age of the youngest child is $$4$$ years.</p>\n\n<p><strong>Statement-2: </strong>The average age of the children is 8 years.</p>\n\n<p>The average age of the children is given by the mean of their ages:</p>\n\n<p>$$\\text{Average} = \\frac{a + (a + 2) + (a + 4) + (a + 6) + (a + 8)}{5}$$</p>\n\n<p>Simplifying the numerator:</p>\n\n<p>$$\\text{Average} = \\frac{5a + 20}{5} = a + 4$$</p>\n\n<p>According to Statement-2, this average is 8 years:</p>\n\n<p>$$a + 4 = 8$$</p>\n\n<p>Solving for $$a$$:</p>\n\n<p>$$a = 8 - 4$$</p>\n\n<p>$$a = 4$$</p>\n\n<p>Therefore, using Statement-2 alone, we can also determine that the age of the youngest child is $$4$$ years.</p>\n\n<p>Since both statements individually lead to the same conclusion, the correct answer is:</p>\n\n<p><strong>Option B: The Question can be answered by using either Statement alone.</strong></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "What is the value of <em>X</em> in the sequence 20, 10, 10, 15, 30, 75, <em>X</em>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "105"
+      },
+      {
+        "identifier": "B",
+        "content": "120"
+      },
+      {
+        "identifier": "C",
+        "content": "150"
+      },
+      {
+        "identifier": "D",
+        "content": "225"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "explanation": "\n\n<p>Sequence: 20, 10, 10, 15, 30, 75, <em>X</em></p>\n\n<p>Step-by-step multiplications:</p>\n\n<ul>\n\n<li>20 × 0.5 = 10</li>\n\n<li>10 × 1 = 10</li>\n\n<li>10 × 1.5 = 15</li>\n\n<li>15 × 2 = 30</li>\n\n<li>30 × 2.5 = 75</li>\n\n<li>75 × 3 = <em>X</em> = 225</li>\n\n</ul>\n\n<p><strong>Therefore, the correct option is 225.</strong></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "In a tournament of Chess having 150 entrants, a player is eliminated whenever he loses a match. It is given that no match results in a tie/draw. How many matches are played in the entire tournament?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "151"
+      },
+      {
+        "identifier": "B",
+        "content": "150"
+      },
+      {
+        "identifier": "C",
+        "content": "149"
+      },
+      {
+        "identifier": "D",
+        "content": "148"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<ol>\n<li><p>The tournament starts with <strong>150 players</strong>.  </p></li>\n<li><p>In this type of elimination tournament, whenever a player loses a match, he is eliminated.  </p></li>\n<li><p>Finally, there will be <strong>1 winner</strong> (who never loses).  </p></li>\n<li><p>Therefore, the total number of players who are eliminated = $150 - 1 = 149$.  </p></li>\n<li><p>Each elimination corresponds to exactly <strong>one match lost</strong>.  </p></li>\n<li><p>Hence, the total number of matches played = <strong>149</strong>.  </p></li>\n</ol>\n<p>So, the correct option is:</p>\n<p><strong>Option C: 149</strong> ✅</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "In the series AABABCABCDABCDE..., which letter appears at the 100th place?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "G"
+      },
+      {
+        "identifier": "B",
+        "content": "H"
+      },
+      {
+        "identifier": "C",
+        "content": "I"
+      },
+      {
+        "identifier": "D",
+        "content": "J"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>Upon analysis, the series follows a specific pattern: it begins with the first letter of the alphabet, then the first two letters, then the first three, and so on.</p>\n\n<p>Summing the initial segments:</p>\n\n<p>1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 = 91</p>\n\n<p>Thus, the 92<sup>nd</sup> position in the series starts from 'A'.</p>\n\n<p>Accordingly, the 100<sup>th</sup> position in the series corresponds to the 9<sup>th</sup> letter after 91 (100 - 91 = 9), which is the letter 'I'.</p>\n\n<p>Therefore, the correct answer is Option (C), 'I'.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "What is the value of <em>X</em> in the sequence 2, 12, 36, 80, 150, <em>X</em>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "248"
+      },
+      {
+        "identifier": "B",
+        "content": "252"
+      },
+      {
+        "identifier": "C",
+        "content": "258"
+      },
+      {
+        "identifier": "D",
+        "content": "262"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>Given sequence: 2, 12, 36, 80, 150, X</p>\n\n<p>By examining the sequence:</p>\n\n<p>1² + 1³ = 2</p>\n\n<p>2² + 2³ = 12</p>\n\n<p>3² + 3³ = 36</p>\n\n<p>4² + 4³ = 80</p>\n\n<p>5² + 5³ = 150</p>\n\n<p>Following this pattern:</p>\n\n<p>6² + 6³ = 252</p>\n\n<p>Hence, the value of X is 252. Therefore, the correct answer is option B.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "The sum of three consecutive integers is equal to their product. How many such possibilities are there?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only one"
+      },
+      {
+        "identifier": "B",
+        "content": "Only two"
+      },
+      {
+        "identifier": "C",
+        "content": "Only three"
+      },
+      {
+        "identifier": "D",
+        "content": "No such possibility is there"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>Let's denote the three consecutive integers as $ x - 1 $, $ x $, and $ x + 1 $.</p>\n\n<p>The sum of these integers is:</p>\n\n<p>$(x - 1) + x + (x + 1) = 3x$</p>\n\n<p>Their product is:</p>\n\n<p>$(x - 1) \\cdot x \\cdot (x + 1) = x^3 - x$</p>\n\n<p>Equating the sum and the product:</p>\n\n<p>$3x = x^3 - x$</p>\n\n<p>Rearranging the terms gives us:</p>\n\n<p>$x^3 - x - 3x = 0$</p>\n\n<p>$x^3 - 4x = 0$</p>\n\n<p>Factoring out the common term:</p>\n\n<p>$x(x^2 - 4) = 0$</p>\n\n<p>$x = 0$ or $x^2 = 4$</p>\n\n<p>Solving for $x$:</p>\n\n<p>$x = 0$ or $x = \\pm 2$</p>\n\n<p>Thus, the possible sets of integers are: $(-3, -2, -1)$, $(-1, 0, 1)$, and $ (1, 2, 3)$.</p>\n\n<p><strong>Therefore, the correct answer is Option C, indicating there are three such possibilities.</strong></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "A biology class at Central High School predicted that a local population of animals will double in size every 12 years. The population at the beginning of 2021&nbsp;was estimated to be 50 animals. If&nbsp;<em style=\"margin: 0px; padding: 0px; border: 0px; outline: 0px; background: transparent;\">P</em><span style=\"margin: 0px; padding: 0px; border: 0px; outline: 0px; background: transparent;\">&nbsp;represents the population&nbsp;</span><em style=\"margin: 0px; padding: 0px; border: 0px; outline: 0px; background: transparent;\">n</em><span style=\"margin: 0px; padding: 0px; border: 0px; outline: 0px; background: transparent;\">&nbsp;years after 2021, then which of the following equations represents the class&nbsp;model of the population over time?</span>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P = 12 + 50n"
+      },
+      {
+        "identifier": "B",
+        "content": "P = 50 + 12n"
+      },
+      {
+        "identifier": "C",
+        "content": "P = 50 (2)<sup>12n</sup>"
+      },
+      {
+        "identifier": "D",
+        "content": "P = 50 (2)<sup>n/12</sup>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "explanation": "<strong>Given:</strong>\n\n<p>The population of animals at the beginning of 2021 is 50.</p>\n\n<p>The population is expected to double every 12 years.</p>\n\n<strong>Calculation:</strong>\n\n<p>As the population doubles every 12 years, the growth can be modeled by an exponential function.</p>\n\n<p>$ P = 50 \\times 2^x $</p>\n\n<p>When $ n = 0 $:</p>\n\n<p>$ P = 50 $</p>\n\n<p>Thus,</p>\n\n<p>$ 50 = 50 \\times 2^0 $</p>\n\n<p>which confirms $ 2^0 = 2^x $, so $ x = 0 $.</p>\n\n<p>When $ n = 12 $:</p>\n\n<p>$ P = 100 $ (since it doubles in 12 years)</p>\n\n<p>Thus,</p>\n\n<p>$ 100 = 50 \\times 2^x $</p>\n\n<p>which implies $ 2^1 = 2^x $, so $ x = 1 $.</p>\n\n<p>For $ n = 24 $:</p>\n\n<p>$ P = 200 $ and we determine that $ x = 2 $.</p>\n\n<p>This establishes that the relationship between $ x $ and $ n $ is $ x = \\frac{n}{12} $.</p>\n\n<p>Therefore, the model equation becomes:</p>\n\n<p>$ P = 50 \\times 2^{\\frac{n}{12}} $</p>\n\n<strong>Hence, the correct option is:</strong> $ P = 50 \\times 2^{\\frac{n}{12}} $.",
+    "answer": null,
+    "topic": null,
+    "year": 2021,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2021-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "A boy plays with a ball and he drops it from a height of 1.5 m. Every time the ball hits the ground, it bounces back to attain a height 4/5<sup>th</sup> of the previous height. The ball does not bounce further if the previous height is less than 50 cm. What is the number of times the ball hits the ground before the ball stops bouncing ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "7"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<strong>Given Information:</strong>\n\n<ul>\n<li>The ball is initially dropped from a height of 1.5 meters.</li><br>\n<li>Each time the ball bounces, it reaches $\\frac{4}{5}$ of the previous height.</li><br>\n<li>The ball stops bouncing if its height after the bounce is less than 50 cm.</li>\n</ul>\n<strong>Initial Calculation:</strong>\n\n<ul>\n<li>Initial height of the drop = 1.5 m = 150 cm.</li>\n</ul>\n<p>The following table illustrates the heights after each bounce:</p>\n\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:350px;\">\n\n<tbody>\n\n<tr>\n\n<td style=\"text-align: center;\">Drop</td>\n\n<td style=\"text-align: center;\">Previous Height (cm)</td>\n\n<td style=\"text-align: center;\">Height after Bouncing Back (cm)</td>\n\n</tr>\n\n<tr>\n\n<td style=\"text-align: center;\">1</td>\n\n<td style=\"text-align: center;\">150</td>\n\n<td style=\"text-align: center;\">150 × $\\frac{4}{5}$ = 120</td>\n\n</tr>\n\n<tr>\n\n<td style=\"text-align: center;\">2</td>\n\n<td style=\"text-align: center;\">120</td>\n\n<td style=\"text-align: center;\">120 × $\\frac{4}{5}$ = 96</td>\n\n</tr>\n\n<tr>\n\n<td style=\"text-align: center;\">3</td>\n\n<td style=\"text-align: center;\">96</td>\n\n<td style=\"text-align: center;\">96 × $\\frac{4}{5}$ = 76.8</td>\n\n</tr>\n\n<tr>\n\n<td style=\"text-align: center;\">4</td>\n\n<td style=\"text-align: center;\">76.8</td>\n\n<td style=\"text-align: center;\">76.8 × $\\frac{4}{5}$ = 61.44</td>\n\n</tr>\n\n<tr>\n\n<td style=\"text-align: center;\">5</td>\n\n<td style=\"text-align: center;\">61.44</td>\n\n<td style=\"text-align: center;\">61.44 × $\\frac{4}{5}$ = 49.152</td>\n\n</tr>\n\n<tr>\n\n<td style=\"text-align: center;\">6</td>\n\n<td style=\"text-align: center;\">49.152</td>\n\n<td style=\"text-align: center;\">0 (less than 50 cm)</td>\n\n</tr>\n\n</tbody>\n\n</table>\n\n<p>As shown in the table, the ball hits the ground 5 times before it stops bouncing.</p>\n\n<strong>Hence, option B (5) is correct.</strong>",
+    "answer": null,
+    "topic": null,
+    "year": 2021,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2021-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>In the series _b_a_ba_b_abab_aab;</p>\n\n<p>fill in the six blanks ( _ ) using one of the following given four choices such that the series follows a specific order.&nbsp;</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "bababa"
+      },
+      {
+        "identifier": "B",
+        "content": "baabba"
+      },
+      {
+        "identifier": "C",
+        "content": "bbaabb"
+      },
+      {
+        "identifier": "D",
+        "content": "ababab"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "explanation": "<p>We are given the incomplete series:</p>\n<p>$ \\_ \\, b \\, \\_ \\, a \\, \\_ \\, b \\, a \\, \\_ \\, b \\, a \\, b \\, a \\, b \\, \\_ \\, a \\, a \\, b \\, ; $</p>\n<p>We have <strong>6 blanks</strong> to be filled with one of the given options.</p>\n\n<h3>Step 1: Observe the sequence</h3>\n<p>The sequence is made of only <strong>‘a’ and ‘b’</strong> in some order. Usually, such questions are based on a repeating <strong>pattern of letters</strong>.</p>\n\n<h3>Step 2: Look at the options</h3>\n<ul>\n<li><p><strong>Option A:</strong> bababa  </p></li>\n<li><p><strong>Option B:</strong> baabba  </p></li>\n<li><p><strong>Option C:</strong> bbaabb  </p></li>\n<li><p><strong>Option D:</strong> ababab  </p></li>\n</ul>\n<p>These are all 6-letter strings. So whichever option we pick, those 6 letters will be placed in the blanks (in order).</p>\n\n<h3>Step 3: Substitution of Option A</h3>\n<p>Put <strong>bababa</strong> into blanks:</p>\n<p>$ (b) \\, b \\, (a) \\, a \\, (b) \\, b \\, a \\, (a) \\, b \\, a \\, b \\, a \\, b \\, (b) \\, a \\, a \\, b $</p>\n<p>This gives the completed sequence:</p>\n<p>$ bbabbaababababbaab $</p>\n<p>This looks quite <strong>irregular</strong>, not a smooth alternating or repeated pattern.</p>\n\n<h3>Step 4: Substitution of Option B</h3>\n<p>Put <strong>baabba</strong> into blanks:</p>\n<p>$ (b) \\, b \\, (a) \\, a \\, (a) \\, b \\, a \\, (b) \\, b \\, a \\, b \\, a \\, b \\, (a) \\, a \\, a \\, b $</p>\n<p>Completed sequence:</p>\n<p>$ bbaaababababaaab $</p>\n<p>Again seems <strong>imbalanced</strong>: notice three a’s in a row at the end.</p>\n\n<h3>Step 5: Substitution of Option C</h3>\n<p>Put <strong>bbaabb</strong> into blanks:</p>\n<p>$ (b) \\, b \\, (b) \\, a \\, (a) \\, b \\, a \\, (a) \\, b \\, a \\, b \\, a \\, b \\, (b) \\, a \\, a \\, b $</p>\n<p>Final sequence:</p>\n<p>$ bbbabaababaabab $</p>\n<p>Too many consecutive <strong>b’s</strong> at the beginning — seems odd.</p>\n\n<h3>Step 6: Substitution of Option D</h3>\n<p>Put <strong>ababab</strong> into blanks:</p>\n<p>$ (a) \\, b \\, (b) \\, a \\, (a) \\, b \\, a \\, (b) \\, b \\, a \\, b \\, a \\, b \\, (a) \\, a \\, a \\, b $</p>\n<p>This gives:</p>\n<p>$ abbaababababa aab $</p>\n<p>Notice carefully:  </p>\n<p>From the left, it forms a smooth <strong>alternating sequence ababab…</strong> which is a meaningful regular order.</p>\n\n<h3>Step 7: Decide the answer</h3>\n<p>Among all options, only <strong>Option D (ababab)</strong> produces a consistent alternating pattern <strong>(ab-ab-ab…)</strong> in the main body of the sequence.  </p>\n\n<p>$ \\boxed{\\text{Option D: ababab}} $</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2021,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2021-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following statements :</p>\n\n<p>1. The sum of 5 consecutive integers can be 100.</p>\n\n<p>2 The&nbsp;product of three consecutive natural numbers can be equal to their sum.</p>\n\n<p>Which of the above statements&nbsp;is/are correct ?&nbsp;</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 only"
+      },
+      {
+        "identifier": "B",
+        "content": "2 only"
+      },
+      {
+        "identifier": "C",
+        "content": "Both 1 and 2"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither 1 nor 2"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>To determine the validity of the statements, let's analyze each one methodically.</p>\n\n<p>For the first statement:</p>\n\n<p>Assume five consecutive integers: $n - 2$, $n - 1$, $n$, $n + 1$, and $n + 2$.</p>\n\n<p>Their sum is:</p>\n\n<p>$ (n - 2) + (n - 1) + n + (n + 1) + (n + 2) = 100 $</p>\n\n<p>Simplifying this equation:</p>\n\n<p>$ 5n = 100 $</p>\n\n<p>$ n = 20 $</p>\n\n<p>Thus, the five consecutive numbers are 18, 19, 20, 21, and 22. This confirms that statement 1 is correct.</p>\n\n<p>For the second statement:</p>\n\n<p>Assume three consecutive natural numbers: $n - 1$, $n$, and $n + 1$.</p>\n\n<p>Their sum should equal their product:</p>\n\n<p>$ (n - 1) + n + (n + 1) = (n - 1) \\times n \\times (n + 1) $</p>\n\n<p>Simplifying this equation:</p>\n\n<p>$ 3n = n^3 - n $</p>\n\n<p>$ n(n^2 - 4) = 0 \\implies n = 0 \\text{ or } n = \\pm 2 $</p>\n\n<p>Given that the numbers must be natural, $n = 0$ and $n = -2$ are invalid. Only $n = 2$ is acceptable, which gives us the consecutive numbers 1, 2, and 3. This confirms that statement 2 is also correct.</p>\n\n<p>Hence, the correct answer is that both statements are correct.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2021,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2021-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>What is the value of ‘X’ in the sequence</p>\n\n<p>2, 7, 22, 67, 202, X, 1822, ?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "603"
+      },
+      {
+        "identifier": "B",
+        "content": "605"
+      },
+      {
+        "identifier": "C",
+        "content": "607"
+      },
+      {
+        "identifier": "D",
+        "content": "608"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>To determine the value of 'X' in the sequence:</p>\n\n<p>2, 7, 22, 67, 202, X, 1822, ?</p>\n\n<p>We observe the following pattern:</p>\n\n<p>The 1st term is $2$.</p>\n\n<p>The 2nd term is $7 = 2 \\times 3 + 1$.</p>\n\n<p>The 3rd term is $22 = 7 \\times 3 + 1$.</p>\n\n<p>Thus, the general pattern for the sequence can be described as:</p>\n\n<p>$ \\text{n}^{\\text{th}} \\text{ term} = (\\text{n-1})^{\\text{th}} \\text{ term} \\times 3 + 1 $</p>\n\n<p>Given that $ X $ is the 6th term in the series (i.e., n = 6):</p>\n\n<p>$ X = 202 \\times 3 + 1 $</p>\n\n<p>$ X = 607 $</p>\n\n<p>Hence, the correct value of 'X' is 607. Therefore, option C is correct.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2021,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2021-csat",
+    "difficulty": null
+  }
+]

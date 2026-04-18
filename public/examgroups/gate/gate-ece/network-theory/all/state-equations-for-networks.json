@@ -1,0 +1,67 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\text { For the given circuit, which one of the following is the correct state equation? } $$</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh22mls0/124bb345-ab28-4d07-a0b0-0429e832258b/ed389c00-af50-11f0-ba93-393527bdf085/file-jaoe38c1mh22mls1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh22mls0/124bb345-ab28-4d07-a0b0-0429e832258b/ed389c00-af50-11f0-ba93-393527bdf085/file-jaoe38c1mh22mls1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Network Theory - State Equations For Networks Question 1 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{d}{d t}\\left[\\begin{array}{l}v \\\\ i\\end{array}\\right]=\\left[\\begin{array}{ll}-4 & -4 \\\\ -2 & -4\\end{array}\\right]\\left[\\begin{array}{l}v \\\\ i\\end{array}\\right]+\\left[\\begin{array}{ll}4 & 0 \\\\ 0 & 4\\end{array}\\right]\\left[\\begin{array}{l}i_1 \\\\ i_2\\end{array}\\right]$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{d}{d t}\\left[\\begin{array}{c}v \\\\ i\\end{array}\\right]=\\left[\\begin{array}{cc}-4 & 4 \\\\ -2 & -4\\end{array}\\right]\\left[\\begin{array}{c}v \\\\ i\\end{array}\\right]+\\left[\\begin{array}{ll}0 & 4 \\\\ 4 & 0\\end{array}\\right]\\left[\\begin{array}{l}i_1 \\\\ i_2\\end{array}\\right]$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{d}{d t}\\left[\\begin{array}{l}v \\\\ i\\end{array}\\right]=\\left[\\begin{array}{cc}4 & -4 \\\\ -2 & -4\\end{array}\\right]\\left[\\begin{array}{l}v \\\\ i\\end{array}\\right]+\\left[\\begin{array}{ll}0 & 4 \\\\ 4 & 4\\end{array}\\right]\\left[\\begin{array}{l}i_1 \\\\ i_2\\end{array}\\right]$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{d}{d t}\\left[\\begin{array}{l}v \\\\ i\\end{array}\\right]=\\left[\\begin{array}{cc}-4 & -4 \\\\ -2 & 4\\end{array}\\right]\\left[\\begin{array}{l}v \\\\ i\\end{array}\\right]+\\left[\\begin{array}{ll}4 & 4 \\\\ 4 & 0\\end{array}\\right]\\left[\\begin{array}{l}i_1 \\\\ i_2\\end{array}\\right]$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh22mk1y/e0dcae35-4264-445a-8ec0-1b194635a772/ebe3ba60-af50-11f0-ba93-393527bdf085/file-jaoe38c1mh22mk1z.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh22mk1y/e0dcae35-4264-445a-8ec0-1b194635a772/ebe3ba60-af50-11f0-ba93-393527bdf085/file-jaoe38c1mh22mk1z.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Network Theory - State Equations For Networks Question 1 English Explanation 1\">$$ \\text { Converting the current source of given circuit into voltage source, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh22mku2/a2580b54-4bc9-4f01-8b43-0fa7a56d5d17/ec7e25a0-af50-11f0-ba93-393527bdf085/file-jaoe38c1mh22mku3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh22mku2/a2580b54-4bc9-4f01-8b43-0fa7a56d5d17/ec7e25a0-af50-11f0-ba93-393527bdf085/file-jaoe38c1mh22mku3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Network Theory - State Equations For Networks Question 1 English Explanation 2\">Current through the inductor and voltage across the capacitor are state variables $x_1=i, x_2=V$ then to find state equations, we have to find $\\dot{x}_1=\\frac{d i}{d t}$ and $\\dot{x}_2=\\frac{d V}{d t}$. So we have to write current equation of capacitor and voltage equation of inductor.</p>\n<p>Applying KCL at node $V$,</p>\n<p>$$ \\begin{aligned} &amp; -i+C \\frac{d V}{d t}+\\frac{V-i_2}{1}=0 \\\\ &amp; \\frac{1}{4} \\frac{d V}{d t}=-V+i+i_2 \\\\ &amp; \\frac{d V}{d t}=-4 V+4 i+4 i_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} $$</p>\n<p>Applying KVL in loop-1,</p>\n<p>$$ \\begin{aligned} &amp; -2 i_1+2 i+L \\frac{d i}{d t}+V=0 \\\\ &amp; \\frac{1}{2} \\frac{d i}{d t}=-V-2 i+2 i_1 \\end{aligned} $$</p>\n<p>$$ \\frac{d i}{d t}=-2 V-4 i+4 i_1 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)$$</p>\n<p>Writing equations (i) and (ii) in matrix form,</p>\n<p>$$ \\frac{d}{d t}\\left[\\begin{array}{c} V \\\\ i \\end{array}\\right]=\\left[\\begin{array}{cc} -4 &amp; 4 \\\\ -2 &amp; -4 \\end{array}\\right]\\left[\\begin{array}{c} V \\\\ i \\end{array}\\right]+\\left[\\begin{array}{ll} 0 &amp; 4 \\\\ 4 &amp; 0 \\end{array}\\right]\\left[\\begin{array}{l} i_1 \\\\ i_2 \\end{array}\\right] $$</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "For the circuit in Fig., write the state equations using v<sub>c</sub>\n and i<sub>L</sub> as state variables. \n<img alt=\"GATE ECE 2000 Network Theory - State Equations For Networks Question 2 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ea65f28ea7fc72bb313d218305f7fd7f4286887dca79fada40ef47d5eeec1ae5.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "<img alt=\"GATE ECE 1997 Network Theory - State Equations For Networks Question 3 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/95604cf56b2728c7816296d55b8bc325f671608cc5b94a92a99df170dd901cc7.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\nFor the circuit shown in Fig. choose state variables $$X_1,\\;X_2,\\;X_3$$ to be $$i_{L1}\\left(t\\right),\\;v_{C2}\\left(t\\right),\\;i_{L3}\\left(t\\right)$$\n<p>(a) Write the state equations</p>\n$$$\\begin{bmatrix}{\\dot X}_1\\\\{\\dot X}_2\\\\{\\dot X}_3\\end{bmatrix}\\;=\\;A\\;\\begin{bmatrix}X_1\\\\X_2\\\\X_3\\end{bmatrix}\\;+\\;B\\left[e\\left(t\\right)\\right]$$$\n<p>(b) If e(t) = 0, t $$\\geq$$ 0, $$i_{L1}\\left(0\\right)\\;=\\;0,\\;v_{C2}\\left(0\\right)\\;=\\;0,\\;i_{L3}\\left(0\\right)\\;=\\;1A,$$ then what would the total energy dissipated in the registors in the interval $$\\left(0,\\infty\\right)$$ be</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) Solve it.\n<br>(b) 0.5 J",
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Refer to the circuit shown in Fig.\n<img alt=\"GATE ECE 1996 Network Theory - State Equations For Networks Question 4 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/dd6c71234dd22aa0c21107b522f4d74f80e033150778d5b96a79efdc7b303386.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\nChoosing the voltage v<sub>C</sub>(t) across capacitor, and the current i<sub>L</sub>(t) through the inductor as state variable,i.e.,\n$$$\\left[\\mathrm x\\left(\\mathrm t\\right)\\right]\\;=\\;\\begin{bmatrix}{\\mathrm v}_\\mathrm C\\left(\\mathrm t\\right)\\\\{\\mathrm i}_\\mathrm L\\left(\\mathrm t\\right)\\end{bmatrix}$$$\nWrite the state equation in the form $$\\frac{\\operatorname d\\left[x\\left(t\\right)\\right]}{\\operatorname dt}\\;=\\;\\left[A\\right]\\left[x\\left(t\\right)\\right]\\;+\\;\\left[B\\right]\\left[u\\left(t\\right)\\right]$$ and find [A], [B] and [u(t)].",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  }
+]

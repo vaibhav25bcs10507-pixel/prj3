@@ -1,0 +1,2452 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a demand paging memory management system with 32-bit logical address, 20 -bit physical address, and page size of 2048 bytes. Assuming that the memory is byte addressable, what is the maximum number of entries in the page table?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $2^{21}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $2^{20}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $2^{22}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $2^{24}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>In a demand paging memory management system, determining the maximum number of entries in the page table requires taking into account the logical address space and the page size. Here's how you can calculate it:</p>\n\n<p><p><strong>Logical Address (L.A.)</strong> is 32 bits, meaning the total number of addresses is $2^{32}$.</p></p>\n<p><p><strong>Physical Address (P.A.)</strong> is 20 bits, but we primarily focus on logical address space for determining the page table size.</p></p>\n<p><p><strong>Page Size</strong> is 2048 bytes, which can be represented as $2^{11}$ bytes.</p></p>\n\n<p>To find the maximum number of entries in the page table, use the following calculation:</p>\n<p>$ \\text{Number of entries} = \\frac{\\text{Logical Address Space (L.A.S)}}{\\text{Page Size}} = \\frac{2^{32} \\text{ bytes}}{2^{11} \\text{ bytes}} = 2^{21} $</p>\n<p>Therefore, the maximum number of entries in the page table is $2^{21}$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following tasks is/are the responsibility/responsibilities of the memory management unit (MMU) in a system with paging-based memory management?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Allocate a new page table for a newly created process</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Translate a virtual address to a physical address using the page table</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Raise a trap when a virtual address is not found in the page table</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Raise a trap when a process tries to write to a page marked with read-only permission in the page table</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>The Memory Management Unit (MMU) is a critical component in computer systems that use paging for memory management. Its responsibilities are as follows:</p>\n\n<p><strong>Option A</strong><br>Allocate a new page table for a newly created process</p>\n<p>This task is generally handled by the operating system's memory manager, not the MMU itself. The MMU primarily deals with the translation and protection aspects, whereas the allocation of page tables lies outside its typical responsibilities.</p>\n\n<p><strong>Option B</strong><br>Translate a virtual address to a physical address using the page table</p>\n<p>This is one of the primary responsibilities of the MMU. When a program accesses memory, it uses virtual addresses, which the MMU translates into physical addresses using the page table.</p>\n\n<p><strong>Option C</strong><br>Raise a trap when a virtual address is not found in the page table</p>\n<p>The MMU is responsible for detecting page faults, which occur when a virtual address does not have a corresponding physical address in the page table. When this happens, the MMU raises a trap (interrupt) that signals the operating system to handle the fault.</p>\n\n<p><strong>Option D</strong><br>Raise a trap when a process tries to write to a page marked with read-only permission in the page table</p>\n<p>The MMU ensures that memory access permissions are enforced. If a process tries to write to a page marked as read-only, the MMU will raise a trap, indicating a protection fault.</p>\n\n<p>Therefore, the correct answers are:</p>\n\n<ul>\n  <li>Option B: Translate a virtual address to a physical address using the page table</li>\n  <li>Option C: Raise a trap when a virtual address is not found in the page table</li>\n  <li>Option D: Raise a trap when a process tries to write to a page marked with read-only permission in the page table</li>\n</ul>\n\n<p>These tasks fall directly within the domain of the MMU.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which one or more of the following options guarantee that a computer system will transition from user mode to kernel mode?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Function Call"
+      },
+      {
+        "identifier": "B",
+        "content": "malloc Call"
+      },
+      {
+        "identifier": "C",
+        "content": "Page Fault"
+      },
+      {
+        "identifier": "D",
+        "content": "System Call"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>The transition from user mode to kernel mode in a computer system can be triggered by different events. Here's an explanation of each option provided:</p>\n\n<p><strong>Option A: Function Call</strong></p>\n<p>Generally, a function call does not necessarily cause a switch from user mode to kernel mode. Function calls are a fundamental part of programming languages and can occur within the same mode the code is currently executing. User mode code often uses function calls to perform various tasks, but these do not automatically require kernel intervention unless the function being called is a specific type of function that requests services from the operating system kernel.</p>\n\n<p><strong>Option B: malloc Call</strong></p>\n<p>The malloc function is a standard library function in C and it allocates memory dynamically from the heap. While the malloc call can result in a system call to request more memory from the operating system if more memory needs to be added to the process's heap, just calling malloc does not guarantee a switch to kernel mode. It is only when the allocation requires more memory from the operating system that a system call may be made, such as brk or mmap on Unix-like systems, and this system call necessitates a transition to kernel mode.</p>\n\n<p><strong>Option C: Page Fault</strong></p>\n<p>A page fault occurs when a process tries to access a section of memory that is not currently mapped to physical memory or does not have the required permissions for access. When a page fault happens, the hardware raises a page fault exception, interrupting the current process and switching to kernel mode to handle the fault. The kernel then decides whether the fault can be handled by bringing the required page into memory, or if the process should be terminated. This is an event that indeed guarantees a switch to kernel mode.</p>\n\n<p><strong>Option D: System Call</strong></p>\n<p>A system call is a programmed request to the operating system for a service performed by the kernel. Typical examples include file manipulation, process control, and inter-process communication. When a system call is made, the execution mode transitions from user mode to kernel mode so that the kernel can safely perform the operation that the user process does not have the privilege to execute directly. The kernel then carries out the task and returns to user mode. This also is a guaranteed switch to kernel mode.</p>\n\n<p>In conclusion, options C (Page Fault) and D (System Call) guarantee that a computer system will transition from user mode to kernel mode. Options A (Function Call) and B (malloc Call) do not inherently guarantee this transition.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "In the context operating systems, which of the following statements is/are correct with respect to paging?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Paging incurs memory overheads."
+      },
+      {
+        "identifier": "B",
+        "content": "Paging helps solve the issue of external fragmentation."
+      },
+      {
+        "identifier": "C",
+        "content": "Page size has no impact on internal fragmentation."
+      },
+      {
+        "identifier": "D",
+        "content": "Multi-level paging is necessary to support pages of different sizes."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Option A: Paging incurs memory overheads.</strong></h3>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Paging Mechanism:</strong></p></p>\n<p><p>Paging divides the virtual address space of a process into fixed-size blocks called <strong>pages</strong>, and the physical memory into blocks of the same size called <strong>frames</strong>.</p></p>\n<p><p>To keep track of the mapping between pages and frames, the operating system uses a <strong>page table</strong> for each process.</p></p>\n<p><p><strong>Memory Overheads:</strong></p></p>\n<p><p><strong>Page Tables:</strong></p>\n\n<p><p>Each process's page table can be substantial in size, especially for large address spaces, as it must contain an entry for each page.</p></p>\n<p><p>The storage required for page tables consumes additional memory, leading to <strong>memory overhead</strong>.</p></p></p>\n<p><p><strong>Translation Lookaside Buffers (TLBs):</strong></p>\n\n<p>To improve performance, TLBs are used to cache recent page table entries, which also consume memory resources.</p></p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p><p>Paging <strong>does incur memory overheads</strong> due to the storage requirements for page tables and associated data structures.</p></p>\n<p><p><strong>Option A is correct.</strong></p></p>\n\n<hr />\n<h3><strong>Option B: Paging helps solve the issue of external fragmentation.</strong></h3>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>External Fragmentation:</strong></p></p>\n<p><p>Occurs when free memory is split into small blocks and is interspersed between allocated memory blocks, making it difficult to allocate contiguous memory spaces for new processes or data.</p></p>\n\n<p><p><strong>Paging and External Fragmentation:</strong></p></p>\n<p><p><strong>Fixed-Size Blocks:</strong></p>\n\n<p><p>Paging eliminates the need for contiguous memory allocation by dividing memory into fixed-size frames.</p></p>\n<p><p>Any page can be placed into any available frame, regardless of their locations in physical memory.</p></p></p>\n<p><p><strong>Elimination of External Fragmentation:</strong></p>\n\n<p><p>Since physical memory is allocated in fixed-size frames and any free frame can be used, there are no gaps or unusable small memory blocks.</p></p>\n<p><p>This effectively <strong>solves the issue of external fragmentation</strong>.</p></p></p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p><p>Paging <strong>helps eliminate external fragmentation</strong> by using fixed-size pages and frames.</p></p>\n<p><p><strong>Option B is correct.</strong></p></p>\n\n<hr />\n<h3><strong>Option C: Page size has no impact on internal fragmentation.</strong></h3>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Internal Fragmentation:</strong></p></p>\n<p><p>Occurs when allocated memory may have unused space because the memory block allocated is larger than the requested memory.</p></p>\n<p><p><strong>Impact of Page Size on Internal Fragmentation:</strong></p></p>\n<p><p><strong>Partial Page Usage:</strong></p>\n\n<p>The last page allocated to a process might not be completely filled if the process's memory size isn't an exact multiple of the page size.</p></p>\n<p><p><strong>Larger Page Sizes:</strong></p>\n\n<p>Increase the potential unused space in the last page, leading to more <strong>internal fragmentation</strong>.</p></p>\n<p><p><strong>Smaller Page Sizes:</strong></p>\n\n<p>Reduce the amount of wasted space, decreasing internal fragmentation.</p></p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p><p><strong>Page size directly impacts internal fragmentation</strong>; larger page sizes can increase internal fragmentation.</p></p>\n<p><p><strong>Option C is incorrect.</strong></p></p>\n\n<hr />\n<h3><strong>Option D: Multi-level paging is necessary to support pages of different sizes.</strong></h3>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Multi-Level Paging:</strong></p></p>\n<p><p>A technique used to manage large address spaces by breaking down the page table into multiple levels.</p></p>\n<p><p>Helps reduce the memory overhead of storing large page tables by paging the page tables themselves.</p></p>\n<p><p><strong>Supporting Different Page Sizes:</strong></p></p>\n<p><p><strong>Variable Page Sizes:</strong></p>\n\n<p>Operating systems may support different page sizes (e.g., standard pages and huge pages) to optimize performance.</p></p>\n<p><p><strong>Role of Multi-Level Paging:</strong></p>\n\n<p><p>While multi-level paging helps manage large page tables efficiently, it is <strong>not necessary</strong> for supporting different page sizes.</p></p>\n<p><p><strong>Segmentation</strong> or <strong>extended paging mechanisms</strong> (like page size extensions) are typically used to support multiple page sizes.</p></p></p>\n<p><p><strong>Hardware Support:</strong></p>\n\n<p>Supporting different page sizes often requires hardware support in the Memory Management Unit (MMU).</p></p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p><p>Multi-level paging is <strong>not necessary</strong> to support pages of different sizes.</p></p>\n<p><p><strong>Option D is incorrect.</strong></p></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Correct Statements:</strong></p></p>\n<p><p><strong>Option A:</strong> Paging incurs memory overheads.</p></p>\n<p><p><strong>Option B:</strong> Paging helps solve the issue of external fragmentation.</p></p>\n<p><p><strong>Incorrect Statements:</strong></p></p>\n<p><p><strong>Option C:</strong> Page size has <strong>an impact</strong> on internal fragmentation.</p></p>\n<p><p><strong>Option D:</strong> Multi-level paging is <strong>not necessary</strong> to support pages of different sizes.</p></p>\n\n<hr />\n<p><strong>Therefore, the correct options are A and B.</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider allocation of memory to a new process. Assume that none of the existing holes in the memory will exactly fit the process's memory requirement. Hence, a new hole of smaller size will be created if allocation is made in any of the existing holes. Which one of the following statements is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The hole created by worst fit is always larger than the hole created by first fit."
+      },
+      {
+        "identifier": "B",
+        "content": "The hole created by best fit is never larger than the hole created by first fit."
+      },
+      {
+        "identifier": "C",
+        "content": "The hole created by first fit is always larger than the hole created by next fit."
+      },
+      {
+        "identifier": "D",
+        "content": "The hole created by next fit is never larger than the hole created by best fit."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given statements is true, we need to analyze each one individually, considering how the different memory allocation strategies (first fit, best fit, worst fit, and next fit) work in a system where no existing hole exactly fits the process's memory requirement.</p>\n<h3><strong>Option A:</strong></h3>\n<p><strong>Statement:</strong> <em>The hole created by worst fit is always larger than the hole created by first fit.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Worst Fit:</strong> Allocates the largest available hole that is big enough for the process.</p></p>\n<p><p><strong>First Fit:</strong> Allocates the first hole that is big enough for the process.</p></p>\n\n<p><strong>Counterexample:</strong></p>\n<p>Suppose we have the following holes:</p>\n\n<p><p>Hole 1: 900 KB</p></p>\n<p><p>Hole 2: 800 KB</p></p>\n<p><p>Hole 3: 700 KB</p></p>\n\n<p><strong>Process requires:</strong> 600 KB</p>\n\n<p><p><strong>Worst Fit:</strong> Allocates Hole 1 (900 KB), leftover hole is 300 KB.</p></p>\n<p><p><strong>First Fit:</strong> Allocates Hole 1 (900 KB), leftover hole is also 300 KB.</p></p>\n\n<p>In this case, the holes created are equal in size, so the hole created by worst fit is <strong>not always larger</strong> than that created by first fit.</p>\n<p><strong>Conclusion:</strong> <strong>Option A is false.</strong></p>\n<hr />\n<h3><strong>Option B:</strong></h3>\n<p><strong>Statement:</strong> <em>The hole created by best fit is never larger than the hole created by first fit.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Best Fit:</strong> Allocates the smallest hole that is big enough for the process, minimizing leftover space.</p></p>\n<p><p><strong>First Fit:</strong> Allocates the first hole that is big enough.</p></p>\n\n<p>In multiple scenarios, best fit either creates a hole of the same size as first fit or a smaller one.</p>\n<p><strong>Example:</strong></p>\n\n<p><p>Holes: 700 KB, 800 KB, 900 KB</p></p>\n<p><p><strong>Process requires:</strong> 650 KB</p></p>\n<p><p><strong>First Fit:</strong> Allocates 700 KB hole, leftover is 50 KB.</p></p>\n<p><p><strong>Best Fit:</strong> Allocates 700 KB hole, leftover is also 50 KB.</p></p>\n\n<p>If there is a smaller suitable hole, best fit will choose it, resulting in a smaller leftover hole.</p>\n<p><strong>Conclusion:</strong> <strong>Option B is true.</strong></p>\n<hr />\n<h3><strong>Option C:</strong></h3>\n<p><strong>Statement:</strong> <em>The hole created by first fit is always larger than the hole created by next fit.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>First Fit:</strong> Starts searching from the beginning of the hole list.</p></p>\n<p><p><strong>Next Fit:</strong> Starts searching from where it left off in the previous allocation.</p></p>\n\n<p>The hole sizes created can vary depending on where the next fit search begins.</p>\n<p><strong>Counterexample:</strong></p>\n\n<p><p>Holes: 300 KB, 500 KB, 700 KB</p></p>\n<p><p>Previous allocation ended at Hole 2.</p></p>\n<p><p><strong>Process requires:</strong> 400 KB</p></p>\n<p><p><strong>First Fit:</strong> Allocates Hole 2 (500 KB), leftover is 100 KB.</p></p>\n<p><p><strong>Next Fit:</strong> Starts at Hole 3 (700 KB), leftover is 300 KB.</p></p>\n\n<p>Here, the hole created by next fit is larger than that created by first fit.</p>\n<p><strong>Conclusion:</strong> <strong>Option C is false.</strong></p>\n<hr />\n<h3><strong>Option D:</strong></h3>\n<p><strong>Statement:</strong> <em>The hole created by next fit is never larger than the hole created by best fit.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Next Fit:</strong> May allocate a larger hole depending on the starting point.</p></p>\n<p><p><strong>Best Fit:</strong> Always allocates the smallest suitable hole.</p></p>\n\n<p><strong>Counterexample:</strong></p>\n\n<p><p>Holes: 600 KB, 700 KB, 800 KB</p></p>\n<p><p>Previous allocation ended at Hole 2.</p></p>\n<p><p><strong>Process requires:</strong> 650 KB</p></p>\n<p><p><strong>Next Fit:</strong> Starts at Hole 3 (800 KB), leftover is 150 KB.</p></p>\n<p><p><strong>Best Fit:</strong> Allocates 700 KB hole, leftover is 50 KB.</p></p>\n\n<p>The hole created by next fit (150 KB) is larger than that created by best fit (50 KB).</p>\n<p><strong>Conclusion:</strong> <strong>Option D is false.</strong></p>\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n<p><strong>Option B is true.</strong></p>\n<p><strong>Answer:</strong> Option B</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "In which one of the following page replacement algorithms it is possible for the page fault rate to increase even when the number of allocated frames increases? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$LRU$$ (Least Recently Used)"
+      },
+      {
+        "identifier": "B",
+        "content": "$$OPT$$ (Optimal Page Replacement)"
+      },
+      {
+        "identifier": "C",
+        "content": "$$MRU$$ (Most Recently Used)"
+      },
+      {
+        "identifier": "D",
+        "content": "$$FIFO$$ (First In First Out)\n  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a system with byte-addressable memory, 32-bit logical addresses, 4 kilobyte page size and page table entries of 4 bytes each. The size of the page table in the system in megabytes is ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A computer system implements a $$40$$-bit virtual address, page size of $$8$$ kilobytes, and a $$128$$-entry translation look-aside buffer $$(TLB)$$ organized into $$32$$ sets each having four ways. Assume that the $$TLB$$ tag does not store any process id. The minimum length of the $$TLB$$ tag in bits is ________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "22",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A system uses $$3$$ page frames for storing process pages in main memory. It uses the Least Recently Used $$(LRU)$$ page replacement policy. Assume that all the page frames are initially empty. What is the total number of page faults that will occur while processing the page reference string given below?\n$$$4,7,6,1,7,6,1,2,7,2$$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A system uses FIFO policy for page replacement. It has $$4$$ pages frames with no pages loaded to begin with. The system first accesses $$100$$ distinct pages in some order and then accesses the same $$100$$ pages but now in the reverse order. How many page faults will occur?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$196$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$192$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$197$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$195$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "In which one of the following page replacement policies, Belady’s anomaly may occur? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "FIFO "
+      },
+      {
+        "identifier": "B",
+        "content": "Optimal "
+      },
+      {
+        "identifier": "C",
+        "content": "LRU"
+      },
+      {
+        "identifier": "D",
+        "content": "MRU"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The essential content(s) in each entry of a page table is / are:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Virtual page number."
+      },
+      {
+        "identifier": "B",
+        "content": "Page frame number."
+      },
+      {
+        "identifier": "C",
+        "content": "Both virtual page number and page frame number."
+      },
+      {
+        "identifier": "D",
+        "content": "Access right information."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "How many $$32K\\,\\, \\times \\,\\,1RAM$$  chips are needed to provide a memory capacity of $$256$$ $$K$$-bytes?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$32$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$64$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$128$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "What is the swap space in the disk used for? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Saving temporary html pages"
+      },
+      {
+        "identifier": "B",
+        "content": "Saving process data "
+      },
+      {
+        "identifier": "C",
+        "content": "Storing the super-block"
+      },
+      {
+        "identifier": "D",
+        "content": "Storing device drivers"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following addressing modes are suitable for program relocation at run time?\n<br>$$1.$$ Absolute addressing\n<br>$$2.$$ Based addressing\n<br>$$3.$$ Relative addressing\n<br>$$4.$$ Indirect addressing",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ &amp; $$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ &amp; $$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2$$ &amp; $$3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1,2$$ &amp; $$4$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a program $$P$$ that consists of two source modules $${M_1}$$ and $${M_2}$$ contained in two different files. If $${M_1}$$ contains a reference to a function defined in $${M_2}$$, the reference will be resolved at.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Edit-time "
+      },
+      {
+        "identifier": "B",
+        "content": "Compile-time "
+      },
+      {
+        "identifier": "C",
+        "content": "Link-time "
+      },
+      {
+        "identifier": "D",
+        "content": "Load-time"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of page frames that must be allocated to a running process in a virtual memory environment is determined by.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the instruction set architecture "
+      },
+      {
+        "identifier": "B",
+        "content": "page size "
+      },
+      {
+        "identifier": "C",
+        "content": "physical memory size "
+      },
+      {
+        "identifier": "D",
+        "content": "number of processes in memory"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "In a system with $$32$$ bit virtual addresses and $$1$$ $$KB$$ page size, use of one-level page tables for virtual to physical address translation is not practical because of",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The large amount of internal fragmentation "
+      },
+      {
+        "identifier": "B",
+        "content": "The large amount of external fragmentation "
+      },
+      {
+        "identifier": "C",
+        "content": "The large memory overhead in maintaining page tables."
+      },
+      {
+        "identifier": "D",
+        "content": "The large computation overhead in the translation process "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is not a form of memory?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Instruction cache "
+      },
+      {
+        "identifier": "B",
+        "content": "Instruction register "
+      },
+      {
+        "identifier": "C",
+        "content": "Instruction opcode "
+      },
+      {
+        "identifier": "D",
+        "content": "Translation look a side buffer"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The optimal page replacement algorithm will select the page that.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Has not been used for the longest time in the past. "
+      },
+      {
+        "identifier": "B",
+        "content": "Will not be used for the longest time in the future. "
+      },
+      {
+        "identifier": "C",
+        "content": "Has been used least number of times. "
+      },
+      {
+        "identifier": "D",
+        "content": "Has been used most number of times. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a virtual memory system with $$FIFO$$ page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in main memory will",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Always decrease the number of page faults."
+      },
+      {
+        "identifier": "B",
+        "content": "Always increase the number of page faults."
+      },
+      {
+        "identifier": "C",
+        "content": "Sometimes increase the number of page faults."
+      },
+      {
+        "identifier": "D",
+        "content": "Never affect the number of page faults."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The process of assigning load addresses to the various parts of the program and adjusting the code and date in the program to reflect the assigned addresses is called",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Assembly "
+      },
+      {
+        "identifier": "B",
+        "content": "Parsing "
+      },
+      {
+        "identifier": "C",
+        "content": "Relocation "
+      },
+      {
+        "identifier": "D",
+        "content": "Symbol resolution "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is false?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Virtual memory implements the translation of a program’s address space into physical memory address space"
+      },
+      {
+        "identifier": "B",
+        "content": "Virtual memory allows each program to exceed the size of the primary memory"
+      },
+      {
+        "identifier": "C",
+        "content": "Virtual memory increases the degree of multiprogramming."
+      },
+      {
+        "identifier": "D",
+        "content": "Virtual memory reduces the context switching overhead."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "In a resident $$–OS$$ computer, which of the following systems must reside in the main memory under all situations?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Assembler "
+      },
+      {
+        "identifier": "B",
+        "content": "Linker"
+      },
+      {
+        "identifier": "C",
+        "content": "Loader "
+      },
+      {
+        "identifier": "D",
+        "content": "Compiler "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Locality of reference implies that the page reference being made by a process",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Will always be to the page used in the previous page reference"
+      },
+      {
+        "identifier": "B",
+        "content": "Is likely to be to one of the pages used in the last few page references"
+      },
+      {
+        "identifier": "C",
+        "content": "Will always be to one of the pages existing in memory"
+      },
+      {
+        "identifier": "D",
+        "content": "Will always lead to a page fault"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Thrashing",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Reduces page $$I/O$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Decreases the degree of multiprogramming"
+      },
+      {
+        "identifier": "C",
+        "content": "Implies excessive page $$I/O$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Improve the system performance"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Dirty bit for a page in a page table",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Helps avoid unnecessary writes on a paging device"
+      },
+      {
+        "identifier": "B",
+        "content": "Helps maintain $$LRU$$ information"
+      },
+      {
+        "identifier": "C",
+        "content": "Allows only read on a page "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "A ROM is sued to store the table for multiplication of two $$8$$-bit unsigned integers. The size of ROM required is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$256 \\times 16$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$64\\,K \\times 8$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4\\,K \\times 16$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$64\\,K \\times 16$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The principle of locality justifies the use of ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Interrupts "
+      },
+      {
+        "identifier": "B",
+        "content": "DMA "
+      },
+      {
+        "identifier": "C",
+        "content": "Polling "
+      },
+      {
+        "identifier": "D",
+        "content": "Cache Memory"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "In a paged segmented scheme of memory management, the segment table itself must have a page table because:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The segment table is often too large to fit in one page."
+      },
+      {
+        "identifier": "B",
+        "content": "Each segment is spread over a number of pages "
+      },
+      {
+        "identifier": "C",
+        "content": "Segment tables point to page table and not to the physical locations of the segment."
+      },
+      {
+        "identifier": "D",
+        "content": "The processor’s description base register points to a page table."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "A linker is given object modules for a set of programs that were compiled separately. What information need to be included in an object module?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Object code\n "
+      },
+      {
+        "identifier": "B",
+        "content": "Relocation bits "
+      },
+      {
+        "identifier": "C",
+        "content": "Names and locations of all external symbols defined in the object module "
+      },
+      {
+        "identifier": "D",
+        "content": "Absolute addresses of internal symbols "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Which page replacement policy sometimes leads to more page faults when size of memory is increased?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Optimal "
+      },
+      {
+        "identifier": "B",
+        "content": "LRU"
+      },
+      {
+        "identifier": "C",
+        "content": "FIFO"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A system has a Translation Lookaside Buffer (TLB) that has a reach of 1 MB . TLB reach is defined as the total amount of physical memory that can be accessed through the TLB entries. The paging system uses pages of size 4 KB . The virtual address space is 64 GB and physical address space is 1 GB . If each TLB entry stores a 4-bit process id, page number, frame number, and a 2-bit control field, then the size of the TLB (in bytes) is $\\_\\_\\_\\_$ . (answer in integer)</p>\n<p>Note: $1 \\mathrm{~K}=2^{10}, 1 \\mathrm{M}=2^{20}, 1 \\mathrm{G}=2^{30}$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1536",
+    "explanation": "<p>$$ \\begin{aligned} \\text { TLB reach } & =\\text { Number of TLB entries × Page size } \\\\ \\text { Number of TLB entries } & =\\frac{\\text { TLB reach }}{\\text { Page size }}=\\frac{1 \\mathrm{MB}}{4 \\mathrm{~KB}} \\\\ & =\\frac{1 \\times 2^{20} \\mathrm{~B}}{4 \\times 2^{10} \\mathrm{~B}}=\\frac{2^{20}}{2^{12}}=2^8=256 \\\\ \\text { Number of pages } & =\\frac{\\text { Virtual address space }}{\\text { Page size }}=\\frac{64 \\mathrm{~GB}}{4 \\mathrm{~KB}} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} \\,\\,\\,\\,\\,\\,\\,\\,&\\begin{aligned} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,& =\\frac{2^6 \\times 2^{30} \\mathrm{~B}}{2^2 \\times 2^{10} \\mathrm{~B}}=\\frac{2^{36}}{2^{12}}=2^{24} \\\\ \\text { Page bits } & =\\log _2^{2^{24}}=24 \\text { bits } \\\\ \\text { Number of frames } & =\\frac{\\text { Physical address space }}{\\text { Frame size }}=\\frac{2^{30} \\mathrm{~B}}{2^{12} \\mathrm{~B}}=2^{18} \\\\ \\text { Frames bits } & =\\log _2^{2^{18}}=18 \\text { bits } \\end{aligned}\\\\ &\\begin{aligned} & \\text { TLB entry bits }=\\text { Process ID }+ \\text { Page number }+ \\text { Frame number }+ \\text { Control bit } \\\\ &\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, =4+24+18+2=48 \\text { bits } \\\\ & \\begin{aligned} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\text { TLB size } & =\\text { TLB entry bits × bits per entry } \\\\ &\\,\\, =\\frac{256 \\times 48}{8}=1536 \\text { Bytes } \\end{aligned} \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider contiguous allocation of physical memory to processes using variable partitioning scheme. Suppose there are 8 holes in the memory of sizes $20 \\mathrm{~KB}, 4 \\mathrm{~KB}$, $25 \\mathrm{~KB}, 18 \\mathrm{~KB}, 7 \\mathrm{~KB}, 9 \\mathrm{~KB}, 15 \\mathrm{~KB}$, and 12 KB . Assume that no two holes are adjacent. Two processes P1 of size 16 KB and P2 of size 9 KB arrive in that order, and they are allocated memory using the best-fit technique. After allocating space to P1 and P2, the number of holes of size less than 8 KB is $\\_\\_\\_\\_$ . (answer in integer)</p>\n<p>Note: $1 \\mathrm{~K}=2^{10}$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmywaawd/6308c611-997d-49e4-9502-7ddd694cc95d/12a875d0-245b-11f1-8c18-217b38cc9d70/file-jaoe38c1mmywaawe.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmywaawd/6308c611-997d-49e4-9502-7ddd694cc95d/12a875d0-245b-11f1-8c18-217b38cc9d70/file-jaoe38c1mmywaawe.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Operating Systems - Memory Management Question 1 English Explanation\"></p>\n<p><b>Step 1: Find where to allocate P1 (16 KB) using Best Fit</b></p>\n<p>The best-fit method chooses the smallest hole that is large enough for the process.</p>\n<p>We look for holes that are at least 16 KB.</p>\n<p>The holes sizes are: 20 KB, 25 KB, 18 KB, 15 KB, 12 KB (all others are smaller than 16 KB).</p>\n<p>The smallest one that fits is 18 KB.</p>\n<p>So, P1 gets placed in the 18 KB hole. The leftover space in that hole is $18 \\mathrm{\\ KB} - 16 \\mathrm{\\ KB} = 2 \\mathrm{\\ KB}$ (this is now a new, smaller hole).</p>\n<p><b>Step 2: Find where to allocate P2 (9 KB) using Best Fit</b></p>\n<p>Now, P2 needs 9 KB. Again, use the best-fit method and look for holes with size at least 9 KB.</p>\n<p>The available holes now are: 20 KB, 25 KB, 15 KB, 12 KB, and the new 2 KB hole (which is too small).</p>\n<p>The smallest suitable hole for 9 KB is the 9 KB hole.</p>\n<p>Allocate P2 to the 9 KB hole. After this, there is no leftover space in this hole.</p>\n<p><b>Step 3: Find all holes less than 8 KB after allocation</b></p>\n<p>After placing both processes, let's see the hole sizes:</p>\n<p>- 20 KB (unchanged)</p>\n<p>- 4 KB (unchanged)</p>\n<p>- 25 KB (unchanged)</p>\n<p>- 7 KB (unchanged)</p>\n<p>- 12 KB (unchanged)</p>\n<p>- 2 KB (created after placing P1)</p>\n<p>(18 KB was used and became 2 KB hole; 9 KB was removed, so no leftover there)</p>\n<p>The holes less than 8 KB are: 4 KB, 7 KB, and 2 KB.</p>\n<p><b>So, there are a total of 3 holes with size less than 8 KB.</b></p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a system that has a cache memory unit and a memory management unit (MMU). The address input to the cache memory is a physical address. The MMU has a translation lookaside buffer (TLB). Assume that when a page is evicted from the main memory, the corresponding blocks in the cache are marked as invalid.</p>\n<p>For a given memory reference, which of the following sequences of events can NEVER happen?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>TLB miss, Page table hit, Cache hit</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>TLB hit, Page table miss, Cache hit</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>TLB miss, Page table miss, Cache hit</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>TLB miss, Page table miss, Cache miss</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) TLB miss means the translation is not in TLB, so the page table is accessed. Page table hit means the page is present in main memory.</p>\n<p>Since cache uses physical address and the page is in memory, a cache hit is possible.</p>\n<p>Possible</p>\n<p>(b) If TLB hit occurs, the translation is already available. Therefore, the page table is not accessed, so a page table miss cannot occur. Hence this sequence is logically inconsistent.</p>\n<p>Impossible</p>\n<p>(c) Page table miss means the page is not in main memory (page fault). Given that evicted pages have their cache blocks invalidated, cache cannot contain valid data. Therefore, cache hit cannot occur.</p>\n<p>Impossible</p>\n<p>(d) TLB miss leads to page table access. Page table miss indicates page fault, so data is not in memory. Since cache blocks are invalidated for evicted pages, cache miss is expected.</p>\n<p>Possible</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a demand paging system with three frames, and the following page reference string: 1 2 3 4 5 4 1 6 4 5 1 3 2 . The contents of the frames are as follows initially and after each reference (from left to right):</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yw6bgn/c309f8e2-a1e1-4667-89c6-e73e3b6cd1fe/652c4970-fb63-11ef-b938-19ef88889b69/file-jaoe38c1m7yw6bgo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yw6bgn/c309f8e2-a1e1-4667-89c6-e73e3b6cd1fe/652c4970-fb63-11ef-b938-19ef88889b69/file-jaoe38c1m7yw6bgo.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Operating Systems - Memory Management Question 5 English\"></p>\n<p>The *-marked references cause page replacements.</p>\n<p>Which one or more of the following could be the page replacement policy/policies in use?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Least Recently Used page replacement policy\n"
+      },
+      {
+        "identifier": "B",
+        "content": " Least Frequently Used page replacement policy\n"
+      },
+      {
+        "identifier": "C",
+        "content": " Most Frequently Used page replacement policy\n"
+      },
+      {
+        "identifier": "D",
+        "content": " Optimal page replacement policy"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Reference string $1,2,3,4,5,4,1,6,4,5,1,3,2$</p> \n<p>Using Optimal page replacement policy</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yw8rqe/13143deb-c8ba-474d-ab92-80f62cb6d79c/a95c3060-fb63-11ef-b938-19ef88889b69/file-jaoe38c1m7yw8rqf.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yw8rqe/13143deb-c8ba-474d-ab92-80f62cb6d79c/a95c3060-fb63-11ef-b938-19ef88889b69/file-jaoe38c1m7yw8rqf.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Operating Systems - Memory Management Question 5 English Explanation\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A computer system supports a logical address space of 232 bytes. It uses two-level hierarchical paging with a page size of 4096 bytes. A logical address is divided into a b-bit index to the outer page table, an offset within the page of the inner page table, and an offset within the desired page. Each entry of the inner page table uses eight bytes. All the pages in the system have the same size.\nThe value of $b$ is _________ . (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "11",
+    "explanation": "<p>$$\\begin{aligned}\n&amp;\\begin{aligned}\n\\text { L.A.S. } &amp; =2^{32} \\text { bits } \\\\\n\\text { Page size } &amp; =4096 \\text { byte }\n\\end{aligned}\\\\\n&amp;\\text { Two level paging }\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7zt62gk/fe69df9b-94b8-4900-b627-9d94a7c38c95/6b7b1b40-fbe4-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zt62gl.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7zt62gk/fe69df9b-94b8-4900-b627-9d94a7c38c95/6b7b1b40-fbe4-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zt62gl.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Operating Systems - Memory Management Question 4 English Explanation\"></p>\n<p>Each table in the inner page table takes 8 bytes</p>\n<p>Number of entries in inner page table $=\\frac{4096}{8}=\\frac{2^{12}}{2^3}=2^9$</p>\n<p>Out page table index $=20-9=11$ bites.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In optimal page replacement algorithm, information about all future page references is available to the operating system (OS). A modification of the optimal page replacement algorithm is as follows:</p>\n<p>The OS correctly predicts only up to next 4 page references (including the current page) at the time of allocating a frame to a page.</p>\n<p>A process accesses the pages in the following order of page numbers:</p>\n<p>$$1,3,2,4,2,3,1,2,4,3,1,4$$</p>\n<p>If the system has three memory frames that are initially empty, the number of page faults that will occur during execution of the process is __________ (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p>$$\\begin{aligned}\n&amp;\\text { Optimal page replacement algorithm }\\\\\n&amp;\\text { Page numbers }=1,3,2,4,2,3,1,2,4,3,1,4\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7w7fq2o/5c023d8d-7ac3-43b2-bc96-39db651e50b5/15370c00-f9e9-11ef-86fa-270642c4dd10/file-jaoe38c1m7w7fq2p.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7w7fq2o/5c023d8d-7ac3-43b2-bc96-39db651e50b5/15370c00-f9e9-11ef-86fa-270642c4dd10/file-jaoe38c1m7w7fq2p.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Operating Systems - Memory Management Question 6 English Explanation\"></p>\n<p>Page fault = 6</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a 32-bit system with 4 KB page size and page table entries of size 4 bytes each. Assume 1 KB = $2^{10}$ bytes. The OS uses a 2-level page table for memory management, with the page table containing an outer page directory and an inner page table. The OS allocates a page for the outer page directory upon process creation. The OS uses demand paging when allocating memory for the inner page table, i.e., a page of the inner page table is allocated only if it contains at least one valid page table entry.</p> <p>An active process in this system accesses 2000 unique pages during its execution, and none of the pages are swapped out to disk. After it completes the page accesses, let $X$ denote the minimum and $Y$ denote the maximum number of pages across the two levels of the page table of the process.</p> <p>The value of $X+Y$ is __________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1028",
+    "explanation": "<p>To determine the value of $X+Y$, we need to first understand the structure and size of the 2-level page table system, as well as the allocation scheme described.</p>\n\n<p>Let's break down the given information:</p>\n\n<p>1. <strong>31-bit System</strong>: In a 32-bit address space, each address is 32 bits.\n\n<ol>\n<li><strong>Page Size</strong>: 4 KB (which is $2^{12}$ bytes).</li><br>\n<li><strong>Page Table Entry Size</strong>: 4 bytes.</li><br>\n<li><strong>Active Pages Accessed</strong>: 2000 unique pages.</p></li>\n</ol>\n<p>First, we calculate the number of bits used for the page offset:\n\n<p>$$\\text{{Page size}} = 4 \\text{{ KB}} = 2^{12}$$</p>\n\n<p>Therefore, the number of bits for the page offset is 12 bits.</p></p>\n\n<p>The remaining bits in a 32-bit address will be used for the page table indices:\n\n<p>$$32 \\text{{ bits}} - 12 \\text{{ bits}} = 20 \\text{{ bits}}$$</p></p>\n\n<p>These 20 bits are split between the outer page directory and the inner page table.</p>\n\n<p>Assuming the outer page directory and inner page table are balanced, each will use 10 bits for indexing:\n\n<ol>\n<li><strong>Outer Page Directory (1st level)</strong>: 10 bits</li><br>\n<li><strong>Inner Page Table (2nd level)</strong>: 10 bits</p></li>\n</ol>\n<p>Each page table entry is 4 bytes (32 bits). Since each page is 4 KB:\n\n<p>$$ 4 \\text{{ KB}} = 2^{12} \\text{{ bytes}} $$</p>\n\n<p>$$ \\text{{Number of entries}} = \\frac{2^{12} \\text{{ bytes}}}{4 \\text{{ bytes}}} = 2^{10} \\text{{ entries}} = 1024 \\text{{ entries}} $$</p></p>\n\n<p>Now, let's determine the outer and inner page tables needed for 2000 pages:</p>\n\n<p>1. <strong>Total Page Directory Items</strong>: The outer page directory can index $2^{10} = 1024$ inner page tables.\n\n<ol>\n<li><strong>Inner Page Tables Required</strong>:</li>\n</ol>\n<p>Since each inner page table can hold $2^{10} = 1024$ entries, and we need space for 2000 unique pages:</p>\n\n<p>$$ 2000 \\text{{ pages}} / 1024 \\text{{ entries per page}} = 1.953 \\approx 2 \\text{{ inner page tables}} $$</p></p>\n\n<p><strong>Minimum Number of Pages ($X$)</strong>:</p>\n\n<p>Initially, only the outer page directory is allocated. Additional pages for inner page tables are allocated only when at least one valid page table entry is present:\n\n<p>$$X = 1 (\\text{{outer page directory}}) + 2 (\\text{{inner page tables}}) = 3$$</p></p>\n\n<p><strong>Maximum Number of Pages ($Y$)</strong>:</p>\n\n<p>Assuming each page can span only one inner page table item (worst case scenario), all entries in the outer page directory will be used:\n\n<p>$$Y = 1 (\\text{{outer page directory}}) + 1024 (\\text{{inner page tables}}) = 1025$$</p></p>\n\n<p>Therefore,\n\n<p>$$X + Y = 3 + 1025 = 1028$$</p></p>\n\n<p>Thus, the value of $X+Y$ is <b>1028</b>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a memory management system that uses a page size of 2 KB. Assume that both the physical and virtual addresses start from 0. Assume that the pages 0, 1, 2, and 3 are stored in the page frames 1, 3, 2, and 0, respectively. The physical address (in decimal format) corresponding to the virtual address 2500 (in decimal format) is ________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "6596",
+    "explanation": "<p>To determine the physical address corresponding to the given virtual address, we need to perform the following steps:</p>\n\n<p>1. <strong>Determine the page number and offset for the virtual address:</strong>\n\n<p>Since the page size is 2 KB, each page can address 2048 bytes. The virtual address can be divided into two parts:</p>\n\n<ul>\n<li>Page number: Virtual address divided by page size.</li><br>\n<li>Offset: Remainder when the virtual address is divided by page size.</p></li>\n</ul>\n<p>Given virtual address (VA) is 2500.</p>\n\n<p>Page number: $$2500 \\div 2048 = 1$$ (integer division)</p>\n\n<p>Offset: $$2500 \\mod 2048 = 452$$</p>\n\n<p>So, the virtual address 2500 corresponds to page number 1 with an offset of 452.</p>\n\n<p>2. <strong>Determine the corresponding page frame:</strong>\n\n<p>According to the given mapping:</p>\n\n<ul>\n<li>Page 0 is in frame 1</li><br>\n<li>Page 1 is in frame 3</li><br>\n<li>Page 2 is in frame 2</li><br>\n<li>Page 3 is in frame 0</p></li>\n</ul>\n<p>Since the page number is 1, it maps to the physical frame 3.</p>\n\n<p>3. <strong>Calculate the physical address:</strong>\n\n<p>The physical address is calculated by combining the page frame number and the offset.</p>\n\n<p>Physical address = (Page frame number * page size) + offset</p>\n\n<p>We have:\n\n<ul>\n<li>Page frame number = 3</li><br>\n<li>Page size = 2048 bytes</li><br>\n<li>Offset = 452 bytes</p></li>\n</ul>\n<p>So, the physical address is:\n\n<p>$$Physical\\ Address = (3 * 2048) + 452 = 6144 + 452 = 6596$$</p></p>\n\n<p>Therefore, the physical address corresponding to the virtual address 2500 is 6596.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the following two-dimensional array D in the C programming language, which is stored in row-major order:</p>\n<p>int D[128] [128];</p>\n<p>Demand paging is used for allocating memory and each physical page frame holds 512 elements of the array D. The Least Recently Used (LRU)( page-replacement policy is used by the operating system. A total of 30 physical page frames are allocated to a process which executes the following code snippet:</p>\n<p>for (int i = 0; i < 128; i++)</p>\n<p>$$\\quad$$ for (int j = 0; j < 128; j++)</p>\n<p>$$\\quad\\quad$$D[j] [i] *= 10;</p>\n<p>The number of page faults generated during the execution of this code snippet is _____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4096",
+    "explanation": "<p>Given array $\\mathrm{D}[128]$ [128] is stored in Row - major Order.</p>\n\n<p>Number of physical frames available $=30$</p>\n\n<p>Number of elements in 1 frame $=512$</p>\n\n<p>So, number of pages to accommodate all element of array $D=\\frac{123 \\times 128}{512}=32$.</p>\n\n<p>Since we need 32 frames and were given only 30 so, collision will occur.</p>\n\n<p>Also number of rows per frame $=\\frac{512}{128}=4$</p>\n\n<p>So, in 30 frames we can per store 120 rows</p>\n\n<p>Thus in $1^{\\text {st }}$ iteration, It' cause 32 page faults.</p>\n\n<p>For 128 iterations it' cause $128 \\times 32=4096$ faults.</p>\n\n<p>Hence, the correct answer is 4096 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a computer system with 57-bit virtual addressing using multi-level tree-structured page tables with L levels for virtual to physical address translation. The page size is 4 KB (1 KB = 1024 B) and a page table entry at any of the levels occupies 8 bytes.</p>\n<p>The value of L is ____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": "<p>To determine the value of L (the number of levels in the page table), we need to analyze how virtual addresses are broken down in a multi-level page table system. Here’s a step-by-step explanation:</p>\n\n<p>First, note the following given values:</p>\n\n<p>1. Virtual Address Space: 57 bits</p>\n\n<p>2. Page Size: 4 KB</p>\n\n<p>3. Page Table Entry Size: 8 bytes</p>\n\n<p>1. Calculate the number of bits needed for the offset:</p>\n\n<p>The page size is 4 KB, which means $$4 \\text{ KB} = 4 \\times 1024 \\text{ B} = 4096 \\text{ B}$$.</p>\n\n<p>To represent 4096 bytes, we need $$\\log_{2}(4096)$$ bits:</p>\n\n<p>$$\\log_{2}(4096) = \\log_{2}(2^{12}) = 12 \\text{ bits}$$.</p>\n\n<p>This means that 12 bits are used for the offset within the page.</p>\n\n<p>2. Calculate the number of bits used for the page table indices:</p>\n\n<p>Since the total virtual address is 57 bits and the offset uses 12 bits, the remaining bits are for the page table indices:</p>\n\n<p>$$57 \\text{ bits} - 12 \\text{ bits} = 45 \\text{ bits}$$.</p>\n\n<p>3. Determine how many entries a single page table can have:</p>\n\n<p>Each page table entry is 8 bytes, so a single page (4 KB) can have:</p>\n\n<p>$$\\frac{4 \\text{ KB}}{8 \\text{ bytes}} = \\frac{4096 \\text{ bytes}}{8 \\text{ bytes}} = 512 \\text{ entries}$$.</p>\n\n<p>To index 512 entries, we need $$\\log_{2}(512)$$ bits:</p>\n\n<p>$$\\log_{2}(512) = \\log_{2}(2^{9}) = 9 \\text{ bits}$$.</p>\n\n<p>4. Determine the number of levels (L):</p>\n\n<p>The 45 bits for the page table indices need to be divided among L levels, with each level index using 9 bits:</p>\n\n<p>$$\\frac{45 \\text{ bits}}{9 \\text{ bits per level}} = 5 \\text{ levels}$$.</p>\n\n<p>Thus, the value of L is:</p>\n\n<p>The value of L is <strong>5</strong>.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which one of the following statements is FALSE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The TLB performs an associative search in parallel on all its valid entries using page number of incoming virtual address."
+      },
+      {
+        "identifier": "B",
+        "content": "If the virtual address of a word given by CPU has a TLB hit, but the subsequent search for the word results in a cache miss, then the word will always be present in the main memory."
+      },
+      {
+        "identifier": "C",
+        "content": "The memory access time using a given inverted page table is always same for all incoming virtual addresses."
+      },
+      {
+        "identifier": "D",
+        "content": "In a system that uses hashed page tables, if two distinct virtual addresses V1 and V2 map to the same value while hashing, then the memory access time of these addresses will not be the same."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) TLB performs parallel search. Hence true.</p>\n<p>(b) If the TLB hit means, word will surely present in main memory. Hence true</p>\n<p>(c) Memory access time using inverted page table is always not same, because there is no indexing applied, we follows no equal linear search. Hence false</p>\n<p>(d) If two distinct virtual address map to same value while hashing, they will be resolved using linked list, so memory access time will not be same. Hence true</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a demand paging system with four page frames (initially empty) and LRU page replacement policy. For the following page reference string</p>\n<p>7, 2, 7, 3, 2, 5, 3, 4, 6, 7, 7, 1, 5, 6, 1</p>\n<p>the page fault rate, defined as the ratio of number of page faults to the number of memory accesses (rounded off to one decimal place) is _____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.6",
+    "explanation": "<p>In a demand paging system with four initially empty page frames using the Least Recently Used (LRU) page replacement policy, consider the following page reference string:</p>\n\n<p>7, 2, 7, 3, 2, 5, 3, 4, 6, 7, 7, 1, 5, 6, 1</p>\n\n<p>The page fault rate is defined as the ratio of the number of page faults to the total number of memory accesses. Let's determine the page fault rate for the given reference string.</p>\n\n<p>There are a total of 15 memory accesses. Out of these, there are 9 page faults.</p>\n\n<p>Therefore, the page fault rate is calculated as follows:</p>\n\n<p>$$\\text{Page Fault Rate} = \\frac{9}{15} = 0.6$$</p>\n\n<p>Hence, the page fault rate is 0.6.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider a three-level page table to translate a 39-bit virtual address to a physical address as shown below.</p>\n\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2bhajy0/34139a84-0667-40fb-b1d5-75f86728cfc7/1631b690-8b86-11ef-ba39-b5a5b3cabf23/file-jaoe38c1m2bhajy1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2bhajy0/34139a84-0667-40fb-b1d5-75f86728cfc7/1631b690-8b86-11ef-ba39-b5a5b3cabf23/file-jaoe38c1m2bhajy1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Operating Systems - Memory Management Question 16 English\"></p>\n\n<p>The page size is 4 KB (1 KB = 2<sup>10</sup> bytes) and page table entry size at every level is 8 bytes. A process P is currently using 2 GB (1 GB = 2<sup>30</sup> bytes) virtual memory which is mapped to 2 GB of physical memory. The minimum amount of memory required for the page table of P across all levels is _______ KB.</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "4108",
+    "explanation": "<p>Given :</p>\n<p>Virtual address $=39$ bits</p>\n<p>Page size $=4 \\mathrm{kB}$</p>\n<p>Physical address $=2 \\mathrm{~GB}$</p>\n<p>Page table entry size $=8 \\mathrm{~B}$</p>\n<p>$$ \\begin{array}{|c|c|c|c|} \\hline \\begin{array}{c} \\text { Level 1 } \\\\ \\text { offset } \\end{array} & \\begin{array}{c} \\text { Level 2 } \\\\ \\text { offset } \\end{array} & \\begin{array}{c} \\text { Level 3 } \\\\ \\text { offset } \\end{array} & \\begin{array}{c} \\text { Page } \\\\ \\text { Offset } \\end{array} \\\\ \\hline 9 \\text { bits } & 9 \\text { bits } & 9 \\text { bits } & 12 \\text { bits } \\\\ \\hline \\end{array} $$</p>\n<p>Three level pages table with address division $(9,9,9,12)$</p>\n<p>9 bits for a level means $2^9$ entries in one-page table of that level</p>\n<p>For process $P$</p>\n<p>Process size $=2 \\mathrm{~GB}$</p>\n<p>Number of pages of process</p>\n<p>$$ \\begin{aligned} & =\\frac{\\text { Process size }}{1 \\text { page size }}=\\frac{2 \\mathrm{~GB}}{4 \\mathrm{kB}} \\\\ & =2^{19} \\text { pages } \\end{aligned} $$</p>\n<p>At level 3 page table has only $2^9$ entries.</p>\n<p>So, one-page table of level 3 can point to $2^9$ pages of virtual memory only.</p>\n<p>So we need $2^{10}$ level-3 page tables of process P.</p>\n<p>So we need $2^{10}$ entries in level-2</p>\n<p>But level 2 page table has only $2^9$ entries</p>\n<p>So one page table of level 2 can only point to $2^9$ page tables of level-3, so we need 2 level-2 page tables.</p>\n<p>So, we need 1 level-1 page table to point to level-2 page tables</p>\n<p>So, number of 1-level PT = 1</p>\n<p>Number of 2-level PT = 2</p>\n<p>Number of 3-level PT $=2^{10}$</p>\n<p>Total $P T=\\left(1+2+2^{10}\\right)=1027$</p>\n<p>Note that all the page tables, at every level have same size which is $2^9 \\times 8 B=2^{12} B=4 \\mathrm{kB}$ So, total page tables size</p>\n<p>$$ =1027 \\times 4 \\mathrm{kB}=4108 \\mathrm{kB} $$</p>\n<p>Hence, the correct answer is 4108 .</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a paging system that uses a 1-level page table residing in main memory and a TLB for address translation. Each main memory access takes 100 ns and TLB lookup takes 20 ns. Each page transfer to/from the disk takes 5000 ns. Assume that the TLB hit ratio is 95%, page fault rate is 10%. Assume that for 20% of the total page faults, a dirty page has to be written back to disk before the required page is read in from disk. TLB update time is negligible. The average memory access time in ns (round off to 1 decimal places) is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "154.5",
+    "explanation": "<p>$$ \\begin{aligned} & \\text { Main memory access time }=100 \\mathrm{~ns} \\\\ & \\text { Translation look aside buffer }=20 \\mathrm{~ns} \\\\ & \\text { TLB hit ratio }=95 \\% \\\\ & \\text { Page fault ratio }=10 \\% \\\\ & \\text { EMAT }=0.95 \\times(20+100)+0.05 \\times(0.9) \\times \\\\ & (20+100+100)+0.1 \\times[0.2 \\times \\\\ & (20+100+5000+5000)+0.8 \\times \\\\ & (20+100+5000)+0.8 \\\\ & \\times(20+100+5000)=154.5 \\mathrm{~ns} \\end{aligned} $$</p>\n<p>Hence, the correct answer is 154.5 .</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Assume that in a certain computer, the virtual addresses are 64 bits long and the physical addresses are 48 bits long. The memory is word addressable. The page size is 8 kB and the word size is 4 bytes. The Translation Look-aside Buffer (TLB) in the address translation path has 128 valid entries. At most how many distinct virtual addresses can be translated without any TLB miss?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16 × 2<sup>10</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "8 × 2<sup>20</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "4 × 2<sup>20</sup>"
+      },
+      {
+        "identifier": "D",
+        "content": "256 × 2<sup>10</sup>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the maximum number of distinct virtual addresses that can be translated without any TLB miss, we'll follow these steps:</p>\n<h3><strong>Given Information:</strong></h3>\n\n<p><p><strong>Virtual Address Size:</strong> 64 bits</p></p>\n<p><p><strong>Physical Address Size:</strong> 48 bits</p></p>\n<p><p><strong>Memory:</strong> Word-addressable</p></p>\n<p><p><strong>Page Size:</strong> 8 kB</p></p>\n<p><p><strong>Word Size:</strong> 4 bytes</p></p>\n<p><p><strong>TLB Entries:</strong> 128 valid entries</p></p>\n\n<h3><strong>Understanding the TLB and Address Translation:</strong></h3>\n\n<p><p>The <strong>Translation Look-aside Buffer (TLB)</strong> is a cache that stores recent translations of virtual page numbers to physical frame numbers.</p></p>\n<p><p>Each TLB entry corresponds to a <strong>virtual page</strong>.</p></p>\n\n<h3><strong>Step 1: Calculate Page Size in Words</strong></h3>\n\n<p><p><strong>Page Size in Bytes:</strong> $ 8\\,\\text{kB} = 8 \\times 1024 = 8192\\,\\text{bytes} $</p></p>\n<p><p><strong>Word Size:</strong> $ 4\\,\\text{bytes} $</p></p>\n<p><p><strong>Page Size in Words:</strong></p>\n<p>$   \\text{Page Size (words)} = \\frac{8192\\,\\text{bytes}}{4\\,\\text{bytes/word}} = 2048\\,\\text{words}   $</p></p>\n\n<h3><strong>Step 2: Determine Offset Bits</strong></h3>\n\n<p><p><strong>Number of Offset Bits (within a page):</strong></p>\n<p>$   \\text{Offset Bits} = \\log_2(2048) = 11\\,\\text{bits}   $</p></p>\n<p><p><strong>Virtual Page Number Bits:</strong></p>\n<p>$   \\text{VPN Bits} = 64\\,\\text{bits (virtual address)} - 11\\,\\text{bits (offset)} = 53\\,\\text{bits}   $</p></p>\n\n<h3><strong>Step 3: Calculate Total Virtual Addresses Without TLB Miss</strong></h3>\n\n<p><p><strong>Each TLB Entry Can Cache One Virtual Page Number (VPN) and Its Mapping</strong></p></p>\n<p><p><strong>Total Virtual Pages Cached in TLB:</strong> $ 128 $ pages</p></p>\n<p><p><strong>Total Virtual Addresses Without TLB Miss:</strong></p>\n<p>$   \\text{Total Addresses} = \\text{Number of Pages} \\times \\text{Page Size (words)} = 128 \\times 2048 = 262,144\\,\\text{addresses}   $</p></p>\n\n<h3><strong>Step 4: Express Total Addresses in Terms of Powers of 2</strong></h3>\n\n<p><p><strong>Total Addresses in Powers of 2:</strong></p>\n<p>$   262,144 = 2^{18}   $</p></p>\n<p><p><strong>Expressed as $ 256 \\times 2^{10} $:</strong></p>\n<p>$   2^{18} = 2^{8} \\times 2^{10} = 256 \\times 1024   $</p></p>\n\n<h3><strong>Conclusion:</strong></h3>\n\n<p>The maximum number of distinct virtual addresses that can be translated without any TLB miss is $ 256 \\times 2^{10} $.</p>\n\n<hr />\n<p><strong>Answer:</strong> Option D</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a process executing on an operating system that uses demand paging. The average time for a memory access in the system is $$M$$ units if the corresponding memory page is available in memory, and $$D$$ units if the memory access causes a page fault. It has been experimentally measured that the average time taken for a memory access in the process is $$X$$ units.\n<p>Which one of the following is the correct expression for the page fault rate experienced by the process?</p>\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {D - M} \\right)/\\left( {X - M} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {X - M} \\right)/\\left( {D - M} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {D - X} \\right)/\\left( {D - M} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {X - M} \\right)/\\left( {D - X} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a computer system with $$40$$-bit virtual addressing and page size of sixteen kilobytes. If the computer system has a one-level page table per process and each page table entry requires $$48$$ bits, then the size of the per-process page table ____________ is megabytes.",
+    "options": [],
+    "correct_options": [],
+    "answer": "384",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a computer system with ten physical page frames. The system is provided with an access sequence $$\\left( {{a_1},{a_2},....,{a_{20}},{a_1},{a_2},...,{a_{20}}} \\right),$$ where each $${{a_i}}$$ is a distinct virtual page number. The difference in the number of page faults between the last-in-first-out page replacement policy and the optimal page replacement policy is _____________",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider six memory partitions of sizes $$200$$ $$KB,$$ $$400$$ $$KB,$$ $$600$$ $$KB,$$ $$500$$ $$KB,$$ $$300$$ $$KB$$ and $$250$$ $$KB,$$ where $$KB$$ refers to kilobyte. These partitions need to be allotted to four processes of sizes $$357$$ $$KB,$$ $$210$$ $$KB,$$ $$468$$ $$KB$$ and $$491$$ $$KB$$ in that order. If the best fit algorithm is used, which partitions are NOT allotted to any process?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$200$$ $$KB$$ and $$300$$ $$KB$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$200$$ $$KB$$ and $$250$$ $$KB$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$250$$ $$KB$$ and $$300$$ $$KB$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$300$$ $$KB$$ and $$400$$ $$KB$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A computer system implements $$8$$ kilobyte pages and a $$32$$-bit physical address space. Each page table entry contains a valid bit, a dirty bit, three permission bits, and the translation. If the maximum size of the page table of a process is $$24$$ megabytes, the length of the virtual address supported by the system is _______________ bits.  ",
+    "options": [],
+    "correct_options": [],
+    "answer": "36 ",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A computer has twenty physical page frames which contain pages numbered $$101$$ through $$120.$$ Now a program accesses the pages numbered $$1, 2, …, 100$$ in that order, and repeats the access sequence <b>THRICE</b>. Which one of the following page replacement policies experiences the same number of page faults as the optimal page replacement policy for this program? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Least-recently-used"
+      },
+      {
+        "identifier": "B",
+        "content": "First-In-First-Out"
+      },
+      {
+        "identifier": "C",
+        "content": "Least-in-first-out"
+      },
+      {
+        "identifier": "D",
+        "content": "None "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that there are $$3$$ page frames which are initially empty. If the page reference string is $$1, 2, 3, 4, 2, 1, 5, 3, 2, 4, 6,$$ the number of page faults using the optimal replacement policy is______________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a paging hardware with a TLB. Assume that the entire page table and all the pages are in the physical memory. It takes 10 milliseconds to search the TLB and 80 milliseconds to access the physical memory. If the TLB hit ratio is 0.6, the effective memory access time (in milliseconds) is______________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "123",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the virtual page reference string \n$$$1,2,3,2,4,1,3,2,4,1$$$\n<br>On a demand paged virtual memory system running on a computer system that has main memory size of $$3$$ page frames which are initially empty. Let $$LRU,$$ $$FIFO$$ and $$OPTIMAL$$ denote the number of page faults under the corresponding page replacement policy. Then  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$OPTIMAL &lt; LRU &lt; FIFO$$   "
+      },
+      {
+        "identifier": "B",
+        "content": "$$OPTIMAL &lt; FIFO &lt; LRU$$  "
+      },
+      {
+        "identifier": "C",
+        "content": "$$OPTIMAL = LRU$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$OPTIMAL = FIFO$$  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the virtual page reference string \n$$$1,2,3,2,4,1,3,2,4,1$$$\n<br>On a demand paged virtual memory system running on a computer system that has main memory size of $$3$$ page frames which are initially empty. Let $$LRU,$$ $$FIFO$$ and $$OPTIMAL$$ denote the number of page faults under the corresponding page replacement policy. Then ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$OPTIMAL &lt; LRU &lt; FIFO$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$OPTIMAL &lt; FIFO &lt; LRU$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$OPTIMAL = LRU$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$OPTIMAL = FIFO$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "A multilevel page table is preferred in comparison to a single level page table for translating virtual address to physical address because.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It reduces the memory access time to read or write a memory location."
+      },
+      {
+        "identifier": "B",
+        "content": "It helps to reduce the size of page table needed to implement the virtual address space of a process."
+      },
+      {
+        "identifier": "C",
+        "content": "It is required by the translation look aside buffer."
+      },
+      {
+        "identifier": "D",
+        "content": "It helps to reduce the number of page faults in page replacement algorithms.  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "A processor uses 36 bit physical addresses and 32 bit virtual addresses, with a page frame size of 4 Kbytes. Each page table entry is of size 4 bytes. A three level page table is used for virtual to physical address translation, where the virtual address is used as follows:\n<br>$$ * \\,\\,\\,\\,\\,\\,$$ Bits 30-31 are used to index into the first level page table\n<br>$$ * \\,\\,\\,\\,\\,\\,$$ Bits 21-29 are used to index into the second level page table\n<br>$$ * \\,\\,\\,\\,\\,\\,$$ Bits 12-20 are used to index into the third level page table, and\n<br>$$ * \\,\\,\\,\\,\\,\\,$$ Bits 0-11 are used as offset within the page\n<p>The number of bits required for addressing the next level page table (or page frame) in the page table entry of the first, second and third level page tables are respectively </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "20, 20 and 20"
+      },
+      {
+        "identifier": "B",
+        "content": "24, 24 and 24"
+      },
+      {
+        "identifier": "C",
+        "content": "24, 24, and 20"
+      },
+      {
+        "identifier": "D",
+        "content": "25, 25 and 24"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A process has been allocated $$3$$ page frames. Assume that none of the pages of the process are available in the memory initially. The process makes the following sequence of page references (reference string): \n$$$1, 2, 1, 3, 7, 4, 5, 6, 3, 1$$$\n<p>If optimal page replacement policy is used, how many page faults occur for the above reference string?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$7$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$9$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$10$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A process has been allocated $$3$$ page frames. Assume that none of the pages of the process are available in the memory initially. The process makes the following sequence of page references (reference string): \n$$$1, 2, 1, 3, 7, 4, 5, 6, 3, 1$$$\n<p>Least Recently Used (LRU) page replacement policy is a practical approximation to optimal page replacement. For the above reference string, how many more page faults occur with LRU than with the optimal page replacement policy?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$3$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A virtual memory system uses First In First Out (FIFO) page replacement policy and allocates a fixed number of frames to a process. Consider the following statements:\n<br>$$P:$$ Increasing the number of page frames allocated to a process sometimes increases the page fault rate.\n<br>$$Q:$$ Some programs do not exhibit locality of reference.\n<p>Which one of the following is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both P and Q are true, and Q is the reason for P "
+      },
+      {
+        "identifier": "B",
+        "content": "Both P and Q are true, but Q is not the reason for P. "
+      },
+      {
+        "identifier": "C",
+        "content": "P is false, but Q is true "
+      },
+      {
+        "identifier": "D",
+        "content": "Both P and Q are false. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A Computer system supports $$32$$-bit virtual addresses as well as $$32$$-bit physical addresses. Since the virtual address space is of the same size as the physical address space, the operating system designers decide to get rid of the virtual memory entirely. Which one of the following is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Efficient implementation of multi-user support is no longer possible."
+      },
+      {
+        "identifier": "B",
+        "content": "The processor cache organization can be made more efficient now."
+      },
+      {
+        "identifier": "C",
+        "content": "Hardware support for memory management is no longer needed."
+      },
+      {
+        "identifier": "D",
+        "content": "$$CPU$$ scheduling can be made more efficient now."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a System with a two-level paging scheme in which a regular memory access takes $$150$$ nanoseconds, and servicing a page fault takes $$8$$ milliseconds. An average instruction takes $$100$$ nanoseconds of $$CPU$$ time, and two memory accesses. The $$TLB$$ hit ratio is $$90$$% and the page fault rate is one in every $$10,000$$ instructions. What is the effective average instruction execution time?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$645$$ nanoseconds"
+      },
+      {
+        "identifier": "B",
+        "content": "$$1050$$ nanoseconds"
+      },
+      {
+        "identifier": "C",
+        "content": "$$1215$$ nanoseconds"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1230$$ nanoseconds"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A processor uses $$2$$-level page tables for virtual to physical address translation. Page tables for both levels are stored in the main memory. Virtual and physical addresses are both $$32$$ bits wide. The memory is byte addressable. For virtual to physical address translation, the $$10$$ most significant bits of the virtual address are used as index into the first level page table while the next $$10$$ bits are used as index into the second level page table. The $$12$$ least significant bits of the virtual address are used as offset within thepage. Assume that the page table entries in both levels of page tables are $$4$$ bytes wide. Further, the processor has a translation look-aside buffer (TLB), with a hit rate of $$96$$%. The TLB caches recently used virtual page numbers and the corresponding physical page numbers. The processor also has a physically addressed cache with a hit rate of $$90$$%. Main memory access time is $$10$$ ns, cache access time is $$1$$ ns, and TLB access time is also $$1$$ ns.\n<p>Suppose a process has only the following pages in its virtual address space: two contiguous code pages starting at virtual address $$0 \\times 00000000,$$ two contiguous data pages starting at virtual address $$0 \\times 00400000,$$ and a stack page starting at virtual address $$0 \\times FFFFF000.$$ The amount of memory required for storing the page tables of this process is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$8$$ KB "
+      },
+      {
+        "identifier": "B",
+        "content": "$$12$$ KB "
+      },
+      {
+        "identifier": "C",
+        "content": "$$16$$ KB "
+      },
+      {
+        "identifier": "D",
+        "content": "$$20$$ KB"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is NOT an advantage of using shared, dynamically linked libraries as opposed to using statically linked libraries?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Smaller sizes of executable files "
+      },
+      {
+        "identifier": "B",
+        "content": "Lesser overall page fault rate in the system\n "
+      },
+      {
+        "identifier": "C",
+        "content": "Faster program startup "
+      },
+      {
+        "identifier": "D",
+        "content": "Existing programs need not be re-linked to take advantage of newer versions of libraries."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "A processor uses $$2$$-level page tables for virtual to physical address translation. Page tables for both levels are stored in the main memory. Virtual and physical addresses are both $$32$$ bits wide. The memory is byte addressable. For virtual to physical address translation, the $$10$$ most significant bits of the virtual address are used as index into the first level page table while the next $$10$$ bits are used as index into the second level page table. The $$12$$ least significant bits of the virtual address are used as offset within thepage. Assume that the page table entries in both levels of page tables are $$4$$ bytes wide. Further, the processor has a translation look-aside buffer (TLB), with a hit rate of $$96$$%. The TLB caches recently used virtual page numbers and the corresponding physical page numbers. The processor also has a physically addressed cache with a hit rate of $$90$$%. Main memory access time is $$10$$ ns, cache access time is $$1$$ ns, and TLB access time is also $$1$$ ns.\n<p>Assuming that no page faults occur, the average time taken to access a virtual address is approximately (to the nearest $$0.5$$ ns)</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1.5$$ ns"
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ ns"
+      },
+      {
+        "identifier": "C",
+        "content": "$$3$$ ns "
+      },
+      {
+        "identifier": "D",
+        "content": "$$4$$ ns"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Dynamic linking can cause security concerns because",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Security is dynamic "
+      },
+      {
+        "identifier": "B",
+        "content": "The path for searching dynamic libraries is not known till runtime "
+      },
+      {
+        "identifier": "C",
+        "content": "Linking is insecure\n "
+      },
+      {
+        "identifier": "D",
+        "content": "Cryptographic procedures are not available for dynamic linking "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a machine with 64 MB physical memory and a 32-bit virtual address space. If the page size is 4KB, what is the approximate size of the page table? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16 M "
+      },
+      {
+        "identifier": "B",
+        "content": "8 MB "
+      },
+      {
+        "identifier": "C",
+        "content": "2 MB "
+      },
+      {
+        "identifier": "D",
+        "content": "24 MB"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose the time to service a page fault is on the average $$10$$ milliseconds, while a memory access takes $$1$$ microsecond. Then a $$99.99$$% hit ratio results in average memory access time of.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1.9999$$ milliseconds"
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ millisecond"
+      },
+      {
+        "identifier": "C",
+        "content": "$$9.999$$ microseconds"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.9999$$ microseconds"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is/are advantage of virtual memory?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Faster access to memory on an average. "
+      },
+      {
+        "identifier": "B",
+        "content": "Processes can be given protected address spaces. "
+      },
+      {
+        "identifier": "C",
+        "content": "Linker can assign addresses independent of where the program will be loaded in physical memory.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Programs larger than the physical memory size can be run. "
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The overlay tree for a program is as shown below:  \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/DLDmBd9MgZDU8ZK45/wxiqzK3bdEZJXSpy3JWmOkUtevvpe/S7ZFmJVcZxsChLhIJYzSM1/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1998 Operating Systems - Memory Management Question 59 English\"> \n<p>What will be the size of the partition (in physical memory) required to load (and run) this program?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$12$$ $$KB$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$14$$ $$KB$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$10$$ $$KB$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$8$$ $$KB$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "If an instruction takes $${\\rm I}$$ microseconds and a page fault takes an additional $$j$$ microseconds, the effective instruction time if on the average a page fault occurs every $$k$$ instruction is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$i + \\left( {j/k} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$i + j{}^ * k$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {i + j} \\right)/k$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {i + j} \\right){}^ * k$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A $$1000$$ Kbyte memory is managed using variable partitions but to compaction. It currently has two partitions of sizes $$200$$ Kbytes and $$260$$ Kbytes respectively. The smallest allocation request in Kbytes that could be denied is for ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$151$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$181$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$231$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$541$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "In a virtual memory system the address space specified by the address lines of the $$CPU$$ must be __________ than the physical memory size and _______ than the secondary storage size.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "smaller, smaller "
+      },
+      {
+        "identifier": "B",
+        "content": "smaller, larger"
+      },
+      {
+        "identifier": "C",
+        "content": "larger, smaller "
+      },
+      {
+        "identifier": "D",
+        "content": "larger, larger "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The capacity of a memory unit is defined by the number of words multiplied by the number of bits/word. How many separate address and data lines are needed for a memory of $$4K\\,\\, \\times \\,\\,16?$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10$$ address, $$16$$ data lines"
+      },
+      {
+        "identifier": "B",
+        "content": "$$11$$ address, $$8$$ data lines "
+      },
+      {
+        "identifier": "C",
+        "content": "$$12$$ address, $$16$$ data lines"
+      },
+      {
+        "identifier": "D",
+        "content": "$$12$$ address, $$12$$ data lines"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The address sequence generated by tracing a particular program executing in a pure demand paging system with $$100$$ records per page with $$1$$ free main memory frame is recorded as follows. What is the number of page faults?\n<p>$$0100, 0200, 0430, 0499, 0510, 0530, 0560, 0120, 0220, 0240, 0260, 0320, 0370 $$</p>\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$13$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$8$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$7$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$10$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "A memory page containing a heavily used variable that was initialized very early and is in constant use is removed when",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "LRU page replacement algorithm is used\n "
+      },
+      {
+        "identifier": "B",
+        "content": "FIFO page replacement algorithm is used "
+      },
+      {
+        "identifier": "C",
+        "content": "LFU page replacement algorithm is used "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following heap (Figure) in which blank regions are not in use and hatched region are in use.  \n<p>The sequence of requests for blocks of size $$300, 25, 125, 50$$ can be satisfied if we use.</p> \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/iLauyehmYo7vcRnLi/p1z1y8M4frPAAjggG4dhOutBjtEnr/YjNkzgKpOffDEwC2AoBsKe/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1994 Operating Systems - Memory Management Question 30 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Either first fit or best fit policy (any one)"
+      },
+      {
+        "identifier": "B",
+        "content": "First fit but not best fit policy"
+      },
+      {
+        "identifier": "C",
+        "content": "Best fit but first fit policy"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "A part of the system software, which under all circumstances must reside in the main memory is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "text editor "
+      },
+      {
+        "identifier": "B",
+        "content": "assembler "
+      },
+      {
+        "identifier": "C",
+        "content": "linker "
+      },
+      {
+        "identifier": "D",
+        "content": "loader "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  },
+  {
+    "content": "A simple two-pass assembler does the following in the first pass:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It allocates space for the literals. "
+      },
+      {
+        "identifier": "B",
+        "content": "It computes the total length of the program\n "
+      },
+      {
+        "identifier": "C",
+        "content": "It builds the symbol table for the symbols and their values.\n "
+      },
+      {
+        "identifier": "D",
+        "content": "It generates code for all the load and store register instructions."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  },
+  {
+    "content": "A ''link editor'' is a program that:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Matches the parameters of the macro definition with locations of the parameters of the macro call. "
+      },
+      {
+        "identifier": "B",
+        "content": "Matches external names of one program with their location in other programs."
+      },
+      {
+        "identifier": "C",
+        "content": "Matches the parameters of subroutine definition with the location of parameters of subroutine call. "
+      },
+      {
+        "identifier": "D",
+        "content": "Acts as a link between compiler and user program. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "Match the pairs in the following question by writing the corresponding letters only.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/Z3LlFyBUWPopSD5Z7/BAD8dOM0b0Vlo42a7TkVUccVC38BQ/fXDoXsNTOqmGhsrrMxEpq8/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1991 Operating Systems - Memory Management Question 72 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$A - R,\\,\\,B - P,\\,\\,C - S,\\,\\,D - Q$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "State whether the following statement TRUE or FALSE.\n<p>The use of monitors ensures that no dead -locks will be caused.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "State whether the following statement TRUE or FALSE.\n<p>The best-fit techniques for memory allocation ensures the memory will never be fragmented.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "State whether the following statement TRUE or FALSE.\n<p>Any implementation of a critical section requires the use of an indivisible machine instruction such as test-and-set.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "State whether the following statement TRUE or FALSE.\n<p>The $$LRU$$ page-replacement policy may cause thrashing for some type of programs.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "The total size of address space in a virtual memory systems is limited by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The length of MAR"
+      },
+      {
+        "identifier": "B",
+        "content": "The available secondary storage "
+      },
+      {
+        "identifier": "C",
+        "content": "The available main memory "
+      },
+      {
+        "identifier": "D",
+        "content": "ALL of the above"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "State whether the following statement TRUE or FALSE.\n<p>The amount of virtual memory available is limited by the availability of secondary storage.</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "State whether the following statements are TRUE or FALSE with reason. Transferring data in blocks from the main memory to the cache memory enables an interleaved main memory unit to operate unit at its maximum speed.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Match the pairs in the following Question.\n<br>$$\\eqalign{\n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,List:\\,{\\rm I}  \\cr \n  &amp; \\left( A \\right)\\,\\,Criotical\\,\\,region  \\cr \n  &amp; \\left( B \\right)\\,\\,Wait/Signal  \\cr \n  &amp; \\left( C \\right)\\,\\,Working\\,\\,set  \\cr \n  &amp; \\left( D \\right)\\,\\,Deadlock  \\cr \n  &amp;   \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,List:\\,{\\rm I}{\\rm I}  \\cr \n  &amp; \\left( p \\right)\\,\\,Hoare's\\,\\,monitor  \\cr \n  &amp; \\left( q \\right)\\,\\,Mutual\\,\\,exclusion  \\cr \n  &amp; \\left( r \\right)\\,\\,\\Pr inciple\\,\\,of\\,\\,locality  \\cr \n  &amp; \\left( s \\right)\\,\\,Circular\\,\\,Wait \\cr} $$",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$A - q,\\,\\,B - p,\\,\\,C - r,\\,\\,D - s$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Under paged memory management scheme simple lock and key memory protection arrangement may still be required if the  $$........$$ processors do not have address mapping hardware.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Input-output",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "In a two -level virtual memory, the memory access time for main memory, $${t_M} = {10^{ - 8}}\\sec $$ and the memory access time for the secondary memory, tag  $$ = {10^{ - 3}}.$$ What must be the hit ratio, $$H$$ such that the access efficiency is within $$80$$ percent of its maximum value?",
+    "options": [],
+    "correct_options": [],
+    "answer": "Hit ratio must be less than or equal to $$80$$% ",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "State whether the following statements are TRUE or FALSE with reason.\n<br>The Link-load -and-go loading scheme required less storange space than the Link-and-go loading scheme.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Match the pairs in the following question.\n<p><b>List - $${\\rm I}$$</b>\n<br>$$(A)$$$$\\,\\,\\,\\,$$ Virtual Memory\n<br>$$(B)$$$$\\,\\,\\,\\,$$ Shared memory\n<br>$$(C)$$$$\\,\\,\\,\\,$$ Look-ahead buffer\n<br>$$(D)$$$$\\,\\,\\,\\,$$ Look-aside buffer</p>\n<p><b>List - $${\\rm II}$$</b>\n<br>$$(p)$$$$\\,\\,\\,\\,$$ Temporal locality\n<br>$$(q)$$$$\\,\\,\\,\\,$$ Spatial Locality\n<br>$$(r)$$$$\\,\\,\\,\\,$$ Address Translation\n<br>$$(s)$$$$\\,\\,\\,\\,$$ Mutual exclusion</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$A = q,\\,\\,B - s,\\,\\,C - p,\\,\\,D - r$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-cse-1989",
+    "difficulty": null
+  },
+  {
+    "content": "A computer system uses $$32$$-bit virtual address, and $$32$$-bit physical address. The physical memory is byte addressable, and the page size is $$4$$ kbytes. It is decided to use two level page tables to translate from virtual address to physical address. Equal number of bits should be used for indexing first level and second level page table, and the size of each page table entry is $$4$$ bytes.\n<p>(a) Give a diagram showing how a virtual address would be translated to a physical address.</p>\n<p>(b) What is the number of page table entries that can be contained in each page?</p>\n<p>(c) How many bits are available for storing protection and other information in each page table entry?</p>\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "(b) No of entries in each page $$ = {2^{10}}$$\n<br>(c) $$12\\,\\,$$ bits.",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "A certain computer system has the segmented paging architecture for virtual memory. The memory is byte addressable. Both virtual and physical address spaces contain $${2^{16}}$$ bytes each. The virtual address space is divided into $$8$$ non-overlapping equal size segments. The memory management unit $$(MMU)$$ has a hardware segment table, each entry of which contains the physical address of the page table for the segment. Page table are stored in the main memory and consists of $$2$$ byte page table entries.\n<p>(a)$$\\,\\,\\,\\,\\,$$ What is the minimum page size in bytes so that the page table for a segment requires at most one page to store it? Assume that the page size can only be a power of $$2.$$</p>\n<p>(b)$$\\,\\,\\,\\,\\,$$ Now suppose that the pages size is $$512$$ bytes. It is proposed to provide a $$TLB$$ (Translation look-aside buffer) for speeding up address translation. The proposed $$TLB$$ will be capable of storing page table entries for $$16$$ recently referenced virtual pages, in a fast cache that will use the direct mapping scheme. What is the number of tag bits that will need to be associated with each cache entry</p>\n<p>(c)$$\\,\\,\\,\\,\\,$$ Assume that each page table entry contains (besides other information) $$1$$ valid bit, $$3$$ bits for page protection and $$1$$ dirty bit. How many bits are available in page table entry for storing the aging information for the page? Assume that the page size is $$512$$ bytes. </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) $$\\,\\,\\,\\,\\,$$ Page size $$=128$$ Bytes\n<br>(b)$$\\,\\,\\,\\,\\,$$ Tag Bits $$=3$$\n<br>(c) $$\\,\\,\\,\\,\\,$$ $$7$$ bits",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "In a computer system where the ‘best-fit’ algorithm is used for allocating ‘jobs’ to ‘memory partitions’, the following situation was encountered: \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/8mAEIf4xbnMowTPV4/Q2JrfNbWVNVGSz7ZgJAnhXF6QEHO4/ECXFv4i4LxNHoaKIRHZkzZ/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1998 Operating Systems - Memory Management Question 34 English\"> \n<p>When will the $$20$$ $$K$$ job complete?</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "After $$19$$ unit time $$20K$$ job will be completed ",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A demand paged virtual memory system uses $$16$$ bit virtual address, page size of $$256$$ bytes, and has $$1$$ Kbyte of main memory. $$LRU$$ page replacement is implemented using a list, whose current status (page numbers in decimal ) is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/jfjcIeCUBP1ldYWOg/NcPgbRyJ1Xpmbl8kA8aX4ylWqsMbx/GraCs9c4fvxBIb3ovijmT9/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1996 Operating Systems - Memory Management Question 35 English\"> \n<br>$$\\eqalign{\n  &amp; \\,\\, \\uparrow   \\cr \n  &amp; LRU\\,Page \\cr} $$\n<br>For each hexa decimal address in the address sequence given below, \n<br>$$00FF,$$ $$010D,$$ $$10FF,$$ $$11B0$$\n<br>Indicate,\n<br>i) The new status of the list\n<br>ii) Page faults, if any, and \n<br>iii) Page replacements, if any",
+    "options": [],
+    "correct_options": [],
+    "answer": "(ii) Page fault $$=3$$ \n<br>(iii) Page replacement $$=2$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A computer installation has 1000K of main memory. The jobs arrive and finish in the following sequence.\n<br>Job 1 requiring 200k arrives\n<br>Job 2 requiring 350k arrives\n<br>Job 3 requiring 300k arrives\n<br>Job 1 finishes\n<br>Job 4 requiring 120k arrives\n<br>Job 5 requiring 150k arrives\n<br>Job 6 requiring 80k arrives\n<p>(a) Draw the memory allocation table using Best Fit and First fit algorithm.\n<br>(b) Which algorithm performs better for this sequence?</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The following page addresses, in the given sequence, were generated by a program: \n<br><b>1 2 3 4 1 3 5 2 1 5 4 3 2 3</b>\n<p>This program is run on a demand paged virtual memory system, with main memory size equal to $$4$$ pages. Indicate the page references for which page faults occurs for the following page replacement algorithms.\n<br>(a) $$LRU$$\n<br>(b) $$FIFO$$</p>\n<p>Assume that the main memory is empty initially.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) $$9$$ page fault\n<br>(b) $$7$$ page fault.",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  },
+  {
+    "content": "Let the page reference and the working set window be <b>c c d b c e c e a d</b> and <b>4,</b> respectively. The initial working set at time $$t = 0$$ contains the pages <b>{a, d, e},</b> where a was referenced at time $$t = 0, d$$ was referenced at time $$t = -1,$$ and $$e$$ was referenced at time $$t = -2.$$ Determine the total number of page faults and the average number of page frames used by computing the working set at each reference. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "No of page fault $$=4$$ \n<br>Average page frames used $$=4.$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  }
+]

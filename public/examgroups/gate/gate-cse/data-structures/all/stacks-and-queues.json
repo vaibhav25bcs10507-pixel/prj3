@@ -1,0 +1,792 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the operator precedence and associativity rules for the <i>integer</i> arithmetic operators given in the table below.</p>\n\n<style>table { width: 100%; border-collapse: collapse; margin: 20px 0; } th { background-color: blue; color: white; border: 1px solid lightgrey; padding: 10px; } td { border: 1px solid lightgrey; padding: 10px; text-align: left; }</style><table><thead><tr><th>Operator</th><th>Precedence</th><th>Associativity</th></tr></thead><tbody><tr><td>+</td><td>Highest</td><td>Left</td></tr><tr><td>−</td><td>High</td><td>Right</td></tr><tr><td>*</td><td>Medium</td><td>Right</td></tr><tr><td>/</td><td>Low</td><td>Right</td></tr></tbody></table>\n\n<p>The value of the expression $3 + 1 + 5 * 2 / 7 + 2 − 4 − 7 − 6 / 2$ as per the above rules is _______</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p>First, solve the addition (<code>+</code>) operations using left associativity :</p>\n<p>$$ \\begin{aligned} & ((3 + 1) + 5) \\times 2 / 7 + 2 - 4 - 7 - 6 / 2 \\\\\\\\ & 9 \\times 2 / 7 + 2 - 4 - 7 - 6 / 2 \\end{aligned} $$</p>\n<p>Next, solve the subtraction (<code>-</code>) operations using right associativity :</p>\n<p>$$ \\begin{aligned} & 9 \\times 2 / (7 + 2 - (4 - (7 - 6))) / 2 \\\\\\\\ & (9 \\times 2) / 6 / 2 \\\\\\\\ & (18 / (6 / 2)) \\quad \\text{(Right associativity)} \\\\\\\\ & (18 / 3) = 6  \\end{aligned} $$</p>\n<p>Hence, the correct answer is 6.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following sequence of operations on an empty stack.</p>\n\n<p>push(54); push(52); pop(); push(55); push(62); s = pop();</p>\n\n<p>Consider the following sequence of operations on an empty queue.</p>\n\n<p>enqueue(21); enqueue(24); dequeue(); enqueue(28); enqueue(32); q = dequeue();</p>\n\n<p>The value of s + q is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "86",
+    "explanation": "<p>To find the value of $ s + q $, we need to perform the given stack and queue operations step by step and record the values of $ s $ and $ q $.</p>\n<h3><strong>Stack Operations:</strong></h3>\n\n<p><strong>push(54):</strong></p>\n\n\n<p>Stack: [54]</p>\n\n\n<p><strong>push(52):</strong></p>\n\n\n<p>Stack: [54, 52] (Top is 52)</p>\n\n\n<p><strong>pop():</strong></p>\n\n\n<p><p>Pops 52.</p></p>\n<p><p>Stack: [54]</p></p>\n\n\n<p><strong>push(55):</strong></p>\n\n\n<p>Stack: [54, 55] (Top is 55)</p>\n\n\n<p><strong>push(62):</strong></p>\n\n\n<p>Stack: [54, 55, 62] (Top is 62)</p>\n\n\n<p><strong>$ s = $ pop():</strong></p>\n\n\n<p><p>Pops 62 and assigns to $ s $.</p></p>\n<p><p>Stack: [54, 55]</p></p>\n<p><p><strong>Value of $ s $:</strong> 62</p></p>\n\n<h3><strong>Queue Operations:</strong></h3>\n\n<p><strong>enqueue(21):</strong></p>\n\n\n<p>Queue: [21]</p>\n\n\n<p><strong>enqueue(24):</strong></p>\n\n\n<p>Queue: [21, 24]</p>\n\n\n<p><strong>dequeue():</strong></p>\n\n\n<p><p>Dequeues 21.</p></p>\n<p><p>Queue: [24]</p></p>\n\n\n<p><strong>enqueue(28):</strong></p>\n\n\n<p>Queue: [24, 28]</p>\n\n\n<p><strong>enqueue(32):</strong></p>\n\n\n<p>Queue: [24, 28, 32]</p>\n\n\n<p><strong>$ q = $ dequeue():</strong></p>\n\n\n<p><p>Dequeues 24 and assigns to $ q $.</p></p>\n<p><p>Queue: [28, 32]</p></p>\n<p><p><strong>Value of $ q $:</strong> 24</p></p>\n\n<h3><strong>Compute $ s + q $:</strong></h3>\n\n<p><p>$ s = 62 $</p></p>\n<p><p>$ q = 24 $</p></p>\n<p><p>$ s + q = 62 + 24 = 86 $</p></p>\n\n<hr />\n<p><strong>Answer:</strong> 86</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A queue is implemented using an array such that ENQUEUE and DEQUEUE operations are performed efficiently. Which one of the following statements is <b>CORRECT</b> ($$n$$ refers to the number of items in the queue)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both operations can be performed in $$O\\left( 1 \\right)$$ time "
+      },
+      {
+        "identifier": "B",
+        "content": "At most one operation can be performed in $$O\\left( 1 \\right)$$ time but the worst case time for the other operation will be $$\\Omega \\left( n \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "The worst case time complexity for both operations will be $$\\Omega \\left( n \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Worst case time complexity for both operations will be $$\\Omega \\left( {\\log n} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The result evaluating the postfix expression $$10\\,\\,5\\, + 60$$ $$\\,\\,6/\\, * \\,8\\, - $$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$284$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$213$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$142$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$71$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A function f defined on stacks of integers satisfies the following properties. \nf(∅) = 0 and f (push (S, i)) = max (f(S), 0) + i for all stacks S and integers i. \nIf a stack S contains the integers 2, -3, 2, -1, 2 in order from bottom to top, what is f(S)? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The best data structure to check whether an arithmetic expression has balanced parentheses is a ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "queue"
+      },
+      {
+        "identifier": "B",
+        "content": "stack "
+      },
+      {
+        "identifier": "C",
+        "content": "tree"
+      },
+      {
+        "identifier": "D",
+        "content": "list"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is essential for converting an infix expression to the postfix form efficiently? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "An operator stack "
+      },
+      {
+        "identifier": "B",
+        "content": "An operand stack"
+      },
+      {
+        "identifier": "C",
+        "content": "An operand stack and an operator stack"
+      },
+      {
+        "identifier": "D",
+        "content": "A parse tree"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements: <br>\n(i) First-in-first out types of computations are efficiently supported by STACKS. <br>\n(ii) Implementing LISTS on linked lists is more efficient than implementing LISTS on an array for almost all the basic LIST operations. <br>\n(iii) Implementing QUEUES on a circular array is more efficient than implementing QUEUES on a linear array with two indices. <br>\n(iv) Last-in-first-out type of computations are efficiently supported by QUEUES. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(ii) and (iii) are true "
+      },
+      {
+        "identifier": "B",
+        "content": "(i) and (ii) are true"
+      },
+      {
+        "identifier": "C",
+        "content": "(iii) and (iv) are true "
+      },
+      {
+        "identifier": "D",
+        "content": "(ii) and (iv) are true"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a stack $S$ and a queue $Q$. Both of them are initially empty and have the capacity to store ten elements each. The elements $1,2,3,4$, and 5 arrive one by one, in that order. When an element arrives, it is assigned either to $S$ (pushed on $S$ ) or to $Q$ (enqueued to $Q)$. Once all the five elements are stored, the output is generated in two steps. First, stack $S$ is emptied by popping all elements. Then queue $Q$ is emptied by dequeueing all elements. The output obtained by following this process is 43125 .</p>\n<p>Given the output, the objective is to predict whether an element was assigned to $S$ or $Q$. Which of the following options is/are possible valid assignment(s) of the elements?</p>\n<p>Note: In the options, the notation $x S$ denotes that element $x$ was assigned to $S$ and $y Q$ denotes that element $y$ was assigned to $Q$.</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$1 S, 2 Q, 3 S, 4 S, 5 Q$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$1 Q, 2 Q, 3 S, 4 S, 5 Q$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$1 Q, 2 Q, 3 Q, 4 S, 5 S$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$1 S, 2 S, 3 S, 4 Q, 5 Q$</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &amp;\\text { Option (a) }\\\\ &amp;1 S, 2 Q, 3 S, 4 S, 5 Q \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyvm4a0/5c336206-725c-4413-ad52-3bcb801a2557/721fba80-2458-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvm4a1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyvm4a0/5c336206-725c-4413-ad52-3bcb801a2557/721fba80-2458-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvm4a1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Data Structures - Stacks and Queues Question 1 English Explanation 1\"></p>\n<p>POP the all elements from stack $S=4,3,1$</p>\n<p>Dequeue the all element from queue $Q=2,5$</p>\n<p>So, option (a) is correct.</p>\n<p>Option (b)</p>\n<p>$1 Q, 2 Q, 3 S, 4 S, 5 Q$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyvm52a/a3992267-1619-4b1f-9d01-1a7e21881408/72bb1020-2458-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvm52b.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyvm52a/a3992267-1619-4b1f-9d01-1a7e21881408/72bb1020-2458-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvm52b.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Data Structures - Stacks and Queues Question 1 English Explanation 2\"></p>\n<p>POP the all elements from stack $S=4,3$</p>\n<p>Dequeue the all element from queue $Q=1,2,5$</p>\n<p>Output $=4,3,1,2,5$</p>\n<p>So, option (b) is valid.</p>\n<p>$$ \\begin{aligned} &amp;\\text { Option (c) }\\\\ &amp;1 Q, 2 Q, 3 Q, 4 S, 5 S \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyvm5v2/a927ea20-9c94-42c3-9180-889347e49a70/735924e0-2458-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvm5v3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyvm5v2/a927ea20-9c94-42c3-9180-889347e49a70/735924e0-2458-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvm5v3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Data Structures - Stacks and Queues Question 1 English Explanation 3\"></p>\n<p>POP the all elements from stack $S=5,4$</p>\n<p>Dequeue the all element from queue $Q=1,2,3$</p>\n<p>Output $=5,4,1,2,3$</p>\n<p>Output sequence does not matched.</p>\n<p>So, option (c) is invalid.</p>\n<p>Option (d)</p>\n<p>$$ 1 S, 2 S, 3 S, 4 Q, 5 Q $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyvm6hn/84a07648-f4df-4951-ac1f-2d59dd09f3f4/73d532b0-2458-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvm6ho.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyvm6hn/84a07648-f4df-4951-ac1f-2d59dd09f3f4/73d532b0-2458-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyvm6ho.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Data Structures - Stacks and Queues Question 1 English Explanation 4\"></p>\n<p>POP the all elements from stack $S=3,2,1$</p>\n<p>Dequeue the all element from queue $Q=4,5$</p>\n<p>Output order $=3,2,1,4,5$,</p>\n<p>Output order does not matched.</p>\n<p>Option (d) is invalid.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a stack data structure into which we can PUSH and POP records. Assume that each record pushed in the stack has a positive integer key and that all keys are distinct. We wish to augment the stack data structure with an $\\mathrm{O}(1)$ time MIN operation that returns a pointer to the record with smallest key present in the stack</p>\n<p>1. without deleting the corresponding record, and</p>\n<p>2. without increasing the complexities of the standard stack operations.</p>\n<p>Which one or more of the following approach(es) can achieve it?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Keep with every record in the stack, a pointer to the record with the smallest key below it.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Keep a pointer to the record with the smallest key in the stack.\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Keep an auxiliary array in which the key values of the records in the stack are maintained in sorted order.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Keep a Min-Heap in which the key values of the records in the stack are maintained."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze each option to see if it meets the requirements:</p>\n\n<p><p>We need the MIN operation to run in $$\\mathrm{O}(1)$$ time.</p></p>\n<p><p>The standard stack operations (PUSH and POP) must remain with their usual time complexities (constant time).</p></p>\n<p><p>The MIN operation should return a pointer to the record with the smallest key without deleting it.</p></p>\n\n<p>Below is a breakdown of each approach:</p>\n<p>• Option A – “Keep with every record in the stack, a pointer to the record with the smallest key below it.”</p>\n<p>  - How it works: When pushing a new record, you compare its key with the current minimum (available from the top record’s pointer). You then store a pointer to the new minimum in the new record.</p>\n<p>  - PUSH can be done in $$\\mathrm{O}(1)$$ time because it involves just one comparison and pointer update.</p>\n<p>  - POP is still $$\\mathrm{O}(1)$$ because you just remove the top record.</p>\n<p>  - The MIN operation becomes trivial, as you just return the pointer stored with the top record.</p>\n<p>  - This approach meets all requirements.</p>\n<p>• Option B – “Keep a pointer to the record with the smallest key in the stack.”</p>\n<p>  - How it works: You maintain a single pointer for the minimum.</p>\n<p>  - The problem: When the record pointed to as minimum is popped, you need to find the next smallest record. Finding the new minimum could involve scanning the entire stack, which is not $$\\mathrm{O}(1)$$.</p>\n<p>  - Therefore, this approach fails to guarantee constant time operations.</p>\n<p>• Option C – “Keep an auxiliary array in which the key values of the records in the stack are maintained in sorted order.”</p>\n<p>  - How it works: You keep an array sorted by keys.</p>\n<p>  - The problem: Inserting into or removing from a sorted array involves shifting elements, which takes $$\\mathrm{O}(n)$$ time in the worst case.</p>\n<p>  - Thus, it increases the complexity of standard stack operations, making it unsuitable.</p>\n<p>• Option D – “Keep a Min-Heap in which the key values of the records in the stack are maintained.”</p>\n<p>  - How it works: A Min-Heap allows retrieval of the smallest element in $$\\mathrm{O}(1)$$ time.</p>\n<p>  - The problem: Inserting into and deleting from a heap are $$\\mathrm{O}(\\log n)$$ operations, which increases the complexities of standard stack operations.</p>\n<p>  - So, this approach does not meet the required complexity constraints.</p>\n<p>Conclusion: Only Option A meets all the conditions, providing constant time operations for PUSH, POP, and MIN.</p>\n<p>Thus, the correct answer is Option A.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let <b>S1</b> and <b>S2</b> be two stacks. <b>S1</b> has capacity of 4 elements. <b>S2</b> has capacity of 2 elements. <b>S1</b> already has 4 elements: 100, 200, 300, and 400, whereas <b>S2</b> is empty, as shown below.</p>\n<style>table { width: 100%; border-collapse: collapse; margin: 20px 0; } th { background-color: blue; color: white; border: 1px solid lightgrey; padding: 10px; } td { border: 1px solid lightgrey; padding: 10px; text-align: left; }</style><table><thead><tr><th>Stack S1</th></tr></thead><tbody><tr><td>400 (Top)</td></tr><tr><td>300</td></tr><tr><td>200</td></tr><tr><td>100</td></tr></tbody></table><table><thead><tr><th>Stack S2</th></tr></thead><tbody><tr><td></td></tr></tbody></table><p>Only the following three operations are available:</p><p><b>PushToS2:</b> Pop the top element from <b>S1</b> and push it on <b>S2</b>.<br><b>PushToS1:</b> Pop the top element from <b>S2</b> and push it on <b>S1</b>.<br><b>GenerateOutput:</b> Pop the top element from <b>S1</b> and output it to the user.</p><p>Note that the pop operation is not allowed on an empty stack and the push operation is not allowed on a full stack.</p>\n<p>Which of the following output sequences can be generated by using the above operations?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>100, 200, 400, 300</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>200, 300, 400, 100</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>400, 200, 100, 300</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>300, 200, 400, 100</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<h4>Option B :</h4>\n<p>Sequence: <strong>200, 300, 400, 100</strong></p>\n\n<p>Pop 400 and 300 from <strong>S1</strong> and push them to <strong>S2</strong>.</p>\n\n<pre><code>   S1 = [200, 100], S2 = [300, 400]\n</code></pre>\n<ol start=\"2\">\n<p>Output 200 from <strong>S1</strong>.</p>\n<p>Pop 300 from <strong>S2</strong> and push it to <strong>S1</strong>.</p>\n<p>Output 300 from <strong>S1</strong>.</p>\n\n<pre><code>   S1 = [100], S2 = [400]\n</code></pre>\n<ol start=\"5\">\n<p>Pop 400 from <strong>S2</strong> and push it to <strong>S1</strong>.</p>\n<p>Output 400, then 100 from <strong>S1</strong>.</p>\n\n<pre><code>   Output: 200, 300, 400, 100\n</code></pre>\n<br/><h4>Option C:</h4>\n<br/><p>Sequence: <strong>400, 200, 100, 300</strong></p>\n\n<br/><p>Output 400 from <strong>S1</strong>.</p>\n<p>Pop 300 from <strong>S1</strong> and push it to <strong>S2</strong>.</p>\n\n<pre><code>   S1 = [200, 100], S2 = [300]\n</code></pre>\n<ol start=\"3\">\n<p>Output 200 and then 100 from <strong>S1</strong>.</p>\n<p>Pop 300 from <strong>S2</strong> and push it to <strong>S1</strong>.</p>\n<p>Output 300 from <strong>S1</strong>.</p>\n\n<pre><code>   Output: 400, 200, 100, 300\n</code></pre>\n<br/><h4>Option D:</h4>\n<br/><p>Sequence: <strong>300, 200, 400, 100</strong></p>\n\n<br/><p>Pop 400 from <strong>S1</strong> and push it to <strong>S2</strong>.</p>\n\n<pre><code>   S1 = [300, 200, 100], S2 = [400]\n</code></pre>\n<ol start=\"2\">\n<p>Output 300 and 200 from <strong>S1</strong>.</p>\n<p>Pop 400 from <strong>S2</strong> and push it to <strong>S1</strong>.</p>\n<p>Output 400 and then 100 from <strong>S1</strong>.</p>\n\n<pre><code>   Output: 300, 200, 400, 100\n</code></pre>\n<p>Hence, the correct options are <strong>B</strong>, <strong>C</strong>, and <strong>D</strong>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a sequence a of elements $$a_0=1,a_1=5,a_2=7,a_3=8,a_4=9$$, and $$a_5=2$$. The following operations are performed on a stack S and a queue Q, both of which are initially empty.</p>\n<p>I: push the elements of a from a$$_0$$ to a$$_5$$ in that order into S.</p>\n<p>II: enqueue the elements of a from a$$_0$$ to a$$_5$$ in that order into Q.</p>\n<p>III: pop an element from S.</p>\n<p>IV: dequeue an element from Q.</p>\n<p>V: pop an element from S.</p>\n<p>VI: dequeue an element from Q.</p>\n<p>VII: dequeue an element from Q and push the same <p>VIII: Repeat operation VII three times.</p>\n<p>IX: pop an element from S.</p>\n<p>X: pop an element from S.</p>\n<p>The top element of S after executing the above operations is ____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "8",
+    "explanation": "<p>To determine the top element of the stack $S$ after executing the given series of operations, we will follow each operation step-by-step.</p>\n\n<p><b>Initial Sequences:</b></p>\n\n<p>Sequence $a$: $a_0 = 1$, $a_1 = 5$, $a_2 = 7$, $a_3 = 8$, $a_4 = 9$, $a_5 = 2$</p>\n\n<p><b>Operations:</b></p>\n\n<p><b>I.</b> Push the elements of $a$ from $a_0$ to $a_5$ in that order into $S$.</p>\n\n<p>Stack $S$ (from bottom to top): 1, 5, 7, 8, 9, 2</p>\n\n<p><b>II.</b> Enqueue the elements of $a$ from $a_0$ to $a_5$ in that order into $Q$.</p>\n\n<p>Queue $Q$ (from front to back): 1, 5, 7, 8, 9, 2</p>\n\n<p><b>III.</b> Pop an element from $S$.</p>\n\n<p>Element popped: 2</p>\n\n<p>Stack $S$ (from bottom to top): 1, 5, 7, 8, 9</p>\n\n<p><b>IV.</b> Dequeue an element from $Q$.</p>\n\n<p>Element dequeued: 1</p>\n\n<p>Queue $Q$ (from front to back): 5, 7, 8, 9, 2</p>\n\n<p><b>V.</b> Pop an element from $S$.</p>\n\n<p>Element popped: 9</p>\n\n<p>Stack $S$ (from bottom to top): 1, 5, 7, 8</p>\n\n<p><b>VI.</b> Dequeue an element from $Q$.</p>\n\n<p>Element dequeued: 5</p>\n\n<p>Queue $Q$ (from front to back): 7, 8, 9, 2</p>\n\n<p><b>VII.</b> Dequeue an element from $Q$ and push the same element into $S$.</p>\n\n<p>Element dequeued and pushed: 7</p>\n\n<p>Queue $Q$ (from front to back): 8, 9, 2</p>\n\n<p>Stack $S$ (from bottom to top): 1, 5, 7, 8, 7</p>\n\n<p><b>VIII.</b> Repeat operation VII three times.</p>\n\n<p>First repetition:</p>\n\n<p>Element dequeued and pushed: 8</p>\n\n<p>Queue $Q$ (from front to back): 9, 2</p>\n\n<p>Stack $S$ (from bottom to top): 1, 5, 7, 8, 7, 8</p>\n\n<p>Second repetition:</p>\n\n<p>Element dequeued and pushed: 9</p>\n\n<p>Queue $Q$ (from front to back): 2</p>\n\n<p>Stack $S$ (from bottom to top): 1, 5, 7, 8, 7, 8, 9</p>\n\n<p>Third repetition:</p>\n\n<p>Element dequeued and pushed: 2</p>\n\n<p>Queue $Q$: (from front to back): [empty]</p>\n\n<p>Stack $S$ (from bottom to top): 1, 5, 7, 8, 7, 8, 9, 2</p>\n\n<p><b>IX.</b> Pop an element from $S$.</p>\n\n<p>Element popped: 2</p>\n\n<p>Stack $S$ (from bottom to top): 1, 5, 7, 8, 7, 8, 9</p>\n\n<p><b>X.</b> Pop an element from $S$.</p>\n\n<p>Element popped: 9</p>\n\n<p>Stack $S$ (from bottom to top): 1, 5, 7, 8, 7, 8</p>\n\n<p>Thus, the top element of $S$ after executing all the operations is <b>8</b>.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the queues Q<sub>1</sub> containing four elements and Q<sub>2</sub> containing none (shown as the Initial State in the figure). The only operations allowed on these two queues are Enqueue (Q, element) and Dequeue (Q). The minimum number of Enqueue operations on Q<sub>1</sub> required to place the elements of Q<sub>1</sub> in Q<sub>2</sub> in reverse order (shown as the Final State in the figure) without using any additional storage is ______________.</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l019jmnp/655ad301-6067-454f-b1cf-3e99b028f6e2/baa57a50-9597-11ec-af10-eb1ba6d3c508/file-1l019jmnq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l019jmnp/655ad301-6067-454f-b1cf-3e99b028f6e2/baa57a50-9597-11ec-af10-eb1ba6d3c508/file-1l019jmnq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": "<p>Given : Queues $Q_1$ containing four elements and $Q_2$ containing none as shown below in the figure.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4639v/470ecb73-346c-46c2-a341-351bfc67487e/fac04630-8ac5-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4639w.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4639v/470ecb73-346c-46c2-a341-351bfc67487e/fac04630-8ac5-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4639w.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 1\"></p>\n<p>We have to obtain the following situation as shown below in the figure.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a47kft/528c22c4-9d37-4478-9145-dba4f6c66947/23d1e290-8ac6-11ef-8af7-472220e51bb9/file-jaoe38c1m2a47kfu.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a47kft/528c22c4-9d37-4478-9145-dba4f6c66947/23d1e290-8ac6-11ef-8af7-472220e51bb9/file-jaoe38c1m2a47kfu.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 2\"></p>\n<p>As we know that;</p>\n<p>If queue is just having 2 elements then we can reverse a queue in place by just using simple enqueue and dequeue and if more than 2 elements we cannot reverse so, first divide 4 elements into 2-2 element each.</p>\n<p><b>Step 1 :</b> Enqueue 1 in $Q_2$, it is already sorted. Also Enqueue 2 in $Q_2$ i.e $1,2$.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a49ooo/3211e50e-ce51-46e4-9df2-94d1531f7fa3/5eb7db80-8ac6-11ef-8af7-472220e51bb9/file-jaoe38c1m2a49oop.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a49ooo/3211e50e-ce51-46e4-9df2-94d1531f7fa3/5eb7db80-8ac6-11ef-8af7-472220e51bb9/file-jaoe38c1m2a49oop.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 3\"></p>\n<p>Till now, No enqueue to $Q_1$.</p>\n<p>Now reverse $Q_2$. This doesn't cost any Enqueue to $Q_1$.</p>\n<p><b>Step 2 :</b> Perform 1 Dequeue and 1 Enqueue simultaneously for 1 time 2 in $Q_2$ i.e. 2,1 (head pointing at 2 now)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4bqto/0d7f3f3f-bd21-44dc-84f8-a45b895c619e/97fd1cc0-8ac6-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4bqtp.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4bqto/0d7f3f3f-bd21-44dc-84f8-a45b895c619e/97fd1cc0-8ac6-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4bqtp.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 4\"></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4d1ls/ef899aaa-58d5-4920-987a-e01a0dc286f7/bc203600-8ac6-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4d1lt.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4d1ls/ef899aaa-58d5-4920-987a-e01a0dc286f7/bc203600-8ac6-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4d1lt.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 5\"></p>\n<p><b>Step 3 :</b> Enqueue 3 in $Q_2$ i.e 2, 1, 3</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4f91u/eb088716-c12d-4831-9997-3e0877036dd7/f97ef720-8ac6-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4f91v.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4f91u/eb088716-c12d-4831-9997-3e0877036dd7/f97ef720-8ac6-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4f91v.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 6\"></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4gp32/4821febf-ac9d-4b37-82ba-6b64e437ccd6/21b0e1e0-8ac7-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4gp33.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4gp32/4821febf-ac9d-4b37-82ba-6b64e437ccd6/21b0e1e0-8ac7-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4gp33.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 7\"></p>\n<p><b>Step 4 :</b> Perform 1 Dequeue and 1 Enqueue simultaneously for 2 times in $Q_2$ i.e $2,1,3 \\rightarrow$ $1,3,2 \\rightarrow 3,2,1$ (head pointing at 3 now)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4iv5h/8ea390fd-f73c-4a35-a1f1-ab3a000a7b1f/5dfef650-8ac7-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4iv5i.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4iv5h/8ea390fd-f73c-4a35-a1f1-ab3a000a7b1f/5dfef650-8ac7-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4iv5i.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 8\"></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4k4mz/5ceb81e8-4088-4b4f-82a5-85df218e865b/812204b0-8ac7-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4k4nt.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4k4mz/5ceb81e8-4088-4b4f-82a5-85df218e865b/812204b0-8ac7-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4k4nt.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 9\"></p>\n<p><b>Step 5 :</b> Enqueue 4 in $Q_2$ i.e $3,2,1,4$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4m74s/31dddf0f-09ae-455e-a005-e09d10b72621/baad9dc0-8ac7-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4m74t.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4m74s/31dddf0f-09ae-455e-a005-e09d10b72621/baad9dc0-8ac7-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4m74t.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 10\"></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4nfda/ae631466-ea6d-4865-8423-c72ba1373edf/dcd97ae0-8ac7-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4nfdb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4nfda/ae631466-ea6d-4865-8423-c72ba1373edf/dcd97ae0-8ac7-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4nfdb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 11\"></p>\n<p><b>Step 6 :</b> Perform 1 Dequeue and 1 Enqueue simultaneously for 3 times in $Q_2$ i.e $3,2,1,4$</p>\n<p>$$ \\rightarrow 2,1,4,3 \\rightarrow 1,4,3,2 \\rightarrow 4,3,2,1 $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4qa85/5cf325b0-5b01-4fbc-b4f6-6ff55986c926/2c4de750-8ac8-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4qa86.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4qa85/5cf325b0-5b01-4fbc-b4f6-6ff55986c926/2c4de750-8ac8-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4qa86.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 12\"></p>\n<p>So the number of enqueue operations in $Q_1$ is 0 .</p>\n<p>Thus, we have obtain the final state as shown below</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a4stei/3de0edf3-d0b1-4c1f-9dbd-0fa57e522772/72bc73a0-8ac8-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4stej.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a4stei/3de0edf3-d0b1-4c1f-9dbd-0fa57e522772/72bc73a0-8ac8-11ef-8af7-472220e51bb9/file-jaoe38c1m2a4stej.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Data Structures - Stacks and Queues Question 6 English Explanation 13\"></p>\n<p>Hence, the correct answer is 0.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose a stack implementation supports an instruction REVERSE, which reverses the order of elements on the stack, in addition to the PUSH and POP instructions. Which one of the following statements is TRUE with respect to this modified stack?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A queue cannot be implemented using this stack."
+      },
+      {
+        "identifier": "B",
+        "content": "A queue can be implemented where ENQUEUE takes a single instruction and DEQUEUE takes a sequence of two instructions."
+      },
+      {
+        "identifier": "C",
+        "content": "A queue can be implemented where ENQUEUE takes a sequence of three instructions and DEQUEUE takes a single instruction."
+      },
+      {
+        "identifier": "D",
+        "content": "A queue can be implemented where both ENQUEUE and DEQUEUE take a single instruction each"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose a circular queue of capacity (n – 1) elements is implemented with an array of n elements. Assume that the insertion and deletion operations are carried out using REAR and FRONT as array index variables, respectively. Initially, REAR = FRONT = 0. The conditions to detect queue full and queue empty are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "full: (REAR+1)<br>\nmod n == FRONT<br>\nempty: REAR == FRONT"
+      },
+      {
+        "identifier": "B",
+        "content": "full: (REAR+1)<br>\nmod n == FRONT<br>\nempty: (FRONT+1)"
+      },
+      {
+        "identifier": "C",
+        "content": "full: REAR == FRONT<br>\nempty: (REAR + 1)<br>\nmod n == FRONT"
+      },
+      {
+        "identifier": "D",
+        "content": "full: (FRONT+1)<br>\nmod n == REAR<br>\nempty: REAR == FRONT"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program: \n<pre><code class=\"c\">#include \n#define EOF -1 \n     void push (int); /* push the argument on the stack */ \n     int pop (void); /* pop the top of the stack */ \n     void flagError (); \n     int main () { \n       int c, m, n, r; \n       while ((c = getchar ()) != EOF) { \n         if (isdigit (c) ) \n           push (c); \n         else if ((c == '+') || (c == '*')) { \n           m = pop (); \n           n = pop (); \n           r = (c == '+') ? n + m : n*m; \n           push (r); \n         } else if (c != ' ') \n           flagError (); \n       } \n       printf(\"% c\", pop ()); \n    } \n</code></pre>\nWhat is the output of the program for the following input ? \n5 2 * 3 3 2 + * + ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "15"
+      },
+      {
+        "identifier": "B",
+        "content": "25"
+      },
+      {
+        "identifier": "C",
+        "content": "30"
+      },
+      {
+        "identifier": "D",
+        "content": "150"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The following postfix expression with single digit operands is evaluated using a stack: \n8 2 3 ^ / 2 3 * + 5 1 * - \nNote that ^ is the exponentiation operator. The top two elements of the stack after the first * is evaluated are:  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6, 1"
+      },
+      {
+        "identifier": "B",
+        "content": "5, 7 "
+      },
+      {
+        "identifier": "C",
+        "content": "3, 2"
+      },
+      {
+        "identifier": "D",
+        "content": "1, 5"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose you are given an implementation of a queue of integers. The operations that can be performed on the queue are: <br>\ni. isEmpty (Q) — returns true if the queue is empty, false otherwise. <br>\nii. delete (Q) — deletes the element at the front of the queue and returns its value. <br>\niii. insert (Q, i) — inserts the integer i at the rear of the queue. <br>\nConsider the following function: \n<pre><code>void f (queue Q) { \n  int i ; \n  if (!isEmpty(Q)) { \n      i = delete(Q); \n      f(Q); \n      insert(Q, i); \n  } \n} </code></pre>\nWhat operation is performed by the above function f ? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Leaves the queue Q unchanged "
+      },
+      {
+        "identifier": "B",
+        "content": "Reverses the order of the elements in the queue Q "
+      },
+      {
+        "identifier": "C",
+        "content": "Deletes the element at the front of the queue Q and inserts it at the rear keeping the other elements in the same order "
+      },
+      {
+        "identifier": "D",
+        "content": "Empties the queue Q"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "An implementation of a queue Q, using two stacks S1 and S2, is given below :\n<pre><code>void insert(Q, X){\n  push(S1, X);\n}\n\nvoid delete(Q){\nif(stack - empty(S2)) then {\n  if(stack - empty(S1)) then {\n   print(\"Q is empty\");\n   return;\n  }else while (!(stack - empty(S1))){\n   X = pop(S1);\n   push(S2, X);\n }\n X = pop(S2);\n}</code></pre>\nLet n insert and $$m( \\le n)$$ delete operations be performed in an arbitrary order on an empty queue Q. Let x and y be the number of push and pop operations performed respectively in the process. Which one of the following is true for all m and n?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n + m \\le x \\le 2n$$ and $$2m \\le y \\le n + m$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$n + m \\le x \\le 2n$$ and $$2m \\le y \\le 2n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2m \\le x \\le 2n$$ and $$2m \\le y \\le n + m$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2m \\le x \\le 2n$$ and $$2m \\le y \\le 2n$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze the number of push (<code>x</code>) and pop (<code>y</code>) operations based on the provided implementation of the queue using two stacks, S1 and S2. Let <code>n</code> be the total number of <code>insert</code> operations and <code>m</code> be the total number of <code>delete</code> operations, with <code>m &lt;= n</code>.</p>\n<p><strong>Analysis of <code>x</code> (total push operations):</strong></p>\n<ol>\n<li><p><strong><code>insert(Q, X)</code> function:</strong></p>\n<ul>\n<li><p><code>push(S1, X);</code></p></li>\n<li><p>Each of the <code>n</code> <code>insert</code> operations performs exactly one <code>push(S1, X)</code>. This contributes <code>n</code> to <code>x</code>.</p></li></ul></li>\n<li><p><strong><code>delete(Q)</code> function (specifically the part involving <code>push</code>):</strong></p>\n<ul>\n<li><p>When <code>S2</code> is empty and <code>S1</code> is not empty, elements are transferred from <code>S1</code> to <code>S2</code>:</p>\n<pre><code class=\"c language-c\">while (!(stack - empty(S1))){\n\n  X = pop(S1);\n\n  push(S2, X); // This is a push operation to S2\n\n}\n</code></pre></li>\n<li><p><strong>Maximum <code>x</code>:</strong> Each of the <code>n</code> distinct elements inserted into the queue is pushed onto <code>S1</code> once. Subsequently, that same element might be moved from <code>S1</code> to <code>S2</code> (in which case it's pushed onto <code>S2</code> once). An element can be pushed to <code>S2</code> at most once in its lifetime, as after it's in <code>S2</code>, it's either deleted or remains there.</p>\n<ul>\n<li><p>Thus, the total number of <code>push(S1)</code> operations is <code>n</code>.</p></li>\n<li><p>The total number of <code>push(S2)</code> operations can be at most <code>n</code> (if all <code>n</code> elements are eventually transferred from <code>S1</code> to <code>S2</code>).</p></li>\n<li><p>Therefore, the maximum number of total push operations <code>x</code> is <code>n + n = 2n</code>.</p></li>\n<li><p><code>x &lt;= 2n</code>.</p></li></ul></li>\n<li><p><strong>Minimum <code>x</code>:</strong> There are always <code>n</code> <code>push(S1)</code> operations (one for each <code>insert</code>). Additionally, for each of the <code>m</code> successful <code>delete</code> operations, an element must eventually be <code>pop</code>ped from <code>S2</code>. To be eligible for <code>pop(S2)</code>, that element must have been <code>push</code>ed onto <code>S2</code> at some point. Therefore, at least <code>m</code> <code>push(S2)</code> operations are performed for the <code>m</code> successfully deleted elements.</p>\n<ul>\n<li><p>Thus, <code>x &gt;= n</code> (for <code>S1</code>) + <code>m</code> (for <code>S2</code>).</p></li>\n<li><p><code>x &gt;= n + m</code>.</p></li></ul></li>\n<li><p>Combining these, we get: <code>n + m &lt;= x &lt;= 2n</code>.</p></li></ul></li>\n</ol>\n<p><strong>Analysis of <code>y</code> (total pop operations):</strong></p>\n<ol>\n<li><p><strong><code>delete(Q)</code> function (specifically the part involving <code>pop</code>):</strong></p>\n<ul>\n<li><p>The <code>delete</code> operation itself performs <code>X = pop(S2);</code> regardless of whether a transfer occurred (unless the queue is entirely empty). There are <code>m</code> successful <code>delete</code> operations. This contributes <code>m</code> to <code>y</code>.</p></li>\n<li><p>When <code>S2</code> is empty and <code>S1</code> is not empty, elements are transferred from <code>S1</code> to <code>S2</code>:</p>\n<pre><code class=\"c language-c\">while (!(stack - empty(S1))){\n\n  X = pop(S1); // This is a pop operation from S1\n\n  push(S2, X);\n\n}\n</code></pre></li>\n<li><p><strong>Maximum <code>y</code>:</strong> Each of the <code>n</code> distinct elements inserted into the queue can be <code>pop</code>ped from <code>S1</code> at most once (because it moves to <code>S2</code> and doesn't return).</p>\n<ul>\n<li><p>Thus, the total number of <code>pop(S1)</code> operations can be at most <code>n</code>.</p></li>\n<li><p>The total number of <code>pop(S2)</code> operations is exactly <code>m</code> (for <code>m</code> successful <code>delete</code> operations).</p></li>\n<li><p>Therefore, the maximum number of total pop operations <code>y</code> is <code>n + m</code>.</p></li>\n<li><p><code>y &lt;= n + m</code>.</p></li></ul></li>\n<li><p><strong>Minimum <code>y</code>:</strong> Each of the <code>m</code> successfully deleted elements must have been <code>pop</code>ped from <code>S2</code>. Also, to be available in <code>S2</code>, these elements must have been transferred from <code>S1</code> (as they are initially pushed to <code>S1</code>). This transfer implies they were <code>pop</code>ped from <code>S1</code>. Therefore, each of the <code>m</code> deleted elements contributes one <code>pop(S1)</code> and one <code>pop(S2)</code>.</p>\n<ul>\n<li><p>Thus, <code>y &gt;= m</code> (from <code>S1</code>) + <code>m</code> (from <code>S2</code>).</p></li>\n<li><p><code>y &gt;= 2m</code>.</p></li></ul></li>\n<li><p>Combining these, we get: <code>2m &lt;= y &lt;= n + m</code>.</p></li></ul></li>\n</ol>\n<p><strong>Conclusion:</strong></p>\n<p>Based on the analysis:</p>\n<ul>\n<li><p>For pushes (<code>x</code>): <code>n + m &lt;= x &lt;= 2n</code></p></li>\n<li><p>For pops (<code>y</code>): <code>2m &lt;= y &lt;= n + m</code></p></li>\n</ul>\n<p>This matches <strong>Option A</strong>.</p>\n<p>The final answer is $\\boxed{A}$</p>",
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The following function computes the value of <sup>m</sup>C<sub>n</sub> correctly for all legal values m and n (m≥1,n≥0 and m&gt;n)  \n<pre><code>int func(int m, int n) \n{ \n     if (E) return 1; \n     else return(func(m -1, n) + func(m - 1, n - 1)); \n} </code></pre>\nIn the above function, which of the following is the correct expression for E?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(n = = 0) || (m = = 1) "
+      },
+      {
+        "identifier": "B",
+        "content": "(n = = 0) &amp;&amp; (m = = 1) "
+      },
+      {
+        "identifier": "C",
+        "content": "(n = = 0) || (m = = n) "
+      },
+      {
+        "identifier": "D",
+        "content": "(n = = 0) &amp;&amp; (m = = n)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that the operators +, -, ×, are left associative and ^ is right associative. The order of precedence (from highest to lowest) is ^, ×, +, -. The postfix expression corresponding to the infix expression a + b×c-d^e^f is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "abc×+def^^-"
+      },
+      {
+        "identifier": "B",
+        "content": "abc×+de^f^-"
+      },
+      {
+        "identifier": "C",
+        "content": "ab+c×d-e^f^ "
+      },
+      {
+        "identifier": "D",
+        "content": "- + a×bc^^def"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A program attempts to generate as many permutation as possible of the string “abcd” by pushing the character a,b,c,d in the same order onto a stack, but it may pop off the top character at any time. Which one of the following a strings CANNOT be generated using this program? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "abcd "
+      },
+      {
+        "identifier": "B",
+        "content": "dcba "
+      },
+      {
+        "identifier": "C",
+        "content": "cbad"
+      },
+      {
+        "identifier": "D",
+        "content": "cabd"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Let S be a stack of size n &gt;= 1. Starting with the empty stack, suppose we push the first n natural numbers in sequence, and then perform n pop operations. Assume that Push and Pop operations take X seconds each, and Y seconds elapse between the end of one such stack operation and the start of the next operation. For m &gt;= 1, define the stack-life of m as the time elapsed from the end of Push(m) to the start of the pop operation that removes m from S. The average stack-life of an element of this stack is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n(X + Y)"
+      },
+      {
+        "identifier": "B",
+        "content": "3Y + 2X"
+      },
+      {
+        "identifier": "C",
+        "content": "n(X + Y) - X"
+      },
+      {
+        "identifier": "D",
+        "content": "Y + 2X"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Compute the post fix equivalent of the following expression. \n3 * log(x+1) - a/2",
+    "options": [],
+    "correct_options": [],
+    "answer": "3x1 + log*a2/-",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "What value would the following function return for the input x = 95? \n<pre><code> function fun (x:integer):integer; \n   Begin \n      If x &gt; 100 then fun : x – 10 \n      Else fun : fun(fun (x + 11)) \n   End; </code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "89"
+      },
+      {
+        "identifier": "B",
+        "content": "90"
+      },
+      {
+        "identifier": "C",
+        "content": "91"
+      },
+      {
+        "identifier": "D",
+        "content": "92"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A priority queue Q is used to implement a stack that stores characters. PUSH (C) is implemented INSERT (Q, C, K) where K is an appropriate integer key chosen by the implementation. POP is implemented as DELETEMIN(Q). For a sequence of operations, the keys chosen are in ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "non-increasing order"
+      },
+      {
+        "identifier": "B",
+        "content": "non-decreasing order"
+      },
+      {
+        "identifier": "C",
+        "content": "strictly increasing order "
+      },
+      {
+        "identifier": "D",
+        "content": "strictly decreasing order"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The postfix expression for the infix expression \nA + B * (C + D) / F + D * E is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "AB + CD + *F/D + E* "
+      },
+      {
+        "identifier": "B",
+        "content": "ABCD + *F/+DE*+ "
+      },
+      {
+        "identifier": "C",
+        "content": "A *B + CD/F *DE++ "
+      },
+      {
+        "identifier": "D",
+        "content": "A + *BCD/F* DE++"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following permutations can be obtained in the output (in the same order) using a stack assuming that the input is the sequence 1, 2, 3, 4, 5 in that order? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3, 4, 5, 1, 2 "
+      },
+      {
+        "identifier": "B",
+        "content": "3, 4, 5, 2, 1 "
+      },
+      {
+        "identifier": "C",
+        "content": "1, 5, 2, 3, 4 "
+      },
+      {
+        "identifier": "D",
+        "content": "5, 4, 3, 1, 2"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "The following sequence of operations is performed on stack: \nPUSH (10),PUSH (20),POP,PUSH (10),PUSH (20),POP,POP,POP,PUSH (20),POP \nThe sequence of the value popped out is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "20,10,20,10,20 "
+      },
+      {
+        "identifier": "B",
+        "content": "20,20,10,10,20 "
+      },
+      {
+        "identifier": "C",
+        "content": "10,20,20,10,20"
+      },
+      {
+        "identifier": "D",
+        "content": "20,20,10,20,10"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  }
+]

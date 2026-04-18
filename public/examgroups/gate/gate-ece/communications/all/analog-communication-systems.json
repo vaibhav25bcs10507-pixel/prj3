@@ -1,0 +1,1073 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a frequency-modulated (FM) signal</p>\n<p>$$ f(t)=A_c \\cos \\left(2 \\pi f_c t+3 \\sin \\left(2 \\pi f_1 t\\right)+4 \\sin \\left(6 \\pi f_1 t\\right)\\right) $$</p>\n<p>where $A_c$ and $f_c$ are, respectively, the amplitude and frequency (in Hz ) of the carrier waveform. The frequency $f_1$ is in Hz , and assume that $f_c>100 f_1$.</p>\n<p>The peak frequency deviation of the FM signal in Hz is $\\qquad$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$15 f_1$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$12 f_1$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$4 f_1$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$2 f_1$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ f(t)=A_c \\cos \\left[2 \\pi f_c t+3 \\sin \\left(2 \\pi f_1 t\\right)+4 \\sin \\left(6 \\pi f_1 t\\right)\\right] $$</p>\n<p>General expression of angle modulated signal,</p>\n<p>$$ s(t)=A_c \\cos \\left[2 \\pi f_c t+\\phi(t)\\right] $$</p>\n<p>From comparison: $\\phi(t)=3 \\sin 2 \\pi f_1 t+4 \\sin 6 \\pi f_1 t$</p>\n<p>Peak frequency deviation:</p>\n<p>$$ \\begin{aligned} \\Delta f=\\left|\\frac{1}{2 \\pi} \\frac{d}{d t} \\phi(t)\\right|_{\\max } & =\\left|\\frac{1}{2 \\pi}\\left[3 \\times 2 \\pi f_1 \\cos 2 \\pi f_1 t+4 \\times 6 \\pi f_1 \\cos 6 \\pi f_1 t\\right]\\right|_{\\max } \\\\ & =\\left|3 f_1 \\cos 2 \\pi f_1 t+12 f_1 \\cos 6 \\pi f_1 t\\right|_{\\max }=3 f_1+12 f_1=15 f_1 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a message signal $m(t)$ which is bandlimited to $[-W, W]$, where $W$ is in Hz . Consider the following two modulation schemes for the message signal:</p>\n\n<p>Double sideband-suppressed carrier (DSB-SC):</p>\n\n<p>$$ f_{\\mathrm{DSB}}(t)=A_c m(t) \\cos \\left(2 \\pi f_c t\\right) $$</p>\n\n<p>Amplitude modulation (AM):</p>\n\n<p>$$ f_{\\mathrm{AM}}(t)=A_c(1+\\mu m(t)) \\cos \\left(2 \\pi f_c t\\right) $$</p>\n<p>Here, $A_c$ and $f_c$ are the amplitude and frequency (in Hz ) of the carrier, respectively. In the case of AM, $\\mu$ denotes the modulation index.</p>\n<p>Consider the following statements:</p>\n<p>(i) An envelope detector can be used for demodulation in the DSB-SC scheme if $m(t)>0$ for all $t$.</p>\n<p>(ii) An envelope detector can be used for demodulation in the AM scheme only if $m(t)>0$ for all $t$.</p>\n<p>Which of the following options is/are correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) is TRUE\n"
+      },
+      {
+        "identifier": "B",
+        "content": "(i) is FALSE\n"
+      },
+      {
+        "identifier": "C",
+        "content": "(ii) is TRUE\n"
+      },
+      {
+        "identifier": "D",
+        "content": "(ii) is FALSE"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>If $m(t)>0$ for all $t$, envelope detector can be used for demodulation of DSB-SC signal. Even for $m(t)<0$, envelope detector can be used for demodulation of AM signal.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An amplitude modulator has output (in Volts)</p>\n<p>$$s(t) = A \\cos(400 \\pi t) + B \\cos(360 \\pi t) + B \\cos(440 \\pi t)$$.</p>\n<p>The carrier power normalized to $1\\Omega$ resistance is 50 Watts. The ratio of the total sideband power to the total power is 1/9. The value of $B$ (in Volts, rounded off to two decimal places) is _______.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.49TO2.51",
+    "explanation": "<p>$$ \\begin{aligned} &\\text { Given : }\\\\ &\\begin{aligned} s(t)=A \\cos (400 \\pi t)+B & \\cos (360 \\pi t)  +B \\cos (440 \\pi t) \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} \\end{aligned} $$</p>\n<p>Carrier power $\\left(P_c\\right)=50$ watts</p>\n<p>Ratio of total side band power to total power.</p>\n<p>$$ \\frac{P_{S B}}{P_t}=\\frac{1}{9} $$</p>\n<p>For a single tone sinusoidal signal, expression of AM signal is given by,</p>\n<p>$$ \\begin{aligned} & s(t)=A_c\\left[1+m_a \\cos \\omega_m t\\right] \\cos \\omega_c t \\\\ & s(t)=A_c \\cos \\omega_c t+\\frac{A_c m_a}{2} \\cos \\left(\\omega_c+\\omega_m\\right) t \\\\ & \\quad \\quad+\\frac{A_c m_a}{2} \\cos \\left(\\omega_c-\\omega_m\\right) t \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\ldots(\\mathrm{ii}) \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\text { Comparing equation (i) and (ii) }\\\\ &A_c=A, \\frac{A_c m_a}{2}=B \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)\\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\text { Power in carrier signal is given by }\\\\ &\\begin{aligned} & P_c=\\frac{A_c^2}{2}=\\frac{A^2}{2} \\\\ & \\frac{A^2}{2}=50 \\\\ & A=10 \\end{aligned} \\end{aligned} $$</p>\n<p>For sinusoidal signal ratio of side band power to total power is given by</p>\n<p>$$ \\begin{aligned} \\frac{P_{S B}}{P_t} & =\\frac{\\frac{P_c m_a^2}{2}}{P_c\\left[1+\\frac{m_a^2}{2}\\right]}=\\frac{\\frac{m_a^2}{2}}{\\frac{2+m_a^2}{2}} \\\\ \\frac{P_{S B}}{P_t} & =\\frac{m_a^2}{2+m_a^2} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\text { Hence, } \\frac{P_{S B}}{P_t}=\\frac{1}{9} \\quad \\text { (Given) }\\\\ &\\begin{aligned} & \\frac{1}{9}=\\frac{m_a^2}{2+m_a^2} \\\\ & 2+m_a^2=9 m_a^2 \\\\ & 2=8 m_a^2 \\\\ & m_a^2=\\frac{1}{4} \\\\ & m_a=\\frac{1}{2} \\end{aligned} \\end{aligned} $$</p>\n<p>From equation (iii)</p>\n<p>$$ \\begin{aligned} & \\frac{A_c m_a}{2}=B \\\\ & \\frac{(10)(1 / 2)}{2}=B \\\\ & \\frac{10}{4}=B \\\\ & B=2.5 \\end{aligned} $$</p>\n<p>Hence, the correct answer is $\\mathbf{2 . 5}$.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a super heterodyne receiver tuned to 600 kHz . If the local oscillator feeds a 1000 kHz signal to the mixer. The image frequency (in integer) is $\\_\\_\\_\\_$ kHz .</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1400to1400",
+    "explanation": "<p>$$ \\text {  From question, we can say that } $$</p>\n<p>$$ \\begin{aligned} & & f_{I F} & =f_{L O}-f_s \\\\ & \\text { or, } & & =1000 \\mathrm{kHz}-600 \\mathrm{kHz}=400 \\mathrm{kHz} \\\\ \\therefore & & f_{s i} & =f_s+2 f_{\\mathrm{IF}} \\\\ & & & =600 \\mathrm{kHz}+2 \\times 400 \\mathrm{kHz} \\\\ \\text { And, } & & f_{s i} & =1400 \\mathrm{kHz} \\end{aligned} $$</p>\n<p>$$ \\text { Hence, the correct answer is }(1400 \\text { to } 1400) \\text {. } $$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a carrier signal which is amplitude modulated by a single - tone sinusoidal message signal with a modulation index of $50 \\%$. If the carrier and one of the side bands are suppressed in the modulated signal, the percentage of power saved (rounded off to one decimal place) is $\\_\\_\\_\\_$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "<p>94.4to94.5</p>",
+    "explanation": "<p>Solution: For SSB-SC, As we know that\\% power saved</p>\n<p>$$ =\\frac{P_C+P_{S B}}{P t}=\\frac{P_C\\left[\\frac{\\mu^2}{4}+1\\right]}{P_C\\left[1+\\frac{\\mu^2}{2}\\right]} \\text { for } S S B-S C $$</p>\n<p>or,&nbsp;&nbsp;$$ =\\frac{1+\\frac{\\mu^2}{4}}{1+\\frac{\\mu^2}{2}} $$</p>\n<p>or, we get $\\%$ power saved $=\\frac{\\mu^2+4}{4+2 \\mu^2}$</p>\n<p>As mentioned we have $\\mu=0.5$</p>\n<p>Therefore % power saving $=\\frac{4+0.25}{4+2 \\times 0.25} \\times 100=94.44$.</p>\n<p>Hence, the correct answer is (94.4 to 94.5).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "content": "For a superheterodyne receiver, the intermediate frequency is 15 MHz and the local oscillator frequency\nis 3.5 GHz. If the frequency of the received signal is greater than the local oscillator frequency, then\nthe image frequency (in MHz) is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3485",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A super heterodyne receiver operates in the frequency range of 58 MHz – 68 MHz. The\nintermediate frequency f<sub>1F</sub> and local oscillator frequency f<sub>L0</sub> are chosen such that\nf<sub>1F</sub> $$\\leq$$ f<sub>L0</sub>.It is\nrequired that the image frequencies fall outside the 58 MHz – 68 MHz band. The minimum\nrequired\nf<sub>1F</sub> (in MHz) is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the signal\n$$s\\left(t\\right)\\;=\\;m\\left(t\\right)\\;\\cos\\left(2{\\mathrm{πf}}_\\mathrm c\\mathrm t\\right)\\;+\\widehat m\\left(t\\right)\\;\\sin\\left(2\\mathrm\\pi\\;{\\mathrm f}_\\mathrm c\\mathrm t\\right)$$ where $$\\widehat m\\left(t\\right)\\;$$\ndenotes the Hilbert\ntransform of m(t) and the bandwidth of m(t) is very small compared to f<sub>c</sub>. The signal s(t) is a",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "high-pass signal"
+      },
+      {
+        "identifier": "B",
+        "content": "low-pass signal"
+      },
+      {
+        "identifier": "C",
+        "content": "band-pass signal"
+      },
+      {
+        "identifier": "D",
+        "content": "double sideband suppressed carrier signal"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an FM signal $$f\\left(t\\right)\\;=\\;\\cos\\left[2{\\mathrm{πf}}_\\mathrm c\\mathrm t\\;+\\;{\\mathrm\\beta}_1\\sin\\;2{\\mathrm{πf}}_1\\mathrm t\\;+\\;{\\mathrm\\beta}_2\\sin\\;2{\\mathrm{πf}}_2\\mathrm t\\right]$$ . The maximum\ndeviation of the instantaneous frequency from the carrier frequency f<sub>c</sub>\n is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\beta_1f_1+\\;\\beta_2f_2$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\beta_1f_2+\\;\\beta_2f_1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\beta_1+\\;\\beta_2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$f_1+\\;f_2$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an angle modulated signal x(t) = 6cos[2$$\\mathrm\\pi$$x10<sup>6</sup>\nt+2sin(8000$$\\mathrm\\pi$$t) +\n4cos(8000$$\\mathrm\\pi$$t)] V. The average power of x(t) is. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10 W"
+      },
+      {
+        "identifier": "B",
+        "content": "18 W"
+      },
+      {
+        "identifier": "C",
+        "content": "20 W"
+      },
+      {
+        "identifier": "D",
+        "content": "28 W"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the amplitude modulated (AM) signal $$A_c\\cos\\omega_ct\\;+\\;2\\cos\\omega_mt\\;\\cos\\omega_ct$$. For\ndemodulating the signal using envelope detector, the minimum value of A<sub>c</sub> should\nbe ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "0.5"
+      },
+      {
+        "identifier": "D",
+        "content": "$$0$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following analog modulation scheme requires the minimum\ntransmitted power and minimum channel bandwidth?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "VSB"
+      },
+      {
+        "identifier": "B",
+        "content": "DSB-SC"
+      },
+      {
+        "identifier": "C",
+        "content": "SSB"
+      },
+      {
+        "identifier": "D",
+        "content": "AM"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "An AM signal is detected using an envelope detector. The carrier frequency and\nmodulating signal frequency are 1 MHz and 2 KHz respectively. An appropriate\nvalue for the time constant of the envelope detector is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "500 µsec"
+      },
+      {
+        "identifier": "B",
+        "content": "20 µsec"
+      },
+      {
+        "identifier": "C",
+        "content": "0.2 µsec"
+      },
+      {
+        "identifier": "D",
+        "content": "1 µsec"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "An AM signal and a narrow-band FM signal with identical carriers, modulating\nsignals and modulation indices of 0.1 are added together. The resultant signal\ncan be closely approximated by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "broadband FM "
+      },
+      {
+        "identifier": "B",
+        "content": "SSB with carrier "
+      },
+      {
+        "identifier": "C",
+        "content": "DSB-SC"
+      },
+      {
+        "identifier": "D",
+        "content": "SSB without carrier"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A 1 MHz sinusoidal carrier is amplitude modulated by a symmetrical square wave\nof period 100 µsec. Which of the following frequencies will NOT be present in the\nmodulated signal?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "990 kHz"
+      },
+      {
+        "identifier": "B",
+        "content": "1010 kHz"
+      },
+      {
+        "identifier": "C",
+        "content": "1020 kHz"
+      },
+      {
+        "identifier": "D",
+        "content": "1030 kHz"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "A modulated signal is given by, $$s\\left(t\\right)=m_1\\left(t\\right)\\cos\\left(2{\\mathrm{πf}}_\\mathrm c\\mathrm t\\right)\\;+m_2\\left(t\\right)\\sin\\left(2{\\mathrm{πf}}_\\mathrm c\\mathrm t\\right)$$, where\nthe baseband signal m<sub>1</sub>(t) and m<sub>2</sub>(t) have bandwidths of 10 kHz and 15 kHz,\nrespectively. The bandwidth of the modulated signal, in kHz, is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10 kHz"
+      },
+      {
+        "identifier": "B",
+        "content": "15 kHz"
+      },
+      {
+        "identifier": "C",
+        "content": "25 kHz"
+      },
+      {
+        "identifier": "D",
+        "content": "30 kHz"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "A DSB-SC signal is generated using the carrier $$\\cos\\left(\\omega_ct\\;+\\;\\theta\\right)$$ and modulating singal\nx(t). The envelope of the DSB-SC signal is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x(t)"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left|x\\left(t\\right)\\right|$$"
+      },
+      {
+        "identifier": "C",
+        "content": "only positive portion of x(t) "
+      },
+      {
+        "identifier": "D",
+        "content": "$$x\\left(t\\right)\\cos\\left(\\theta\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The image channel selectivity of super heterodyne receiver depends upon ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "IF amplifiers only "
+      },
+      {
+        "identifier": "B",
+        "content": "RF and IF amplifiers only"
+      },
+      {
+        "identifier": "C",
+        "content": "Preselector, RF and IF amplifiers"
+      },
+      {
+        "identifier": "D",
+        "content": "Pre selector, and RF amplifiers only"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "$$v\\left(t\\right)\\;=5\\left[\\cos\\left(10^6\\mathrm{πt}\\right)\\;-\\;\\sin\\left(10^3\\mathrm{πt}\\right)\\times\\sin\\left(10^6\\mathrm{πt}\\right)\\right]$$ represents",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "DSB suppressed carrier signal"
+      },
+      {
+        "identifier": "B",
+        "content": "AM signal"
+      },
+      {
+        "identifier": "C",
+        "content": "SSB upper sideband signal"
+      },
+      {
+        "identifier": "D",
+        "content": "Narrow band FM signal"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let a frequency modulated (FM) signal $$x(t) = A\\cos ({\\omega _c}t + {k_f}\\int_{ - \\infty }^t {m(\\lambda )d\\lambda )} $$, where $$m(t)$$ is a message signal of bandwidth W. It is passed through a non-linear system with output $$y(t) = 2x(t) + 5{(x(t))^2}$$. Let $${B^T}$$ denote the FM bandwidth. The minimum value of $${\\omega _c}$$ required to recover $$x(t)$$ from $$y(t)$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${B_T} + W$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${3 \\over 2}{B_T}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2{B_T} + W$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${5 \\over 2}{B_T}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $x(t)=A \\cos \\left(\\omega_c t+k_f \\int\\limits_{-\\infty}^t m(\\lambda) d \\lambda\\right)$</p>\n\n<p>Also, $y(t)=2 x(t)+5 x^2(t)$</p>\n\n<p>$\\begin{aligned} &amp; y(t)=2 A \\cos \\left(\\omega_c t+k_f \\int\\limits_{-\\infty}^t m(\\lambda) d \\lambda\\right)+5 A^2 \\cos ^2\\left(\\omega_c t+k_f \\int\\limits_{-\\infty}^t m(\\lambda) d \\lambda\\right) \\\\\\\\ &amp; y(t)=2 A \\cos \\left(\\omega_c t+k_f \\int\\limits_{-\\infty}^t m(\\lambda) d \\lambda\\right)+5 A^2\\left(\\frac{1+\\cos \\left(2 \\omega_c t+2 k_f \\int\\limits_{-\\infty}^t m(\\lambda) d \\lambda\\right)}{2}\\right)\\end{aligned}$</p>\n\n<p>$$ y(t)=2 A \\cos \\left(\\omega_c t+k_f \\int\\limits_{-\\infty}^t m(\\lambda) d \\lambda\\right)+\\frac{5 A^2}{2} \\cos \\left(2 \\omega_c t+k_f \\int\\limits_{-\\infty}^t m(\\lambda) d \\lambda\\right)+\\frac{5 A^2}{2} $$</p>\n\n<p>Om plotting the frequency spectrum of $y(t)$</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywmuzja/2800e07f-a08a-46fa-ae9a-0c22688b3a29/742ff950-47f7-11ef-a44d-8fba9a2e13ab/file-jaoe38c1lywmuzjb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywmuzja/2800e07f-a08a-46fa-ae9a-0c22688b3a29/742ff950-47f7-11ef-a44d-8fba9a2e13ab/file-jaoe38c1lywmuzjb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Communications - Analog Communication Systems Question 9 English Explanation\">\n\n<p>To recover $x(t)$ from $y(t)$</p>\n\n<p>$$ \\begin{aligned} &amp; 2 \\omega_c-B_T&gt;\\omega_c+\\frac{B_T}{2} \\\\\\\\ &amp; \\omega_c&gt;\\frac{3 B_T}{2} \\end{aligned} $$</p>\n\n<p>$\\therefore$ Minimum value of $\\omega_c$ will be $\\left(\\omega_c\\right)_{\\min }=\\frac{3 B_T}{2}$</p>\n\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let x$$_1$$(t) and x$$_2$$(t) be two band-limited signals having bandwidth $$B=4\\pi\\times10^3$$ rad/s each. In the figure below, the Nyquist sampling frequency, in rad/s, required to sample y(t), is</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxc5v42/0226045d-c3a0-4355-84ab-a14350ecad7b/66e69a20-485a-11ef-b529-abeccbcae568/file-jaoe38c1lyxc5v43.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxc5v42/0226045d-c3a0-4355-84ab-a14350ecad7b/66e69a20-485a-11ef-b529-abeccbcae568/file-jaoe38c1lyxc5v43.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Communications - Analog Communication Systems Question 10 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$20\\pi\\times10^3$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$40\\pi\\times10^3$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$8\\pi\\times10^3$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$32\\pi\\times10^3$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given that $x_1(t)$ and $x_2(t)$ are bandlimited to $4 \\pi \\times 10^3 \\mathrm{rad} / \\mathrm{sec}$. $x_1(t)$ and $x_2(t)$ can be represented in frequency domain as shown below,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxcb5q0/9f38eed1-106f-4e3c-aa03-c551030026e8/fa246380-485a-11ef-b529-abeccbcae568/file-jaoe38c1lyxcb5q1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxcb5q0/9f38eed1-106f-4e3c-aa03-c551030026e8/fa246380-485a-11ef-b529-abeccbcae568/file-jaoe38c1lyxcb5q1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Communications - Analog Communication Systems Question 10 English Explanation 1\">\n\n<p>From the given figure,</p>\n\n<p>$$ y(t)=x_1(t) \\cos \\left(12 \\pi \\times 10^3 t\\right)+x_2(t) \\cos \\left(4 \\pi \\times 10^3 t\\right) $$</p>\n\n<p>The spectrum of $y(t)$ can be drawn as shown below</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyxccrdo/c1e737c4-cb46-4905-8e49-8d06a966da6d/26ae5dc0-485b-11ef-b529-abeccbcae568/file-jaoe38c1lyxccrdp.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyxccrdo/c1e737c4-cb46-4905-8e49-8d06a966da6d/26ae5dc0-485b-11ef-b529-abeccbcae568/file-jaoe38c1lyxccrdp.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Communications - Analog Communication Systems Question 10 English Explanation 2\">\n\n<p>$\\therefore$ Maximum frequency of $Y(\\omega)$ is $\\omega_m=16 \\pi \\times 10^3 \\mathrm{rad} / \\mathrm{sec}$</p>\n\n<p>Nyquist sampling rate will be $\\omega_s=2 \\omega_m=32 \\pi \\times 10^3 \\mathrm{rad} / \\mathrm{sec}$</p>\n\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider an FM broadcast that employs the pre-emphasis filter with frequency response</p>\n<p>$${H_{pe}}(\\omega ) = 1 + {{j\\omega } \\over {{\\omega _0}}}$$,</p>\nwhere $$\\omega$$<sub>0</sub> = 10<sup>4</sup> rad/sec.<p></p>\n<p>For the network shown in the figure to act as a corresponding de-emphasis filter, the appropriate pairs of (R, C) values is/are ____________.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kenfpi/55bf9e8f-6c28-40fd-afc8-f8416390e87e/1a26e570-2ab4-11ed-ac06-93878138b969/file-1l7kenfpj.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kenfpi/55bf9e8f-6c28-40fd-afc8-f8416390e87e/1a26e570-2ab4-11ed-ac06-93878138b969/file-1l7kenfpj.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Analog Communication Systems Question 11 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "R = 1 k$$\\Omega$$, C = 0.1 $$\\mu$$F"
+      },
+      {
+        "identifier": "B",
+        "content": "R = 2 k$$\\Omega$$, C = 1 $$\\mu$$F"
+      },
+      {
+        "identifier": "C",
+        "content": "R = 1 k$$\\Omega$$, C = 2 $$\\mu$$F"
+      },
+      {
+        "identifier": "D",
+        "content": "R = 2 k$$\\Omega$$, C = 0.5 $$\\mu$$F"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given frequency response of pre-emphasis filter,</p>\n<p>$${H_{pe}}(\\omega ) = 1 + {{j\\omega } \\over {{\\omega _0}}}$$ where, $${\\omega _0} = {10^4}{{rad} \\over {\\sec }}$$</p>\n<p>Deemphasis filter given as,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kenfpi/55bf9e8f-6c28-40fd-afc8-f8416390e87e/1a26e570-2ab4-11ed-ac06-93878138b969/file-1l7kenfpj.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kenfpi/55bf9e8f-6c28-40fd-afc8-f8416390e87e/1a26e570-2ab4-11ed-ac06-93878138b969/file-1l7kenfpj.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Analog Communication Systems Question 11 English Explanation\"></p>\n<p>$${H_{De}}(\\omega ) = {1 \\over {1 + j\\omega RC}}\\buildrel {} \\over\n \\longrightarrow \\left| {{H_{De}}(\\omega )} \\right| = {1 \\over {\\sqrt {1 + {{(\\omega RC)}^2}} }}$$</p>\n<p>Relationship between pre-emphasis and De-emphasis systems is</p>\n<p>$$\\left| {{H_{Pe}}(\\omega )} \\right| = {1 \\over {\\left| {{H_{De}}(\\omega )} \\right|}}$$</p>\n<p>$${\\left| {{H_{Pe}}(\\omega )} \\right|^2} = {1 \\over {{{\\left| {{H_{De}}(\\omega )} \\right|}^2}}}$$</p>\n<p>$$1 + {\\left( {{\\omega  \\over {{\\omega _0}}}} \\right)^2} = 1 + {(\\omega RC)^2}$$</p>\n<p>$${1 \\over {{\\omega _0}}} = RC \\Rightarrow RC = {10^{ - 4}}$$</p>\n<p>Option (a) only satisfies the required condition.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A sinusoidal message signal having root mean square value of 4 V and frequency of 1 kHz is fed to a phase modulator with phase deviation constant $2 \\mathrm{rad} /$ volt. If the carrier signal is $c(t)=2 \\cos \\left(2 \\pi 10^6 t\\right)$, the maximum instantaneous frequency of the phase modulated signal (rounded off to one decimal place) is $\\_\\_\\_\\_$ Hz.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "<p>1011313to1011314</p>",
+    "explanation": "<p>From the question, we have</p>\n<p>$$ \\begin{aligned} & V_{\\mathrm{rms}}=\\frac{A_m}{\\sqrt{2}}=4 \\\\ & \\begin{aligned} A_m & =4 \\times \\sqrt{2} \\text { volts } \\\\ f_m & =1 \\mathrm{KHz} \\\\ \\Delta \\varphi & =2 \\mathrm{rad} / \\mathrm{volt}=K_p m(t) \\\\ f_c & =10^6 \\\\ A c & =2 \\end{aligned} \\end{aligned} $$</p>\n<p>Now on using the below formula, we get</p>\n<p>$$ \\begin{aligned} f_i & =A c \\cos [\\theta(t)] \\\\ & =A c \\cos \\left[2 \\pi f_c t+K_p m(t)\\right] \\\\ or,f_i & =\\frac{1}{2 \\pi} \\frac{d}{d t}[\\theta(f)] \\end{aligned} $$</p>\n<p>Also we have $\\left(f_i\\right)_{\\text {max }}=f_c+\\frac{k p}{2 \\pi}\\left[\\frac{d m(t)}{d t}\\right]_{\\text {max }}$</p>\n<p>or, $\\left[\\frac{d m(t)}{d t}\\right]_{\\max }=2 \\pi \\times 10^3 \\times 4 \\sqrt{2}$</p>\n<p>$$ \\therefore \\quad\\left(f_i\\right)_{\\max }=1000 \\times 10^3+\\frac{2}{2 \\pi}\\left[2 \\pi \\times 4 \\sqrt{2} \\times 10^3\\right] $$</p>\n<p></p>\n<p>$$ \\begin{aligned} or,& =10^6+8 \\sqrt{2} \\times 10^3 \\\\ or,& =(1000+11.3137) \\mathrm{KHz} \\\\ & =1011313.7 \\mathrm{~Hz} \\end{aligned} $$</p>\n<p>Hence, the correct answer is (1011313 to 1011314).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$S_{P M}(t)$ and $S_{F M}(t)$ are defined below, are the phase modulated and the frequency modulated waveforms, respectively, corresponding to the message signal $m(t)$ shown in the figure.</p>\n<p>$$ \\begin{aligned} &amp; S_{P M}(t)=\\cos \\left[1000 \\pi t+k_p m(t)\\right] \\\\ &amp; S_{F M}(t)=\\cos \\left[1000 \\pi t+k_f \\int_{-\\infty}^t m(\\tau) d \\tau\\right] \\end{aligned} $$</p>\n<p>Where $k_p$ is the phase deviation constant in radians/volt and $k_f$ is the frequency deviation constant in radians/second/volt. If the highest instantaneous frequencies of $S_{P M}(t)$ and $S_{F M}(t)$ are same, then the value of the ratio $\\frac{k_p}{k_f}$ is $\\_\\_\\_\\_$ seconds.</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh24bh6i/96db3fdc-cbb7-4c05-8ef5-d1dcff0e2e8f/8a0711a0-af57-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh24bh6j.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh24bh6i/96db3fdc-cbb7-4c05-8ef5-d1dcff0e2e8f/8a0711a0-af57-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh24bh6j.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Communications - Analog Communication Systems Question 1 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>Given : Phase modulated waveform,</p>\n<p>$$ S_{P M}(t)=\\cos \\left[1000 \\pi t+k_p m(t)\\right] $$</p>\n<p>Frequency modulated waveform,</p>\n<p>$$ S_{F M}(t)=\\cos \\left[1000 \\pi t+k_f \\int_{-\\infty}^t m(\\tau) d \\tau\\right] $$</p>\n<p>$S_{P M}$ is phase modulated signal with instantaneous phase</p>\n<p>$$ \\theta_i(t)=1000 \\pi t+k_p m(t) $$</p>\n<p>and&nbsp;&nbsp;$$ k_p=\\text { phase deviation constant }(\\mathrm{rad} / \\mathrm{volt}) $$</p>\n<p>$S_{F M}(t)=$ frequency modulated signal with instantaneous phase</p>\n<p>$$ \\theta_i(t)=1000 \\pi t+k_f \\int_{-\\infty}^t m(\\tau) d \\tau $$</p>\n<p>Where $k_f=$ frequency deviation constant</p>\n<p>Given that, highest instantaneous frequency are same</p>\n<p>$$ \\left.\\left(f_i\\right)\\right|_{P M_{\\max }}=\\left.\\left(f_i\\right)\\right|_{F M_{\\max }} $$</p>\n<p>From the relation,</p>\n<p>$$ f_i(t)=\\frac{1}{2 \\pi} \\frac{d \\theta_i(t)}{d t} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh24bg3n/100c34c0-349f-40ce-9372-7ca851ab889f/89319930-af57-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh24bg3o.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh24bg3n/100c34c0-349f-40ce-9372-7ca851ab889f/89319930-af57-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh24bg3o.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Communications - Analog Communication Systems Question 1 English Explanation\">$$ \\begin{aligned} &amp;\\text { Instantaneous angular frequency of PM waveform, }\\\\ &amp;\\begin{aligned} &amp; \\left.\\left(f_i\\right)\\right|_{P M}=\\frac{1}{2 \\pi} \\frac{d}{d t}\\left[1000 \\pi t+k_p m(t)\\right] \\\\ &amp; \\left.\\left(f_i\\right)\\right|_{P M}=\\frac{1}{2 \\pi}[1000 \\pi]+\\left.\\frac{k_p}{2 \\pi} \\frac{d m(t)}{d t}\\right|_{\\max } \\\\ &amp; \\left.\\left(f_i\\right)\\right|_{P M}=500+\\left.\\frac{k_p}{2 \\pi} \\frac{d m(t)}{d t}\\right|_{\\max } \\\\ &amp; \\left.\\frac{d m(t)}{d t}\\right|_{\\max }=5 \\\\ &amp; \\left.f_i(t)\\right|_{P M}=500+\\frac{k_p}{2 \\pi} \\times 5 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp;\\text { Instantaneous angular frequency of FM waveform, }\\\\ &amp;\\begin{aligned} \\left.f_i(t)\\right|_{F M} &amp; =\\frac{1}{2 \\pi} \\frac{d}{d t}\\left[1000 \\pi t+k_f \\int_{-\\infty}^t m(\\tau) d \\tau\\right] \\\\ &amp; =\\frac{1}{2 \\pi}[1000 \\pi]+\\left.\\frac{k_f}{2 \\pi} m(t)\\right|_{\\max } \\\\ \\left.m(t)\\right|_{\\max } &amp; =10 \\\\ \\left.f_i(t)\\right|_{F M} &amp; =500+\\frac{k_f}{2 \\pi} \\times 10 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp;\\text { Equating equations (i) and (ii), }\\\\ &amp;\\begin{aligned} &amp; 500+\\frac{k_p}{2 \\pi} \\times 5=500+\\frac{k_f}{2 \\pi} \\times 10 \\\\ &amp; \\frac{k_p}{k_f}=\\frac{10}{5}=2 \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\text { Hence, the value of the ratio } \\frac{k_p}{k_f} \\text { is } 2 \\text {. } $$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For the modulated signal $x(t)=m(t) \\cos \\left(2 \\pi f_c t\\right)$, the message signal $m(t)=4 \\cos (1000 \\pi t)$ and the carrier frequency $f_c$ is 1 MHz . The signal $x(t)$ is passed through a demodulator, as shown in figure below. The output $y(t)$ of the demodulator is</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh25xjiy/bca5279f-e224-4adf-8290-3b13d40c84e1/d8c517a0-af5d-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25xjiz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh25xjiy/bca5279f-e224-4adf-8290-3b13d40c84e1/d8c517a0-af5d-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25xjiz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Communications - Analog Communication Systems Question 2 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\cos (540 \\pi t)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\cos (1000 \\pi t)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\cos (920 \\pi t)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\cos (460 \\pi t)$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given demodulator circuit is shown below, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh25xilp/7c058ca6-ad74-4f67-9ce8-61cbb2ccaa77/d80e71d0-af5d-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25xilq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh25xilp/7c058ca6-ad74-4f67-9ce8-61cbb2ccaa77/d80e71d0-af5d-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh25xilq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Communications - Analog Communication Systems Question 2 English Explanation\">$$ \\text { Ideal LPF has cut off frequency } 510 \\mathrm{~Hz} $$</p>\n<p>Given $x(t)=m(t) \\cos \\left(2 \\pi f_c t\\right)$ where</p>\n<p>$$ m(t)=4 \\cos (1000 \\pi t) \\text { and } f_c=1 \\mathrm{MHz} $$</p>\n<p>From the figure,</p>\n<p>$$ \\begin{aligned} &amp; p(t)=x(t) \\cos \\left(2 \\pi\\left(f_c+40\\right) t\\right) \\\\ &amp; p(t)=m(t) \\cos \\left(2 \\pi f_c t\\right) \\cos \\left(2 \\pi f_c t+80 \\pi t\\right) \\\\ &amp; p(t)=\\frac{m(t)}{2}\\left[\\cos \\left(4 \\pi f_c t+80 \\pi t\\right)+\\cos (80 \\pi t)\\right] \\\\ &amp; p(t)=2 \\cos (1000 \\pi t)\\left[\\cos \\left(4 \\pi f_c t+80 \\pi t\\right)+\\cos (80 \\pi t)\\right] \\\\ &amp; p(t)=\\underbrace{\\cos \\left(4 \\pi f_c t+1080 \\pi t\\right)}_{x_1}+\\underbrace{\\cos \\left(4 \\pi f_c t-920 \\pi t\\right)}_{x_2}+\\underbrace{\\cos (1080 \\pi t)}_{f=540 \\mathrm{~Hz}}+\\underbrace{\\cos (920 \\pi t)}_{f=460 \\mathrm{~Hz}} \\end{aligned} $$</p>\n<p>As LPF has cut-off frequency of 510 Hz or $1020 \\pi \\mathrm{rad} / \\mathrm{s}$, so components $x_1, x_2$ and $x_3$ will be attenuated by LPF.</p>\n<p>$$ y(t)=\\cos (920 \\pi t) $$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The un-modulated carrier power in an AM transmitter is 5kW. This carrier is modulated by a\nsinusoidal modulating signal. The maximum percentage of modulation is 50%. If it is reduced\nto 40%, then the maximum un-modulated carrier power (in kW) that can be used without\noverloading the transmitter is ___________",
+    "options": [],
+    "correct_options": [],
+    "answer": "5.208",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A modulating signal given By $$x\\left(t\\right)=5\\sin\\left(4\\mathrm\\pi10^3\\mathrm t\\;-\\;10\\mathrm{πcos}2\\mathrm\\pi10^3\\mathrm t\\right)$$ V\nis fed to a phase modulator\nwith phase deviation constant k<sub>p</sub>=0.5rad/V. If the carrier frequency is 20 kHz, the\ninstantaneous frequency (in kHz) at t = 0.5 ms is __________",
+    "options": [],
+    "correct_options": [],
+    "answer": "70",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In the system shown in figure (a), m(t) is a low-pass signal with bandwidth W Hz. The\nfrequency response of the band-pass filter H(f) is shown in figure (b). If it is desired that the\noutput signal z(t) = 10x(t), the maximum value of W (in Hz) should be strictly less than\n____________________.\n<img alt=\"GATE ECE 2015 Set 1 Communications - Analog Communication Systems Question 14 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/e69f377a0663d561422681e47e8085df10847d4e08dc54b41e542237f502d7e9.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "350",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The signal m(t) as shown is applied both to a phase modulator (with\nk<sub>p</sub>\nas the phase constant) and\na frequency modulator (with\nk<sub>f</sub>\nas the frequency constant) having the same carrier frequency. \n<img alt=\"GATE ECE 2012 Communications - Analog Communication Systems Question 15 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b054a8aa9264ded8899940953b8161e828951168e45d3952fe69fe964abf5d34.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<p>The ratio k<sub>p</sub>/k<sub>f</sub>\n(in rad/Hz) for the same maximum phase deviation is</p>\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$8\\mathrm\\pi$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$4\\mathrm\\pi$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2\\mathrm\\pi$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\mathrm\\pi$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The signal $$\\cos\\;\\omega_ct\\;+\\;0.5\\;\\cos\\;\\omega_mt\\;s\\mathrm{in}\\;\\omega_ct$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "FM only"
+      },
+      {
+        "identifier": "B",
+        "content": "AM only"
+      },
+      {
+        "identifier": "C",
+        "content": "both AM &amp; FM "
+      },
+      {
+        "identifier": "D",
+        "content": "neither AM nor FM"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A Hilbert transformer is a",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "non-linear system"
+      },
+      {
+        "identifier": "B",
+        "content": "non-causal system"
+      },
+      {
+        "identifier": "C",
+        "content": "time-varying system"
+      },
+      {
+        "identifier": "D",
+        "content": "low-pass system"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The diagonal clipping in Amplitude Demodulation (using envelope detector) can\nbe avoided if RC time-constant of the envelope detector satisfies the following\ncondition, (here W is message bandwidth and ω<sub>c</sub>\nis carrier frequency both in\nrad/sec) ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\mathrm{RC}\\;&lt;\\frac1{\\mathrm W}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\mathrm{RC}\\;&gt;\\frac1{\\mathrm W}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\mathrm{RC}\\;&lt;\\frac1{{\\mathrm\\omega}_\\mathrm c}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\mathrm{RC}\\;&gt;\\frac1{{\\mathrm\\omega}_\\mathrm c}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A device with input x(t) and output y(t) is characterized by: y(t) = x<sup>2</sup>(t). An FM signal with frequency deviation of 90 kHz and modulating signal bandwidth of 5 kHz is applied to this device. The bandwidth of the output signal is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "370 kHz"
+      },
+      {
+        "identifier": "B",
+        "content": "190 kHz"
+      },
+      {
+        "identifier": "C",
+        "content": "380 kHz"
+      },
+      {
+        "identifier": "D",
+        "content": "95 kHz"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A carrier is phase modulated (PM) with frequency deviation of 10 kHz by a single\ntone frequency of 1 kHz. If the single tone frequency is increased to 2 kHz,\nassuming that phase deviation remains unchanged, the bandwidth of the PM\nsignal is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "21 kHz "
+      },
+      {
+        "identifier": "B",
+        "content": "22 kHz "
+      },
+      {
+        "identifier": "C",
+        "content": "42 kHz "
+      },
+      {
+        "identifier": "D",
+        "content": "44 kHz "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Two sinusoidal signals of same amplitude and frequencies 10 kHz and 10.1 kHz\nare added together. The combined signal is given to an ideal frequency detector.\nThe output of the detector is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.1 kHz sinusoid"
+      },
+      {
+        "identifier": "B",
+        "content": "20.1 kHz sinusoid"
+      },
+      {
+        "identifier": "C",
+        "content": "a linear function of time"
+      },
+      {
+        "identifier": "D",
+        "content": "a constant"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A DSB-SC signal is to be generated with a carrier frequency f<sub>c</sub> = 1MHz using a\nnonlinear device with the input-output characteristic $$v_0=a_0v_i\\;+\\;a_1v_i^3$$.where a<sub>0</sub> and a<sub>1</sub> are constants. The output of the nonlinear device can be filtered\nby an appropriate band-pass filter. Let $$v_0=A_c'\\;\\cos\\left(2{\\mathrm{πf}}_\\mathrm c'\\mathrm t\\right)\\;+\\;m\\left(t\\right)$$ where m(t) is the message signal. Then the value of\n$$f_c'$$ (in MHz) is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1.0"
+      },
+      {
+        "identifier": "B",
+        "content": "0.333"
+      },
+      {
+        "identifier": "C",
+        "content": "0.5"
+      },
+      {
+        "identifier": "D",
+        "content": "3.0"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$m\\left(t\\right)\\;=\\cos\\left[\\left(4\\mathrm\\pi\\times10^3\\right)t\\right]$$ be the message signal and\n$$c\\left(t\\right)\\;=5\\cos\\left[2\\mathrm\\pi\\times10^6t\\right]$$ be the carrier. \n<p> c(t) and m(t) are used to generate an FM signal. If the peak frequency deviation\nof the generated FM signal is three times the transmission bandwidth of the AM\nsingal, then the coefficient of the term $$\\cos\\left[2\\mathrm\\pi\\left(1008\\times10^3\\right)t\\right]$$ in the FM signal (in\nterms of the Bessel coefficients) is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5\\;J_4\\left(3\\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left(5/2\\right)\\;J_8\\left(3\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left(5/2\\right)\\;J_8\\left(4\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$5\\;J_4\\left(6\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$m\\left(t\\right)\\;=\\cos\\left[\\left(4\\mathrm\\pi\\times10^3\\right)t\\right]$$ be the message signal and\n$$c\\left(t\\right)\\;=5\\cos\\left[2\\mathrm\\pi\\times10^6t\\right]$$ be the carrier. \n<p>c(t) and m(t) are used to generate an AM signal. The modulation index of the\ngenerated AM signal is 0.5. Then the quantity $$\\frac{Total\\;sideband\\;power}{Carrier\\;power}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1/2"
+      },
+      {
+        "identifier": "B",
+        "content": "1/4"
+      },
+      {
+        "identifier": "C",
+        "content": "1/3"
+      },
+      {
+        "identifier": "D",
+        "content": "1/8"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "In an FM system, a carrier of 100 MHz is modulated by a sinusoidal signal of 5\nKHz. The bandwidth by Carson’s approximation is 1 MHz. If y(t) = (modulated\nwaveform)<sup>3</sup>, then by using Carson’s approximation, the bandwidth of y(t) around\n300 MHz and the and the spacing of spectral components are, respectively.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3 MHz, 5 KHz "
+      },
+      {
+        "identifier": "B",
+        "content": "1 MHz, 15 KHz "
+      },
+      {
+        "identifier": "C",
+        "content": "3 MHz, 15 KHz"
+      },
+      {
+        "identifier": "D",
+        "content": "1 MHz, 5 KHz "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following demodulator(s) can be used for demodulating the signal\n$$x(t)\\;=\\;5\\left(1+2\\;\\cos200\\mathrm{πt}\\right)\\cos\\;20000\\;\\mathrm{πt}$$ .",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Envelope demodulator"
+      },
+      {
+        "identifier": "B",
+        "content": "square law demodulator"
+      },
+      {
+        "identifier": "C",
+        "content": "synchronous demodulator"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "content": "A superheterodyne radio receiver with an intermediate frequency of 455 KHz is\ntuned to a station operating at 1200 KHz. The associated image frequency is\n______ KHz.",
+    "options": [],
+    "correct_options": [],
+    "answer": "2110",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "content": "The maximum power efficiency of an AM modulator is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "25%"
+      },
+      {
+        "identifier": "B",
+        "content": "50%"
+      },
+      {
+        "identifier": "C",
+        "content": "75%"
+      },
+      {
+        "identifier": "D",
+        "content": "100%"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  }
+]

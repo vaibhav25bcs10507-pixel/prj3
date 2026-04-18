@@ -1,0 +1,389 @@
+[
+  {
+    "direction": null,
+    "content": "<p>Consider a unity-gain negative feedback system consisting of the plant G(s) (given below) and a proportional-integral controller. Let the proportional gain and integral gain be 3 and 1, respectively. For a unit step reference input, the final values of the controller output and the plant output, respectively, are</p>\n<p>$$G(s) = {1 \\over {s - 1}}$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\infty,\\infty$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$1,0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$1,-1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$-1,1$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given system can be drawn as shown below,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyy5k7do/686073b8-139d-4c29-9f14-d9a7a73be7f4/5e7339c0-48cd-11ef-9c03-5b7518daaafa/file-jaoe38c1lyy5k7dp.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyy5k7do/686073b8-139d-4c29-9f14-d9a7a73be7f4/5e7339c0-48cd-11ef-9c03-5b7518daaafa/file-jaoe38c1lyy5k7dp.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2023 Control Systems - Controller and Compensator Question 3 English Explanation\">\n\n<p>Here,</p>\n\n<p>$X(s) \\rightarrow$ Controller output</p>\n\n<p>$C(s) \\rightarrow$ Plant output</p>\n\n<p>$C(s)=R(s) \\frac{\\left(3+\\frac{1}{s}\\right)\\left(\\frac{1}{s-1}\\right)}{1+\\left(3+\\frac{1}{s}\\right) \\frac{1}{s-1}}=R(s) \\frac{(3 s+1)}{s(s-1)+3 s+1}=\\frac{(3 s+1)}{s(s-1)+3 s+1} \\times \\frac{1}{s}$</p>\n\n<p>$\\begin{aligned} &amp; \\therefore \\quad c(\\infty)=\\lim _{s \\rightarrow 0} s C(s)=1 \\\\\\\\ &amp; X(s)=[R(s)-C(s)]\\left(3+\\frac{1}{s}\\right) \\\\\\\\ &amp; X(s)=[R(s)-C(s)]\\left(\\frac{3 s+1}{s}\\right) \\\\\\\\ &amp; x(\\infty)=\\lim _{s \\rightarrow 0} s X(s)=\\lim _{s \\rightarrow 0}[R(s)-C(s)](3 s+1)\\end{aligned}$</p>\n\n<p>$$ \\begin{aligned} x(\\infty) &amp; =\\lim _{s \\rightarrow 0}\\left(\\frac{1}{s}-\\frac{1}{s} \\frac{(3 s+1)}{\\left(s^2+2 s+1\\right)}\\right)(3 s+1) \\\\\\\\ &amp; =\\lim _{s \\rightarrow 0} \\frac{1}{s}\\left[\\frac{s^2+2 s+1-3 s-1}{s^2+2 s+1}\\right](3 s+1) \\\\\\\\ &amp; =\\lim _{s \\rightarrow 0} \\frac{1}{s}\\left[\\frac{s^2-s}{s^2+2 s+1}\\right](3 s+1)=\\lim _{s \\rightarrow 0} \\frac{(s-1)(3 s+1)}{s^2+2 s+1}=-1 \\end{aligned} $$</p>\n\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function $$C(s)$$ of a compensator is given below: \n$$C\\left( s \\right) = {{\\left( {1 + {s \\over {0.1}}} \\right)\\left( {1 + {s \\over {100}}} \\right)} \\over {\\left( {1 + s} \\right)\\left( {1 + {s \\over {10}}} \\right)}}$$\n<p>The frequency range in which the phase (lead) introduce by the compensator reaches the maximum is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.1 &lt; \\omega  &lt; 1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1 &lt; \\omega  &lt; 10$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$10 &lt; \\omega  &lt; 100$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\omega  &gt; 100$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function of a second order real system with a perfectly flat magnitude response of unity has a pole at $$\\left( {2 - j3} \\right).$$ List all the poles and zeros.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Poles at $$\\left( {2 \\pm j3} \\right),$$ no zeros "
+      },
+      {
+        "identifier": "B",
+        "content": "Poles at $$\\left( { \\pm 2 - j3} \\right),$$ one zero at origin"
+      },
+      {
+        "identifier": "C",
+        "content": "Poles at $$\\left( {2 - j3} \\right),\\,\\,\\left( { - 2 + j3} \\right),$$ zeros at $$\\left( { - 2 - j3} \\right),\\,\\,\\left( {2 + j3} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Poles at $$\\left( {2 \\pm j3} \\right),$$ zeros at $$\\left( { - 2 \\pm j3} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A lead compensator used for a closed loop controller has the following transfer function $${\\textstyle{{K\\left( {1 + {s \\over a}} \\right)} \\over {\\left( {1 + {s \\over b}} \\right)}}}\\,\\,\\,$$ For such a lead compensator ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a &lt; b$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$b &lt; a$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$a &gt; Kb$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$a &lt; Kb$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ee-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The phase lead compensation is used to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "increase rise time and decrease overshoot "
+      },
+      {
+        "identifier": "B",
+        "content": "decrease both rise time and overshoot "
+      },
+      {
+        "identifier": "C",
+        "content": "increase both rise time and overshoot"
+      },
+      {
+        "identifier": "D",
+        "content": "decrease rise time and increase overshoot"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ee-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A differentiator has transfer function whose ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "phase increases linearly with frequency "
+      },
+      {
+        "identifier": "B",
+        "content": "amplitude remains constant "
+      },
+      {
+        "identifier": "C",
+        "content": "amplitude increases linearly with frequency "
+      },
+      {
+        "identifier": "D",
+        "content": "amplitude  decreases linearly with frequency "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ee-1994",
+    "difficulty": null
+  },
+  {
+    "content": "The pole $$-$$ zero configuration of a phase lead compensator is given by\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/vzXfAuLiaGKqvy1Ic/nyripCw3niKE6oFZx2YMOgOCGoQGm/JyMMpbGO2bHsK3jx1oMUgk/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 1994 Control Systems - Controller and Compensator Question 4 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/JMhSZoMEeLWKNPEAZ/M1D2L3nLJArWS7OYmzwgW88roj0vr/ZFOeGN5Abhk1PVX0YiTJBy/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 1994 Control Systems - Controller and Compensator Question 4 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/wsLpI4ftP26fQGXI6/kr3RyVMSYjm9kP2lZn9qGlKr75q3s/XenSJVAms8oPqZ5MzQ6IBy/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 1994 Control Systems - Controller and Compensator Question 4 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/heYTTSxWA3ku3JTno/3FA3k291HRtE8RAQMFRtep14YzbIF/zNpx58DkLA3ZAPQ5XsXPEN/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 1994 Control Systems - Controller and Compensator Question 4 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ee-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "A controller $D(s)$ of the form $\\left(1+K_D s\\right)$ is to be designed for the plant $G(s)=\\frac{1000 \\sqrt{2}}{s(s+10)^2}$ as shown in the figure. The value of $K_D$ that yields a phase margin of $45^{\\circ}$ at the gain cross-over frequency of $10 \\mathrm{rad} / \\mathrm{sec}$ is _________(round off to one decimal place).\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbgi3xxf/170e44b9-68cd-49b7-a04a-42e9eeae1253/251e3d30-4077-11f0-8189-2f5e9344a491/file-jaoe38c1mbgi3xxg.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbgi3xxf/170e44b9-68cd-49b7-a04a-42e9eeae1253/251e3d30-4077-11f0-8189-2f5e9344a491/file-jaoe38c1mbgi3xxg.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2025 Control Systems - Controller and Compensator Question 2 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.1",
+    "explanation": "<p>Given compensated system has</p>\n<p>$$ P M=180^{\\circ}+\\left[-90^{\\circ}-2 \\tan ^{-1}\\left(\\frac{10}{10}\\right)\\right]=0^{\\circ} $$</p>\n<p>But required $45^{\\circ}$ phase margin has to be provided by compensator</p>\n<p>$$ \\begin{aligned} \\left.\\tan ^{-1}\\left[K_d \\omega\\right]\\right|_{\\text {at } \\omega=10 \\mathrm{rad} / \\text { sec }} & =45^{\\circ} \\\\ \\therefore \\quad K_D & =0.1 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ee-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In the given figure, plant $G_p(s)=\\frac{2.2}{(1+0.1 s)(1+0.4 s)(1+1.2 s)}$ and compensator $G_c(s)=K\\left[\\frac{1+T_1 s}{1+T_2 s}\\right]$.</p>\n<p>The external disturbance input is $D(s)$. It is desired that when the disturbance is a unit step, the steady state error should not exceed 0.1 unit. The minimum value of $K$ is ____________. . (Round off to 2 decimal places)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh63xf0d/94ef3099-76d6-42aa-a4c6-1431e0620f28/259eded0-b189-11f0-9ec5-a735814724b3/file-jaoe38c1mh63xf0e.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh63xf0d/94ef3099-76d6-42aa-a4c6-1431e0620f28/259eded0-b189-11f0-9ec5-a735814724b3/file-jaoe38c1mh63xf0e.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2021 Control Systems - Controller and Compensator Question 1 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "10.45",
+    "explanation": "<p>$$ \\begin{aligned} &amp;\\text { Method 1: }\\\\ &amp;\\text {  } \\begin{gathered}Given : G_p(s)=\\frac{2.2}{(1+0.1 s)(1+0.4 s)(1+1.2 s)} \\\\ G_c(s)=K\\left[\\frac{1+T_1 s}{1+T_2 s}\\right] \\end{gathered} \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh63xe1a/2e5749d3-5c95-419b-8107-ac5ef33d5acb/24de26e0-b189-11f0-9ec5-a735814724b3/file-jaoe38c1mh63xe1b.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh63xe1a/2e5749d3-5c95-419b-8107-ac5ef33d5acb/24de26e0-b189-11f0-9ec5-a735814724b3/file-jaoe38c1mh63xe1b.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2021 Control Systems - Controller and Compensator Question 1 English Explanation\">$$ \\begin{aligned} \\text { Put } R(s)=0, &amp; C(s)=G_p\\left[E(s) G_c(s)+D\\right] \\\\ &amp; -E=G_p G_c E+G_p D \\\\ &amp; -E\\left[1+G_p G_c\\right]=G_p D \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp; E(s)=\\frac{-G_p D}{1+G_p G_c} \\\\ &amp; e_{s s}=\\lim _{s \\rightarrow 0} S E(s) \\\\ &amp; e_{s s}=\\frac{-2.2}{1+2.2 K} \\\\ &amp; e_{s s} \\leq 0.1 \\\\ &amp; \\frac{-22}{1+22 K} \\leq 0.1 \\\\ &amp; -2.2 \\leq 0.1+0.22 K \\\\ &amp; 0.22 K \\geq-2.3 \\\\ &amp; K \\geq-10.45 \\\\ &amp; K_{\\min }=-10.45 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ee-2021",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function of a compensator is given as $${G_c}\\left( s \\right) = {{s + a} \\over {s + b}}$$ \n<p>$${G_c}\\left( s \\right)$$ is a lead compensator if </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a = 1,b = 2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$a = 3,b = 2$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$a = -3,b = -1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$a = 3,b = 1$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ee-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function of a compensator is given as $${G_c}\\left( s \\right) = {{s + a} \\over {s + b}}$$ \n<p>The phase of the above lead compensator is maximum at </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sqrt 2 \\,rad/s$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sqrt 3 \\,rad/s$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sqrt 6 \\,rad/s$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1/$$ $$\\sqrt 3 \\,rad/s$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ee-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function of two compensators are given below:\n$${C_1} = {{10\\left( {s + 1} \\right)} \\over {\\left( {s + 10} \\right)}},\\,{C_2} = {{s + 10} \\over {10\\left( {s + 1} \\right)}}$$ \n<p>Which one of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${C_1}$$ is lead compensator and $${C_2}$$ is a lag compensator "
+      },
+      {
+        "identifier": "B",
+        "content": "$${C_1}$$ is a lag compensator and $${C_2}$$ is a lead compensator"
+      },
+      {
+        "identifier": "C",
+        "content": "Both $${C_1}$$ and $${C_2}$$ are lead compensator "
+      },
+      {
+        "identifier": "D",
+        "content": "Both $${C_1}$$ and $${C_2}$$ are lag compensator "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The system $$900/s(s+1)(s+9)$$ is to be such that its gain crossover frequency becomes same as its uncompensated phase crossover frequency and provides at $${45^0}$$  phase margin . To achieve this, one may use ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a lag compensator that provides an attenuation of $$20dB$$ and a phase lag of $${45^0}$$ at the frequency of $$3\\sqrt 3 $$ rad/s"
+      },
+      {
+        "identifier": "B",
+        "content": "a lead compensator that provides an amplification of $$20dB$$ and a phase lead of  $${45^0}$$ at the frequency of $$3$$ rad/s "
+      },
+      {
+        "identifier": "C",
+        "content": "a lag - lead compensator that provides an amplification of $$20dB$$ and a phase alg of  $${45^0}$$ at the frequency of $$\\sqrt 3 $$ rad/s"
+      },
+      {
+        "identifier": "D",
+        "content": "a lag - lead compensator that provides an attenuation of $$20dB$$ and phase lead of $${45^0}$$ at the frequency of $$3$$ rad/s"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ee-2007",
+    "difficulty": null
+  },
+  {
+    "content": "$$D\\left( s \\right) = {{\\left( {0.5s + 1} \\right)} \\over {\\left( {0.05s + 1} \\right)}}$$  Maximum phase lead of the compensator is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$52$$ deg at 4 rad/sec"
+      },
+      {
+        "identifier": "B",
+        "content": "$$52$$ deg at $$10$$ rad/sec"
+      },
+      {
+        "identifier": "C",
+        "content": "$$55$$ deg at $$12$$ rad/sec"
+      },
+      {
+        "identifier": "D",
+        "content": "none of the answers is correct"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ee-2000",
+    "difficulty": null
+  }
+]

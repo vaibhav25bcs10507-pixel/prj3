@@ -1,0 +1,566 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let <b> f(z) </b> be an analytic function, where <b> z = x + iy </b>. If the real part of <b> f(z) </b> is <b> cosh x cos y </b>, and the imaginary part of <b> f(z) </b> is zero for <b> y = 0 </b>, then <b> f(z) </b> is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>cosh x exp (−iy)</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>cosh z exp z</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>cosh z cos y</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>cosh z</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the function <b>f(z)</b>, we first note that since <b>f(z)</b> is analytic, it satisfies the Cauchy-Riemann equations. Let's denote <b>f(z)</b> as:</p>\n\n$$ f(z) = u(x, y) + i v(x, y) $$\n\n<p>where <b>u(x, y)</b> is the real part and <b>v(x, y)</b> is the imaginary part of <b>f(z)</b>.</p>\n\n<p>Given that the real part of <b>f(z)</b> is <b>cosh x cos y</b>, we have:</p>\n\n$$ u(x, y) = \\cosh x \\cos y $$\n\n<p>And since the imaginary part of <b>f(z)</b> is zero when <b>y = 0</b>, we have:</p>\n\n$$ v(x, 0) = 0 $$\n\n<p>Next, we use the Cauchy-Riemann equations:</p>\n\n$$ \\frac{\\partial u}{\\partial x} = \\frac{\\partial v}{\\partial y} \\quad \\text{and} \\quad \\frac{\\partial u}{\\partial y} = -\\frac{\\partial v}{\\partial x} $$\n\n<p>First, compute these partial derivatives for <b>u(x, y)</b>:</p>\n\n<p>For <b>u(x, y) = \\cosh x \\cos y</b>, we find:</p>\n\n$$ \\frac{\\partial u}{\\partial x} = \\sinh x \\cos y $$\n\n$$ \\frac{\\partial u}{\\partial y} = -\\cosh x \\sin y $$\n\n<p>From the Cauchy-Riemann equations, we get:</p>\n\n$$ \\frac{\\partial v}{\\partial y} = \\sinh x \\cos y $$\n\n$$ -\\frac{\\partial v}{\\partial x} = -\\cosh x \\sin y $$\n\n<p>Thus:</p>\n\n$$ \\frac{\\partial v}{\\partial x} = \\cosh x \\sin y $$\n\n<p>Integrating <b>$ \\frac{\\partial v}{\\partial x}$ </b> with respect to <b>x</b>, we get:</p>\n\n$$ v(x, y) = \\sinh x \\sin y + g(y) $$\n\n<p>However, <b>v(x, 0) = 0</b> implies:</p>\n\n$$ v(x, 0) = \\sinh x \\cdot 0 + g(0) = 0 \\implies g(0) = 0 $$\n\n<p>Since <b>g(y)</b> is zero, <b>v(x, y)</b> becomes:</p>\n\n$$ v(x, y) = \\sinh x \\sin y $$\n\n<p>Thus, we can form the function <b>f(z)</b> as:</p>\n\n$$ f(z) = u(x, y) + iv(x, y) = \\cosh x \\cos y + i \\sinh x \\sin y $$\n\n<p>We recognize that:</p>\n\n$$ f(z) = \\cosh x \\cos y + i \\sinh x \\sin y = \\cosh(x + iy) = \\cosh(z) $$\n\n<p>Therefore, the function <b>f(z)</b> is</p> \n\n<b>cosh z</b>,\n\n<p>which corresponds to Option D.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-me-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p style=\"\">The value of k that makes the complex-valued function</p>\n\n<p style=\"\">𝑓(𝑧) = 𝑒<span style=\" line-height: 0; position: relative; vertical-align: baseline; top: -0.5em;font-size:10.5px;\">−𝑘𝑥</span>&nbsp;(cos 2𝑦 − 𝑖 sin 2𝑦)</p>\n\n<p style=\"\">analytic, where 𝑧 = 𝑥 + 𝑖𝑦, is _________.</p>\n\n<p style=\"\">(Answer in integer)</p>\n",
+    "options": [],
+    "correct_options": [],
+    "explanation": "<p>Given the function :</p>\n\n<p>$ f(z) = u(x, y) + iv(x, y) $</p>\n\n<p>$ f(z) = e^{-kx} \\cos 2y - i e^{-kx} \\sin 2y $</p>\n\n<p>Therefore, we identify :</p>\n\n<p>$ u(x, y) = e^{-kx} \\cos 2y $</p>\n\n<p>$ v(x, y) = -e^{-kx} \\sin 2y $</p>\n\n<p>Here's how to compute the partial derivatives :</p>\n\n<p>$ \\frac{\\partial u}{\\partial x} = -k e^{-kx} \\cos 2y $</p>\n\n<p>$ \\frac{\\partial u}{\\partial y} = -2 e^{-kx} \\sin 2y $</p>\n\n<p>$ \\frac{\\partial v}{\\partial x} = -k e^{-kx} \\sin 2y $</p>\n\n<p>$ \\frac{\\partial v}{\\partial y} = -2 e^{-kx} \\cos 2y $</p>\n\n<p>For $ f(z) $ to be analytic, it must satisfy the Cauchy-Riemann equations :</p>\n\n<p>$ \\frac{\\partial u}{\\partial x} = \\frac{\\partial v}{\\partial y} $</p>\n\n<p>Substituting the derived derivatives :</p>\n\n<p>$ -k e^{-kx} \\cos 2y = -2 e^{-kx} \\cos 2y $</p>\n\n<p>Solving for k :</p>\n\n<p>$ k = 2 $</p>",
+    "answer": "1.999TO2.001",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-me-2023",
+    "difficulty": null
+  },
+  {
+    "content": "$$f\\left( z \\right) = u\\left( {x,y} \\right) + i\\,\\,\\,\\,v\\left( {x,y} \\right)$$  is an analytic function of complex variable $$z=x+iy$$ , where $$i = \\sqrt { - 1} $$ If $$u(x,y)=2xy,$$ then $$v(x,y)$$ may be expressed as ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - {x^2} + {y^2} + $$ constant"
+      },
+      {
+        "identifier": "B",
+        "content": "$$  {x^2} - {y^2} + $$ constant"
+      },
+      {
+        "identifier": "C",
+        "content": "$$  {x^2} + {y^2} + $$ constant"
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - \\left( {{x^2} + {y^2}} \\right) + $$ constant"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Solutions of Laplace's equation having continuous second-order partial derivatives are called ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "biharmonic functions"
+      },
+      {
+        "identifier": "B",
+        "content": "harmonic functions "
+      },
+      {
+        "identifier": "C",
+        "content": "conjugate harmonic functions"
+      },
+      {
+        "identifier": "D",
+        "content": "error functions"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Given two complex numbers $${z_1} = 5 + \\left( {5\\sqrt 3 } \\right)i$$ and $${z_2} = {2 \\over {\\sqrt 3 }} + 2i,$$ the argument of $${{{z_1}} \\over {{z_2}}}$$ in degrees $$i$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$30$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$60$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$90$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The argument of the complex number $${{1 + i} \\over {1 - i}},$$ where $$i = \\sqrt { - 1} ,$$  is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - \\pi $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - {\\pi  \\over 2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$  {\\pi  \\over 2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pi $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An analytic function of a complex variable $$z=x+iy,$$  where $$i = \\sqrt { - 1} $$ is expressed as \n<br>$$f\\left( z \\right) = u\\left( {x,y} \\right) + i\\,v\\left( {x,y} \\right).\\,$$ If $$u(x,y)=2xy,$$ \n<br>then $$v(x,y)$$ must be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${x^2} + {y^2} + $$ constant "
+      },
+      {
+        "identifier": "B",
+        "content": "$${x^2} - {y^2} + $$ constant "
+      },
+      {
+        "identifier": "C",
+        "content": "$$-{x^2} + {y^2} + $$ constant "
+      },
+      {
+        "identifier": "D",
+        "content": "$$-{x^2} - {y^2} + $$ constant "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The product of two complex numbers $$1 + i\\,\\,\\,\\,\\&amp; \\,\\,\\,\\,2 - 5\\,i$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$7-3i$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3-4i$$  "
+      },
+      {
+        "identifier": "C",
+        "content": "$$-3-4i$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$7+3i$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-me-2011",
+    "difficulty": null
+  },
+  {
+    "content": "An analytic function of a complex variable $$z = x + i\\,y$$ is expressed as \n<br>$$f\\left( z \\right) = u\\left( {x,y} \\right) + i\\,\\,v\\,\\,\\left( {x,y} \\right)$$ where $$i = \\sqrt { - 1} .$$ \n<br>If $$u=xy$$ then the expression for $$v$$ should be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{{{\\left( {x + y} \\right)}^2}} \\over 2} + k$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{x - {y^2}} \\over 2} + k$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{y^2} - {x^2}} \\over 2} + k$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{{{\\left( {x - y} \\right)}^2}} \\over 2} + k$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-me-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The integral $$\\oint {f(z)dz} $$ evaluated around the unit circle on the complex plane for $$f(z) = {{\\cos z} \\over z}$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2\\pi i$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$4\\pi i$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-2\\pi i$$"
+      },
+      {
+        "identifier": "D",
+        "content": "0"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "$${i^i}$$, where $$i\\, = \\,\\sqrt { - 1} $$ is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "$${e^{ - {\\pi  \\over 2}}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\pi  \\over 2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-me-1996",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $C$ is the unit circle in the complex plane with its center at the origin, then the value of $n$ in the equation given below is _______ (rounded off to 1 decimal place).</p>\n<p>$$ \\oint_c \\frac{z^3}{\\left(z^2+4\\right)\\left(z^2-4\\right)} d z=2 \\pi i n $$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "-0.1TO0.1",
+    "explanation": "<p>Poles: $\\left(z^2-4\\right)\\left(z^2+4\\right)=0$</p>\n<p>$$ z= \\pm 2, \\pm 2 i $$</p>\n<p>All the poles are lies outstack the closed curve.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-me-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Given z = x +iy, i = √-1 C is a circle of radius 2 with the centre at the origin. If the contour C is traversed anticlockwise, then the value of the integral&nbsp;<span class=\"math-tex\">$\\frac{1}{2\\pi}\\int_c\\frac{1}{(z-i)(z+4i)}dZ$</span>&nbsp;is ________ (round off to one decimal place.)",
+    "options": [],
+    "correct_options": [],
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m0465x1k/87ab2375-d15d-4bcd-9f3f-468ff50fe487/a58ac080-5fe8-11ef-a6e1-b3bdc355884c/file-jaoe38c1m0465x1l.png?format=png\" alt=\"GATE ME 2022 Set 2 Engineering Mathematics - Complex Variable Question 3 English Explanation\"></p>\n<p>$ \\text{Complex function :} $</p>\n<p>$ f(z) = \\frac{1}{(z - i)(z + 4i)} $</p>\n<h4>Poles :</h4>\n<p>The poles of the function $ f(z) $ are :</p>\n<p>$ z = i \\text{ and } z = -4i $</p>\n<h4>Applying the Residue Theorem :</h4>\n<p>The integral around a closed contour $ C $ is given by:</p>\n<p>$ I = 2 \\pi i \\sum \\text{(residues of } f(z) \\text{ at poles inside the contour)} $</p>\n<h4>Calculating Residues:</h4>\n<p>The residue at $ z = i $ is :</p>\n<p>$ \\operatorname{Res}(z = i) = \\lim\\limits_{z \\to i} f(z) (z-i) $</p>\n<p>$ \\operatorname{Res}(z = i) = \\lim\\limits_{z \\to i} \\frac{1}{(z - i)(z + 4i)} (z - i) $</p>\n<p>$ \\operatorname{Res}(z = i) = \\lim\\limits_{z \\to i} \\frac{1}{z + 4i} $</p>\n<p>$ \\operatorname{Res}(z = i) = \\frac{1}{i + 4i} $</p>\n<p>$ \\operatorname{Res}(z = i) = \\frac{1}{5i} $</p>\n<p>Since $ z = -4i $ is outside the circle of radius 2, it does not contribute to the integral.</p>\n<h4>Computing the Integral :</h4>\n<p>Using the residue $ \\operatorname{Res}(z = i) = \\frac{1}{5i} $:</p>\n<p>$ I = \\frac{1}{2\\pi} \\times 2\\pi i \\times \\frac{1}{5i} $</p>\n<p>Simplifying :</p>\n<p>$ I = \\frac{1}{5} = 0.2 $</p>\n<p>Hence, the value of the integral is 0.2.</p>\n",
+    "answer": "0.2",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>The value of the integral</p>\n\n<p><span class=\"math-tex\">$\\rm \\oint \\left( \\frac{6z}{2z^4 - 3z^3 + 7 z^2 - 3z + 5} \\right) dz$</span></p>\n\n<p>evaluated over a counter-clockwise circular contour in the complex plane enclosing only the pole z = i, where 𝑖 is the imaginary unit, is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(-1 + i)&nbsp;π"
+      },
+      {
+        "identifier": "B",
+        "content": "<span style=\"\">(1 + i)&nbsp;π</span>"
+      },
+      {
+        "identifier": "C",
+        "content": "2<span style=\"\">(1 - i)&nbsp;π</span>"
+      },
+      {
+        "identifier": "D",
+        "content": "<span style=\"\">(2 + i)&nbsp;π</span>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "explanation": "<p>Given : $ I = \\oint \\left( \\frac{6z}{2z^4 - 3z^3 + 7z^2 - 3z + 5} \\right) dz $</p>\n\n<p>The integral is evaluated over a counter-clockwise circular contour in the complex plane enclosing only the pole $ z = i $.</p>\n\n<p>We know that :</p>\n\n<p>$$ I = 2 \\pi i \\times \\operatorname{Res}(z = a) $$</p>\n\n<p>Specifically :</p>\n\n<p>$$ I = 2 \\pi i \\times \\operatorname{Res}(z = i) $$</p>\n\n<p>Given the complex function :</p>\n\n<p>$$ f(z) = \\frac{6z}{2z^4 - 3z^3 + 7z^2 - 3z + 5} $$</p>\n\n<p>To find the residue at the pole $ z = i $, we use the formula for the residue :</p>\n\n<p>$$ \\operatorname{Res}(z = a) = \\lim_{z \\to a} \\left[ f(z) \\cdot (z - a) \\right] $$</p>\n\n<p>Applying this, we get :</p>\n\n<p>$$ \\operatorname{Res}(z = i) = \\lim_{z \\to i} \\left( \\frac{6z}{2z^4 - 3z^3 + 7z^2 - 3z + 5} \\cdot (z - i) \\right) $$</p>\n\n<p>Which simplifies further to :</p>\n\n<p>$$ \\operatorname{Res}(z = i) = \\lim_{z \\to i} \\frac{6z^2 - 6zi}{2z^4 - 3z^3 + 7z^2 - 3z + 5} $$</p>\n\n<p>At this point, the expression is in the indeterminate form $\\frac{0}{0}$, so we apply L'Hôpital's rule :</p>\n\n<p>$$ \\operatorname{Res}(z = i) = \\lim_{z \\to i} \\frac{12z - 6i}{8z^3 - 9z^2 + 14z - 3} $$</p>\n\n<p>Evaluating the limit, we find :</p>\n\n<p>$$ \\operatorname{Res}(z = i) = \\frac{12i - 6i}{8i^3 - 9i^2 + 14i - 3} = \\frac{6i}{-8i + 9 + 14i - 3} = \\frac{6i}{6 + 6i} = \\frac{i}{1 + i} $$</p>\n\n<p>To simplify, we rationalize the denominator :</p>\n\n<p>$$ \\frac{i}{1 + i} \\times \\frac{1 - i}{1 - i} = \\frac{i(1 - i)}{(1 + i)(1 - i)} = \\frac{i - i^2}{1^2 - i^2} = \\frac{i + 1}{2} = \\frac{1 + i}{2} $$</p>\n\n<p>From this, we use our earlier formula :</p>\n\n<p>$$ I = 2 \\pi i \\times \\operatorname{Res}(z = i) $$</p>\n\n<p>Thus :</p>\n\n<p>$$ I = 2 \\pi i \\times \\frac{1 + i}{2} = \\pi i (1 + i) = \\pi (i + i^2) = \\pi (i - 1) = (-1 + i) \\pi $$</p>\n\n<p>Hence, the correct answer is $(\\mathrm{A}) (-1 + i) \\pi$.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "If $$f\\left( z \\right) = \\left( {{x^2} + a{y^2}} \\right) + ibxy$$ is a complex analytic function of $$z=x+iy,$$ \n<br>where $${\\rm I} = \\sqrt { - 1} ,$$ then",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a=-1,b=-1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$a=-1, b=2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$a=1, b=2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$a=2, b=2$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The value of $$\\oint\\limits_\\Gamma  {{{3z - 5} \\over {\\left( {z - 1} \\right)\\left( {z - 2} \\right)}}dz} $$ along a closed path $$\\Gamma $$ is equal to $$\\left( {4\\pi i} \\right),$$ where $$z=x+iy$$ and $$i = \\sqrt { - 1} .$$ The correct path $$\\Gamma $$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/a8tfL3cVUp3ww2H1c/VbZUDjRUhylSwFRl4bb2RMstWkJ6P/7p3P1Nv3F1wFAz8EZrjvDS/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ME 2016 Set 2 Engineering Mathematics - Complex Variable Question 13 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/zeXIjNqEIfkrJdu9h/GK6dVOmsWiQZnuz0YOgvT4TtGTZjb/IMXzzV4LcPHJEnCd9ZcUgv/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ME 2016 Set 2 Engineering Mathematics - Complex Variable Question 13 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/1yz92eCiTAgvdQZy9/pdXus6JkJWLM0hyxNPMpXIj0rh51I/4tquf95knVtieKnGpo8ZPm/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ME 2016 Set 2 Engineering Mathematics - Complex Variable Question 13 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/khYXYsN8gOzdBG7mW/7qxoM9j6lD7IabmoBidn6PzyXiQG8/EcuD4zfcuxi4K8DDsUV8Kh/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ME 2016 Set 2 Engineering Mathematics - Complex Variable Question 13 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A function $$f$$ of the complex variable $$z=x+iy,$$ is given as $$f(x,y)=u(x,y)+iv(x,y),$$ \n<br>Where $$u(x,y)=2kxy$$ and $$v(x,y)$$ $$ = {x^2} - {y^2}.$$ \n<br>The value of $$k,$$ for which the function is analytic, is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "-1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the integral $$\\int\\limits_{ - \\infty }^\\infty  {{{\\sin x} \\over {{x^2} + 2x + 2}}} dx$$ \n<br>evaluated using contour integration and the residue theorem is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - \\pi {{\\sin \\left( 1 \\right)} \\over e}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - \\pi {{\\cos \\left( 1 \\right)} \\over e}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{\\sin \\left( 1 \\right)} \\over e}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\cos \\left( 1 \\right)} \\over e}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "If $$z$$ is a complex variable, the value of $$\\int\\limits_5^{3i} {{{dz} \\over z}} $$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - 0.511 - 1.57i$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-0.511+1.57i$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.511-1.57i$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.511+1.57i$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "An analytic function of a complex variable $$z = x + iy$$ is expressed as \n<br>$$f\\left( z \\right) = u\\left( {x + y} \\right) + iv\\left( {x,y} \\right),$$ where $$i = \\sqrt { - 1} .$$ If $$u(x, y)=$$ $${x^3} - {y^2}$$ \n<br>then expression for $$v(x,y)$$ in terms of $$x,y$$ and a general constant $$c$$ would be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$xy+c$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{{x^2} + {y^2}} \\over 2} + c$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2xy+c$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{{{\\left( {x - y} \\right)}^2}} \\over 2} + c$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "If $$\\phi (x,y)$$ and $$\\psi (x,y)$$ are function with continuous 2<sup>nd</sup> derivatives then $$\\phi (x,y)\\, + \\,i\\psi (x,y)$$ can be expressed as an analytic function of x +iy ($$i = \\sqrt { - 1} $$) when",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{\\partial \\phi } \\over {\\partial x}} =  - {{\\partial \\psi } \\over {\\partial x}},\\,{{\\partial \\phi } \\over {\\partial y}} = {{\\partial \\psi } \\over {\\partial y}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\partial \\phi } \\over {\\partial y}} =  - {{\\partial \\psi } \\over {\\partial x}},\\,{{\\partial \\phi } \\over {\\partial x}} = {{\\partial \\psi } \\over {\\partial y}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{\\partial ^2}\\phi } \\over {\\partial {x^2}}} + {{{\\partial ^2}\\phi } \\over {\\partial {y^2}}} = {{{\\partial ^2}\\psi } \\over {\\partial {x^2}}} + {{{\\partial ^2}\\psi } \\over {\\partial {y^2}}} = 1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\partial \\phi } \\over {\\partial x}} + {{\\partial \\phi } \\over {\\partial y}} = {{\\partial \\psi } \\over {\\partial x}} + {{\\partial \\psi } \\over {\\partial y}} = 0$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,782 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In a 4-bit ripple counter, if the period of the waveform at the last flip-flop is 64 microseconds, then the frequency of the ripple counter in kHz is _________. (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "250",
+    "explanation": "<p>Note: In the question description, in the last sentence the word clock is missing. Because of the missing of the word clock the question is wrong.</p>\n<p>Number of flip-flops in the given</p>\n<p>Ripple counter, $$n=4$$</p>\n<p>Time period of the waveform at the last flip-flop (last flip-flop must be MSB flip flop i.e. FF 3$), T_3=64$ microseconds.</p>\n<p>The frequency of the waveform at the last flip-flop $f_{Q 3}=\\frac{1}{T_3}$</p>\n<p>Consider the clock frequency of the ripple counter as $f_c$.</p>\n<p>$$\\begin{aligned}\n\\text{Where,}\\quad f_{Q 3} & =\\frac{f_c}{2^4}=\\frac{f_c}{16} \\\\\nf_c & =16 \\times f_{Q 3}=16 \\times \\frac{1}{64 \\times 10^{-6}}=\\frac{1000}{4} \\times 10^3=250 \\mathrm{~kHz}\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The output of a 2-input multiplexer is connected back to one of its inputs as shown in the figure.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr45rtu/b3c46d70-0e32-4557-b7c1-760ae81888c8/676f5730-44ee-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr45rtv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr45rtu/b3c46d70-0e32-4557-b7c1-760ae81888c8/676f5730-44ee-11ef-ba4e-05f55505d0da/file-jaoe38c1lyr45rtv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Digital Logic - Sequential Circuits Question 5 English\"></p>\n<p>Match the functional equivalence of this circuit to one of the following options.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "D Flip-flop"
+      },
+      {
+        "identifier": "B",
+        "content": "D Latch"
+      },
+      {
+        "identifier": "C",
+        "content": "Half-adder"
+      },
+      {
+        "identifier": "D",
+        "content": "Demultiplexer"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The output equation of above $2 \\times 1$ mux is :</p>\n\n<p>$$ V=\\bar{S} I_0+S . I_1 $$</p>\n\n<p>So, when $\\mathrm{S}=0$</p>\n\n<p>$Y=I_0=Q$, the previous state value</p>\n\n<p>When $S=1$</p>\n\n<p>$$ Y=I_1,(\\text { Output }=\\text { Input }) $$</p>\n\n<p>Thus, it is D, Latch</p>\n\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the sequential circuit shown in the figure, where both flip-flops used are positive edge-triggered $$D$$ flip-flops.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/Ijud3FuRiWYutyWdW/gwSk6FcSRKIoEzx2nOBHo51q74pVc/7886sJIZEpOWkcou4c13Dt/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2018 Digital Logic - Sequential Circuits Question 9 English\"> \n<p>The number of states in the state transition diagram of this circuit that have a transition back to the same state on some value of “in” is _____.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "We want to design a synchronous counter that counts the sequence $$0-1-0-2-0-3$$ and then repeats. The minimum number of $$J-K$$ flip-flops required to implement this counter is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3 to 4",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a 4-bit Johnson counter with an initial value of 0000. The counting sequence of this counter is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0, 1, 3, 7, 15, 14, 12, 8, 0"
+      },
+      {
+        "identifier": "B",
+        "content": "0, 1, 3, 5, 7, 9, 11, 13, 15, 0"
+      },
+      {
+        "identifier": "C",
+        "content": "0, 2, 4, 6, 8, 10, 12, 14, 0"
+      },
+      {
+        "identifier": "D",
+        "content": "0, 8, 12, 14, 15, 7, 3, 1, 0"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of $$JK$$ flip-flops required to construct a synchronous counter with the count sequence $$\\left( {0,0,1,1,2,2,3,3,0,0,...} \\right)$$ is ____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$k = {2^n}.$$  A circuit is built by giving the output of an ݊$$n$$-bit binary counter as input to an $$n$$-to-$${2^n}$$ bit decoder. This circuit is equivalent to a",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$k$$-bit binary up counter."
+      },
+      {
+        "identifier": "B",
+        "content": "$$k$$-bit binary down counter."
+      },
+      {
+        "identifier": "C",
+        "content": "$$k$$-bit ring counter."
+      },
+      {
+        "identifier": "D",
+        "content": "$$k$$-bit Johnson counter. "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "You are given a free running clock with a duty cycle of $$50$$% and a digital waveform $$f$$ which changes only at the negative edge of the clock. Which one of the following circuits (using clocked $$D$$ flip-flops) will delay the phase of $$f$$ by  $${180^0}?$$ \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/LhsBfbCxCe0kbzRnw/j7zoGeiBmyO5ksKky2znwYKGkg3Rh/UWoLouR7I7TOQ0yCCTG5m7/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2006 Digital Logic - Sequential Circuits Question 18 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/nW7zWXraUOSVbGzgj/MGfFskWPZ64aeRvmWPn5taqjTzdIA/ivjwCQ0uuJlF11CzZ0E4Xc/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2006 Digital Logic - Sequential Circuits Question 18 English Option 2\">    "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/fk63h0u46JG0lEZWY/O5gzcD6ADSBiTzFLVEDkgbQxvF3NK/jJUyCtbyZs82Ivl5QakfDf/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2006 Digital Logic - Sequential Circuits Question 18 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/5r6hrTWOS5R7yb8AP/En6btO0pM5a8MdXoAMB3PbfeRZhu7/4Ez8MckHBC4LnJDQyRB1bY/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2006 Digital Logic - Sequential Circuits Question 18 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "$$SR.$$ latch made by cross coupling two $$NAND$$ gates if $$S=R=0,$$ Then it will result in ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$Q=0,Q'=1$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$Q=1, Q'=0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$Q=1, Q'=1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Indeterminate state "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a 2-bit saturating up/down counter that performs the saturating up count when the input $P$ is 0 , and the saturating down count when $P$ is 1 . The Next State table of the counter is as shown. The counter is built as a synchronous sequential circuit using $D$ flip-flops.</p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\"><thead>\n  <tr>\n    <th class=\"tg-c3ow\">Inpur</th>\n    <th class=\"tg-c3ow\" colspan=\"2\">Current state</th>\n    <th class=\"tg-c3ow\" colspan=\"2\">Next state</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-c3ow\">$$<br>P<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>Q_1<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>Q_0<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>Q_1^{+}<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>Q_0^{+}<br>$$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">$$<br>\\begin{aligned}<br>&amp; 0 \\\\<br>&amp; 0 \\\\<br>&amp; 0 \\\\<br>&amp; 0 \\\\<br>&amp; 1 \\\\<br>&amp; 1 \\\\<br>&amp; 1 \\\\<br>&amp; 1<br>\\end{aligned}<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>\\begin{aligned}<br>&amp; 0 \\\\<br>&amp; 0 \\\\<br>&amp; 1 \\\\<br>&amp; 1 \\\\<br>&amp; 0 \\\\<br>&amp; 0 \\\\<br>&amp; 1 \\\\<br>&amp; 1<br>\\end{aligned}<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>\\begin{aligned}<br>&amp; 0 \\\\<br>&amp; 1 \\\\<br>&amp; 0 \\\\<br>&amp; 1 \\\\<br>&amp; 0 \\\\<br>&amp; 1 \\\\<br>&amp; 0 \\\\<br>&amp; 1<br>\\end{aligned}<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>\\begin{aligned}<br>&amp; 0 \\\\<br>&amp; 1 \\\\<br>&amp; 1 \\\\<br>&amp; 1 \\\\<br>&amp; 0 \\\\<br>&amp; 0 \\\\<br>&amp; 0 \\\\<br>&amp; 1<br>\\end{aligned}<br>$$</td>\n    <td class=\"tg-c3ow\">$$<br>\\begin{aligned}<br>&amp; 1 \\\\<br>&amp; 0 \\\\<br>&amp; 1 \\\\<br>&amp; 1 \\\\<br>&amp; 0 \\\\<br>&amp; 0 \\\\<br>&amp; 1 \\\\<br>&amp; 0<br>\\end{aligned}<br>$$</td>\n  </tr>\n</tbody></table>\n\nWhich one of the following options corresponds to the expressions for the inputs of the $D$ flip-flops, $D_1$ and $D_0$ ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$D_1=P Q_1+\\bar{P} Q_0+Q_1 Q_0 \\quad D_0=P Q_0+\\bar{P} Q_1+Q_1 \\overline{Q_0}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$D_1=\\bar{P} Q_1+\\bar{P} Q_0+Q_1 Q_0 \\quad D_0=\\bar{P} \\overline{Q_0}+\\bar{P} Q_1+Q_1 \\overline{Q_0}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$D_1=\\bar{P} \\bar{Q}_1+\\bar{P} Q_0+Q_1 Q_0 \\quad D_0=\\bar{P} Q_0+\\bar{P} Q_1+Q_1 \\overline{Q_0}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$D_1=P \\overline{Q_1}+\\bar{P} Q_0+Q_1 Q_0 \\quad D_0=P \\overline{Q_0}+\\bar{P} Q_1+Q_1 \\overline{Q_0}$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{array}{|c|c|c|c|c|} \\hline \\boldsymbol{P} &amp; \\boldsymbol{Q}_1 &amp; \\boldsymbol{Q}_0 &amp; \\boldsymbol{Q}_1^{+} &amp; \\boldsymbol{Q}_0^{+} \\\\ \\hline 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\\\ 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 \\\\ 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 \\\\ 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\\\ \\hline 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\\\ 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\\\ 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 \\\\ 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\\\ \\hline \\end{array} $$</p>\n<p>$$ Q_0^{+}=D_0=\\sum m(0,2,3,6) $$</p>\n<p><img alt=\"GATE CSE 2026 Set 1 Digital Logic - Sequential Circuits Question 1 English Explanation 1\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyo15oy/a6f14c91-5aed-4b8c-be8b-e73792513362/cb522f20-243a-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyo15oz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyo15oy/a6f14c91-5aed-4b8c-be8b-e73792513362/cb522f20-243a-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyo15oz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p><img alt=\"GATE CSE 2026 Set 1 Digital Logic - Sequential Circuits Question 1 English Explanation 2\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyo16by/15e7e579-8b1e-40dc-b3f6-cb861ea43fb8/cbd086e0-243a-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyo16bz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyo16by/15e7e579-8b1e-40dc-b3f6-cb861ea43fb8/cbd086e0-243a-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyo16bz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the given sequential circuit designed using D-Flip-flops. The circuit is initialized with some value (initial state). The number of distinct states the circuit will go through before returning back to the initial state is _________ . (Answer in integer)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7wmfrce/3f274342-29ef-4afc-874f-add4a8b0fcb9/bf224bf0-fa23-11ef-be1b-751055e1d495/file-jaoe38c1m7wmfrcf.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7wmfrce/3f274342-29ef-4afc-874f-add4a8b0fcb9/bf224bf0-fa23-11ef-be1b-751055e1d495/file-jaoe38c1m7wmfrcf.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Digital Logic - Sequential Circuits Question 3 English\"></p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": "<p>The given sequential circuit is similar to Johnson counter. (Not exactly Johnson counter. In Johnson counter LSB flip flop complementary output is MSB flip-flop impact). The number of distinct states the circuit will go through before returning back to the initial state is 7.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7wmgrbg/de430268-83b8-4a88-acdd-938db57d3820/daec18c0-fa23-11ef-be1b-751055e1d495/file-jaoe38c1m7wmgrbh.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7wmgrbg/de430268-83b8-4a88-acdd-938db57d3820/daec18c0-fa23-11ef-be1b-751055e1d495/file-jaoe38c1m7wmgrbh.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Digital Logic - Sequential Circuits Question 3 English Explanation\"></p>\n<p>Correct answer is 7 .</p>\n<p>Answer 8 is wrong as per the question description.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a sequential digital circuit consisting of T flip-flops and D flip-flops as shown in the figure. CLKIN is the clock input to the circuit. At the beginning, Q1, Q2 and Q3 have values 0, 1 and 1, respectively.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr3ivjt/b8aebace-4168-49ba-913a-afe6539d2489/eab2e290-44eb-11ef-9c19-0f7f09062910/file-jaoe38c1lyr3ivju.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr3ivjt/b8aebace-4168-49ba-913a-afe6539d2489/eab2e290-44eb-11ef-9c19-0f7f09062910/file-jaoe38c1lyr3ivju.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Digital Logic - Sequential Circuits Question 4 English\"></p>\n<p>Which one of the given values of (Q1, Q2, Q3) can NEVER be obtained with this digital circuit?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(0, 0, 1)"
+      },
+      {
+        "identifier": "B",
+        "content": "(1, 0, 0)"
+      },
+      {
+        "identifier": "C",
+        "content": "(1, 0, 1)"
+      },
+      {
+        "identifier": "D",
+        "content": "(1, 1, 1)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given circuit is made from two $T$ flip flops and one D flp-flop.</p>\n\n<p>Here, $T_1=\\bar{Q}_3$</p>\n\n<p>So, $ Q_1^{+}=T_1 \\oplus Q_1=\\bar{Q}_3 \\oplus Q_1=Q_3 \\odot Q_1$</p>\n\n<p>Also, $D_2=Q_1$</p>\n\n<p>So, $Q_2^{+}=Q_1$</p>\n\n<p>Now, $T_3=Q_2$</p>\n\n<p>$$ Q_3^{+}=T_3 \\oplus Q_2=Q_3 \\oplus Q_2 $$</p>\n\n<p>The state table looks like :</p>\n\n<p>$$ \\begin{array}{|c|c|c|c|c|c|} \\hline \\boldsymbol{Q}_1 & \\boldsymbol{Q}_2 & \\boldsymbol{Q}_3 & \\boldsymbol{Q}_1^{+} & \\boldsymbol{Q}_2^{+} & \\boldsymbol{Q}_3^{+} \\\\ \\hline 0 & 1 & 1 & 0 & 0 & 0 \\\\ \\hline 0 & 0 & 0 & 1 & 0 & 0 \\\\ \\hline 1 & 0 & 0 & 0 & 1 & 0 \\\\ \\hline 0 & 1 & 0 & 1 & 0 & 1 \\\\ \\hline 1 & 0 & 1 & 1 & 1 & 1 \\\\ \\hline 1 & 1 & 1 & 1 & 1 & 0 \\\\ \\hline 1 & 1 & 0 & 0 & 1 & 1 \\\\ \\hline \\end{array} $$</p>\n\n<p>So, the missing state is 001.</p>\n\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a digital display system (DDS) shown in the figure that displays the contents of register X. A 16-bit code word is used to load a word in X, either from S or from R. S is a 1024-word memory segment and R is a 32-word register file. Based on the value of mode bit M, T selects an input word to load in X. P and Q interface with the corresponding bits in the code word to choose the addressed word. Which one of the following represents the functionality of P, Q, and T?</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02qiw9o/64d22131-ba53-4fc7-aa89-7dbd507579b6/ea1b6fe0-9666-11ec-9a20-f135abcde963/file-1l02qiw9q.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02qiw9o/64d22131-ba53-4fc7-aa89-7dbd507579b6/ea1b6fe0-9666-11ec-9a20-f135abcde963/file-1l02qiw9q.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Digital Logic - Sequential Circuits Question 6 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P is 10 : 1 multiplexer; Q is 5 : 1 multiplexer; T is 2 : 1 multiplexer"
+      },
+      {
+        "identifier": "B",
+        "content": "P is 10 : 2<sup>10</sup> decoder; Q is 5 : 2<sup>5</sup> decoder; T is 2 : 1 encoder"
+      },
+      {
+        "identifier": "C",
+        "content": "P is 10 : 2<sup>10</sup> decoder; Q is 5 : 2<sup>5</sup> decoder; T is 2 : 1 multiplexer"
+      },
+      {
+        "identifier": "D",
+        "content": "P is 1 : 10 de-multiplexer; Q is 1 : 5 de-multiplexer; T is 2 : 1 multiplexer"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>S is 1024 word memory segment, it needs 10 address lines.</p>\n<p>$$\\therefore$$ P must be a decoder, with 10 input lines and 1024 output lines. (10 : 2<sup>10</sup> decoder)</p>\n<p>R is 32 word register file, it needs 5 address lines.</p>\n<p>$$\\therefore$$ Q must be a decoder, with 5 input lines and 32 output lines. (5 : 2<sup>5</sup> decoder)</p>\n<p>Based on mode bit M, T selects an input word to load X.</p>\n<p>$$\\therefore$$ T must be 2 : 1 multiplexer, M is select input to the multiplexer.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Suppose we want to design a synchronous circuit that processes a string of 0’s and 1’s. Given a string, it produces another string by replacing the first 1 in any subsequence of consecutive 1’s by a 0. Consider the following example.</p>\n\n<p>Input sequence : 00100011000011100</p>\n\n<p>Output sequence : 00000001000001100</p>\n\n<p>A Mealy Machine is a state machine where both the next state and the output are functions of the present state and the current input.</p>\n\n<p>The above mentioned circuit can be designed as a two-state Mealy machine. The states in the Mealy machine can be represented using Boolean values 0 and 1. We denote the current state, the next state, the next incoming bit, and the output bit of the Mealy machine by the variables s, t, b and y respectively.</p>\n\n<p>Assume the initial state of the Mealy machine is 0.</p>\n\n<p>What are the Boolean expressions corresponding to t&nbsp;and y in&nbsp;terms of s and b ?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>t = b</p>\n\n<p>y = sb</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>t = s + b</p>\n\n<p>y = sb</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>t = s + b</p>\n\n<p>y = sb̅</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>t = b</p>\n\n<p>y = sb̅&nbsp;</p>\n"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><u><strong>Mealy Machine</strong></u> :&nbsp;</p>\n\n<p><span>In the theory of computation, a&nbsp;</span><b>Mealy machine</b><span>&nbsp;is a finite-state&nbsp;</span><b>machine</b><span>&nbsp;whose output values are determined both by its current state and the current inputs i.e. inputs and output mentioned on transition edges.</span></p>\n\n<p><u><strong>Explanation</strong></u> :</p>\n\n<p><strong>Given</strong> :&nbsp;</p>\n\n<p>Mealy Machine which&nbsp;replaces the first 1 in any subsequence of consecutive 1’s by a 0.</p>\n\n<p>s = current state</p>\n\n<p>t = next state</p>\n\n<p>b = next incoming bit</p>\n\n<p>t = output bit</p>\n\n<p>consider the following Mealy Machine for the given scenario.</p>\n\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2bq19v8/aadf58a1-2a5f-45fb-8dd7-11c2e2e66f2b/4649e830-8ba8-11ef-93c3-eb3e83b228b7/file-jaoe38c1m2bq19v9.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2bq19v8/aadf58a1-2a5f-45fb-8dd7-11c2e2e66f2b/4649e830-8ba8-11ef-93c3-eb3e83b228b7/file-jaoe38c1m2bq19v9.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Digital Logic - Sequential Circuits Question 7 English Explanation\"></p>\n\n<p>we need to find expression for t and y</p>\n\n<p><strong>t is next state</strong><u>,</u></p>\n\n<p>at state '0' in Mealy Machine t = b</p>\n\n<p>at state '1' in Mealy Machine t = b</p>\n\n<p>now we left with two options Option 1 and Option 4.</p>\n\n<p><strong>y is output bit&nbsp;</strong></p>\n\n<p>at state '0' in Mealy Machine both the output bit is 0,&nbsp;we can not be&nbsp;sure which is true sb or sb̅.</p>\n\n<p>at state '1' in Mealy Machine one<strong> </strong>output which loops to itself s=1 and b=1 then sb=1 and output bit is also 1<strong>.</strong></p>\n\n<p><u><strong>Hence t = b and&nbsp;</strong></u><u><strong>y = sb</strong></u>&nbsp;</p>\n",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider a 3-bit counter, designed using T flip-flop, as shown below:</p>\n\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxsxn0un/9436c439-8c00-4b1e-9eb2-f50cf6b72443/77890100-696a-11ec-9522-5d7fed2ebc5a/file-1kxsxn0uo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxsxn0un/9436c439-8c00-4b1e-9eb2-f50cf6b72443/77890100-696a-11ec-9522-5d7fed2ebc5a/file-1kxsxn0uo.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 80vh\" alt=\"GATE CSE 2021 Set 1 Digital Logic - Sequential Circuits Question 8 English\"> \n</p>\n\n<p>Assuming the initial state of the counter given by PQR as 000, what are the next three states?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "001, 010, 000"
+      },
+      {
+        "identifier": "B",
+        "content": "001, 010, 111"
+      },
+      {
+        "identifier": "C",
+        "content": "011, 101, 111"
+      },
+      {
+        "identifier": "D",
+        "content": "011, 101, 000"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>3-bit synchronous counter is shown below, </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxsxn0un/9436c439-8c00-4b1e-9eb2-f50cf6b72443/77890100-696a-11ec-9522-5d7fed2ebc5a/file-1kxsxn0uo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxsxn0un/9436c439-8c00-4b1e-9eb2-f50cf6b72443/77890100-696a-11ec-9522-5d7fed2ebc5a/file-1kxsxn0uo.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 80vh\" alt=\"GATE CSE 2021 Set 1 Digital Logic - Sequential Circuits Question 8 English Explanation\"> </p>\n<p>Next state equation for each flip-flop present in above counter, </p>\n<p></p><p>$P^{+}=T_p \\oplus P=R \\oplus P$</p><p></p>\n<p></p><p>$Q^{+}=T_Q \\oplus Q=\\bar{P} \\oplus Q$</p><p></p>\n<p></p><p>$R^{+}=T_R \\oplus R=\\bar{Q} \\oplus R$</p><p></p>\n<p>So, next state table will be</p>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:350px;\">\n\n    <tbody>\n\n        <tr>\n\n            <td style=\"width:55px;height:33px;\">\n\n            <p><strong>P</strong></p>\n\n            </td>\n\n            <td style=\"width:55px;height:33px;\">\n\n            <p><strong>Q</strong></p>\n\n            </td>\n\n            <td style=\"width:55px;height:33px;\">\n\n            <p><strong>R</strong></p>\n\n            </td>\n\n            <td style=\"width:89px;height:33px;\">\n\n            <p align=\"center\"><strong>P<sup>+</sup>=R⊕ P</strong></p>\n\n            </td>\n\n            <td style=\"width:85px;height:33px;\">\n\n            <p><strong>Q<sup>+</sup>=P̅ ⊕ Q</strong></p>\n\n            </td>\n\n            <td style=\"width:85px;height:33px;\">\n\n            <p><strong>R<sup>+</sup>=Q̅&nbsp;⊕ R</strong></p>\n\n            </td>\n\n        </tr>\n\n        <tr>\n\n            <td style=\"width:55px;height:32px;\">\n\n            <p>0</p>\n\n            </td>\n\n            <td style=\"width:55px;height:32px;\">\n\n            <p>0</p>\n\n            </td>\n\n            <td style=\"width:55px;height:32px;\">\n\n            <p>0</p>\n\n            </td>\n\n            <td style=\"width:89px;height:32px;\">\n\n            <p>0</p>\n\n            </td>\n\n            <td style=\"width:85px;height:32px;\">\n\n            <p>1</p>\n\n            </td>\n\n            <td style=\"width:85px;height:32px;\">\n\n            <p>1</p>\n\n            </td>\n\n        </tr>\n\n        <tr>\n\n            <td style=\"width:55px;height:33px;\">\n\n            <p>0</p>\n\n            </td>\n\n            <td style=\"width:55px;height:33px;\">\n\n            <p>1</p>\n\n            </td>\n\n            <td style=\"width:55px;height:33px;\">\n\n            <p>1</p>\n\n            </td>\n\n            <td style=\"width:89px;height:33px;\">\n\n            <p>1</p>\n\n            </td>\n\n            <td style=\"width:85px;height:33px;\">\n\n            <p>0</p>\n\n            </td>\n\n            <td style=\"width:85px;height:33px;\">\n\n            <p>1</p>\n\n            </td>\n\n        </tr>\n\n        <tr>\n\n            <td style=\"width:55px;height:32px;\">\n\n            <p>1</p>\n\n            </td>\n\n            <td style=\"width:55px;height:32px;\">\n\n            <p>0</p>\n\n            </td>\n\n            <td style=\"width:55px;height:32px;\">\n\n            <p>1</p>\n\n            </td>\n\n            <td style=\"width:89px;height:32px;\">\n\n            <p>0</p>\n\n            </td>\n\n            <td style=\"width:85px;height:32px;\">\n\n            <p>0</p>\n\n            </td>\n\n            <td style=\"width:85px;height:32px;\">\n\n            <p>0</p>\n\n            </td>\n\n        </tr>\n\n    </tbody>\n\n</table>\n<p>Next 3 states are 000 → 011 →101 → 000</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A positive edge-triggered D flip-flop is connected to a positive edge-triggered JK flip-flop as follows. The Q output of the D flip-flop is connected to both the J and K inputs of the JK flip-flop, while the Q output of the JK flip-flop is connected to the input of the D flip-flop. Initially, the output of the D flip-flop is set to logic one and the output of the JK flip-flop is cleared. Which one of the following is the bit sequence (including the initial state) generated at the Q output of the JK flip-flop when the flip-flops are connected to a free-running common clock? Assume that J = K = 1 is the toggle mode and J = K = 0 is the state-holding mode of the JK flip-flop. Both the flip-flops have non-zero propagation delays.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0110110..."
+      },
+      {
+        "identifier": "B",
+        "content": "0100100..."
+      },
+      {
+        "identifier": "C",
+        "content": "011101110..."
+      },
+      {
+        "identifier": "D",
+        "content": "011001100..."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/7OKfXcSfeZLmUu87W/nwnJx8c9bnTJRxFN6vtehs1IKcu0Q/ITgGEDl5Kv1P8resn2q0tB/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 3 Digital Logic - Sequential Circuits Question 20 English\">\n<p>The above synchronous sequential circuit built using $$JK$$ flip-flops is initialized with $${Q_2}{Q_1}{Q_0} = 000.\\,\\,$$ The state sequence for this circuit for the next $$3$$ clock cycles is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$001,010,011$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$111,110,101$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$100,110,111$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$100,011,001$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following circuit involving three Dtypes flip-flops  used in a certain type of Counter configuration.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/wNVlgobjgHQBR27g0/gk6qFz4UzpIKP93ZE30Uh42Z96Mwg/IsEwlel7lnMWii1ohVwuqY/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Digital Logic - Sequential Circuits Question 21 English\">\n<p>If at some instance prior to the occurrence of the clock edge, $$P, Q$$ and $$R$$ have a value $$0,1$$ and $$0$$ respectively, what shall be the value of $$PQR$$ after the clock edge?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$000$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "$$001$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$010$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$011$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following circuit involving three Dtypes flip-flops  used in a certain type of Counter configuration.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/wNVlgobjgHQBR27g0/gk6qFz4UzpIKP93ZE30Uh42Z96Mwg/IsEwlel7lnMWii1ohVwuqY/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Digital Logic - Sequential Circuits Question 22 English\">\n<p>If all the flip-flops were reset to $$0$$ at power on, what is the total number of distinct outputs (states) represented by $$PQR$$ generated by the counter?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Given the following state table of an $$FSM$$ with two states $$A$$ and $$B,$$ one input and one output:\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/17ajKEH7qfAj3S78r/ayXFIN7mA2BBlyiMcmnToevWqL9gV/rLBHb6PSlMT7HezwnEynQN/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2009 Digital Logic - Sequential Circuits Question 23 English\">\n<p>If the initial state is $$A = 0, B=0.$$ What is the minimum length of an input string which will take the machine to the state $$A=0, B=1$$ with Output$$=1?$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The control signal functions of a $$4$$-bit binary counter are given below $$($$where $$X$$ “don’t care”$$):$$\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/HUMqykr3Z20ARo7FU/bF2p5M06vEjZUsAC1AQsmmZSkW6Se/izhga5xJHdNT6OamObYtke/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2007 Digital Logic - Sequential Circuits Question 24 English 1\">\n<p>The counter is connected as follows:</p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/eOaG74oGRz6Qk2YXs/9vavgf2ewafEZXW3WyDrRaVLmXiEC/u6JiejmtKt4ivrm6jyeXTY/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2007 Digital Logic - Sequential Circuits Question 24 English 2\"> \n<p>Assume that the counter and gate delays are negligible. If the counter starts at $$0,$$ then it cycles through the following sequence:</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0, 3, 4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0, 3, 4, 5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0, 1, 2, 3, 4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0, 1, 2, 3, 4, 5$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the circuit in the diagram. The $$ \\oplus $$ operator represents $$EX$$-$$OR.$$ The $$D$$ flip-flops are initialized to zeros (cleared). \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/sV36dKZgCQPYXaGN6/5e2DKYJo5fvii4WANAoGbCLwRcrae/hdj2d5LKjRvUeRYl4wHBWs/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2006 Digital Logic - Sequential Circuits Question 16 English\"> \n<p>The following data: $$100110000$$ is supplied to the ''data'' terminal in nine clock cycles. After that the values of $${q_2}{q_1}{q_0}$$ are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$000$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$001$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$010$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$101$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the partial implementation of a $$2$$-bit counter using $$T$$ flip-flops following the sequence $$0$$-$$2$$-$$3$$-$$1$$-$$0,$$  as shown below.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/5aZOaj6KuJariqdsD/pHhfP6Irb76oD6BhRaKylQROAOGut/cxJnba9FQuoY24nycEiA2z/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2004 Digital Logic - Sequential Circuits Question 17 English\"> \n<p>To complete the circuit, the input $$X$$ should be </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${Q_2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${Q_2} + {Q_1}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {{Q_1} \\oplus {Q_2}} \\right)'$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {{Q_1} \\oplus {Q_2}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A 1- input, 2- output synchronous sequential circuit behaves as follows.\n<p>Let $${z_k},\\,{n_k}$$ denote the number of $$0’s$$ and $$1’s$$ respectively in initial $$k$$ bits of the input</p> <p>$$\\left({{z_k} + {n_k} = k} \\right).$$ The circuit outputs $$00$$ until one of the following conditions holds.</p>\n<p>$$ * \\,\\,\\,\\,\\,$$ $${z_k} = {n_k} + 2.\\,\\,\\,$$ In this case, the output at the $$k$$-th and all subsequent clock ticks is $$10.$$</p>\n<p>$$ * \\,\\,\\,\\,\\,$$ $${n_k} = {z_k} + 2.\\,\\,\\,$$ In this case, the output at the $$k$$-th and all subsequent clock ticks is $$01.$$</p>\n<p>What is the minimum number of states required in the state transition graph of the above circuit?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$6$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$7$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$8$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following circuit with initial state $${Q_0} = {Q_1} = 0.$$ The $$D$$ Flip-Flops are positive edge triggered and have set up times $$20$$ nanosecond and hold times $$0.$$ \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/xcJr63MYnx5R4nUy3/NW7Ug3jM5FaizRszJUwmPXCpyLKlb/f3mkGZcwyOvmoCZbNqNUN2/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2001 Digital Logic - Sequential Circuits Question 19 English 1\"> \n<p>Consider the following timing diagram of $$X$$ and $$C;$$ the clock period of $$C&gt;40$$ nanosecond which one is the correct plot of $$Y?$$ </p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/atqpFVsbI2bH3TlTd/CchHBENZJkaDKsQlHp850rHRQyhk3/lGjDc3MeJlkgZUi8osG5N5/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2001 Digital Logic - Sequential Circuits Question 19 English 2\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/sZeT5tLlMfww1s1NQ/5YxocgnQ5pgMemqTHHO1g2cmfocVi/36c03nyPMPlEgAdLOWMG1S/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2001 Digital Logic - Sequential Circuits Question 19 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/PmRcxjmZy12QIhfTg/DDnZYm02a6k2Fpftt3h65FkF8G9f2/57Ckv4GDxDQab34Z820M6q/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2001 Digital Logic - Sequential Circuits Question 19 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/DejAGC4QoGPpDehWT/cHrkgHkpDrZKmLhk4qw15G5Q3eGvi/oeTe7siMI6YEYqulXm36qS/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2001 Digital Logic - Sequential Circuits Question 19 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/wsis0ovDxhCWTDCrN/aMIlavdADR0svUQoPf5kbhFX3EBff/qxfIeWLKUDUMInHm3x1s1C/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2001 Digital Logic - Sequential Circuits Question 19 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the circuit given below with initial state $${Q_0} = 1,\\,\\,{Q_1} = {Q_2} = 0.$$ The state of the circuit is given by the value of $$4{Q_2} + 2{Q_1} + {Q_{0.}}$$\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/GGTsZuVkXboLmbe1P/6T58jWjjNycXTDacvru5VrjyhviQL/02ZT0nFYU8SOEFECJAutj2/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2001 Digital Logic - Sequential Circuits Question 26 English\"> \n<p>Which one of the following is correct state sequence of the circuit?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1,3,4,6,7,5,2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1, 2, 5, 3, 7, 6, 4$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$1, 2, 7, 3, 5, 6, 4$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1, 6, 5, 7, 2, 3, 4$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The following arrangement of master-slave flip-flop\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/DbQ63my7s0PlswUG4/xbDYUdbCnVmVbPbwQD38M0yatvCTl/kRQ1VLYUz5GeM2q5noRZZ9/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2000 Digital Logic - Sequential Circuits Question 27 English\">\n<p>Has the initial state of $$P, Q$$ as $$0, 1$$ (respectively). After three clock cycles the output states $$P, Q$$ is (respectively).</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1,0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1,1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0,0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0,1$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Find the maximum clock frequency at which the counter in Fig., can be operated. Assume that the propagation delay through each flip-flop and $$AND$$ gate is $$10$$ $$ns.$$ Also assume that the setup time for the $$JK$$ inputs of the flip-flops is negligible. \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/0hDYwEwbd8ZmRI0or/RGmSBX3SwSEDI9Z6pEbZxTtc0xH5h/0VWOCt6qyUmbqAIl2wDW1O/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1991 Digital Logic - Sequential Circuits Question 28 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "25",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the synchronous sequential circuit in fig.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/IwlKUv9WRkvattKK8/RpBmIUlfcxEVuSKgTroAwB3nsZJBl/XbQ7dPYTMxqUPqdVl5CDlO/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1996 Digital Logic - Sequential Circuits Question 14 English 1\"> \n<p>(a) Draw a state diagram which is implemented by the circuit. Use the following names for the states corresponding to the  values of flip-flops as given below.</p>\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/KsrrynOcYtIHRh1og/i85w4bGTEmPdpamK3NcASL1A2FwqZ/yhCimX0BktklWM6wlwe6Fp/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1996 Digital Logic - Sequential Circuits Question 14 English 2\"> \n<p>(b) Given that the initial state of the circuit is $${S_4},$$ identify the set of states which are not reachable.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${S_4} \\to {S_2} \\to {S_5} \\to {S_6} \\to {S_7} \\to {S_3} \\to {S_1}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "For the synchronous counter shown in fig. write the truth table of $${Q_0},\\,\\,{Q_1}$$ and $${Q_2}$$ after each pulse starting from $${Q_0} = {Q_1} = {Q_2} = 0$$ and determine the counting sequenced also the modulus of the counter\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/Y5lNSUORleZ2hrrOB/pCgBap7wlx4ZNVsLkXBClZWxbbnHh/IbAu4Z1fCHU3b4ls0JJ5rI/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1990 Digital Logic - Sequential Circuits Question 15 English\"> \n<p>What is the modules of the counter with initial state $${Q_2}\\,{Q_1}\\,{Q_0} = 000$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  }
+]

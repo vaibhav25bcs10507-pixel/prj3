@@ -1,0 +1,350 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A partial data path of a processor is given in the figure, where $R A, R B$, and $R Z$ are 32-bit registers. Which option(s) is/are CORRECT related to arithmetic operations using the data path as shown?</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7uv38t1/7c7c8645-bde7-4557-8ce3-b0370c3d6bd3/03f79850-f92c-11ef-9f5b-bb3ac55a76f1/file-jaoe38c1m7uv38t2.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7uv38t1/7c7c8645-bde7-4557-8ce3-b0370c3d6bd3/03f79850-f92c-11ef-9f5b-bb3ac55a76f1/file-jaoe38c1m7uv38t2.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Computer Organization - Alu Data Path and Control Unit Question 1 English\"></p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " The data path can implement arithmetic operations involving two registers.\n"
+      },
+      {
+        "identifier": "B",
+        "content": " The data path can implement arithmetic operations involving one register and one immediate value.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " The data path can implement arithmetic operations involving two immediate values.\n"
+      },
+      {
+        "identifier": "D",
+        "content": " The data path can only implement arithmetic operations involving one register and one immediate value."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><table style=\"undefined;table-layout: fixed; width: 433px\"><colgroup>\n<col style=\"width: 197px\">\n<col style=\"width: 236px\">\n</colgroup>\n<thead>\n  <tr>\n    <th></th>\n    <th></th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td>ALU operation</td>\n    <td>$R_A,R_B$</td>\n  </tr>\n  <tr>\n    <td>ALU operation</td>\n    <td>Immediate, $R_B$</td>\n  </tr>\n  <tr>\n    <td>ALU operation</td>\n    <td>$R_A$, Immediate</td>\n  </tr>\n  <tr>\n    <td>ALU operation</td>\n    <td>Immediate, Immediate </td>\n  </tr>\n</tbody>\n</table></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following data path diagram.\n<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/1da9i2ynkclmqw3i/d0bb435f-71fa-4d59-accb-b0599bb1dbdd/d72d08f0-c5a5-11ea-b796-4745b429ed6f/file-1da9i2ynkclmqw3j-320w.png\"><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkclmqw3i/d0bb435f-71fa-4d59-accb-b0599bb1dbdd/d72d08f0-c5a5-11ea-b796-4745b429ed6f/file-1da9i2ynkclmqw3j-500w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Computer Organization - Alu Data Path and Control Unit Question 2 English\"></picture>\n<br>Consider an instruction: R0 $$ \\leftarrow $$ R1 + R2. The following steps are used to execute it over the given data path. Assume that PC is incremented appropriately. The subscripts r and w indicate read and write operations, respectively. \n<br><br>1. R2<sub>r</sub>, TEMP1<sub>r</sub>, ALU<sub>add</sub>, TEMP2<sub>w</sub>\n<br>2. R1<sub>r</sub>, TEMP1<sub>w</sub>\n<br>3. PC<sub>r</sub>, MAR<sub>w</sub>, MEM<sub>r</sub>\n<br>4. TEMP2<sub>r</sub>, R0<sub>w</sub>\n<br>5. MDR<sub>r</sub>, IR<sub>w</sub>\n<br><br>Which one of the following is the correct order of execution of the above steps?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3, 5, 1, 2, 4"
+      },
+      {
+        "identifier": "B",
+        "content": "3, 5, 2, 1, 4"
+      },
+      {
+        "identifier": "C",
+        "content": "1, 2, 4, 3, 5"
+      },
+      {
+        "identifier": "D",
+        "content": "2, 1, 4, 5, 3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b></p>\n<p><picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/1da9i2ynkclmqw3i/d0bb435f-71fa-4d59-accb-b0599bb1dbdd/d72d08f0-c5a5-11ea-b796-4745b429ed6f/file-1da9i2ynkclmqw3j-320w.png\"><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkclmqw3i/d0bb435f-71fa-4d59-accb-b0599bb1dbdd/d72d08f0-c5a5-11ea-b796-4745b429ed6f/file-1da9i2ynkclmqw3j-500w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Computer Organization - Alu Data Path and Control Unit Question 2 English Explanation\"></picture></p>\n<p>$\\rightarrow$ Store the content of PC into MAR by issuing memory read.</p>\n<p>$$ \\mathrm{PC}_r, \\mathrm{MAR}_w, \\mathrm{MEM}_r $$</p>\n<p>$\\rightarrow$ Store the data from memory data register into IR.</p>\n<p>$\\mathrm{MDR}_r, \\mathrm{IR}_w$</p>\n<p>$\\rightarrow$ Store the content of R1 into temporary register TEMP1</p>\n<p>$\\mathrm{R} 1_r$, TEMP $_w$</p>\n<p>$\\rightarrow$ Add contents of R2 and TEMP1 and store result in TEMP2.</p>\n<p>$\\mathrm{R}_2, \\mathrm{TEMP1}_r, \\mathrm{ALU}_{\\text {add }}$ TEMP2 $_w$</p>\n<p>$\\rightarrow$ Store contents of TEMP2 into R0.</p>\n<p>TEMP2 $_r, R 0_w$</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following processor design characteristics.\n<p>$$\\,\\,\\,\\,\\,\\,\\,{\\rm I}.\\,\\,\\,\\,\\,$$ Register-to-register arithmetic operations only\n<br>$$\\,\\,\\,\\,\\,{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,$$ Fixed-length instruction format\n<br>$$\\,\\,\\,{\\rm I}{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,$$ Hardwired control unit</p>\n<p>Which of the characteristics above are used in the design of a $$RISC$$ processor? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ and $${\\rm II}$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}$$$${\\rm I}$$ and $${\\rm III}$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm I}$$ and $${\\rm III}$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I},$$ $${\\rm II}$$ and $${\\rm III}$$ only "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "The size of the data count register of a $$DMA$$ controller is $$16$$ bits. The processor needs to transfer a file of $$29,154$$ kilobytes from disk to main memory. The memory is byte addressable. The minimum number of times the $$DMA$$ controller needs to get the control of the system bus from the processor to transfer the file from the disk to main memory is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "456",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following sequence of micro-operations\n<br>$$\\eqalign{\n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,MBR\\,\\,\\,\\,\\,\\,\\, \\leftarrow PC  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,MAR\\,\\,\\,\\,\\,\\,\\, \\leftarrow X  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,PC\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\leftarrow Y  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,Memory\\, \\leftarrow MBR \\cr} $$\n<p>Which one of the following is a possible operation performed by this sequence?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Instruction fetch "
+      },
+      {
+        "identifier": "B",
+        "content": "Operand fetch "
+      },
+      {
+        "identifier": "C",
+        "content": "Conditional branch "
+      },
+      {
+        "identifier": "D",
+        "content": "Initiation of interrupt service "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following data path of a $$CPU$$ \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/C0NVQSKi6f3xoc27h/FqComs4LQ1bFSS0rY64HlCCyPPeN1/ep2KYNzLUgSJrb0ipvUdPF/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2005 Computer Organization - Alu Data Path and Control Unit Question 5 English\"> \n<p>The, $$ALU$$, the bus and all the registers in the data path are of identical size. All operations including incrementation of the $$PC$$ and the $$GPRs$$ are to be carried out in the $$ALU.$$ Two clock cycle are needed for memory read operation-the first one for loading address in the $$MAR$$ and the next one for loading data from the memory but into the $$MDR.$$</p>\n<p>The instruction $$''call$$ $$Rn,sub''$$ is a two word instruction. Assuming that $$PC$$ is incremented during the fetch cycle of the first word of the instruction, its register transfer interpretation is \n$$$\\eqalign{\n  &amp; Rn &lt;  = PC + 1;  \\cr \n  &amp; PC &lt;  = M\\left[ {PC} \\right]; \\cr} $$$\n<br>The minimum number of $$CPU$$ clock cycles needed during the execution cycle of this instruction is :</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following data path of a $$CPU$$ \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/C0NVQSKi6f3xoc27h/FqComs4LQ1bFSS0rY64HlCCyPPeN1/ep2KYNzLUgSJrb0ipvUdPF/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2005 Computer Organization - Alu Data Path and Control Unit Question 6 English\"> \n<p>The, $$ALU$$, the bus and all the registers in the data path are of identical size. All operations including incrementation of the $$PC$$ and the $$GPRs$$ are to be carried out in the $$ALU.$$ Two clock cycle are needed for memory read operation-the first one for loading address in the $$MAR$$ and the next one for loading data from the memory but into the $$MDR.$$</p>\n<p>The instruction $$''add$$ $$R0$$, $$R1''$$  has the register transfer interpretation $$R0 &lt;  = R0 + R1.$$ The minimum number of cycles needed for execution cycle of this instruction is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The microinstructions stored in the control memory of a processor have a width of $$26$$ bits. Each microinstruction is divided into three fields: a micro-operation of $$13$$ bits, a next address field $$(X),$$ and a $$MUX$$ select field $$(Y).$$ There are $$8$$ status bits in the inputs of the $$MUX$$. \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/IfZRg41IK9Ja9VPoY/XxfYSEioLDHMAjquGCBMX1yXaPDjp/2uGUPX5dAB0ISqgfzr7WlE/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2004 Computer Organization - Alu Data Path and Control Unit Question 7 English\"> \n<p>How many bits are there in the $$X$$ and $$Y$$ fields, and what is the size of the control memory in number of words?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10,3, 1024$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$8, 5, 256$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5, 8. 2048$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$10, 3, 512$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Horizontal micro programming ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "does not require use of signal decoders."
+      },
+      {
+        "identifier": "B",
+        "content": "Results in larger sized micro instructions then vertical micro programming"
+      },
+      {
+        "identifier": "C",
+        "content": "Uses one bit for each control signal "
+      },
+      {
+        "identifier": "D",
+        "content": "All of the above"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following datapath of a simple non-pipelined $$CPU.$$ The registers $$A,B,$$ $${A_1},{A_2},$$ $$MDR,$$ the bus and the $$ALU$$ are $$8$$-bit wide. $$SP$$ and $$MAR$$ are $$16$$-bit registers. The $$MUX$$ is of size $$8 \\times \\left( {2:1} \\right)$$ and the $$DEMUX$$ is of size $$8 \\times \\left( {1:2} \\right)$$. Each memory operation takes $$2$$ $$CPU$$ clock cycles and uses $$MAR$$ (Memory Address Register) and $$MDR$$ (Memory Data register). $$SP$$ can be decremented locally.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/KqZ782HBdn2DcN9TW/8nUnpocIo68M5JIE769DJ6r6Bkie1/3orRfRCEi2zUb2q5JXZnw4/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2001 Computer Organization - Alu Data Path and Control Unit Question 10 English\">\n<p>The $$CPU$$ instruction $$''push$$ $$r'',$$ where $$r=A$$ or $$B,$$ has the specification\n<br>$$\\eqalign{\n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,M\\left[ {SP} \\right] \\leftarrow r  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,SP \\leftarrow SP - 1 \\cr} $$\n<br>How many $$CPU$$ clock cycles are needed to execute the $$''push$$ $$r''$$ instruction?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Arrange the following configuration for CPU in decreasing order of operating speeds: Hardwired control, vertical micro- programming, horizontal micro-programming ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Hardwired control, vertical micro-programming, horizontal micro-programming "
+      },
+      {
+        "identifier": "B",
+        "content": "Hardwired control, horizontal micro- programming, vertical micro-programming "
+      },
+      {
+        "identifier": "C",
+        "content": "Horizontal micro-programming, vertical micro-programming, hardwired control"
+      },
+      {
+        "identifier": "D",
+        "content": "Vertical micro-programming, horizontal micro-programming, hardwired control"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The main difference (s) between a $$CISC$$ and a $$RISC$$ processor is/are that a $$RISC$$ processor typically:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "has fewer instructions"
+      },
+      {
+        "identifier": "B",
+        "content": "has fewer addressing modes"
+      },
+      {
+        "identifier": "C",
+        "content": "has more registers"
+      },
+      {
+        "identifier": "D",
+        "content": "is easier to implement using hard-wired control logic"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  }
+]

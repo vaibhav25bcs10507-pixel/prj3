@@ -1,0 +1,1895 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statements is/are true?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\mathrm{LL}(1)$ parser uses backtracking</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>For a grammar to be $\\mathrm{LL}(1)$, it must be left-recursive</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>For a grammar to be $\\mathrm{LL}(1)$, it must be left-factored</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The $\\mathrm{LL}(1)$ parsers are more powerful than the SLR parsers</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>A grammar must be left factored in the case of $\\mathrm{LL}(1)$. LL(1) uses non backtracking.</p>\n<p>If a grammar is left recursive then it is not $\\mathrm{LL}(1)$.</p>\n<p>There is no relation between $\\operatorname{LL}(1)$ and $\\operatorname{SLR}(1)$.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which ONE of the following statements is FALSE regarding the symbol table?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " Symbol table is responsible for keeping track of the scope of variables.\n"
+      },
+      {
+        "identifier": "B",
+        "content": " Symbol table can be implemented using a binary search tree.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " Symbol table is not required after the parsing phase.\n"
+      },
+      {
+        "identifier": "D",
+        "content": " Symbol table is created during the lexical analysis phase.\n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze each option to see which one is false:</p>\n\n<p>Option A: \"Symbol table is responsible for keeping track of the scope of variables.\"  </p>\n\n\n<p>This is true. The symbol table maintains details about identifiers, including their scope and type, which is essential during semantic analysis and later stages.</p>\n\n\n<p>Option B: \"Symbol table can be implemented using a binary search tree.\"  </p>\n\n\n<p>This is also true. Although hash tables are common, one can indeed implement a symbol table with a binary search tree.</p>\n\n\n<p>Option C: \"Symbol table is not required after the parsing phase.\"  </p>\n\n\n<p>This is false. The symbol table is crucial not just during parsing but also in subsequent phases such as semantic analysis, type checking, and code generation.</p>\n\n\n<p>Option D: \"Symbol table is created during the lexical analysis phase.\"  </p>\n\n\n<p>This statement can be considered true in many implementations. Often, the lexical analyzer initializes or interacts with an identifier table (sometimes considered part of the overall symbol table) when it recognizes identifiers, although the complete information might be filled in later.</p>\n\n<p>Since only one statement is false, the answer is:</p>\n<p>$$\\textbf{Option C is false}$$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statements is/are FALSE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>An attribute grammar is a syntax-directed definition (SDD) in which the functions in the semantic rules have no side effects</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>The attributes in a L-attributed definition cannot always be evaluated in a depth-first order</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Synthesized attributes can be evaluated by a bottom-up parser as the input is parsed</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>All L-attributed definitions based on LR(1) grammar can be evaluated using a bottom-up parsing strategy</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze each option one by one to identify which statements are false:</p>\n\n<p><strong>Option A:</strong> An attribute grammar is a syntax-directed definition (SDD) in which the functions in the semantic rules have no side effects.</p>\n\n<p>This statement is <strong>true</strong>. An attribute grammar is exactly as described: it is a form of SDD where semantic rules are purely functional and have no side effects.</p>\n\n<p><strong>Option B:</strong> The attributes in a L-attributed definition cannot always be evaluated in a depth-first order.</p>\n\n<p>This statement is <strong>false</strong>. L-attributed definitions are specifically designed so that their attributes can be evaluated in a depth-first manner. Thus, the depth-first order evaluation of attributes is always possible for L-attributed definitions.</p>\n\n<p><strong>Option C:</strong> Synthesized attributes can be evaluated by a bottom-up parser as the input is parsed.</p>\n\n<p>This statement is <strong>true</strong>. Synthesized attributes, by definition, depend only on the attributes of a node’s children. In bottom-up parsing, as each rule is reduced, the synthesized attributes can be evaluated, making them suitable for such parsing strategies.</p>\n\n<p><strong>Option D:</strong> All L-attributed definitions based on LR(1) grammar can be evaluated using a bottom-up parsing strategy.</p>\n\n<p>This statement is <strong>false</strong>. While it's true that synthesized attributes in LR(1) grammars can often be evaluated in a bottom-up fashion, L-attributed definitions can also include inherited attributes, which require information from parent or sibling nodes and may not always be suitable for purely bottom-up parsing.</p>\n\n<p>So, the statements that are <strong>FALSE</strong> are:</p>\n\n<ul>\n\n<li>Option B</li>\n\n<li>Option D</li>\n\n</ul>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following is/are Bottom-Up Parser(s)?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Shift-reduce Parser</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Predictive Parser</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>LL(1) Parser</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>LR Parser</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To answer this question, let's first understand the difference between Bottom-Up and Top-Down parsers. This understanding will help us to identify which of the given options are Bottom-Up parsers.</p>\n\n<p><strong>Bottom-Up Parsing:</strong> In bottom-up parsing, the parser starts with the input symbols and tries to construct the parse tree up to the start symbol. Essentially, the parsing process begins from the leaves (i.e., the input symbols) and works its way up to the root (i.e., the start symbol of the grammar). The key examples of bottom-up parsers are:</p>\n\n<ul>\n  <li><strong>Shift-Reduce Parser:</strong> This is a type of bottom-up parser that uses a stack to hold symbols and applies reductions to convert a sequence of symbols into a higher-level non-terminal symbol until the start symbol is derived.</li>\n  <li><strong>LR Parser:</strong> This is a more powerful bottom-up parser that can handle a broad class of grammars, including all deterministic context-free grammars. It includes variations such as SLR (Simple LR), LALR (Look-Ahead LR), and Canonical LR parsers.</li>\n</ul>\n\n<p><strong>Top-Down Parsing:</strong> In contrast, top-down parsing starts with the start symbol and tries to derive the input symbols by breaking down the non-terminals to the terminals. Examples of top-down parsers include:</p>\n\n<ul>\n  <li><strong>Predictive Parser:</strong> This is a type of top-down parser which uses lookahead to decide which production to apply, and generally avoids backtracking. LL(1) parser is a specific type of predictive parser.</li>\n  <li><strong>LL(1) Parser:</strong> This is a type of top-down parser where the first 'L' stands for scanning the input from left to right, the second 'L' stands for producing a leftmost derivation, and '1' stands for using one lookahead symbol.</li>\n</ul>\n\n<p>Given the options:</p>\n\n<ul>\n  <li><strong>Option A: Shift-reduce Parser</strong> - This is a bottom-up parser.</li>\n  <li><strong>Option B: Predictive Parser</strong> - This is a top-down parser.</li>\n  <li><strong>Option C: LL(1) Parser</strong> - This is a top-down parser.</li>\n  <li><strong>Option D: LR Parser</strong> - This is a bottom-up parser.</li>\n</ul>\n\n<p>Based on these explanations, the bottom-up parsers among the given options are:</p>\n\n<ul>\n  <li>Option A: Shift-reduce Parser</li>\n  <li>Option D: LR Parser</li>\n</ul>\n\n<p>Therefore, the correct answers are Option A and Option D.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the following statements regarding the front-end and back-end of a compiler.</p>\n<p>S1: The front-end includes phases that are independent of the target hardware.</p>\n<p>S2: The back-end includes phases that are specific to the target hardware.</p>\n<p>S3: The back-end includes phases that are specific to the programming language used in the source code.</p>\n<p>Identify the CORRECT option.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only S1 is TRUE."
+      },
+      {
+        "identifier": "B",
+        "content": "Only S1 and S2 is TRUE."
+      },
+      {
+        "identifier": "C",
+        "content": "S1, S2 and S3 are all TRUE."
+      },
+      {
+        "identifier": "D",
+        "content": "Only S1 and S3 are TRUE."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The correct option is <strong>Option B: Only S1 and S2 are TRUE.</strong></p>\n\n<p>Here's a breakdown of why:</p>\n\n<p><strong>S1: The front-end includes phases that are independent of the target hardware.</strong></p>\n\n<p>This statement is <strong>TRUE</strong>. The front-end of a compiler deals with the source code and its translation into an intermediate representation. This process is largely independent of the target hardware.  Here are some key phases of the front-end:</p>\n\n<ul>\n\n<li><strong>Lexical Analysis:</strong> Reading the source code character by character and grouping them into meaningful units called tokens (e.g., keywords, identifiers, operators, constants).</li>\n\n<li><strong>Syntax Analysis:</strong> Checking the grammatical correctness of the token sequence, ensuring it follows the rules of the programming language. This is also known as parsing.</li>\n\n<li><strong>Semantic Analysis:</strong>  Verifying the meaning and consistency of the code.  This involves type checking, ensuring variables are used appropriately, and resolving any ambiguities in the code.  </li>\n\n<li><strong>Intermediate Code Generation:</strong>  Converting the source code into an intermediate representation (IR), which is often a platform-independent language that is easier to optimize and translate into machine code.</li>\n\n</ul>\n\n<p>These phases focus on understanding the source code, not on the specific architecture of the target machine. </p>\n\n<p><strong>S2: The back-end includes phases that are specific to the target hardware.</strong></p>\n\n<p>This statement is also <strong>TRUE</strong>. The back-end of a compiler is responsible for generating machine code that can run on a specific target architecture. These phases are highly dependent on the target hardware:</p>\n\n<ul>\n\n<li><strong>Code Optimization:</strong>  Improving the efficiency and performance of the intermediate code for the target hardware.  This could involve rearranging instructions, removing redundant code, and using registers effectively.</li>\n\n<li><strong>Code Generation:</strong> Converting the optimized intermediate code into machine code (binary instructions) that the target processor can execute.</li>\n\n<li><strong>Assembly:</strong>  (Sometimes included in code generation)  Translating the machine code into assembly language, which is a human-readable representation of the machine instructions. </li>\n\n</ul>\n\n<p>The back-end needs to understand the target processor's instruction set, memory organization, and other hardware-specific details.</p>\n\n<p><strong>S3: The back-end includes phases that are specific to the programming language used in the source code.</strong></p>\n\n<p>This statement is <strong>FALSE</strong>. While the front-end is specific to the programming language (e.g., C, Python, Java), the back-end focuses on the target machine, not the specific language used in the source code.  The back-end takes the intermediate code, which has already been language-independent, and translates it to machine code for the target platform.  It doesn't matter if the intermediate code was generated from C, Python, or any other language.</p>\n\n<p><strong>In summary:</strong> The front-end deals with the source code and its translation to a platform-independent representation, while the back-end tailors the code for the specific hardware architecture of the target machine.</p>\n\n<p></p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which one of the following statements is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The LALR(1) parser for a grammar G cannot have reduce-reduce conflict if the LR(1) parser for G does not have reduce-reduce conflict."
+      },
+      {
+        "identifier": "B",
+        "content": "Symbol table is accessed only during the lexical analysis phase."
+      },
+      {
+        "identifier": "C",
+        "content": "Data flow analysis is necessary for run-time memory management."
+      },
+      {
+        "identifier": "D",
+        "content": "LR(1) parsing is sufficient for deterministic context-free languages."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) False : Even though LR(1) parser does not have R/R conflict for a grammar G, the LALR(1) parser may have R/R conflict for G.</p>\n<p>(b) False : Symbol table can be accessed by all the phases of a compiler</p>\n<p>(c) False : Data flow analysis is used in control flow graph for code optimization</p>\n<p>(d) True : LR(1) parser is sufficient for DCLF's.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the augmented grammar with {+, *, (, ), id} as the set of terminals.</p>\n<p>S' $$\\to$$ S</p>\n<p>S $$\\to$$ S + R | R</p>\n<p>R $$\\to$$ R * P | P</p>\n<p>P $$\\to$$ (S) | id</p>\n<p>If I<sub>0</sub> is the set of two LR(0) items {[S' $$\\to$$ S.], [S $$\\to$$ S. + R]}, then goto(closure(I<sub>0</sub>), +) contains exactly _________ items.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": "<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02ezyus/4ae95cf7-e19f-4a33-949b-3792473ef073/d74f3f40-9639-11ec-a1d8-135fcba6bdd9/file-1l02ezyut.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02ezyus/4ae95cf7-e19f-4a33-949b-3792473ef073/d74f3f40-9639-11ec-a1d8-135fcba6bdd9/file-1l02ezyut.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Compiler Design - Parsing Question 13 English Explanation\"></p>\n<p>Goto (I<sub>0</sub>, +) will have 5 elements.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following statements.</p>\n\n<p>S<sub>1</sub> : Every SLR(1) grammar is unambiguous but there are certain unambiguous grammars that are not SLR(1).</p>\n\n<p>S<sub>2</sub> : For any context-free grammar, there is a parser that takes at most O(n<sup>3</sup>) time to parse a string of length n.</p>\n\n<p>Which one of the following option is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S<sub>1</sub> is true and S<sub>2</sub> is false"
+      },
+      {
+        "identifier": "B",
+        "content": "S<sub>1</sub> is false and S<sub>2</sub> is true"
+      },
+      {
+        "identifier": "C",
+        "content": "S<sub>1</sub> is true and S<sub>2</sub> is true"
+      },
+      {
+        "identifier": "D",
+        "content": "S<sub>1</sub> is false and S<sub>2</sub> is false"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Statement $ S_1 $:</strong></h3>\n<p><em>Every SLR(1) grammar is unambiguous but there are certain unambiguous grammars that are not SLR(1).</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><strong>Every SLR(1) Grammar is Unambiguous</strong></p>\n\n\n<p><p><strong>SLR(1) Grammars:</strong></p>\n\n<p><p>SLR(1) stands for <strong>Simple LR(1)</strong>. These grammars can be parsed using SLR(1) parsers without conflicts.</p></p>\n<p><p>SLR(1) grammars are a subset of LR(1) grammars.</p></p></p>\n<p><p><strong>Unambiguity:</strong></p>\n\n<p><p>LR(1) grammars are <strong>deterministic context-free grammars</strong>.</p></p>\n<p><p>Deterministic context-free grammars are <strong>unambiguous</strong> because they produce a unique parse tree for each valid string.</p></p></p>\n<p><p><strong>Conclusion:</strong></p>\n\n<p><strong>All SLR(1) grammars are unambiguous.</strong></p></p>\n\n\n<p><strong>There Exist Unambiguous Grammars That Are Not SLR(1)</strong></p>\n\n\n<p><p><strong>Unambiguous Grammars Not in SLR(1):</strong></p>\n\n<p><p>Not all unambiguous grammars can be parsed using SLR(1) parsing tables without conflicts.</p></p>\n<p><p><strong>Example:</strong></p></p>\n<p><p>Consider the following unambiguous grammar:</p>\n<p>$          S \\rightarrow aSa \\mid bSb \\mid c          $</p></p>\n<p><p>This grammar is unambiguous but <strong>not</strong> SLR(1) because it requires more lookahead to parse without conflicts.</p></p></p>\n<p><p><strong>Conclusion:</strong></p>\n\n<p><strong>There are unambiguous grammars that are not SLR(1).</strong></p></p>\n\n<p><strong>Overall Conclusion for $ S_1 $:</strong> <strong>True</strong></p>\n<hr />\n<h3><strong>Statement $ S_2 $:</strong></h3>\n<p><em>For any context-free grammar, there is a parser that takes at most $ O(n^3) $ time to parse a string of length $ n $.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Parsing Arbitrary Context-Free Grammars:</strong></p></p>\n<p><p><strong>CYK Algorithm:</strong></p>\n\n<p>The Cocke-Younger-Kasami (CYK) algorithm can parse any context-free grammar (in Chomsky Normal Form) in $ O(n^3) $ time.</p></p>\n<p><p><strong>Earley's Algorithm:</strong></p>\n\n<p><p>Earley's parser can parse any context-free grammar in $ O(n^3) $ time in the worst case.</p></p>\n<p><p>For unambiguous grammars, Earley's parser operates in $ O(n^2) $ time, and for a large class of grammars (including LR(k) grammars), it operates in $ O(n) $ time.</p></p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p><strong>There exists a general parsing algorithm with $ O(n^3) $ time complexity for any context-free grammar.</strong></p></p>\n\n<p><strong>Overall Conclusion for $ S_2 $:</strong> <strong>True</strong></p>\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>$ S_1 $ is True</strong></p></p>\n<p><p><strong>$ S_2 $ is True</strong></p></p>\n\n<hr />\n<p><strong>Therefore, the correct choice is:</strong></p>\n<p><strong>Option C:</strong> $ S_1 $ is true and $ S_2 $ is true.</p>\n<hr />\n<p><strong>Answer:</strong> Option C</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following grammar.\n<br><br>S $$ \\to $$ aSB| d\n<br>B $$ \\to $$ b\n<br><br>The number of reduction steps taken by a bottom-up parser while accepting the string aaadbbb is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": "<p>For the string aaadbbb (so $n=3$), you perform</p>\n\n<p><p>one reduction  $\\;d \\to S$  </p></p>\n<p><p>three times  $\\;b \\to B$  </p></p>\n<p><p>three times  $\\;aSB \\to S$  </p></p>\n\n<p>Total reductions $=1 + 3 + 3 = 7$.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following kinds of derivation is used by LR parsers?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Rightmost"
+      },
+      {
+        "identifier": "B",
+        "content": "Leftmost in reverse"
+      },
+      {
+        "identifier": "C",
+        "content": "Rightmost in reverse"
+      },
+      {
+        "identifier": "D",
+        "content": "Leftmost"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "As LR parser is bottom up parser that is why  it uses Rightmost derivation in reverse.",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the grammar given below:\n<br><br>S → Aa\n<br><br>A → BD\n<br><br>B → b | ε\n<br><br>D → d | ε\n<br><br>Let a, b, d, and $ be indexed as follows:\n<img src=\"https://imagex.cdn.examgoal.net/jf76htyjzwr9us4/560875bb-5262-47e1-898c-28e3a721b80f/5a443d40-ca65-11e9-8a74-7f4f47aa0c85/file-jf76htyjzwr9us5-269w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Compiler Design - Parsing Question 22 English\">\n<br>Compute the FOLLOW set of the non-terminal B and write the index values for the symbols in the FOLLOW set in the descending order. (For example, if the FOLLOW set is {a, b, d, $}, then the answer should be 3210)\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "31 to 31",
+    "explanation": "Follow(B) = First(D) $$ \\cup $$ Follow(A)\n<br><br>[ When D is $$\\varepsilon  $$ then Follow(B) = Follow(A) ]\n<br><br>$$ \\therefore $$ Follow(B) = {d} $$ \\cup $$ {a} = {a, d}\n<br><br>As a = 3 and d = 1 then Descending order = 31",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Match the following:\n <p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-jash{font-weight:bold;font-size:18px;text-align:left}\n.tg .tg-wv9z{font-size:22px;text-align:center}\n.tg .tg-pe1m{font-weight:bold;font-size:18px;text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-wv9z\">GROUP - 1</th>\n    <th class=\"tg-wv9z\">GROUP - 2</th>\n  </tr>\n  <tr>\n    <td class=\"tg-jash\">(P) Lexical analysis</td>\n    <td class=\"tg-jash\">(i) Leftmost derivation</td>\n  </tr>\n  <tr>\n    <td class=\"tg-jash\">(Q) Top down parsing</td>\n    <td class=\"tg-jash\">(ii) Type checking</td>\n  </tr>\n  <tr>\n    <td class=\"tg-jash\">(R) Semantic analysis</td>\n    <td class=\"tg-jash\">(iii) Regular expressions </td>\n  </tr>\n  <tr>\n    <td class=\"tg-pe1m\">(S) Runtime environments </td>\n    <td class=\"tg-pe1m\">(iv) Activation records</td>\n  </tr>\n</tbody></table></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P \\leftrightarrow i,\\,\\,Q \\leftrightarrow ii,\\,\\,R \\leftrightarrow iv,\\,\\,S \\leftrightarrow iii$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P \\leftrightarrow iii,\\,\\,Q \\leftrightarrow i,\\,\\,R \\leftrightarrow ii,\\,\\,S \\leftrightarrow iv$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$P \\leftrightarrow ii,\\,\\,Q \\leftrightarrow iii,\\,\\,R \\leftrightarrow i,\\,\\,S \\leftrightarrow iv$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$P \\leftrightarrow iv,\\,\\,Q \\leftrightarrow i,\\,\\,R \\leftrightarrow ii,\\,\\,S \\leftrightarrow iii$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Among simple $$LR (SLR) ,$$ canonical $$LR,$$ and look-ahead $$LR$$ $$(LALR),$$ which of the following pairs identify the method that is very easy to implement and the method that is the most powerful , in that order?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$SLR, LALR$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Canonical $$LR,$$ $$LALR$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$SLR,$$ canonical $$LR$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$LALR,$$ canonical $$LR$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is TRUE at any valid state in shift-reduce parsing? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Viable prefixes appear only at the bottom of the stack and not inside"
+      },
+      {
+        "identifier": "B",
+        "content": "Viable prefixes appear only at the top of the stack and not inside"
+      },
+      {
+        "identifier": "C",
+        "content": "The stack contains only a set of viable prefixes"
+      },
+      {
+        "identifier": "D",
+        "content": "The stack never contains viable prefixes"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Match the following: \n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-s268{text-align:left}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-baqh\">GROUP 1</th>\n    <th class=\"tg-baqh\">GROUP 2</th>\n  </tr>\n  <tr>\n    <td class=\"tg-s268\">P. Lexical analysis</td>\n    <td class=\"tg-0lax\">1. Graph coloring</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">Q. Parsing </td>\n    <td class=\"tg-0lax\">2. DFA minimization</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">R. Register allocation</td>\n    <td class=\"tg-0lax\">3. Post-order traversal </td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">S. Expression evaluation</td>\n    <td class=\"tg-0lax\">4. Production tree </td>\n  </tr>\n</tbody></table> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P - 2,\\,\\,Q - 3,\\,\\,R - 1,\\,\\,S - 4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P - 2,\\,\\,Q - 1,\\,\\,R - 4,\\,\\,S - 3$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$P - 2,\\,\\,Q - 4,\\,\\,R - 1,\\,\\,S - 3$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$P - 2,\\,\\,Q - 3,\\,\\,R - 4,\\,\\,S - 1$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the grammar defined by the following production rules, with two operators * and +</p>\n$$\\eqalign{\n  &amp; S \\to T*P  \\cr \n  &amp; T \\to U\\,|\\,T*U  \\cr \n  &amp; P \\to Q + P\\,|\\,Q  \\cr \n  &amp; Q \\to id  \\cr \n  &amp; U \\to id \\cr} $$\n<p>Which one of the following is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "+ is left associative, while * is right associative"
+      },
+      {
+        "identifier": "B",
+        "content": "+ is right associative, while * is left associative"
+      },
+      {
+        "identifier": "C",
+        "content": "Both + and * are right associative"
+      },
+      {
+        "identifier": "D",
+        "content": "Both + and * are left associative"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "What is the maximum number of reduce moves that can be taken by a bottom-up parser for a grammar with no epsilon and unit-production ( i.e., of type $$A \\to \\varepsilon $$ and $$A \\to a$$ ) to parse a string with n tokens? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${n \\over 2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$n - 1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2n - 1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^n}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Given the language L= { ab, aa, baa }, which of the following strings are in L* ? \n<p>1) abaabaaabaa \n<br>2) aaaabaaaa \n<br>3) baaaaabaaaab \n<br>4) baaaaabaa </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1,2 and 3 "
+      },
+      {
+        "identifier": "B",
+        "content": "2,3 and 4"
+      },
+      {
+        "identifier": "C",
+        "content": "1,2 and 4"
+      },
+      {
+        "identifier": "D",
+        "content": "1,3 and 4"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following describes a handle (as applicable to LR-parsing) appropriately?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It is the position in a sentential form where the next shift or reduce operation will occur"
+      },
+      {
+        "identifier": "B",
+        "content": "It is non-terminal whose production will be used for reduction in the next step"
+      },
+      {
+        "identifier": "C",
+        "content": "It is a production that may be used for reduction in a future step along with a position in the sentential form where the next shift or reduce operation will occur"
+      },
+      {
+        "identifier": "D",
+        "content": "It is the production p that will be used for reduction in the next step along with a position in the sentential form where the right hand side of the production may be found"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is a top-down parser?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Recursive descent parser."
+      },
+      {
+        "identifier": "B",
+        "content": "Operator precedence parser."
+      },
+      {
+        "identifier": "C",
+        "content": "An LR(k) parser."
+      },
+      {
+        "identifier": "D",
+        "content": "An LALR(k) parser."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the following grammar.</p>\n$$\\eqalign{\n  &amp; S \\to S*E  \\cr \n  &amp; S \\to E  \\cr \n  &amp; E \\to F + E  \\cr \n  &amp; E \\to F  \\cr \n  &amp; F \\to id \\cr} $$\n<p>Consider the following LR(0) items corresponding to the grammar above.</p> \n$$\\eqalign{\n  &amp; (i)\\,S \\to S*.E  \\cr \n  &amp; (ii)\\,E \\to F. + E  \\cr \n  &amp; (iii)\\,E \\to F + .E \\cr} $$\n<p>Given the items above, which two of them will appear in the same set in the canonical sets-of-items for the grammar?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) and (ii)"
+      },
+      {
+        "identifier": "B",
+        "content": "(ii) and (iii)"
+      },
+      {
+        "identifier": "C",
+        "content": "(i) and (iii)"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The grammar $$A \\to AA\\,|\\,\\left( A \\right)\\,|\\,\\varepsilon $$  <br>is not suitable for predictive-parsing because the grammar is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "ambiguous\n"
+      },
+      {
+        "identifier": "B",
+        "content": "left-recursive"
+      },
+      {
+        "identifier": "C",
+        "content": "right-recursive"
+      },
+      {
+        "identifier": "D",
+        "content": "an operator-grammar"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following suffices to convert an arbitrary CFG to an LL(1) grammar? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Removing left recursion alone"
+      },
+      {
+        "identifier": "B",
+        "content": "Factoring the grammar alone"
+      },
+      {
+        "identifier": "C",
+        "content": "Removing left recursion and factoring the grammar"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "In a bottom-up evaluation of a syntax directed definition, inherited attributes can",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "always be evaluated"
+      },
+      {
+        "identifier": "B",
+        "content": "be evaluated only if the definition is L- attributed"
+      },
+      {
+        "identifier": "C",
+        "content": "be evaluated only if the definition has synthesized attributes"
+      },
+      {
+        "identifier": "D",
+        "content": "never be evaluated"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that the SLR parser for a grammar G has n<sub>1</sub> states and the LALR parser for G has n<sub>2</sub> states. The relationship between n<sub>1</sub> and n<sub>2</sub> is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n<sub>1</sub> is necessarily less than n<sub>2</sub> "
+      },
+      {
+        "identifier": "B",
+        "content": "n<sub>1</sub> is necessarily equal to n<sub>2</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "n<sub>1</sub> is necessarily greater than n<sub>2</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The process of assigning load addresses to the various parts of the program and adjusting the code and date in the program to reflect the assigned addresses is called",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Assembly"
+      },
+      {
+        "identifier": "B",
+        "content": "Parsing"
+      },
+      {
+        "identifier": "C",
+        "content": "Relocation"
+      },
+      {
+        "identifier": "D",
+        "content": "Symbol resolution"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is false?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "An unambiguous grammar has same leftmost and rightmost derivation"
+      },
+      {
+        "identifier": "B",
+        "content": "An LL(1) parser is a top-down parser "
+      },
+      {
+        "identifier": "C",
+        "content": "LALR is more powerful than SLR "
+      },
+      {
+        "identifier": "D",
+        "content": "An ambiguous grammar can never be LR(k) for any k"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "SLR parser is more powerful than LALR"
+      },
+      {
+        "identifier": "B",
+        "content": "LALR parser is more powerful than Canonical LR parser"
+      },
+      {
+        "identifier": "C",
+        "content": "Canonical LR parser is more powerful than LALR parser."
+      },
+      {
+        "identifier": "D",
+        "content": "The parsers SLR, Canonical CR, and LALR have the same power"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The pass numbers for each of the following activities\n<p>(i) object code generation \n<br>(ii) literals added to literal table \n<br>(iii) listing printed \n<br>(iv) address resolution of local symbols that occur in a two pass assembler respectively are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1, 2, 1, 2"
+      },
+      {
+        "identifier": "B",
+        "content": "2, 1, 2, 1"
+      },
+      {
+        "identifier": "C",
+        "content": "2, 1, 1, 2 "
+      },
+      {
+        "identifier": "D",
+        "content": "1, 2, 2, 2"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the canonical $L R(0)$ parsing of the grammar below using terminals $\\{a, b, c\\}$ and non-terminals $\\{A, B, C, S\\}$ with $S$ as the start symbol.</p>\n<p>$$ \\begin{aligned} & S \\rightarrow A C B \\\\ & A \\rightarrow \\alpha A \\mid \\in \\\\ & C \\rightarrow c C \\mid \\in \\\\ & B \\rightarrow b B \\mid b \\end{aligned} $$</p>\n<p>Which one of the following options gives the number of shift-reduce conflicts that will occur in the $L R(0)$ ACTION table?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>2</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>3</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>4</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>5</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ G=\\{S \\rightarrow A C B, A \\rightarrow a A|\\in, C \\rightarrow c C| \\in, B \\rightarrow b B \\mid b\\} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyv4vaw/9714c6dd-16ef-4810-ae54-4e32341b5567/926f6f80-2456-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyv4vax.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyv4vaw/9714c6dd-16ef-4810-ae54-4e32341b5567/926f6f80-2456-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyv4vax.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Compiler Design - Parsing Question 1 English Explanation\">$$ I_0, I_2, I_3, I_7 \\text { and } I_9 \\text { are having } \\mathrm{S} / \\mathrm{R} \\text { conflict. } $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Given a Context-Free Grammar G as follows :</p>\n<p>$S \\rightarrow A a|b a c| d c \\mid b d a$</p>\n<p>$A \\rightarrow d$</p>\n<p>Which ONE of the following statements is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$G$ is neither $\\operatorname{LALR}(1)$ nor $\\operatorname{SLR}(1)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$G$ is $\\operatorname{CLR}(1)$, not $\\operatorname{LALR}(1)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$G$ is $\\operatorname{LALR}(1)$, not $\\operatorname{SLR}(1)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$G$ is $\\operatorname{LALR}(1)$, also $\\operatorname{SLR}(1)$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yrlznp/defe79a1-2d27-4858-93f0-bcdf558ec433/8b5aef50-fb51-11ef-9115-8db426cbf786/file-jaoe38c1m7yrlznq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yrlznp/defe79a1-2d27-4858-93f0-bcdf558ec433/8b5aef50-fb51-11ef-9115-8db426cbf786/file-jaoe38c1m7yrlznq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Compiler Design - Parsing Question 4 English Explanation 1\"></p>\n<p>$$\\begin{aligned}\n&amp; \\Rightarrow\\{c\\} \\cap \\text { follow }(A) \\\\\n&amp; \\Rightarrow\\{c\\} \\cap\\{a, c\\} \\\\\n&amp; \\Rightarrow\\{c\\} \\\\\n&amp; \\neq \\phi \\\\\n&amp; \\Rightarrow S / R \\text { conflict } \\\\\n&amp; \\Rightarrow \\text { not } \\operatorname{SLR}(1)\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yrmqev/754323ae-9137-438d-9bc8-91c0a8289313/a005c470-fb51-11ef-9115-8db426cbf786/file-jaoe38c1m7yrmqew.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yrmqev/754323ae-9137-438d-9bc8-91c0a8289313/a005c470-fb51-11ef-9115-8db426cbf786/file-jaoe38c1m7yrmqew.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Compiler Design - Parsing Question 4 English Explanation 2\"></p>\n<p>No conflicts in $\\operatorname{CLR}(1)$ and no mergeable states in $\\operatorname{LALR}(1)$</p>\n<p>$\\therefore \\quad$ The grammar is $\\operatorname{CLR}(1)$ and also $\\operatorname{LALR}(1$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider two grammars $G_1$ and $G_2$ with the production rules given below:</p>\n<p>$G_1: S \\rightarrow$ if $E$ then $S \\mid$ if $E$ then $S$ else $S \\mid a$</p>\n<p>$$\\mathrm{E} \\rightarrow \\mathrm{~b}$$</p>\n<p>$G_2: S \\rightarrow$ if $E$ then $S \\mid M$</p>\n<p>$E \\rightarrow$ if $E$ then $M$ else $S \\mid c$</p>\n<p>$$\\mathrm{E} \\rightarrow \\mathrm{~b}$$</p>\n<p>where if, then, else, $a, b, c$ are the terminals.</p>\n<p>Which of the following option(s) is/are CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$G_1$ is not $L L(1)$ and $G_2$ is $L L(1)$.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$G_1$ is $L L(1)$ and $G_2$ is not $L L(1)$.\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$G_1$ and $G_2$ are not $L L(1)$.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$G_1$ and $G_1$ are ambiguous."
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&amp; G_1: S \\rightarrow \\text { if } E \\text { then } S \\mid \\text { if } E \\text { then } S \\text { else } S \\mid a \\\\\n&amp; \\Rightarrow\\{\\text { if }\\} \\cap\\{\\text { if }\\} \\\\\n&amp; \\Rightarrow\\{\\text { if }\\} \\\\\n&amp; \\neq \\phi \\\\\n&amp; \\Rightarrow \\operatorname{Not} \\operatorname{LL}(1)\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yzk2uy/5c7e4743-e128-415e-be51-cfd9616ea650/9f3e3da0-fb70-11ef-8217-f921e49d6378/file-jaoe38c1m7yzk2uz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yzk2uy/5c7e4743-e128-415e-be51-cfd9616ea650/9f3e3da0-fb70-11ef-8217-f921e49d6378/file-jaoe38c1m7yzk2uz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Compiler Design - Parsing Question 3 English Explanation 1\"></p>\n<p>Same string \"if $b$ then if $b$ then a else $a$ \" is having two different parse trees $\\Rightarrow G_1$ is ambiguous.</p>\n<p>$$\\begin{array}{ll}\nG_2 &amp; \\text { if } E \\text { then } S \\mid M \\\\\n\\Rightarrow &amp; \\{\\text { if }\\} \\cap \\text { First }(M) \\\\\n\\Rightarrow &amp; \\{\\text { if }\\} \\cap\\{\\text { if, } c\\} \\\\\n\\Rightarrow &amp; \\{\\text { if }\\} \\\\\n\\neq &amp; \\phi \\\\\n\\Rightarrow &amp; \\text { Not LL(1) }\n\\end{array}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yzl1yx/f850e8ab-b36d-4a81-93e4-b825c254bb0c/ba5d7290-fb70-11ef-8217-f921e49d6378/file-jaoe38c1m7yzl1yy.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yzl1yx/f850e8ab-b36d-4a81-93e4-b825c254bb0c/ba5d7290-fb70-11ef-8217-f921e49d6378/file-jaoe38c1m7yzl1yy.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Compiler Design - Parsing Question 3 English Explanation 2\"></p>\n<p>The string \"if $b$ then if $b$ then $c$ else if $b$ then $c$ else $c$ \" has two different parse trees $\\Rightarrow G_2$ is ambiguous.</p>\n<p>$\\therefore$ Answer is (c) and (d).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statement(s) is/are TRUE while computing First and Follow during top down parsing by a compiler?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " For a production $A \\rightarrow \\varepsilon, \\varepsilon$ will be added to First(A).\n"
+      },
+      {
+        "identifier": "B",
+        "content": " If there is any input right end marker, it will be added to First(S), where $S$ is the start symbol.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " For a production $A \\rightarrow \\varepsilon, \\varepsilon$ will be added to Follow(A).\n"
+      },
+      {
+        "identifier": "D",
+        "content": " If there is any input right end marker, it will be added to Follow(S), where $S$ is the start symbol."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze each option:</p>\n\n<p>Option A: For a production $$A \\rightarrow \\varepsilon,$$ $$\\varepsilon$$ is added to $$\\text{FIRST}(A)$$.  </p>\n\n\n<p>This is true. When a non-terminal has a production that derives the empty string, $$\\varepsilon$$ is included in its FIRST set.</p>\n\n\n<p>Option B: If there is any input right end marker, it will be added to $$\\text{FIRST}(S)$$, where $$S$$ is the start symbol.  </p>\n\n\n<p>This is false. The right end marker (often represented as $$\\$$$) is not added to the FIRST set; it is added to the FOLLOW set of the start symbol.  3. Option C: For a production $$A \\rightarrow \\varepsilon,$$ $$\\varepsilon$$ is added to $$\\text{FOLLOW}(A)$$.      - This is false. The empty string is considered in FIRST sets for productions, but the FOLLOW set contains terminal symbols (and possibly the end marker), not $$\\varepsilon$$.  4. Option D: If there is any input right end marker, it will be added to $$\\text{FOLLOW}(S)$$, where $$S$$ is the start symbol.      - This is true. In top-down parsing, the end marker $$\\$$$ is added to the FOLLOW set of the start symbol to indicate the end of input.</p>\n\n<p>Thus, the correct statements are:</p>\n\n<p><p>Option A</p></p>\n<p><p>Option D</p></p>\n",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following context-free grammar where the start symbol is S and the set of terminals is {a,b,c,d}.</p><p>$ S \\rightarrow AaAb \\mid BbBa $</p><p>$ A \\rightarrow cS \\mid \\epsilon $</p><p>$ B \\rightarrow dS \\mid \\epsilon $</p><p>The following is a partially-filled LL(1) parsing table.</p>\n<style>table { width: 100%; border-collapse: collapse; margin: 20px 0; } th { background-color: blue; color: white; border: 1px solid lightgrey; padding: 10px; } td { border: 1px solid lightgrey; padding: 10px; text-align: left; }</style><table><thead><tr><th></th><th>a</th><th>b</th><th>c</th><th>d</th><th>$</th></tr></thead><tbody><tr><td><b>S</b></td><td>S $\\rightarrow$ AaAb</td><td>S $\\rightarrow$ BbBa</td><td>(1)</td><td>(2)</td><td></td></tr><tr><td><b>A</b></td><td>A $\\rightarrow \\epsilon$</td><td>(3)</td><td>A $\\rightarrow$ cS</td><td></td><td></td></tr><tr><td><b>B</b></td><td>(4)</td><td>B $\\rightarrow \\epsilon$</td><td></td><td>B $\\rightarrow$ dS</td><td></td></tr></tbody></table>\n<p>Which one of the following options represents the CORRECT combination for the numbered cells in the parsing table?</p><p><i>Note: In the options, “blank” denotes that the corresponding cell is empty.</i></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>(1) $ S \\rightarrow AaAb $, (2) $ S \\rightarrow BbBa $, (3) $ A \\rightarrow \\epsilon $, (4) $ B \\rightarrow \\epsilon $</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>(1) $ S \\rightarrow BbBa $, (2) $ S \\rightarrow AaAb $, (3) $ A \\rightarrow \\epsilon $, (4) $ B \\rightarrow \\epsilon $</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>(1) $ S \\rightarrow AaAb $, (2) $ S \\rightarrow BbBa $, (3) blank, (4) blank</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>(1) $ S \\rightarrow BbBa $, (2) $ S \\rightarrow AaAb $, (3) blank, (4) blank</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To fill in the LL(1) parsing table for the given context-free grammar, we need to determine the productions that should appear in the cells based on the FIRST and FOLLOW sets of non-terminal symbols. Given the grammar:</p>\n\n<p>$ S \\rightarrow AaAb \\mid BbBa $</p>\n\n<p>$ A \\rightarrow cS \\mid \\epsilon $</p>\n\n<p>$ B \\rightarrow dS \\mid \\epsilon $</p>\n\n<p>First, we calculate the FIRST sets for each non-terminal:</p>\n\n<ul>\n\n<li>FIRST(S) = {a, b} since the productions are $ S \\rightarrow AaAb $ and $ S \\rightarrow BbBa $ which both start with 'a' when A produces $ \\epsilon $ or with 'b' when B produces $ \\epsilon $.</li>\n\n<li>FIRST(A) = {c, $ \\epsilon $} since A can either produce cS or $ \\epsilon $.</li>\n\n<li>FIRST(B) = {d, $ \\epsilon $} since B can either produce dS or $ \\epsilon $.</li>\n\n</ul>\n\n<p>Next, we calculate the FOLLOW sets for each non-terminal starting with $ FOLLOW(S) = {$} $ :</p>  <ul>     <li>FOLLOW(A) includes 'a' since $ S \\rightarrow AaAb $ leaves 'a' after A. So, FOLLOW(A) = {a}.</li>     <li>FOLLOW(B) includes 'a' since $ S \\rightarrow BbBa $ leaves 'a' after B. So, FOLLOW(B) = {a}.</li> </ul>  <p>Now, let's use these sets to fill the table:</p>  <table>   <thead>     <tr>       <th></th>       <th>a</th>       <th>b</th>       <th>c</th>       <th>d</th>       <th>$</th>\n\n</tr>\n\n</thead>\n\n<tbody>\n\n<tr>\n\n<td><b>S</b></td>\n\n<td>S $\\rightarrow$ AaAb</td>\n\n<td>S $\\rightarrow$ BbBa</td>\n\n<td>blank</td>\n\n<td>blank</td>\n\n<td>blank</td>\n\n</tr>\n\n<tr>\n\n<td><b>A</b></td>\n\n<td>A $\\rightarrow \\epsilon$</td>\n\n<td>A $\\rightarrow \\epsilon$ (because 'a' is in FOLLOW(A))</td>\n\n<td>A $\\rightarrow$ cS</td>\n\n<td>blank</td>\n\n<td>blank</td>\n\n</tr>\n\n<tr>\n\n<td><b>B</b></td>\n\n<td>B $\\rightarrow \\epsilon$ (because 'a' is in FOLLOW(B))</td>\n\n<td>B $\\rightarrow \\epsilon$</td>\n\n<td>blank</td>\n\n<td>B $\\rightarrow$ dS</td>\n\n<td>blank</td>\n\n</tr>\n\n</tbody>\n\n</table>\n\n<p>Based on this, the correct combination for the numbered cells is:</p>\n\n<p>(1) blank</p>\n\n<p>(2) blank</p>\n\n<p>(3) $ A \\rightarrow \\epsilon $ </p>\n\n<p>(4) $ B \\rightarrow \\epsilon $ </p>\n\n<p>The correct option is:</p>\n\n<p>Option A:\n\n<p>(1) $ S \\rightarrow AaAb $,</p>\n\n<p>(2) $ S \\rightarrow BbBa $,</p>\n\n<p>(3) $ A \\rightarrow \\epsilon $,</p>\n\n<p>(4) $ B \\rightarrow \\epsilon $</p></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following augmented grammar, which is to be parsed with a SLR parser. The set of terminals is $\\{ a, b, c, d, \\, \\#, \\, @ \\}$</p> <p>$S' \\rightarrow S$<br> $S \\rightarrow SS \\;|\\; Aa \\;|\\; bAc \\;|\\; Bc \\;|\\; bBa$<br> $A \\rightarrow d\\#\\#$<br> $B \\rightarrow @$</p> <p>Let $I_0 = \\text{CLOSURE}( \\{ S' \\rightarrow \\bullet S \\} )$. The number of items in the set $GOTO(I_0, \\, S)$ is __________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "9",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lzz84r1t/abe59770-9a47-4ea2-ae1a-81f130ed24bf/6c1d5610-5d30-11ef-b44a-cd4728a101d5/file-jaoe38c1lzz84r1u.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lzz84r1t/abe59770-9a47-4ea2-ae1a-81f130ed24bf/6c1d5610-5d30-11ef-b44a-cd4728a101d5/file-jaoe38c1lzz84r1u.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 2 Compiler Design - Parsing Question 7 English Explanation\"></p>\n<p>From above DFA we can see that Goto (closure $\\left(I_0\\right)$, s) contain 9 items.</p>\n<p>Hence, the correct answer is 9 .</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following grammar $G$, with $S$ as the start symbol. The grammar $G$ has three incomplete productions denoted by (1), (2), and (3).</p>\n<p>$$S \\rightarrow d a T \\mid \\underline{\\ (1)}$$</p><p>$$T \\rightarrow a S \\mid b T \\mid \\ \\underline{(2)}$$</p><p>$$R \\rightarrow \\underline{(3)} \\mid \\epsilon$$</p><p>The set of terminals is $\\{a, b, c, d, f\\}$. The FIRST and FOLLOW sets of the different non-terminals are as follows.</p><p>FIRST($S$) = $\\{c, d, f\\}$, FIRST($T$) = $\\{a, b, \\epsilon\\}$, FIRST($R$) = $\\{c, \\epsilon\\}$</p><p>FOLLOW($S$) = FOLLOW($T$) = $\\{c, f, \\#\\}$, FOLLOW($R$) = $\\{f\\}$</p>\n<p>Which one of the following options CORRECTLY fills in the incomplete productions?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>(1) $S \\rightarrow R f$ (2) $T \\rightarrow \\epsilon$ (3) $R \\rightarrow c T R$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>(1) $S \\rightarrow f R$ (2) $T \\rightarrow \\epsilon$ (3) $R \\rightarrow c T R$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>(1) $S \\rightarrow f R$ (2) $T \\rightarrow c T$ (3) $R \\rightarrow c R$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>(1) $S \\rightarrow R f$ (2) $T \\rightarrow c T$ (3) $R \\rightarrow c R$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the correct productions that fill in the incomplete parts of the grammar, we need to ensure that the provided FIRST and FOLLOW sets are consistent with the production rules. Let's analyze each option based on the provided FIRST and FOLLOW sets.</p>\n\n<p><strong>Option A:</strong>\n\n<p>(1) $$S \\rightarrow R f$$<br>(2) $$T \\rightarrow \\epsilon$$<br>(3) $$R \\rightarrow c T R$$</p>\n\n<p>Let's verify each production:\n\n<ul>\n<li>For (1) $$S \\rightarrow R f$$, we need to check if this rule will maintain the FIRST($S$) = {c, d, f}. Since FIRST($R$) = {c, $\\epsilon$}, the FIRST set of $$R f$$ can be {c, f}. Hence, this is consistent with FIRST($S$).</li><br>\n<li>For (2) $$T \\rightarrow \\epsilon$$, it is consistent with the given FIRST($T$) = {a, b, $\\epsilon$}.</li><br>\n<li>For (3) $$R \\rightarrow c T R$$, FIRST($R$) should include c, which it does. The production can generate strings starting with c, followed by strings derived from TR. It matches the condition that FIRST($R$) contains c.</p></li>\n</ul>\n<p>The FOLLOW sets are also checked:\n\n<ul>\n<li>FOLLOW($S$) = FOLLOW($T$) = {c, f, #}, and FOLLOW($R$) = {f}. The non-terminal $R$ in $$S \\rightarrow R f$$ should respect FOLLOW($R$) = f.</p></li>\n</ul>\n<p>Option A appears consistent with the given FIRST and FOLLOW sets.</p>\n\n<p><strong>Option B:</strong>\n\n<p>(1) $$S \\rightarrow f R$$<br>(2) $$T \\rightarrow \\epsilon$$<br>(3) $$R \\rightarrow c T R$$</p>\n\n<p>Let's verify each production:\n\n<ul>\n<li>For (1) $$S \\rightarrow f R$$, FIRST($S$) should include f, which is consistent with given FIRST($S$) = {c, d, f}.</li><br>\n<li>For (2) $$T \\rightarrow \\epsilon$$, it matches the FIRST($T$) = {a, b, $\\epsilon$}.</li><br>\n<li>For (3) $$R \\rightarrow c T R$$, this maintains the FIRST($R$) = {c, $\\epsilon$}.</p></li>\n</ul>\n<p>Option B appears consistent with the given FIRST and FOLLOW sets.</p>\n\n<p><strong>Option C:</strong>\n\n<p>(1) $$S \\rightarrow f R$$<br>(2) $$T \\rightarrow c T$$<br>(3) $$R \\rightarrow c R$$</p>\n\n<p>Let's verify each production:\n\n<ul>\n<li>For (1) $$S \\rightarrow f R$$, it maintains FIRST($S$) = {c, d, f}.</li><br>\n<li>For (2) $$T \\rightarrow c T$$, this would mean FIRST($T$) = {c}, which is not consistent with the given FIRST($T$) = {a, b, $\\epsilon$}.</li><br>\n<li>For (3) $$R \\rightarrow c R$$, this would mean FIRST($R$) = {c}, but it should also include epsilon as given.</p></li>\n</ul>\n<p>Option C is inconsistent with the given FIRST sets.</p>\n\n<p><strong>Option D:</strong>\n\n<p>(1) $$S \\rightarrow R f$$<br>(2) $$T \\rightarrow c T$$<br>(3) $$R \\rightarrow c R$$</p>\n\n<p>Let's verify each production:\n\n<ul>\n<li>For (1) $$S \\rightarrow R f$$, it maintains FIRST($S$) = {c, d, f}.</li><br>\n<li>For (2) $$T \\rightarrow c T$$, it sets FIRST($T$) = {c}, which is not consistent with the given FIRST($T$) = {a, b, $\\epsilon$}.</li><br>\n<li>For (3) $$R \\rightarrow c R$$, this restricts FIRST($R$) = {c}, which does not include epsilon as required.</p></li>\n</ul>\n<p>Option D is inconsistent with the given FIRST sets.</p>\n\n<p>Therefore, the correct option that correctly fills in the incomplete productions is <strong>Option A</strong>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following augmented grammar with {#, @, &lt;, &gt;, a, b, c} as the set of terminals.</p>\n<p>S'&nbsp;→ S</p>\n<p>S&nbsp;→ S # cS</p>\n<p>S&nbsp;→ SS</p>\n<p>S&nbsp;→ S @</p>\n<p>S&nbsp;→ &lt; S &gt;</p>\n<p>S&nbsp;→ a</p>\n<p>S&nbsp;→ b</p>\n<p>S&nbsp;→ c</p>\n<p>Let I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">0</span>&nbsp;= CLOSURE({S'&nbsp;→&nbsp;∙ S}). The number of items in the set GOTO(GOTO(I<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">0</span>, &lt;), &lt;) is _______</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "8",
+    "explanation": "<p>Grammar is</p>\n<p>S'&nbsp;→ S</p>\n<p>S&nbsp;→ S # cS</p>\n<p>S&nbsp;→ SS</p>\n<p>S&nbsp;→ S @</p>\n<p>S&nbsp;→ &lt; S &gt;</p>\n<p>S&nbsp;→ a</p>\n<p>S&nbsp;→ b</p>\n<p>S&nbsp;→ c</p>\n<p>Where $\\{\\#, @,&lt;,&gt;, a, b, c\\}$ are set of terminals.</p>\n<p>Let $I_0$ is the closure $\\left(\\left\\{S^{\\prime} \\rightarrow S\\right\\}\\right)$.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2evz7mo/129e41e6-155b-4fd2-875f-9474322bd753/ddaa6600-8d65-11ef-8f53-65a959f1bf2b/file-jaoe38c1m2evz7mp.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2evz7mo/129e41e6-155b-4fd2-875f-9474322bd753/ddaa6600-8d65-11ef-8f53-65a959f1bf2b/file-jaoe38c1m2evz7mp.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Compiler Design - Parsing Question 15 English Explanation\"></p>\n<p>$I_0 \\operatorname{GOTO}\\left(\\operatorname{GOTO}\\left(I_0,&lt;\\right),&lt;\\right)$ contains 8 items.</p>\n<p>Hence, the correct answer is 8 .</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following context-free grammar where the set of terminals is {a, b, c, d, f}.</p>\n\n<p>S&nbsp;→ d a T | R f</p>\n\n<p>T&nbsp;→ a S | b a T |&nbsp;ϵ</p>\n\n<p>R&nbsp;→ c a T R |&nbsp;ϵ</p>\n\n<p>The following is a partially-filled LL(1) parsing table.</p>\n\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxrh3bbc/e4e352c8-f86e-44cf-9cc9-c3ca35763a22/f8b7e170-689c-11ec-8fcd-a9d188381bed/file-1kxrh3bbd.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxrh3bbc/e4e352c8-f86e-44cf-9cc9-c3ca35763a22/f8b7e170-689c-11ec-8fcd-a9d188381bed/file-1kxrh3bbd.png\" loading=\"lazy\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;max-height: 60vh\" alt=\"GATE CSE 2021 Set 1 Compiler Design - Parsing Question 16 English\"> </p>\n\n<p>Which one of the following choices represents the correct combination for the numbered cells in the parsing table (\"blank\" denotes that the corresponding cell is empty)?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(1) S&nbsp;→ R f (2) S&nbsp;→ R f (3) T&nbsp;→&nbsp;ϵ (4) T&nbsp;→&nbsp;ϵ"
+      },
+      {
+        "identifier": "B",
+        "content": "(1) blank (2) S&nbsp;→ R f (3) blank (4) blank"
+      },
+      {
+        "identifier": "C",
+        "content": "(1) S&nbsp;→ R f (2) blank (3) blank (4) T&nbsp;→&nbsp;ϵ"
+      },
+      {
+        "identifier": "D",
+        "content": "(1) blank (2) S&nbsp;→ R f (3) T&nbsp;→&nbsp;ϵ (4)&nbsp;T&nbsp;→&nbsp;ϵ"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b></p>\n<p>Context free grammar is</p>\n<p>$$ \\begin{aligned} & S \\rightarrow d a T \\mid R f \\\\ & T \\rightarrow a S|b a T| \\varepsilon \\\\ & R \\rightarrow c a T R \\mid \\varepsilon \\end{aligned} $$</p>\n<p>Where $\\{a, b, c, d, f\\}$ are set of terminals. Now, find first and follow of R,S and T.</p>\n<p>$$ \\begin{array}{|c|c|c|} \\hline & \\text { First } & \\text { Follow } \\\\ \\hline \\mathrm{R} & \\{c, \\varepsilon\\} & \\{f\\} \\\\ \\hline \\mathrm{S} & \\{c, d, f\\} & \\{\\$\\} \\\\ \\hline \\mathrm{T} & \\{a, b, \\varepsilon\\} & \\{\\$\\} \\\\ \\hline \\end{array} $$</p>\n<p>Fill these entries in LL(1) parsing table </p>\n<p>$$ \\begin{array}{lcccccc}  & a & b & c & d & f & \\$ \\\\ \\hline S & & & S \\rightarrow R f & S \\rightarrow d a T & S \\rightarrow R f & \\\\ \\hline T & T \\rightarrow a S & T \\rightarrow b a T & T \\rightarrow \\varepsilon & & T \\rightarrow \\varepsilon & T \\rightarrow \\varepsilon \\\\ \\hline R & & & R \\rightarrow c a T R & & R \\rightarrow \\varepsilon & \\\\ \\hline \\end{array} $$</p>\n<p>Hence , the correct option is (A).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the productions A $$ \\to $$ PQ and A $$ \\to $$ XY. Each of the five non-terminals A, P, Q, X, and Y has two attributes: s is a synthesized attribute, and i is an inherited attribute. Consider the following rules.\n<br><br>Rule 1 : P.i = A.i + 2, Q.i = P.i + A.i, and A.s = P.s + Q.s\n<br>Rule 2 : X.i = A.i + Y.s and Y.i = X.s + A.i\n<br><br>Which one of the following is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only Rule 2 is L-attributed."
+      },
+      {
+        "identifier": "B",
+        "content": "Neither Rule 1 nor Rule 2 is L-attributed."
+      },
+      {
+        "identifier": "C",
+        "content": "Both Rule 1 and Rule 2 are L-attributed."
+      },
+      {
+        "identifier": "D",
+        "content": "Only Rule 1 is L-attributed."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given rules are <strong>L-attributed</strong>, we'll analyze each rule in the context of <strong>attribute grammars</strong> and the definitions of <strong>L-attributed grammars</strong>.</p>\n<hr />\n<h3><strong>Understanding L-Attributed Grammars:</strong></h3>\n<p>An attribute grammar is <strong>L-attributed</strong> if the attributes can be evaluated in a single left-to-right traversal of the parse tree. Specifically:</p>\n\n<p><p><strong>Inherited attributes</strong> of a symbol can depend only on:</p></p>\n<p><p>Attributes of the parent node.</p></p>\n<p><p>Attributes of any siblings to the <strong>left</strong> (but <strong>not</strong> to the right).</p></p>\n<p><p>Attributes of ancestors (nodes higher up in the tree).</p></p>\n<p><p><strong>Synthesized attributes</strong> can depend on:</p></p>\n<p><p>Attributes of the symbol's children.</p></p>\n<p><p>Attributes of the symbol itself (for recursive definitions).</p></p>\n\n<p><strong>Key Restrictions for L-attributed grammars:</strong></p>\n\n<p><p>An inherited attribute <strong>cannot</strong> depend on attributes of <strong>right siblings</strong> or <strong>children</strong>.</p></p>\n<p><p>A synthesized attribute <strong>can</strong> depend on attributes of the node's <strong>children</strong>.</p></p>\n\n<hr />\n<h3><strong>Given Productions and Rules:</strong></h3>\n\n<p><p><strong>Production 1:</strong> $ A \\to P \\ Q $</p>\n<p><strong>Rule 1:</strong></p></p>\n\n\n<p><p>$ P.i = A.i + 2 $</p></p>\n<p><p>$ Q.i = P.i + A.i $</p></p>\n<p><p>$ A.s = P.s + Q.s $</p></p>\n\n\n<p><p><strong>Production 2:</strong> $ A \\to X \\ Y $</p>\n<p><strong>Rule 2:</strong></p></p>\n\n\n<p><p>$ X.i = A.i + Y.s $</p></p>\n<p><p>$ Y.i = X.s + A.i $</p></p>\n\n<hr />\n<h3><strong>Analyzing Rule 1:</strong></h3>\n<p><strong>Production:</strong> $ A \\to P \\ Q $</p>\n<p><strong>Rules:</strong></p>\n\n<p><strong>$ P.i = A.i + 2 $</strong></p>\n\n\n<p><p>$ P.i $ is an <strong>inherited attribute</strong> of $ P $.</p></p>\n<p><p>Depends on $ A.i $ (inherited attribute of parent $ A $), which is <strong>allowed</strong>.</p></p>\n<p><p><strong>Conclusion:</strong> Valid for L-attributed grammar.</p></p>\n\n\n<p><strong>$ Q.i = P.i + A.i $</strong></p>\n\n\n<p><p>$ Q.i $ is an <strong>inherited attribute</strong> of $ Q $.</p></p>\n<p><p>Depends on:</p>\n\n<p><p>$ P.i $ (inherited attribute of <strong>left sibling</strong> $ P $) — <strong>allowed</strong>.</p></p>\n<p><p>$ A.i $ (inherited attribute of parent $ A $) — <strong>allowed</strong>.</p></p></p>\n<p><p><strong>Conclusion:</strong> Valid for L-attributed grammar.</p></p>\n\n\n<p><strong>$ A.s = P.s + Q.s $</strong></p>\n\n\n<p><p>$ A.s $ is a <strong>synthesized attribute</strong> of $ A $.</p></p>\n<p><p>Depends on $ P.s $ and $ Q.s $ (synthesized attributes of children) — <strong>allowed</strong>.</p></p>\n<p><p><strong>Conclusion:</strong> Valid for L-attributed grammar.</p></p>\n\n<p><strong>Overall Conclusion for Rule 1:</strong> <strong>All dependencies comply with L-attributed restrictions.</strong></p>\n<hr />\n<h3><strong>Analyzing Rule 2:</strong></h3>\n<p><strong>Production:</strong> $ A \\to X \\ Y $</p>\n<p><strong>Rules:</strong></p>\n\n<p><strong>$ X.i = A.i + Y.s $</strong></p>\n\n\n<p><p>$ X.i $ is an <strong>inherited attribute</strong> of $ X $.</p></p>\n<p><p>Depends on:</p>\n\n<p><p>$ A.i $ (inherited attribute of parent $ A $) — <strong>allowed</strong>.</p></p>\n<p><p>$ Y.s $ (synthesized attribute of <strong>right sibling</strong> $ Y $) — <strong>NOT allowed</strong> in L-attributed grammars.</p></p></p>\n<p><p><strong>Violation:</strong> Inherited attribute depending on the synthesized attribute of a <strong>right sibling</strong> is <strong>not permitted</strong>.</p></p>\n<p><p><strong>Conclusion:</strong> Rule violates L-attributed restrictions.</p></p>\n\n\n<p><strong>$ Y.i = X.s + A.i $</strong></p>\n\n\n<p><p>$ Y.i $ is an <strong>inherited attribute</strong> of $ Y $.</p></p>\n<p><p>Depends on:</p>\n\n<p><p>$ X.s $ (synthesized attribute of <strong>left sibling</strong> $ X $) — <strong>allowed</strong>.</p></p>\n<p><p>$ A.i $ (inherited attribute of parent $ A $) — <strong>allowed</strong>.</p></p></p>\n<p><p><strong>Conclusion:</strong> Valid for L-attributed grammar.</p></p>\n\n<p><strong>Overall Conclusion for Rule 2:</strong> **Rule 2 is *<em>not</em>* L-attributed due to the dependency of $ X.i $ on $ Y.s $.**</p>\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Rule 1</strong> is <strong>L-attributed</strong>.</p></p>\n<p><p><strong>Rule 2</strong> is <strong>not L-attributed</strong>.</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Option D</p>\n<p><strong>Only Rule 1 is L-attributed.</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the augmented grammar given below :\n<br><br> S' → S\n    <br>S → 〈L〉 | id\n    <br>L → L,S | S\n<br><br>Let I<sub>0</sub> = CLOSURE ({[S' → ●S]}). The number of items in the set GOTO (I<sub>0</sub> , 〈 ) is: _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": "<h3><strong>Given Grammar :</strong></h3>\n\n<p><p><strong>Augmented Grammar :</strong></p>\n<p>$    \\begin{align*}    S' &\\to S \\\\    S &\\to \\langle L \\rangle \\mid \\text{id} \\\\    L &\\to L, S \\mid S    \\end{align*}    $</p></p>\n<p><p><strong>Initial Item Set $ I_0 $ :</strong></p>\n<p>$    I_0 = \\text{CLOSURE}(\\{ [S' \\to \\bullet S] \\})    $</p></p>\n\n<hr />\n<h3><strong>Step 1 : Compute $ I_0 $</strong></h3>\n<p>Starting with $ [S' \\to \\bullet S] $ :</p>\n\n<p>Since the dot is before $ S $, and $ S $ is a non-terminal, we add items for all productions of $ S $ :</p>\n\n\n<p><p>$ [S \\to \\bullet \\langle L \\rangle] $</p></p>\n<p><p>$ [S \\to \\bullet \\text{id}] $</p></p>\n\n\n<p>The symbols after the dots are terminals ($ \\langle $ and $ \\text{id} $), so no further closure is needed.</p>\n\n<p><strong>Items in $ I_0 $:</strong></p>\n\n<p><p>$ [S' \\to \\bullet S] $</p></p>\n<p><p>$ [S \\to \\bullet \\langle L \\rangle] $</p></p>\n<p><p>$ [S \\to \\bullet \\text{id}] $</p></p>\n\n<hr />\n<h3><strong>Step 2: Compute $ \\text{GOTO}(I_0, \\langle) $</strong></h3>\n<p>Identify items in $ I_0 $ where the dot is before $ \\langle $:</p>\n\n<p>$ [S \\to \\bullet \\langle L \\rangle] $</p>\n\n<p><strong>Shift over $ \\langle $:</strong></p>\n\n<p>$ [S \\to \\langle \\bullet L \\rangle] $</p>\n\n<p><strong>Compute the closure starting from this item:</strong></p>\n\n<p><strong>Add the initial item:</strong></p>\n\n\n<p>$ [S \\to \\langle \\bullet L \\rangle] $</p>\n\n\n<p><strong>Since the dot is before $ L $ (a non-terminal), add items for $ L $:</strong></p>\n\n\n<p><p>$ [L \\to \\bullet L, S] $</p></p>\n<p><p>$ [L \\to \\bullet S] $</p></p>\n\n\n<p><p>**In $ [L \\to \\bullet L, S] $, the dot is before $ L $, so we need items for $ L $ again. However, these items are already included, so we stop here.</p></p>\n<p><p><strong>In $ [L \\to \\bullet S] $, the dot is before $ S $, add items for $ S $:</strong></p></p>\n\n\n<p><p>$ [S \\to \\bullet \\langle L \\rangle] $</p></p>\n<p><p>$ [S \\to \\bullet \\text{id}] $</p></p>\n\n\n<p>No further closure is needed as the dots are before terminals or already included non-terminals.</p>\n\n<p><strong>Items in $ \\text{GOTO}(I_0, \\langle) $:</strong></p>\n\n<p><p>$ [S \\to \\langle \\bullet L \\rangle] $</p></p>\n<p><p>$ [L \\to \\bullet L, S] $</p></p>\n<p><p>$ [L \\to \\bullet S] $</p></p>\n<p><p>$ [S \\to \\bullet \\langle L \\rangle] $</p></p>\n<p><p>$ [S \\to \\bullet \\text{id}] $</p></p>\n\n<hr />\n<h3><strong>Answer:</strong></h3>\n<p><strong>The number of items in $ \\text{GOTO}(I_0, \\langle) $ is $\\boxed{5}$.</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following parse tree for the expression $$a \\ne b\\$ c\\$ d \\ne e \\ne f,$$  involving two binary operators $$\\$ $$ and $$ \\ne $$.  \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/KGMqetyKS8CF2Ijo3/peAf66NGuvrwASVDFsg6LmdaESSHs/OTx6o3rRmVJP1ZxrFCIOzO/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2018 Compiler Design - Parsing Question 23 English\"> \n<p>Which one of the following is correct for the given parse tree?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\$ $$ has higher precedence and is left associative; $$ \\ne $$ is right associative"
+      },
+      {
+        "identifier": "B",
+        "content": "$$ \\ne $$ has higher precedence and is left associative; $$\\$ $$ is right associativ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\$ $$ has higher precedence and is left associative; $$ \\ne $$ is left associative "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ \\ne $$ has higher precedence and is right associative; $$\\$ $$ is left associative  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "The attributes of three arithmetic operators in some programming language are given below.\n\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-p7ly{font-weight:bold;font-size:20px;text-align:center}\n.tg .tg-hgcj{font-weight:bold;text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-p7ly\">Operator</th>\n    <th class=\"tg-p7ly\">Precedence </th>\n    <th class=\"tg-p7ly\">Associativity</th>\n    <th class=\"tg-p7ly\">Arity </th>\n  </tr>\n  <tr>\n    <td class=\"tg-p7ly\">+</td>\n    <td class=\"tg-hgcj\">High</td>\n    <td class=\"tg-hgcj\">Left</td>\n    <td class=\"tg-hgcj\">Binary</td>\n  </tr>\n  <tr>\n    <td class=\"tg-p7ly\">_</td>\n    <td class=\"tg-hgcj\">Medium</td>\n    <td class=\"tg-hgcj\">Right</td>\n    <td class=\"tg-hgcj\">Binary</td>\n  </tr>\n  <tr>\n    <td class=\"tg-p7ly\">*</td>\n    <td class=\"tg-hgcj\">Low</td>\n    <td class=\"tg-hgcj\">Left</td>\n    <td class=\"tg-hgcj\">Binary</td>\n  </tr>\n</tbody></table> </p>\n<p>The value of the expression $$2 - 5 + 1 - 7 * 3$$ in this language is _______________.</p> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "9",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A student wrote two context-free grammars <b>G1</b> and <b>G2</b> for generating a single $$C$$-like array declaration. The dimension of the array is at least one. For example, \n$$${\\mathop{\\rm int}} \\,\\,\\,\\,\\,\\,\\,a[10]\\,\\,[3];$$$\n<p>The grammars use D as the start symbol, and use six terminal symbols <b>int ; id [ ] num.</b>\n<br><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-13k7{font-size:20px;text-align:left}\n.tg .tg-dzkb{font-size:24px;text-align:left}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-dzkb\">Grammar <span style=\"font-weight:bold\">G1</span></th>\n    <th class=\"tg-dzkb\">Grammar <span style=\"font-weight:bold\">G2</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-13k7\">D → <span style=\"font-weight:bold\">int</span>L;</td>\n    <td class=\"tg-13k7\">D → <span style=\"font-weight:bold\">int</span>L;</td>\n  </tr>\n  <tr>\n    <td class=\"tg-13k7\">L → <span style=\"font-weight:bold\">id</span>[E</td>\n    <td class=\"tg-13k7\">L → <span style=\"font-weight:bold\">id</span>E</td>\n  </tr>\n  <tr>\n    <td class=\"tg-13k7\">E → <span style=\"font-weight:bold\">num</span></td>\n    <td class=\"tg-13k7\">E → E[<span style=\"font-weight:bold\">num</span>]</td>\n  </tr>\n  <tr>\n    <td class=\"tg-13k7\">E → <span style=\"font-weight:bold\">num</span>][E </td>\n    <td class=\"tg-13k7\">E → [<span style=\"font-weight:bold\">num</span>]</td>\n  </tr>\n</tbody></table></p>\n<p>Which of the grammars correctly generate the declaration mentioned above?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both <b>G1</b> and <b>G2</b>\n "
+      },
+      {
+        "identifier": "B",
+        "content": "Only <b>G1</b>\n "
+      },
+      {
+        "identifier": "C",
+        "content": "Only <b>G2</b>\n "
+      },
+      {
+        "identifier": "D",
+        "content": "Neither <b>G1</b> nor <b>G2</b> \n"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following grammar $$G$$ \n<p>$$\\eqalign{\n  &amp; \\,\\,\\,\\,\\,\\,\\,S \\to \\,\\,\\,\\,\\,\\,\\,F|H  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,F \\to \\,\\,\\,\\,\\,\\,\\,p|c  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,H \\to \\,\\,\\,\\,\\,\\,\\,d|c \\cr} $$</p>\n<p>where $$S, F$$ and $$H$$ are non-terminal symbols, $$p, d,$$ and $$c$$ are terminal symbols. Which of the following statement(s) is/are correct?</p>\n<p>$$\\,\\,\\,\\,\\,\\,\\,S1.\\,\\,\\,\\,\\,\\,\\,LL\\left( 1 \\right)\\,\\,$$ can parse all strings that are generated using grammar $$G$$\n<br>$$\\,\\,\\,\\,\\,\\,\\,S2.\\,\\,\\,\\,\\,\\,\\,LR\\left( 1 \\right)\\,\\,$$ can parse all strings that are generated using grammar $$G$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $$S1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Only $$S2$$"
+      },
+      {
+        "identifier": "C",
+        "content": "both $$S1$$ and $$S2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $$S1$$ nor $$S2$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "<p>A canonical set of items is given below</p>\n$$\\eqalign{\n  &amp; S \\to L. &gt; R  \\cr \n  &amp; Q \\to R. \\cr} $$\n<p>On input symbol &lt; the set has</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a shift-reduce conflict and a reduce-reduce conflict."
+      },
+      {
+        "identifier": "B",
+        "content": "a shift-reduce conflict but not a reduce-reduce conflict."
+      },
+      {
+        "identifier": "C",
+        "content": "a reduce-reduce conflict but not a shift-reduce conflict."
+      },
+      {
+        "identifier": "D",
+        "content": "neither a shift-reduce nor a reduce-reduce conflict."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the following two sets of LR(1) items of an LR(1) grammar.</p>\n$$\\eqalign{\n  &amp; X \\to c.X,\\,c/d\\,\\,\\,\\,\\,\\,\\,\\,X \\to c.X,\\$   \\cr \n  &amp; X \\to .cX,c/d\\,\\,\\,\\,\\,\\,\\,\\,X \\to .cX,\\$   \\cr \n  &amp; X \\to .d,c/d\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,X \\to .d,\\$  \\cr} $$\n<p>Which of the following statements related to merging of the two sets in the corresponding LALR\nparser is/are <b>FALSE</b>?</p>\n<p>1. Cannot be merged since look aheads are different.\n<br>2. Can be merged but will result in S-R conflict.\n<br>3. Can be merged but will result in R-R conflict.\n<br>4. Cannot be merged since goto on c will lead to two different sets.</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 only "
+      },
+      {
+        "identifier": "B",
+        "content": "2 only"
+      },
+      {
+        "identifier": "C",
+        "content": "1 and 4 only"
+      },
+      {
+        "identifier": "D",
+        "content": "1, 2, 3 and 4"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The grammar $$S \\to aSa\\,|\\,\\,bS\\,|\\,\\,c$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "LL(1) but not LR(1) "
+      },
+      {
+        "identifier": "B",
+        "content": "LR(1) but not LR(1)"
+      },
+      {
+        "identifier": "C",
+        "content": "Both LL(1) and LR(1)"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither LL(1) nor LR(1)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "An LALR(1) parser for a grammar G can have shift-reduce (S-R) conflicts if and only if",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The SLR(1) parser for G has S - R conflicts"
+      },
+      {
+        "identifier": "B",
+        "content": "The LR(1) parser for G has S - R conflicts "
+      },
+      {
+        "identifier": "C",
+        "content": "The LR(0) parser for G has S - R conflicts"
+      },
+      {
+        "identifier": "D",
+        "content": "The LALR(1) parser for G has reduce-reduce conflicts"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following two statements:\n<p>P: Every regular grammar is LL(1) \n<br>Q: Every regular set has a LR(1) grammar </p>\nWhich of the following is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both P and Q are true  "
+      },
+      {
+        "identifier": "B",
+        "content": "P is true and Q is false"
+      },
+      {
+        "identifier": "C",
+        "content": "P is false and Q is true"
+      },
+      {
+        "identifier": "D",
+        "content": "Both P and Q are false"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the grammar with non-terminals N = { S, C, S<sub>1</sub> }, terminals T = { a, b, i, t, e }, with S as the start symbol, and the following set of rules:</p>\n$$\\eqalign{\n  &amp; S \\to iCtS{S_1}\\,|\\,\\,a  \\cr \n  &amp; {S_1} \\to eS\\,|\\,\\,\\varepsilon   \\cr \n  &amp; C \\to b \\cr} $$\n<p>The grammar is NOT LL(1) because:</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "it is left recursive"
+      },
+      {
+        "identifier": "B",
+        "content": "it is right recursive"
+      },
+      {
+        "identifier": "C",
+        "content": "it is ambiguous"
+      },
+      {
+        "identifier": "D",
+        "content": "It is not context-free"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the CFG with { S, A, B } as the non-terminal alphabet, { a, b } as the terminal alphabet, S as the start symbol and the following set of production rules:</p>\n$$\\eqalign{\n  &amp; S \\to bA\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,S \\to aB  \\cr \n  &amp; A \\to a\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,B \\to b  \\cr \n  &amp; A \\to aS\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,B \\to bS  \\cr \n  &amp; S \\to bAA\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,B \\to aBB \\cr} $$\n<p>Which of the following strings is generated by the grammar?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "aaaabb"
+      },
+      {
+        "identifier": "B",
+        "content": "aabbbb"
+      },
+      {
+        "identifier": "C",
+        "content": "aabbab"
+      },
+      {
+        "identifier": "D",
+        "content": "abbbba"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the CFG with { S, A, B } as the non-terminal alphabet, { a, b } as the terminal alphabet, S as the start symbol and the following set of production rules:</p>\n$$\\eqalign{\n  &amp; S \\to bA\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,S \\to aB  \\cr \n  &amp; A \\to a\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,B \\to b  \\cr \n  &amp; A \\to aS\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,B \\to bS  \\cr \n  &amp; S \\to bAA\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,B \\to aBB \\cr} $$\n<p>For the correct answer strings to the previous question, how many derivation trees are there?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the following grammar:</p>\n$$\\eqalign{\n  &amp; S \\to FR  \\cr \n  &amp; R \\to *S\\,|\\,\\varepsilon   \\cr \n  &amp; F \\to id \\cr} $$\n<p>In the predictive parser table, M, of the grammar the entries $$M\\left[ {S,id} \\right]$$ and $$M\\left[ {R,\\$ } \\right]$$ respectively.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{ {S \\to FR} \\right\\}$$ and $$\\left\\{ {R \\to \\varepsilon } \\right\\}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{ {S \\to FR} \\right\\}$$ and $$\\left\\{ {\\,\\,} \\right\\}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\{ {S \\to FR} \\right\\}$$ and $$\\left\\{ {R \\to  * S} \\right\\}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{ {F \\to id} \\right\\}$$ and $$\\left\\{ {R \\to \\varepsilon } \\right\\}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Which one of the following grammars generates the following language?</p>\n$$L = \\left( {{a^i}{b^j}|i \\ne j} \\right)$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\eqalign{\n  &amp; S \\to AC\\,|\\,CB  \\cr \n  &amp; C \\to aCb\\,|\\,a\\,|\\,b  \\cr \n  &amp; A \\to aA\\,|\\, \\in   \\cr \n  &amp; B \\to Bb\\,|\\, \\in  \\cr} $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$S \\to aS\\,|\\,Sb\\,|\\,a\\,|\\,b$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\eqalign{\n  &amp; S \\to AC\\,|\\,CB  \\cr \n  &amp; C \\to aCb\\,|\\, \\in   \\cr \n  &amp; A \\to aA\\,|\\, \\in   \\cr \n  &amp; B \\to Bb\\,|\\, \\in  \\cr} $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\eqalign{\n  &amp; S \\to AC\\,|\\,CB  \\cr \n  &amp; C \\to aCb\\,|\\, \\in   \\cr \n  &amp; A \\to aA\\,|\\,a  \\cr \n  &amp; B \\to Bb\\,|\\,b \\cr} $$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "In the correct grammar of the previous question, what is the length of the derivation (number of steps starring from S) to generate the string $${a^l}{b^m}$$ with $$l \\ne m$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\max (l,m) + 2$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$l + m + 2$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$l + m + 3$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\max (l,m) + 3$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the grammar</p>\n$$E \\to E + n\\,|\\,E \\times n\\,|\\,n$$\n<p>For a sentence n + n × n, the handles in the right-sentential form of the reduction are</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n, E + n and E + n × n "
+      },
+      {
+        "identifier": "B",
+        "content": "n, E + n and E + E × n"
+      },
+      {
+        "identifier": "C",
+        "content": "n, n + n and n + n × n"
+      },
+      {
+        "identifier": "D",
+        "content": "n, E + n and E × n"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the grammar</p>\n$$S \\to \\left( S \\right)\\,|\\,a$$\n<p>Let the number of states in SLR(1), LR(1) and LALR(1) parsers for the grammar be n<sub>1</sub>, n<sub>2</sub> and n<sub>3</sub> respectively. </p>\nThe following relationship holds good ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n<sub>1</sub> &lt; n<sub>2</sub> &lt; n<sub>3</sub>"
+      },
+      {
+        "identifier": "B",
+        "content": "n<sub>1</sub> = n<sub>3</sub> &lt; n<sub>2</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "n<sub>1</sub> = n<sub>2</sub> = n<sub>3</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "n<sub>1</sub> ≥ n<sub>3</sub> ≥ n<sub>2</sub> "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the following expression grammar. The seman­tic rules for expression calculation are stated next to each grammar production.</p>\n$$\\eqalign{\n  &amp; E \\to number\\,\\,\\,\\,\\,E.val = number.val  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,|E\\,\\,' + '\\,\\,E\\,\\,\\,\\,\\,\\,{E^{\\left( 1 \\right)}}.val = {E^{\\left( 2 \\right)}}.val + {E^{\\left( 3 \\right)}}.val  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,|\\,E\\,\\,' \\times '\\,\\,E\\,\\,\\,\\,\\,\\,\\,{E^{\\left( 1 \\right)}}.val = {E^{\\left( 2 \\right)}}.val \\times {E^{\\left( 3 \\right)}}.val \\cr} $$\n<p>The above grammar and the semantic rules are fed to a yacc tool (which is an LALR (1) parser generator) for parsing and evaluating arithmetic expressions. Which one of the following is true about the action of yacc for the given grammar?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It detects recursion and eliminates recursion"
+      },
+      {
+        "identifier": "B",
+        "content": "It detects reduce-reduce conflict, and resolves"
+      },
+      {
+        "identifier": "C",
+        "content": "It detects shift-reduce conflict, and resolves the conflict in favor of a shift over a reduce action "
+      },
+      {
+        "identifier": "D",
+        "content": "It detects shift-reduce conflict, and resolves the conflict in favor of a reduce over a shift action"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the following expression grammar. The seman­tic rules for expression calculation are stated next to each grammar production.</p>\n$$\\eqalign{\n  &amp; E \\to number\\,\\,\\,\\,\\,E.val = number.val  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,|E\\,\\,' + '\\,\\,E\\,\\,\\,\\,\\,\\,{E^{\\left( 1 \\right)}}.val = {E^{\\left( 2 \\right)}}.val + {E^{\\left( 3 \\right)}}.val  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,|\\,E\\,\\,' \\times '\\,\\,E\\,\\,\\,\\,\\,\\,\\,{E^{\\left( 1 \\right)}}.val = {E^{\\left( 2 \\right)}}.val \\times {E^{\\left( 3 \\right)}}.val \\cr} $$\n<p>Assume the conflicts in the previous question are resolved and an LALR(1) parser is generated for parsing arithmetic expressions as per the given grammar. Consider an expression <br>3 × 2 + 1. <br>What precedence and associativity properties does the generated parser realize?</p>  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Equal precedence and left associativity; ex­pression is evaluated to 7"
+      },
+      {
+        "identifier": "B",
+        "content": "Equal precedence and right associativity; ex­pression is evaluated to 9"
+      },
+      {
+        "identifier": "C",
+        "content": "Precedence of $$' \\times '$$ is higher than that of ‘+’, and both operators are left associative; expression is evaluated to 7"
+      },
+      {
+        "identifier": "D",
+        "content": "Precedence of ‘+’ is higher than that of $$' \\times '$$, and both operators are left associative; expression is evaluated to 9"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the grammar with the following translation rules and E as the start symbol.</p>\n$$\\eqalign{\n  &amp; E \\to {E_1}\\# T\\,\\,\\left\\{ {E.value = {E_1}.value*T.value} \\right\\}  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,|T\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\left\\{ {E.value = T.value} \\right\\}  \\cr \n  &amp; T \\to {T_1}\\&amp; F\\,\\,\\,\\left\\{ {T.value = {T_1}.value*F.value} \\right\\}  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,|\\,F\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\left\\{ {T.value = F.value} \\right\\}  \\cr \n  &amp; F \\to num\\,\\,\\,\\,\\,\\,\\,\\left\\{ {F.value = num.value} \\right\\} \\cr} $$\n<p>Compute <b>E.value</b> for the root of the parse tree for the expression:<br>2 # 3 &amp; 5 # 6\n&amp; 4.</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "200"
+      },
+      {
+        "identifier": "B",
+        "content": "180"
+      },
+      {
+        "identifier": "C",
+        "content": "160"
+      },
+      {
+        "identifier": "D",
+        "content": "40"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Which of the following grammar rules violate the requirements of an operator grammar? P, Q, R are nonterminals, and r, s, t are terminals.</p>\n$$\\eqalign{\n  &amp; 1.\\,P \\to QR  \\cr \n  &amp; 2.\\,P \\to QsR  \\cr \n  &amp; 3.\\,P \\to \\varepsilon   \\cr \n  &amp; 4.\\,P \\to QtRr \\cr} $$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 only"
+      },
+      {
+        "identifier": "B",
+        "content": "1 and 3 only"
+      },
+      {
+        "identifier": "C",
+        "content": "2 and 3 only"
+      },
+      {
+        "identifier": "D",
+        "content": "3 and 4 only"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the grammar shown below.</p>\n$$\\eqalign{\n  &amp; S \\to CC  \\cr \n  &amp; C \\to cC\\,|\\,d \\cr} $$\n<p>This grammar is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "LL(1)"
+      },
+      {
+        "identifier": "B",
+        "content": "SLR(1) but not LL(1)"
+      },
+      {
+        "identifier": "C",
+        "content": "LALR(1) but not SLR(1)"
+      },
+      {
+        "identifier": "D",
+        "content": "LR(1) but not LALR(1)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the translation scheme shown below</p>\n$$\\eqalign{\n  &amp; S \\to TR  \\cr \n  &amp; R \\to  + T\\left\\{ {pr{\\mathop{\\rm int}} (' + ');} \\right\\}\\,R\\,|\\,\\varepsilon   \\cr \n  &amp; T \\to num\\,\\left\\{ {pr{\\mathop{\\rm int}} (num.val);} \\right\\} \\cr} $$\n<p>Here <b>num</b> is a token that represents an integer and <b>num</b>.val represents the corresponding integer value. For an input string '9 + 5 + 2', this translation scheme will print</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "9 + 5 + 2"
+      },
+      {
+        "identifier": "B",
+        "content": "9 5 + 2 +"
+      },
+      {
+        "identifier": "C",
+        "content": "9 5 2 + +"
+      },
+      {
+        "identifier": "D",
+        "content": "+ + 9 5 2"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the grammar shown below</p>\n$$\\eqalign{\n  &amp; S \\to iEtSS'\\,|\\,\\,a  \\cr \n  &amp; S' \\to eS\\,|\\,\\,\\varepsilon   \\cr \n  &amp; E \\to b \\cr} $$\n<p>In the predictive parse table, $$M$$, of this grammar, the entries $$M\\left[ {S',e} \\right]$$ and $$M\\left[ {S',\\phi } \\right]$$ respectively are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\{ \\,S' \\to eS\\,\\} $$ and $$\\{ \\,S' \\to \\varepsilon \\,\\} $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\{ \\,S' \\to eS\\,\\} $$ and $$\\{ \\,\\,\\,\\} $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\{ \\,S' \\to \\varepsilon \\,\\} $$ and $$\\{ \\,S' \\to \\varepsilon \\,\\} $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\{ \\,S' \\to eS\\,,S' \\to \\varepsilon \\} $$ and $$\\{ \\,S' \\to \\varepsilon \\,\\} $$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "<p>A shift reduce parser carries out the actions specified within braces immediately after reducing with the corresponding rule of grammar.</p>\n$$\\eqalign{\n  &amp; S \\to xxW\\,\\left\\{ {pr{\\mathop{\\rm int}} \\,'1'} \\right\\}  \\cr \n  &amp; S \\to y\\,\\left\\{ {pr{\\mathop{\\rm int}} \\,'2'} \\right\\}  \\cr \n  &amp; W \\to Sz\\,\\left\\{ {pr{\\mathop{\\rm int}} \\,'3'} \\right\\} \\cr} $$\n<p>What is the translation of <b>xxxxyzz</b> using the syntax directed translation scheme\ndescribed by the above rules?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "23131"
+      },
+      {
+        "identifier": "B",
+        "content": "11233"
+      },
+      {
+        "identifier": "C",
+        "content": "11231"
+      },
+      {
+        "identifier": "D",
+        "content": "33211"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the SLR(1) and LALR (1) parsing tables for a context-free grammar. Which of the following statements is/are true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The goto part of both tables may be different. "
+      },
+      {
+        "identifier": "B",
+        "content": "The shift entries are identical in both the tables."
+      },
+      {
+        "identifier": "C",
+        "content": "The reduce entries in the tables may be different."
+      },
+      {
+        "identifier": "D",
+        "content": "The error entries in the tables may be different."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the following grammar:</p>\n$$\\eqalign{\n  &amp; S \\to S  \\cr \n  &amp; S \\to SS\\,|\\,a\\,|\\,\\varepsilon  \\cr} $$\n<p>(a) Construct the collection of sets of LR(0) items for this grammar and draw its go to graph.</p>\n<p>(b) Indicate the shift-reduce and reduce-reduce conflict (if any) in the various state of the LR(0) parser.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it",
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-cse-1988",
+    "difficulty": null
+  }
+]

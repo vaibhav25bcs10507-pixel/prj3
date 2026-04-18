@@ -1,0 +1,488 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following options is the correct Fourier series of the periodic function $f(x)$ described below:</p>\n<p>$$ f(x)=\\left\\{\\begin{array}{cl} 0 & \\text { if }-2 < x < -1 \\\\ 2 k & \\text { if }-1 < x < 1 \\text {; period }=4 \\\\ 0 & \\text { if }-1 < x < 2 \\end{array}\\right. $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$f(x)=\\frac{k}{2}+\\frac{2 k}{\\pi}\\left(\\cos \\frac{\\pi}{2} x-\\frac{1}{3} \\cos \\frac{3 \\pi}{2} x+\\frac{1}{5} \\cos \\frac{5 \\pi}{2} x-+\\ldots\\right)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$f(x)=\\frac{k}{2}+\\frac{2 k}{\\pi}\\left(\\sin \\frac{\\pi}{2} x-\\frac{1}{3} \\sin \\frac{3 \\pi}{2} x+\\frac{1}{5} \\sin \\frac{5 \\pi}{2} x-+\\ldots\\right)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$f(x)=k+\\frac{4 k}{\\pi}\\left(\\cos \\frac{\\pi}{2} x-\\frac{1}{3} \\cos \\frac{3 \\pi}{2} x+\\frac{1}{5} \\cos \\frac{5 \\pi}{2} x-+\\ldots\\right)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$f(x)=k+\\frac{4 k}{\\pi}\\left(\\sin \\frac{\\pi}{2} x-\\frac{1}{3} \\sin \\frac{3 \\pi}{2} x+\\frac{1}{5} \\sin \\frac{5 \\pi}{2} x-+\\ldots\\right)$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbhy8s6f/3ace381b-0dec-4189-a9a0-4eb53a4034b4/06701b70-4143-11f0-b425-4d40a5be1093/file-jaoe38c1mbhy8s6g.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbhy8s6f/3ace381b-0dec-4189-a9a0-4eb53a4034b4/06701b70-4143-11f0-b425-4d40a5be1093/file-jaoe38c1mbhy8s6g.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CE 2025 Set 1 Engineering Mathematics - Transform Theory Question 1 English Explanation\"></p>\n<p>$$ \\begin{aligned} a_0 &amp; =\\frac{1}{L} \\int_{-L}^L f(x) d x \\\\ &amp; =\\frac{1}{2} \\int_{-2}^2 f(x) d x \\\\ &amp; =\\frac{1}{2} \\times 2 \\int_0^2 f(x) d x \\\\ &amp; =\\int_0^1 2 k d x=2 k \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp;\\text {  }\\\\ &amp;\\begin{aligned} f(x) &amp; =\\text { even function } \\\\So\\,\\,\\,\\, b_n &amp; =0 \\\\ \\text { Period } &amp; =4 \\text { i.e. i.n }(-2,2) \\\\ L &amp; =2 \\\\ a_n &amp; =\\frac{1}{L} \\int_{-L}^L \\cos \\left(\\frac{n \\pi x}{2}\\right) f(x) d x \\\\ &amp; =\\frac{1}{2} \\int_{-2}^2 \\cos \\left(\\frac{n \\pi x}{2}\\right) f(x) d x \\\\ &amp; =2 \\times \\frac{1}{2} \\int_0^1 \\cos \\left(\\frac{n \\pi x}{2}\\right) 2 k \\cdot d x \\\\ &amp; =2 k \\int_0^1 \\cos \\left(\\frac{n \\pi x}{2}\\right) d x \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp; =2 k\\left[\\frac{\\sin \\left(\\frac{n \\pi x}{2}\\right)}{\\left(\\frac{n \\pi}{2}\\right)}\\right]_0^1=\\frac{4 k}{n \\pi}\\left[\\sin \\left(\\frac{n \\pi x}{2}\\right)\\right]_0^1 \\\\ a_n &amp; =\\frac{4 k}{n \\pi} \\sin \\frac{n \\pi}{2} \\end{aligned} $$</p>\n<p>$$ \\text { } \\quad \\begin{aligned}Now, \\,\\, f(x) &amp; =\\frac{a_0}{2}+\\sum_{n=1}^{\\infty} a_n \\cos \\left(\\frac{n \\pi x}{L}\\right) \\\\ &amp; =\\frac{2 k}{2}+\\sum_{n=1}^{\\infty} a_n \\cos \\left(\\frac{n \\pi x}{L}\\right) \\\\ =k+ &amp; \\frac{4 k}{\\pi} \\cos \\frac{\\pi x}{2}+\\frac{4 k}{2 \\pi} \\times 0+\\frac{4 k}{3 \\pi}(-1) \\cos \\left(\\frac{3 \\pi x}{2}\\right)+0+\\frac{4 k}{5 \\pi} \\times \\cos \\frac{5 \\pi x}{2}+\\ldots \\\\ &amp; =k+\\frac{4 k}{\\pi}\\left[\\cos \\left(\\frac{\\pi x}{2}\\right)-\\frac{1}{3} \\cos \\frac{3 \\pi x}{2}+\\frac{1}{5} \\cos \\frac{5 \\pi x}{2}-\\ldots\\right] \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ce-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The Fourier cosine series of a function is given by :</p>\n<p>$$f(x) = \\sum\\limits_{n = 0}^\\infty  {{f_n}\\cos nx} $$</p>\n<p>For f(x) = cos<sup>4</sup>x, the numerical value of (f<sub>4</sub> + f<sub>5</sub>) is _________. (round off to three decimal places)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.120TO0.130",
+    "explanation": "<p>Given the Fourier cosine series of a function:</p>\n<p>$ f(x) = \\sum\\limits_{n = 0}^\\infty f_n \\cos(nx) $</p>\n<p>For $ f(x) = \\cos^4(x) $, we need to find the numerical value of $ (f_4 + f_5) $ rounded to three decimal places.</p>\n<p>First, let's express $ \\cos^4(x) $ in a more workable form:</p>\n<p>$ f(x) = \\cos^4(x) = (\\cos^2(x))(\\cos^2(x)) $</p>\n<p>Using the double-angle identity for cosine:</p>\n<p>$ \\cos^2(x) = \\frac{1 + \\cos(2x)}{2} $</p>\n<p>Substitute this into our expression:</p>\n<p>$ f(x) = \\left( \\frac{1 + \\cos(2x)}{2} \\right)\\left( \\frac{1 + \\cos(2x)}{2} \\right) $</p>\n<p>$ f(x) = \\frac{1}{4} \\left[1 + \\cos(2x) + \\cos(2x) + \\cos^2(2x)\\right] $</p>\n<p>$ f(x) = \\frac{1}{4} \\left[1 + 2\\cos(2x) + \\cos^2(2x)\\right] $</p>\n<p>Next, replace $ \\cos^2(2x) $ using the double-angle identity again:</p>\n<p>$ \\cos^2(2x) = \\frac{1 + \\cos(4x)}{2} $</p>\n<p>This gives us:</p>\n<p>$ f(x) = \\frac{1}{4} \\left[1 + 2\\cos(2x) + \\frac{1 + \\cos(4x)}{2}\\right] $</p>\n<p>Simplify this expression:</p>\n<p>$ f(x) = \\frac{1}{8} \\left[2 + 4 \\cos(2x) + 1 + \\cos(4x)\\right] $</p>\n<p>$ f(x) = \\frac{1}{8} \\left[3 + 4 \\cos(2x) + \\cos(4x)\\right] $</p>\n<p>Distribute the $\\frac{1}{8}$:</p>\n<p>$ f(x) = \\frac{3}{8} + \\frac{1}{2} \\cos(2x) + \\frac{1}{8} \\cos(4x) $</p>\n<p>So the expansion includes terms for the 4th and 5th harmonics:</p>\n<p>$ f(x) = \\ldots + f_4 \\cos(4x) + f_5 \\cos(5x) + \\ldots $</p>\n<p>From this, it's clear that:</p>\n<p>$ f_4 = \\frac{1}{8} $</p>\n<p>$ f_5 = 0 $</p>\n<p>Adding these values together:</p>\n<p>$ f_4 + f_5 = \\frac{1}{8} + 0 $</p>\n<p>$ f_4 + f_5 = 0.125 $</p>\n<p>Thus, $ f_4 + f_5 = 0.125 $.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ce-2022-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Given two continuous time signals $$x\\left( t \\right) = {e^{ - t}}$$ and $$y\\left( t \\right) = {e^{ - 2t}}$$ which exists for $$t&gt;0$$ then the convolution $$z\\left( t \\right) = x\\left( t \\right) * y\\left( t \\right)$$ is ____________.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${e^{ - t}} - {e^{ - 2t}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${e^{ - 2t}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${e^{ - t}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${e^{ - t}} + {e^{ - 3t}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ce-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Laplace transform of $$f\\left( x \\right) = \\cos \\,h\\left( {ax} \\right)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${a \\over {{s^2} - {a^2}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${s \\over {{s^2} - {a^2}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${a \\over {{s^2} + {a^2}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${s \\over {{s^2} + {a^2}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ce-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The Laplace transform of a function $$f(t)$$ is \n$$$F\\left( s \\right) = {{5{s^2} + 23s + 6} \\over {s\\left( {{s^2} + 2s + 2} \\right)}}$$$\n<br>As $$t \\to  \\propto ,\\,\\,f\\left( t \\right)$$ approaches",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$17/2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ \\propto $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ce-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A delayed unit step function is defined as \n$$$u\\left( {t - a} \\right) = \\left\\{ {\\matrix{\n   {0,} &amp; {t &lt; a}  \\cr \n   {1,} &amp; {t \\ge a}  \\cr \n\n } } \\right.$$$\n<p>Its Laplace transform is ____________.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a\\,\\,{e^{ - as}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${e^{ - as}}/s$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${e^{  as}}/s$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${e^{ - as}}/a$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ce-2004",
+    "difficulty": null
+  },
+  {
+    "content": "If $$L$$ denotes the laplace transform of a function, $$L\\left\\{ {\\sin \\,\\,at} \\right\\}$$ will be equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${a \\over {{s^2} - {a^2}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${a \\over {{s^2} + {a^2}}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${s \\over {{s^2} + {a^2}}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${s \\over {{s^2} - {a^2}}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ce-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The inverse Laplace transform of $$1/\\left( {{s^2} + 2s} \\right)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {1 - {e^{ - 2t}}} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {1 + {e^{2t}}} \\right)/2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {1 - {e^{2t}}} \\right)/2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {1 - {e^{ - 2t}}} \\right)/2$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ce-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The Laplace transform of the function \n<br>$$\\eqalign{\n  &amp; f\\left( t \\right) = k,\\,0 &lt; t &lt; c  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\, = 0,\\,c &lt; t &lt; \\infty ,\\,\\, \\cr} $$  \n<br>is \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {k/s} \\right){e^{ - sc}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {k/s} \\right){e^{sc}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$k\\,{e^{ - sc}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {k/s} \\right)\\left( {1 - {e^{ - sc}}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ce-1999",
+    "difficulty": null
+  },
+  {
+    "content": "$${\\left( {s + 1} \\right)^{ - 2}}$$ is laplace transform of ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${t^2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${t^3}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${e^-2t}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$t{e^{ - t}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ce-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The Laplace Transform of a unit step function $${u_a}\\left( t \\right),$$ defined as \n<br>$$\\matrix{\n   {{u_a}\\left( t \\right) = 0} &amp; {for\\,\\,\\,t &lt; a\\,}  \\cr \n   { = 1} &amp; {for\\,\\,\\,t &gt; a,}  \\cr \n\n } $$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${e^{ - as}}/s$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$s{e^{ - as}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$s - u\\left( 0 \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$s{e^{ - as}} - 1$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ce-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The inverse Laplace transform of $${{\\left( {s + 9} \\right)} \\over {\\left( {{s^2} + 6s + 13} \\right)}}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\cos \\,2t + 9\\,\\sin \\,2t$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${e^{ - 3t}}\\,\\cos 2t - 3\\,{e^{ - 3t}}\\sin \\,2t$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${e^{ - 3t}}\\,\\sin 2t + 3\\,{e^{ - 3t}}\\cos \\,2t$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${e^{ - 3t}}\\,\\cos 2t + 3\\,{e^{ - 3t}}\\sin \\,2t$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ce-1995",
+    "difficulty": null
+  },
+  {
+    "content": "If $$F\\left( s \\right) = L\\left\\{ {f\\left( t \\right)} \\right\\} = {{2\\left( {s + 1} \\right)} \\over {{s^2} + 4s + 7}}$$ then the initial and final values of $$f(t)$$ are respectively ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0,2$$ $$0,{2 \\over 7}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2,0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0,{2 \\over 7}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2 \\over 7},\\,0$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ce-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Laplace transform of $$f\\left( t \\right) = \\cos \\left( {pt + q} \\right)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{s\\,\\cos \\,q - p\\,\\sin \\,q} \\over {{s^2} + {p^2}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{s\\,\\cos \\,q - p\\,\\sin \\,q} \\over {{s^2} + {p^2}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{s\\,\\sin \\,q - p\\,\\cos \\,q} \\over {{s^2} + {p^2}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{s\\,\\sin \\,q + p\\,\\cos \\,q} \\over {{s^2} + {p^2}}}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ce-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Using Laplace transforms, solve $${a \\over {{s^2} - {a^2}}}\\,\\,\\left( {{d^2}y/d{t^2}} \\right) + 4y = 12t\\,\\,$$ \n<br>given that $$y=0$$ and $$dy/dt=9$$ at $$t=0$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$y\\left( t \\right) = 3t + 3\\sin 2t$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ce-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The Laplace transform of the following function is \n$$$f\\left( t \\right) = \\left\\{ {\\matrix{\n   {\\sin t} &amp; {for\\,\\,0 \\le t \\le \\pi }  \\cr \n   0 &amp; {for\\,\\,t &gt; \\pi }  \\cr \n\n } } \\right.$$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/\\left( {1 + {s^2}} \\right)\\,$$ for all $$\\,s &gt; 0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/\\left( {1 + {s^2}} \\right)\\,$$ for all  $$\\,s &lt; \\pi $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {1 + {e^{ - \\pi s}}} \\right)/\\left( {1 + {s^2}} \\right)$$ for all $$s&gt;0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${e^{ - \\pi s}}/\\left( {1 + {s^2}} \\right)$$ for all $$s &gt; 0$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ce-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$F\\left( s \\right) = L\\left[ {f\\left( t \\right)} \\right]$$ denote the Laplace transform of the function $$f(t)$$. Which of the following statements is correct? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/35ZtVu7d4zvfdIM7N/AMtTW9dz0l0WhS0bTnjkVsyefLE4y/w6UY6IttRR2KN9XbUFpKu7/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CE 2000 Engineering Mathematics - Transform Theory Question 13 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/vObZX1S6PTjqfqEuh/vn8zOhHzkJTWDkEhs6pWSIZ5nynFi/XOCzmc4Bh21DF3ZDpqv9n0/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CE 2000 Engineering Mathematics - Transform Theory Question 13 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/2rzIXNikLif3dnh1A/ZW8OJDI1TfMXE8NMxmavCjAPDbiLs/fU2T01MRagJZ1xZR7soCaI/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CE 2000 Engineering Mathematics - Transform Theory Question 13 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/63NcdpxbWxVQg5p9M/rvg0rmceaYnpBJuQb9TYIXanKyrwT/MjqvMOvEiRIF00F2v7ycs6/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CE 2000 Engineering Mathematics - Transform Theory Question 13 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ce-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Using Laplace transform, solve the initial value problem $$9{y^{11}} - 6{y^1} + y = 0$$ \n<br>$$y\\left( 0 \\right) = 3$$ and $${y^1}\\left( 0 \\right) = 1,$$ where prime denotes derivative with respect to $$t.$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$y\\left( t \\right) = 3{e^{{\\raise0.5ex\\hbox{$\\scriptstyle t$}\n\\kern-0.1em/\\kern-0.15em\n\\lower0.25ex\\hbox{$\\scriptstyle 3$}}}}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ce-1996",
+    "difficulty": null
+  }
+]

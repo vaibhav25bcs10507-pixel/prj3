@@ -1,0 +1,258 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A, B$ are two square matrices, such that $A B=A, B A=B$, then $(A+B)^7$ equals</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $A+B$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $2^7(A+B)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $2^6(A+B)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $2^8(A+B)$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given two square matrices $ A $ and $ B $ such that $ AB = A $ and $ BA = B $, we want to determine the value of $(A+B)^7$.</p>\n<p><strong>Step-by-step Explanation:</strong></p>\n\n<p><p>From $ AB = A $, multiplying both sides by $ B $ gives:</p>\n<p>$    BAB = BA    $</p>\n<p>Since $ BA = B $, we substitute to get:</p>\n<p>$    B^2 = B    $</p></p>\n<p><p>From $ BA = B $, multiplying both sides by $ A $ yields:</p>\n<p>$    ABA = AB    $</p>\n<p>Knowing $ AB = A $, we substitute to find:</p>\n<p>$    A^2 = A    $</p></p>\n<p><p>Now, let's explore $(A + B)^2$:</p>\n<p>$    (A+B)^2 = A^2 + AB + BA + B^2    $</p>\n<p>Substituting the known values:</p>\n<p>$    = A + A + B + B = 2(A+B)    $</p></p>\n<p><p>Continuing this pattern:</p></p>\n\n\n<p><p>$(A+B)^3 = (A+B)^2(A+B) = 2(A+B)(A+B) = 2 \\cdot 2(A+B) = 2^2(A+B)$</p></p>\n<p><p>$(A+B)^4 = (A+B)^3(A+B) = 2^2(A+B)(A+B) = 2^3(A+B)$</p></p>\n\n\n<p><p>Generalizing, for any integer $ n $:</p>\n<p>$    (A+B)^{n+1} = (A+B)^n(A+B) = 2^n \\cdot 2(A+B) = 2^{n+1}(A+B)    $</p></p>\n<p><p>Therefore, specifically for $(A+B)^7$:</p>\n<p>$    (A+B)^7 = 2^6(A+B)    $</p></p>\n\n<p>Hence, $(A+B)^7 = 2^6(A+B)$.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "viteee-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $A=\\left[\\begin{array}{ll}1 & 1 \\\\ 0 & 1\\end{array}\\right]$ and $B=\\left[\\begin{array}{cc}\\frac{\\sqrt{3}}{2} & \\frac{1}{2} \\\\ -\\frac{1}{2} & \\frac{\\sqrt{3}}{2}\\end{array}\\right]$, then $\\left(B B^T A\\right)^5$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\left[\\begin{array}{cc}2+\\sqrt{3} & 1 \\\\ -1 & 2-\\sqrt{3}\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{1}{2}\\left[\\begin{array}{ll}1 & 5 \\\\ 0 & 1\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\left[\\begin{array}{ll}1 & 5 \\\\ 0 & 1\\end{array}\\right]$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\left[\\begin{array}{ll}5 & 1 \\\\ 0 & 1\\end{array}\\right]$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&\\begin{aligned}\n& \\because B=\\left[\\begin{array}{cc}\n\\frac{\\sqrt{3}}{2} & \\frac{1}{2} \\\\\n\\frac{-1}{2} & \\frac{\\sqrt{3}}{2}\n\\end{array}\\right] \\\\\n& \\begin{aligned}\n\\therefore \\quad B^T & =\\left[\\begin{array}{ll}\n\\frac{\\sqrt{3}}{2} & \\frac{-1}{2} \\\\\n\\frac{1}{2} & \\frac{\\sqrt{3}}{2}\n\\end{array}\\right] \\\\\n\\text { and } B B^T & =\\left[\\begin{array}{ll}\n\\frac{\\sqrt{3}}{2} & \\frac{1}{2} \\\\\n-\\frac{1}{2} & \\frac{\\sqrt{3}}{2}\n\\end{array}\\right]\\left[\\begin{array}{ll}\n\\frac{\\sqrt{3}}{2} & \\frac{-1}{2} \\\\\n\\frac{1}{2} & \\frac{\\sqrt{3}}{2}\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n\\frac{3}{4}+\\frac{1}{4} & \\frac{-\\sqrt{3}}{4}+\\frac{\\sqrt{3}}{4} \\\\\n\\frac{-\\sqrt{3}}{4}+\\frac{\\sqrt{3}}{4} & \\frac{1}{4}+\\frac{3}{4}\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]\n\\end{aligned}\n\\end{aligned}\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n& \\text { and } A=\\left[\\begin{array}{ll}\n1 & 1 \\\\\n0 & 1\n\\end{array}\\right] \\\\\n& \\therefore\\left(B B^{\\top} A\\right)\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]\\left[\\begin{array}{ll}\n1 & 1 \\\\\n0 & 1\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n1 & 1 \\\\\n0 & 1\n\\end{array}\\right]=A \\\\\n& \\text { and } \\quad\\left(B B^{\\top} A\\right)^2=A^2=\\left[\\begin{array}{ll}\n1 & 2 \\\\\n0 & 1\n\\end{array}\\right] \\\\\n& \\text { Hence, }\\left(B B^{\\top} A\\right)^5=\\left[\\begin{array}{ll}\n1 & 5 \\\\\n0 & 1\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "viteee-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If matrix $$A=\\left[\\begin{array}{ccc}0 & 2 b & -2 \\\\ 3 & 1 & 3 \\\\ 3 a & 3 & -1\\end{array}\\right]$$ is given to be symmetric, then the value of $$a b$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "0"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-$$1"
+      },
+      {
+        "identifier": "D",
+        "content": "9/4"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, $$A=\\left[\\begin{array}{ccc}0 & 2 b & -2 \\\\ 3 & 1 & 3 \\\\ 3 a & 3 & -1\\end{array}\\right]$$</p>\n<p>Since, $$A$$ is symmetric matrix, therefore we have $$A^T=A$$</p>\n<p>$$\\Rightarrow\\left[\\begin{array}{ccc}0 & 2 b & -2 \\\\ 3 & 1 & 3 \\\\ 3 a & 3 & -1\\end{array}\\right]^T=\\left[\\begin{array}{ccc}0 & 2 b & -2 \\\\ 3 & 1 & 3 \\\\ 3 a & 3 & -1\\end{array}\\right]$$</p>\n<p>$$\\Rightarrow\\left[\\begin{array}{ccc}\n0 & 3 & 3 a \\\\\n2 b & 1 & 3 \\\\\n-2 & 3 & -1\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n0 & 2 b & -2 \\\\\n3 & 1 & 3 \\\\\n3 a & 3 & -1\n\\end{array}\\right]$$</p>\n<p>$$\\Rightarrow 3 a=-2$$ and $$2 b=3 \\Rightarrow a=-2 / 3$$ and $$b=3 / 2$$</p>\n<p>So, $$a \\cdot b=\\frac{-2}{3} \\times \\frac{3}{2}=-1$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "viteee-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The determinant of the matrix $$\\left[\\begin{array}{ccc}1 & 4 & 8 \\\\ 1 & 9 & 27 \\\\ 1 & 16 & 64\\end{array}\\right]$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "13"
+      },
+      {
+        "identifier": "B",
+        "content": "208"
+      },
+      {
+        "identifier": "C",
+        "content": "52"
+      },
+      {
+        "identifier": "D",
+        "content": "104"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned} & \\left|\\begin{array}{ccc}1 & 4 & 8 \\\\ 1 & 9 & 27 \\\\ 1 & 16 & 64\\end{array}\\right| \\\\\\\\ & =1[576-432]-4[64-27]+8[16-9] \\\\\\\\ & =144-148+56=52\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "viteee-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose, $$A=\\left[\\begin{array}{lll}a_1 & b_1 & c_1 \\\\ a_2 & b_2 & c_2 \\\\ a_3 & b_3 & c_3\\end{array}\\right]$$ is an adjoint of the matrix $$\\left[\\begin{array}{rrr}1 & 3 & 3 \\\\ 1 & 4 & 3 \\\\ 1 & 3 & 4\\end{array}\\right]$$. The value of $$\\frac{a_1+b_2+c_3}{b_1 a_2}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "0"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s break down the solution step by step. We are given the matrix</p>\n<p>$$ X = \\begin{bmatrix} 1 & 3 & 3 \\\\ 1 & 4 & 3 \\\\ 1 & 3 & 4 \\end{bmatrix}, $$</p>\n<p>and its adjugate (or classical adjoint) is given by</p>\n<p>$$ \\text{adj}(X) = A = \\begin{bmatrix} a_1 & b_1 & c_1 \\\\ a_2 & b_2 & c_2 \\\\ a_3 & b_3 & c_3 \\end{bmatrix}. $$</p>\n<p>Remember that the adjugate matrix is the transpose of the cofactor matrix. Therefore:</p>\n<p>• The entry in the first row and first column, $$a_1,$$ equals the cofactor of $$X$$ at position $$ (1,1) $$; thus, $$a_1 = C_{11}.$$  </p>\n<p>• The entry $$b_2$$ (at position $$ (2,2) $$) equals $$C_{22}.$$  </p>\n<p>• The entry $$c_3$$ (at position $$ (3,3) $$) equals $$C_{33}.$$  </p>\n<p>• Similarly, $$b_1$$ (position $$ (1,2) $$) equals $$C_{21},$$ and $$a_2$$ (position $$ (2,1) $$) equals $$C_{12}.$$</p>\n<p>We need to find the value of</p>\n<p>$$ \\frac{a_1 + b_2 + c_3}{b_1 a_2}. $$</p>\n<p>Let’s compute each required cofactor.</p>\n\n<p><p>Compute $$a_1 = C_{11}:$$  </p>\n<p>Remove the 1st row and 1st column of $$X$$ to get</p>\n<p>$$    \\begin{bmatrix}    4 & 3 \\\\    3 & 4    \\end{bmatrix}.    $$</p>\n<p>The determinant is </p>\n<p>$$    4 \\times 4 - 3 \\times 3 = 16 - 9 = 7.    $$</p>\n<p>Since $$(-1)^{1+1} = 1,$$ we have</p>\n<p>$$    a_1 = 7.    $$</p></p>\n<p><p>Compute $$b_2 = C_{22}:$$  </p>\n<p>Remove the 2nd row and 2nd column to obtain</p>\n<p>$$    \\begin{bmatrix}    1 & 3 \\\\    1 & 4    \\end{bmatrix}.    $$</p>\n<p>Its determinant is</p>\n<p>$$    1 \\times 4 - 3 \\times 1 = 4 - 3 = 1,    $$</p>\n<p>and since $$(-1)^{2+2} = 1,$$ we get</p>\n<p>$$    b_2 = 1.    $$</p></p>\n<p><p>Compute $$c_3 = C_{33}:$$  </p>\n<p>Remove the 3rd row and 3rd column, which gives</p>\n<p>$$    \\begin{bmatrix}    1 & 3 \\\\    1 & 4    \\end{bmatrix}.    $$</p>\n<p>Its determinant is also</p>\n<p>$$    1 \\times 4 - 3 \\times 1 = 1.    $$</p>\n<p>With $$(-1)^{3+3} = 1,$$ we have</p>\n<p>$$    c_3 = 1.    $$</p></p>\n<p><p>Compute $$b_1 = C_{21}:$$  </p>\n<p>The cofactor of the element at position $$ (2,1) $$ is computed by removing the 2nd row and 1st column:</p>\n<p>$$    \\begin{bmatrix}    3 & 3 \\\\    3 & 4    \\end{bmatrix}.    $$</p>\n<p>The determinant is</p>\n<p>$$    3 \\times 4 - 3 \\times 3 = 12 - 9 = 3.    $$</p>\n<p>The sign factor is $$(-1)^{2+1} = -1,$$ so</p>\n<p>$$    b_1 = -3.    $$</p></p>\n<p><p>Compute $$a_2 = C_{12}:$$  </p>\n<p>For position $$ (1,2),$$ remove the 1st row and 2nd column:</p>\n<p>$$    \\begin{bmatrix}    1 & 3 \\\\    1 & 4    \\end{bmatrix}.    $$</p>\n<p>The determinant is</p>\n<p>$$    1 \\times 4 - 3 \\times 1 = 4 - 3 = 1.    $$</p>\n<p>Here, the sign factor is $$(-1)^{1+2} = -1,$$ so</p>\n<p>$$    a_2 = -1.    $$</p></p>\n\n<p>Now, substitute these values into the expression:</p>\n<p>• Numerator: </p>\n<p>$$ a_1 + b_2 + c_3 = 7 + 1 + 1 = 9. $$</p>\n<p>• Denominator: </p>\n<p>$$ b_1 \\cdot a_2 = (-3) \\times (-1) = 3. $$</p>\n<p>Thus, the ratio is</p>\n<p>$$ \\frac{9}{3} = 3. $$</p>\n<p>So, the value of $$\\frac{a_1+b_2+c_3}{b_1 a_2}$$ is 3, which corresponds to Option A.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "viteee-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For all values of $$\\lambda$$, rank of matrix</p>\n<p>$$A=\\left[\\begin{array}{ccc}\n{ }^h C_0 & { }^4 C_3 & { }^5 C_4 \\\\\n\\lambda & 8 & 8 \\lambda-6 \\\\\n1+\\lambda^2 & 8 \\lambda+4 & 2 \\lambda+21\n\\end{array}\\right]$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "for $$\\lambda=2, \\rho(A)=1$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "for $$\\lambda=-1, \\rho(A)=1$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "for $$\\lambda=2, \\rho(A)=3$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "for $$\\lambda=-1, \\rho(A)=4$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$\\begin{aligned}\nA & =\\left[\\begin{array}{ccc}\n{ }^n C_0 & { }^4 C_3 & { }^5 C_4 \\\\\n\\lambda & 8 & 8 \\lambda-6 \\\\\n1+\\lambda^2 & 8 \\lambda+4 & 2 \\lambda+21\n\\end{array}\\right] \\\\\n\\Rightarrow \\quad A & =\\left[\\begin{array}{ccc}\n1 & 4 & 5 \\\\\n\\lambda & 8 & 8 \\lambda-6 \\\\\n1+\\lambda^2 & 8 \\lambda+4 & 2 \\lambda+21\n\\end{array}\\right]\n\\end{aligned}$$</p>\n<p>Apply $$R_2 \\rightarrow R_2-2 R_1$$ and $$R_3 \\rightarrow R_3-R_1$$</p>\n<p>$$A=\\left[\\begin{array}{ccc}\n1 & 4 & 5 \\\\\n\\lambda-2 & 0 & 8 \\lambda-16 \\\\\n\\lambda^2 & 8 \\lambda & 2 \\lambda+16\n\\end{array}\\right]$$</p>\n<p>For $$\\lambda=2, A=\\left[\\begin{array}{ccc}1 & 4 & 5 \\\\ 0 & 0 & 0 \\\\ 4 & 16 & 20\\end{array}\\right]$$</p>\n<p>Apply $$R_3 \\rightarrow R_3-4 R_1$$</p>\n<p>$$A=\\left[\\begin{array}{lll}\n1 & 4 & 5 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]$$</p>\n<p>$$\\therefore$$ Rank, $$\\rho(A)=1$$</p>\n<p>Hence, option (a) is correct.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "viteee-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A=\\left[\\begin{array}{ll}3 & -4 \\\\ 1 & -1\\end{array}\\right]$$, then $$\\left(A-A^{\\prime}\\right)$$ is equal to (where, $$A^{\\prime}$$ is transpose of matrix $$A$$ )</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "null matrix\n"
+      },
+      {
+        "identifier": "B",
+        "content": "identity matrix\n"
+      },
+      {
+        "identifier": "C",
+        "content": "symmetric\n"
+      },
+      {
+        "identifier": "D",
+        "content": "skew-symmetric"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$A=\\left[\\begin{array}{ll}3 & -4 \\\\ 1 & -1\\end{array}\\right]$$</p>\n<p>Then, $$A^{\\prime}=\\left[\\begin{array}{rr}3 & 1 \\\\ -4 & -1\\end{array}\\right]$$</p>\n<p>Now, $$A-A^{\\prime}=\\left[\\begin{array}{ll}3 & -4 \\\\ 1 & -1\\end{array}\\right]-\\left[\\begin{array}{rr}3 & 1 \\\\ -4 & -1\\end{array}\\right]$$</p>\n<p>$$\\Rightarrow \\quad A-A^{\\prime}=\\left[\\begin{array}{rr}0 & -5 \\\\ 5 & 0\\end{array}\\right]\\quad \\text{.... (i)}$$</p>\n<p>Now, we have</p>\n<p>$$\\begin{aligned}\n& A^{\\prime}-A=\\left[\\begin{array}{rr}\n3 & 1 \\\\\n-4 & -1\n\\end{array}\\right]-\\left[\\begin{array}{rr}\n3 & -4 \\\\\n1 & -1\n\\end{array}\\right]=\\left[\\begin{array}{rr}\n0 & 5 \\\\\n-5 & 0\n\\end{array}\\right] \\\\\n& \\Rightarrow \\quad\\left(A^{\\prime}-A\\right)^{\\prime}=\\left[\\begin{array}{rr}\n0 & -5 \\\\\n5 & 0\n\\end{array}\\right]=\\left(A-A^{\\prime}\\right) \\text { [from Eq. (i)] } \\\\\n\\end{aligned}$$</p>\n<p>which represent that $$\\left(A-A^{\\prime}\\right)$$ is skew-symmetric matrix.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "viteee-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $$A^{-1}=\\left[\\begin{array}{rr}5 & -2 \\\\ -7 & 3\\end{array}\\right]$$ and $$B^{-1}=\\frac{1}{2}\\left[\\begin{array}{rr}9 & -7 \\\\ -8 & 6\\end{array}\\right]$$, then $$(A B)^{-1}$$ is equal to</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[\\begin{array}{rr}47 & -39 / 2 \\\\ -41 & 17\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[\\begin{array}{rr}94 & -82 \\\\ -39 & 34\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[\\begin{array}{rr}-47 & 46 \\\\ 39 / 2 & -17\\end{array}\\right]$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[\\begin{array}{rr}-47 & 39 / 2 \\\\ 46 & -17\\end{array}\\right]$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given that,</p>\n<p>$$A^{-1}=\\left[\\begin{array}{rr}\n5 & -2 \\\\\n-7 & 3\n\\end{array}\\right] \\text { and } B^{-1}=\\frac{1}{2}\\left[\\begin{array}{rr}\n9 & -7 \\\\\n-8 & 6\n\\end{array}\\right]$$</p>\n<p>Now, we have $$(A B)^{-1}=B^{-1} \\cdot A^{-1}$$</p>\n<p>$$\\begin{aligned}\n& =\\frac{1}{2}\\left[\\begin{array}{rr}\n9 & -7 \\\\\n-8 & 6\n\\end{array}\\right]\\left[\\begin{array}{rr}\n5 & -2 \\\\\n-7 & 3\n\\end{array}\\right] \\\\\n& =\\frac{1}{2}\\left[\\begin{array}{rr}\n45+49 & -18-21 \\\\\n-40-42 & 16+18\n\\end{array}\\right] \\\\\n& =\\frac{1}{2}\\left[\\begin{array}{rr}\n94 & -39 \\\\\n-82 & 34\n\\end{array}\\right]=\\left[\\begin{array}{rr}\n47 & -39 / 2 \\\\\n-41 & 17\n\\end{array}\\right]\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "viteee-2021",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,444 @@
+[
+  {
+    "content": "The value of 3<sup>51</sup> mod 5 is_________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>To find the value of $ 3^{51} \\mod 5 $, we can utilize Fermat's Little Theorem. Fermat's Little Theorem states that if $ p $ is a prime number and $ a $ is an integer that is not divisible by $ p $, then:</p>\n<p>$$ a^{p-1} \\equiv 1 \\mod p $$</p>\n<p>In this case, let $ a = 3 $ and $ p = 5 $. Therefore, according to Fermat's Little Theorem:</p>\n<p>$$ 3^{5-1} = 3^4 \\equiv 1 \\mod 5 $$</p>\n<p>Since $ 3^4 \\equiv 1 \\mod 5 $, any power of $ 3^4 $ raised to a multiple can also be simplified using this theorem. The exponent 51 can be written in terms of this cycle as follows:</p>\n<p>51 can be expressed as $ 4 \\times 12 + 3 $. So, we have:</p>\n<p>$$ 3^{51} = 3^{4 \\times 12 + 3} = (3^4)^{12} \\times 3^3 $$</p>\n<p>By Fermat's Little Theorem, $ (3^4)^{12} \\equiv 1^{12} \\equiv 1 \\mod 5 $. Therefore:</p>\n<p>$$ 3^{51} \\equiv 1 \\times 3^3 \\mod 5 $$</p>\n<p>Now, we need to calculate $ 3^3 \\mod 5 $:</p>\n<p>$$ 3^3 = 27 $$</p>\n<p>$ 27 \\mod 5 $ is the remainder when 27 is divided by 5, which is 2. Thus,</p>\n<p>$$ 3^3 \\equiv 2 \\mod 5 $$</p>\n<p>Therefore, the final result is:</p>\n<p>$$ 3^{51} \\equiv 2 \\mod 5 $$</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "A sender S sends a message m to receiver R, which is digitally signed by S with its\nprivate key. In this scenario, one or more of the following security violations can take\nplace.\n<p><b>I.</b> S can launch a birthday attack to replace m with a fraudulent message.\n<br><b>II.</b> A third party attacker can launch a birthday attack to replace m with a fraudulent\nmessage.\n<br><b>III.</b> R can launch a birthday attack to replace m with a fraudulent message.</p> \nWhich of the following are possible security violations?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and II only"
+      },
+      {
+        "identifier": "B",
+        "content": "I only"
+      },
+      {
+        "identifier": "C",
+        "content": "II only"
+      },
+      {
+        "identifier": "D",
+        "content": "II and III only"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-cse-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Anarkali digitally signs a message and sends it to Salim. Verification of the signature by Salim requires",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Anarkali's public key"
+      },
+      {
+        "identifier": "B",
+        "content": "Salim's public key"
+      },
+      {
+        "identifier": "C",
+        "content": "Salim's private key"
+      },
+      {
+        "identifier": "D",
+        "content": "Anarkali's private key"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose that everyone in a group of N people wants to communicate secretly with the N - 1 others using symmetric key cryptographic system. The communication between any two persons should not be decodable by the others in the group. The number of keys required in the system as a whole to satisfy the confidentiality requirement is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2N"
+      },
+      {
+        "identifier": "B",
+        "content": "N(N - 1)"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{N(N - 1)} \\over 2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "(N - 1)<sup>2</sup>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following are used to generate a message digest by the network security protocols? \n<br>(P) RSA <br>(Q) SHA-1 <br>(R) DES <br>(S) MD5",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P and R only "
+      },
+      {
+        "identifier": "B",
+        "content": "Q and R only"
+      },
+      {
+        "identifier": "C",
+        "content": "Q and S only"
+      },
+      {
+        "identifier": "D",
+        "content": "R and S only"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Using public key cryptography, X adds a digital signature σ to message M, encrypts, and sends it to Y, where it is decrypted. Which one of the following sequences of keys is used for the operations?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Encryption: X's private key followed by Y's private key; <br>Decryption: X’s public key followed by Y’s public key"
+      },
+      {
+        "identifier": "B",
+        "content": "Encryption: X's private key followed by Y's public key; <br>Decryption: X's public key followed by Y's private key"
+      },
+      {
+        "identifier": "C",
+        "content": "Encryption: X's public key followed by Y's private key; <br>Decryption: Y's public key followed by X's private key"
+      },
+      {
+        "identifier": "D",
+        "content": "Encryption: X's private key followed by Y's public key; <br>Decryption: Y's private key followed by X's public key"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A layer-4 firewall (a device that can look at all protocol headers up to the transport layer) CANNOT",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "block entire HTTP traffic during 9:00 PM and 5:00 AM"
+      },
+      {
+        "identifier": "B",
+        "content": "block all ICMP traffic"
+      },
+      {
+        "identifier": "C",
+        "content": "stop incoming traffic from a specific IP address but allow outgoing traffic to the same IP address"
+      },
+      {
+        "identifier": "D",
+        "content": "block TCP traffic from a specific user on a multi-user system during 9:00 PM and 5:00 AM"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following two statements: \n<p>i. A hash function (these are often used for computing digital signatures) is an injective function. \n<br>ii. encryption technique such as DES performs a permutation on the elements of its input alphabet.</p> \nWhich one of the following options is valid for the above two statements?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both are false \n"
+      },
+      {
+        "identifier": "B",
+        "content": "Statement (i) is true and the other is false"
+      },
+      {
+        "identifier": "C",
+        "content": "Statement (ii) is true and the other is false"
+      },
+      {
+        "identifier": "D",
+        "content": "Both are true"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Exponentiation is a heavily used operation in public key cryptography. Which of the following options is the tightest upper bound on the number of multiplications required to compute (b<sup>n</sup> mod m),$$0 \\le b,n \\le m$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm O}\\left( {\\log n} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm O}\\left( {\\sqrt n } \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm O}\\left( {{n \\over {\\log n}}} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm O}\\left( n \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum positive integer p such that <b>(3<sup>p</sup> modulo 17) = 1</b> is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5"
+      },
+      {
+        "identifier": "B",
+        "content": "8"
+      },
+      {
+        "identifier": "C",
+        "content": "12"
+      },
+      {
+        "identifier": "D",
+        "content": "16"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A sender is employing public key Cryptography to send a secret message to a receiver. Which one of the following statement is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Sender encrypts using receiver's public key."
+      },
+      {
+        "identifier": "B",
+        "content": "Sender encrypts using his own public key."
+      },
+      {
+        "identifier": "C",
+        "content": "Receiver decrypts using sender's public key."
+      },
+      {
+        "identifier": "D",
+        "content": "Receiver decrypts using his own public key."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "In an RSA cryptosystem, the value of the public modulus parameter n is 3007. If it is also known that $$\\varphi $$(n) = 2880, where $$\\varphi $$() denotes Euler's Totient Function, then the prime factor of n which is greater than 50 is ______.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "97",
+    "explanation": "<p>To solve this problem, we need to find the prime factors $ p $ and $ q $ of $ n = 3007 $ such that:</p>\n\n<p><p>$ n = p \\times q $</p></p>\n<p><p>$ \\varphi(n) = (p - 1)(q - 1) = 2880 $</p></p>\n\n<hr />\n<h3><strong>Step 1: Set Up the Equations</strong></h3>\n<p>We have:</p>\n\n<p><p>$ p \\times q = 3007 $       (Equation 1)</p></p>\n<p><p>$ (p - 1)(q - 1) = 2880 $    (Equation 2)</p></p>\n\n<hr />\n<h3><strong>Step 2: Simplify Equation 2</strong></h3>\n<p>Expand Equation 2:</p>\n<p>$ (p - 1)(q - 1) = pq - p - q + 1 = 2880 $</p>\n<p>Using $ pq = 3007 $ from Equation 1:</p>\n<p>$ 3007 - p - q + 1 = 2880 $</p>\n<p>Simplify:</p>\n<p>$ 3008 - p - q = 2880 $</p>\n<p>$ p + q = 3008 - 2880 = 128    (Equation 3) $</p>\n<hr />\n<h3><strong>Step 3: Find the Prime Numbers</strong></h3>\n<p>Now, we need to find two prime numbers $ p $ and $ q $ such that:</p>\n\n<p><p>$ p + q = 128 $</p></p>\n<p><p>$ p \\times q = 3007 $</p></p>\n\n<p>List primes less than 128 and find pairs that sum to 128.</p>\n<p>Possible prime pairs:</p>\n\n<p><p>$ (31, 97) $</p></p>\n<p><p>$ (41, 87) $  (Note: 87 is not prime)</p></p>\n<p><p>$ (19, 109) $</p></p>\n\n<p>Test the pairs:</p>\n<h4><strong>Pair (31, 97):</strong></h4>\n\n<p><p>Sum: $ 31 + 97 = 128 $</p></p>\n<p><p>Product: $ 31 \\times 97 = 3007 $</p></p>\n\n<p><strong>This pair satisfies both conditions.</strong></p>\n<hr />\n<h3><strong>Step 4: Identify the Larger Prime</strong></h3>\n<p>Between $ p = 31 $ and $ q = 97 $:</p>\n\n<p><p>$ 31 < 50 $</p></p>\n<p><p>$ 97 > 50 $</p></p>\n\n<hr />\n<p><strong>Therefore, the prime factor of $ n $ greater than 50 is $\\boxed{97}$.</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider that B wants to send a message m that is digitally signed to A. Let the pair of private and public keys for A and B be denoted by $$K_x^ - $$ and $$K_x^ + $$ for x = A, B, respectively. Let K<sub>x</sub>(m) represent the operation of encrypting m with a key K<sub>x</sub> and H(m) represent the message digest. Which one of the following indicates the <b>CORRECT</b> way of sending the message m along with the digital signature to A?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{ {m,K_B^ + \\left( {H\\left( m \\right)} \\right)} \\right\\}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{ {m,K_B^ - \\left( {H\\left( m \\right)} \\right)} \\right\\}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\{ {m,K_A^ - \\left( {H\\left( m \\right)} \\right)} \\right\\}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{ {m,K_A^ + (m)} \\right\\}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the RSA public key cryptosystem, the private and public keys are (e, n) and (d, n) respectively, where n = p$$ \\times $$q and p and q are large primes. Besides, n is public and p and q are private. Let M be an integer such that 0 &lt; M &lt; n and f(n) = (p - 1)(q - 1). Now consider the following equations.\n<p><b>I.</b> M'= M<sup>e</sup> mod n \n<br>M = (M')<sup>d</sup> mod n </p> \n<p><b>II.</b> ed ≡ 1 mod n </p> \n<p><b>III.</b> ed ≡ 1 mod $$\\phi $$(n) </p>\n<p><b>IV.</b> M'= M<sup>e</sup> mod $$\\phi $$(n) \n<br>M = (M')<sup>d</sup> mod $$\\phi $$(n)</p>\nWhich of the above equations correctly represent RSA cryptosystem?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and II "
+      },
+      {
+        "identifier": "B",
+        "content": "I and III"
+      },
+      {
+        "identifier": "C",
+        "content": "II and IV"
+      },
+      {
+        "identifier": "D",
+        "content": "III and IV"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The total number of keys required for a set of n individuals to be able to communicate with each other using secret key and public key crypto-systems, respectively are:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n(n - 1) and 2n"
+      },
+      {
+        "identifier": "B",
+        "content": "2n and $${{N(N - 1)} \\over 2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{N(N - 1)} \\over 2}$$ and 2n"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{N(N - 1)} \\over 2}$$ and n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose that two parties A and B wish to setup a common secret key (D - H key) between themselves using the Diffie-Hellman key exchange technique. They agree on 7 as the modulus and 3 as the primitive root. Party A chooses 2 and party B chooses 5 as their respective secrets. Their D - H key is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,512 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A lexical analyzer uses the following token definitions</p>\n<ul>\n<li><p>letter → [A - Za - z]</p></li>\n<li><p>digit → [0-9]</p></li>\n<li><p>id → letter (letter $\\mid$ digit)*</p></li>\n<li><p>number → digit $^{+}$</p></li>\n<li><p>ws → (blank | tab | newline) ${ }^{+}$</p></li>\n</ul>\n<p>For the string given below,</p>\n<p>$x1 \\quad 23mm \\quad 78\\quad$ y $\\quad7 z \\quad z z 5 \\quad 14 A \\quad 8 H \\quad A a Y c D$</p>\n<p>the number of tokens (excluding ws) that will be produced by the lexical analyzer is</p>\n<p>$\\_\\_\\_\\_$ . (answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "13",
+    "explanation": "<p>Using the given token rules:</p>\n<ul>\n<li><p>$id \\to letter(letter \\mid digit)^*$</p></li>\n<li><p>$number \\to digit^+$</p></li>\n<li><p>$ws$ is ignored</p></li>\n</ul>\n<p>Now scan the string from left to right using the <strong>longest match</strong> rule.</p>\n<p>Given string:</p>\n<p>$$ x1 \\quad 23mm \\quad 78 \\quad y \\quad 7z \\quad zz5 \\quad 14A \\quad 8H \\quad AaYcD $$</p>\n<p>Now identify each token:</p>\n<ol>\n<li><p>$x1$  </p>\n<p>Starts with a letter, followed by a digit, so it is an $id$.</p></li>\n<li><p>$23mm$  </p>\n<p>Starts with digits, so $23$ is a $number$.  </p>\n<p>Then $mm$ starts with a letter, so $mm$ is an $id$.  </p>\n<p>Thus gives <strong>2 tokens</strong>: $23$, $mm$</p></li>\n<li><p>$78$  </p>\n<p>This is a $number$.</p></li>\n<li><p>$y$  </p>\n<p>This is an $id$.</p></li>\n<li><p>$7z$  </p>\n<p>Starts with digit, so $7$ is a $number$.  </p>\n<p>Then $z$ is an $id$.  </p>\n<p>Thus gives <strong>2 tokens</strong>: $7$, $z$</p></li>\n<li><p>$zz5$  </p>\n<p>Starts with letter, and letters/digits can follow, so whole $zz5$ is an $id$.</p></li>\n<li><p>$14A$  </p>\n<p>Starts with digits, so $14$ is a $number$.  </p>\n<p>Then $A$ is an $id$.  </p>\n<p>Thus gives <strong>2 tokens</strong>: $14$, $A$</p></li>\n<li><p>$8H$  </p>\n<p>Starts with digit, so $8$ is a $number$.  </p>\n<p>Then $H$ is an $id$.  </p>\n<p>Thus gives <strong>2 tokens</strong>: $8$, $H$</p></li>\n<li><p>$AaYcD$  </p>\n<p>Starts with a letter and all are letters, so it is an $id$.</p></li>\n</ol>\n<p>Now count all tokens:</p>\n<p>$$ 1 + 2 + 1 + 1 + 2 + 1 + 2 + 2 + 1 = 13 $$</p>\n<p>So, the number of tokens produced is</p>\n<p>$$ \\boxed{13} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following C statements:</p>\n<p>char <em>str1 = \"Hello; /</em> Statement S1 */</p>\n<p>char <em>str2 = \"Hello;\"; /</em> Statement S2 */</p>\n<p>int <em>str3 = \"Hello\"; /</em> Statement S3 */</p>\n<p>Which of the following options is/are correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>S 1 and S 2 have syntactic errors</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>S 2 has a lexical error and S 3 has a syntactic error</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>S 1 has a lexical error and S 3 has a semantic error</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>S1 has a syntactic error and S3 has a semantic error</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let us examine each statement carefully.</p>\n<p>The statements are:</p>\n<p>$$ \\text{S1: } \\texttt{char *str1 = \"Hello;} $$</p>\n<p>$$ \\text{S2: } \\texttt{char *str2 = \"Hello;\";} $$</p>\n<p>$$ \\text{S3: } \\texttt{int *str3 = \"Hello\";} $$</p>\n<p>Now let us classify the errors.</p>\n\n<h2>Statement S1</h2>\n<p>$$ \\texttt{char *str1 = \"Hello;} $$</p>\n<p>Here, the string starts with a double quote but does <strong>not end</strong> with a double quote.</p>\n<p>So the compiler cannot form a valid string token.</p>\n<p>Therefore, this is a <strong>lexical error</strong>.</p>\n\n<h2>Statement S2</h2>\n<p>$$ \\texttt{char *str2 = \"Hello;\";} $$</p>\n<p>Here, the string literal is:</p>\n<p>$$ \\texttt{\"Hello;\"} $$</p>\n<p>which is perfectly valid.</p>\n<p>But after that, there is an extra double quote before the semicolon:</p>\n<p>$$ \\texttt{\"Hello;\";} $$</p>\n<p>This makes the statement invalid in terms of structure of the C statement.</p>\n<p>So this is a <strong>syntactic error</strong>.</p>\n\n<h2>Statement S3</h2>\n<p>$$ \\texttt{int *str3 = \"Hello\";} $$</p>\n<p>Here, $\\texttt{\"Hello\"}$ is a string literal, whose type is compatible with $\\texttt{char *}$ in the usual C context.</p>\n<p>But the variable is declared as:</p>\n<p>$$ \\texttt{int *str3} $$</p>\n<p>Assigning a character string address to an $\\texttt{int *}$ is a <strong>type mismatch</strong>.</p>\n<p>So this is a <strong>semantic error</strong>.</p>\n\n<h2>Now check the options</h2>\n<h3>Option A</h3>\n<p>S1 and S2 have syntactic errors</p>\n<p>This is false, because S1 has a lexical error.</p>\n<h3>Option B</h3>\n<p>S2 has a lexical error and S3 has a syntactic error</p>\n<p>This is false.</p>\n<h3>Option C</h3>\n<p>S1 has a lexical error and S3 has a semantic error</p>\n<p>This is true.</p>\n<h3>Option D</h3>\n<p>S1 has a syntactic error and S3 has a semantic error</p>\n<p>This is false, because S1 is lexical, not syntactic.</p>\n\n<h2>Correct answer</h2>\n<p>$$ \\boxed{\\text{Option C}} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following two sets:</p><p><b>Set X</b></p><p>P. Lexical Analyzer</p><p>Q. Syntax Analyzer</p><p>R. Intermediate Code Generator</p><p>S. Code Optimizer</p><p><b>Set Y</b></p><p>1. Abstract Syntax Tree</p><p>2. Token</p><p>3. Parse Tree</p><p>4. Constant Folding</p><p>Which one of the following options is the correct match from <b>Set X</b> to <b>Set Y</b>?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>P – 4; Q – 1; R – 3; S – 2</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>P – 2; Q – 3; R – 1; S – 4</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>P – 2; Q – 1; R – 3; S – 4</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>P – 4; Q – 3; R – 2; S – 1</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the correct match between Set X and Set Y, we need to understand the roles of each component in the compilation process and align them with their corresponding elements:</p>\n\n<p><b>Set X:</b></p>\n\n<ul>\n\n<li>P. Lexical Analyzer</li>\n\n<li>Q. Syntax Analyzer</li>\n\n<li>R. Intermediate Code Generator</li>\n\n<li>S. Code Optimizer</li>\n\n</ul>\n\n<p><b>Set Y:</b></p>\n\n<ul>\n\n<li>1. Abstract Syntax Tree</li>\n\n<li>2. Token</li>\n\n<li>3. Parse Tree</li>\n\n<li>4. Constant Folding</li>\n\n</ul>\n\n<p>Let's go through each element in Set X and identify the corresponding element in Set Y:</p>\n\n<p><b>P. Lexical Analyzer</b></p>\n\n<p>The lexical analyzer, also known as a scanner, is responsible for converting a sequence of characters into a sequence of tokens. Therefore, the correct match from Set Y is \"2. Token.\"</p>\n\n<p><b>Q. Syntax Analyzer</b></p>\n\n<p>The syntax analyzer, also known as a parser, takes the tokens produced by the lexical analyzer and arranges them into a tree structure according to the rules of grammar. This tree is known as the \"parse tree.\" Therefore, the correct match from Set Y is \"3. Parse Tree.\"</p>\n\n<p><b>R. Intermediate Code Generator</b></p>\n\n<p>The intermediate code generator takes the parse tree or abstract syntax tree and produces an intermediate representation of the source code. This representation is often an abstract syntax tree. Therefore, the correct match from Set Y is \"1. Abstract Syntax Tree.\"</p>\n\n<p><b>S. Code Optimizer</b></p>\n\n<p>The code optimizer makes the intermediate code more efficient without changing its meaning by applying various optimization techniques. One of these techniques is \"constant folding,\" which simplifies constant expressions at compile time. Therefore, the correct match from Set Y is \"4. Constant Folding.\"</p>\n\n<p>Based on this analysis, the correct match from Set X to Set Y is:</p>\n\n<ul>\n\n<li>P – 2</li>\n\n<li>Q – 3</li>\n\n<li>R – 1</li>\n\n<li>S – 4</li>\n\n</ul>\n\n<p>This corresponds to Option B.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In a compiler, keywords of a language are recognized during",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "parsing of the program"
+      },
+      {
+        "identifier": "B",
+        "content": "the code generation"
+      },
+      {
+        "identifier": "C",
+        "content": "the lexical analysis of the program"
+      },
+      {
+        "identifier": "D",
+        "content": "dataflow analysis"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Which data structure in a compiler is used for managing information about variables and their attributes?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Abstract syntax tree "
+      },
+      {
+        "identifier": "B",
+        "content": "Symbol table "
+      },
+      {
+        "identifier": "C",
+        "content": "Semantic stack "
+      },
+      {
+        "identifier": "D",
+        "content": "Parse table"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Match all items in Group 1 with correct options from those given in Group 2.\n<p><b>Group 1</b></p>\nP. Regular expression\n<br>Q. Pushdown automata\n<br>R. Dataflow analysis\n<br>S. Register allocation\n<p><b>Group 2</b></p>\n1. Syntax analysis\n<br>2. Code generation\n<br>3. Lexical analysis\n<br>4. Code optimization",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P - 4. Q - 1, R - 2, S - 3"
+      },
+      {
+        "identifier": "B",
+        "content": "P - 3, Q - 1, R - 4, S - 2"
+      },
+      {
+        "identifier": "C",
+        "content": "P - 3, Q - 4, R - 1, S - 2"
+      },
+      {
+        "identifier": "D",
+        "content": "P - 2, Q - 1, R - 4, S - 3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The number of tokens in the following C statement is:\n<pre><code class=\"c\">printf(\"i = %d, &amp;i = %x\",i, &amp;i);</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "26"
+      },
+      {
+        "identifier": "C",
+        "content": "10"
+      },
+      {
+        "identifier": "D",
+        "content": "21"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Type checking is normally done during",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Lexical analysis"
+      },
+      {
+        "identifier": "B",
+        "content": "Syntax analysis"
+      },
+      {
+        "identifier": "C",
+        "content": "Syntax directed translation"
+      },
+      {
+        "identifier": "D",
+        "content": "Code optimization"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following strings can definitely be said to be tokens without looking at the next input character while compiling a Pascal program?\n<p><b>I.</b> begin \n<br><b>II.</b> program \n<br><b>III.</b> &lt;&gt; </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I"
+      },
+      {
+        "identifier": "B",
+        "content": "II"
+      },
+      {
+        "identifier": "C",
+        "content": "III"
+      },
+      {
+        "identifier": "D",
+        "content": "All of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "In some programming languages, an identifier is permitted to be a letter following by any number of letters or digits. If L and D denote the sets of letters and digits respectively, which of the following expressions defines an identifier?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\left( {L \\cup D} \\right)^ + }$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$L{\\left( {L \\cup D} \\right)^*}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\left( {L.D} \\right)^*}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$L{\\left( {L.D} \\right)^*}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Match the following: \n <p><b>List - I </b></p>\n(a) Lexical Analysis \n<br>(b) Code Optimization \n<br>(c) Code Generation \n<br>(d) Abelian Group \n <p><b>List - II </b></p>\n(p) DAG's \n<br>(q) Syntax trees \n<br>(r) Push Down automata \n<br>(s) Finite automata",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a - s, b - p, c - q, d - r"
+      },
+      {
+        "identifier": "B",
+        "content": "a - r, b - p, c - q, d - s"
+      },
+      {
+        "identifier": "C",
+        "content": "a - s, b - q, c - p, d - r"
+      },
+      {
+        "identifier": "D",
+        "content": "a - s, b - p, c - r, d - q"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "In a compiler the module that checks every character of the source text is called:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The code generator"
+      },
+      {
+        "identifier": "B",
+        "content": "The code optimizer "
+      },
+      {
+        "identifier": "C",
+        "content": "The lexical analyzer"
+      },
+      {
+        "identifier": "D",
+        "content": "The syntax analyzer"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-cse-1988",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following C code segment:</p>\n\n<p>a = b + c;</p>\n\n<p>e = a&nbsp;+ 1;</p>\n\n<p>d = b + c;</p>\n\n<p>f = d&nbsp;+ 1;</p>\n\n<p>g = e&nbsp;+ f;</p>\n\n<p>In a compiler, this code segment is represented internally as a directed acyclic graph (DAG). The number of nodes of nodes in the DAG is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p>To determine the number of nodes in the Directed Acyclic Graph (DAG) representation of the given code segment, we'll step through each line and construct the DAG while identifying common subexpressions.</p>\n<p><strong>Given C Code Segment:</strong></p>\n\n<p><p><code>a = b + c;</code></p></p>\n<p><p><code>e = a + 1;</code></p></p>\n<p><p><code>d = b + c;</code></p></p>\n<p><p><code>f = d + 1;</code></p></p>\n<p><p><code>g = e + f;</code></p></p>\n\n<h3><strong>Step-by-Step Construction:</strong></h3>\n<h4><strong>1. Construct Nodes for Variables and Constants:</strong></h4>\n\n<p><p><strong>Variables:</strong> <code>b</code>, <code>c</code></p></p>\n<p><p><strong>Constants:</strong> <code>1</code></p></p>\n\n<h4><strong>2. Process Each Assignment:</strong></h4>\n<h5><strong>Assignment 1:</strong> <code>a = b + c;</code></h5>\n\n<p><p><strong>Operation Node:</strong> <code>+</code> (with operands <code>b</code> and <code>c</code>)</p></p>\n<p><p><strong>Label:</strong> Node labeled with <code>a</code></p></p>\n\n<h5><strong>Assignment 2:</strong> <code>e = a + 1;</code></h5>\n\n<p><p><strong>Since <code>a</code> is <code>b + c</code>, we can reuse the existing <code>+</code> node for <code>b + c</code>.</strong></p></p>\n<p><p><strong>Operation Node:</strong> <code>+</code> (with operands <code>a</code> (which is <code>b + c</code>) and <code>1</code>)</p></p>\n<p><p><strong>Label:</strong> Node labeled with <code>e</code></p></p>\n\n<h5><strong>Assignment 3:</strong> <code>d = b + c;</code></h5>\n\n<p><p><strong>Common Subexpression:</strong> <code>b + c</code> already exists (from Assignment 1)</p></p>\n<p><p><strong>Label Addition:</strong> Node for <code>b + c</code> now also labeled with <code>d</code></p></p>\n\n<h5><strong>Assignment 4:</strong> <code>f = d + 1;</code></h5>\n\n<p><p><strong>Since <code>d</code> is <code>b + c</code>, we can reuse the node for <code>b + c</code>.</strong></p></p>\n<p><p><strong>Operation Node:</strong> <code>+</code> (with operands <code>d</code> (which is <code>b + c</code>) and <code>1</code>)</p></p>\n<p><p><strong>Common Subexpression:</strong> <code>d + 1</code> is the same as <code>a + 1</code> which we have labeled as <code>e</code></p></p>\n<p><p><strong>Label Addition:</strong> Node for <code>a + 1</code> now also labeled with <code>f</code></p></p>\n\n<h5><strong>Assignment 5:</strong> <code>g = e + f;</code></h5>\n\n<p><p><strong>Since <code>e</code> and <code>f</code> are both <code>a + 1</code> (which is <code>(b + c) + 1</code>), they point to the same node.</strong></p></p>\n<p><p><strong>Operation Node:</strong> <code>+</code> (with operands <code>e</code> and <code>f</code> which are the same node)</p></p>\n<p><p><strong>Label:</strong> Node labeled with <code>g</code></p></p>\n\n<h3><strong>DAG Representation:</strong></h3>\n\n<p><p><strong>Node 1:</strong> <code>b</code> (variable)</p></p>\n<p><p><strong>Node 2:</strong> <code>c</code> (variable)</p></p>\n<p><p><strong>Node 3:</strong> <code>+</code> operation with operands <code>b</code> and <code>c</code>; labeled with <code>a</code> and <code>d</code></p></p>\n<p><p><strong>Node 4:</strong> <code>1</code> (constant)</p></p>\n<p><p><strong>Node 5:</strong> <code>+</code> operation with operands Node 3 (<code>b + c</code>) and Node 4 (<code>1</code>); labeled with <code>e</code> and <code>f</code></p></p>\n<p><p><strong>Node 6:</strong> <code>+</code> operation with operands Node 5 (<code>(b + c) + 1</code>) and Node 5 (since <code>e</code> and <code>f</code> are the same); labeled with <code>g</code></p></p>\n\n<h3><strong>Counting the Nodes:</strong></h3>\n\n<p><strong>Total Nodes:</strong> 6</p>\n\n<p><strong>Therefore, the number of nodes in the DAG is</strong> <strong>6</strong>.</p>\n<hr />\n<p><strong>Answer:</strong> 6</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A lexical analyzer uses the following patterns to recognize three tokens $${T_1},{T_2},$$ and $${T_3}$$ over the alphabet $$\\left\\{ {a,b,c} \\right\\}.$$ \n<p>$$\\eqalign{\n  &amp; {T_1}:\\,\\,\\,a?{\\left( {b|c} \\right)^ * }a  \\cr \n  &amp; {T_2}:\\,\\,\\,b?{\\left( {a|c} \\right)^ * }b  \\cr \n  &amp; {T_3}:\\,\\,\\,c?{\\left( {b|a} \\right)^ * }c \\cr} $$</p>\n<p>Note that $$'x?'$$ means $$0$$ or $$1$$ occurrence of the symbol $$x.$$ Note also that the analyzer outputs the token that matches the longest possible prefix.</p>\n<p>If the string $$bbaacabc$$ is processed by the analyzer, which one of the following is the sequence of tokens it outputs?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${T_1}{T_2}{T_3}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${T_1}{T_1}{T_3}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${T_2}{T_1}{T_3}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${T_3}{T_3}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>The lexical analyzer processes the input string <code>bbaacabc</code> by repeatedly finding the longest prefix that matches any of the given token patterns $T_1, T_2, T_3$.</p>\n<p>The token patterns are:</p>\n<ul>\n<li><p>$T_1: a? (b|c)^* a$</p></li>\n<li><p>$T_2: b? (a|c)^* b$</p></li>\n<li><p>$T_3: c? (b|a)^* c$</p></li>\n</ul>\n<p>Let's break down the processing:</p>\n<p><strong>Step 1: Process <code>bbaacabc</code></strong></p>\n<p>We will look for the longest prefix of <code>bbaacabc</code> that matches $T_1$, $T_2$, or $T_3$.</p>\n<ul>\n<li><p><strong>For $T_1: a? (b|c)^* a$</strong></p>\n<p>This pattern requires the string to end with 'a'. The part before the final 'a' must be optional 'a' followed by zero or more 'b's or 'c's.</p>\n<ul>\n<li><p><code>bba</code>: Matches $T_1$. (Optional <code>a?</code> is empty, <code>(b|c)^*</code> matches <code>bb</code>, final <code>a</code> matches <code>a</code>). Length = 3.</p></li>\n<li><p><code>bbaa</code>: Does not match. The last <code>a</code> is the final <code>a</code>. The prefix <code>bba</code> does not match <code>a?(b|c)^*</code> because <code>bba</code> contains an <code>a</code> which is not at the start and not allowed in <code>(b|c)^*</code>.</p></li>\n<li><p><code>bbaaca</code>: Does not match. The last <code>a</code> is the final <code>a</code>. The prefix <code>bbaac</code> does not match <code>a?(b|c)^*</code> because <code>bbaac</code> contains an <code>a</code> which is not at the start and not allowed in <code>(b|c)^*</code>.</p></li>\n<li><p>No other longer prefixes ending in <code>a</code> match $T_1$.</p></li>\n<li><p><em>Longest $T_1$ match: <code>bba</code> (Length 3)</em></p></li></ul></li>\n<li><p><strong>For $T_2: b? (a|c)^* b$</strong></p>\n<p>This pattern requires the string to end with 'b'. The part before the final 'b' must be optional 'b' followed by zero or more 'a's or 'c's.</p>\n<ul>\n<li><p><code>b</code>: Matches $T_2$. (Optional <code>b?</code> is empty, <code>(a|c)^*</code> matches empty string, final <code>b</code> matches <code>b</code>). Length = 1.</p></li>\n<li><p><code>bb</code>: Matches $T_2$. (Optional <code>b?</code> matches <code>b</code>, <code>(a|c)^*</code> matches empty string, final <code>b</code> matches <code>b</code>). Length = 2.</p></li>\n<li><p><code>bbaacab</code>: Does not match. The last <code>b</code> is the final <code>b</code>. The prefix <code>bbaaca</code> must match <code>b?(a|c)^*</code>.</p>\n<ul>\n<li><p>If <code>b?</code> is empty: <code>bbaaca</code> does not match <code>(a|c)^*</code> as it contains <code>b</code>.</p></li>\n<li><p>If <code>b?</code> matches <code>b</code>: <code>bbaaca</code> must match <code>b(a|c)^*</code>. The <code>b</code> matches first <code>b</code>. The <code>baaca</code> does not match <code>(a|c)^*</code> as it contains <code>b</code>.</p></li></ul></li>\n<li><p><em>Longest $T_2$ match: <code>bb</code> (Length 2)</em></p></li></ul></li>\n<li><p><strong>For $T_3: c? (b|a)^* c$</strong></p>\n<p>This pattern requires the string to end with 'c'. The part before the final 'c' must be optional 'c' followed by zero or more 'b's or 'a's.</p>\n<ul>\n<li><p><code>bbaac</code>: Matches $T_3$. (Optional <code>c?</code> is empty, <code>(b|a)^*</code> matches <code>bbaa</code>, final <code>c</code> matches <code>c</code>). Length = 5.</p></li>\n<li><p><code>bbaacabc</code>: Does not match. The last <code>c</code> is the final <code>c</code>. The prefix <code>bbaacab</code> must match <code>c?(b|a)^*</code>.</p>\n<ul>\n<li><p>If <code>c?</code> is empty: <code>bbaacab</code> does not match <code>(b|a)^*</code> as it contains <code>c</code>.</p></li>\n<li><p>If <code>c?</code> matches <code>c</code>: <code>bbaacab</code> must match <code>c(b|a)^*</code>. It does not start with <code>c</code>.</p></li></ul></li>\n<li><p><em>Longest $T_3$ match: <code>bbaac</code> (Length 5)</em></p></li></ul></li>\n</ul>\n<p>Comparing the longest matches:</p>\n<ul>\n<li><p>$T_1$: <code>bba</code> (Length 3)</p></li>\n<li><p>$T_2$: <code>bb</code> (Length 2)</p></li>\n<li><p>$T_3$: <code>bbaac</code> (Length 5)</p></li>\n</ul>\n<p>The longest prefix is <code>bbaac</code>, which matches $T_3$.</p>\n<p><strong>Output:</strong> $T_3$.</p>\n<p>Remaining string: <code>abc</code>.</p>\n<p><strong>Step 2: Process <code>abc</code></strong></p>\n<p>We will look for the longest prefix of <code>abc</code> that matches $T_1$, $T_2$, or $T_3$.</p>\n<ul>\n<li><p><strong>For $T_1: a? (b|c)^* a$</strong></p>\n<ul>\n<li><p><code>a</code>: Matches $T_1$. (Optional <code>a?</code> is empty, <code>(b|c)^*</code> matches empty string, final <code>a</code> matches <code>a</code>). Length = 1.</p></li>\n<li><p><em>Longest $T_1$ match: <code>a</code> (Length 1)</em></p></li></ul></li>\n<li><p><strong>For $T_2: b? (a|c)^* b$</strong></p>\n<ul>\n<li><p><code>ab</code>: Matches $T_2$. (Optional <code>b?</code> is empty, <code>(a|c)^*</code> matches <code>a</code>, final <code>b</code> matches <code>b</code>). Length = 2.</p></li>\n<li><p><em>Longest $T_2$ match: <code>ab</code> (Length 2)</em></p></li></ul></li>\n<li><p><strong>For $T_3: c? (b|a)^* c$</strong></p>\n<ul>\n<li><p><code>abc</code>: Matches $T_3$. (Optional <code>c?</code> is empty, <code>(b|a)^*</code> matches <code>ab</code>, final <code>c</code> matches <code>c</code>). Length = 3.</p></li>\n<li><p><em>Longest $T_3$ match: <code>abc</code> (Length 3)</em></p></li></ul></li>\n</ul>\n<p>Comparing the longest matches:</p>\n<ul>\n<li><p>$T_1$: <code>a</code> (Length 1)</p></li>\n<li><p>$T_2$: <code>ab</code> (Length 2)</p></li>\n<li><p>$T_3$: <code>abc</code> (Length 3)</p></li>\n</ul>\n<p>The longest prefix is <code>abc</code>, which matches $T_3$.</p>\n<p><strong>Output:</strong> $T_3$.</p>\n<p>Remaining string: empty.</p>\n<p>The sequence of tokens outputted is $T_3 T_3$.</p>\n<p>The final answer is $\\boxed{\\text{${T_3}{T_3}$}}$.</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following statements is FALSE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Context-free grammar can be used to specify both lexical and syntax rules. "
+      },
+      {
+        "identifier": "B",
+        "content": "Type checking is done before parsing. "
+      },
+      {
+        "identifier": "C",
+        "content": "High-level language programs can be translated to different Intermediate Representations. "
+      },
+      {
+        "identifier": "D",
+        "content": "Arguments to a function can be passed using the program stack.  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following grammars is free from $$left$$ $$recursion$$? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\eqalign{\n  &amp; S\\,\\, \\to \\,\\,AB  \\cr \n  &amp; A\\,\\, \\to \\,\\,Aa\\,\\,|\\,\\,b  \\cr \n  &amp; B \\to c \\cr} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\eqalign{\n  &amp; S\\,\\, \\to \\,\\,AB\\,\\,|\\,\\,Bb\\,\\,|\\,\\,c  \\cr \n  &amp; A\\,\\, \\to \\,\\,Bd\\,\\,|\\,\\,\\varepsilon   \\cr \n  &amp; B \\to e \\cr} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\eqalign{\n  &amp; S\\,\\, \\to \\,\\,Aa\\,\\,|\\,\\,B\\,\\,|\\,\\,  \\cr \n  &amp; A\\,\\, \\to \\,\\,Bd\\,\\,|\\,\\,Sc\\,\\,|\\,\\,\\varepsilon   \\cr \n  &amp; B \\to d \\cr} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\eqalign{\n  &amp; S\\,\\, \\to \\,\\,Aa\\,\\,|\\,\\,Bb\\,\\,|\\,\\,c  \\cr \n  &amp; A\\,\\, \\to \\,\\,Bd\\,\\,|\\,\\,\\varepsilon   \\cr \n  &amp; B \\to Ae\\,\\,|\\,\\,\\varepsilon  \\cr} $$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following are true? \n<p>I. A programming language which does not permit global variables of any kind and has no nesting of procedures/functions, but permits recursion can be implemented with static storage allocation </p>\n<p>II. Multi-level access link (or display) arrangement is needed to arrange activation records only if the programming language being implemented has nesting of procedures/functions</p> \n<p>III. Recursion in programming languages cannot be implemented with dynamic storage allocation </p>\n<p>IV. Nesting procedures/functions and recursion require a dynamic heap allocation scheme and cannot be implemented with a stack-based allocation scheme for activation records </p>\n<p>V. Programming languages which permit a function to return a function as its result cannot be implemented with a stack-based storage allocation scheme for activation records</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "II only"
+      },
+      {
+        "identifier": "B",
+        "content": "I, III and IV only"
+      },
+      {
+        "identifier": "C",
+        "content": "I, II and V only"
+      },
+      {
+        "identifier": "D",
+        "content": "II, III and V only"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The number of tokens in the Fortran statement <b>DO 10 I = 1.25</b> is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "Here in the statement,\n<br/><br/> DO 10 I = 1.25\n<br/><br/>Because of decimal point we can say DO is not a keyword, it is a part of the identifier DO10I.\n<br/><br/>So here 3 tokens present\n<br/><br/>”DO10I” $$ \\to $$ 1\n<br/><br/>“=“ $$ \\to $$ 2\n<br/><br/>“1.25” $$ \\to $$ 3\n<br/><br/><b><i>Note :</i></b> In the statement\n<br/><br/> DO 10 I = 1,25\n<br/><br/>We have seven tokens\n<br/><br/>1. keyword DO\n<br/><br/>2. The statement label 10\n<br/><br/>3. The identifier I\n<br/><br/>4. The operator =\n<br/><br/>5. The constant 1\n<br/><br/>6. The comma\n<br/><br/>7. The constant 25\n<br/><br/>Here, DO is a keyword because of comma.",
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  }
+]

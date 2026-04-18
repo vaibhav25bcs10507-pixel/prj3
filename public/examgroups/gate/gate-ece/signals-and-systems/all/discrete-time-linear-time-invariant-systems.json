@@ -1,0 +1,686 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the discrete-time system below with input $x[n]$ and output $y[n]$. In the figure, $h_1[n]$ and $h_2[n]$ denote the impulse responses of LTI Subsystems 1 and 2, respectively. Also, $\\delta[n]$ is the unit impulse, and $b&gt;0$.</p>\n<p>Assuming $h_2[n] \\neq \\delta[n]$, the overall system (denoted by the dashed box) is_________.</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbero2ra/7483ce0c-b302-4a24-8bdb-b729299b6212/f5e52960-3f82-11f0-8c45-9940f0f1d7bd/file-jaoe38c1mbero2rb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbero2ra/7483ce0c-b302-4a24-8bdb-b729299b6212/f5e52960-3f82-11f0-8c45-9940f0f1d7bd/file-jaoe38c1mbero2rb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Signals and Systems - Discrete Time Linear Time Invariant Systems Question 3 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "linear and time invariant\n"
+      },
+      {
+        "identifier": "B",
+        "content": "linear and time variant\n"
+      },
+      {
+        "identifier": "C",
+        "content": "nonlinear and time invariant\n"
+      },
+      {
+        "identifier": "D",
+        "content": "nonlinear and time variant"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mberp9yl/9c235420-f743-4052-aa63-f8aecca70a6f/1744b5d0-3f83-11f0-8c45-9940f0f1d7bd/file-jaoe38c1mberp9ym.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mberp9yl/9c235420-f743-4052-aa63-f8aecca70a6f/1744b5d0-3f83-11f0-8c45-9940f0f1d7bd/file-jaoe38c1mberp9ym.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Signals and Systems - Discrete Time Linear Time Invariant Systems Question 3 English Explanation\"></p>\n<p>$$ \\begin{array}{rlrl} \\therefore  p(n) &amp; =\\left[x(n) * h_1(n)\\right]+b \\delta(n) \\\\ \\Rightarrow  q(n) &amp; =h_2(n) * p(n)=h_2(n) *\\left[x(n) * h_1(n)+b \\delta(n)\\right] \\\\  &amp; =x(n) * h_1(n) * h_2(n)+b h_2(n) \\quad\\left[\\because h_2(n) * \\delta(n)=h_2(n)\\right] \\\\ \\Rightarrow   y(n) &amp; =q(n)-b \\delta(n) \\\\ &amp;   =\\left[x(n) * h_1(n) * h_2(n)+b \\cdot h_2(n)\\right]-b \\delta(n) \\\\ \\therefore   y(n) &amp; =x(n) * h_1(n) * h_2(n)+\\underbrace{b h_2(n)-b \\delta(n)}_{f(n)} \\end{array} $$</p>\n<p>where, $\\quad f(n)=b h_2(n)-b \\delta(n)$</p>\n<p>Because of $f(n)$ in the output $y(n)$, the system is non-linear and time-variant.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a system with input $$x(t)$$ and output $$y(t) = x({e^t})$$. The system is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Causal and time invariant."
+      },
+      {
+        "identifier": "B",
+        "content": "Non-causal and time varying."
+      },
+      {
+        "identifier": "C",
+        "content": "Causal and time varying."
+      },
+      {
+        "identifier": "D",
+        "content": "Non-causal and time invariant."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> $y(t)=x\\left(e^t\\right)$</p>\n\n<p>To check time invariance,</p>\n\n<p>$$ \\begin{aligned} & y\\left(t, t_0\\right)=T\\left\\{x\\left(t-t_0\\right)\\right\\}=x\\left(e^t-t_0\\right) .......(i) \\\\\\\\ & y\\left(t-t_0\\right)=x\\left(e^{t-t_0}\\right).........(ii) \\end{aligned} $$</p>\n\n<p>From equation (i) and (ii),</p>\n\n<p>$$ y\\left(t, t_0\\right) \\neq y\\left(t-t_0\\right) $$</p>\n\n<p>So, given system is time variant</p>\n\n<p>Let $t=3 \\mathrm{sec}$</p>\n\n<p>$$ y(3)=x\\left(e^3\\right) $$</p>\n\n<p>According to above equation, output depends on future inputs.</p>\n\n<p>So, given system is non-causal.</p>\n\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The output $y[n]$ of a discrete - time system for an input $x[n]$ is</p>\n<p>$$ y[n]=\\max\\limits_{-\\infty \\leq k \\leq n}|x[k]| $$</p>\n<p>The unit impulse response of the system is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>unit step signal $u[n]$.</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>0 for all $n$.</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>unit impulse signal $\\delta[n]$.</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>1 for all $n$.</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $y[n]=\\max\\limits_{-\\infty \\leq k \\leq n}|x(k)|$</p>\n<p>To find response of the system for impulse input, i.e. impulse response , taking</p>\n<p>$$ \\begin{aligned} x[n] & =\\delta[n] \\text { then output } \\\\ y[n] \\cong & h[n]=\\max _{-\\infty \\leq k \\leq n}|\\delta(k)| \\\\ h[n] & =0 \\text { for } n<0 \\\\ & 1 \\text { for } n \\geq 0 \\end{aligned} $$</p>\n<p>As impulse will occur at $k=0$ and from the given condition $k \\leq n$, so impulse response will be 1 for all $n \\geq 0$, which is same as the definition of unit step signal $u[n]$.</p>\n<p>Hence the correct option is (A).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider  a single input single output discrete-time system with $$h\\left[ n \\right]\\,$$ as input and $$y\\left[ n \\right]\\,$$ as output, where the two are related as \n<br>$$y\\left[ n \\right]\\, = \\left\\{ {\\matrix{\n   {n\\left| {x\\left[ n \\right]} \\right|,} &amp; {for\\,\\,0 \\le n \\le 10}  \\cr \n   {x\\left[ n \\right] - x\\left[ {n - 1} \\right],} &amp; {otherwise,}  \\cr \n\n } } \\right.$$ \n<p>Which one of the following statements is true about the system?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It is causal and stable "
+      },
+      {
+        "identifier": "B",
+        "content": "It is causal but not stable "
+      },
+      {
+        "identifier": "C",
+        "content": "It is not causal but stable "
+      },
+      {
+        "identifier": "D",
+        "content": "It is neither causal nor stable "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An <b>LTI</b> system with unit sample response \n<br>$$h\\left( n \\right) = 5\\delta \\left[ n \\right] - 7\\delta \\left[ {n - 1} \\right] + 7\\delta \\left[ {n - 3} \\right] - 5\\delta \\left[ {n - 4} \\right]$$ is a<br> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "low pass filter "
+      },
+      {
+        "identifier": "B",
+        "content": "high pass filter "
+      },
+      {
+        "identifier": "C",
+        "content": "band pass filter "
+      },
+      {
+        "identifier": "D",
+        "content": "band stop filter "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A system is defined by its impulse response $$h\\left( n \\right) = {2^n}\\,u\\left( {n - 2} \\right).$$ The system is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "stable and causal. "
+      },
+      {
+        "identifier": "B",
+        "content": "causal but not stable. "
+      },
+      {
+        "identifier": "C",
+        "content": "stable but not causal. "
+      },
+      {
+        "identifier": "D",
+        "content": "unstable and non causal. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Two discrete time systems with impulse responses $${h_1}\\left[ n \\right]\\, = \\delta \\left[ {n - 1} \\right]$$ and $${h_2}\\left[ n \\right]\\, = \\delta \\left[ {n - 2} \\right]$$ are connected in cascade. The overall impulse response of the cascaded system is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\delta \\left[ {n - 1} \\right] + \\delta \\left[ {n - 2} \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\delta \\left[ {n - 4} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\delta \\left[ {n - 3} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\delta \\left[ {n - 1} \\right]\\delta \\left[ {n - 2} \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The impulse response $$h\\left[ n \\right]$$ of a linear time-invariant system is given by $$h\\left[ n \\right]$$ $$ = u\\left[ {n + 3} \\right] + u\\left[ {n - 2} \\right] - 2\\,u\\left[ {n - 7} \\right],$$ where $$u\\left[ n \\right]$$ is the unit step sequence. The above system is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "stable but not causal. "
+      },
+      {
+        "identifier": "B",
+        "content": "stable and causal. "
+      },
+      {
+        "identifier": "C",
+        "content": "causal but unstable. "
+      },
+      {
+        "identifier": "D",
+        "content": "unstable and not causal."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A sequence $$x\\left( n \\right)$$ with the $$z$$-transform $$X\\left( z \\right)$$ $$ = {z^4} + {z^2} - 2z + 2 - 3{z^{ - 4}}$$ is applied as an input to a linear, time-invariant system with the impulse response $$h\\left( n \\right) = 2\\delta \\left( {n - 3} \\right)$$ \n<br>where $$\\matrix{\n   {\\delta \\left( n \\right) = 1,} &amp; {n = 0}  \\cr \n   {0,} &amp; {otherwise}  \\cr \n\n } $$<br>\n<br>The output at $$n = 4$$ is<br> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-6 "
+      },
+      {
+        "identifier": "B",
+        "content": "zero "
+      },
+      {
+        "identifier": "C",
+        "content": "2 "
+      },
+      {
+        "identifier": "D",
+        "content": "-4 "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For a unit step input $u[n]$, a discreate-time $L T I$ system produces an output signal $(2 \\delta[n+1]+\\delta[n]+\\delta[n-1])$. Let $y[n]$ be the output of the system for an input $\\left(\\left(\\frac{1}{2}\\right)^n u[n]\\right)$.</p>\n<p>The value of $y[0]$ is The value of $y[0]$ is $\\_\\_\\_\\_$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": "<p>Solution: From question, we have Step response, $=S(n)$</p>\n<p>Impulse Response, $\\boldsymbol{h}[n]=S(n)-S(n-1)$</p>\n<p>After putting the values, we get</p>\n<p>$$ \\begin{aligned} \\boldsymbol{h}[n]= & 2 \\delta[n+1]+\\delta[n]+\\delta[n-1] \\\\ & -2 \\delta[n]-\\delta[n-1]-\\delta[n-2] \\\\ \\boldsymbol{h}[n]= & 2 \\delta[n+1]-\\delta[n]-\\delta[n-2] \\end{aligned} $$</p>\n<p>Now For the input value $x[n]=\\left(\\frac{1}{2}\\right)^n u[n]$ :</p>\n<p>Now the Output is,</p>\n<p>$$ \\begin{aligned} y[n]= & 2 \\delta[n+1] *\\left(\\frac{1}{2}\\right)^n u[n]-\\delta[n] *\\left(\\frac{1}{2}\\right)^n u[n] \\\\ & -\\delta[n-2] *\\left(\\frac{1}{2}\\right)^n u[n] \\end{aligned} $$</p>\n<p>$$ \\begin{aligned}or,< & y[n]=\\left(\\frac{1}{2}\\right)^n u(n+1)-\\left(\\frac{1}{2}\\right)^n u(n)-\\left(\\frac{1}{2}\\right)^{n-2} u(n-2) \\\\ & y(0)=1-1=0 \\end{aligned} $$</p>\n<p>$$ \\text { Hence, the correct answer is }(0 \\text { to } 0) \\text {. } $$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "content": "Two sequence $${x_1}\\left[ n \\right]$$ and $${x_2}\\left[ n \\right]$$ have the same energy. \n<br>Suppose $${x_1}\\left[ n \\right]$$ $$ = \\alpha \\,{0.5^n}\\,u\\left[ n \\right],$$ where $$\\alpha $$ is a positive real number and $$u\\left[ n \\right]\\,$$  is the unit step sequence. Assume \n$$${x_2}\\left[ n \\right] = \\,\\left\\{ {\\matrix{\n   {\\sqrt {1.5} } &amp; {for\\,\\,\\,n = 0,1}  \\cr \n   0 &amp; {otherwise}  \\cr \n\n } } \\right.$$$\n<p> Then the value of $$\\,\\alpha $$ is________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.5",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a discrete-time signal \n<br> $$x\\left[ n \\right] = \\left\\{ {\\matrix{\n   {n\\,\\,for\\,\\,0 \\le n \\le 10}  \\cr \n   {0\\,\\,otherwise}  \\cr \n\n } } \\right.$$ \n<p>If $$y\\left[ n \\right]$$ is the convolution of $$x\\left[ n \\right]$$ with itself, the value of $$y\\left[ 4 \\right]$$ is </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "10",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$y\\left[ n \\right]$$ denote the convolution of $$h\\left[ n \\right]$$ and $$g\\left[ n \\right]$$, where $$h\\left[ n \\right]$$ $$ = \\,{\\left( {1/2} \\right)^2}\\,\\,u\\left[ n \\right]$$ and $$g\\left[ n \\right]\\,$$ is a causal sequence. If $$y\\left[ 0 \\right]\\,$$ $$ = \\,1$$ and $$y\\left[ 1 \\right]\\,$$ $$ = \\,1/2,$$  then $$g\\left[ 1 \\right]$$ equals ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 "
+      },
+      {
+        "identifier": "B",
+        "content": "1/2 "
+      },
+      {
+        "identifier": "C",
+        "content": "1 "
+      },
+      {
+        "identifier": "D",
+        "content": "3/2 "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Two system $${H_1}\\left( z \\right)$$ and $${H_2}\\left( z \\right)$$ are connected in cascade as shown below. The overall output  $$y\\left( n \\right)$$ is the same as the input $$x\\left( n \\right)$$ with a one unit delay. The transfer function of the second system $${H_2}\\left( z \\right)$$ is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/380e8fc279122bff8aabb13dcf613156da2997d4956127bf89f500ff81e444e4.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Signals and Systems - Discrete Time Linear Time Invariant Systems Question 12 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{\\left( {1 - 0.6\\,{z^{ - 1}}} \\right)} \\over {{z^{ - 1}}\\left( {1 - 0.4\\,{z^{ - 1}}} \\right)}}\\,$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{{z^{ - 1}}\\left( {1 - 0.6\\,{z^{ - 1}}} \\right)} \\over {\\left( {1 - 0.4\\,{z^{ - 1}}} \\right)}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{z^{ - 1}}\\left( {1 - 0.4\\,{z^{ - 1}}} \\right)} \\over {\\left( {1 - 0.6\\,{z^{ - 1}}} \\right)}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\left( {1 - 0.4\\,{z^{ - 1}}} \\right)} \\over {{z^{ - 1}}\\left( {1 - 0.6\\,{z^{ - 1}}} \\right)}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function of a discrete time <b>LTI</b> system is given by \n<br>$$H\\left( z \\right) = {{2 - {3 \\over 4}{z^{ - 1}}} \\over {1 - {3 \\over 4}{z^{ - 1}} + {1 \\over 8}{z^{ - 2}}}}$$\n<p>Consider the following statements:\n<br>S1: The system is stable and causal for $$ROC:\\,\\,\\,\\left| z \\right| &gt; \\,1/2$$ \n<br>S2: The system is stable but not causal for $$ROC:\\,\\,\\,\\left| z \\right| &lt; \\,1/4$$\n<br>S3: The system is neither stable nor causal for $$ROC:\\,\\,1/4\\, &lt; \\,\\left| z \\right| &lt; \\,{\\raise0.5ex\\hbox{$\\scriptstyle 1$}\n\\kern-0.1em/\\kern-0.15em\n\\lower0.25ex\\hbox{$\\scriptstyle 2$}}$$ </p> \n<p>Which one of the following statements is valid?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both S1 and S2 are true "
+      },
+      {
+        "identifier": "B",
+        "content": "Both S2 and S3 are true "
+      },
+      {
+        "identifier": "C",
+        "content": "Both S1 and S3 are true "
+      },
+      {
+        "identifier": "D",
+        "content": "S1, S2 and S3 are all true "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "A discrete time linear shift - invariant system has an impulse response $$h\\left[ n \\right]$$ with $$h\\left[ 0 \\right]$$ $$ = 1,\\,\\,h\\left[ 1 \\right]\\,\\, =  - 1,\\,\\,h\\left[ 2 \\right]\\,\\, = \\,2$$, and zero otherwise. The system is given an input sequence $$x\\left[ n \\right]$$ with $$x\\left[ 0 \\right]$$ $$ = \\,x\\left[ 2 \\right]\\, = \\,1,$$ and zero otherwise. The number of nonzero samples in the output sequence $$y\\left[ n \\right]$$, and the value of $$y\\left[ 2 \\right]$$  are, respectively",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5,  2 "
+      },
+      {
+        "identifier": "B",
+        "content": "6,  2 "
+      },
+      {
+        "identifier": "C",
+        "content": "6,  1 "
+      },
+      {
+        "identifier": "D",
+        "content": "5,  3 "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A system with input $$x\\left( n \\right)$$ and output $$y\\left( n \\right)$$ is given as $$y\\left( n \\right)$$ $$ = \\left( {\\sin {5 \\over 6}\\,\\pi \\,n} \\right)x\\left( n \\right).$$ The system is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "linear, stable and invertible. "
+      },
+      {
+        "identifier": "B",
+        "content": "non-linear, stable and non-invertible. "
+      },
+      {
+        "identifier": "C",
+        "content": "linear, stable and non-invertible. "
+      },
+      {
+        "identifier": "D",
+        "content": "linear, unstable and invertible. "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The impulse response $$h\\left[ n \\right]$$ of a linear time invariant system is given as \n<br>$$h\\left[ n \\right] = \\left\\{ {\\matrix{\n   { - 2\\sqrt 2 ,} &amp; {n = 1, - 1}  \\cr \n   {4\\sqrt 2 ,} &amp; {n = 2, - 2}  \\cr \n   {0,} &amp; {otherwise}  \\cr \n\n } } \\right.$$<br>\n<p>If the input to the above system is the sequence $${e^{j\\pi n/4}},$$ then the output is</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4\\sqrt 2 \\,{\\mkern 1mu} {e^{j\\,\\pi \\,n\\,\\,/\\,4}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4\\sqrt 2 \\,{\\mkern 1mu} {e^{ - j\\,\\pi \\,n\\,/4}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4{\\mkern 1mu} {e^{j\\,\\pi \\,n\\,/4}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - 4{\\mkern 1mu} {e^{j\\,\\pi \\,n\\,/4}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A causal <b>LTI</b> system is described by the difference equation $$2y\\left[ n \\right] = ay\\left[ {n - 2} \\right] - 2x\\left[ n \\right] + \\beta x\\left[ {n - 1} \\right].$$  The system is stable only if ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left| \\alpha  \\right| = 2,\\,\\left| \\beta  \\right| &lt; 2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left| \\alpha  \\right| &gt; 2,\\,\\left| \\beta  \\right| &gt; 2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left| \\alpha  \\right| &lt; 2$$, any value of $$\\beta $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left| \\beta  \\right| &lt; 2,$$ any value of $$\\alpha $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Let P be linearity, Q be time-invariance, R be causality and S be stability. \n<p>A discrete time system has the input-output relationship,</p>\n<br>$$y\\left( n \\right) = \\left\\{ {\\matrix{\n   {x\\left( n \\right),} &amp; {n \\ge 1}  \\cr \n   {0,} &amp; {n = 0}  \\cr \n   {x\\left( {n + 1} \\right),} &amp; {n \\le  - 1}  \\cr \n\n } } \\right.$$<br>\n<p>Where $$x\\left( n \\right)\\,$$ is the input and $$y\\left( n \\right)\\,$$ is the output. The above system has the properties</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P, S but not Q, R"
+      },
+      {
+        "identifier": "B",
+        "content": "P, Q, S but not R "
+      },
+      {
+        "identifier": "C",
+        "content": "P, Q, R, S"
+      },
+      {
+        "identifier": "D",
+        "content": "Q, R, S but not P"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "If the impulse response of a discrete-time system is $$h\\left[ n \\right]\\, = \\, - {5^n}\\,\\,u\\left[ { - n\\, - 1} \\right],$$ then the system function $$H\\left( z \\right)\\,\\,\\,$$ is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{ - z} \\over {z - 5}}$$ and the system is stable. "
+      },
+      {
+        "identifier": "B",
+        "content": "$${z \\over {z - 5}}$$ and the system is stable. "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{ - z} \\over {z - 5}}$$ and the system is unstable. "
+      },
+      {
+        "identifier": "D",
+        "content": "$${z \\over {z - 5}}$$ and the system is unstable. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "A linear discrete - time system has the characteristic equation, $${z^3} - 0.81\\,\\,z = 0.$$ The system ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "is stable. "
+      },
+      {
+        "identifier": "B",
+        "content": "is marginally stable. "
+      },
+      {
+        "identifier": "C",
+        "content": "is unstable. "
+      },
+      {
+        "identifier": "D",
+        "content": "stability cannot be assessed from the given information. "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the system shown in the Fig.1 below. The transfer function  $$Y\\left( z \\right)/X\\left( z \\right)$$ of the system is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/whQpS4ndpgkTZUAcw/aVRVRszHCU0wPcgSRx4Mt4osqnc50/cHQ2EK066a18FXcnoGVht5/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1988 Signals and Systems - Discrete Time Linear Time Invariant Systems Question 21 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{1 + a\\,{z^{ - 1}}} \\over {1 + b\\,{z^{ - 1}}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{1 + b\\,{z^{ - 1}}} \\over {1 + a\\,{z^{ - 1}}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{1 + a\\,{z^{ - 1}}} \\over {1 - b\\,{z^{ - 1}}}}$$  "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{1 - b\\,{z^{ - 1}}} \\over {1 + a\\,{z^{ - 1}}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "The output of a system is given in difference equation form as $$y\\left( k \\right) = \\,a\\,\\,y\\left( {k - 1} \\right) + x\\left( k \\right),$$  where $$x\\left( k \\right)$$ is the input. If $$x\\left( k \\right)$$ $$\\, = \\,\\,0$$ for $$k\\, \\ne \\,0,\\,\\,x\\left( 0 \\right)\\, = \\,1,$$  and $$y\\left( 0 \\right)\\, = \\,0,$$  find $$y\\left( k \\right)$$ for all $$k.$$ \n<p>Determine the range of $$'a'$$  for which $$y\\left( k \\right)\\,$$ is bounded.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$y\\left( k \\right)\\,$$ is bounded where $$\\left| a \\right|\\, &gt; \\,1$$. ",
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "In Fig. 1, a linear time invariant discrete system is shown. Blocks labeled D represent unit delay elements. For $$n\\, &lt; 0,$$ you may assume that $$x\\left( n \\right),$$ $${y_1}\\left( n \\right),\\,\\,{y_2}\\left( n \\right)$$ are all zero. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/846bcb2b58356bbc5ee315c4b75319d5b30bb05d002b8eb69ded39fe7d75f0c9.jpg\" loading=\"lazy\" alt=\"GATE ECE 1997 Signals and Systems - Discrete Time Linear Time Invariant Systems Question 5 English\"> \n<p>(a) Find the expression for $${y_1}\\left( n \\right)$$ and $${y_2}\\left( n \\right)$$ in terms of $$x\\left( n \\right).$$ \n<br>(b) Find the transfer function $${y_2}\\left( z \\right)/X\\left( z \\right)$$ in the $$z$$-domain.\n<br>(c) If $$x\\left( n \\right) = 1$$ at $$n = 0$$      or      $$x\\left( n \\right) = 0$$  otherwise</p>\n<p>Find $${y_2}\\left( n \\right).$$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) $$${y_1}\\left( n \\right) = x\\left( {n - 1} \\right) - 2{y_1}\\left( {n - 1} \\right) - {y_1}\\left( {n - 2} \\right)$$$\n$$${y_2}\\left( n \\right) = x\\left( {n - 2} \\right) - 2{y_2}\\left( {n - 1} \\right) - {y_2}\\left( {n - 2} \\right)$$$\n<p>(b) $${{{y_2}\\left( z \\right)} \\over {x\\left( z \\right)}} = {1 \\over {{{\\left( {z + 1} \\right)}^2}}}$$</p>\n<p>(c) $${y_2}\\left( n \\right) = 0$$ where $$n \\le 0$$</p>",
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "In the linear time-invariant system shown in Fig. 1, blocks labeled D represent unit delay elements. Find the expression for $$y\\left( n \\right),$$ and also the transfer function $${{Y\\left( z \\right)} \\over {X\\left( z \\right)}}$$ in the $$z$$-domain. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/fBeVAfSvlZcAfH4rb/bpgH2mIliuQ2zu6PIQlXKjWshMIM2/EE4ADQvXqnPTLN2kftW95W/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1996 Signals and Systems - Discrete Time Linear Time Invariant Systems Question 6 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${{Y\\left( z \\right)} \\over {X\\left( z \\right)}}\\,\\,\\,{{Y\\left( z \\right)} \\over {X\\left( z \\right)}} = {{{z^3} + 4{z^2} + 5} \\over {z\\left( {{z^2} + 2z + 3} \\right)}}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A system having a unit impulse response $$h\\left( n \\right)$$  =   $$u\\left( n \\right)$$  is excited by a signal $$x\\left( n \\right)$$ $$ = \\,{\\alpha ^n}\\,\\,u\\left( n \\right).\\,$$ Determine the output  $$y\\left( n \\right)$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$y\\left( n \\right)$$ $$ = \\,0\\,,\\,\\,$$ where $$\\,n \\le  - 1$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,277 @@
+[
+  {
+    "direction": null,
+    "content": "<p>One million random numbers are generated from a statistically stationary process with a Gaussian distribution with mean zero and standard deviation $$\\sigma_0$$. The $$\\sigma_0$$ is estimated by randomly drawing out 10,000 numbers of samples ($$x_n$$). The estimates $${\\widehat \\sigma _1}$$, $${\\widehat \\sigma _2}$$ are computed in the following two ways.</p>\n<p>$$\\matrix{\n   {\\widehat \\sigma _1^2 = {1 \\over {100000}}\\sum\\nolimits\\limits_{n = 1}^{10000} {x_n^2} } & {\\widehat \\sigma _2^2 = {1 \\over {9999}}\\sum\\nolimits\\limits_{n = 1}^{10000} {x_n^2} }  \\cr \n\n } $$</p>\n<p>Which of the following statements is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$E(\\widehat \\sigma _2^2) = \\sigma _0^2$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$E(\\widehat \\sigma _2^{}) = {\\sigma _0}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$E(\\widehat \\sigma _1^2) = \\sigma _0^2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$E(\\widehat \\sigma _1^{}) = E({\\widehat \\sigma _2})$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $\\hat{\\sigma}_1^2=\\frac{1}{10000} \\sum\\limits_{n=1}^{10000} x_n^2, \\quad \\hat{\\sigma}_2^2=\\frac{1}{9999} \\sum\\limits_{n=1}^{10000} x_n^2$</p>\n\n<p>Here mean, $\\sigma_0 E\\left(x^2\\right)=\\operatorname{var}(X)$</p>\n\n<p>For the samples in population, then for variance we use the formula :</p>\n\n<p>$$ E\\left(\\sigma_2^2\\right)=\\frac{1}{N} \\sum\\left(x_n^2\\right) \\quad\\{\\because \\mathrm{var}=m s v\\} $$</p>\n\n<p>Here, $N=10000$ so $E\\left(\\hat{\\sigma}_1^2\\right)=\\sigma_0^2$</p>\n\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Three points in the x-y plane are ($$-$$1, 0.8), (0, 2.2) and (1, 2.8). The value of the slope of the best fit straight line in the least square sense is _________ (Round off to 2 decimal places).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.9TO1.1",
+    "explanation": "<p>Given points in x-y planes are,</p>\n\n<p>$$ \\begin{array}{|c|c|c|c|} \\hline \\boldsymbol{x} & -1 & 0 & 1 \\\\ \\hline \\boldsymbol{y} & 0.8 & 2.2 & 2.8 \\\\ \\hline \\end{array} $$</p>\n\n<p>Let the straight line, $y=a x+b$</p>\n\n<p>By least square approximation, then by regression line method.</p>\n\n<p>$$ \\begin{aligned} & \\Sigma y_i=a \\Sigma x_i+b n \\\\\\\\ & \\Sigma x_i y_i=a \\Sigma x_i^2+b \\Sigma x_i \\end{aligned} $$</p>\n\n<p>$$ \\begin{array}{|c|c|c|c|} \\hline x & y & x^2 & x y \\\\\\\\ \\hline-1 & 0.8 & 1 & -0.8 \\\\\\\\ \\hline 0 & 2.2 & 0 & 0 \\\\\\\\ \\hline 1 & 2.8 & 1 & 2.8 \\\\\\\\ \\hline \\Sigma x=0 & \\Sigma y=5.8 & \\Sigma x^2=2 & \\Sigma x y=2 \\\\\\\\ \\hline \\end{array} $$</p>\n\n<p>Substituting the values in equations (i) and (ii),</p>\n\n<p>$$ \\begin{aligned} & 5.8=a(0)+3 b \\\\\\\\ & 2=a(2)+0(b) \\\\\\\\ & a=1, b=1.9 \\end{aligned} $$</p>\n\n<p>The value of slope $a=1$.</p>\n\n<p>Hence, the correct answer is 1 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "content": "If a continuous function $$f(x)$$ does not have a root in the interval $$\\left[ {a,b} \\right],\\,\\,$$ then which one of the following statements is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$f\\left( a \\right).\\,f\\left( b \\right) = 0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$f\\left( a \\right).f\\left( b \\right) &lt; 0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$f\\left( a \\right).f\\left( b \\right) &gt; 0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$f\\left( a \\right)/f\\left( b \\right) \\le 0$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The function $$f\\left( x \\right) = {e^x} - 1\\,\\,$$ is to be solved using Newton $$-$$ Raphson method. If the initial value of $${x_0}$$ is taken $$1.0,$$ then the absolute error observed at $${2^{nd}}$$ iteration is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.06",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ee-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "When the Newton-Raphson method is applied to solve the equation $$\\,\\,f\\left( x \\right) = {x^3} + 2x - 1 = 0,\\,\\,$$  the solution at the end of the first iteration with the initial value as $${x_0} = 1.2$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-0.82$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.49$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.705$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.69$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ee-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$\\,{x^2} - 117 = 0.\\,\\,$$ The iterative steps for the solution using Newton -Raphson's method is given by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${x_{k + 1}} = {1 \\over 2}\\left( {{x_k} + {{117} \\over {{x_k}}}} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${x_{k + 1}} = {x_k} - {{117} \\over {{x_k}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${x_{k + 1}} = {x_k} - {{{x_k}} \\over {117}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${x_{k + 1}} = {x_k} - {1 \\over 2}\\left( {{x_k} + {{117} \\over {{x_k}}}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ee-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Equation $${e^x} - 1 = 0\\,\\,$$ is required to be solved using Newton's method with an initial guess $$\\,\\,{x_0} =  - 1.\\,\\,$$ Then after one step of Newton's method estimate $${x_1}$$ of the solution will be given by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.71828$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.36784$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.20587$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.0000$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Given the differential equation $${y^1} = x - y$$ with initial condition $$y(0)=0.$$ The value of $$y(0.1)$$ calculated numerically upto the third place of decimal by the $${2^{nd}}$$ order Runge-Kutta method with step size $$h=0.1$$ is  ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${1 \\over {200}}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ee-1993",
+    "difficulty": null
+  },
+  {
+    "content": "Solution, the variable $${x_1}$$ and $${x_2}$$ for the following equations is to be obtained by employing the Newton $$-$$ Raphson iteration method \n<br>equation (i) $$10\\,{x_2}\\,\\sin \\,{x_1} - 0.8 = 0$$\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$10\\,x_2^2\\, - 10\\,{x_2}\\cos \\,{x_1} - 0.6 = 0$$\n<br>Assuming the initial values $${x_1} = 0.0$$ and $${x_2} = 1.0$$ the Jacobian matrix is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\matrix{\n   {10} &amp; { - 0.8}  \\cr \n   0 &amp; { - 0.6}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\matrix{\n   {10} &amp; 0  \\cr \n   0 &amp; {10}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\matrix{\n   0 &amp; { - 0.8}  \\cr \n   {10} &amp; { - 0.6}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   {10} &amp; 0  \\cr \n   {10} &amp; { - 10}  \\cr \n\n } } \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ee-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A differential equation $${{dx} \\over {dt}} = {e^{ - 2t}}\\,\\,u\\left( t \\right)\\,\\,$$  has to be solved using trapezoidal rule of integration with a step size $$h=0.01$$ sec. Function $$u(t)$$ indicates a unit step function. If $$x(0)=0$$ then the value of $$x$$ at $$t=0.01$$ sec will be given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.00099$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.00495$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.0099$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.0198$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The value of $$\\,\\,\\,\\int\\limits_1^2 {{1 \\over x}\\,\\,\\,dx\\,\\,\\,\\,} $$ computed using simpson's rule with a step size of $$h=0.25$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.69430$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.69385$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.69325$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.69415$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ee-1998",
+    "difficulty": null
+  }
+]

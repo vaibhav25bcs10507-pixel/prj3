@@ -1,0 +1,453 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In the circuit shown, the n : 1 step-down transformer and the diodes are ideal. The diodes have no voltage drop in forward biased condition. If the input voltage (in Volts) is $V_s(t) = 10 \\sin\\omega t$ and the average value of load voltage $V_L(t)$ (in Volts) is $\\frac{2.5}{\\pi}$, the value of n is _____.</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxkyfe8e/6ae058ed-ac43-4d59-8c0c-1b0ec57abc18/10f8f7d0-2dbf-11ef-bfc8-2b32b9c46aa5/file-jaoe38c1lxkyfe8f.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxkyfe8e/6ae058ed-ac43-4d59-8c0c-1b0ec57abc18/10f8f7d0-2dbf-11ef-bfc8-2b32b9c46aa5/file-jaoe38c1lxkyfe8f.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Analog Circuits - Diodes Question 4 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>4</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>8</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>12</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>16</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>(i) Single phase full wave mid-point Diode Rectifier with $R$-Load.</p>\n<p>(ii) Input voltage $V_s(t)=10 \\sin \\omega t$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfeabl7m/557550f6-4183-453a-9dd8-15a2f125e876/fcf3b730-8e6f-11f0-af8a-fb4a25e5b24b/file-jaoe38c1mfeabl7n.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfeabl7m/557550f6-4183-453a-9dd8-15a2f125e876/fcf3b730-8e6f-11f0-af8a-fb4a25e5b24b/file-jaoe38c1mfeabl7n.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Analog Circuits - Diodes Question 4 English Explanation\"></p>\n<p>Transformation ratio</p>\n<p>$$ \\begin{aligned} &amp; (k)=\\frac{V_2}{V_1}=\\frac{N_2}{N_1}=\\frac{1}{n} \\\\ &amp; V_2=\\frac{V_1}{n}=\\frac{V_S}{n} \\end{aligned} $$</p>\n<p>Case 1: During positive Half cycle.</p>\n<p>$D_1 \\rightarrow \\mathrm{ON}$ and $D_2 \\rightarrow \\mathrm{OFF}$</p>\n<p>$$ V_L=\\frac{V_S}{2 n}\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)$$</p>\n<p>$$ \\begin{aligned} &amp;\\text { Case } 2 \\text { : During Negative Half cycle. }\\\\ &amp;\\begin{aligned} &amp; D_1 \\rightarrow \\mathrm{OFF} \\text { and } D_2 \\rightarrow \\mathrm{ON} \\\\ &amp; V_L=\\frac{-V_S}{2 n} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} \\end{aligned} $$</p>\n<p>The DC Output Voltage or Average Output Voltage can be calculated as follows.</p>\n<p>$$ \\begin{aligned} &amp; V_0=V_{d c}=\\frac{1}{\\pi} \\int_0^\\pi\\left(\\frac{V_s}{2 n}\\right) d \\omega t \\\\ &amp; V_0=\\frac{1}{\\pi} \\int_0^\\pi \\frac{V_m}{2 n} \\sin \\omega t d \\omega t \\\\ &amp; V_0=\\frac{V_m}{2 \\pi n} \\int_0^\\pi \\sin \\omega t d \\omega t \\\\ &amp; V_{0(\\mathrm{avg})}=\\frac{V_m}{2 \\pi n}[-\\cos \\omega t]_0^\\pi \\\\ &amp; V_{0(\\mathrm{avg})}=\\frac{V_m}{2 \\pi n}[-\\cos (\\pi)+\\cos (0)] \\\\ &amp; V_{0(\\mathrm{avg})}=\\frac{V_m}{2 \\pi n}[1+1]=\\frac{2 V_m}{2 \\pi n}=\\frac{V_m}{\\pi n} \\\\ &amp; V_{0(\\mathrm{avg})}=\\frac{2.5}{\\pi}=\\frac{V_m}{\\pi n} \\\\ &amp; n=\\frac{V_m}{2.5}=\\frac{10}{2.5}=4 \\end{aligned} $$</p>\n<p>Hence the correct option is (A).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An asymmetrical periodic pulse train $v_{\\text {in }}$ of 10 V amplitude with on-time $T_{\\mathrm{ON}}=1 \\mu \\mathrm{~s}$ is applied to the circuit shown in the figure. The diode $D_1$ is ideal.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0r51kt/629a5a38-37fe-46d0-b5da-dec22cd9116d/37caaed0-ae97-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0r51ku.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0r51kt/629a5a38-37fe-46d0-b5da-dec22cd9116d/37caaed0-ae97-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0r51ku.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Analog Circuits - Diodes Question 1 English\">The difference between the maximum voltage and minimum voltage of the output waveform $v_0$ (in integer) is $\\_\\_\\_\\_$ V.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "10to10",
+    "explanation": "<p>$$ \\text { As mentioned we have } V_{\\text {in }}=10 \\mathrm{~V} \\text {; and Diode is } \\mathrm{ON} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0r50vq/aa0daba6-0a74-4a56-b03f-c7132459b968/3740e560-ae97-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0r50vr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0r50vq/aa0daba6-0a74-4a56-b03f-c7132459b968/3740e560-ae97-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0r50vr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Analog Circuits - Diodes Question 1 English Explanation\">Capacitor gets charged up to 10 V .</p>\n<p></p>\n<p>So,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ V_c=10 \\mathrm{~V} $$</p>\n<p></p>\n<p>Also, we have&nbsp;&nbsp;$$ V_{\\text {in }}=0 ; \\text { Diode is } \\mathrm{OFF} $$</p>\n<p>For this, the Discharging time constant $=R C=10 \\mathrm{~m} \\mathrm{sec}$</p>\n<p>Then we can say</p>\n<p>$$ \\begin{array}{ll}  &amp; \\tau_{\\text {Discharges }} \\gg \\tau_{\\mathrm{OFF}} \\\\ &amp; V_c=10 \\mathrm{~V} \\\\ \\text { Also, } &amp; V_{\\text {out }}=V_{\\text {in }}-V_c=V_{\\text {in }}-10 \\\\ \\text { or, } &amp; V_{\\text {in }}=10 \\mathrm{~V} \\\\ \\text { or, } &amp; V_{\\text {out }}=0 \\mathrm{~V} \\\\ \\therefore &amp; V_{\\text {out }}=10 \\mathrm{~V} \\end{array} $$</p>\n<p>Hence, the correct answer is $(10$ to 10$)$.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "content": "The output V<sub>0</sub> of the diode circuit shown in the figure is connected to an averaging DC voltmeter. The reading on the DC voltmeter in Volts, neglecting the voltage drop across the\ndiode, is ____________.\n\n<img alt=\"GATE ECE 2017 Set 2 Analog Circuits - Diodes Question 13 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/20b7d7ebd8f507f0f9b68c0e5227fd8d6a1b363f668ec32598612ce010976ec6.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "3.18",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that the diode in the figure has on V<sub>on</sub> = 0.7V, but is otherwise ideal. \n<img alt=\"GATE ECE 2016 Set 2 Analog Circuits - Diodes Question 15 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/e1efb06e483c333c60e83115974223451c535a6faa3a9b3bfb85474d6feadcbf.jpg\" style=\"text-align:center;max-width:100%;height:auto;display:block;\" loading=\"lazy\">\nThe magnitude of the current i<sub>2</sub> (in mA) is equal to __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.25",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The diodes D1 and D2 in the figure are ideal and the capacitors are identical. The product RC is very\nlarge compared to the time period of the ac voltage. Assuming that the diodes do not breakdown in the\nreverse bias, the output voltage V<sub>0</sub> (in volt) at the steady state is__________.\n<img alt=\"GATE ECE 2016 Set 3 Analog Circuits - Diodes Question 12 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/bba6ca56908fbbc206c8ace2cdfe9e2a6fb6ea27f72534943fb3252b9c2bab0e.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "If the circuit shown has to function as a clamping circuit, which one of the following\nconditions should be satisfied for sinusoidal signal of period T?\n<img alt=\"GATE ECE 2015 Set 2 Analog Circuits - Diodes Question 14 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a94f37b505bb18feb7e087c2616a1cc64c12cbec0f3a63c2ac8d0562448ed1e8.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "RC &lt;&lt; T"
+      },
+      {
+        "identifier": "B",
+        "content": "RC = 0.35 T"
+      },
+      {
+        "identifier": "C",
+        "content": "RC $$\\approx$$ T"
+      },
+      {
+        "identifier": "D",
+        "content": "RC &gt;&gt; T"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit shown, assume that diodes D<sub>1</sub> and D<sub>2</sub> are ideal. In the steady-state condition the average voltage V<sub>ab</sub> (in Volts) across the 0.5 μF capacitor is _____.\n<img alt=\"GATE ECE 2015 Set 3 Analog Circuits - Diodes Question 16 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ac8aa3cf0ec33ca728c4bccf85de443f14f5969e7aba99ee649a2dcac901ab97.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "100",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The figure shows a half-wave rectifier. The diode D is ideal. The average steady-state current\n(in Amperes) through the diode is approximately ____________.\n<img alt=\"GATE ECE 2014 Set 3 Analog Circuits - Diodes Question 18 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/73f965938d1b5fcee774911e5e24278ea028e5e8d13bffd99c2c50fd2140b6cd.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.1",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "For a given sample-and-hold circuit, if the value of the hold capacitor is increased, then ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Droop rate decreases and acquisition time decreases "
+      },
+      {
+        "identifier": "B",
+        "content": "Droop rate decreases and acquisition time increases "
+      },
+      {
+        "identifier": "C",
+        "content": "Droop rate increases and acquisition time decreases "
+      },
+      {
+        "identifier": "D",
+        "content": "Droop rate increases and acquisition time increases"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "The diodes and capacitors in the circuit shown are ideal. The voltage v(t)\nacross the diode D1 is\n<img alt=\"GATE ECE 2012 Analog Circuits - Diodes Question 19 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/13716322e072c587550685f6ad0c88bf5b5e60df7c19aa23379a3d386d0a24f7.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "cos (ωt) − 1\n"
+      },
+      {
+        "identifier": "B",
+        "content": "sin (ωt)\n"
+      },
+      {
+        "identifier": "C",
+        "content": "1 - cos (ωt)"
+      },
+      {
+        "identifier": "D",
+        "content": "1 - sin (ωt)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The circuit shown in figure is best described as a \n<img alt=\"GATE ECE 2003 Analog Circuits - Diodes Question 20 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b429f4e9e2a1ea07531a11decb59526589a50cab541e631675cce844da342e41.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "bridge rectifier "
+      },
+      {
+        "identifier": "B",
+        "content": "ring modulator "
+      },
+      {
+        "identifier": "C",
+        "content": "frequency discriminator"
+      },
+      {
+        "identifier": "D",
+        "content": "voltage doubler "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "For full wave rectification, a four diode bridge rectifier is claimed to have the\nfollowing advantages over a two diode circuit:\n<p>(1) less expensive transformer</p>\n<p>(2) smaller size transformer, and</p>\n<p>(3) suitability for higher voltage application.</p>\nOf these,",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "only (1) and (2) are true"
+      },
+      {
+        "identifier": "B",
+        "content": "only (1) and (3) are true"
+      },
+      {
+        "identifier": "C",
+        "content": "only (2) and (3) are true"
+      },
+      {
+        "identifier": "D",
+        "content": "(1), (2) as well as (3) are true"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>All the diodes in the circuit given below are ideal.</p>\n<p>Which of the following plots is/are correct when $V_I$ (in Volts) is swept from $-M$ to $M$ ?</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbezi05j/d2ae87a0-7c8e-4176-8533-e8e32efcb44a/960fd570-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezi05k.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbezi05j/d2ae87a0-7c8e-4176-8533-e8e32efcb44a/960fd570-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezi05k.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 2 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbeziemy/5d09586d-bb8b-4746-80e9-e9ffe0dcba27/a1400fa0-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbeziemz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbeziemy/5d09586d-bb8b-4746-80e9-e9ffe0dcba27/a1400fa0-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbeziemz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 2 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbezioof/1cf90945-09fd-4e0d-8eb1-4068560b43aa/a901aff0-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezioog.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbezioof/1cf90945-09fd-4e0d-8eb1-4068560b43aa/a901aff0-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezioog.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 2 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbezj3pq/dd84a04d-ee0a-4088-b75a-290cf30a25ef/b49f2ae0-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezj3pr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbezj3pq/dd84a04d-ee0a-4088-b75a-290cf30a25ef/b49f2ae0-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezj3pr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 2 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbezjer2/c5c9948e-7ec5-4072-aa62-358e0f67b5df/bd25c8e0-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezjer3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbezjer2/c5c9948e-7ec5-4072-aa62-358e0f67b5df/bd25c8e0-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezjer3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 2 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbezk5am/a0209bae-4ab5-4814-9fb2-5b28fa2f9c7d/d1a6cee0-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezk5an.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbezk5am/a0209bae-4ab5-4814-9fb2-5b28fa2f9c7d/d1a6cee0-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezk5an.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 2 English Explanation 1\"></p>\n<p>Given, $V_{\\text {in }}$ is steep of $-M$ to $+M$</p>\n<p>For $V_0$ versus $V_{\\text {IN }}$ :</p>\n<p>Let $\\quad V_{\\text {IN }}=+M$</p>\n<p>In the bridge rectifier, $D_1$ and $D_3$ are forward bias, and $D_2$ and $D_4$ are reverse bias,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbezl66d/79a279e0-3c0e-409a-b7ff-358aa6d2e2bc/ee248260-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezl66e.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbezl66d/79a279e0-3c0e-409a-b7ff-358aa6d2e2bc/ee248260-3fa1-11f0-a491-e768f614f5b9/file-jaoe38c1mbezl66e.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 2 English Explanation 2\"></p>\n<p>$$ \\therefore \\quad V_{\\text {in }}-V_0=0 \\Rightarrow V_{\\text {in }}=V_0 $$</p>\n<p>$\\therefore$ For $V_{\\text {in }}=+M \\Rightarrow V_0=M$</p>\n<p>$$ \\begin{aligned} -V_{\\text {in }}+I_{\\text {in }} R &amp; =0 \\\\ I_{\\text {in }} &amp; =\\frac{V_{\\text {in }}}{R}=\\frac{M}{R} \\end{aligned} $$</p>\n<p>Let $V_{\\text {IN }}=-M$</p>\n<p>$D_1$ and $D_3$ are reverse bias,</p>\n<p>$D_2$ and $D_4$ are forward bias.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbezmen9/a2f5626e-0b9c-4c97-a9b6-598de819a3c5/107e4d50-3fa2-11f0-a491-e768f614f5b9/file-jaoe38c1mbezmena.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbezmen9/a2f5626e-0b9c-4c97-a9b6-598de819a3c5/107e4d50-3fa2-11f0-a491-e768f614f5b9/file-jaoe38c1mbezmena.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 2 English Explanation 3\"></p>\n<p>$$ \\therefore \\quad \\begin{aligned} V_{\\text {in }}+V_0 &amp; =0 \\\\ V_o &amp; =-V_{\\text {in }}=-[-M]=M \\\\ -V_{\\text {in }}+I_{\\text {in }} \\times R &amp; =0 \\\\ I_{\\text {in }} &amp; =\\frac{V_{\\text {in }}}{R}=\\frac{-M}{R} \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbezneli/5350af7d-71a7-4269-9a8a-f1de344c93ec/2c43d460-3fa2-11f0-a491-e768f614f5b9/file-jaoe38c1mbeznelj.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbezneli/5350af7d-71a7-4269-9a8a-f1de344c93ec/2c43d460-3fa2-11f0-a491-e768f614f5b9/file-jaoe38c1mbeznelj.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 2 English Explanation 4\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The diode in the circuit shown below is ideal. The input voltage (in Volts) is given by $V_1=10 \\sin 100 \\pi t$, where time $t$ is in seconds.</p>\n<p>The time duration (in ms, rounded off to two decimal places) for which the diode is forward biased during one period of the input is ________.</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbf02j0w/fcb8fa75-329e-4301-b7fa-93a42e81601a/d0d27d00-3fa3-11f0-a491-e768f614f5b9/file-jaoe38c1mbf02j0x.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbf02j0w/fcb8fa75-329e-4301-b7fa-93a42e81601a/d0d27d00-3fa3-11f0-a491-e768f614f5b9/file-jaoe38c1mbf02j0x.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 3 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "13.32TO13.34",
+    "explanation": "<p>Given,</p>\n<p>$$ \\begin{aligned} 2 \\pi f t &amp; =100 \\pi t \\\\ f &amp; =50 \\mathrm{~Hz} \\\\ T_0 &amp; =\\frac{1}{f}=20 \\mathrm{msec} \\\\ V_i &amp; =10 \\sin (100 \\pi t)=10 \\sin \\alpha \\\\ \\alpha &amp; =100 \\pi t \\end{aligned} $$</p>\n<p>Diode conducts if $V_i&gt;-5 \\mathrm{~V}$</p>\n<p>Diode is OFF if $V_i&lt;-5 \\mathrm{~V}$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbf03lot/b14c17f4-8c03-4216-ab7f-b1e362e5c5c4/eeb083d0-3fa3-11f0-a491-e768f614f5b9/file-jaoe38c1mbf03lou.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbf03lot/b14c17f4-8c03-4216-ab7f-b1e362e5c5c4/eeb083d0-3fa3-11f0-a491-e768f614f5b9/file-jaoe38c1mbf03lou.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Analog Circuits - Diodes Question 3 English Explanation\"></p>\n<p>$$ 10 \\sin \\alpha=-5 $$</p>\n<p>$$ \\begin{aligned} &amp;\\begin{aligned} \\alpha &amp; =\\sin ^{-1}\\left(\\frac{-5}{10}\\right) \\\\ \\alpha &amp; =\\frac{7 \\pi}{6}, \\frac{11 \\pi}{6} \\\\ 100 \\pi t_1 &amp; =\\frac{7 \\pi}{6} \\\\ t_1 &amp; =11.66 \\mathrm{msec} \\\\ \\alpha_2 &amp; =100 \\pi t_2=\\frac{11 \\pi}{6} \\\\ t_2 &amp; =18.33 \\mathrm{msec} \\end{aligned}\\\\ &amp;\\text { Diode is OFF from } t_1 \\text { to } t_2\\\\ &amp;\\begin{aligned} t_{\\mathrm{OFF}} &amp; =t_2-t_1=6.66 \\mathrm{msec} \\\\ t_{\\mathrm{ON}} &amp; =T_0-t_{\\mathrm{OFF}}=13.33 \\mathrm{msec} \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>In the circuit shown below, D$$_1$$ and D$$_2$$ are silicon diodes with cut-in voltage of 0.7 V. $$\\mathrm{V_{IN}}$$ and $$\\mathrm{V_{OUT}}$$ are input and output voltages in volts. The transfer characteristic is</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywnnk9z/99199b6d-8954-4b5b-a142-78fc08f99aca/8eddc770-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnnka0.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywnnk9z/99199b6d-8954-4b5b-a142-78fc08f99aca/8eddc770-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnnka0.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Analog Circuits - Diodes Question 5 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywnoi3u/6eb3bf75-63a9-4542-a9af-da384c62693b/a8ffb0a0-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnoi3v.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywnoi3u/6eb3bf75-63a9-4542-a9af-da384c62693b/a8ffb0a0-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnoi3v.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Analog Circuits - Diodes Question 5 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywnpv1m/61132dc4-2303-486b-957e-86267b6857ec/cecd6ca0-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnpv1n.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywnpv1m/61132dc4-2303-486b-957e-86267b6857ec/cecd6ca0-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnpv1n.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Analog Circuits - Diodes Question 5 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywnpqcf/b679749b-4d66-469e-b955-6401b9d5bec9/cb2c2a00-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnpqcg.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywnpqcf/b679749b-4d66-469e-b955-6401b9d5bec9/cb2c2a00-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnpqcg.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Analog Circuits - Diodes Question 5 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywnplk7/2bc5956f-f0ae-42d4-9a2a-c96c6a500e95/c779f770-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnplk8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywnplk7/2bc5956f-f0ae-42d4-9a2a-c96c6a500e95/c779f770-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnplk8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Analog Circuits - Diodes Question 5 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given circuit is as shown below,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywnnk9z/99199b6d-8954-4b5b-a142-78fc08f99aca/8eddc770-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnnka0.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywnnk9z/99199b6d-8954-4b5b-a142-78fc08f99aca/8eddc770-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnnka0.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Analog Circuits - Diodes Question 5 English Explanation 1\">\n\n<p><b>Case 1 :</b> When $V_{I N}&lt;0.3 \\mathrm{~V}, D_1$ is OFF and $D_2$ is ON . So, the circuit becomes,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywntlz2/f41a6f62-d741-430f-a76b-38c103998297/370829e0-47fb-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywntlz3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywntlz2/f41a6f62-d741-430f-a76b-38c103998297/370829e0-47fb-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywntlz3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Analog Circuits - Diodes Question 5 English Explanation 2\">\n\n<p>$$ \\therefore V_{\\text {out }}=V_{I N}+0.7 $$</p>\n\n<p><b>Case 2 :</b> When $0.3 \\mathrm{~V} &lt; V_{I N} &lt; 1.7 \\mathrm{~V}$, both $D_1$ and $D_2$ are OFF. So, the circuit becomes.</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywnvu2z/dcb209f2-a615-4c17-9d41-f6f48c8f87bd/74e9fdb0-47fb-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnvu30.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywnvu2z/dcb209f2-a615-4c17-9d41-f6f48c8f87bd/74e9fdb0-47fb-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnvu30.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Analog Circuits - Diodes Question 5 English Explanation 3\">\n\n<p>$$ \\therefore  V_{\\text {out }}=1 \\mathrm{~V} $$</p>\n\n<p><b>Case 3 :</b> When $V_{I N}&gt;1.7 \\mathrm{~V}, D_1$ is ON and $D_2$ is OFF. So, the circuit becomes,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywnxxql/3dfd8d75-2eec-4a79-8e14-db0529f3a17c/af5ff6c0-47fb-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnxxrg.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywnxxql/3dfd8d75-2eec-4a79-8e14-db0529f3a17c/af5ff6c0-47fb-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnxxrg.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Analog Circuits - Diodes Question 5 English Explanation 4\">\n\n<p>$V_{\\text {out }}=V_{I N}-0.7$</p>\n\n<p>So, the transfer characteristics can be drawn as shown below,</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lywnoi3u/6eb3bf75-63a9-4542-a9af-da384c62693b/a8ffb0a0-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnoi3v.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lywnoi3u/6eb3bf75-63a9-4542-a9af-da384c62693b/a8ffb0a0-47fa-11ef-a4ec-23a9bd42cec6/file-jaoe38c1lywnoi3v.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Analog Circuits - Diodes Question 5 English Explanation 5\">\n\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A circuit and the characteristics of the diode (D) in it are shown. The ratio of the minimum to the maximum small signal voltage gain $${{\\partial {V_{out}}} \\over {\\partial {V_{in}}}}$$ is __________ (rounded off to two decimal places).</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7j6crp1/36546a9c-af84-4f6c-a497-55c1277a3daf/dfd3e650-2a06-11ed-8dda-b7a06b81f81b/file-1l7j6crp2.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7j6crp1/36546a9c-af84-4f6c-a497-55c1277a3daf/dfd3e650-2a06-11ed-8dda-b7a06b81f81b/file-1l7j6crp2.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Analog Circuits - Diodes Question 6 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.75",
+    "explanation": "<p>When diode is OFF:</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7j6ejia/f47e1156-b58a-45ca-92ef-a8dfa870fdf5/111f1220-2a07-11ed-8dda-b7a06b81f81b/file-1l7j6ejib.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7j6ejia/f47e1156-b58a-45ca-92ef-a8dfa870fdf5/111f1220-2a07-11ed-8dda-b7a06b81f81b/file-1l7j6ejib.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Analog Circuits - Diodes Question 6 English Explanation 1\"></p>\n<p>V<sub>o</sub> = 4I</p>\n<p>V<sub>in</sub> = 6I</p>\n<p>A<sub>v</sub> = $${{{V_o}} \\over {{V_{in}}}} = {4 \\over 6} = {2 \\over 3}$$</p>\n<p>When diode is ON, voltage drop across diode is 0.7 V.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7j6ezq8/5788a31a-13bb-4766-8a0c-ff24d4ce7fab/1da6ed10-2a07-11ed-8dda-b7a06b81f81b/file-1l7j6ezq9.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7j6ezq8/5788a31a-13bb-4766-8a0c-ff24d4ce7fab/1da6ed10-2a07-11ed-8dda-b7a06b81f81b/file-1l7j6ezq9.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Analog Circuits - Diodes Question 6 English Explanation 2\"></p>\n<p>$${V_o} = 0.7 + (2\\,k\\Omega )I$$</p>\n<p>$${V_{in}} = 0.7 + (4\\,k\\Omega )I$$</p>\n<p>$$I = {{{V_o} - 0.7} \\over {2k\\Omega }}$$</p>\n<p>$${V_{in}} = 0.7 + (4k\\Omega )\\,.\\,{{({V_o} - 0.7)} \\over {(2k\\Omega )}} = 0.7 + 2{V_o} - 1.4$$</p>\n<p>$${V_o} = {{{V_{in}} + 0.7} \\over 2}$$</p>\n<p>$$A{'_v} = {{\\partial {V_o}} \\over {\\partial {V_{in}}}} = {1 \\over 2}$$</p>\n<p>Maximum voltage gain, $${A_v} = {2 \\over 3}$$</p>\n<p>Minimum voltage gain, $$A{'_v} = {1 \\over 2}$$</p>\n<p>$${{{{(\\partial {V_{out}}/\\partial {V_{in}})}_{\\min }}} \\over {{{(\\partial {V_{out}}/\\partial {V_{in}})}_{\\max }}}} = {{A{'_v}} \\over {{A_v}}} = {1 \\over 2} \\times {3 \\over 2} = {3 \\over 4} = 0.75$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "The figure shows a half-wave rectifier with a\n475 µF\nfilter capacitor. The load draws a constant\ncurrent I<sub>0</sub>= 1 A from the rectifier. The figure also shows the input voltage V<sub>i</sub>\n, the output\nvoltage V<sub>C</sub> and the peak-to-peak voltage ripple\non V<sub>C</sub>.The input voltage V<sub>i</sub> is a triangle-wave\nwith an amplitude of 10 V and a period of 1 ms.\n<img alt=\"GATE ECE 2016 Set 2 Analog Circuits - Diodes Question 7 English 1\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/23f33b30b5b80cc78a132829f06a910d28ca9c817156a8c30043dfcea64a123d.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<img alt=\"GATE ECE 2016 Set 2 Analog Circuits - Diodes Question 7 English 2\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a04f5dd685aa45ee690468393721fe8142a9334176fbe0720763802d4a59772e.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<p>The value of the ripple\nu\n(in volts) is ______________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The diode in the circuit given below has\nV<sub>ON</sub> = 0.7V\nbut is ideal otherwise. The current (in mA) in the 4kΩ resistor is __________.\n<img alt=\"GATE ECE 2015 Set 2 Analog Circuits - Diodes Question 10 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/eb166fa88995fdae4954d482e360147e88fa6691ca9f706807f3d55853528f81.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.6",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit shown below, assume that the voltage drop across a forward biased\ndiode is 0.7V. The thermal voltage V<sub>t</sub> = kT/q = 25mV. The small signal input\nv<sub>i</sub> = V<sub>P</sub> cos ($$\\omega t$$) where V<sub>P</sub> = 100mV.\n<img alt=\"GATE ECE 2011 Analog Circuits - Diodes Question 8 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c64e340885f9969f6859d0806d88bc3194a2bef2690c1051a00bac696f5752d8.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\nThe ac output voltage v<sub>ac</sub> is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.25 cos($$\\omega t$$)mV"
+      },
+      {
+        "identifier": "B",
+        "content": "1 cos($$\\omega t$$)mV"
+      },
+      {
+        "identifier": "C",
+        "content": "2 cos($$\\omega t$$)mV"
+      },
+      {
+        "identifier": "D",
+        "content": "22 cos($$\\omega t$$)mV"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit shown below, assume that the voltage drop across a forward biased\ndiode is 0.7V. The thermal voltage V<sub>t</sub> = kT/q = 25mV. The small signal input\nv<sub>i</sub> = V<sub>P</sub> cos ($$\\omega t$$) where V<sub>P</sub> = 100mV.\n<img alt=\"GATE ECE 2011 Analog Circuits - Diodes Question 9 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c64e340885f9969f6859d0806d88bc3194a2bef2690c1051a00bac696f5752d8.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n\nThe bias current I<sub>DC</sub> through the diodes is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 mA"
+      },
+      {
+        "identifier": "B",
+        "content": "1.28 mA"
+      },
+      {
+        "identifier": "C",
+        "content": "1.5 mA"
+      },
+      {
+        "identifier": "D",
+        "content": "2 mA"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A dc power supply has a no-load voltage of 30V, and a full-load voltage of 25 V\nat a full-load current of 1A. Its output resistance and load regulation, respectively\nare \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5Ω and 20% "
+      },
+      {
+        "identifier": "B",
+        "content": "25Ω and 20%"
+      },
+      {
+        "identifier": "C",
+        "content": "5Ω and 16.7% "
+      },
+      {
+        "identifier": "D",
+        "content": "25Ω and 16.7%"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  }
+]

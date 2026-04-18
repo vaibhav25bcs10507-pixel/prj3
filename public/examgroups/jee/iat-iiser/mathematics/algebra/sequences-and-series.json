@@ -1,0 +1,98 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $S_n$ denote the sum of the first $n$ terms of a sequence $a_1, a_2, a_3, \\ldots$. If $S_{n+3}-S_n=13 n+7$ for all $n$, what is the value of $a_{13}-a_{10}$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>13</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>137</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>46</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>12</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We are told:</p>\n<p>$ S_{n+3}-S_n = 13n + 7, \\quad \\forall n. $</p>\n<p>But $S_n = a_1 + a_2 + ... + a_n$.</p>\n<p>So</p>\n<p>$ S_{n+3} - S_n = (a_{n+1} + a_{n+2} + a_{n+3}) = 13n + 7. \\tag{1} $</p>\n\n<h3>Step 1:</h3>\n<p>We can write equations for different $n$.</p>\n<p>For $n, n+1, n+2,$ etc.</p>\n<p>At $n$:</p>\n<p>$ a_{n+1} + a_{n+2} + a_{n+3} = 13n + 7. $</p>\n<p>At $n+1$:</p>\n<p>$ a_{n+2} + a_{n+3} + a_{n+4} = 13(n+1) + 7 = 13n + 20. $</p>\n<p>Now subtract the two:</p>\n<p>$ (a_{n+2}+a_{n+3}+a_{n+4}) - (a_{n+1}+a_{n+2}+a_{n+3}) = (13n + 20) - (13n + 7). $</p>\n<p>Simplify:</p>\n<p>$ a_{n+4} - a_{n+1} = 13. $</p>\n\n<h3>Step 2:</h3>\n<p>So we have the recurrence:</p>\n<p>$ a_{n+4} = a_{n+1} + 13. $</p>\n<p>This means the sequence increases by 13 every 3 steps (since $a_{n+4}-a_{n+1}=13$).</p>\n<p>So for $a_{13} - a_{10}$:</p>\n<p>These indices differ by $3$:</p>\n<p>$ a_{13} - a_{10} = 13. $</p>\n\n<p>✅ <strong>Final Answer:</strong> $a_{13} - a_{10} = 13.$</p>\n<p><strong>Answer: Option A (13)</strong></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "iat-iiser-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Let $a_1, a_2, a_3, \\ldots$ be a sequence of real numbers. Let $s_n=a_1+a_2+\\cdots+a_n$. If $2 s_n=$ $n\\left(c+a_n\\right)$ for some real number. for some real number $c$ and for all $n=1,2,3, \\ldots$, then which one of the following statements is Correct?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$a_1, 2 a_2, 3 a_3, \\ldots$ is an Arithmetic Progression.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$a_1, a_2, a_3, \\ldots$ is an Arithmetic Progression.\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$a_1, 2 a_2, 3 a_3, \\ldots$ is a Geometric Progression.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$a_1, a_2, a_3$, ...is a Geometric Progression."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the progression of the sequence $a_1, a_2, a_3, \\ldots$, we analyze the given condition for the sequence's sum:</p>\n<p>$ s_n = a_1 + a_2 + a_3 + \\cdots + a_n = \\frac{n}{2}(c + a_n) $</p>\n<p>This expression resembles the sum formula for an arithmetic progression (AP):</p>\n<p>$ s_n = \\frac{n}{2}(a_1 + a_n) $</p>\n<p>To validate if our sequence is an AP, let's assume it is. If so, the sum formula for the first $n$ terms of an AP, where $a_1$ is the first term and $d$ is the common difference, would be:</p>\n<p>$ s_n = \\frac{n}{2}(2a_1 + (n-1)d) $</p>\n<p>$ a_n = a_1 + (n-1)d $</p>\n<p>Substituting these into the given equation:</p>\n<p>$ 2\\left(\\frac{n}{2}(2a_1 + (n-1)d)\\right) = n(c + a_1 + (n-1)d) $</p>\n<p>Simplifying both sides gives:</p>\n<p>$ 2a_1 + (n-1)d = c + a_1 + (n-1)d $</p>\n<p>This reduces further to:</p>\n<p>$ 2a_1 = a_1 + c $</p>\n<p>$ c = a_1 $</p>\n<p>Since $c = a_1$, this confirms our sequence $a_1, a_2, a_3, \\ldots$ is indeed an arithmetic progression (AP), given that this assumption led to a consistent and valid result. Therefore, the assumption that $a_1, a_2, a_3, \\ldots$ is an arithmetic progression is correct.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "iat-iiser-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "A lab reports that the global average temperature in the year 2020 was $14.9^{\\circ} \\mathrm{C}$ and predicts that the global average temperature will increase at the rate of $1 \\%$ per year. What will be the global average temperature in the year 2035?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$15.049^{\\circ} \\mathrm{C}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$17.298^{\\circ} \\mathrm{C}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$17.135^{\\circ} \\mathrm{C}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$17.471^{\\circ} \\mathrm{C}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We treat the 1 % increase per year as exponential growth over 15 years (from 2020 to 2035):</p>\n\n<p><p>Initial temperature: $T_0 = 14.9^\\circ\\!C$  </p></p>\n<p><p>Annual growth factor: $1 + r = 1 + 0.01 = 1.01$  </p></p>\n<p><p>Number of years: $n = 2035 - 2020 = 15$  </p></p>\n<p><p>Future temperature:</p>\n<p>$$      T_{2035}      = T_0 \\times (1.01)^{15}      = 14.9 \\times (1.01)^{15}      \\approx 17.298^\\circ\\!C    $$</p></p>\n\n<p>That matches Option B.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "iat-iiser-2022",
+    "difficulty": null
+  }
+]

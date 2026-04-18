@@ -1,0 +1,849 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statements regarding Breadth First Search (BFS) and Depth First Search (DFS) on an undirected simple graph G is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " A DFS tree of $G$ is a Shortest Path tree of $G$.\n"
+      },
+      {
+        "identifier": "B",
+        "content": " Every non-tree edge of $G$ with respect to a DFS tree is a forward/back edge.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " If $(u, v)$ is a non-tree edge of $G$ with respect to a BFS tree, then the distances from the source vertex $s$ to $u$ and $v$ in the BFS tree are within $\\pm 1$ of each other.\n"
+      },
+      {
+        "identifier": "D",
+        "content": " Both BFS and DFS can be used to find the connected components of $G$.\n"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's examine each option one by one.</p>\n\n<p>Option A: \"A DFS tree of $$G$$ is a Shortest Path tree of $$G$$.\"  </p>\n\n\n<p><p>A DFS tree is constructed using Depth First Search, which explores as far as possible along each branch before backtracking. This strategy does not guarantee that the paths in the DFS tree are the shortest ones from the source.  </p></p>\n<p><p>In contrast, a BFS tree (built using Breadth First Search) always yields the shortest paths (in terms of edge count) when the graph is unweighted.  </p></p>\n<p><p>Therefore, Option A is FALSE.</p></p>\n\n\n<p>Option B: \"Every non-tree edge of $$G$$ with respect to a DFS tree is a forward/back edge.\"  </p>\n\n\n<p><p>In DFS (for an undirected graph), the edges are typically classified as either tree edges or back edges. (In directed graphs there are additional classifications like forward and cross edges, but for undirected graphs only tree and back edges occur.)  </p></p>\n<p><p>Since every non-tree edge in a DFS of an undirected graph is in fact a back edge, and a back edge is included in the group denoted by “forward/back edges,” this statement is technically correct.  </p></p>\n<p><p>Thus, Option B is TRUE.</p></p>\n\n\n<p>Option C: \"If $$(u, v)$$ is a non-tree edge of $$G$$ with respect to a BFS tree, then the distances from the source vertex $$s$$ to $$u$$ and $$v$$ in the BFS tree are within $$\\pm1$$ of each other.\"  </p>\n\n\n<p><p>In a BFS tree, the level of each vertex corresponds to its distance (the minimum number of edges) from the source $$s$$.  </p></p>\n<p><p>For any edge $$(u,v)$$ in an undirected graph, the triangle inequality guarantees that  </p>\n<p>$$|d(s,u) - d(s,v)| \\le 1.$$  </p></p>\n<p><p>This property holds whether the edge is part of the BFS tree or a non-tree edge.  </p></p>\n<p><p>Therefore, Option C is TRUE.</p></p>\n\n\n<p>Option D: \"Both BFS and DFS can be used to find the connected components of $$G$$.\"  </p>\n\n\n<p><p>To find connected components in an undirected graph, we can simply perform a BFS or DFS from any unvisited vertex until all vertices in that component are discovered, and then repeat for the remaining vertices.  </p></p>\n<p><p>Hence, both BFS and DFS are valid for identifying connected components.  </p></p>\n<p><p>Thus, Option D is TRUE.</p></p>\n\n<p>In summary, Options B, C, and D are true, while Option A is false.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following undirected graph with edge weights as shown:</p>\n\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1kxfvgd75/0c91ed34-2922-451d-af77-f864e26c2286/bbb53410-623b-11ec-8f78-9b71008b7b00/file-1kxfvgd76.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1kxfvgd75/0c91ed34-2922-451d-af77-f864e26c2286/bbb53410-623b-11ec-8f78-9b71008b7b00/file-1kxfvgd76.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2021 Set 1 Data Structures - Graphs Question 8 English\"> <br>\nThe number of minimum-weight spanning trees of the graph is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p><b>Given :</b> </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3b9aa0u/6f1d1a62-0798-4a4f-baac-6097e078babd/fce015e0-9f32-11ef-8d26-a7f3eb1e40aa/file-jaoe38c1m3b9aa0v.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3b9aa0u/6f1d1a62-0798-4a4f-baac-6097e078babd/fce015e0-9f32-11ef-8d26-a7f3eb1e40aa/file-jaoe38c1m3b9aa0v.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 1 Data Structures - Graphs Question 8 English Explanation 1\"></p>\n<p>MST for given graph is </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3b9a6m0/4f61c74d-62f1-4fe1-8d48-b2536b22b474/fa3d3070-9f32-11ef-8d26-a7f3eb1e40aa/file-jaoe38c1m3b9a6m1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3b9a6m0/4f61c74d-62f1-4fe1-8d48-b2536b22b474/fa3d3070-9f32-11ef-8d26-a7f3eb1e40aa/file-jaoe38c1m3b9a6m1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 1 Data Structures - Graphs Question 8 English Explanation 2\"></p>\n<p>Solid lines represent compulsory edges in MST and dotted lines represent optional edges in MST only one edge out of those 3 edges is possible hence answer is 3. </p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following directed graph: \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/uMIouIdq51p1Qf3ju/AeaPQY0JSjhIrGn4M94YLnFsdFGIn/WcAmCsIkl3dOrqL9q0bnmP/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2016 Set 1 Data Structures - Graphs Question 14 English\"> \n<p>The number of different topological orderings of the vertices of the graph is ________________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Breadth First Search $$(BFS)$$ is started on a binary tree beginning from the root vertex. There is a vertex $$t$$ at a distance four from the root. If t is the $$n$$-th vertex in this $$BFS$$ traversal, then the maximum possible value of $$n$$ is ___________.\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "31",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the tree arcs of a BFS traversal from a source node <b>W</b> in an unweighted, connected,\nundirected graph. The tree <b>T</b> formed by the tree arcs is a data structure for computing",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the shortest path between every pair of vertices."
+      },
+      {
+        "identifier": "B",
+        "content": "the shortest path from <b>W</b> to every vertex in the graph."
+      },
+      {
+        "identifier": "C",
+        "content": "the shortest paths from <b>W</b> to only those nodes that are leaves of <b>T</b>."
+      },
+      {
+        "identifier": "D",
+        "content": "the longest path in the graph."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let G be a graph with n vertices and m edges. What is the tightest upper bound on the\nrunning time of Depth First Search on G, when G is represented as an adjacency matrix?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta(n)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta(n+m)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta(n^2)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta(m^2)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose depth first search is executed on the graph below starting at some unknown vertex. Assume that a recursive call to visit a vertex is made only after first checking that the vertex has not been visited earlier. Then the maximum possible recursion depth (including the initial call) is _________.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/c5yrlo5gKE380tMi3/1GpsgJX5JFVOTDwpqgstKyajEZBel/lSeHlB0VwRP8QVlVWeX78M/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 3 Data Structures - Graphs Question 30 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "19",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In a depth-first traversal of a graph G with n vertices,k edges are marked as tree edges. The number of connected components in G is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "k"
+      },
+      {
+        "identifier": "B",
+        "content": "k + 1"
+      },
+      {
+        "identifier": "C",
+        "content": "n-k-1"
+      },
+      {
+        "identifier": "D",
+        "content": "n-k"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following graph among the following sequences <br>\nI. a b e g h f <br>\nII. a b f e h g <br>\nIII. a b f h g e <br>\nIV. a f g h b e<br>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/WRpIEogTDhCBPhD3I/F5iimTnJcfhHu1vLiHQpxoDUof7iR/Wxjbf9umYL83KXDQf5K8W0/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2003 Data Structures - Graphs Question 32 English\">\nWhat are depth first traversals of the above graph?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I, II and IV only"
+      },
+      {
+        "identifier": "B",
+        "content": "I and IV only"
+      },
+      {
+        "identifier": "C",
+        "content": "II, III and IV only"
+      },
+      {
+        "identifier": "D",
+        "content": "I, III and IV only"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $G$ be a weighted directed acyclic graph with $m$ edges and $n$ vertices. Given $G$ and a source vertex $s$ in $G$, which one of the following options gives the worst case time complexity of the fastest algorithm to find the lengths of shortest paths from $s$ to all vertices that are reachable from $s$ in $G$ ?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\theta(m+n)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\theta(m+n \\log (n))$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\theta(n m)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\theta\\left(n^3\\right)$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$G$ is a weighted directed acyclic graph (DAG) with $n$ vertices and $m$ edges.</p>\n<p>To find the shortest paths from the source vertex $s$ to all reachable vertices, the fastest method uses Topological Sorting.</p>\n<p>First, we do Topological Sorting of the vertices. This takes time $\\theta(n + m)$.</p>\n<p>Then, we process each vertex in topological order and relax all its outgoing edges. This also takes time proportional to the total number of edges, which is $m$.</p>\n<p>So, the total worst-case time complexity is $\\theta(n + m)$.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following pseudocode for depth-first search (DFS) algorithm which takes a directed graph $G(V, E)$ as input, where $d[v]$ and $f[v]$ are the discovery time and finishing time, respectively, of the vertex $v \\in V$.</p>\n<table border=\"1\" cellpadding=\"15\" cellspacing=\"0\"\n       style=\"border-collapse:collapse;\n              font-family:'Times New Roman', serif;\n              font-style:italic;\n              width:900px;\">\n\n  <tr>\n    <td style=\"vertical-align:top; width:50%;\">\n\n      <b>DFS(G):</b><br>\n      unmark all v ∈ V<br>\n      t ← 0<br>\n      for each v ∈ V<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;if v is unmarked<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t ← Explore(G, v, t)<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;end if<br>\n      end for\n\n    </td>\n\n    <td style=\"vertical-align:top; width:50%;\">\n\n      <b>Explore(G, v, t):</b><br>\n      &nbsp;&nbsp;&nbsp;&nbsp;mark v<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;t ← t + 1<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;d[v] ← t<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;for each (v, w) ∈ E<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if w is unmarked<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t ← Explore(G, w, t)<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end if<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;end for<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;t ← t + 1<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;f[v] ← t<br>\n      &nbsp;&nbsp;&nbsp;&nbsp;return t\n\n    </td>\n  </tr>\n\n</table>\n<p>Suppose that the input directed graph $G(V, E)$ is a directed acyclic graph (DAG). For an edge $(u, v) \\in E$, which of the following options will NEVER be correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$d[u] < d[v] < f[v] < f[u]$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$d[v] < d[u] < f[u] < f[v]$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$d[v] < f[v] < d[u] < f[u]$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$d[u] < d[v] < f[u] < f[v]$</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>DFS traversal of directed graph</p>\n<p>$d[v]$ : Explanation begin of vertex $u$.</p>\n<p>$f[v]$ : Exploration end of vertex $u$.</p>\n<p><img alt=\"GATE CSE 2026 Set 1 Data Structures - Graphs Question 1 English Explanation\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyp8ogm/b2a7ec02-42e3-4fc5-b51c-cfb40b4a7abd/859cc760-243f-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyp8ogn.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyp8ogm/b2a7ec02-42e3-4fc5-b51c-cfb40b4a7abd/859cc760-243f-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyp8ogn.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p>No back edges possible in DFS traversal of directed acyclic graph.</p>\n<p>If ( $u, v$ ) forward edge (or) tree edge $d[u] &lt; d[v] &lt; f[v] &lt; f[u]$.</p>\n<p>If $(u, v)$ back edge $d[v] &lt; d[u] &lt; f[u] &lt; f[v]$ but not possible back edge in acyclic graph</p>\n<p>If $(u, v)$ cross edge $d[v] &lt; f[v] &lt; d[u] &lt; f[u]$.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An undirected, unweighted, simple graph $G(V, E)$ is said to be 2 -colorable if there exists a function $c: V \\rightarrow\\{0,1\\}$ such that for every $(u, v) \\in E, c(u) \\neq c(v)$.</p>\n<p>Which of the following statements about 2-colorable graphs is/are true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>If $G$ is 2-colorable, then $G$ may contain cycles of odd length</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>If $G$ is 2 -colorable, then $G$ may contain cycles of even length</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>An optimal algorithm for testing whether $G$ is 2-colorable runs in time $\\theta(|V|+|E|)$, if $G$ is represented as an adjacency list</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p> An optimal algorithm for testing whether $G$ is 2-colorable runs in time $\\theta(|E| \\log |V|)$, if $G$ is represented as an adjacency list</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>A graph is said to be 2-colorable if we can assign one of two colors (like $0$ and $1$) to each vertex such that no two connected vertices share the same color. In graph theory, a 2-colorable graph is known as a <strong>bipartite graph</strong>. </p>\n<p><strong>Option A: If $G$ is 2-colorable, then $G$ may contain cycles of odd length</strong></p>\n<p>Let us test the coloring on an odd-length cycle, for example, a triangle (a cycle of length 3 with vertices $v_1, v_2, v_3$). </p>\n<ul>\n<li><p>Let $c(v_1) = 0$.</p></li>\n<li><p>Then, $c(v_2)$ must be $1$.</p></li>\n<li><p>Then, $c(v_3)$ must be $0$.</p></li>\n<li><p>Because it is a cycle, $v_3$ is connected to $v_1$. They both now have the color $0$, which violates the rule. </p></li>\n</ul>\n<p>This happens with any cycle of odd length. A graph is bipartite (or 2-colorable) if and only if it does <strong>not</strong> contain any odd-length cycles. Thus, Option A is false.</p>\n<p><strong>Option B: If $G$ is 2-colorable, then $G$ may contain cycles of even length</strong></p>\n<p>Let us test the coloring on an even-length cycle (e.g., a square with 4 vertices $v_1, v_2, v_3, v_4$).</p>\n<ul>\n<li><p>Let $c(v_1) = 0$.</p></li>\n<li><p>Then, $c(v_2) = 1$.</p></li>\n<li><p>Then, $c(v_3) = 0$.</p></li>\n<li><p>Then, $c(v_4) = 1$. </p></li>\n</ul>\n<p>Here, $v_4$ is connected to $v_1$, and their colors ($1$ and $0$) are different, which follows the rule perfectly. Finding an even-length cycle does not violate the 2-coloring condition. Thus, Option B is true.</p>\n<p><strong>Option C: An optimal algorithm for testing whether $G$ is 2-colorable runs in time $\\theta(|V|+|E|)$, if $G$ is represented as an adjacency list</strong></p>\n<p>To check if a graph is 2-colorable, we can use simple graph traversal techniques like Breadth-First Search (BFS) or Depth-First Search (DFS).</p>\n<ul>\n<li><p>We start at a source vertex, color it $0$, and color all its adjacent vertices $1$. </p></li>\n<li><p>We then color their adjacent vertices $0$, and so on.</p></li>\n<li><p>While traversing, if we find an adjacent vertex that is already colored with the same color as the current vertex, the graph is not 2-colorable.</p></li>\n</ul>\n<p>When using an adjacency list representation, BFS or DFS requires us to visit every vertex once and check every edge. This takes time proportional to the sum of vertices and edges, which is $\\theta(|V| + |E|)$. This is optimal since we must look at the whole graph at least once. Thus, Option C is true.</p>\n<p><strong>Option D: An optimal algorithm for testing whether $G$ is 2-colorable runs in time $\\theta(|E| \\log |V|)$, if $G$ is represented as an adjacency list</strong></p>\n<p>As we discussed above, the best standard optimal algorithm takes $\\theta(|V| + |E|)$ time using BFS or DFS. An algorithm running in $\\theta(|E| \\log |V|)$ would be unnecessarily slow and is normally seen in algorithms involving priority queues (like Prim's or Dijkstra's), which are not needed here. Thus, Option D is false.</p>\n<p><strong>Correct Options:</strong></p>\n<p><strong>Option B</strong> and <strong>Option C</strong> are the true statements.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following algorithm someAlgo that takes an undirected graph $G$ as input. someAlgo ( $G$ )</p>\n<p>1. Let $v$ be any vertex in $G$. Run BFS on $G$ starting at $v$. Let $u$ be a vertex in $G$ at maximum distance from $v$ as given by the BFS.</p>\n<p>2. Run BFS on $G$ again with $u$ as the starting vertex. Let $z$ be the vertex at maximum distance from $u$ as given by the BFS.</p>\n<p>3. Output the distance between $u$ and $z$ in $G$.</p>\n<p>The output of someAlgo( $T$ ) for the tree shown in the given figure is $\\qquad$ . (Answer in integer)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7zt8t8q/9a4c7c3a-46c5-4015-abf4-98fab0c17385/b7c9b6a0-fbe4-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zt8t8r.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7zt8t8q/9a4c7c3a-46c5-4015-abf4-98fab0c17385/b7c9b6a0-fbe4-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zt8t8r.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Data Structures - Graphs Question 4 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7zt961e/c1d85dad-d3f7-4d34-a07a-b523593ab21e/c1ac3b20-fbe4-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zt961f.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7zt961e/c1d85dad-d3f7-4d34-a07a-b523593ab21e/c1ac3b20-fbe4-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zt961f.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Data Structures - Graphs Question 4 English Explanation\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $G(V, E)$ be an undirected and unweighted graph with 100 vertices. Let $d(u, v)$ denote the number of edges in a shortest path between vertices $u$ and $v$ in $V$. Let the maximum value of $d(u, v), u, v \\in V$ such that $u \\neq v$, be 30 . Let $T$ be any breadth-first-search tree of $G$. Which ONE of the given options is CORRECT for every such graph $G$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " The height of $T$ is exactly 15.\n"
+      },
+      {
+        "identifier": "B",
+        "content": " The height of $T$ is exactly 30.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " The height of $T$ is at least 15 .\n"
+      },
+      {
+        "identifier": "D",
+        "content": " The height of $T$ is at least 30 .\n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>First, let us restate the situation:</p>\n\n<p><p>We have an undirected, unweighted graph $G$ on 100 vertices.  </p></p>\n<p><p>Its diameter (the maximum distance between any two vertices) is 30, i.e., there exist vertices $u, v$ such that the shortest‐path distance $d(u,v) = 30$.  </p></p>\n<p><p>We perform a BFS from some (arbitrary) vertex $r\\in V$, and let $T$ be the resulting BFS tree. The height of $T$ is the maximum distance (in $T$) from $r$ to any other vertex of $G$. Because $T$ is a BFS tree, that “height” in $T$ is also the shortest‐path distance in $G$ from $r$ to its farthest vertex.</p></p>\n\n<p>We want to determine which of the statements (A)–(D) must be <strong>true for every</strong> such graph $G$ and every BFS tree $T$.</p>\n<hr />\n<h2>Key Facts About Diameter, Radius, and Eccentricity</h2>\n\n<p><p><strong>Diameter</strong>: The maximum distance between any two vertices in $G$. Denoted $\\mathrm{diam}(G)$. In our case, $\\mathrm{diam}(G) = 30$.</p></p>\n<p><p><strong>Eccentricity</strong> of a vertex $r$: The distance from $r$ to its farthest vertex in $G$. Denoted $e(r)$.  </p></p>\n<p><p><strong>Radius</strong> of the graph: The minimum eccentricity among all vertices. Denoted $\\mathrm{rad}(G) = \\min_{x\\in V} e(x)$.  </p></p>\n<p><p><strong>Relationship between radius and diameter</strong> (in any graph):</p>\n<p>$    \\mathrm{rad}(G) \\;\\le\\; \\mathrm{diam}(G) \\;\\le\\; 2\\,\\mathrm{rad}(G).    $</p>\n<p>In particular, if $\\mathrm{diam}(G) = 30$, then</p>\n<p>$    \\mathrm{rad}(G) \\;\\ge\\; \\lceil 30/2 \\rceil \\;=\\; 15.    $</p></p>\n<p><p><strong>BFS tree height from $r$</strong> is exactly the eccentricity of $r$. So for a BFS rooted at $r$, the height of that BFS tree is $e(r)$.</p></p>\n\n<p>Hence:</p>\n\n<p><p>We know $\\mathrm{diam}(G) = 30$.  </p></p>\n<p><p>Therefore $\\mathrm{rad}(G) \\ge 15$.  </p></p>\n<p><p>For <em>any</em> vertex $r$, its eccentricity $e(r)$ satisfies $\\mathrm{rad}(G) \\le e(r) \\le \\mathrm{diam}(G)$.  </p></p>\n<p><p>In numbers: $15 \\le \\mathrm{rad}(G) \\le e(r) \\le 30$.</p></p>\n\n<p>So if we pick an arbitrary root $r$ for BFS, the height of the BFS tree $T$ is $e(r)$, which is at least $\\mathrm{rad}(G)$. Since $\\mathrm{rad}(G) \\ge 15$, we conclude the BFS‐tree height is <strong>at least 15</strong>.</p>\n<hr />\n<h2>Checking the Given Options</h2>\n\n<p><p><strong>Option A: “The height of $T$ is exactly 15.”</strong>  </p>\n<p>This is not guaranteed, because the BFS root may <em>not</em> be a center vertex. Its eccentricity could be bigger than 15.  </p></p>\n<p><p><strong>Option B: “The height of $T$ is exactly 30.”</strong>  </p>\n<p>Also not guaranteed, because if we happen to choose (or have) a root closer to the ‘middle’ of the graph, its eccentricity might be less than 30.  </p></p>\n<p><p><strong>Option C: “The height of $T$ is at least 15.”</strong>  </p>\n<p>This aligns with our argument: $\\mathrm{rad}(G)\\ge15$ and $e(r)\\ge\\mathrm{rad}(G)$. So the BFS tree height cannot be less than 15.  </p></p>\n<p><p><strong>Option D: “The height of $T$ is at least 30.”</strong>  </p>\n<p>This is not necessarily true. The height could be as low as (about) 15 if the BFS root is near the center of the graph.</p></p>\n\n<p>Thus, the only statement that must hold for <strong>every</strong> such graph $G$ of diameter 30 and <strong>any</strong> BFS tree $T$ is:</p>\n<blockquote>\n  <p><strong>Option C: The height of $T$ is at least 15.</strong></p>\n</blockquote>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let G be a directed graph and T a depth first search (DFS) spanning tree in G that is rooted at a vertex v. Suppose T is also a breadth first search (BFS) tree in G, rooted at v. Which of the following statements is/are TRUE for every such graph G and tree T?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>There are no back-edges in G with respect to the tree T</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>There are no cross-edges in G with respect to the tree T</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>There are no forward-edges in G with respect to the tree T</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The only edges in G are the edges in T</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m00r8oye/e9116ab2-8551-45e5-8ee5-a8bd1674ab15/efd60f60-5e07-11ef-aed1-3becbdb48cb2/file-jaoe38c1m00r8oyf.png\" alt=\"GATE CSE 2024 Set 1 Data Structures - Graphs Question 7 English Explanation 1\"></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m00r8lcp/f9e91693-6957-4d44-ba03-cf4bebbd8f86/ed0da090-5e07-11ef-aed1-3becbdb48cb2/file-jaoe38c1m00r8lcq.png\" alt=\"GATE CSE 2024 Set 1 Data Structures - Graphs Question 7 English Explanation 2\"></p>\n\n<p></p><p><strong>Back Edge Possible :</strong> Back edges can exist in $ G $ with respect to the tree $ T $.</p><p></p>\n<p></p><p><strong>Cross Edge Possible :</strong> Cross edges can also exist in $ G $ with respect to the tree $ T $.</p><p></p>\n<p></p><p><strong>No Forward Edge :</strong> There cannot be any forward edges in $ G $ with respect to the tree $ T $. If there were a forward edge, it would contradict the property that $ T $ is both a DFS and BFS tree, leading to different traversal orders.</p><p></p>\n\n<p>Hence, the correct option is <strong>(C)</strong>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let G = (V, E) be a directed, weighted graph with weight function w: E $$ \\to $$ R. For some function f: V $$ \\to $$ R, for each edge (u, v) $$ \\in $$ E, define w'(u, v) as w(u, v) + f(u) - f(v).\n<br><br>Which one of the options completes the following sentence so that it is TRUE?\n<br>“The shortest paths in G under w are shortest paths under w’ too, _______”.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "for every f : V $$ \\to $$ R"
+      },
+      {
+        "identifier": "B",
+        "content": "if and only if $$\\forall u \\in V$$, f(u) is positive"
+      },
+      {
+        "identifier": "C",
+        "content": "if and only if $$\\forall u \\in V$$, f(u) is negative"
+      },
+      {
+        "identifier": "D",
+        "content": "f and only if f(u) is the distance from s to u in the graph obtained by adding a new vertex\ns to G and edges of zero weight from s to every vertex of G"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve this problem, we need to analyze how reweighting edges using a potential function $ f $ affects the shortest paths in a directed, weighted graph $ G $.</p>\n<h3><strong>Given:</strong></h3>\n\n<p><p><strong>Graph $ G = (V, E) $</strong></p></p>\n<p><p><strong>Weight function $ w: E \\rightarrow \\mathbb{R} $</strong></p></p>\n<p><p><strong>Reweighted edges $ w'(u, v) = w(u, v) + f(u) - f(v) $</strong> for some function $ f: V \\rightarrow \\mathbb{R} $</p></p>\n\n<h3><strong>Objective:</strong></h3>\n<p>Determine under what conditions the shortest paths in $ G $ under $ w $ are also shortest paths under $ w' $.</p>\n<h3><strong>Understanding Reweighting:</strong></h3>\n\n<p><p><strong>Path Weight Transformation:</strong></p></p>\n<p><p>For any path $ p $ from $ u $ to $ v $:</p>\n<p>$     w'(p) = w(p) + f(u) - f(v)     $</p></p>\n<p><p>This means the reweighted path cost differs from the original by $ f(u) - f(v) $.</p></p>\n\n<p><p><strong>Preservation of Shortest Paths:</strong></p></p>\n<p><p><strong>Relative Costs Unchanged:</strong></p>\n\n<p><p>The difference in costs between any two paths from $ u $ to $ v $ remains the same after reweighting.</p></p>\n<p><p>Therefore, the path with the minimum original cost remains the path with the minimum reweighted cost.</p></p></p>\n<p><p><strong>No Negative Cycles Introduced:</strong></p>\n\n<p><p>Reweighting does not introduce negative cycles because cycles are closed paths where start and end vertices are the same ($ u = v $), so $ f(u) - f(v) = 0 $.</p></p>\n<p><p>The total weight of any cycle remains the same under $ w' $ as under $ w $.</p></p></p>\n\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p><strong>Shortest Paths Are Preserved:</strong></p>\n\n<p>Since the ordering of path costs remains the same, shortest paths under $ w $ remain shortest paths under $ w' $ for <strong>any</strong> function $ f: V \\rightarrow \\mathbb{R} $.</p></p>\n\n<h3><strong>Analyzing the Options:</strong></h3>\n\n<p><p><strong>Option A:</strong> <em>For every $ f: V \\rightarrow \\mathbb{R} $</em></p></p>\n<p><p><strong>Correct:</strong> As demonstrated, the shortest paths are preserved for any function $ f $.</p></p>\n<p><p><strong>Option B and C:</strong> <em>Conditions on $ f(u) $ being positive or negative</em></p></p>\n<p><p><strong>Incorrect:</strong> The preservation of shortest paths does not depend on $ f(u) $ being positive or negative.</p></p>\n<p><p><strong>Option D:</strong> <em>Specific choice of $ f(u) $ based on distances from a new vertex</em></p></p>\n<p><p>While choosing $ f(u) $ as distances from a new vertex $ s $ (as in Johnson's algorithm) ensures non-negative edge weights, the shortest paths are preserved regardless of this specific choice.</p></p>\n<p><p><strong>Incorrect:</strong> The condition is not necessary for the preservation of shortest paths.</p></p>\n\n<h3><strong>Final Answer:</strong></h3>\n<p><strong>Option A: For every $ f: V \\rightarrow \\mathbb{R} $</strong></p>\n<hr />\n<p><strong>Therefore, the shortest paths in $ G $ under $ w $ are shortest paths under $ w' $ too, for every function $ f: V \\rightarrow \\mathbb{R} $.</strong></p>\n<p><strong>Answer:</strong> Option A</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ be a simple undirected graph. Let $${T_D}$$ be a depth first search tree of $$G.$$ Let $${T_B}$$ be a\nbreadth first search tree of $$G.$$ Consider the following statements.\n<p>$$(I)$$ No edge of $$G$$ is a cross edge with respect to $${T_D}.$$ ($$A$$ cross edge in $$G$$ is between \n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,$$ two nodes neither of which is an ancestor of the other in $${T_D}.$$)\n<br>$$(II)$$ For every edge $$(u,v)$$ of $$G,$$ if $$u$$ is at depth $$i$$ and $$v$$ is at depth $$j$$ in $${T_B}$$, then <br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$\\left| {i - j} \\right| = 1.$$</p>\n<p>Which of the statements above must necessarily be true?</p>\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$I$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$II$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "Both $$I$$ and $$II$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $$I$$ nor $$II$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ be a graph with $$100!$$ vertices, with each vertex labelled by a distinct permutation of the numbers $$1,2, … , 100.$$ There is an edge between vertices $$u$$ and $$v$$ if and only if the label of $$u$$ can be obtained by swapping two adjacent numbers in the label of $$v.$$ Let $$𝑦$$ denote the degree of a vertex in $$G,$$ and $$𝑧$$ denote the number of connected components in $$G.$$ Then, $$𝑦 + 10𝑧 =$$ _____. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "109",
+    "explanation": "<p>First, observe that each vertex of $G$ corresponds to one of the $100!$ permutations of $\\{1,2,\\dots,100\\}$.  There is an edge between two vertices if and only if their labels differ by exactly one swap of adjacent elements.</p>\n<hr />\n<h2>1. The degree $y$ of each vertex</h2>\n<p>Given any particular permutation of $1,2,\\dots,100$, we can create a new permutation by choosing any one of the $99$ adjacent pairs and swapping those two elements.  Because each of those $99$ possible adjacent swaps produces a distinct permutation (and thus a distinct edge), <strong>each vertex has $99$ neighbors</strong> in the graph.  </p>\n<p>Hence,</p>\n<p>$ y \\;=\\; 99. $</p>\n<hr />\n<h2>2. The number of connected components $z$</h2>\n<p>From a classical result (or by a simple argument), we know that any permutation can be transformed into any other permutation by a sequence of adjacent transpositions (in fact, adjacent transpositions generate the full symmetric group).  Therefore, starting from any vertex (permutation), one can reach any other vertex by a path of these single “adjacent swaps.”  In other words, the graph is <strong>connected</strong>.</p>\n<p>Hence,</p>\n<p>$ z \\;=\\; 1. $</p>\n<hr />\n<h2>3. Final value of $y + 10z$</h2>\n<p>$ y + 10z  \\;=\\; 99 \\;+\\; 10\\times 1 \\;=\\; 99 + 10 \\;=\\; \\boxed{109}. $</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "In an adjacency list representation of an undirected simple graph $$G = (V,E),$$ each edge $$(u, v)$$ has two adjacency list entries: $$[v]$$ in the adjacency list of $$u,$$ and $$[u]$$ in the adjacency list of $$v.$$ These are called twins of each other. A twin pointer is a pointer from an adjacency list entry to its twin. If $$|E| = m$$ and $$|V| = n,$$ and the memory size is not a constraint, what is the time complexity of the most efficient algorithm to set the twin pointer in each entry in each adjacency list?\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\left( {{n^2}} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\left( {n + m} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\left( {{m^2}} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\left( {{n^4}} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ be a connected undirected graph of $$100$$ vertices and $$300$$ edges. The weight of a minimum spanning tree of $$G$$ is $$500.$$ When the weight of each edge of $$G$$ is increased by five, the weight of a minimum spanning tree becomes ________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "995",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Let G = (V, E) be a simple undirected graph, and s be a particular vertex in it called the source. For $$x \\in V$$, let d(x) denote the shortest distance in G from s to x. A breadth first search (BFS) is performed starting at s. Let T be the resultant BFS tree. If (u, v) is an edge of G that is not in T, then which one of the following CANNOT be the value of $$d\\left( u \\right) - d\\left( v \\right)$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-1"
+      },
+      {
+        "identifier": "B",
+        "content": "0"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let G be a weighted graph with edge weights greater than one and G' be the graph constructed by squaring the weights of edges in G. Let T and T' be the minimum spanning trees of G and G' respectively, with total weights t and t'. Which of the following statements is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "T' = T with total weight t' = t<sup>2</sup> "
+      },
+      {
+        "identifier": "B",
+        "content": "T' = T with total weight t' &lt; t<sup>2</sup> "
+      },
+      {
+        "identifier": "C",
+        "content": "T' =! T but total weight t' = t<sup>2</sup> "
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a complete undirected graph with vertex set {0,1,2,3,4}. Entry W<sub>ij</sub> in the matrix W below is the weight of the edge {i, j}\n$$$W = \\left( {\\matrix{\n   0 &amp; 1 &amp; 8 &amp; 1 &amp; 4  \\cr \n   1 &amp; 0 &amp; {12} &amp; 4 &amp; 9  \\cr \n   8 &amp; {12} &amp; 0 &amp; 7 &amp; 3  \\cr \n   1 &amp; 4 &amp; 7 &amp; 0 &amp; 2  \\cr \n   4 &amp; 9 &amp; 3 &amp; 2 &amp; 0  \\cr \n\n } } \\right)$$$\nWhat is the minimum possible weight of a spanning tree T in this graph such that vertex 0 is a leaf node in the tree T?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7"
+      },
+      {
+        "identifier": "B",
+        "content": "8"
+      },
+      {
+        "identifier": "C",
+        "content": "9"
+      },
+      {
+        "identifier": "D",
+        "content": "10"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a complete undirected graph with vertex set {0,1,2,3,4}. Entry W<sub>ij</sub> in the matrix W below is the weight of the edge {i, j}\n$$$W = \\left( {\\matrix{\n   0 &amp; 1 &amp; 8 &amp; 1 &amp; 4  \\cr \n   1 &amp; 0 &amp; {12} &amp; 4 &amp; 9  \\cr \n   8 &amp; {12} &amp; 0 &amp; 7 &amp; 3  \\cr \n   1 &amp; 4 &amp; 7 &amp; 0 &amp; 2  \\cr \n   4 &amp; 9 &amp; 3 &amp; 2 &amp; 0  \\cr \n\n } } \\right)$$$\nWhat is the minimum possible weight of a path P from vertex 1 to vertex 2 in this graph such that P contains at most 3 edges?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7"
+      },
+      {
+        "identifier": "B",
+        "content": "8"
+      },
+      {
+        "identifier": "C",
+        "content": "9"
+      },
+      {
+        "identifier": "D",
+        "content": "10"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following sequence of nodes for the undirected graph given below. <br>\n1.a b e f d g c <br>\n2.a b e f c g d <br>\n3.a d g e b c f <br>\n4.a d b c g e f <br>\nA Depth First Search (DFS) is started at node a. The nodes are listed in the order they are first visited. Which all of the above is (are) possible output(s)?\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/dcp8ttJnX5ahJfcvK/8Y2uhoCD5hzfiCm11uvGu28ZMUurO/Bfm1d42gkudoTOwl225inT/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Data Structures - Graphs Question 26 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 and 3 only"
+      },
+      {
+        "identifier": "B",
+        "content": "2 and 3 only"
+      },
+      {
+        "identifier": "C",
+        "content": "2, 3 and 4 only"
+      },
+      {
+        "identifier": "D",
+        "content": "1 , 2 and 3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "What is the largest integer m such that every simple connected graph with n vertices and n edges contains at least m different spanning trees?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the depth-first-search of an undirected graph with 3 vertices P, Q, and R. Let discovery time d(u) represent the time instant when the vertex u is first visited, and finish time f(u) represent the time instant when the vertex u is last visited. Given that <br>\nd(P) = 5 units&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f(P) = 12 units <br>\nd(Q) = 6 units&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f(Q) = 10 units <br>\nd(R) = 14 unit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f(R) = 18 units <br>\nWhich one of the following statements is TRUE about the graph ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "There is only one connected component "
+      },
+      {
+        "identifier": "B",
+        "content": "There are two connected components, and P and R are connected "
+      },
+      {
+        "identifier": "C",
+        "content": "There are two connected components, and Q and R are connected"
+      },
+      {
+        "identifier": "D",
+        "content": "There are two connected components, and P and Q are connected"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Let T be a depth first search tree in an undirected graph G. Vertices u and v are leaves of this tree T. The degrees of both u and v in G are at least 2. which one of the following statements is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "There must exist a vertex w adjacent to both u and v in G "
+      },
+      {
+        "identifier": "B",
+        "content": "There must exist a vertex w whose removal disconnects u and v in G "
+      },
+      {
+        "identifier": "C",
+        "content": "There must exist a cycle in G containing u and v "
+      },
+      {
+        "identifier": "D",
+        "content": "There must exist a cycle in G containing u and all its neighbours in G."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Let T be a depth-first search tree in an undirected graph G. Vertices u and v are\nleaves of this tree T. The degrees of both u and v in G are at least 2. Which one\nof the following statements is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "There must exist a vertex w adjacent to both u and v in G"
+      },
+      {
+        "identifier": "B",
+        "content": "There must exist a vertex w whose removal disconnects u and v in G"
+      },
+      {
+        "identifier": "C",
+        "content": "There must exist a cycle in G containing u and v"
+      },
+      {
+        "identifier": "D",
+        "content": "There must exist a cycle in G containing u and all its neighbors in G."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an undirected unweighted graph G. Let a breadth-first traversal of G be\ndone starting from a node r. Let d(r, u) and d(r, v) be the lengths of the shortest\npaths from r to u and v respectively in G. If u is visited before v during the\nbreadth-first traversal, which of the following statements is correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "d(r, u) &lt; d(r, v)"
+      },
+      {
+        "identifier": "B",
+        "content": "d(r, u) &gt; d(r, v)"
+      },
+      {
+        "identifier": "C",
+        "content": "d(r, u)$$ \\le $$d(r, v)"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "How many undirected graphs (not necessarily connected) can be constructed out\nof a given set V = { v<sub>1</sub>,v<sub>2</sub>,........,v<sub>n</sub> } of n vertices?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{n(n-1)} {2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "2<sup>n</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "n!"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2^\\frac{n(n-1)} {2}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Let G be an undirected graph. Consider a depth-first traversal of G, and let T be\nthe resulting depth-first search tree. Let u be a vertex in G and let v be the first\nnew (unvisited) vertex visited after visiting u in the traversal. Which of the\nfollowing statements is always true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "{u, v} must be an edge in G, and u is a descendant of v in T"
+      },
+      {
+        "identifier": "B",
+        "content": "{u, v} must be an edge in G, and v is a descendant of u in T"
+      },
+      {
+        "identifier": "C",
+        "content": "If {u, v} is not an edge in G then u is a leaf in T"
+      },
+      {
+        "identifier": "D",
+        "content": "If {u, v} is not an edge in G then u and v must have the same parent in T"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,317 @@
+[
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Let P be an array containing n integers. Let t be the lowest upper bound on the number of comparisons of the array elements, required to find the minimum and maximum values in an arbitrary of n elements. Which one of the following choices is correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "t &gt; 2n - 2"
+      },
+      {
+        "identifier": "B",
+        "content": "$$t &gt; 3\\left\\lceil {\\frac{n}{2}} \\right\\rceil $$&nbsp;and t&nbsp;≤&nbsp;2n - 2"
+      },
+      {
+        "identifier": "C",
+        "content": "t &gt; n and&nbsp;$$t \\le 3\\left\\lceil {\\frac{n}{2}} \\right\\rceil $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$t &gt; \\left\\lceil {{{\\log }_2}(n)} \\right\\rceil $$&nbsp;and t&nbsp;≤&nbsp;n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the correct choice, we'll analyze the minimum number of comparisons $ t $ required to find both the minimum and maximum values in an array of $ n $ elements, and see which option correctly describes $ t $.</p>\n<h3><strong>Known Algorithms and Comparisons:</strong></h3>\n\n<p><strong>Naive Approach:</strong></p>\n\n\n<p><p><strong>Separate Searches:</strong></p>\n\n<p><p>Find the minimum with $ n - 1 $ comparisons.</p></p>\n<p><p>Find the maximum with $ n - 1 $ comparisons.</p></p>\n<p><p><strong>Total comparisons:</strong> $ t = 2n - 2 $.</p></p></p>\n\n\n<p><strong>Improved Approach:</strong></p>\n\n\n<p><p><strong>Pairwise Comparisons:</strong></p>\n\n<p><p>Compare elements in pairs.</p></p>\n<p><p>For each pair, perform:</p></p>\n<p><p>1 comparison to determine the smaller and larger of the pair.</p></p>\n<p><p>Then compare the smaller to the current minimum and the larger to the current maximum.</p></p>\n<p><p><strong>Total comparisons:</strong></p></p>\n<p><p>If $ n $ is even: $ t = 3(n/2) - 2 = \\frac{3n}{2} - 2 $.</p></p>\n<p><p>If $ n $ is odd: $ t = 3\\left\\lfloor \\frac{n}{2} \\right\\rfloor $.</p></p></p>\n\n<h3><strong>Analyzing the Options:</strong></h3>\n<h4><strong>Option A:</strong> $ t > 2n - 2 $</h4>\n\n<p><p><strong>Reality:</strong> The naive approach uses exactly $ 2n - 2 $ comparisons.</p></p>\n<p><p><strong>Conclusion:</strong> Since there are algorithms that require fewer than $ 2n - 2 $ comparisons, $ t $ can be less than or equal to $ 2n - 2 $.</p></p>\n<p><p><strong>Result:</strong> <strong>Option A is incorrect.</strong></p></p>\n\n<h4><strong>Option B:</strong> $ t > 3\\left\\lceil \\frac{n}{2} \\right\\rceil $ and $ t \\leq 2n - 2 $</h4>\n\n<p><p><strong>Calculations:</strong></p></p>\n<p><p>$ 3\\left\\lceil \\frac{n}{2} \\right\\rceil $ is approximately $ \\frac{3n}{2} $ or slightly more.</p></p>\n<p><p><strong>Lower Bound:</strong> $ t > \\frac{3n}{2} $.</p></p>\n<p><p><strong>Upper Bound:</strong> $ t \\leq 2n - 2 $.</p></p>\n<p><p><strong>Reality:</strong></p></p>\n<p><p>The improved approach achieves $ t = \\frac{3n}{2} - 2 $, which is less than $ \\frac{3n}{2} $.</p></p>\n<p><p>Therefore, $ t $ is <strong>less than</strong> $ 3\\left\\lceil \\frac{n}{2} \\right\\rceil $.</p></p>\n<p><p><strong>Result:</strong> <strong>Option B is incorrect.</strong></p></p>\n\n<h4><strong>Option C:</strong> $ t > n $ and $ t \\leq 3\\left\\lceil \\frac{n}{2} \\right\\rceil $</h4>\n\n<p><p><strong>Calculations:</strong></p></p>\n<p><p><strong>Lower Bound:</strong> $ t > n $.</p>\n\n<p><p>For $ n \\geq 2 $, the minimum number of comparisons is greater than $ n $.</p></p>\n<p><p>For example, with the improved approach:</p></p>\n<p><p>$ t = \\frac{3n}{2} - 2 $, which is greater than $ n $ for $ n \\geq 4 $.</p></p></p>\n<p><p><strong>Upper Bound:</strong> $ t \\leq 3\\left\\lceil \\frac{n}{2} \\right\\rceil $.</p>\n\n<p>This aligns with the number of comparisons in the improved algorithm.</p></p>\n<p><p><strong>Conclusion:</strong> This option correctly captures the range of $ t $ for $ n \\geq 2 $.</p></p>\n<p><p><strong>Result:</strong> <strong>Option C is correct.</strong></p></p>\n\n<h4><strong>Option D:</strong> $ t > \\left\\lceil \\log_2 n \\right\\rceil $ and $ t \\leq n $</h4>\n\n<p><p><strong>Reality:</strong></p></p>\n<p><p>The lower bound $ t > \\left\\lceil \\log_2 n \\right\\rceil $ is true since finding both minimum and maximum requires more than $ \\log n $ comparisons.</p></p>\n<p><p>However, the upper bound $ t \\leq n $ is incorrect because we need more than $ n $ comparisons for $ n \\geq 2 $ in order to find both the minimum and maximum.</p>\n\n<p>For example, even with the naive approach, $ t = 2n - 2 $.</p></p>\n<p><p><strong>Result:</strong> <strong>Option D is incorrect.</strong></p></p>\n\n<h3><strong>Final Answer:</strong></h3>\n<p><strong>Option C</strong> is correct because the minimum number of comparisons $ t $ required to find both the minimum and maximum values in an array of $ n $ elements satisfies $ t > n $ and $ t \\leq 3\\left\\lceil \\frac{n}{2} \\right\\rceil $.</p>\n<hr />\n<p><strong>Answer:</strong> Option C</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program.\n<br><br><pre><code class=\"c\">#include &lt; stdio.h &gt;\nint main () {\n    int a [4] [5] = {{1, 2, 3, 4, 5},\n                           {6, 7, 8, 9, 10},\n                           {11, 12, 13, 14, 15},\n                           {16, 17, 18, 19, 20}};\n    printf (“%d\\n”, *(*(a+**a+2) +3));\n    return (0);\n}</code></pre>\n<br><br>The output of the program is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "19",
+    "explanation": "<p>The program will print:</p>\n<p>19</p>\n<p>Explanation:</p>\n\n<p><p>**a is the same as a[0][0], so  </p>\n<p>$$**a = a[0][0] = 1.$$</p></p>\n<p><p>Therefore  </p>\n<p>$$a + **a + 2 = a + 1 + 2 = a + 3.$$</p></p>\n<p><p>*(a+3) refers to the 4th row (index 3), i.e. the array {16,17,18,19,20}, which decays to a pointer to its first element. Adding 3 gives a pointer to the element at index 3.  </p></p>\n<p><p>Dereferencing that pointer yields  </p>\n<p>$$*(*(a+3)+3) = a[3][3] = 19.$$</p></p>\n\n<p>So the output is 19.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "A program P reads in 500 integers in the range [0, 100] representing the cores of 500 students. It then print the frequency of each score above 50. What would be the best way for P to store the frequencies?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "An array of 50 numbers"
+      },
+      {
+        "identifier": "B",
+        "content": "An array of 100 numbers"
+      },
+      {
+        "identifier": "C",
+        "content": "An array of 500 numbers"
+      },
+      {
+        "identifier": "D",
+        "content": "A dynamically allocated array of 550 numbers"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A single array A[1..MAXSIZE] is used to implement two stacks, The two stacks grow from opposite ends of the array. Variables top1 and top2 (top1 &lt; top2) point to the location of the topmost element in each of the stacks, If the space is to be used efficiently, the condition for \"stack full\" is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(top 1 = MAXSIZE/2) AND (top 2 = MAXSIZE/2 + 1)"
+      },
+      {
+        "identifier": "B",
+        "content": "top 1 + top 2 = MAXSIZE"
+      },
+      {
+        "identifier": "C",
+        "content": "(top 1 = MAXSIZE/2) or (top 2 = MAXSIZE)"
+      },
+      {
+        "identifier": "D",
+        "content": "top 1 = top 2 - 1"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose you are given an array s[1..n] and a procedure reverse (s, i, j) which reverse the order of elements in s between positions i and j (both inclusive). What does the following sequence do, where $$1 \\le k &lt; n:$$ reverse (s, 1, k);<br>\nreverse (s, k+1, n);<br>\nreverse (s, 1, n);<br>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Rotates s left by k positions"
+      },
+      {
+        "identifier": "B",
+        "content": "Leaves s unchanged"
+      },
+      {
+        "identifier": "C",
+        "content": "Reverse all elements of s"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : array $[1 \\ldots . n]$ and procedure reverse ( $s, i, j$ ) which reverse element ( $i, j$ )</p>\n<p>Let's take an example</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1maqy8028/dc2494bf-5c7b-46cd-a330-39beabc42dfc/c72f3500-3269-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqy8029.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1maqy8028/dc2494bf-5c7b-46cd-a330-39beabc42dfc/c72f3500-3269-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqy8029.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2000 Data Structures - Arrays Question 10 English Explanation 1\"></p>\n<p>Assume value of $k$ is 3</p>\n<p>First, we call reverse $(s, 1,3)$</p>\n<p>It reverses the value of array at position 1,3 .</p>\n<p>So $s$ will be</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1maqya0aq/ecd77efe-255a-4e93-92a2-4397fa065a2a/fefc2e20-3269-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqya0ar.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1maqya0aq/ecd77efe-255a-4e93-92a2-4397fa065a2a/fefc2e20-3269-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqya0ar.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2000 Data Structures - Arrays Question 10 English Explanation 2\"></p>\n<p>$\\Rightarrow $ Second call reverse $(s, 4,5)$ it reverses the value of array at position.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1maqybm54/a0711538-0b56-4b3c-9cfc-0e1fba0d16f8/2bab1580-326a-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqybm55.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1maqybm54/a0711538-0b56-4b3c-9cfc-0e1fba0d16f8/2bab1580-326a-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqybm55.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2000 Data Structures - Arrays Question 10 English Explanation 3\"></p>\n<p>$\\Rightarrow \\quad$ Now reverse $(s, 1,5)$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1maqyexft/9aba4ad5-88c9-42fe-a82e-38934a525408/87d28b90-326a-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqyexfu.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1maqyexft/9aba4ad5-88c9-42fe-a82e-38934a525408/87d28b90-326a-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqyexfu.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2000 Data Structures - Arrays Question 10 English Explanation 4\"></p>\n<p>So, after all the function call we can say that it rotates an array $s(1 \\ldots . . n)$ left by $k$ position.</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "An n $$\\times$$ n array v is defined as follows V [i, j] = i - j for all i, j, $$1 \\le i \\le n,\\,1 \\le j \\le n$$ The sum of the elements of the array v is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "n - 1"
+      },
+      {
+        "identifier": "C",
+        "content": "$${n^2} - 3n + 2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${n^2}(n + 1)/2$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $n \\times n$ array defined as follow $v[i, j]=i-j$ for all $i, j, i \\leq n, 1 \\leq j \\leq n$</p>\n<p>Let $\\quad n=3$</p>\n<p>Substitute the value</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1maqxrf78/312fabcf-d0a8-4106-a618-3e669558855f/fa1f9740-3267-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqxrf79.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1maqxrf78/312fabcf-d0a8-4106-a618-3e669558855f/fa1f9740-3267-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqxrf79.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2000 Data Structures - Arrays Question 11 English Explanation\">\n<p>The sum of the element of the array $v=$</p>\n<p>$$ \\begin{aligned} &amp; =0-1-2+1+0-1+2+1+0 \\\\ &amp; =0 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An array $[82, 101, 90, 11, 111, 75, 33, 131, 44, 93]$ is heapified. Which one of the following options represents the first three elements in the heapified array?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>82, 90, 101</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>82, 11, 93</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>131, 11, 93</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>131, 111, 90</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>When an array is heapified, it can be converted into either a min-heap or a max-heap. Let's consider the properties of both types of heaps to determine the correct answer.</p>\n\n<p>For a min-heap, the value of each parent node is less than or equal to the values of its children. The root node will have the minimum value in the entire heap.</p>\n\n<p>For a max-heap, the value of each parent node is greater than or equal to the values of its children. The root node will have the maximum value in the entire heap.</p>\n\n<p>Given the array $[82, 101, 90, 11, 111, 75, 33, 131, 44, 93]$, we need to determine the first three elements after heapification.</p>\n\n<p><b>Option A:</b> 82, 90, 101</p>\n\n<p>This option suggests a sequence that resembles neither a min-heap nor a max-heap, as there is no clear hierarchical order. Therefore, it is incorrect.</p>\n\n<p><b>Option B:</b> 82, 11, 93</p>\n\n<p>In this option, 82 is the root, 11 is a child, and 93 is another child. This could potentially be a min-heap since 82 is the smallest and 11 is smaller than 93. But this sequence does not conform well to either a min-heap or a max-heap. Therefore, it is incorrect.</p>\n\n<p><b>Option C:</b> 131, 11, 93</p>\n\n<p>If 131 is the root, it does not fit a min-heap since it is the maximum value and should not be on top. It could be a top value for a max-heap, but 11 should be greater than 93 if it were 131's direct child, which does not comply with a max-heap property. Therefore, it is incorrect.</p>\n\n<p><b>Option D:</b> 131, 111, 90</p>\n\n<p>In this option, 131 is the root, 111 is a child, and 90 is another child. This looks like a max-heap, with 131 being the highest value, followed by 111 and 90. This arrangement seems appropriate for a max-heap.</p>\n\n<p>Among the given options, <b>Option D</b> represents the first three elements in the heapified array as a max-heap.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C functions in which size is the number of elements in the array E:\n<pre><code class=\"c\">int MyX(int *E, unsigned int size){\n int Y = 0;\n int Z;\n int i,j,k;\n for(i = 0; i &lt; size; i++)\n       Y = Y + E[i];\n for(i = 0; i &lt; size; i++)\n   for(j = i; j &lt; size; j++){\n     Z = 0;\n     for(k = i; k &lt;= j; k++)\n        Z = Z + E[k];\n     if(Z &gt; Y)\n        Y = X;\n   }\n   return Y;\n}\n</code></pre>\nThe value returned by the function MyX is the",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Maximum possible sum of elements in any sub-array of array E."
+      },
+      {
+        "identifier": "B",
+        "content": "Maximum element in any sub-array of array E."
+      },
+      {
+        "identifier": "C",
+        "content": "Sum of the maximum elements in all possible sub-arrays of array E."
+      },
+      {
+        "identifier": "D",
+        "content": "The sum of all elements in the array E."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Two matrices M<sub>1</sub> and M<sub>2</sub> are to be stored in arrays A and B respectively. Each array can be stored either in row-major or column-major order in contiguous memory locations. The time complexity of an algorithm to compute M<sub>1</sub>$$\\times$$ M<sub>2</sub> will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Best if A is in row-major and B is in column-major order"
+      },
+      {
+        "identifier": "B",
+        "content": "Best if both are in row-major order"
+      },
+      {
+        "identifier": "C",
+        "content": "Best if both are in column-major order"
+      },
+      {
+        "identifier": "D",
+        "content": "Independent of the storage scheme"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Let A be a two dimensional array declared as follows:<br>\nA : array [ 1... 10] [1... 15] of integer;<br>\nAssuming that each integer takes one memory locations the array is stored in row-major order and the first element of the array is stored at location 100, what is the address of the element A[i] [j]?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "15i + j + 84"
+      },
+      {
+        "identifier": "B",
+        "content": "15j + i + 84"
+      },
+      {
+        "identifier": "C",
+        "content": "10i + j + 89"
+      },
+      {
+        "identifier": "D",
+        "content": "10j + i + 89"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given:</p>\n\n<p><p>A is a two-dimensional array of integers.</p></p>\n<p><p>Array dimensions are $ A[1 \\ldots 10][1 \\ldots 15] $.</p></p>\n<p><p>Number of rows (R) = 10.</p></p>\n<p><p>Number of columns (C) = 15.</p></p>\n<p><p>Size of each integer (W) = 1 memory location.</p></p>\n<p><p>The array is stored in row-major order.</p></p>\n<p><p>Base address = 100.</p></p>\n\n<p>To find the address of the element $ A[i][j] $:</p>\n<p>The formula for the address in row-major order is:</p>\n<p>$ \\text{Address of } A[i][j] = \\text{Base address} + W \\times [(i-1) \\times C + (j-1)] $</p>\n<p>Substituting the values:</p>\n<p>$ = 100 + 1 \\times [(i-1) \\times 15 + (j-1)] $</p>\n<p>Simplifying the equation:</p>\n<p>$ = 100 + [15i - 15 + j - 1]  $</p>\n<p>$ = 100 + 15i + j - 16 $</p>\n<p>$ = 84 + 15i + j $</p>\n<p>Hence, the address of $ A[i][j] $ is $ 84 + 15i + j $.</p>",
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "In a compact single dimensional array representation for lower triangular matrices (i.e all the elements above the diagonal are zero) of size n $$\\times$$ n, non-zero elements (i.e., elements of the lower triangle) of each row are stored one after another, starting from the first row, the index of the (i, j)<sup>th</sup> element of the lower triangular matrix in this new representation is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "i + j"
+      },
+      {
+        "identifier": "B",
+        "content": "i + j - 1"
+      },
+      {
+        "identifier": "C",
+        "content": "$$(j - 1) + i{{(i - 1)} \\over 2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$i + {{j(j - 1)} \\over 2}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>single dimensional array representation for lower triangular matrices of size $n \\times n$, Let us take $(3,3)$ lower triangular matrix</p>\n<p>$$ \\left[\\begin{array}{lll} 1 &amp; 0 &amp; 0 \\\\ 2 &amp; 3 &amp; 0 \\\\ 4 &amp; 5 &amp; 6 \\end{array}\\right] $$</p>\n<p>Now, above matrix can be stored in 1D as</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1maqxa0qq/c70821e1-d60c-4f07-9cdc-1e671c175706/16330220-3266-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqxa0qr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1maqxa0qq/c70821e1-d60c-4f07-9cdc-1e671c175706/16330220-3266-11f0-ac03-3dc26e6eefd5/file-jaoe38c1maqxa0qr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 1994 Data Structures - Arrays Question 7 English Explanation\">\n<p>Here, element $(2,2)$ will be stored in arr[2] Now, let us find the location of $(2,2)$ by all option</p>\n<p>(A) $2+2=4 \\Rightarrow \\operatorname{arr}[4]$ wrong</p>\n<p>(B) $2+2-1=3 \\Rightarrow \\operatorname{arr}[3]$ wrong</p>\n<p>(C) $(2-1)+\\frac{2(1)}{2} \\Rightarrow \\operatorname{arr}[2]$ correct</p>\n<p>(D) $2+\\frac{2 \\times 1}{2} \\Rightarrow \\operatorname{arr}[3]$ wrong</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  }
+]

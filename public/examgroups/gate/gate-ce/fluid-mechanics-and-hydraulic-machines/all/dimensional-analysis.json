@@ -1,0 +1,67 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "For a flowing fluid, a dimensionless combination of velocity (V), length scale (l), and acceleration due to gravity (g) would be\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{V^2}{g l}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{V g}{l}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{g l^2}{V}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{l}{V^2 g}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>The only choice that is dimensionless is Option A. </p>\n<p>Check dimensions:  </p>\n\n<p><p>[V] = L T⁻¹  </p></p>\n<p><p>[g] = L T⁻²  </p></p>\n<p><p>[l] = L  </p></p>\n\n<p>So for A:$$\\frac{V^2}{g\\,l}=\\frac{(L/T)^2}{(L/T^2)\\,L}=\\frac{L^2/T^2}{L^2/T^2}=1\\quad\\text{(dimensionless)}$$  </p>\n<p>This ratio is actually the square of the Froude number, $$\\mathrm{Fr}^2=\\frac{V^2}{g\\,l}\\,. $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ce-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The drag force, $F_D$ on a sphere due to a fluid flowing past the sphere is a function of viscosity, $\\mu$, the mass density, $\\rho$, the velocity of flow, $V$ and the diameter of the sphere, $D$.</p>\n<p>Pick the relevant (one or more) non-dimensional parameter(s) pertaining to the above process from the following list.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{F_D}{\\rho V^2 D^2}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{\\rho F_D}{V^2 D^2}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{\\rho V D}{\\mu}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{\\mu \\rho}{V D}$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ F_D=F(D, V, \\rho, \\mu) $$</p>\n<p>Derive that,</p>\n<p>$$ \\begin{aligned} F_D & =k \\cdot D^2 v^2 \\rho f\\left(\\frac{M}{\\rho v D}\\right) \\\\ m & =1+4, h=3=5 \\\\ \\text { Number of } \\pi \\text {-term } & =m-n \\\\ & =5-3=2 \\\\ \\pi_1 & =D^a v^b \\rho^c F_D \\end{aligned} $$</p>\n<p>Dimension:</p>\n<p>$$ \\begin{aligned} {\\left[\\mathrm{M}^{\\circ} \\mathrm{L}^{\\circ} \\mathrm{T}^{\\circ}\\right] } & =[\\mathrm{L}]^{\\mathrm{a}}\\left[\\mathrm{LT}^{-1}\\right]^{\\mathrm{b}}\\left[\\mathrm{ML}^{-3}\\right]^{\\mathrm{c}}\\left[\\mathrm{MLT}^{-2}\\right] \\\\ & =\\left[\\mathrm{M}^{\\mathrm{c}+1} \\mathrm{~L}^{\\mathrm{a}+\\mathrm{b}-3 \\mathrm{c}+1} \\mathrm{~T}^{-\\mathrm{b}-2}\\right] \\end{aligned} $$</p>\n<p>Compare</p>\n<p>$$ \\begin{aligned} c+1 & =0, c=-1 \\\\ b+2 & =0 \\quad b=-2 \\\\ a+b-3+1 & =0 \\\\ a-2+3+1 & =0 \\\\ a & =-2 \\\\ \\pi_1 & =D^{-2} v^{-2} \\rho^{-1} \\cdot F_D \\\\ or\\,\\,\\,\\,\\,\\,\\pi_1 & =\\frac{F_D}{D^2 v^2 \\rho} \\\\ \\pi_2 & =D^a v^b \\rho^c \\mu \\end{aligned} $$</p>\n<p></p>\n<p>Dimensions</p>\n<p>$$ \\begin{aligned} {\\left[\\mathrm{M}^{\\circ} \\mathrm{L}^{\\circ} \\mathrm{T}^{\\circ}\\right] } & =[\\mathrm{L}]^a\\left[\\mathrm{LT}^{-1}\\right]^b\\left[\\mathrm{ML}^{-3}\\right]^c\\left[\\mathrm{ML}^{-1} \\mathrm{~T}^{-1}\\right] \\\\ & =\\left[\\mathrm{M}^{c+1} \\mathrm{~L}^{a+b-3 \\mathrm{c}-1} \\mathrm{~T}^{-b-1}\\right] \\end{aligned} $$</p>\n<p>Compare</p>\n<p>$$ \\begin{aligned} c+1 & =0, c=-1 \\\\ -b-1 & =0 \\quad b=-1 \\\\ a+b-3 c+1 & =0 \\\\ a-1+3-1 & =0 \\\\ a & =-1 \\\\ \\pi_2 & =D^{-1} v^{-1} \\rho^{-1} \\mu \\end{aligned} $$</p>\n<p></p>\n<p>$$ \\begin{aligned} &or\\,\\,\\,\\,\\, \\pi_2=\\frac{\\mu}{\\rho V D} \\\\ &\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\pi_2=D^a V^b \\rho^c \\mu \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\text { According to Buckingham's } \\pi \\text {-theorem }\\\\ &\\begin{aligned} f\\left(\\pi_1, \\pi_2\\right) & =0 \\\\ \\pi_1 & =k f\\left(\\pi_2\\right) \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\begin{aligned} \\frac{F_D}{D^2 v^2 \\rho} & =k f\\left(\\frac{\\mu}{\\rho v D}\\right) \\\\ F_D & =k \\cdot D^2 v^2 \\rho f\\left(\\frac{\\mu}{\\rho v D}\\right) \\end{aligned}\\\\ &\\text { Hence, the correct answer are (a) and (c). } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ce-2025-set-2",
+    "difficulty": null
+  }
+]

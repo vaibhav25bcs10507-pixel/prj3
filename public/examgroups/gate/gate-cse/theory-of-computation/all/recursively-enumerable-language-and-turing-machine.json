@@ -1,0 +1,1071 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following statements is equivalent to the following assertion?</p>\n<p>Turing machine $M$ decides the language $L \\subseteq\\{0,1\\}$.</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Turing machine $M$ halts on all input strings in $\\{0,1\\}^*$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Turing machine $M$ accepts all input strings in $L$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Turing machine $M$ rejects all input strings in $\\{0,1\\}^*-L$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Turing machine $M$ accepts all input strings in $L$ and rejects all input strings in $\\{0,1\\}^*-L$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>For a Turing machine $M$ to <strong>decide</strong> a language $L$, the meaning is:</p>\n<ul>\n<li><p>$M$ must <strong>halt on every input</strong></p></li>\n<li><p>$M$ must <strong>accept</strong> every string in $L$</p></li>\n<li><p>$M$ must <strong>reject</strong> every string not in $L$</p></li>\n</ul>\n<p>So the complete condition is:</p>\n<p>$$ \\text{$M$ accepts all strings in $L$ and rejects all strings in } \\{0,1\\}^* - L $$</p>\n<p>Now check the options:</p>\n<ul>\n<li><p><strong>Option A:</strong> Only says $M$ halts on all inputs. This is not enough.</p></li>\n<li><p><strong>Option B:</strong> Only says $M$ accepts strings in $L$. It says nothing about strings not in $L$.</p></li>\n<li><p><strong>Option C:</strong> Only says $M$ rejects strings not in $L$. It says nothing about strings in $L$.</p></li>\n<li><p><strong>Option D:</strong> Says $M$ accepts all strings in $L$ and rejects all strings in $\\{0,1\\}^* - L$. This matches the deciding condition.</p></li>\n</ul>\n<p>Hence, the correct answer is:</p>\n<p>$$ \\boxed{\\text{Option D}} $$</p>\n<p>Note: Since “accept” and “reject” are halting states, Option D also ensures that $M$ halts on every input.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which of the following statements is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Every subset of a recursively enumerable language is recursive."
+      },
+      {
+        "identifier": "B",
+        "content": "If a language L and its complement $$\\overline L $$ are both recursively enumerable, then L must be recursive."
+      },
+      {
+        "identifier": "C",
+        "content": "Complement of a context-free language must be recursive."
+      },
+      {
+        "identifier": "D",
+        "content": "If L<sub>1</sub> and L<sub>2</sub> are regular, then L<sub>1</sub> $$\\cap$$ L<sub>2</sub> must be deterministic context-free."
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) No language is closed under subset operation. So subset of an RE language may or may not be REC. So option (a) is false.</p>\n<p>(b) If L and $$\\overline L $$ are both RE $$\\Rightarrow$$ L is REC is a theorem and is true.</p>\n<p>(c) (CFL)<sup>C</sup> = (CSL)<sup>C</sup> = CSL</p>\n<p>Every CSL is recursive.</p>\n<p>So, complement of CFL is recursive is true.</p>\n<p>(d) L<sub>1</sub> $$\\to$$ regular, L<sub>2</sub> $$\\to$$ regular</p>\n<p>$$\\Rightarrow$$ L<sub>1</sub> $$\\cap$$ L<sub>2</sub> = Regular $$\\cap$$ Regular = Regular</p>\n<p>Now every regular language is a DCFL.</p>\n<p>So, option (d) is true.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the language\n<br>L = { $${a^n}|n \\ge 0$$ } $$ \\cup $$ { $${a^n}{b^n}|n \\ge 0$$ }\n<br>and the following statements.\n<br><br>I. L is deterministic context-free.\n<br>II. L is context-free but not deterministic context-free.\n<br>III. L is not LL(k) for any k.\n<br><br>Which of the above statements is/are TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I only"
+      },
+      {
+        "identifier": "B",
+        "content": "II only"
+      },
+      {
+        "identifier": "C",
+        "content": "I and III only"
+      },
+      {
+        "identifier": "D",
+        "content": "III only"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statements are <strong>TRUE</strong>, we'll analyze each statement individually in the context of the given language:</p>\n<p>$ L = \\{ a^n \\mid n \\geq 0 \\} \\cup \\{ a^n b^n \\mid n \\geq 0 \\} $</p>\n<hr />\n<h3><strong>Statement I:</strong></h3>\n<p><strong>\"L is deterministic context-free.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n<p><strong>Understanding $ L $:</strong></p>\n<p><p>$ L $ includes all strings consisting of zero or more $ a $'s.</p></p>\n<p><p>$ L $ also includes strings where $ a $'s are followed by an equal number of $ b $'s.</p></p>\n<p><p><strong>Constructing a Deterministic Pushdown Automaton (DPDA):</strong></p>\n\n<p>We can design a DPDA to accept $ L $ as follows:</p></p>\n<p><p><strong>States:</strong> $ q_0 $ (initial), $ q_1 $</p></p>\n<p><p><strong>Stack Symbols:</strong> $ Z_0 $ (stack bottom marker), $ A $</p></p>\n<p><p><strong>Transitions:</strong></p>\n\n<p><p><strong>From $ q_0 $:</strong></p></p>\n\n<p><p>On input <strong>'a'</strong>, push <strong>'A'</strong> onto the stack; stay in $ q_0 $.</p></p>\n\n<p><p>On input <strong>'b'</strong>, if the stack top is <strong>'A'</strong>, pop <strong>'A'</strong> and move to $ q_1 $.</p></p>\n\n<p><p>On <strong>end of input</strong>, accept (since strings of only $ a $'s are allowed).</p></p>\n\n<p><p><strong>From $ q_1 $:</strong></p></p>\n\n<p><p>On input <strong>'b'</strong>, if the stack top is <strong>'A'</strong>, pop <strong>'A'</strong>; stay in $ q_1 $.</p></p>\n\n<p><p>On <strong>end of input</strong>, if stack top is <strong>$ Z_0 $</strong>, accept.</p></p>\n\n<p><p><strong>Error Conditions:</strong></p></p>\n\n<p><p>If in $ q_1 $ and input is <strong>'a'</strong>, reject.</p></p>\n\n<p><p>If trying to pop <strong>'A'</strong> when the stack is empty, reject.</p></p></p>\n<p><p><strong>Acceptance:</strong></p>\n\n<p>The DPDA accepts if it reaches the end of input in $ q_0 $ or $ q_1 $ with the appropriate stack conditions.</p></p>\n<p><strong>Conclusion:</strong></p>\n<p><p>A DPDA can be constructed to accept $ L $, so <strong>$ L $ is deterministic context-free</strong>.</p></p>\n<p><p><strong>Statement I is TRUE.</strong></p></p>\n<hr />\n<h3><strong>Statement II:</strong></h3>\n<p><strong>\"L is context-free but not deterministic context-free.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n<p><p>Since <strong>Statement I is TRUE</strong>, $ L $ is deterministic context-free.</p></p>\n<p><p>Therefore, <strong>Statement II is FALSE</strong>.</p></p>\n<hr />\n<h3><strong>Statement III:</strong></h3>\n<p><strong>\"L is not LL(k) for any $ k $.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n<p><strong>LL(k) Parsing:</strong></p>\n<p><p>An LL(k) grammar is a context-free grammar that can be parsed by a <strong>top-down parser</strong> with <strong>k</strong> lookahead tokens.</p></p>\n<p><p>LL(k) languages are a subset of deterministic context-free languages (DCFLs).</p></p>\n<p><strong>Attempting to Construct an LL(k) Grammar for $ L $:</strong></p>\n<p><p><strong>Potential Grammar:</strong></p>\n\n<p>$      \\begin{align*}      S &\\to A \\mid B \\\\      A &\\to a A \\mid \\varepsilon \\\\      B &\\to a B b \\mid \\varepsilon      \\end{align*}      $</p></p>\n<p><p><strong>Issues:</strong></p>\n\n<p><p>The grammar is <strong>ambiguous</strong> and <strong>left-recursive</strong>, which complicates LL(k) parsing.</p></p>\n\n<p><p>Eliminating left recursion and ambiguity may not be possible without increasing $ k $ indefinitely.</p></p></p>\n<p><strong>Conclusion:</strong></p>\n<p><p>There is <strong>no LL(k) grammar for any finite $ k $</strong> that can generate $ L $.</p></p>\n<p><p><strong>$ L $ is not LL(k) for any $ k $.</strong></p></p>\n<p><p><strong>Statement III is TRUE.</strong></p></p>\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n<p><p><strong>Statements that are TRUE:</strong></p></p>\n<p><p><strong>Statement I</strong></p></p>\n<p><p><strong>Statement III</strong></p></p>\n<p><p><strong>Statements that are FALSE:</strong></p></p>\n<p><p><strong>Statement II</strong></p></p>\n<hr />\n<p><strong>Answer:</strong> Option C</p>\n<p><strong>I and III only</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following types of languages: $${L_1}:$$ Regular, $${L_2}:$$ Context-free, $${L_3}:$$ Recursive, $${L_4}:$$ Recursively enumerable. Which of the following is/are <b>TRUE</b>? \n <p>$$\\,\\,\\,\\,\\,\\,\\,{\\rm I}.\\,\\,\\,\\,\\,\\,\\,$$ $$\\overline {{L_3}}  \\cup {L_4}$$ is recursively enumerable\n<br>$$\\,\\,\\,\\,\\,{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,\\,\\,$$ $$\\overline {{L_2}}  \\cup {L_3}$$ is recursive\n<br>$$\\,\\,\\,{\\rm I}{\\rm I}{\\rm I}.\\,\\,\\,\\,\\,\\,\\,$$ $$L_1^ *  \\cap {L_2}$$ is context-free\n<br>$$\\,\\,\\,{\\rm I}V.\\,\\,\\,\\,\\,\\,\\,$$ $${L_1} \\cup \\overline {{L_2}} $$  is context-free</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}$$ and $${\\rm III}$$ only"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm I}$$ and $${\\rm IV}$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I},$$ $${\\rm II}$$ and $${\\rm III}$$ only "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "<p>For any two languages L<sub>1</sub> and L<sub>2</sub> such that L<sub>1</sub> is context-free and L<sub>2</sub> is recursively enumerable but not recursive, which of the following is/are necessarily true?</p>\nI. $${\\overline L _1}$$ (complement of L<sub>1</sub>) is recursive\n<br>II. $${\\overline L _2}$$ (complement of L<sub>2</sub>) is recursive\n<br>III. $${\\overline L _1}$$ is context-free\n<br>IV. $${\\overline L _1} \\cup {L_2}$$ is recursively enumerable",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I only"
+      },
+      {
+        "identifier": "B",
+        "content": "III only"
+      },
+      {
+        "identifier": "C",
+        "content": "III and IV only"
+      },
+      {
+        "identifier": "D",
+        "content": "I and IV only"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements.\n<p>$$\\,\\,\\,$$ $${\\rm I}.\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ The complement of every Turing decidable language is Turing decidable\n<br>$$\\,$$ $${\\rm II}.\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ There exists some language which is in $$NP$$ but is not Turing decidable\n<br>$${\\rm III}.\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ If $$L$$ is a language in $$NP,$$ $$L$$ is Turing decidable</p>\n<p>Which of the above statements is/are true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $${\\rm I}$$$${\\rm I}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "Only $${\\rm III}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "Only $${\\rm I}$$ and $${\\rm II}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Only $${\\rm I}$$ and $${\\rm III}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$A\\,\\,{ \\le _m}\\,\\,B$$ denotes that language $$A$$ is mapping reducible (also known as many-to-one reducible) to language $$B.$$ Which one of the following is FALSE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "If $$A\\,\\,{ \\le _m}\\,\\,B$$ and $$B$$ is recursive then $$A$$ is recursive."
+      },
+      {
+        "identifier": "B",
+        "content": "If $$A\\,\\,{ \\le _m}\\,\\,B$$ and $$A$$ is undecidable then $$B$$ is un-decidable. "
+      },
+      {
+        "identifier": "C",
+        "content": "If $$A\\,\\,{ \\le _m}\\,\\,B$$ and $$B$$ is recursively enumerable then $$A$$ is recursively enumerable.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "If $$A\\,\\,{ \\le _m}\\,\\,B$$ and $$B$$ is not recursively enumerable then $$A$$ is not recursively enumerable."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is/are <b>FALSE</b>?\n<br>$$1.$$ For every non-deterministic Turing machine, there exists an equivalent deterministic Turing machine\n<br>$$2.$$ Turing recognizable languages are closed under union and complementation\n<br>$$3.$$ Turing decidable languages are closed under intersection and complementation\n<br>$$4.$$ Turing recognizable languages are closed under union and intersection",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ and $$4$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ and $$3$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$$3$$ only "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is true for the language $$\\left\\{ {{a^p}} \\right.\\left| P \\right.$$  prime $$\\left. \\, \\right\\}$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It is not accepted by a Turing machine"
+      },
+      {
+        "identifier": "B",
+        "content": "It is regular but not context-free "
+      },
+      {
+        "identifier": "C",
+        "content": "It is context-free but not regular"
+      },
+      {
+        "identifier": "D",
+        "content": "It is neither regular nor context-free, but accepted by a Turing machine "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "If the strings of a language $$L$$ can be effectively enumerated in lexicographic (i.e., alphabetic$$(c)$$ order, which of the following statements is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$L$$ is necessarily finite"
+      },
+      {
+        "identifier": "B",
+        "content": "$$L$$ is regular but not necessarily finite "
+      },
+      {
+        "identifier": "C",
+        "content": "$$L$$ is context free but not necessarily regular"
+      },
+      {
+        "identifier": "D",
+        "content": "$$L$$ is recursive but not necessarily context free "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Nobody knows yet if $$P=NP$$. Consider the language $$L$$ defined as follows\n<br>$$L = \\left\\{ {\\matrix{\n   {{{\\left( {0 + 1} \\right)}^ * }\\,\\,\\,if\\,\\,P = NP}  \\cr \n   {\\,\\,\\,\\,\\,\\,\\,\\phi \\,\\,\\,\\,Otherwise}  \\cr \n\n } } \\right.$$ \n<p>Which of the following statement is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$L$$ is recursive "
+      },
+      {
+        "identifier": "B",
+        "content": "$$L$$ is recursively enumerable but not recursive"
+      },
+      {
+        "identifier": "C",
+        "content": "$$L$$ is not recursively enumerable"
+      },
+      {
+        "identifier": "D",
+        "content": "Whether $$L$$ is recursive or not will be known after we find out if $$P=NP.$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Regarding the power of recognition of languages, which of the following statement is false?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The non-deterministic finite-state automata are equivalent to deterministic finite-state automata."
+      },
+      {
+        "identifier": "B",
+        "content": "Non-deterministic Push-down automata are equivalent to deterministic Push-down automata."
+      },
+      {
+        "identifier": "C",
+        "content": "Non-deterministic Turing machines are equivalent to deterministic Turing machines."
+      },
+      {
+        "identifier": "D",
+        "content": "Multi-tape Turing machines are equivalent to Single-tape Turing machines. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is / are true / false?\n<p>Regular languages are closed under infinite union.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is / are true / false?\n<p>The language $$\\left\\{ {{0^n}\\,\\left| {\\,n} \\right.} \\right.$$ is prime$$\\left. \\, \\right\\}$$ is not regular</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is / are true / false?\n<p>Union of two recursive languages is recursive </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which of the following is/are undecidable?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Given two Turing machines M<sub>1</sub> and M<sub>2</sub>, decide if L(M<sub>1</sub>) = L(M<sub>2</sub>)."
+      },
+      {
+        "identifier": "B",
+        "content": "Given a Turing machine M, decide if L(M) is regular."
+      },
+      {
+        "identifier": "C",
+        "content": "Given a Turing machine M, decide if M accepts all strings."
+      },
+      {
+        "identifier": "D",
+        "content": "Given a Turing machine M, decide if M takes more than 1073 steps on every string."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>A, B, C choices are all non-trivial properties of RE language (language of TM's) and hence all UNDECIDABLE.</p>\n<p>Choice (d) is DECIDABLE. Why?</p>\n<p>A Turing Machine see only at most the first 1073 symbols of input in its first 1073 steps. Hence whether it stops on first 1073 steps depends only on the first 1073 symbols of input.</p>\n<p>Since the number of strings of length 1073 is finite, it gives a way to decide this. Run the input machine M on all inputs of length 1073 and check whether any of them stops within 1073 steps. If so, reject, otherwise accept.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>For a Turing machine M, {M} denotes an encoding of M. Consider the following two languages.</p>\n\n<p>L<sub>1</sub> = {(M) | M takes more than 2021 steps on all inputs}</p>\n\n<p>L<sub>2</sub> = {(M) | M takes more than 2021 steps on some input}</p>\n\n<p>Which one of the following options is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both L<sub>1</sub> and L<sub>2</sub> are undecidable."
+      },
+      {
+        "identifier": "B",
+        "content": "L<sub>1</sub> is undecidable and L<sub>2</sub> is decidable."
+      },
+      {
+        "identifier": "C",
+        "content": "L<sub>1</sub> is decidable and L<sub>2</sub> is undecidable."
+      },
+      {
+        "identifier": "D",
+        "content": "Both L<sub>1</sub> and L<sub>2</sub> are decidable."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>$L_1=\\{\\langle M\\rangle \\mid M$ takes more than 2021 steps on all inputs $\\}$</p>\n<p>$L_2=\\{\\langle M\\rangle \\mid M$ takes more than 2021 steps on some input}</p>\n<p>Consider $L_1$, if for all inputs, M takes more than 2021 steps i.e., if we monitor $2021+1$ steps for all possible inputs then $L_1$ can be decidable.</p>\n<p>Consider $L_2$, if for none of inputs M takes more than 2021 steps that means we can answer \"no\" for $L_2$, else \"yes\"</p>\n<p>Hence $L_2$ is also decidable.</p>\n<p>Hence the correct option is (D).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following sets :</p>\n<p>S1. Set of all recursively enumerable languages over the alphabet $\\{0,1\\}$</p>\n<p>S2. Set of all syntactically valid C programs</p>\n<p>S3. Set of all languages over the alphabet $\\{0,1\\}$</p>\n<p>S4. Set of all non-regular languages over the alphabet $\\{0,1\\}$</p>\n<p>Which of the above sets are uncountable?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S1 and S2"
+      },
+      {
+        "identifier": "B",
+        "content": "S3 and S4"
+      },
+      {
+        "identifier": "C",
+        "content": "S2 and S3"
+      },
+      {
+        "identifier": "D",
+        "content": "S1 and S4"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><strong>Step-by-Step Reasoning</strong></p>\n\n<p><strong>S1: Set of all recursively enumerable languages over {0,1}</strong></p>\n\n\n<p><p>A recursively enumerable (RE) language over a given alphabet can be recognized by some Turing machine.</p></p>\n<p><p>The number of Turing machines is countable since each Turing machine can be described by a finite string over a finite alphabet (such as a binary encoding).</p></p>\n<p><p>Since there is at least one Turing machine for every RE language, and we have a surjection from a countable set (the set of all Turing machines) onto the set of all RE languages, the set of all RE languages is at most countable.</p></p>\n<p><p>Therefore, <strong>S1 is countable</strong>.</p></p>\n\n\n<p><strong>S2: Set of all syntactically valid C programs</strong></p>\n\n\n<p><p>Every syntactically valid C program is a finite string over a finite alphabet (ASCII characters typically).</p></p>\n<p><p>The set of all finite strings over a finite alphabet is countable.</p></p>\n<p><p>Therefore, <strong>S2 is countable</strong>.</p></p>\n\n\n<p><strong>S3: Set of all languages over the alphabet {0,1}</strong></p>\n\n\n<p><p>A language is a subset of {0,1}<em>, where {0,1}</em> is the set of all finite binary strings.</p></p>\n<p><p>{0,1}* is countably infinite.</p></p>\n<p><p>The set of all languages over {0,1} is the power set of {0,1}<em>, i.e., P({0,1}</em>).</p></p>\n<p><p>The power set of a countably infinite set is uncountable (this is a standard result from set theory).</p></p>\n<p><p>Therefore, <strong>S3 is uncountable</strong>.</p></p>\n\n\n<p><strong>S4: Set of all non-regular languages over the alphabet {0,1}</strong></p>\n\n\n<p><p>The set of all languages over {0,1} is uncountable (as established in S3).</p></p>\n<p><p>The set of all regular languages over {0,1} is known to be countable.</p></p>\n<p><p>If you remove the countably infinite set of regular languages from the uncountably infinite set of all languages, the remainder (non-regular languages) is still uncountable.</p></p>\n<p><p>Therefore, <strong>S4 is uncountable</strong>.</p></p>\n\n<p><strong>Summary:</strong></p>\n\n<p><p>S1: Countable</p></p>\n<p><p>S2: Countable</p></p>\n<p><p>S3: Uncountable</p></p>\n<p><p>S4: Uncountable</p></p>\n\n<p><strong>Answer:</strong> S3 and S4 are uncountable.</p>\n<p><strong>Correct Option:</strong> <strong>B</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "The set of all recursively enumerable languages is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "closed under complementation. "
+      },
+      {
+        "identifier": "B",
+        "content": "closed under intersection. "
+      },
+      {
+        "identifier": "C",
+        "content": "a subset of the set of all recursive languages "
+      },
+      {
+        "identifier": "D",
+        "content": "an uncountable set.  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statement about the set of all <strong>recursively enumerable (RE) languages</strong> is correct, we'll analyze each option individually. Understanding the properties of RE languages in the theory of computation will help us make an informed decision.</p>\n<hr />\n<h3><strong>Understanding Recursively Enumerable Languages</strong></h3>\n\n<p><p><strong>Recursively Enumerable Languages (RE):</strong></p></p>\n<p><p>A language is recursively enumerable if there exists a Turing machine that will <strong>accept</strong> any string in the language but may <strong>not halt</strong> for strings not in the language.</p></p>\n<p><p>RE languages are also known as <strong>Turing-recognizable</strong> languages.</p></p>\n<p><p>They are a broader class than <strong>recursive languages</strong>, which are languages for which a Turing machine will halt on <strong>all inputs</strong>, accepting those in the language and rejecting those not in the language.</p></p>\n\n<hr />\n<h3><strong>Analyzing Each Option</strong></h3>\n<h4><strong>Option A: The set of all recursively enumerable languages is closed under complementation.</strong></h4>\n\n<p><p><strong>Explanation:</strong></p></p>\n<p><p><strong>Closure under complementation</strong> means that if a language $ L $ is recursively enumerable, then its complement $ \\overline{L} $ is also recursively enumerable.</p></p>\n<p><p><strong>Fact about RE Languages:</strong></p>\n\n<p><p>The class of recursively enumerable languages is <strong>not closed under complementation</strong>.</p></p>\n<p><p>This is because the complement of a recursively enumerable language may not be recursively enumerable.</p></p>\n<p><p><strong>Counterexample:</strong></p></p>\n<p><p>Let $ L $ be a known non-recursive recursively enumerable language.</p></p>\n<p><p>Then, $ \\overline{L} $ is not recursively enumerable.</p></p></p>\n<p><p><strong>Conclusion:</strong></p>\n\n<p><strong>Option A is incorrect.</strong></p></p>\n\n<h4><strong>Option B: The set of all recursively enumerable languages is closed under intersection.</strong></h4>\n\n<p><p><strong>Explanation:</strong></p></p>\n<p><p><strong>Closure under intersection</strong> means that if $ L_1 $ and $ L_2 $ are recursively enumerable languages, then their intersection $ L_1 \\cap L_2 $ is also recursively enumerable.</p></p>\n<p><p><strong>Fact about RE Languages:</strong></p>\n\n<p><p>The class of recursively enumerable languages is <strong>closed under intersection</strong>.</p></p>\n<p><p><strong>Proof Sketch:</strong></p></p>\n<p><p>Given Turing machines $ M_1 $ and $ M_2 $ that recognize $ L_1 $ and $ L_2 $ respectively.</p></p>\n<p><p>Construct a new Turing machine $ M $ that simulates both $ M_1 $ and $ M_2 $ in parallel (e.g., alternate steps between them) on the input string.</p></p>\n<p><p>$ M $ accepts the input if both $ M_1 $ and $ M_2 $ accept.</p></p>\n<p><p>If the input is in $ L_1 \\cap L_2 $, both machines will accept, and so will $ M $.</p></p>\n<p><p>If the input is not in $ L_1 \\cap L_2 $, at least one machine may loop indefinitely or reject, so $ M $ may not accept.</p></p></p>\n<p><p><strong>Conclusion:</strong></p>\n\n<p><strong>Option B is correct.</strong></p></p>\n\n<h4><strong>Option C: The set of all recursively enumerable languages is a subset of the set of all recursive languages.</strong></h4>\n\n<p><p><strong>Explanation:</strong></p></p>\n<p><p><strong>Relationship between RE and Recursive Languages:</strong></p>\n\n<p><p>Recursive languages are a subset of recursively enumerable languages, not the other way around.</p></p>\n<p><p>Every recursive language is recursively enumerable, but not all recursively enumerable languages are recursive.</p></p></p>\n<p><p><strong>Fact:</strong></p>\n\n<p><p>There exist recursively enumerable languages that are <strong>not recursive</strong>.</p></p>\n<p><p>These are languages for which membership is semi-decidable: acceptance is guaranteed for strings in the language, but non-membership may result in non-termination.</p></p></p>\n<p><p><strong>Conclusion:</strong></p>\n\n<p><strong>Option C is incorrect.</strong></p></p>\n\n<h4><strong>Option D: The set of all recursively enumerable languages is an uncountable set.</strong></h4>\n\n<p><p><strong>Explanation:</strong></p></p>\n<p><p><strong>Countability:</strong></p>\n\n<p><p>A set is countable if its elements can be put into a one-to-one correspondence with the natural numbers.</p></p>\n<p><p><strong>The set of all Turing machines is countable</strong> because Turing machines can be described by finite strings over a finite alphabet, and there are countably many such strings.</p></p>\n<p><p>Since each recursively enumerable language is recognized by some Turing machine, the set of recursively enumerable languages is also countable.</p></p></p>\n<p><p><strong>Contrast with All Languages:</strong></p>\n\n<p><p>The set of all possible languages over an alphabet (the power set of all strings) is <strong>uncountable</strong>.</p></p>\n<p><p>Therefore, there are languages that are not recursively enumerable.</p></p></p>\n<p><p><strong>Conclusion:</strong></p>\n\n<p><strong>Option D is incorrect.</strong></p></p>\n\n<hr />\n<h3><strong>Final Answer</strong></h3>\n<p>After analyzing all options, we find that only <strong>Option B</strong> is correct:</p>\n\n<p><strong>The set of all recursively enumerable languages is closed under intersection.</strong></p>\n\n<hr />\n<p><strong>Answer: Option B</strong></p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following problems. $$L(G)$$ denotes the language generated by a grammar $$G.$$ $$L(M)$$ denotes the language accepted by a machine $$M.$$\n <p>$$\\,\\,\\,\\,\\,\\,\\,\\,{\\rm I}.\\,\\,\\,\\,\\,\\,\\,$$ For an unrestricted grammar $$G$$ and a string $$W,$$ whether $$w \\in L\\left( G \\right)$$\n<br>$$\\,\\,\\,\\,\\,\\,{\\rm II}.\\,\\,\\,\\,\\,\\,\\,$$ Given a Turing machine $$M,$$ whether $$L(M)$$ is regular\n<br>$$\\,\\,\\,\\,{\\rm III}.\\,\\,\\,\\,\\,\\,\\,$$ Given two grammars $${G_1}$$ and $${G_2}$$, whether $$L\\left( {{G_1}} \\right) = L\\left( {{G_2}} \\right)$$\n<br>$$\\,\\,\\,\\,{\\rm IV}.\\,\\,\\,\\,\\,\\,\\,$$ Given an $$NFA$$ $$N,$$ whether there is a deterministic $$PDA$$ $$P$$ such that $$N$$ \n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$\\,\\,\\,\\,\\,\\,\\,\\\\,\\,\\,$$and $$P$$ accept the same language.</p>\n<p>Which one of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$ are undecidable"
+      },
+      {
+        "identifier": "B",
+        "content": "Only $${\\rm III}$$ is undecidable "
+      },
+      {
+        "identifier": "C",
+        "content": "Only $${\\rm I}$$$${\\rm I}$$ and $${\\rm IV}$$ are undecidable "
+      },
+      {
+        "identifier": "D",
+        "content": "Only $${\\rm I}$$, $${\\rm II}$$ and $${\\rm III}$$ are undecidable  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given statements are <strong>undecidable</strong>, we'll analyze each problem individually using concepts from the theory of computation and decidability.</p>\n<hr />\n<h3><strong>Problem I:</strong></h3>\n<p><strong>\"For an unrestricted grammar $ G $ and a string $ w $, whether $ w \\in L(G) $\"</strong></p>\n<h4><strong>Analysis:</strong></h4>\n\n<p><p><strong>Unrestricted Grammar:</strong></p></p>\n<p><p>Generates recursively enumerable languages.</p></p>\n<p><p>Equivalent to Turing machines in terms of language recognition capability.</p></p>\n<p><p><strong>Membership Problem:</strong></p></p>\n<p><p>Deciding whether a given string $ w $ is generated by an unrestricted grammar $ G $.</p></p>\n<p><p><strong>Decidability:</strong></p></p>\n<p><p><strong>Undecidable.</strong></p></p>\n<p><p>This problem is equivalent to the <strong>Turing machine acceptance problem</strong>, which is undecidable.</p></p>\n<p><p><strong>Reasoning:</strong></p>\n\n<p><p>The halting problem can be reduced to this problem.</p></p>\n<p><p>There's no general algorithm that can determine for every unrestricted grammar and string whether the string belongs to the language.</p></p></p>\n\n<hr />\n<h3><strong>Problem II:</strong></h3>\n<p><strong>\"Given a Turing machine $ M $, whether $ L(M) $ is regular\"</strong></p>\n<h4><strong>Analysis:</strong></h4>\n\n<p><p><strong>Property of Languages Recognized by Turing Machines:</strong></p></p>\n<p><p>Regular languages are a strict subset of recursively enumerable languages.</p></p>\n<p><p><strong>Decidability:</strong></p></p>\n<p><p><strong>Undecidable.</strong></p></p>\n<p><p><strong>Reasoning:</strong></p>\n\n<p><p><strong>Rice's Theorem</strong> applies: any non-trivial property of the languages recognized by Turing machines is undecidable.</p></p>\n<p><p>The property \"the language is regular\" is non-trivial (some languages are regular, others are not).</p></p>\n<p><p>There is no algorithm that can determine whether an arbitrary Turing machine recognizes a regular language.</p></p></p>\n\n<hr />\n<h3><strong>Problem III:</strong></h3>\n<p><strong>\"Given two grammars $ G_1 $ and $ G_2 $, whether $ L(G_1) = L(G_2) $\"</strong></p>\n<h4><strong>Analysis:</strong></h4>\n\n<p><p><strong>Language Equivalence Problem:</strong></p></p>\n<p><p>Determining whether two grammars generate the same language.</p></p>\n<p><p><strong>Decidability:</strong></p></p>\n<p><p><strong>Undecidable.</strong></p></p>\n<p><p><strong>Reasoning:</strong></p>\n\n<p><p>For context-free grammars, the equivalence problem is undecidable.</p></p>\n<p><p>Even more so for unrestricted grammars (which can generate recursively enumerable languages).</p></p>\n<p><p>There's no general algorithm to decide language equivalence for arbitrary grammars.</p></p></p>\n\n<hr />\n<h3><strong>Problem IV:</strong></h3>\n<p><strong>\"Given an NFA $ N $, whether there is a deterministic PDA $ P $ such that $ N $ and $ P $ accept the same language.\"</strong></p>\n<h4><strong>Analysis:</strong></h4>\n\n<p><p><strong>NFA and Regular Languages:</strong></p></p>\n<p><p>NFA recognizes regular languages.</p></p>\n<p><p><strong>Deterministic PDA (DPDA):</strong></p></p>\n<p><p>Recognizes a subset of context-free languages known as deterministic context-free languages.</p></p>\n<p><p>However, <strong>all regular languages are deterministic context-free languages</strong>.</p></p>\n<p><p><strong>Decidability:</strong></p></p>\n<p><p><strong>Decidable.</strong></p></p>\n<p><p><strong>Reasoning:</strong></p>\n\n<p><p>For any regular language recognized by an NFA, we can construct a DPDA that recognizes the same language.</p></p>\n<p><p>Since the answer is always <strong>\"Yes\"</strong>, the problem is trivial and decidable.</p></p>\n<p><p>An algorithm can confirm that for any NFA $ N $, there exists a DPDA $ P $ such that $ L(N) = L(P) $.</p></p></p>\n\n<hr />\n<h3><strong>Conclusion:</strong></h3>\n\n<p><p><strong>Undecidable Problems:</strong> Problems <strong>I</strong>, <strong>II</strong>, and <strong>III</strong> are undecidable.</p></p>\n<p><p><strong>Decidable Problem:</strong> Problem <strong>IV</strong> is decidable.</p></p>\n\n<hr />\n<p><strong>Answer: Option D</strong></p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$X$$ be a recursive language and $$Y$$ be a recursively enumerable but not recursive language. Let $$W$$ and $$Z$$ be two languages such that $$\\overline Y $$ reduces to $$W,$$ and $$Z$$ reduces to $$\\overline X $$ (reduction means the standard many-one reduction). Which one of the following statements is <b>TRUE</b>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$W$$ can be recursively enumerable and $$Z$$ is recursive. "
+      },
+      {
+        "identifier": "B",
+        "content": "$$W$$ can be recursive and $$Z$$ is recursively enumerable. "
+      },
+      {
+        "identifier": "C",
+        "content": "$$W$$ is not recursively enumerable and $$Z$$ is recursive. "
+      },
+      {
+        "identifier": "D",
+        "content": "$$W$$ is not recursively enumerable and $$Z$$ is not recursive. "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following languages.\n<p>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $${L_1} = \\left\\{ {\\left\\langle M \\right\\rangle |M} \\right.$$ takes at least $$2016$$ steps on some input $$\\left. \\, \\right\\},$$\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $${L_2} = \\left\\{ {\\left\\langle M \\right\\rangle |M} \\right.$$ takes at least $$2016$$ steps on all inputs $$\\left. \\, \\right\\}$$ and \n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $${L_3} = \\left\\{ {\\left\\langle M \\right\\rangle |M} \\right.$$ accepts $$\\left. \\varepsilon  \\right\\},$$</p>\n<br>where for each Turing machine $${M,\\left\\langle M \\right\\rangle }$$ denotes a specific encoding of $$M.$$ Which one of the following is <b>TRUE</b>? \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${L_1}$$ is recursive and $${L_2},$$$${L_3}$$ are not recursive "
+      },
+      {
+        "identifier": "B",
+        "content": "$${L_2}$$ is recursive and $${L_1},$$$${L_3}$$ are not recursive "
+      },
+      {
+        "identifier": "C",
+        "content": "$${L_1},$$$${L_2}$$ are recursive and $${L_3}$$ is not recursive "
+      },
+      {
+        "identifier": "D",
+        "content": "$${L_{1,}}$$$${L_{2,}}$$$${L_{3}}$$ are recursive\n "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$ &lt; M &gt; $$ be the encoding of a Turing machine as a string over $$\\sum { = \\left\\{ {0,1} \\right\\}.} $$ \n<br>Let $$L = \\left\\{ { &lt; M &gt; \\left| M \\right.} \\right.$$ is a Turing machine that accepts a string of length $$\\left. {2014} \\right\\}.$$ Then, $$L$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "decidable and recursively enumerable "
+      },
+      {
+        "identifier": "B",
+        "content": "un-decidable but recursively enumerable "
+      },
+      {
+        "identifier": "C",
+        "content": "un-decidable and not recursively enumerable "
+      },
+      {
+        "identifier": "D",
+        "content": "decidable but not recursively enumerable"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$L$$ be a language and $$\\overline L $$ be its complement. Which one of the following is NOT a viable possibility?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Neither $$L$$ nor $$\\overline L $$ is recursively enumerable (r.e)."
+      },
+      {
+        "identifier": "B",
+        "content": "One of $$L$$ and $$\\overline L $$ is r.e. but not recursive; the other is not r.e."
+      },
+      {
+        "identifier": "C",
+        "content": "Both $$L$$ and $$\\overline L $$  are r.e. but not recursive. "
+      },
+      {
+        "identifier": "D",
+        "content": "Both $$L$$ and $$\\overline L $$ are recursive."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "If $$L$$ and $$\\overline L $$ are recursively enumerable then $$L$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Regular "
+      },
+      {
+        "identifier": "B",
+        "content": "Context-free "
+      },
+      {
+        "identifier": "C",
+        "content": "Context-sensitive "
+      },
+      {
+        "identifier": "D",
+        "content": "Recursive."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "For $$s \\in {\\left( {0 + 1} \\right)^ * },$$ let $$d(s)$$ denote the decimal value of $$s(e. g.d(101)=5)$$\n<br>Let $$L = \\left\\{ {s \\in {{\\left( {0 + 1} \\right)}^ * }\\left| {\\,d\\left( s \\right)\\,} \\right.} \\right.$$ mod $$5=2$$ and  $$d(s)$$ mod $$\\left. {7 \\ne 4} \\right\\}$$\n<p>Which of the following statement is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$L$$ is recursively enumerable, but not recursive "
+      },
+      {
+        "identifier": "B",
+        "content": "$$L$$ is recursive, but not context-free "
+      },
+      {
+        "identifier": "C",
+        "content": "$$L$$ is context-free, but not regular "
+      },
+      {
+        "identifier": "D",
+        "content": "$$L$$ is regular"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${L_1}$$ be a regular language, $${L_2}$$ be a deterministic context-free language and $${L_3}$$ a recursively enumerable, but not recursive, language. Which one of the following statement is false?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${L_1} \\cap {L_2}$$ is deterministic $$CFL$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${L_3} \\cap {L_1}$$ is recursive "
+      },
+      {
+        "identifier": "C",
+        "content": "$${L_1} \\cup {L_2}$$ is context-free "
+      },
+      {
+        "identifier": "D",
+        "content": "$${L_1} \\cap {L_2} \\cap {L_3}$$ is recursively enumerable"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${L_1}$$ be a recursive language, and Let $${L_2}$$ be a recursively enumerable but not a recursive language. Which one of the following is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline {{L_1}} $$ is recursive and $$\\overline {{L_2}} $$ is recursively enumerable "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline {{L_1}} $$ is recursive and $$\\overline {{L_2}} $$ is not recursively enumerable"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline {{L_1}} $$ and $$\\overline {{L_2}} $$ are recursively enumerable "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline {{L_1}} $$ is recursively enumerable and $$\\overline {{L_2}} $$ is recursive"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Define Languages $${L_0}$$ and $${L_1}$$ as follows\n<br>$${L_0} = \\left\\{ { &lt; M,\\,w,\\,0 &gt; \\left| {M\\,\\,} \\right.} \\right.$$ halts on $$\\left. w \\right\\}$$\n<br>$${L_1} = \\left\\{ { &lt; M,w,1 &gt; \\left| M \\right.} \\right.$$ does not halts on $$\\left. w \\right\\}$$\n<p>Here $$ &lt; M,\\,w,\\,i &gt; $$ is a triplet, whose first component, $$M$$ is an encoding of a Turing Machine, second component, $$w$$, is a string, and third component, $$t,$$ is a bit.\n<br>Let $$L = {L_0} \\cup {L_1}.$$ Which of the following is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$L$$ is recursively enumerable, but $$\\overline L $$ is not "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline L $$  is recursively enumerable, but $$L$$ is not "
+      },
+      {
+        "identifier": "C",
+        "content": "Both $$L$$ and $$\\overline L $$ are recursive "
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $$L$$ nor $$\\overline L $$ is recursive enumerable "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "A single tape Turing Machine $$M$$ has two states $${q_0}$$ and $${q_1}$$, of which $${q_0}$$ is the starting state. The tape alphabet of $$M$$ is $$\\left\\{ {0,\\,\\,1,\\,\\,B} \\right\\}$$ and its input alphabet is $$\\left\\{ {0,\\,\\,1} \\right\\}$$. The symbol $$B$$ is the blank symbol used to indicate end of an input string. The transition function of $$M$$ is described in the following table. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/NyLtLnNgJTRSh1QXC/yj9qkdRMQoCMvQtdTDKTKhDWBqyKW/5EvNT7PxuB3ckhuMUix2ta/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2003 Theory of Computation - Recursively Enumerable Language and Turing Machine Question 24 English\">  \n<p>The table is interpreted as illustrated below. The entry $$\\left( {{q_1},1,\\,R} \\right)$$ in row $${{q_0}}$$ and column $$1$$ signifies that if $$M$$ is in state $${{q_0}}$$ and reads $$1$$ on the current tape square, then it writes $$1$$ on the same tape square, moves its tape head one position to the right and transitions to state $${{q_1}}$$.</p>\n<p>Which of the following statements is true about $$M?$$ </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$M$$ does not halt on any string in $${\\left( {0 + 1} \\right)^ + }$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$M$$ does not halt on any string in $${\\left( {00 + 1} \\right)^ + }$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$M$$  halts on all string ending in a $$0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$M$$ halts on all string ending in $$a$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The complement of a recursively language is recursive. "
+      },
+      {
+        "identifier": "B",
+        "content": "The complement of a recursively enumerable language is recursively enumerable."
+      },
+      {
+        "identifier": "C",
+        "content": "The complement of a recursively language is either recursive or recursively enumerable. "
+      },
+      {
+        "identifier": "D",
+        "content": "The complement of a context-free language is context-free."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The $$C$$ language is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A context free language  "
+      },
+      {
+        "identifier": "B",
+        "content": "A context sensitive language"
+      },
+      {
+        "identifier": "C",
+        "content": "A regular language"
+      },
+      {
+        "identifier": "D",
+        "content": "Parsable fully only by a Turing machine "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is not decidable?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Given a Turing machine $$M,$$ a stings s and an integer $$k,$$ $$M$$ accepts $$s$$ within $$k$$ steps"
+      },
+      {
+        "identifier": "B",
+        "content": "Equivalence of two given Turing machines "
+      },
+      {
+        "identifier": "C",
+        "content": "Language accepted by a given finite state machine is not empty "
+      },
+      {
+        "identifier": "D",
+        "content": "Language generated by a context free grammar is non empty "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following conversions is not possible (algorithmically)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Regular grammar to context free grammar "
+      },
+      {
+        "identifier": "B",
+        "content": "Non-deterministic $$FSA$$ to deterministic $$FSA$$"
+      },
+      {
+        "identifier": "C",
+        "content": "Non-deterministic $$PDA$$ to deterministic $$PDA$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Non-deterministic Turing machine to deterministic Turing machine   "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "In which of the cases stated below is the following statement true?\n<br>“For every non-deterministic machine $${M_1}$$ there exists an equivalent deterministic machine $${M_2}$$\nrecognizing the same language“.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${M_1}$$ is nondeterministic finite automation"
+      },
+      {
+        "identifier": "B",
+        "content": "$${M_1}$$ is a nondeterministic $$PDA$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${M_1}$$ is a non-deterministic Turing machine\n "
+      },
+      {
+        "identifier": "D",
+        "content": "For no machine $${M_1}$$ use the above statement true  "
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Recursive languages are:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A proper superset of context free languages."
+      },
+      {
+        "identifier": "B",
+        "content": "Always recognizable by pushdown automata."
+      },
+      {
+        "identifier": "C",
+        "content": "Also called Type $$(0)$$ languages."
+      },
+      {
+        "identifier": "D",
+        "content": "Recognizable by Turing machines."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  }
+]

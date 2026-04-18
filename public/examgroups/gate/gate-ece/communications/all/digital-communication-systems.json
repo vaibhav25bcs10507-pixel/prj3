@@ -1,0 +1,1650 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A digital communication system transmits through a noiseless bandlimited channel $[-W, W]$. The received signal $z(t)$ at the output of the receiving filter is given by $z(t) = \\sum\\limits_{n} b[n]x(t-nT)$ where $b[n]$ are the symbols and $x(t)$ is the overall system response to a single symbol. The received signal is sampled at $t = mT$. The Fourier transform of $x(t)$ is $X(f)$. The Nyquist condition that $X(f)$ must satisfy for zero intersymbol interference at the receiver is ______.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$$\\sum\\limits_{m=-\\infty}^{\\infty} X \\left( f + \\frac{m}{T}\\right) = T$$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$$\\sum\\limits_{m=-\\infty}^{\\infty} X \\left( f + \\frac{m}{T}\\right) = \\frac{1}{T}$$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$$\\sum\\limits_{m=-\\infty}^{\\infty} X (f + mT) = T$$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$$\\sum\\limits_{m=-\\infty}^{\\infty} X (f + mT) = \\frac{1}{T}$$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>For zero ISI, $x(t)$ should have zero crossings at $\\pm T, \\pm 2 T, \\pm 3 T \\ldots \\ldots$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfh7pr7m/c60aa507-fd85-4543-abe5-f422c05a6b25/25799e20-900c-11f0-8a29-d1d739f0bc87/file-jaoe38c1mfh7pr7n.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfh7pr7m/c60aa507-fd85-4543-abe5-f422c05a6b25/25799e20-900c-11f0-8a29-d1d739f0bc87/file-jaoe38c1mfh7pr7n.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Communications - Digital Communication Systems Question 6 English Explanation 1\">$$ \\text { The train of impulse is given below } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfh7qkyw/c50a5669-c73b-46ef-9db7-c37b50abb6a7/3c765280-900c-11f0-8a29-d1d739f0bc87/file-jaoe38c1mfh7qkyx.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfh7qkyw/c50a5669-c73b-46ef-9db7-c37b50abb6a7/3c765280-900c-11f0-8a29-d1d739f0bc87/file-jaoe38c1mfh7qkyx.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Communications - Digital Communication Systems Question 6 English Explanation 2\">$$ x(t) \\sum_{m=-\\infty}^{\\infty} \\delta(t-m T)=x(0) \\delta(t) $$</p>\n<p>Taking fourier transform both sides,</p>\n<p>$$ \\begin{gathered} \\frac{1}{T} \\sum_{m=-\\infty}^{\\infty} X\\left(f-\\frac{m}{T}\\right)=x(0) \\\\ \\sum_{m=-\\infty}^{\\infty} X\\left(f-\\frac{m}{T}\\right)=x(0) T \\end{gathered} $$</p>\n<p></p>\n<p>$$or\\,\\, \\sum_{m=-\\infty}^{\\infty} X\\left(f+\\frac{m}{T}\\right)=x(0) T $$</p>\n<p>If $x(0)=1$ then option $A$ can be taken as correct option.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let H(X) denote the entropy of a discrete random variable X taking K possible distinct real values. Which of the following statements is/are necessarily true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "H(X) $$\\le$$ log<sub>2</sub> K bits"
+      },
+      {
+        "identifier": "B",
+        "content": "H(X) $$\\le$$ H(2X)"
+      },
+      {
+        "identifier": "C",
+        "content": "H(X) $$\\le$$ H(X<sup>2</sup>)"
+      },
+      {
+        "identifier": "D",
+        "content": "H(X) $$\\le$$ H(2<sup>X</sup>)"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given that X is a discrete random variable taking K possible distinct real values. If 'K' symbols having equal probability then entropy will be maximum H(X)<sub>max</sub> = log<sub>2</sub>K. If symbols having different probabilities then H(X) &lt; log<sub>2</sub>K</p>\n<p>So, that, H(X) $$\\le$$ log<sub>2</sub>K</p>\n<p>Option (a) is correct.</p>\n<p>Given option (b), H(X) $$\\le$$ H(2X)</p>\n<p>Let,</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n</p><table class=\"tg\">\n<thead>\n  <tr>\n    <th class=\"tg-baqh\">$$X \\in \\{ {x_i}\\} $$</th>\n    <th class=\"tg-baqh\">$$\\matrix{<br>   { - 1} &amp; 0 &amp; 1  \\cr <br><br> } $$</th>\n  </tr>\n</thead>\n<tbody>\n  <tr>\n    <td class=\"tg-baqh\">$${P_X}({x_i})$$</td>\n    <td class=\"tg-baqh\">$$\\matrix{<br>   {{1 \\over 4}} &amp; {{1 \\over 2}} &amp; {{1 \\over 4}}  \\cr <br><br> } $$</td>\n  </tr>\n</tbody>\n</table><p></p>\n<p>H(X) = $$\\sum\\limits_i {{P_X}({x_i}} )lo{g_2}{1 \\over {{P_X}({x_i})}}$$</p>\n<p>$$ = {1 \\over 4}{\\log _2}4 + {1 \\over 2}{\\log _2} + {1 \\over 4}{\\log _2}4$$</p>\n<p>H(X) $$ = 1.5{{bits} \\over {symbol}}$$</p>\n<p>Let, Y = 2X</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kfskby/a20c5d2a-9605-49bd-9494-116d871b9a0b/91e5d0e0-2ab8-11ed-ac06-93878138b969/file-1l7kfskbz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kfskby/a20c5d2a-9605-49bd-9494-116d871b9a0b/91e5d0e0-2ab8-11ed-ac06-93878138b969/file-1l7kfskbz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Digital Communication Systems Question 8 English Explanation 1\"></p>\n<p>H(2X) = H(Y) = $$\\sum\\limits_i {{P_Y}({y_i})lo{g_2}{1 \\over {{P_Y}({y_i})}} = 1.5{{bits} \\over {symbol}}} $$</p>\n<p>For Y = 2X, distant X values results in distinct 'Y' values so that H(X) = H(Y). So, option (b) is true. i.e., H(X) = H(2X)</p>\n<p>Given option (c), H(X) $$\\le$$ H(X<sup>2</sup>);</p>\n<p>Let Y = X<sup>2</sup>,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kfr7er/b0ff7395-78a3-4ed6-b26b-a7d8105ba5b2/6c1b4930-2ab8-11ed-ac06-93878138b969/file-1l7kfr7es.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kfr7er/b0ff7395-78a3-4ed6-b26b-a7d8105ba5b2/6c1b4930-2ab8-11ed-ac06-93878138b969/file-1l7kfr7es.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Digital Communication Systems Question 8 English Explanation 2\"></p>\n<p>H(X<sup>2</sup>) = H(Y) = $$\\sum\\limits_i {{P_Y}({y_i})lo{g_2}{1 \\over {{P_Y}({y_i})}}} $$</p>\n<p>$$ = {1 \\over 2}{\\log _2}2 + {1 \\over 2}{\\log _2}2 = 1{{bit} \\over {symbol}}$$</p>\n<p>whereas, H(X) = $$1.5{{bits} \\over {symbol}}$$</p>\n<p>Option (c) is corrext.</p>\n<p>Given option (d), H(X) $$\\le$$ H(2<sup>X</sup>)</p>\n<p>Let Y = 2<sup>X</sup></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kfpr5e/db28e0dd-7526-4de0-aa61-2adc9046255e/43bca920-2ab8-11ed-ac06-93878138b969/file-1l7kfpr5f.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kfpr5e/db28e0dd-7526-4de0-aa61-2adc9046255e/43bca920-2ab8-11ed-ac06-93878138b969/file-1l7kfpr5f.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Digital Communication Systems Question 8 English Explanation 3\"></p>\n<p>Here distinct 'X' values results in distinct 'Y' values.</p>\n<p>So that, H(X) = H(Y)</p>\n<p>i.e. H(X) = H(2<sup>X</sup>)</p>\n<p>Option (d) is true.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A symbol stream contains alternate QPSK and 16-QAM symbols. If symbols from this stream are transmitted at the rate of 1 mega-symbols per second, the raw (uncoded) data rate is _________ mega-bits per second (rounded off to one decimal place).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p>Given that symbol stream contains alternate QPSK and 16-QAM symbols.</p>\n<p>Symbol rate given as 1 mega symbols per second.</p>\n<p>For QPSK,</p>\n<p>Bit rate = $$1M{{symbol} \\over {\\sec }} \\times {\\log _2}4{{bits} \\over {symbol}}$$</p>\n<p>Bit rate = 2 Mbps</p>\n<p>For 16-QAM,</p>\n<p>Bit rate = $$1M{{symbol} \\over {\\sec }} \\times {\\log _2}16{{bits} \\over {symbol}}$$</p>\n<p>Bit rate = 4 Mbps</p>\n<p>Since, alternate QPSK and 16-QAM used, data rate of uncoded data is</p>\n<p>$$ = {{4\\,Mbps + 2\\,Mbps} \\over 2} = 3\\,Mbps$$.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A message signal having peak-to-peak value of 2 V , root mean square value of 0.1 V and bandwidth of 5 kHz is sampled and fed to a pulse code modulation (PCM) system that uses a uniform quantizer. The PCM output is transmitted over a channel that can support a maximum transmission rate of 50 kbps . Assuming that the quantization error is uniformly distributed, the maximum signal to quantization</p>\n<p>noise ratio that can be obtained by the PCM system (rounded off to two decimal places) is $\\_\\_\\_\\_$ .</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "<p>30.5to30.8</p>",
+    "explanation": "<p>From question,we have</p>\n<p>$$ V_{p p}=V_H-V_L=2 \\mathrm{~V} $$</p>\n<p>Also, rms value $=0.1 \\mathrm{~V}$</p>\n<p>And, Signal power $=P_s=V^2{ }_{\\mathrm{rms}}=0.01$ wats</p>\n<p>For $\\quad f_{\\text {max }}=5 \\mathrm{kHz}$</p>\n<p>We have $\\quad f_s=2 \\times 5 \\mathrm{kHz}=10 \\mathrm{kHz}$</p>\n<p>And $\\quad r_b=50 \\mathrm{kbps}=n f_s$</p>\n<p>$$ 50 \\mathrm{kbps}=n \\times 10 \\mathrm{kHz} $$</p>\n<p>For $\\quad n=5$</p>\n<p>We have SQNR of PCM $=\\frac{\\text { Signal power }}{\\text { Noise power }}$</p>\n<p>And, Noise power $=P_n=\\frac{\\delta}{\\sqrt{2}}=\\frac{\\left(\\frac{V_H-V_L}{2 n}\\right)^2}{12}$</p>\n<p>$$ =\\frac{\\left(\\frac{2}{2^5}\\right)^2}{12}=\\frac{\\left(\\frac{2}{32}\\right)^2}{12} $$</p>\n<p>or,&nbsp;$$ P_n=\\frac{4}{32 \\times 32 \\times 12} $$</p>\n<p>Then finally we have, $\\mathrm{SQNR}=\\frac{P_s}{P_n}=\\frac{0.01}{\\frac{4}{32 \\times 32 \\times 12}}$</p>\n<p>$$ \\text { SQNR = } 30.72 $$</p>\n<p>Hence, the correct answer is (30.5 to 30.8).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A 4 kHz sinusoidal message signal having amplitude 4 V is fed to a delta modulator (DM) operating at a sampling rate of 32 kHz . The minimum step size required to avoid slope overload noise in the DM (rounded off to two decimal places) is $\\_\\_\\_\\_$ V.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "<p>3.10to3.20</p>",
+    "explanation": "<p>For avoiding slope over load error, following is the condition</p>\n<p></p>\n<p></p></p>\n<p>$$ \\begin{aligned} \\frac{\\Delta}{T s} & \\geq \\frac{d}{d t}(m(t)) \\\\or, \\frac{\\Delta}{T s} & \\geq 2 \\pi f_m \\cdot A_m \\end{aligned} $$</p>\n<p>Then we have&nbsp;$$ \\Delta \\min =2 \\pi f_m \\cdot A_m \\cdot T_s $$</p>\n<p>Then,&nbsp;$$ \\Delta_{\\min }=\\pi=3.141 \\mathrm{~V} $$</p>\n<p>Hence, the correct answer is (3.10 to 3.20).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A digital communication system transmits a block of $N$ bits. The probability of error in decoding a bit is $\\alpha$. The error event of each bit is independent of the error events of the other bits. The received block is declared erroneous of at least one of its bits is decoded wrongly. The probability that the received block is erroneous, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$1-(1-\\alpha)^N$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\alpha^N$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$N(1-\\alpha)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$1-\\alpha^N$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given probability of error in decoding a single bit is } $$</p>\n<p>$$ \\begin{aligned} &amp; P(e)=\\alpha \\\\ &amp; \\text { Block size }=N \\text { bits } \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh21a8py/f09d284b-134a-41ee-b0dc-99bebe81ec4e/ac4bc460-af4b-11f0-ba93-393527bdf085/file-jaoe38c1mh21a8pz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh21a8py/f09d284b-134a-41ee-b0dc-99bebe81ec4e/ac4bc460-af4b-11f0-ba93-393527bdf085/file-jaoe38c1mh21a8pz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Communications - Digital Communication Systems Question 2 English Explanation\"></p>\n<p>The received block is declared erroneous, if at least one of bits is decoded wrongly, Probability of received correct block $=(1-\\alpha)^N$</p>\n<p>The probability of received block is erroneous $=1-(1-\\alpha)^N$ Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "In a digital communication system, the overall pulse shape p(t) at the receiver before the\nsampler has the Fourier transform P(f). If the symbols are transmitted at the rate of 2000\nsymbols per second, for which of the following cases is inter symbol interference zero? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/bjyaDRQpdJaUTACbX/X0Rg1HNlLVjpDuqr2MqQEOxDJAFjZ/zDmssjYOgktGJxLf8VbCpz/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Communications - Digital Communication Systems Question 48 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/3LfiizTZmj08ooKt3/iNn9GuMve0zt6xkRNmDIXsGcFUFIU/MNqNCLr2htgTbNsfdbZDYO/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Communications - Digital Communication Systems Question 48 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/XfL714Er0QCaGu6bV/wJNQU6flNMB2cDiOwDWysZf87yDbs/Xgha9gYCPWhO1GOxNWofwn/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Communications - Digital Communication Systems Question 48 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/K9NFLjvagq5lTPQok/luxjskJRxYfio4ZnyC390S5h0fW4Q/GFdEko1pnO8DurnZE8YZIl/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2017 Set 1 Communications - Digital Communication Systems Question 48 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following statements about differential pulse code modulation (DPCM) is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The sum of message signal sample with its prediction is quantized"
+      },
+      {
+        "identifier": "B",
+        "content": "The message signal sample is directly quantized, and its prediction is not used "
+      },
+      {
+        "identifier": "C",
+        "content": "The difference of message signal sample and a random signal is quantized "
+      },
+      {
+        "identifier": "D",
+        "content": "The difference of message signal sample with its predictions is quantized "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A speech signal is sampled at 8 kHz and encoded into PCM format using 8 bits/sample. The PCM data is transmitted through a baseband channel via  4-level PAM. The minimum bandwidth  (in kHz) required for transmission is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "16",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider binary data transmission at a rate of 56  kbps using baseband binary pulse amplitude modulation     (PAM)   that is designed to have a raised-cosine spectrum.  The transmission bandwidth   (in   kHz) required for a roll-off factor of 0.25 is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "35",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The modulation scheme commonly used for transmission from GSM mobile terminals is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4-QAM "
+      },
+      {
+        "identifier": "B",
+        "content": "16-PSK "
+      },
+      {
+        "identifier": "C",
+        "content": "Walsh-Hadamard orthogonal codes "
+      },
+      {
+        "identifier": "D",
+        "content": "Gaussian Minimum Shift Keying (GMSK) "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In a code  -  division multiple access (CDMA)  system with N  =  8  chips, the maximum number of users who can be assigned mutually orthogonal signature sequences is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "8",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The bit rate of a digital communication system is R kbits/s. The modulation used is 32-QAM. The minimum bandwidth required for ISI free transmission is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "R/10 Hz "
+      },
+      {
+        "identifier": "B",
+        "content": "R/10 kHz "
+      },
+      {
+        "identifier": "C",
+        "content": "R/5 Hz "
+      },
+      {
+        "identifier": "D",
+        "content": "R/5 kHz "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "In a PCM system, if the code word length is increased from 6 to 8 bits, the signal to quantization noise ratio improves by the factor ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8/6 "
+      },
+      {
+        "identifier": "B",
+        "content": "12 "
+      },
+      {
+        "identifier": "C",
+        "content": "16 "
+      },
+      {
+        "identifier": "D",
+        "content": "8"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "In the output of a DM speech encoder, the consecutive pulses are of opposite polarity during time interval t<sub>1</sub> $$ \\le $$ t $$ \\le $$ t<sub>2</sub>. This indicates that during this interval ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the input to the modulator is essentially constant. "
+      },
+      {
+        "identifier": "B",
+        "content": "the modulator is going through slope overload. "
+      },
+      {
+        "identifier": "C",
+        "content": "the accumulator is in saturation. "
+      },
+      {
+        "identifier": "D",
+        "content": "the speech signal is being sampled at the Nyquist rate. "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "For a bit-rate of 8 kbps, the best possible values of the transmitted frequencies in a coherent binary <b>FSK</b> system are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16 KHz and 20 KHz "
+      },
+      {
+        "identifier": "B",
+        "content": "20 KHz and 32 KHz "
+      },
+      {
+        "identifier": "C",
+        "content": "20 KHz and  40 KHz  "
+      },
+      {
+        "identifier": "D",
+        "content": "32 KHz and 40 KHz  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "A band limited signal is sampled at the Nyquist rate. The signal can be recovered by passing the samples through ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "an RC filter "
+      },
+      {
+        "identifier": "B",
+        "content": "an envelope detector "
+      },
+      {
+        "identifier": "C",
+        "content": "a PLL "
+      },
+      {
+        "identifier": "D",
+        "content": "an ideal low-pass filter with the appropriate bandwidth "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Compression in PCM refers to relative compression of ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "higher signal amplitudes "
+      },
+      {
+        "identifier": "B",
+        "content": "lower signal amplitudes "
+      },
+      {
+        "identifier": "C",
+        "content": "lower signal frequencies "
+      },
+      {
+        "identifier": "D",
+        "content": "higher signal frequencies "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "For a given data rate, the bandwidth B<sub>p</sub> of a BPSK signal and the band width B<sub>0</sub>  of the OOK signal are related as ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "B<sub>p</sub> = B<sub>0</sub>/4 "
+      },
+      {
+        "identifier": "B",
+        "content": "B<sub>p</sub> = B<sub>0</sub>/2 "
+      },
+      {
+        "identifier": "C",
+        "content": "B<sub>p</sub> = B<sub>0</sub> "
+      },
+      {
+        "identifier": "D",
+        "content": "B<sub>p</sub> = 2B<sub>0</sub>   "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Quadrature multiplexing is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the same as FDM "
+      },
+      {
+        "identifier": "B",
+        "content": "the same as TDM "
+      },
+      {
+        "identifier": "C",
+        "content": "a combination of FDM and TDM "
+      },
+      {
+        "identifier": "D",
+        "content": "quite different from FDM and TDM "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "In a PCM system with uniform quantization, increasing the number of bits from 8 to 9 will reduce the quantization noise power by a factor of ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "9 "
+      },
+      {
+        "identifier": "B",
+        "content": "8 "
+      },
+      {
+        "identifier": "C",
+        "content": "4 "
+      },
+      {
+        "identifier": "D",
+        "content": "2 "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The line code that has zero dc component for pulse transmission of random binary data is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Non - return to zero (NRZ)"
+      },
+      {
+        "identifier": "B",
+        "content": "Return to zero(RZ) "
+      },
+      {
+        "identifier": "C",
+        "content": "Alternate Mark Inversion (AMI) "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "A deterministic signal has the power spectrum given in figure. The minimum sampling rate needed to completely represent this signal is\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/BxRzoDVNY5CCs6H8W/MB2HGRG4T1BpLTHyF6F9dIqTjKL2X/RjMF5zngkOxuClUrBuZ7my/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 1997 Communications - Digital Communication Systems Question 63 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 KHz "
+      },
+      {
+        "identifier": "B",
+        "content": "2 KHz "
+      },
+      {
+        "identifier": "C",
+        "content": "3 KHz "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The signal to quantization noise ratio in an n-bit PCM system",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "depends upon the sampling frequency employed."
+      },
+      {
+        "identifier": "B",
+        "content": "is independent of the value of 'n'. "
+      },
+      {
+        "identifier": "C",
+        "content": "increasing with increasing value of 'n'."
+      },
+      {
+        "identifier": "D",
+        "content": "decreases with the increasing value of n'."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "If the number of bits per sample in a PCM system is increased from n to         n+1, the improvement in signal-to-quantization noise ratio will be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3 dB "
+      },
+      {
+        "identifier": "B",
+        "content": "6 dB"
+      },
+      {
+        "identifier": "C",
+        "content": "2n dB "
+      },
+      {
+        "identifier": "D",
+        "content": "n dB"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The bandwidth required for the transmission of a PCM signal increases by a factor of ________  when the number of quantization levels is increased from 4 to 64. \n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The information bit sequence {1 1 1 0 1 0 1 0 1} is to be transmitted by encoding with Cyclic Redundancy Check 4 (CRC-4) code, for which the generator polynomial is $C(x) = x^4 + x + 1$. The encoded sequence of bits is ____.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>{1 1 1 0 1 0 1 1 1 0 0}</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>{1 1 1 0 1 0 1 1 1 0 1}</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>{1 1 1 0 1 0 1 1 1 1 0}</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>{1 1 1 0 1 0 1 0 1 0 0}</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the encoded sequence of bits using Cyclic Redundancy Check (CRC-4), we need to follow these steps:</p>\n\n<p>1. <strong>Define the generator polynomial</strong>: The given generator polynomial is $$C(x) = x^4 + x + 1$$, which corresponds to the binary sequence {1 0 0 1 1}.</p>\n\n<p>2. <strong>Append zeros to the information bit sequence</strong>: The information bit sequence is {1 1 1 0 1 0 1 0 1}. To encode this using CRC-4, we need to append four zeros (since the generator polynomial is of degree 4) to the end of this sequence, resulting in {1 1 1 0 1 0 1 0 1 0 0 0 0}.</p>\n\n<p>3. <strong>Perform binary division</strong>: We divide the augmented information sequence by the generator polynomial using binary division (XOR operations) to find the remainder. The steps are as follows:</p>\n\n<p>- Divide {1 1 1 0 1 0 1 0 1 0 0 0 0} by {1 0 0 1 1}.</p>\n\n<p>- First step: Align and XOR the first five bits of the dividend with the generator polynomial.</p>\n\n<pre>\n\n<p>11101 01010000</p>\n\n<p>-10011</p>\n\n<p>---------</p>\n\n<p>01101 01010000</p>\n\n</pre>\n\n<p>- Second step: Bring down the next bit and align the result with the generator polynomial if necessary.</p>\n\n<pre>\n\n<p>01101 01010000</p>\n\n<p>-00000</p>\n\n<p>---------</p>\n\n<p>11010 11010000</p>\n\n</pre>\n\n<p>- Continue this process. We can illustrate it step by step, but for brevity here, the essential steps are given. After completing the binary division, we obtain the remainder.</p>\n\n<p>4. <strong>Find the remainder</strong>: After performing the division, we get the remainder, which is {1010} in this case.</p>\n\n<p>5. <strong>Form the encoded sequence</strong>: Append the remainder to the original bit sequence. The encoded sequence of bits is {1 1 1 0 1 0 1 0 1} + {1 0 1 0}, which gives us {1 1 1 0 1 0 1 0 1 1 0 0}.</p>\n\n<p>The correct encoded sequence is therefore:</p>\n\n<p>Option <b>A</b>: {1 1 1 0 1 0 1 1 1 0 0}</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider  a channel over which either symbol x<sub>A</sub> or symbol x<sub>B</sub> is transmitted. Let the output of the channel Y be the input to a maximum likelihood (ML) detector at the receiver. The conditional probability density functions for y given x<sub>A</sub> and x<sub>B</sub> are :</p>\n<p>$${f_{\\left. Y \\right|{x_A}}}(y) = {e^{ - (y + 1)}}u(y + 1)$$,</p>\n<p>$${f_{\\left. Y \\right|{x_B}}}(y) = {e^{(y - 1)}}(1 - u(y - 1))$$,</p>\n<p>where, u( . ) is the standard unit step function. The probability of symbol error for this system is _________ (rounded off to two decimal places).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.23",
+    "explanation": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kfdrtg/86034b49-3722-4298-9a53-6d624f460810/f68b1d40-2ab6-11ed-ac06-93878138b969/file-1l7kfdrth.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kfdrtg/86034b49-3722-4298-9a53-6d624f460810/f68b1d40-2ab6-11ed-ac06-93878138b969/file-1l7kfdrth.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Communications - Digital Communication Systems Question 9 English Explanation\"><br>$\\mathrm{ML}$ decoding $\\rightarrow f_{Y \\mid X_{A}}(y) \\underset{X_{B}}{\\stackrel{X_{A}}{\\gtrless}} f_{Y \\mid X_{B}}(y)$\n<br><br>\ni.e. $\\quad f_{Y \\mid X_{A}}(y)&gt;f_{Y \\mid X_{B}}(y) \\rightarrow$ Decision favour of $X_{A}$\n<br><br>\ni.e. $\\quad f_{Y \\mid X_{A}}(y) &lt; f_{Y / X_{B}}(y) \\rightarrow$ Decision favour of $X_{B}$\n<br><br>\nFor $-1 &lt; y &lt; 0$ and $1&lt; y &lt; \\infty \\rightarrow f_{Y \\mid X_{A}}(y) &gt; f_{Y \\mid X_{B}}(y)$\n<br><br>\nFor above internal decision in favour of $X_{A}$.\n<br><br>\nFor $-\\infty &lt; y &lt; -1$ and $0 &lt; y &lt; 1 \\rightarrow f_{Y \\mid X_{B}}(y) &gt; f_{Y \\mid X_{A}}(y)$\n<br><br>\nFor above internal decision in favour of $X_{B}$.\n<br><br>\n$$\nP_{e}=P\\left(X_{A}\\right) \\cdot P_{e_{X_{A}}}+P\\left(X_{B}\\right) \\cdot P_{e_{X_{B}}}\n$$\n<br><br>\n$P_{e_{X_{A}}} \\rightarrow$ Probability of error $X_{A}$ transmitted\n<br><br>\n$P_{e_{X_{B}}} \\rightarrow$ Probability of error $X_{B}$ transmitted\n<br><br>\n$P_{e_{X_{A}}}=\\int_{0}^{1} f_{Y / X_{A}}(y) d y=\\int_{0}^{1} e^{-(y+1)} u(y+1) d y$\n<br><br>\n$=\\int_{0}^{1} e^{-(y+1)} d y=e^{-1}-e^{-2}=0.23$\n<br><br>\n$P_{e_{X_{B}}}=\\int_{-1}^{0} f_{Y / x_{B}}(y) d y=\\int_{-1}^{0} e^{(y-1)}[1-u(y-1)] d y$\n<br><br>\n$=\\int_{-1}^{0} e^{y-1} d y=e^{-1}-e^{-2}=0.23$\n<br><br>\n$P_{e}=P\\left(X_{A}\\right) \\times 0.23+P\\left(X_{B}\\right) \\times 0.23=0.23\\left[P\\left(X_{A}\\right)+P\\left(X_{B}\\right)\\right]$\n<br><br>\n$P_{e}=0.23$ ",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In a digital communication system, a symbol $S$ randomly chosen from the set $\\left\\{s_1, s_2, s_3, s_4\\right\\}$ is transmitted. It is given that $s_1=-3, s_2=-1, s_3=+1$ and $s_4=+2$. The received symbol is $Y=S+W . W$ is a zero mean unit - variance Gaussian random variable and is independent of $S . P_i$ is the conditional probability of symbol error for the maximum likelihood (ML) decoding when the transmitted symbol $S=s_i$. The index $i$ for which the conditional symbol error probability $P_i$ is the highest is $\\_\\_\\_\\_$ .</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p>Given : A symbol ' $S$ ' is chosen randomly from the set $\\left(S_1, S_2, S_3, S_4\\right)$</p>\n<p>$$ \\begin{aligned} &amp; S_1=-3 \\\\ &amp; S_2=-1 \\\\ &amp; S_3=+1 \\\\ &amp; S_4=+2 \\end{aligned} $$</p>\n<p>Received symbol is $Y=S+W$</p>\n<p>Where</p>\n<p>$W \\rightarrow$ Zero mean unit variance Gaussian random variable and is independent of $S$.</p>\n<p>$P_i \\rightarrow$ Conditional probability of symbol error for the maximum likelihood decoding when the transmitted symbol $S=S_i$.</p>\n<p>Conditional probability density function for the transmitted symbols.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh23nbqg/0b666f61-a57a-4475-a91e-8dfc4a51efc1/ea66ba80-af54-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh23nbqh.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh23nbqg/0b666f61-a57a-4475-a91e-8dfc4a51efc1/ea66ba80-af54-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh23nbqh.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Communications - Digital Communication Systems Question 1 English Explanation\">Symbols $S_1$ and $S_4$ have only one decision boundary hence $P_e$ will be less compared to $S_2$ and $S_3 . S_2$ and $S_3$ are bounded by error due to 2 decision boundaries.</p>\n<p>Since $S_2$ is comparatively distant from adjacent symbols $S_1$ and $S_2$ (2 units each respectively) it will have lower probability of error compared to $S_3$ which is 2 units and only 1 unit far from its adjacent symbols $S_2$ and $S_4$.</p>\n<p>$\\therefore \\quad S_3$ has the highest probability of error.</p>\n<p>Hence, index $i=3$, to get highest conditional symbol error probability.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "In binary frequency shift keying (FSK), the given signal wave forms are \n<br> $$\\,{u_o}(t) = 5\\,\\cos \\,(20000\\,\\pi \\,t);\\,0 \\le \\,\\,t\\, \\le \\,T,$$ and\n<br> $${u_o}(t) = 5\\,\\cos \\,(22000\\,\\pi \\,t);\\,0 \\le \\,\\,t\\, \\le \\,T,$$\n<p> where T is the bit-duration interval and t is  in seconds. Both $${u_o}(t)$$ and $${u_1}(t)$$ are zero output the interval $$0 \\le \\,\\,t\\, \\le \\,T$$. With a matched filter (correlator ) based receiver, the smallest positive value of T (in milliseconds) required to have $${u_o}(t)$$ and $${u_1}(t)$$ uncorrelated is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.25 ms"
+      },
+      {
+        "identifier": "B",
+        "content": "0.5 ms"
+      },
+      {
+        "identifier": "C",
+        "content": "0.75 ms"
+      },
+      {
+        "identifier": "D",
+        "content": "1.0 ms"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An ideal band-pass channel 500Hz-2000 Hz is deployed for communication. A modem is designed to transmit bits at the rate of 4800 bits/s using 16-QAM. The roll-off factor of a pulse with a raised cosine spectrum that utilizes the entire frequency band is____________________",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.25",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The bit error probability of a memoryless binary symmetric channel is $${10^{ - 5}}$$. If $${10^{ - 5}}$$ bits are sent over this channel, then the probability that not more than one bit will be in error is ________________",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.735",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The transmitted signal in a GSM system is of 200 kHz bandwidth and 8 users share a common bandwidth using TDMA. If at a given time 12 users are talking in a cell, the total bandwidth of the signal received by the base station of the cell will be at least (in kHz) ___________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "400",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A sinusoidal signal of 2 kHz frequency is applied to a delta modulator. The sampling rate and step-size $$\\Delta $$ of the delta modulator are 20,000 samples per second and 0.1 V, respectively. To prevent slope overload, the maximum amplitude of the sinusoidal signal (in Volts) is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {2\\pi }}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over \\pi }$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2 \\over \\pi }$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pi $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The input to a 1-bit quantizer is a random variable X with pdf $${f_x}(x) = 2{e^{ - 2x}}\\,\\,for\\,\\,x \\ge 0$$ and $${f_x}(x) = 0\\,\\,for\\,\\,x\\, &lt; \\,0$$. For outputs to be of equal probability, the quantizer threshold should be _______________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.345",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A binary random variable X takes the value of 1 with probability 1/3. X is input to a casade of 2 independent identical binary symmetric channels (BSCs) each with crossover probability 1/2. The output of BSCs are the random variables $${Y_1}$$ and $${Y_2}$$ as shown in the figure.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/nkAONQliWVzq13h7j/RFZxwj5CpC7KMsladferbVcIfephr/FSELDqz4yr5MmtNkXeQKNf/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 3 Communications - Digital Communication Systems Question 18 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "2 ",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In a PCA system, the signal $$m(t) = \\{ \\sin (100\\,\\pi \\,t)\\, + \\cos (100\\,\\pi \\,t\\} $$ V is sampled at the Nyquist rate. The samples are processed by a uniform quantizer with step size 0.75 V. The minimum data rate of the PCM system in bits per second is________________",
+    "options": [],
+    "correct_options": [],
+    "answer": "200",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "An M - level PSK modulation scheme is used to transmit independent binary digits over a band-pass channel with bandwidth 100 kHz. The bit rate is 200 kbps and the system characteristic is a raised-cosine spectrum with 100% excess bandwidth. The minimum value of M is ___________________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "16",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "A speech signal, band limited to 4 kHz and peak voltage varying between + 5V and - 5V is sampled at the Nyquist rate. Each sample is quantized and represented by 8 bits.\n<p> If the bits 0 and 1 are transmitted using bipolar pulses, the minimum bandwidth required for distortion free transmission is </p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "64 kHz"
+      },
+      {
+        "identifier": "B",
+        "content": "32 kHz"
+      },
+      {
+        "identifier": "C",
+        "content": "8 kHz "
+      },
+      {
+        "identifier": "D",
+        "content": "4 kHz. "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A speech signal, band limited to 4 kHz and peak voltage varying between + 5V and - 5V is sampled at the Nyquist rate. Each sample is quantized and represented by 8 bits.\n<p> Assuming the signal to be uniformly distributed between its peak values, the signal to noise ratio at the quantizer output is </p> \n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16 dB"
+      },
+      {
+        "identifier": "B",
+        "content": "32 dB"
+      },
+      {
+        "identifier": "C",
+        "content": "48 dB"
+      },
+      {
+        "identifier": "D",
+        "content": "64 dB "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A speech signal, band limited to 4kHz and peak voltage varying between +5V and -5V is sampled at the Nyquist rate. Each sample is quantized and represented by 8 bits.\n<p> The number of quantitization levels required to reduce the quantization noise by a factor of 4 would be </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1024"
+      },
+      {
+        "identifier": "B",
+        "content": "512"
+      },
+      {
+        "identifier": "C",
+        "content": "256"
+      },
+      {
+        "identifier": "D",
+        "content": "64"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Four messages band limited to W, W, 2 W and 3 W respectively are to be multiplexed using Time Division Multiplexing (TDM). The minimum bandwidth required for transmission of this TDM signal is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 W"
+      },
+      {
+        "identifier": "B",
+        "content": "3 W\n"
+      },
+      {
+        "identifier": "C",
+        "content": "6 W"
+      },
+      {
+        "identifier": "D",
+        "content": "7 W"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "In a GSM system, 8 channels can co-exist in 200 KHz bandwidth using TDMA. A GSM based cellular operator is allocated 5 MHz bandwidth. Assuming a frequency reuse factor of 1/5, i. e. a five-cell repeat pattern,, the maximum number of simultaneous channels that can exist in one cell is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "200"
+      },
+      {
+        "identifier": "B",
+        "content": "40"
+      },
+      {
+        "identifier": "C",
+        "content": "25"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "In a Direct sequence CDMA system the chip rate is $$1.2288\\,\\, \\times \\,\\,{10^6}$$ chips per second. If the processing gain is desired to be at least 100. The data rate ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "must be less than or equal to $$12.288\\,\\, \\times \\,\\,{10^3}$$ bits per sec."
+      },
+      {
+        "identifier": "B",
+        "content": "must be greater than $$12.288\\,\\, \\times \\,\\,{10^3}$$ bits per sec."
+      },
+      {
+        "identifier": "C",
+        "content": "must be exactly  equal to $$12.288\\,\\, \\times \\,\\,{10^3}$$ bits per sec. "
+      },
+      {
+        "identifier": "D",
+        "content": "can take any value less than $$12.288\\,\\, \\times \\,\\,{10^3}$$ bits per sec."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "In delta modulation, the slope overload distortion can be reduced by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "decreasing the step size  "
+      },
+      {
+        "identifier": "B",
+        "content": "decreasing the granular noise "
+      },
+      {
+        "identifier": "C",
+        "content": "decreasing the sampling rate "
+      },
+      {
+        "identifier": "D",
+        "content": "increasing the step size "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The raised cosine pulse p(t) is used for zero ISI in digital communications. The expression for p(t) with unity roll-off factor is given by $$$p(t) = {{\\sin \\,4\\,\\pi \\,W\\,t} \\over \\matrix{\n  4\\,\\pi \\,W\\,t(1 - 16{W^2}{t^2}) \\hfill \\cr \n   \\hfill \\cr \n   \\hfill \\cr} }$$$ \nThe value of p(t) at $$t = {1 \\over {4\\,W}}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "- 0.5"
+      },
+      {
+        "identifier": "B",
+        "content": "0 "
+      },
+      {
+        "identifier": "C",
+        "content": "0.5"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\infty $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum step-size required for a Delta-Modulator operating at 32 K samples/sec to track the signal (here u(t) is the unit-step function)\n<p> x(t) = 125t(u(t) - u (t - 1) + (250 - 125t) (u (t - 1) - u (t - 2 )) so that slope - overload is avoided, would be  </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${2^{ - 10}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^{ - 8}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^{ - 6}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{ - 4}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Three analog signals, having bandwidths 1200 Hz, 600 Hz and 600 Hz are sampled at their respective Nyquist rates, enocodes with 12 bit words, and time division multiplexed. The bit rate for the multiplexed signal is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "115.2 kbps"
+      },
+      {
+        "identifier": "B",
+        "content": "28.8 kbps "
+      },
+      {
+        "identifier": "C",
+        "content": "57.6 kbps "
+      },
+      {
+        "identifier": "D",
+        "content": "38.4 kbps "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Choose the correct one from among the alternatives A, B, C, D after matching an item from Group 1 with the most appropriate item in Group 2. \n<p> <b> Group </b> \n<br> 1. FM \n<br> 2. DM\n<br> 3. PSK \n<br> 4. PCM </p>\n<p> <b> Group 2 </b> \n<br> P: Slope overload \n<br> Q: $${\\mu  - law}$$\n<br> R: Envelope detector \n<br> S: Capture effect \n<br> T: Hilbert transform\n<br> U: Matched filter </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 - T, 2 - P, 3 - U, 4 - S"
+      },
+      {
+        "identifier": "B",
+        "content": "1 - S, 2 - U, 3 - P, 4 - T "
+      },
+      {
+        "identifier": "C",
+        "content": "1 - S, 2 - P, 3 - U, 4 - Q"
+      },
+      {
+        "identifier": "D",
+        "content": "1 - U, 2 - R, 3 - S, 4 - Q"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A source produces binary data at the rate of 10 kbps. The binary symbols are represented as shown in fig.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/eDRIQPjhEgUt7cmph/UXvTvg8hRvGZcAZzdWGlGh2YwSygr/rpvaoeD5QYEYSPBvYfpms9/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2004 Communications - Digital Communication Systems Question 31 English 1\">\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/8nD99A7NIuFUoxvKL/qsTXTdCrVG61vTxDu4aXYLMWXLXWb/3cGcbv1EWz2FnUOCcQe8Qc/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2004 Communications - Digital Communication Systems Question 31 English 2\">  \nThe source output is transmitted using two modulation schemes, namely Binary PSK (BPSK) and Quadrature PSK (QPSK).\n Let $${B_1}$$ and $${B_2}$$ be the bandwidth requirements of BPSK and QPSK respectively. Assuming that the bandwidth of the above rectangular pulses is 10 kHz,  $${B_1}$$ and $${B_2}$$ are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${B_1}$$ = 20 KHz, $${B_2}$$ = 20 KHz"
+      },
+      {
+        "identifier": "B",
+        "content": "$${B_1}$$ = 10 KHz, $${B_2}$$ = 20 KHz "
+      },
+      {
+        "identifier": "C",
+        "content": "$${B_1}$$ = 20 KHz, $${B_2}$$ = 10 KHz"
+      },
+      {
+        "identifier": "D",
+        "content": "$${B_1}$$ = 10 KHz, $${B_2}$$ = 10 KHz"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The input to a linear delta modulator having a step size $$\\Delta $$ = 0.628 is a sine wave with frequency f<sub>m</sub> and peak amplitude E<sub>m</sub>. If the sampling frequency f<sub>s</sub> = 40 KHz. the combination of the sine-wave frequency and the amplitude, where slope overload will take place is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Em 0.3V,  Fm 8 KHz "
+      },
+      {
+        "identifier": "B",
+        "content": "Em 1.5V,  Fm 4 KHz "
+      },
+      {
+        "identifier": "C",
+        "content": "Em 1.5V,  Fm 2 KHz "
+      },
+      {
+        "identifier": "D",
+        "content": "Em 3.0V,  Fm 1 KHz "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "A signal is sampled at 8 KHz and is quantized using 8-bit uniform quantizer. Assuming $$SN{R_q}$$ for a sinusoidal signal, the correct statement for PCM signal with a bit rate of R is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "R = 32 kbps, $$SN{R_q}$$ = 25.8 dB"
+      },
+      {
+        "identifier": "B",
+        "content": "R = 64 kbps, $$SN{R_q}$$ = 49.8 dB"
+      },
+      {
+        "identifier": "C",
+        "content": "R = 64 kbps, $$SN{R_q}$$ = 55.8 dB "
+      },
+      {
+        "identifier": "D",
+        "content": "R = 32 kbps, $$SN{R_q}$$ = 49.8 dB"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "If S represents the carrier synchronization at the receiver and $$\\rho $$ represents the bandwidth efficiency, then the correct statement for the coherent binary PSK is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\rho  = 0.5,\\,S$$ is required"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\rho  = 1.0,\\,S$$ is required "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\rho  = 0.5,\\,S$$ is not required"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\rho  = 1.0,\\,S $$ is not required"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "In a digital communication system employing Frequency Shift Keying (FSK), the 0 and 1 bit are represented by sine waves of 10 KHz and 25 KHz respectively. These waveforms will be orthogonal for a bit interval of ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$45\\,\\,\\mu \\sec $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$200\\,\\,\\mu \\sec $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$50\\,\\,\\mu \\sec $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$250\\,\\,\\mu \\sec $$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Four independent messages have bandwidths of 100Hz, 100 Hz, 200Hz and 400Hz respectively. Each is sampled at the Nyquist rate, and the samples are time division multiplexed (TDM) and transmitted. The transmitted sample rate )in Hz) is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1600"
+      },
+      {
+        "identifier": "B",
+        "content": "800"
+      },
+      {
+        "identifier": "C",
+        "content": "400"
+      },
+      {
+        "identifier": "D",
+        "content": "200"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The number of bits in a binary PCM  system is increased from n to n+1. As a result, the signal to quantization noise ratio will improve by a factor ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {n + 1} \\right)/n$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^{\\left( {n + 1} \\right)/n}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^{2\\left( {n + 1} \\right)/n}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "which is independent of n"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Coherent demodulation of FSK signal can be effected using ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "correlation receiver "
+      },
+      {
+        "identifier": "B",
+        "content": "band pass filters and envelope detectors "
+      },
+      {
+        "identifier": "C",
+        "content": "matched filter "
+      },
+      {
+        "identifier": "D",
+        "content": "discriminator detection "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "The bit stream 01001 is differentially encoded using 'Delay and Ex OR' scheme for DPSK transmission. Assuming the reference bit as a '1' and assigning phases of '0' and '$$\\,\\pi $$' for 1's and 0's respectively, in the encoded sequence, the transmitted phase sequence becomes ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\,\\pi $$ 0$$\\,\\pi $$ $$\\,\\pi $$ 0"
+      },
+      {
+        "identifier": "B",
+        "content": "0 $$\\,\\pi $$ $$\\,\\pi $$ 0 0"
+      },
+      {
+        "identifier": "C",
+        "content": "0 $$\\,\\pi $$ $$\\,\\pi $$ $$\\,\\pi $$ 0"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\,\\pi $$ $$\\,\\pi $$ 0$$\\,\\pi $$ $$\\,\\pi $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Source encoding in a data communication system is done in order to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "enhance the information transmission. "
+      },
+      {
+        "identifier": "B",
+        "content": "band pass filters and envelope rate detectors.  "
+      },
+      {
+        "identifier": "C",
+        "content": "conserve the transmitted power. "
+      },
+      {
+        "identifier": "D",
+        "content": "discriminator detection. "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "For the signal constellation shown in the figure, the type of modulation is ________.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/uygg9mAkRtTeqCoML/ejz3hqo41oZXg3PkQHCi6Dt1XdAGS/XE2QqXimCvDt7zBmJOvEDf/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 1991 Communications - Digital Communication Systems Question 42 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Quadrature phase shift keying",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "In a BPSK signal detector, the local oscillator has a fixed phase error of 20<sup>0</sup>. This phase error deteriorates the <b>SNR</b> at the output by a factor of ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\cos {20^0}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\cos ^2}{20^0}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\cos {70^0}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\cos ^2}{70^0}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-ece-1990",
+    "difficulty": null
+  },
+  {
+    "content": "In binary data transmission DPSK is preferred to PSK because ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a coherent carrier is not required to be generated at the receiver. "
+      },
+      {
+        "identifier": "B",
+        "content": "for a given energy per bit, the probability of error is less. "
+      },
+      {
+        "identifier": "C",
+        "content": "the 180<sup>0</sup> phase shifts of the carrier are unimportant. "
+      },
+      {
+        "identifier": "D",
+        "content": "more protection is provided against impulse noise. "
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function of a zero - order hold is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{1 - \\exp \\left( { - Ts} \\right)} \\over s}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{1 - \\exp \\left( { - Ts} \\right)} \\over s}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over {\\left[ {1 - \\exp \\left( { - Ts} \\right)} \\right]}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "The message bit sequence input to a DPSK modulator is 1, 1, 0, 0, 1, 1.  The carrier phase during the reception of the first two message bits is $$\\pi ,\\,\\,\\pi $$. The carrier phase for the remaining four message bits is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\pi $$, $$\\pi $$, 0, $$\\pi $$"
+      },
+      {
+        "identifier": "B",
+        "content": "0, 0, $$\\pi $$, $$\\pi $$"
+      },
+      {
+        "identifier": "C",
+        "content": "0, $$\\pi $$, $$\\pi $$, $$\\pi $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pi $$, $$\\pi $$, 0, 0"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "A rectangular pulse existing between t = 0 and t = T and having an amplitude A is to be received by a matched filter \n<p> (a) Draw the impulse response of the matched filter labeling all important points and the axes.\n<br> (b) Find the signal shape at the filter output. Lable all important points and axes. </p> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "solve it ",
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "content": "For the input signal, x(t), shown in Fig.\n<p> (a) Sketch the impulse response, h(t), of the matched filter.\n<br> (b) Sketch the output, y(t), of the matched filter. Fully label your diagram.\n<br> (c) If the input to the matched filter consists of the signal, x(t), plus additive white noise of two sided spectral density of $${10^{ - 6}}$$ watts/Hz, find the maximum output SNR of the matched filter. </p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/W5NcfQu0AKoYD6QWl/Y5vlk67KtG2nQvyinuQZOTMk9Bm8R/Lke3rLEGDkJbguBey05n9I/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1989 Communications - Digital Communication Systems Question 11 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "(c) $$4\\, \\times {10^6}$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "A signal of bandwidth 3.5 kHz has peak-to-peak and rms amplitudes of 4 V and 0.2 V, respectively. This signal is passed through a linear PCM coder and then transmitted over a channel capable of supporting a transmission rate of 60 kbps. Calculate the maximum signal-to-quantization-noise ratio that can be obtained using this system.",
+    "options": [],
+    "correct_options": [],
+    "answer": "33.4 dB.",
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  }
+]

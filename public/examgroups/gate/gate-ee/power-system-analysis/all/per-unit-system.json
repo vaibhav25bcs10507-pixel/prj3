@@ -1,0 +1,306 @@
+[
+  {
+    "direction": null,
+    "content": "<p>The expressions of fuel cost of two thermal generating units as a function of the respective power generation $${P_{G1}}$$ and $${P_{G2}}$$ are given as</p>\n<p>$$\\matrix{\n   {{F_1}({P_{G1}}) = 0.1aP_{G1}^2 + 40{P_{G1}} + 120\\,Rs/hour} & {0\\,MW \\le {P_{G1}} \\le 350\\,MW}  \\cr \n   {{F_2}({P_{G2}}) = 0.2P_{G2}^2 + 30{P_{G2}} + 100\\,Rs/hour} & {0\\,MW \\le {P_{G2}} \\le 300\\,MW}  \\cr \n\n } $$</p>\n<p>where $$a$$ is a constant. For a given value of $$a$$, optimal dispatch requires the total load of 290 MW to be shared as $${P_{G1}} = 175\\,MW$$ and $${P_{G2}} = 115\\,MW$$. With the load remaining unchanged, the value of $$a$$ is increased by 10% and optimal dispatch is carried out. The changes in $${P_{G1}}$$ and the total cost of generation, $$F( = {F_1} + {F_2})$$ in Rs/hour will be as follows</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${P_{G1}}$$ will decrease and $$F$$ will increase"
+      },
+      {
+        "identifier": "B",
+        "content": "Both $${P_{G1}}$$ and $$F$$ will increase"
+      },
+      {
+        "identifier": "C",
+        "content": "$${P_{G1}}$$ will increase and $$F$$ will decrease"
+      },
+      {
+        "identifier": "D",
+        "content": "Both $${P_{G1}}$$ and $$F$$ will decrease"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b></p>\n\n<p>$$ \\begin{aligned} & F_1\\left(P_{g_1}\\right)=0.1 a P_{G_1}^2+40 P_{G_1}+120 \\mathrm{Rs} / \\mathrm{hr} \\\\\\\\ & F_2\\left(P_{g_2}\\right)=0.2 P_{G_2}^2+30 P_{G_2}+100 \\mathrm{Rs} / \\mathrm{hr} \\end{aligned} $$</p>\n\n<p>Incremental cost, $I_{C_1}=\\frac{d F_1}{d P_{G_1}}=0.2 a P_{G_1}+40$</p>\n\n<p>$$ \\begin{aligned} & I_{C_2}=\\frac{d F_2}{d P_{G_2}}=0.4 P_{G_2}+30 \\\\\\\\ & 0.2 a \\times 175+40=0.4 \\times 115+30 \\end{aligned} $$</p>\n\n<p>$$ a=1.028 $$</p>\n\n<p>Now, $P_1^{\\prime}+P_2^{\\prime}=175+115=290 \\mathrm{~mW}$</p>\n\n<p>$$ \\begin{aligned} & a^{\\prime}=1.1 \\times 1.028=1.1308 \\\\\\\\ & F_1=0.1 \\times 1.1308 P_1^{\\prime 2}+40 P_1{ }^{\\prime}+120 \\\\\\\\ & F_2=0.2 P_2^{\\prime 2}+30 P_2+100 \\\\\\\\ & I_{C_1}=0.226 P_1{ }^{\\prime}+40 \\\\\\\\ & I_{C_2}=0.4 P_2{ }^{\\prime}+30 \\end{aligned} $$</p>\n\n<p>$\\begin{aligned} & \\text { For optimal load, } I_{C_1}=I_{C_2} \\\\\\\\ & 0.226 P_1^{\\prime}+40=0.4 P_2^{\\prime}+30 \\\\\\\\ & 0.226 P_1^{\\prime}-0.4 P_2^{\\prime}=-10 ......(i)\\end{aligned}$</p>\n\n<p>$$ \\begin{aligned} & P_1^{\\prime}+P_2^{\\prime}=290 \\\\\\\\ & P_1^{\\prime}=169 \\mathrm{MW} \\\\\\\\ & P_2^{\\prime}=121 \\mathrm{MW} \\end{aligned} $$</p>\n\n<p>So, $P_1$ decreases</p>\n\n<p>$F$ when $P_1=175 \\mathrm{MW}$ and $P_2=115 \\mathrm{MW}$</p>\n\n<p>$$ \\begin{aligned} & F_1=0.1 \\times 1.028 \\times 175^2+40 \\times 175+120=10268.2 \\mathrm{Rs} / \\mathrm{hr} \\\\\\\\ & F_2=0.2 \\times 115^2+30 \\times 115+100=6195 \\mathrm{Rs} / \\mathrm{hr} \\end{aligned} $$</p>\n\n<p>$$ \\begin{aligned} & F=F_1+F_2=16463 \\mathrm{Rs} / \\mathrm{hr} \\\\\\\\ & F_1^{\\prime}=0.1 \\times 1.1308 \\times 169^2+40 \\times 169+120=10109.6 \\\\\\\\ & F_2^{\\prime}=0.2 \\times 121^2+30 \\times 121+100=6658.2 \\\\\\\\ & F^{\\prime}=F_1^{\\prime}+F_2^{\\prime}=16767.8 \\mathrm{Rs} / \\mathrm{hr} \\end{aligned} $$</p>\n\n<p>So, $F$ increase</p>\n\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The bus admittance ($$Y_{bus}$$) matrix of a 3-bus power system is given below.</p>\n<p>$$\\quad\\quad$$$$\\matrix{\n   1 & \\quad\\quad\\quad2\\quad\\quad & 3  \\cr \n\n } $$</p>\n<p>$$\\matrix{\n   1  \\cr \n   2  \\cr \n   3  \\cr \n\n } \\left[ {\\matrix{\n   { - j15} & {j10} & {j5}  \\cr \n   {j10} & { - j13.5} & {j4}  \\cr \n   {j5} & {j4} & { - j8}  \\cr \n\n } } \\right]$$</p>\n<p>Considering that there is no shunt inductor connected to any of the buses, which of the following can NOT be true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Line charging capacitor of finite value is present in all three lines"
+      },
+      {
+        "identifier": "B",
+        "content": "Line charging capacitor of finite value is present in line 2-3 only"
+      },
+      {
+        "identifier": "C",
+        "content": "Line charging capacitor of finite value is present in line 2-3 only and shunt capacitor of finite value is present in bus 1 only"
+      },
+      {
+        "identifier": "D",
+        "content": "Line charging capacitor of finite value is present in line 2-3 only and shunt capacitor of finite value is present in bus 3 only"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "content": "The p.u. parameters for a $$500$$ MVA machine on its own base are: \n<br>Inertia, M = $$20$$ p.u.; reactance X = $$2$$ p.u. The p.u. values of inertia and reactance on $$100$$ MVA common base, respectively are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4, 0.4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$100, 10$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4, 10$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$100,0.4$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ee-2005",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The three-bus power system shown in the figure has one alternator connected to bus 2 which supplies 200 MW and 40 MVAr power. Bus 3 is infinite bus having a voltage of magnitude $$|{V_3}| = 1.0$$ p.u. and angle of $$-15^\\circ$$. A variable current source, $$|I|\\angle \\phi $$ is connected at bus 1 and controlled such that the magnitude of the bus 1 voltage is maintained at 1.05 p.u. and the phase angle of the source current, $$\\phi  = {\\theta _1} \\pm {\\pi  \\over 2}$$, where $$\\theta_1$$ is the phase angle of the bus 1 voltage. The three buses can be categorized for load flow analysis as</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lz2z3otb/698fcaf8-6659-4747-8004-a54067e65852/07a26ef0-4b74-11ef-87d5-8f906fb24c7e/file-jaoe38c1lz2z3otc.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lz2z3otb/698fcaf8-6659-4747-8004-a54067e65852/07a26ef0-4b74-11ef-87d5-8f906fb24c7e/file-jaoe38c1lz2z3otc.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2023 Power System Analysis - Per Unit System Question 2 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$$Bus~1~~Slack~bus$$</p>\n<p>$$Bus~2~~P-|V|~bus$$</p>\n<p>$$Bus~3~~P-Q~bus$$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$$Bus~1~~P-|V|~bus$$</p>\n<p>$$Bus~2~~P-|V|~bus$$</p>\n<p>$$Bus~3~~Slack~bus$$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$$Bus~1~~P-Q~bus$$</p>\n<p>$$Bus~2~~P-Q~bus$$</p>\n<p>$$Bus~3~~Slack~bus$$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$$Bus~1~~P-|V|~bus$$</p>\n<p>$$Bus~2~~P-Q~bus$$</p>\n<p>$$Bus~3~~Slack~bus$$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Bus 1 is classified as a PV bus because its voltage magnitude is maintained at 1.05 p.u. and the phase angle of the source current is adjusted to be at right angles to its voltage phase angle.</p>\n\n<p>Bus 2 is classified as a PQ bus since it is an alternator connected to it, supplying 200 MW and 40 MVAr.</p>\n\n<p>Bus 3 is considered a Slack bus because it is an infinite bus with a specified voltage magnitude of 1.0 p.u. and an angle of -15°.</p>\n\n<p>Thus, the categorization of the buses for the load flow analysis is as follows:</p>\n\n<ul>\n<li>Bus 1: PV bus</li><br>\n<li>Bus 2: PQ bus</li><br>\n<li>Bus 3: Slack bus</li>\n</ul>\n<p>Therefore, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "content": "Two generator units $$G1$$ and $$G2$$ are connected by $$15$$ $$kV$$ line with a bus at the mid-point as shown below\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/uXeGsNDFAejQBesyO/sQB4NukBSRvfyZ6pECWhjua4AuIgB/uDDPAWN4rrmHrAwuflhnqG/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2011 Power System Analysis - Per Unit System Question 4 English\"> \n<br>$${G_1} = 250\\,\\,MVA.\\,\\,\\,15kV,\\,\\,$$ positive sequence $$X = 25$$% on its own base\n<br>$${G_2} = 100\\,\\,MVA.\\,\\,\\,15kV,\\,$$ positive sequence $$X = 10$$% on its own base\n<br>$${L_1}$$ and $${L_2}$$ $$= 10$$ $$km,$$ positive sequence $$ X = 0.225$$ $$\\,\\,\\Omega /km$$ \n<p>In the above system the three-phase fault $$MVA$$ at the bus $$3$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$82.55$$ $$MVA$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$85.11$$ $$MVA$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$170.91$$ $$MVA$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$181.82$$ $$MVA$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ee-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Two generator units $$G1$$ and $$G2$$ are connected by $$15$$ $$kV$$ line with a bus at the mid-point as shown below\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/uXeGsNDFAejQBesyO/sQB4NukBSRvfyZ6pECWhjua4AuIgB/uDDPAWN4rrmHrAwuflhnqG/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2011 Power System Analysis - Per Unit System Question 5 English\"> \n<br>$${G_1} = 250\\,\\,MVA.\\,\\,\\,15kV,\\,\\,$$ positive sequence $$X = 25$$% on its own base\n<br>$${G_2} = 100\\,\\,MVA.\\,\\,\\,15kV,\\,$$ positive sequence $$X = 10$$% on its own base\n<br>$${L_1}$$ and $${L_2}$$ $$= 10$$ $$km,$$ positive sequence $$ X = 0.225$$ $$\\,\\,\\Omega /km$$\n<p>For the above system, the positive sequence diagram with the p.u values on the $$100$$ $$MVA$$ common</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/xpnCYXh3rsprw7v8Z/fM8Cw1MlcOI20tmvetepILe4b5K2J/5IB6PHDE5xPrX6TnUePLyW/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2011 Power System Analysis - Per Unit System Question 5 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/VJUfEJO5VsvA5BCWr/acQONrTbjkGHA4BFWySYZFM8PD9K9/Z5WvC4Dj6KgKk50HOeSjQj/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2011 Power System Analysis - Per Unit System Question 5 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/wj7qPkIdJZpAkufSU/uSWaCwEh1dK22dyxqdUwJaTDilWO6/jd6A4EfyCbWL4cc0CGUkVZ/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2011 Power System Analysis - Per Unit System Question 5 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/2oiOHP9eJxAeDwQs5/tAUfl1A0OeSojQMIGH0tikDydtJ8O/r0UH5ehauGTWo4UEI1HIzy/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2011 Power System Analysis - Per Unit System Question 5 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ee-2011",
+    "difficulty": null
+  },
+  {
+    "content": "For the power system shown in the figure below, the specifications of the components are the following:\n<br>$$G1: 25$$ $$kV,$$ $$100$$ $$MVA,$$ $$X=9$$%\n<br>$$G2: 25$$ $$kV,$$ $$100$$ $$MVA,$$ $$X=9$$%\n<br>$$T1: 25$$ $$kV/220$$ $$kV,$$ $$90$$ $$MVA,$$ $$X=12$$%\n<br>$$T2: 220$$ $$kV/ 25$$ $$kV,$$ $$90$$ $$MVA,$$ $$X=12$$%\n<br>$$Line$$ $$1: 220$$ $$kV,$$ $$X= 150$$ $$ohms$$ \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/jsZZQj7JG7UcvRxMB/B2sCBpcEzD53TrAmLU6sTBUFKqIvq/gxVa2TLAShD9EjXZUOBa5A/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2010 Power System Analysis - Per Unit System Question 6 English\"> \n<p>Choose $$25$$ $$kV$$ as the base voltage at the generator $$G1,$$ and $$200$$ $$MVA$$ as the $$MVA$$ base. The impedance diagram is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/58SCa0xf5bUXdSQTl/gVSCSx6hr27BngoTfOVaOY3kzHjYV/LJEfrqeoAJY0iBnFLKJ0AP/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2010 Power System Analysis - Per Unit System Question 6 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/Ya1tb0RBcWmZAlaRn/hsDl55Wdr8swTcNydokJCzXwEuQHy/qNx9FE6XDYSJG0YisOfNY5/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2010 Power System Analysis - Per Unit System Question 6 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/DmicN5UrXjCjEipMU/gtqO5Lr8HUWy3STfqPeeXCuhCgEcX/Djh0JusMFkFgjy4cnFIZgn/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2010 Power System Analysis - Per Unit System Question 6 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/drp3JTuqKtwUMVFQF/G5JX64ts8Of7v40Wv7FVM3HKTreur/v4a1BzceUhgSaXbn30y9L5/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2010 Power System Analysis - Per Unit System Question 6 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ee-2010",
+    "difficulty": null
+  },
+  {
+    "content": "A generator is connected through a $$20$$ MVA, $$13.8/138$$ kV step up transformer, to a transmission line. At the receiving end of the line a load is supplied through a step down transformer of $$10$$ MVA, $$138/69$$ kV rating. A $$0.72$$ p.u. load, evaluated, on load side transformer ratings as base values of $$10$$ MVA and $$69$$ kV in load circuit, the value of the load (in per unit) in generator circuit will be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$36$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1.44$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.72$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.18$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ee-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A new generator having $${E_g} = 1.4\\,\\angle {30^ \\circ }\\,$$ pu [ equivalent to ($$1.212 +j$$ $$0.70$$)pu ] and synchronous reactance $$'{X_s}'$$ of $$1.0$$ pu on the system base, is to be connected to a bus having voltage $${V_t}$$ in the existing power system. This existing power system can be represented by Thevenin's voltage $${E_{th}} = 0.9\\angle {0^ \\circ }\\,\\,$$   pu in series with Tjhevenin's impedance $${Z_{th}} = 0.25\\angle {90^ \\circ }\\,\\,$$  pu.  The magnitude of the voltage $${V_t},$$ of the system in pu will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.990$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.973$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.963$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.900$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ee-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A $$75$$ MVA, $$10$$ kV synchronous generator has X<sub>d</sub> $$= 0.4$$ p.u. The X<sub>d</sub> value (in p.u.) is a base of $$100$$ MVA, $$11$$ kV is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.578$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.279$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.412$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.44$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ee-2001",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": " Let $M$ be the set of all $3 \\times 3$ matrices with real entries. Consider the relation $R$ on $M$ given by $R=\\{(A, B) \\in M \\times M: \\operatorname{det}(A-B)$ is an integer $\\}$. Which one of the following statements is Correct?\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$R$ is reflexive and symmetric, but not transitive.\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $R$ is reflexive, but neither symmetric nor transitive.\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $R$ is an equivalence relation.\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $R$ is symmetric and transitive, but not reflexive."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the properties of the relation $ R $ on the set $ M $ of all $ 3 \\times 3 $ matrices with real entries defined by </p>\n<p>$ R = \\{(A, B) \\in M \\times M : \\operatorname{det}(A-B) \\text{ is an integer} \\}, $</p>\n<p>we need to check if $ R $ is reflexive, symmetric, and transitive.</p>\n\n<p><p><strong>Reflexivity</strong>:  </p>\n<p>A relation $ R $ is reflexive if every element is related to itself, i.e., $(A, A) \\in R$ for all $ A \\in M $.</p>\n<p>Given any matrix $ A \\in M $, we have</p>\n<p>$\\operatorname{det}(A-A) = \\operatorname{det}(0) = 0$.</p>\n<p>Since $ 0 $ is an integer, $(A, A) \\in R$ for all $ A \\in M$. Therefore, $ R $ is reflexive.</p></p>\n<p><p><strong>Symmetry</strong>:  </p>\n<p>A relation $ R $ is symmetric if $(A, B) \\in R$ implies $(B, A) \\in R$.</p>\n<p>Suppose $(A, B) \\in R$, meaning $\\operatorname{det}(A-B)$ is an integer. We need to verify that $\\operatorname{det}(B-A)$ is also an integer.</p>\n<p>Since</p>\n<p>$    \\operatorname{det}(B-A) = -\\operatorname{det}(A-B),    $</p>\n<p>and the negative of an integer is also an integer, $\\operatorname{det}(B-A)$ is an integer. Thus, $ R $ is symmetric.</p></p>\n<p><p><strong>Transitivity</strong>:  </p>\n<p>A relation $ R $ is transitive if whenever $(A, B) \\in R$ and $(B, C) \\in R$, it follows that $(A, C) \\in R$.</p>\n<p>Let's consider:</p>\n<p>$    \\begin{align*}    A &= \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}, \\\\    B &= \\begin{bmatrix} 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}, \\\\    C &= \\begin{bmatrix} 0.5 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}.    \\end{align*}    $</p>\n<p>We find:</p>\n<p>$    \\operatorname{det}(A-B) = 1, \\quad \\operatorname{det}(B-C) = 0, \\quad \\operatorname{det}(A-C) = 0.5.    $</p>\n<p>Here, $(A, B) \\in R$ and $(B, C) \\in R$, but $(A, C) \\notin R$ because $ \\operatorname{det}(A-C) = 0.5$, which is not an integer. Hence, $ R $ is not transitive.</p></p>\n\n<p>Based on this analysis, $ R $ is reflexive and symmetric, but not transitive.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "iat-iiser-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Let $X$ be the set of all $2 \\times 2$ matrices with real entries and $R \\subset X \\times X$ be the relation $R=$ $\\{(A, B): A B=B A\\}$. Which of the following statements is true?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$R$ is reflexive and symmetric but not transitive\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$R$ is reflexive and transitive but not symmetric\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$R$ is symmetric and transitive but not reflexive\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$R$ is an equivalance relation"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ R=\\{(A, B) \\in X \\times X \\mid A B=B A\\} $$</p>\n<p>Reflexivity</p>\n<p>A relation $R$ on a set $X$ is reflexive if every element is related to itself. In other words, $\\forall A \\in X$,</p>\n<p>$$ (A, A) \\in R $$</p>\n<p>In this context, for $R$ to be reflexive, we need $A A=A A$ for all $A \\in X$. This is always true. Hence, $(A, A) \\in R$ for all $A \\in X$.</p>\n<p>The relation $R$ is reflexive.</p>\n<p>Symmetry</p>\n<p>A relation $R$ on a set $X$ is symmetric if for all $A, B \\in X$,</p>\n<p>$$ (A, B) \\in R \\Rightarrow(B, A) \\in R $$</p>\n<p>In this context, if $A B=B A$, then $B A=A B$. This is inherently true because equality is symmetric. Therefore, if $(A, B) \\in R$, then $(B, A) \\in R$.</p>\n<p>Conclusion: The relation $R$ is symmetric.</p>\n<p>Transitivity</p>\n<p>A relation $R$ on a set $X$ is transitive if for all $A, B, C \\in X$, $(A, B) \\in R$ and $(B, C) \\in R \\Rightarrow(A, C) \\in R$.</p>\n<p>In this context, if $A B=B A$ and $B C=C B$, we need to show that $A C=C A$. This is not generally true for arbitrary $2 \\times 2$ matrices. As a counterexample, consider the following matrices:</p>\n<p>$$ B=\\left[\\begin{array}{ll} 1 & 0 \\\\ 0 & 1 \\end{array}\\right]=I, \\quad A=\\left[\\begin{array}{ll} 1 & 2 \\\\ 3 & 4 \\end{array}\\right], \\quad C=\\left[\\begin{array}{ll} 5 & 6 \\\\ 7 & 8 \\end{array}\\right] $$</p>\n<p>For these matrices, $A B=B A$ and $B C=C B$, but $A C \\neq C A$</p>\n<p>(You can calculate any one element of both matrices to disprove).</p>\n<p>Conclusion: The relation $R$ is not transitive.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "iat-iiser-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\text {  Define binary operation * on } Q \\text { by } a * b=a+b-3 \\text {. The inverse of } 2 \\text { with respect to * is } $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the inverse of 2 with respect to the binary operation * (defined by $a * b = a + b - 3$), we need an $x$ such that $2 * x = e$, where $e$ is the identity element for the operation.</p>\n<p>First, let's determine the identity element $e$:</p>\n<p>$ \\begin{aligned} a * e &= a \\\\ a + e - 3 &= a \\\\ e &= 3 \\end{aligned} $</p>\n<p>Thus, the identity element $e$ is 3.</p>\n<p>Next, we need to find $x$ such that:</p>\n<p>$ \\begin{aligned} 2 * x &= 3 \\\\ 2 + x - 3 &= 3 \\\\ x &= 4 \\end{aligned} $</p>\n<p>Therefore, the inverse of 2 with respect to the binary operation * is 4.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "iat-iiser-2020",
+    "difficulty": null
+  }
+]

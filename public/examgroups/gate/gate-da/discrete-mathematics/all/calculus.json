@@ -1,0 +1,161 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $f(x)=\\frac{e^x-e^{-x}}{2}, x \\in R$. Let $f^{(k)}(a)$ denote the $k^{\\text {th }}$ derivative of $f$ evaluated at $a$. What is the value of $f^{(10)}(0)$ ?(Note: ! denotes factorial)</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " 0\n"
+      },
+      {
+        "identifier": "B",
+        "content": " 1\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{1}{10!}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{2}{10!}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>$$ f(x)=\\frac{e^x-e^{-x}}{2}, x \\varepsilon R $$</p>\n<p>$f^{(k)}(x)$ denote the $k^{\\text {th }}$ derivative of $f$ elevated at $x=a$</p>\n<p>$$ f(x)=\\frac{e^x-e^{-x}}{2}=\\sinh (x) $$</p>\n<p>This is the hyperbolic since function. Taylor Series expansion of $\\sinh (x)$</p>\n<p>$$ \\sinh (x)=x+\\frac{x^3}{3!}+\\frac{x^5}{5!}+\\frac{x^7}{7!}+\\ldots \\ldots \\ldots . $$</p>\n<p>This series contains only odd powers of $x$, only odd derivative are non-zero at $x=0$.</p>\n<p>$$ \\begin{aligned} & \\sinh (x)=\\frac{e^x-e^{-x}}{2} \\\\ & f(x)=\\sinh (x) \\end{aligned} $$</p>\n<p>Differentiating both sides equation (i) with respect to $x$.</p>\n<p>$$ f^{\\prime}(x)=\\cosh (x) $$</p>\n<p>Differentiating both sides of equation (ii) with respect to $x$.</p>\n<p>$$ f^{\\prime \\prime}(x)=\\sinh (x) $$</p>\n<p>Differentiating both sides of equation (iii) with respect to $x$.</p>\n<p>$$ f^{\\prime \\prime}(x)=\\cosh (x) $$</p>\n<p>Hence,</p>\n<p>Even derivative of $f(x)$ is $\\sinh (x)$ and odd derivative of $f(x)$ is $\\cosh (x)$.</p>\n<p>$$ f^{10}(x)=\\sinh (x)=\\frac{e^x-e^{-x}}{2} $$</p>\n<p>At, $\\quad x=0$</p>\n<p>$$ f^{10}(0)=\\frac{e^0-e^{-0}}{2}=\\frac{1-1}{2}=0 $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider two functions $f: \\mathbb{R} \\rightarrow \\mathbb{R}$ and $g: \\mathbb{R} \\rightarrow(1, \\infty)$. Both functions are differentiable at a point c . Which of the following functions is/are ALWAYS differentiable at c ? The symbol $\\cdot$ denotes product and the symbol odenotes composition of functions.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$f \\pm g$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$f . g$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{f}{g}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$f \\circ g+g \\circ f$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : Two function</p>\n<p>$$ f: R \\rightarrow R \\text { and } g: R \\rightarrow(1, \\infty) $$</p>\n<p>Both are differentiable at C</p>\n<p>$$ f^{\\prime}(\\mathrm{C}) \\text { and } g^{\\prime}(C) \\text { exist } $$</p>\n<p>From option (A)</p>\n<p>Since addition \\&amp; substraction of two differentiable functions is differentiable.</p>\n<p>So, option (A) is correct.</p>\n<p>From option (B)</p>\n<p>Since multiplication of two differentiable function is differentiable, So option (B) is correct.</p>\n<p>From option (C)</p>\n<p>$$ f^{\\prime}(C)=\\text { exist } \\& g^{\\prime}(C)=\\text { exist } $$</p>\n<p>and $g(C) \\neq 0$</p>\n<p>$$ \\because \\quad R \\rightarrow(1, \\infty) $$</p>\n<p>Differentiating $f / g$</p>\n<p>$$ d\\left(\\frac{f}{g}\\right)=\\frac{g f^{\\prime}-f g^{\\prime}}{g^2} $$</p>\n<p>At point C</p>\n<p>$$ d\\left(\\frac{f}{g}\\right)=\\frac{g(C) f^{\\prime}(C)-f(C) g^{\\prime}(C)}{(g(C))^2} $$</p>\n<p>Since all the terms are finite values and</p>\n<p>$$ \\begin{aligned} & g(C) \\neq 0 \\\\ & d\\left(\\frac{f}{g}\\right)=\\text { exist } \\end{aligned} $$</p>\n<p>So, option (C) is correct.</p>\n<p>From option (D)</p>\n<p>Since $f(x)$ and $g(x)$ are differentiable at point C.</p>\n<p>$$ d[f o g]=d[f(g(x))]=f^{\\prime}(g(C)) \\cdot g^{\\prime}(C) $$</p>\n<p>$g^{\\prime}(C)$ exist but we cannot comment about the existence of $f^{\\prime}(g(C))$. Since $f(x)$ and $g(x)$ are not differentiable throughout the domain.</p>\n<p>So, option (D)</p>\n<p>Hence, the correct option are (A) (B) and (C).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\\mathop {\\lim }\\limits_{t \\to  + \\infty } \\sqrt{t^2+t}-t= $$</p>\n<p>(Round</p>\n<p>off to one decimal place)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.5\n\n",
+    "explanation": "<p>Given :</p>\n<p>$$ f(t)=\\mathop {\\lim }\\limits_{t \\to   \\infty }\\left(\\sqrt{t^2+t}-t\\right) $$</p>\n<p>The given limit is $\\infty-\\infty$ form, rationalizing Nr and Dr.</p>\n<p>$$ \\begin{aligned} & f(t)=\\lim _{t \\rightarrow \\infty} \\frac{\\left(\\sqrt{t^2+t}-t\\right)}{\\left(\\sqrt{t^2+t}+t\\right)}\\left(\\sqrt{t^2+t}+t\\right) \\\\ & f(t)=\\lim _{t \\rightarrow \\infty} \\frac{\\left(t^2+t-t^2\\right)}{\\sqrt{t^2+t}+t} \\\\ & f(t)=\\lim _{t \\rightarrow \\infty} \\frac{t}{\\sqrt{t^2+t}+t} \\\\ & f(t)=\\lim _{t \\rightarrow \\infty} \\frac{t}{t\\left[\\sqrt{1+\\frac{1}{t}}+1\\right]} \\\\ & f(t)=\\lim _{t \\rightarrow \\infty} \\frac{1}{\\sqrt{1+\\frac{1}{t}}+1} \\\\ & f(t)=\\frac{1}{1+1}=0.5 \\end{aligned} $$</p>\n<p>Hence, the correct answer is 0.5 .</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the function</p>\n<p>$$ f(\\mathrm{x})=\\frac{x^3}{3}+\\frac{7}{2} x^2+10 x+\\frac{133}{2}, x \\in[-8,0] . $$</p>\n<p>Which of the following statements is/are correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The maximum value of $f$ is attained at $x=-5$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "The minimum value of $f$ is attained at $x=-2$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " The maximum value of $f$ is $\\frac{133}{2}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " The minimum value of the derivative of $f$ is attained at $x=-\\frac{7}{2}$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given: $f(x)=\\frac{x^3}{3}+\\frac{7}{2} x^2+10 x+\\frac{133}{2}, x \\in[-8,0]$ Differentiation both sides of $f(x)$ with respect to $x$.</p>\n<p>$$ \\begin{aligned} & f^{\\prime}(x)=\\frac{3 x^2}{3}+\\frac{7}{2}(2 x)+10 \\\\ & f^{\\prime}(x)=x^2+7 x+10 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} $$</p>\n<p>Stationary points are given by</p>\n<p>$$ \\begin{aligned} & f^{\\prime}(x)=0 \\\\ & x^2+7 x+10=0 \\\\ & x^2+5 x+2 x+10=0 \\\\ & x(x+5)+2(x+5)=0 \\\\ & (x+2)(x+5)=0 \\\\ & x=-2, x=-5 \\\\ & x_1=-2, x_2=-5 \\end{aligned} $$</p>\n<p>Differentiating both sides of equation (ii) with respect to $x$</p>\n<p>$$ f^{\\prime \\prime}(x)=2 x+7 $$</p>\n<p>At $x_1=-2$</p>\n<p>$$ f^{\\prime \\prime}(x)=2(-2)+7=-4+7=3>0 $$</p>\n<p>(Minima)</p>\n<p>At $x_2=-5$</p>\n<p>$$ \\begin{aligned} f^{\\prime \\prime}(x) & =2(-5)+7 \\\\ f^{\\prime \\prime}(x) & =-10+7 \\\\ f^{\\prime \\prime}(x) & =-3<0 \\text { (Maxima) } \\end{aligned} $$</p>\n<p>Checking stationary points</p>\n<p>$$ \\begin{aligned} & f(-8)=\\frac{(-8)^3}{3}+\\frac{7}{2}(-8)^2+10(-8)+\\frac{133}{2} \\\\ & f(-8)=\\frac{-512}{3}+\\frac{7}{2}(64)-80+\\frac{133}{2} \\\\ & \\quad=-170.66+224-80+66.5=39.84 \\\\ & f(0)=\\frac{(0)^3}{3}+\\frac{7}{2}(0)^2+10(0)+\\frac{133}{2} \\\\ & \\begin{aligned} f(0) & =\\frac{133}{2} \\\\ f(-5) & =\\frac{(-5)^3}{3}+\\frac{7}{2}(-5)^2+10(-5)+\\frac{133}{2} \\\\ & =\\frac{-125}{3}+\\frac{7}{2}(25)+10(-5)+\\frac{133}{2} \\\\ & =-41.66+87.5-50+66.5 \\\\ & =62.23 \\\\ f(-2) & =\\frac{(-2)^3}{3}+\\frac{7}{2}(-2)^2+10(-2)+\\frac{133}{2} \\\\ & =\\frac{-8}{3}+\\frac{7}{2}(4)+10(-2)+\\frac{133}{2} \\\\ & =-2.66+14-20+66.5 \\\\ f(-2) & =57.84 \\end{aligned} \\end{aligned} $$</p>\n<p>$$ \\text { Thus the following values are obtained } $$</p>\n<p>$$ \\begin{array}{|c|c|} \\hline \\boldsymbol{x} & \\boldsymbol{f}(\\boldsymbol{x}) \\\\ \\hline-8 & 39.84 \\\\ \\hline-5 & 62.23 \\\\ \\hline-2 & 57.84 \\\\ \\hline 0 & \\frac{133}{2} \\\\ \\hline \\end{array} $$</p>\n<p>So the maximum value of function $f(x)$ is $\\frac{133}{2}$ and affained at $x=0$</p>\n<p>Hence option (C) is correct and option (A) is incorrect</p>\n<p>Minimum value of function $f(x)$ is affained at</p>\n<p>$$ x=-8 $$</p>\n<p>Hence, option (B) is not correct.</p>\n<p>Now $f^{\\prime}(x)=x^2+7 x+10$</p>\n<p>$$ f^{\\prime \\prime}(x)=2 x+7 $$</p>\n<p>Stationary point of $f^{\\prime}(x)$ is</p>\n<p>$$ \\begin{aligned} & f^{\\prime \\prime}(x)=0 \\\\ & 2 x+7=0 \\\\ & 2 x=-7 \\\\ & x=\\frac{-7}{2} \\end{aligned} $$</p>\n<p>At $x=\\frac{-7}{2}$</p>\n<p>$$ \\begin{aligned} f^{\\prime}\\left(\\frac{7}{2}\\right) & =\\left(\\frac{7}{2}\\right)^2+7\\left(\\frac{7}{2}\\right)+10 \\\\ & =\\frac{49}{4}+\\frac{49}{2}+10 \\\\ & =12.25+24.5+10 \\\\ & =46.75>0\\,\\,\\,\\,\\,\\, (Minima)\\end{aligned} $$</p>\n<p></p>\n<p>Hence $x=\\frac{-7}{2}$ is the minima of $f^{\\prime}(x)$</p>\n<p>Hence option (D) is correct.</p>\n<p>Hence, the correct option is (A,D).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $f: \\mathbb{R} \\rightarrow \\mathbb{R}$ be a twice-differentiable function and suppose its second derivative</p>\n<p>satisfies $f^{\\prime \\prime}(x)>0$ for all $x \\in \\mathbb{R}$. Which of the following statements is/are ALWAYS correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $f$ has a local minima\n"
+      },
+      {
+        "identifier": "B",
+        "content": " There does not exist $x$ and $y, x \\neq y$,, such that $f^{\\prime}(x)=f^{\\prime}(y)=0$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $f$ has at most one global minimum\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $f$ has at most one local minimum"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>Function $f: R \\rightarrow R$ is twice-differentiable $f^{\\prime \\prime}(x)>0$ for all $x \\in R$</p>\n<p><p>$\\quad f^{\\prime \\prime}(x)>0$ means $f$ is strictly convex on $R$.</p></p>\n<p><p>Graph bends upward everywhere.</p></p>\n<p>Case 1: Derivative never zero no minimum $f(x)=e^x$</p>\n<p>Graph :</p>\n<p>(i) Always increasing</p>\n<p>(ii) No turning point (no minimum)</p>\n<p>(iii) No value of $x$ such that $f^{\\prime}(x)=0$</p>\n<p>So, no local or global minimum exists.</p>\n<p>Case 2 : Derivative zero at exactly one point one minimum.</p>\n<p>$$ f(x)=x^2 $$</p>\n<p>Graph :</p>\n<p>(i) Parabola opening upwards</p>\n<p>(ii) $\\quad f^{\\prime}(x)=2 x=0$ at $z=0$</p>\n<p>(iii) Unique point where slope is zero</p>\n<p>(iv) This is both a local and global minimum.</p>\n<p>Option (A) : Not always true (as in $f(x)=e^x$ ).</p>\n<p>Option (B): True, $f^{\\prime}(x)=0$ at must once.</p>\n<p>Option (C) : True, one global minimum possible.</p>\n<p>Option (D) : True, one local minimum maximum.</p>\n<p>Hence, the correct options are (B), (C) and (D).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $\\quad f: \\mathbb{R} \\rightarrow \\mathbb{R} \\quad$ be such that $|f(x)-f(y)| \\leq(x-y)^2$ for all $x, y \\in \\mathbb{R}$.</p>\n<p>Then $\\quad f(1)-f(0)=$ ____________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": "<p>Given : Let $f: R \\rightarrow R$ be such that</p>\n<p>$$ |f(x)-f(y)| \\leq(x-y)^2 \\text { for all } x, y \\in \\mathbb{R} . $$</p>\n<p>From given inequality</p>\n<p>$$ \\begin{aligned} |f(x)-f(y)| & \\leq(x-y)^2 \\\\ \\left|\\frac{f(x)-f(y)}{x-y}\\right| & \\leq(x-y) \\end{aligned} $$</p>\n<p>Take the limit as $y$ approaches $x$ :</p>\n<p>$$ \\left|\\lim _{y \\rightarrow x} \\frac{f(x)-f(y)}{x-y}\\right| \\leq \\lim _{y \\rightarrow x}|x-y| $$</p>\n<p>Definition of derivative</p>\n<p>$$ f^{\\prime}(x)=\\lim _{y \\rightarrow x} \\frac{f(y)-f(x)}{y-x} $$</p>\n<p>Now the left side as the absolute value of the derivative</p>\n<p>$$ \\left|f^{\\prime}(x)\\right| \\leq 0 $$</p>\n<p>Since absolute value is non-negative, this implies</p>\n<p>$$ \\left|f^{\\prime}(x)\\right|=0 $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  }
+]

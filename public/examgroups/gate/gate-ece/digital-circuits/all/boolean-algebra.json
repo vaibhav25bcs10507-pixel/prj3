@@ -1,0 +1,871 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For the Boolean function</p> <p>$F(A, B, C, D) = \\sum m(0,2,5,7,8,10,12,13,14,15)$,</p> <p>the essential prime implicants are _________.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p> $BD$, $\\overline{B}~\\overline{D}$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p> $BD$, $AB$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p> $AB$, $\\overline{B}~\\overline{D}$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p> $BD$, $\\overline{B}~\\overline{D}$, $AB$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $F(A, B, C, D)$</p>\n<p>$$ =\\sum m(0,2,5,7,8,10,12,13,14,15) $$</p>\n<p>$k$-Map of function $F$ in SOP form is</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfdwomru/6a8028e3-1641-4243-a65d-d932f81efe95/a7de5aa0-8e3a-11f0-a029-e731836977d4/file-jaoe38c1mfdwomrv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfdwomru/6a8028e3-1641-4243-a65d-d932f81efe95/a7de5aa0-8e3a-11f0-a029-e731836977d4/file-jaoe38c1mfdwomrv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Digital Circuits - Boolean Algebra Question 1 English Explanation\"></p>\n<p>$$ \\text { Hence, the correct option is (A). } $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Select the Boolean function(s) equivalent to x + yz, where x, y, and z are Boolean variables, and + denotes logical OR operation.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x + z + xy"
+      },
+      {
+        "identifier": "B",
+        "content": "(x + y) (x + z)"
+      },
+      {
+        "identifier": "C",
+        "content": "x + xy + yz"
+      },
+      {
+        "identifier": "D",
+        "content": "x + xz + xy"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : f = x + yz</p>\n<p>(a) x + xy + xz = x(1 + y) + xz = x + xz = x</p>\n<p>(b) (x + y) (x + z) = x + yz</p>\n<p>(c) x + xy + yz = x(1 + y) + yz = x + yz</p>\n<p>(d) xy  + yz = y(x + z)</p>\n<p>So, option (b, c) are correct.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "A function F(A, B, C) defined by three Boolean variables A, B and C when expressed as sum\nof products is given by \n<br><br>F = $$\\overline A .\\overline B .\\overline C  + \\overline A .B.\\overline C  + A.\\overline B .\\overline C $$\n<br><br>where, $$\\overline A $$, $$\\overline B $$, and $$\\overline C $$ are the complements of the respective variables. The product of sums\n(POS) form of the function F is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "F = (A + B + C)(A + $$\\overline B $$ + C)($$\\overline A $$ + B + C)"
+      },
+      {
+        "identifier": "B",
+        "content": "F = ($$\\overline A $$ + $$\\overline B $$ + $$\\overline C $$)($$\\overline A $$ + B + $$\\overline C $$)(A + $$\\overline B $$ + $$\\overline C $$)"
+      },
+      {
+        "identifier": "C",
+        "content": "F = (A + B + $$\\overline C $$)(A + $$\\overline B $$ + $$\\overline C $$)($$\\overline A $$ + B + $$\\overline C $$)($$\\overline A $$ + $$\\overline B $$ + C)($$\\overline A $$ + $$\\overline B $$ + $$\\overline C $$)"
+      },
+      {
+        "identifier": "D",
+        "content": "F = ($$\\overline A $$ + $$\\overline B $$ + C)($$\\overline A $$ + B + C)(A + $$\\overline B $$ + C)(A + B + $$\\overline C $$)(A + B + C)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "Given that : \n<br><br>F(A, B, C) = $$\\overline A .\\overline B .\\overline C  + \\overline A .B.\\overline C  + A.\\overline B .\\overline C $$\n<br><br>$$\\overline A .\\overline B .\\overline C$$ = 000 = 0\n<br><br>$$\\overline A .B.\\overline C$$ = 010 = 2\n<br><br>$$A.\\overline B .\\overline C $$ = 100 = 4\n<br><br>So, F(A, B, C) = $$\\sum {\\left( {0,2,4} \\right)} $$\n<br><br>Above expression is in SOP form.\n<br><br>$$ \\therefore $$ POS form is\n<br><br> F(A, B, C) = $$\\pi \\left( {1,3,5,6,7} \\right)$$\n<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = $$\\pi \\left( {001,011,101,110,111} \\right)$$\n<br><br>In POS form,\n<br><br>001 = (A + B + $$\\overline C $$)\n<br>011 = (A + $$\\overline B $$ + $$\\overline C $$)\n<br>101 = ($$\\overline A $$ + B + $$\\overline C $$)\n<br>110 = ($$\\overline A $$ + $$\\overline B $$ + C)\n<br>111 = ($$\\overline A $$ + $$\\overline B $$ + $$\\overline C $$)\n<br><br>$$ \\therefore $$ F(A, B, C) in POS form\n<br><br>= (A + B + $$\\overline C $$)(A + $$\\overline B $$ + $$\\overline C $$)($$\\overline A $$ + B + $$\\overline C $$)($$\\overline A $$ + $$\\overline B $$ + C)($$\\overline A $$ + $$\\overline B $$ + $$\\overline C $$)",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "For an n - variable Boolean function  maximum number of prime implicants is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2(n-1)"
+      },
+      {
+        "identifier": "B",
+        "content": "n/2"
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^n}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "2$$^{_{(n - 1)}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The Boolean expression\n(X+Y)(X+$$\\overline Y $$)+($$\\overline {(X\\overline Y ) + \\overline X } $$ simplifies to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "X"
+      },
+      {
+        "identifier": "B",
+        "content": "Y"
+      },
+      {
+        "identifier": "C",
+        "content": "XY"
+      },
+      {
+        "identifier": "D",
+        "content": "X+Y"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the sum of products function f (x,y,z) = $$\\sum {} $$m (2,3,4,5), the prime implicants are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline X \\,Y,X\\overline Y $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline X \\,Y,X\\overline Y $$$$\\overline Z ,X\\overline Y Z$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline X Y\\overline Z $$,$$\\overline X YZ,X\\overline Y $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline X Y\\overline Z $$ ,$$\\overline X YZ,X\\overline Y $$$$\\overline Z ,X\\overline Y Z$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The Boolean function Y=AB+CD is to be realized using only 2-input NAND gates. The minimum number of gates required is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The number of product terms in the minimized sum-of-product expression obtained through the following k-map is ( where , \"d\" denotes don't care states)\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/7ccca3bfe196c3fd46b3a3d81a97f990250acc442139c6c3febb215af4e80bcf.jpg\" loading=\"lazy\" alt=\"GATE ECE 2006 Digital Circuits - Boolean Algebra Question 26 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The Boolean expression for the truth table shown is <style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">A</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">B</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold\">C</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold\">D</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-s6z2\">1</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-s6z2\">1</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n</tbody></table>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "B(A+C)($$\\overline A  + \\overline C )$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$B\\left( {A + \\overline C } \\right)\\left( {\\overline A  + C} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline B $$(A+$$\\overline C $$)($$\\overline A $$+C)"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline B $$(A+C)(($$\\overline A  + \\overline C )$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The number of distinct Boolean expressions of 4 variables is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16"
+      },
+      {
+        "identifier": "B",
+        "content": "256"
+      },
+      {
+        "identifier": "C",
+        "content": "1024"
+      },
+      {
+        "identifier": "D",
+        "content": "65536"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The Logical expression $$Y = A + \\overline A B$$ is equivalent to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "y = AB"
+      },
+      {
+        "identifier": "B",
+        "content": "y = $$\\overline A $$ B"
+      },
+      {
+        "identifier": "C",
+        "content": "y = $$\\overline A $$ + B"
+      },
+      {
+        "identifier": "D",
+        "content": "y = A + B"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The K-map for a Boolean function is shown in figure. The number of essential prime implicants for this function is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a97a282b19c46879c0d3da98ed0104716264ba9c0ab2eeb0d54dc1c7b0ce48df.jpg\" loading=\"lazy\" alt=\"GATE ECE 1998 Digital Circuits - Boolean Algebra Question 30 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "8"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Two 2' s  complement numbers having sign bits x and y added and the sign bit of the result is z. Then, the occurrence of overflow is indicated by the Boolean function.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "xyz"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline x $$ $$\\overline y $$ $$\\overline z $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline x $$ $$\\overline y $$ z + x  y $$\\overline z $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "xy + yz + zx "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The number of Boolean functions that can be generated by n variable is equal to:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2$$^n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^2}^n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "2$$^{n - 1}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "2$$^{n + 1}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-ece-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following gives the simplified sum of products expression for the Boolean function $$F = {m_0} + {m_2} + {m_3} + {m_5},$$ where $$F = {m_0} + {m_2} + {m_3} + {m_5},$$ are  minterms corresponding to the inputs A, B\n  and C with A as the MSB and C as the LSB?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline A B + \\,\\overline A \\,\\overline B \\,\\overline C  + \\,A\\overline B \\,C$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline A \\,\\overline C  + \\overline A B + A\\overline B C$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline A \\,\\overline C  + A\\,\\overline B  + A\\overline B C$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline A \\,BC + \\overline A \\,\\overline C  + A\\,\\overline B C$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Following is the k-map of a Boolean function of five variable  P, Q, R, S and X. The minimum for the function is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8018d267a5b2aaedc9f86a0fcfc50d9057ce457e3ef53f33fab6f0c59657a778.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 3 Digital Circuits - Boolean Algebra Question 10 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline P \\,\\overline {Q\\,} \\,S\\overline X  + P\\overline Q \\,S\\overline X  + Q\\,\\overline R \\,\\,\\overline S X + QR\\overline {S\\,} X$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline {Q\\,} \\,S\\,\\overline X \\, + Q\\,\\overline S \\,X$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline {Q\\,} S\\,X + Q\\,\\overline S \\,\\overline X $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline {Q\\,} S\\, + Q\\,\\overline S \\,$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A function of Boolean variables X,Y and Z is expressed in terms of the min-terms as F(X, Y, Z)=$$\\sum\\limits_{}^{} {} $$m(1,2,5,6,7) Which one of the product of sums given below is equal to the funtion F(X, Y, Z)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(\\overline X  + \\overline Y  + \\overline Z ).(\\overline X  + Y + Z).(X + \\overline Y  + \\overline Z )$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$(X + Y + Z).(X + \\overline Y  + \\overline Z ).(\\overline X  + Y + Z)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$(\\overline X  + \\overline Y  + Z).(\\overline X  + Y + \\overline Z ).(X + \\overline Y  + Z).(X + Y + \\overline Z ).(X + Y + Z)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$(X + Y + \\overline Z ).(\\overline X  + Y + Z).(\\overline X  + Y + \\overline Z ).((\\overline X  + \\overline Y  + Z).(\\overline X  + \\overline Y  + \\overline Z )$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The Boolean expression\nF(X, Y, Z)= $$\\overline X Y\\overline Z  + X\\overline {Y\\,} \\overline Z  + XY\\overline Z  + XYZ$$ \nconverted into the canonical product of sum (POS)from is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(x + y + z)(x + y + \\overline z )(x + \\overline y  + \\overline z )(\\overline x  + y + \\overline z )$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$(x + \\overline y  + z)(\\overline x  + y + \\overline z )(\\overline x  + \\overline y  + z)(\\overline x  + \\overline y  + z)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$(x + y + z)(\\overline x  + y + \\overline z )(x + \\overline y  + z)(\\overline x  + \\overline y  + \\overline z )$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$(x + \\overline y  + \\overline z )(\\overline x  + y + z)(\\overline x  + \\overline y  + z)(x + y + z)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the Boolean function,\nF(w,z,y,z)=wy+ xy +$$\\overline w \\,xyz + \\overline w \\,\\overline x y\\, + xz + \\,\\overline {x\\,} \\,\\overline y \\,$$ $$\\overline z $$\nWhich one of the following is the complete set of essential prime implicants?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$w,y,xz,\\overline x \\,\\overline z $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "w, y, xz"
+      },
+      {
+        "identifier": "C",
+        "content": "$$y,\\overline x \\,\\overline {y\\,} \\overline {\\,z} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "y, xz, $$\\overline x \\,\\,\\overline {\\,z} $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "If X=1 in the logic equation\n$$\\left[ {X + Z\\left\\{ {\\overline Y  + (\\overline Z  + X\\overline {Y)} } \\right\\}} \\right]$$ $$\\left\\{ {\\overline X  + \\overline Z (X + Y)} \\right\\} = 1,$$  then\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Y=Z"
+      },
+      {
+        "identifier": "B",
+        "content": "Y= $${\\overline Z }$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "Z= 1 "
+      },
+      {
+        "identifier": "D",
+        "content": "Z= 0"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The Boolean expression\nY= $$\\overline A \\,\\overline B \\,\\overline C \\,D + \\overline A BC\\overline D  + A\\overline {B\\,} \\overline C \\,D + AB\\overline C \\,\\overline D $$\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Y = $$\\overline A \\,\\overline B \\,\\overline C \\,D + \\overline A B\\overline C  + A\\overline C D$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Y = $$\\overline A \\,\\overline B \\,\\overline C \\,D + BC\\overline D  + A\\overline B \\overline C \\,D$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "Y=$$ \\overline A \\,BC\\,\\overline D  + \\overline B \\,\\overline C D + A\\overline B \\overline C \\,D$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Y= $$\\overline A \\,BC\\,\\overline D  + \\overline B \\,\\overline C D + AB\\overline C \\,\\overline D $$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The point p in the following figure is stuck- at-1. The output f will be\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/3c1a24b85f20fa166275b859d1b5314d8753e769be80f52c51dd1106f964d520.jpg\" loading=\"lazy\" alt=\"GATE ECE 2006 Digital Circuits - Boolean Algebra Question 16 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline {AB\\overline {C\\,} } $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline A $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$AB\\overline C $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "A "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A Boolean function 'f' of two variables x and y is defined as follows:\nf(0,0)=f(0,1)=f(1,1)=1;f(1,0)=0\nAssuming complements of x and y are not available, a minimum cost solution for realizing F using only 2-input NOR gates and 2-input OR gates (each having unit cost) would have a total cost  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 unit"
+      },
+      {
+        "identifier": "B",
+        "content": "4 unit"
+      },
+      {
+        "identifier": "C",
+        "content": "3 unit"
+      },
+      {
+        "identifier": "D",
+        "content": "2 unit"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The Boolean expression AC + B$$\\overline C $$ is equivalent to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline A \\,C + B\\overline C  + AC$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline B C\\, + AC + B\\overline C  + \\overline A C\\overline B $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "AC+$$B\\overline C  + \\overline B C + ABC$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline A \\,B\\,\\overline C  + A\\,B\\,\\overline C  + A\\overline {\\,B} \\,C$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "If the functions W, X, Y and Z are as follows\n<p> W= R+$$\\overline P Q + \\overline R $$ S\n<br> X = $$X = PQ\\overline R \\,\\overline S  + \\overline P \\,\\overline Q \\,\\overline R \\,\\overline S  + P\\overline Q \\,\\overline R \\,\\overline S $$ \n<br>Y = $$RS + \\overline {OR + P\\overline Q  + \\overline {PQ} } $$\n<br> Z = $$R + S + \\overline {PQ + \\overline {PQR}  + P\\overline {QS} } $$\n</p><br>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "W=Z, X=$$\\overline Z $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "W=$$\\overline Z $$, X=Y"
+      },
+      {
+        "identifier": "C",
+        "content": "W=Z, X=Y"
+      },
+      {
+        "identifier": "D",
+        "content": "W=Y= $$\\overline Z $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The minimized form of the logical expression ($$\\overline A \\,\\overline B \\,\\overline C  + B\\overline C  + \\overline A B\\overline C  + \\overline A BC + AB\\overline C )$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline A \\overline C  + B\\overline C  + \\overline A B$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "$$A\\overline C  + \\overline B C + \\overline A B$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline A C + \\overline B C + \\overline A B$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$A\\overline C  + \\overline B C + A\\overline B $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "For a binary half-subtractor having two inputs A and B, the correct set of Logical expressions for the output D(=Aminus B) and X(=Borrow) are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "D = AB + $$\\overline A B,X = \\overline A B$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$D = \\,\\overline A B + A\\overline B  + A\\overline B , X= A\\overline B $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$D = \\overline A B + A\\overline B ,X = \\overline A B$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$D = AB + \\overline A \\,\\overline {\\,B} ,X = A\\overline B $$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Given the Boolean function F in three variables R, S and T as \nF=$$\\,\\overline R \\,S\\overline T  + R\\overline {S\\,} T + RST$$ \n<p>(a) Express F in the minimum sum-of-products from.\n<br> (b) Express F in the minimum product-of-sums from.\n<br>(c) Assuming that both true and complement froms of the input variables are avialable, draw a cicruit to implement F using the minimum number of 2input NAND gates only. \n</p>\n<br>",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br>(a) F =RT+$$\\,\\overline R \\,S\\,T$$ \n<br>(b) F =(R+$$\\overline T )(\\overline R  + T)(R + S)$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "In certain application, four inputs A, B, C, D (both true and complement forms available)are fed to logic circuit, producing an output F which operates a relay. The relay turns on when F(ABCD)=1 for the following states of the inputs (ABCD):'0000', '0010' ,0101',0110','1101' and '1110'. States '1000' and '1001' do not occur, and for the remaining states, the relay is off. Minaining states, the relay is off. Minimize F with the help of a Karnaugh map and realize it using a minimum number of 3- input NAND gates.",
+    "options": [],
+    "correct_options": [],
+    "answer": "F =$$\\overline C $$ D+BC$$\\overline D $$ + $$\\overline A \\,\\overline B $$ $$\\overline D $$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Its is desired to generate the following three Boolean functions.\n $$\\eqalign{\n  &amp; {F_1} = a\\,\\overline b \\,c + \\overline a \\,b\\overline c  + bc  \\cr \n  &amp; {F_2} = \\,a\\,\\overline b \\,c + ab + \\overline a \\,b\\overline c   \\cr \n  &amp; {F_3} = \\,\\overline a \\,\\overline b \\,\\overline c  + abc + \\overline a c \\cr} $$\n<p> By using an OR gate array as shown in figure where $${P_{1\\,}}\\,to\\,{P_5}$$  are the product terms in one or more of the variables a, $$\\overline a $$, b, $$\\,\\overline b $$, c and $$\\overline c $$.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/5c1448c975e2815c5476a613b47f302b931ed59c44daafdaf3df72b97d7d53db.jpg\" loading=\"lazy\" alt=\"GATE ECE 1996 Digital Circuits - Boolean Algebra Question 5 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "<p> $${P_{1\\,}}$$= $$\\overline a \\,$$ b\n<br> $${P_{2\\,}}$$= ac\n<br> $${P_{3\\,}}$$= b$$\\overline c $$\n<br> IF  $${P_{4\\,}}$$= bc then $${P_{5\\,}}$$ = $$\\,\\overline a \\,\\overline c $$ \n<br>IF $${P_{4\\,}}$$= $$\\,\\overline a \\,\\overline c $$ then  IF  $${P_{5\\,}}$$ =bc\n</p>",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A 'code converter' is to be designed to convert from the BCD(5421) to the normal BCD (8421). The input BCD combinations for each digit are below. A block diagram of the converter is shown in figure.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/d131a982726e9ff98e804e7f548883b641ab7b4569f5b2923c7453a141268af2.jpg\" loading=\"lazy\" alt=\"GATE ECE 1995 Digital Circuits - Boolean Algebra Question 6 English\">\n<br> (A) draw K-map for outputs, W, X, Y, and Z.\n<br> (B) Obtain minimized expression for the outputs W, X, Y, and Z.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "<p>  (b) W= AB+ACD\n<br> X=$$\\overline A B + A\\overline C D + A\\,\\overline B \\,\\overline D $$ \n<br> or\n<br> $$X = \\overline A \\,B + A\\overline B \\overline C  + AC\\overline D $$\n<br>OR\n<br> X= $$\\overline A B + A\\,\\overline {B\\,} \\overline C  + A\\,\\overline B \\,\\overline D $$\n<br>Y=$$\\overline A C + A\\overline C D + AC\\overline D $$\n<br> Z=$$\\overline A \\,D + A\\,\\overline D $$\n\n</p>",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The four variable function f is given in terms of min-terms as:\nf (A B C D ) = $$\\sum {} $$m  (2,3,8,10,11,12,14,15 .)\nUsing the K-map minimize the function in the sum of products form. Also, given the realization using only two-input NAND gates\n. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "f =  (A, B, C, D)=A$$\\overline D  + AC + \\overline B C$$\n",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  }
+]

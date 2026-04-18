@@ -1,0 +1,802 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Three numbers x, y, z are selected from the set of the first seven natural numbers such that x > 2y > 3z. How many such distinct triplets (x, y, z) are possible?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>One triplet</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Two triplets</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Three triplets</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Four triplets</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the number of distinct triplets $(x, y, z)$ that satisfy the condition $x > 2y > 3z$, let's analyze the given condition using the first seven natural numbers $\\{1, 2, 3, 4, 5, 6, 7\\}$.</p>\n\n<p>Firstly, since $x$, $y$, and $z$ are natural numbers chosen from the set, their possible values are integers in the range $1$ to $7$. Let's look at the condition $x > 2y > 3z$ in more detail.</p>\n\n<p>We need $2y$ to be an even number since $2y$ means multiplying $y$ by 2. Hence $y$ can take values $\\{1, 2, 3\\}$ (as $4, 5, 6, 7$ would make $2y$ larger than 7 which is out of bounds for $x$, the largest in our set).</p>\n\n<p>Let's analyze each possible value for $y$:</p>\n\n<p><strong>Case 1: $y = 3$</strong><br>\n\n<p>If $y = 3$, then $2y = 6$. Therefore, $x$ must be greater than $6$. The only possibly value for $x$ in the set is $7$. Next, we need $z$ such that $3z < 6$ which means $z$ can be $\\{1\\}$. Thus, $(7, 3, 1)$ is a valid triplet.</p></p>\n\n<p><strong>Case 2: $y = 2$</strong><br>\n\n<p>If $y = 2$, then $2y = 4$. Therefore, $x$ must be greater than $4$. Thus, $x$ can be $\\{5, 6, 7\\}$. Now, $3z < 4$ which implies $z$ can be $\\{1\\}$. So the valid triplets are $(5, 2, 1)$, $(6, 2, 1)$, and $(7, 2, 1)$.</p></p>\n\n<p><strong>Case 3: $y = 1$</strong><br>\n\n<p>If $y = 1$, then $2y = 2$. Therefore, $x$ must be greater than $2$. Thus, $x$ can be $\\{3, 4, 5, 6, 7\\}$. Next, $3z < 2$ which implies $z = 1$ is not possible since $3 \\cdot 1 = 3$. Therefore, no possible triplets for $y = 1$.</p></p>\n\n<p>So summing it up, we get the valid distinct triplets as follows:</p>\n\n<ul>\n\n<li>(7, 3, 1)</li>\n\n<li>(5, 2, 1)</li>\n\n<li>(6, 2, 1)</li>\n\n<li>(7, 2, 1)</li>\n\n</ul>\n\n<p>Therefore, there are four such distinct triplets.</p>\n\n<p><strong>Hence, the correct answer is Option D (Four triplets).</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2024-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "In how many ways can a batsman score exactly 25 runs by scoring single runs, fours and sixes only, irrespective of the sequence of scoring shots?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "18"
+      },
+      {
+        "identifier": "B",
+        "content": "19"
+      },
+      {
+        "identifier": "C",
+        "content": "20"
+      },
+      {
+        "identifier": "D",
+        "content": "21"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>To determine the number of ways a batsman can score exactly 25 runs using only singles (1 run), fours (4 runs), and sixes (6 runs), we need to solve the equation:</p>\n\n<p>$$x + 4y + 6z = 25$$</p>\n\n<p>where $x$, $y$, and $z$ are non-negative integers representing the number of singles, fours, and sixes respectively.</p>\n\n<p>We can approach this problem by iterating through possible values of $z$ (the number of sixes) and for each $z$, find feasible pairs $(x, y)$ such that the equation holds true.</p>\n\n<p>Let's start by trying different values of $z$ and solving for $x$ and $y$:</p>\n\n<ul>\n\n<li>$z = 0$:</li>\n\n<p>$x + 4y = 25$</p>\n\n<p>The possible values for $y$ range from 0 to 6 (since $4 \\times 6 = 24$). Substituting these values, we get:</p>\n\n<ul>\n\n<li>$y = 0$, $x = 25$</li>\n\n<li>$y = 1$, $x = 21$</li>\n\n<li>$y = 2$, $x = 17$</li>\n\n<li>$y = 3$, $x = 13$</li>\n\n<li>$y = 4$, $x = 9$</li>\n\n<li>$y = 5$, $x = 5$</li>\n\n<li>$y = 6$, $x = 1$</li>\n\n</ul>\n\n<li>$z = 1$:</li>\n\n<p>$x + 4y = 19$</p>\n\n<p>The possible values for $y$ range from 0 to 4 (since $4 \\times 5 = 20$). Substituting these values, we get:</p>\n\n<ul>\n\n<li>$y = 0$, $x = 19$</li>\n\n<li>$y = 1$, $x = 15$</li>\n\n<li>$y = 2$, $x = 11$</li>\n\n<li>$y = 3$, $x = 7$</li>\n\n<li>$y = 4$, $x = 3$</li>\n\n</ul>\n\n<li>$z = 2$:</li>\n\n<p>$x + 4y = 13$</p>\n\n<p>The possible values for $y$ range from 0 to 3 (since $4 \\times 4 = 16$). Substituting these values, we get:</p>\n\n<ul>\n\n<li>$y = 0$, $x = 13$</li>\n\n<li>$y = 1$, $x = 9$</li>\n\n<li>$y = 2$, $x = 5$</li>\n\n<li>$y = 3$, $x = 1$</li>\n\n</ul>\n\n<li>$z = 3$:</li>\n\n<p>$x + 4y = 7$</p>\n\n<p>The possible values for $y$ range from 0 to 1 (since $4 \\times 2 = 8$). Substituting these values, we get:</p>\n\n<ul>\n\n<li>$y = 0$, $x = 7$</li>\n\n<li>$y = 1$, $x = 3$</li>\n\n</ul>\n\n<li>$z = 4$:</li>\n\n<p>$x + 4y = 1$</p>\n\n<p>The only possible value for $y$ is 0:</p>\n\n<ul>\n\n<li>$y = 0$, $x = 1$</li>\n\n</ul>\n\n</ul>\n\n<p>We count all the solutions found:</p>\n\n<ul>\n\n<li>For $z = 0$: 7 solutions</li>\n\n<li>For $z = 1$: 5 solutions</li>\n\n<li>For $z = 2$: 4 solutions</li>\n\n<li>For $z = 3$: 2 solutions</li>\n\n<li>For $z = 4$: 1 solution</li>\n\n</ul>\n\n<p>Adding these, the total number of ways is:</p>\n\n<p>$$7 + 5 + 4 + 2 + 1 = 19$$</p>\n\n<p>Hence, the total number of ways a batsman can score exactly 25 runs is 19. Therefore, the correct answer is:</p>\n\n<p><b>Option B: 19</b></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>There are four letters and four envelopes and exactly one letter is to be put in exactly one envelope with the correct address. If the letters are randomly inserted into the envelopes, then consider the following statements:</p>\n\n<p>1. It is possible that exactly one letter goes into an incorrect envelope.</p>\n\n<p>2. There are only six ways in which only two letters can go into the correct envelopes.</p>\n\n<p>Which of the statements given above is/are correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 only"
+      },
+      {
+        "identifier": "B",
+        "content": "<span style=\"\">2 only</span>"
+      },
+      {
+        "identifier": "C",
+        "content": "<span style=\"\">Both 1 and 2</span>"
+      },
+      {
+        "identifier": "D",
+        "content": "<span style=\"\">Neither 1 nor 2</span>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>Let's analyze the given statements one by one to determine their correctness:</p>\n\n<p><strong>Statement 1: It is possible that exactly one letter goes into an incorrect envelope.</strong></p>\n\n<p>To determine if this statement is correct, let's think about it logically. If exactly one letter goes into an incorrect envelope, it must mean that the other three letters are correctly placed in their respective envelopes. However, this is not possible. If three letters are in their correct envelopes, the fourth letter also has to be in the correct envelope because there's only one envelope left, which means it is impossible for exactly one letter to be in the incorrect envelope.</p>\n\n<p><strong>Statement 2: There are only six ways in which only two letters can go into the correct envelopes.</strong></p>\n\n<p>To analyze this, we will use combinatorial reasoning. We will look at how many ways we can place exactly two letters correctly among four letters (let's label them as $L_1, L_2, L_3,$ and $L_4$ corresponding to envelopes $E_1, E_2, E_3,$ and $E_4$) and the other two letters incorrectly.</p>\n\n<p>First, choose the 2 letters that will be placed correctly. This can be done in:</p>\n\n<p>$$\\binom{4}{2} = 6$$</p>\n\n<p>ways.</p>\n\n<p>For the remaining two letters, they must not be in their correct envelopes. Since we are ensuring derangement (no letter should be in its own envelope), there is only 1 valid arrangement for these two letters.</p>\n\n<p>The number of ways to arrange the two remaining letters incorrectly is 1.</p>\n\n<p>Therefore, there are:</p>\n\n<p>$$\\binom{4}{2} \\times 1 = 6$$</p>\n\n<p>ways to place exactly two letters in the correct envelopes and the rest in incorrect ones.</p>\n\n<p>So, statement 2 is correct.</p>\n\n<p>Thus, the correct answer is:</p>\n\n<p><strong>Option B</strong> <span style=\"color: rgb(33, 37, 41);\">2 only</span></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "How many distinct 8-digit numbers can be formed by rearranging the digits of the number 11223344 such that odd digits occupy odd positions and even digits occupy even positions?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "12"
+      },
+      {
+        "identifier": "B",
+        "content": "18"
+      },
+      {
+        "identifier": "C",
+        "content": "36"
+      },
+      {
+        "identifier": "D",
+        "content": "72"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>To determine how many distinct 8-digit numbers can be formed by rearranging the digits of the number 11223344, where odd digits occupy odd positions and even digits occupy even positions, let's break down the problem.</p>\n\n<p>The given number is 11223344, which contains:</p>\n\n<ul>\n\n<li>Odd digits: 1, 1, 3, 3</li>\n\n<li>Even digits: 2, 2, 4, 4</li>\n\n</ul>\n\n<p>We need to place odd digits (1 and 3) in the odd positions and even digits (2 and 4) in the even positions of the 8-digit number.</p>\n\n<p>The positions are as follows:</p>\n\n<ul>\n\n<li>Odd Positions: 1, 3, 5, 7</li>\n\n<li>Even Positions: 2, 4, 6, 8</li>\n\n</ul>\n\n<p>First, let's arrange the odd digits (1, 1, 3, 3) in the odd positions. The number of ways to arrange these digits is given by the formula for permutations of multiset:</p>\n\n<p>$$ \\text{Number of ways to arrange 1, 1, 3, 3} = \\frac{4!}{2! \\cdot 2!} $$</p>\n\n<p>Here, 4! is the total permutations of 4 digits, and 2! accounts for the repeated digits 1 and 3. Thus,</p>\n\n<p>$$ \\frac{4!}{2! \\cdot 2!} = \\frac{24}{4} = 6 $$</p>\n\n<p>Next, let's arrange the even digits (2, 2, 4, 4) in the even positions. Similarly, the number of ways to arrange these digits is:</p>\n\n<p>$$ \\text{Number of ways to arrange 2, 2, 4, 4} = \\frac{4!}{2! \\cdot 2!} $$</p>\n\n<p>Thus,</p>\n\n<p>$$ \\frac{4!}{2! \\cdot 2!} = \\frac{24}{4} = 6 $$</p>\n\n<p>Since both arrangements (odd positions and even positions) are independent of each other, the total number of distinct 8-digit numbers that can be formed is the product of the two arrangements:</p>\n\n<p>$$ \\text{Total number of distinct 8-digit numbers} = 6 \\times 6 = 36 $$</p>\n\n<p>Therefore, the correct answer is:</p>\n\n<p><strong>Option C: 36</strong></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "ABCD is a square. One point on each of AB and CD; and two distinct points on each of BC and DA are chosen. How many distinct triangles can be drawn using any three points as vertices out of these six points?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16"
+      },
+      {
+        "identifier": "B",
+        "content": "18"
+      },
+      {
+        "identifier": "C",
+        "content": "20"
+      },
+      {
+        "identifier": "D",
+        "content": "24"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>To solve the problem, we need to calculate the number of distinct triangles that can be formed using the six given points. Here's a step-by-step explanation of the approach:</p>\n\n<p>Let's denote the points as follows:\n\n<ul>\n<li>Let point $ P $ be on line segment $ AB $.</li><br>\n<li>Let point $ Q $ be on line segment $ CD $.</li><br>\n<li>Let points $ R $ and $ S $ be on line segment $ BC $.</li><br>\n<li>Let points $ T $ and $ U $ be on line segment $ DA $.</p></li>\n</ul>\n<p>In total, we have 6 points: $ P, Q, R, S, T, $ and $ U $. We need to find the number of distinct triangles that can be formed from these points.</p>\n\n<p>The formula for nCr or the number of combinations of $ n $ items taken $ r $ at a time is given by:</p>\n\n<p>$$ \\binom{n}{r} = \\frac{n!}{r!(n-r)!} $$</p>\n\n<p>In this scenario, we need to select 3 points out of 6 to form a triangle. Therefore, we use the combination formula for $ n = 6 $ and $ r = 3 $:</p>\n\n<p>$$ \\binom{6}{3} = \\frac{6!}{3!(6-3)!} = \\frac{6!}{3!3!} $$</p>\n\n<p>Calculating the factorial values:</p>\n\n<p>$$ 6! = 720, \\quad 3! = 6 $$</p>\n\n<p>Substitute these values into the combination formula:</p>\n\n<p>$$ \\binom{6}{3} = \\frac{720}{6 \\times 6} = \\frac{720}{36} = 20 $$</p>\n\n<p>Thus, the number of distinct triangles that can be formed from the six points is 20.</p>\n\n<p>The correct answer is Option C: 20</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>A box contains 14 black balls, 20 blue balls, 26 green balls, 28 yellow balls, 38 red balls and 54 white balls. Consider the following statements:</p>\n\n<p>1. The smallest number n such that any n balls drawn from the box randomly must contain one full group of at least one colour is 175.</p>\n\n<p>2. The smallest number m&nbsp;such that any m balls drawn from the box randomly must contain at least one ball of each colour is 167.</p>\n\n<p>Which of the above statements is/are correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 only"
+      },
+      {
+        "identifier": "B",
+        "content": "<span style=\"\">2 only</span>"
+      },
+      {
+        "identifier": "C",
+        "content": "<span style=\"\">Both 1 and 2</span>"
+      },
+      {
+        "identifier": "D",
+        "content": "<span style=\"\">Neither 1 nor 2</span>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>Let's analyze the statements one by one with the given number of balls of each color:</p>\n\n<ul>\n\n<li>Black balls: 14</li>\n\n<li>Blue balls: 20</li>\n\n<li>Green balls: 26</li>\n\n<li>Yellow balls: 28</li>\n\n<li>Red balls: 38</li>\n\n<li>White balls: 54</li>\n\n</ul>\n\n<p><strong>Statement 1:</strong> The statement claims that the smallest number $ n $ such that any $ n $ balls drawn from the box randomly must contain one full group of at least one color is 175.</p>\n\n<p>To verify, consider the worst-case scenario where you have drawn the maximum number of balls without completing one full group of any color. This would be achieved by drawing all balls from all other colors except one ball short of a full group for each color.</p>\n\n<p>The maximum number of balls we can draw without having a full group of any color:</p>\n\n<p>\n\n<p>$$14 - 1 + 20 - 1 + 26 - 1 + 28 - 1 + 38 - 1 + 54 - 1$$</p>\n\n</p>\n\n<p>Which computes to:</p>\n\n<p>\n\n<p>$$13 + 19 + 25 + 27 + 37 + 53 = 174$$</p>\n\n</p>\n\n<p>Therefore, if we were to draw one more ball (making it 175), we would definitely complete at least one full group of some color. So this statement is true. $ n = 175 $.</p>\n\n<p><strong>Statement 2:</strong> The statement claims that the smallest number $ m $ such that any $ m $ balls drawn from the box randomly must contain at least one ball of each color is 167.</p>\n\n<p>To verify, consider the worst-case scenario where you have drawn the maximum number of balls without containing at least one ball of each color. This would be achieved by drawing all balls from five colors and none from the sixth color (supposing we are missing the color with the least number of balls).</p>\n\n<p>Max number of balls without one color:</p>\n\n<p>\n\n<p>$$54 (white) + 38 (red) + 28 (yellow) + 26 (green) + 20 (blue) = 166$$</p>\n\n</p>\n\n<p>Therefore, if we were to draw one more ball (making it 167), we would definitely have at least one ball of every color. So this statement is true. $ m = 167 $.</p>\n\n<p>Thus, both statements are true. The correct answer is:</p>\n\n<p>Option C</p>\n\n<p><strong>Both 1 and 2</strong></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "What is the sum of all 4-digit numbers less than 2000 formed by the digits 1, 2, 3 and 4, where none of the digits is repeated?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7998"
+      },
+      {
+        "identifier": "B",
+        "content": "8028"
+      },
+      {
+        "identifier": "C",
+        "content": "8878"
+      },
+      {
+        "identifier": "D",
+        "content": "9238"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "explanation": "<p>To determine the sum of all 4-digit numbers less than 2000, which can be formed using the digits 1, 2, 3, and 4 without repetition, we need to analyze the conditions and then calculate systematically.</p>\n\n<p>First, note that the 4-digit numbers formed should be less than 2000. Therefore, the most significant digit (thousands place) can only be 1, as any other digit would make the number 2000 or more.</p>\n\n<p>Here are the steps to solve the problem:</p>\n\n<p>1. If the thousands place is fixed at 1, the digits remaining for the hundreds, tens, and units places are 2, 3, and 4.</p>\n\n<p>2. We can form all possible permutations using the remaining digits for the hundreds, tens, and units places. The number of permutations of 3 digits is calculated as $3!$ (3 factorial), which equals 6.</p>\n\n<p>3. List all the permutations of 2, 3, and 4:</p>\n\n<ul>\n\n<li>234</li>\n\n<li>243</li>\n\n<li>324</li>\n\n<li>342</li>\n\n<li>423</li>\n\n<li>432</li>\n\n</ul>\n\n<p>4. Now, each of these permutations will form a unique 4-digit number with 1 as the thousands place. For each permutation, prepend the digit 1. Thus, the numbers are:</p>\n\n<ul>\n\n<li>1234</li>\n\n<li>1243</li>\n\n<li>1324</li>\n\n<li>1342</li>\n\n<li>1423</li>\n\n<li>1432</li>\n\n</ul>\n\n<p>5. We need to sum these numbers:</p>\n\n<p>$$ 1234 + 1243 + 1324 + 1342 + 1423 + 1432 $$</p>\n\n<p>For simplicity, we can first find the sum of digits in each place value separately:</p>\n\n<p><strong>Thousands Place:</strong> There are 6 numbers, each with 1 in the thousands place:</p>\n\n<p>$$ 1 + 1 + 1 + 1 + 1 + 1 = 6 \\text{ (times 1000)} = 6000 $$</p>\n\n<p><strong>Hundreds Place:</strong> The digits 2, 3, and 4 appear here twice each (since there are 6 permutations):</p>\n\n<p>$$ 2 \\times 2 + 2 \\times 3 + 2 \\times 4 = 4 + 6 + 8 = 18 \\text{ (times 100)} = 1800 $$</p>\n\n<p><strong>Tens Place:</strong> Similar to the hundreds place, digits 2, 3, and 4 appear here twice each:</p>\n\n<p>$$ 2 \\times 2 + 2 \\times 3 + 2 \\times 4 = 4 + 6 + 8 = 18 \\text{ (times 10)} = 180 $$</p>\n\n<p><strong>Units Place:</strong> Similarly, digits 2, 3, and 4 appear here twice each:</p>\n\n<p>$$ 2 \\times 2 + 2 \\times 3 + 2 \\times 4 = 4 + 6 + 8 = 18 \\text{ (times 1)} = 18 $$</p>\n\n<p>Adding all these gives:</p>\n\n<p>$$ 6000 + 1800 + 180 + 18 = 7998 $$</p>\n\n<p>Thus, the sum of all 4-digit numbers less than 2000 formed by the digits 1, 2, 3, and 4 without repetition is 7998.</p>\n\n<p><strong>The correct answer is Option A: 7998.</strong></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "What is the number of selections of 10 consecutive objects in clockwise direction out of 12 objects arranged in a circle?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "11"
+      },
+      {
+        "identifier": "C",
+        "content": "12"
+      },
+      {
+        "identifier": "D",
+        "content": "66"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>To solve this problem, we first need to understand how arranging objects in a circle affects our choices compared to arranging them in a line.</p>\n\n<p>When objects are arranged in a circle, the count of total ways to select consecutive objects differs because the first and last objects are adjacent. Here, we need to select 10 consecutive objects out of 12 arranged in a circle.</p>\n\n<p>If we \"break\" the circle at any point, it becomes a linear arrangement. But regardless of where we start, choosing 10 consecutive objects will fix the arrangement. For instance, consider labeling the objects from 1 to 12:</p>\n\n<p>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12</p>\n\n<p>If we choose 10 consecutive objects starting at any position, the possible selections would be:</p>\n\n<ul>\n\n<li><code>1 to 10</code></li>\n\n<li><code>2 to 11</code></li>\n\n<li><code>3 to 12</code></li>\n\n<li><code>4 to 1 (next loop around the circle)</code></li>\n\n<li>...</li>\n\n</ul>\n\n<p>Since all positions in the circle are essentially symmetrical, the unique starting points for our selection are exactly and only those positions that are in between our selection range. In doing so, we realize we can start the selection at any of the positions in 12, as choosing 10 consecutive objects includes this position and moves around the circle.</p>\n\n<p>Therefore, each selection of 10 consecutive objects is a distinct arrangement that repeats every 12 times. Thus, the number of possible selections is:</p>\n\n<p>$$ \\text{Number of selections} = 12 $$</p>\n\n<p>So, the correct answer is <b>12</b>.</p>\n\n<p><b>Option C:</b> 12</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "In an examination, the maximum marks for each of the four papers namely P, Q, R and S are 100. Marks scored by the students are in integers. A student can score 99% in n different ways. What is the value of n?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<span style=\"\">16</span>"
+      },
+      {
+        "identifier": "B",
+        "content": "<span style=\"\">17</span>"
+      },
+      {
+        "identifier": "C",
+        "content": "<span style=\"\">23</span>"
+      },
+      {
+        "identifier": "D",
+        "content": "<span style=\"\">35</span>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "explanation": "<p>To determine the number of ways a student can score 99% across four papers, each with a maximum of 100 marks, we start by calculating 99% of the total marks.</p>\n\n<p>The total marks for the four papers are:</p>\n\n<p>$$4 \\times 100 = 400$$</p>\n\n<p>99% of 400 is:</p>\n\n<p>$$0.99 \\times 400 = 396$$</p>\n\n<p>So, the student needs to score a total of 396 marks out of 400. Let us denote the marks scored in the papers P, Q, R, and S as $P, Q, R,$ and $S$ respectively. This gives us the equation:</p>\n\n<p>$$P + Q + R + S = 396$$</p>\n\n<p>To find out the number of ways to achieve this, we need to determine the integer solutions to this equation where $0 \\leq P, Q, R, S \\leq 100$.</p>\n\n<p>To make the analysis easier, we reframe the problem. Let’s calculate the deficit from the full marks for each paper. Define $P', Q', R',$ and $S'$ as the marks deducted from 100 in each paper. Thus:</p>\n\n<p>$$P' = 100 - P$$</p>\n\n<p>$$Q' = 100 - Q$$</p>\n\n<p>$$R' = 100 - R$$</p>\n\n<p>$$S' = 100 - S$$</p>\n\n<p>Consequently, the equation becomes:</p>\n\n<p>$$4 \\times 100 - (P' + Q' + R' + S') = 396$$</p>\n\n<p>$$400 - (P' + Q' + R' + S') = 396$$</p>\n\n<p>Which simplifies to:</p>\n\n<p>$$P' + Q' + R' + S' = 4$$</p>\n\n<p>We now need to find the number of non-negative integer solutions to the equation above. This is a classic \"stars and bars\" problem in combinatorics where we find the number of solutions to:</p>\n\n<p>$$x_1 + x_2 + x_3 + x_4 = 4$$</p>\n\n<p>The formula for the number of non-negative integer solutions is given by:</p>\n\n<p>$$\\binom{n + k - 1}{k - 1}$$</p>\n\n<p>where $n$ is the sum (4 in this case) and $k$ is the number of variables (4 here). Therefore, we have:</p>\n\n<p>$$\\binom{4 + 4 - 1}{4 - 1} = \\binom{7}{3}$$</p>\n\n<p>Calculating the binomial coefficient, we get:</p>\n\n<p>$$\\binom{7}{3} = \\frac{7!}{3! (7 - 3)!} = \\frac{7!}{3! \\times 4!} = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = 35$$</p>\n\n<p>Thus, the number of ways a student can score 396 out of 400 marks is $35$.</p>\n\n<p><b>Answer: Option D (35)</b></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "A flag has to be designed with 4 horizontal stripes using some or all of the colours red, green and yellow. What is the number of different ways in which this can be done so that no two adjacent stripes have the same colour?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "12"
+      },
+      {
+        "identifier": "B",
+        "content": "18"
+      },
+      {
+        "identifier": "C",
+        "content": "24"
+      },
+      {
+        "identifier": "D",
+        "content": "36"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>To solve this problem, we need to consider the constraints: the flag must have 4 horizontal stripes, each stripe can be one of three colors (red, green, or yellow), and no two adjacent stripes can have the same color. Let's denote the number of stripes as $ n $ and the number of colors as $ k $, where $ n = 4 $ and $ k = 3 $.</p>\n\n<p>The problem can be approached by considering the choices available for each stripe given the constraints:</p>\n\n<p>1. For the first stripe, there are 3 choices since it can be any of the three colors.</p>\n\n<p>2. For the second stripe, it cannot be the same color as the first stripe, so there are 2 choices.</p>\n\n<p>3. For the third stripe, it cannot be the same color as the second stripe, so there are again 2 choices.</p>\n\n<p>4. For the fourth stripe, it cannot be the same color as the third stripe, so there are again 2 choices.</p>\n\n<p>Thus, the total number of ways the flag can be designed is:</p>\n\n<p>$$ 3 \\times 2 \\times 2 \\times 2 = 24 $$</p>\n\n<p>Therefore, the number of different ways to design the flag is 24.</p>\n\n<p>The correct answer is Option C: 24.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "There are five persons&nbsp;P, Q, R, S and T each one of whom has to be assigned one task. Neither P nor Q can be assigned Task-1. Task-2 must be assigned to either R or S. In how many ways can the assignment be done?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6"
+      },
+      {
+        "identifier": "B",
+        "content": "12"
+      },
+      {
+        "identifier": "C",
+        "content": "18"
+      },
+      {
+        "identifier": "D",
+        "content": "24"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "explanation": "<p>Let's solve this problem step-by-step by considering all the given constraints.</p>\n\n<p>First, we know:</p>\n\n<ul>\n\n<li>Neither P nor Q can be assigned Task-1.</li>\n\n<li>Task-2 must be assigned to either R or S.</li>\n\n</ul>\n\n<p>Let's break this problem down into two main cases based on who can be assigned Task-2.</p>\n\n<p><strong>Case 1: Task-2 is assigned to R</strong></p>\n\n<p>If Task-2 is assigned to R, we have 4 tasks left (Task-1, Task-3, Task-4, and Task-5) to be assigned to P, Q, S, and T, with the restriction that neither P nor Q can be assigned Task-1.</p>\n\n<p>For Task-1, the only possible candidates are S and T.</p>\n\n<p><strong>Subcase 1.1: Task-1 is assigned to S</strong></p>\n\n<p>If Task-1 is assigned to S, the remaining individuals (P, Q, and T) need to be assigned Tasks-3, 4, and 5. The number of ways to assign these tasks is the number of permutations of 3 individuals, which is:</p>\n\n<p>$$ 3! = 6 $$</p>\n\n<p><strong>Subcase 1.2: Task-1 is assigned to T</strong></p>\n\n<p>If Task-1 is assigned to T, the remaining individuals (P, Q, and S) need to be assigned Tasks-3, 4, and 5. The number of ways to assign these tasks is also:</p>\n\n<p>$$ 3! = 6 $$</p>\n\n<p>Therefore, the total number of ways for Case 1 is:</p>\n\n<p>$$ 6 + 6 = 12 $$</p>\n\n<p><strong>Case 2: Task-2 is assigned to S</strong></p>\n\n<p>If Task-2 is assigned to S, we again have 4 tasks left (Task-1, Task-3, Task-4, and Task-5) to be assigned to P, Q, R, and T, with the restriction that neither P nor Q can be assigned Task-1.</p>\n\n<p>For Task-1, the possible candidates are again R and T.</p>\n\n<p><strong>Subcase 2.1: Task-1 is assigned to R</strong></p>\n\n<p>If Task-1 is assigned to R, the remaining individuals (P, Q, and T) need to be assigned Tasks-3, 4, and 5. The number of ways to assign these tasks is:</p>\n\n<p>$$ 3! = 6 $$</p>\n\n<p><strong>Subcase 2.2: Task-1 is assigned to T</strong></p>\n\n<p>If Task-1 is assigned to T, the remaining individuals (P, Q, and R) need to be assigned Tasks-3, 4, and 5. The number of ways to assign these tasks is also:</p>\n\n<p>$$ 3! = 6 $$</p>\n\n<p>Therefore, the total number of ways for Case 2 is:</p>\n\n<p>$$ 6 + 6 = 12 $$</p>\n\n<p>Finally, adding both cases together, the total number of ways the assignment can be done is:</p>\n\n<p>$$ 12 + 12 = 24 $$</p>\n\n<p>So, the correct answer is <strong>Option D: 24</strong>.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "The letters of the word \"INCOMPREHENSIBILITIES\" are arranged alphabetically in reverse order. How many positions of the letter/letters will remain unchanged?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "None"
+      },
+      {
+        "identifier": "B",
+        "content": "One"
+      },
+      {
+        "identifier": "C",
+        "content": "Two"
+      },
+      {
+        "identifier": "D",
+        "content": "Three"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>The given word is \"INCOMPREHENSIBILITIES\".</p>\n\n<ol>\n<li>List the letters of the word \"INCOMPREHENSIBILITIES\" alphabetically:</li>\n</ol>\n<p>B, B, C, E, E, E, H, I, I, I, I, I, L, M, N, N, O, P, R, S, S, T</p>\n\n<ol>\n<li>Reverse this alphabetical order to get:</li>\n</ol>\n<p>T, S, S, R, P, O, N, N, M, L, I, I, I, I, I, H, E, E, E, C, B, B</p>\n\n<ol>\n<li>Compare this reversed alphabetical order with the original word to see which positions remain unchanged.</li>\n</ol>\n<p>Original word: I, N, C, O, M, P, R, E, H, E, N, S, I, B, I, L, I, T, I, E, S</p>\n\n<p>Reversed alphabetical order: T, S, S, R, P, O, N, N, M, L, I, I, I, I, I, H, E, E, E, C, B, B</p>\n\n<p>By comparing each position, we observe:</p>\n\n<ul>\n<li>The 13th letter \"I\" in the original word remains \"I\" in the reversed order.</li><br>\n<li>The 15th letter \"I\" in the original word remains \"I\" in the reversed order.</li>\n</ul>\n<p>Thus, there are two positions where the letter \"I\" remains unchanged.</p>\n\n<p>Therefore, the correct answer is:</p>\n\n<p>Option C: Two</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2023-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "The digits 1 to 9 are arranged in three rows in such a way that each row contains three digits, and the number formed in the second row is twice the number formed in the first row; and the number formed in the third row is thrice the number formed in the first row. Repetition of digits is not allowed. If only three of the four digits 2, 3, 7 and 9 are allowed to use in the first row, how many such combinations are possible to be arranged in the three rows?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>In a scenario where the digits 1 to 9 are arranged into three rows, each comprising three digits, the number formed by the second row must be twice the number formed by the first row, and the number formed by the third row must be three times the number formed by the first row. No digit can be repeated. If only three of the digits 2, 3, 7, and 9 can be used in the first row, let's determine the number of possible combinations.</p>\n\n<p>After following the given criteria and performing the calculations, only two valid arrangements are possible:</p>\n\n<strong>First Arrangement:</strong>\n\n<ul>\n<li><strong>Row 1:</strong> 2 7 3</li><br>\n<li><strong>Row 2:</strong> 5 4 6</li><br>\n<li><strong>Row 3:</strong> 8 1 9</li>\n</ul>\n<strong>Second Arrangement:</strong>\n\n<ul>\n<li><strong>Row 1:</strong> 3 2 7</li><br>\n<li><strong>Row 2:</strong> 6 5 4</li><br>\n<li><strong>Row 3:</strong> 9 8 1</li>\n</ul>\n<p>Thus, the number of feasible combinations is limited to two.</p>\n\n<p>Hence, the correct answer is Option C, which is 2.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "How many 3-digit natural numbers (without repetition of digits) are there such that each digit is odd and the number is divisible by 5?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8"
+      },
+      {
+        "identifier": "B",
+        "content": "12"
+      },
+      {
+        "identifier": "C",
+        "content": "16"
+      },
+      {
+        "identifier": "D",
+        "content": "24"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>To determine the number of 3-digit numbers without repeating digits, where each digit is odd and the number is divisible by 5:</p>\n\n<p>We have odd digits: 1, 3, 5, 7, 9.</p>\n\n<p>For a 3-digit number to be divisible by 5, the units digit must be 5.</p>\n\n<p>Thus, we have the positions: hundreds, tens, and units. The units digit is fixed as 5.</p>\n\n<p>For the remaining two positions (hundreds and tens), we can use the digits 1, 3, 7, 9.</p>\n\n<p>To arrange these remaining digits, we use permutations:</p>\n\n<p>$ ^{4}P_{2} = \\frac{4!}{(4-2)!} = \\frac{4 \\times 3 \\times 2 \\times 1}{2 \\times 1} = 12 $</p>\n\n<p>Hence, the total number of 3-digit natural numbers meeting the criteria is 12.</p>\n\n<strong>Thus, option B (12) is correct.</strong>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "The letters A, B, C, D and E are arranged in such a way that there are exactly two letters between A and E. How many such arrangements are possible?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "12"
+      },
+      {
+        "identifier": "B",
+        "content": "18"
+      },
+      {
+        "identifier": "C",
+        "content": "24"
+      },
+      {
+        "identifier": "D",
+        "content": "36"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>We have 5 letters: <strong>A, B, C, D, E.</strong>  </p>\n<p>Condition: There must be <strong>exactly two letters between A and E</strong>.</p>\n\n<h3>Step 1: Check possible positions of A and E</h3>\n<ul>\n<li><p>Total positions = 5 places.  </p></li>\n<li><p>If A is at position 1, then E can be only at position 4.  </p></li>\n<li><p>If A is at position 2, then E can be only at position 5.  </p></li>\n<li><p>If A is at position 3, then E would require position 6, which does not exist.  </p></li>\n</ul>\n<p>This gives two valid choices when A is on the left.  </p>\n<p>But A and E can be interchanged (A at pos 4 and E at pos 1 etc.), so <strong>4 possible fixed placements of (A, E).</strong></p>\n\n<h3>Step 2: Arrange remaining 3 letters</h3>\n<p>For the remaining 3 letters (B, C, D):  </p>\n<ul>\n<li>They can be arranged in $3! = 6$ ways.</li>\n</ul>\n\n<h3>Step 3: Total arrangements</h3>\n<ul>\n<li>For each of the 4 valid placements of A and E, we have 6 arrangements of the other 3 letters.  </li>\n</ul>\n<p>So total = $4 \\times 6 = 24$</p>\n\n<h3>Final Answer:</h3>\n<p><strong>Option C: 24</strong> ✅</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<em>A, B</em> and <em>C </em>are three places such that there are three different roads from <em>A</em> to <em>B</em>, four different roads from<em> B</em> to<em> C</em> and three different roads from <em>A</em> to <em>C</em>. In how many different ways can one travel from<em> A</em> to<em> C </em>using these roads?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10"
+      },
+      {
+        "identifier": "B",
+        "content": "13"
+      },
+      {
+        "identifier": "C",
+        "content": "15"
+      },
+      {
+        "identifier": "D",
+        "content": "36"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>To determine the number of different ways to travel from A to C using the given roads, let's break down the problem:</p>\n\n<ol>\n<li>There are 3 different roads from A to B.</li><br>\n<li>There are 4 different roads from B to C.</li>\n</ol>\n<p>Therefore, the number of ways to travel from A to C by passing through B is calculated as:</p>\n\n<p>$ 3 \\text{ (ways from A to B)} \\times 4 \\text{ (ways from B to C)} = 12 \\text{ ways} $</p>\n\n<p>Additionally, there are 3 direct roads from A to C.</p>\n\n<p>Thus, the total number of different ways to travel from A to C, considering both direct and indirect routes, is:</p>\n\n<p>$ 12 \\text{ (via B)} + 3 \\text{ (directly)} = 15 \\text{ ways} $</p>\n\n<p>Therefore, the correct answer is 15.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Let <em>A</em>, <em>B</em> and <em>C</em> represent distinct non-zero digits. Suppose <em>x</em> is the sum of all possible 3-digit numbers formed by <em>A</em>, <em>B</em> and <em>C</em> without repetition.</p>\n\n<p>Consider the following statements :</p>\n\n<p>1. The 4-digit least value of <em>x</em> is 1332.</p>\n\n<p>2. The 3-digit greatest value of x is 888.</p>\n\n<p>Which of the above statements is/are correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 only"
+      },
+      {
+        "identifier": "B",
+        "content": "2 only"
+      },
+      {
+        "identifier": "C",
+        "content": "Both 1 and 2"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither 1 nor 2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "explanation": "<p>The minimum possible value for three distinct non-zero digits $A$, $B$, and $C$ is 1, 2, and 3.</p>\n\n<p>All possible 3-digit numbers formed by $A$, $B$, and $C$ without repetition are 123, 132, 213, 231, 312, and 321.</p>\n\n<p>Thus, $x = 123 + 132 + 213 + 231 + 312 + 321 = 1332$.</p>\n\n<p>Therefore, the least value of $x$ is 1332.</p>\n\n<strong>Statement 1: The 4-digit least value of $x$ is 1332:</strong> Correct.\n\n<strong>Statement 2: The 3-digit greatest value of $x$ is 888:</strong> False, as the least value of $x$ is 1332.\n\n<p>Hence, the correct answer is option A, i.e., 1 only.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "There is a numeric lock which has a 3-digit PIN. The PIN contains digits 1 to 7. There is no repetition of digits. The digits in the PIN from left to right are in decreasing order. Any two digits in the PIN differ by at least 2. How many maximum attempts does one need to find out the PIN with certainty?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6"
+      },
+      {
+        "identifier": "B",
+        "content": "8"
+      },
+      {
+        "identifier": "C",
+        "content": "10"
+      },
+      {
+        "identifier": "D",
+        "content": "12"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p><strong>Option (C) is correct.</strong></p>\n\n<p>All possible values for a 3-digit PIN are: <strong>753, 752, 751, 742, 741, 731, 642, 641, 631, 531.</strong></p>\n\n<p>Therefore, the maximum number of attempts required to determine the PIN with certainty is <strong>10</strong>.</p>\n\n<p><strong>Hence, the correct answer is option (C), which is 10.</strong></p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>If</p>\n\n<p>15&nbsp;×&nbsp;14 <span style=\"\">×</span> 13 <span style=\"\">× ...&nbsp;×&nbsp;</span>3 <span style=\"\">×&nbsp;</span>2 <span style=\"\">×&nbsp;</span>1 = 3<em><sup>m</sup></em> <span style=\"\">×&nbsp;</span><em>n</em></p>\n\n<p>where <em>m</em> and <em>n</em> are positive integers, then what is the maximum value of <em>m</em>?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7"
+      },
+      {
+        "identifier": "B",
+        "content": "6"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>To determine the maximum value of $ m $, we need to find the power of 3 in $ 15! $.</p>\n\n<p>Steps to compute the power of 3 in $ 15! $:</p>\n\n<ol>\n<li>Calculate the integer value of $\\left\\lfloor \\frac{15}{3^1} \\right\\rfloor$.</li><br>\n<li>Calculate the integer value of $\\left\\lfloor \\frac{15}{3^2} \\right\\rfloor$.</li><br>\n<li>Calculate the integer value of $\\left\\lfloor \\frac{15}{3^3} \\right\\rfloor$ and continue until the result is zero.</li>\n</ol>\n<p>Power of 3 in $ 15! $:</p>\n\n<p>$ \\left\\lfloor \\frac{15}{3} \\right\\rfloor + \\left\\lfloor \\frac{15}{9} \\right\\rfloor + \\left\\lfloor \\frac{15}{27} \\right\\rfloor = 5 + 1 + 0 = 6 $</p>\n\n<p>Thus,</p>\n\n<p>$ 15 \\times 14 \\times 13 \\times \\ldots \\times 3 \\times 2 \\times 1 = 3^6 \\times n = 3^6 \\times 1793792000 $</p>\n\n<p>Therefore, $ \\boxed{m = 6} $.</p>\n\n<strong>Alternate Method:</strong>\n\n<p>Identify the numbers divisible by 3 in the sequence $ 15 \\times 14 \\times 13 \\times \\ldots \\times 3 \\times 2 \\times 1 $:</p>\n\n<ul>\n<li>3 = $ 3 \\times 1 $</li><br>\n<li>6 = $ 3 \\times 2 $</li><br>\n<li>9 = $ 3^2 $</li><br>\n<li>12 = $ 3 \\times 4 $</li><br>\n<li>15 = $ 3 \\times 5 $</li>\n</ul>\n<p>Adding up the powers of 3:</p>\n\n<p>$ 1 + 1 + 2 + 1 + 1 = 6 $</p>\n\n<p>Therefore, $ \\boxed{m = 6} $.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "One non-zero digit, one vowel and one consonant from English alphabet (in capital) are to be used in forming passwords, such that each password has to start with a vowel and end with a consonant. How many such passwords can be generated?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "105"
+      },
+      {
+        "identifier": "B",
+        "content": "525"
+      },
+      {
+        "identifier": "C",
+        "content": "945"
+      },
+      {
+        "identifier": "D",
+        "content": "1050"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>To create passwords that start with a vowel, are followed by a non-zero digit, and end with a consonant (all in uppercase), we need to determine the number of possible combinations.</p>\n\n<ol>\n<li><strong>Number of vowels</strong>: There are 5 vowels in the English alphabet (A, E, I, O, U).</li><br>\n<li><strong>Number of consonants</strong>: There are 21 consonants in the English alphabet.</li><br>\n<li><strong>Number of non-zero digits</strong>: There are 9 non-zero digits (1 through 9).</li>\n</ol>\n<p>Given these elements:</p>\n\n<ul>\n<li>The first character in the password must be a vowel.</li><br>\n<li>The second character must be a non-zero digit.</li><br>\n<li>The third character must be a consonant.</li>\n</ul>\n<p>To calculate the total number of possible passwords, we use the product of the number of choices for each character position:</p>\n\n<p>$ 5 \\text{ (vowels)} \\times 9 \\text{ (non-zero digits)} \\times 21 \\text{ (consonants)} = 945 $</p>\n\n<p>Therefore, the total number of passwords that can be generated is 945.</p>\n\n<p>Thus, the correct answer is <strong>Option C: 945</strong>.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "There are 9 cups placed on a table arranged in equal number of rows and columns out of which 6 cups contain coffee and 3 cups contain tea. In how many ways can they be arranged so that each row should contain at least one cup of coffee?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "18"
+      },
+      {
+        "identifier": "B",
+        "content": "27"
+      },
+      {
+        "identifier": "C",
+        "content": "54"
+      },
+      {
+        "identifier": "D",
+        "content": "81"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "explanation": "<p>We will analyze two scenarios:</p>\n\n<strong>Case 1:</strong> When there are 3 coffee cups in one row, 2 coffee cups in another row, and 1 coffee cup in the remaining row.\n\n<ol>\n<li>For the row with 3 coffee cups, there is only one way to arrange them.</li><br>\n<li>For the row with 2 coffee cups, there are three possible arrangements.</li><br>\n<li>For the row with 1 coffee cup, there are also three possible arrangements.</li>\n</ol>\n<p>Thus, the total arrangements for Case 1 are calculated as:</p>\n\n<p>$ 3! \\times 1 \\times 3 \\times 3 = 54 $</p>\n\n<strong>Case 2:</strong> When each row has exactly 2 coffee cups.\n\n<ol>\n<li>Each row with 2 coffee cups can be arranged in three possible ways.</li>\n</ol>\n<p>Hence, the total arrangements for Case 2 are:</p>\n\n<p>$ 1 \\times 3 \\times 3 \\times 3 = 27 $</p>\n\n<p>Adding the total arrangements from both cases, we get:</p>\n\n<p>$ 54 + 27 = 81 $</p>\n\n<p>Therefore, the correct answer is 81.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2022-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider all 3-digit numbers (without repetition of digits) obtained using three non-zero digits which are multiples of 3. Let S be their sum.</p>\n\n<p>Which of the following is/are correct?</p>\n\n<p>1.&nbsp;S is always divisible by 74.</p>\n\n<p>2.&nbsp;S is always divisible by 9.</p>\n\n<p>select the correct answer using the code given below:</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 only"
+      },
+      {
+        "identifier": "B",
+        "content": "2 only"
+      },
+      {
+        "identifier": "C",
+        "content": "Both 1 and 2"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither 1 nor 2"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<strong>Given:</strong>\n\n<p>The digits are non-zero and multiples of 3, specifically 3, 6, and 9.</p>\n\n<p>The numbers do not have repeating digits.</p>\n\n<strong>Calculation:</strong>\n\n<p>The numbers that can be formed are:</p>\n\n<p>369, 396, 639, 693, 936, and 963</p>\n\n<p>The sum of these numbers is 3996, which is divisible by both 74 and 9.</p>\n\n<p>Hence, the correct answer is option C.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2021,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2021-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "On a chess board, in how many different ways can 6 consecutive squares be chosen on the diagonals along a straight path ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "6"
+      },
+      {
+        "identifier": "C",
+        "content": "8"
+      },
+      {
+        "identifier": "D",
+        "content": "12"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>The chessboard contains two main diagonals, each consisting of 8 squares. Our objective is to select 6 consecutive squares along these diagonals.</p>\n\n<p>To simplify, we can treat a block of 6 consecutive squares as a single unit.</p>\n\n<p>Thus, for each diagonal, there are (8 - 6 + 1) = 3 possible positions where this block of 6 squares can fit. This calculation is represented by the combination formula $ \\binom{3}{1} = 3 $.</p>\n\n<p>Applying the same logic to the other diagonal, we also find 3 different possible positions.</p>\n\n<p>In conclusion, when considering both diagonals, there are a total of 3 (for one diagonal) + 3 (for the other diagonal) = 6 distinct ways to choose 6 consecutive squares.</p>\n\n<p>Hence, the correct answer is option B, 6.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2021,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2021-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Using 2, 2, 3, 3, 3 as digits, how many distinct numbers greater than 30000 can be formed ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "6"
+      },
+      {
+        "identifier": "C",
+        "content": "9"
+      },
+      {
+        "identifier": "D",
+        "content": "12"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>To form numbers greater than 30000 using the digits 2, 2, 3, 3, 3, the first digit cannot be 2. Therefore, the first digit must be 3, leaving us with the digits 2, 2, 3, 3 to arrange in the remaining four places.</p>\n\n<p>The number of distinct numbers greater than 30000 that can be formed is calculated by:</p>\n\n<p>$ \\frac{4!}{2! \\times 2!} $</p>\n\n<p>$ = \\frac{24}{2 \\times 2} = 6 $</p>\n\n<p>Therefore, there are 6 distinct numbers greater than 30000 that can be formed.</p>\n\n<strong>Important Points:</strong>\n\n<p>The number of ways to arrange $ n $ objects, where $ p $ objects are alike of one type, $ q $ objects are alike of a second type, and $ r $ objects are alike of a third type, is given by:</p>\n\n<p>$ \\frac{n!}{p!q!r!} $</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2021,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2021-csat",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "There are 6 persons arranged in a row. Another person has to shake hands with 3 of them so that he should not shake hands with two consecutive persons. In how many distinct possible combinations can the handshakes take place ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>Beginning from the left, the individual will avoid shaking hands with the person immediately next to those he shakes hands with.</p>\n\n<p>Since the individual needs to shake hands with 3 people, and starting from the left by shaking hands with the first person, the next person in line will be omitted from the handshake. By shaking hands with the third person, the fourth person will also be omitted.</p>\n\n<p>Therefore, there will be 4 remaining individuals after omitting 2, and we can select any 3 out of these 4 individuals for the handshakes.</p>\n\n<p>Hence, the number of distinct possible handshakes is calculated as:</p>\n\n<p>$ \\binom{4}{3} $</p>\n\n<p>This simplifies to:</p>\n\n<p>$ \\frac{4!}{3! \\times 1!} = 4 $</p>\n\n<p>Thus, the correct answer is option B.</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2021,
+    "yearKey": "upsc-civil-service-prelims-paper-ii-2021-csat",
+    "difficulty": null
+  }
+]

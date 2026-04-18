@@ -1,0 +1,292 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a file of size 4 million bytes being transferred between two hosts connected via a path consisting of three consecutive links of bandwidth $2 \\mathrm{Mbps}, 500 \\mathrm{kbps}$, and 1 Mbps , respectively. All processing delays and propagation delays are negligible. Assume that there is no other background traffic over the path and no other additional overhead to transfer the file.</p>\n<p>Which one of the following is the total time (in seconds) to transfer the file?</p>\n<p>Note: $1 \\mathrm{M}=10^6, 1 \\mathrm{k}=10^3$</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>731</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>64</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>8</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>16</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmytr2n8/72ed818f-e06f-4f6a-aab6-e37bf885e048/29a66e40-2451-11f1-8c18-217b38cc9d70/file-jaoe38c1mmytr2n9.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmytr2n8/72ed818f-e06f-4f6a-aab6-e37bf885e048/29a66e40-2451-11f1-8c18-217b38cc9d70/file-jaoe38c1mmytr2n9.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Computer Networks - Concepts of Layering Question 1 English Explanation\"></p><p>File size $=4 \\times 10^6 \\times 8$ bits</p><p></p>\n<p>$$ \\begin{aligned} &amp; T \\cdot T_{L_1}=\\frac{4 \\times 10^6 \\times 8}{2 \\times 10^6}=1 \\mathrm{sec} \\\\ &amp; T \\cdot T_{L_2}=\\frac{4 \\times 10^6 \\times 8}{500 \\times 10^3}=\\frac{320}{5}=64 \\mathrm{sec} \\\\ &amp; T \\cdot T_{L_3}=\\frac{4 \\times 10^6 \\times 8}{10^6}=32 \\mathrm{sec} \\end{aligned} $$</p>\n<p>Bottleneck BW $=$ Min $(2 \\mathrm{Mbps}, 500 \\mathrm{kbps}, 1 \\mathrm{Mbps})$</p>\n<p>$$ &nbsp; \\Rightarrow T \\cdot T_{L_2}=\\frac{4 \\times 10^6 \\times 8}{500 \\times 10^2}=\\frac{320}{5}=64 \\mathrm{sec} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following statements :</p>\n<p>(i) Address Resolution Protocol (ARP) provides a mapping from an IP address to the corresponding hardware (link-layer) address.</p>\n<p>(ii) A single TCP segment from a sender $S$ to a receiver $R$ cannot carry both data from $S$ to $R$ and acknowledgement for a segment from $R$ to $S$.</p>\n<p>Which ONE of the following is CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " Both (i) and (ii) are TRUE\n"
+      },
+      {
+        "identifier": "B",
+        "content": " (i) is TRUE and (ii) is FALSE\n"
+      },
+      {
+        "identifier": "C",
+        "content": " (i) is FALSE and (ii) is TRUE\n"
+      },
+      {
+        "identifier": "D",
+        "content": " Both (i) and (ii) are FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>ARP is a network protocol used to find the MAC (Media Access Control) address corresponding to a given IP address. So, (i) is true.</p>\n<p>TCP uses piggybacking to send an acknowledgment (ACK) along with data in the same segment. So, (ii) is false.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Identify the ONE CORRECT matching between the OSI layers and their corresponding functionalities as shown.</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 559px\"><colgroup>\n<col style=\"width: 73px\">\n<col style=\"width: 188px\">\n<col style=\"width: 72px\">\n<col style=\"width: 226px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-amwm\"></th>\n    <th class=\"tg-amwm\">OSI Layers</th>\n    <th class=\"tg-amwm\"></th>\n    <th class=\"tg-amwm\">Functionalities</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-baqh\">(a)</td>\n    <td class=\"tg-0lax\">Network layer</td>\n    <td class=\"tg-baqh\">(I)</td>\n    <td class=\"tg-0lax\">Packet routing</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">(b)</td>\n    <td class=\"tg-0lax\">Transport layer</td>\n    <td class=\"tg-baqh\">(II)</td>\n    <td class=\"tg-0lax\">Framing and error handling</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">(c)</td>\n    <td class=\"tg-0lax\">Datalink layer</td>\n    <td class=\"tg-baqh\">(III)</td>\n    <td class=\"tg-0lax\">Host to host communication</td>\n  </tr>\n</tbody>\n</table></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " (a)-(I), (b)-(II), (c)-(III)\n"
+      },
+      {
+        "identifier": "B",
+        "content": " (a)-(I), (b)-(III), (c)-(II)\n"
+      },
+      {
+        "identifier": "C",
+        "content": " (a)-(II), (b)-(I), (c)-(III)\n"
+      },
+      {
+        "identifier": "D",
+        "content": " (a)-(III), (b)-(II), (c)-(I)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The correct matching is:</p>\n\n<p><p>Network layer – Packet routing</p></p>\n<p><p>Transport layer – Host to host communication</p></p>\n<p><p>Datalink layer – Framing and error handling</p></p>\n\n<p>This corresponds to Option B:  </p>\n<p>(a)-(I), (b)-(III), (c)-(II).</p>\n<p>Here's a brief explanation:</p>\n\n<p><p>The <strong>Network layer</strong> (Layer 3) is responsible for packet routing.  </p></p>\n<p><p>The <strong>Transport layer</strong> (Layer 4) handles host-to-host communication by ensuring reliable data transfer between end systems.  </p></p>\n<p><p>The <strong>Datalink layer</strong> (Layer 2) deals with framing and error handling to ensure data is correctly transmitted over the physical medium.</p></p>\n\n<p>Thus, Option B is the correct answer.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the following pairs of OSI protocol layer/sub-layer and its functionality, the INCORRECT pair is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Network layer and Routing. "
+      },
+      {
+        "identifier": "B",
+        "content": "Transport layer and End-to-end process communication."
+      },
+      {
+        "identifier": "C",
+        "content": "Data Link Layer and Bit synchronization."
+      },
+      {
+        "identifier": "D",
+        "content": "Medium Access Control sub-layer and Channel sharing."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "Data link layer has error control,flow control,access control and framing as functionalities.\nBit synchronization is a part of physical layer.",
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that source S and destination D are connected through two intermediate routers labeled R. Determine how many times each packet has to visit the network layer and the data link layer during a transmission from S to D.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/K8kx1Twk3yon1haiJ/c3EBn83Tv7WHQ9KyCeFfkYyYo5for/2tWVXsnceR4dXaZzbJzvsD/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2013 Computer Networks - Concepts of Layering Question 7 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Network layer – 4 times and Data link layer – 4 times"
+      },
+      {
+        "identifier": "B",
+        "content": "Network layer – 4 times and Data link layer – 3 times"
+      },
+      {
+        "identifier": "C",
+        "content": "Network layer – 4 times and Data link layer – 6 times"
+      },
+      {
+        "identifier": "D",
+        "content": "Network layer – 2 times and Data link layer – 6 times"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/dSksxikUy55ZYrjXb/8OMew1cZmz03sZ5OyBxIIsZJhjtlj/Zp5JmJ8o4Rg0pcQY2dtPe2/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2013 Computer Networks - Concepts of Layering Question 7 English Explanation\"> \n<p>From above given diagram, it's easily visible that packet will visit network layer 4 times(once at each node [S, R, R, D]) and packet will visit Data Link layer 6 times (One time at S and one time at D, then two times for each intermediate router R as data link layer is used for link to link communication.) </p>\n\n\n<p>Once packet reaches to R(router) then it goes up from physical layer to DLL to Network layer and when packet coming out of router in order from Network layer to DLL to Physical layer.</p> \n\n<p>Remember: \nYou can see, At router there are two Physical Layer and two Data link Layer.The reason is,on one side of the router there could be one network and other side of the router there could be other network.</p> \n\n<p>For ex.- One side there could be Ethernet and on other side there could be Token Ring.So,One DLL will understand the language of Ethernet and other DLL will convert the packet so that it could be read by the Token Ring. </p>\n\n<p>That is why two DLL and two PL is needed at the Router.</p>",
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The protocol data unit (PDU) for the application layer in the Internet stack is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Segment "
+      },
+      {
+        "identifier": "B",
+        "content": "Datagram"
+      },
+      {
+        "identifier": "C",
+        "content": "Message"
+      },
+      {
+        "identifier": "D",
+        "content": "Frame"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "The PDU for Datalink layer, Network layer, Transport layer and Application layer are frame, datagram, segment and message respectively.",
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is not a client-server application?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Internet chat"
+      },
+      {
+        "identifier": "B",
+        "content": "Web browsing"
+      },
+      {
+        "identifier": "C",
+        "content": "E-mail"
+      },
+      {
+        "identifier": "D",
+        "content": "Ping"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "Ping is the name of a standard software utility, used to test connectivity either between client-client or client-server.",
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Choose the best matching between <b>Group 1</b> and <b>Group 2 </b>:\n  <p><b>Group –1</b></p>\nP. Data link layer \n<br>Q. Network layer \n<br>R. Transport layer \n    <p><b>Group – 2</b></p>\n1. Ensures reliable transport of data over a physical point-to-point link \n<br>2. Encodes/decodes data for physical transimission \n<br>3. Allows end-to-end communication between two processes \n<br>4. Routes data from one network node to the next",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P – 1, Q – 4, R - 3"
+      },
+      {
+        "identifier": "B",
+        "content": "P – 2, Q – 4, R - 1"
+      },
+      {
+        "identifier": "C",
+        "content": "P – 2, Q – 3, R - 1"
+      },
+      {
+        "identifier": "D",
+        "content": "P – 1, Q – 3, R - 2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "Data link layer offers reliability on link to link basis, where transport layers offer the communication end to end basis. Network layer is responsible for routing.",
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The forwarding table of a router is shown below.</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 604px\">\n<colgroup>\n<col style=\"width: 210px\">\n<col style=\"width: 236px\">\n<col style=\"width: 158px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-amwm\">Subnet Number</th>\n    <th class=\"tg-amwm\">Subnet Mask</th>\n    <th class=\"tg-amwm\">Interface ID</th>\n  </tr>\n</thead>\n<tbody>\n  <tr>\n    <td class=\"tg-0lax\">200.150.0.0</td>\n    <td class=\"tg-0lax\">255.255.0.0</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">200.150.64.0</td>\n    <td class=\"tg-0lax\">255.255.224.0</td>\n    <td class=\"tg-baqh\">2</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">200.150.68.0</td>\n    <td class=\"tg-0lax\">255.255.255.0</td>\n    <td class=\"tg-baqh\">3</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">200.150.68.64</td>\n    <td class=\"tg-0lax\">255.255.255.224</td>\n    <td class=\"tg-baqh\">4</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">Default</td>\n    <td class=\"tg-0lax\"></td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n</tbody>\n</table></p>\n<p>A packet addressed to a destination address 200.150.68.118 arrives at the router. It will be forwarded to the interface with ID _______________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p>We will perform AND operation between IP and Subnet mask and see it we get same subnet -ID or not and well do longest prefix match.</p>\n\n<p>So, checking subnet -4 .</p>\n\n<p>$\\mathrm{IP} \\wedge$ subnet $=(200.150 .68 .118) \\wedge(255.255 .255 .224)=(200.150 .68 .96)$</p>\n\n<p>Subnet ID didn't match.</p>\n\n<p>Checking subnet 3</p>\n\n<p>(200.150.68.118) ^ (255.255.255.0) = (200.150.68.0)</p>\n\n<p>Subnet ID matches.</p>\n\n<p>If 11 be forwarded to 3 .</p>\n\n<p>Hence, the correct answer is 3 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider routing table of an organization's router shown below :</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\">\n<thead>\n  <tr>\n    <th class=\"tg-baqh\">Subnet number</th>\n    <th class=\"tg-baqh\">Subnet mask</th>\n    <th class=\"tg-baqh\">Next hop</th>\n  </tr>\n</thead>\n<tbody>\n  <tr>\n    <td class=\"tg-0lax\">12.20.164.0</td>\n    <td class=\"tg-0lax\">255.255.252.0</td>\n    <td class=\"tg-0lax\">R1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">12.20.170.0</td>\n    <td class=\"tg-0lax\">255.255.254.0</td>\n    <td class=\"tg-0lax\">R2</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">12.20.168.0</td>\n    <td class=\"tg-0lax\">255.255.254.0</td>\n    <td class=\"tg-0lax\">Interface 0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">12.20.166.0</td>\n    <td class=\"tg-0lax\">255.255.254.0</td>\n    <td class=\"tg-0lax\">Interface 1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">default</td>\n    <td class=\"tg-0lax\"></td>\n    <td class=\"tg-0lax\">R3</td>\n  </tr>\n</tbody>\n</table></p>\n<p>Which of the following prefixes in CIDR notation can be collectively used to correctly aggregate all of the subnets in the routing table?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "12.20.164.0/20"
+      },
+      {
+        "identifier": "B",
+        "content": "12.20.164.0/22"
+      },
+      {
+        "identifier": "C",
+        "content": "12.20.164.0/21"
+      },
+      {
+        "identifier": "D",
+        "content": "12.20.168.0/22"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given Routing Tables :</p>\n<p></p><p>1. | 12.20.164.0 | 255.255.252.0 |</p>\n\n<p>| 12.20.10100100.00000000 |</p><p></p>\n<p></p><p>2. | 12.20.170.0 | 255.255.254.0 |</p>\n\n<p>| 12.20.10101010.00000000 |</p><p></p>\n<p></p><p>3. | 12.20.168.0 | 255.255.254.0 |</p>\n\n<p>| 12.20.10101000.00000000 |</p><p></p>\n<p></p><p>4. | 12.20.166.0 | 255.255.254.0 |</p>\n\n<p>| 12.20.10101110.00000000 |</p><p></p>\n<p>Subnet (2) and subnet (3) can be aggregated</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m00t2m9n/2e54a8d4-c96c-4734-a253-a828923d7d62/192a07c0-5e0f-11ef-b4f7-27e324afa2c4/file-jaoe38c1m00t2m9o.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m00t2m9n/2e54a8d4-c96c-4734-a253-a828923d7d62/192a07c0-5e0f-11ef-b4f7-27e324afa2c4/file-jaoe38c1m00t2m9o.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Computer Networks - Concepts of Layering Question 5 English Explanation 1\"></p>\n<p>Subnet (1) and subnet (4) can be aggregated</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m00t3nr1/1c3d30d1-4053-49d8-b8ae-13a374af00bd/361e4ad0-5e0f-11ef-b4f7-27e324afa2c4/file-jaoe38c1m00t3nr2.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m00t3nr1/1c3d30d1-4053-49d8-b8ae-13a374af00bd/361e4ad0-5e0f-11ef-b4f7-27e324afa2c4/file-jaoe38c1m00t3nr2.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Computer Networks - Concepts of Layering Question 5 English Explanation 2\">\n<p>Hence the correct option is (B) and (D).</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  }
+]

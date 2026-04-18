@@ -1,0 +1,1095 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statements about threads is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Threads can only be implemented in kernel space</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Each thread has its own file descriptor table for open files</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>All the threads belonging to a process share a common stack</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Threads belonging to a process are by default not protected from each other</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze each of the statements one by one:</p>\n\n<b>Option A: Threads can only be implemented in kernel space</b>\n<p>This statement is not true. Threads can be implemented in different ways, including user space and kernel space. User space threads are managed without kernel intervention, whereas kernel threads are managed by the operating system kernel.</p>\n\n<b>Option B: Each thread has its own file descriptor table for open files</b>\n<p>This statement is also not true. In most operating systems, threads within the same process share the same file descriptor table. This allows threads to access files opened by other threads within the same process.</p>\n\n<b>Option C: All the threads belonging to a process share a common stack</b>\n<p>This statement is false. Although threads share the same process address space, each thread has its own stack. The stack is used to store local variables, return addresses, and other function call information that is specific to a thread.</p>\n\n<b>Option D: Threads belonging to a process are by default not protected from each other</b>\n<p>This statement is true. Threads within the same process share the same address space and can access the same data. This means that one thread can potentially read, write, or corrupt the data used by another thread unless proper synchronization mechanisms (like mutexes or semaphores) are used.</p>\n\n<p>So, the correct answer is:</p>\n<p><b>Option D</b></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider three concurrent processes P1, P2 and P3 as shown below, which access a shared variable D that has been initialized to 100.\n<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/7k4dijzxnv4oj/bc998251-5f36-4523-a0a8-41bcf295eee1/ce0a0c30-cae4-11e9-b6af-03e5a41ad408/file-7k4dijzxnv4ok-320w.png\"><img src=\"https://imagex.cdn.examgoal.net/7k4dijzxnv4oj/bc998251-5f36-4523-a0a8-41bcf295eee1/ce0a0c30-cae4-11e9-b6af-03e5a41ad408/file-7k4dijzxnv4ok-500w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Operating Systems - Synchronization and Concurrency Question 9 English\"></picture>\nThe processes are executed on a uniprocessor system running a time-shared operating system. If the minimum and maximum possible values of D after the three processes have completed execution are X and Y respectively, then the value of Y–X is _________.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "80",
+    "explanation": "<b>Case 1 :</b>\n<br><br>Let initially P2 reads D = 100 and then got preempted.\n<br><br>Then P1 executes D = D + 20, so now D = 120.\n<br><br>Then P3 executes D = D + 10, so now D = 130.\n<br><br>Initially when P2 got preempted the value of D was = 100.\n<br><br> Now P2  executes D = D - 50 = 100 - 50 = 50\n<br><br>P2 writes D = 50 final value. This is <b>minimum</b>.\n<br><br><b>Case 2 :</b>\n<br><br>Let initially P1 reads D = 100 and then got preempted.\n<br><br>Yhen  P3 reads D = 100 and then got preempted.\n<br><br>Then P2 reads D = 100 and executes D = D - 50 = 100 - 50 = 50 and writes it.\n<br><br>Then P1 executes D = D + 20 = 100 + 20 = 120\n<br><br>Then P3 reads D = 120 and executes D = D + 10 gives maximum value D = 130.\n<br><br>So, Y - X = 130 - 50 = 80.",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "The following two functions P1 and P2 that share a variable B with an initial value of 2 execute concurrently.\n<pre><code class=\"c\">P1( ) {\n  C = B – 1;\n  B = 2 * C;\n}\n\n\nP2( ) {\n  D = 2 * B;\n  B = D - 1;\n}\n</code></pre>\nThe number of distinct values that B can possibly take after the execution is___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A file is organized so that the ordering of data records is the same as or close to the ordering of data entries in some index. Then that index is called",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Dense"
+      },
+      {
+        "identifier": "B",
+        "content": "Sparse"
+      },
+      {
+        "identifier": "C",
+        "content": "Clustered"
+      },
+      {
+        "identifier": "D",
+        "content": "Unclustered"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Three concurrent processes X, Y, and Z execute three different code segments that access and update certain shared variables. Process X executes the P operation (i.e., wait) on semaphores a, b and c; process Y executes the P operation on semaphores b, c and d; process Z executes the P operation on semaphores c, d, and a before entering the respective code segments. After completing the execution of its code segment, each process invokes the V operation (i.e., signal) on its three semaphores. All semaphores are binary semaphores initialized to one. Which one of the following represents a deadlock-free order of invoking the P operations by the processes?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "X:P(a)P(b)P(c)<br>\nY:P(b)P(c)P(d)<br>\nZ:P(c)P(d)P(a)"
+      },
+      {
+        "identifier": "B",
+        "content": "X:P(b)P(a)P(c)<br>\nY:P(b)P(c)P(d)<br>\nZ:P(a)P(c)P(d)"
+      },
+      {
+        "identifier": "C",
+        "content": "X:P(b)P(a)P(c)<br>\nY:P(c)P(b)P(d)<br>\nZ:P(a)P(c)P(d)"
+      },
+      {
+        "identifier": "D",
+        "content": "X:P(a)P(b)P(c)<br>\nY:P(c)P(b)P(d)<br>\nZ:P(c)P(d)P(a)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the methods used by processes P1 and P2 for accessing their critical sections whenever needed, as given below. The initial values of shared boolean variables S1 and S2 are randomly assigned.<br><br>\n <img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/ZVIWDbpOPCIn5CgYF/UbwsMFmhGchnpDgku8rK5OTFcySOo/RaS0OTgNsfBctGtsKLFLb9/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2010 Operating Systems - Synchronization and Concurrency Question 32 English\"><br>\nWhich of the following statement describes the properties achieved?\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Mutual exclusion but not progress"
+      },
+      {
+        "identifier": "B",
+        "content": "Progress but not mutual exclusion"
+      },
+      {
+        "identifier": "C",
+        "content": "Neither mutual exclusion nor progress"
+      },
+      {
+        "identifier": "D",
+        "content": "Both mutual exclusion and progress"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following scheduling algorithms is non-preemptive?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Round Robin"
+      },
+      {
+        "identifier": "B",
+        "content": "First-In-First-Out"
+      },
+      {
+        "identifier": "C",
+        "content": "Multilevel Queue Scheduling"
+      },
+      {
+        "identifier": "D",
+        "content": "Multilevel Queue Scheduling with feedback"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Where does the swap space reside?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "RAM"
+      },
+      {
+        "identifier": "B",
+        "content": "Disk"
+      },
+      {
+        "identifier": "C",
+        "content": "ROM"
+      },
+      {
+        "identifier": "D",
+        "content": "On-chip cache"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose a processor does not have any stack pointer register. Which of the following statements is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It cannot have subroutine call instruction"
+      },
+      {
+        "identifier": "B",
+        "content": "It can have subroutine call instruction, but no nested subroutine calls"
+      },
+      {
+        "identifier": "C",
+        "content": "Nested subroutine calls are possible, but interrupts are not"
+      },
+      {
+        "identifier": "D",
+        "content": "All sequences of subroutine call and also interrupts are possible"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Let m[0] ..m[4] be mutexes (binary semaphores) and P[0] ...P[4] be processes. Suppose each process P[i] executes the following:<br><br> wait (m[i]); wait (m(m[(i+1) mod 4]))0;<br>.......<br>release (m[i]); release (m[(i+1) mod 4]);<br><br>This could cause ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Thrashing"
+      },
+      {
+        "identifier": "B",
+        "content": "Deadlock"
+      },
+      {
+        "identifier": "C",
+        "content": "Starvation, but not the deadlock"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "A counting semaphore was initialized to 10. Then 6 P (wait) operations and 4 V (signal) operations were completed on this semaphore. The resulting value of the semaphore",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "8"
+      },
+      {
+        "identifier": "C",
+        "content": "10"
+      },
+      {
+        "identifier": "D",
+        "content": "12"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "When the result of a computation depends on the speed of the processes involved there is said to be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Cycle stealing"
+      },
+      {
+        "identifier": "B",
+        "content": "Race condition"
+      },
+      {
+        "identifier": "C",
+        "content": "A time clock"
+      },
+      {
+        "identifier": "D",
+        "content": "A deadlock"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A critical section is a program segment",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Which should run in certain specified amount of time"
+      },
+      {
+        "identifier": "B",
+        "content": "Which avoids deadlocks"
+      },
+      {
+        "identifier": "C",
+        "content": "Where shared resources are accessed"
+      },
+      {
+        "identifier": "D",
+        "content": "Which must be enclosed by a pair of semaphore operations, P and V"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider three processes P1, P2, and P3 running identical code, as shown in the pseudocode below. A and B are two binary semaphores initialized to 1 and 0 , respectively. $X$ is a shared variable initialized to 0 . Each line in the pseudocode is executed atomically. Pseudocode of P1, P2, and P3</p>\n<p></p>\n<p>Wait(A);</p>\n<pre><code>Print(*);\n\nX = X+1;\n\nIf (X == 2)\n\n    {\n\n        Print($);\n\n        Signal(B);\n\n    }\n\nSignal(A);\n\nWait(B);\n\nPrint(#);\n\nSignal(B);\n\n</code></pre>\n\n<p>Assume that any of the three processes can start to execute first and context switching can happen between these processes at any arbitrary time and in any arbitrary order. Which of the following patterns is/are possible to be generated as an outcome of the execution of these three processes?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>**\\$*### "
+      },
+      {
+        "identifier": "B",
+        "content": " **\\$#</em>##</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>**\\$*##*# "
+      },
+      {
+        "identifier": "D",
+        "content": " ***\\$###</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Option (d) is not possible:</b> It is not possible to print <code>***</code> one after another without printing <code>$</code> after the second <code>*</code>. This is because, in the code, when the shared variable <code>X</code> becomes 2, the process must print <code>$</code> and then signal the semaphore <code>B</code>. So, after printing the second <code>*</code>, <code>$</code> must be printed before the third <code>*</code>.</p>  <p><b>All other options are possible:</b> The other output patterns can happen because, depending on the order in which the processes run, it is possible for <code>$</code> to be printed after two <code>*</code> are printed, and then for <code>#</code> and other outputs to follow as per the semaphore signals.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following two threads T1 and T2 that update two shared variables a and b. Assume that initially $a = 1$ and $b = 1$. Though context switching between threads can happen at any time, each statement of T1 or T2 is executed atomically without interruption.</p>\n<p>T1: <br> $a = a + 1$; <br> $b = b + 1$; <br> <br> T2: <br> $b = 2 * b$; <br> $a = 2 * a$;</p>\n<p>Which one of the following options lists all the possible combinations of values of a and b after both T1 and T2 finish execution?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$(a = 4, b = 4); (a = 3, b = 3); (a = 4, b = 3)$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$(a = 3, b = 4); (a = 4, b = 3); (a = 3, b = 3)$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$(a = 4, b = 4); (a = 4, b = 3); (a = 3, b = 4)$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$(a = 2, b = 2); (a = 2, b = 3); (a = 3, b = 4)$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze the execution of threads T1 and T2, given the initial values of the shared variables $$a = 1$$ and $$b = 1$$. Suppose context switching can happen at any time, but each statement of T1 or T2 executes atomically.</p>\n\n<p>Thread T1 executes: <br>\n1. $$a = a + 1$$;<br>\n2. $$b = b + 1$$;</p>\n\n<p>Thread T2 executes: <br>\n1. $$b = 2 * b$$;<br>\n2. $$a = 2 * a$$;</p>\n\n<p>Consider the sequences of execution:</p>\n\n<p><b>Case 1: T1 executes first, followed by T2</b></p>\n<p>1. $$a = a + 1 \\Rightarrow a = 1 + 1 = 2$$<br>\n2. $$b = b + 1 \\Rightarrow b = 1 + 1 = 2$$<br>\n3. $$b = 2 * b \\Rightarrow b = 2 * 2 = 4$$<br>\n4. $$a = 2 * a \\Rightarrow a = 2 * 2 = 4$$<br>\nFinal values: $$a = 4$$, $$b = 4$$</p>\n\n<p><b>Case 2: T2 executes first, followed by T1</b></p>\n<p>1. $$b = 2 * b \\Rightarrow b = 2 * 1 = 2$$<br>\n2. $$a = 2 * a \\Rightarrow a = 2 * 1 = 2$$<br>\n3. $$a = a + 1 \\Rightarrow a = 2 + 1 = 3$$<br>\n4. $$b = b + 1 \\Rightarrow b = 2 + 1 = 3$$<br>\nFinal values: $$a = 3$$, $$b = 3$$</p>\n\n<p><b>Case 3: Mixed execution</b></p>\n\n<p>Scenario 1: T1's first statement, T2 executes, T1's second statement<br>\n1. $$a = a + 1 \\Rightarrow a = 1 + 1 = 2$$<br>\n2. $$b = 2 * b \\Rightarrow b = 2 * 1 = 2$$<br>\n3. $$a = 2 * a \\Rightarrow a = 2 * 2 = 4$$<br>\n4. $$b = b + 1 \\Rightarrow b = 2 + 1 = 3$$<br>\nFinal values: $$a = 4$$, $$b = 3$$</p>\n\n<p>Scenario 2: T2's first statement, T1 executes, T2's second statement<br>\n1. $$b = 2 * b \\Rightarrow b = 2 * 1 = 2$$<br>\n2. $$a = a + 1 \\Rightarrow a = 1 + 1 = 2$$<br>\n3. $$b = b + 1 \\Rightarrow b = 2 + 1 = 3$$<br>\n4. $$a = 2 * a \\Rightarrow a = 2 * 2 = 4$$<br>\nFinal values: $$a = 4$$, $$b = 3$$</p>\n\n<p>A thorough analysis shows that no other significant ordering yields different final values.</p>\n\n<p>Combining all possible final values from these sequences, the possible combinations of $$a$$ and $$b$$ after both T1 and T2 finish execution are:</p>\n<p>$$(a = 4, b = 4), (a = 3, b = 3), (a = 4, b = 3)$$</p>\n\n<p>Thus, the correct option is:</p>\n<p><b>Option A: $(a = 4, b = 4); (a = 3, b = 3); (a = 4, b = 3)$</b></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following code snippet using the <code>fork()</code> and <code>wait()</code> system calls. Assume that the code compiles and runs correctly, and that the system calls run successfully without any errors.</p><pre><code>int x = 3;\nwhile(x &gt; 0) {\n  fork();\n  printf(&quot;hello&quot;);\n  wait(NULL);\n  x--;\n}</code></pre><p>The total number of times the <code>printf</code> statement is executed is _______</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "14",
+    "explanation": "<p>To determine the total number of times the <code>printf</code> statement is executed, we need to analyze the behavior of the <code>fork()</code> system call and the structure of the loop.</p>\n\n<p>The <code>fork()</code> system call creates a new process, which is a copy of the current process. Each call to <code>fork()</code> will result in the creation of a child process. Importantly, both the parent and the child process will continue executing the code following the <code>fork()</code> call.</p>\n\n<p>Let's break down the execution step-by-step:</p>\n\n<p>Initially:</p>\n\n<pre><code>int x = 3;</code></pre>\n\n<p>The loop condition <code>while(x > 0)</code> will execute three times because the initial value of <code>x</code> is 3 and it decrements by 1 each iteration.\n\n<p>Here's how the processes are created and the <code>printf</code> calls are executed:</p>\n\n<ol>\n\n<li><strong>1st Iteration (x = 3):</strong>\n\n<ul>\n\n<li>Parent process (P0) starts with x = 3.</li>\n\n<li>P0 calls <code>fork()</code> creating child process (P1).</li>\n\n<li>Both P0 and P1 will execute <code>printf(\"hello\")</code>.</li>\n\n<li>Then both will call <code>wait(NULL)</code> (Only parent will wait).</li>\n\n<li>P0 and P1 decrement their own x (both become x = 2).</li>\n\n</ul>\n\n</li>\n\n<li><strong>2nd Iteration (x = 2):</strong>\n\n<ul>\n\n<li>P0 and P1 now have x = 2.</li>\n\n<li>P0 calls <code>fork()</code> creating a new child (P2).</li>\n\n<li>P1 calls <code>fork()</code> creating a new child (P3).</li>\n\n<li>We now have P0, P1, P2, and P3.</li>\n\n<li>All four processes execute <code>printf(\"hello\")</code>.</li>\n\n<li>P0 and P1 will call <code>wait(NULL)</code> (Only parents will wait).</li>\n\n<li>Each process decrements its own x (all become x = 1).</li>\n\n</ul>\n\n</li>\n\n<li><strong>3rd Iteration (x = 1):</strong>\n\n<ul>\n\n<li>P0, P1, P2, and P3 now have x = 1.</li>\n\n<li>P0 calls <code>fork()</code> creating a new child (P4).</li>\n\n<li>P1 calls <code>fork()</code> creating a new child (P5).</li>\n\n<li>P2 calls <code>fork()</code> creating a new child (P6).</li>\n\n<li>P3 calls <code>fork()</code> creating a new child (P7).</li>\n\n<li>We now have P0, P1, P2, P3, P4, P5, P6, and P7.</li>\n\n<li>All eight processes execute <code>printf(\"hello\")</code>.</li>\n\n<li>P0, P1, P2, and P3 will call <code>wait(NULL)</code> (Only parents will wait).</li>\n\n<li>Each process decrements its own x (all become x = 0).</li>\n\n</ul>\n\n</li>\n\n</ol>\n\n<p>To summarize, we have the following counts of \"hello\" printed:</p>\n\n<ul>\n\n<li>1st Iteration: 2 \"hello\"</li>\n\n<li>2nd Iteration: 4 \"hello\"</li>\n\n<li>3rd Iteration: 8 \"hello\"</li>\n\n</ul>\n\n<p>The total number of times the <code>printf</code> statement is executed is:</p>\n\n<p>$$\\begin{aligned} 2 + 4 + 8 = 14 \\end{aligned}$$</p>\n\n<p>Therefore, the total number of times the <code>printf</code> statement is executed is 14.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the two functions incr and decr shown below.</p>\n<p><pre>\n<code>\nincr() {\n  wait(s);\n  X = X+1;\n  signal(s);\n}\n\ndecr() {\n   wait(s);\n   X = X-1;\n   signal(s);\n}\n</code>\n</pre></p>\n<p>There are 5 threads each invoking incr once, and 3 threads each invoking decr once, on the same shared variable X. The initial value of X is 10.</p>\n<p>Suppose there are two implementations of the semaphore s, as follows:</p>\n<p>I-1: s is a binary semaphore initialized to 1.</p>\n<p>I-2: s is a counting semaphore initialized to 2.</p>\n<p>Let V1, V2 be the values of X at the end of execution of all the threads with implementations I-1, I-2, respectively.</p>\n<p>Which one of the following choices corresponds to the minimum possible values of V1, V2, respectively?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "15, 7"
+      },
+      {
+        "identifier": "B",
+        "content": "7, 7"
+      },
+      {
+        "identifier": "C",
+        "content": "12, 7"
+      },
+      {
+        "identifier": "D",
+        "content": "12, 8"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the minimum possible values of $ V_1 $ and $ V_2 $ under the given implementations of the semaphore, let's analyze the behavior of the functions:</p>\n\n<p><p><strong>With Implementation I-1 (Binary Semaphore):</strong></p>\n<p>The binary semaphore ensures mutual exclusion, meaning that only one thread can access the critical section (the block of code between <code>wait(s)</code> and <code>signal(s)</code>) at a time. </p>\n<p>Since there are 5 <code>incr()</code> operations and 3 <code>decr()</code> operations on the shared variable $ X $, and these operations execute one-by-one due to the mutual exclusive nature guaranteed by the binary semaphore, the operations will be serialized correctly.</p>\n<p>Initial value of $ X $ is 10:</p>\n<p>$    X_{\\text{final}} = 10 + 5\\ (\\text{incr}) - 3\\ (\\text{decr}) = 10 + 2 = 12    $</p>\n<p>Thus, $ V_1 = 12 $.</p></p>\n<p><p><strong>With Implementation I-2 (Counting Semaphore):</strong></p>\n<p>A counting semaphore initialized to 2 allows up to 2 threads to execute their critical sections concurrently. This means:</p></p>\n\n\n<p><p>Two increments (<code>incr()</code>) or decrements (<code>decr()</code>) or one increment and one decrement can occur at the same time.</p></p>\n<p><p>If threads are not synchronized, interleaving can potentially cause race conditions and hence unpredictable results.</p>\n<p>Considering the worst-case interleaving:</p>\n<p>Let's assume that initially the two <code>decr()</code> operations run concurrently, potentially leading to decreased values of $ X $ before all <code>incr()</code> operations get a chance to increase it, causing:</p></p>\n<p><p>Two <code>decr()</code>: </p>\n<p>$      X = 10 - 1 - 1 = 8      $</p></p>\n<p><p>Following that, all <code>incr()</code> operations and remaining <code>decr()</code> can cause:</p>\n\n<p><p>Three <code>incr()</code> and one <code>decr()</code> on top of the previous result:</p>\n<p>$      X = 8 + 1 + 1 + 1 - 1 = 10      $</p></p>\n<p>However, due to potential adverse scheduling and race conditions, the minimum result can further be decreased based on specific thread scheduling:</p>\n<p>$    X_{\\text{worst-case}} = 10 + 0\\ (\\text{net result balance swung by interleavings}) - 3\\ (\\text{decr}) = 7    $</p>\n<p>Thus, $ V_2 $ can be as low as 7 due to race conditions not protected by the counting semaphore.</p></p>\n\n<p>Therefore, the correct choice for the minimum possible values of $ V_1 $ and $ V_2 $ is:</p>\n<p><strong>Option C: 12, 7</strong></p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider a computer system with multiple shared resource types, with one instance per resource type. Each instance can be owned by only one process at a time. Owning and freeing of resources are done by holding a global lock (L). The following scheme is used to own a resource instance:</p>\n\n<p>function O<span style=\"\">WN</span>R<span style=\"\">ESOURCES(<span style=\"\">Resource R)</span></span></p>\n\n<p><span style=\"\"><span style=\"\">Acquire lock L / / a global lock</span></span></p>\n\n<p><span style=\"\"><span style=\"\">if R is available then</span></span></p>\n\n<p><span style=\"\"><span style=\"\">Acquire R</span></span></p>\n\n<p><span style=\"\"><span style=\"\">Release lock L</span></span></p>\n\n<p><span style=\"\"><span style=\"\">else</span></span></p>\n\n<p><span style=\"\"><span style=\"\">if R is owned by another process P then</span></span></p>\n\n<p><span style=\"\"><span style=\"\">Terminate P, after releasing all resources owned by P</span></span></p>\n\n<p><span style=\"\"><span style=\"\">Acquire R</span></span></p>\n\n<p><span style=\"\"><span style=\"\">Restart P</span></span></p>\n\n<p><span style=\"\"><span style=\"\">Release lock L</span></span></p>\n\n<p><span style=\"\"><span style=\"\">end if</span></span></p>\n\n<p><span style=\"\"><span style=\"\">end if</span></span></p>\n\n<p><span style=\"\"><span style=\"\">end function</span></span></p>\n\n<p><span style=\"\"><span style=\"\">Which of the following choice(s) about the above scheme is/are correct?</span></span></p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The scheme may lead to starvation."
+      },
+      {
+        "identifier": "B",
+        "content": "The scheme may lead to live-lock."
+      },
+      {
+        "identifier": "C",
+        "content": "The scheme ensures that deadlocks will not occur."
+      },
+      {
+        "identifier": "D",
+        "content": "The scheme violates the mutual exclusion property."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>function O<span style=\"\">WN</span>R<span style=\"\">ESOURCES(<span style=\"\">Resource R)</span></span></p>\n<p><span style=\"\"><span style=\"\">Acquire lock L / / a global lock</span></span></p>\n<p><span style=\"\"><span style=\"\">if R is available then</span></span></p>\n<p><span style=\"\"><span style=\"\">Acquire R</span></span></p>\n<p><span style=\"\"><span style=\"\">Release lock L</span></span></p>\n<p><span style=\"\"><span style=\"\">else</span></span></p>\n<p><span style=\"\"><span style=\"\">if R is owned by another process P then</span></span></p>\n<p><span style=\"\"><span style=\"\">Terminate P, after releasing all resources owned by P</span></span></p>\n<p><span style=\"\"><span style=\"\">Acquire R</span></span></p>\n<p><span style=\"\"><span style=\"\">Restart P</span></span></p>\n<p><span style=\"\"><span style=\"\">Release lock L</span></span></p>\n<p><span style=\"\"><span style=\"\">end if</span></span></p>\n<p><span style=\"\"><span style=\"\">end if</span></span></p>\n<p><span style=\"\"><span style=\"\">end function</span></span></p>\n<p>Mutual exclusion is not violated. </p>\n<p>Also, there will be no deadlock because of forceful pre-emption of resources.</p>\n<p>This may lead to starvation if the process is keeps on coming and pre-empting each other like P1 is pre-empted by P2 and P2 is preempted by P3.</p>\n<p>Live-lock is also possible due to continuous pre-emption of resources.</p>\n<p>For option (c) consider two processes P1 and P2 now P1 enter the code acquires lock and resource.</p>\n<p>Now P2 enters the else part kills P1 and acquire R and restart P1 Now P1 again acquire lock and kills the process P2 this continues creating a live lock scenario but there is ambiguity in the code since \"Release R\" is not written anywhere so ambiguity is regarding how the process will release Resource R. According to the code, the only way to release the resource is by getting killed.</p>\n<p>Hence, the correct options are (A), (B) and (C).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following multi-threaded code segment (in a mix of C and pseudocode), invoked by two processes P1 and P2, and each of the processes spawns two threads T1 and T2:</p>\n\n<p>int x = 0; //&nbsp;global</p>\n\n<p>Lock L1; // global</p>\n\n<p>main() {</p>\n\n<p>create a thread to execute foo(); // Thread T1</p>\n\n<p>create a thread to execute foo(); // Thread T2</p>\n\n<p>wait for the two threads to finish execution;</p>\n\n<p>print (x);}</p>\n\n<p>foo() {</p>\n\n<p>int y = 0;</p>\n\n<p>Acquire L1;</p>\n\n<p>x = x + 1;</p>\n\n<p>y = y + 1;</p>\n\n<p>Release L1;</p>\n\n<p>print (y); }</p>\n\n<p>Which of the following statement(s) is/are correct ?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both T1 and T2, in both the processes, will print the value of y as 1."
+      },
+      {
+        "identifier": "B",
+        "content": "At least one of P1 and P2 will print the value of x as 4"
+      },
+      {
+        "identifier": "C",
+        "content": "Both P1 and P2 will print the value of x as 2."
+      },
+      {
+        "identifier": "D",
+        "content": "At least one of the threads will print the value of y as 2."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statements are correct, we'll analyze the code and understand how variables <code>x</code> and <code>y</code> change during execution.</p>\n<h3><strong>Understanding the Code:</strong></h3>\n\n<p><p><strong>Global Variables (per process):</strong></p></p>\n<p><p><code>int x = 0;</code>  </p>\n\n<p><code>x</code> is a global variable <strong>within each process</strong>.</p></p>\n<p><p><code>Lock L1;</code>  </p>\n\n<p><code>L1</code> is a lock <strong>within each process</strong>.</p></p>\n<p><p><strong>Process Structure:</strong></p></p>\n<p><p><strong>Each process (<code>P1</code> and <code>P2</code>) does the following:</strong></p>\n\n<p><p>Creates two threads (<code>T1</code> and <code>T2</code>).</p></p>\n<p><p>Each thread executes the <code>foo()</code> function.</p></p>\n<p><p>After both threads finish, the process prints the value of <code>x</code>.</p></p></p>\n<p><p><strong>Function <code>foo()</code>:</strong></p></p>\n\n<pre><code class=\"c language-c\">  foo() {\n\n      int y = 0;\n\n      Acquire L1;\n\n      x = x + 1;\n\n      y = y + 1;\n\n      Release L1;\n\n      print(y);\n\n  }\n</code></pre>\n<h3><strong>Analyzing Each Statement:</strong></h3>\n<hr />\n<h4><strong>Option A:</strong></h4>\n<p><strong>Statement:</strong> <em>Both <code>T1</code> and <code>T2</code>, in both the processes, will print the value of <code>y</code> as <code>1</code>.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>In <code>foo()</code>, <code>y</code> is a <strong>local variable</strong> initialized to <code>0</code>.</p></p>\n<p><p>Inside the critical section:</p></p>\n<p><p><code>x = x + 1;</code> (increments the global <code>x</code>)</p></p>\n<p><p><code>y = y + 1;</code> (increments the local <code>y</code>)</p></p>\n<p><p>After releasing the lock, the thread prints <code>y</code>.</p></p>\n<p><p>Since <code>y</code> starts at <code>0</code> and is incremented once:</p></p>\n<p><p>Each thread will print <code>y = 1</code>.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option A is correct.</strong></p>\n<hr />\n<h4><strong>Option B:</strong></h4>\n<p><strong>Statement:</strong> <em>At least one of <code>P1</code> and <code>P2</code> will print the value of <code>x</code> as <code>4</code>.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>Since <code>x</code> is <strong>global within each process</strong>, <code>P1</code> and <code>P2</code> have their own separate <code>x</code>.</p></p>\n<p><p>In each process:</p></p>\n<p><p>Both <code>T1</code> and <code>T2</code> increment <code>x</code> by <code>1</code>.</p></p>\n<p><p>So, <code>x</code> becomes <code>2</code> in each process.</p></p>\n<p><p>There is no sharing of <code>x</code> between <code>P1</code> and <code>P2</code>.</p></p>\n<p><p>Therefore, neither <code>P1</code> nor <code>P2</code> will print <code>x</code> as <code>4</code>.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option B is incorrect.</strong></p>\n<hr />\n<h4><strong>Option C:</strong></h4>\n<p><strong>Statement:</strong> <em>Both <code>P1</code> and <code>P2</code> will print the value of <code>x</code> as <code>2</code>.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>As established, in each process:</p></p>\n<p><p><code>x</code> starts at <code>0</code>.</p></p>\n<p><p>Both threads increment <code>x</code> once.</p></p>\n<p><p>After both threads finish, <code>x = 2</code>.</p></p>\n<p><p>Each process prints <code>x = 2</code>.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option C is correct.</strong></p>\n<hr />\n<h4><strong>Option D:</strong></h4>\n<p><strong>Statement:</strong> <em>At least one of the threads will print the value of <code>y</code> as <code>2</code>.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><code>y</code> is a <strong>local variable</strong> in <code>foo()</code>, initialized to <code>0</code> each time <code>foo()</code> is called.</p></p>\n<p><p>It is incremented once in each call to <code>foo()</code>.</p></p>\n<p><p>There is no way for <code>y</code> to become <code>2</code> in any thread.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option D is incorrect.</strong></p>\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Options A and C are correct.</strong></p></p>\n<p><p><strong>Options B and D are incorrect.</strong></p></p>\n\n<hr />\n<p><strong>Answer:</strong> Options A and C are correct.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Each of a set of n processes executes the following code using two semaphores a and b initialized to 1 and 0, respectively. Assume that count is a shared variable\n<img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu1mvih/fe1746d6-445a-4576-abb4-3fd25115a170/559ebf90-ca46-11ea-b796-4745b429ed6f/file-1da9i2ynkcu1mvii-320w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Operating Systems - Synchronization and Concurrency Question 8 English\">\n<br>What does the code achieve?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It ensures that all processes execute CODE SECTION P mutually exclusively."
+      },
+      {
+        "identifier": "B",
+        "content": "It ensures that at most two processes are in CODE SECTION Q at any time."
+      },
+      {
+        "identifier": "C",
+        "content": "It ensures that no process executes CODE SECTION Q before every process has finished CODE SECTION P."
+      },
+      {
+        "identifier": "D",
+        "content": "It ensures that at most n-1 processes are in CODE SECTION P at any time."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> </p>\n<p><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu1mvih/fe1746d6-445a-4576-abb4-3fd25115a170/559ebf90-ca46-11ea-b796-4745b429ed6f/file-1da9i2ynkcu1mvii-320w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Operating Systems - Synchronization and Concurrency Question 8 English Explanation\"></p>\n<p>All the processes running the given code will remain block due to wait (b) until the value the value of count becomes n. </p>\n<p>When the value of count will become equals ton, value of b changes to 1 which will subsequently allow a process to go into process section θ. </p>\n<p>Hence, no process can go to section θ until all the process executes code sati on P. </p>\n<p>Hence, the correct option is (C). </p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "A certain computation generates two arrays a and b such that a[i]=f(i)for 0 ≤ i &lt; n and b[i] = g (a[i] )for 0 ≤ i &lt; n. Suppose this computation is decomposed into two concurrent processes X and Y such that X computes the array a and Y computes the array b. The processes employ two binary semaphores R and S, both initialized to zero. The array a is shared by the two processes. The structures of the processes are shown below.\n<pre><code>Process X:\nprivate i;\nfor(i = 0; i &lt; n; i++){\n a [i] = f (i);\n Exit X (R, S);\n}\n\nProcess Y:\nprivate i;\nfor(i = 0; i &lt; n; i++){\n Entry Y (R, S);\n b [i] = g (a [i] );\n}</code></pre>\nWhich of the following represents the correct implementations of Exit X and Entry Y?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<pre><code>Exit X (R, S){\n  P(R);\n  V(S);\n}\nEntry Y (R, S){\n  P(S);\n  V(R);\n}\n</code></pre>"
+      },
+      {
+        "identifier": "B",
+        "content": "<pre><code>Exit X (R, S){\n  V(R);\n  V(S);\n}\nEntry Y (R, S){\n  P(R);\n  P(S);\n}\n</code></pre>"
+      },
+      {
+        "identifier": "C",
+        "content": "<pre><code>Exit X (R, S){\n  P(S);\n  V(R);\n}\nEntry Y (R, S){\n  V(S);\n  P(R);\n}\n</code></pre>"
+      },
+      {
+        "identifier": "D",
+        "content": "<pre><code>Exit X (R, S){\n  V(R);\n  P(S);\n}\nEntry Y (R, S){\n  V(S);\n  P(R);\n}\n</code></pre>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A shared variable x, initialized to zero, is operated on by four concurrent processes W, X, Y, Z as follows. Each of the processes W and X reads x from memory, increments by one, stores it to memory, and then terminates. Each of the processes Y and Z reads x from memory, decrements by two, stores it to memory, and then terminates. Each process before reading x invokes the P operation (i.e., wait) on a counting semaphore S and invokes the V operation (i.e., signal) on the semaphore S after storing x to memory. Semaphore S is initialized to two. What is the maximum possible value of x after all processes complete execution?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-2"
+      },
+      {
+        "identifier": "B",
+        "content": "-1"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Fetch_And_Add (X, i) is an atomic Read-Modify-Write instruction that reads the value of memory location X, increments it by the value i, and returns the old value of X. It is used in the pseudocode shown below to implement a busy-wait lock. L is an unsigned integer shared variable initialized to 0. The value of 0 corresponds to lock being available, while any non-zero value corresponds to the lock being not available.\n<pre><code>AcquireLock(L){ \n  While (Fetch_And_Add(L,1)) \n  L = 1; \n} \nRelease Lock(L){ \n  L = 0; \n}</code></pre>\nThis implementation ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "fails as L can overflow "
+      },
+      {
+        "identifier": "B",
+        "content": "fails as L can take on a non-zero value when the lock is actually available "
+      },
+      {
+        "identifier": "C",
+        "content": "works correctly but may starve some processes "
+      },
+      {
+        "identifier": "D",
+        "content": "works correctly without starvation"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The following program consists of 3 concurrent processes and 3 binary semaphores. The semaphores are initialized as S0=1, S1=0, S2=0.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/5CuGPwuG6rKKVMiG2/TcLZHerR2rrxpPh6I2WuGm18FagnN/NoAbLofnZo6jLzhw0YnPqc/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2010 Operating Systems - Synchronization and Concurrency Question 15 English\"> \nHow many times will process P0 print '0'?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "At least twice"
+      },
+      {
+        "identifier": "B",
+        "content": "Exaclty twice"
+      },
+      {
+        "identifier": "C",
+        "content": "Exactly thrice"
+      },
+      {
+        "identifier": "D",
+        "content": "Exactly once"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The enter_CS() and leave_CS() functions to implement critical section of a process are realized using test-and-set instruction as follows:\n<pre><code>void enter_CS(X) { \n   while test-and-set(X) ; \n} \n\nvoid leave_CS(X) { \n  X=0; \n}</code></pre>\nIn the above solution, X is a memory location associated with the CS and is initialized to 0. Now consider the following statements: <br> <br>\nI. The above solution to CS problem is deadlock-free  <br>\nII. The solution is starvation free.  <br>\nIII. The processes enter CS in FIFO order.  <br> \nIV More than one process can enter CS at the same time. <br>  <br>\nWhich of the above statements is TRUE? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I only"
+      },
+      {
+        "identifier": "B",
+        "content": "I and II"
+      },
+      {
+        "identifier": "C",
+        "content": "II and III"
+      },
+      {
+        "identifier": "D",
+        "content": "IV only"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The P and V operations on counting semaphores, where s is a counting semaphore, are defined as follows:\n<pre><code>\nP(s): s = s-1; \nif s &lt; 0 then wait; \nV(s) : s = s-1; \nifs &lt;= 0 then wakeup a process waiting on s;\n</code></pre>\nAssume that P<sub>b</sub> and V<sub>b</sub> the wait and signal operations on binary semaphores are provided. Two binary semaphores X<sub>b</sub> and Y<sub>b</sub> are used to implement the semaphore operations P(s) and V(s) as follows: \n<pre><code>\n  P(s): P<sub>b</sub> (X<sub>b</sub>);\n        S = s - 1;\n        if(s &lt; 0){\n          V<sub>b</sub>(X<sub>b</sub>);\n          P<sub>b</sub>(Y<sub>b</sub>);\n        }\n        Else V<sub>b</sub> (X<sub>b</sub>);\n  V(s): P<sub>b</sub> (X<sub>b</sub>);\n        S = s + 1;\n        if(s &lt;= 0) V<sub>b</sub>(Y<sub>b</sub>);\n        V<sub>b</sub>(X<sub>b</sub>);\n</code></pre>\nThe initial values of X<sub>b</sub> and Y<sub>b</sub> are respectively",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 and 0"
+      },
+      {
+        "identifier": "B",
+        "content": "0 and 1"
+      },
+      {
+        "identifier": "C",
+        "content": "1 and 0"
+      },
+      {
+        "identifier": "D",
+        "content": "1 and 1"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Two processes, P1 and P2, need to access a critical section of code. Consider the following synchronization construct used by the processes:\n<div style=\"border:1px solid black;padding: 4px;margin:2px \">\n<pre><code> /* P1 */\n  while(true){\n  want s1=true;\n  while(wants2 == true){\n  /* Critical Section */\n   wants1 = false;\n  }\n  /* Reminder Section */\n }\n</code></pre>\n</div>\n<div style=\"border:1px solid black;padding: 4px;margin:2px \">\n<pre><code> /* P2 */\n  while(true){\n  want s2=true;\n  while(wants1 == true){\n  /* Critical Section */\n   Wants2 = false;\n  }\n  /* Reminder Section */\n }\n</code></pre>\n</div>\nHere wants1 and wants2 are shared variables, which are initialized to false. Which one of the following statements is TRUE about the above construct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It does not ensure the mutual exclusion."
+      },
+      {
+        "identifier": "B",
+        "content": "It does not ensure bounded waiting."
+      },
+      {
+        "identifier": "C",
+        "content": "It requires that processes enter the critical section in strict alternation"
+      },
+      {
+        "identifier": "D",
+        "content": "It does not prevent deadlocks, but ensures mutual exclusion"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The atomic fetch-and-set x, y instruction unconditionally sets the memory location x to 1 and fetches the old value of x n y without allowing any intervening access to the memory location x. consider the following implementation of P and V functions on a binary semaphore S.\n<pre><code class=\"c\">\nvoid P (binary_semaphore *s) { \n\n   unsigned y; \n   unsigned *x = &amp;(s-&gt;value); \n   \n   do { \n\n     fetch-and-set x, y; \n\n   } while (y); \n} \n\nvoid V (binary_semaphore *s) { \n\n   S-&gt;value = 0; \n\n} </code></pre>\nWhich one of the following is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The implementation may not work if context switching is disabled in P "
+      },
+      {
+        "identifier": "B",
+        "content": "Instead of using fetch-and–set, a pair of normal load/store can be used "
+      },
+      {
+        "identifier": "C",
+        "content": "The implementation of V is wrong "
+      },
+      {
+        "identifier": "D",
+        "content": "The code does not implement a binary semaphore "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Barrier is a synchronization construct where a set of processes synchronizes globally i.e. each process in the set arrives at the barrier and waits for all others to arrive and then all processes leave the barrier. Let the number of processes in the set be three and S be a binary semaphore with the usual P and V functions. Consider the following C implementation of a barrier with line numbers shown on left.\n\n<pre><code>void barrier (void) { \n1: P(S); \n2: process_arrived++; \n3: V(S); \n4: while (process_arrived !=3); \n5: P(S); \n6: process_left++; \n7: if (process_left==3) { \n8: process_arrived = 0; \n9: process_left = 0; \n10: } \n11: V(S); \n} \n</code></pre>\nThe variables process_arrived and process_left are shared among all processes and are initialized to zero. In a concurrent program all the three processes call the barrier function when they need to synchronize globally.<br>\nThe above implementation of barrier is incorrect. Which one of the following is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The barrier implementation is wrong due to the use of binary semaphore S."
+      },
+      {
+        "identifier": "B",
+        "content": "The barrier implementation may lead to deadlock if two invocations are used in immediate succession"
+      },
+      {
+        "identifier": "C",
+        "content": "Lines 6 to 10 need not be inside a critical section."
+      },
+      {
+        "identifier": "D",
+        "content": "The barrier implementation is correct if there are only two processes instead of three."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Barrier is a synchronization construct where a set of processes synchronizes globally i.e. each process in the set arrives at the barrier and waits for all others to arrive and then all processes leave the barrier. Let the number of processes in the set be three and S be a binary semaphore with the usual P and V functions. Consider the following C implementation of a barrier with line numbers shown on left.\n<pre><code>void barrier (void) { \n1: P(S); \n2: process_arrived++; \n3: V(S); \n4: while (process_arrived !=3); \n5: P(S); \n6: process_left++; \n7: if (process_left==3) { \n8: process_arrived = 0; \n9: process_left = 0; \n10: } \n11: V(S); \n} \n</code></pre>\nThe variables process_arrived and process_left are shared among all processes and are initialized to zero. In a concurrent program all the three processes call the barrier function when they need to synchronize globally.<br>\nWhich one of the following rectifies the problem in the implementation? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Lines 6 to 10 are simply replaced by process_arrived-- "
+      },
+      {
+        "identifier": "B",
+        "content": "At the beginning of the barrier the first process to enter the barrier waits until process_arrived becomes zero before proceeding to execute P(S)."
+      },
+      {
+        "identifier": "C",
+        "content": "Context switch is disabled at the beginning of the barrier and re-enabled at the end. "
+      },
+      {
+        "identifier": "D",
+        "content": "The variable process_left is made private instead of shared"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose we want to synchronize two concurrent processes P and Q using binary semaphores S and T. The code for the processes P and Q is shown below.<br><br>\n<b>Process P:</b>\n<pre><code class=\"java\">\nwhile(1){\n  W:\n  Print '0';\n  Print '0';\n  X:\n}\n</code></pre>\n<br>\n<b>Process Q:</b><br>\n<pre><code>\nwhile(1){\n  Y:\n  Print '1';\n  Print '1';\n  Z:\n}\n</code></pre>\nSynchronization statements can be inserted only at points W, X, Y, and Z.<br>\n<p>Which of the following will ensure that the output string never contains a substring of the form 01<sup>n</sup>0 or 10<sup>n</sup>1 where n is odd?</p>  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P(S) at W, V(S) at X, P(T) at Y, V(T) at Z, S and T initially 1 "
+      },
+      {
+        "identifier": "B",
+        "content": "P(S) at W, V(T) at X, P(T) at Y, V(S) at Z, S and T initially 1 "
+      },
+      {
+        "identifier": "C",
+        "content": "P(S) at W, V(S) at X, P(S) at Y, V(S) at Z, S initially 1 "
+      },
+      {
+        "identifier": "D",
+        "content": "V(S) at W, V(T) at X, P(S) at Y, P(T) at Z, S and T initially 1"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose we want to synchronize two concurrent processes P and Q using binary semaphores S and T. The code for the processes P and Q is shown below.<br><br>\n<b>Process P:</b>\n<pre><code class=\"java\">\nwhile(1){\n  W:\n  Print '0';\n  Print '0';\n  X:\n}\n</code></pre>\n<br>\n<b>Process Q:</b><br>\n<pre><code>\nwhile(1){\n  Y:\n  Print '1';\n  Print '1';\n  Z:\n}\n</code></pre>\nSynchronization statements can be inserted only at points W, X, Y, and Z.<br>\n<p>Which of the following will always lead to an output starting with 001100110011</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P(A) at W, V(S) at X, P(T) at Y, V(T) at Z, S and T initially 1"
+      },
+      {
+        "identifier": "B",
+        "content": "P(A) at W, V(T) at X, P(T) at Y,  V(S) at Z, S initially 1 and T initially 0"
+      },
+      {
+        "identifier": "C",
+        "content": "P(S) at W, V(T) at X, P(T) at Y,V(T) at Z, S and T initially 1"
+      },
+      {
+        "identifier": "D",
+        "content": "P(S) at W, V(S) at X, P(T) at Y,  V(T) at Z, S initially 1 and T initially 0"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider Peterson’s algorithm for mutual exclusion between two concurrent processes i and j. The program executed by process is shown below.\n<pre><code> Repeat \n     flag[i]=true; \n     turn=j; \n     while (P) do no-op; \n     Enter critical section, perform actions, then \n     exit critical section \n     Flag[i]=false; \n     Perform other non-critical section actions. \n Until false;</code></pre>\nFor the program to guarantee mutual exclusion, the predicate P in the while loop should be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "flag[j]=true and turn=i"
+      },
+      {
+        "identifier": "B",
+        "content": "flag[j]=true and turn=j"
+      },
+      {
+        "identifier": "C",
+        "content": "flag[i]=true and turn=j"
+      },
+      {
+        "identifier": "D",
+        "content": "flag[i]=true and turn=i"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Each process P<sub>i</sub>,i=1.....9 is coded as follows\n<pre><code>\n  Repeat\n  P(mutex){\n  critical section\n  }\n  V(mutex)\n  Forever\n</code></pre>\n\nThe code for P<sub>10</sub> is identical except that it uses V(mutex) in place of P(mutex). What is the largest number of processes that can be inside the critical section at any moment? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "A solution to the Dining Philosophers Problem which avoids deadlock is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "ensure that all philosophers pick up the left fork before the right fork."
+      },
+      {
+        "identifier": "B",
+        "content": "ensure that all philosophers pick up the right fork before the left fork"
+      },
+      {
+        "identifier": "C",
+        "content": "ensure that one particular philosopher picks up the left fork before the right fork, and that all other philosophers pick up the right fork before the left fork"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The concurrent programming constructs fork and join are as below: \nFork (label) which creates a new process executing from the specified label join (variable) which decrements the specified synchronization variable (by 1) and terminates the process if the new value is not 0. \nShow the precedence graph for S1, S2, S3, S4 and S5 of the concurrent program below. <br> \nN = 2<br> \nM = 2 <br> \nfork L3 <br> \nfork L4 <br> \nS1 <br> \nL1 : join N <br> \nS3 <br> \nL2: join M<br>  \nS5 <br> \nL3:S2 <br> \ngoto L1 <br> \nL4:S4 <br> \ngoto L2 <br> \nnext: ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve by yourself",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "At a particular time of computation the value of a counting semaphore is 7. Then 20 P operations and 15 V operations were completed on this semaphore. The resulting value of the semaphore is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "42"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "7"
+      },
+      {
+        "identifier": "D",
+        "content": "12"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Semaphore operations are atomic because they are implemented within the OS",
+    "options": [],
+    "correct_options": [],
+    "answer": "Kernel",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "A critical region is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "One which is enclosed by a pair of P and V operations on semaphores"
+      },
+      {
+        "identifier": "B",
+        "content": "A program segment that has not been proved bug-free "
+      },
+      {
+        "identifier": "C",
+        "content": "A program segment that often causes unexpected system crashes"
+      },
+      {
+        "identifier": "D",
+        "content": "A program segment where shared resources are accessed "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-cse-1987",
+    "difficulty": null
+  }
+]

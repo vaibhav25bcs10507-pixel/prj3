@@ -1,0 +1,1456 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In the feedback control system shown in the figure below $G(s) = \\dfrac{6}{s(s+1)(s+2)}$.</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxkxiwuh/7393f2b2-95fd-41cb-af23-8d07beca947d/89a65b90-2dbb-11ef-8399-1ffca357d536/file-jaoe38c1lxkxiwui.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxkxiwuh/7393f2b2-95fd-41cb-af23-8d07beca947d/89a65b90-2dbb-11ef-8399-1ffca357d536/file-jaoe38c1lxkxiwui.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Control Systems - Time Response Analysis Question 2 English\"><p>$R(s), Y(s),$ and $E(s)$ are the Laplace transforms of $r(t), y(t),$ and $e(t)$, respectively. If the input $r(t)$ is a unit step function, then __________</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\lim\\limits_{t \\to \\infty} e(t) = 0$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\lim\\limits_{t \\to \\infty} e(t) = \\dfrac{1}{3}$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\lim\\limits_{t \\to \\infty} e(t) = \\dfrac{1}{4}$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\lim\\limits_{t \\to \\infty} e(t)$ does not exist, $e(t)$ is oscillatory</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : The open loop transfer function is given by,</p>\n<p>$$ G(s)=\\frac{6}{s(s+1)(s+2)} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfdx1kyr/b2d97fc1-ebc6-4e11-9b48-3dc0b79b8ed5/0ffdab30-8e3c-11f0-a029-e731836977d4/file-jaoe38c1mfdx1kys.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfdx1kyr/b2d97fc1-ebc6-4e11-9b48-3dc0b79b8ed5/0ffdab30-8e3c-11f0-a029-e731836977d4/file-jaoe38c1mfdx1kys.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Control Systems - Time Response Analysis Question 2 English Explanation 1\"></p>\n<p>$$ E(s)=R(s)-Y(s) H(s) $$</p>\n<p>For Negative unity feedback system :</p>\n<p>$$ \\begin{aligned} &amp; H(s)=1 \\\\ &amp; E(s)=R(s)-Y(s) \\\\ &amp; E(s)=R(s)-E(s) G(s) \\\\ &amp; E(s)[1+G(s)]=R(s) \\\\ &amp; E(s)=\\frac{R(s)}{1+G(s)} \\end{aligned} $$</p>\n<p>As we know that from final value theorem :</p>\n<p>$$ e_{s s}=\\lim _{t \\rightarrow \\infty} e(t)=\\lim _{s \\rightarrow 0} s E(s) $$</p>\n<p>$$ \\begin{aligned} &amp; \\lim _{t \\rightarrow \\infty} e(t)=\\lim _{s \\rightarrow 0} \\frac{s R(s)}{1+G(s)} \\\\ &amp; \\lim _{t \\rightarrow \\infty} e(t)=\\lim _{s \\rightarrow 0} \\frac{s \\times \\frac{1}{s}}{1+\\frac{6}{s(s+1)(s+2)}}=0 \\end{aligned} $$</p>\n<p>$\\Rightarrow \\quad$ This is wrong. First we need to check whether the system is stable or not.</p>\n<p>$\\Rightarrow \\quad$ To check the stability of a closed loop system. We use Routh's stability criterion.</p>\n<p>The characteristic equation is,</p>\n<p>$$ \\begin{aligned} &amp; 1+G(s)=0 \\\\ &amp; 1+\\frac{6}{s(s+1)(s+2)}=0 \\\\ &amp; \\left(s^2+s\\right)(s+2)+6=0 \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfdx3fos/5cb1ddc3-6a00-4b2b-9c41-7b4ec1c0441d/438866c0-8e3c-11f0-a029-e731836977d4/file-jaoe38c1mfdx3fot.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfdx3fos/5cb1ddc3-6a00-4b2b-9c41-7b4ec1c0441d/438866c0-8e3c-11f0-a029-e731836977d4/file-jaoe38c1mfdx3fot.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Control Systems - Time Response Analysis Question 2 English Explanation 2\">Internal Product (IP) $=3 \\times 2=6$</p>\n<p>External Product $(\\mathrm{EP})=6$</p>\n<p>$\\mathrm{IP}=\\mathrm{EP}$ : System is marginal stable, i.e., $\\xi=0$.</p>\n<p>Note :</p>\n<p>(i) It is meaningless to find the steady state errors for unstable (or) marginal closed loop system. So we have to calculate the steady state errors only for closed loop stable systems.</p>\n<p>(ii) This means we need to check whether the control system is stable or not before finding the steady state errors.</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "content": "The open loop transfer function $$$\\mathrm G\\left(\\mathrm s\\right)\\;=\\;\\frac{\\left(\\mathrm s\\;+\\;1\\right)}{\\mathrm s^\\mathrm p\\left(\\mathrm s\\;+\\;2\\right)\\left(\\mathrm s\\;+\\;3\\right)}$$$ Where p is an integer, is connected in unity feedback configuration as shown in figure.\n<img alt=\"GATE ECE 2017 Set 1 Control Systems - Time Response Analysis Question 47 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/0c78d5f0363a11c02ff0cbfc09c63ee2174e4a82add02939b5fa2b8fec483641.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\nGiven that the steady state error is zero for unit step input and is 6 for unit ramp input, the\nvalue of the parameter p is _________.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The response of the system\n$$G\\left(s\\right)\\;=\\;\\frac{s\\;-\\;2}{\\left(s\\;+\\;1\\right)\\left(s\\;+\\;3\\right)}$$\nto the unit step input u(t) is y(t).\nThe value of $$\\frac{\\mathrm{dy}}{\\mathrm{dt}}\\;\\mathrm{at}\\;\\mathrm t\\;=\\;0^+\\;\\mathrm{is}$$ ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For the unity feedback control system shown in the figure, the open-loop transfer function G(s) is\ngiven as $$G\\left(s\\right)\\;=\\;\\frac2{s\\left(s\\;+\\;1\\right)}$$ .The steady state error e<sub>ss</sub> due to a unit step input is\n<img alt=\"GATE ECE 2016 Set 3 Control Systems - Time Response Analysis Question 48 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ee98f37dddd5e60cf961b970ac731b65e1b2f6ae65b6536032264c2ab057ecdc.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "0.5"
+      },
+      {
+        "identifier": "C",
+        "content": "1.0"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\infty$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A unity negative feedback system has an open–loop transfer function $$G\\left(s\\right)=\\frac K{s\\left(s+1\\right)}$$.The\ngain K for the system to have a damping ratio of 0.25 is _____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "400",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The natural frequency of an undamped second-order system is 40 rad/s. If the system is\ndamped with a damping ratio 0.3, the damped natural frequency in rad/s is ________. \n",
+    "options": [],
+    "correct_options": [],
+    "answer": "38.15",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The input $$-3\\mathrm e^{2\\mathrm t}\\;\\mathrm u\\left(\\mathrm t\\right)$$, where u(t) is the unit step function, is applied to a system with transfer\nfunction $$\\frac{s-2}{s+3}$$. If the initial value of the output is -2, then the value of the output at steady\nstate is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "For the second order closed-loop system shown in the figure, the natural frequency (in rad/s)\nis \n<img alt=\"GATE ECE 2014 Set 4 Control Systems - Time Response Analysis Question 50 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8d87b14c04fcf10cb5420915fdebdccd264cf1de1cfb9308b01f99b9b89f2d5d.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "The differential equation\n$$$100\\frac{\\mathrm d^2\\mathrm y}{\\mathrm{dt}^2}-20\\frac{\\mathrm{dy}}{\\mathrm{dt}}+\\mathrm y=\\mathrm x\\left(\\mathrm t\\right)$$$ describes a system with an\ninput x(t) and an output y(t). The system, which is initially relaxed, is excited by\na unit step input. The output y(t) can be represented by the waveform ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/da25e075f1ce2aa93329a952fb23c7e4507c4cb1175b28bbe849f2005a88abfe.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Time Response Analysis Question 26 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/b116cc768f28568ff69214e4ad70d979d8fda88fc209f403a712a56f7a945be4.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Time Response Analysis Question 26 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/dffb95ae4ad8a7d8fb7c14c2d90965ceef3728d0fad322b5f9f77acada8f2f74.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Time Response Analysis Question 26 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/9b4e65344eadc55df2839644c4d19d347e8dc7f6a615e7160660a148497a856d.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2011 Control Systems - Time Response Analysis Question 26 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Step responses of a set of three second-order underdamped systems all have the\nsame percentage overshoot. Which of the following diagrams represents the\npoles of the three systems? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/d29948892b1d2dc2cf01732854cd4fdccd14bd965452b20b67ae0c1bb84a4876.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2008 Control Systems - Time Response Analysis Question 52 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/d94e7c2b0446b79802f8b8a09df79969acd458f35535fbd4b78b0cb5f22caa9d.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2008 Control Systems - Time Response Analysis Question 52 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/bc26fcb035e663c9e2249250c33aeb32b65105bf126845a2d4ead62515a26b05.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2008 Control Systems - Time Response Analysis Question 52 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/2904ff25372714ee3a275132a0f0f3c94ed6ac6c27a230966904de0bc4959cc8.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2008 Control Systems - Time Response Analysis Question 52 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "If the Laplace transform of a signal y(t) is   $$Y\\left(s\\right)\\;=\\;\\frac1{s\\left(s\\;-\\;1\\right)}$$ ,  then its final value is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-1"
+      },
+      {
+        "identifier": "B",
+        "content": "$$0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "unbounded"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a system with the transfer function\n$$$G\\left(s\\right)=\\frac{s+6}{Ks^2+s+6}$$$\nIts damping ratio\nwill be 0.5 when the value of K is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2/6"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "1/6"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "If the characteristic equation of a closed-loop system is s<sup>2</sup> + 2s + 2 =0, then the\nsystem is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "overdamped"
+      },
+      {
+        "identifier": "B",
+        "content": "critically damped"
+      },
+      {
+        "identifier": "C",
+        "content": "underdamped"
+      },
+      {
+        "identifier": "D",
+        "content": "undamped"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "For a second-order system with the closed-loop transfer function \n$$$T\\left(s\\right)=\\frac9{s^2+4s+9}$$$ the settling time for 2% band in seconds is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1.5"
+      },
+      {
+        "identifier": "B",
+        "content": "2.0"
+      },
+      {
+        "identifier": "C",
+        "content": "3.0"
+      },
+      {
+        "identifier": "D",
+        "content": "4.0"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "If $$F\\left(s\\right)\\;=\\;\\frac\\omega{s^2\\;+\\;\\omega^2}$$, then the value of $$\\underset{t\\rightarrow\\infty}{\\lim\\;}f\\left(t\\right),\\;\\left\\{where\\;F\\left(s\\right)\\;is\\;the\\;L\\left[f\\left(t\\right)\\right]\\right\\}$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "cannot be determined"
+      },
+      {
+        "identifier": "B",
+        "content": "is zero"
+      },
+      {
+        "identifier": "C",
+        "content": "is unity"
+      },
+      {
+        "identifier": "D",
+        "content": "is infinite"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a unity feedback control system with open-loop transfer function\n$$G\\left(s\\right)\\;=\\;\\frac K{s\\left(s\\;+\\;1\\right)}$$ .\nThe steady state error of the system due to a unit step input is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "zero"
+      },
+      {
+        "identifier": "B",
+        "content": "K"
+      },
+      {
+        "identifier": "C",
+        "content": "1/K"
+      },
+      {
+        "identifier": "D",
+        "content": "infinite"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a feedback control system with loop transfer function $$$G\\left(s\\right)H\\left(s\\right)=\\frac{K\\left(1+0.5s\\right)}{s\\left(1+s\\right)\\left(1+2s\\right)}$$$\nThe type of the closed loop system is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "If $$L\\left(f\\left(t\\right)\\right)=\\frac{2\\left(s+1\\right)}{s^2+2s+5}$$ then f(0<sup>+</sup>) and f($$\\infty$$) are given by\n[Note: 'L' stands for 'Laplace Transform of']",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0,2 respectively"
+      },
+      {
+        "identifier": "B",
+        "content": "2,0 respectively"
+      },
+      {
+        "identifier": "C",
+        "content": "0,1 respectively"
+      },
+      {
+        "identifier": "D",
+        "content": "2/5,0 respectively"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "For a second order system, damping ratio $$\\left(\\xi\\right)$$ , is 0 &lt; $$\\xi$$ &lt; 1 ,then the roots of the characteristic polynomial are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Real but not equal"
+      },
+      {
+        "identifier": "B",
+        "content": "Real and equal"
+      },
+      {
+        "identifier": "C",
+        "content": "Complex conjugate"
+      },
+      {
+        "identifier": "D",
+        "content": "Imaginary"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The final value theorem is used to find the ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "steady state value of the system output"
+      },
+      {
+        "identifier": "B",
+        "content": "initial value of the system output"
+      },
+      {
+        "identifier": "C",
+        "content": "transient behaviour of the system output"
+      },
+      {
+        "identifier": "D",
+        "content": "none of these"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The step error coefficient of a system G(s)=$$\\frac1{\\left(s+6\\right)\\left(s+1\\right)}$$ with unity feedback is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1/6"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\infty$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$0$$"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The poles of a continuous time oscillator are ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\pm j\\omega_n$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a unity negative feedback control system with forward path gain $G(s) = \\frac{K}{(s + 1)(s + 2)(s + 3)}$ as shown.</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxkzgqcc/55bb30ec-3c5f-498b-9d41-883d317291f8/1f4409c0-2dc3-11ef-ab56-674ed58d7efd/file-jaoe38c1lxkzgqcd.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxkzgqcc/55bb30ec-3c5f-498b-9d41-883d317291f8/1f4409c0-2dc3-11ef-ab56-674ed58d7efd/file-jaoe38c1lxkzgqcd.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Control Systems - Time Response Analysis Question 1 English\">\n<p>The impulse response of the closed-loop system decays faster than $e^{-t}$ if ________.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$1 \\leq K \\leq 5$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$7 \\leq K \\leq 21$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$-4 \\leq K \\leq -1$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$-24 \\leq K \\leq -6$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given : } G(s)=\\frac{K}{(s+1)(s+2)(s+3)} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfdx4v9z/1662e1c8-78b7-4463-a079-a489b8ba61cb/6b624670-8e3c-11f0-a029-e731836977d4/file-jaoe38c1mfdx4va0.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfdx4v9z/1662e1c8-78b7-4463-a079-a489b8ba61cb/6b624670-8e3c-11f0-a029-e731836977d4/file-jaoe38c1mfdx4va0.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Control Systems - Time Response Analysis Question 1 English Explanation\">The characteristic equation is given by</p>\n<p>$$ \\begin{aligned} &amp; 1+G(s)=0 \\\\ &amp; 1+\\frac{K}{(s+1)(s+2)(s+3)}=0 \\\\ &amp; (s+1)(s+2)(s+3)+K=0 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} $$</p>\n<p>For the impulse response of the closed loop system to decay faster than $e^{-t}$ at the poles must lies on the left side of $s=-1$. Hence, replacing $S$ by $z-1$ in the characteristic equation</p>\n<p>Substituting $s=z-1$ in equation (i)</p>\n<p>New characteristic equation is,</p>\n<p>$$ \\begin{gathered} (z-1+1)(z-1+2)(z-1+3)+K=0 \\\\ z(z+1)(z+2)+K=0 \\\\ z^3+3 z^2+2 z+K=0 \\end{gathered} $$</p>\n<p>$$ \\begin{array}{c|cc} \\hline z^3 &amp; 1 &amp; 2 \\\\ z^2 &amp; 3 &amp; K \\\\ z^1 &amp; \\frac{6-K}{3} &amp; 0 \\\\ z^0 &amp; K &amp; 0 \\end{array} $$</p>\n<p>For the system to be stable</p>\n<p>$$ \\text { and } \\quad \\begin{aligned} &amp; K&gt;0 \\\\ &amp; \\frac{6-K}{3}&gt;0 \\\\ &amp; 6&gt;K \\end{aligned} $$</p>\n<p>On combining the above two conditions.</p>\n<p>$$ 0<k<6 $$<=\"\" p=\"\">\n</k<6></p><p>From the options option (A) lies in the above range of $K$.</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A closed loop system is shown in the figure where $$k&gt;0$$ and $$\\alpha &gt; 0$$. The steady state error due to a ramp input $$(R(s) = \\alpha /{s^2})$$ is given by</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyvakv0e/34b529e2-0f83-44ce-8322-bc3cc4e02f3c/a4687880-473a-11ef-87aa-039a709b088d/file-jaoe38c1lyvakv0p.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyvakv0e/34b529e2-0f83-44ce-8322-bc3cc4e02f3c/a4687880-473a-11ef-87aa-039a709b088d/file-jaoe38c1lyvakv0p.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Control Systems - Time Response Analysis Question 3 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{2\\alpha } \\over k}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\alpha } \\over k}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{\\alpha } \\over 2k}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\alpha } \\over 4k}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n\n<p>$$ R(s)=\\frac{\\alpha}{s^2} $$</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyvakv0e/34b529e2-0f83-44ce-8322-bc3cc4e02f3c/a4687880-473a-11ef-87aa-039a709b088d/file-jaoe38c1lyvakv0p.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyvakv0e/34b529e2-0f83-44ce-8322-bc3cc4e02f3c/a4687880-473a-11ef-87aa-039a709b088d/file-jaoe38c1lyvakv0p.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2023 Control Systems - Time Response Analysis Question 3 English Explanation\">\n\n<p>$$ G(s)=\\frac{K}{s(s+2)} $$</p>\n\n<p>Steady state error for ramp input is given by</p>\n\n<p>$$ \\begin{aligned} e_{s s} &amp; =\\frac{\\alpha}{K_v} \\\\ K_v &amp; =\\lim _{s \\rightarrow 0} s G(s)=\\lim _{s \\rightarrow 0} \\frac{K}{(s+2)} \\\\ K_v &amp; =\\frac{K}{2} \\\\ e_{s s} &amp; =\\frac{\\alpha}{K / 2} \\\\ e_{s s} &amp; =\\frac{2 \\alpha}{K} \\end{aligned} $$</p>\n\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Two linear time-invariant systems with transfer functions</p>\n<p>$${G_1}(s) = {{10} \\over {{s^2} + s + 1}}$$ and $${G_2}(s) = {{10} \\over {{s^2} + s\\sqrt {10}  + 10}}$$</p>\n<p>have unit step responses y<sub>1</sub>(t) and y<sub>2</sub>(t), respectively. Which of the following statements is/are true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "y<sub>1</sub>(t) and y<sub>2</sub>(t) have the same percentage peak overshoot."
+      },
+      {
+        "identifier": "B",
+        "content": "y<sub>1</sub>(t) and y<sub>2</sub>(t) have the same steady-state value."
+      },
+      {
+        "identifier": "C",
+        "content": "y<sub>1</sub>(t) and y<sub>2</sub>(t) have the same damped frequency of oscillation."
+      },
+      {
+        "identifier": "D",
+        "content": "y<sub>1</sub>(t) and y<sub>2</sub>(t) have the same 2% settling time."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>For system $${G_1}(s) = {{10} \\over {{s^2} + s + 1}}$$</p>\n<p>Characteristics equation,</p>\n<p>$${s^2} + s + 1 = 0$$</p>\n<p>The standard characteristics equation is</p>\n<p>$${s^2} + 2\\xi {\\omega _n}s + \\omega _n^2 = 0$$</p>\n<p>On comparing, $${\\omega _n} = 1$$, $$\\xi  = {1 \\over 2} = 0.5$$</p>\n<p>$${\\omega _d} = {\\omega _n}\\sqrt {1 - {\\xi ^2}}  = 1\\sqrt {1 - {{(0.5)}^2}}  = 0.866$$</p>\n<p>Settling time, $${t_s} = {4 \\over {\\xi {\\omega _n}}} = 8$$ sec</p>\n<p>Steady-state error,</p>\n<p>$${e_{ss}} = \\mathop {\\lim }\\limits_{s \\to 0} {{s\\left( {{1 \\over s}} \\right)\\,.\\,10} \\over {{s^2} + s + 1}} = 10$$</p>\n<p>$${e_{ss}} = 10$$</p>\n<p>For system, $${G_2}(s) = {{10} \\over {{s^2} + \\sqrt {10} s + 10}}$$</p>\n<p>Characteristics equation,</p>\n<p>$${s^2} + \\sqrt {10} s + 10 = 0$$</p>\n<p>Standard characteristics equation,</p>\n<p>$${s^2} + 2\\xi {\\omega _n}s + \\omega _n^2 = 0$$</p>\n<p>On comparing, $$\\omega _n^2 = 10 \\Rightarrow {\\omega _n} = \\sqrt {10} $$</p>\n<p>$$2\\xi {\\omega _n} = \\sqrt {10}  \\Rightarrow \\xi  = 0.5$$</p>\n<p>$${\\omega _d} = {\\omega _n}\\sqrt {1 - {\\xi ^2}}  = \\sqrt {10} \\sqrt {1 - {{(0.5)}^2}}  = 2.739$$</p>\n<p>Settling time, $${t_s} = {4 \\over {\\xi {\\omega _n}}} = {4 \\over {0.5\\sqrt {10} }} = {8 \\over {\\sqrt {10} }} = 2.535$$</p>\n<p>Steady state error, $${e_{ss}} = \\mathop {\\lim }\\limits_{s \\to 0} {{s\\left( {{1 \\over s}} \\right)\\,.\\,10} \\over {{s^2} + \\sqrt {10} s + 10}} = 1$$</p>\n<p>$${e_{ss}} = 1$$</p>\n<p>Since '$$\\xi $$' value for both the system is same. So percentage peak overshoot for both system is same.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The block diagram of a closed-loop control system is shown in the figure. R(s), Y(s), and D(s) are the Laplace transforms of the time-domain signals r(t), y(t), and d(t), respectively. Let the error signal be defined as e(t) = r(t) $$-$$ y(t). Assuming the reference input r(t) = 0 for all t, the steady-state error e($$\\infty$$), due to a unit step disturbance d(t), is __________ (rounded off to two decimal places).</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7idln8c/58704971-ec36-479e-ba91-d00381467235/6deaa1c0-2996-11ed-bc1c-a3a2358ae168/file-1l7idln8d.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7idln8c/58704971-ec36-479e-ba91-d00381467235/6deaa1c0-2996-11ed-bc1c-a3a2358ae168/file-1l7idln8d.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Control Systems - Time Response Analysis Question 5 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "-0.1",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7idmm33/9bc2f151-d432-4a73-aa1d-4c11775b0ed2/88d72df0-2996-11ed-bc1c-a3a2358ae168/file-1l7idmm34.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7idmm33/9bc2f151-d432-4a73-aa1d-4c11775b0ed2/88d72df0-2996-11ed-bc1c-a3a2358ae168/file-1l7idmm34.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Control Systems - Time Response Analysis Question 5 English Explanation\"></p>\n<p>G<sub>1</sub>(s) = 10, G<sub>2</sub>(s) = $${1 \\over {s(s + 10)}}$$</p>\n<p>$${{E(s)} \\over {D(s)}} = {{ - {G_2}(s)} \\over {1 + {G_1}(s){G_2}(s)}}$$</p>\n<p>$$ = {{{{ - 1} \\over {s(s + 10)}}} \\over {1 + \\left( {10 \\times {1 \\over {s(s + 10)}}} \\right)}}$$</p>\n<p>$$ = {1 \\over {{s^2} + 10s + 10}}$$</p>\n<p>$${e_{ss}} = \\mathop {\\lim }\\limits_{t \\to \\infty } e(t) = \\mathop {\\lim }\\limits_{s \\to 0} sE(s)$$</p>\n<p>$${e_{ss}} = \\mathop {\\lim }\\limits_{s \\to 0} {{s(1/s)( - 1)} \\over {{s^2} + 10s + 10}}$$</p>\n<p>$${e_{ss}} = {{ - 1} \\over {10}}$$</p>\n<p>$${e_{ss}} =  - 0.1$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "In the feedback system shown below \n$$$G\\left(S\\right)\\;=\\frac1{(s^2\\;+\\;2s)}$$$\nThe step response of the closed-loop system should have minimum settling time and have no\novershoot.\n<img alt=\"GATE ECE 2016 Set 2 Control Systems - Time Response Analysis Question 32 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/5bf46017d416a1abe0a0b9ed169f285e05243d8253cbe23195cd3e50ba310b52.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\nThe required value of gain k to achieve this is __________.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The open-loop transfer function of a unity-feedback control system is\n$$$G\\left(S\\right)\\;=\\frac K{s(s\\;+\\;2)}$$$\n For the peak overshoot of the closed-loop system to a unit step input to be\n10%, the value of K is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.2 to 1.3",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The output of a standard second–order system for a unit step input is given as $$$y\\left(t\\right)=1-\\frac2{\\sqrt3}e^{-t}\\cos\\left(\\sqrt3t\\;-\\;\\frac{\\mathrm\\pi}6\\right)$$$ The transfer function of the system is\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac2{\\left(s+2\\right)\\left(s+\\sqrt3\\right)}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac1{s^2+2s+1}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac3{s^2+2s+3}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac4{s^2+2s+4}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The damping ratio of a series RLC circuit can be expressed as",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{R^2C}{2L}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{2L}{R^2C}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac R2\\sqrt{\\frac CL}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac2R\\sqrt{\\frac LC}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "For the following feedback system $$G\\left(s\\right)=\\frac1{\\left(s+1\\right)\\left(s+2\\right)}$$.The 2% settling time of the step\nresponse is required to be less than 2 seconds.\n<img alt=\"GATE ECE 2014 Set 1 Control Systems - Time Response Analysis Question 12 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/871aded066629ea4137896027772807cc6ac31e325312559d74856faecd95261.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">Which one of the following compensators C(s) achieves this?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3\\left(\\frac1{s+5}\\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$5\\left(\\frac{0.03}s+1\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "2(s+4)"
+      },
+      {
+        "identifier": "D",
+        "content": "$$4\\left(\\frac{s+8}{s+3}\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The steady state error of the system shown in the figure for a unit step input is _______.\n<img alt=\"GATE ECE 2014 Set 3 Control Systems - Time Response Analysis Question 35 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/6bfb72e3a8e8ec6c2636e43b7575c03854886172107696fb9069041293a9dbda.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.5",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The open-loop transfer function of a dc motor is given as $$\\;\\frac{\\omega\\left(s\\right)}{V_a\\left(s\\right)}=\\frac{10}{1+10s}$$, when\nconnected in feedback as shown below, the approximate value of  K<sub>a</sub> that will\nreduce the time constant of the closed-loop system by one hundred times as\ncompared to that of the open-loop system is\n<img alt=\"GATE ECE 2013 Control Systems - Time Response Analysis Question 13 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/4a97ef26f3df7026037dcb98183fa7d169eca838e9ee4b0cfd56aea238f7a8dc.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "10"
+      },
+      {
+        "identifier": "D",
+        "content": "100"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The unit step response of an under-damped second order system has steady state value of -2.\nWhich one of the following transfer function has these properties?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{-2.24}{s^2\\;+\\;2.59s\\;+\\;1.12}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{-3.82}{s^2\\;+\\;1.91s\\;+\\;1.91}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{-2.24}{s^2\\;-\\;2.59s\\;+\\;1.12}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{-3.82}{s^2\\;-\\;1.91s\\;+\\;1.91}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "<b>Group I</b> lists a set of four transfer functions. <b>Group II</b> gives a list of possible step\nresponses y(t). Match the step responses with the corresponding transfer\nfunctions\n<p><b>Group I</b>\n$$$P=\\frac{25}{s^2+25}\\;\\;\\;\\;\\;Q=\\frac{36}{s^2+20s+36}$$$\n$$$R=\\frac{36}{s^2+12s+36}\\;\\;\\;\\;\\;S=\\frac{49}{s^2+7s+49}$$$</p>\n<p><b>Group II</b>\n\n<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/a2ef55456697ccb00d6dfa97f06dcfb9575ae18c4ea4ec1b018ae002087c2a41.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2008 Control Systems - Time Response Analysis Question 14 English 1\">\n<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/20dfb31f5483060d92ec8b1dfbb9a0df08cd70732763c0fa4749b2f53d733a13.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2008 Control Systems - Time Response Analysis Question 14 English 2\">\n<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/14bbcaebc1014ff5ea64e45897478c531593af0e26372895e4183933e3e51e06.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2008 Control Systems - Time Response Analysis Question 14 English 3\">\n<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/dfb28505c6d6bc0d938900141d5982bc773d31aa145c779d7021997620ce2e10.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2008 Control Systems - Time Response Analysis Question 14 English 4\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\begin{array}{l}P\\;\\;\\;\\;Q\\;\\;\\;\\;R\\;\\;\\;\\;S\\\\3\\;\\;\\;\\;\\;1\\;\\;\\;\\;\\;4\\;\\;\\;\\;\\;2\\end{array}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\begin{array}{l}P\\;\\;\\;\\;Q\\;\\;\\;\\;R\\;\\;\\;\\;S\\\\3\\;\\;\\;\\;\\;2\\;\\;\\;\\;\\;4\\;\\;\\;\\;\\;1\\end{array}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\begin{array}{l}P\\;\\;\\;\\;Q\\;\\;\\;\\;R\\;\\;\\;\\;S\\\\2\\;\\;\\;\\;\\;1\\;\\;\\;\\;\\;4\\;\\;\\;\\;\\;3\\end{array}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\begin{array}{l}P\\;\\;\\;\\;Q\\;\\;\\;\\;R\\;\\;\\;\\;S\\\\3\\;\\;\\;\\;\\;4\\;\\;\\;\\;\\;1\\;\\;\\;\\;\\;2\\end{array}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A linear, time-invariant, causal continuous time system has a rational transfer\nfunction with simple poles at s=-2 and s=-4, and one simple zero at s=-1. A unit\nstep u(t) is applied at the input of the system. At steady state, the output has\nconstant value of 1. The impulse response of this system is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "[exp(-2t) + exp(-4t)]u(t)"
+      },
+      {
+        "identifier": "B",
+        "content": "[-4exp(-2t) + 12exp(-4t) - exp(-t)]u(t)"
+      },
+      {
+        "identifier": "C",
+        "content": "[-4exp(-2t) + 12exp(-4t)]u(t)"
+      },
+      {
+        "identifier": "D",
+        "content": "[-0.5exp(-2t) + 1.5exp(-4t)]u(t)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The frequency response of a linear, time-invariant system is given by $$H\\left(f\\right)\\;=\\;\\frac5{1\\;+\\;j10\\mathrm{πf}}$$ .The step response of the system is: \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5\\left(1\\;-\\;e^{-5t}\\right)u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$5\\left(1\\;-\\;e^{-\\frac15}\\right)u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac15\\;\\left(1\\;-\\;e^{-5t}\\right)u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac15\\;\\left(1\\;-\\;e^{-\\frac15}\\right)u\\left(t\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function of a plant is $$$T\\left(s\\right)=\\frac5{\\left(s+5\\right)\\left(s^2+s+1\\right)}$$$ The second-order\napproximation of T (s) using dominant pole concept is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac1{\\left(s+5\\right)\\left(s+1\\right)}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac5{\\left(s+5\\right)\\left(s+1\\right)}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac5{\\left(s^2+s+1\\right)}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac1{\\left(s^2+s+1\\right)}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The unit-step response of a system starting from rest is given by\n$$$\\mathrm c\\left(\\mathrm t\\right)=1-\\mathrm e^{-2\\mathrm t}\\;\\mathrm{for}\\;\\mathrm t\\geq0$$$The transfer function of the system is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac1{1+2s}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac2{2+s}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac1{2+s}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{2s}{1+2s}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The unit impulse response of a system is: \n$$$h\\left(t\\right)\\;=\\;e^{-t},\\;t\\geq0$$$\nFor this system, the steady-state value of the output for unit step input is equal\nto ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-1"
+      },
+      {
+        "identifier": "B",
+        "content": "$$0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\infty$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "A ramp input applied to an unity feedback system results in 5% steady state\nerror. The type number and zero frequency gain of the system are respectively. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 and 20"
+      },
+      {
+        "identifier": "B",
+        "content": "0 and 20"
+      },
+      {
+        "identifier": "C",
+        "content": "0 and 1/20"
+      },
+      {
+        "identifier": "D",
+        "content": "1 and 1/20"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "In the derivation of expression for peak percent overshoot,$$$M_p=exp\\left(\\frac{-\\mathrm{πξ}}{\\sqrt{1-\\xi^2}}\\right)\\times100\\%$$$ .Which one of the following conditions is NOT required?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "System is linear and time invariant."
+      },
+      {
+        "identifier": "B",
+        "content": "The system transfer function has a pair of complex conjugate poles and no\nzeroes."
+      },
+      {
+        "identifier": "C",
+        "content": "There is no transportation delay in the system."
+      },
+      {
+        "identifier": "D",
+        "content": "The system has zero initial conditions."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A causal system having the transfer function $$G\\left(s\\right)\\;=\\;\\frac1{s\\;+\\;2}$$\nis excited with 10u(t).\nThe time at which the output reaches 99% of its steady state value is \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2.7 sec"
+      },
+      {
+        "identifier": "B",
+        "content": "2.5 sec"
+      },
+      {
+        "identifier": "C",
+        "content": "2.3 sec"
+      },
+      {
+        "identifier": "D",
+        "content": "2.1 sec"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A system described by the following differential equation\n$$$\\frac{d^2y}{dt^2}+3\\frac{dy}{dt}+2y=x\\left(t\\right)$$$ is initially at rest. For input x(t) = 2u(t), the output y(t) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left(1-2e^{-t}+e^{-2t}\\right)u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left(1+2e^{-t}-2e^{-2t}\\right)u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left(0.5+e^{-t}+1.5e^{-2t}\\right)u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left(0.5+2e^{-t}+2e^{-2t}\\right)u\\left(t\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A second-order system has the transfer function $$\\frac{C\\left(s\\right)}{R\\left(s\\right)}=\\frac4{s^2+4s+4}$$. With r(t) as the unit-step function, the response c(t) of the system is represented\nby",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/5dfaff22f6ed41ba26ba86e7a0e0f468ad385a387f1b7f689cafdda30473e227.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2003 Control Systems - Time Response Analysis Question 19 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/6b674fd0d32e991fd840f8a131ec604d21fd619caae7dd469f0ca2186f3ace5c.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2003 Control Systems - Time Response Analysis Question 19 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/3386f5c14a1c13c686db7d1a973093e0ae3046495832284af091e500b708e300.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2003 Control Systems - Time Response Analysis Question 19 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/4ff6f12f6efdc067d4bf9842423bf8ded82c2a61ea7fbbef891f516c7d4587be.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2003 Control Systems - Time Response Analysis Question 19 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The transfer function of a system is $$G\\left(s\\right)\\;=\\;\\frac{100}{\\left(s\\;+\\;1\\right)\\left(s\\;+\\;100\\right)}$$.For a unit step input\nto the system the approximate settling time for 2% criterion is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "100 sec"
+      },
+      {
+        "identifier": "B",
+        "content": "4 sec"
+      },
+      {
+        "identifier": "C",
+        "content": "1 sec"
+      },
+      {
+        "identifier": "D",
+        "content": "0.01 sec"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "If the closed-loop transfer function T(s) of a unity negative feedback system is\ngiven by $$$T\\left(s\\right)=\\frac{a_{n-1}s+a_n}{s^n+a_1s^{n-1}+.....+a_{n-1}s+a_n}$$$ then the steady state error for a unit ramp input is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{a_n}{a_{n-1}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{a_n}{a_{n-2}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{a_{n-2}}{a_{n-2}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "zero"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The unit impulse response of a linear time invariant system is the unit step\nfunction u(t). For t&gt;0, the response of the system ot an excitation e<sup>-at</sup> u(t), a &gt; 0 will be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "ae<sup>-at</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "(1/a)(1 - e<sup>-at</sup>)"
+      },
+      {
+        "identifier": "C",
+        "content": "a(1 - e<sup>-at</sup>)"
+      },
+      {
+        "identifier": "D",
+        "content": "1 - e<sup>-at</sup>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The response of an LCR circuit to a step input is\n<br>(a) Over damped\n<br>(b)  Critically damped\n<br>(c) Oscillatory\n<p>If the transfer function has\n<br><br>(1) poles on the negative real axis\n<br>(2) poles on the imaginary axis\n<br>(3) multiple poles on the positive real axis\n<br>(4) poles on the positive real axis\n<br>(5) multiple poles on the negative real axis</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) - (1) , (b) - (5) , (c) - (2)",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Match the following with List-1 with List-2\n<p><b>List-1</b>\n<br>(a) Very low response at very high frequencies.\n<br>(b) Overshoot\n<br>(c)  Synchro-control transformer output</p>\n<p><b>List-2</b>\n<br>(1) Low pass systems\n<br>(2) Velocity damping\n<br>(3) Natural frequency\n<br>(4) Phase-sensitive modulation\n<br>(5) Damping ration</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) - (1) , (b) - (5) , (c) - (4)",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "content": "A unity feedback control system has the open loop transfer function \n$$G\\left(s\\right)\\;=\\;\\frac{4\\left(1\\;+\\;2s\\right)}{s^2\\left(s\\;+\\;2\\right)}$$ .If the input to the system is a unit ramp, the steady-state error will be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "0.5"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "Infinity."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "A second order system has a transfer function given by $$\\mathrm G\\left(\\mathrm s\\right)\\;=\\;\\frac{25}{\\mathrm s^2\\;+\\;8\\mathrm s\\;+\\;25}$$ .If the system, initially at rest is subjected to a unit step input at t = 0, the\nsecond peak in response will occur at ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\mathrm\\pi\\;\\sec$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{\\mathrm\\pi}3\\;\\sec$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{2\\mathrm\\pi}3\\;\\sec$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{2\\mathrm\\pi}3\\;\\sec$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "The steady state error of a stable 'type 0' unity feedback system for a unit step function is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac1{1+K_p}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\infty$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac1{K_p}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-ece-1990",
+    "difficulty": null
+  },
+  {
+    "content": "A critically damped, continuous-time, second order system, when sampled, will have ( in Z domain)",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A simple pole"
+      },
+      {
+        "identifier": "B",
+        "content": "double pole on real axis"
+      },
+      {
+        "identifier": "C",
+        "content": "Double pole on imaginary axis"
+      },
+      {
+        "identifier": "D",
+        "content": "a pair of complex conjugate poles"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "The block diagram of a feedback system is shown in Figure.\n<img alt=\"GATE ECE 2000 Control Systems - Time Response Analysis Question 9 English 1\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/50c75ac34cecc792f9908e2cd9a6c2571e2de6f5e71424a54a5bd4a6da032268.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<img alt=\"GATE ECE 2000 Control Systems - Time Response Analysis Question 9 English 2\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b0296e38c8d085ca6a05127c8ff64b7bdd424850d9efc8bf5d68d062dd03714d.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<br>(a) Find the closed loop transfer function.\n<br>(b) Find the minimum value of G for which the step response of the system\nwould exhibit an overshoot, as shown in Figure.\n<br>(c) For G equal to twice this minimum value, find the time period T indicated in\nFigure.",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br>(a) Closed loop transfer function= $$\\frac G{s^2+3s+G}$$\n<br>(b) G = 6.25\n<br>(c) T= 1.96 sec",
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Following fig. shows the block diagram representation of control system. The system in\nblock A has an impulse response\nh(t ) = e<sup>−t</sup> u(t ).\nThe system in block B has an\nimpulse response\nh(t ) = e<sup>−2t</sup> u(t ). The block 'K' amplifies its inputs by a factor k.\nFor the overall system with input x(t) and output y(t).\n<img alt=\"GATE ECE 1997 Control Systems - Time Response Analysis Question 10 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c3f753b259f6b2ffc9dd97e4510214725d2785b5b92638eaf5e12e1b1dfc84b5.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n(a)  Find the transfer function $$\\frac{y\\left(s\\right)}{x\\left(s\\right)}$$\nwhen k =1.\n<br>(b) Find the impulse response when k = 0.\n<br>(c) Find the values of k for which the system becomes unstable.",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) $$\\frac{y\\left(s\\right)}{x\\left(s\\right)}=\\frac1{s^2+3s+3}$$\n<br>(b) Impulse response h(t)=$$\\left(e^{-t}-e^{-2t}\\right)u\\left(t\\right)$$\n<br>(c) When k&lt;-2 system is unstable.",
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "For the linear, time-invariant system whose block diagram is shown in Fig.\nwith input x(t) and output y(t),\n<img alt=\"GATE ECE 2000 Control Systems - Time Response Analysis Question 7 English 1\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/9f0372ed57731671d968f8f053de36197dd2f30fdcf6973b56386f2fb54df1ba.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<img alt=\"GATE ECE 2000 Control Systems - Time Response Analysis Question 7 English 2\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/c8a2cb12aa2e3c7d70295f805a39971083b258a33d9dd239c9598f03f0ba9f4d.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<br>(a) Find the transfer function.\n<br>(b) For the step response of the system [i.e. find y(t) when x(t) is a unit step\nfunction and the initial conditions are zero]\n<br>(c) Find y(t), if x(t) is as shown in Fig. and the initial conditions are zero.",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br>(a) $$\\frac{Y\\left(s\\right)}{X\\left(s\\right)}=\\frac1{s^2+4s+3}$$\n<br>(b) $$y\\left(t\\right)=\\frac13-\\frac12e^{-t}+\\frac16e^{-3t}$$\n<br>(c) $$\\begin{array}{l}y\\left(t\\right)=L^{-1}\\left[Y\\left(s\\right)\\right]=\\left[1\\right]-\\left[2\\right]\\\\Where\\\\\\left[1\\right]=\\frac13u\\left(t-1\\right)-\\frac12e^{-\\left(t-1\\right)}u\\left(t-1\\right)+\\frac16e^{-3\\left(t-1\\right)}u\\left(t-1\\right)\\\\\\left[2\\right]=\\frac13u\\left(t-2\\right)-\\frac12e^{-\\left(t-2\\right)}u\\left(t-2\\right)+\\frac16e^{-3\\left(t-2\\right)}u\\left(t-2\\right)\\end{array}$$",
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Block diagram model of a position control system is shown in figure.\n<img alt=\"GATE ECE 1992 Control Systems - Time Response Analysis Question 8 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/6bb842db2c578078e3192787178ce252860ad524199ed9262ba03c3dae0d94e1.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<br>(a) In absence of derivative feedback (K<sub>t</sub>=0) , determine damping ratio of the\nsystem for amplifier gain K<sub>A</sub>=5. Also find the steady state error to unit\nramp input.\n<br><br>(b) Find suitable values of the parameters K<sub>A</sub> and K<sub>t</sub> so that damping ratio of the\nsystem is increased to 0.7 without affecting the steady state error as\nobtained in part (a).",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br>(a) $$\\frac{C\\left(s\\right)}{R\\left(s\\right)}=\\frac{10}{s^2+2s+10}$$\n<br>Steady state error for unit Ramp=0.2\n<br>(b) K<sub>A</sub> =25 and K<sub>t</sub> = 4\n",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the system shown in Fig. Determine the value of  'a'  such that the\ndamping ratio is 0.5. Also obtain the values of the rise time 't<sub>r</sub>' and maximum\novershoot 'M<sub>p</sub>' in its step response.\n<img alt=\"GATE ECE 1998 Control Systems - Time Response Analysis Question 6 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a32291a39b4e3c9d8bc2a31167320c7b01b812f66c0fc3cb4c6352f6a3534d3a.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br>a = 0.2\n<br>t<sub>r</sub> = 0.6053 sec\n<br>M<sub>p</sub> = 0.163",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  }
+]

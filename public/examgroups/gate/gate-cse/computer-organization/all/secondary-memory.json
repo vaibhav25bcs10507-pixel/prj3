@@ -1,0 +1,62 @@
+[
+  {
+    "direction": null,
+    "content": "<p>A cache memory that has a hit rate of 0.8 has an access latency 10 ns and miss penalty 100 ns. An optimization is done on the cache to reduce the miss rate. However, the optimization results in an increase of cache access latency to 15 ns, whereas the miss penalty is not affected. The minimum hit rate (rounded off to two decimal places) needed after the optimization such that it should not increase the average memory access time is _________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.85",
+    "explanation": "<p>Memory who optimization</p>\n<p>H<sub>C</sub> = 0.8</p>\n<p>T<sub>C</sub> = 10 ns</p>\n<p>Miss penalty = 100 ns</p>\n<p>T<sub>avg</sub> = T<sub>C</sub> + (1 $$-$$ H<sub>C</sub>) miss penalty</p>\n<p>= (10) + (1 $$-$$ 0.8) 100 = 30 ns</p>\n<p>Memory with optimization</p>\n<p>T<sub>C</sub> = 15 ns</p>\n<p>Miss penalty = 100 ns</p>\n<p>H<sub>C</sub> = ?</p>\n<p>T<sub>avg</sub> = 28 ns</p>\n<p>T<sub>avg</sub> = T<sub>C</sub> + (1 $$-$$ H<sub>C</sub>) miss penalty</p>\n<p>30 = (15) + (1 $$-$$ H<sub>C</sub>) 100 ns</p>\n<p>H<sub>C</sub> = 0.85</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A disk of size 512 M bytes is divided into blocks of 64 K bytes. A file is stored in the disk using linked allocation. In linked allocation, each data block reserves 4 bytes to store the pointer to the next data block. The link part of the last data block contains a NULL pointer (also of 4 bytes). Suppose a file of 1 M bytes needs to be stored in the disk. Assume, $1 \\mathrm{~K}=2^{10}$ and $1 \\mathrm{M}=2^{20}$. The amount of space in bytes that will be wasted due to internal fragmentation is ________ . (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "65468",
+    "explanation": "<p>To store a file of size 1 MB using linked allocation on a disk with blocks of size 64 KB, let's calculate the amount of space wasted due to internal fragmentation.</p>\n<h3>Initial Details</h3>\n\n<p><p><strong>Disk Size:</strong> 512 MB</p></p>\n<p><p><strong>Block Size:</strong> 64 KB = $2^{16}$ bytes = 65,536 bytes</p></p>\n<p><p><strong>Pointer Size per Block:</strong> 4 bytes</p></p>\n<p><p><strong>File Size:</strong> 1 MB = $2^{20}$ bytes = 1,048,576 bytes</p></p>\n\n<h3>Calculation</h3>\n\n<p><p><strong>Usable Space per Block:</strong></p>\n<p>Each block can store 65,536 bytes minus the 4 bytes needed for the pointer.</p>\n<p>$    \\text{Usable space per block} = 65,536 - 4 = 65,532 \\text{ bytes}    $</p></p>\n<p><p><strong>Number of Blocks Required:</strong></p>\n<p>$    \\text{Number of blocks} = \\frac{\\text{File Size}}{\\text{Usable data per block}} = \\frac{1,048,576}{65,532} \\approx 16.007    $</p>\n<p>Since the number of blocks must be an integer, we need 17 blocks to store the entire file.</p></p>\n<p><p><strong>Unused Data Space in the Last Block:</strong></p>\n<p>Since 16 full blocks will be used, the data stored in these blocks will be:</p>\n<p>$    16 \\times 65,532 = 1,048,512 \\text{ bytes}    $</p>\n<p>This leaves 64 bytes of data still needing to be stored.</p>\n<p>$    \\text{Remaining data} = 1,048,576 - 1,048,512 = 64 \\text{ bytes}    $</p></p>\n<p><p><strong>Data in the Last Block:</strong></p>\n<p>In the last block, these remaining 64 bytes are stored along with a 4-byte pointer (though it will be NULL):</p>\n<p>$    \\text{Used space in the last block} = 64 + 4 = 68 \\text{ bytes}    $</p></p>\n<p><p><strong>Wasted Space in the Last Block:</strong></p>\n<p>$    \\text{Wasted space in the last block} = 65,536 - 68 = 65,468 \\text{ bytes}    $</p></p>\n\n<p>Therefore, the amount of space wasted due to internal fragmentation is 65,468 bytes.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a 512 GB hard disk with 32 storage surfaces. There are 4096 sectors per track and each sector holds 1024 bytes of data. The number of cylinders in the hard disk is ______</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4096",
+    "explanation": "<p>To determine the number of cylinders in the hard disk, we need to follow a series of calculations based on the given data. Let's break down each step:</p>\n\n<p>The total storage capacity of the hard disk is given as 512 GB. However, we should convert this to bytes for easier calculations:</p>\n\n<p>$$ 512 \\, \\text{GB} = 512 \\times 1024 \\times 1024 \\times 1024 \\, \\text{bytes} $$</p>\n\n<p>This value is equivalent to:</p>\n\n<p>$$ 512 \\times 1024^3 \\, \\text{bytes} $$</p>\n\n<p>Next, we are given that there are 32 storage surfaces. This implies there are 32 platters (one surface per platter). So, we can denote:</p>\n\n<p>$$ \\text{Total storage capacity} = \\text{Number of surfaces} \\times \\text{Number of cylinders} \\times \\text{Number of sectors per track} \\times \\text{Number of bytes per sector} $$</p>\n\n<p>We need to find the number of cylinders. Let's denote the number of cylinders as $ C $. The equations we have are:</p>\n\n<p>$$ 512 \\times 1024^3 \\, \\text{bytes} = 32 \\times C \\times 4096 \\times 1024 \\, \\text{bytes} $$</p>\n\n<p>Simplifying this equation:</p>\n\n<p>$$ 512 \\times 1024^3 = 32 \\times C \\times 4096 \\times 1024 $$</p>\n\n<p>We can cancel out 1024 from both sides:</p>\n\n<p>$$ 512 \\times 1024^2 = 32 \\times C \\times 4096 $$</p>\n\n<p>Solving the equation for $ C $:</p>\n\n<p>$$ 512 \\times 1024^2 = 32 \\times 4096 \\times C $$</p>\n\n<p>$$ 512 \\times 1048576 = 32 \\times 4096 \\times C $$</p>\n\n<p>$$ 536870912 = 131072 \\times C $$</p>\n\n<p>$$ C = \\frac{536870912}{131072} $$</p>\n\n<p>$$ C = 4096 $$</p>\n\n<p>Thus, the number of cylinders in the hard disk is 4096.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a disk pack with a seek time of 4 milliseconds and rotational speed of 10000 rotations per minute (RPM). It has 600 sectors per track and each sector can store 512 bytes of data. Consider a file stored in the disk. The file contains 2000 sectors. Assume that every sector access necessitates a seek, and the average rotational latency for accessing each sector is half of the time for one complete rotation. The total time (in milliseconds) needed to read the entire file is ____________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "14020",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a typical disk that rotates at $$15000$$ rotations per minute $$(RPM)$$ and has a transfer rate of $$50 \\times {10^6}\\,\\,\\,bytes/\\sec .$$ If the average seek time of the disk is twice the average rotational delay and the controller’s transfer time is $$10$$ times the disk transfer time, the average time (in milliseconds) to read or write a $$512$$-byte sector of the disk is  ______________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "6.1 to 6.2",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  }
+]

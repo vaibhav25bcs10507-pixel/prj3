@@ -1,0 +1,787 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following two statements about interrupt handling mechanisms in a CPU.</p>\n<p>S1: In non-vectored interrupt mechanism, it usually takes more time to start the Interrupt Service Routine (ISR) when compared to that in a vectored interrupt mechanism.</p>\n<p>S2: In daisy-chain interrupt mechanism, the CPU polls all the input devices individually to determine the source of the interrupt.</p>\n<p>Which one of the following options is correct with respect to S1 and S2?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Both S 1 and S 2 are true</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Both S 1 and S 2 are false</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>S1 is true and S2 is false</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>S1 is false and S2 is true</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<ul>\n\n<p><b>About S1:</b></p>\n\n<p>In a non-vectored interrupt, the CPU does not know the address of the Interrupt Service Routine (ISR) in advance. It waits for the device to send the address after the CPU sends an interrupt acknowledge (INTA) signal. This process takes extra time.</p>\n\n<p>In a vectored interrupt, the address of the ISR is already assigned or fixed. When an interrupt happens, the CPU can quickly go to the ISR. So, vectored interrupts are generally faster to start than non-vectored interrupts.</p>\n\n<p><b>About S2:</b></p>\n\n<p>In a daisy-chain interrupt method, all devices are connected in a series (chain) to the CPU through a single interrupt pin. When an interrupt occurs, the CPU sends the interrupt acknowledge (INTA) signal, and each device in the chain gets a chance, one by one, to tell the CPU if it was the source of the interrupt. The device that generated the interrupt responds first.</p>\n\n<p>In this method, the CPU does not poll each device individually. Instead, the devices pass the INTA signal one by one along the chain until the source is found.</p>\n\n</ul>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose a program is running on a non-pipelined single processor computer system. The computer is connected to an external device that can interrupt the processor asynchronously. The processor needs to execute the interrupt service routine (ISR) to serve this interrupt. The following steps (not necessarily in order) are taken by the processor when the interrupt arrives:</p>\n<p>(i) The processor saves the content of the program counter.</p>\n<p>(ii) The program counter is loaded with the start address of the ISR.</p>\n<p>(iii) The processor finishes the present instruction.</p>\n<p>Which ONE of the following is the CORRECT sequence of steps?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(iii), (i), (ii)\n"
+      },
+      {
+        "identifier": "B",
+        "content": "(i), (iii), (ii)\n"
+      },
+      {
+        "identifier": "C",
+        "content": "(i), (ii), (iii)\n"
+      },
+      {
+        "identifier": "D",
+        "content": "(iii), (ii), (i)\n"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze the steps that a processor must take when an interrupt occurs on a non-pipelined single-processor system:</p>\n\n<p><p>The processor must first finish executing the current instruction. This ensures that the instruction, which might be partially completed, is fully executed before transferring control to the interrupt service routine (ISR).</p></p>\n<p><p>Once the instruction finishes, the processor saves the content of the program counter (PC). This step is crucial because it stores the address of the next instruction to execute, which allows the processor to resume normal operations after the ISR is complete.</p></p>\n<p><p>Finally, the processor loads the PC with the start address of the ISR, thereby transferring control to the interrupt handler.</p></p>\n\n<p>In summary, the correct sequence is:</p>\n\n<p><p>(iii) Finish the present instruction.</p></p>\n<p><p>(i) Save the content of the program counter.</p></p>\n<p><p>(ii) Load the PC with the start address of the ISR.</p></p>\n\n<p>This corresponds to Option A.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a computer with a 4 MHz processor. Its DMA controller can transfer 8 bytes in 1 cycle from a device to main memory through cycle stealing at regular intervals. Which one of the following is the data transfer rate <i>(in bits per second)</i> of the DMA controller if 1% of the processor cycles are used for DMA?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>2,56,000</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>3,200</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>25,60,000</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>32,000</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the data transfer rate of the DMA controller, we need to calculate the amount of data transferred per second.</p>\n\n<p>The processor operates at 4 MHz, which means it has:</p>\n\n<p>$$4 \\times 10^6 \\text{ cycles per second}$$</p>\n\n<p>The DMA controller uses 1% of these cycles for data transfer, so the number of cycles used by the DMA per second is:</p>\n\n<p>$$0.01 \\times 4 \\times 10^6 = 4 \\times 10^4 \\text{ cycles per second}$$</p>\n\n<p>The DMA controller transfers 8 bytes in each cycle. Therefore, the total amount of data transferred per second in bytes is:</p>\n\n<p>$$4 \\times 10^4 \\text{ cycles/second} \\times 8 \\text{ bytes/cycle} = 3.2 \\times 10^5 \\text{ bytes/second}$$</p>\n\n<p>Since we need the data transfer rate in bits per second, we multiply the result by 8 (since there are 8 bits in 1 byte):</p>\n\n<p>$$3.2 \\times 10^5 \\text{ bytes/second} \\times 8 \\text{ bits/byte} = 2.56 \\times 10^6 \\text{ bits/second}$$</p>\n\n<p>Therefore, the data transfer rate of the DMA controller is:</p>\n\n<p>$$2,560,000 \\text{ bits per second}$$</p>\n\n<p>So, the correct option is:</p>\n\n<p>Option C: 25,60,000</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following statements is FALSE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>In the cycle stealing mode of DMA, one word of data is transferred between an I/O device and main memory in a stolen cycle</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>For bulk data transfer, the burst mode of DMA has a higher throughput than the cycle stealing mode</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze each statement to determine which one is false:</p>\n\n<p><b>Option A:</b> \"In the cycle stealing mode of DMA, one word of data is transferred between an I/O device and main memory in a stolen cycle.\"</p>\n\n<p>This statement is true. Cycle stealing is a mode of Direct Memory Access (DMA) where the DMA controller takes control of the system bus to transfer a word of data. This happens during a CPU cycle, so it \"steals\" the cycle from the CPU.</p>\n\n<p><b>Option B:</b> \"For bulk data transfer, the burst mode of DMA has a higher throughput than the cycle stealing mode.\"</p>\n\n<p>This statement is true. Burst mode DMA can transfer large blocks of data in a single operation without returning control to the CPU after each word, leading to higher throughput compared to cycle stealing mode, which transfers data word by word, potentially interrupting the CPU more frequently.</p>\n\n<p><b>Option C:</b> \"Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism.\"</p>\n\n<p>This statement is false. In a programmed I/O (PIO) mechanism, the CPU is actively involved in the I/O operation and spends significant time in polling and waiting for the I/O device to be ready, which results in poor CPU utilization. In contrast, interrupt driven I/O allows the CPU to perform other tasks while waiting for the I/O operation to complete, thereby improving CPU utilization.</p>\n\n<p><b>Option D:</b> \"The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts.\"</p>\n\n<p>This statement is true. With vectored interrupts, the address of the interrupt service routine (ISR) is directly provided by the interrupting device, allowing the CPU to quickly jump to the appropriate ISR. In non-vectored interrupts, the CPU has to determine the ISR address, which takes more time.</p>\n\n<p>Thus, the false statement is:</p>\n\n<p><b>Option C:</b> \"Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism.\"</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A keyboard connected to a computer is used at a rate of 1 keystroke per second. The computer system polls the keyboard every 10 ms (milli seconds) to check for a keystroke and consumes 100 $$\\mu$$s (micro seconds) for each poll. If it is determined after polling that a key has been pressed, the system consumes an additional 200 $$\\mu$$s to process the keystroke. Let $$T_1$$ denote the fraction of a second spent in polling and processing a keystroke.</p>\n<p>In an alternative implementation, the system uses interrupts instead of polling. An interrupt is raised for every keystroke. It takes a total of 1 ms for servicing an interrupt and processing a keystroke. Let $$T_2$$ denote the fraction of a second spent in servicing the interrupt and processing a keystroke.</p>\n<p>The ratio $${{{T_1}} \\over {{T_2}}}$$ is __________. (Rounded off to one decimal place)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "10.2",
+    "explanation": "<p>Computer system polls keyboard every 10 ms .</p>\n\n<p>In one second, it polls $\\frac{1 \\mathrm{~s}}{10 \\mathrm{~ms}}=\\frac{1000 \\mathrm{~ms}}{10 \\mathrm{~ms}}=100$ times</p>\n\n<p>Each poll take $100 \\mu \\mathrm{s}$</p>\n\n<p>So, Total polling time $=100 \\times 100 \\mu \\mathrm{s}=10 \\times 10^3 \\mu \\mathrm{s}=10 \\mathrm{~ms}$</p>\n\n<p>Also, it takes $200 \\mu \\mathrm{s}$ for processing keystroke i.e. 0.2 ms</p>\n\n<p>Total time spent in polling $\\left(T_1\\right)=(10+0.2) \\mathrm{ms}=10.2 \\mathrm{~ms}$</p>\n\n<p>In interrupt system, when there's keystroke CPU executes corresponding interrupt service routine i.e.</p>\n\n<p>ISR taking 1 ms . So, $T_2=1 \\mathrm{~ms}$</p>\n\n<p>Now, $\\frac{T_1}{T_2}=\\frac{10.2 \\mathrm{~ms}}{1 \\mathrm{~ms}}=10.2$</p>\n\n<p>Hence, the correct answer is 10.2 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which one of the following facilitates transfer of bulk data from hard disk to main memory with the highest throughput?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "DMA based I/O transfer"
+      },
+      {
+        "identifier": "B",
+        "content": "Interrupt driven I/O transfer"
+      },
+      {
+        "identifier": "C",
+        "content": "Polling based I/O transfer"
+      },
+      {
+        "identifier": "D",
+        "content": "Programmed I/O transfer"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>In DMA, bulk amount of data will be transferred from the secondary memory to main memory without the involvement of a CPU.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Consider a computer system with DMA support. The DMA module is transferring one 8-bit character in one CPU cycle from a device to memory through cycle stealing at regular intervals. Consider a 2 MHz processor. If 0.5% processor cycles are used for DMA, the data transfer rate of the device is __________ bits per second.",
+    "options": [],
+    "correct_options": [],
+    "answer": "80000",
+    "explanation": "<p><b>Given :</b></p>\n<p>Frequency of processor $=2 \\mathrm{MHz}$ $0.5 \\%$ processor cycles are used for DMA DMA module transfers one 8 -bit character in one CPU cycle from a device to memory through cycle stealing at regular intervals.</p>\n<p>As we know $2 \\mathrm{MHz} \\rightarrow 2 \\times 10^6$ cycles per second</p>\n<p>Now $0.5 \\%$ of these cycles are taken by DMA to transfer the data.</p>\n<p>So total number of cycles taken to transfer the data will be $\\frac{0.5}{100} \\times 2 \\times 10^6=10,000$ and in each cycle 8 bits are transferred.</p>\n<p>So, data transfer rate in bits per second</p>\n<p>$$ =8 \\times 10000=80,000 $$</p>\n<p>Hence, the correct answer is 80000 .</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A computer handles several interrupt sources of which of the following are relevant for this question. \n<p>$$ * \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ Interrupt from $$CPU$$ temperature sensor (raises interrupt if $$CPU$$ \n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ temperature is too high)\n<br>$$ * \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ Interrupt from Mouse (raises interrupt if the mouse is moved or a button is \n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$pressed) \n<br>$$ * \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ Interrupt from Keyboard (raises interrupt when a key is pressed or released)\n<br>$$ * \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ Interrupt from Hard Disk (raises interrupt when a disk read is completed)</p>\n<p>Which one of these will be handled at the $$HIGHEST$$ priority? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Interrupt from Hard Disk"
+      },
+      {
+        "identifier": "B",
+        "content": "Interrupt from Mouse "
+      },
+      {
+        "identifier": "C",
+        "content": "Interrupt from Keyboard "
+      },
+      {
+        "identifier": "D",
+        "content": "Interrupt from $$CPU$$ temperature sensor  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A $$CPU$$ generally handles an interrupt by executing an interrupt service routine ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "as soon as an interrupt is raised "
+      },
+      {
+        "identifier": "B",
+        "content": "by checking the interrupt register at the end of fetch cycle "
+      },
+      {
+        "identifier": "C",
+        "content": "by checking the interrupt register after finishing the execution of the current instruction "
+      },
+      {
+        "identifier": "D",
+        "content": "by checking the interrupt register at fixed time intervals."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Normally user programs are prevented from handling $${\\rm I}/O$$ directly by $${\\rm I}/O$$ instructions in them. For $$CPUs$$ having explicit $${\\rm I}/O$$ instructions, such $${\\rm I}/O$$ protection is ensured by having the $${\\rm I}/O$$ instructions privileged. In a $$CPU$$ with memory mapped $${\\rm I}/O$$, there is no explicit $${\\rm I}/O$$ instruction. Which one of the following is true for  a $$CPU$$ with memory mapped $${\\rm I}/O$$ ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}/O$$ protection is ensured by operating system routine(s) "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}/O$$ protection is ensured by a hardware  trap"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm I}/O$$ protection is ensured during system configuration "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I}/O$$ protection is not possible "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is true for a $$CPU$$ having a single interrupt request line and single interrupt grant line?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Neither vectored interrupt nor multiple interrupting devices are possible "
+      },
+      {
+        "identifier": "B",
+        "content": "Vectored interrupts are not possible but multiple interrupting devices are possible "
+      },
+      {
+        "identifier": "C",
+        "content": "Vectored interrupts and multiple interrupting devices are both possible"
+      },
+      {
+        "identifier": "D",
+        "content": "Vectored interrupt is possible but multiple interrupting devices are not possible"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "How many $$8$$-bit characters can be transmitted per second over $$9600$$ baud serial communication link using a parity synchronous mode of transmission with one start bit &amp; Eight data bits, two stop bits, and one parity bit",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$600$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$800$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$876$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1200$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "In serial data transmission, every byte of data is padded with a $$‘0’$$ in the beginning and one or two $$‘1’s$$ at the end of byte because",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Receiver is to be synchronized for byte reception "
+      },
+      {
+        "identifier": "B",
+        "content": "Receiver recovers lost $$‘0’s$$ and $$‘1’s$$ from these padded bits"
+      },
+      {
+        "identifier": "C",
+        "content": "Padded bits are useful in purity computation "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "A processor needs software interrupt to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Test the interrupt system of the processor "
+      },
+      {
+        "identifier": "B",
+        "content": "Implement co-routines "
+      },
+      {
+        "identifier": "C",
+        "content": "Obtain system services which need execution of privileged instructions"
+      },
+      {
+        "identifier": "D",
+        "content": "Return from subroutine "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Unless enabled, a $$CPU$$ will not be able to process interrupts."
+      },
+      {
+        "identifier": "B",
+        "content": "Loop instructions cannot be interrupted till they complete. "
+      },
+      {
+        "identifier": "C",
+        "content": "A processor checks for interrupts before executing a new instruction. "
+      },
+      {
+        "identifier": "D",
+        "content": "Only level triggered interrupts are possible on microprocessors."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following device should get higher priority on assigning interrupts?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Hard disk"
+      },
+      {
+        "identifier": "B",
+        "content": "Printer "
+      },
+      {
+        "identifier": "C",
+        "content": "Keyboard "
+      },
+      {
+        "identifier": "D",
+        "content": "Floppy disk"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The correct matching for the following pairs is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/1s0kM0YEOH8uObk1r/HwzSiLGZgKSBenJzv7FhvrXZEN6M7/41zEKWZrjNvG4OiCycwoqv/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1997 Computer Organization - IO Interface Question 24 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a - 4,\\,\\,b - 3,\\,\\,c - 1,\\,\\,d - 2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$a - 2,\\,\\,b - 1,\\,\\,c - 3,\\,\\,d - 4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$a - 4,\\,\\,b - 3,\\,\\,c - 2,\\,\\,d - 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$a - 2,\\,\\,b - 3,\\,\\,c - 4,\\,\\,d - 1$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "It gives non-uniform priority to various devices.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It gives non-uniform priority to various devices."
+      },
+      {
+        "identifier": "B",
+        "content": "It gives uniform priority to all devices."
+      },
+      {
+        "identifier": "C",
+        "content": "It is only useful for connecting slow devices to a processor "
+      },
+      {
+        "identifier": "D",
+        "content": "It requires a separate interrupt pin on the processor for each device."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "In a vectored interrupt",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The branch address is assigned to a fixed location in memory "
+      },
+      {
+        "identifier": "B",
+        "content": "The interrupting source supplies the branch information to the processor through an interrupt vector."
+      },
+      {
+        "identifier": "C",
+        "content": "The branch address is obtained from a register in the processor."
+      },
+      {
+        "identifier": "D",
+        "content": "None of these "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Start and stop bits do not contain 'information' but these are used in serial communication for ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Error detection "
+      },
+      {
+        "identifier": "B",
+        "content": "Error correction"
+      },
+      {
+        "identifier": "C",
+        "content": "Synchronization "
+      },
+      {
+        "identifier": "D",
+        "content": "Slowing down the communication"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "The following are some events that occur after a device controller issues an interrupt while process $$L$$ is under execution.\n<p>$$(P)$$ The processor pushes the process status of $$L$$ onto the control stack.\n<br>$$(Q)$$ The processor finishes the execution of the current instruction.\n<br>$$(R)$$ The processor executes the interrupt service routine.\n<br>$$(S)$$ The processor pops the process status of $$L$$ from the control stack.\n<br>$$(T)$$ The processor loads the new PC value based on the interrupt.</p>\n<p>Which one of the following is the correct order in which the events above occur? </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$QPTRS$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$PTRSQ$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$TRPQS$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$QTPRS$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "On a non-pipe-lined sequential processor, a program segment, which is a part of the interrrupt service routine, is given to transfer $$500$$ bytes from an $${\\rm I}/O$$ device to memory.  Initialize the address register Initialize the count to $$500$$\n<br>$$LOOP:$$ Load a byte from device Store in memory at address given by address register \n$$$\\eqalign{\n  &amp; Increment\\,\\,\\,the\\,\\,\\,address\\,\\,register  \\cr \n  &amp; Decrement\\,\\,\\,the\\,\\,count  \\cr \n  &amp; If\\,\\,\\,count!\\,\\,\\, = 0\\,\\,\\,go\\,\\,\\,to\\,\\,\\,LOOP \\cr} $$$\n<p>Assume that each statement in this program is equivalent to a machine instruction which takes one clock cycle to execute if it is non- load/store instruction. The load-store instructions take two clock cycles to execute.</p>\n<p>The designer of the system also has an alternate approach of using the $$DMA$$ controller to implement the same transfer. The $$DMA$$ controller requires $$20$$ clock cycles for initialization and other overheads. Each $$DMA$$ transfer cycle takes two clock cycles to transfer one byte of data from the device to the memory.</p>\n<p>What is the approximate speed up when the $$DMA$$ controller based design is used in place of the interrupt driven program based input-output?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3.4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4.4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5.1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6.7$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A device with data transfer rate $$10$$ $$KB/sec$$ is connected to a $$CPU.$$ Data is transferred byte-wise. Let the interrupt overhead be $$4$$ $$\\mu \\sec $$. The byte transfer time between the device interface register and $$CPU$$ or memory is negligible. What is the minimum performance gain of operating the device under interrupt mode over operating it under program controlIed  mode?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$15$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$25$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$35$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$45$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the disk drive with the following specifications $$16$$ surfaces, $$512$$ tracks/surface, $$512$$ sectors/track, $$1$$ $$KB/sector$$, rotation speed $$3000$$ $$rpm.$$  The disk is operated in cycle stealing mode whereby whenever one byte word is ready it is sent to memory; similarly, for writing, the disk interface reads a $$4$$ byte word from the memory in each $$DMA$$ cycle. Memory cycle time is $$40$$ $$nsec$$. The maximum percentage of time that the $$CPU$$ gets blocked during $$DMA$$ operation is  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$25$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$40$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$50$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A Hard disk with a transfer rate of $$10Mbytes/second$$ is constantly transferring data to memory using $$DMA.$$ The processor runs at $$600MHz$$ and takes $$300$$ and $$900$$ clock cycles to initiate and complete $$DMA$$ transfer respectively. The size of the data transfer is $$20$$ $$KB.$$ What is the $$\\% $$ of processor time consumed for this operation ? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10\\% $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1\\% $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.1\\% $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.01\\% $$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A graphics card has on board memory of $$1$$ $$MB.$$ Which of the following modes can the card not support?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1600\\,\\, \\times \\,\\,400$$ resolution with $$256$$ colours on a $$17$$ inch monitor "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1600\\,\\, \\times \\,\\,400$$ resolution with $$16$$ million colours on a $$14$$ inch monitor "
+      },
+      {
+        "identifier": "C",
+        "content": "$$800\\,\\, \\times \\,\\,400$$ resolution with $$16$$ million colours on a $$17$$ inch monitor "
+      },
+      {
+        "identifier": "D",
+        "content": "$$800\\,\\, \\times \\,\\,400$$ resolution with $$256$$ colours on a $$14$$ inch monitor "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "RAID configurations of disks are used to provide ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Fault-tolerance "
+      },
+      {
+        "identifier": "B",
+        "content": "High speed "
+      },
+      {
+        "identifier": "C",
+        "content": "High data density "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  }
+]

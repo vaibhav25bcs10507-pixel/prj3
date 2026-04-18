@@ -1,0 +1,334 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider designing a linear classifier</p>\n<p>$$ y=\\operatorname{sign}(f(x ; w ; b)), f(x ; w, b)=w^{\\mathrm{T}} x+b $$</p>\n<p>on a dataset</p>\n<p>$$ \\begin{aligned} & D=\\left\\{\\left(x_1, y_1\\right),\\left(x_2, y_2\\right) \\ldots \\ldots\\left(x_N, y_N\\right)\\right\\} \\\\ & x_i \\in \\mathbb{R}^d, y_i \\in\\{+1,-1\\}, i=1,2, \\ldots \\ldots, N \\end{aligned} $$</p>\n<p>Recall that the sign function outputs +1 if the argument is positive, and -1 if the argument is non-positive. The parameters $w$ and $b$ are updated as per the following training algorithm:</p>\n<p>$$ w_{\\text {new }}=w_{\\text {old }}+y_n x_n, b_{\\text {new }}=b_{\\text {old }}+y_n $$</p>\n<p>Whenever sign $\\left(f\\left(x_n ; w_{\\text {old }}, b_{\\text {old }}\\right)\\right) \\neq y_n$ In other words, whenever the classifier wrongly predicts a sample $\\left(x_n, y_n\\right)$ from the dataset, $w_{\\text {old }}$ gets updated to $w_{\\text {new }}$, and likewise $b_{\\text {old }}$ gets updated to $b_{\\text {new }}$. Consider the case</p>\n<p>$$ \\left(x_n,+1\\right), f\\left(x_n ; w_{\\text {old }}, b_{\\text {old }}\\right)<0 \\text {. Then } $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$f\\left(x_n ; w_{\\text {new }}, b_{\\text {new }}\\right)>f\\left(x_n ; w_{\\text {old }}, b_{\\text {old }}\\right)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$f\\left(x_n ; w_{\\text {new }}, b_{\\text {new }}\\right) < f\\left(x_n ; w_{\\text {old }}, b_{\\text {old }}\\right)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$f\\left(x_n ; w_{\\text {new }}, b_{\\text {new }}\\right)=f\\left(x_n ; w_{\\text {old }}, b_{\\text {old }}\\right)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$y_n f\\left(x_n ; w_{\\text {old }}, b_{\\text {old }}\\right)>1$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>If $f(x)>0$</p>\n<p>$$ \\operatorname{sgn}(f(x))=+1 $$</p>\n<p>If $f(x)<0$</p>\n<p>$$ \\begin{aligned} & \\operatorname{sgn}(f(x))=-1 \\\\ & W_{\\text {new }}=W_{\\text {old }}+1 * x_n \\\\ & b_{\\text {new }}=b_{\\text {old }}+1 \\\\ & (f(x))_{\\text {new }}=\\left(W_{\\text {old }}+x_n\\right)^T+b_{\\text {old }} \\\\ & \\left(W_{\\text {old }}^T x\\right)^T+b_{\\text {old }}<0 \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $C_1$ and $C_2$ be two sets of objects. Let $D(x, y)$ be a measure of dissimilarity between two objects $x$ and $y$. Consider the following definitions of dissimilarity between $C_1$ and $C_2$.</p>\n<p>DIS-1 $\\left(C_1, C_2\\right)=\\max _{x \\in C_1, y \\in C_2} D(x, y)$ DIS-2 $\\left(C_1, C_2\\right)=\\min _{x \\in C_1, y \\in C_2} D(x, y)$</p>\n<p>Which of the following statements Which of the following statements is/are correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Single Linkage Clustering uses DIS1\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Single Linkage Clustering uses DIS2\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Complete Linkage Clustering uses DIS-2\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Complete Linkage Clustering uses DIS-1"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We have to maximize the inter cluster difference and we have to minimize the intra cluster difference.</p>\n<p>Hence, the correct option is (B, D).</p>\n<p>In a random experiment, one of these boxes is selected, where the probability of choosing Box-</p>\n<p>1 is $\\frac{1}{2}$, Box- 2 is $\\frac{1}{6}$, and Box- 3 is $\\frac{1}{3}$. A ball is drawn at random from the selected box. Given that the ball drawn is white, the probability that it is drawn from Box-2 is _________ (Round off to two decimal places)</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Given data $\\{(-1,1),(2,-5),(3,5)\\}$ of the form $(x, y)$, we fit a model $y=w x$ using linear least-squares regression. The optimal value of $w$ is _________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.286",
+    "explanation": "<p>Given data $\\{(-1,1),(2,-5),(3,5)\\}$ of the form $(x, y)$, we fit a model $y=w x$ using linear least squares regression.</p>\n<p>The least squares solution for $w$ in the model $y=w x$ is given by,</p>\n<p>$$ \\begin{aligned} & w=\\frac{\\sum_{i=1}^n x_i y_i}{\\sum_{i=1}^n x_i^2} \\\\ & w=\\frac{(-1)(1)+(2)(-5)+(3)(5)}{(-1)^2+(2)^2+(3)^2} \\\\ & w=\\frac{-1+(-10)+15}{1+4+9}=\\frac{4}{14} \\\\ & w=\\frac{2}{7}=0.286 \\end{aligned} $$</p>\n<p>Hence, the optimal value of $w$ is 0.286 .</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>(Round off to three decimal places)</p>\n<p>The naive Bayes classifier is used to solve a two-class classification problem with class labels $y_1, y_2$. Suppose the prior probabilities are $P\\left(y_1\\right)=\\frac{1}{3}$ and $P\\left(y_2\\right)=\\frac{2}{3}$. Assuming a discrete feature space with $P\\left(x \\mid y_1\\right)=\\frac{3}{4}$ and $P\\left(x \\mid y_2\\right)=\\frac{1}{4}$ for a specific feature vector $x$. The probability of misclassifying $x$ is</p>\n<p>_________ (Round off to two decimal places)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.4",
+    "explanation": "<p>Given :</p>\n<p>The prior probability are</p>\n<p>$$ P\\left(y_1\\right)=\\frac{1}{3} \\text { and } P\\left(y_2\\right)=\\frac{2}{3} $$</p>\n<p>Assuming a discrete feature space wit $P\\left(\\frac{x}{y_1}\\right)=\\frac{3}{4}$ and $P\\left(\\frac{x}{y_2}\\right)=\\frac{1}{4}$ for a feature vector $x$.</p>\n<p>Law of total probability</p>\n<p>$$ \\begin{aligned} & P(x)=P\\left(\\frac{x}{y_1}\\right) P\\left(y_1\\right)+P\\left(\\frac{x}{y_2}\\right) P\\left(y_2\\right) \\\\ & P(x)=\\left(\\frac{3}{4} \\times \\frac{1}{3}\\right)+\\left(\\frac{1}{4} \\times \\frac{2}{3}\\right) \\\\ & P(x)=\\frac{3}{12}+\\frac{2}{12}=\\frac{5}{12} \\end{aligned} $$</p>\n<p>Using Baye's Theorem</p>\n<p>$$ P\\left(\\frac{y_1}{x}\\right)=\\frac{P\\left(\\frac{x}{y_1}\\right) P\\left(y_1\\right)}{P(x)} $$</p>\n<p>$$ \\begin{aligned} & P\\left(\\frac{y_1}{x}\\right)=\\frac{\\left(\\frac{3}{4} \\times \\frac{1}{3}\\right)}{\\left(\\frac{5}{12}\\right)}=\\frac{\\left(\\frac{3}{12}\\right)}{\\left(\\frac{5}{12}\\right)}=\\frac{3}{5} \\\\ & P\\left(\\frac{y_1}{x}\\right)=0.6 \\end{aligned} $$</p>\n<p>Similarly for $P\\left(\\frac{y_2}{x}\\right)$ :</p>\n<p>$$ P\\left(\\frac{y_2}{x}\\right)=\\frac{\\left(\\frac{1}{4} \\times \\frac{2}{3}\\right)}{\\left(\\frac{5}{12}\\right)}=\\frac{2}{5}=0.4 $$</p>\n<p>The classifier assigns $x$ to the class with the highest probability, which is $y_1$. The misclassification probability is</p>\n<p>$$ P\\left(\\frac{y_2}{x}\\right)=0.4 $$</p>\n<p>Hence, the correct answer is 0.4 .</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $\\left\\{x_1, x_2, \\ldots ., x_n\\right\\}$ be a set of linearly independent vectors in $\\mathbb{R}^n$. Let the $(\\mathrm{i}, \\mathrm{j})$ - th element of matrix $A \\in \\mathbb{R}^{n \\times n}$ be given by $A_{i j}=x_i^T x_j, 1 \\leq i, j \\leq n$. Which one of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A is invertible\n"
+      },
+      {
+        "identifier": "B",
+        "content": "0 is a singular value of A\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Determinant of $A$ is 0\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$z^T A z=0$ for some non-zero $z \\in \\mathbb{R}^n$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given :</p>\n<p>Matrix $A$ is given by, $A_{i j}=x_i^T x_j$, where $x_1, x_2, \\ldots \\ldots x_n$ are linearly independent vectors in $R^n$.</p>\n<p>This forms a Gram matrix, which is always positive definite if the vectors are linearly independent.</p>\n<p>From option (A) : A is invertible since the Gram matrix of independent vectors is positive definite it is full rank and invertible.</p>\n<p>So, option (A) is correct.</p>\n<p>From option (B) : 0 is a singular value of $A$.</p>\n<p>If $A$ were singular it would have a zero Eigen value. But a positive definite matrix cannot have a zero Eigen values.</p>\n<p>So, option (B) is incorrect.</p>\n<p>From option (C) : Determinant of $A$ is 0 .</p>\n<p>If A were singular, its determinant would be 0 . But Since A is invertible.</p>\n<p>$$ \\operatorname{det}(A) \\neq 0 . $$</p>\n<p>So, option (C) is incorrect.</p>\n<p>From option (B) : Determinant of $A$ is 0 .</p>\n<p>$$ \\operatorname{det}(A)=0 $$</p>\n<p>So, true for this matrix, but again not always true (depends on Eigen values).</p>\n<p>So, option (B) is incorrect.</p>\n<p>From option (C) : The sum of diagonal element is 1 .</p>\n<p>Trace $(A)=0+1=1$</p>\n<p>True for this matrix, but again not always true. So, option (C) is incorrect.</p>\n<p>From option (D) : $A$ and $A^2$ have the same rank.</p>\n<p>$$ A=A^2=\\left[\\begin{array}{ll} 0 & 1 \\\\ 0 & 1 \\end{array}\\right] $$</p>\n<p>Rank of $A=1$ (only one independent row)</p>\n<p>Rank of $A^2=1$</p>\n<p>Hence, the correct option is (D).</p>\n<p>From option (D) : $Z^T A Z=0$ for same non-zero $Z \\in R^n$.</p>\n<p>This statement is incorrect, because a positive matrix does not allow such vectors.</p>\n<p>Hence, the correct option is (A).</p>\n<p>Also, trace is just the sum of Eigen values which can vary (e.g., $1+1+(-1)=1$ in same cases).</p>\n<p>But not always 1 , so option C is incorrect.</p>\n<p>From option (D) : $A$ and $A^2$ have the same rank.</p>\n<p>$$ A^2=\\left[\\begin{array}{ccc} (1)^2 & 0 & 0 \\\\ 0 & (-1)^2 & 0 \\\\ 0 & 0 & (0)^2 \\end{array}\\right]=\\left[\\begin{array}{lll} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0 \\end{array}\\right] $$</p>\n<p>Rank of $A=2$ (two non-zero rows)</p>\n<p>Rank of $A^2=2$ (two non-zeros raws)</p>\n<p>So, option (D) is correct.</p>\n<p>Hence, the correct option is (D).</p>\n<p>Now, A is non-diagonal matrix satisfies $A^3=A$</p>\n<p>$$ \\begin{aligned} & A=\\left[\\begin{array}{ll} 0 & 1 \\\\ 0 & 1 \\end{array}\\right] \\\\ & A^2=\\left[\\begin{array}{ll} 0 & 1 \\\\ 0 & 1 \\end{array}\\right]\\left[\\begin{array}{ll} 0 & 1 \\\\ 0 & 1 \\end{array}\\right]=\\left[\\begin{array}{ll} 0 & 1 \\\\ 0 & 1 \\end{array}\\right] \\\\ & A^2=A=\\left[\\begin{array}{ll} 0 & 1 \\\\ 0 & 1 \\end{array}\\right] \\\\ & A^3=A^2 A \\\\ & A^3=\\left[\\begin{array}{ll} 0 & 1 \\\\ 0 & 1 \\end{array}\\right]\\left[\\begin{array}{ll} 0 & 1 \\\\ 0 & 1 \\end{array}\\right]=\\left[\\begin{array}{ll} 0 & 1 \\\\ 0 & 1 \\end{array}\\right] \\\\ & A^3=A=\\left[\\begin{array}{ll} 0 & 1 \\\\ 0 & 1 \\end{array}\\right] \\end{aligned} $$</p>\n<p>From option (A) :</p>\n<p>$$ \\operatorname{det}(A)=0 $$</p>\n<p>So, A is not invertible.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the neural network shown in the figure with inputs: $u, v$ weights: $a, b, c, d, e, f$ output: $y$ R denotes the ReLU function, $\\mathrm{R}(x)=\\max (0, \\mathrm{x})$.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mdij3a3l/12783654-a18b-4dfe-a1f5-56f535919d23/fbe85430-692c-11f0-81ab-819dcb95af6f/file-jaoe38c1mdij3a43.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mdij3a3l/12783654-a18b-4dfe-a1f5-56f535919d23/fbe85430-692c-11f0-81ab-819dcb95af6f/file-jaoe38c1mdij3a43.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE AI 2025 Machine Learning - Machine Learning Question 4 English\">Given $u=2, v=3$, $a=1, b=1, c=1, d=-1, e=4, f=-1$, which one of following is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{\\partial y}{\\partial a}=8, \\frac{\\partial y}{\\partial f}=0$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{\\partial y}{\\partial a}=1, \\frac{\\partial y}{\\partial f}=0$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{\\partial y}{\\partial a}=1, \\frac{\\partial y}{\\partial f}=-1$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{\\partial y}{\\partial a}=2, \\frac{\\partial y}{\\partial f}=-1$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &y=\\operatorname{Relu}(e \\cdot \\operatorname{Relu}(a u+b v)+f \\cdot \\operatorname{Relu}(c u+d v))\\\\ &a u+b v=1 \\times 2+1 \\times 3=5\\\\ &\\text { Relu }(a u+b v)=5\\\\ &c u+d v=1 \\times 2+(-1) \\times 3\\\\ &=-1\\\\ &\\text { Relu }(c u+d v)=0\\\\ &y=\\operatorname{Relu}(4 \\times 5+(-1) \\times 0)\\\\ &=\\text { Relu (20) } \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\begin{aligned} & \\frac{\\partial y}{\\partial a}=1 \\times e+R^{\\prime}(a u+b v) \\\\ & =1 \\times e \\times 1 \\times u=4 \\times 2=8 \\\\ & \\frac{\\partial y}{\\partial f}=1 \\times R(n u+d v) \\\\ & =1 \\times 0=0 \\end{aligned}\\\\ &\\text { Hence, the correct option is (A). } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider game trees Tree-1 and Tree-2 as shown. The first level is a MAX agent and the second level is a MIN agent. The value in the square node is the output of the utility function.</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mdij6lkj/71f4343a-6518-4f1a-8b6c-8e32cf1bcb85/582f6030-692d-11f0-81ab-819dcb95af6f/file-jaoe38c1mdij6lkk.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mdij6lkj/71f4343a-6518-4f1a-8b6c-8e32cf1bcb85/582f6030-692d-11f0-81ab-819dcb95af6f/file-jaoe38c1mdij6lkk.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE AI 2025 Machine Learning - Machine Learning Question 1 English\">\nFor what ranges of $x$ and $y$, the right child of node $B$ and the right child of node $E$ will be pruned by alpha-beta pruning algorithm?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$x \\in[1, \\infty)$ and $y \\in(-\\infty, 2]$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$x \\in(-\\infty, 2]$ and $y \\in(-\\infty, 5]$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$x \\in(-\\infty, 2]$ and $y \\in[2, \\infty)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$x \\in[1, \\infty)$ and $y \\in(-\\infty, 5]$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>By looking at the tree We can conclude that</p>\n<p>$$ \\begin{aligned} & B=\\min (x, 1) \\\\ & x \\in[-8,2] \\\\ & y \\in[2,8] \\end{aligned} $$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statements is/are correct about the rectified linear unit (ReLU) activation function defined as $\\operatorname{ReLU}(x)=\\max (x, 0)$, where $\\mathrm{x} \\in \\mathbb{R}$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "ReLU is continuous everywhere\n"
+      },
+      {
+        "identifier": "B",
+        "content": "ReLU is differentiable everywhere\n"
+      },
+      {
+        "identifier": "C",
+        "content": "ReLU is not differentiable at $x=0$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\operatorname{ReLU}(x)=\\operatorname{ReLU}(a x)$, for all $a \\in \\mathbb{R}$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &amp;\\text { Given : }\\\\ &amp;\\begin{aligned} &amp; f(x)=\\operatorname{Relu}(x)=\\max (x, 0) x \\in R \\\\ &amp; f(x)=x \\end{aligned} \\end{aligned} $$</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mdijt85t/fbb97d8e-a65a-43df-966e-d0ece6795e4d/cd701720-692f-11f0-81ab-819dcb95af6f/file-jaoe38c1mdijt85u.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mdijt85t/fbb97d8e-a65a-43df-966e-d0ece6795e4d/cd701720-692f-11f0-81ab-819dcb95af6f/file-jaoe38c1mdijt85u.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE AI 2025 Machine Learning - Machine Learning Question 3 English Explanation\">\n<p>$f(x)$ is continuous everywhere</p>\n<p>$f(x)$ is not differentiable at origin</p>\n<p>So Relu is continuous everywhere Relu is not differentiable at $x=0$</p>\n<p>Hence, the correct option are (A) and (C).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $x_1, x_2, x_3, x_4, x_5$ be a system of orthonormal vectors in $\\mathbb{R}^{10}$. Consider the matrix $A=x_1 x_1^T+\\ldots . .+x_5 x_5^T$. Which of the following statements is/are correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " Singular values of $A$ are also its eigenvalues\n"
+      },
+      {
+        "identifier": "B",
+        "content": " Singular values of $A$ are either 0 or 1\n"
+      },
+      {
+        "identifier": "C",
+        "content": " Determinant of $A$ is 1\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $A$ is invertible"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & x_1 \\rightarrow\\left[\\begin{array}{llllll} 1 & 0 & 0 & 0 & \\cdots & 0 \\end{array}\\right] \\\\ & x_2 \\rightarrow\\left[\\begin{array}{ll} 0,1,0,00 & \\cdots 0 \\end{array}\\right] \\\\ & x_3 \\rightarrow[0,0,1,00 \\cdots 0] \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} X_1 X_1^T & \\rightarrow\\left[\\begin{array}{ccccc} 1 & 0 & 0 & \\cdots & 0 \\\\ 0 & 0 & 0 & \\cdots & 0 \\\\ 0 & 0 & 0 & \\cdots & \\\\ \\vdots & & & & \\\\ 0 & 0 & 0 & 0 & 0 \\end{array}\\right] \\\\ X_2 X_2^T & \\rightarrow\\left[\\begin{array}{ccccc} 0 & 0 & 0 & \\cdots & 0 \\\\ 0 & 1 & 0 & \\cdots & 0 \\\\ \\vdots & & & & \\\\ 0 & 0 & 0 & \\cdots & 0 \\end{array}\\right] \\end{aligned} $$</p>\n<p>$$ A=\\left[\\begin{array}{cccccccccc} 1 & 0 & 0 & \\cdots & \\cdots & \\cdots & \\cdots & \\cdots & \\cdots & 0 \\\\ 0 & 1 & 0 & \\cdots & \\cdots & \\cdots & \\cdots & \\cdots & \\cdots & 0 \\\\ 0 & \\vdots & 1 & \\cdots & \\cdots & \\cdots & \\cdots & \\cdots & \\cdots & 0 \\\\ 0 & \\vdots & \\vdots & 1 & \\cdots & \\cdots & \\cdots & \\cdots & \\cdots & 0 \\\\ 0 & \\vdots & \\vdots & \\vdots & 1 & \\cdots & \\cdots & \\cdots & \\cdots & 0 \\\\ 0 & \\vdots & \\vdots & \\vdots & \\vdots & 0 & \\cdots & \\cdots & \\cdots & 0 \\\\ 0 & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & 0 & \\cdots & \\cdots & 0 \\\\ 0 & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & 0 & \\cdots & 0 \\\\ 0 & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & 0 & 0 \\\\ 0 & 0 & 0 & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & \\vdots & 0 \\end{array}\\right] $$</p>\n<p>5 eigen values, are 1 and 5 eigen values are 0 Hence, the correct option is (A,B).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider designing a linear binary classifier $f(x)=\\operatorname{sign} g\\left(w^T x+b\\right), x \\in \\mathbb{R}^2$ on the following training data:</p>\n<p>Class -1: $\\left\\{\\binom{2}{0},\\binom{0}{2},\\binom{2}{2}\\right\\}$, Class - 2: $\\left\\{\\binom{0}{0}\\right\\}$</p>\n<p>Hard-margin support vector machine (SVM) formulation is solved to obtain $w$ and $b$. Which of the following options is/are correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$w=\\binom{4}{4}$ and $b=1$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "The number of support vectors is 3\n"
+      },
+      {
+        "identifier": "C",
+        "content": "The margin is $\\sqrt{2}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Training accuracy is $98 \\%$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mdim216j/6123d3bf-072b-4e69-b129-dd3fd3f20f60/949604b0-6938-11f0-9391-9d0b378b3348/file-jaoe38c1mdim216k.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mdim216j/6123d3bf-072b-4e69-b129-dd3fd3f20f60/949604b0-6938-11f0-9391-9d0b378b3348/file-jaoe38c1mdim216k.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE AI 2025 Machine Learning - Machine Learning Question 2 English Explanation\"></p>\n<p>Support value $=\\frac{1}{\\sqrt{2}}+\\frac{1}{\\sqrt{2}}=\\frac{2}{\\sqrt{2}}=\\sqrt{2}$</p>\n<p>Number of support vector $=3$</p>\n<p>Hence, the correct option is (A, D).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a two-class problem in $R^d$ with class labels red and green. Let $\\mu_{\\text {red }}$ and $\\mu_{\\text {green }}$ be the means of the two classes.</p>\n<p>Given test sample $x \\in R^d$, a classifier calculates</p>\n<p>the squared Euclidean distance (denoted by $\\|\\cdot\\|^2$ ) between $x$ and the means of the two classes and assigns the class label that the sample x is closest to. That is, the classifier computes</p>\n<p>$$ f(x)=\\left\\|\\mu_{\\text {red }}-x\\right\\|^2-\\left\\|\\mu_{\\text {green }}-x\\right\\|^2 $$</p>\n<p>and assigns the label red to $x$ if $f(x)<0$, and green otherwise. Which of the following statements is/are correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " The sample $x=0$ is assigned the label green if $\\left\\|\\mu_{\\text {red }}\\right\\|<\\left\\|\\mu_{\\text {green }}\\right\\|$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $f$ is a linear function of $x$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $f(x)=w^T x+b$, where $w$ and $b$ are functions of $\\mu_{\\text {red }}$ and $\\mu_{\\text {green }}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $f$ is a quadratic polynomial in $x$"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & f(x)<0 \\rightarrow \\text { red } \\\\ & \\operatorname{dis}\\left(x, \\mu_{\\text {red }}\\right)<\\operatorname{dis}\\left(x, \\mu_{\\text {green }}\\right) \\\\ & f(x) \\geq 0 \\rightarrow \\operatorname{green} \\\\ & \\operatorname{dis}\\left(x, \\mu_{\\text {red }}\\right) \\geq \\operatorname{dis}\\left(x, \\mu_{\\text {green }}\\right) \\\\ & \\mu_{\\text {red }}^2-2 \\mu_{\\text {red }} X+X^2-\\left(\\mu_{\\text {green }}^2-2 \\mu_{\\text {green }}^X+X^2\\right) \\end{aligned} $$</p>\n<p>It becomes linear function.</p>\n<p>Hence, the correct option is (B, C).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $D=\\left\\{x^{(1)}, \\ldots ., x^{(n)}\\right\\}$ be a dataset of $n$ observations where each $x^i \\in \\mathbb{R}^{100}$. It is given that $\\sum_{i=1}^n x^{(\\mathrm{i})}=0$ The covariance matrix computed from $D$ has eigenvalues $\\lambda_i=100^{2-i}, 1 \\leq i \\leq 100$. Let $u \\in \\mathbb{R}^{100}$ be the direction of maximum variance with $u^T u=1$.</p>\n<p>The value of $\\frac{1}{n} \\sum_{i=1}^n\\left(u^T x^{(i)}\\right)^2= $_________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "100",
+    "explanation": null,
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  }
+]

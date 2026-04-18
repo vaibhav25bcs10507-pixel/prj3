@@ -1,0 +1,1061 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In a system, numbers are represented using 4-bit two's complement form. Consider four numbers $N 1=1011, N 2=1101, N 3=1010$ and $N 4=1001$ in the system. Which of the following operations will result in arithmetic overflow?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\mathrm{N} 1+\\mathrm{N} 2$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\mathrm{N} 2+\\mathrm{N} 3$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\mathrm{N} 3-\\mathrm{N} 4$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$N 1+N 4$</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>2s complement data given</p>\n<p>$$ \\begin{aligned} & N_1: 1011 \\rightarrow(-5)_{10} \\\\ & N_2: 1101 \\rightarrow(-3)_{10} \\\\ & N_3: 1010 \\rightarrow(-6)_{10} \\\\ & N_4: 1001 \\rightarrow(-7)_{10} \\end{aligned} $$</p>\n<p>4-bit 2s complement range : $\\{-8$ to +7$\\}$</p>\n<p>$$ \\begin{aligned} & N_1+N_2 \\rightarrow(-5)+(-3)=-8 \\\\ & N_2+N_3 \\rightarrow(-3)+(-6)=-9 \\text { (over flow) } \\\\ & N_3+N_4 \\rightarrow(-6)-(-7)=+1 \\\\ & N_1+N_4 \\rightarrow(-5)+(-7)=-12 \\text { (over flow) } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The 32-bit IEEE 754 single precision representation of a number is 0xC2710000. The number in decimal representation is $\\_\\_\\_\\_$ . (rounded off to two decimal places)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "-60.25",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyur2xg/449bc044-b1f5-43f8-a080-c61a8bdf279b/12ffa540-2455-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyur2xh.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyur2xg/449bc044-b1f5-43f8-a080-c61a8bdf279b/12ffa540-2455-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyur2xh.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Digital Logic - Number Systems Question 1 English Explanation\"></p>\n<p>$$ \\begin{aligned} &amp; \\text { Value: }(-1)^1(1.1110001000 \\ldots .) \\times 2^{132-127} \\\\ &amp; \\text{Here, the sign bit is }1\\text{, so the number is negative.} \\\\ &amp; \\text{The exponent bits give }132\\text{, so actual exponent }=132-127=5. \\\\ &amp; \\text{The mantissa (fraction) gives the binary }(1.1110001000 \\ldots .) \\text{ in normalized form.} \\\\ &amp; -(1.1110001000 \\ldots .) \\times 2^5 \\\\ &amp; \\text{Multiplying by }2^5\\text{ shifts the binary point 5 places to the right:} \\\\ &amp; -111100.01000 \\ldots . \\\\ &amp; \\text{Now convert this binary to decimal: }111100_2=32+16+8+4=60 \\\\ &amp; \\text{and }0.01000_2=\\frac{1}{4}=0.25 \\\\ &amp; \\rightarrow-60.25 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the 8-bit signed integers $X, Y$ and $Z$ represented using the sign-magnitude form. The binary representations of $X$ and $Y$ are as follows:</p>\n<p>$$ X: 10110100 \\quad Y: 01001100 $$</p>\n<p>Which of the following operations to compute $Z$ result(s) in an arithmetic overflow?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$Z=X+Y$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$Z=X-Y$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$Z=-X+Y$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$Z=-X-Y$</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &8 \\text { bit sign-magnitude range is }\\\\\\\\ &\\begin{aligned} & \\left\\{-\\left(2^{8-1}-1\\right) \\text { to }+\\left(2^{8-1}-1\\right)\\right\\} \\\\\\\\ & \\{-127 \\text { to }+127\\} \\\\\\\\ & X: 10110100 \\Rightarrow-52 \\\\\\\\ & Y: 01001100 \\Rightarrow+76 \\\\\\\\ & X+Y \\Rightarrow-52+(76)=+24 \\\\\\\\ & X-Y \\Rightarrow-52-(+76)=-128 \\text { (overflow) } \\\\\\\\ & -X+Y \\Rightarrow-(-52)+(+76)=+128 \\text { (overflow) } \\\\\\\\ & -X-Y \\Rightarrow-(-52)-(+76)=-24 \\end{aligned} \\end{aligned} $$</p>\n<p>In 8-bit sign-magnitude form, the first bit shows the sign and the remaining 7 bits show the magnitude.</p>\n<p>So, for $X = 10110100$, the sign bit is $1$, which means the number is negative. The magnitude is $0110100 = 52$. Therefore, $X = -52$.</p>\n<p>For $Y = 01001100$, the sign bit is $0$, which means the number is positive. The magnitude is $1001100 = 76$. Therefore, $Y = +76$.</p>\n<p>The range of an 8-bit signed integer in sign-magnitude form is from $-127$ to $+127$.</p>\n<p>Now check each operation one by one.</p>\n<p>For $X+Y$: $$-52 + 76 = 24$$ This is within the allowed range, so there is no overflow.</p>\n<p>For $X-Y$: $$-52 - 76 = -128$$ This is smaller than $-127$, so it is outside the allowed range. Hence, overflow occurs.</p>\n<p>For $-X+Y$: since $X=-52$, we get $-X=+52$. Then $$52 + 76 = 128$$ This is greater than $+127$, so it is outside the allowed range. Hence, overflow occurs.</p>\n<p>For $-X-Y$: $$52 - 76 = -24$$ This lies within the allowed range, so there is no overflow.</p>\n<p>Therefore, arithmetic overflow occurs in $X-Y$ and $-X+Y$.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The number -6 can be represented as 1010 in 4-bit 2's complement representation. Which of the following is/are CORRECT 2's complement representation(s) of $-6$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " 10001010 in 8-bits\n"
+      },
+      {
+        "identifier": "B",
+        "content": " 11111010 in 8-bits\n"
+      },
+      {
+        "identifier": "C",
+        "content": " 1000000000001010 in 16-bits\n"
+      },
+      {
+        "identifier": "D",
+        "content": " 1111111111111010 in 16-bits\n"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's break down the process of representing –6 in 2's complement form and then check each option.</p>\n\n<p>Representing –6 in 4-bit 2's complement:</p>\n\n\n<p><p>First, represent +6 in 4 bits: $$+6 = 0110$$</p></p>\n<p><p>Invert the bits: $$1001$$</p></p>\n<p><p>Add 1: </p>\n<p>$$1001 + 0001 = 1010$$</p>\n<p>So, $$-6 = 1010$$ in 4-bit 2's complement, as given.</p></p>\n\n\n<p>Sign extension to 8 bits:</p>\n\n\n<p><p>To extend a 4-bit number to 8 bits in 2's complement, repeat the sign bit (the leftmost bit). Since $$1010$$ has a sign bit of 1, extend it by adding four 1's on the left:</p>\n<p>$$1010 \\to 1111\\,1010$$</p></p>\n<p><p>This matches Option B: $$11111010$$ in 8-bits.</p></p>\n\n\n<p>Sign extension to 16 bits:</p>\n\n\n<p><p>Similarly, extend the 8-bit result by repeating the sign bit (1) for the full 16 bits:</p>\n<p>$$11111010 \\to 11111111\\,11111010$$</p></p>\n<p><p>This matches Option D: $$1111111111111010$$ in 16-bits.</p></p>\n\n\n<p>Evaluating the other options:</p>\n\n\n<p><p>Option A: $$10001010$$ in 8 bits does not come from sign extension of $$1010$$ and actually represents a different value.</p></p>\n<p><p>Option C: $$1000000000001010$$ in 16 bits is not the proper sign-extended version (the correct extension should have all the leading bits as 1’s).</p></p>\n\n<p>Thus, the correct 2's complement representations of $$-6$$ among the options are:</p>\n\n<p><p>Option B: $$11111010$$ in 8-bits  </p></p>\n<p><p>Option D: $$1111111111111010$$ in 16-bits</p></p>\n",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The format of a single-precision floating-point number as per the <b>IEEE 754</b> standard is:</p><style>table { width: 100%; border-collapse: collapse; margin: 20px 0; } th { background-color: blue; color: white; border: 1px solid lightgrey; padding: 10px; } td { border: 1px solid lightgrey; padding: 10px; text-align: left; }</style><table><thead><tr><th>Sign<br>(1 bit)</th><th>Exponent<br>(8 bits)</th><th>Mantissa<br>(23 bits)</th></tr></thead></table><p>Choose the largest floating-point number among the following options.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Sign</p><p>0</p><p>Exponent</p><p>0111 1111</p><p>Mantissa</p><p>1111 1111 1111 1111 1111 1111</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Sign</p><p>0</p><p>Exponent</p><p>1111 1110</p><p>Mantissa</p><p>1111 1111 1111 1111 1111 1111</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Sign</p><p>0</p><p>Exponent</p><p>1111 1111</p><p>Mantissa</p><p>1111 1111 1111 1111 1111 1111</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Sign</p><p>0</p><p>Exponent</p><p>0111 1111</p><p>Mantissa</p><p>0000 0000 0000 0000 0000 0000</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the largest floating-point number among the given options, we need to interpret each number according to the IEEE 754 single-precision floating-point format. This format consists of three parts:</p>\n\n<ul>\n\n<li>Sign bit (1 bit)</li>\n\n<li>Exponent (8 bits)</li>\n\n<li>Mantissa or Fraction (23 bits)</li>\n\n</ul>\n\n<p>The value of a floating-point number can be computed using the following formula:</p>\n\n<p>\n\n<p>$$ (-1)^{sign} \\times (1 + mantissa) \\times 2^{(exponent - 127)} $$</p>\n\n</p>\n\n<p>Let's analyze each option using this formula:</p>\n\n<p><strong>Option A</strong></p>\n\n<p>\n\n<ul>\n\n<li>Sign = 0 (positive)</li>\n\n<li>Exponent = 0111 1111 (binary) = 127 (decimal)</li>\n\n<li>Mantissa = 1111 1111 1111 1111 1111 1111 (binary) = $$1 - 2^{-23} \\approx 1 + 0.99999988$$</li>\n\n</ul>\n\n<p>Value = $$1 \\times (1 + 0.99999988) \\times 2^{(127 - 127)}$$ = $$1 \\times (1.99999988) \\times 2^0$$ = $$1.99999988$$.</p>\n\n<p><strong>Option B</strong></p>\n\n<p>\n\n<ul>\n\n<li>Sign = 0 (positive)</li>\n\n<li>Exponent = 1111 1110 (binary) = 254 (decimal)</li>\n\n<li>Mantissa = 1111 1111 1111 1111 1111 1111 (binary) = $$1 - 2^{-23}$$</li>\n\n</ul>\n\n<p>Value = $$1 \\times (1 + 0.99999988) \\times 2^{(254 - 127)}$$ = $$1 \\times (1.99999988) \\times 2^{127}$$.</p>\n\n<p>This is an extremely large number, very close to the maximum representable value for a single-precision number.</p>\n\n<p><strong>Option C</strong></p>\n\n<p>\n\n<ul>\n\n<li>Sign = 0 (positive)</li>\n\n<li>Exponent = 1111 1111 (binary) = 255 (decimal)</li>\n\n<li>Mantissa = 1111 1111 1111 1111 1111 1111 (binary)</li>\n\n</ul>\n\n<p>Exponent 255 is reserved for special values in IEEE 754:</p>\n\n<ul>\n\n<li>If the mantissa is all zeros, the value represents $$\\infty$$ (positive infinity).</li>\n\n<li>If the mantissa is non-zero, it represents NaN (Not a Number).</li>\n\n</ul>\n\n<p>Since the mantissa is non-zero, it represents NaN, which is not a valid or comparable floating-point number.</p>\n\n<p><strong>Option D</strong></p>\n\n<p>\n\n<ul>\n\n<li>Sign = 0 (positive)</li>\n\n<li>Exponent = 0111 1111 (binary) = 127 (decimal)</li>\n\n<li>Mantissa = 0000 0000 0000 0000 0000 0000 (binary) = 0</li>\n\n</ul>\n\n<p>Value = $$1 \\times (1 + 0) \\times 2^{(127 - 127)}$$ = $$1 \\times 1 \\times 2^0$$ = $$1$$.</p>\n\n<p>Therefore, the largest floating-point number among the given options is:</p>\n\n<p><strong>Option B</strong> because it represents a floating-point number with a very large exponent and the highest possible mantissa, resulting in an extremely large value.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a system that uses 5 bits for representing signed integers in 2’s complement format. In this system, two integers <i>A</i> and <i>B</i> are represented as <i>A</i>=01010 and <i>B</i>=11010. Which one of the following operations will result in either an arithmetic overflow or an arithmetic underflow?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p><i>A + B</i></p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p><i>A - B</i></p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p><i>B - A</i></p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p><i>2 * B</i></p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>First, let's understand the representation of the integers <i>A</i> and <i>B</i> in 2’s complement format. The given 5-bit binary numbers need to be interpreted as follows:</p>\n\n<p><strong>For A (01010):</strong></p>\n<p>The first bit (0) indicates that the number is positive. Hence, we directly convert the remaining bits (1010) to decimal.</p>\n<p>$$A = 0 \\times 2^4 + 1 \\times 2^3 + 0 \\times 2^2 + 1 \\times 2^1 + 0 \\times 2^0$$</p>\n<p>$$A = 0 + 8 + 0 + 2 + 0 = 10$$</p>\n\n<p><strong>For B (11010):</strong></p>\n<p>The first bit (1) indicates that the number is negative. To find the decimal value, we first find the 2’s complement.</p>\n<p>Step 1: Invert all bits: 00101</p>\n<p>Step 2: Add 1 to the least significant bit (LSB): 00110</p>\n<p>This gives us the positive equivalent of the negative number. Converting 00110 to decimal:</p>\n<p>$$Positive Equivalent = 0 \\times 2^4 + 0 \\times 2^3 + 1 \\times 2^2 + 1 \\times 2^1 + 0 \\times 2^0$$</p>\n<p>$$Positive Equivalent = 0 + 0 + 4 + 2 + 0 = 6$$</p>\n<p>Since the original number was negative, B = -6.</p>\n\n<p>Now we have:</p>\n<p><i>A</i> = 10</p>\n<p><i>B</i> = -6</p>\n\n<p>Let's perform the given operations and check for overflow or underflow:</p>\n\n<p><strong>Option A: <i>A + B</i></strong></p>\n<p>$$10 + (-6) = 4$$</p>\n<p>The result 4 can be represented in 5 bits: 00100.</p>\n<p>No overflow or underflow here.</p>\n\n<p><strong>Option B: <i>A - B</i></strong></p>\n<p>$$10 - (-6) = 10 + 6 = 16$$</p>\n<p>The result 16 cannot be represented in 5 bits signed integers, which can range from -16 to 15:</p>\n<p>5-bit binary for 16 would need more than 5 bits: 10000.</p>\n<p>Hence, this operation results in an arithmetic overflow.</p>\n\n<p><strong>Option C: <i>B - A</i></strong></p>\n<p>$$-6 - 10 = -16$$</p>\n<p>-16 can be represented in 5 bits: 10000.</p>\n<p>There is no overflow or underflow in this case, as -16 is within the representable range.</p>\n\n<p><strong>Option D: <i>2 * B</i></strong></p>\n<p>$$2 \\times (-6) = -12$$</p>\n<p>-12 can be represented in 5 bits: 10100.</p>\n<p>No overflow or underflow here.</p>\n\n<p>Thus, the operation that results in either an arithmetic overflow or an arithmetic underflow is:</p>\n\n<p><strong>Option B: <i>A - B</i></strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A particular number is written as 132 in radix-4 representation. The same number in radix-5 representation is ____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "110",
+    "explanation": "<p>To find the equivalent number in radix-5, we first need to convert the given radix-4 number to a base-10 (decimal) number and then convert that decimal number to radix-5. Let's begin by converting the radix-4 number 132 to a decimal number.</p>\n\n<p>The radix-4 number 132 is composed of the digits 1, 3, and 2. In base-4, the place values from right to left are $4^0$, $4^1$, $4^2$, etc. Therefore, the decimal equivalent of the given number can be found by multiplying each digit by its respective place value and adding them together.</p>\n\n<p>The conversion formula from base-4 to decimal is:</p>\n\n<p>$$\n\\text{Decimal} = d_n \\times 4^n + d_{n-1} \\times 4^{n-1} + \\ldots + d_1 \\times 4^1 + d_0 \\times 4^0\n$$</p>\n\n<p>Where $ d_i $ represents the digit in the $ i $-th place of the base-4 number. For the base-4 number 132:</p>\n\n<p>$$\n\\text{Decimal} = 1 \\times 4^2 + 3 \\times 4^1 + 2 \\times 4^0\n$$</p>\n\n<p>$$\n\\text{Decimal} = 1 \\times 16 + 3 \\times 4 + 2 \\times 1\n$$</p>\n\n<p>$$\n\\text{Decimal} = 16 + 12 + 2\n$$</p>\n\n<p>$$\n\\text{Decimal} = 30\n$$</p>\n\n<p>Now that we have the decimal equivalent (30), we'll convert it to base-5. In radix-5, each digit ranges from 0 to 4, and the place values from right to left are $5^0$, $5^1$, $5^2$, etc. We'll use division and remainder to find the equivalent radix-5 number.</p>\n\n<p>We divide the decimal number by 5 and find the remainder. The remainder becomes the least significant digit (rightmost digit), and we repeat the process with the quotient until the quotient is zero.</p>\n\n<p>Let's carry out the division:</p>\n\n<p>$\n\\begin{align*}\n30 \\div 5 &= 6 \\text{ with a remainder of } 0 \\quad \\text{(least significant digit)} \\\\\\\\\n6 \\div 5 &= 1 \\text{ with a remainder of } 1 \\\\\\\\\n1 \\div 5 &= 0 \\text{ with a remainder of } 1 \\quad \\text{(most significant digit)}\n\\end{align*}\n$</p>\n\n<p>Arranging these remainders from the most to the least significant digit gives us the base-5 representation of the decimal number 30.</p>\n\n<p>Thus, the radix-5 representation is 110.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let R1 and R2 be two 4-bit registers that store numbers in 2's complement form. For the operation R1 + R2, which one of the following values of R1 and R2 gives an arithmetic overflow?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "R1 = 1011 and R2 = 1110"
+      },
+      {
+        "identifier": "B",
+        "content": "R1 = 1100 and R2 = 1010"
+      },
+      {
+        "identifier": "C",
+        "content": "R1 = 0011 and R2 = 0100"
+      },
+      {
+        "identifier": "D",
+        "content": "R1 = 1001 and R2 = 1111"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Stored numbers in register R1 and R2 are in 2's complement form.</p>\n<p>Register size is 4 bits. The range of numbers in 2's complement form is $$-$$8 to + 7.</p>\n<p>If R1 + R2, result is out of out of the above range, then it is overflow.</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02cpojk/86b5e59d-80cb-4a33-bda4-f879c3e94689/e6fe60f0-9630-11ec-8971-a71d91368fa4/file-1l02cpojl.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02cpojk/86b5e59d-80cb-4a33-bda4-f879c3e94689/e6fe60f0-9630-11ec-8971-a71d91368fa4/file-1l02cpojl.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Digital Logic - Number Systems Question 13 English Explanation\"></p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "If x and y are two decimal digits and (0.1101)<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span>&nbsp;= (0.8xy5)<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">10</span>, the decimal value of x + y is ______",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": "<p>Given :</p>\n<p>$x$ and $y$ are two decimal digits</p>\n<p>$$ (0.1101)_2=(0.8 x y 5)_{10} $$ ..........(i)</p>\n<p>Decimal equivalent of given fractional binary number $(0.1101)_2$ is</p>\n<p>$$ \\begin{aligned} & =1 \\times 2^{-1}+1 \\times 2^{-2}+0 \\times 2^{-3}+1 \\times 2^{-4} \\\\\\\\ & =2^{-1}+2^{-2}+2^{-4} \\\\\\\\ & =0.0625+0.25+0.5 \\\\\\\\ & =(0.8125)_{10} ............(ii) \\end{aligned} $$</p>\n<p>Comparing equation (i) and (ii) we get,</p>\n<p>$$ (0.8125)_{10}=(0.8 x y 5)_{10} $$</p>\n<p>Therefore, $x=1, y=2$</p>\n<p>$$ \\Rightarrow x+y=3 $$</p>\n<p>Hence, the correct answer is 3 .</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>The format of the single-precision floating-point representation of a real number as per the IEEE 754 standard is as follows:</p>\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:180px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p align=\"center\">sign</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">exponent</p>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<p align=\"center\">mantissa</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n<br>\nWhich one of the following choices is correct with respect to the smallest normalized positive number represented using the standard?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "exponent = 00000000 and mantissa = 00000000000000000000001"
+      },
+      {
+        "identifier": "B",
+        "content": "exponent = 00000001 and mantissa = 00000000000000000000000"
+      },
+      {
+        "identifier": "C",
+        "content": "exponent = 00000001 and mantissa = 00000000000000000000001"
+      },
+      {
+        "identifier": "D",
+        "content": "​exponent = 00000001 and mantissa = 000000000000000000000001"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>In IEEE 754 representation all 1 s in exponent field is reserved for special numbers.</p>\n<p>(when sign bit is positive) and - (when sign bit is negative) infinities when all mantissa bits are zeroes.</p>\n<p>SNAN (Signaling Not A Number) : when leading mantissa bit is 0 and at least one other mantissa bit is non-zero.</p>\n<p>NAN (Quiet NAN) : when leading mantissa bit is 1 .</p>\n<p>Also, all 0 s for exponent field is reserved for denormalized numbers (small numbers between 0 and $\\pm 1$ which cannot be represented using normalized numbers). That is, a normalized IEEE 754 represented number (both single and double precision) must have at least one bit set in the exponent field and for the smallest exponent this will be the right most bit. Now, to make it the smallest positive normalized number in single-precision format, we can have all mantissa bits 0 which will give the numerical value as 1 .</p>\n<p>$\\underbrace{000 \\ldots 0}_{23 \\text { zeroes }} \\times 2^{1-127}=2^{-126}$.</p>\n<p>(Here, 1 before \".\" is implied in IEEE 754 representation for every normalized numbers and 127 is the exponent bias used to have negative exponents without an explicit sign bit)</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Let the representation of a number in base 3 be 210. What is the hexadecimal representation of the number?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "21"
+      },
+      {
+        "identifier": "B",
+        "content": "528"
+      },
+      {
+        "identifier": "C",
+        "content": "D2"
+      },
+      {
+        "identifier": "D",
+        "content": "15"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the hexadecimal representation of the number that is given in base 3 as <strong>210</strong>, we'll perform the following steps:</p>\n\n<p><p><strong>Convert the base-3 number to decimal.</strong></p></p>\n<p><p><strong>Convert the decimal number to hexadecimal.</strong></p></p>\n<p><p><strong>Match the result with the given options.</strong></p></p>\n\n<hr />\n<h3><strong>Step 1: Convert Base-3 Number to Decimal</strong></h3>\n<p>Given the base-3 number: <strong>210</strong></p>\n<p>In base-3, the place values are powers of 3, starting from the rightmost digit (which is the least significant digit).</p>\n<h4><strong>Calculating the Decimal Value</strong></h4>\n<p>Let’s write down the digits with their corresponding place values:</p>\n\n<p><p><strong>Digits:</strong>  2  1  0</p></p>\n<p><p><strong>Positions (exponents):</strong> 2  1  0</p></p>\n\n<p>Compute the decimal value using the formula:</p>\n<p>$ \\text{Decimal Value} = \\sum_{i=0}^{n} (\\text{Digit}_i \\times 3^i) $</p>\n<p>Where $ \\text{Digit}_i $ is the digit at position $ i $ (starting from 0 on the right).</p>\n<p>Compute each term:</p>\n\n<p><p><strong>For position 2 (leftmost digit):</strong></p>\n<p>$   2 \\times 3^2 = 2 \\times 9 = 18   $</p></p>\n<p><p><strong>For position 1:</strong></p>\n<p>$   1 \\times 3^1 = 1 \\times 3 = 3   $</p></p>\n<p><p><strong>For position 0 (rightmost digit):</strong></p>\n<p>$   0 \\times 3^0 = 0 \\times 1 = 0   $</p></p>\n\n<p><strong>Sum the values:</strong></p>\n<p>$ \\text{Decimal Value} = 18 + 3 + 0 = 21 $</p>\n<hr />\n<h3><strong>Step 2: Convert Decimal Number to Hexadecimal</strong></h3>\n<p>Now, we need to convert the decimal number <strong>21</strong> to hexadecimal.</p>\n<h4><strong>Method: Division by 16</strong></h4>\n<p>Divide the decimal number by 16 and keep track of the quotient and remainder.</p>\n\n<p><p><strong>Divide 21 by 16:</strong></p>\n<p>$    21 \\div 16 = 1 \\text{ with a remainder of } 5    $</p></p>\n<p><p><strong>Determine the hexadecimal digits:</strong></p></p>\n\n\n<p><p><strong>Most Significant Digit (MSD):</strong> The quotient $ 1 $</p></p>\n<p><p><strong>Least Significant Digit (LSD):</strong> The remainder $ 5 $</p></p>\n\n\n<p><strong>Convert digits to hexadecimal characters:</strong></p>\n\n\n<p><p>Decimal digits $ 0 $ to $ 9 $ are the same in hexadecimal.</p></p>\n<p><p>Decimal $ 10 $ to $ 15 $ correspond to hexadecimal characters $ A $ to $ F $.</p>\n<p>In this case, both digits are less than 10, so they remain the same.</p></p>\n\n\n<p><p><strong>Write the hexadecimal number:</strong></p>\n<p>$    \\text{Hexadecimal Representation} = \\text{MSD} \\, \\text{LSD} = 1\\,5    $</p>\n<p>So, the hexadecimal representation is <strong>15</strong>.</p></p>\n\n<hr />\n<h3><strong>Step 3: Match with the Given Options</strong></h3>\n<p>Given options:</p>\n\n<p><p><strong>Option A:</strong> 21</p></p>\n<p><p><strong>Option B:</strong> 528</p></p>\n<p><p><strong>Option C:</strong> D2</p></p>\n<p><p><strong>Option D:</strong> 15</p></p>\n\n<p>Our computed hexadecimal value is <strong>15</strong>, which matches <strong>Option D</strong>.</p>\n<hr />\n<p><strong>Answer: Option D</strong></p>\n<hr />\n<p><strong>Therefore, the hexadecimal representation of the base-3 number 210 is 15.</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following representation of a number in IEEE 754 single-precision floating point format with a bias of 127.</p>\n\n<p>S: 1 E:&nbsp; &nbsp;10000001&nbsp; &nbsp; F : 11110000000000000000000</p>\n\n<p>Here S, E and F denote the sign, exponent and fraction components of the floating point representation.</p>\n\n<p>The decimal value corresponding to the above representation (rounded to 2 decimal places) is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "-7.75",
+    "explanation": "<p>Given : $S: 1 \\quad E: 10000001$</p>\n<p>$$ F: 11110000000000000000000 $$</p>\n<p>IEEE 754 single-precision floating point format with bias of 127</p>\n<p>Sign bit $=1$, therefore actual number will be negative</p>\n<p>Bias Exponent $=10000001$</p>\n<p>So, its decimal equivalent is</p>\n<p>$$ \\begin{aligned} & =2^7+2^0 \\\\\\\\ & =128+1=129 \\\\\\\\ e & =\\text { Bias Exponent }-127 \\\\\\\\ & =129-127 \\\\\\\\ & =2 \\end{aligned} $$</p>\n<p>Therefore, binary number is $=-1.1111 \\times 2^2$ Its decimal equivalent is</p>\n<p>$$ \\begin{aligned} & =-\\left(1 \\times 2^2+1 \\times 2^1+1 \\times 2^0+1 \\times 2^{-1} 1 \\times 2^{-2}\\right) \\\\\\\\ & =(-7.75)_{10} \\end{aligned} $$</p>\n<p>Hence, the correct answer is $=(-7.75)_{10}$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider Z = X - Y, where X, Y and Z are all in sign-magnitude form. X and Y are each represented in n bits. To avoid overflow, the representation of Z would require a minimum of :",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n + 1 bits"
+      },
+      {
+        "identifier": "B",
+        "content": "n – 1 bits"
+      },
+      {
+        "identifier": "C",
+        "content": "n + 2 bits"
+      },
+      {
+        "identifier": "D",
+        "content": "n bits"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the minimum number of bits required to represent $ Z = X - Y $ in sign-magnitude form without overflow, given that $ X $ and $ Y $ are each represented in $ n $ bits, we'll analyze the maximum possible magnitude of $ Z $ and find how many bits are needed to represent it.</p>\n<hr />\n<h3><strong>Understanding Sign-Magnitude Representation:</strong></h3>\n\n<p><p><strong>Sign-magnitude representation</strong> uses one bit for the sign and the remaining bits for the magnitude.</p></p>\n<p><p>For $ n $ bits, the magnitude uses $ n - 1 $ bits.</p></p>\n<p><p>The maximum magnitude ($ M $) representable is:</p>\n<p>$   M = 2^{n - 1} - 1   $</p></p>\n<p><p>The representable numbers range from $ -M $ to $ +M $.</p></p>\n\n<hr />\n<h3><strong>Calculating the Range of $ Z $:</strong></h3>\n\n<p><p><strong>Maximum $ X $:</strong> $ +M $</p></p>\n<p><p><strong>Minimum $ X $:</strong> $ -M $</p></p>\n<p><p><strong>Maximum $ Y $:</strong> $ +M $</p></p>\n<p><p><strong>Minimum $ Y $:</strong> $ -M $</p></p>\n<p><p><strong>Maximum $ Z $:</strong></p>\n<p>$   Z_{\\text{max}} = X_{\\text{max}} - Y_{\\text{min}} = (+M) - (-M) = +2M   $</p></p>\n<p><p><strong>Minimum $ Z $:</strong></p>\n<p>$   Z_{\\text{min}} = X_{\\text{min}} - Y_{\\text{max}} = (-M) - (+M) = -2M   $</p></p>\n<p><p>Therefore, $ Z $ ranges from $ -2M $ to $ +2M $.</p></p>\n\n<hr />\n<h3><strong>Calculating the Maximum Magnitude of $ Z $:</strong></h3>\n\n<p><p>The maximum magnitude needed for $ Z $ is:</p>\n<p>$   |Z_{\\text{max}}| = 2M = 2 \\times (2^{n - 1} - 1) = 2^n - 2   $</p></p>\n\n<p><p>We need to represent magnitudes up to $ 2^n - 2 $.</p></p>\n\n<hr />\n<h3><strong>Determining the Number of Bits Needed:</strong></h3>\n\n<p><p><strong>Number of bits for magnitude ($ m $):</strong> We need $ m $ bits such that:</p>\n<p>$   2^m - 1 \\geq 2^n - 2   $</p></p>\n<p><p>Solving for $ m $:</p>\n<p>$   2^m \\geq 2^n - 1   $</p></p>\n<p><p>Since $ 2^n - 1 < 2^n $, we have:</p>\n<p>$   2^m \\geq 2^n - 1 < 2^n   $</p></p>\n<p><p>This means $ m \\geq n $.</p></p>\n<p><p><strong>Total bits required ($ m + 1 $):</strong> Including the sign bit, we need at least $ n + 1 $ bits to represent $ Z $ without overflow.</p></p>\n\n<hr />\n<h3><strong>Conclusion:</strong></h3>\n\n<p><p><strong>Minimum number of bits required:</strong> $ n + 1 $</p></p>\n<p><p><strong>Answer:</strong> Option A</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Option A</p>\n<p><strong>$ n + 1 $ bits</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "In 16-bit 2's complement representation, the decimal number -28 is :",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1000 0000 1110 0100"
+      },
+      {
+        "identifier": "B",
+        "content": "0000 0000 1110 0100"
+      },
+      {
+        "identifier": "C",
+        "content": "1111 1111 1110 0100"
+      },
+      {
+        "identifier": "D",
+        "content": "1111 1111 0001 1100"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "Binary form of +28 = 0000 0000 0001 1100\n\n<br><br>1’s complement =\t1111 1111 1110 0011\n<br><br>2’s complement = 1’s complement + 1\n\n<br><br>2’s complement = 1111 1111 1110 0100 \n= (-28)",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The $n$-bit fixed-point representation of an unsigned real number $X$ uses $f$ bits for the fraction part. Let $i=n-f$. The range of decimal values for $X$ in this representation is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$2^{-f}$ to $2^i$"
+      },
+      {
+        "identifier": "B",
+        "content": "$2^{-f}$ to $\\left(2^i-2^{-f}\\right)$"
+      },
+      {
+        "identifier": "C",
+        "content": "0 to $2^i$"
+      },
+      {
+        "identifier": "D",
+        "content": "0 to $\\left(2^i-2^{-f}\\right)$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b></p>\n<p>Unsigned real number $X$ size $\\rightarrow n$-bit long</p>\n<p>Fractional part in $X \\rightarrow f$-bit long</p>\n<p>Integer part in $X \\rightarrow i=(n-f)$ bit long</p>\n<p>Range of decimal value for only integer part of real number $X$ is,</p>\n<p>$$ 0 \\text { to }\\left(2^j-1\\right) $$</p>\n<p>Range of decimal value for only fractional part of real number $X$ is,</p>\n<p>$$ 0 \\text { to }\\left(1-2^{-5}\\right) $$</p>\n<p>So, finally range of real number $X$, contain both integer and fractional part is,</p>\n<p>$$ \\begin{aligned} & 0 \\text { to }\\left(2^i-1+1-2^{-f}\\right) \\\\ & 0 \\text { to }\\left(2^i-2^{-f}\\right) \\end{aligned} $$</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-cse-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The $$16$$-bit $$2’s$$ complement representation of an integer is $$1111$$ $$1111$$ $$1111$$ $$0101;$$ its decimal\nrepresentation is ____________.\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "11",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an eight-bit ripple-carry adder for computing the sum of $$A$$ and $$B,$$ where $$A$$ and $$B$$ are integers represented in $$2’s$$ complement form. If the decimal value of $$A$$ is one, the decimal value of $$B$$ that leads to the longest latency for the sum to stabilize is __________ .",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$X$$ be the number of distinct $$16$$-bit integers in $$2’s$$ complement representation. Let $$Y$$ be the number of distinct $$16$$-bit integers in sign magnitude representation. \n<br> Then $$X −Y$$ is ____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the equation $${\\left( {123} \\right)_5} = {\\left( {x8} \\right)_y}$$ with $$x$$ and $$y$$ as unknown. The number of possible solutions is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The base (or radix) of the number system such that the following equation holds is __________\n<br>$${{312} \\over {20}} = 13.1$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The smallest integer that can be represented by an $$8$$-bit number in $$2's$$ complement form is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-256$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-128$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-127$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "$$P$$ is a $$16$$-bit signed integer. The $$2's$$ complement representtation of $$P$$ is $${\\left( {F87B} \\right)_{16}}$$ . The $$2's$$ complement representation of $$8{}^ * \\,P$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\left( {C3D8} \\right)_{16}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\left( {187B} \\right)_{16}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\left( {F878} \\right)_{16}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\left( {987B} \\right)_{16}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "$${\\left( {1217} \\right)_8}$$ is equivalent to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\left( {1217} \\right)_16}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\left( {028F} \\right)_{16}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\left( {2297} \\right)_{10}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\left( {0B17} \\right)_{16}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "$${73_x}$$ (in base $$-$$ $$x$$ number system) is equal to $${54_y}$$ (in base $$-y$$ number system), the possible values of $$x$$ and $$y$$ are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$8,$$ $$16$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10,$$ $$12$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$9,$$ $$13$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$8,$$ $$11$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Assuming all numbers are in $$2's$$ complement representation, which of the following numbers is divisible by $$11111011?$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$11100111$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$11100100$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$11010111$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$11011011$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The decimal value $$0.25$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "is equivalent to binary $$0.1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "is equivalent to binary $$0.01$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "is equivalent to binary $$0.00111$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "can not be represented precisely in binary "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The $$2's$$ compliment representation of the decimal value $$-15$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1111$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$11111$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$111111$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$10001$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Sign extension is the step in ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Floating point multiplication "
+      },
+      {
+        "identifier": "B",
+        "content": "Signed $$16$$ bit integer addition "
+      },
+      {
+        "identifier": "C",
+        "content": "Arithmetic left shift "
+      },
+      {
+        "identifier": "D",
+        "content": "Converting a signed integer from one size to another."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The number $$43$$ in $$2's$$ complement representation is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$01010101$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$11010101$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$00101011$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$10101011$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Three floating point numbers $X, Y$, and $Z$ are stored in three registers $R_X, R_Y$, and $R_Z$, respectively in IEEE 754 single precision format as given below in hexadecimal:</p>\n<p>$$R_X=0 \\times C 1100000, R_Y=0 \\times 40 C 00000, \\text { and } R_Z=0 \\times 41400000$$</p>\n<p>Which of the following option(s) is/are CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $4(X+Y)+Z=0$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $2 Y-Z=0$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $4 X+3 Z=0$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $X+Y+Z=0$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$\\mathrm{R}_{\\mathrm{X}}=(\\mathrm{C} 1100000)_H$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yy00i2/cd6cb4f0-48e9-45e1-bd13-a229f7c30d1d/881c0ea0-fb6a-11ef-9d17-b19dcdbd8148/file-jaoe38c1m7yy00i3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yy00i2/cd6cb4f0-48e9-45e1-bd13-a229f7c30d1d/881c0ea0-fb6a-11ef-9d17-b19dcdbd8148/file-jaoe38c1m7yy00i3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Digital Logic - Number Systems Question 5 English Explanation 1\"></p>\n<p>$$\\begin{aligned}\n\\text { Bias } &amp; =+127 \\\\\n\\text { Value } &amp; =(-1)^1(1.001000 \\ldots . .) \\times 2^{130-127} \\\\\n&amp; =-1.001000 \\ldots . . \\times 2^3 \\\\\n&amp; =-9 \\\\\nR_Y &amp; =(40 \\mathrm{C} 00000)_H\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yy0r1h/2baca179-e9b9-4a77-9c56-0793cf894921/9c9c5150-fb6a-11ef-9d17-b19dcdbd8148/file-jaoe38c1m7yy0r1i.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yy0r1h/2baca179-e9b9-4a77-9c56-0793cf894921/9c9c5150-fb6a-11ef-9d17-b19dcdbd8148/file-jaoe38c1m7yy0r1i.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Digital Logic - Number Systems Question 5 English Explanation 2\"></p>\n<p>$$\\begin{aligned}\n\\text { Value } &amp; =(-1)^0(1.100 \\ldots \\ldots .) \\times 2^{129-127} \\\\\n&amp; =+(1.100 \\ldots . .) \\times 2^2 \\\\\n&amp; =+6 \\\\\nR_Z &amp; =(41400000)_H\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yy1ku2/590afb76-bc4d-4782-a7b5-7b2c2f09ff30/b3a031a0-fb6a-11ef-9d17-b19dcdbd8148/file-jaoe38c1m7yy1ku3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yy1ku2/590afb76-bc4d-4782-a7b5-7b2c2f09ff30/b3a031a0-fb6a-11ef-9d17-b19dcdbd8148/file-jaoe38c1m7yy1ku3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Digital Logic - Number Systems Question 5 English Explanation 3\"></p>\n<p>$$\\begin{aligned}\n\\text { Value } &amp; =(-1)^0(1.000 \\ldots . .) \\times 2^{130-127} \\\\\n&amp; =+(1.1000 \\ldots . .) \\times 2^3 \\\\\n&amp; =+12\n\\end{aligned}$$</p>\n<p>$\\bullet$ $4(-9 \\times+6)+12=0 \\quad \\Rightarrow$ True</p>\n<p>$\\bullet$ $(2 \\times 6)-(+12)=0 \\quad \\Rightarrow$ True</p>\n<p>$\\bullet$ $4 \\times(-9)+(3 \\times 12)=0 \\quad \\Rightarrow$ True</p>\n<p>$\\bullet$ $-9+6+12=0 \\quad \\Rightarrow$ False</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following is/are EQUAL to 224 in radix-5 (i.e., base-5) notation?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>64 in radix-10</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>100 in radix-8</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>50 in radix-16</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>121 in radix-7</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given numbers are equal to <strong>224</strong> in radix-5 (base-5) notation, we need to convert each number from its respective base to base-10 (decimal) and then compare the results.</p>\n\n<p>Let's convert each option to base-10:</p>\n\n<p><strong>Option A: 64 in radix-10</strong></p>\n<p>This is already in base-10, so no conversion is needed:</p>\n<p>$$64_{10} = 64$$</p>\n\n<p><strong>Option B: 100 in radix-8</strong></p>\n<p>Convert this number from base-8 (octal) to base-10 (decimal):</p>\n<p>$$100_8$$</p>\n<p>The conversion process involves using the positional value of each digit:</p>\n<p>$$1 \\cdot 8^2 + 0 \\cdot 8^1 + 0 \\cdot 8^0 = 1 \\cdot 64 + 0 \\cdot 8 + 0 \\cdot 1 = 64$$</p>\n<p>So, $$100_8 = 64_{10}$$</p>\n\n<p><strong>Option C: 50 in radix-16</strong></p>\n<p>Convert this number from base-16 (hexadecimal) to base-10 (decimal):</p>\n<p>$$50_{16}$$</p>\n<p>The conversion process involves using the positional value of each digit:</p>\n<p>$$5 \\cdot 16^1 + 0 \\cdot 16^0 = 5 \\cdot 16 + 0 \\cdot 1 = 80$$</p>\n<p>So, $$50_{16} = 80_{10}$$</p>\n\n<p><strong>Option D: 121 in radix-7</strong></p>\n<p>Convert this number from base-7 to base-10 (decimal):</p>\n<p>$$121_7$$</p>\n<p>The conversion process involves using the positional value of each digit:</p>\n<p>$$1 \\cdot 7^2 + 2 \\cdot 7^1 + 1 \\cdot 7^0 = 1 \\cdot 49 + 2 \\cdot 7 + 1 \\cdot 1 = 49 + 14 + 1 = 64$$</p>\n<p>So, $$121_7 = 64_{10}$$</p>\n\n<p>Comparing all the results, we find that Options A, B, and D are equal to $$64_{10}$$ which in this case matches the value of $$224_5$$ in base-10.</p>\n\n<p>Therefore, the correct options are:</p>\n<p><strong>Option A: 64 in radix-10</strong></p>\n<p><strong>Option B: 100 in radix-8</strong></p>\n<p><strong>Option D: 121 in radix-7</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the IEEE-754 single precision floating point numbers P=0xC1800000 and Q=0x3F5C2EF4.</p>\n<p>Which one of the following corresponds to the product of these numbers (i.e., P $$\\times$$ Q), represented in the IEEE-754 single precision format?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0x404C2EF4"
+      },
+      {
+        "identifier": "B",
+        "content": "0x405C2EF4"
+      },
+      {
+        "identifier": "C",
+        "content": "0xC15C2EF4"
+      },
+      {
+        "identifier": "D",
+        "content": "0xC14C2EF4"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the product of P and Q in IEEE-754 single precision floating-point format, we have to follow these steps:</p>\n\n<ol>\n    <li>Convert the hexadecimal numbers to their binary equivalent.</li>\n    <li>Decode the binary strings into their sign, exponent, and mantissa parts.</li>\n    <li>Perform the multiplication operation according to the IEEE-754 rules.</li>\n    <li>Normalize the result if necessary.</li>\n    <li>Round the result to fit within the mantissa's precision if necessary.</li>\n    <li>Convert the result back into the IEEE-754 single precision format in hexadecimal.</li>\n</ol>\n\n<p>Let's follow these steps for P=0xC1800000 and Q=0x3F5C2EF4.</p>\n\n<p>Step 1: Convert hexadecimal to binary:</p>\n<ul>\n    <li>For P (0xC1800000):\n        $$ P_{binary} = 1100 \\, 0001 \\, 1000 \\, 0000 \\, 0000 \\, 0000 \\, 0000 \\, 0000_{(2)} $$</li>\n    <li>For Q (0x3F5C2EF4):\n        $$ Q_{binary} = 0011 \\, 1111 \\, 0101 \\, 1100 \\, 0010 \\, 1110 \\, 1111 \\, 0100_{(2)} $$</li>\n</ul>\n\n<p>Step 2: Decode into sign, exponent, and mantissa:</p>\n<ul>\n    <li>For P:\n        <ul>\n            <li>Sign: 1 (negative number)</li>\n            <li>Exponent: 1000001 (in binary), which is 129 in decimal</li>\n            <li>Mantissa: The value after the initial 1 that's always assumed for normal numbers: 1.0</li>\n        </ul>\n    </li>\n    <li>For Q:\n        <ul>\n            <li>Sign: 0 (positive number)</li>\n            <li>Exponent: 01111101 (in binary), which is 125 in decimal</li>\n            <li>Mantissa: 1 + $$0.010111000010111011110100_{(2)}$$ or approximately 1.3604 in decimal (considering the implicit leading 1)</li>\n        </ul>\n    </li>\n</ul>\n\n<p>Step 3: Perform the multiplication operation:</p>\n<ul>\n    <li>The result sign will be negative because one of the operands is negative.</li>\n    <li>The exponents are added together: 129 (for P) + 125 (for Q) = 254. We then subtract the bias (127 for single precision) to get the actual exponent: 254 - 127 = 127.</li>\n    <li>The mantissas are multiplied: 1.0 (for P) * approximately 1.3604 (for Q). The leading \"1\" for both mantissas is implicit in normalized binary numbers; thus, the actual multiplication is between 1.0 (which has no effect) and roughly 1.3604, yielding approximately 1.3604. Since the mantissa of P is exactly 1.0, the result should have the same significant digits as the mantissa of Q.</li>\n</ul>\n\n<p>Step 4 and 5: Normalize the result if necessary and round:</p>\n<p>No need for normalization since the mantissa was not affected by multiplication, and exponent 127 is a valid one that does not require any adjustment. So, we directly encode the result.</p>\n\n<p>Step 6: Convert the result back to IEEE-754 format in hexadecimal:</p>\n<p>By considering the sign, the adjusted exponent (127 + the bias of 127), and the mantissa from the Q (because the mantissa of P is 1.0 and has no significant digits beyond 1), we should have:</p>\n\n<ul>\n    <li>Sign: 1 (since the result is negative)</li>\n    <li>Exponent: 127 (adjusted result) + 127 (bias) = 254, which is $$ 11111110_{(2)} $$</li>\n    <li>Mantissa: From Q, it is approximately 3604 in decimal, hence in binary and with 23 bits for the mantissa, it would be: $$ 01011100001011101111010 $$</li>\n    <li>So, the final binary representation will be: $$ 1 \\, 11111110 \\, 01011100001011101111010 $$</li>\n    <li>Converting this binary to hexadecimal: $$ 1100 \\, 0001 \\, 0101 \\, 1100 \\, 0010 \\, 1110 \\, 1111 \\, 0100 $$ which is 0xC15C2EF4</li>\n</ul>\n\n<p>Hence, the correct answer is:</p>\n\n<p>Option C - 0xC15C2EF4</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider three floating point numbers A, B and C stored in registers R<sub>A</sub>, R<sub>B</sub> and R<sub>C</sub>, respectively as per IEEE-754 single precision floating point format. The 32-bit content stored in these registers (in hexadecimal form) are as follows.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyskb6pa/3aa229af-7099-4ad0-88e1-7ee02a8e267a/58af6ce0-45ba-11ef-906c-c3874909930d/file-jaoe38c1lyskb6pb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyskb6pa/3aa229af-7099-4ad0-88e1-7ee02a8e267a/58af6ce0-45ba-11ef-906c-c3874909930d/file-jaoe38c1lyskb6pb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2022 Digital Logic - Number Systems Question 12 English\"></p>\n<p>Which one of the following is FALSE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A  + C = 0"
+      },
+      {
+        "identifier": "B",
+        "content": "C = A  + B"
+      },
+      {
+        "identifier": "C",
+        "content": "B = 3C"
+      },
+      {
+        "identifier": "D",
+        "content": "(B $$-$$ C) > 0"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>IEEE-754 single precision format:</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02mbrg7/3590f386-dd67-4681-b008-7502496cc018/7f33fc70-9656-11ec-8a72-632e293a0c47/file-1l02mbrg8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02mbrg7/3590f386-dd67-4681-b008-7502496cc018/7f33fc70-9656-11ec-8a72-632e293a0c47/file-1l02mbrg8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Digital Logic - Number Systems Question 12 English Explanation 1\"></p>\n<p>Decimal value (D.V.) = ($$-$$1)<sup>S</sup> $$\\times$$ 1.M $$\\times$$ 2<sup>B.E $$-$$ Bias</sup></p>\n<p>Bias value in IEEE single precision format is 127.</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02mdiy0/c905c908-c63e-46e4-94ce-6f6a846a53a0/b0404a80-9656-11ec-8a72-632e293a0c47/file-1l02mdiy1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02mdiy0/c905c908-c63e-46e4-94ce-6f6a846a53a0/b0404a80-9656-11ec-8a72-632e293a0c47/file-1l02mdiy1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Digital Logic - Number Systems Question 12 English Explanation 2\"></p>\n<p>S = 1, B.E = 130, M = 1.100 0000 0000 .....</p>\n<p>D.V = ($$-$$1)<sup>1</sup> $$\\times$$ 1.1 $$\\times$$ 2<sup>130 $$-$$ 127</sup> = $$-$$ 1.1 $$\\times$$ 2<sup>3</sup> = $$-$$ 1100 = ($$-$$ 12)<sub>10</sub></p>\n<p>$$\\therefore$$ A = $$-$$12</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02mfokm/889d7491-3afc-461b-92c0-1951c9996b38/ec378c60-9656-11ec-8a72-632e293a0c47/file-1l02mfokn.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02mfokm/889d7491-3afc-461b-92c0-1951c9996b38/ec378c60-9656-11ec-8a72-632e293a0c47/file-1l02mfokn.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Digital Logic - Number Systems Question 12 English Explanation 3\"></p>\n<p>S = 0, B.E = 132, M = 1.001 000000 ........</p>\n<p>D.V = ($$-$$1)<sup>0</sup> $$\\times$$ 1.001 $$\\times$$ 2<sup>132 $$-$$ 127</sup> = +1.001 $$\\times$$ 2<sup>5</sup> = +100100 = (+36)<sub>10</sub></p>\n<p>$$\\therefore$$ B = +36</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02mh9r1/44dffc30-1191-49e3-9b35-9ad696972c28/1862c4d0-9657-11ec-8a72-632e293a0c47/file-1l02mh9r2.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02mh9r1/44dffc30-1191-49e3-9b35-9ad696972c28/1862c4d0-9657-11ec-8a72-632e293a0c47/file-1l02mh9r2.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Digital Logic - Number Systems Question 12 English Explanation 4\"></p>\n<p>S = 0, B.E = 130, M = 1.100 0000 ........</p>\n<p>D.V = ($$-$$1)<sup>0</sup> $$\\times$$ 1.1 $$\\times$$ 2<sup>130 $$-$$ 127</sup> = +1.1 $$\\times$$ 2<sup>3</sup> = 1100 = (+12)<sub>10</sub></p>\n<p>$$\\therefore$$ C = +12</p>\n<p>(a) A + C = $$-$$12 + 12 = 0 True</p>\n<p>(b) C = A + B</p>\n<p>A + B = $$-$$ 12 + 36 = + 24 $$\\ne$$ C False</p>\n<p>(c) B = 3C</p>\n<p>= 3 $$\\times$$ + 12 = 36 = B True</p>\n<p>(d) B $$-$$ C &gt; 0</p>\n<p>= 36 $$-$$ 12 = 24 &gt; 0 True</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "content": "Consider three registers R1, R2 and R3 that store numbers in IEEE-754 single precision floating point format. Assume that R1 and R2 contain the values (in hexadecimal notation) 0x42200000 and 0xC1200000, respectively.\n<br>If R3 = $${{R1} \\over {R2}}$$, what is the value stored in R3?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0x40800000"
+      },
+      {
+        "identifier": "B",
+        "content": "0x40800000"
+      },
+      {
+        "identifier": "C",
+        "content": "0xC8500000"
+      },
+      {
+        "identifier": "D",
+        "content": "0xC0800000"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : \n\n<br><br>$\\begin{aligned} R_1 &amp; =0 \\times 42200000 \\\\\\\\ R_2 &amp; =0 \\times \\mathrm{C} 1200000\\end{aligned}$</p>\n<p>$R_1$ in hexadecimal notation is given as,</p>\n<p>$$ 0 \\times 42200000 $$</p>\n<p>Convert it into 32 -bit binary number as,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mahwgqka/48cedb5c-e806-4e50-b6d5-8edacf2039ee/da06bda0-2d6f-11f0-857f-7513726195ee/file-jaoe38c1mahwgqkb.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mahwgqka/48cedb5c-e806-4e50-b6d5-8edacf2039ee/da06bda0-2d6f-11f0-857f-7513726195ee/file-jaoe38c1mahwgqkb.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Digital Logic - Number Systems Question 18 English Explanation 1\"></p>\n<p>Here, $\\quad s=0 \\Rightarrow R_1$ is positive number</p>\n<p>$$ e=10000100 \\Rightarrow(132)_{10} $$</p>\n<p>$$ \\begin{aligned} \\text { Actual exponent } &amp; =e-\\text { Bias } \\\\ &amp; =132-127=5 \\end{aligned} $$</p>\n<p>(For IEEE 754, Bias = 127 fixed)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mahwjdq4/9b62eaab-f55f-4414-9599-4147a36f93af/23898ed0-2d70-11f0-857f-7513726195ee/file-jaoe38c1mahwjdq5.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mahwjdq4/9b62eaab-f55f-4414-9599-4147a36f93af/23898ed0-2d70-11f0-857f-7513726195ee/file-jaoe38c1mahwjdq5.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Digital Logic - Number Systems Question 18 English Explanation 2\"></p>\n<p>Now, represent $R_1$ in IEEE 754 single precision floating point format as,</p>\n<p>$$ \\begin{aligned} &amp; \\Rightarrow \\quad(-1)^s \\times(1 . \\mathrm{m}) \\times 2^{e-\\text { Bias=Actual exponent }} \\\\ &amp; \\Rightarrow \\quad(-1)^0 \\times 1.01000000000000000000000 \\times 2^5 \\\\ &amp; \\Rightarrow \\quad 1.01000000000000000000000 \\times 2^5 \\end{aligned} $$</p>\n<p>$\\Rightarrow \\quad$ Shifted above number 5 -times towards left so $2^5$ reduce to $2^0$.</p>\n<p>$$ \\Rightarrow \\quad 101000.000000000000000000 $$</p>\n<p>$\\Rightarrow$ Decimal equivalent of above binary number is,</p>\n<p>$$ \\Rightarrow \\quad+40=R_1 $$</p>\n<p>$R_2$ in hexadecimal notation is given as,</p>\n<p>$$ 0 \\times C 1200000 $$</p>\n<p>Convert it into 32 -bit binary number as,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mahwnvw9/b657dde0-a47e-4779-9174-2126fe71cb1f/a0cf4290-2d70-11f0-857f-7513726195ee/file-jaoe38c1mahwnvwa.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mahwnvw9/b657dde0-a47e-4779-9174-2126fe71cb1f/a0cf4290-2d70-11f0-857f-7513726195ee/file-jaoe38c1mahwnvwa.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Digital Logic - Number Systems Question 18 English Explanation 3\"></p>\n<p>Here, $\\quad s=1 \\Rightarrow R_2$ is negative number</p>\n<p>$$ e=10000010 \\Rightarrow(130)_{10} $$</p>\n<p>$$ \\begin{aligned} \\text { Actual exponent } &amp; =e-\\text { Bias } \\\\ &amp; =130-127=3 \\end{aligned} $$</p>\n<p>(For IEEE 754, Bias = 127 fixed)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mahwqvlt/ab1eacd3-e287-427a-9622-922f028a6118/f4037620-2d70-11f0-857f-7513726195ee/file-jaoe38c1mahwqvlu.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mahwqvlt/ab1eacd3-e287-427a-9622-922f028a6118/f4037620-2d70-11f0-857f-7513726195ee/file-jaoe38c1mahwqvlu.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Digital Logic - Number Systems Question 18 English Explanation 4\"></p>\n<p>Now, represent $R_2$ in IEEE 754 single precision</p>\n<p>floating point format as,</p>\n<p>$$ \\begin{aligned} &amp; \\Rightarrow \\quad(-1)^s \\times(1 . \\mathrm{m}) \\times 2^{e-\\text { Bias=Actual exponent }} \\\\ &amp; \\Rightarrow \\quad(-1)^1 \\times 1.01000000000000000000000 \\times 2^3 \\\\ &amp; \\Rightarrow \\quad-1.01000000000000000000000 \\times 2^3 \\end{aligned} $$</p>\n<p>Shifted above number 3-times towards left so $2^3$ reduce to $2^0$.</p>\n<p>$$ \\Rightarrow \\quad-1010.00000000000000000000 $$</p>\n<p>Decimal equivalent of above binary number is,</p>\n<p>$$ \\Rightarrow \\quad-40=R_2 $$</p>\n<p>Thus,</p>\n<p>$$ \\begin{aligned} &amp; R_3=\\frac{R_1}{R_2}=\\frac{40}{-10}=-4 \\\\ &amp; R_3=-4 \\end{aligned} $$</p>\n<p>Now, represent -4 into IEEE 754 single precision format as,</p>\n<p>$$ s=1 \\Rightarrow \\text { Because } R_3 \\text { is negative. } $$</p>\n<p>Binary value of +4 into 23-bit is,</p>\n<p>$$ (100.00000000000000000000)_2 $$</p>\n<p>Above binary number shifted 2-times towards right as,</p>\n<p>$$ (1.00000000000000000000000) \\times 2^2 $$</p>\n<p>So, -4 can be represented according to IEEE 754 single precision format as,</p>\n<p>$$ (-1)^1 \\times(1.00000000000000000000000) \\times 2^2 $$</p>\n<p>Here, actual exponent $=2=e-$ Bias</p>\n<p>Exponent, $e=2+$ Bias</p>\n<p>(For IEEE 754 format Bias = 127 fixed)</p>\n<p>$$ e=2+127=129=(10000001)_2 $$</p>\n<p>Mantissa, $m=00000000000000000000000$</p>\n<p>So, $R_3=(-4)$ in IEEE 754 binary format is,</p>\n<p>Convert it into hexadecimal notation as,</p>\n<p>$$ \\begin{array}{cccccccccc} 1100 &amp; 0000 &amp; 1000 &amp; 0000 &amp; 0000 &amp; 0000 &amp; 0000 &amp; 0000 \\\\ 12=c &amp; 0 &amp; 8 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\end{array} $$</p>\n<p>So, hexadecimal notation of $R_3$ is,</p>\n<p>$$ (0 \\times C 0800000) $$</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the unsigned $$8$$-bit fixed point binary number representation below \n$$${b_7}\\,\\,{b_6}\\,\\,{b_5}\\,\\,{b_4}\\,\\,{b_3}\\,\\,.\\,\\,{b_2}\\,\\,{b_1}\\,\\,{b_0}$$$\n<br>where the position of the binary point is between $${b_3}$$ and $${b_2}$$. Assume $${b_7}$$ is the most significant bit. Some of the decimal numbers listed below cannot be represented exactly in the above representation:\n<br> $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$(i)$$ $$31.500$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$(ii)$$ $$0.875$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$(iii)$$ $$12.100$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ (iv) $$3.001$$\n<p>Which one of the following statements is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "None of $$(i), (ii), (iii), (iv)$$ can be exactly represented"
+      },
+      {
+        "identifier": "B",
+        "content": "Only $$(ii)$$ cannot be exactly represented "
+      },
+      {
+        "identifier": "C",
+        "content": "Only $$(iii)$$ and $$(iv)$$ cannot be exactly represented"
+      },
+      {
+        "identifier": "D",
+        "content": "Only $$(i)$$ and $$(ii)$$ cannot be exactly represented  "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the equation $${\\left( {43} \\right)_x} = {\\left( {y3} \\right)_8}$$ where $$x$$ and $$y$$ are unknown. The number of possible solutions is ______________",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$A=1111$$ $$1010$$ and $$B=0000$$ $$1010$$ be two $$8$$-bit $$2's$$ complement numbers. Their product in $$2's$$ complement is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1100$$ $$0100$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1001$$ $$1100$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1010$$ $$0101$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1101$$ $$0101$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The $$2's$$ complement representation of $${\\left( { - 539} \\right)_{10}}$$ in hexadecimal is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ABE$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$DBC$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$DE5$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$9E7$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Zero has two representations in:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Sign magnitude "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1's$$ complement"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2's$$ complement "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Given $$\\sqrt {\\left( {224} \\right),}  = {\\left( {13} \\right)_r},$$ \n<br>The value of the radix' $$r$$ is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the number given by the decimal expression. \n<br>$${16^3} \\times 9 + {16^2} \\times 7 + 16 \\times 5 + 3$$\n<p>The number of $$1's$$ in the unsigned binary representation of the number is _______.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "9",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  }
+]

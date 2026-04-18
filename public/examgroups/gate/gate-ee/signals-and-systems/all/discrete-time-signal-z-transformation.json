@@ -1,0 +1,379 @@
+[
+  {
+    "direction": null,
+    "content": "<p>The Z-transform of a discrete signal $$x[n]$$ is</p>\n<p>$$X(z) = {{4z} \\over {(z - {1 \\over 5})(z - {2 \\over 3})(z - 3)}}$$ with $$ROC = R$$.</p>\n<p>Which one of the following statements is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Discrete-time Fourier transform of $$x[n]$$ converges if R is $$|z| > 3$$"
+      },
+      {
+        "identifier": "B",
+        "content": "Discrete-time Fourier transform of $$x[n]$$ converges if R is $${2 \\over 3} < |z| < 3$$"
+      },
+      {
+        "identifier": "C",
+        "content": "Discrete-time Fourier transform of $$x[n]$$ converges if R is such that $$x[n]$$ is a left-sided sequence"
+      },
+      {
+        "identifier": "D",
+        "content": "Discrete-time Fourier transform of $$x[n]$$ converges if R is such that $$x[n]$$ is a right-sided sequence"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $X(z)=\\frac{4 z}{\\left(z-\\frac{1}{5}\\right)\\left(z-\\frac{2}{3}\\right)(z-3)}$</p>\n\n<p>Poles of $X(z)$ are located at $z=\\frac{1}{5}, z=\\frac{2}{3}$ and $z=3$.</p>\n\n<p>For DTFT to converge, the ROC of $Z$-transform of $x(n)$ should contain unit circle.</p>\n\n<p>If $x(n)$ is a right sided sequence then the ROC is $|z|>3$ which does not include unit circle. So, option (D) and $(\\mathrm{A})$ are wrong.</p>\n\n<p>If R.O.C. is $\\frac{2}{3}<|z|<3$, the R.O.C. includes unit circle. So, option (B) is correct.</p>\n\n<p>If $x(n)$ is a left sided then R.O.C will be $|z|<\\frac{1}{5}$ which does not include unit circle. So, option (C) is wrong. \n<br/><br/>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "content": "The pole-zero plots of three discrete-time systems P, Q and R on the z-plane are shown below.\n<img alt=\"GATE EE 2017 Set 2 Signals and Systems - Discrete Time Signal Z Transformation Question 13 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/49af8130bee76574556eaadbed11dd18d87c613f9f925a79f3e9470c7df40ecb.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\nWhich one of the following is TRUE about the frequency selectivity of these systems?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "All three are high-pass filters."
+      },
+      {
+        "identifier": "B",
+        "content": "All three are band-pass filters."
+      },
+      {
+        "identifier": "C",
+        "content": "All three are low-pass filters."
+      },
+      {
+        "identifier": "D",
+        "content": "P is a low-pass filter, Q is a band-pass filter and R is a high-pass filter."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The z-Transform of a sequence x[n] is given as X(z) = 2z+4−4/z+3/z<sup>2</sup>. If y[n] is the first difference of x[n], then Y(Z) is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2z+2-\\frac8z+\\frac7{z^2}-\\frac3{z^3}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-2z+2-\\frac6z+\\frac1{z^2}-\\frac3{z^3}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-2z-2+\\frac8z-\\frac7{z^2}+\\frac3{z^3}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$4z-2-\\frac8z-\\frac1{z^2}+\\frac3{z^3}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If the Z-transform of a finite-duration discrete-time signal $x[n]$ is $X(z)$, then the Z-transform of the signal $y[n] = x[2n]$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$Y(z) = X(z^2)$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$Y(z) = \\frac{1}{2} \\left[ X(z^{-1/2}) + X(-z^{-1/2}) \\right]$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$Y(z) = \\frac{1}{2} \\left[ X(z^{1/2}) + X(-z^{1/2}) \\right]$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$Y(z) = \\frac{1}{2} \\left[ X(z^2) + X(-z^2) \\right]$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ee-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The discrete-time Fourier transform of a signal $$x[n]$$ is $$X(\\Omega ) = (1 + \\cos \\Omega ){e^{ - j\\Omega }}$$. Consider that $${x_p}[n]$$ is a periodic signal of period N = 5 such that</p>\n<p>$${x_p}[n] = x[n]$$, for $$n = 0,1,2$$</p>\n<p>= 0, for $$n = 3,4$$</p>\n<p>Note that $${x_p}[n] = \\sum\\nolimits\\limits_{k = 0}^{n - 1} {{a_k}{e^{j{{2\\pi } \\over N}kn}}} $$. The magnitude of the Fourier series coeffiient $$a_3$$ is __________ (Round off to 3 decimal places).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.037TO0.039",
+    "explanation": "<p>We know that, $a_k=\\frac{1}{N} \\sum_{n=0}^{N-1} x(n) e^{\\frac{-j 2 \\pi}{N} k n}$</p>\n\n<p>$$ \\begin{aligned} & a_k=\\left.\\frac{1}{N} X(\\Omega)\\right|_{\\Omega=\\frac{2 \\pi k}{N}} \\\\ & a_k=\\left.\\frac{1}{N}(1+\\cos \\Omega) e^{-j \\Omega}\\right|_{\\Omega=\\frac{2 \\pi k}{N}}=\\frac{1}{N}\\left(1+\\cos \\frac{2 \\pi k}{N}\\right) e^{\\frac{-j 2 \\pi k}{N}} \\\\ & a_3=\\frac{1}{5}\\left(1+\\cos \\frac{2 \\pi \\times 3}{5}\\right) e^{\\frac{-j 2 \\pi \\times 3}{5}} \\\\ & a_3=\\frac{1}{5}\\left(1+\\cos \\frac{6 \\pi}{5}\\right) e^{\\frac{-j 6 \\pi}{5}} \\\\ & \\left|a_3\\right|=\\frac{1}{5}\\left(1+\\cos \\frac{6 \\pi}{5}\\right)=0.038 \\end{aligned} $$</p>\n\n<p>Hence, the correct answer is 0.038 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The causal signal with $z$-transform $z^2(z-a)^{-2}$ is ( $u[n]$ is the unit step signal)</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$a^{2 n} u[n]$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$(n+1) a^n u[n]$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$n^{-1} a^n u[n]$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$n^2 a^n u[n]$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : Z-transform of a causal signal is,</p>\n<p>$$ X(z)=z^2(z-a)^{-2}=\\frac{z^2}{(z-a)^2} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)$$</p>\n<p>The Z transform pair for $a^n u[n]$ signal is given by</p>\n<p>$$ a^n u[n] \\longleftrightarrow \\frac{z}{z-a} $$</p>\n<p>Using differentiation in z-domain property,</p>\n<p>$$ \\begin{aligned} & n a^n u[n] \\longleftrightarrow-z \\frac{d}{d z}\\left(\\frac{z}{z-a}\\right) \\Rightarrow-z\\left[\\frac{(z-a) \\times 1-z \\times 1}{(z-a)^2}\\right] \\\\ & n a^n u[n] \\longleftrightarrow \\frac{a z}{(z-a)^2} \\end{aligned} $$</p>\n<p>Using time shifting property,</p>\n<p>$$ \\begin{aligned} & (n+1) a^{n+1} u[n+1] \\longleftrightarrow \\frac{a z}{(z-a)^2} z \\\\ & (n+1) a^n u[n+1] \\longleftrightarrow \\frac{z^2}{(z-a)^2} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{aligned} $$</p>\n<p>Comparing equations (i) and (ii), required inverse of given transform is,</p>\n<p>$$ x[n]=(n+1) a^n u[n+1] $$</p>\n<p>Sequence $u[n+1]$ exist for $-1 \\leq n<\\infty$, but the factor ( $n+1$ ) is zero for $n=-1$, so $x[n]$ may be expressed as a causal sequence.</p>\n<p>$$ x[n]=(n+1) a^n u[n] $$</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ee-2021",
+    "difficulty": null
+  },
+  {
+    "content": "A cascade system having the impulse responses $$$\\begin{array}{l}h_1\\left(n\\right)=\\left\\{1,\\;-1\\right\\}\\;\\;\\;and\\;\\;h_2\\left(n\\right)=\\left\\{1,\\;1\\right\\}\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\end{array}$$$ is shown in the\nfigure below, where symbol $$\\uparrow$$ denotes the time origin.\n<img alt=\"GATE EE 2017 Set 2 Signals and Systems - Discrete Time Signal Z Transformation Question 11 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8c3ab0cea6e9fdbad483b0ec043c48b3e02548c01ed96e131f7c6a2551c59d0f.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\nThe input sequence x(n) for which the cascade system produces an output sequence\n$$$\\begin{array}{l}y\\left(n\\right)=\\left\\{1,\\;2,\\;1,\\;-1,\\;-2,\\;-1\\right\\}\\;\\;is\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\end{array}$$$\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\begin{array}{l}x\\left(n\\right)=\\left\\{1,\\;2,\\;1,\\;1\\right\\}\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\end{array}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\begin{array}{l}x\\left(n\\right)=\\left\\{1,\\;1,\\;2,\\;2\\right\\}\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\end{array}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\begin{array}{l}x\\left(n\\right)=\\left\\{1,\\;1,\\;1\\right\\}\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\end{array}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\begin{array}{l}x\\left(n\\right)=\\left\\{1,\\;2,\\;2,\\;1\\right\\}\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\uparrow\\end{array}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a discrete time signal given by\n<br>x[n]=(-0.25)<sup>n</sup>u[n]+(0.5)<sup>n</sup>u[-n-1]\n<br>The region of convergence of its Z-transform would be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the region inside the circle of radius 0.5 and centered at origin."
+      },
+      {
+        "identifier": "B",
+        "content": "the region outside the circle of radius 0.25 and centered at origin."
+      },
+      {
+        "identifier": "C",
+        "content": "the annular region between the two circles, both centered at origin and having radii\n0.25 and 0.5."
+      },
+      {
+        "identifier": "D",
+        "content": "the entire Z plane."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$X\\left(z\\right)=\\frac1{1-z^{-3}}$$\nbe the Z–transform of a causal signal x[n]. Then, the values of\nx[2] and x[3] are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0 and 0"
+      },
+      {
+        "identifier": "B",
+        "content": "0 and 1"
+      },
+      {
+        "identifier": "C",
+        "content": "1 and 0"
+      },
+      {
+        "identifier": "D",
+        "content": "1 and 1"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ee-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A discrete system is represented by the difference equation\n$$$\\begin{bmatrix}X_1\\left(k+1\\right)\\\\X_2\\left(k+2\\right)\\end{bmatrix}=\\begin{bmatrix}a&amp;a-1\\\\a+1&amp;a\\end{bmatrix}\\begin{bmatrix}X_1\\left(k\\right)\\\\X_2\\left(k\\right)\\end{bmatrix}$$$\nIt has initial condition $$X_1\\left(0\\right)=1;\\;X_2\\left(0\\right)=0$$. The pole location of the system for a = 1,\nare",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1\\pm j0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$-1\\pm j0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\pm1+j0$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$0\\pm j1$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ee-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Given X(z)=$$\\frac z{\\left(z-a\\right)^2}$$ with $$\\left|z\\right|$$ &gt; a, the residue of X(z)z<sup>n-1</sup> at z = a for n $$\\geq$$ 0 will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a<sup>n-1</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "a<sup>n</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "na<sup>n</sup>"
+      },
+      {
+        "identifier": "D",
+        "content": "na<sup>n-1</sup>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The discrete-time signal $$$x\\left[n\\right]\\leftrightarrow X\\left(z\\right)={\\textstyle\\sum_{n=0}^\\infty}\\frac{3^n}{2+n}z^{2n}$$$\nwhere $$\\leftrightarrow$$ denote a transform-pair relationship, is orthogonal to the signal",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y_1\\left[n\\right]\\leftrightarrow Y_1\\left(z\\right)={\\textstyle\\sum_{n=0}^\\infty}\\left(\\frac23\\right)^nz^{-n}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$y_2\\left[n\\right]\\leftrightarrow Y_2\\left(z\\right)={\\textstyle\\sum_{n=0}^\\infty}\\left(5^n-n\\right)z^{-\\left(2n+1\\right)}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$y_3\\left[n\\right]\\leftrightarrow Y_3\\left(z\\right)={\\textstyle\\sum_{n=-\\infty}^\\infty}2^{-\\left|n\\right|}z^{-n}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$y_4\\left[n\\right]\\leftrightarrow Y_4\\left(z\\right)=2z^{-4}\\;+\\;3z^{-2}+1$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ee-2006",
+    "difficulty": null
+  },
+  {
+    "content": "If u(k) is the unit step and $$\\delta\\left(k\\right)$$ is the unit impulse function, the inverse z-transform\nof $$F\\left(z\\right)=\\frac1{z+1}$$ for k&gt;0 is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left(-1\\right)^k\\delta\\left(k\\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\delta\\left(k\\right)-\\left(-1\\right)^k$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left(-1\\right)^ku\\left(k\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$u\\left(k\\right)-\\left(-1\\right)^k$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ee-2005",
+    "difficulty": null
+  }
+]

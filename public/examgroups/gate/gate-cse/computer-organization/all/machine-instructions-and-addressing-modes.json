@@ -1,0 +1,948 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Match each addressing mode in List I with a data element or an element of a data structure (in a high-level language) in List II:</p>\n<style type=\"text/css\">\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n\n.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}\n\n</style>\n<table class=\"tg\"><thead>\n\n  <tr>\n\n    <th class=\"tg-c3ow\" colspan=\"2\">List-I</th>\n\n    <th class=\"tg-c3ow\" colspan=\"2\">List-II</th>\n\n  </tr></thead>\n\n<tbody>\n\n  <tr>\n\n    <td class=\"tg-c3ow\">P.</td>\n\n    <td class=\"tg-c3ow\">Immediate</td>\n\n    <td class=\"tg-c3ow\">1.</td>\n\n    <td class=\"tg-c3ow\">Element of an array</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-c3ow\">Q.</td>\n\n    <td class=\"tg-c3ow\">Indirect</td>\n\n    <td class=\"tg-c3ow\">2.</td>\n\n    <td class=\"tg-c3ow\">Pointer</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-c3ow\">R.</td>\n\n    <td class=\"tg-c3ow\">Base with index</td>\n\n    <td class=\"tg-c3ow\">3.</td>\n\n    <td class=\"tg-c3ow\">Element of a record</td>\n\n  </tr>\n\n  <tr>\n\n    <td class=\"tg-c3ow\">S.</td>\n\n    <td class=\"tg-c3ow\">Base with offset/displacement</td>\n\n    <td class=\"tg-c3ow\">4.</td>\n\n    <td class=\"tg-c3ow\">Constant</td>\n\n  </tr>\n\n</tbody>\n\n</table>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\mathrm{P}-4, \\mathrm{Q}-3, \\mathrm{R}-1, \\mathrm{~S}-2$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$P-4, Q-2, R-1, S-3$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$P-1, Q-4, R-3, S-2$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\mathrm{P}-2, \\mathrm{Q}-3, \\mathrm{R}-1, \\mathrm{~S}-4$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<h3>1. Immediate addressing</h3>\n<p>In immediate addressing, the actual value is given directly in the instruction.</p>\n<p>So, it matches with <strong>Constant</strong>.</p>\n<p>$$P \\to 4$$</p>\n\n<h3>2. Indirect addressing</h3>\n<p>In indirect addressing, the address of the data is stored in another location, typically through a <strong>pointer</strong>.</p>\n<p>So, it matches with <strong>Pointer</strong>.</p>\n<p>$$Q \\to 2$$</p>\n\n<h3>3. Base with index</h3>\n<p>This addressing mode is used to access an <strong>element of an array</strong>, where:</p>\n<p>$$\\text{Effective Address} = \\text{Base Address} + \\text{Index}$$</p>\n<p>So, it matches with <strong>Element of an array</strong>.</p>\n<p>$$R \\to 1$$</p>\n\n<h3>4. Base with offset/displacement</h3>\n<p>This is used for accessing an <strong>element of a record</strong> (or structure), where the field is at a fixed offset from the base address.</p>\n<p>So, it matches with <strong>Element of a record</strong>.</p>\n<p>$$S \\to 3$$</p>\n\n<p>Thus, the correct matching is:</p>\n<p>$$P-4,\\ Q-2,\\ R-1,\\ S-3$$</p>\n<h3>Correct option: <strong>B</strong></h3>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a processor P whose instruction set architecture is the load-store architecture. The instruction format is such that the first operand of any instruction is the destination operand.</p>\n<p>Which one of the following sequences of instructions corresponds to the high-level language statement $Z=X+Y$ ?</p>\n<p>Note: $X, Y$, and $Z$ are memory operands. $R 0, R 1$, and $R 2$ are registers.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>ADD Z, X, Y</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>ADD RO, X, Y STORE Z, R0</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>LOAD RO, X</p>\n<p>ADD Z, RO, Y</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>LOAD RO, X</p>\n<p>LOAD R1, Y</p>\n<p>ADD R2, R0, R1</p>\n<p>STORE Z, R2</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Load-store architecture is a reg-reg reference CPU organization so, both of the ALU operands are always required in the registers.</p>\n<p>LOAD RO, X</p>\n<p>LOAD R1, Y</p>\n<p>ADD R2, R0, R1</p>\n<p>STORE Z, R2</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following is/are part of an Instruction Set Architecture of a processor?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " The size of the cache memory\n"
+      },
+      {
+        "identifier": "B",
+        "content": " The clock frequency of the processor\n"
+      },
+      {
+        "identifier": "C",
+        "content": " The number of cache memory levels\n"
+      },
+      {
+        "identifier": "D",
+        "content": " The total number of registers"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Instruction Set Architecture (ISA) specifies the set of instructions that a processor can execute. It includes details such as instruction formats, addressing modes, and the operations performed by these instructions. </p>\n<p>The clock frequency, however, is a feature of the processor's hardware implementation, known as microarchitecture, and is not part of the ISA. Therefore, the clock frequency does not fall under the scope of an ISA.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements.\n<br><br>I. Daisy chaining is used to assign priorities in attending interrupts.\n<br><br/>II. When a device raises a vectored interrupt, the CPU does polling to identify the source of the interrupt.\n<br><br/>III. In polling, the CPU periodically checks the status bits to know if any device needs its attention.\n<br><br/>IV. During DMA, both the CPU and DMA controller can be bus masters at the same time.\n<br><br>Which of the above statements is/are TRUE?  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and IV only"
+      },
+      {
+        "identifier": "B",
+        "content": "I and II only"
+      },
+      {
+        "identifier": "C",
+        "content": "III only"
+      },
+      {
+        "identifier": "D",
+        "content": "I and III only"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given statements are <strong>TRUE</strong>, let's analyze each one individually.</p>\n<hr />\n<h3><strong>Statement I:</strong></h3>\n<p><strong>\"Daisy chaining is used to assign priorities in attending interrupts.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Daisy Chaining in Interrupt Handling:</strong></p></p>\n<p><p>Daisy chaining is a method used to assign <strong>priorities</strong> to devices requesting interrupts.</p></p>\n<p><p>Devices are connected in a series (chain) configuration.</p></p>\n<p><p>The <strong>Interrupt Acknowledge (INTA)</strong> signal is passed from one device to the next in the chain.</p></p>\n<p><p>A device with a higher priority is placed closer to the CPU, so it receives the INTA signal first.</p></p>\n<p><p>This method allows the CPU to service higher-priority devices before lower-priority ones.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Statement I is TRUE.</strong></p>\n<hr />\n<h3><strong>Statement II:</strong></h3>\n<p><strong>\"When a device raises a vectored interrupt, the CPU does polling to identify the source of the interrupt.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Vectored Interrupts:</strong></p></p>\n<p><p>In a vectored interrupt system, each interrupting device is assigned a unique <strong>interrupt vector</strong>.</p></p>\n<p><p>The interrupt vector typically contains the address of the <strong>Interrupt Service Routine (ISR)</strong> specific to that device.</p></p>\n<p><p>When a device raises a vectored interrupt, it provides its interrupt vector to the CPU.</p></p>\n<p><p>The CPU uses this vector to directly jump to the appropriate ISR without needing to identify the source.</p></p>\n<p><p><strong>Polling:</strong></p></p>\n<p><p>Polling involves the CPU checking each device's status register to determine which device needs attention.</p></p>\n<p><p>Polling is typically used in <strong>non-vectored</strong> interrupt systems or when interrupts are not used.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Statement II is FALSE.</strong> In vectored interrupts, the CPU does <strong>not</strong> perform polling to identify the source; the device provides the necessary information directly.</p>\n<hr />\n<h3><strong>Statement III:</strong></h3>\n<p><strong>\"In polling, the CPU periodically checks the status bits to know if any device needs its attention.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Polling Mechanism:</strong></p></p>\n<p><p>Polling is a technique where the CPU <strong>periodically</strong> checks the <strong>status registers</strong> of peripheral devices.</p></p>\n<p><p>The CPU reads the status bits to determine if a device is ready for data transfer or requires service.</p></p>\n<p><p>This method is simple but can be inefficient, as the CPU spends time checking devices even if they do not need service.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Statement III is TRUE.</strong></p>\n<hr />\n<h3><strong>Statement IV:</strong></h3>\n<p><strong>\"During DMA, both the CPU and DMA controller can be bus masters at the same time.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Direct Memory Access (DMA):</strong></p></p>\n<p><p>DMA allows devices to transfer data directly to or from memory without continuous CPU intervention.</p></p>\n<p><p>The <strong>DMA controller</strong> temporarily becomes the <strong>bus master</strong> to control data transfer.</p></p>\n<p><p><strong>Bus Mastership:</strong></p></p>\n<p><p>Only one entity can be the bus master at any given time to avoid conflicts.</p></p>\n<p><p>When the DMA controller takes over the bus, the CPU relinquishes control until the DMA operation is complete.</p></p>\n<p><p>The CPU and DMA controller <strong>cannot</strong> be bus masters simultaneously.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Statement IV is FALSE.</strong> The CPU and DMA controller <strong>do not</strong> share bus mastership at the same time.</p>\n<hr />\n<h3><strong>Summary:</strong></h3>\n\n<p><p><strong>Statements that are TRUE:</strong></p></p>\n<p><p><strong>Statement I</strong></p></p>\n<p><p><strong>Statement III</strong></p></p>\n<p><p><strong>Statements that are FALSE:</strong></p></p>\n<p><p><strong>Statement II</strong></p></p>\n<p><p><strong>Statement IV</strong></p></p>\n\n<hr />\n<p><strong>Answer:</strong> Option D</p>\n<p><strong>I and III only</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "A processor has $$40$$ distinct instructions and $$24$$ general purpose registers. A $$32$$-bit instruction word has an opcode, two register operands and an immediate operand. The number of bits available for the immediate operand field is __________ .",
+    "options": [],
+    "correct_options": [],
+    "answer": "16",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For computers based on three-address instruction formats, each address field can be used to specify which of the following:\n<p>(S1) A memory operand <br>(S2) A processor register <br>(S3) An implied accumulator register</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Either S1 or S2"
+      },
+      {
+        "identifier": "B",
+        "content": "Either S2 or S3"
+      },
+      {
+        "identifier": "C",
+        "content": "Only S2 and S3"
+      },
+      {
+        "identifier": "D",
+        "content": "All of S1, S2 and S3"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A $$CPU$$ has $$24$$-bit instructions. A program starts at address $$300$$ (in decimal). Which one of the following is a legal program counter (all values in decimal)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$400$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$500$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$600$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$700$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following addressing modes are suitable for program relocation at run time? \n<br>$$1.$$ Absolute addressing\n<br>$$2.$$ Based addressing\n<br>$$3.$$ Relative addressing\n<br>$$4.$$ Indirect addressing<p></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ and $$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ and $$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2$$ and $$3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1, 2$$ and $$4$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is not a form of memory?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Instruction cache"
+      },
+      {
+        "identifier": "B",
+        "content": "Instruction register "
+      },
+      {
+        "identifier": "C",
+        "content": "Instruction opcode"
+      },
+      {
+        "identifier": "D",
+        "content": "Translation look aside buffer"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "In absolute addressing mode ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the operand is inside the instruction "
+      },
+      {
+        "identifier": "B",
+        "content": "the address of the operand is inside the instruction "
+      },
+      {
+        "identifier": "C",
+        "content": "the register containing the address of the operand is specified inside the instruction "
+      },
+      {
+        "identifier": "D",
+        "content": "the location of the operand is implicit "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The most appropriate matching for the following pairs\n<br>$$X:$$ Indirect addressing \n<br>$$Y:$$ Immediate addressing \n<br>$$Z:$$ Auto decrement addressing is<p></p>\n<p>$$1:$$ Loops\n<br>$$2:$$ Pointers\n<br>$$3.$$ Constants </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$X - 3,\\,Y - 2,\\,Z - 1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$X - 1,\\,Y - 3,\\,Z - 2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$X - 2,\\,Y - 3,\\,Z - 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$X - 3,\\,Y - 1,\\,Z - 2$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a processor that has 16 general purpose registers and it uses 2-byte instruction format for all its instructions. Variable-sized opcodes are permitted. There are three different types of instructions; M-type, R-type, and C-type. Each M-type instruction has 2 register operands and a 6 -bit immediate operand. Each R-type instruction has 3 register operands. Each C-type instruction has a register operand and a 6-bit offset value. If there are 2 unique M-type opcodes and 7 unique R-type opcodes, which one of the following options gives the maximum number of unique opcodes possible for C-type instructions?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>8</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>4</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>64</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>16</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Instruction size = } 16 \\text { bit } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyv9knw/6ac4be26-61bc-4209-96d8-83dc845ca739/154341c0-2457-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyv9knx.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyv9knw/6ac4be26-61bc-4209-96d8-83dc845ca739/154341c0-2457-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyv9knx.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Computer Organization - Machine Instructions and Addressing Modes Question 1 English Explanation\"></p>\n<p>Take from CDR</p>\n<ol>\n<li><p>1. Primitive OPcode size $=2$ bit</p></li>\n<li><p>2. Number of instructions $=2^2=4$</p></li>\n<li><p>3. Number of free OPcodes after M-Type $=(4-2)=2$</p></li>\n<li><p>4. Number of R-Type instruction $=2 \\times 2^2=8$</p></li>\n<li><p>5. Number of free OPcodes after R-Type $=(8-7)=1$</p></li>\n<li><p>6. Number of C-Type instruction $=1 \\times 2^2=4$</p></li>\n</ol>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A processor has 64 general-purpose registers and 50 distinct instruction types. An instruction is encoded in 32-bits. What is the maximum number of bits that can be used to store the immediate operand for the given instruction?</p>\n<p>$$\\mathrm{ADD ~ R1,~\\#25 \\qquad // R1 = R1 + 25}$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16"
+      },
+      {
+        "identifier": "B",
+        "content": "20"
+      },
+      {
+        "identifier": "C",
+        "content": "22"
+      },
+      {
+        "identifier": "D",
+        "content": "24"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7vf4eon/fa4f5156-78b9-4aac-a89f-f7f3222088d0/5ae66670-f97a-11ef-bdd1-8fcf8ec6e3e2/file-jaoe38c1m7vf4eoo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7vf4eon/fa4f5156-78b9-4aac-a89f-f7f3222088d0/5ae66670-f97a-11ef-bdd1-8fcf8ec6e3e2/file-jaoe38c1m7vf4eoo.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Computer Organization - Machine Instructions and Addressing Modes Question 5 English Explanation\"></p>\n<p>20 bit space is required to represent the immediate value.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A processor with 16 general purpose registers uses a 32-bit instruction format. The instruction format consists of an opcode field, an addressing mode field, two register operand fields, and a 16-bit scalar field. If 8 addressing modes are to be supported, the maximum number of unique opcodes possible for every addressing mode is _________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "32",
+    "explanation": "<p>To determine the maximum number of unique opcodes possible for every addressing mode, we need to break down the 32-bit instruction format and understand how the bits are allocated to each field. Here's how it can be done:</p>\n\n<p>The 32-bit instruction format consists of the following fields:</p>\n\n<ul>\n\n<li>Opcode field</li>\n\n<li>Addressing mode field</li>\n\n<li>Two register operand fields</li>\n\n<li>16-bit scalar field</li>\n\n</ul>\n\n<p>Given details:</p>\n\n<ul>\n\n<li>The processor has 16 general purpose registers, which means each register operand field needs $$\\log_2{16} = 4$$ bits.</li>\n\n<li>There are 8 addressing modes, so the addressing mode field needs $$\\log_2{8} = 3$$ bits.</li>\n\n<li>The scalar field is fixed at 16 bits.</li>\n\n</ul>\n\n<p>Let $b_{\\text{opcode}}$ be the number of bits allocated to the Opcode field. We can summarize the bit allocation of the instruction format as follows:</p>\n\n<ul>\n\n<li>Scalar field: 16 bits</li>\n\n<li>Two register operand fields: $$4 + 4 = 8$$ bits</li>\n\n<li>Addressing mode field: 3 bits</li>\n\n</ul>\n\n<p>So, the total bits used by these fields is:</p>\n\n<p>$$ 16 + 8 + 3 = 27 \\text{ bits} $$</p>\n\n<p>The remaining bits for the opcode field are:</p>\n\n<p>$$ 32 - 27 = 5 \\text{ bits} $$</p>\n\n<p>Therefore, the number of unique opcodes possible for every addressing mode, given 5 bits is:</p>\n\n<p>$$ 2^5 = 32 $$</p>\n\n<p>So, the maximum number of unique opcodes possible for every addressing mode is <strong>32</strong>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A processor uses a 32-bit instruction format and supports byte-addressable memory access. The ISA of the processor has 150 distinct instructions. The instructions are equally divided into two types, namely R-type and I-type, whose formats are shown below.</p><p>R-type Instruction Format:</p><style>table { width: 100%; border-collapse: collapse; margin: 20px 0; } th { background-color: blue; color: white; border: 1px solid lightgrey; padding: 10px; } td { border: 1px solid lightgrey; padding: 10px; text-align: left; }</style><table><thead><tr><th>OPCODE</th><th>UNUSED</th><th>DST Register</th><th>SRC Register1</th><th>SRC Register2</th></tr></thead></table><p>I-type Instruction Format:</p><table><thead><tr><th>OPCODE</th><th>DST Register</th><th>SRC Register</th><th># Immediate value/address</th></tr></thead></table><p>In the OPCODE, 1 bit is used to distinguish between I-type and R-type instructions and the remaining bits indicate the operation. The processor has 50 architectural registers, and all register fields in the instructions are of equal size.</p><p>Let <i>X</i> be the number of bits used to encode the UNUSED field, <i>Y</i> be the number of bits used to encode the OPCODE field, and <i>Z</i> be the number of bits used to encode the immediate value/address field. The value of <i>X + 2Y + Z</i> is __________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "34",
+    "explanation": "<p>Given that the processor uses a 32-bit instruction format, we need to figure out the bit allocation for each part of both instruction types (R-type and I-type), focusing on fields whose sizes we are supposed to determine.</p>\n\n<p>We know that:</p>\n\n<p>1. The processor supports 150 distinct instructions, divided equally into R-type and I-type instructions. Therefore, there are 75 R-type instructions and 75 I-type instructions.</p>\n\n<p>2. OPCODE field distinguishes between R-type and I-type instructions using 1 bit. The remaining bits in the OPCODE field are used to specify the particular operation.</p>\n\n<p>3. There are 50 architectural registers, which means we need enough bits to uniquely identify each one of these registers.</p>\n\n<p>Now let's analyze the instruction formats:</p>\n\n<p><strong>R-type Instruction Format:</strong></p>\n\n<table>\n\n<thead>\n\n<tr>\n\n<th>OPCODE</th>\n\n<th>UNUSED</th>\n\n<th>DST Register</th>\n\n<th>SRC Register1</th>\n\n<th>SRC Register2</th>\n\n</tr>\n\n</thead>\n\n</table>\n\n<p><strong>I-type Instruction Format:</strong></p>\n\n<table>\n\n<thead>\n\n<tr>\n\n<th>OPCODE</th>\n\n<th>DST Register</th>\n\n<th>SRC Register</th>\n\n<th># Immediate value/address</th>\n\n</tr>\n\n</thead>\n\n</table>\n\n<p>Let’s calculate the bits required for the fields in the instruction:</p>\n\n<p>1. <strong>Number of bits for registers:</strong> To encode 50 registers, we need at least:</p>\n\n<p>$$ \\lceil \\log_2 50 \\rceil = 6 \\text{ bits} $$</p>\n\n<p>Therefore, each register field (DST Register, SRC Register1, and SRC Register2) needs 6 bits.</p>\n\n<p>2. <strong>Number of bits for OPCODE:</strong> The OPCODE field uses 1 bit to distinguish between R-type and I-type, leaving the rest for encoding the specific instruction. Since there are 75 instructions for each type, this requires:</p>\n\n<p>$$ \\lceil \\log_2 75 \\rceil = 7 \\text{ bits} $$</p>\n\n<p>This means the total size of the OPCODE field is:</p>\n\n<p>$$ 1 \\text{ (to distinguish between types)} + 7 \\text{ (to specify the operation)} = 8 \\text{ bits} $$</p>\n\n<p>3. <strong>Number of bits for the UNUSED field (X):</strong> In an R-type instruction, the total bit size is 32 bits and can be divided as follows:</p>\n\n<p>Bits for all register fields:</p>\n\n<p>$$ 3 \\times 6 \\text{ bits} = 18 \\text{ bits} $$</p>\n\n<p>Total bits so far (R-type):</p>\n\n<p>$$ 8 \\text{ (OPCODE)} + 18 \\text{ (register fields)} = 26 \\text{ bits} $$</p>\n\n<p>The number of bits left for the UNUSED field is:</p>\n\n<p>$$ 32 \\text{ (total bits)} - 26 \\text{ bits used} = 6 \\text{ bits (X)} $$</p>\n\n<p>4. <strong>Number of bits for the Immediate value/address field (Z):</strong> In an I-type instruction, the total bit size is 32 bits and can be divided as follows:</p>\n\n<p>Bits for two register fields:</p>\n\n<p>$$ 2 \\times 6 \\text{ bits} = 12 \\text{ bits} $$</p>\n\n<p>Total bits so far (I-type):</p>\n\n<p>$$ 8 \\text{ (OPCODE)} + 12 \\text{ (register fields)} = 20 \\text{ bits} $$</p>\n\n<p>The number of bits left for the Immediate value/address field is:</p>\n\n<p>$$ 32 \\text{ (total bits)} - 20 \\text{ bits used} = 12 \\text{ bits (Z)} $$</p>\n\n<p>Finally, we need to find the value of <strong>X + 2Y + Z</strong>:</p>\n\n<p>$$ X + 2Y + Z = 6 + 2 \\times 8 + 12 = 34 $$</p>\n\n<p>Therefore, the value of <strong>X + 2Y + Z</strong> is <strong>34</strong>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the given C-code and its corresponding assembly code, with a few operands U1-U4 being unknown. Some useful information as well as the semantics of each unique assembly instruction is annotated as inline comments in the code. The memory is byte-addressable.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr7ty3s/747489d1-2642-4a4c-9bad-9dfd873d83b9/c3170d90-44fc-11ef-b8e7-e36aaf4aa694/file-jaoe38c1lyr7ty3t.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr7ty3s/747489d1-2642-4a4c-9bad-9dfd873d83b9/c3170d90-44fc-11ef-b8e7-e36aaf4aa694/file-jaoe38c1lyr7ty3t.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Computer Organization - Machine Instructions and Addressing Modes Question 8 English\"></p>\n<p>Which one of the following options is a CORRECT replacement for operands in the position (U1, U2, U3, U4) in the above assembly code?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(8, 4, 1, L02)"
+      },
+      {
+        "identifier": "B",
+        "content": "(3, 4, 4, L01)"
+      },
+      {
+        "identifier": "C",
+        "content": "(8, 1, 1, L02)"
+      },
+      {
+        "identifier": "D",
+        "content": "(3, 1, 1, L01)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Here an analyzing code we can observe that. We are to shift value of $r_s$ left by $u$ places. In code were multiplying element of $b$ by 8 . So, $u_1=3$, which is same as multiplying value by 8 or $2^3$.</p>\n\n<p>Also, $r_3$ and $r_4$ stores storing address of next element of arrays $a$ and $v$. Since t's 32 bit system and size of int is 4 B so well increment by 4 so, value of $u_2$ and $u_3 \\mathrm{~s} 4$.</p>\n\n<p>We have to jump to short of code i.e. $\\angle 01$ so that for-loop can be run. So, $u_4$ is $\\angle 01$.</p>\n\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "If the numerical value of a 2-byte unsigned integer on a little endian computer is 255 more than that on a big endian computer, which of the following choices represent(s) the unsigned integer on a little endian computer?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0x0001"
+      },
+      {
+        "identifier": "B",
+        "content": "0x6665"
+      },
+      {
+        "identifier": "C",
+        "content": "0x0100"
+      },
+      {
+        "identifier": "D",
+        "content": "0x4243"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Consider each option one by one :</p>\n\n<p><b>Option (A) :</b> 0x0001</p>\n<p>On little endian (LE) : 0x0001</p>\n<p>On Big endian (BE) : 0x0100</p>\n<p>Converting LE into decimal :</p>\n<p>$$ (0001)_{16}=(1)_{10} $$</p>\n<p>Converting BE into decimal :</p>\n<p>$$ (0100)_{16}=(256)_{10} $$</p>\n<p>Subtracting BE from LE,</p>\n<p>$$ 1-256=-255 $$</p>\n\n<p><b>Option (B) :</b> 0x6665</p>\n<p>On little endian (LE) : 0x6665</p>\n<p>On Big endian (BE) : 0x6566</p>\n<p>Converting LE into decimal :</p>\n<p>$$ (6665)_{16}=(26213)_{10} $$</p>\n<p>Converting BE into decimal :</p>\n<p>$$ (6566)_{16}=(25958)_{10} $$</p>\n<p>Subtracting BE from LE,</p>\n<p>$$ 26213-25958=255 $$</p>\n<p>Clearly, $\\mathrm{LE}=255+\\mathrm{BE}$</p>\n\n<p><b>Option (C) :</b> 0x0100</p>\n<p>On little endian (LE) : 0x0100</p>\n<p>On Big endian (BE) : 0x0001</p>\n<p>Converting LE into decimal :</p>\n<p>$$ (0100)_{16}=(256)_{10} $$</p>\n<p>Converting BE into decimal :</p>\n<p>$$ (0001)_{16}=(1)_{10} $$</p>\n<p>Subtracting BE from LE,</p>\n<p>$$ 256-1=255 $$</p>\n<p>Clearly, LE $=255+$ BE</p>\n\n<p><b>Option (D) :</b> 0x4243</p>\n<p>On little endian (LE) : 0x4243</p>\n<p>On Big endian (BE) : 0x4342</p>\n<p>Converting LE into decimal :</p>\n<p>$$ (4243)_{16}=(16963)_{10} $$</p>\n<p>Converting BE into decimal :</p>\n<p>$$ (4342)_{16}=(17218)_{10} $$</p>\n<p>Subtracting BE from LE,</p>\n<p>$$ 16963-17218=-255 $$</p>\n\n<p>Hence, the correct options are (B), (C).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A processor has 64 registers and uses 16-bit instruction format. It has two types of instructions: I-type and R-type. Each I-type instruction contains an opcode, a register name, and a 4-bit immediate value. Each R-type instruction contains an opcode and two register names. If there are 8 distinct I-type opcodes, then the maximum number of distinct R-type opcodes is _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "14",
+    "explanation": "<p><b>Given :</b></p>\n<p>Number of registers $=64$</p>\n<p>Size of instruction $=16$ bits</p>\n<p>Number of distinct I-type instructions $=8$</p>\n<p>Total number of possible instruction encodings</p>\n<p>$$ =2^{16} $$</p>\n<p>Number of bits required for register</p>\n<p>$$ =\\log _2(64)=6 \\text { bits } $$</p>\n<p>Number of bits required for immediate value $=4$ bits</p>\n<p>I-type instruction format</p>\n<p>$$ \\begin{array}{|l|l|l|} \\hline \\text { OPCODE } & \\text { REGISTER } & \\text { IMMEDIATE } \\\\ \\hline \\end{array} $$</p>\n<p>R-type instruction format</p>\n<p>$$ \\begin{array}{|l|l|l|} \\hline \\text { OPCODE } & \\text { REGISTER } & \\text { REGISTER } \\\\ \\hline \\end{array} $$</p>\n<p>Given 8 I-type instructions, let $x$ be the number of R-type then</p>\n<p>$$ \\begin{aligned} & 2^{16}=8 \\times 2^6 \\times 2^4+x \\times 2^6 \\times 2^6 \\\\\\\\ & \\Rightarrow x=14 \\end{aligned} $$</p>\n<p>Hence, the correct answer is 14 .</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "A processor has $$16$$ integer registers $$\\left( {R0,\\,\\,R1,\\,\\,..\\,\\,,\\,\\,R15} \\right)$$) and $$64$$ floating point registers $$(F0, F1,… , F63).$$ It uses a $$2$$-byte instruction format. There are four categories of instructions: Type-$$1,$$ Type-$$2,$$ Type-3, and Type-$$4.$$ Type-$$1$$ category consists of four instructions, each with $$3$$ integer register operands $$(3Rs)$$. Type-$$2$$ category consists of eight instructions, each with $$2$$ floating point register operands $$(2Fs).$$ Type-$$3$$ category consists of fourteen instructions, each with one integer register operand and one floating point register operand $$(1R+1F).$$ Type-$$4$$ category consists of $$N$$ instructions, each with a floating point register operand $$(1F).$$ \n<p>The maximum value of $$N$$ is __________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "32",
+    "explanation": "<h2>1. Counting distinct instructions in each category</h2>\n<p>Let us denote :</p>\n\n<p><p>$\\displaystyle R_{\\text{count}} = 16$ for the 16 integer registers ($R0,\\dots,R15$).</p></p>\n<p><p>$\\displaystyle F_{\\text{count}} = 64$ for the 64 floating‐point registers ($F0,\\dots,F63$).</p></p>\n\n<h3>Category Type‑1</h3>\n\n<p><p>Number of instructions in this category: $4$.</p></p>\n<p><p>Each instruction has <strong>3 integer register</strong> operands.</p></p>\n<p><p>Number of ways to choose 3 integer registers: $R_{\\text{count}}^3 = 16^3 = 4096.$</p></p>\n\n<p>So, the total distinct instruction encodings in Type‑1 is:  </p>\n<p>$ 4 \\;\\times\\; 16^3 \\;=\\; 4 \\times 4096 \\;=\\; 16384. $</p>\n<h3>Category Type‑2</h3>\n\n<p><p>Number of instructions in this category: $8$.</p></p>\n<p><p>Each instruction has <strong>2 floating‐point register</strong> operands.</p></p>\n<p><p>Number of ways to choose 2 floating‐point registers: $F_{\\text{count}}^2 = 64^2 = 4096.$</p></p>\n\n<p>Hence, the total distinct instruction encodings in Type‑2 is:</p>\n<p>$ 8 \\;\\times\\; 64^2 \\;=\\; 8 \\times 4096 \\;=\\; 32768. $</p>\n<h3>Category Type‑3</h3>\n\n<p><p>Number of instructions in this category : $14$.</p></p>\n<p><p>Each instruction has <strong>1 integer register + 1 floating‐point register</strong>.</p></p>\n<p><p>Ways to choose 1 integer register and 1 floating register: $16 \\times 64 = 1024.$</p></p>\n\n<p>Thus, the total distinct instruction encodings in Type‑3 is :</p>\n<p>$ 14 \\;\\times\\; (16 \\times 64) \\;=\\; 14 \\times 1024 \\;=\\; 14336. $</p>\n<h3>Category Type‑4</h3>\n\n<p><p>Number of instructions in this category : $N$ (unknown).</p></p>\n<p><p>Each instruction has <strong>1 floating‐point register</strong>.</p></p>\n<p><p>Ways to choose that 1 floating register : $64$.</p></p>\n\n<p>Hence, total distinct instruction encodings in Type‑4 is :</p>\n<p>$ N \\;\\times\\; 64. $</p>\n<hr />\n<h2>2. Summation and the 16-bit constraint</h2>\n<p>The total of all distinct instructions from all categories must not exceed $65536$. Therefore,</p>\n<p>$ \\underbrace{16384}_{\\text{Type-1}} \\;+\\; \\underbrace{32768}_{\\text{Type-2}} \\;+\\; \\underbrace{14336}_{\\text{Type-3}} \\;+\\; \\underbrace{N \\times 64}_{\\text{Type-4}} \\;\\;\\le\\;\\; 65536. $</p>\n<p>Let us sum up the first three categories :</p>\n<p>$ 16384 \\;+\\; 32768 \\;+\\; 14336 \\;=\\; 49152 \\;+\\; 14336 \\;=\\; 63488. $</p>\n<p>Thus,</p>\n<p>$ 63488 + 64N \\;\\le\\; 65536 \\quad\\Longrightarrow\\quad 64N \\;\\le\\; 65536 - 63488 \\;=\\; 2048 \\quad\\Longrightarrow\\quad N \\;\\le\\; \\frac{2048}{64} \\;=\\; 32. $</p>\n<p>Hence, the <strong>maximum possible value of $N$</strong> that still fits within the 16-bit instruction encoding space is</p>\n<p>$ \\boxed{32}. $</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a processor with $$64$$ registers and an instruction set of size twelve. Each instruction has five distinct fields, namely, opcode, two source register identifiers, one destination register identifier, and a twelve-bit immediate value. Each instruction must be stored in memory in a byte-aligned fashion. If a program has $$100$$ instructions, the amount of memory (in bytes) consumed by the program text is _____________.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "500",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following code sequence having five instructions $${I_1}$$ to $${I_5}$$. Each of these instructions has the following format.\n<p>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,OP\\,\\,Ri,\\,\\,Rj,\\,\\,Rk$$</p>\n<p>where operation $$OP$$ is performed on contents of registers $$Rj$$ and $$Rk$$ and the result is stored in register $$Ri.$$ </p>\n<p>$$\\eqalign{\n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,{I_1}:ADD\\,\\,\\,R1,\\,R2,\\,R3  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,{I_2}:MUL\\,\\,R7,\\,R1,\\,R3  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,{I_3}:SUB\\,\\,\\,\\,R4,\\,R1,\\,R5  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,{I_4}:ADD\\,\\,\\,R3,\\,R2,\\,R4  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,{I_5}:MUL\\,\\,\\,R7,\\,R8,\\,R9 \\cr} $$</p>\n<p>Consider the following three statements.</p>\n<p>$$\\,\\,\\,\\,\\,\\,S1:\\,\\,$$ There is an anti-dependence between instructions $${L_2}$$ and $${L_5}$$\n<br>$$\\,\\,\\,\\,\\,\\,S2:\\,\\,$$ There is an anti-dependence between instructions $${L_2}$$ and $${L_4}$$\n<br>$$\\,\\,\\,\\,\\,\\,S3:\\,\\,$$ Within an instruction pipeline an anti-dependence always creates one or more stalls</p>\n<p>Which one of above statements is/are correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $$S1$$ is true "
+      },
+      {
+        "identifier": "B",
+        "content": "Only $$S2$$ is true "
+      },
+      {
+        "identifier": "C",
+        "content": "Only $$S1$$ and $$S3$$ are true "
+      },
+      {
+        "identifier": "D",
+        "content": "Only $$S2$$ and $$S3$$ are true "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a processor with byte-addressable memory. Assume that all registers, including Program Counter $$(PC)$$ and Program Status Word $$(PSW),$$ are of size $$2$$ bytes. A stack in the main memory is implemented from memory location $${\\left( {0100} \\right)_{16}}$$ and it grows upward. The stack pointer $$(SP)$$ points to the top element of the stack. The current value of $$SP$$ is $${\\left( {016E} \\right)_{16}}$$. The CALL instruction is of two words, the first word is the op-code and the second word is the starting address of the subroutine (one word $$= 2$$ bytes). The CALL instruction is implemented as follows:\n<p>$$ \\bullet \\,\\,\\,\\,\\,\\,\\,\\,$$ Store the current value of $$PC$$ in the stack\n<br>$$ \\bullet \\,\\,\\,\\,\\,\\,\\,\\,$$ Store the value of $$PSW$$ register in the stack\n<br>$$ \\bullet \\,\\,\\,\\,\\,\\,\\,\\,$$ Load the starting address of the subroutine in $$PC$$</p>\n<p>The content of $$PC$$ just before the fetch of a CALL instruction is $$\\left( {5FA0} \\right){\\,_{16}}.$$ After execution of the CALL instruction, the value of the stack pointer is </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {016A} \\right){\\,_{16}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {016C} \\right){\\,_{16}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {0170} \\right){\\,_{16}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {0172} \\right){\\,_{16}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A machine has a $$32$$-bit architecture, with $$1$$-word long instructions. It has $$64$$ registers, each of which is $$32$$ bits long. It needs to support $$45$$ instructions, which have an immediate operand in addition to two register operands. Assuming that the immediate operand is an unsigned integer, the maximum value of the immediate operand is ____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "16383",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two processors ܲ$${P_1}$$ and $${P_2}$$ executing the same instruction set. Assume that under identical conditions, for the same input, a program running on $${P_2}$$ takes $$25$$% less time but incurs $$20$$% more $$CPI$$ (clock cycles per instruction) as compared to the program running on ܲ$${P_1}$$ If the clock frequency of ܲ$${P_1}$$ is $$1GHz,$$ then the clock frequency of $${P_2}$$ (in $$GHz$$) is _____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.6",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a hypothetical processor with an instruction of type $$LW$$ $$R1, 20(R2),$$ which during execution reads a $$32$$-bit word from memory and stores it in a $$32$$-bit register $$R1.$$ The effective address of the memory location is obtained by the addition of a constant $$20$$ and the contents of register $$R2.$$ Which of the following best reflects the addressing mode implemented by this instruction for the operand in memory?<p></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Immediate Addressing "
+      },
+      {
+        "identifier": "B",
+        "content": "Register Addressing "
+      },
+      {
+        "identifier": "C",
+        "content": "Register Indirect Scaled Addressing"
+      },
+      {
+        "identifier": "D",
+        "content": "Base or Indexed Addressing"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "On a non-pipelined sequential processor, a program segment, which is a part of the interrupt service routine, is given to transfer $$500$$ bytes from an $${\\rm I}/O$$ device to memory. Initialize the address register Initialize the count to $$500$$ \n<p>$$LOOP:$$ Load a byte from device Store in memory at address given by address register \n<br>Increment the address register\n<br>Decrement the count\n<br>If count! $$=0$$ go to $$LOOP$$</p>\n<p>Assume that each statement in this program is equivalent to a machine instruction which takes one clock cycle to execute if it is a non load/store instruction. The load-store instructions take two clock cycles to execute.</p>\n<p>The designer of the system also has an alternate approach of using the $$DMA$$ controller to implement the same transfer. The $$DMA$$ controller requires $$20$$ clock cycles for initialization and other overheads. Each $$DMA$$ transfer cycle takes two clock cycles to transfer one byte of data from the device to the memory.</p>\n<p>What is the approximate speed up when the $$DMA$$ controller based design is used in place of the interrupt driven program based input- output?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3.4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4.4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5.1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6.7$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "For all delayed conditional branch instructions, irrespective of whether the condition evaluate true or false,",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the instruction following the conditional branch instruction in memory is executed\n"
+      },
+      {
+        "identifier": "B",
+        "content": "the first instruction in the fall through path is executed"
+      },
+      {
+        "identifier": "C",
+        "content": "the first instruction in the taken path is executed\n"
+      },
+      {
+        "identifier": "D",
+        "content": "the branch takes longer to execute than any other instruction "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is/are true of the auto increment addressing mode?\n<br>$$1.$$ It is useful in creating self relocating code\n<br>$$2.$$ If it is included in an Instruction Set Architecture, then an additional $$ALU$$ is required for effective address calculation\n<br>$$3.$$ The amount of increment depends on the size of the data item accessed.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2$$ and $$3$$ only "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following must be true for the $$RFE$$ (Return From Exception) instruction on a general purpose processor?\n<br>$$1.$$ It must be a trap instruction\n<br>$$2.$$ It must be a privileged instruction\n<br>$$3.$$ An exception cannot be allowed to occur during execution of an $$RFE$$ instruction.<p></p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ and $$2$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1,2$$ and $$3$$ only"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following program segment. Here R1, R2 and R3 are the general purpose registers.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/qJCD6wL7aQ2jNlnU1/XkwdLOGQ646gPd0lQwNB2veRt6Eyz/mXAKSQlKpW26CbrvbRlKx1/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2006 Computer Organization - Machine Instructions and Addressing Modes Question 26 English\"> \n<p>Assume that the content of memory location $$3000$$ is $$10$$ and the content of the register $$R3$$ is $$2000$$. The content of each of the memory locations from $$2000$$ to $$2010$$ is $$100.$$ The program is loaded from the memory location $$1000.$$ All the numbers are in decimal. </p>\n<p>Assume that the memory is word addressable. After the execution of this program, the content of memory location $$2010$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$100$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$101$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$102$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$110$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following program segment. Here R1, R2 and R3 are the general purpose registers.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/qJCD6wL7aQ2jNlnU1/XkwdLOGQ646gPd0lQwNB2veRt6Eyz/mXAKSQlKpW26CbrvbRlKx1/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2006 Computer Organization - Machine Instructions and Addressing Modes Question 27 English\"> \n<p>Assume that the content of memory location $$3000$$ is $$10$$ and the content of the register $$R3$$ is $$2000$$. The content of each of the memory locations from $$2000$$ to $$2010$$ is $$100.$$ The program is loaded from the memory location $$1000.$$ All the numbers are in decimal. </p>\n<p>Assume that the memory is word addressable. The number of memory references for accessing the data in executing the program completely is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$11$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$20$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$21$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following program segment. Here R1, R2 and R3 are the general purpose registers.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/qJCD6wL7aQ2jNlnU1/XkwdLOGQ646gPd0lQwNB2veRt6Eyz/mXAKSQlKpW26CbrvbRlKx1/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2006 Computer Organization - Machine Instructions and Addressing Modes Question 25 English\"> \n<p>Assume that the content of memory location $$3000$$ is $$10$$ and the content of the register $$R3$$ is $$2000$$. The content of each of the memory locations from $$2000$$ to $$2010$$ is $$100.$$ The program is loaded from the memory location $$1000.$$ All the numbers are in decimal. </p>\n<p>Assume that the memory is byte addressable and the word size is $$32$$ bits. If an interrupt occurs during the execution of the instruction $$''INC$$ $$R3'',$$ what return address will be pushed on to the stack?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1005$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1020$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$1024$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1040$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a three word machine instruction $$ADD$$ $$A$$ $$\\left[ {{R_0}} \\right],\\,@\\,B$$\n<p>The first operand (destination) ''$$A$$ $$\\left[ {{R_0}} \\right]''$$ uses indexed addressing mode with $${{R_0}}$$ as the index register. The second operand (source) $$''@B''$$ used indirect addressing mode. $$A$$ and $$B$$ are memory addresses residing at the second and the third words, respectively. The first word of the instruction specific the opcode, the index register designation and the source and destination addressing modes. During execution of $$ADD$$ instruction, the two operands are added and stored in the destination (first operand).</p>\n<p>The number of memory cycles needed during the execution cycle of the instruction is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following program segment for a hypothetical  $$CPU$$ having three user registers $$R1,R2, $$ and $$R3.$$\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/2Wtjpp1Z1fIDOaIcg/GrpBn2lFYCPrlToEUHl2Tazkf6cPt/PVTTxkW81gsbMCnICEgK7g/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2004 Computer Organization - Machine Instructions and Addressing Modes Question 30 English\"> \n<p>Consider that the memory is byte addressable with word size $$32$$ bits, and the program has been loaded starting from memory location $$1000$$ (decimal). If an interrupt occurs while the $$CPU$$ has been halted after executing the HALT instruction, the return address (in decimal) saved in the stack will be</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1007$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1020$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$1024$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1028$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following program segment for a hypothetical  $$CPU$$ having three user registers $$R1,R2, $$ and $$R3.$$\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/2Wtjpp1Z1fIDOaIcg/GrpBn2lFYCPrlToEUHl2Tazkf6cPt/PVTTxkW81gsbMCnICEgK7g/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2004 Computer Organization - Machine Instructions and Addressing Modes Question 29 English\">  \n<p>Let the clock cycles required for various operations be as follows: \n<br>Register to/from memory transfer:\n<br>$$3$$ clock cycles \n<br>ADD with both operands in register:\n<br>$$1$$ clock cycle \n<br>Instruction fetch and decode:\n<br>$$2$$ clock cycles per word\n</p><p>The total number of clock cycle required to execute the program is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$29$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$24$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$23$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$20$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Which is the most appropriate match for the items in the first column with the items in the second column?\n<br>$$X.$$ Indirect Addressing \n<br>$$Y.$$ Indexed Addressing\n<br>$$Z.$$ Base Register Addressing\n<br>$${\\rm I}.\\,\\,$$Array implementation\n<br>$${\\rm II}.\\,\\,$$Writing relocatable code\n<br>$${\\rm III}.\\,\\,$$Passing array as parameter",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {X,\\,{\\rm I}{\\rm I}{\\rm I}} \\right),\\,\\,\\left( {Y,\\,{\\rm I}} \\right),\\,\\,\\left( {Z,\\,\\,{\\rm I}{\\rm I}} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {X,\\,{\\rm I}{\\rm I}} \\right),\\,\\,\\left( {Y,\\,{\\rm I}{\\rm I}{\\rm I}} \\right),\\,\\,\\left( {Z,\\,\\,{\\rm I}} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {X,\\,{\\rm I}{\\rm I}{\\rm I}} \\right),\\,\\,\\left( {Y,\\,{\\rm I}{\\rm I}} \\right),\\,\\,\\left( {Z,\\,\\,{\\rm I}} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {X,\\,{\\rm I}} \\right),\\,\\,\\left( {Y,\\,{\\rm I}{\\rm I}{\\rm I}} \\right),\\,\\,\\left( {Z,\\,\\,{\\rm I}{\\rm I}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,2339 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $A$ be the adjacency matrix of a simple undirected graph $G$. Suppose $A$ is its own inverse. Which one of the following statements is always TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$G$ is a cycle</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$G$ is a perfect matching</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$G$ is a complete graph</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>There is no such graph $G$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statement is always true, let's begin by analyzing the given condition: the adjacency matrix $ A $ of the graph $ G $ is its own inverse. Mathematically, this condition can be expressed as:</p>\n\n<p>$$ A^2 = I $$</p>\n\n<p>where $ I $ is the identity matrix of the same dimension as $ A $. This condition implies that the square of the adjacency matrix yields the identity matrix.</p>\n\n<p>Let's delve deeper into the implications of this condition:</p>\n\n<ol>\n\n<li><p>If $ A $ is its own inverse, then for any vertex $ v $ in the graph $ G $, the vertices adjacent to $ v $ must collectively form an independent set. This ensures that none of them are adjacent to each other, as any edge between them would create an off-diagonal entry in $ A^2 $ other than in the identity matrix structure.</p></li>\n\n<p></p>\n\n<li><p>The diagonal entries in $ A^2 $ being one implies that each vertex must have a degree of at least one, ensuring that it has a neighbor.</p></li>\n\n<p></p>\n\n<li><p>The off-diagonal entries in $ A^2 $ being zero implies no common neighbors between two distinct vertices; otherwise, there would be an entry of two or greater in $ A^2 $.</p></li>\n\n</ol>\n\n<p>Given these constraints, let us analyze each option:</p>\n\n<p><b>Option A: $ G $ is a cycle</b></p>\n\n<p>A cycle does not necessarily satisfy the above conditions for all cases. For instance, a cycle with more than 3 vertices will not have $ A $ as its own inverse. Therefore, this option is not always true.</p>\n\n<p><b>Option B: $ G $ is a perfect matching</b></p>\n\n<p>A perfect matching satisfies the conditions perfectly. In a perfect matching, each vertex is connected to exactly one other vertex, forming independent pairs. The adjacency matrix for a perfect matching graph indeed satisfies $ A^2 = I $. This option is always true.</p>\n\n<p><b>Option C: $ G $ is a complete graph</b></p>\n\n<p>A complete graph doesn't satisfy $ A^2 = I $ for any graph with more than one vertex because each vertex in a complete graph has multiple neighbors and the degree is not limited to 1. Therefore, this option is not always true.</p>\n\n<p><b>Option D: There is no such graph $ G $</b></p>\n\n<p>As shown in Option B, a perfect matching graph is an example of a graph where $ A $ is its own inverse, meaning such a graph $ G $ does exist. Therefore, this option is not true.</p>\n\n<p>In conclusion, the correct statement that is always true is:</p>\n\n<p><b>Option B: $ G $ is a perfect matching.</b></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The number of spanning trees in a <i>complete graph</i> of 4 vertices labelled A, B, C, and D is __________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "16",
+    "explanation": "<p>A spanning tree of a graph is a subgraph that includes all the vertices and is also a tree, which means there are no cycles and it is connected. For a complete graph with $ n $ vertices, denoted as $ K_n $, the number of spanning trees can be computed using Cayley's formula. Cayley's formula states that the number of spanning trees in a complete graph with $ n $ vertices is given by $ n^{n-2} $.</p>\n\n<p>For a complete graph with 4 vertices (A, B, C, and D), we have:</p>\n\n<p>$$ n = 4 $$</p>\n\n<p>Using Cayley's formula:</p>\n\n<p>$$ n^{n-2} = 4^{4-2} = 4^2 = 16 $$</p>\n\n<p>Therefore, the number of spanning trees in a complete graph with 4 vertices is 16.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which of the following statements is/are TRUE for a group G?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "If for all x, y $$\\in$$ G, (xy)<sup>2</sup> = x<sup>2</sup>y<sup>2</sup>, then G is commutative."
+      },
+      {
+        "identifier": "B",
+        "content": "If for all X $$\\in$$ G, x<sup>2</sup> = 1, then G is commutative. Here, 1 is the identity element of G."
+      },
+      {
+        "identifier": "C",
+        "content": "If the order of G is 2, then G is commutative."
+      },
+      {
+        "identifier": "D",
+        "content": "If G is commutative, then a subgroup of G need not be commutative."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) Given that, (xy)<sup>2</sup> = x<sup>2</sup>y<sup>2</sup></p>\n<p>xyxy = xxyy</p>\n<p>yx = xy ($$\\because$$ By applying cancelation laws in group)</p>\n<p>$$\\therefore$$ $$\\forall$$x, y $$\\in$$ G, yx = xy</p>\n<p>$$\\therefore$$ G is commutative.</p>\n<p>(b) $$\\forall$$x $$\\in$$ G, x<sup>2</sup> = 1</p>\n<p>$$\\Rightarrow$$ x = x<sup>$$-$$1</sup> ($$\\because$$ x<sup>2</sup> = 1, xx = 1, x<sup>$$-$$1</sup>xx = x<sup>$$-$$1</sup>, ex = x<sup>$$-$$1</sup>, x = x<sup>$$-$$1</sup>)</p>\n<p>In a group if every element has its own inverse then group is commutative.</p>\n<p>(c) Every group of prime order is commutative so of O(G) = 2, the group 'G' is commutative.</p>\n<p>(d) If G is commutative then a subgroup of 'G' is also commutative.</p>\n<p>Let H is subgroup of group commutative group 'G'</p>\n<p>$$\\forall$$a, b, $$\\in$$ H, we have a, b, $$\\in$$ G and ab = ba ($$\\because$$ 'G' is commutative)</p>\n<p>$$\\therefore$$ H is commutative.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a simple undirected graph of 10 vertices. If the graph is disconnected, then the maximum number of edges it can have is __________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "36",
+    "explanation": "<p>If 'G' is a group with 'n' vertices and having 'k' connected components then maximum number of edges in 'G'.</p>\n<p>$$ = {{(n - k)(n - k + 1)} \\over 2}$$</p>\n<p>In the given problem, n = 10, k = 2</p>\n<p>$$ = {{(10 - 2)(10 - 2 + 1)} \\over 2} = 36$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "In an undirected connected planar graph G, there are eight vertices and five faces. The number of edges in G is ______",
+    "options": [],
+    "correct_options": [],
+    "answer": "11",
+    "explanation": "<p>To find the number of edges in an undirected connected planar graph with given vertices and faces, you can use Euler's formula for planar graphs, which states:</p>\n<p>$$ V - E + F = 2 $$</p>\n<p>where:</p>\n\n<p><p>$ V $ is the number of vertices,</p></p>\n<p><p>$ E $ is the number of edges,</p></p>\n<p><p>$ F $ is the number of faces.</p></p>\n\n<p>Given:</p>\n\n<p><p>$ V = 8 $</p></p>\n<p><p>$ F = 5 $</p></p>\n\n<p>Plug these values into Euler’s formula:</p>\n<p>$$ 8 - E + 5 = 2 $$</p>\n<p>Simplifying the equation:</p>\n<p>$$ 13 - E = 2 $$</p>\n<p>Subtract 13 from both sides:</p>\n<p>$$ -E = 2 - 13 $$</p>\n<p>$$ -E = -11 $$</p>\n<p>Multiplying both sides by -1 gives:</p>\n<p>$$ E = 11 $$</p>\n<p>Therefore, the number of edges in the graph $ G $ is $ \\boxed{11} $.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let G be an undirected complete graph on n vertices, where n &gt; 2. Then, the number of different Hamiltonian cycles in G is equal to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n!"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "(n - 1)!"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{\\left( {n - 1} \\right)!} \\over 2}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><p>A <strong>Hamiltonian cycle</strong> is a cycle that visits each vertex <strong>exactly once</strong> and returns to the starting vertex.</p></p>\n<p><p>In an <strong>undirected complete graph</strong> $ G $ with $ n $ vertices (denoted as $ K_n $), every pair of distinct vertices is connected by an edge.</p></p>\n<p><p>This means that from any vertex, you can directly reach any other vertex.</p></p>\n\n<hr />\n<h3><strong>Counting Hamiltonian Cycles in $ K_n $:</strong></h3>\n\n<p><strong>Fixing a Starting Point:</strong></p>\n\n\n<p><p>To avoid counting the same cycle multiple times due to rotations, we fix one vertex as the starting point.</p></p>\n<p><p>Let's fix vertex <strong>1</strong> as the starting point.</p></p>\n\n\n<p><strong>Permuting the Remaining Vertices:</strong></p>\n\n\n<p><p>The remaining $ n - 1 $ vertices can be arranged in <strong>any order</strong>.</p></p>\n<p><p>The number of ways to arrange these vertices is $ (n - 1)! $.</p></p>\n\n\n<p><strong>Accounting for Directionality in an Undirected Graph:</strong></p>\n\n\n<p><p>In an <strong>undirected</strong> graph, traversing the cycle in the <strong>opposite direction</strong> results in the <strong>same cycle</strong>.</p></p>\n<p><p>Therefore, each unique set of vertex arrangements corresponds to <strong>two</strong> possible cycles (one in each direction).</p></p>\n<p><p>To correct for this duplication, we <strong>divide</strong> the total number of permutations by <strong>2</strong>.</p></p>\n\n<hr />\n<h3><strong>Calculating the Number of Hamiltonian Cycles:</strong></h3>\n\n<p><p><strong>Total permutations of vertices (with fixed starting point):</strong></p>\n<p>$   \\text{Total permutations} = (n - 1)!   $</p></p>\n<p><p><strong>Adjusting for undirected cycles (dividing by 2):</strong></p>\n<p>$   \\text{Number of unique Hamiltonian cycles} = \\frac{(n - 1)!}{2}   $</p></p>\n\n<hr />\n<h3><strong>Example with $ n = 4 $:</strong></h3>\n\n<p><p><strong>Vertices:</strong> 1, 2, 3, 4</p></p>\n<p><p><strong>Fix starting vertex:</strong> 1</p></p>\n<p><p><strong>Permutations of remaining vertices:</strong> (2,3,4), (2,4,3), (3,2,4), (3,4,2), (4,2,3), (4,3,2) — total of $ 3! = 6 $ permutations</p></p>\n<p><p><strong>Accounting for directionality:</strong></p></p>\n<p><p>Each cycle can be traversed in two directions, but they are considered the same in an undirected graph.</p></p>\n<p><p>So, the total unique Hamiltonian cycles is $ \\frac{6}{2} = 3 $.</p></p>\n\n<hr />\n<h3><strong>Conclusion:</strong></h3>\n\n<p><p><strong>The number of different Hamiltonian cycles in an undirected complete graph $ K_n $ is:</strong></p>\n<p>$   \\boxed{\\dfrac{(n - 1)!}{2}}   $</p></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "The chromatic number of the following graph is _______. \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/Cf0tZGD7ij8ZJXjrL/c6ydGAwuE267xNxWmF8dxFAHDpKbA/1X0Ee59D86nWQmpMLo3DYE/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2018 Discrete Mathematics - Graph Theory Question 26 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ be a finite group on $$84$$ elements. The size of a largest possible proper subgroup of $$G$$ is ________.\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "42",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of colours that is sufficient to vertex-colour any planar graph is _____________ .",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G = \\left( {V,E} \\right)$$ be a directed graph where $$V$$ is the set of vertices and $$E$$ the set of edges. Then which one of the following graphs has the same strongly connected components as $$G$$? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${G_1} = \\left( {V,\\,\\,{E_1}} \\right)\\,\\,\\,$$where  $$\\,\\,{E_1} = \\left\\{ {\\left( {u,v} \\right) \\notin E} \\right\\}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${G_2} = \\left( {V,\\,\\,{E_2}} \\right)\\,\\,\\,$$ where   $$\\,\\,\\,{E_2} = \\left\\{ {\\left( {u,v} \\right) \\in E} \\right\\}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${G_3} = \\left( {V,\\,\\,{E_3}} \\right)\\,\\,\\,$$ where $$\\,\\,{E_3} = $$ {$${\\left( {u,v} \\right)\\left| \\, \\right.}$$  there isa path of length $$ \\le 2$$ from $$u$$ to $$v$$ in $$E$$}"
+      },
+      {
+        "identifier": "D",
+        "content": "$${G_4} = \\left( {{V_4},\\,\\,{E_{}}} \\right)\\,\\,\\,$$ where   $${{V_4}}$$ is the set of vertices in $$G$$ which are not isolated."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The maximum number of edges in a bipartite graph on $$12$$ vertices is  _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "36",
+    "explanation": "<p>A bipartite graph divides its vertices into two disjoint sets such that every edge connects a vertex from one set to a vertex from the other set. To maximize the number of edges, you want as many connections as possible between the two sets.</p>\n<p>Here’s how to determine the maximum number of edges for 12 vertices:</p>\n\n<p><p>Split the 12 vertices into two sets. The product of the set sizes represents the total possible edges. The maximum product is achieved when the two sets are as equal in size as possible.</p></p>\n<p><p>For 12 vertices, divide them into two sets of 6 vertices each.</p></p>\n<p><p>The maximum number of edges is then:</p>\n<p>$$6 \\times 6 = 36$$</p></p>\n\n<p>Thus, the maximum number of edges in a bipartite graph on 12 vertices is 36.</p>",
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "let $$G$$ be a group with $$15$$ elements. Let $$L$$ be a subgroup of $$G$$. It is known that $$L \\ne G$$ and that the size of $$L$$ is at least $$4$$. The size of $$L$$ is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is/are TRUE for undirected graphs?\n<br>P:   Number of odd degree  vertices is even. \n<br>Q:   Sum of degrees of all vertices is even.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P only "
+      },
+      {
+        "identifier": "B",
+        "content": "Q only "
+      },
+      {
+        "identifier": "C",
+        "content": "Both P and Q "
+      },
+      {
+        "identifier": "D",
+        "content": "Neither P and Q "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an undirected random$$^ \\circ $$ graph of eight vertices. The probability that there is an edge between a pair of vertices is 1/2. What is the expected number of unordered cycles of length three? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/8$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$7$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$8$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Let G be a simple undirected planner graph on 10 vertices with 15 edges. If G is a connected graph, then the number of bounded faces in any embedding of G on the plane is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3 "
+      },
+      {
+        "identifier": "B",
+        "content": "4 "
+      },
+      {
+        "identifier": "C",
+        "content": "5 "
+      },
+      {
+        "identifier": "D",
+        "content": "6 "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "$$K4$$ and $$Q3$$ are graphs with the following structures.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/djP5obFWWzqGEj9xk/vWrjON9vaHua6UlOj4Wdh6HBFmFlw/aazUuTw97DaQTKGmy15cw5/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2011 Discrete Mathematics - Graph Theory Question 72 English\">\n<p>Which one of the following statements is <b>TRUE</b> in relation to these graphs?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$K4$$ is planar while $$Q3$$  is not "
+      },
+      {
+        "identifier": "B",
+        "content": "Both $$K4$$ and $$Q3$$ are planar "
+      },
+      {
+        "identifier": "C",
+        "content": "$$Q3$$ is planar while $$K3$$ is not"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $$K4$$ nor $$Q3$$ is planar "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ $$\\,\\,\\,\\,\\, = \\,\\,\\,\\left( {V,\\,\\,\\,\\,\\,E} \\right)$$ be a graph. Define $$\\xi \\left( G \\right) = \\sum\\limits_d {{i_d} \\times } {\\mkern 1mu} d,$$ where $${{i_d}}$$ is the number of vertices of degree $$d$$ in $$G$$. If $$S$$ and $$T$$ are two different trees with $$\\xi \\left( S \\right) = \\xi \\left( T \\right)$$, then ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left| S \\right| = 2\\left| T \\right|$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left| S \\right| = \\left| T \\right| - 1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left| S \\right| = \\left| T \\right|$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left| S \\right| = \\left| T \\right| + 1$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "What is the chromatic number of an $$n$$-vertex simple connected graph which does not contain any odd length cycle? Assume $$n \\ge 2$$. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$n-1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$n$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is TRUE for any simple connected undirected graph with more than $$2$$ vertices?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "No two vertices have the same degree."
+      },
+      {
+        "identifier": "B",
+        "content": "At least two vertices have the same degree. "
+      },
+      {
+        "identifier": "C",
+        "content": "At least three vertices have the same degree. "
+      },
+      {
+        "identifier": "D",
+        "content": "AA vertices have the same degree. "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "What is the size of the smallest MIS (Maximal Independent Set) of a chain of nine nodes?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5 "
+      },
+      {
+        "identifier": "B",
+        "content": "4 "
+      },
+      {
+        "identifier": "C",
+        "content": "3 "
+      },
+      {
+        "identifier": "D",
+        "content": "2 "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "What is the chromatic number of the following graph?\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/DUs3ek6uJFfU2rRpf/JU1x7ubWUWA8vpsCn6Et5CM7aYuF8/LS4er1oqJYJGI0RE9e53kW/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2008 Discrete Mathematics - Graph Theory Question 71 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a weighted undirected graph with positive edge weights and let $$uv$$ be an edge in the graph. It is known that the shortest path from the source vertex $$s$$ to $$u$$ has weight 53 and the shortest path from $$s$$ to $$v$$ has weighted 65. Which one of the following statements is always true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "weight$$(u,  v)$$ $$ &lt; 12$$"
+      },
+      {
+        "identifier": "B",
+        "content": "weight$$(u,  v)$$ $$ \\le 12$$"
+      },
+      {
+        "identifier": "C",
+        "content": "weight$$(u,  v)$$ $$ &gt; 12$$"
+      },
+      {
+        "identifier": "D",
+        "content": "weight$$(u,  v)$$ $$ \\ge 12$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The height of a binary tree is the maximum number of edges in any root to leaf path. The maximum number of nodes in a binary tree of  height $$h$$ is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${2^h} - 1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^{h - 1}} - 1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^{h + 1}} - 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{h + 1}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ be the non-planar graph with minimum possible number of edges. Then $$G$$ has  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "9 edges and 5 vertices"
+      },
+      {
+        "identifier": "B",
+        "content": "9 edges and 6 vertices"
+      },
+      {
+        "identifier": "C",
+        "content": "10 edges and 5 vertices"
+      },
+      {
+        "identifier": "D",
+        "content": "10 edges and 6 vertices"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The maximum number of binary trees that can be formed with three unlabeled nodes is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 "
+      },
+      {
+        "identifier": "B",
+        "content": "5 "
+      },
+      {
+        "identifier": "C",
+        "content": "4 "
+      },
+      {
+        "identifier": "D",
+        "content": "3 "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a weighted complete graph $$G$$ on the vertex set $$\\left\\{ {{v_1},\\,\\,\\,{v_2},....,\\,\\,\\,{v_n}} \\right\\}$$ such that the weight of the edge $$\\left( {{v_i},\\,\\,\\,\\,{v_j}} \\right)$$ is $$2\\left| {i - j} \\right|$$. The weight of a minimum spanning tree of $$G$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n - 1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2n - 2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\matrix{\n   n  \\cr \n   2  \\cr \n\n } } \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${n^2}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "If all the edge weights of an undirected graph are positive, then any subject of edges that connects all the vertices and has minimum total weight is a ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Hamiltonian cycle"
+      },
+      {
+        "identifier": "B",
+        "content": "grid"
+      },
+      {
+        "identifier": "C",
+        "content": "hypercube "
+      },
+      {
+        "identifier": "D",
+        "content": "tree "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ be the simple graph with 20 vertices and 100 edges. The size of the minimum vertex cover of $$G$$ is 8. Then, the size of the maximum independent set of $$G$$ is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "12 "
+      },
+      {
+        "identifier": "B",
+        "content": "8 "
+      },
+      {
+        "identifier": "C",
+        "content": "Less than 8 "
+      },
+      {
+        "identifier": "D",
+        "content": "More than 12 "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ be a simple connected planar graph with 13 vertices and 19 edges. Then, the number of faces in the planar embedding of the graph is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6 "
+      },
+      {
+        "identifier": "B",
+        "content": "8 "
+      },
+      {
+        "identifier": "C",
+        "content": "9 "
+      },
+      {
+        "identifier": "D",
+        "content": "13"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "What is the maximum number of edges in an acyclic undirected graph with $$n$$ vertices? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n-1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$n$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$n + 1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2n-2$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ be an arbitrary graph with $$n$$ nodes and $$k$$ components. If a vertex is removed from $$G$$, the number of components in the resultant graph must necessarily lie between ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$k$$ and $$n$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$k - 1$$ and $$k + 1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$k - 1$$ and $$n - 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$k + 1$$ and $$n -k$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Maximum number of edges in a n - node undirected graph without self loops is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${n^2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$n\\left( {n - 1} \\right)/2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$n - 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {n + 1} \\right)\\left( n \\right)/2$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The number of distinct simple graph with upto three nodes is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "15 "
+      },
+      {
+        "identifier": "B",
+        "content": "10"
+      },
+      {
+        "identifier": "C",
+        "content": "7 "
+      },
+      {
+        "identifier": "D",
+        "content": "9 "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is/are tautology? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {a \\vee b} \\right) \\to \\left( {b \\wedge c} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {a \\wedge b} \\right) \\to \\left( {b \\vee c} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {a \\vee b} \\right) \\to \\left( {b \\to c} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {a \\to b} \\right) \\to \\left( {b \\to c} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "A non-planar graph with minimum number of vertices has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "9 edges, 6 vertices"
+      },
+      {
+        "identifier": "B",
+        "content": "6 edges, 4 vertices"
+      },
+      {
+        "identifier": "C",
+        "content": "10 edges, 5 vertices"
+      },
+      {
+        "identifier": "D",
+        "content": "9 edges, 5 vertices"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a complete graph $K_n$ with $n$ vertices ( $n>4$ ). Note that multiple spanning trees can be constructed over $K_n$. Each of these spanning trees is represented as a set of edges. The Jaccard coefficient between any two sets is defined as the ratio of the size of the intersection of the two sets to the size of the union of the two sets. Which one of the following options gives the lowest possible value for the Jaccard coefficient between any two spanning trees of $K_n$ ?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{1}{n}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{1}{2 n-3}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>0</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{1}{n-1}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Number of edges in each spanning tree:</b></p>\n<p>Each spanning tree in a complete graph $K_n$ has $(n-1)$ edges.</p>\n<p><b>Jaccard coefficient formula:</b></p>\n<p>The Jaccard coefficient for two sets (here, two spanning trees $T_1$ and $T_2$) is given by:</p>\n<p>$$ J = \\frac{|T_1 \\cap T_2|}{|T_1 \\cup T_2|} $$</p>\n<p>This means the number of edges common to both trees divided by the total number of unique edges in both trees combined.</p>\n<p><b>To find the lowest possible Jaccard coefficient:</b></p>\n<p>The coefficient will be lowest when the two spanning trees have the fewest common edges. The smallest value for $|T_1 \\cap T_2|$ is $0$, which happens when the two spanning trees have no edges in common (they are edge-disjoint).</p>\n<p><b>Calculation:</b></p>\n<p>If $T_1$ and $T_2$ are edge-disjoint spanning trees, then $|T_1 \\cap T_2| = 0$.</p>\n<p>The union will have $|T_1 \\cup T_2| = (n-1) + (n-1) = 2(n-1)$ edges.</p>\n<p>So, $$ J = \\frac{0}{2(n-1)} = 0 $$</p>\n<p><b>Conclusion:</b></p>\n<p>The lowest possible value of the Jaccard coefficient is $0$, which occurs when the two spanning trees have no edges in common.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $G(V, E)$ be a simple, undirected graph. A vertex cover of $G$ is a subset $V^{\\prime} \\subseteq V$ such that for every $(u, v) \\in E, u \\in V^{\\prime \\prime}$ or $v \\in V^{\\prime}$. Let the size of the smallest vertex cover in $G$ be $k$. Let $S$ be any vertex cover of size $k$.</p>\n<p>For a vertex $v \\in V$, which of the following constraints will always ensure that $v \\in S$ ?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>The degree of $v$ is at least $k+1$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>The vertex $v$ is on a path of length $k+1$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>The vertex $v$ is on a cycle of length $k+1$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The vertex $v$ is a part of a clique of size $k$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To understand which constraint ensures that the vertex $v$ must be in the minimum vertex cover $S$, let us carefully analyze the definition of a vertex cover. </p>\n<p>A vertex cover is a subset of vertices such that for every edge in the graph, at least one of its endpoints is included in the subset. We are given that $S$ is a vertex cover of size $k$. Therefore, $S$ contains exactly $k$ vertices, meaning $|S| = k$.</p>\n<p>Let us evaluate <strong>Option A</strong>, which states that the degree of vertex $v$ is at least $k+1$. We will use a proof by contradiction.</p>\n<p><strong>Step 1:</strong> Let $d(v)$ be the degree of vertex $v$. According to Option A, $d(v) \\ge k+1$. Since the graph is simple, $v$ is connected to $d(v)$ distinct neighbors. </p>\n<p><strong>Step 2:</strong> Assume that $v$ is <strong>not</strong> in the vertex cover $S$ ($v \\notin S$). </p>\n<p><strong>Step 3:</strong> By the definition of a vertex cover, every edge must have at least one of its endpoints in $S$. Since $v$ is not in $S$, for all the edges connected to $v$, the other endpoints must absolutely be in $S$. </p>\n<p><strong>Step 4:</strong> This means all $d(v)$ neighbors of vertex $v$ must be included in the vertex cover $S$. </p>\n<p><strong>Step 5:</strong> This implies that the size of the vertex cover $S$ must be at least $d(v)$. </p>\n<p>$$|S| \\ge d(v)$$</p>\n<p>Since $d(v) \\ge k+1$, it follows that:</p>\n<p>$$|S| \\ge k+1$$</p>\n<p><strong>Step 6:</strong> However, we are given that the size of $S$ is exactly $k$ ($|S| = k$). </p>\n<p>A set of size $k$ cannot contain $k+1$ or more elements. This is a clear contradiction. </p>\n<p><strong>Conclusion:</strong> Our assumption that $v \\notin S$ must be false. Therefore, to cover all the edges without exceeding the maximum allowed size of $k$ vertices in the vertex cover, the vertex $v$ <strong>must</strong> be included in $S$. </p>\n<p>None of the other options forces $v$ to be in every possible vertex cover of size $k$. </p>\n<p>Thus, <strong>Option A</strong> is the correct answer.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $G$ be an undirected graph, which is a path on 8 vertices. The number of matchings in $G$ is $\\_\\_\\_\\_$ (answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "34",
+    "explanation": "<p>Let $a_n$ be the number of matchings in a path graph with n vertices. To find $a_n$ consider a specific vertex (e.g., the last vertex $v_n$ ):</p>\n<ol>\n<li><p>Vertex $v_n$ is not matched: The number of ways to form matchings for the remaining $n-1$ vertices is $a_{n-1}$.</p></li>\n<li><p>Vertex $v_n$ is matched: It must be matched with its only neighbor $v_{n-1}$. This edge is now fixed, and neither $v_n$ nor $v_{n-1}$ can be part of any other edge. The number of ways to match the remaining $n-2$ vertices is $a_{n-2}$.</p></li>\n</ol>\n<p>This gives us the Fibonacci recurrence:</p>\n<p>$$ a_n=a_{n-1}+a_{n-2} $$</p>\n<p>Initial values:</p>\n<ul>\n<li><p>$n=1\\left(P_1\\right)$ : 1 vertex, 0 edges. The only matching is the empty set. $\\Rightarrow a_1=1$.</p></li>\n<li><p>$n=2\\left(P_2\\right): 2$ vertices, 1 edge. Matchings: $\\left\\}\\right.$ and $\\left\\{\\left(v_1, v_2\\right)\\right\\} . \\Rightarrow a_2=1$.</p></li>\n</ul>\n<p>$$ \\begin{aligned} & a(2)=a(1)+a(0)=1+1=2 \\\\ & a(3)=a(2)+a(1)=2+1=3 \\\\ & a(4)=a(3)+a(2)=3+2=5 \\\\ & a(5)=a(4)+a(3)=5+3=8 \\\\ & a(6)=a(5)+a(4)=8+5=13 \\\\ & a(7)=a(6)+a(5)=13+8=21 \\\\ & a(8)=a(7)+a(6)=21+13=34 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The chromatic number of a graph is the minimum number of colours used in a proper colouring of the graph. The chromatic number of the following graph is ________</p><p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1lwugm5h7/41209cc3-237d-4a96-b405-ccfd43dc3870/07aa10b0-1f2d-11ef-b236-4f75b99a7f02/file-6y3zli1lwugm5h8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/6y3zli1lwugm5h7/41209cc3-237d-4a96-b405-ccfd43dc3870/07aa10b0-1f2d-11ef-b236-4f75b99a7f02/file-6y3zli1lwugm5h8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 2 Discrete Mathematics - Graph Theory Question 5 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lzz8p8be/9e3d2b3f-5cce-4a3a-b14c-e89d45935a9d/a5a29ba0-5d32-11ef-bc8c-2fbbd91ce1c3/file-jaoe38c1lzz8p8bf.png\" alt=\"GATE CSE 2024 Set 2 Discrete Mathematics - Graph Theory Question 5 English Explanation\"></p>\n<p>Given : The graph is bipartite, which means it can be divided into two sets of vertices such that no two vertices within the same set are adjacent. In this case, we can place alternating 4 vertices in one set and the remaining alternating 4 vertices in the second set.</p>\n<p>A bipartite graph with at least one edge always has a chromatic number of 2.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The chromatic number of a graph is the minimum number of colours used in a proper colouring of the graph. Let $G$ be any graph with $n$ vertices and chromatic number $k$. Which of the following statements is/are always TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$G$ contains a complete subgraph with $k$ vertices</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$G$ contains an independent set of size at least $n/k$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$G$ contains at least $k(k-1)/2$ edges</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$G$ contains a vertex of degree at least $k$</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The chromatic number of a graph is the minimum number of colors required for a proper coloring of the graph. Let $ G $ be any graph with $ n $ vertices and chromatic number $ k $. The following statements are evaluated based on these definitions:</p>\n<p>(A) False. The chromatic number $ k $ does not necessarily mean that the graph contains a clique of $ k $ vertices.</p>\n<p>(B) True. This is supported by the pigeonhole principle, which implies that there is at least one independent set of size at least $ n/k $.</p>\n<p>(C) True. The minimum number of edges between $ k $ color classes is given by the combination formula $ \\binom{k}{2} $.</p>\n<p>(D) False. Consider a cycle graph on an odd number of vertices. Although its chromatic number is 3, no vertex has a degree of 3.</p>\n<p>Thus, the correct options are (B) and (C).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The number of edges present in the forest generated by the DFS traversal of an undirected graph <i>G</i> with 100 vertices is 40. The number of connected components in <i>G</i> is ________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "60",
+    "explanation": "<p>In graph theory, a Depth-First Search (DFS) traversal of an undirected graph $ G $ can produce a spanning forest when the graph is disconnected. This forest contains spanning trees for each connected component of $ G $. Each spanning tree in the forest has a specific property: if the spanning tree has $ V_i $ vertices, it will have $ V_i - 1 $ edges.</p>\n\n<p>Given that the graph $ G $ has 100 vertices and the DFS traversal generates a forest with 40 edges, we can use the following facts to determine the number of connected components:</p>\n\n<p>1. The total number of vertices in the graph $ G $ is 100.</p>\n\n<p>2. Each connected component’s spanning tree will have $ V_i - 1 $ edges.</p>\n\n<p>3. Let’s assume the graph has $ k $ connected components. This means the forest will have $ k $ spanning trees.</p>\n\n<p>4. If this forest has $ k $ spanning trees and each spanning tree $ T_i $ has $ V_i $ vertices and $ V_i - 1 $ edges, the sum of all edges in the forest spanning trees is the total number of edges caused by all connected components combined.</p>\n\n<p>According to the problem, the total number of edges is 40. Using the above properties, we can derive the following equation:</p>\n\n<p style=\"text-align:center;\">\n\n<p>$$ \\sum\\limits_{i=1}^{k} (V_i - 1) = 40 $$</p>\n\n</p>\n\n<p>Total number of vertices in the graph is:</p>\n\n<p style=\"text-align:center;\">\n\n<p>$$ \\sum\\limits_{i=1}^{k} V_i = 100 $$</p>\n\n</p>\n\n<p>Let’s combine these to form a single equation. The first sum of edges of each tree can be simplified assuming the sum of all $ V_i $ is equal to the total vertices minus the number of connected components:</p>\n\n<p style=\"text-align:center;\">\n\n<p>$$ \\sum\\limits_{i=1}^{k} (V_i - 1) = \\sum\\limits_{i=1}^{k} V_i - k \\implies 100 - k = 40 $$</p>\n\n</p>\n\n<p>Solving for $ k $, we get:</p>\n\n<p style=\"text-align:center;\">\n\n<p>$$ 100 - 40 = k \\implies k = 60 $$</p>\n\n</p>\n\n<p>Hence, the number of connected components in $ G $ is 60.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let G be a simple, finite, undirected graph with vertex set {$$v_1,...,v_n$$}. Let $$\\Delta(G)$$ denote the maximum degree of G and let N = {1, 2, ...} denote the set of all possible colors. Color the vertices of G using the following greedy strategy:</p>\n<p>for $$i=1,....,n$$</p>\n<p>color($$v_i)$$ $$\\leftarrow$$ min{$$j\\in N$$ : no neighbour of $$v_i$$ is colored $$j$$}</p>\n<p>Which of the following statements is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "This procedure results in a proper vertex coloring of G."
+      },
+      {
+        "identifier": "B",
+        "content": "The number of colors used is at most $$\\Delta(G)+1$$."
+      },
+      {
+        "identifier": "C",
+        "content": "The number of colors used is at most $$\\Delta(G)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "The number of colors used is equal to the chromatic number of G."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><b>For Option (A) :</b> Its, true as</p>\n<p>\"Color $\\left(V_i\\right) \\leftarrow \\min &lt; J \\in N=$ No neighbor of $V_i$ is colored $J&gt;\"$</p>\n<p>So, it ensures proper coloring.</p>\n<p><b>For Option (B) :</b> We can take example of a cycle of length 3.</p>\n<p>Here, $ \\Delta G=2$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m200dsq9/8e2be17c-c20a-472a-8d05-0c96cdacc93e/56116210-8537-11ef-bade-ef761474a0d3/file-jaoe38c1m200dsqa.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m200dsq9/8e2be17c-c20a-472a-8d05-0c96cdacc93e/56116210-8537-11ef-bade-ef761474a0d3/file-jaoe38c1m200dsqa.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Discrete Mathematics - Graph Theory Question 10 English Explanation 1\"></p>\n<p>But we need 3 colours to color it also, number of neighbor's can't be more than the degree, i.e. $\\Delta G$.</p>\n<p>So, at most $\\Delta G+1$ colours needed.</p>\n<p>This option is true.</p>\n<p>For Option (C) It's False as we have explained above.</p>\n<p>For Option (D) It is not always the case as sometimes we might see that greedy coloring might not be giving optimal result. Consider example.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m200hgb2/dbd1933f-452e-4129-ad9f-1469924ccbea/bbb56ee0-8537-11ef-b32e-178e27cb6985/file-jaoe38c1m200hgb3.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m200hgb2/dbd1933f-452e-4129-ad9f-1469924ccbea/bbb56ee0-8537-11ef-b32e-178e27cb6985/file-jaoe38c1m200hgb3.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Discrete Mathematics - Graph Theory Question 10 English Explanation 2\"></p>\n<p>When coloured greedily in order $\\left(v_1, v_2 \\ldots \\ldots . . v_6\\right)$. </p>\n<p>90 , number of color used $\\neq$ Chromatic number of graph</p>\n<p>Hence, the correct options are (A) and (B).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let $$U = \\{ 1,2,3\\} $$. Let 2$$^U$$ denote the powerset of U. Consider an undirected graph G whose vertex set is 2$$^U$$. For any $$A,B \\in {2^U},(A,B)$$ is an edge in G if and only if (i) $$A \\ne B$$, and (ii) either $$A \\supseteq B$$ or $$B \\supseteq A$$. For any vertex A in G, the set of all possible orderings in which the vertices of G can be visited in a Breadth First Search (BFS) starting from A is denoted by B(A).</p>\n<p>If $$\\phi$$ denotes the empty set, then the cardinality of B($$\\phi$$) is ___________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "5040",
+    "explanation": "<p>To solve this problem, we need to understand the structure of the graph $ G $ and how BFS (Breadth-First Search) works in this context. Let's break this down step-by-step.</p>\n\n<p>First, let’s find the powerset of $ U = \\{ 1, 2, 3 \\} $. The powerset $ 2^U $ consists of all subsets of $ U $, which are:</p>\n\n<p>\n\n<p>$$ 2^U = \\{ \\emptyset, \\{1\\}, \\{2\\}, \\{3\\}, \\{1,2\\}, \\{1,3\\}, \\{2,3\\}, \\{1,2,3\\} \\} $$</p>\n\n</p>\n\n<p>Now, $ G $ is an undirected graph where the vertex set is $ 2^U $. An edge $ (A, B) $ exists if and only if (i) $ A \\ne B $, and (ii) either $ A \\supseteq B $ or $ B \\supseteq A $. This means that there is an edge between every pair of sets where one set is a subset of the other.</p>\n\n<p>We need to find the cardinality of $ B(\\emptyset) $, where $ B(A) $ represents all possible orderings of BFS starting from vertex $ A $. Starting BFS from the empty set $ \\emptyset $, we must explore all vertices connected to $ \\emptyset $ in all possible ways BFS can visit these vertices.</p>\n\n<p>The empty set $ \\emptyset $ is connected to all other sets in $ 2^U $ because $ \\emptyset \\subseteq $ any set. So, the vertices connected to $ \\emptyset $ are:</p>\n\n<p>\n\n<p>$$ \\{ \\{1\\}, \\{2\\}, \\{3\\}, \\{1,2\\}, \\{1,3\\}, \\{2,3\\}, \\{1,2,3\\} \\} $$</p>\n\n</p>\n\n<p>This means we start at $ \\emptyset $ and the BFS should then visit any of the connected vertices. After visiting $ \\emptyset $, the BFS has 7 vertices to visit, and they can be visited in any order. Therefore, the number of ways to visit these 7 vertices (the cardinality of $ B(\\emptyset) $) is the number of permutations of these 7 vertices:</p>\n\n<p>\n\n<p>$$ |B(\\emptyset)| = 7! $$</p>\n\n</p>\n\n<p>Calculating $ 7! $:</p>\n\n<p>\n\n<p>$$ 7! = 7 \\times 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = 5040 $$</p>\n\n</p>\n\n<p>Therefore, the cardinality of $ B(\\emptyset) $ is $ 5040 $.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a simple undirected unweighted graph with at least three vertices. If A is the adjacency matrix of the graph, then the number of 3-cycles in the graph is given by the trace of</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A<sup>3</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "A<sup>3</sup> divided by 2"
+      },
+      {
+        "identifier": "C",
+        "content": "A<sup>3</sup> divided by 3"
+      },
+      {
+        "identifier": "D",
+        "content": "A<sup>3</sup> divided by 6"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Represent graph in adjacency matrix format.</p>\n<p>If adjacency matrix multiply by itself 3 times matrix.</p>\n<p>Adjacency matrix $$\\times$$ Adjacency matrix $$\\times$$ Adjacency matrix</p>\n<p>$$A_{ii}^3$$ [diagonal element] represents cycle of length 3 with beginning and ending with vertex i.</p>\n<p>Trace of $${A^3} = A_{11}^3 + A_{22}^3 + A_{33}^3 + ...A_{nn}^3$$ {sum of diagonals}</p>\n<p>Since cycle has 3 vertices it counted for every vertex we need to divide by 3 for trace of A<sup>3</sup> and because and undirected graph A $$-$$ B $$-$$ C $$-$$ A same as A $$-$$ C $$-$$ B $$-$$ A cycle. To eliminate repeated possibility divide by 2.</p>\n<p>Number of cycles of 3 vertices = $${{{A^3}} \\over 6}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a simple undirected weighted graph G, all of whose edge weights are distinct. Which of the following statements about the minimum spanning trees of G is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The edge with the second smallest weight is always part of any minimum spanning tree of G."
+      },
+      {
+        "identifier": "B",
+        "content": "One or both of the edges with the third smallest and the fourth smallest weights are part of any minimum spanning tree of G."
+      },
+      {
+        "identifier": "C",
+        "content": "Suppose S $$\\subseteq$$ V be such that S $$\\ne$$ $$\\phi$$ and S $$\\ne$$ V. Consider the edge with the minimum weight such that one of its vertices is in S and the other in V \\ S. Such an edge will always be part of any minimum spanning tree of G."
+      },
+      {
+        "identifier": "D",
+        "content": "G can have multiple minimum spanning trees."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02qzmlq/f90d863d-c01e-455b-8d7e-3692a466651b/bb658300-9668-11ec-9a20-f135abcde963/file-1l02qzmls.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02qzmlq/f90d863d-c01e-455b-8d7e-3692a466651b/bb658300-9668-11ec-9a20-f135abcde963/file-1l02qzmls.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Discrete Mathematics - Graph Theory Question 14 English Explanation\"></p>\n<p>$$\\bullet$$ 2<sup>nd</sup> minimum cost edge always in MST because 2<sup>nd</sup> minimum not forms cycle in MST.</p>\n<p>$$\\bullet$$ One of 3<sup>rd</sup> or 4<sup>th</sup> minimum in MST. If 3<sup>rd</sup> minimum forms cycle in MST the 4<sup>th</sup> minimum must be in MST.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The following simple undirected graph is referred to as the Peterson graph.</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02pt1u4/ac3b6b96-6f13-4ab5-8a60-edccfea6c686/1b5e8cc0-9664-11ec-a831-692b803aaf38/file-1l02pt1u5.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02pt1u4/ac3b6b96-6f13-4ab5-8a60-edccfea6c686/1b5e8cc0-9664-11ec-a831-692b803aaf38/file-1l02pt1u5.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Discrete Mathematics - Graph Theory Question 17 English\"></p>\n<p>Which of the following statements is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The chromatic number of the graph is 3."
+      },
+      {
+        "identifier": "B",
+        "content": "The graph has a Hamiltonian path."
+      },
+      {
+        "identifier": "C",
+        "content": "<p>The following graph is isomorphic to the Peterson graph.</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02puyvq/68565734-8031-4e92-9544-bbc5d0da1f03/50b46b60-9664-11ec-a831-692b803aaf38/file-1l02puyvr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02puyvq/68565734-8031-4e92-9544-bbc5d0da1f03/50b46b60-9664-11ec-a831-692b803aaf38/file-1l02puyvr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Discrete Mathematics - Graph Theory Question 17 English Option 3\"></p>"
+      },
+      {
+        "identifier": "D",
+        "content": "The size of the largest independent set of the given graph is 3. (A subset of vertices of a graph form an independent set if no two vertices of the subset are adjacent.)"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) Chromatic number of Peterson graph is 3.</p>\n<p>(b) Peterson graph has Hamiltonian path.</p>\n<p>(c) The given graph is isomorphic to Peterson graph.</p>\n<p>(d) The size of the largest independent set of Peterson graph is 4.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which of the properties hold for the adjacency matrix A of a simple undirected unweighted graph having n vertices?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The diagonal entries of A<sup>2</sup> are the degrees of the vertices of the graph."
+      },
+      {
+        "identifier": "B",
+        "content": "If the graph is connected, then none of the entries of A<sup>n $$-$$ 1</sup> + I<sub>n</sub> can be zero."
+      },
+      {
+        "identifier": "C",
+        "content": "If the sum of all the elements of A is at most 2(n $$-$$ 1), then the graph must be acyclic."
+      },
+      {
+        "identifier": "D",
+        "content": "If there is at least a 1 in each of A's rows and columns, then the graph must be connected."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) Assume adjacency matrix representation of undirected graph is \"A\".</p>\n<p>A<sup>2</sup> = A $$\\times$$ A</p>\n<p>Diagonal elements of A<sup>2</sup> are degree of vertices of $${\\left( {{A^2}} \\right)_{ii}}$$ represents degree of node i. So (a) is true.</p>\n<p>(b) Take following connected graph with n = 3,</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02nz3r5/b9508c76-91ec-46e5-a79e-b8ccdb50c121/f1727310-965c-11ec-97d5-2f3014bafa5b/file-1l02nz3r6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02nz3r5/b9508c76-91ec-46e5-a79e-b8ccdb50c121/f1727310-965c-11ec-97d5-2f3014bafa5b/file-1l02nz3r6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Discrete Mathematics - Graph Theory Question 16 English Explanation 1\"></p>\n<p>Adjacency matrix, $$(A) = \\left[ {\\matrix{\n   0 &amp; 1 &amp; 0  \\cr \n   1 &amp; 0 &amp; 1  \\cr \n   0 &amp; 1 &amp; 0  \\cr \n\n } } \\right]$$</p>\n<p>$${A^{n - 1}} = {A^{3 - 1}} = {A^2} = \\left[ {\\matrix{\n   0 &amp; 1 &amp; 0  \\cr \n   1 &amp; 0 &amp; 1  \\cr \n   0 &amp; 1 &amp; 0  \\cr \n\n } } \\right]\\left[ {\\matrix{\n   0 &amp; 1 &amp; 0  \\cr \n   1 &amp; 0 &amp; 1  \\cr \n   0 &amp; 1 &amp; 0  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   1 &amp; 0 &amp; 1  \\cr \n   0 &amp; 2 &amp; 0  \\cr \n   1 &amp; 0 &amp; 1  \\cr \n\n } } \\right]$$</p>\n<p>$${A^{n - 1}} + {I^n} = {A^2} + {I_3} = \\left[ {\\matrix{\n   1 &amp; 0 &amp; 1  \\cr \n   0 &amp; 2 &amp; 0  \\cr \n   1 &amp; 0 &amp; 1  \\cr \n\n } } \\right] + \\left[ {\\matrix{\n   1 &amp; 0 &amp; 0  \\cr \n   0 &amp; 1 &amp; 0  \\cr \n   0 &amp; 0 &amp; 1  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   2 &amp; 0 &amp; 1  \\cr \n   0 &amp; 3 &amp; 0  \\cr \n   1 &amp; 0 &amp; 2  \\cr \n\n } } \\right]$$</p>\n<p>We can see that A<sup>n $$-$$ 1</sup> + I<sub>n</sub> have some entries as zero. So (b) false.</p>\n<p>(c) Consider following acyclic graph with n = 5</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02o0lh7/056bd979-61c0-44b5-8202-af8cdff9f386/1af288b0-965d-11ec-acac-4f2c17d6cc3e/file-1l02o0lh8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02o0lh7/056bd979-61c0-44b5-8202-af8cdff9f386/1af288b0-965d-11ec-acac-4f2c17d6cc3e/file-1l02o0lh8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Discrete Mathematics - Graph Theory Question 16 English Explanation 2\"></p>\n<p>Here, $$A = \\left[ {\\matrix{\n   0 &amp; 1 &amp; 1 &amp; 0 &amp; 0  \\cr \n   1 &amp; 0 &amp; 1 &amp; 0 &amp; 0  \\cr \n   1 &amp; 1 &amp; 0 &amp; 0 &amp; 1  \\cr \n   0 &amp; 0 &amp; 0 &amp; 1 &amp; 0  \\cr \n\n } } \\right]$$</p>\n<p>Sum of all elements in A = 8</p>\n<p>Here n = 5, So 2(n $$-$$ 1) = 2(5 $$-$$ 1) = 8</p>\n<p>Here above graph satisfying 'if' condition of graph, but above graph is not acyclic. So, (c) is false.</p>\n<p>(d) Consider above graph in option (c), here, in A all rows and columns have at least a 1, but it is disconnected. So, (d) is false.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>In a directed acyclic graph with a source vertex s, the quality-score of a directed path is defined to be the product of the weights of the edges on the path. Further, for a vertex v other than s, the quality-score of v is defined to be the maximum among the quality-scores of all the paths from s to v. The quality-score of s is assumed to be 1.</p>\n\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2eur0g5/03e85dff-0311-4779-ba8c-197f96288c87/1083ec40-8d61-11ef-81a6-fd672af95676/file-jaoe38c1m2eur0g6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2eur0g5/03e85dff-0311-4779-ba8c-197f96288c87/1083ec40-8d61-11ef-81a6-fd672af95676/file-jaoe38c1m2eur0g6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Discrete Mathematics - Graph Theory Question 18 English\"></p>\n\n<p>The sum of the quality-scores of all the vertices in the graph shown above is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "929",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2eur0g5/03e85dff-0311-4779-ba8c-197f96288c87/1083ec40-8d61-11ef-81a6-fd672af95676/file-jaoe38c1m2eur0g6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2eur0g5/03e85dff-0311-4779-ba8c-197f96288c87/1083ec40-8d61-11ef-81a6-fd672af95676/file-jaoe38c1m2eur0g6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Discrete Mathematics - Graph Theory Question 18 English Explanation\"></p>\n<p>quality-score of $S=1$</p>\n<p>Therefore,</p>\n<p>quality-score of $\\mathrm{C}=1 \\quad \\because(\\mathrm{~S} \\rightarrow \\mathrm{C})$</p>\n<p>quality-score of $\\mathrm{F}=1 \\times 9 \\quad \\because(\\mathrm{~S} \\rightarrow \\mathrm{C} \\rightarrow \\mathrm{F})$</p>\n<p>quality-score of $\\mathrm{A}=9 \\quad \\because(\\mathrm{~S} \\rightarrow \\mathrm{~A})$</p>\n<p>quality-score of $\\mathrm{D}=9 \\times 1 \\because(\\mathrm{~S} \\rightarrow \\mathrm{~A} \\rightarrow \\mathrm{D})$</p>\n<p>quality-score of G $=9 \\times 1 \\times 9$</p>\n<p>$$ \\because(\\mathrm{S} \\rightarrow \\mathrm{~A} \\rightarrow \\mathrm{D} \\rightarrow \\mathrm{G}) $$</p>\n<p>quality-score of $B=9 \\times 1$</p>\n<p>$$ \\because(\\mathrm{S} \\rightarrow \\mathrm{~A} \\rightarrow \\mathrm{~B}) $$</p>\n<p>quality-score of $\\mathrm{E}=9 \\times 1 \\times 9$</p>\n<p>$$ \\because(\\mathrm{S} \\rightarrow \\mathrm{~A} \\rightarrow \\mathrm{D} \\rightarrow \\mathrm{E}) $$</p>\n<p>quality-score of $\\mathrm{T}=9 \\times 1 \\times 9 \\times 9$</p>\n<p>$$ \\because(\\mathrm{S} \\rightarrow \\mathrm{~A} \\rightarrow \\mathrm{D} \\rightarrow \\mathrm{E} \\rightarrow \\mathrm{~T}) $$</p>\n<p>Sum of quality-score of all vertices</p>\n<p>$$ =1+1+9+9+9+81+9+81+729=929 $$</p>\n<p>Hence, the correct answer is 929 .</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>An articulation point in a connected graph is a vertex such that removing the vertex and its incident edges disconnects the graph into two or more connected components.</p>\n\n<p>Let T be a DFS tree obtained by doing DFS in a connected undirected graph G. Which of the following option is/are correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "If u is an articulation point in G such that x is an ancestor of u in T and y is a descendent of u in T, then all paths from x to y in G must pass through u."
+      },
+      {
+        "identifier": "B",
+        "content": "Root of T is an articulation point in G if and only if it has 2 or more children."
+      },
+      {
+        "identifier": "C",
+        "content": "Root of T can never be an articulation point in G."
+      },
+      {
+        "identifier": "D",
+        "content": "A leaf of T can be an articulation point in G."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>(A) False : Below is the reason to show how this is false.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3a2nxrz/9986ac0c-9fe6-4cfd-8748-7c2a145df583/5030f310-9e8c-11ef-a560-79a99b0fc0e7/file-jaoe38c1m3a2nxs1.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3a2nxrz/9986ac0c-9fe6-4cfd-8748-7c2a145df583/5030f310-9e8c-11ef-a560-79a99b0fc0e7/file-jaoe38c1m3a2nxs1.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 1 Discrete Mathematics - Graph Theory Question 22 English Explanation 1\"></p>\n<p>If $u$ is articulation point, then removing u generates 2 connected components, now there might be a case when $x$ and $y$ will belong to either one of the connected component and hence a path will exist between them without passing through $u$</p>\n\n<p>(B) True : We need at least 2 children so that root is articulation point.</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3a2r76y/83ab50ee-2aed-42c8-9ce1-6b0a58c2d61c/aae418a0-9e8c-11ef-a560-79a99b0fc0e7/file-jaoe38c1m3a2r76z.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3a2r76y/83ab50ee-2aed-42c8-9ce1-6b0a58c2d61c/aae418a0-9e8c-11ef-a560-79a99b0fc0e7/file-jaoe38c1m3a2r76z.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 1 Discrete Mathematics - Graph Theory Question 22 English Explanation 2\">\n\n\n<p>(C) False : Check option (B) for more information.</p>\n<p>(D) False : This can never happen. Leaf will always have degree $=1$.</p>\n\n",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Let G be a group order 6, and H be a subgroup of G such that 1 &lt; |H| &lt; 6. Which one of the following options is correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "G is always cyclic, but H may not be cyclic."
+      },
+      {
+        "identifier": "B",
+        "content": "G may not be cyclic, but H is always cyclic."
+      },
+      {
+        "identifier": "C",
+        "content": "Both G and H are always cyclic."
+      },
+      {
+        "identifier": "D",
+        "content": "Both G and H may not be cyclic."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the correct option, we'll analyze the possible groups $ G $ of order 6 and their subgroups $ H $ of orders greater than 1 and less than 6 (i.e., $ |H| = 2 $ or $ |H| = 3 $).</p>\n<h3><strong>Understanding Groups of Order 6</strong></h3>\n<p>A group of order 6 can be one of the following:</p>\n\n<p><strong>Cyclic Group $ \\mathbb{Z}_6 $</strong>:</p>\n\n\n<p><p><strong>Structure</strong>: This is an abelian (commutative) group where every element can be expressed as a power of a single element (a generator).</p></p>\n<p><p><strong>Properties</strong>: All subgroups of a cyclic group are cyclic.</p></p>\n\n\n<p><strong>Symmetric Group $ S_3 $</strong>:</p>\n\n\n<p><p><strong>Structure</strong>: This is the group of all permutations of three elements. It is non-abelian (non-commutative).</p></p>\n<p><p><strong>Properties</strong>: It contains both cyclic and non-cyclic subgroups.</p></p>\n\n<h3><strong>Analyzing Subgroups of Orders 2 and 3</strong></h3>\n<p>According to <strong>Lagrange's Theorem</strong>, the order of a subgroup $ H $ must divide the order of the group $ G $. Therefore, for $ |G| = 6 $, the possible orders of $ H $ are 1, 2, 3, and 6. Since $ 1 < |H| < 6 $, we focus on $ |H| = 2 $ and $ |H| = 3 $.</p>\n<h4><strong>Case 1: $ G $ is Cyclic ($ \\mathbb{Z}_6 $)</strong></h4>\n\n<p><p><strong>Subgroups of Order 2</strong>:</p></p>\n<p><p>There is one subgroup of order 2 in $ \\mathbb{Z}_6 $, generated by the element of order 2.</p></p>\n<p><p><strong>Cyclic Nature</strong>: Since $ \\mathbb{Z}_6 $ is cyclic, all its subgroups are cyclic.</p></p>\n\n<p><p><strong>Subgroups of Order 3</strong>:</p></p>\n<p><p>There is one subgroup of order 3 in $ \\mathbb{Z}_6 $, generated by the element of order 3.</p></p>\n<p><p><strong>Cyclic Nature</strong>: Again, subgroups are cyclic.</p></p>\n<p><p><strong>Conclusion</strong>:</p></p>\n<p><p>Both $ G $ and $ H $ are cyclic in this case.</p></p>\n\n<h4><strong>Case 2: $ G $ is Non-Cyclic ($ S_3 $)</strong></h4>\n\n<p><p><strong>Is $ S_3 $ Cyclic?</strong></p></p>\n<p><p><strong>No</strong>, $ S_3 $ is non-abelian and cannot be generated by a single element, so it is not cyclic.</p></p>\n<p><p><strong>Subgroups of Order 2</strong>:</p></p>\n<p><p>$ S_3 $ has three subgroups of order 2, each generated by a transposition (a swap of two elements).</p></p>\n<p><p><strong>Cyclic Nature</strong>: Each subgroup is cyclic because it's generated by a single element of order 2.</p></p>\n<p><p><strong>Subgroups of Order 3</strong>:</p></p>\n<p><p>$ S_3 $ has one subgroup of order 3, generated by a 3-cycle (a permutation that cycles three elements).</p></p>\n<p><p><strong>Cyclic Nature</strong>: This subgroup is cyclic because it's generated by a single element of order 3.</p></p>\n<p><p><strong>Conclusion</strong>:</p></p>\n<p><p>$ G $ is not cyclic, but all subgroups $ H $ of orders 2 and 3 are cyclic.</p></p>\n\n<h3><strong>Evaluating the Options</strong></h3>\n\n<p><p><strong>Option A</strong>: <em>$ G $ is always cyclic, but $ H $ may not be cyclic.</em></p></p>\n<p><p><strong>Incorrect</strong>: $ G $ may not be cyclic (e.g., $ S_3 $), and $ H $ is always cyclic.</p></p>\n<p><p><strong>Option B</strong>: <em>$ G $ may not be cyclic, but $ H $ is always cyclic.</em></p></p>\n<p><p><strong>Correct</strong>: As demonstrated, $ G $ can be non-cyclic ($ S_3 $), but all subgroups $ H $ of orders 2 and 3 are cyclic.</p></p>\n<p><p><strong>Option C</strong>: <em>Both $ G $ and $ H $ are always cyclic.</em></p></p>\n<p><p><strong>Incorrect</strong>: $ G $ may not be cyclic.</p></p>\n<p><p><strong>Option D</strong>: <em>Both $ G $ and $ H $ may not be cyclic.</em></p></p>\n<p><p><strong>Incorrect</strong>: While $ G $ may not be cyclic, $ H $ is always cyclic.</p></p>\n\n<h3><strong>Final Answer</strong></h3>\n<p><strong>Option B: $ G $ may not be cyclic, but $ H $ is always cyclic.</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Let G = (V, E) be an undirected unweighted connected graph. The diameter of G is defined as:</p>\n\n<p>diam(G) =&nbsp;$$\\displaystyle\\max_{u, x\\in V}$$&nbsp;{the length of shortest path between u and v}</p>\n\n<p>Let M be the adjacency matrix of G.</p>\n\n<p>Define graph G<sub>2</sub> on the same set of vertices with adjacency matrix N, where</p>\n\n<p>$$N_{ij} =\\left\\{ {\\begin{array}{*{20}{c}} {1 \\ \\ \\text{if} \\ \\ {M_{ij}} &gt; 0 \\ \\ \\text{or} \\ \\ P_{ij} &gt; 0, \\ \\text{where} \\ \\ P = {M^2}}\\\\ {0, \\ \\ \\ \\ \\ \\text{otherwise}} \\end{array}} \\right.$$</p>\n\n<p>Which one of the following statements is true?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "diam(G) &lt; diam(G<sub>2</sub>)&nbsp;≤ diam(G)"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\lceil {diam(G)/2} \\right\\rceil $$&nbsp;&lt; diam(G<sub>2</sub>) &lt; diam(G)"
+      },
+      {
+        "identifier": "C",
+        "content": "diam(G<sub>2</sub>)&nbsp;≤&nbsp;$$\\left\\lceil {diam(G)/2} \\right\\rceil $$"
+      },
+      {
+        "identifier": "D",
+        "content": "diam(G<sub>2</sub>) = diam(G)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statement is true regarding the diameters of graphs $ G $ and $ G_2 $, let's analyze the given information step by step.</p>\n<hr />\n<h3><strong>Understanding the Given Graphs</strong></h3>\n\n<p><p><strong>Graph $ G $</strong>: An undirected, unweighted, connected graph with adjacency matrix $ M $.</p></p>\n<p><p><strong>Graph $ G_2 $</strong>: A graph on the same set of vertices as $ G $ with adjacency matrix $ N $, where:</p>\n<p>$   N_{ij} = \\begin{cases}   1 & \\text{if } M_{ij} > 0 \\text{ or } P_{ij} > 0, \\text{ where } P = M^2 \\\\   0 & \\text{otherwise}   \\end{cases}   $</p></p>\n<p><p><strong>Diameter of a Graph</strong> ($ \\text{diam}(G) $): The maximum shortest path length between any two vertices in the graph $ G $.</p></p>\n\n<hr />\n<h3><strong>Interpreting $ M^2 $ and $ N $</strong></h3>\n\n<p><p><strong>$ M^2 $</strong>: The square of the adjacency matrix $ M $. The element $ (M^2)_{ij} $ counts the number of paths of length <strong>2</strong> between vertices $ i $ and $ j $ in $ G $.</p></p>\n<p><p><strong>$ P_{ij} = (M^2)_{ij} $</strong>: So, $ P_{ij} > 0 $ indicates that there is at least one path of length <strong>2</strong> between $ i $ and $ j $ in $ G $.</p></p>\n<p><p><strong>Adjacency Matrix $ N $ of $ G_2 $</strong>: $ N_{ij} = 1 $ if there is an edge between $ i $ and $ j $ in $ G $ or if there is a path of length <strong>2</strong> between $ i $ and $ j $ in $ G $.</p></p>\n\n<hr />\n<h3><strong>Understanding $ G_2 $</strong></h3>\n\n<p><p><strong>Edges in $ G_2 $</strong>: Every edge in $ G $ is also in $ G_2 $. Additionally, $ G_2 $ includes edges between vertices that are at a distance of <strong>2</strong> in $ G $.</p></p>\n<p><p><strong>Implication</strong>: In $ G_2 $, any two vertices that were at a distance of <strong>2</strong> in $ G $ are now adjacent (distance <strong>1</strong> in $ G_2 $).</p></p>\n\n<hr />\n<h3><strong>Analyzing the Diameters</strong></h3>\n\n<p><p><strong>Objective</strong>: Find the relationship between $ \\text{diam}(G) $ and $ \\text{diam}(G_2) $.</p></p>\n<p><p><strong>Observation</strong>:</p></p>\n<p><p>In $ G_2 $, the distances between vertices are reduced compared to $ G $.</p></p>\n<p><p>Specifically, the maximum distance in $ G_2 $ should be approximately half of that in $ G $, rounded up.</p></p>\n\n<hr />\n<h3><strong>Deriving the Relationship</strong></h3>\n\n<p><p><strong>For any two vertices $ u $ and $ v $ in $ G $</strong>:</p></p>\n<p><p>Let the shortest path length between $ u $ and $ v $ in $ G $ be $ d(u,v) $.</p></p>\n<p><p>In $ G_2 $, due to the added edges, the new shortest path length $ d_2(u,v) $ satisfies:</p>\n<p>$     d_2(u,v) \\leq \\left\\lceil \\frac{d(u,v)}{2} \\right\\rceil     $</p></p>\n<p><p><strong>Diameter Relation</strong>:</p></p>\n<p><p>The diameter of $ G_2 $ satisfies:</p>\n<p>$     \\text{diam}(G_2) \\leq \\left\\lceil \\frac{\\text{diam}(G)}{2} \\right\\rceil     $</p></p>\n<p><p>This is because the longest shortest path in $ G $ (the diameter) will be approximately halved in $ G_2 $.</p></p>\n\n<hr />\n<h3><strong>Evaluating the Options</strong></h3>\n\n<p><p><strong>Option A</strong>: $ \\text{diam}(G) < \\text{diam}(G_2) \\leq \\text{diam}(G) $</p></p>\n<p><p>This implies $ \\text{diam}(G) < \\text{diam}(G_2) \\leq \\text{diam}(G) $, which is contradictory.</p></p>\n<p><p><strong>Conclusion</strong>: Incorrect.</p></p>\n<p><p><strong>Option B</strong>: $ \\left\\lceil \\frac{\\text{diam}(G)}{2} \\right\\rceil < \\text{diam}(G_2) < \\text{diam}(G) $</p></p>\n<p><p>Suggests $ \\text{diam}(G_2) $ is greater than $ \\left\\lceil \\frac{\\text{diam}(G)}{2} \\right\\rceil $, which contradicts our derived relation.</p></p>\n<p><p><strong>Conclusion</strong>: Incorrect.</p></p>\n<p><p><strong>Option C</strong>: $ \\text{diam}(G_2) \\leq \\left\\lceil \\frac{\\text{diam}(G)}{2} \\right\\rceil $</p></p>\n<p><p>Aligns perfectly with our derivation.</p></p>\n<p><p><strong>Conclusion</strong>: Correct.</p></p>\n<p><p><strong>Option D</strong>: $ \\text{diam}(G_2) = \\text{diam}(G) $</p></p>\n<p><p>Implies no change in diameter, which is not the case since distances are reduced in $ G_2 $.</p></p>\n<p><p><strong>Conclusion</strong>: Incorrect.</p></p>\n\n<hr />\n<h3><strong>Final Answer</strong></h3>\n<p><strong>Option C is true</strong>: $\\boxed{\\text{diam}(G_2) \\leq \\left\\lceil \\dfrac{\\text{diam}(G)}{2} \\right\\rceil}$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Graph G is obtained by adding vertex s to K<sub>3,4</sub> and making s adjacent to every vertex of K<sub>3,4</sub>. The minimum number of colours required to edge-colour G is _____.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2pkq83l/1c13db85-6cd2-410c-a679-a383ed0b2544/7e781f10-9346-11ef-82fd-75272662ff93/file-jaoe38c1m2pkq83m.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2pkq83l/1c13db85-6cd2-410c-a679-a383ed0b2544/7e781f10-9346-11ef-82fd-75272662ff93/file-jaoe38c1m2pkq83m.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Discrete Mathematics - Graph Theory Question 23 English Explanation 1\"></p>\n<p>Now another vertex S is added to $k_{3,4}$, such that $S$ is connected to all vertices. The resultant graph is</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2pkq3q4/97b20369-a86f-4583-8cef-51dac9ff3009/7b16f2b0-9346-11ef-82fd-75272662ff93/file-jaoe38c1m2pkq3q5.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2pkq3q4/97b20369-a86f-4583-8cef-51dac9ff3009/7b16f2b0-9346-11ef-82fd-75272662ff93/file-jaoe38c1m2pkq3q5.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Discrete Mathematics - Graph Theory Question 23 English Explanation 2\"></p>\n<p>So, the minimum number of colors required $=7$ </p>\n<p>Hence, the correct answer is 7 .</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let <i>G</i> be any connected, weighted, undirected graph.</p><p>I. <i>G</i> has a unique minimum spanning tree, if no two edges of <i>G</i> have the same weight.</p><p>II. <i>G</i> has a unique minimum spanning tree, if, for every cut of <i>G</i>, there is a unique minimum-weight edge crossing the cut.</p><p>Which of the above two statements is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>I only</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>II only</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Both I and II</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Neither I nor II</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>A Minimum Spanning Tree (MST) of a weighted, connected, undirected graph is unique if and only if there is a unique \"best\" choice at each step of any MST algorithm (like Kruskal’s or Prim’s). Two commonly known sufficient conditions for MST uniqueness are :</p></p>\n\n\n<p><p><strong>Condition 1 (Distinct edge weights)</strong> : If all the edge weights in the graph are distinct (no two edges share the same weight), then the MST is guaranteed to be unique. This is a well-known property.</p></p>\n\n<p><p><strong>Condition 2 (Unique minimum-weight edge for each cut)</strong>: The uniqueness can also be characterized by another condition: for every cut in the graph, the minimum-weight edge that crosses that cut is unique. If there was a tie for the minimum edge across any cut, that could create ambiguity (multiple equally good choices) when forming the MST, potentially leading to multiple MSTs. Ensuring that each cut has a single minimum-weight crossing edge ensures that no such ambiguity exists.</p></p>\n\n\n<p><strong>Analyze the given statements</strong> :</p>\n\n\n<p><p><strong>Statement I</strong> : \"G has a unique MST if no two edges of G have the same weight.\"</p>\n<p>This statement is <strong>true</strong> based on standard MST theory. Distinct edge weights guarantee uniqueness of the MST.</p></p>\n<p><p><strong>Statement II</strong> : \"G has a unique MST if, for every cut of G, there is a unique minimum-weight edge crossing the cut.\"</p>\n<p>This statement is also <strong>true</strong>. The uniqueness of the minimum edge in every cut ensures that no alternative MST can be formed by swapping edges of equal weight, thereby guaranteeing a unique MST.</p></p>\n\n\n<p><p><strong>Conclusion</strong> :</p>\n<p>Both conditions are known criteria for ensuring the uniqueness of an MST. Thus, both I and II are true.</p></p>\n\n<p><strong>Final Answer :</strong> <strong>Option C (Both I and II)</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose L = { p, q, r, s, t } is a lattice represented by the following Hasse diagram:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/JQBTbjfVyxeZMb29a/VKBvUxomrekcxGiW48s27pr2XjviV/1dAhWA5fCRqAiDWr34Ch66/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2015 Set 1 Discrete Mathematics - Graph Theory Question 31 English\">\nFor any $$x, y ∈ L$$, not necessarily distinct, $$x ∨ y$$ and x ∧ y are join and meet of x, y, respectively. Let $$L^3 = \\left\\{\\left(x, y, z\\right): x, y, z ∈ L\\right\\}$$ be the set of all ordered triplets of the elements of L. Let p<sub>r</sub> be the probability that an element $$\\left(x, y,z\\right) ∈ L^3$$ chosen equiprobably satisfies $$x ∨ (y ∧ z) = (x ∨ y) ∧ (x ∨ z)$$. Then",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "p<sub>r</sub> = 0"
+      },
+      {
+        "identifier": "B",
+        "content": "p<sub>r</sub> = 1"
+      },
+      {
+        "identifier": "C",
+        "content": "$$0 &lt; p_r ≤ \\frac{1}{5}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{1}{5} &lt; p_r &lt; 1$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let G be a connected planar graph with 10 vertices. If the number of edges on each face is three, then the number of edges in G is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "24",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In a connected graph, bridge is an edge whose removal disconnects a graph. Which one of the following statements is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A tree has no bridges "
+      },
+      {
+        "identifier": "B",
+        "content": "A bridge cannot be part of a simple cycle "
+      },
+      {
+        "identifier": "C",
+        "content": "Every edge of a clique with size $$ \\ge 3$$ is a bridge (A clique is any complete sub-graph of a graph )"
+      },
+      {
+        "identifier": "D",
+        "content": "A graph with bridges cannot have a cycle"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A graph is self-complementary if it is isomorphic to its complement. For all self-complementary graphs on $$n$$ vertices, $$n$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A multiple of $$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Even "
+      },
+      {
+        "identifier": "C",
+        "content": "Odd "
+      },
+      {
+        "identifier": "D",
+        "content": "Congruent to $$0$$ $$mod$$ $$4$$, or, $$1$$ $$mod$$ $$4.$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A cycle on $$n$$ vertices is isomorphic to its complement. The value of $$n$$ is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an undirectional graph $$G$$ where self-loops are not allowed. The vertex set of $$G$$ is $$\\left\\{ {\\left( {i,j} \\right):\\,1 \\le i \\le 12,\\,1 \\le j \\le 12} \\right\\}.$$ There is an edge between $$(a,b)$$ and $$(c,d)$$ if $$\\left| {a - c} \\right| \\le 1$$ and $$\\left| {b - d} \\right| \\le 1$$. The number of edges in this graph is _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "506",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An ordered $$n$$-tuple $$\\left( {{d_1},\\,\\,{d_2},\\,....,{d_n}} \\right)$$ with $${{d_1} \\ge ,\\,\\,{d_2} \\ge .... \\ge {d_n}}$$ is called graphic if there exists a simple undirected graph with $$n$$ vertices having degrees $${d_1},{d_2},.....,{d_n}$$ respectively. Which of the following $$6$$- tuples is NOT graphic?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(1, 1, 1, 1, 1, 1)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$(2, 2, 2, 2, 2, 2)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$(3, 3, 3, 1, 0, 0)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$(3, 2, 1, 1, 1, 0)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "If $$G$$ is a forest with $$n$$ vertices and $$k$$ connected components, how many edges does $$G$$ have?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\lfloor {n/k} \\right\\rfloor $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\lceil {n/k} \\right\\rceil \\,$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$n - k$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$n - k + 1$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$\\delta $$ denote the minimum degree of a vertex in a graph. For all planar graphs on $$n$$ vertices with $$\\delta  \\ge 3$$, which one of the following is TRUE?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "In any planar embedding, the number of faces is at least $${n \\over 2} + 2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "In any planar embedding, the number of faces is less than $${n \\over 2} + 2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "There is a planar embedding in which the number of facess is less than $${n \\over 2} + 2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "There is a planar embedding in which the number of faces is at most $${n \\over {\\delta  + 1}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The line graph $$L(G)$$ of a simple graph $$G$$ is defined as follows:\n<p>$$\\,\\,\\,\\,$$There is exactly one vertex $$v(e)$$ in $$L$$(G)$$ for each edge $$e$$ in $$G$$</p>\n<p>$$\\,\\,\\,\\,$$ For any two edges $$e$$ and $$e'$$ in $$G$$, $$L(G)$$ has an edge between $$v(e)$$ and $$v(e')$$, if and only if $$e$$ and $$e'$$ </p>\n<p>$$\\,\\,\\,\\,$$ Which of the following statements is/are <b>TRUE</b>?</p>\n<p>(P) The line graph of a cycle is a cycle.\n<br>(Q) The line graph of a clique is a  clique.\n<br>(R) The line graph of a planar graph is planar.\n<br>(S) The line graph of a tree is a tree.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P only "
+      },
+      {
+        "identifier": "B",
+        "content": "P and R only "
+      },
+      {
+        "identifier": "C",
+        "content": "R only "
+      },
+      {
+        "identifier": "D",
+        "content": "P, Q and S only"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ be a complete undirected graph on $$6$$ vertices. If vertices of $$G$$ $$\\,\\,\\,\\,$$ are labeled, then the number of distinct cycles of length $$4$$ in $$G$$ is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$15$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$30$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$90$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$360$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following graphs is isomorphic to\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/Zf21QyRG6T2PNRlqG/RQvfh36OffRhCJfe3CLgvYQ0TABDY/qt261BR9RFrAWgkkyGMIOP/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Discrete Mathematics - Graph Theory Question 69 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/uwkzKPlbtLW0hilcH/myaFJRmh2OA5PnMK1TzsCaFPojDuz/HdBT0XqNOurYK1pqZ4Jrnb/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Discrete Mathematics - Graph Theory Question 69 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/sayX95lMZWt56lsVV/iuQGfrj4yqnEEkk3CKr32w1RyxTIu/ykoJ7vH2CEJjFniOAI6yJ3/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Discrete Mathematics - Graph Theory Question 69 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/Grewv5zZZyZsvPJbh/8EW0hIXolW8hAffhhfm99fpzFBYFc/T4XABA3bRaq3Sg7UQ1Aj7n/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Discrete Mathematics - Graph Theory Question 69 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/gDU1jlkaXWLM980NV/mq2DAYUOHk9cuOxMDCUl5rRdL2oRF/uIl7J4YJVr4l10Gl9R6R9s/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Discrete Mathematics - Graph Theory Question 69 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The degree sequence of a simple graph is the sequence of the degrees of the nodes in the graph in decreasing order. Which of the following sequences can not be the degree sequence of any graph? \n<br>$${\\rm I}.$$$$\\,\\,\\,\\,\\,7,6,5,4,4,3,2,1$$\n<br>$${\\rm I}{\\rm I}.$$$$\\,\\,\\,\\,\\,6,6,6,6,3,3,2,2$$ \n<br>$${\\rm I}{\\rm I}{\\rm I}.$$$$\\,\\,\\,\\,\\,7,6,6,4,4,3,2,2$$\n<br>$${\\rm I}V.$$$$\\,\\,\\,\\,\\,8,7,7,6,4,2,1,1$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}$$$${\\rm I}$$$${\\rm I}$$ and $${\\rm I}$$$$V$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm I}$$$$V$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I}$$$${\\rm I}$$ and $${\\rm I}$$$$V$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "A binary tree with $$n&gt;1$$ nodes has $${n_1}$$, $${n_2}$$ and $${n_3}$$ nodes of degree one, two and three respectively. The degree of a node is defined as the number of its neighbours. \n<p>Starting with the above tree, while there remains a node $$v$$ of degree two in the tree, add an edge between the two neighbours of $$v$$ and then remove $$v$$ from the tree. How many edges will remain at the end of the process?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${2^ * }{n_1} - 3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${n_2} + {2^ * }{n_1} - 2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${n_3} - {n_2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${n_2} + {n_1} - 2$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A binary tree with $$n&gt;1$$ nodes has $${n_1}$$, $${n_2}$$ and $${n_3}$$ nodes of degree one, two and three respectively. The degree of a node is defined as the number of its neighbours. \n<p>$${n_3}$$ can be expressed as:</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${n_1}$$ $$+$$ $${n_1}$$ $$-$$ $$1$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${n_1}$$ $$-$$ $$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {{{{n_1} + {n_2}} \\over 2}} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${n_2}$$ $$-$$ $$1$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "$$G$$ is a simple undirected graph. Some vertices of $$G$$ are of odd degree. Add a node $$v$$ to $$G$$ and make it adjacent to each odd degree vertex of $$G$$. The resultant graph is sure to be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Regular "
+      },
+      {
+        "identifier": "B",
+        "content": "Complete "
+      },
+      {
+        "identifier": "C",
+        "content": "Hamiltonian "
+      },
+      {
+        "identifier": "D",
+        "content": "Euler"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements is true for every planar graph on $$n$$ vertices? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The graph is connected "
+      },
+      {
+        "identifier": "B",
+        "content": "The graph is Eulerian "
+      },
+      {
+        "identifier": "C",
+        "content": "The graph has a vertex-cover of size at most $$3n/4$$"
+      },
+      {
+        "identifier": "D",
+        "content": "The graph has an independent set of size at least $$n/3$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "$$G$$ is a graph on $$n$$ vertices and $$2n-2$$ edges. The edges of $$G$$ can be partitioned into two edge-disjoint spanning trees. Which of the following in NOT true for $$G$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "For every subset of $$k$$ vertices, the induced subgraph has at most $$2k-2$$ edges"
+      },
+      {
+        "identifier": "B",
+        "content": "The minimum cut in $$G$$ has at least two edges "
+      },
+      {
+        "identifier": "C",
+        "content": "There are two edge-disjoint paths between every pair of vertices"
+      },
+      {
+        "identifier": "D",
+        "content": "There are two vertex-disjoint paths between every pair of vertices "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following graphs has an Eulerian circuit?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Any $$k$$-regular graph where $$k$$ is an even number. "
+      },
+      {
+        "identifier": "B",
+        "content": "A complete graph on 90 vertices. "
+      },
+      {
+        "identifier": "C",
+        "content": "The complement of a cycle on 25 vertices. "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Let Graph$$(x)$$ be a predicate which denotes that $$x$$ is a graph. Let Connected$$(x)$$ be a predicate which denotes that $$x$$ is connected. Which of the following first order logic sentences <b>DOES  NOT</b> represent the statement:  $$Not\\,\\,\\,every\\,\\,\\,graph\\,\\,\\,is\\,\\,\\,connected?$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\neg \\forall x\\left( {Graph\\left( x \\right) \\Rightarrow Connected\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\exists x\\left( {Graph\\left( x \\right) \\wedge \\neg Connected\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\neg \\forall x\\left( {\\neg Graph\\left( x \\right) \\vee Connected\\left( x \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\forall x\\left( {Graph\\left( x \\right) \\Rightarrow \\neg Connected\\left( x \\right)} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the undirected graph $$G$$ defined as follows. The vertices of $$G$$ are bit strings of length $$n$$. We have an edge between vertex $$u$$ and vertex $$v$$ if and only if $$u$$ and $$v$$ differ in exactly one bit position (in other words, $$v$$ can be obtained from $$u$$ by flipping a single bit). The ratio of the choromatic number of $$G$$ to the diameter of $$G$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1/{2^{n - 1}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/n$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2/n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$3/n$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The $${2^n}$$ vertices of a graph $$G$$ correspond to all subsets of a set of size $$n$$, for $$n \\ge 6$$. Two vertices of $$G$$ are adjacent if and only if the corresponding sets intersect in exactly two elements. \n<p>the number of vertices of degree zero in $$G$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$n$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$n + 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^n}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The $${2^n}$$ vertices of a graph $$G$$ correspond to all subsets of a set of size $$n$$, for $$n \\ge 6$$. Two vertices of $$G$$ are adjacent if and only if the corresponding sets intersect in exactly two elements. \n<p>The maximum degree of a vertex in $$G$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\mathop 2\\limits^{n/2} } \\right){2^{n/2}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^{n - 2}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^{n - 3}} \\times 3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{n - 1}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following graphs is NOT planar?\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/cPylWvhbb2pescodR/6DZsTEXP9LHXReJEHqg7di9HnMWWS/B2FmX9TMqjNp8vrTClSmSE/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2005 Discrete Mathematics - Graph Theory Question 32 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "G1 "
+      },
+      {
+        "identifier": "B",
+        "content": "G2"
+      },
+      {
+        "identifier": "C",
+        "content": "G3 "
+      },
+      {
+        "identifier": "D",
+        "content": "G4"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "How many graphs on $$n$$ labeled vertices exist which have at least $$\\left( {{n^2} - 3n} \\right)/2\\,\\,\\,$$ edges?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${}^{\\left( {{n^ \\wedge }2 - n} \\right)/2}{C_{\\left( {{n^ \\wedge }2 - 3n} \\right)/2}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\sum\\limits_{k = 0}^{\\left( {{n^ \\wedge }2 - 3n} \\right)/2} {{}^{\\left( {{n^ \\wedge }2 - n} \\right)}{C_k}} }$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${}^{\\left( {{n^ \\wedge }2 - n} \\right)/2}{C_n}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sum\\nolimits_{k = 0}^n {{}^{\\left( {{n^ \\wedge }2 - n} \\right)/2}{C_k}} $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "What is the number of vertices in an undirected connected graph with $$27$$ edges, $$6$$ vertices of degree $$2$$, $$\\,\\,$$  $$3$$ vertices of degree 4 and remaining of degree 3? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$11$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$18$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$19$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${G_1} = \\left( {V,\\,{E_1}} \\right)$$ and $${G_2} = \\left( {V,\\,{E_2}} \\right)$$ be connected graphs on the same vertex set $$V$$ with more than two vertices. If $${G_1} \\cap {G_2} = \\left( {V,{E_1} \\cap {E_2}} \\right)$$ is not a connected graph, then the graph $${G_1} \\cup {G_2} = \\left( {V,{E_1} \\cup {E_2}} \\right)$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "cannot have a cut vertex "
+      },
+      {
+        "identifier": "B",
+        "content": "must have a cycle "
+      },
+      {
+        "identifier": "C",
+        "content": "must have a cut-edge (bridge) "
+      },
+      {
+        "identifier": "D",
+        "content": "has chromatic number strictly greater than those of $${G_1}$$ and$${G_2}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The minimum number of colours required to colour the following graph, such that\nno two adjacent vertices are assigned the same colour, is\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/NmDsvgE6wf9BVuwvN/DcBRMPR6Vx4SXClMY5V8CpAqf4QBK/rb358YH3kpiKHGvr43zbX1/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2004 Discrete Mathematics - Graph Theory Question 70 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "How many perfect matchings are there in a complete graph of 6 vertices? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$15$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$24$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$30$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$60$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "$$A$$ graph $$G$$ $$=$$ $$(V,  E)$$ satisfies $$\\left| E \\right| \\le \\,3\\left| V \\right| - 6.$$ The min-degree of $$G$$ is defined as $$\\mathop {\\min }\\limits_{v \\in V} \\left\\{ {{{\\mathop{\\rm d}\\nolimits} ^ \\circ }egree\\left( v \\right)} \\right\\}$$. Therefore, min-degree of $$G$$ cannot be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$  "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "how many undirected graphs (not necessarily connected) can be constructed out of a given $$\\,\\,\\,\\,V = \\left\\{ {{v_1},\\,\\,{v_2},\\,....,\\,\\,{v_n}} \\right\\}$$ of $$n$$ vertices? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n\\left( {n - 1} \\right)/2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^n}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$n!$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{n\\left( {n - 1} \\right)/2}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Prove that in a finite graph, the number of vertices of odd degree is always even.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Maximum number of edges in a planar graph with $$n$$ vertices is _______ .",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$3n - 6$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "The maximum number of possible edges in an undirected graph with a vertices and $$k$$ components is _________ .",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${{\\left( {a - k} \\right)\\left( {a - k + 1} \\right)} \\over 2}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "A graph is planar if and only if,",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "it does not contain subgraphs homeomorphic to K<sub>5</sub> and K<sub>3, 3.</sub>"
+      },
+      {
+        "identifier": "B",
+        "content": "it does not contain subgraphs isomorphic to K<sub>5</sub> or K<sub>3, 3.</sub> "
+      },
+      {
+        "identifier": "C",
+        "content": "it does not contain subgraphs isomorphic to K<sub>5</sub> and K<sub>3, 3.</sub>  "
+      },
+      {
+        "identifier": "D",
+        "content": "it does not contain subgraphs homeomorphic to K<sub>5</sub> or K<sub>3, 3.</sub> "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following graphs is  / are planar?  (see fig.)\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/AD4MN822LQhFWUsLt/Ofl3ne0UUTs0rZ6xtNbRnQPwaFBPd/D7QtDo8M1xlbfrm8xYpTKe/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1989 Discrete Mathematics - Graph Theory Question 33 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "G2",
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-cse-1989",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$G$$ be a connected, undirected graph. A $$cut$$ in $$G$$ is a set of edges whose removal results in $$G$$ being broken into two or more components which are not connected with each other. The size of a cut is called its $$cardinality$$. A $$min-cut$$ of $$G$$ is a cut in $$G$$ of minimum cardinality. Consider the following graph.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/yNhSIkbhhAUCbEilk/WE62OnGFQZR8l3mFTWRVJDqhCqP5n/V79jKFJ8lhV4E9pmwCG087/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1999 Discrete Mathematics - Graph Theory Question 34 English\"> \n<p>(a) Which of the following sets of edges is a cut?\n<br>$$\\,\\,\\,\\,$$(i)$$\\,\\,\\,\\,\\left\\{ {\\left( {A,\\,B} \\right),\\left( {E,\\,F} \\right),\\left( {B,\\,D} \\right),\\left( {A,\\,E} \\right),\\left( {A,\\,D} \\right)} \\right\\}$$\n<br>$$\\,\\,\\,\\,$$(ii)$$\\,\\,\\,\\,\\left\\{ {\\left( {B,\\,D} \\right),\\left( {C,\\,F} \\right),\\left( {A,\\,B} \\right)} \\right\\}$$</p>\n<p>(b) What is the cardinality of a min-cut in this graph?</p>\n<p>(c) Prove that if a connected undirected graph $$G$$ with $$n$$ vertices has a min-cut of cardinality $$k$$, then $$G$$ has at least $$(nk/2)$$ edges.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "How many minimum spanning tress does the following graph have? Draw them (Weights are assigned to the edges).\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/2TfjM0cLIW6MVMraZ/ir35SkY7n74QSEqppxOctZ6XOE8Ef/rxxJRrLWfqRPzPTn3lh6jq/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1995 Discrete Mathematics - Graph Theory Question 35 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Two.",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,636 @@
+[
+  {
+    "content": "A link has a transmission speed of 10<sup>6</sup> bits/sec. It uses data packets of size 1000 bytes each. Assume that the acknowledgement has negligible transmission delay, and that its propagation delay is the same as the data propagation delay. Also assume that the processing delays at the nodes are negligible. The efficiency of the stop-and-wait protocol in this setup is exactly 25%. The value of the one-way propagation delay (in milliseconds) is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "12",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A bit-stuffing based framing protocol uses an 8-bit delimiter pattern of 01111110. If the output bit-string after stuffing is 01111100101, then the input bit-string is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0111110100"
+      },
+      {
+        "identifier": "B",
+        "content": "0111110101"
+      },
+      {
+        "identifier": "C",
+        "content": "0111111101"
+      },
+      {
+        "identifier": "D",
+        "content": "0111111111"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The maximum window size for data transmission using the selective reject protocol with n-bit frame sequence numbers is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2<sup>n</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "2<sup>n - 1</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "2<sup>n</sup> - 1"
+      },
+      {
+        "identifier": "D",
+        "content": "2<sup>n - 2</sup>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the transmission of data bits 110001011 over a link that uses Cyclic Redundancy Check (CRC) code for error detection. If the generator bit pattern is given to be 1001, which one of the following options shows the remainder bit pattern appended to the data bits before transmission?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>011</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>101</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>000</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>100</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} \\text { Data bits transmission } &amp; =110001011 \\\\ \\text { Generator } &amp; =1001 \\end{aligned} $$<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyv7x6k/8d6d6ec7-494f-44a2-8ea4-ac28c50fe5e0/e7508fc0-2456-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyv7x6l.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyv7x6k/8d6d6ec7-494f-44a2-8ea4-ac28c50fe5e0/e7508fc0-2456-11f1-8c18-217b38cc9d70/file-jaoe38c1mmyv7x6l.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Computer Networks - Data Link Layer and Switching Question 1 English Explanation\"></p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>It is necessary to design a link-layer protocol between two hosts that are directly connected over a lossless link of length 3000 kilometers. Assume that the link bandwidth is $10^8$ bits per second and that the propagation delay in the link is 5 nanoseconds per meter. Every transmitted data byte is assigned a unique sequence number.</p>\n<p>Let $N$ be the minimum number of bits needed for the sequence number field in the protocol header such that</p>\n<p>(i) the sequence numbers do not wrap around before 60 seconds, and</p>\n<p>(ii) the maximum utilization of the link is achieved.</p>\n<p>The value of $N$ is $\\_\\_\\_\\_$ . (answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "30",
+    "explanation": "<p><strong>Given Data:</strong></p>\n<ul>\n<li><p>Link Length, $d = 3000 \\text{ km} = 3000 \\times 10^3 \\text{ m} = 3 \\times 10^6 \\text{ m}$.</p></li>\n<li><p>Link Bandwidth, $B = 10^8$ bits per second (bps).</p></li>\n<li><p>Propagation delay per meter = $5 \\text{ ns/m} = 5 \\times 10^{-9} \\text{ s/m}$.</p></li>\n<li><p>Every transmitted data byte is assigned a sequence number.</p></li>\n</ul>\n<p>We need to find the minimum number of bits ($N$) for the sequence number field, considering two conditions. We will analyze each condition separately.</p>\n\n<h3>Condition (i): Sequence numbers do not wrap around before 60 seconds.</h3>\n<p>This condition relates the total number of sequence numbers to the rate at which they are used.</p>\n<ol>\n<li><p><strong>Find the rate of sequence number consumption:</strong></p>\n<p>The problem states that every <em>byte</em> gets a sequence number. So, the rate at which sequence numbers are used is equal to the rate at which bytes are transmitted.</p>\n<p>The bandwidth is given in bits per second. We convert this to bytes per second.</p>\n<p>Since $1 \\text{ byte} = 8 \\text{ bits}$,</p>\n<p>$$ \\text{Rate of transmission} = \\frac{\\text{Bandwidth in bps}}{8} = \\frac{10^8}{8} \\text{ bytes/s} $$</p>\n<p>$$ \\text{Rate of transmission} = 12,500,000 \\text{ bytes/s} = 1.25 \\times 10^7 \\text{ bytes/s} $$</p>\n<p>This is the rate at which sequence numbers are consumed.</p></li>\n<li><p><strong>Formulate the inequality:</strong></p>\n<p>If we have $N$ bits for the sequence number field, the total number of unique sequence numbers we can have is $2^N$.</p>\n<p>The time it takes for these sequence numbers to wrap around ($T_{wrap}$) is:</p>\n<p>$$ T_{wrap} = \\frac{\\text{Total number of sequence numbers}}{\\text{Rate of consumption}} $$</p>\n<p>$$ T_{wrap} = \\frac{2^N}{1.25 \\times 10^7} $$</p>\n<p>The condition is that this time must be at least 60 seconds.</p>\n<p>$$ \\frac{2^N}{1.25 \\times 10^7} \\ge 60 $$</p>\n<p>$$ 2^N \\ge 60 \\times 1.25 \\times 10^7 $$</p>\n<p>$$ 2^N \\ge 75 \\times 10^7 = 7.5 \\times 10^8 $$</p>\n<p>This is our first requirement for the value of $2^N$.</p></li>\n</ol>\n\n<h3>Condition (ii): The maximum utilization of the link is achieved.</h3>\n<p>For maximum link utilization ($\\eta = 1$), the sender must be able to send data continuously without waiting for an acknowledgment. This means the sender's window size must be large enough to \"fill the pipe\". The amount of data required to fill the pipe is called the Bandwidth-Delay Product (BDP).</p>\n<ol>\n<li><p><strong>Calculate Propagation Time ($T_p$):</strong></p>\n<p>This is the time it takes for a bit to travel from one end of the link to the other.</p>\n<p>$$ T_p = \\text{Link Length} \\times (\\text{Delay per meter}) $$</p>\n<p>$$ T_p = (3 \\times 10^6 \\text{ m}) \\times (5 \\times 10^{-9} \\text{ s/m}) $$</p>\n<p>$$ T_p = 15 \\times 10^{-3} \\text{ s} = 0.015 \\text{ s} $$</p></li>\n<li><p><strong>Calculate Round Trip Time (RTT):</strong></p>\n<p>RTT is the time for a signal to go from the sender to the receiver and a response to come back.</p>\n<p>$$ RTT = 2 \\times T_p = 2 \\times 0.015 \\text{ s} = 0.03 \\text{ s} $$</p></li>\n<li><p><strong>Calculate the Bandwidth-Delay Product (BDP):</strong></p>\n<p>BDP tells us the maximum number of bits that can be \"in flight\" on the link at any given time.</p>\n<p>$$ BDP = \\text{Bandwidth} \\times RTT $$</p>\n<p>$$ BDP = (10^8 \\text{ bps}) \\times (0.03 \\text{ s}) = 3 \\times 10^6 \\text{ bits} $$</p></li>\n<li><p><strong>Find the minimum number of sequence numbers for maximum utilization:</strong></p>\n<p>To achieve maximum utilization, the sender's window must be large enough to hold at least BDP worth of data. Since each byte has a sequence number, we need to find the BDP in bytes.</p>\n<p>$$ \\text{BDP in bytes} = \\frac{3 \\times 10^6 \\text{ bits}}{8 \\text{ bits/byte}} = 375,000 \\text{ bytes} $$</p>\n<p>This means we need to have at least 375,000 unique sequence numbers available to assign to the bytes in the window. The total number of sequence numbers ($2^N$) must be at least this large.</p>\n<p>$$ 2^N \\ge 375,000 $$</p>\n<p>This is our second requirement for the value of $2^N$.</p></li>\n</ol>\n\n<h3>Combining Both Conditions</h3>\n<p>Now we have two inequalities that must be satisfied:</p>\n<ol>\n<li><p>From Condition (i): $2^N \\ge 7.5 \\times 10^8$</p></li>\n<li><p>From Condition (ii): $2^N \\ge 375,000$</p></li>\n</ol>\n<p>To satisfy both conditions, we must choose the stricter (larger) one.</p>\n<p>$$ 7.5 \\times 10^8 \\text{ is much larger than } 375,000 $$</p>\n<p>So, we must satisfy:</p>\n<p>$$ 2^N \\ge 7.5 \\times 10^8 $$</p>\n<p>Now, we need to find the smallest integer $N$ that satisfies this inequality. We can use logarithms or check powers of 2.</p>\n<p>We know that $2^{10} = 1024 \\approx 10^3$.</p>\n<p>So, $2^{30} = (2^{10})^3 \\approx (10^3)^3 = 10^9$.</p>\n<p>Let's check the values around $N=30$:</p>\n<ul>\n<li><p>For $N = 29$:</p>\n<p>$2^{29} = 2^{30} / 2 = 1,073,741,824 / 2 = 536,870,912 = 5.37 \\times 10^8$.</p>\n<p>This value is less than $7.5 \\times 10^8$. So, $N=29$ is not enough.</p></li>\n<li><p>For $N = 30$:</p>\n<p>$2^{30} = 1,073,741,824 = 1.07 \\times 10^9$.</p>\n<p>This value is greater than $7.5 \\times 10^8$. So, $N=30$ is sufficient.</p></li>\n</ul>\n<p>The smallest integer value of $N$ that satisfies the condition is 30.</p>\n<p>The value of $N$ is <strong>30</strong>.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the implementation of sliding window protocol over a lossless link, with a window size of $W$ frames, where each frame is of size 1000 bits (including header). The bandwidth of the link is $100 \\mathrm{kbps}\\left(1 \\mathrm{k}=10^3\\right)$ and the one-way propagation delay is 100 milliseconds. Assume that processing times at the sender and receiver are zero and the transmission time of acknowledgements is also zero. Which one of the following options gives the minimum size of $W$ (in number of frames) required to achieve $100 \\%$ link utilization?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>10</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>21</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>20</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>11</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} \\text { Window size } & =W \\text { frames } \\\\ \\text { Frame size } & =1000 \\text { bits (Header + Data) } \\\\ \\text { Bandwidth of link } & =100 \\mathrm{kbps}, \\text { Propagation delay = } 100 \\text { millisec } \\\\ \\% \\mathrm{LU} & =100 \\% \\\\ \\end{aligned} $$</p>\n<p>First, find the transmission time of one frame.</p>\n<p>$$ \\text {Transmission time } = \\frac{\\text{Frame size}}{\\text{Bandwidth}} = \\frac{1000}{100 \\times 10^3} \\text{ second} = 0.01 \\text{ second} = 10 \\text{ ms} $$</p>\n<p>Now, use the NCERT-style relation for full link utilization in sliding window protocol:</p>\n<p>$$ \\text {Link Utilization} = W \\times \\frac{T_t}{T_t + 2T_p} $$</p>\n<p>For $100\\%$ utilization, this value must be 1.</p>\n<p>$$ 1 = W \\times \\frac{10}{10 + 2 \\times 100} $$</p>\n<p>Now simplify step by step.</p>\n<p>$$ 1 = W \\times \\frac{10}{210} $$</p>\n<p>$$ 210 = 10W $$</p>\n<p>$$ W = 21 $$</p>\n<p>So, the minimum window size required is:</p>\n<p>$$ \\Rightarrow \\quad \\text { Window size } = 21 $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose we are transmitting frames between two nodes using Stop-and-Wait protocol. The frame size is 3000 bits. The transmission rate of the channel is 2000 bps (bits/ second) and the propagation delay between the two nodes is 100 milliseconds. Assume that the processing times at the source and destination are negligible. Also, assume that the size of the acknowledgement packet is negligible. Which ONE of the following most accurately gives the channel utilization for the above scenario in percentage?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "88.23"
+      },
+      {
+        "identifier": "B",
+        "content": "93.75"
+      },
+      {
+        "identifier": "C",
+        "content": "85.44"
+      },
+      {
+        "identifier": "D",
+        "content": "66.67"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's break down the problem step by step:</p>\n\n<p>Determine the transmission time for one frame:</p>\n\n\n<p><p>The frame size is 3000 bits.</p></p>\n<p><p>The transmission rate is 2000 bits per second (bps).</p>\n<p>$$T_{transmission} = \\frac{3000 \\text{ bits}}{2000 \\text{ bps}} = 1.5 \\text{ seconds}$$</p></p>\n\n\n<p>Consider the propagation delay:</p>\n\n\n<p><p>The propagation delay between the two nodes is 100 milliseconds (0.1 seconds).</p></p>\n<p><p>Since we're using the Stop-and-Wait protocol, the sender must wait for an acknowledgement, which will traverse back to the sender.</p></p>\n<p><p>Assuming that the acknowledgement's transmission time is negligible, the total propagation delay (round-trip) is:</p>\n<p>$$T_{propagation} = 0.1 \\text{ seconds (forward)} + 0.1 \\text{ seconds (backward)} = 0.2 \\text{ seconds}$$</p></p>\n\n\n<p><p>Calculate the total cycle time for one frame transmission:</p>\n<p>$$T_{cycle} = T_{transmission} + T_{propagation} = 1.5 \\text{ seconds} + 0.2 \\text{ seconds} = 1.7 \\text{ seconds}$$</p></p>\n<p><p>Compute the channel utilization using the formula:</p>\n<p>$$\\text{Utilization} = \\frac{T_{transmission}}{T_{cycle}} = \\frac{1.5}{1.7} \\approx 0.88235$$</p>\n<p>Converting to a percentage:</p>\n<p>$$0.88235 \\times 100 \\approx 88.23\\%$$</p></p>\n\n<p>Thus, the channel utilization for the given scenario is approximately 88.23%, making Option A the correct answer.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider an Ethernet segment with a transmission speed of $10^8$ bits/sec and a maximum segment length of 500 meters. If the speed of propagation of the signal in the medium is $2 \\times 10^8$ meters/sec, then the minimum frame size (in bits) required for collision detection is _________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "500",
+    "explanation": "<p>To determine the minimum frame size required for collision detection in an Ethernet segment, we need to understand the concept of collision detection in the context of the CSMA/CD (Carrier Sense Multiple Access with Collision Detection) protocol used in Ethernet networks.</p>\n\n<p>The key idea is that for a station to detect a collision, the frame transmission time must be at least twice the signal propagation time across the entire segment. This is to ensure that if a collision occurs, the transmitting station is still transmitting when the collision signal returns.</p>\n\n<p>Let's break this down step by step:</p>\n\n<p><strong>Step 1: Calculate the signal propagation time</strong></p>\n\n<p>The maximum segment length is 500 meters, and the speed of signal propagation in the medium is $2 \\times 10^8$ meters/sec. The propagation time ($t_{prop}$) can be calculated using the formula:</p>\n\n<p>\n\n<p>$$ t_{prop} = \\frac{\\text{distance}}{\\text{speed}} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ t_{prop} = \\frac{500}{2 \\times 10^8} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ t_{prop} = 2.5 \\times 10^{-6} \\,\\text{seconds} $$</p>\n\n</p>\n\n<p><strong>Step 2: Calculate the round-trip propagation time</strong></p>\n\n<p>For collision detection, we need the round-trip propagation time, which is twice the one-way propagation time:</p>\n\n<p>\n\n<p>$$ t_{round-trip} = 2 \\times t_{prop} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ t_{round-trip} = 2 \\times 2.5 \\times 10^{-6} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ t_{round-trip} = 5 \\times 10^{-6} \\,\\text{seconds} $$</p>\n\n</p>\n\n<p><strong>Step 3: Calculate the minimum frame size</strong></p>\n\n<p>The minimum frame size is determined by the amount of data that can be transmitted in this round-trip time. Given the transmission speed of $10^8$ bits/sec, the minimum frame size ($S$) in bits can be calculated using the formula:</p>\n\n<p>\n\n<p>$$ S = \\text{transmission speed} \\times t_{round-trip} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ S = 10^8 \\times 5 \\times 10^{-6} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ S = 500 \\,\\text{bits} $$</p>\n\n</p>\n\n<p>Therefore, the minimum frame size required for collision detection is 500 bits.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Consider the cyclic redundancy check (CRC) based error detecting scheme having the generator polynomial X<sup>3</sup>&nbsp;+ X + 1. Suppose the message m<sub>4</sub>m<sub>3</sub>m<sub>2</sub>m<sub>1</sub>m<sub>0</sub> = 11000 is to be transmitted. Check bits c<sub>2</sub>c<sub>1</sub>c<sub>0</sub> are appended at the end of the message by the transmitter using the above CRC scheme. The transmitted bit string is denoted by m<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">4</span>m<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">3</span>m<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span>m<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span>m<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">0</span>c<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span>c<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span>c<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">0</span>. The value of the check bit sequence c<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span>c<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span>c<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">0</span> is&nbsp;",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "101"
+      },
+      {
+        "identifier": "B",
+        "content": "100"
+      },
+      {
+        "identifier": "C",
+        "content": "111"
+      },
+      {
+        "identifier": "D",
+        "content": "110"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>A CRC based error detecting scheme having generator polynomial</p>\n<p>$$ x^3+x+1 $$</p>\n<p>and the message $m_4 m_3 m_2 m_1 m_0=11000$. Check bits $c_2 c_1 c_0$ appended at the end of the message.</p>\n<p>$$ x^3+x+1=1011 $$</p>\n<p>Append 3 zeroes at the end of message 11000 $=110000000$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2ep02ar/edee5948-fa5d-4427-97f2-1fa3f1b03602/9573df30-8d4a-11ef-9b44-a94e1a90a00c/file-jaoe38c1m2ep02as.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2ep02ar/edee5948-fa5d-4427-97f2-1fa3f1b03602/9573df30-8d4a-11ef-9b44-a94e1a90a00c/file-jaoe38c1m2ep02as.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Computer Networks - Data Link Layer and Switching Question 6 English Explanation\"></p>\n<p>Value of $c_2 c_1 c_0=100$</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Assume that a 12-bit Hamming codeword consisting of 8-bit data and 4 check bits is d<sub>8</sub>d<sub>7</sub>d<sub>6</sub>d<sub>5</sub>c<sub>8</sub>d<sub>4</sub>d<sub>3</sub>d<sub>2</sub>c<sub>4</sub>d<sub>1</sub>c<sub>2</sub>c<sub>1</sub>, where the data bits and the check bits are given in the following tables:</p>\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan=\"8\" style=\"width:220px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\"><strong>Data bits</strong></p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">d<sub>8</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">d<sub>7</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">d<sub>6</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">d<sub>5</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">d<sub>4</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">d<sub>3</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">d<sub>2</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">d<sub>1</sub></p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">1</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">1</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">0</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">x</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">0</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">1</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">0</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">1</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n&nbsp;\n\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">c<sub>8</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">c<sub>4</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">c<sub>2</sub></p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:22px;\">\n\t\t\t<p style=\"text-align: center;\">c<sub>1</sub></p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">Y</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">0</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">1</p>\n\t\t\t</td>\n\t\t\t<td style=\"width:28px;height:23px;\">\n\t\t\t<p style=\"text-align: center;\">0</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n<br>\nWhich one of the following choices gives the correct values of x and y?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x is 1 and y is 0."
+      },
+      {
+        "identifier": "B",
+        "content": "x is 1 and y is 1."
+      },
+      {
+        "identifier": "C",
+        "content": "x is 0 and y is 1."
+      },
+      {
+        "identifier": "D",
+        "content": "x is 0 and y is 0."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the correct values of $ x $ and $ y $ in the Hamming codeword, we'll use the properties of the Hamming code and the given bits.</p>\n<h3><strong>Given:</strong></h3>\n<p><p><strong>Data bits:</strong></p>\n\n<table border=\"1\">\n  <tr>\n    <th>Position</th>\n    <th>Bit</th>\n    <th>Value</th>\n  </tr>\n  <tr>\n    <td>d<sub>8</sub></td>\n    <td>12</td>\n    <td>1</td>\n  </tr>\n  <tr>\n    <td>d<sub>7</sub></td>\n    <td>11</td>\n    <td>1</td>\n  </tr>\n  <tr>\n    <td>d<sub>6</sub></td>\n    <td>10</td>\n    <td>0</td>\n  </tr>\n  <tr>\n    <td>d<sub>5</sub></td>\n    <td>9</td>\n    <td>x (unknown)</td>\n  </tr>\n  <tr>\n    <td>d<sub>4</sub></td>\n    <td>7</td>\n    <td>0</td>\n  </tr>\n  <tr>\n    <td>d<sub>3</sub></td>\n    <td>6</td>\n    <td>1</td>\n  </tr>\n  <tr>\n    <td>d<sub>2</sub></td>\n    <td>5</td>\n    <td>0</td>\n  </tr>\n  <tr>\n    <td>d<sub>1</sub></td>\n    <td>3</td>\n    <td>1</td>\n  </tr>\n</table>\n\n<p><p><strong>Check bits:</strong></p>\n\n<table border=\"1\">\n  <tr>\n    <th>Position</th>\n    <th>Bit</th>\n    <th>Value</th>\n  </tr>\n  <tr>\n    <td>c<sub>8</sub></td>\n    <td>8</td>\n    <td>y (unknown)</td>\n  </tr>\n  <tr>\n    <td>c<sub>4</sub></td>\n    <td>4</td>\n    <td>0</td>\n  </tr>\n  <tr>\n    <td>c<sub>2</sub></td>\n    <td>2</td>\n    <td>1</td>\n  </tr>\n  <tr>\n    <td>c<sub>1</sub></td>\n    <td>1</td>\n    <td>0</td>\n  </tr>\n</table>\n\n\n<h3><strong>Parity Bit Calculations:</strong></h3>\n<p><strong>Parity bit $ c_1 $ at position 1:</strong></p>\n<p><p><strong>Positions checked:</strong> 3, 5, 7, 9, 11</p></p>\n<p><p><strong>Bits:</strong> $ d_1 = 1 $, $ d_2 = 0 $, $ d_4 = 0 $, $ d_5 = x $, $ d_7 = 1 $</p></p>\n<p><p><strong>Parity equation:</strong></p>\n\n<p>$   c_1 + d_1 + d_2 + d_4 + d_5 + d_7 \\equiv 0 \\mod 2   $</p></p>\n<p><p><strong>Substitute known values:</strong></p>\n\n<p>$   0 + 1 + 0 + 0 + x + 1 \\equiv 0 \\mod 2 \\implies (2 + x) \\equiv 0 \\mod 2   $</p></p>\n<p><p><strong>Solve for $ x $:</strong></p>\n\n<p>$   x \\equiv 0 \\mod 2 \\implies x = 0   $</p></p>\n<p><strong>Parity bit $ c_2 $ at position 2:</strong></p>\n<p><p><strong>Positions checked:</strong> 3, 6, 7, 10, 11</p></p>\n<p><p><strong>Bits:</strong> $ d_1 = 1 $, $ d_3 = 1 $, $ d_4 = 0 $, $ d_6 = 0 $, $ d_7 = 1 $</p></p>\n<p><p><strong>Parity equation:</strong></p>\n\n<p>$   c_2 + d_1 + d_3 + d_4 + d_6 + d_7 \\equiv 0 \\mod 2   $</p></p>\n<p><p><strong>Substitute known values:</strong></p>\n\n<p>$   1 + 1 + 1 + 0 + 0 + 1 \\equiv 0 \\mod 2 \\implies (4) \\equiv 0 \\mod 2   $</p></p>\n<p><p><strong>Parity holds.</strong></p></p>\n<p><strong>Parity bit $ c_4 $ at position 4:</strong></p>\n<p><p><strong>Positions checked:</strong> 5, 6, 7, 12</p></p>\n<p><p><strong>Bits:</strong> $ d_2 = 0 $, $ d_3 = 1 $, $ d_4 = 0 $, $ d_8 = 1 $</p></p>\n<p><p><strong>Parity equation:</strong></p>\n\n<p>$   c_4 + d_2 + d_3 + d_4 + d_8 \\equiv 0 \\mod 2   $</p></p>\n<p><p><strong>Substitute known values:</strong></p>\n\n<p>$   0 + 0 + 1 + 0 + 1 \\equiv 0 \\mod 2 \\implies (2) \\equiv 0 \\mod 2   $</p></p>\n<p><p><strong>Parity holds.</strong></p></p>\n<p><strong>Parity bit $ c_8 $ at position 8:</strong></p>\n<p><p><strong>Positions checked:</strong> 9, 10, 11, 12</p></p>\n<p><p><strong>Bits:</strong> $ d_5 = x = 0 $, $ d_6 = 0 $, $ d_7 = 1 $, $ d_8 = 1 $</p></p>\n<p><p><strong>Parity equation:</strong></p>\n\n<p>$   c_8 + d_5 + d_6 + d_7 + d_8 \\equiv 0 \\mod 2   $</p></p>\n<p><p><strong>Substitute known values:</strong></p>\n\n<p>$   y + 0 + 0 + 1 + 1 \\equiv 0 \\mod 2 \\implies (y + 2) \\equiv 0 \\mod 2   $</p></p>\n<p><p><strong>Solve for $ y $:</strong></p>\n\n<p>$   y \\equiv 0 \\mod 2 \\implies y = 0   $</p></p>\n<h3><strong>Conclusion:</strong></h3>\n<p><strong>$ x = 0 $ and $ y = 0 $</strong></p>\n<hr />\n<p><strong>Answer:</strong> Option D</p>\n<p><strong>x is 0 and y is 0.</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A sender uses the Stop-and-Wait ARQ protocol for reliable transmission of frames. Frames are of size 1000 bytes and the transmission rate at the sender is 80 Kbps (1Kbps = 1000 bits/second). Size of an acknowledgment is 100 bytes and the transmission rate at the receiver is 8 Kbps. The one-way propagation delay is 100 milliseconds. Assuming no frame is lost, the sender throughput is __________ bytes/second.",
+    "options": [],
+    "correct_options": [],
+    "answer": "2500",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a 128 × 10<sup>3</sup> bits/second satellite communication link with one way propagation delay of 150 milliseconds. Selective retransmission (repeat) protocol is used on this link to send data with a frame size of 1 kilobyte. Neglect the transmission time of acknowledgement. The minimum number of bits required for the sequence number field to achieve 100% utilization is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a network connected two systems located 8000 kilometers apart. The bandwidth of the network is 500 × 10<sup>6</sup> bits per second. The propagation speed of the media is 4 × 10<sup>6</sup> meters per second. It is needed to design a Go-Back-N sliding window protocol for this network. The average packet size is 10<sup>7</sup> bits. The network is to be used to its full capacity. Assume that processing delays at nodes are negligible. Then the minimum size in bits of the sequence number field has to be ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "8",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Two hosts are connected via a packet switch with $${10^7}$$ bits per second links. Each link has a propagation delay of $$20$$ micro-seconds. The switch begins forwarding a packet $$35$$ microseconds after it receives the same. If $$10000$$ bits of data are to be transmitted between the two hosts using a packet size of $$5000$$ bits, the time elapsed between the transmission of the first bit of data and the reception of the last bit of the data in microseconds is____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1575",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose that the stop-and-wait protocol is used on a link with a bit rate of 64 kilobits per second and 20 milliseconds propagation delay. Assume that the transmission time for the acknowledgment and the processing time at nodes are negligible. Then the minimum frame size in bytes to achieve a link utilization of at least 50% is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "320",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Two hosts are connected via a packet switch with 10<sup>7</sup> bits per second links. Each link has a propagation delay of 20 microseconds. The switch begins forwarding a packet 35 microseconds after it receives the same. If 1000 bits of data are to be transmitted between the two hosts using a packet size of 5000 bits, the time elapsed between the transmission of the first bit of data and the reception of the last of the data in microsecond is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1575",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the store and forward packet switched network given below. Assume that the bandwidth of each link is 10<sup>6</sup> bytes/sec. A user on host A sends a file of size 10<sup>3</sup> bytes to host B through routers R1 and R2 in three different ways. In the first case a single packet containing the complete file is transmitted from A to B. In the second case, the file is split into 10 equal parts, and these packets are transmitted from A to B. In the third case, the file is split into 20 equal parts and these packets are sent from A to B. Each packet contains 100 bytes of header information along with the user data. Consider only transmission time and ignore processing, queuing and propagation delays. Also assume that there are no errors during transmission. Let T1, T2 and T3 be the times taken to transmit the file in the first, second and third case respectively. Which one of the following is CORRECT?\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/Dm98zgbhmcQ1WAPdf/3lpt4zucTHKGvEeSDUUrG4JnaZMeI/jCRxG5ON87rC6nphjX37i6/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 2 Computer Networks - Data Link Layer and Switching Question 15 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$T1 &lt; T2 &lt; T3$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$T1 &gt; T2 &gt; T3$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$T1 = T3,T3 &lt; T1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$T1 = T3,T3 &gt; T2$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a selective repeat sliding window protocol that uses a frame size of 1 KB to send data on a 1.5 Mbps link with a one-way latency of 50 msec. To achieve a link utilization of 60%, the minimum number of bits required to represent the sequence number field is ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let G(x) be the generator polynomial used for CRC checking. What is the condition that should be satisfied by G(x) to detect odd number of bits in error?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "G(x) contains more than two terms"
+      },
+      {
+        "identifier": "B",
+        "content": "G(x) does not divide 1 + x<sup>k</sup>, for any k not exceeding the frame length"
+      },
+      {
+        "identifier": "C",
+        "content": "1 + x is a factor of G(x)"
+      },
+      {
+        "identifier": "D",
+        "content": "G(x) has an odd number of terms"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Frames of 1000 bits are sent over a 10<sup>6</sup> bps duplex link between two hosts. The propagation time is 25 ms. Frames are to be transmitted into this link to maximally pack them in transit (within the link). \n<br><br>Suppose that the sliding window protocol is used with the sender window size of 2<sup>l</sup>, where l is the number of bits identified in the earlier part and acknowledgements are always piggy backed. After sending 2<sup>l</sup> frames, what is the minimum time the sender will have to wait before starting transmission of the next frame? (Identify the closest choice ignoring the frame processing time.)",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16 ms"
+      },
+      {
+        "identifier": "B",
+        "content": "18 ms"
+      },
+      {
+        "identifier": "C",
+        "content": "20 ms"
+      },
+      {
+        "identifier": "D",
+        "content": "22 ms"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Frames of 1000 bits are sent over a 10<sup>6</sup> bps duplex link between two hosts. The propagation time is 25 ms. Frames are to be transmitted into this link to maximally pack them in transit (within the link). \n<br>What is the minimum number of bits (I) that will be required to represent the sequence numbers distinctly? Assume that no time gap needs to be given between transmission of two frames.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I = 2"
+      },
+      {
+        "identifier": "B",
+        "content": "I = 3"
+      },
+      {
+        "identifier": "C",
+        "content": "I = 4"
+      },
+      {
+        "identifier": "D",
+        "content": "I = 5"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The message 11001001 is to be transmitted using the CRC polynomial x<sup>3</sup> + 1 to protect it from errors. The message that should be transmitted is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "11001001000"
+      },
+      {
+        "identifier": "B",
+        "content": "11001001011"
+      },
+      {
+        "identifier": "C",
+        "content": "11001010"
+      },
+      {
+        "identifier": "D",
+        "content": "110010010011"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The distance between two stations M and N is L kilometers. All frames are K bits long. The propagation delay per kilometer is t seconds. Let R bits/second be the channel capacity. Assuming that processing delay is negligible, the minimum number of bits for the sequence number field in a frame for maximum utilization, when the sliding window protocol is used, is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\lceil {{{\\log }_2}{{2LtR + 2K} \\over K}} \\right\\rceil $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\lceil {{{\\log }_2}{{2LtR} \\over K}} \\right\\rceil $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\lceil {{{\\log }_2}{{2LtR + K} \\over K}} \\right\\rceil $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\lceil {{{\\log }_2}{{2LtR + 2K} \\over {2K}}} \\right\\rceil $$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Station A needs to send a message consisting of 9 packets to Station B using a sliding window (window size 3) and go-back-n error control strategy. All packets are ready and immediately available for transmission. If every 5<sup>th</sup> packet that A transmits gets lost (but no acks from B ever get lost), then what is the number of packets that A will transmit for sending the message to B?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "12"
+      },
+      {
+        "identifier": "B",
+        "content": "14"
+      },
+      {
+        "identifier": "C",
+        "content": "16"
+      },
+      {
+        "identifier": "D",
+        "content": "18"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Station A uses 32 byte packets to transmit messages to Station B using a sliding window protocol. The round trip delay between A and B is 80 milliseconds and the bottleneck bandwidth on the path between A and B is 128 kbps. What is the optimal window size that A should use?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "20"
+      },
+      {
+        "identifier": "B",
+        "content": "40"
+      },
+      {
+        "identifier": "C",
+        "content": "160"
+      },
+      {
+        "identifier": "D",
+        "content": "320"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "In a packet switching network, packets are routed from source to destination along a single path having two intermediate nodes. If the message size is 24 bytes and each packet contains a header of 3 bytes, then the optimum packet size is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "6"
+      },
+      {
+        "identifier": "C",
+        "content": "7"
+      },
+      {
+        "identifier": "D",
+        "content": "9"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Host A is sending data to host B over a full duplex link. A and B are using the sliding window protocol for flow control. The send and receive window sizes are 5 packets each. Data packets (sent only from A to B) are all 1000 bytes long and the transmission time for such a packet is 50 $$\\mu $$s Acknowledgement packets (sent only from B to A) are very small and require negligible transmission time. The propagation delay over the link is 200 $$\\mu $$s. What is the maximum achievable throughput in this communication? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7.69 × 10<sup>6</sup> bps"
+      },
+      {
+        "identifier": "B",
+        "content": "11.11 × 10<sup>6</sup> bps"
+      },
+      {
+        "identifier": "C",
+        "content": "12.33 × 10<sup>6</sup> bps"
+      },
+      {
+        "identifier": "D",
+        "content": "15.00 × 10<sup>6</sup> bps"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  }
+]

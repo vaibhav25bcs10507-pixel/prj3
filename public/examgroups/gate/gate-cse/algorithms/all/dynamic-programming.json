@@ -1,0 +1,627 @@
+[
+  {
+    "content": "The Floyd-Warshall algorithm for all-pair shortest paths computation is based on",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Greedy paradigm. "
+      },
+      {
+        "identifier": "B",
+        "content": "Divide-and-Conquer paradigm. "
+      },
+      {
+        "identifier": "C",
+        "content": "Dynamic Programming paradigm. "
+      },
+      {
+        "identifier": "D",
+        "content": "neither Greedy nor Divide-and-Conquer nor Dynamic Programming paradigm. "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Match the following:\n<p><b>List 1</b></p>\n(P) Prim’s algorithm for minimum spanning tree\n<br>(Q) Floyd-Warshall algorithm for all pairs shortest paths\n<br>(R) Mergesort\n<br>(S) Hamiltonian circuit\n\n<p><b>List 2</b></p>\n(i) Backtracking\n<br>(ii) Greedy method\n<br>(iii) Dynamic programming\n<br>(iv) Divide and conquer",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P - iii, Q - ii, R - iv, S - i"
+      },
+      {
+        "identifier": "B",
+        "content": "P - i, Q - ii, R - iv, S - iii"
+      },
+      {
+        "identifier": "C",
+        "content": "P - ii, Q - iii, R - iv, S - i"
+      },
+      {
+        "identifier": "D",
+        "content": "P - ii, Q - i, R - iii, S - iv"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An algorithm to find the length of the longest monotonically increasing sequence of numbers in an array A[0:n−1] is given below.\n<br><br>\nLet L<sub>i</sub>, denote the length of the longest monotonically increasing sequence starting at index i in the array.\n\nInitialize L<sub>n−1</sub>=1.\n<br><br>\nFor all i such that  $$0 \\leq i \\leq n-2$$<br><br>\n$$L_i = \\begin{cases} 1+ L_{i+1} &amp;  \\quad\\text{if A[i] &lt; A[i+1]} \\\\ 1 &amp; \\quad\\text{Otherwise}\\end{cases}$$\n<br><br> \nFinally, the length of the longest monotonically increasing sequence is max(L<sub>0</sub>, L<sub>1</sub>,…,L<sub>n−1</sub>)  <br>\nWhich of the following statements is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The algorithm uses dynamic programming paradigm"
+      },
+      {
+        "identifier": "B",
+        "content": "The algorithm has a linear complexity and uses branch and bound paradigm"
+      },
+      {
+        "identifier": "C",
+        "content": "The algorithm has a non-linear polynomial complexity and uses branch and bound paradigm"
+      },
+      {
+        "identifier": "D",
+        "content": "The algorithm uses divide and conquer paradigm"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The tightest lower bound on the number of comparisons, in the worst case, for comparison-based sorting is of the order of",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "n"
+      },
+      {
+        "identifier": "B",
+        "content": "n<sup>2</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "n log n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$n \\log^2n$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following algorithm design techniques is used in finding all pairs of shortest distances in a graph?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Dynamic programming"
+      },
+      {
+        "identifier": "B",
+        "content": "Backtracking"
+      },
+      {
+        "identifier": "C",
+        "content": "Greedy"
+      },
+      {
+        "identifier": "D",
+        "content": "Divide and Conquer"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a table $T$, where the elements $T[i][j], 0 \\leq i, j \\leq n$, represent the cost of the optimal solutions of different subproblems of a problem that is being solved using a dynamic programming algorithm. The recursive formulation to compute the table entries is as follows:</p>\n<p>$$ \\begin{array}{ll} T[0][k]=T[k][0]=1 &amp; \\text { for } k=0,1,2, \\ldots, n \\\\ T[i][j]=2 T[i-1][j]+3 T[i][j-1] &amp; \\text { for } 1 \\leq i, j \\leq n \\end{array} $$</p>\n<p>Consider the following two algorithms to compute entries of $T$. Assume that for both the algorithms, for all $0 \\leq i, j \\leq n, T[i][j]$ has been initialized to 1 .</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1mnm5lifq/917b2fdb-ca81-4041-a90a-6890b4f07dc3/837acc50-3125-11f1-aaf2-6b02068b5318/file-6y3zli1mnm5lifr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/6y3zli1mnm5lifq/917b2fdb-ca81-4041-a90a-6890b4f07dc3/837acc50-3125-11f1-aaf2-6b02068b5318/file-6y3zli1mnm5lifr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Algorithms - Dynamic Programming Question 1 English\"></p>\n<p>Algorithm $B_k, k \\in\\{1,2\\}$ is said to be correct if and only if it calculates the correct values of $T[i][j]$, for all $0 \\leq i, j \\leq n$, (as per the recursive formulation) at the end of the execution of the algorithm $B_k$.</p>\n<p>Which one of the following statements is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Both algorithms $B_1$ and $B_2$ are correct</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Algorithm $B_1$ is correct, but algorithm $B_2$ is incorrect</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Algorithm $B_2$ is correct, but algorithm $B_1$ is incorrect</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Both algorithms $B_1$ and $B_2$ are incorrect</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>The table $T$ is given, where each entry $T[i][j]$ shows the cost for the optimal solution of a subproblem using dynamic programming.</p>\n<p>The recursive rules to fill this table are:</p>\n<p><b>Base Cases:</b></p>\n<p>For any $k$ from $0$ to $n$,</p>\n<p>$$ T[0][k] = T[k][0] = 1 $$</p>\n<p>This means the value at row $0$ or column $0$ is always $1$.</p>\n<p><b>Recursive Case:</b></p>\n<p>For all $i, j$ where $1 \\leq i, j \\leq n$:</p>\n<p>$$ T[i][j] = 2 T[i-1][j] + 3 T[i][j-1] $$</p>\n<p>This means the value at position $[i][j]$ depends on the value just above it, $[i-1][j]$, and the value just to its left, $[i][j-1]$.</p>\n<p>The question wants us to check if both given algorithms fill the table $T$ correctly according to these rules.</p>\n<p>Since both algorithms initialize all entries to $1$ for $0 \\leq i, j \\leq n$, the base cases are already set properly.</p>\n<p>During their main computation, both algorithms update $T[i][j]$ for $i \\ge 1$ and $j \\ge 1$ using the recursive formula. Each algorithm checks that for every $T[i][j]$, the needed earlier values ($T[i-1][j]$ and $T[i][j-1]$) have already been computed before updating $T[i][j]$.</p>\n<p>Therefore, <b>both algorithms are correct</b> for calculating all $T[i][j]$ values as per the given recursive formula.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $G(V, E)$ be an undirected, edge-weighted graph with integer weights. The weight of a path is the sum of the weights of the edges in that path. The length of a path is the number of edges in that path.</p>\n<p>Let $s \\in V$ be a vertex in $G$. For every $u \\in V$ and for every $k \\geq 0$, let $d_k(u)$ denote the weight of a shortest path (in terms of weight) from $s$ to $u$ of length at most $k$. If there is no path from $s$ to $u$ of length at most $k$, then $d_k(u)=\\infty$.</p>\n<p>Consider the statements:</p>\n<p>S1: For every $k \\geq 0$ and $u \\in V, d_{k+1}(u) \\leq d_k(u)$.</p>\n<p>S2: For every $(u, v) \\in E$, if $(u, v)$ is part of a shortest path (in terms of weight) from $s$ to $v$, then for every $k \\geq 0, d_k(u) \\leq d_k(v)$.</p>\n<p>Which one of the following options is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Only S1 is true</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Only S2 is true</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Both S 1 and S 2 are true</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Neither S1 nor S2 is true</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$G(V, E)$ undirected edge weighted graph with integer weights.</p>\n<p>Weight of a path is sum of the weights of the edges in that path.</p>\n<p>Length of the path is the number of edges in that path. $d_k(u)$ weights of shortest path from $s$ to $u$ of length at most $k$.</p>\n<p>$S_1$ : For every $k \\geq 0$ and $u \\in$ vertex $d_{k+1}(u) \\leq d_k(u)$ is true because when allowed more edges is expands the set of allowed shortest paths.</p>\n<p>$S_2$ is false.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let G(V, E) be a directed graph, where V = {1, 2, 3, 4, 5} is the set of vertices and E is the set of directed edges, as defined by the following adjacency matrix A.</p>\n<p>$$A[i][j] = \\left\\{ {\\matrix{\n   {1,} & {1 \\le j \\le i \\le 5}  \\cr \n   {0,} & {otherwise}  \\cr \n\n } } \\right.$$</p>\n<p>A[i][j] = 1 indicates a directed edge from node i to node j. A directed spanning tree of G, rooted at r $$\\in$$ V, is defined as a subgraph T of G such that the undirected version of T is a tree, and T contains a directed path from r to every other vertex in V. The number of such directed spanning trees rooted at vertex 5 is _____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "24",
+    "explanation": "<p>According to given adjacency matrix, the graph will be as following</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02rxg8z/a3ecc68f-cef3-45ba-a36d-d472d6fb1f24/67ff6d30-966c-11ec-8544-5f783dc62960/file-1l02rxg90.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02rxg8z/a3ecc68f-cef3-45ba-a36d-d472d6fb1f24/67ff6d30-966c-11ec-8544-5f783dc62960/file-1l02rxg90.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Algorithms - Dynamic Programming Question 3 English Explanation\"></p>\n<p>Now, to find directed spanning tree of the above graph as per  definition given in question, r = 5 is given,</p>\n<p>(i) To reach node 4, from 5 : (5, 4) = 1 way</p>\n<p>(ii) To reach node 3, from {5, 4}: (5, 3), (4, 3) = 2 ways</p>\n<p>(iii) To reach node 2, from {5, 4, 3}: (5, 2), (4, 2), (3, 2) = 3 ways</p>\n<p>(iv) To reach node 1, from {5, 4, 3, 2}: (5, 1), (4, 1), (3, 1), (2, 1) = 4 ways</p>\n<p>From (i), (ii), (iii), (iv),</p>\n<p>Total no. of ways to reach node 4, 5, 2, 1</p>\n<p>From node 5 = 1 $$\\times$$ 2 $$\\times$$ 3 $$\\times$$ 4 = 24 ways</p>\n<p>So, there are 24 directed spanning trees for given graph.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following directed graph:&#160;</p>\n\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2bygwkl/2956bbe0-0f5c-4a18-a885-04e31902ea18/41ff9150-8bc9-11ef-b90a-592847649669/file-jaoe38c1m2bygwkm.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2bygwkl/2956bbe0-0f5c-4a18-a885-04e31902ea18/41ff9150-8bc9-11ef-b90a-592847649669/file-jaoe38c1m2bygwkm.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Algorithms - Dynamic Programming Question 4 English\"></p>\n\n<p>Which of the following is/are correct about the graph?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The graph does not have a strongly connected component."
+      },
+      {
+        "identifier": "B",
+        "content": "For each pair of vertices u and v, there is a directed path from u to v."
+      },
+      {
+        "identifier": "C",
+        "content": "​The graph does not have a topological order."
+      },
+      {
+        "identifier": "D",
+        "content": "A depth-first traversal starting at vertex S classifies three directed edges as back edges."
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Back Edge - It is an edge $(u, v)$ such that $v$ is ancestor of node $u$ but not part of DFS tree.</p>\n<p>We can observe that,</p>\n<p>(A) The graph does have a strongly connected component, it has cycle.</p>\n<p>(B) Not all rectangular/square components form a cycle.</p>\n<p>(C) The graph does not have a topological order, because there's a cycle in the bottom left corner of the graph.</p>\n<p>(D) There are only 3 back edges, if started from $S$.</p>\n<p>Hence the correct option are (C) and (D).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Define R<sub>n</sub> to be the maximum amount earned by cutting a rod of length n meters into one or more pieces of integer length and selling them. For i &gt; 0, let p[i] denotes the selling price of a rod whose length is i meters. Consider the array of prices:</p>\n\n<p>p[1] = 1, p[2] = 5, p[3] = 8, p[4] = 9, p[5] = 10, p[6] = 17, p[7] = 18</p>\n\n<p>Which of the following statements is/are correct about R<sub>7</sub>?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "R<sub>7</sub> cannot be achieved by a solution consisting of three pieces."
+      },
+      {
+        "identifier": "B",
+        "content": "R<sub>7</sub> = 19"
+      },
+      {
+        "identifier": "C",
+        "content": "R<sub>7</sub> = 18"
+      },
+      {
+        "identifier": "D",
+        "content": "R<sub>7</sub> is achieved by three different solutions."
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve this problem, we'll compute $ R_7 $ and analyze the options provided.</p>\n<h3><strong>Given Prices:</strong></h3>\n\n<p><p>$ p[1] = 1 $</p></p>\n<p><p>$ p[2] = 5 $</p></p>\n<p><p>$ p[3] = 8 $</p></p>\n<p><p>$ p[4] = 9 $</p></p>\n<p><p>$ p[5] = 10 $</p></p>\n<p><p>$ p[6] = 17 $</p></p>\n<p><p>$ p[7] = 18 $</p></p>\n\n<h3><strong>Calculating $ R_n $ for $ n = 1 $ to $ 7 $:</strong></h3>\n<p>We use the recurrence:</p>\n<p>$ R_n = \\max\\limits_{1 \\leq i \\leq n} (p[i] + R_{n - i}) $</p>\n<p>with base case $ R_0 = 0 $.</p>\n<h4><strong>Computations:</strong></h4>\n\n<p><p><strong>$ R_1 $:</strong></p>\n<p>$    R_1 = p[1] + R_0 = 1 + 0 = 1    $</p></p>\n<p><p><strong>$ R_2 $:</strong></p>\n<p>$    R_2 = \\max(p[1] + R_1, p[2] + R_0) = \\max(1 + 1, 5 + 0) = 5    $</p></p>\n<p><p><strong>$ R_3 $:</strong></p>\n<p>$    R_3 = \\max(p[1] + R_2, p[2] + R_1, p[3] + R_0) = \\max(1 + 5, 5 + 1, 8 + 0) = 8    $</p></p>\n<p><p><strong>$ R_4 $:</strong></p>\n<p>$    R_4 = \\max(1 + 8, 5 + 5, 8 + 1, 9 + 0) = 10    $</p></p>\n<p><p><strong>$ R_5 $:</strong></p>\n<p>$    R_5 = \\max(1 + 10, 5 + 8, 8 + 5, 9 + 1, 10 + 0) = 13    $</p></p>\n<p><p><strong>$ R_6 $:</strong></p>\n<p>$    R_6 = \\max(1 + 13, 5 + 10, 8 + 8, 9 + 5, 10 + 1, 17 + 0) = 17    $</p></p>\n<p><p><strong>$ R_7 $:</strong></p>\n<p>$    R_7 = \\max(1 + 17, 5 + 13, 8 + 10, 9 + 8, 10 + 5, 17 + 1, 18 + 0) = 18    $</p></p>\n\n<h3><strong>Analyzing the Options:</strong></h3>\n<h4><strong>Option A:</strong></h4>\n<p><strong>Statement:</strong> $ R_7 $ cannot be achieved by a solution consisting of three pieces.</p>\n<p><strong>Analysis:</strong></p>\n<p>We look for a three-piece cut that sums up to length 7 and achieves $ R_7 = 18 $.</p>\n\n<p><p><strong>Cut into lengths 2, 2, and 3:</strong></p></p>\n<p><p>Total price: $ p[2] + p[2] + p[3] = 5 + 5 + 8 = 18 $</p></p>\n\n<p><strong>Conclusion:</strong> This three-piece cut achieves $ R_7 = 18 $. So, <strong>Option A is false</strong>.</p>\n<h4><strong>Option B:</strong></h4>\n<p><strong>Statement:</strong> $ R_7 = 19 $</p>\n<p><strong>Analysis:</strong></p>\n<p>From our computation, $ R_7 = 18 $.</p>\n<p><strong>Conclusion:</strong> <strong>Option B is false</strong>.</p>\n<h4><strong>Option C:</strong></h4>\n<p><strong>Statement:</strong> $ R_7 = 18 $</p>\n<p><strong>Analysis:</strong></p>\n<p>Our calculation shows $ R_7 = 18 $.</p>\n<p><strong>Conclusion:</strong> <strong>Option C is true</strong>.</p>\n<h4><strong>Option D:</strong></h4>\n<p><strong>Statement:</strong> $ R_7 $ is achieved by three different solutions.</p>\n<p><strong>Analysis:</strong></p>\n<p>Possible cuts achieving $ R_7 = 18 $:</p>\n\n<p><p><strong>Cut lengths:</strong> 7 (no cut)</p></p>\n<p><p><strong>Cut lengths:</strong> 1 and 6</p></p>\n<p><p><strong>Cut lengths:</strong> 2 and 5</p></p>\n<p><p><strong>Cut lengths:</strong> 3 and 4</p></p>\n<p><p><strong>Cut lengths:</strong> 2, 2, and 3 (three pieces)</p></p>\n\n<p><strong>Conclusion:</strong> There are multiple (more than three) ways to achieve $ R_7 = 18 $. <strong>Option D is true</strong>.</p>\n<h3><strong>Final Answer:</strong></h3>\n\n<p><strong>Options C and D are correct.</strong></p>\n\n<hr />\n<p><strong>Answer:</strong> Options C and D are correct.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that multiplying a matrix $${G_1}$$ of dimension $$p \\times q$$ with another matrix $${G_2}$$ of dimension $$q \\times r$$ requires $$pqr$$ scalar multiplications. Computing the product of $$n$$ matrices $${G_1}{G_2}{G_{3...}}{G_n}$$ can be done by parenthesizing in different ways. Define $${G_i}\\,\\,{G_{i + 1}}$$ as an explicitly computed pair for a given paranthesization if they are directly multiplied. For example, in the matrix multiplication chain $${G_1}{G_2}{G_3}{G_4}{G_5}{G_6}$$ using parenthesization $$\\left( {{G_1}\\left( {{G_2}{G_3}} \\right)} \\right)\\left( {{G_4}\\left( {{G_5}{G_6}} \\right)} \\right),\\,\\,{G_2}{G_3}$$ and $${G_5}{G_6}$$ are the only explicitly computed pairs.\n<p>Consider a matrix multiplication chain $${F_1}{F_2}{F_3}{F_4}{F_5},$$ where matrices $${F_1},{F_2},{F_3},{F_4}$$ and $${F_5}$$ are of dimensions $$2 \\times 25,\\,\\,25 \\times 3,\\,\\,3 \\times 16,\\,\\,16 \\times 1$$ and $$1 \\times 1000,$$ respectively. In the parenthesization of $${F_1}{F_2}{F_3}{F_4}{F_5}$$ that minimizes the total number of scalar multiplications, the explicitly computed pairs is/are</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${F_1}{F_2}$$ and $${F_3}{F_4}$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$${F_2}{F_3}$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$${F_3}{F_4}$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$${F_1}{F_2}$$ and $${F_4}{F_5}$$ only "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${A_1},{A_2},{A_3},$$ and $${A_4}$$ be four matrices of dimensions $$10 \\times 5,\\,\\,5 \\times 20,\\,\\,20 \\times 10,$$ and $$10 \\times 5,\\,$$ respectively. The minimum number of scalar multiplications required to find the product $${A_1}{A_2}{A_3}{A_4}$$ using the basic matrix multiplication method is ______________.\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "1500",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Given below are some algorithms, and some algorithm design paradigms.\n<br><br><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}\n.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}\n.tg .tg-xldj{border-color:inherit;text-align:left}\n.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-c3ow\">GROUP 1</th>\n    <th class=\"tg-c3ow\">GROUP 2</th>\n  </tr>\n  <tr>\n    <td class=\"tg-xldj\">1. Dijkstra's Shortest Path</td>\n    <td class=\"tg-0pky\">i. Divide and Conquer</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0pky\">2. Floyd-Warshall algorithm to compute <br>all pairs shortest path</td>\n    <td class=\"tg-0pky\">ii. Dynamic Programming</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0pky\">3. Binary search on a sorted array</td>\n    <td class=\"tg-0pky\">iii. Greedy design</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0pky\">4. Backtracking search on a graph</td>\n    <td class=\"tg-0pky\">iv. Depth-first search</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\"></td>\n    <td class=\"tg-0lax\">v. Breadth-first search</td>\n  </tr>\n</tbody></table> \n<p>Match the above algorithms on the left to the corresponding design paradigm they follow. </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1 - i,\\,\\,2 - iii,\\,\\,3 - i,\\,\\,4 - v.$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1 - iii,\\,\\,2 - iii,\\,\\,3 - i,\\,\\,4 - v.$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1 - iii,\\,\\,2 - ii,\\,\\,3 - i,\\,\\,4 - iv.$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1 - iii,\\,\\,2 - ii,\\,\\,3 - i,\\,\\,4 - v.$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two strings A = “qpqrr” and B = “pqprqrp”. Let x be the length of the longest common subsequence (not necessarily contiguous) between A and B and let y be the number of such longest common subsequences between A and B. Then x + 10y = ___.",
+    "options": [],
+    "correct_options": [],
+    "answer": "34",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Four matrices M<sub>1</sub>, M<sub>2</sub>, M<sub>3</sub> and M<sub>4</sub> of dimensions p $$\\times$$ q, q $$\\times$$ r, r $$\\times$$ s and s $$\\times$$ t respectively can be multiplied is several ways with different number of total scalar multiplications. For example, when multiplied as ((M<sub>1</sub> $$\\times$$ M<sub>2</sub>) $$\\times$$ (M<sub>3</sub> $$\\times$$ M<sub>4</sub>)), the total number of multiplications is pqr + rst + prt. When multiplied as (((M<sub>1</sub> $$\\times$$ M<sub>2</sub>) $$\\times$$ M<sub>3</sub>) $$\\times$$ M<sub>4</sub>), the total number of scalar multiplications is pqr + prs + pst.\n<br><br>\nIf p = 10, q = 100, r = 20, s = 5 and t = 80, then the number of scalar multiplications needed is: ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "248000"
+      },
+      {
+        "identifier": "B",
+        "content": "44000"
+      },
+      {
+        "identifier": "C",
+        "content": "19000"
+      },
+      {
+        "identifier": "D",
+        "content": "25000"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A sub-sequence of a given sequence is just the given sequence with some elements (possibly none or all) left out. We are given two sequences X[m] and Y[n] of lengths m and n, respectively with indexes of X and Y starting from 0.<br><br>\nWe wish to find the length of the longest common sub-sequence (LCS) of X[m] and Y[n] as l(m,n), where an incomplete recursive definition for the function I(i,j) to compute the length of the LCS of X[m] and Y[n] is given below:\n<pre><code>l(i,j)  = 0, if either i = 0 or j = 0\n        = expr1, if i,j &gt; 0 and X[i-1] = Y[j-1]\n        = expr2, if i,j &gt; 0 and X[i-1] ≠ Y[j-1]</code></pre>\nWhich one of the following options is correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "expr1 = l(i − 1, j) + 1"
+      },
+      {
+        "identifier": "B",
+        "content": "expr1 = l(i, j − 1)"
+      },
+      {
+        "identifier": "C",
+        "content": "expr2 = max( l(i − 1, j), l(i, j − 1))"
+      },
+      {
+        "identifier": "D",
+        "content": "expr2 = max( l(i − 1,j − 1),l (i, j))"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "A sub-sequence of a given sequence is just the given sequence with some elements (possibly none or all) left out. We are given two sequences X[m] and Y[n] of lengths m and n, respectively with indexes of X and Y starting from 0.<br><br>\nWe wish to find the length of the longest common sub-sequence (LCS) of X[m] and Y[n] as l(m,n), where an incomplete recursive definition for the function I(i,j) to compute the length of the LCS of X[m] and Y[n] is given below:\n<pre><code>l(i,j)  = 0, if either i = 0 or j = 0\n        = expr1, if i,j &gt; 0 and X[i-1] = Y[j-1]\n        = expr2, if i,j &gt; 0 and X[i-1] ≠ Y[j-1]</code></pre>\nThe value of l(i, j) could be obtained by dynamic programming based on the correct recursive definition of l(i, j) of the form given above, using an array L[M, N], where M = m+1 and N = n + 1, such that L[i, j] = l(i, j).<br><br>\nWhich one of the following statements would be TRUE regarding the dynamic programming solution for the recursive definition of l(i, j)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "All elements of L should be initialized to 0 for the values of l(i, j) to be properly computed. "
+      },
+      {
+        "identifier": "B",
+        "content": "The values of l(i,j) may be computed in a row major order or column major order of L[M, N]."
+      },
+      {
+        "identifier": "C",
+        "content": "The values of l(i, j) cannot be computed in either row major order or column major order of L[M, N]."
+      },
+      {
+        "identifier": "D",
+        "content": "L[p, q]  needs to be computed before L[r, s] if either p &lt; r or q &lt; s."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The subset-sum problem is defined as follows. Given a set of n positive integers, S = {a<sub>1</sub> ,a<sub>2</sub> ,a<sub>3</sub> ,…,a<sub>n</sub>} and positive integer W, is there a subset of S whose elements sum to W? A dynamic program for solving this problem uses a 2-dimensional Boolean array X, with n rows and W+1 columns. X[i, j], 1 &lt;= i &lt;= n, 0 &lt;= j &lt;= W, is TRUE if and only if there is a subset of {a<sub>1</sub> ,a<sub>2</sub> ,…,a<sub>i</sub>} whose elements sum to j. \n<br>Which of the following is valid for 2 &lt;= i &lt;= n and ai &lt;= j &lt;= W?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "X[i, j] = X[i – 1, j] V X[i, j -a<sub>i</sub>]"
+      },
+      {
+        "identifier": "B",
+        "content": "X[i, j] = X[i – 1, j] V X[i – 1, j – a<sub>i</sub>]"
+      },
+      {
+        "identifier": "C",
+        "content": "X[i, j] = X[i – 1, j] V X[i, j – a<sub>i</sub>]"
+      },
+      {
+        "identifier": "D",
+        "content": "X[i, j] = X[i – 1, j] V X[i -1, j – a<sub>i</sub>]"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program that attempts to locate an element x in an array Y[] using binary search. The program is erroneous.\n<pre><code>1.   f(int Y[10], int x) {\n2.     int i, j, k;\n3.     i = 0; j = 9;\n4.     do {\n5.             k =  (i + j) /2;\n6.             if( Y[k] &lt; x)  i = k; else j = k;\n7.         } while(Y[k] != x &amp;&amp; i &lt; j);\n8.     if(Y[k] == x) printf (\"x is in the array \") ;\n9.     else printf (\" x is not in the array \") ;\n10.  }</code></pre> \nThe correction needed in the program to make it work properly is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Change line 6 to: if (Y[k]"
+      },
+      {
+        "identifier": "B",
+        "content": "Change line 6 to: if (Y[k]"
+      },
+      {
+        "identifier": "C",
+        "content": "Change line 6 to: if (Y[k]"
+      },
+      {
+        "identifier": "D",
+        "content": "Change line 7 to: } while ((Y[k]==x)&amp;&amp;(i"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The subset-sum problem is defined as follows. Given a set of n positive integers, S = {a<sub>1</sub> ,a<sub>2</sub> ,a<sub>3</sub> ,…,a<sub>n</sub>} and positive integer W, is there a subset of S whose elements sum to W? A dynamic program for solving this problem uses a 2-dimensional Boolean array X, with n rows and W+1 columns. X[i, j], 1 &lt;= i &lt;= n, 0 &lt;= j &lt;= W, is TRUE if and only if there is a subset of {a<sub>1</sub> ,a<sub>2</sub> ,…,a<sub>i</sub>} whose elements sum to j. \n<br><br>\nWhich entry of the array X, if TRUE, implies that there is a subset whose elements sum to W?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "X[1, W]"
+      },
+      {
+        "identifier": "B",
+        "content": "X[n, 0]"
+      },
+      {
+        "identifier": "C",
+        "content": "X[n, W]"
+      },
+      {
+        "identifier": "D",
+        "content": "X[n-1, n]"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program that attempts to locate an element x in an array Y[] using binary search. The program is erroneous.\n<pre><code>1.   f(int Y[10], int x) {\n2.     int i, j, k;\n3.     i = 0; j = 9;\n4.     do {\n5.             k =  (i + j) /2;\n6.             if( Y[k] &lt; x)  i = k; else j = k;\n7.         } while(Y[k] != x &amp;&amp; i &lt; j);\n8.     if(Y[k] == x) printf (\"x is in the array \") ;\n9.     else printf (\" x is not in the array \") ;\n10.  }</code></pre>\nOn which of the following contents of Y and x does the program fail?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Y is [1 2 3 4 5 6 7 8 9 10] and x &lt; 10"
+      },
+      {
+        "identifier": "B",
+        "content": "Y is [1 3 5 7 9 11 13 15 17 19] and x &lt; 1"
+      },
+      {
+        "identifier": "C",
+        "content": "Y is [2 2 2 2 2 2 2 2 2 2] and x &gt; 2"
+      },
+      {
+        "identifier": "D",
+        "content": "Y is [2 4 6 8 10 12 14 16 18 20] and 2 &lt; x &lt; 20 and x is even"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A binary search tree is generated by inserting in order the following integers:<br><br>\n50, 15, 62, 5, 20, 58, 91, 3, 8, 37, 60, 24 <br><br>\nThe number of nodes in the left subtree and right subtree of the root respectively is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(4, 7)"
+      },
+      {
+        "identifier": "B",
+        "content": "(7, 4)"
+      },
+      {
+        "identifier": "C",
+        "content": "(8, 3)\n"
+      },
+      {
+        "identifier": "D",
+        "content": "(3, 8)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Obtain the optimal binary search tree with equal probabilities for the\nidentifier set (a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>) = ( if, stop, while)",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  }
+]

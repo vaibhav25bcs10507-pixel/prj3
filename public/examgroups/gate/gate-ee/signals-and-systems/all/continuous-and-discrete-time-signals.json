@@ -1,0 +1,365 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a continuous-time signal</p>\n<p>$$ x(t)=-t^2\\{u(t+4)-u(t-4)\\} $$</p>\n<p>where $u(t)$ is the continuous-time unit step function. Let $\\delta(t)$ be the continuous-time unit impulse function. The value of</p>\n<p>$$ \\int_{-\\infty}^{\\infty} x(t) \\delta(t+3) d t $$</p>\n<p>is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " -9\n"
+      },
+      {
+        "identifier": "B",
+        "content": " 9\n"
+      },
+      {
+        "identifier": "C",
+        "content": " 3\n"
+      },
+      {
+        "identifier": "D",
+        "content": " -3"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the value of the integral </p>\n<p>$ \\int_{-\\infty}^{\\infty} x(t) \\delta(t+3) \\, dt $</p>\n<p>we use the sifting property of the impulse function, which states:</p>\n<p>$ \\int_{-\\infty}^{\\infty} f(t) \\delta(t-a) \\, dt = f(a) $</p>\n<p>for any function $ f(t) $. In this case, our function is $ x(t) $ and $ a = -3 $. Thus, we have:</p>\n<p>$ I = x(-3) $</p>\n<p>Given the expression for $ x(t) $:</p>\n<p>$ x(t) = -t^2 \\{ u(t+4) - u(t-4) \\} $</p>\n<p>we need to evaluate it at $ t = -3 $:</p>\n<p>$ x(-3) = -(-3)^2 \\{ u(-3+4) - u(-3-4) \\} $</p>\n<p>This simplifies to:</p>\n<p>$ = -9 \\{ u(1) - u(-7) \\} $</p>\n<p>The unit step function $ u(t) $ is defined as:</p>\n<p>$ u(t) =  \\begin{cases}  0, & \\text{if } t < 0 \\\\  1, & \\text{if } t \\geq 0  \\end{cases} $</p>\n<p>Therefore, </p>\n\n<p><p>$ u(1) = 1 $ because $ 1 \\geq 0 $</p></p>\n<p><p>$ u(-7) = 0 $ because $-7 < 0 $</p></p>\n\n<p>Substituting these values back, we have:</p>\n<p>$ x(-3) = -9[1 - 0] = -9 $</p>\n<p>Thus, the value of the integral is $-9$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ee-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A continuous-time system that is initially at rest is described by</p>\n<p>$${{dy(t)} \\over {dt}} + 3y(t) = 2x(t)$$,</p>\n<p>where $$x(t)$$ is the input voltage and $$y(t)$$ is the output voltage. The impulse response of the system is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3{e^{ - 2t}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 3}{e^{ - 2t}}u(t)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2{e^{ - 3t}}u(t)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2{e^{ - 3t}}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The continuous-time system is described by the differential equation:</p>\n\n<p>$$\\frac{dy(t)}{dt} + 3y(t) = 2x(t)$$</p>\n\n<p>To find the impulse response of the system, we need to solve this equation for the case when the input voltage $$x(t)$$ is an impulse function, $$\\delta(t)$$. An impulse function has the property that it is zero everywhere except at $ t = 0 $, where it is infinitely large in such a way to have a unit area.</p>\n\n<p>So, we let $$x(t) = \\delta(t)$$ and solve the differential equation:</p>\n\n<p>$$\\frac{dy(t)}{dt} + 3y(t) = 2\\delta(t)$$</p>\n\n<p>Take the Laplace transform of both sides of the equation. Recall that the Laplace transform of an impulse function $$\\delta(t)$$ is 1. Also, we need to consider the initial condition, which is given as the system being initially at rest (this means $$y(0) = 0$$).</p>\n\n<p>$$\\mathcal{L}\\left\\{\\frac{dy(t)}{dt}\\right\\} + \\mathcal{L} \\left\\{3y(t)\\right\\} = \\mathcal{L}\\{2\\delta(t)\\}$$</p>\n\n<p>Using the linear properties of the Laplace transform and the initial condition:</p>\n\n<p>$$sY(s) - y(0) + 3Y(s) = 2$$</p>\n\n<p>$$sY(s) + 3Y(s) = 2$$</p>\n\n<p>$$Y(s)(s + 3) = 2$$</p>\n\n<p>$$Y(s) = \\frac{2}{s + 3}$$</p>\n\n<p>Taking the inverse Laplace transform to get the impulse response $$h(t)$$:</p>\n\n<p>$$h(t) = 2e^{-3t}u(t)$$</p>\n\n<p>Therefore, the impulse response of the system is:</p>\n\n<p><strong>Option C</strong>: $$2e^{-3t}u(t)$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$z\\left(t\\right)=x\\left(t\\right)\\ast y\\left(t\\right)$$, where \"*\" denotes convolution. Let C be a positive real-valued\nconstant. Choose the correct expression for z(ct).",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$c.x\\left(ct\\right)\\ast y\\left(ct\\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$x\\left(ct\\right)\\ast y\\left(ct\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$c.x\\left(t\\right)\\ast y\\left(ct\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$c.x\\left(ct\\right)\\ast y\\left(t\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the system with following input-output relation $$y\\left[n\\right]=\\left(1+\\left(-1\\right)^n\\right)x\\left[n\\right]$$\nwhere, x[n] is the input and y[n] is the output. The system is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "invertible and time invariant"
+      },
+      {
+        "identifier": "B",
+        "content": "invertible and time varying"
+      },
+      {
+        "identifier": "C",
+        "content": "non-invertible and time invariant"
+      },
+      {
+        "identifier": "D",
+        "content": "non-invertible and time varying"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The value of $$\\int_{-\\infty}^{+\\infty}e^{-t}\\partial\\left(2t-2\\right)dt$$. where $$\\partial\\left(t\\right)$$ is the Dirac delta function, is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac1{2e}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac2e$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac1{e^2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac1{2e^2}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ee-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A moving average function is given by $$y\\left(t\\right)=\\frac1T\\int_{t-T}^tu\\left(\\tau\\right)d\\tau$$. If the input u is a sinusoidal\nsignal of frequency\n$$\\frac1{2T}Hz$$,\nthen in steady state, the output y will lag u (in degree) by\n________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "90",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "For a periodic signal  the $$v\\left(t\\right)=30\\sin100t\\;+\\;10\\cos300t\\;+\\;6\\sin\\left(500t\\;+\\;\\frac{\\mathrm\\pi}4\\right)$$\nfundamental frequency in radians/s is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "100"
+      },
+      {
+        "identifier": "B",
+        "content": "300"
+      },
+      {
+        "identifier": "C",
+        "content": "500"
+      },
+      {
+        "identifier": "D",
+        "content": "1500"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ee-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A point Z has been plotted in the complex plane, as shown in figure below.\n<img alt=\"GATE EE 2011 Signals and Systems - Continuous and Discrete Time Signals Question 13 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/9572c8fed40009e2d5208f33c1766ea8a5b01525e4de681e012a74f266add941.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n\nThe plot of the complex number $$y=\\frac1z$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img alt=\"GATE EE 2011 Signals and Systems - Continuous and Discrete Time Signals Question 13 English Option 1\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8b6d9265a86dfe22438f0766945fe38fc13365540897a906cef8f3f6d74bae48.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/e16cd10524ed9212faa80656473833cfa4ea3ec9b5537802184c6672e43a2c92.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE EE 2011 Signals and Systems - Continuous and Discrete Time Signals Question 13 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/419f6b6d3d8f5bda588b7ac1710a18cb5c3c61e0b8040dddd7921c85276acda3.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE EE 2011 Signals and Systems - Continuous and Discrete Time Signals Question 13 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/2c7f35561a5548c882fbb8ddfcca3a186827afc757512fcfe03f1c675051d72a.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE EE 2011 Signals and Systems - Continuous and Discrete Time Signals Question 13 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ee-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The convolution of the function $$f_1\\left(t\\right)=e^{-2t}\\;u\\left(t\\right)$$ and $$f_2\\left(t\\right)=e^t\\;u\\left(t\\right)$$ is equal to __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\left[-\\frac13e^{-2t}+\\frac13e^t\\right]u\\left(t\\right)$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ee-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the integral $$\\int_{-5}^{+6}e^{-2t}\\delta\\left(t-1\\right)dt$$ is equal to ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$e^{-2}$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ee-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let continuous-time signals $x_1(t)$ and $x_2(t)$ be \n<br/><br/>$x_1(t)=\\left\\{\\begin{array}{cc}1, & t \\in[0,1] \\\\ 2-t, & t \\in[1,2] \\\\ 0, & \\text { otherwise }\\end{array}\\right.$ \n\n<br/><br/>and $x_2(t)=\\left\\{\\begin{array}{cc}t, & t \\in[0,1] \\\\ 2-t, & t \\in[1,2] \\\\ 0, & \\text { otherwise }\\end{array}\\right.$.<div></div> Consider the convolution \n<br/><br/>$y(t)=x_1(t) * x_2(t)$. Then $\\int\\limits_{-\\infty}^{\\infty} y(t) d t$ is :</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1.5"
+      },
+      {
+        "identifier": "B",
+        "content": "2.5"
+      },
+      {
+        "identifier": "C",
+        "content": "3.5"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbg8uu09/1edd33c0-e65f-4178-8467-b4892da237a3/f5a4f590-4052-11f0-9461-7db1b037f033/file-jaoe38c1mbg8uu0a.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbg8uu09/1edd33c0-e65f-4178-8467-b4892da237a3/f5a4f590-4052-11f0-9461-7db1b037f033/file-jaoe38c1mbg8uu0a.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2025 Signals and Systems - Continuous and Discrete Time Signals Question 1 English Explanation\"></p>\n<p>$$ \\begin{aligned} &amp;y(t)=x_1(t) * x_2(t)\\\\ &amp;\\text {  }\\\\ &amp;\\begin{aligned}Area\\,\\, property : A y &amp; =A x_1 A x_2 \\\\ A x_1 &amp; =1 \\times 1+\\frac{1}{2} \\times 1 \\times 1 \\\\ &amp; =1+\\frac{1}{2}=\\frac{3}{2} \\\\ A x_2 &amp; =\\frac{1}{2} \\times 2 \\times 1=1 \\\\ A y &amp; =\\frac{3}{2} \\times 1=1.5 \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ee-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If the energy of a continuous-time signal $x(t)$ is $E$ and the energy of the signal $2x(2t - 1)$ is $cE$, then $c$ is _____ (rounded off to 1 decimal place).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>To find the value of $ c $, we need to understand how the scaling of time and amplitude affects the energy of a continuous-time signal. The energy $ E $ of a continuous-time signal $ x(t) $ is given by:</p>\n\n<p>\n\n<p>$$ E = \\int_{-\\infty}^{\\infty} |x(t)|^2 \\, dt $$</p>\n\n</p>\n\n<p>Now, consider the signal $ y(t) = 2x(2t - 1) $. Let's determine the energy of this new signal. The energy of $ y(t) $ is:</p>\n\n<p>\n\n<p>$$ E_y = \\int_{-\\infty}^{\\infty} |y(t)|^2 \\, dt = \\int_{-\\infty}^{\\infty} |2x(2t - 1)|^2 \\, dt $$</p>\n\n</p>\n\n<p>Since we have a scaling factor of 2 in the amplitude, the squared amplitude will scale by a factor of $ 2^2 = 4 $. Therefore, we get:</p>\n\n<p>\n\n<p>$$ E_y = \\int_{-\\infty}^{\\infty} 4|x(2t - 1)|^2 \\, dt $$</p>\n\n</p>\n\n<p>We also need to account for the time scaling. When the time argument $ t $ is scaled by a factor of 2, the integration variable must also change accordingly. Let $ u = 2t - 1 $. This implies that $ du = 2 \\, dt $ and therefore $ dt = \\frac{du}{2} $. Changing the variable of integration, we find:</p>\n\n<p>\n\n<p>$$ E_y = \\int_{-\\infty}^{\\infty} 4|x(u)|^2 \\, \\frac{du}{2} $$</p>\n\n</p>\n\n<p>Simplifying this expression, we get:</p>\n\n<p>\n\n<p>$$ E_y = 2 \\int_{-\\infty}^{\\infty} |x(u)|^2 \\, du = 2E $$</p>\n\n</p>\n\n<p>Therefore, the energy of the signal $ 2x(2t - 1) $ is $ 2E $, which means the value of $ c $ is:</p>\n\n<p>\n\n<p>$$ c = 2 $$</p>\n\n</p>\n\n<p>Rounded to one decimal place, $ c = 2.0 $.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ee-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The period of the discrete-time signal $$x[n]$$ described by the equation below is $$N=$$ __________ (Round off to the nearest integer).</p>\n<p>$$x[n] = 1 + 3\\sin \\left( {{{15\\pi } \\over 8}n + {{3\\pi } \\over 4}} \\right) - 5\\sin \\left( {{\\pi  \\over 3}n - {\\pi  \\over 4}} \\right)$$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "48",
+    "explanation": "<p>Given : $x(n)=1+3 \\sin \\left(\\frac{15 \\pi}{8} n+\\frac{3 \\pi}{4}\\right)-5 \\sin \\left(\\frac{\\pi}{3} n-\\frac{\\pi}{4}\\right)$</p>\n\n<p>Frequency components of $x(n)$ are : $f_1=\\frac{15 \\pi}{16 \\pi}=\\frac{15}{16}$ and $f_2=\\frac{\\pi}{6 \\pi}=\\frac{1}{6}$</p>\n\n<p>$\\therefore$ Time period, $N_1=16$ and $N_2=6$</p>\n\n<p>Time period of $x(n)$ will be,</p>\n\n<p>$$ N=\\text { L.C.M }\\left[N_1, N_2\\right]=\\text { L.C.M }[16,6]=48 $$</p>\n\n<p>Hence, the correct answer is 48 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ee-2023",
+    "difficulty": null
+  },
+  {
+    "content": "The function shown in the figure can be represented as\n<img alt=\"GATE EE 2014 Set 1 Signals and Systems - Continuous and Discrete Time Signals Question 7 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/cc28dac5c16495805842d0dde0796e6516a1ae832de8d1c3838a800333c97608.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$u\\left(t\\right)-u\\left(t-T\\right)+\\frac{\\left(t-T\\right)}Tu\\left(t-T\\right)-\\left(\\frac{t-2T}T\\right)u\\left(t-2T\\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$u\\left(t\\right)+\\frac tTu\\left(t-T\\right)-\\frac tTu\\left(t-2T\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$u\\left(t\\right)-u\\left(t-T\\right)+\\frac{\\left(t-T\\right)}Tu\\left(t\\right)-\\left(\\frac{t-2T}T\\right)u\\left(t\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$u\\left(t\\right)+\\frac{\\left(t-T\\right)}Tu\\left(t-T\\right)-2\\frac{\\left(t-2T\\right)}Tu\\left(t-2T\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ee-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "If u(t), r(t) denote the unit step and unit ramp functions respectively and u(t)*r(t) their convolution, then the function u(t+1)*r(t-2) is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(1/2)(t-1)(t-2)"
+      },
+      {
+        "identifier": "B",
+        "content": "(1/2)(t-1)(t-2)"
+      },
+      {
+        "identifier": "C",
+        "content": "(1/2)(t-1)<sup>2</sup>u(t-1)"
+      },
+      {
+        "identifier": "D",
+        "content": "none of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ee-2007",
+    "difficulty": null
+  }
+]

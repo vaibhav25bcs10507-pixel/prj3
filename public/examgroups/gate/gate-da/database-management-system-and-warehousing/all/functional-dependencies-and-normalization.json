@@ -1,0 +1,100 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If a relational decomposition is not dependency-preserving, which one of the following relational operators will be executed more frequently in order to maintain the dependencies?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Selection\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Projection\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Join\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Set union"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<blockquote>\n  <p>If a relational decomposition is <strong>not dependency-preserving</strong>, which relational operator will be executed more frequently to maintain the dependencies?</p>\n</blockquote>\n\n<h3>Step 1: Recall what <em>dependency-preserving decomposition</em> means</h3>\n<p>When we decompose a relation $ R $ into $ R_1, R_2, ..., R_n $:</p>\n<ul>\n<li>The decomposition is <strong>dependency-preserving</strong> if all <strong>functional dependencies (FDs)</strong> from $ R $ can be <strong>enforced</strong> by enforcing dependencies <strong>only</strong> on each $ R_i $, without needing to <strong>join</strong> the relations back together.</li>\n</ul>\n\n<h3>Step 2: What happens if it is <strong>not dependency-preserving</strong>?</h3>\n<p>If the decomposition is <strong>not dependency-preserving</strong>, some FDs <strong>span multiple decomposed relations</strong>.  </p>\n<p>That means you <strong>cannot test or enforce those dependencies</strong> by looking at individual relations alone.</p>\n<p>To check or enforce such dependencies, you must:</p>\n<ul>\n<li><p><strong>Join</strong> the decomposed relations,</p></li>\n<li><p>Then test whether the combined tuples satisfy the original dependency.</p></li>\n</ul>\n\n<h3>Step 3: Determine which operator is involved</h3>\n<p>The operator required to <strong>combine decomposed relations</strong> is the <strong>JOIN</strong> operator.</p>\n<p>So, if a decomposition is not dependency-preserving, the <strong>join</strong> operation must be performed more frequently to maintain and enforce the dependencies.</p>\n\n<p>✅ <strong>Correct Answer: Option C — Join</strong></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following two relations, named Customer and Person, in a</p>\n<p>database:</p>\n<p>Person (</p>\n<p>aadhaar CHAR(12) PRIMARY KEY, name VARCHAR(32));</p>\n<p>Customer (</p>\n<p>name VARCHAR(32), email VARCHAR(32) PRIMARY KEY, phone CHAR(10), aadhaar CHAR(12), FOREIGN KEY (aadhaar) REFERENCES Person(aadhaar)); Which of the following statements is/are correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " aadhaar is a candidate key in the Customer relation\n"
+      },
+      {
+        "identifier": "B",
+        "content": " phone can be NULL in the Customer relation\n"
+      },
+      {
+        "identifier": "C",
+        "content": " aadhaar is a candidate key in the Person relation\n"
+      },
+      {
+        "identifier": "D",
+        "content": " aadhaar can be NULL in the Person relation"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Aadhar is foreign key in customer.</p>\n<p>Phenp can be null as nothing is mentioned, aadhar is a primary key and all primary keys are candidate key.</p>\n<p>Aadhar cannot be null as it is primary key. Hence, the correct option is (B, C).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a database relation $R$ with attributes ABCDEFG , and having the following functional dependencies:</p>\n<p>$$ \\mathrm{A} \\rightarrow \\mathrm{BCEF} \\quad \\mathrm{E} \\rightarrow \\mathrm{DG} \\quad \\mathrm{BC} \\rightarrow \\mathrm{~A} $$</p>\n<p>Which of the following statements is/are correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A is the only candidate key of R\n"
+      },
+      {
+        "identifier": "B",
+        "content": "A, BC are the candidate keys of R\n"
+      },
+      {
+        "identifier": "C",
+        "content": "A, BC, E are the candidate keys of R\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Relation R is not in Boyce-Codd Normal Form (BCNF)"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & R(A B C D E F G) \\\\ & A \\rightarrow B C E F \\\\ & E \\rightarrow D G \\\\ & B C \\rightarrow A \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & (A)^{+}=\\{A B C D E F G\\} \\\\ & (B C)^{+}=\\{A B C D E F G\\} \\end{aligned} $$</p>\n<p>Only A and BC are candidate key and it is not in BCNF as</p>\n<p>$$ E \\rightarrow D G $$</p>\n<p>In this functional dependency $E$ is not a super key.</p>\n<p>Hence, the correct option is (B, D).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  }
+]

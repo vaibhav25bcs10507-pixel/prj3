@@ -1,0 +1,1092 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following two relations, <b>R(A, B)</b> and <b>S(A, C)</b>:</p>\n<style>table { width: 100%; border-collapse: collapse; margin: 20px 0; } th { background-color: blue; color: white; border: 1px solid lightgrey; padding: 10px; } td { border: 1px solid lightgrey; padding: 10px; text-align: left; }</style><table><thead><tr><th colspan=\"2\">R</th></tr><tr><th>A</th><th>B</th></tr></thead><tbody><tr><td>10</td><td>20</td></tr><tr><td>20</td><td>30</td></tr><tr><td>30</td><td>40</td></tr><tr><td>30</td><td>50</td></tr><tr><td>50</td><td>95</td></tr></tbody></table><table><thead><tr><th colspan=\"2\">S</th></tr><tr><th>A</th><th>C</th></tr></thead><tbody><tr><td>10</td><td>90</td></tr><tr><td>30</td><td>45</td></tr><tr><td>40</td><td>80</td></tr></tbody></table>\n<p>The total number of tuples obtained by evaluating the following expression</p><p style=\"text-align: center;\">$$ \\sigma_{B < C}(R \\bowtie_{R.A = S.A} S) $$</p><p>is _________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>The given relational algebra expression is:</p>\n\n<p style=\"text-align: center;\">$$ \\sigma_{B < C}(R \\bowtie_{R.A = S.A} S) $$</p>\n\n<p>Let's break down the steps to solve this expression and find the total number of tuples obtained:</p>\n\n<p><strong>1. Compute the natural join $ R \\bowtie_{R.A = S.A} S $:</strong></p>\n\n<p>The natural join $ R \\bowtie_{R.A = S.A} S $ will combine the tuples from $ R $ and $ S $ where the values of attribute $ A $ are equal. This results in the following combined tuples:</p>\n\n<table>\n\n<thead>\n\n<tr>\n\n<th>A</th>\n\n<th>B</th>\n\n<th>C</th>\n\n</tr>\n\n</thead>\n\n<tbody>\n\n<tr><td>10</td><td>20</td><td>90</td></tr>\n\n<tr><td>30</td><td>40</td><td>45</td></tr>\n\n<tr><td>30</td><td>50</td><td>45</td></tr>\n\n</tbody>\n\n</table>\n\n<p>The combined tuples are:</p>\n\n<ul>\n\n<li>(10, 20, 90)</li>\n\n<li>(30, 40, 45)</li>\n\n<li>(30, 50, 45)</li>\n\n</ul>\n\n<p><strong>2. Apply the selection $ \\sigma_{B < C} $:</strong></p>\n\n<p>We need to select tuples where the value of attribute $ B $ is less than the value of attribute $ C $. Let's apply this condition to each tuple:</p>\n\n<ul>\n\n<li>For (10, 20, 90): $ 20 < 90 $ is true</li>\n\n<li>For (30, 40, 45): $ 40 < 45 $ is true</li>\n\n<li>For (30, 50, 45): $ 50 < 45 $ is false</li>\n\n</ul>\n\n<p>The selected tuples are:</p>\n\n<ul>\n\n<li>(10, 20, 90)</li>\n\n<li>(30, 40, 45)</li>\n\n</ul>\n\n<p><strong>3. Count the total number of tuples:</strong></p>\n\n<p>The total number of selected tuples is 2.</p>\n\n<p>Therefore, the total number of tuples obtained by evaluating the expression is:</p>\n\n<p style=\"text-align: center;\">$$ 2 $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the following three relations in a relational database.</p>\n<p>Employee ( $$\\underline {eld} $$ , Name), Brand ( $$\\underline {bld} $$ , bName), Own ( $$\\underline {eld} $$ , $$\\underline {bld} $$)</p>\n<p>Which of the following relational algebra expressions return the set of elds who own all the brands?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\pi$$<sub>eld</sub> ($$\\pi$$<sub>eld, bld</sub> (Own) / $$\\pi$$<sub>bld</sub> (Brand))"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\pi$$<sub>eld</sub> (Own) $$-$$ $$\\pi$$<sub>eld</sub> (($$\\pi$$<sub>eld</sub> (Own) $$\\times$$ $$\\pi$$<sub>bld</sub> (Brand)) $$-$$ $$\\pi$$<sub>eld, bld</sub> (Own))"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\pi$$<sub>eld</sub> ($$\\pi$$<sub>eld, bld</sub> (Own) / $$\\pi$$<sub>bld</sub> (Own))"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pi$$<sub>eld</sub> (($$\\pi$$<sub>eld</sub> (Own) $$\\times$$ $$\\pi$$<sub>bld</sub> (Own) / $$\\pi$$<sub>bld</sub> (Brand))"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\bullet$$ $$\\pi$$<sub>eld, bld</sub> (Own) / $$\\pi$$<sub>bld</sub> (Brand) $$\\Rightarrow$$ Results eid's which owns every brand of brand relation.</p>\n<p>$$\\bullet$$ Option (b) expansion and division using basic operators.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>A relation r(A, B) in a relational database has 1200 tuples. The attribute A has integer values ranging from 6 to 20, and the attribute B has integer values ranging from 1 to 20. Assume that the attributes A and B are independently distributed. The estimated number of tuples in the output of&nbsp;σ<sub>(A&gt;10)∨(B=18)</sub>(r) is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "819TO820",
+    "explanation": "<p>To estimate the number of tuples resulting from the selection $\\sigma_{(A>10) \\lor (B=18)}(r)$, we can use the concept of <strong>selectivity</strong> and the given that attributes $ A $ and $ B $ are independently distributed.</p>\n<p><strong>Step 1: Determine the selectivity of each condition individually.</strong></p>\n\n<p><strong>Selectivity of $ A > 10 $:</strong></p>\n\n\n<p><p>Possible values of $ A $ range from <strong>6 to 20</strong>, totaling <strong>15</strong> distinct values.</p></p>\n<p><p>Values where $ A > 10 $ are from <strong>11 to 20</strong>, totaling <strong>10</strong> values.</p></p>\n<p><p>Selectivity $ P(A > 10) = \\dfrac{\\text{Number of values where } A > 10}{\\text{Total number of } A \\text{ values}} = \\dfrac{10}{15} = \\dfrac{2}{3} $.</p></p>\n\n\n<p><strong>Selectivity of $ B = 18 $:</strong></p>\n\n\n<p><p>Possible values of $ B $ range from <strong>1 to 20</strong>, totaling <strong>20</strong> distinct values.</p></p>\n<p><p>There's only <strong>1</strong> value where $ B = 18 $.</p></p>\n<p><p>Selectivity $ P(B = 18) = \\dfrac{\\text{Number of values where } B = 18}{\\text{Total number of } B \\text{ values}} = \\dfrac{1}{20} $.</p></p>\n\n\n<p><strong>Selectivity of $ A > 10 $ and $ B = 18 $ (since $ A $ and $ B $ are independent):</strong></p>\n\n\n<p>$ P(A > 10 \\text{ and } B = 18) = P(A > 10) \\times P(B = 18) = \\dfrac{2}{3} \\times \\dfrac{1}{20} = \\dfrac{1}{30} $.</p>\n\n<p><strong>Step 2: Compute the combined selectivity using the inclusion-exclusion principle.</strong></p>\n<p>$ P((A > 10) \\lor (B = 18)) = P(A > 10) + P(B = 18) - P(A > 10 \\text{ and } B = 18) $</p>\n<p>Plugging in the values:</p>\n<p>$ P((A > 10) \\lor (B = 18)) = \\dfrac{2}{3} + \\dfrac{1}{20} - \\dfrac{1}{30} $</p>\n<p>Convert all fractions to a common denominator (60):</p>\n<p>$ P((A > 10) \\lor (B = 18)) = \\dfrac{40}{60} + \\dfrac{3}{60} - \\dfrac{2}{60} = \\dfrac{41}{60} $</p>\n<p><strong>Step 3: Estimate the number of tuples in the output.</strong></p>\n<p>$ \\text{Estimated number of tuples} = \\text{Total tuples} \\times P((A > 10) \\lor (B = 18)) = 1200 \\times \\dfrac{41}{60} = 820 $</p>\n<hr />\n<p><strong>Answer:</strong></p>\n<p>820</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "What is the optimized version of the relation algebra expression $$\\pi_{A1}(\\pi_{A2}(\\sigma_{F1}(\\sigma_{F2}(r))))$$, where $$A1, A2$$ are sets of attributes in r with $$A1 \\subset A2$$ and $$F1,F2$$ are Boolean expressions based on the attributes in r?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\pi_{A1}(\\sigma_{(F1 \\wedge F2)}(r))$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\pi_{A1}(\\sigma_{(F1 \\vee F2)}(r))$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\pi_{A2}(\\sigma_{(F1 \\wedge F2)}(r))$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pi_{A2}(\\sigma_{(F1 \\vee F2)}(r))$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Which of the following tuple relational calculus expression(s) is/are equivalent to $$\\forall t \\in r \\left(P\\left(t\\right)\\right)$$?</p>\nI. $$\\neg \\exists t \\in r \\left(P\\left(t\\right)\\right)$$\n<br>II. $$\\exists t \\notin r \\left(P\\left(t\\right)\\right)$$\n<br>III. $$\\neg \\exists t \\in r \\left(\\neg P\\left(t\\right)\\right)$$\n<br>IV. $$\\exists t \\notin r \\left(\\neg P\\left(t\\right)\\right)$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I only"
+      },
+      {
+        "identifier": "B",
+        "content": "II only"
+      },
+      {
+        "identifier": "C",
+        "content": "III only"
+      },
+      {
+        "identifier": "D",
+        "content": "III and IV only"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the relations r<sub>1</sub>(P, Q, R) and r<sub>2</sub>(R, S, T) with primary keys P and R respectively. The relation r<sub>1</sub> contains 2000 tuples and r<sub>2</sub> contains 2500 tuples. The maximum size of the join $${r_1} \\Join {r_2}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2000"
+      },
+      {
+        "identifier": "B",
+        "content": "2500"
+      },
+      {
+        "identifier": "C",
+        "content": "4500"
+      },
+      {
+        "identifier": "D",
+        "content": "5000"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following relational query languages have the same expressive power?\n<p>I) Relational algebra\n<br>II) Tuple relational calculus restricted to safe expressions\n<br>III) Domain relational calculus restricted to safe expressions</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "II and III only"
+      },
+      {
+        "identifier": "B",
+        "content": "I and II only"
+      },
+      {
+        "identifier": "C",
+        "content": "I and III only"
+      },
+      {
+        "identifier": "D",
+        "content": "I, II and III"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Let r be a relation instance with schema R = (A, B, C, D).</p>\nWe define $${r_1} = {\\pi _{A,B,C}}\\left( r \\right)$$ and $${r_1} = {\\pi _{A,D}}\\left( r \\right)$$. Let $$s = {r_1}*{r_2}$$ where * denotes natural join. Given that the decomposition of r into r<sub>1</sub> and r<sub>2</sub> is lossy, which one of the following is TRUE? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$s \\subset r$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$r \\cup s =r$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$r \\subset s$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$r * s = s$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Let R<sub>1</sub> (<u>A,</u> B, C) and R<sub>2</sub> (<u>D,</u> E) be two relation schema, where the primary keys are shown underlined, and let C be a foreign key in R<sub>1</sub> referring to R<sub>2</sub>. Suppose there is no violation of the above referential integrity constraint in the corresponding relation instances r<sub>1</sub> and r<sub>2</sub>. Which one of the following relational algebra expressions would necessarily produce an empty relation? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\prod\\nolimits_D {\\left( {{r_2}} \\right)}  - \\prod\\nolimits_C {\\left( {{r_1}} \\right)} $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\prod\\nolimits_C {\\left( {{r_1}} \\right)}  - \\prod\\nolimits_D {\\left( {{r_2}} \\right)} $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\prod\\nolimits_D {\\left( {{r_1}{ \\Join _{C \\ne D}}{r_2}} \\right)} $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\prod\\nolimits_C {\\left( {{r_1}{ \\Join _{C = D}}{r_2}} \\right)} $$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following SQL query: \n<pre><code class=\"sql\">Select distinct a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub> \n\nFrom r<sub>1</sub>, r<sub>2</sub>, ..., r<sub>m</sub> \n\nWhere P; </code></pre>\nFor an arbitrary predicate P, this query is equivalent to which of the following relational algebra expressions? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\prod\\limits_{{a_1},{a_2},....,{a_n}} {{\\sigma _p}} \\left( {{r_1} \\times {r_2} \\times .... \\times {r_m}} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\prod\\limits_{{a_1},{a_2},....,{a_n}} {{\\sigma _p}} \\left( {{r_1} \\Join {r_2} \\Join .... \\Join {r_m}} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\prod\\limits_{{a_1},{a_2},....,{a_n}} {{\\sigma _p}} \\left( {{r_1} \\cup {r_2} \\cup .... \\cup {r_m}} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\prod\\limits_{{a_1},{a_2},....,{a_n}} {{\\sigma _p}} \\left( {{r_1} \\cap {r_2} \\cap .... \\cap {r_m}} \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "With regard to the expressive power of the formal relational query languages, which of the following statements is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Relational algebra is more powerful than relational calculus. "
+      },
+      {
+        "identifier": "B",
+        "content": "Relational algebra has the same power as relational calculus."
+      },
+      {
+        "identifier": "C",
+        "content": "Relational algebra has the same power as safe relational calculus."
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Given the relations </p>\n<p><b>employee (name, salary, deptno)</b>, and <br><b>department (deptno, deptname, address)</b> </p>\nWhich of the following queries cannot be expressed using the basic relational algebra operations $$\\left(\\sigma, \\pi,\\times ,\\Join, \\cup, \\cap,-\\right)$$? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Department address of every employee"
+      },
+      {
+        "identifier": "B",
+        "content": "Employees whose name is the same as their department name"
+      },
+      {
+        "identifier": "C",
+        "content": "The sum of all employee’s salaries"
+      },
+      {
+        "identifier": "D",
+        "content": "All employees of a given department"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the join of a relation R with a relation S. If R has m tuples and S has n tuples then the maximum and minimum sizes of the join respectively are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "m + n and 0"
+      },
+      {
+        "identifier": "B",
+        "content": "mn and 0"
+      },
+      {
+        "identifier": "C",
+        "content": "m + n and |m – n|"
+      },
+      {
+        "identifier": "D",
+        "content": "mn and m + n"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "<p>The relational algebra expression equivalent to the following tuple calculus expression:</p>\n$$\\left\\{ {t|t \\in r \\wedge \\left( {t\\left[ A \\right] = 10 \\wedge t\\left[ B \\right] = 20} \\right)} \\right\\}$$ is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\sigma _{\\left( {A = 10 \\vee B = 20} \\right)}}\\left( r \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\sigma _{\\left( {A = 10} \\right)}}\\left( r \\right) \\cup {\\sigma _{\\left( {B = 20} \\right)}}\\left( r \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\sigma _{\\left( {A = 10} \\right)}}\\left( r \\right) \\cap {\\sigma _{\\left( {B = 20} \\right)}}\\left( r \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\sigma _{\\left( {A = 10} \\right)}}\\left( r \\right) - {\\sigma _{\\left( {B = 20} \\right)}}\\left( r \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Give a relational algebra expression using only the minimum number of operators from $$\\left( { \\cup ,\\, - } \\right)$$ which is equivalent to $$R \\cap S$$.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "$$R \\cap S = R - \\left( {R - S} \\right)$$\n<p>Intersection can be expressed in terms of union and minus.</p>\n<p>But we don't need to use both of them as in the question says<b> use only the minimum number of operators from $$\\left( { \\cup ,\\, - } \\right)$$ </b> to create a relational algebra expression which is equivalent to $$R \\cap S$$. So we use only minus( - ) operator.</p> ",
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "content": "An instance of a relational scheme R(A, B, C) has distinct values for attribute A. Can you conclude that A is a candidate key for R?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a relational database schema with two relations $R(P, Q)$ and $S(X, Y)$.</p>\n<p>Let $E=\\{\\langle u\\rangle \\mid \\exists v \\exists w\\langle u, v\\rangle \\in R \\wedge\\langle v, w\\rangle \\in S\\}$ be a tuple relational calculus expression. Which one of the following relational algebraic expressions is equivalent to $E$ ?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p> $\\Pi_P\\left(R \\bowtie_{R . P=S . X} S\\right)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p> $\\Pi_P\\left(S \\bowtie_{S . X=R . Q} R\\right)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p> $\\Pi_P\\left(R \\bowtie_{R . P=S . Y} S\\right)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p> $\\Pi_P\\left(S \\bowtie_{S . Y=R . Q} R\\right)$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &amp; R(P, Q) S(X, Y) \\\\ &amp; E=\\{\\langle u\\rangle \\mid \\exists v \\exists w\\langle u, v\\rangle \\in R \\wedge\\langle v, w\\rangle \\in S\\} \\end{aligned} $$</p>\n<p><img alt=\"GATE CSE 2026 Set 1 Database Management System - Relational Algebra Question 1 English Explanation\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyopglh/78c218a8-2ba5-40b3-ae4e-d62eb53a69cc/6f29c750-243d-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyopgli.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyopglh/78c218a8-2ba5-40b3-ae4e-d62eb53a69cc/6f29c750-243d-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyopgli.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p>$$ \\Pi_P\\left(S \\bowtie \\bowtie_{S . X=R . Q} R\\right) $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider two relations describing teams and players in a sports league:</p>\n<p>$\\bullet$ teams(tid, tname): tid, tname are team-id and team-name, respectively.</p>\n<p>$\\bullet$ players(pid, pname, tid): pid, pname, and tid denote player-id, player-name and the team-id of the player, respectively.</p>\n<p>Which ONE of the following tuple relational calculus queries returns the name of the players who play for the team having tname as ' $M I$ '?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\{$ p.pname $\\mid p \\in$ players $\\wedge \\exists t(t \\in$ teams $\\wedge$ p.tid $=$ t.tid $\\wedge$ t.name $=' \\mathrm{MI}$ ' $)\\}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\{$ p.pname $\\mid p \\in$ teams $\\wedge \\exists t(t \\in$ players $\\wedge$ p.tid $=$ t.tid $\\wedge$ t.name $=' \\mathrm{Ml}$ ') \\}\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\{$ p.pname $\\mid p \\in$ players $\\wedge \\exists t(t \\in$ teams $\\wedge$ t.name $=' M 1$ ' $)\\}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\{p . p n a m e \\mid p \\in$ teams $\\wedge \\exists t(t \\in$ players $\\wedge$ t.name $=$ ' Ml ' $)\\}$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We want <strong>the names of players</strong> (from the <code>players</code> relation) <strong>who are on the team</strong> whose <code>tname</code> is <code>'MI'</code> (from the <code>teams</code> relation). Let’s examine each proposed TRC query in turn:</p>\n<hr />\n<h2>Relation Definitions Recap</h2>\n\n<p><p><strong>teams</strong>(<strong>tid</strong>, <strong>tname</strong>)</p></p>\n<p><p><strong>players</strong>(<strong>pid</strong>, <strong>pname</strong>, <strong>tid</strong>)</p></p>\n\n<p>Here,  </p>\n\n<p><p><code>tid</code> is the team's ID.  </p></p>\n<p><p><code>tname</code> is the team's name (e.g., <code>'MI'</code>).  </p></p>\n<p><p><code>players.tid</code> is a foreign key referencing <code>teams.tid</code>.</p></p>\n\n<hr />\n<h2>Understanding the Correct Logic</h2>\n<p>To find <em>player names</em> of the team named <code>'MI'</code>, we want:</p>\n\n<p><p><strong>Start from players</strong>: for each tuple $p \\in \\text{players}$.  </p></p>\n<p><p><strong>Join with teams</strong>: require that there exists a team $t \\in \\text{teams}$ such that  </p></p>\n\n\n<p><p>$p.\\text{tid} = t.\\text{tid}$  </p></p>\n<p><p>$t.\\text{tname} = \\text{'MI'}$.  </p></p>\n\n\n<p><strong>Project</strong> $p.\\text{pname}$.</p>\n\n<p>So in standard TRC form:</p>\n<p>$ \\{\\,p.\\mathrm{pname} \\mid p \\in \\mathrm{players} \\,\\wedge\\, \\exists\\,t \\,\\bigl(t\\in \\mathrm{teams} \\,\\wedge\\, p.\\mathrm{tid}=t.\\mathrm{tid} \\,\\wedge\\, t.\\mathrm{tname}=\\text{'MI'}\\bigr)\\}. $</p>\n<hr />\n<h2>Checking the Provided Options</h2>\n<p>Let’s match each option against the logic above (noting that a small mismatch like using <code>t.name</code> vs <code>t.tname</code> can be a shorthand but is structurally the same idea if everything else fits).</p>\n\n<p><p><strong>Option A</strong>  </p>\n<p>$    \\bigl\\{\\;p.\\mathrm{pname}\\;\\mid\\;p\\in \\mathrm{players}\\;\\wedge\\;\\exists t\\,(\\,t\\in \\mathrm{teams}\\;\\wedge\\;p.\\mathrm{tid}=t.\\mathrm{tid}\\;\\wedge\\;t.\\mathrm{name}='\\mathrm{MI}'\\,)\\bigr\\}.    $  </p></p>\n\n\n<p><p>This says: “From <code>players</code> pick those <code>p</code> for which there exists some <code>t</code> in <code>teams</code> with matching <code>tid</code> and <code>t.name = 'MI'</code>.”  </p></p>\n<p><p>Aside from the label <code>t.name</code> vs <code>t.tname</code>, the structure <strong>exactly</strong> matches our needed join-and-filter.  </p></p>\n<p><p><strong>Logically correct</strong> for returning player names of team <code>'MI'</code>.</p></p>\n\n\n<p><p><strong>Option B</strong>  </p>\n<p>$    \\{\\,p.\\mathrm{pname} \\mid p\\in \\mathrm{teams} \\,\\wedge\\, \\exists t(\\,t\\in \\mathrm{players}\\,\\wedge\\, p.\\mathrm{tid}=t.\\mathrm{tid}\\,\\wedge\\,t.\\mathrm{name}='\\mathrm{MI}')\\}.    $  </p></p>\n\n\n<p><p>Here, $p$ is taken from <code>teams</code>, but then we try to project <code>p.pname</code>. However, <code>teams</code> only has attributes <code>(tid, tname)</code>—it does not have a <code>pname</code> attribute.  </p></p>\n<p><p>Also, <code>t.name='MI'</code> is interpreted as checking if a <em>player’s</em> name is <code>'MI'</code>, not the team’s.  </p></p>\n<p><p><strong>Incorrect</strong> for our goal.</p></p>\n\n\n<p><p><strong>Option C</strong>  </p>\n<p>$    \\{\\,p.\\mathrm{pname} \\mid p\\in \\mathrm{players}\\,\\wedge\\, \\exists t(\\,t\\in \\mathrm{teams}\\,\\wedge\\, t.\\mathrm{name}='\\mathrm{MI}')\\}.    $  </p></p>\n\n\n<p><p>This only says “there exists some team named <code>'MI'</code>,” without <em>joining</em> <code>p.tid</code> to <code>t.tid</code>. Essentially <em>all</em> players would match if any team named <code>'MI'</code> exists.  </p></p>\n<p><p><strong>Incorrect</strong> because it doesn’t ensure the player belongs to the <code>'MI'</code> team.</p></p>\n\n\n<p><p><strong>Option D</strong>  </p>\n<p>$    \\{\\,p.\\mathrm{pname}\\mid p\\in \\mathrm{teams}\\,\\wedge\\, \\exists t(t\\in \\mathrm{players}\\,\\wedge\\, t.\\mathrm{name}='\\mathrm{MI}')\\}.    $  </p></p>\n\n\n<p><p>Same structural problems as (B): it takes <code>p</code> from <code>teams</code> (which lacks <code>pname</code>) and never ties the team to the <code>'MI'</code> entity in a meaningful way.  </p></p>\n<p><p><strong>Incorrect</strong>.</p></p>\n\n<hr />\n<h2>Conclusion</h2>\n<p>Only <strong>Option A</strong> has the correct structure to <em>start with players</em>, <em>join on <code>tid</code></em>, and <em>require the team’s name be <code>'MI'</code></em>. </p>\n<p>Hence, the correct answer is</p>\n<p>$ \\boxed{\\text{Option A.}} $</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The relation schema, <b>Person</b>($\\underline{\\text{pid}}$, $city$), describes the city of residence for every person uniquely identified by $pid$. The following relational algebra operators are available: <i>selection, projection, cross product, and rename</i>.</p><p>To find the list of cities where at least 3 persons reside, using the above operators, the minimum number of <i>cross product</i> operations that must be used is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>1</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>2</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>3</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>4</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned}   R_1 &\\leftarrow \\sigma(R \\times S) \\\\   &\\quad \\text{with condition: } R.city = S.city \\wedge R.pid \\neq S.pid \\\\\\\\   R_2 &\\leftarrow \\sigma(R_1 \\times P) \\\\   &\\quad \\text{with condition: } R_1.city = P.city \\wedge R_1.pid \\neq P.pid \\\\\\\\   R_3 &\\leftarrow \\pi(R_2) \\\\   &\\quad \\text{city} \\end{aligned} $$</p>\n<p>Thus, we require 3 tables and 2 cross product operations. Therefore, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following relations P(X,Y,Z), Q(X,Y,T) and R(Y,V).\n<br><img src=\"https://imagex.cdn.examgoal.net/7kejek273qbhg/0bc4d4ed-eae6-4499-ace0-2d38a56bc12e/56eb1d50-f7ae-11e9-a7bc-b7b08ce8d541/file-7kejek273qbhh-320w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Database Management System - Relational Algebra Question 7 English 1\">\n<br>How many tuples will be returned by the following relational algebra query?\n<br><img src=\"https://imagex.cdn.examgoal.net/7kejek273tha4/c98a4c7f-9cc5-47e3-adee-025bd1fd0aaf/aed2c6d0-f7ae-11e9-a7bc-b7b08ce8d541/file-7kejek273tha5-320w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Database Management System - Relational Algebra Question 7 English 2\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": "<p><img src=\"https://imagex.cdn.examgoal.net/7kejek273qbhg/0bc4d4ed-eae6-4499-ace0-2d38a56bc12e/56eb1d50-f7ae-11e9-a7bc-b7b08ce8d541/file-7kejek273qbhh-320w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Database Management System - Relational Algebra Question 7 English Explanation\"></p>\n<p>The first query returns- </p>\n<p>$$ \\begin{array}{|c|} \\hline X \\\\ \\hline X_2 \\\\ \\hline \\end{array} $$</p>\n<p>Second query returns- </p>\n<p>$$ \\begin{array}{|c|} \\hline X \\\\ \\hline X_1 \\\\ \\hline \\end{array} $$</p>\n<p>Difference will return -</p>\n<p>$$ \\begin{array}{|c|} \\hline X \\\\ \\hline X_2 \\\\ \\hline \\end{array} $$</p>\n<p>Hence , the correct answer is 1. </p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the relations $$r(A, B)$$ and $$s(B, C),$$ where $$s.B$$ is a primary key and $$r.B$$ is a foreign key referencing $$s.B.$$ Consider the query \n<p>$$Q:$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ $$r$$ $$\\,\\,\\,\\,$$  $$\\bowtie$$ $$\\,\\,\\,\\,$$ $$\\left( {{\\sigma _{b &lt; 5}}\\left( s \\right)} \\right)$$</p>\n<p>Let $$LOJ$$ denote the natural left outer-join operation. Assume that $$r$$ and $$s$$ contain no null values.</p>\n<p>Which one of the following queries is NOT equivalent to $$Q$$?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\sigma _{B &lt; 5}}\\left( {r\\,\\,} \\right.$$ $$\\bowtie$$ $$\\left. {\\,\\,s} \\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\sigma _{B &lt; 5}}\\left( {r\\,\\,LOJ\\,\\,s} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$r\\,\\,LOJ\\,\\,\\left( {{\\sigma _{B &lt; 5}}\\left( s \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\sigma _{B &lt; 5}}\\left( r \\right)LOJ\\,\\,s$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $r(A, B)$ and $s(B, C)$</p>\n<p>Query : Q : r $\\bowtie\\left(\\sigma_B&lt;5(\\mathrm{~s})\\right)$</p>\n<p>Example :</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m598t0ih/3a9eceae-080e-4585-bcb1-99a4ddb8bad7/fa3b8c90-c5af-11ef-a4e2-fb8e7cf702cd/file-jaoe38c1m598t0ii.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m598t0ih/3a9eceae-080e-4585-bcb1-99a4ddb8bad7/fa3b8c90-c5af-11ef-a4e2-fb8e7cf702cd/file-jaoe38c1m598t0ii.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2018 Database Management System - Relational Algebra Question 8 English Explanation\"></p>\n<p>Query : Q : $\\mathrm{r} \\bowtie\\left(\\sigma_{\\mathrm{B}}&lt;(\\mathrm{s})\\right)$</p>\n<p>Result in :</p>\n<p>$$ \\begin{array}{|c|c|c|} \\hline \\mathrm{A} &amp; \\mathrm{~B} &amp; \\mathrm{C} \\\\ \\hline a_1 &amp; 2 &amp; c_1 \\\\ \\hline a_2 &amp; 4 &amp; c_1 \\\\ \\hline a_3 &amp; 4 &amp; c_1 \\\\ \\hline \\end{array} $$</p>\n<p>Consider Query $(\\mathrm{A}): \\sigma_{\\mathrm{B} &lt; S}(\\mathrm{r} \\bowtie \\mathrm{s})$ \n\n<br><br>Result in :</p>\n<p>$$ \\begin{array}{|c|c|c|} \\hline \\mathrm{A} &amp; \\mathrm{~B} &amp; \\mathrm{C} \\\\ \\hline a_1 &amp; 2 &amp; c_1 \\\\ \\hline a_2 &amp; 4 &amp; c_1 \\\\ \\hline a_3 &amp; 4 &amp; c_1 \\\\ \\hline \\end{array} $$</p>\n<p>Consider Query (B) : $\\sigma_{\\mathrm{B}&lt;\\mathrm{s}}(\\mathrm{r}⟕ \\mathrm{s})$ \n\n<br><br>Result in :</p>\n<p>$$ \\begin{array}{|c|c|c|} \\hline \\mathrm{A} &amp; \\mathrm{~B} &amp; \\mathrm{C} \\\\ \\hline a_1 &amp; 2 &amp; c_1 \\\\ \\hline a_2 &amp; 4 &amp; c_1 \\\\ \\hline a_3 &amp; 4 &amp; c_1 \\\\ \\hline \\end{array} $$</p>\n<p>Consider Query (C) : $\\mathrm{r} ⟕ \\sigma_{\\mathrm{B}&lt;5}(\\mathrm{~s})$ ) \n\n<br><br>Result in :</p>\n<p>$$ \\begin{array}{|c|c|c|} \\hline \\mathrm{A} &amp; \\mathrm{~B} &amp; \\mathrm{C} \\\\ \\hline a_1 &amp; 2 &amp; c_1 \\\\ \\hline a_2 &amp; 4 &amp; c_1 \\\\ \\hline a_3 &amp; 4 &amp; c_1 \\\\ \\hline a_4 &amp; 6 &amp; \\text { NULL } \\\\ \\hline a_5 &amp; 6 &amp; \\text { NULL } \\\\ \\hline \\end{array} $$</p>\n<p>Consider Query (D) : $\\sigma_B &lt; (\\mathrm{r}) ⟕ \\mathrm{s}$ \n\n<br><br>Result in :</p>\n<p>$$ \\begin{array}{|c|c|c|} \\hline \\mathrm{A} &amp; \\mathrm{~B} &amp; \\mathrm{C} \\\\ \\hline a_1 &amp; 2 &amp; c_1 \\\\ \\hline a_2 &amp; 4 &amp; c_1 \\\\ \\hline a_3 &amp; 4 &amp; c_1 \\\\ \\hline \\end{array} $$</p>\n<p>So Query (C) not equal to given Query Q. </p>\n<p>Hence, the correct option is (C)</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two relations $${R_1}\\left( {A,B} \\right)$$ with the tuples $$(1,5), (3,7)$$ and $${R_2}\\left( {A,C} \\right) = \\left( {1,7} \\right),\\left( {4,9} \\right).$$ \n<br>Assume that $$R(A,B,C)$$ is the full natural outer join of $${R_1}$$ and $${R_2}$$. Consider the following tuples of the form $$(A,B,C): a = (1,5,null),$$ $$b = (1,null,7),$$ $$c = (3, null, 9),$$ $$d = (4,7,null),$$ $$e = (1,5,7),$$ $$f = (3,7,null),$$ $$g = (4,null,9).$$ Which one of the following statements is correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$R$$ contains $$a, b, e, f, g$$ but not $$c, d.$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$R$$ contains all of $$a, b, c, d, e, f, g.$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$R$$ contains $$e, f, g$$ but not $$a, b.$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$R$$ contains $$e$$ but not $$f, g.$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a join (relation algebra) between relations <b>r(R)</b>and <b>s(S)</b> using the nested loop method.\nThere are 3 buffers each of size equal to disk block size, out of which one buffer is reserved for\nintermediate results. Assuming <b>size(r(R)) &lt; size(s(S))</b>, the join will have fewer number of\ndisk block accesses if",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "relation r(R) is in the outer loop."
+      },
+      {
+        "identifier": "B",
+        "content": "relation s(S) is in the outer loop."
+      },
+      {
+        "identifier": "C",
+        "content": "join selection factor between r(R) and s(S) is more than 0.5."
+      },
+      {
+        "identifier": "D",
+        "content": "join selection factor between r(R) and s(S) is less than 0.5."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the relational schema given below, where <b>eId</b> of the relation <b>dependent</b> is a foreign key referring to <b>empId</b> of the relation <b>employee</b>. Assume that every employee has at least one associated dependent in the dependent relation:\n<p><b>employee (<u>empId,</u> empName, empAge)</b></p>\n<p><b>dependent (<u>depId, eId,</u> depName, depAge)</b></p>\nConsider the following relational algebra query:\n$$\\Pi_{empId}\\:(employee) - \\Pi_{empId}\\:(employee \\bowtie_{(empId=eID) \\wedge (empAge \\leq depAge)} dependent)$$\n<p>The above query evaluates to the set of empIds of employees whose age is greater than that of</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "some dependent."
+      },
+      {
+        "identifier": "B",
+        "content": "all dependents."
+      },
+      {
+        "identifier": "C",
+        "content": "some of his/her dependents."
+      },
+      {
+        "identifier": "D",
+        "content": "all of his/her dependents."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following relations A, B and C:\n<br><b>A</b>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">ID</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Name</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Age</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">12</td>\n    <td class=\"tg-s6z2\">Arun</td>\n    <td class=\"tg-s6z2\">60</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">15</td>\n    <td class=\"tg-s6z2\">Shreya</td>\n    <td class=\"tg-s6z2\">24</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">99</td>\n    <td class=\"tg-s6z2\">Rohit</td>\n    <td class=\"tg-s6z2\">11</td>\n  </tr>\n</tbody></table>\n<br><b>B</b>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">ID</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Name</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Age</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">15</td>\n    <td class=\"tg-s6z2\">Shreya</td>\n    <td class=\"tg-s6z2\">24</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">25</td>\n    <td class=\"tg-s6z2\">Hari</td>\n    <td class=\"tg-s6z2\">40</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">98</td>\n    <td class=\"tg-baqh\">Rohit</td>\n    <td class=\"tg-baqh\">20</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">99</td>\n    <td class=\"tg-s6z2\">Rohit</td>\n    <td class=\"tg-s6z2\">11</td>\n  </tr>\n</tbody></table>\n<br><b>C</b>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">ID</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Phone</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Area</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">10</td>\n    <td class=\"tg-s6z2\">2200</td>\n    <td class=\"tg-s6z2\">02</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">99</td>\n    <td class=\"tg-s6z2\">2100</td>\n    <td class=\"tg-s6z2\">01</td>\n  </tr>\n</tbody></table>\n<p>How many tuples does the result of the following relational algebra expression contain? Assume that the schema of A ∪ B is the same as that of A.\n$$(A\\cup B)\\bowtie _{A.Id &gt; 40 \\vee C.Id &lt; 15} C$$</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "9"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose R<sub>1</sub> (<u>A,</u> B) and R<sub>2</sub> (<u>C,</u> D) are two relation schemas. Let r<sub>1</sub> and r<sub>2</sub> be the\ncorresponding relation instances. B is a foreign key that refers to C in R<sub>2</sub>. If data in r<sub>1</sub> and r<sub>2</sub> satisfy referential integrity constraints, which of the following is <b>ALWAYS TRUE</b>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\prod_{B}(r_{1})- \\prod _{C}(r_{2})= \\varnothing$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\prod_{C}(r_{2})- \\prod _{B}(r_{1})= \\varnothing$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\prod_{B}(r_{1}) = \\prod _{C}(r_{2})$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\prod_{B}(r_{1}) - \\prod _{C}(r_{2}) \\neq \\varnothing$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following relations A, B and C:\n<br><b>A</b>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">ID</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Name</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Age</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">12</td>\n    <td class=\"tg-s6z2\">Arun</td>\n    <td class=\"tg-s6z2\">60</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">15</td>\n    <td class=\"tg-s6z2\">Shreya</td>\n    <td class=\"tg-s6z2\">24</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">99</td>\n    <td class=\"tg-s6z2\">Rohit</td>\n    <td class=\"tg-s6z2\">11</td>\n  </tr>\n</tbody></table>\n<br><b>B</b>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">ID</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Name</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Age</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">15</td>\n    <td class=\"tg-s6z2\">Shreya</td>\n    <td class=\"tg-s6z2\">24</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">25</td>\n    <td class=\"tg-s6z2\">Hari</td>\n    <td class=\"tg-s6z2\">40</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">98</td>\n    <td class=\"tg-baqh\">Rohit</td>\n    <td class=\"tg-baqh\">20</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">99</td>\n    <td class=\"tg-s6z2\">Rohit</td>\n    <td class=\"tg-s6z2\">11</td>\n  </tr>\n</tbody></table>\n<br><b>C</b>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">ID</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Phone</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Area</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">10</td>\n    <td class=\"tg-s6z2\">2200</td>\n    <td class=\"tg-s6z2\">02</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">99</td>\n    <td class=\"tg-s6z2\">2100</td>\n    <td class=\"tg-s6z2\">01</td>\n  </tr>\n</tbody></table>\n<p>How many tuples does the result of the following SQL query contain?</p>\n<pre><code>SELECT A.Id \nFROM A \nWHERE A.Age &gt; ALL (SELECT B.Age \n                   FROM B \n                   WHERE B.Name = 'Arun')</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "0"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a relational table r with sufficient number of records, having attributes\nA<sub>1</sub>, A<sub>2</sub>,....., A<sub>n</sub> and let 1 $$ \\le $$ p $$ \\le $$ n. Two queries Q1 and Q2 are given below.\n<p>$$Q1: \\pi_{A_1, \\dots ,A_p} \\left(\\sigma_{A_p=c}\\left(r\\right)\\right)$$ where is a constant</p>\n<p>$$Q2: \\pi_{A_1, \\dots ,A_p} \\left(\\sigma_{c_1 \\leq A_p \\leq c_2}\\left(r\\right)\\right)$$ where c<sub>1</sub> and c<sub>2</sub> are constants</p>\n<p>The database can be configured to do ordered indexing on A<sub>p</sub> or hashing on A<sub>p</sub>. Which of the following statements is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Ordered indexing will always outperform hashing for both queries"
+      },
+      {
+        "identifier": "B",
+        "content": "Hashing will always outperform ordered indexing for both queries"
+      },
+      {
+        "identifier": "C",
+        "content": "Hashing will outperform ordered indexing on Q1, but not on Q2"
+      },
+      {
+        "identifier": "D",
+        "content": "Hashing will outperform ordered indexing on Q2, but not on Q1"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The following functional dependencies hold for relations R(A, B, C) and S(B, D, E):\n$$$\\eqalign{\n  &amp; B \\to A  \\cr \n  &amp; A \\to C \\cr} $$$\n<p>The relation R contains 200 tuples and the relation S contains 100 tuples. What is\nthe maximum number of tuples possible in the natural join R $$\\Join$$ S?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "100"
+      },
+      {
+        "identifier": "B",
+        "content": "200"
+      },
+      {
+        "identifier": "C",
+        "content": "300"
+      },
+      {
+        "identifier": "D",
+        "content": "2000"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Let R and S be two relations with the following schema\n<p>R (<u>P</u>, <u>Q</u>, R1, R2, R3)</p>\n<p>S (<u>P</u>, <u>Q</u>, S1, S2)</p>\nWhere {P, Q} is the key for both schemas. Which of the following queries are equivalent?\n<br>I. $$\\Pi_P \\left(R \\bowtie S\\right)$$\n<br>II. $$\\Pi_P \\left(R\\right) \\bowtie \\Pi_P\\left(S\\right)$$\n<br>III. $$\\Pi_P \\left(\\Pi_{P, Q} \\left(R\\right) \\cap \\Pi_{P,Q} \\left(S\\right) \\right)$$\n<br>IV. $$\\Pi_P \\left(\\Pi_{P, Q} \\left(R\\right) - \\left(\\Pi_{P,Q} \\left(R\\right) - \\Pi_{P,Q} \\left(S\\right)\\right)\\right)$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only I and II"
+      },
+      {
+        "identifier": "B",
+        "content": "Only I and III"
+      },
+      {
+        "identifier": "C",
+        "content": "Only I, II and III"
+      },
+      {
+        "identifier": "D",
+        "content": "Only I, III and IV"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Information about a collection of students is given by the relation <b>studInfo(studId, name, sex)</b>. The relation <b>enroll(studId, courseId)</b> gives which student has enrolled for (or taken) what course(s). Assume that every course is taken by at least one male and at least one female student. What does the following relational algebra expression represent?</p>\n$$\\eqalign{\n  &amp; \\prod\\nolimits_{courseId} {((\\prod\\nolimits_{studId} {({\\sigma _{sex = 'female'}}} }   \\cr \n  &amp; (studInfo)) \\times \\prod\\nolimits_{courseId} {(enroll)) - enroll)}  \\cr} $$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Courses in which all the female students are enrolled."
+      },
+      {
+        "identifier": "B",
+        "content": "Courses in which a proper subset of female students are enrolled."
+      },
+      {
+        "identifier": "C",
+        "content": "Courses in which only male students are enrolled."
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the relation <b>employee(name, sex, supervisorName)</b> with name as the key, supervisorName gives the name of the supervisor of the employee under consideration. What does the following Tuple Relational Calculus query produce?</p>\n$$\\eqalign{\n  &amp; \\{ e.name\\,|\\,employee(e) \\wedge   \\cr \n  &amp; (\\forall x)[\\neg employee(x) \\vee   \\cr \n  &amp; x.\\sup ervisorName \\ne e.name\\, \\vee   \\cr \n  &amp; x.sex = 'male']\\}  \\cr} $$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Names of employees with a male supervisor."
+      },
+      {
+        "identifier": "B",
+        "content": "Names of employees with no immediate male subordinates."
+      },
+      {
+        "identifier": "C",
+        "content": "Names of employees with no immediate female subordinates."
+      },
+      {
+        "identifier": "D",
+        "content": "Names of employees with a female supervisor."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a selection of the form σ<sub>A</sub> ≤ 100(r), where r is a relation with 1000 tuples. Assume that the attribute values for A among the tuples are uniformly distributed in the interval [ 0, 500 ]. Which one of the following options is the best estimate of the number of tuples returned by the given selection query? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "50"
+      },
+      {
+        "identifier": "B",
+        "content": "100"
+      },
+      {
+        "identifier": "C",
+        "content": "150"
+      },
+      {
+        "identifier": "D",
+        "content": "200"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following relation schemas :\n<p>b-Schema = (b-name, b-city, assets)\n<br>a-Schema = (a-num, b-name, bal)\n<br>d-Schema = (c-name, a-number)</p>\n<p>Let branch, account and depositor be respectively instances of the above schemas. Assume that account and depositor relations are much bigger than the branch relation.</p>\nConsider the following query: \n<br>П<sub>c-name</sub> (σ<sub>b-city = “Agra” ⋀ bal &lt; 0</sub> (branch $$ \\Join $$ (account $$ \\Join $$ depositor))\n<p>Which one of the following queries is the most efficient version of the above query ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "П<sub>c-name</sub> (σ<sub>bal &lt; 0</sub> (σ<sub>b-city = “Agra”</sub> branch $$ \\Join $$ account) $$ \\Join $$ depositor) "
+      },
+      {
+        "identifier": "B",
+        "content": "П<sub>c-name</sub> (σ<sub>b-city = “Agra”</sub>branch $$ \\Join $$ (σ<sub>bal &lt; 0</sub> account $$ \\Join $$ depositor))"
+      },
+      {
+        "identifier": "C",
+        "content": "П<sub>c-name</sub> (σ<sub>b-city = “Agra” </sub>branch $$ \\Join $$ σ<sub>b-city = “Agra” ⋀ bal &lt; 0</sub> account) $$ \\Join $$ depositor) "
+      },
+      {
+        "identifier": "D",
+        "content": "П<sub>c-name</sub> (σ<sub>b-city = “Agra” ⋀ bal &lt; 0</sub> account $$ \\Join $$ depositor))"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "A table <b>‘student’</b> with schema (roll, name, hostel, marks), and another table <b>‘hobby’</b> with schema (roll, hobbyname) contains records as shown below:\n<p><b>Table: student</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-4t8i{font-weight:bold;color:#fe0000;border-color:inherit;text-align:center;vertical-align:top}\n.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}\n.tg .tg-uys7{border-color:inherit;text-align:center}\n.tg .tg-jz3v{font-weight:bold;color:#fe0000;border-color:inherit;text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-jz3v\">Roll</th>\n    <th class=\"tg-jz3v\">Name</th>\n    <th class=\"tg-jz3v\">Hostel</th>\n    <th class=\"tg-4t8i\">Marks</th>\n  </tr>\n  <tr>\n    <td class=\"tg-uys7\">1798</td>\n    <td class=\"tg-uys7\">Manoj Rathod</td>\n    <td class=\"tg-uys7\">7</td>\n    <td class=\"tg-c3ow\">95</td>\n  </tr>\n  <tr>\n    <td class=\"tg-uys7\">2154</td>\n    <td class=\"tg-uys7\">Soumic Banerjee</td>\n    <td class=\"tg-uys7\">5</td>\n    <td class=\"tg-c3ow\">68</td>\n  </tr>\n  <tr>\n    <td class=\"tg-uys7\">2369</td>\n    <td class=\"tg-uys7\">Gumma Reddy</td>\n    <td class=\"tg-uys7\">7</td>\n    <td class=\"tg-c3ow\">86</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">2581</td>\n    <td class=\"tg-c3ow\">Pradeep Pendse</td>\n    <td class=\"tg-c3ow\">6</td>\n    <td class=\"tg-c3ow\">92</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">2643</td>\n    <td class=\"tg-c3ow\">Suhas Kulkarni</td>\n    <td class=\"tg-c3ow\">5</td>\n    <td class=\"tg-c3ow\">78</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">2711</td>\n    <td class=\"tg-c3ow\">Nitin Kadam</td>\n    <td class=\"tg-c3ow\">8</td>\n    <td class=\"tg-c3ow\">72</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">2872</td>\n    <td class=\"tg-c3ow\">Kiran Vora</td>\n    <td class=\"tg-c3ow\">5</td>\n    <td class=\"tg-c3ow\">92</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">2926</td>\n    <td class=\"tg-c3ow\">Manoj Kunkalikar <br></td>\n    <td class=\"tg-c3ow\">5</td>\n    <td class=\"tg-c3ow\">94</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">2959</td>\n    <td class=\"tg-c3ow\">Hemant Karkhanis <br></td>\n    <td class=\"tg-c3ow\">7</td>\n    <td class=\"tg-c3ow\">88</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">3125</td>\n    <td class=\"tg-c3ow\">Rajesh Doshi</td>\n    <td class=\"tg-c3ow\">5</td>\n    <td class=\"tg-c3ow\">82</td>\n  </tr>\n</tbody></table>\n<p><b>Table: hobby</b></p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Roll</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Hobbyname</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">1798</td>\n    <td class=\"tg-s6z2\">chess</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">1798</td>\n    <td class=\"tg-s6z2\">music <br></td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">2154</td>\n    <td class=\"tg-s6z2\">music</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">2369</td>\n    <td class=\"tg-s6z2\">swimming</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">2581</td>\n    <td class=\"tg-s6z2\">cricket</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">2643</td>\n    <td class=\"tg-s6z2\">chess</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">2643</td>\n    <td class=\"tg-s6z2\">hockey</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">2711</td>\n    <td class=\"tg-s6z2\">volleyball</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">2872</td>\n    <td class=\"tg-s6z2\">football</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">2926</td>\n    <td class=\"tg-s6z2\">cricket</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">2959</td>\n    <td class=\"tg-baqh\">photography<br></td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">3125</td>\n    <td class=\"tg-baqh\">music</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">3125</td>\n    <td class=\"tg-baqh\">chess</td>\n  </tr>\n</tbody></table>\n<p>The following SQL query is executed on the above tables:</p>\n<pre><code class=\"sql\">Select hostel\nFrom student natural join hobby\nWhere marks &gt; = 75 and roll between 2000 and 3000;</code></pre>\n<p>Relations S and H with the same schema as those of these two tables respectively contain the same information as tuples. A new relation S’ is obtained by the following relational algebra operation:</p>\n$$\\eqalign{\n  &amp; S' = \\prod\\nolimits_{hostel} {(({\\sigma _{S.roll = H.roll}}}   \\cr \n  &amp; ({\\sigma _{marks &gt; 75\\,\\,\\,and\\,\\,roll &gt; 2000\\,\\,and\\,\\,roll &lt; 3000}}(S))X(H)) \\cr} $$\n<p>The difference between the number of rows output by the SQL statement and the number of tuples in S’ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "0"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the relation <b>Student (<u>name,</u> sex, marks)</b>, where the primary key is shown underlined, pertaining to students in a class that has at least one boy and one girl. What does the following relational algebra expression produce?\n(Note: ρ is the rename operator). \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/9NQBCIMxVFLLZczE8/8w8ZUnChbRiI9Fbl4GuPEsyVtT1Xa/2ID1OT3QAMpMXRMu4WRVUR/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2004 Database Management System - Relational Algebra Question 23 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "names of girl students with the highest marks"
+      },
+      {
+        "identifier": "B",
+        "content": "names of girl students with more marks than some boy student"
+      },
+      {
+        "identifier": "C",
+        "content": "names of girl students with marks not less than some boy student "
+      },
+      {
+        "identifier": "D",
+        "content": "names of girl students with more marks than all the boy students"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following relational calculus expressions is not safe?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{t \\mid \\exists u \\in R_1\\left(t[A] = u[A]\\right) \\land \\neg \\exists s \\in R_2 \\left(t[A] = s[A]\\right)\\right\\}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{ t \\mid \\forall u \\in R_1\\left(u[A]=\"x\"\\Rightarrow \\exists s \\in R_2\\left(t[A] = s[A] \\land s[A] = u[A]\\right)\\right) \\right\\}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\{t \\mid \\neg (t \\in R_1)\\right\\}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{t \\mid \\exists u \\in R_1\\left(t[A]=u[A]\\right) \\land \\exists s \\in R_2 \\left(t[A] = s[A]\\right)\\right\\}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following query transformations (i.e. replacing the l.h.s. expression by the r.h.s. expression) is incorrect? R<sub>1</sub> and R<sub>2</sub> are relations, C<sub>1</sub>, C<sub>2</sub> are selection conditions and A<sub>1</sub>, A<sub>2</sub> are attributes of R<sub>1</sub>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sigma_{C_1} \\left(\\sigma_{C_2}\\left(R_1\\right)\\right) \\to \\sigma_{C_2} \\left(\\sigma_{C_1}\\left(R_1\\right)\\right)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sigma_{C_1} \\left(\\pi_{A_1}\\left(R_1\\right)\\right) \\to \\pi_{A_1} \\left(\\sigma_{C_1}\\left(R_1\\right)\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sigma_{C_1} \\left(R_1 \\cup R_2\\right) \\to  \\sigma_{C_1}\\left(R_1\\right) \\cup \\sigma_{C_1} \\left(R_2\\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pi_{A_1} \\left(\\sigma_{C_1}\\left(R_1\\right)\\right) \\to \\sigma_{C_1} \\left(\\pi_{A_1}\\left(R_1\\right)\\right)$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "<p>A library relational database system uses the following schema</p>\n<p>USERS (User #, User Name, Home Town)</p>\n<p>BOOKS (Books # Book Title, Author Name)</p> <p>ISSUED (Book #, User #, Date)</p>\nExplain in one English sentence, what each of the following relational algebra queries is designed to determine.\n<p>(a) $$\\sigma_{ \\text{User#}=6}\\left(\\pi_{\\text{User#, Book Title}}\\left(\\left(\\text{USERS} \\bowtie \\text{ISSUED}\\right) \\bowtie \\text{BOOKS}\\right)\\right)$$</p>\n(b) $$\\pi_{\\text{Author Name}}\\left(\\text{BOOKS} \\bowtie \\sigma_{\\text{Home Town=Delhi}} \\left(\\text{USERS} \\bowtie \\text{ISSUED}\\right)\\right)$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "<p>(a) Select the titles of the books issued to User# = 6</p>\n<p>(b) Select author names of the books issued to users who are from Delhi.</p> ",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following Python declarations of two lists.</p>\n<p>$$ \\begin{aligned} & A=[1,2,3] \\\\ & B=[4,5,6] \\end{aligned} $$</p>\n<p>Which one of the following statements results in $A=[1,2,3,4,5,6]$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " A.extend(B)\n"
+      },
+      {
+        "identifier": "B",
+        "content": " A.append(B)\n"
+      },
+      {
+        "identifier": "C",
+        "content": " A.update(B)\n"
+      },
+      {
+        "identifier": "D",
+        "content": " A.insert(B)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Thus is a fact based question related to properties of Python.</p>\n<p>So, A extend B is correct.</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following Python code snippet.</p>\n<p>$\\mathrm{A}=\\{$ \"this\",\"that\" $\\}$</p>\n<p>$B=\\{$ \"that\",\"other\" $\\}$</p>\n<p>$\\mathrm{C}=\\{$ \"other\",\"this\"}</p>\n<p>while \"other\" in C :</p>\n<p>if \"this\" in A :</p>\n<p>$\\mathrm{A}, \\mathrm{B}, \\mathrm{C}=\\mathrm{A}-\\mathrm{B}, \\mathrm{B}-\\mathrm{C}, \\mathrm{C}-\\mathrm{A}$</p>\n<p>if \"that\" in B ;</p>\n<p>$\\mathrm{A}, \\mathrm{B}, \\mathrm{C}=\\mathrm{C}|\\mathrm{A}, \\mathrm{A}| \\mathrm{B}, \\mathrm{B} \\mid \\mathrm{C}$</p>\n<p>When the above program is executed, at the end, which of the following sets contains \"this\"?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only A\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Only B\n"
+      },
+      {
+        "identifier": "C",
+        "content": " Only C\n"
+      },
+      {
+        "identifier": "D",
+        "content": " A, C"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>After first iteration of while loop</p>\n<p>$$ \\begin{aligned} & A=\\{\\text { this, other }\\} \\\\ & B=\\{\\text { that }, \\text { this }\\} \\\\ & C=\\{\\text { other }, \\text { that }\\} \\end{aligned} $$</p>\n<p>After second iteration of while loop</p>\n<p>$$ \\begin{aligned} & A=\\{\\text { other }\\} \\\\ & B=\\{\\text { this }\\} \\\\ & C=\\{\\text { that }\\} \\end{aligned} $$</p>\n<p>B set contain \"this\"</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following Python code snippet.</p>\n<p>$\\operatorname{def} f(a, b)$ :</p>\n<p>if ( $a==0$ ):</p>\n<p>return b</p>\n<p>$$ \\begin{aligned} &\\begin{aligned} & \\text { if }(\\mathrm{a} \\% 2==1) \\text { : } \\\\ & \\text { return } 2 * f((a-1) / 2, b) \\\\ & \\text { return } b+f(a-1, b) \\\\ & \\operatorname{print}(f(15,10)) \\end{aligned}\\\\ &\\text { The value printed by the code snippet is__________ } \\end{aligned} $$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "160",
+    "explanation": "<p>$$\\eqalign{   & f(15,0)  \\cr    & \\,\\,\\,\\,\\,\\,\\, \\downarrow   \\cr    & 2x\\,f(7,10)  \\cr    & \\,\\,\\,\\,\\,\\,\\, \\downarrow   \\cr    & 2x\\,f(3,10)  \\cr    & \\,\\,\\,\\,\\,\\,\\, \\downarrow   \\cr    & 2x\\,f(1,10)  \\cr    & \\,\\,\\,\\,\\,\\,\\, \\downarrow   \\cr    & 2x\\,f(0,10)  \\cr    & \\,\\,\\,\\,\\,\\,\\, \\downarrow   \\cr    & 10 \\cr} $$</p>\n<p>Output $=2 \\times 10 \\times 2 \\times 2 \\times 2=160$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following pseudocode.</p>\n<p>Create empty stack S</p>\n<p>set $x=0$, flag $=0$, sum $=0$</p>\n<p>Push $x$ onto $S$</p>\n<p>while ( $S$ is not empty) $\\{$</p>\n<p>if (flag equals 0){</p>\n<p>Set $x=x+1$</p>\n<p>Push $x$ onto S}</p>\n<p>if ( $x$ equals 8 ):</p>\n<p>Set flag $=1$</p>\n<p>if (flag equals 1){</p>\n<p>$x=\\operatorname{Pop}(\\mathrm{S})$</p>\n<p>if ( $x$ is odd):</p>\n<p>Pop (S)</p>\n<p>Set sum $=\\operatorname{sum}+\\mathrm{x}\\}$</p>\n<p>}</p>\n<p>Output sum</p>\n<p>The value of sum output by a program executing the above pseudocode is________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "24",
+    "explanation": "<p>$$ \\begin{array}{|c|} \\hline 8 \\\\ \\hline 7 \\\\ \\hline 6 \\\\ \\hline 5 \\\\ \\hline 4 \\\\ \\hline 3 \\\\ \\hline 2 \\\\ \\hline 1 \\\\ \\hline 0 \\\\ \\hline \\end{array} $$</p>\n<p>By running the while loop.</p>\n<p>$$ x \\rightarrow 0 \\quad 1 \\quad 2 \\quad 39 $$</p>\n<p>$$ \\begin{aligned} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,& 5 \\\\ & 6 \\\\ & 7 \\\\ & 8 \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\begin{aligned} & \\text { Flag } \\rightarrow 1 \\\\ & \\text { As } x=8 \\\\ & \\text { Sum }=8+7+5+3+1=24 \\end{aligned}\\\\ &\\text { Hence, the correct answer is } 24 \\text {. } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  }
+]

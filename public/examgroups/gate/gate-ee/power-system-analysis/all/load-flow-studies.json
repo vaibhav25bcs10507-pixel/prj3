@@ -1,0 +1,921 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>During a power failure, a domestic household uninterruptible power supply (UPS) supplies AC power to a limited number of lights and fans in various rooms. As per a NewtonRaphson load-flow formulation, the UPS would be represented as a</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Slack bus\n"
+      },
+      {
+        "identifier": "B",
+        "content": "PV bus\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$P Q$ bus\n"
+      },
+      {
+        "identifier": "D",
+        "content": "PQV bus"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>In a Newton–Raphson load-flow model you have three standard bus types:</p>\n\n<p><p>Slack bus  </p>\n<p>• |V| and δ are held fixed  </p>\n<p>• P and Q are the unknowns that “pick up” all system mismatches  </p></p>\n<p><p>PV bus  </p>\n<p>• P (generation) and |V| are fixed  </p>\n<p>• Q and δ are the unknowns  </p></p>\n<p><p>PQ bus  </p>\n<p>• P and Q (loads) are fixed  </p>\n<p>• |V| and δ are the unknowns  </p></p>\n\n<p>A domestic UPS maintains the AC voltage magnitude and frequency (hence the voltage angle reference) and supplies whatever real and reactive power the loads demand.  That exactly matches the slack‐bus formulation:</p>\n<p>$$|V|=V_{\\rm set},\\quad \\delta=\\delta_{\\rm set},\\quad P,\\;Q\\text{ unknown (to be solved)}$$</p>\n<p>So the UPS is modeled as a Slack bus (Option A).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ee-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The figure shows the single line diagram of a 4-bus power network. Branches $b_1$, $b_2$, $b_3$, and $b_4$ have impedances $4z$, $z$, $2z$, and $4z$ per-unit (pu), respectively, where $z = r + jx$, with $r &gt; 0$ and $x &gt; 0$. The current drawn from each load bus (marked as arrows) is equal to $I$ pu, where $I \\neq 0$. If the network is to operate with minimum loss, the branch that should be opened is</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxokz93j/3c3e7029-4b40-439e-b438-62696ea44e18/9bfa95f0-2fbd-11ef-9032-99cc6a311420/file-jaoe38c1lxokz93k.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxokz93j/3c3e7029-4b40-439e-b438-62696ea44e18/9bfa95f0-2fbd-11ef-9032-99cc6a311420/file-jaoe38c1lxokz93k.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2024 Power System Analysis - Load Flow Studies Question 5 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$b_1$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$b_2$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$b_3$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$b_4$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ee-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a power system consisting of $N$ number of buses. Buses in this power system are categorized into slack bus. $P V$ buses and $P Q$ buses for load flow study. The number of $P Q$ buses is $N_L$. The balanced Newton-Raphson method is used to carry out load flow study in polar form $H, S, M$ and $R$ are sub-matrices of the Jacobian matrix $J$ as shown below:</p>\n<p>$$ \\left[\\begin{array}{l} \\Delta P \\\\ \\Delta Q \\end{array}\\right]=J\\left[\\begin{array}{l} \\Delta \\delta \\\\ \\Delta \\gamma \\end{array}\\right] \\text {, where } J=\\left[\\begin{array}{ll} H & S \\\\ M & R \\end{array}\\right] $$</p>\n<p>The dimension of the sub matrix $M$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$N_L \\times(N-1)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$(N-1) \\times\\left(N-1-N_L\\right)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$N_L \\times\\left(N-1+N_L\\right)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$(N-1) \\times\\left(N-1+N_L\\right)$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Jacobian matrix is given by,</p>\n<p>$$ J=\\left[\\begin{array}{ll} \\frac{\\partial P}{\\partial \\delta} & \\frac{\\partial P}{\\partial \\gamma} \\\\ \\frac{\\partial Q}{\\partial \\delta} & \\frac{\\partial Q}{\\partial \\gamma} \\end{array}\\right] $$</p>\n<p>Comparing it with Jacobian matrix given in question</p>\n<p>$$ J=\\left[\\begin{array}{ll} H & S \\\\ M & R \\end{array}\\right] $$</p>\n<p>$$ \\begin{aligned}So, \\,\\,& M=\\frac{\\partial Q}{\\partial \\delta} \\\\ & Q \\rightarrow \\text { Known } \\\\ & \\delta \\rightarrow \\text { Unknown } \\end{aligned} $$</p>\n<p>So , size of sub-Jacobian matrix $M$ is given by,</p>\n<p>$$ =N_L \\times(N-1) $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ee-2021",
+    "difficulty": null
+  },
+  {
+    "content": "A 1000 $$ \\times $$ 1000 bus admittance matrix for an electric power system has 8000 non-zero\nelements. The minimum number of branches (transmission lines and transformers) in this\nsystem are _____ (up to 2 decimal places).\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "3500 to 3500",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ee-2018",
+    "difficulty": null
+  },
+  {
+    "content": "The figure show the per-phase representation of a phase-shifting transformer connected between buses $$1$$ and $$2,$$ where $$\\alpha $$ is a complex number with non-zero real and imaginary parts.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/Xw1fbBV0RYiBdMl7Z/2qVFWdUmLS7uE3iWtguFFsFt2FaFh/xBcVPjVSIWFdyzFlEEg75k/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2017 Set 2 Power System Analysis - Load Flow Studies Question 24 English\"> \n<br>For the given circuit, $${Y_{bus}}$$ and $${Z_{bus}}$$ are bus admittance matrix and bus impedance matrix, respectively, each of size $$2\\, \\times \\,2$$. Which one of the following statements is true? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both $${Y_{bus}}$$ and $${Z_{bus}}$$ are symmetric"
+      },
+      {
+        "identifier": "B",
+        "content": "$${Y_{bus}}$$ is symmetric and $${Z_{bus}}$$ is unsymmetric"
+      },
+      {
+        "identifier": "C",
+        "content": "$${Y_{bus}}$$ is unsymmetric and $${Z_{bus}}$$ is symmetric "
+      },
+      {
+        "identifier": "D",
+        "content": "Both $${Y_{bus}}$$ and $${Z_{bus}}$$ are unsymmetric"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In a load flow problem solved by Newton-Raphson method with polar coordinates, the size of the Jacobian is $$\\,100\\,\\, \\times \\,\\,100.$$ If there are $$20$$ PV buses in addition to PQ buses and a slack bus, the total number of buses in the system is ________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "61 to 61",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A 10-bus power system consists of four generator buses indexed as G1, G2, G3, G4 and six load buses indexed as L1, L2, L3, L4, L5, L6. The generator bus G1 is considered as slack bus, and the load buses L3 and L4 are voltage controlled buses. The generator at bus G2 cannot supply the required reactive power demand, and hence it is operating at its maximum reactive power limit. The number of non-linear equations required for solving the load flow problem using Newton-Raphson method in polar form is ____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "14 to 14",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A $$3$$-bus power system is shown in the figure below, where the diagonal elements of $$Y$$-bus matrix are: $${Y_{11}} =  - j12\\,pu,\\,\\,\\,{Y_{22}} =  - j15\\,pu\\,\\,$$ and $$\\,{Y_{33}} =  - j7\\,pu.$$\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/z9msz2YWBicsedicu/yzEEbLE1yCFee0LEJs2ZKBxlK5pn1/DmRmNo0f0saaUhdeK6QDdP/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2017 Set 1 Power System Analysis - Load Flow Studies Question 25 English\"> \n<p>The per unit values of the line reactance's $$p, q$$ and $$r$$ shown in the figure are </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$p =  - 0.2,\\,\\,q =  - 0.1,\\,\\,r =  - 0.5$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$p =   0.2,\\,\\,q =   0.1,\\,\\,r =   0.5$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$p =  - 5,\\,\\,q =  - 10,\\,\\,r =  - 2$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$p =   5,\\,\\,q =   10,\\,\\,r =   2$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In a 100 bus power system, there are 10 generators. In a particular iteration of Newton Raphson load flow technique (in polar coordinates), two of the PV buses are converted to PQ type. In this iteration.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the number of unknown voltage angles increases by two and the number of unknown voltage magnitudes increases by two.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "the number of unknown voltage angles remains unchanged and the number of unknown voltage magnitudes increases by two."
+      },
+      {
+        "identifier": "C",
+        "content": "the number of unknown voltage angles increases by two and the number of unknown voltage magnitudes decreases by two.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "the number of unknown voltage angles remains unchanged and the number of unknown voltage magnitudes decreases by two "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ee-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The magnitude of three-phase fault currents at buses A and B of a power system are 10 pu and 8 pu, respectively. Neglect all resistances in the system and consider the pre-fault system to be unloaded. The pre-fault voltage at all buses in the system is 1.0 pu. The voltage magnitude at bus B during a three-phase fault at bus A is 0.8 pu. The voltage magnitude at bus A during a three-phase fault at bus B in pu, is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.83 to 0.85",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ee-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A $$3$$-bus power system network consists of $$3$$ transmission lines. The bus admittance matrix of the uncompensated system is\n<br>$$\\left[ {\\matrix{\n   { - j6} &amp; {j3} &amp; {j4}  \\cr \n   {j3} &amp; { - j7} &amp; {j5}  \\cr \n   {j4} &amp; {j5} &amp; { - j8}  \\cr \n\n } } \\right]\\,pu$$\n<br>If the shunt capacitance of all transmission lines is $$50$$% compensated, the imaginary part of the $$3$$<sup>rd</sup> row $$3$$<sup>rd</sup> column element (in $$pu$$) of the bus admittance matrix after compensation is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-j7.0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-j8.5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$-j7.5$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$-j9.0$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A 183-bus power system has 150PQ buses and 32 PV buses. In the general case, to obtain the load flow solution using Newton-Raphson method in polar coordinates, the minimum number of simultaneous equations to be solved is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "332 to 332",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ee-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The bus admittance matrix of a three-bus three-line system is\n<br>$$y = j\\left[ {\\matrix{\n   { - 13} &amp; {10} &amp; 5  \\cr \n   {10} &amp; { - 18} &amp; {10}  \\cr \n   5 &amp; {10} &amp; { - 13}  \\cr \n\n } } \\right]$$\n<br>If each transmission line between the two buses is represented by an equivalent $$\\pi \\,$$ network, the magnitude of the shunt susceptance of the line connecting bus $$1$$ and $$2$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ee-2012",
+    "difficulty": null
+  },
+  {
+    "content": "A power system consists of $$300$$ buses out of which $$20$$ buses are generator buses, $$25$$ buses are the ones with reactive power support and $$15$$ buses are the ones with fixed shunt capacitors. All the other buses are load buses. It is proposed to perform a load flow analysis for the system using Newton-Raphson method. The size of the Newton-Raphson Jacobian matrix is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$553 \\times 553$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$540 \\times 540$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$555 \\times 555$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$554 \\times 554$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ee-2003",
+    "difficulty": null
+  },
+  {
+    "content": "If the reference bus is changed in two load flow runs with same system data and power obtained for reference bus taken as specified P and Q in the latter run",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The system losses will be unchanged but complex bus voltages will change."
+      },
+      {
+        "identifier": "B",
+        "content": "The system losses will change but complex bus voltages remain unchanged."
+      },
+      {
+        "identifier": "C",
+        "content": "The system losses as well as complex bus voltage will change."
+      },
+      {
+        "identifier": "D",
+        "content": "The system losses as well as complex bus voltage will be unchanged."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ee-1996",
+    "difficulty": null
+  },
+  {
+    "content": "In load-flow analysis, a voltage-controlled bus is treated as a load bus in subsequent iteration for a _________limit is violated.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Reactive Power ",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ee-1995",
+    "difficulty": null
+  },
+  {
+    "content": "In load flow analysis, the load connected at a bus is represented as ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Constant current drawn from the Bus"
+      },
+      {
+        "identifier": "B",
+        "content": "Constant impedance connected at the bus"
+      },
+      {
+        "identifier": "C",
+        "content": "Voltage and frequency dependent source at the bus"
+      },
+      {
+        "identifier": "D",
+        "content": "Constant real and reactive power drawn from the bus."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ee-1993",
+    "difficulty": null
+  },
+  {
+    "content": "In load flow studies of a power system, the quantities specified at a voltage-controlled bus are ____________and___________",
+    "options": [],
+    "correct_options": [],
+    "answer": "Voltage, Power",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ee-1992",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For the three-bus lossless power network shown in the figure, the voltage magnitudes at all the buses are equal to 1 per unit (pu), and the differences of the voltage phase angles are very small. The line reactances are marked in the figure, where $\\alpha$, $\\beta$, $\\gamma$, and $x$ are strictly positive. The bus injections $P_1$ and $P_2$ are in pu. If $P_1 = mP_2$, where $m &gt; 0$, and the real power flow from bus 1 to bus 2 is 0 pu, then which one of the following options is correct?</p><p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxolr8jy/e0bb79e2-3505-442c-b1b1-e02f99f6bd03/a636f2e0-2fc0-11ef-9032-99cc6a311420/file-jaoe38c1lxolr8jz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxolr8jy/e0bb79e2-3505-442c-b1b1-e02f99f6bd03/a636f2e0-2fc0-11ef-9032-99cc6a311420/file-jaoe38c1lxolr8jz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2024 Power System Analysis - Load Flow Studies Question 4 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\gamma = m\\beta$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\beta = m\\gamma$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\alpha = m\\gamma$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\alpha = m\\beta$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ee-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A 3-bus network is shown. Consider generators as ideal voltage sources. If rows 1,2 and 3 of the $Y_{h s}$ matrix correspond to bus 1,2 and 3 respectively, then $Y_{h s}$ of the network is</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh62vr4q/2f70d340-62bd-4198-9169-571180e1564c/0e3c87a0-b185-11f0-9ec5-a735814724b3/file-jaoe38c1mh62vr4r.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh62vr4q/2f70d340-62bd-4198-9169-571180e1564c/0e3c87a0-b185-11f0-9ec5-a735814724b3/file-jaoe38c1mh62vr4r.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2021 Power System Analysis - Load Flow Studies Question 1 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\left[\\begin{array}{ccc}-4 j & j & j \\\\ j & -4 j & j \\\\ j & j & -4 j\\end{array}\\right]$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\left[\\begin{array}{ccc}-4 j & 2 j & 2 j \\\\ 2 j & -4 j & 2 j \\\\ 2 j & 2 j & -4 j\\end{array}\\right]$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\left[\\begin{array}{ccc}-\\frac{3}{4} j & \\frac{1}{4} j & \\frac{1}{4} j \\\\ \\frac{1}{4} j & -\\frac{3}{4} j & \\frac{1}{4} j \\\\ \\frac{1}{4} j & \\frac{1}{4} j & \\frac{-3}{4} j\\end{array}\\right]$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\left[\\begin{array}{ccc}\\frac{-1}{2} j & \\frac{1}{4} j & \\frac{1}{4} j \\\\ \\frac{1}{4} j & -\\frac{1}{2} j & \\frac{1}{4} j \\\\ \\frac{1}{4} j & \\frac{1}{4} j & \\frac{-1}{2} j\\end{array}\\right]$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh62vq23/3a104368-66a8-4f69-8172-5993bdc46328/0d6847b0-b185-11f0-9ec5-a735814724b3/file-jaoe38c1mh62vq24.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh62vq23/3a104368-66a8-4f69-8172-5993bdc46328/0d6847b0-b185-11f0-9ec5-a735814724b3/file-jaoe38c1mh62vq24.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2021 Power System Analysis - Load Flow Studies Question 1 English Explanation\">From the above circuit diagram, output voltage is given by,</p>\n<p>$$ V_0=j\\left[I_1+I_2+I_3\\right] $$</p>\n<p>Applying KVL at bus 1,</p>\n<p>$$ \\begin{aligned} &amp; V_1-I_1[j]=j\\left[I_1+I_2+I_3\\right] \\\\ &amp; j 2 I_1+j I_2+j I_3=V_1 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} $$</p>\n<p>Similarly at bus 2,</p>\n<p>$$ j I_1+j 2 I_2+j I_3=V_2 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)$$</p>\n<p>Similarly at bus 3,</p>\n<p>$$ j I_1+j I_2+j 2 I_3=V_3 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)$$</p>\n<p>Solving equation (i), (ii) and (iii),</p>\n<p>$$ \\begin{aligned} &amp; I_1=-\\frac{3}{4} j V_1+\\frac{1}{4} j V_2+\\frac{1}{4} j V_3 \\\\ &amp; I_2=\\frac{1}{4} j V_1-\\frac{3}{4} j V_2+\\frac{1}{4} j V_3 \\\\ &amp; I_3=\\frac{1}{4} j V_1+\\frac{1}{4} j V_2-\\frac{3}{4} j V_3 \\\\ Hence,\\,\\,&amp; Y \\text { bus }=\\left[\\begin{array}{ccc} -\\frac{3}{4} j &amp; \\frac{1}{4} j &amp; \\frac{1}{4} j \\\\ \\frac{1}{4} j &amp; \\frac{-3}{4} j &amp; \\frac{1}{4} j \\\\ \\frac{1}{4} j &amp; \\frac{1}{4} j &amp; \\frac{-3}{4} j \\end{array}\\right] \\end{aligned} $$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ee-2021",
+    "difficulty": null
+  },
+  {
+    "content": "The per-unit power output of a salient-pole generator which is connected to an infinite bus,\nis given by the expression, P = 1.4 sin $$\\delta $$ + 0.15 sin 2$$\\delta $$, where $$\\delta $$ is the load angle. Newton-Raphson method is used to calculate the value of $$\\delta $$ for P = 0.8 pu. If the initial guess is\n$$30^\\circ $$, then its value (in degree) at the end of the first iteration is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$15^\\circ $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$28.48^\\circ $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$31.20^\\circ $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$28.74^\\circ $$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ee-2018",
+    "difficulty": null
+  },
+  {
+    "content": "The bus admittance matrix for a power system network is\n$$$\\left[ {\\matrix{\n   { - j39.9} &amp; {j20} &amp; {j20}  \\cr \n   {j20} &amp; { - j39.9} &amp; {j20}  \\cr \n   {j20} &amp; {j20} &amp; { - j39.9}  \\cr \n\n } } \\right]\\,pu.$$$\n<br>There is a transmission  line connected between buses $$1$$ and $$3,$$ which is represented by the circuit shown in figure. \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/fYPRrFt8DMd00vp4F/aJwAqyoZdLJXnmdda470XqCwtZD4o/s60mQCIKiUwJtGNirhcNWW/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2017 Set 1 Power System Analysis - Load Flow Studies Question 10 English\"> \n<p>If this transmission line is removed from service what is the modified bus admittance matrix? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {\\matrix{\n   { - j19.9} &amp; {j20} &amp; 0  \\cr \n   {j20} &amp; { - j39.9} &amp; {j20}  \\cr \n   0 &amp; {j20} &amp; { - j19.9}  \\cr \n\n } } \\right]\\,pu$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {\\matrix{\n   { - j39.95} &amp; {j20} &amp; 0  \\cr \n   {j20} &amp; { - j39.9} &amp; {j20}  \\cr \n   0 &amp; {j20} &amp; { - j39.95}  \\cr \n\n } } \\right]\\,pu$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\matrix{\n   { - j19.95} &amp; {j20} &amp; 0  \\cr \n   {j20} &amp; { - j39.9} &amp; {j20}  \\cr \n   0 &amp; {j20} &amp; { - j29.95}  \\cr \n\n } } \\right]\\,pu$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\matrix{\n   { - j19.95} &amp; {j20} &amp; {j20}  \\cr \n   {j20} &amp; { - j39.9} &amp; {j20}  \\cr \n   {j20} &amp; {j20} &amp; { - j19.95}  \\cr \n\n } } \\right]\\,pu$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Determine the correctness or otherwise of the following Assertion (a) and the Reason (R).\n<br><b>Assertion (A):</b>  Fast decoupled load flow method gives approximate load flow solution because it uses several assumptions.\n<br><b>Reason (R):</b>  Accuracy depends on the power mismatch vector tolerance.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both (A) and (R) are true and (R) is the correct reason for (A) "
+      },
+      {
+        "identifier": "B",
+        "content": "Both (A) and (R) are true but (R) is not the correct reason for (A) "
+      },
+      {
+        "identifier": "C",
+        "content": "Both (A) and (R) are false "
+      },
+      {
+        "identifier": "D",
+        "content": "(A) is false and (R) is true "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the following network, the voltage magnitudes at all buses are equal to $$1$$ p.u., the voltage phase angles are very small, and the line resistance are negligible. All the line reactances are equal to $$j1\\Omega .$$ \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/KqwgLWk8AdjFChRjo/KEcfoMevEpnZDUiDM9LcVVt3pvibI/zbIPlkGF4fWBN2YLnqleGW/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2013 Power System Analysis - Load Flow Studies Question 13 English\"> \n<p>The voltage phase angles in rad at buses $$2$$ and $$3$$ are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\theta _2} =  - 0.1,\\,\\,\\,{\\theta _3} =  - 0.2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\theta _2} =   0,\\,\\,\\,{\\theta _3} =  - 0.1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\theta _2} =   0.1,\\,\\,\\,{\\theta _3} =  0.1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\theta _2} =   0.1,\\,\\,\\,{\\theta _3} =   0.2$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ee-2013",
+    "difficulty": null
+  },
+  {
+    "content": "For a power system network with $$n$$ nodes,  $${Z_{33}}$$ of its bus impedance matrix is $$j0.5$$ per unit. The voltage at mode $$3$$ is $$1.3\\angle  - {10^0}\\,\\,$$ per unit. If a capacitor having reactance of $$-j3.5$$ per unit is now added to the network  between  node $$3$$ and the reference node, the current drawn by the capacitor per unit as",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.325\\angle  - {100^0}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.325\\angle  - {80^0}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.371\\angle  - {100^0}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.433\\angle  - {80^0}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ee-2013",
+    "difficulty": null
+  },
+  {
+    "content": "In the following network, the voltage magnitudes at all buses are equal to $$1$$ p.u., the voltage phase angles are very small, and the line resistance are negligible. All the line reactances are equal to $$j1\\Omega .$$ \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/KqwgLWk8AdjFChRjo/KEcfoMevEpnZDUiDM9LcVVt3pvibI/zbIPlkGF4fWBN2YLnqleGW/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2013 Power System Analysis - Load Flow Studies Question 12 English\"> \n<p>If the base impedance and the line-to-line base voltage are $$100\\Omega $$ and $$\\,100kV,\\,\\,$$ respectively, then the real power in MW delivered by the generator connected at the slack bus is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-10$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$20$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ee-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A three–bus network is shown in the figure below indicating the p.u. impedances of each element\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/ROgeVq22UnVgjXgUZ/8BWacW4uaq59PNxvM85sV2kU5OAi8/RghfLTmdhBnQ7eSBma31aF/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2011 Power System Analysis - Load Flow Studies Question 15 English\"> \n<p>The bus admittance matrix, $$Y$$-$$bus,$$ of the network is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$j\\left[ {\\matrix{\n   {0.3} &amp; { - 0.2} &amp; 0  \\cr \n   { - 0.2} &amp; {0.12} &amp; {0.08}  \\cr \n   0 &amp; {0.08} &amp; {0.02}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$j\\left[ {\\matrix{\n   { - 15} &amp; 5 &amp; 0  \\cr \n   5 &amp; {7.5} &amp; { - 12.5}  \\cr \n   0 &amp; { - 12.5} &amp; {2.5}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$j\\left[ {\\matrix{\n   {0.1} &amp; {0.2} &amp; 0  \\cr \n   {0.2} &amp; {0.12} &amp; { - 0.08}  \\cr \n   0 &amp; { - 0.08} &amp; {0.10}  \\cr \n\n } } \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$j\\left[ {\\matrix{\n   { - 10} &amp; 5 &amp; 0  \\cr \n   5 &amp; {7.5} &amp; {12.5}  \\cr \n   0 &amp; {12.5} &amp; { - 10}  \\cr \n\n } } \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ee-2011",
+    "difficulty": null
+  },
+  {
+    "content": "For the $${Y_{bus}}$$ matrix of a $$4$$-bus system given in per unit, the buses having shunt elements are\n$$${Y_{BUS}} = j\\left[ {\\matrix{\n   { - 5} &amp; 2 &amp; {2.5} &amp; 0  \\cr \n   2 &amp; { - 10} &amp; {2.5} &amp; 4  \\cr \n   {2.5} &amp; {2.5} &amp; { - 9} &amp; 4  \\cr \n   0 &amp; 4 &amp; 4 &amp; { - 8}  \\cr \n\n } } \\right]$$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ and $$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ and $$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ and $$2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1,2$$ and $$4$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ee-2009",
+    "difficulty": null
+  },
+  {
+    "content": "For a power system the admittance and impedance matrices for the fault studies are as follows.\n$$$\\eqalign{\n  &amp; {Y_{bus}} = \\left[ {\\matrix{\n   { - j8.75} &amp; {j1.25} &amp; {j2.50}  \\cr \n   {j1.25} &amp; { - j6.25} &amp; {j2.50}  \\cr \n   {j2.50} &amp; {j2.50} &amp; { - j5.00}  \\cr \n\n } } \\right]  \\cr \n  &amp; {Z_{bus}} = \\left[ {\\matrix{\n   {j0.16} &amp; {j0.08} &amp; {j0.12}  \\cr \n   {j0.08} &amp; {j0.24} &amp; {j0.16}  \\cr \n   {j0.12} &amp; {j0.16} &amp; {j0.34}  \\cr \n\n } } \\right] \\cr} $$$\n<p>The pre-fault voltages are $$1.0$$ $$p.u.$$ at all the buses. The system was unloaded prior to the fault. A solid $$3$$ phase fault takes place at bus $$2.$$</p>\n<p>The post fault voltages at buses $$1$$ and $$3$$ in per unit respectively are</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.24,0.63$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.31, 0.76$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.33, 0.67$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.67, 0.33$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ee-2006",
+    "difficulty": null
+  },
+  {
+    "content": "For a power system the admittance and impedance matrices for the fault studies are as follows.\n$$$\\eqalign{\n  &amp; {Y_{bus}} = \\left[ {\\matrix{\n   { - j8.75} &amp; {j1.25} &amp; {j2.50}  \\cr \n   {j1.25} &amp; { - j6.25} &amp; {j2.50}  \\cr \n   {j2.50} &amp; {j2.50} &amp; { - j5.00}  \\cr \n\n } } \\right]  \\cr \n  &amp; {Z_{bus}} = \\left[ {\\matrix{\n   {j0.16} &amp; {j0.08} &amp; {j0.12}  \\cr \n   {j0.08} &amp; {j0.24} &amp; {j0.16}  \\cr \n   {j0.12} &amp; {j0.16} &amp; {j0.34}  \\cr \n\n } } \\right] \\cr} $$$\n<p>The pre-fault voltages are $$1.0$$ $$p.u.$$ at all the buses. The system was unloaded prior to the fault. A solid $$3$$ phase fault takes place at bus $$2.$$</p>\n <p>The per unit fault feeds from generators connected to buses $$1$$ and $$2$$ respectively are </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1.20, 2.51$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1.55, 2.61$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1.66, 2.50$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5.00,2.50$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ee-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The Gauss Seidel load flow method has following disadvantages. Tick the incorrect student. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Unreliable convergence "
+      },
+      {
+        "identifier": "B",
+        "content": "Slow convergence "
+      },
+      {
+        "identifier": "C",
+        "content": "Choice of slack bus effects convergence "
+      },
+      {
+        "identifier": "D",
+        "content": "A good initial guess for voltages is essential for convergence"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ee-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The network shown in the given figure has impedances in p.u. as indicated. The diagonal element $$Y22$$ of the bus admittance matrix $${Y_{BUS}}$$ of the network is \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/ldSgr5Sk87rTvq5ic/vmCLxBrEDkutaggQJ19ZohA7ARr4x/SiThDCh3F2EZag8HSlKcUo/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2005 Power System Analysis - Load Flow Studies Question 20 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-j$$ $$19.8$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$+j$$ $$20.0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$+j$$ $$0.2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$-j$$ $$19.95$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ee-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The bus impedance matrix of a $$4$$-bus power system is given by\n$$${Z_{bus}} = \\left[ {\\matrix{\n   {j0.3435} &amp; {j0.2860} &amp; {j0.2723} &amp; {j0.277}  \\cr \n   {j0.2860} &amp; {j0.3408} &amp; {j0.2586} &amp; {j0.2414}  \\cr \n   {j0.2723} &amp; {j0.2586} &amp; {j0.2791} &amp; {j0.2209}  \\cr \n   {j0.2277} &amp; {j0.2414} &amp; {j0.2209} &amp; {j0.2791}  \\cr \n\n } } \\right]$$$\n<p>A branch having an impedance of $$j0.2\\Omega $$ is connected between bus $$2$$ and the reference. Then the values of  $${Z_{22,new}}$$ and $${Z_{23,new}}$$ of the bus impedance matrix of the modified network are respectively</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$j0.5408\\,\\Omega \\,\\,\\,$$ and $$\\,\\,\\,j0.4586\\,\\Omega $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$j0.1260\\,\\Omega \\,\\,\\,$$ and $$\\,\\,\\,j0.0956\\,\\Omega $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$j0.5408\\,\\Omega \\,\\,\\,$$ and $$\\,\\,\\,j0.0956\\,\\Omega $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$j0.1260\\,\\Omega \\,\\,\\,$$ and $$\\,\\,\\,j0.1630\\,\\Omega $$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ee-2003",
+    "difficulty": null
+  },
+  {
+    "content": "A power system consists of 2 areas (Area 1 and Area 2) connected by a single tie line (figure). It is required to carry out a load flow study on this system. While entering the network data, the tie-line data (connectivity and parameters) is inadvertently left out. If the load flow program is run with this incomplete data.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/dxaS7NCoo3Zg4b1m7/fr2cWqwOusVXYtMkQ4sOXtMHLdtSD/WjpTwBSfzHfWRCOBx0MdEC/image.svg\" loading=\"lazy\" alt=\"GATE EE 2002 Power System Analysis - Load Flow Studies Question 22 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The load-flow will converge only if the slack bus is specified in Area 1  "
+      },
+      {
+        "identifier": "B",
+        "content": "The load-flow will converge only if the slack bus is specified in Area 2 "
+      },
+      {
+        "identifier": "C",
+        "content": "The load-flow will converge if the slack bus is specified in either Area 1 or Area 2 "
+      },
+      {
+        "identifier": "D",
+        "content": "The load-flow will not converge if only one slack bus is specified.  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ee-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Two transposed $$3$$ phase lines run parallel to each other.  The equation describing the voltage drop in both lines is given below.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/4zTDQL8K34WS52e3K/C2iriOQYbtSdjkbXmeL9DWKQznUxy/Ow3XLTdqPfMXh68R2Duv65/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2002 Power System Analysis - Load Flow Studies Question 8 English\"> \n<p>Compute the self and mutual zero sequence impedances of this system i.e, compute $${Z_{011}},\\,\\,{Z_{012}},\\,\\,{Z_{021}},\\,\\,{Z_{022}}\\,\\,\\,$$ in the following equations.\n<br>$$\\Delta {V_{01}} = {Z_{011}}\\,{{\\rm I}_{01}} + {Z_{012}}\\,{{\\rm I}_{02}}$$\n<br>$$\\Delta {V_{02}} = {Z_{021}}\\,{{\\rm I}_{01}} + {Z_{022}}\\,{{\\rm I}_{02}}\\,\\,$$ where $$\\,\\Delta {V_{01}},$$\n<br>$$\\Delta {V_{02}},\\,{{\\rm I}_{01}},\\,{{\\rm I}_{02}}\\,\\,$$ are the zero sequence voltage drops and currents for the two lines respectively.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "$${Z_{011}} = {Z_{022}} = j0.25\\,p.u$$\n<br>$${Z_{012}} = {Z_{021}} = j0.12\\,p.u$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ee-2002",
+    "difficulty": null
+  },
+  {
+    "content": "For the $$Y$$-$$bus$$ matrix given in per unit values, where the first, second, third and fourth row refers to bus $$1, 2, 3$$ and $$4$$ respectively, draw the reactance diagram.\n$$${Y_{bus}} = j\\left[ {\\matrix{\n   { - 6} &amp; 2 &amp; {2.5} &amp; 0  \\cr \n   2 &amp; { - 10} &amp; {2.5} &amp; 4  \\cr \n   {2.5} &amp; {2.5} &amp; { - 9} &amp; 4  \\cr \n   0 &amp; 4 &amp; {4 - 8} &amp; {}  \\cr \n\n } } \\right]$$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ee-2001",
+    "difficulty": null
+  }
+]

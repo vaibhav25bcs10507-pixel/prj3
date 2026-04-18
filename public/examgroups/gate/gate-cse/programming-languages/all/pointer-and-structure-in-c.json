@@ -1,0 +1,865 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In C runtime environment, which one of the following is stored in heap?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>A static variable declared inside a function</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>An array of integers declared inside a function</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>A dynamically allocated array of integers created using malloc() function call</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Return address of a function</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The correct answer is <strong>Option C</strong>.</p>\n\n<p>In the C programming language, the memory of a program is typically divided into a few main parts. The two most important ones for this question are the <strong>Stack</strong> and the <strong>Heap</strong>.</p>\n<ol>\n<li><p><strong>The Stack:</strong></p>\n<ul>\n<li><p>Think of the stack as a neat pile of books. You add a book to the top and you remove a book from the top. This is a Last-In, First-Out (LIFO) structure.</p></li>\n<li><p>When a function is called, a block of memory (called a stack frame) is created on the top of the stack.</p></li>\n<li><p>This stack frame stores the function's local variables, its parameters, and the return address (where to go back to after the function is finished).</p></li>\n<li><p>When the function finishes, its stack frame is removed from the top of the stack. This is all handled automatically by the compiler.</p></li></ul></li>\n<li><p><strong>The Heap:</strong></p>\n<ul>\n<li><p>The heap is a large, unorganized pool of memory. It's not as neat as the stack.</p></li>\n<li><p>This memory is used for <strong>dynamic memory allocation</strong>. \"Dynamic\" means it happens while the program is running, not at compile time.</p></li>\n<li><p>You, the programmer, have to explicitly ask for memory from the heap using functions like <code>malloc()</code> (memory allocation) or <code>calloc()</code>.</p></li>\n<li><p>This memory stays allocated until you explicitly free it using the <code>free()</code> function. If you forget to free it, it leads to a \"memory leak\".</p></li></ul></li>\n</ol>\n<p>Now let's look at the options based on this understanding:</p>\n<ul>\n<li><p><strong>Option A: A static variable declared inside a function</strong></p>\n<ul>\n<li>A <code>static</code> variable is special. It is not stored on the stack. It is stored in a separate memory area (often called the Data Segment or BSS Segment). Its lifetime is the entire duration of the program, not just the function call. So, this is incorrect.</li></ul></li>\n<li><p><strong>Option B: An array of integers declared inside a function</strong></p>\n<ul>\n<li>An array like <code>int my_array[10];</code> declared inside a function is a <strong>local variable</strong>. Like all local variables, it is stored on the <strong>stack</strong>. It is created when the function starts and destroyed when the function ends. So, this is incorrect.</li></ul></li>\n<li><p><strong>Option C: A dynamically allocated array of integers created using <code>malloc()</code> function call</strong></p>\n<ul>\n<li>The <code>malloc()</code> function is specifically designed to request memory from the <strong>heap</strong>. The memory you get from <code>malloc</code> is not managed automatically; you are in control. This is the definition of heap storage. So, this is <strong>correct</strong>.</li></ul></li>\n<li><p><strong>Option D: Return address of a function</strong></p>\n<ul>\n<li>As we discussed, the return address is essential information for a function call. It is stored as part of the function's stack frame on the <strong>stack</strong>. So, this is incorrect.</li></ul></li>\n</ul>\n<p><strong>Conclusion:</strong></p>\n<p>Only dynamically allocated memory, created using functions like <code>malloc()</code>, is stored on the heap. All other options refer to data stored in other memory segments like the stack or the data segment.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following C program :</p>\n<pre><code class='c'>#include &lt;stdio.h&gt;\nvoid stringcopy(char *, char *);\nint main( ) {\n    char a[30] = \"@#Hello world!\";\n    stringcopy(a,a+2);\n    printf(\"%s\\n\", a);\n    return 0;\n}\nvoid sringcopy(char *s, char *t) {\n    while(*t)\n        *st++ = *t++;\n}\n</code></pre>\n<p>Which ONE of the following will be the output of the program?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " @\\#Hello World!\n"
+      },
+      {
+        "identifier": "B",
+        "content": " Hello World!\n"
+      },
+      {
+        "identifier": "C",
+        "content": " ello World!\n"
+      },
+      {
+        "identifier": "D",
+        "content": " Hello World!d!"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s walk through what the program does.</p>\n\n<p><p>The array a is initialized as follows (each index labeled):</p>\n<p>  index 0: '@'  </p>\n<p>  index 1: '#'  </p>\n<p>  index 2: 'H'  </p>\n<p>  index 3: 'e'  </p>\n<p>  index 4: 'l'  </p>\n<p>  index 5: 'l'  </p>\n<p>  index 6: 'o'  </p>\n<p>  index 7: ' '  </p>\n<p>  index 8: 'w'  </p>\n<p>  index 9: 'o'  </p>\n<p>  index 10: 'r'  </p>\n<p>  index 11: 'l'  </p>\n<p>  index 12: 'd'  </p>\n<p>  index 13: '!'  </p>\n<p>  index 14: '\\0' (null terminator)</p></p>\n<p><p>The call to the function is made as follows:  </p>\n<p>  stringcopy(a, a+2);  </p>\n<p>  This means:  </p>\n<p>  – The destination pointer (s) points to a[0].  </p>\n<p>  – The source pointer (t) points to a[2] (i.e. the beginning of the substring \"Hello world!\").</p></p>\n<p><p>Now, let’s see what happens inside the while loop:  </p>\n<p>  $$\\text{while}(*t)\\; *s++ = *t++$$  </p>\n<p>  This loop copies each character from the source to the destination until it reaches the 0 (null) character. Notice that the loop condition checks&nbsp;*t without assigning the null character.</p>\n<p>  The copy sequence is:</p>\n<p>  • Copy a<a href=\"\">2</a> to a[0].  </p>\n<p>  • Copy a<a href=\"\">3</a> to a[1].  </p>\n<p>  • Copy a<a href=\"\">4</a> to a[2].  </p>\n<p>  • Copy a<a href=\"\">5</a> to a[3].  </p>\n<p>  • Copy a<a href=\"\">6</a> to a[4].  </p>\n<p>  • Copy a[7] (' ') to a[5].  </p>\n<p>  • Copy a<a href=\"\">8</a> to a[6].  </p>\n<p>  • Copy a<a href=\"\">9</a> to a[7].  </p>\n<p>  • Copy a<a href=\"\">10</a> to a[8].  </p>\n<p>  • Copy a<a href=\"\">11</a> to a[9].  </p>\n<p>  • Copy a<a href=\"\">12</a> to a[10].  </p>\n<p>  • Copy a<a href=\"\">13</a> to a[11].  </p>\n<p>  When t reaches index 14 (the null terminator), the loop stops. It never copies the null terminator itself.</p></p>\n<p><p>After the loop, the first 12 characters of a have become:  </p>\n<p>  \"H e l l o   w o r l d !\"</p>\n<p>  However, the array a still holds its old characters for indices 12 and 13. What were they originally?  </p>\n<p>  – a[12] was 'd' and a[13] was '!'  </p>\n<p>  The null terminator remains at a[14].</p></p>\n<p><p>When printf prints the array, it starts at a[0] and stops when it encounters the null at a[14]. Thus, the output is the concatenation of:</p>\n<p>  • The copied \"Hello world!\" (from indices 0–11)  </p>\n<p>  • The leftover \"d!\" (from indices 12–13)</p></p>\n\n<p>This produces:  </p>\n<p>  \"Hello World!d!\"  </p>\n<p>(Option D matches this output.)</p>\n<p>Additional notes:  </p>\n<p>• There is a slight typo in the function definition (sringcopy instead of stringcopy), but it is clear from the context what is intended.  </p>\n<p>• The copy loop does not copy the terminating null, so the old characters beyond the copied part remain in the array.</p>\n<p>Therefore, the correct answer is Option D.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following C function definition.</p> <pre> <code>int fX(char *a) {\n\n   char *b = a; \n\n   while(*b) \n        b++; \n\n   return b - a; } </code> </pre> <p>Which of the following statements is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>The function call <code>fX(\"abcd\")</code> will always return a value</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Assuming a character array <code>c</code> is declared as <code>char c[] = \"abcd\"</code> in <code>main()</code>, the function call <code>fX(c)</code> will always return a value</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>The code of the function will not compile</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Assuming a character pointer <code>c</code> is declared as <code>char *c = \"abcd\"</code> in <code>main()</code>, the function call <code>fX(c)</code> will always return a value</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "\n<p><p><strong>Option A</strong>: TRUE. The function call <code>fX(\"abcd\")</code> will process the string <code>\"abcd\"</code> and return the length of the string, which is 4. This is because the string <code>\"abcd\"</code> is properly null-terminated.</p></p>\n<p><p><strong>Option B</strong>: TRUE. When a character array <code>c</code> is declared as <code>char c[] = \"abcd\"</code> in <code>main()</code>, <code>fX(c)</code> will return the length of the string, 4. The string is stored with a null terminator in a char array, making it well-formed for the function <code>fX</code>.</p></p>\n<p><p><strong>Option C</strong>: FALSE. The code of the function will compile without errors. The function <code>fX</code> correctly uses pointers to determine the length of the string.</p></p>\n<p><p><strong>Option D</strong>: TRUE. Assuming a character pointer <code>c</code> is declared as <code>char *c = \"abcd\"</code> in <code>main()</code>, the function call <code>fX(c)</code> will return the length 4. The string literal is properly null-terminated and the pointer <code>c</code> adequately points to the first character of the string.</p></p>\n",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>What is printed by the following ANSI C program?</p>\n<pre>\n<code lang=\"c\">\n#include &lt;stdio.h&gt;\nint main(int argc, char *argv[ ]) {\n   int x = 1, z[2] = {10, 11};\n   int *p = NULL;\n   p = &x;\n   *p = 10;\n   p = &z[1];\n   *(&z[0] + 1) += 3;\n   printf(\"%d, %d, %d\\n\", x, z[0], z[1]);\n   return 0;\n} \n</code>\n</pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1, 10, 11"
+      },
+      {
+        "identifier": "B",
+        "content": "1, 10, 14"
+      },
+      {
+        "identifier": "C",
+        "content": "10, 14, 11"
+      },
+      {
+        "identifier": "D",
+        "content": "10, 10, 14"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02equ3q/bf0a60a8-fb93-4748-86e9-19347eefb003/d95b5860-9638-11ec-a1d8-135fcba6bdd9/file-1l02equ3r.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02equ3q/bf0a60a8-fb93-4748-86e9-19347eefb003/d95b5860-9638-11ec-a1d8-135fcba6bdd9/file-1l02equ3r.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Programming Languages - Pointer and Structure in C Question 6 English Explanation\"></p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following ANSI C program.</p>\n\n<p>#include&lt;stdio.h&gt;</p>\n\n<p>int main(){</p>\n\n<p>int arr[4][5];</p>\n\n<p>int i, j;</p>\n\n<p>for(i =0; i&lt;4; i++){</p>\n\n<p>for (j =0; j&lt;5; j++){</p>\n\n<p>arr [i][j] = 10*i + j;</p>\n\n<p>}</p>\n\n<p>}</p>\n\n<p>print(\"%d\", *(arr[1] + 9));</p>\n\n<p>return 0;</p>\n\n<p>}</p>\n\n<p>What is the output of the above program?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "14"
+      },
+      {
+        "identifier": "B",
+        "content": "20"
+      },
+      {
+        "identifier": "C",
+        "content": "30"
+      },
+      {
+        "identifier": "D",
+        "content": "24"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the output of the program, we need to analyze the given code step by step.</p>\n<h3><strong>Code Analysis:</strong></h3>\n<pre><code class=\"c language-c\">#include &lt;stdio.h&gt;\n\nint main() {\n\n    int arr[4][5];\n\n    int i, j;\n\n    for (i = 0; i &lt; 4; i++) {\n\n        for (j = 0; j &lt; 5; j++) {\n\n            arr[i][j] = 10 * i + j;\n\n        }\n\n    }\n\n    printf(\"%d\", *(arr[1] + 9));\n\n    return 0;\n\n}\n</code></pre>\n<p><strong>Understanding the Code:</strong></p>\n\n<p><strong>Array Initialization:</strong></p>\n\n\n<p></p><p><code>arr</code> is a 2D array with 4 rows and 5 columns.</p><p></p>\n<p></p><p>The nested loops initialize each element of the array using the formula:</p>\n<p>$      \\text{arr}[i][j] = 10 \\times i + j      $</p><p></p>\n\n\n<p><strong>Printing the Value:</strong></p>\n\n\n<p></p><p>The program prints <code>*(arr[1] + 9)</code>.</p><p></p>\n<p></p><p>We need to calculate the value at this memory location.</p><p></p>\n\n<h3><strong>Memory Layout:</strong></h3>\n<p>In C, 2D arrays are stored in <strong>row-major order</strong>. This means that the rows are stored sequentially in memory.</p>\n\n<p></p><p><strong>Total Elements:</strong> $ 4 \\times 5 = 20 $</p><p></p>\n<p></p><p><strong>Memory Indices:</strong></p><p></p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2erxton/0b3d15d5-65a5-4aed-92ed-e29baa0bce98/12914970-8d56-11ef-a39f-4fe286e9d106/file-jaoe38c1m2erxtoo.webp?format=webp\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2erxton/0b3d15d5-65a5-4aed-92ed-e29baa0bce98/12914970-8d56-11ef-a39f-4fe286e9d106/file-jaoe38c1m2erxtoo.webp\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Programming Languages - Pointer and Structure in C Question 7 English Explanation\">\n<h3><strong>Calculating the Output:</strong></h3>\n\n<p></p><p><strong><code>arr[1]</code> Points to <code>arr[1][0]</code>:</strong></p><p></p>\n<p></p><p><code>arr[1]</code> is a pointer to the second row, starting at index 5.</p><p></p>\n<p></p><p><strong>Calculating <code>*(arr[1] + 9)</code>:</strong></p><p></p>\n<p></p><p>We move 9 positions ahead from <code>arr[1][0]</code> (index 5).</p><p></p>\n<p></p><p>Memory index: $ 5 + 9 = 14 $</p><p></p>\n<p></p><p>So, <code>*(arr[1] + 9)</code> refers to <code>arr[2][4]</code>.</p><p></p>\n<p></p><p><strong>Value at <code>arr[2][4]</code>:</strong></p><p></p>\n<p></p><p>Using the initialization formula:</p>\n<p>$     \\text{arr}[2][4] = 10 \\times 2 + 4 = 24     $</p><p></p>\n\n<h3><strong>Conclusion:</strong></h3>\n<p>The program will output <strong><code>24</code></strong>.</p>\n<p><strong>Answer:</strong> Option D</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program :\n<br><br><pre><code class=\"c\">#include &lt; stdio.h &gt;\n int main ()  {\n            int arr [] = {1,2,3,4,5,6,7,8,9,0,1,2,5}, *ip = arr+4;\n             printf (\"%d\\n\", ip[1]);\n             return 0;\n}</code></pre>\n<br><br>The number that will be displayed on execution of the program is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p>To determine the output of the given C program, let's carefully analyze the code step by step.</p>\n<hr />\n<h3><strong>Given Program:</strong></h3>\n<pre><code class=\"c language-c\">#include &lt;stdio.h&gt;\n\nint main () {\n\n       int arr[] = {1,2,3,4,5,6,7,8,9,0,1,2,5}, *ip = arr+4;\n\n       printf(\"%d\\n\", ip[1]);\n\n       return 0;\n\n}\n</code></pre>\n<hr />\n<h3><strong>Understanding the Code:</strong></h3>\n\n<p><p><strong>Array Initialization:</strong></p>\n<p>The array <code>arr</code> is initialized with the following elements:</p></p>\n\n<pre><code>   Index: 0  1  2  3  4  5  6  7  8  9  10 11 12\n\n   Value: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0,  1, 2, 5\n</code></pre>\n<ol start=\"2\">\n<p><strong>Pointer Initialization:</strong></p>\n\n\n<p><p><code>ip = arr + 4;</code></p></p>\n<p><p>This sets <code>ip</code> to point to the element at index <code>4</code> of <code>arr</code>.</p></p>\n<p><p>So, <code>ip</code> points to <code>arr[4]</code>, which has the value <code>5</code>.</p></p>\n\n<ol start=\"2\">\n<p><strong>Accessing <code>ip[1]</code>:</strong></p>\n\n\n<p><p>In C, <code>ip[n]</code> is equivalent to <code>*(ip + n)</code>.</p></p>\n<p><p>Therefore, <code>ip[1]</code> is the same as <code>*(ip + 1)</code>.</p></p>\n<p><p>Since <code>ip</code> points to <code>arr[4]</code>, <code>ip + 1</code> points to <code>arr[5]</code>.</p></p>\n<p><p>Thus, <code>ip[1]</code> is the value of <code>arr[5]</code>.</p></p>\n\n<ol start=\"2\">\n<p><strong>Determining <code>arr[5]</code>:</strong></p>\n\n\n<p>From the array, <code>arr[5] = 6</code>.</p>\n\n<ol start=\"2\">\n<p><strong>Printing the Value:</strong></p>\n\n\n<p>The <code>printf</code> statement outputs <code>ip[1]</code>, which is <code>6</code>.</p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n<p><strong>6</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program.\n<pre><code class=\"c\">#include&lt; stdio.h &gt;\nstruct Ournode{\n char x,y,z;\n};\nint main(){\n struct Ournode p = {'1', '0', 'a'+2};\n struct Ournode *q = &amp;p;\n printf (\"%c, %c\", *((char*)q+1), *((char*)q+2));\n return 0;\n}</code></pre>\nThe output of this program is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0, c"
+      },
+      {
+        "identifier": "B",
+        "content": "0, a+2"
+      },
+      {
+        "identifier": "C",
+        "content": "'0', 'a+2'"
+      },
+      {
+        "identifier": "D",
+        "content": "'0', 'c'"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program\n<pre><code class=\"c\">void f(int, short);\nvoid main()\n{\n    int i = 100;\n    short s = 12;\n    short *p = &amp;s;\n    __________ ;    // call to f()\n}</code></pre>\nWhich one of the following expressions, when placed in the blank above, will <b>NOT</b> result in\na type checking error?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<pre><code class=\"c\">f(s,*s)</code></pre>"
+      },
+      {
+        "identifier": "B",
+        "content": "<pre><code class=\"c\">i = f(i,s)</code></pre>"
+      },
+      {
+        "identifier": "C",
+        "content": "<pre><code class=\"c\">f(i,*s)</code></pre>"
+      },
+      {
+        "identifier": "D",
+        "content": "<pre><code class=\"c\">f(i,*p)</code></pre>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program.\n<pre><code class=\"c\">#include &lt; stdio.h &gt;\n    void mystery(int *ptra, int *ptrb) {\n    int *temp;\n    temp = ptrb;\n    ptrb = ptra;\n    ptra = temp;\n}\nint main() {\n    int a=2016, b=0, c=4, d=42;\n    mystery(&amp;a, &amp;b);\n    if (a &lt; c)\n       mystery(&amp;c, &amp;a);\n    mystery(&amp;a, &amp;d);\n    printf(\"%d\\n\", a);\n}</code></pre>\nThe output of the program is _____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "2016",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The output of the following C program is__________. <pre><code class=\"c\">\nvoid f1(int a, int b) { \nint c; \nc=a; a=b; b=c; \n}\n\nvoid f2(int *a, int *b) { \nint c; \nc=*a; *a=*b; *b=c; \n}\n\nint main(){ \nint a=4, b=5, c=6; \nf1(a,b); \nf2(&amp;b, &amp;c); \nprintf(“%d”,c-a-b); \n}</code></pre>",
+    "options": [],
+    "correct_options": [],
+    "answer": "-5",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "What does the following fragment of C-program print?\n<pre><code>char c[ ] = \"GATE2011\";\nchar *p = c;\nprintf(\"%s\", p + p[3] - p[1]);</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "GATE2011"
+      },
+      {
+        "identifier": "B",
+        "content": "E2011"
+      },
+      {
+        "identifier": "C",
+        "content": "2011"
+      },
+      {
+        "identifier": "D",
+        "content": "01"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "What does the following program print?\n<pre><code>#include &lt; stdio.h &gt;\nvoid f (int *p, int *q) {\n     p = q;\n    *p = 2;\n}\nint i = 0, j = 1;\nint main ( ){\n     f(&amp;i, &amp;j);\n     printf (\"%d %d \\ n\", i, j);\n     return 0;\n}</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2 2"
+      },
+      {
+        "identifier": "B",
+        "content": "2 1"
+      },
+      {
+        "identifier": "C",
+        "content": "0 1"
+      },
+      {
+        "identifier": "D",
+        "content": "0 2"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "What does the following C statement declare?\n<pre><code>int (*f)(int *);</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A function that takes an integer pointer as argument and returns an integer"
+      },
+      {
+        "identifier": "B",
+        "content": "A function that takes an integer as argument and returns an integer pointer"
+      },
+      {
+        "identifier": "C",
+        "content": "A pointer to a function that takes an integer pointer  as argument and returns an integer"
+      },
+      {
+        "identifier": "D",
+        "content": "A function that takes an integer pointer as argument and returns a function pointer"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C function:\n<pre><code class=\"c\">void swap (int a, int b)\n{\n   int temp;\n   temp = a;\n   a = b;\n   b = temp;\n}</code></pre>\nIn order to exchange the values of two variables x and y.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "call swap (x, y)"
+      },
+      {
+        "identifier": "B",
+        "content": "call swap (&amp;x, &amp;y)"
+      },
+      {
+        "identifier": "C",
+        "content": "swap (x, y) cannot be used as it does return any value"
+      },
+      {
+        "identifier": "D",
+        "content": "swap (x, y) cannot be used as the parameters are passed by value"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Assume the following C variable declaration\n<p>int * A[10], B[10][10];</p>\nOf the following expressions\n<br><br>I. A[2] <br>II. A[2] [3] <br>III. B[1] <br>IV. B[2] [3]\n<br><br>Which will not give compile-time errors if used as left hand sides of assignment\nstatements in a C program?   ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I, II, and IV only"
+      },
+      {
+        "identifier": "B",
+        "content": "II, III, and IV only"
+      },
+      {
+        "identifier": "C",
+        "content": "II and IV only"
+      },
+      {
+        "identifier": "D",
+        "content": "IV only"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The following C declarations\n<pre><code class=\"c\">struct node{\n  int i:\n  float j;\n};\nstruct node *s[10];</code></pre>\ndefine s to be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "An array, each element of which is a pointer to a structure of type node"
+      },
+      {
+        "identifier": "B",
+        "content": "A structure of 2 fields, each field being a pointer to an array of 10 elements"
+      },
+      {
+        "identifier": "C",
+        "content": "A structure of 3 fields: an integer, a float, and an array of 10 elements"
+      },
+      {
+        "identifier": "D",
+        "content": "An array, each element of which is a structure of type node"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "The most appropriate matching for the following pairs\n<br><br>X: m=malloc(5); m= NULL; \n<br>Y: free(n); n-&gt;value = 5; \n<br>Z: char *p; *p='a'; \n<br><br>1: using dangling \n<br>2: using uninitialized pointers\n<br>3. lost memory\n<br>is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "X – 1 Y – 3 Z – 2"
+      },
+      {
+        "identifier": "B",
+        "content": "X – 2 Y – 1 Z – 3"
+      },
+      {
+        "identifier": "C",
+        "content": "X – 3 Y – 2 Z – 1 "
+      },
+      {
+        "identifier": "D",
+        "content": "X – 3 Y – 1 Z – 2"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C declaration\n<pre><code class=\"c\">struct {\n      short s[5];\n      union {\n      float y;\n      long z;\n      } u;\n}t;</code></pre>\nAssume that objects of the type short, float and long occupy 2 bytes, 4 bytes and\n8 bytes, respectively. The memory requirement for variable t, ignoring alignment\nconsiderations, is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "22 bytes"
+      },
+      {
+        "identifier": "B",
+        "content": "14 bytes"
+      },
+      {
+        "identifier": "C",
+        "content": "18 bytes"
+      },
+      {
+        "identifier": "D",
+        "content": "10 bytes"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following ANSI-C program.</p>\n<pre><code>#include &lt;stdio.h&gt;\n\nint main( ) {\n\n    int *ptr, a, b, c;\n\n    a=5; b=11; c=20;\n\n    ptr=&amp;a; *ptr=c; ptr=&amp;c;\n\n    a=*(&amp;b); c=*ptr-a;\n\n    printf(\"%d\",c);\n\n    return(0);\n\n}\n</code></pre>\n<p>The output of this program is $\\_\\_\\_\\_$ . (answer in integer)</p>\n<p>Note: Assume that the program compiles and runs successfully.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "9",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyxi90p/7aa49c8c-01aa-4d11-b06a-d89604b715ec/d8cef190-245f-11f1-b399-8d95003d7d74/file-jaoe38c1mmyxi90q.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyxi90p/7aa49c8c-01aa-4d11-b06a-d89604b715ec/d8cef190-245f-11f1-b399-8d95003d7d74/file-jaoe38c1mmyxi90q.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Programming Languages - Pointer and Structure in C Question 1 English Explanation\"></p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>What is the output of the following C program?</p>\n<pre><code>\n#include &lt;studio.h&gt;\nint main() {\n  double a[2]={20.0, 25.0}, *p, *q;\n  p = a;\n  q = p + 1;\n  printf(\"%d,%d\", (int)(q - p), (int)(*q - *p));\n  return 0;}\n</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>4,8</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>1,5</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>8,5</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>1,8</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze the given C program step by step to understand its output:</p>\n\n<pre><code>\n\n<p>#include &lt;stdio.h&gt;</p>\n\n<p>int main() {</p>\n\n<p>double a[2]={20.0, 25.0}, *p, *q;</p>\n\n<p>p = a;</p>\n\n<p>q = p + 1;</p>\n\n<p>printf(\"%d,%d\", (int)(q - p), (int)(*q - *p));</p>\n\n<p>return 0;}</p>\n\n</code></pre>\n\n<p>Here is a detailed explanation:</p>\n\n<ol>\n\n<li>The array <code>a</code> is initialized with two double values: 20.0 and 25.0. So, <code>a[0] = 20.0</code> and <code>a[1] = 25.0</code>.</li>\n\n<li>The pointers <code>p</code> and <code>q</code> are declared.</li>\n\n<li>The pointer <code>p</code> is assigned the address of the first element of the array <code>a</code> (i.e., <code>p = a</code>; now <code>p</code> points to <code>20.0</code>).</li>\n\n<li>The pointer <code>q</code> is assigned the address of the next element after <code>p</code> (i.e., <code>q = p + 1</code>; now <code>q</code> points to <code>25.0</code>).</li>\n\n<li>The statement <code>printf(\"%d,%d\", (int)(q - p), (int)(*q - *p))</code> will print two values:\n\n<ul>\n\n<li>The first value <code>(int)(q - p)</code>: This calculates the difference between the pointers <code>q</code> and <code>p</code>. Since <code>q</code> points to the element immediately after <code>p</code>, the difference is <code>1</code>.</li>\n\n<li>The second value <code>(int)(*q - *p)</code>: This calculates the difference between the values pointed to by <code>q</code> and <code>p</code>. The value at <code>*q</code> is <code>25.0</code> and the value at <code>*p</code> is <code>20.0</code>. Their difference is <code>25.0 - 20.0 = 5.0</code>. Since it is cast to an integer, it becomes <code>5</code>.</li>\n\n</ul>\n\n</li>\n\n</ol>\n\n<p>Therefore, the output of the program will be:</p>\n\n<p><code>1,5</code></p>\n\n<p>So, the correct answer is:</p>\n\n<p><strong>Option B</strong>: <code>1,5</code></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following ANSI C program:</p>\n\n<p>#include &lt;stdio.h&gt;</p>\n\n<p>#include &lt;stdlib.h&gt;</p>\n\n<p>struct Node{</p>\n\n<p>int value;</p>\n\n<p>struct Node&nbsp;⋆next;};</p>\n\n<p>int main(){</p>\n\n<p>struct Node&nbsp;⋆boxE,&nbsp;⋆head,&nbsp;⋆boxN; int index = 0;</p>\n\n<p>boxE = head = (struct Node&nbsp;⋆) malloc (sizeof(struct Node));</p>\n\n<p>head -&gt; value = index;</p>\n\n<p>for (index = 1; index &lt;=3; index++){</p>\n\n<p>boxN = (struct Node&nbsp;⋆) malloc(sizeof(struct Node));</p>\n\n<p>boxE -&gt; next = boxN;</p>\n\n<p>boxN -&gt; value = index;</p>\n\n<p>boxE = boxN; }</p>\n\n<p>for (index = 0; index &lt;= 3; index++) {</p>\n\n<p>printf(\"value at index %d is %d\\m\", index, head -&gt; value);</p>\n\n<p>head = head -&gt; next;</p>\n\n<p>printf(\"value at index %d is %d\\n\", index + 1, head -&gt; value);}}</p>\n\n<p>Which one of the statement below is correct about the program ?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It has a missing return which will be reported as an error by the compiler."
+      },
+      {
+        "identifier": "B",
+        "content": "It dereferences an uninitialized pointer that may result in a run-time error."
+      },
+      {
+        "identifier": "C",
+        "content": "Upon execution, the program goes into an infinite loop."
+      },
+      {
+        "identifier": "D",
+        "content": "Upon execution, the program creates a linked-list of five nodes."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The linked list of four nodes will be created.</p>\n<p>First node: value $=0$</p>\n<p>Second node : value $=1$</p>\n<p>Third node : value $=2 \\quad$ Fourth node : value $=3$</p>\n<p>The last for loop will print the index number and the values</p>\n<p>In the last iteration when index $=3$</p>\n<p>head $=$ head-&gt; next $/ /$ trying to access the unknown memory location because the fifth node is not there.</p>\n<p>Hence the segmentation fault or run time error will come here.</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program:<br><br>\n<pre><code class=\"c\">       #include &lt; stdio.h &gt;\n       int main()\n       {\n           int a[] = {2, 4, 6, 8, 10} ;\n           int i, sum = 0, *b = a + 4 ;\n           for (i = 0; i &lt; 5; i++)\n                 sum = sum + (*b - i) - *(b - i) ;\n           printf (\"%d\\n\", sum) ;\n           return 0 ;\n        }</code></pre>\n<br>The output of the above C program is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "10",
+    "explanation": "<p>To determine the output of the given C program, let's step through it carefully.</p>\n<p><strong>Given Program:</strong></p>\n<pre><code class=\"c language-c\">#include &lt;stdio.h&gt;\n\nint main()\n\n{\n\n    int a[] = {2, 4, 6, 8, 10};\n\n    int i, sum = 0, *b = a + 4;\n\n    for (i = 0; i &lt; 5; i++)\n\n        sum = sum + (*b - i) - *(b - i);\n\n    printf(\"%d\\n\", sum);\n\n    return 0;\n\n}\n</code></pre>\n<h3><strong>Understanding the Code:</strong></h3>\n\n<p><p><strong>Array Initialization:</strong></p></p>\n<p><p><code>a[] = {2, 4, 6, 8, 10};</code></p></p>\n<p><p>Indices: <code>a[0]=2</code>, <code>a[1]=4</code>, <code>a[2]=6</code>, <code>a[3]=8</code>, <code>a[4]=10</code></p></p>\n<p><p><strong>Pointer Initialization:</strong></p></p>\n<p><p><code>*b = a + 4;</code></p></p>\n<p><p><code>b</code> points to <code>a[4]</code>, which is <code>10</code>.</p></p>\n<p><p><strong>Variables:</strong></p></p>\n<p><p><code>sum = 0;</code></p></p>\n<p><p><code>i</code> iterates from <code>0</code> to <code>4</code>.</p></p>\n\n<h3><strong>Loop Execution:</strong></h3>\n<p>We need to compute:</p>\n<p>$ \\text{sum} = \\text{sum} + (\\ast b - i) - \\ast (b - i) $</p>\n<table border=\"1\">\n  <tr>\n    <th>Iteration (i)</th>\n    <th>*b</th>\n    <th>*(b - i)</th>\n    <th>Calculation</th>\n    <th>sum</th>\n  </tr>\n  <tr>\n    <td>0</td>\n    <td>10</td>\n    <td>*(b - 0) = a[4] = 10</td>\n    <td>sum += (10 - 0) - 10 ⇒ sum += 0</td>\n    <td>0</td>\n  </tr>\n  <tr>\n    <td>1</td>\n    <td>10</td>\n    <td>*(b - 1) = a[3] = 8</td>\n    <td>sum += (10 - 1) - 8 ⇒ sum += 1</td>\n    <td>1</td>\n  </tr>\n  <tr>\n    <td>2</td>\n    <td>10</td>\n    <td>*(b - 2) = a[2] = 6</td>\n    <td>sum += (10 - 2) - 6 ⇒ sum += 2</td>\n    <td>3</td>\n  </tr>\n  <tr>\n    <td>3</td>\n    <td>10</td>\n    <td>*(b - 3) = a[1] = 4</td>\n    <td>sum += (10 - 3) - 4 ⇒ sum += 3</td>\n    <td>6</td>\n  </tr>\n  <tr>\n    <td>4</td>\n    <td>10</td>\n    <td>*(b - 4) = a[0] = 2</td>\n    <td>sum += (10 - 4) - 2 ⇒ sum += 4</td>\n    <td>10</td>\n  </tr>\n</table>\n\n<p><strong>Calculations:</strong></p>\n\n<p><strong>First Iteration (i = 0):</strong></p>\n\n\n<p><p><code>*b = 10</code></p></p>\n<p><p><code>*(b - 0) = a[4] = 10</code></p></p>\n<p><p><code>sum += (10 - 0) - 10 = 0</code></p></p>\n<p><p><code>sum = 0</code></p></p>\n\n\n<p><strong>Second Iteration (i = 1):</strong></p>\n\n\n<p><p><code>*(b - 1) = a[3] = 8</code></p></p>\n<p><p><code>sum += (10 - 1) - 8 = 1</code></p></p>\n<p><p><code>sum = 0 + 1 = 1</code></p></p>\n\n\n<p><strong>Third Iteration (i = 2):</strong></p>\n\n\n<p><p><code>*(b - 2) = a[2] = 6</code></p></p>\n<p><p><code>sum += (10 - 2) - 6 = 2</code></p></p>\n<p><p><code>sum = 1 + 2 = 3</code></p></p>\n\n\n<p><strong>Fourth Iteration (i = 3):</strong></p>\n\n\n<p><p><code>*(b - 3) = a[1] = 4</code></p></p>\n<p><p><code>sum += (10 - 3) - 4 = 3</code></p></p>\n<p><p><code>sum = 3 + 3 = 6</code></p></p>\n\n\n<p><strong>Fifth Iteration (i = 4):</strong></p>\n\n\n<p><p><code>*(b - 4) = a[0] = 2</code></p></p>\n<p><p><code>sum += (10 - 4) - 2 = 4</code></p></p>\n<p><p><code>sum = 6 + 4 = 10</code></p></p>\n\n<p><strong>Final Result:</strong></p>\n\n<p><p>After the loop, <code>sum</code> is <code>10</code>.</p></p>\n<p><p>The program prints <code>10</code>.</p></p>\n\n<hr />\n<p><strong>Answer:</strong> <strong>10</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program:\n<pre><code class=\"c\">#include&lt; stdio.h &gt;\nvoid fun1(char *s1, char *s2){\n  char *tmp;\n  tmp = s1;\n  s1 = s2;\n  s2 = tmp;\n}\nvoid fun2(char **s1, char **s2){\n  char *tmp;\n  tmp = *s1;\n  *s1 = *s2;\n  *s2 = tmp;\n}\nint main(){\n  char *str1 = \"Hi\", *str2 = \"Bye\";\n  fun1(str1, str2); printf(\"%s %s \", str1, str2);\n  fun2(&amp;str1, &amp;str2); printf(\"%s %s\", str1, str2);\n  return 0;\n}</code></pre>\nThe output of the program above is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Hi Bye Bye Hi"
+      },
+      {
+        "identifier": "B",
+        "content": "Hi Bye Hi Bye"
+      },
+      {
+        "identifier": "C",
+        "content": "Bye Hi Hi Bye"
+      },
+      {
+        "identifier": "D",
+        "content": "Bye Hi Bye Hi"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "What is the output of the following C code? Assume that the address of x is 2000 (in decimal) and an integer requires four bytes of memory.\n<pre><code class=\"c\">int main () { \nunsigned int x[4][3] = \n          {{1,2,3},{4,5,6},{7,8,9},{10,11,12}}; \n          printf(“%u, %u, %u”, x+3, *(x+3), *(x+2)+3); \n}</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2036, 2036, 2036"
+      },
+      {
+        "identifier": "B",
+        "content": "2012, 4, 2204"
+      },
+      {
+        "identifier": "C",
+        "content": "2036, 10, 10"
+      },
+      {
+        "identifier": "D",
+        "content": "2012, 4, 6"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C code segment.\n<pre><code>int a, b, c = 0;\nvoid prtFun(void);\nmain( )\n{ \n   static int a = 1; /* Line 1 */\n   prtFun();\n   a + = 1;\n   prtFun();\n   printf(\"\\n %d %d \", a, b);\n}\nvoid prtFun(void)\n{ \n   static int a=2;   /* Line 2 */\n   int b=1;\n   a+ = ++b;\n   printf(\"\\n %d %d \", a, b);\n}</code></pre>\nWhat output will be generated by the given code segment?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\eqalign{\n  &amp; 3\\,\\,1  \\cr \n  &amp; 4\\,\\,1  \\cr \n  &amp; 4\\,\\,2 \\cr} $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\eqalign{\n  &amp; 4\\,\\,2  \\cr \n  &amp; 6\\,\\,1  \\cr \n  &amp; 6\\,\\,1 \\cr} $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\eqalign{\n  &amp; 4\\,\\,2  \\cr \n  &amp; 6\\,\\,2  \\cr \n  &amp; 2\\,\\,0 \\cr} $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\eqalign{\n  &amp; 3\\,\\,1  \\cr \n  &amp; 5\\,\\,2  \\cr \n  &amp; 5\\,\\,2 \\cr} $$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C code segment.\n<pre><code>int a, b, c = 0;\nvoid prtFun(void);\nmain( )\n{ \n   static int a = 1; /* Line 1 */\n   prtFun();\n   a + = 1;\n   prtFun();\n   printf(\"\\n %d %d \", a, b);\n}\nvoid prtFun(void)\n{ \n   static int a=2;   /* Line 2 */\n   int b=1;\n   a+ = ++b;\n   printf(\"\\n %d %d \", a, b);\n}</code></pre>\nWhat output will be generated by the given code segment if:\n<br>Line 1 is replaced by <b>auto int a = 1;</b>\n<br>Line 2 is replaced by <b>register int a = 2;</b>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\eqalign{\n  &amp; 3\\,\\,1  \\cr \n  &amp; 4\\,\\,1  \\cr \n  &amp; 4\\,\\,2 \\cr} $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\eqalign{\n  &amp; 4\\,\\,2  \\cr \n  &amp; 6\\,\\,1  \\cr \n  &amp; 6\\,\\,1 \\cr} $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\eqalign{\n  &amp; 4\\,\\,2  \\cr \n  &amp; 6\\,\\,2  \\cr \n  &amp; 2\\,\\,0 \\cr} $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\eqalign{\n  &amp; 4\\,\\,2  \\cr \n  &amp; 4\\,\\,2  \\cr \n  &amp; 2\\,\\,0 \\cr} $$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "What is printed by the following C program?\n<pre><code>#include &lt; stdio.h &gt;\nint f(int x, int *py, int **ppz)\n{\n   int y, z;\n  **ppz += 1; \n   z  = **ppz;\n  *py += 2;\n   y = *py;\n   x += 3;\n   return x + y + z;\n}\n \nvoid main()\n{\n   int c, *b, **a;\n   c = 4;\n   b = &amp;c;\n   a = &amp;b; \n   printf( \"%d\", f(c,b,a));\n   getchar();\n}</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "18"
+      },
+      {
+        "identifier": "B",
+        "content": "19"
+      },
+      {
+        "identifier": "C",
+        "content": "21"
+      },
+      {
+        "identifier": "D",
+        "content": "22"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider this C code to swap two integers and these five statements:\n<pre><code>void swap(int *px, int *py) \n{ \n    *px = *px - *py; \n    *py = *px + *py; \n    *px = *py - *px; \n}</code></pre>\nS1: will generate a compilation error <br><br>S2: may generate a segmentation fault at runtime depending on the arguments passed <br><br>S3: correctly implements the swap procedure for all input pointers referring to integers stored in memory locations accessible to the process <br><br>S4: implements the swap procedure correctly for some but not all valid input pointers <br><br>S5: may add or subtract integers and pointers. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S1"
+      },
+      {
+        "identifier": "B",
+        "content": "S2 and S3"
+      },
+      {
+        "identifier": "C",
+        "content": "S2 and S4"
+      },
+      {
+        "identifier": "D",
+        "content": "S2 and S5"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program segment:\n<pre><code>char p[20];\nchar *s = \"string\";\nint length = strlen(s);\nfor(i=0; i &lt; length; i++)\n  p[i] = s[length-i];\nprintf(\"%s\",p);\n</code></pre>\nThe output of the program is \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "gnirts"
+      },
+      {
+        "identifier": "B",
+        "content": "string"
+      },
+      {
+        "identifier": "C",
+        "content": "gnirt"
+      },
+      {
+        "identifier": "D",
+        "content": "no output is printed"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the C program shown below.\n<pre><code>#include &lt; stdio.h &gt;\n#define print(x) printf(\"%d \", x)\nint x;\nvoid Q(int z) {\n   z += x; print(z);\n}\nvoid P(int *y) {\n   int x = *y+2;\n   Q(x); *y = x-1;\n   print(x);\n}\nmain(void) {\n   x = 5;\n   P(&amp;x);\n   print(x);\n}</code></pre>\nThe output of this program is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "12 7 6"
+      },
+      {
+        "identifier": "B",
+        "content": "22 12 11"
+      },
+      {
+        "identifier": "C",
+        "content": "14 6 6"
+      },
+      {
+        "identifier": "D",
+        "content": "7 6 6"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following three C functions:\n<pre><code>[P1] int*g(void)\n     {\n       int x=10;\n       return(&amp;x);\n     }\n</code></pre>\n<pre><code>[P2] int*g(void)\n      {\n        int *px;\n       *px = 10;\n        return px;\n      }</code></pre>\n<pre><code>[P3] int*g(void)\n     {\n       int *px\n       px =(int*)malloc (size of (int));\n       *px = 10;\n       return px;\n     }</code></pre>\nWhich of the above three functions are likely to cause problems with pointers?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only P3"
+      },
+      {
+        "identifier": "B",
+        "content": "Only P1 and P3"
+      },
+      {
+        "identifier": "C",
+        "content": "Only P1 and P2"
+      },
+      {
+        "identifier": "D",
+        "content": "P1, P2 and P3"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program:\n<pre><code>void abc(char *s)\n{\n   if(s[0]=='\\0') return;\n   abc(s+1);\n   abc(s+1);\n   printf(\"%c\",s[0]);\n}\nmain()\n{ \n   abc(\"123\");\n}\n</code></pre>\n(a) What will be the output of the program?\n<br>(b) If abc(s) is called with a null-terminated string s of length n characters (not\ncounting the null ('\\0') character), how many characters will be printed by\nabc(s)? ",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) 332 332 1\n<br>(b) (2<sup>n</sup> - 1)",
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  }
+]

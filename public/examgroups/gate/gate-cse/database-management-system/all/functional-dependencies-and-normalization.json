@@ -1,0 +1,1498 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $P, Q, R$ and $S$ be the attributes of a relation in a relational schema. Let $X \\rightarrow Y$ indicate functional dependency in the context of a relational database, where $X, Y \\subseteq\\{P, Q, R, S\\}$ Which of the following options is/are always true?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>If $(\\{P, Q\\} \\rightarrow\\{R\\}$ and $\\{P\\} \\rightarrow\\{R\\})$, then $\\{Q\\} \\rightarrow\\{R\\}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>If $\\{P, Q\\} \\rightarrow\\{R\\}$, then $(\\{P\\} \\rightarrow\\{R\\}$ or $\\{Q\\} \\rightarrow\\{R\\})$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>If $(\\{P\\} \\rightarrow\\{R\\}$ and $\\{Q\\} \\rightarrow\\{S\\})$, then $\\{P, Q\\} \\rightarrow\\{R, S\\}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>If $\\{P\\} \\rightarrow\\{R\\}$, then $\\{P, Q\\} \\rightarrow\\{R\\}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let $P, Q, R, S$ be attributes of a relation.</p>\n<p>Check each statement one by one using functional dependency rules.</p>\n<p>$\\{P Q \\rightarrow R, P \\rightarrow R\\} \\Rightarrow Q \\rightarrow R$ : False</p>\n<p>This is not always true because knowing $Q$ alone does not give $R$.</p>\n<p>From the given dependencies, we can find the closure of $Q$.</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ Q^{+}=\\{Q\\} $$</p>\n<p>Since $R$ is not in $Q^{+}$, we cannot say $Q \\rightarrow R$.</p>\n<p>$\\{P Q \\rightarrow R\\} \\Rightarrow\\{P \\rightarrow R$ or $Q \\rightarrow R\\}$ : False</p>\n<p>This is also not always true.</p>\n<p>If $P Q \\rightarrow R$, it means both $P$ and $Q$ together determine $R$.</p>\n<p>It does not mean that $P$ alone determines $R$, or $Q$ alone determines $R$.</p>\n<p>For example, the closure of $P$ is only:</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ P^{+}=\\{P\\} $$</p>\n<p>So $P \\rightarrow R$ is not implied. Similarly, $Q \\rightarrow R$ is also not implied.</p>\n<p>$\\{P \\rightarrow R, Q \\rightarrow S\\} \\Rightarrow\\{P Q \\rightarrow R S\\}:$ True</p>\n<p>This is true.</p>\n<p>From $P \\rightarrow R$, if we know $P$, we get $R$.</p>\n<p>From $Q \\rightarrow S$, if we know $Q$, we get $S$.</p>\n<p>So if we know both $P$ and $Q$, then we can get both $R$ and $S$.</p>\n<p>Hence, $P Q \\rightarrow R S$.</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ [P Q]^{+}=P Q R S $$</p>\n<p>$P \\rightarrow R \\Rightarrow P Q \\rightarrow R$ : True</p>\n<p>This is true by augmentation.</p>\n<p>If $P$ determines $R$, then adding $Q$ with $P$ on the left side still keeps the dependency true.</p>\n<p>So $P Q \\rightarrow R$.</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ [P Q]^{+}=P Q R $$</p>\n<p>Therefore, the always true statements are the third and fourth options.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In the context of relational database normalization, which of the following statements is/ are true?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p> It is always possible to obtain a dependency-preserving 3NF decomposition of a relation</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p> It is always possible to obtain a dependency-preserving 1NF decomposition of a relation</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p> It is not always possible to obtain a dependency-preserving BCNF decomposition of a relation</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p> It is not always possible to obtain a dependency-preserving 2NF decomposition of a relation</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<h2>Option A</h2>\n<p>\"It is always possible to obtain a dependency-preserving 3NF decomposition of a relation\"</p>\n<p>This is <strong>true</strong>.</p>\n<p>By the standard 3NF decomposition algorithm, for any relation schema, we can always get a <strong>lossless</strong> and <strong>dependency-preserving</strong> decomposition into <strong>3NF</strong>.</p>\n<p>So, <strong>Option A is true</strong>.</p>\n\n<h2>Option B</h2>\n<p>\"It is always possible to obtain a dependency-preserving 1NF decomposition of a relation\"</p>\n<p>This is <strong>true</strong>.</p>\n<p>1NF is the most basic normal form, requiring only atomic values. Any relation can be represented in 1NF, and since we can even keep the relation as it is, dependency preservation is not a problem.</p>\n<p>So, <strong>Option B is true</strong>.</p>\n\n<h2>Option C</h2>\n<p>\"It is not always possible to obtain a dependency-preserving BCNF decomposition of a relation\"</p>\n<p>This is <strong>true</strong>.</p>\n<p>A BCNF decomposition can always be obtained, but it may <strong>not preserve all functional dependencies</strong>. Thus, dependency preservation is <strong>not always possible</strong> in BCNF.</p>\n<p>So, <strong>Option C is true</strong>.</p>\n\n<h2>Option D</h2>\n<p>\"It is not always possible to obtain a dependency-preserving 2NF decomposition of a relation\"</p>\n<p>This is <strong>false</strong>.</p>\n<p>Since 3NF decomposition is always possible with dependency preservation, and every 3NF relation is also in 2NF, a dependency-preserving 2NF decomposition is certainly possible.</p>\n<p>So, <strong>Option D is false</strong>.</p>\n\n<h2>Final Answer</h2>\n<p>The correct statements are:</p>\n<p>$$ \\boxed{A,\\ B,\\ C} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statements about a relation $R$ in first normal form (1NF) is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$R$ can have a multi-attribute key</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$R$ cannot have a foreign key</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$R$ cannot have a composite attribute</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$R$ cannot have more than one candidate key</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statements about a relation $R$ in first normal form (1NF) are true, let's first understand what 1NF entails. A relation is in 1NF if it adheres to the following rules:</p>\n\n<ul>\n  <li>All columns must contain atomic (indivisible) values.</li>\n  <li>Each column must contain values of the same type.</li>\n  <li>Each column must contain a unique name.</li>\n  <li>The order in which data is stored does not matter.</li>\n</ul>\n\n<p>With this understanding, let's analyze each option:</p>\n\n<p><b>Option A: $R$ can have a multi-attribute key</b></p>\n<p>True. A multi-attribute key, also known as a composite key, is allowed in 1NF. A composite key is simply a key that consists of more than one attribute, and there is no restriction in 1NF against having such keys.</p>\n\n<p><b>Option B: $R$ cannot have a foreign key</b></p>\n<p>False. The concept of 1NF does not exclude the use of foreign keys. Foreign keys are related to establishing relationships between tables, but 1NF only concerns the atomicity of the values in each column.</p>\n\n<p><b>Option C: $R$ cannot have a composite attribute</b></p>\n<p>True. A composite attribute consists of multiple sub-parts and is not atomic. Since 1NF requires that each attribute contain atomic values, composite attributes are not allowed.</p>\n\n<p><b>Option D: $R$ cannot have more than one candidate key</b></p>\n<p>False. There is no restriction in 1NF on the number of candidate keys. A relation in 1NF can have multiple candidate keys.</p>\n\n<p>Therefore, the correct statements about a relation $R$ in first normal form (1NF) are:</p>\n\n<p>Option A: $R$ can have a multi-attribute key</p>\n<p>Option C: $R$ cannot have a composite attribute</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>In a relational data model, which one of the following statements is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A relation with only two attributes is always in BCNF."
+      },
+      {
+        "identifier": "B",
+        "content": "If all attributes of a relation are prime attributes, then the relation is in BCNF."
+      },
+      {
+        "identifier": "C",
+        "content": "Every relation has at least one non-prime attribute."
+      },
+      {
+        "identifier": "D",
+        "content": "BCNF decompositions preserve functional dependencies."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Relation with 2 attributes always in BCNF</p>\n<p>R(AB) {A $$\\to$$ B} $$\\Rightarrow$$ BCNF</p>\n<p>{B $$\\to$$ A} $$\\Rightarrow$$ BCNF</p>\n<p>{A $$\\to$$ B, B $$\\to$$ A} $$\\Rightarrow$$ BCNF</p>\n<p>{No non-trivial FD's} $$\\Rightarrow$$ BCNF</p>\n<p>$$\\bullet$$ If all prime attributes than relation always in 3NF but may not BCNF.</p>\n<p>$$\\bullet$$ Not mandatory of atleast one non-prime attribute in RDBMS table.</p>\n<p>$$\\bullet$$ Not every relation can decompose into BCNF with dependency preserving.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a relation R(A, B, C, D, E) with the following three functional dependencies.</p>\n<p>AB $$\\to$$ C ; BC $$\\to$$ D ; C $$\\to$$ E;</p>\n<p>The number of superkeys in the relation R is _________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "8",
+    "explanation": "<p>AB<sup>+</sup> = ABCDE</p> \n<p>$$ \\therefore $$ AB : Candidate key</p>\n<p>Non prime attribute = C, D, E</p>\n<p>$$ \\therefore $$ Number of superkeys = 2<sup>3</sup> = 8. Those are AB, ABC, ABD, ABE, ABCD, ABCE, ABDE, ABCDE. In super key candidate key should always present.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following statements S1 and S2 about the relational data model:</p>\n\n<p>S1: A relation scheme can have at most one foreign key.</p>\n\n<p>S2: A foreign key in a relation scheme R cannot be used to refer to tuples of R.</p>\n\n<p>Which one of the following choices is correct?&nbsp;</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S1 is true and S2 is false.&nbsp;&nbsp;"
+      },
+      {
+        "identifier": "B",
+        "content": "Both S1 and S2 are true.&nbsp;&nbsp;"
+      },
+      {
+        "identifier": "C",
+        "content": "Both S1 and S2 are false.&nbsp;&nbsp;"
+      },
+      {
+        "identifier": "D",
+        "content": "S1 is false and S2 is true.&nbsp;"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statements are correct, let's analyze each one individually in the context of the relational data model.</p>\n<hr />\n<h3><strong>Statement S1:</strong></h3>\n<p><strong>A relation scheme can have at most one foreign key.</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Definition of Foreign Key:</strong></p></p>\n<p><p>A <strong>foreign key</strong> is a set of one or more attributes in a relation (table) that refers to the <strong>primary key</strong> or a <strong>candidate key</strong> in another relation (or possibly the same relation).</p></p>\n<p><p>The purpose of a foreign key is to enforce <strong>referential integrity</strong> between data in two relations.</p></p>\n<p><p><strong>Possibility of Multiple Foreign Keys:</strong></p></p>\n<p><p>A relation can have <strong>multiple foreign keys</strong>, each referencing a primary key in the same or different relations.</p></p>\n<p><p><strong>Example:</strong></p>\n\n<p><p><strong>Employee</strong> table:</p></p>\n<p><p>Attributes: EmployeeID (PK), Name, DepartmentID (FK to Department), ManagerID (FK to Employee).</p></p>\n<p><p>Here, the <strong>Employee</strong> table has two foreign keys:</p></p>\n<p><p><code>DepartmentID</code> references the <strong>Department</strong> table.</p></p>\n<p><p><code>ManagerID</code> references the <strong>Employee</strong> table itself (self-referencing foreign key).</p></p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>A relation scheme <strong>can have multiple foreign keys</strong>.</p></p>\n<p><p><strong>Statement S1 is false.</strong></p></p>\n\n<hr />\n<h3><strong>Statement S2:</strong></h3>\n<p><strong>A foreign key in a relation scheme $ R $ cannot be used to refer to tuples of $ R $.</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Self-Referencing Foreign Keys:</strong></p></p>\n<p><p>A foreign key can reference the primary key of <strong>the same relation</strong>. This is known as a <strong>self-referencing</strong> or <strong>recursive foreign key</strong>.</p></p>\n<p><p><strong>Use Cases:</strong></p>\n\n<p><p><strong>Hierarchical Data:</strong></p></p>\n<p><p>Representing organizational structures, such as an employee-manager relationship.</p></p>\n<p><p><strong>Bill of Materials:</strong></p></p>\n<p><p>Items that are composed of other items in a nested fashion.</p></p></p>\n<p><p><strong>Example:</strong></p></p>\n<p><p><strong>Employee</strong> table:</p>\n\n<p><p>Attributes: EmployeeID (PK), Name, ManagerID (FK to EmployeeID).</p></p>\n<p><p><code>ManagerID</code> is a foreign key that references <code>EmployeeID</code> in the same table, establishing a relationship where an employee can be the manager of other employees.</p></p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>A foreign key <strong>can</strong> refer to tuples within the same relation.</p></p>\n<p><p><strong>Statement S2 is false.</strong></p></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Statement S1 is false.</strong></p></p>\n<p><p><strong>Statement S2 is false.</strong></p></p>\n\n<hr />\n<p><strong>Answer:</strong> Option C</p>\n<p><strong>Both S1 and S2 are false.</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A database of research articles in a journal uses the following schema.\n<pre><code>(VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, YEAR, PRICE)</code></pre>\nThe primary key is <b>(VOLUME, NUMBER, STARTPAGE, ENDPAGE)</b> and the following\nfunctional dependencies exist in the schema.\n<pre><code>(VOLUME, NUMBER, STARTPAGE, ENDPAGE) → TITLE\n(VOLUME, NUMBER) → YEAR\n(VOLUME, NUMBER, STARTPAGE, ENDPAGE) → PRICE</code></pre>\nThe database is redesigned to use the following schemas.\n<pre><code>(VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, PRICE)\n(VOLUME, NUMBER, YEAR)</code></pre>\nWhich is the weakest normal form that the new database satisfies, but the old one does not?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1NF"
+      },
+      {
+        "identifier": "B",
+        "content": "2NF"
+      },
+      {
+        "identifier": "C",
+        "content": "3NF"
+      },
+      {
+        "identifier": "D",
+        "content": "BCNF"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the relation  $$X\\left( {P,Q,R,S,T,U} \\right)$$ with the following set of functional dependencies\n <br>$$\\eqalign{\n  &amp; F = \\left\\{ \\, \\right.  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\left\\{ {P,R} \\right\\} \\to \\left\\{ {S,T} \\right\\},  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\left\\{ {P,S,U} \\right\\} \\to \\left\\{ {Q,R} \\right\\}  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\left. \\, \\right\\} \\cr} $$ \n<br>Which of the following is the trivial functional dependency in $${F^ + },$$ where $${F^ + }$$ is closure of $$f$$ ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{ {P,R} \\right\\} \\to \\left\\{ {S,T} \\right\\}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{ {P,R} \\right\\} \\to \\left\\{ {R,T} \\right\\}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\{ {P,S} \\right\\} \\to \\left\\{ S \\right\\}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{ {P,S,U} \\right\\} \\to \\left\\{ Q \\right\\}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The maximum number of superkeys for the relation schema $$R(E, F, G, H)$$ with $$E$$ as key is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "8",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the relation schema $$R = \\left( {E,\\,F,\\,G,\\,H,\\,I,\\,J,\\,K,L,\\,M,\\,N} \\right)$$ and the set of functional dependencies $$\\left\\{ {\\left\\{ {E,F} \\right\\} \\to \\left\\{ G \\right\\},\\left\\{ F \\right\\}} \\right.$$\n<br>$$ \\to \\left\\{ {I,J} \\right\\},\\left\\{ {E,H} \\right\\} \\to \\left\\{ {K,L} \\right\\},\\left\\{ K \\right\\}$$\n<br>$$ \\to \\left\\{ M \\right\\},\\left\\{ L \\right\\}$$\n<br>$$ \\to \\left. {\\left\\{ N \\right\\}} \\right\\}$$ on $$R.$$ What is the key for $$R?$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{ {E,F} \\right\\}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{ {E,F,H} \\right\\}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\{ {E,\\,F,\\,H,\\,K,\\,L} \\right\\}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{ E \\right\\}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A prime attribute of a relation scheme $$R$$ is an attribute that appears",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "In all candidate keys of $$R$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "In some candidate key of $$R.$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "In a foreign key of $$R.$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Only in the primary key of $$R.$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Every relation in $$3NF$$ is also in $$BCNF$$"
+      },
+      {
+        "identifier": "B",
+        "content": "A relation $$R$$ is in $$3NF$$ if every non-prime attribute of $$R$$ is fully functionally dependent on every key of $$R$$"
+      },
+      {
+        "identifier": "C",
+        "content": "Every relation in $$BCNF$$ is also in $$3NF$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "No relation can be in both $$BCNF$$ and $$3NF$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "A table has fields, $$F1, F2, F3, F4, F5,$$ with the following functional dependencies: \n<br>$$F1 \\to F3.\\,F2 \\to F4.\\,\\,\\,\\left( {F1\\,.\\,F2} \\right) \\to F5$$ in terms of Normalization, this table is in",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1NF$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2NF$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3NF$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "None of these "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following statements about normal forms is <b>FALSE?</b> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$BCNF$$ is stricter than $$3NF$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Lossless, dependency $$-$$ preserving decomposition into $$3NF$$ is always possible"
+      },
+      {
+        "identifier": "C",
+        "content": "Lossless, dependency - preserving decomposition into $$BCNF$$ is always possible "
+      },
+      {
+        "identifier": "D",
+        "content": "Any relation with two attributes is in $$BCNF$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Relation $$R$$ with an associated set of functional dependencies, $$F,$$ is decomposed into $$BCNF.$$ The redundancy (arising out of functional dependencies) in the resulting set of relations is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Zero "
+      },
+      {
+        "identifier": "B",
+        "content": "More than zero but less than that of an equivalent $$3NF$$ decomposition"
+      },
+      {
+        "identifier": "C",
+        "content": "Proportional to the size of $${F^ + }$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Indeterminate "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a schema $$R(A,B,C,D)$$ and functional dependencies $$A \\to B\\,\\,$$ and $$C \\to D\\,\\,$$. Then the decomposition of $$R$$ into $${R_1}\\left( {AB} \\right)$$ and $${R_2}\\left( {CD} \\right)$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Dependency preserving and lossless join"
+      },
+      {
+        "identifier": "B",
+        "content": "Lossless join but not dependency preserving"
+      },
+      {
+        "identifier": "C",
+        "content": "Dependency preserving but not lossless join "
+      },
+      {
+        "identifier": "D",
+        "content": "Not dependency preserving and not lossless join "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$R=(A,B,C,D,E,F)$$ be a relation scheme with the following dependencies: $$C \\to F,\\,E \\to A,\\,EC \\to D,\\,A \\to B.$$ Which of the following is a key for $$R?$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$CD$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$EC$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$AE$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$AC$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Which normal form is considered adequate for normal relational database design? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ $$NF$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$5$$ $$NF$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ $$NF$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$3$$ $$NF$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "State True or False with reason. There is always a decomposition into Boyce-codd normal form $$(BCNF)$$  that is lossless and dependency preserving.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-cse-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In the context of schema normalization in relational DBMS, consider a set $F$ of functional dependencies. The set of all functional dependencies implied by $F$ is called the closure of $F$. To compute the closure of $F$, Armstrong's Axioms can be applied. Consider $X, Y$, and $Z$ as sets of attributes over a relational schema. The three rules of Armstrong's Axioms are described as follows.</p>\n<p>Reflexivity: If $Y \\subseteq X$, then $X \\rightarrow Y$</p>\n<p>Augmentation: If $X \\rightarrow Y$, then $X Z \\rightarrow Y Z$ for any $Z$</p>\n<p>Transitivity: If $X \\rightarrow Y$ and $Y \\rightarrow Z$, then $X \\rightarrow Z$</p>\n<p>The additional rule of Union is defined as follows.</p>\n<p>Union: If $X \\rightarrow Y$ and $X \\rightarrow Z$, then $X \\rightarrow Y Z$</p>\n<p>It can be proved that the additional rule of Union is also implied by the three rules of Armstrong's Axioms. Listed below are four combinations of these three rules. Which one of these combinations is both necessary and sufficient for the proof?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Reflexivity, Augmentation, and Transitivity</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Reflexivity and Augmentation</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Transitivity</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Augmentation and Transitivity</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Reflexivity, if $Y \\subseteq X$ then $X \\rightarrow Y$</p>\n<p>Augmentation, if $X \\rightarrow Y$ then $X Z \\rightarrow Y Z$</p>\n<p>Transitivity, if $X \\rightarrow Y, Y \\rightarrow Z$ then $X \\rightarrow Z$</p>\n<p>The additional union rule</p>\n<p>If $X \\rightarrow Y, X \\rightarrow Z$ then $X \\rightarrow Y Z$</p>\n<p>To derive union rule required Augmentation or transitivity.</p>\n<p>If $X \\rightarrow Y$ then $X \\rightarrow X Y$ : Augmentation</p>\n<p>If $X \\rightarrow Z$ then $X Y \\rightarrow Y Z:$ Augmentation</p>\n<p>If $X \\rightarrow X Y, X Y \\rightarrow Y Z$ then $X \\rightarrow Y Z:$ Transitivity.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Consider a relational database schema with a relation $R(A, B, C, D)$. If $\\{A, B\\}$ and $\\{A, C\\}$ are the only two candidate keys of the relation $R$, then the number of superkeys of relation $R$ is $\\_\\_\\_\\_$ . (answer in integer)\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "(6)\n",
+    "explanation": "<p>$\\{\\underline{A B}, \\underline{A C}\\}$ candidate keys.<img alt=\"GATE CSE 2026 Set 1 Database Management System - Functional Dependencies and Normalization Question 1 English Explanation\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyr5zhn/690d15d6-6a6a-4100-874f-e5bf24564fbf/0cf66bb0-2447-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyr5zho.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyr5zhn/690d15d6-6a6a-4100-874f-e5bf24564fbf/0cf66bb0-2447-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyr5zho.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p>Number of super keys.</p>\n<p>$$ \\Rightarrow \\quad 2^2+2^2-2=6 $$</p>\n<p>6 superkeys</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following relational schema along with all the functional dependencies that hold on them.</p>\n<p>$$\\begin{aligned}\n& R 1(A, B, C, D, E):\\{D \\rightarrow E, E A \\rightarrow B, E B \\rightarrow C\\} \\\\\n& R 2(A, B, C, D):\\{A \\rightarrow D, A \\rightarrow B, C \\rightarrow A\\}\n\\end{aligned}$$</p>\n<p>Which of the following statement(s) is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$R 1$ is in 3NF\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$R 2$ is in 3 NF\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$R 1$ is NOT in 3 NF\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$R 2$ is NOT in 3NF"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}\n.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 523px\"><colgroup>\n<col style=\"width: 272px\">\n<col style=\"width: 251px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-7btt\"></th>\n    <th class=\"tg-7btt\"></th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-0pky\">$R_1(A B C D E)$</td>\n    <td class=\"tg-0pky\">$R_2(A B C D)$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0pky\">$\\{D \\rightarrow E, E A \\rightarrow B, E B \\rightarrow C\\}$</td>\n    <td class=\"tg-0pky\">$\\{A \\rightarrow D, A \\rightarrow B, C \\rightarrow A\\}$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0pky\">$(D A)^{+}=\\{D E A B C\\}$</td>\n    <td class=\"tg-0pky\">$C^{+}=C A B D$</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">$$\\underline {AD} $$ : Candidate key</td>\n    <td class=\"tg-0lax\">$$\\underline {C} $$ : Candidate key</td>\n  </tr>\n  <tr>\n    <td class=\"tg-0lax\">$R_1$ in 1 NF but not in 2NF</td>\n    <td class=\"tg-0lax\">$R_2$ in 2 NF but not in 3 NF</td>\n  </tr>\n</tbody>\n</table></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a relational schema team(name, city, owner), with functional dependencies \\{name $\\rightarrow$ city, name $\\rightarrow$ owner}.</p>\n<p>The relation team is decomposed into two relations, $t 1$ (name, city) and $t 2$ (name, owner). Which of the following statement(s) is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The relation team is NOT in BCNF.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "The relations $t 1$ and $t 2$ are in BCNF.\n"
+      },
+      {
+        "identifier": "C",
+        "content": "The decomposition constitutes a lossless join.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "The relation team is NOT in 3NF."
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>In the relational schema team(name, city, owner), we have the functional dependencies:</p>\n\n<p><p>name → city</p></p>\n<p><p>name → owner</p></p>\n\n<p>The candidate key for this relation is name, since it determines all other attributes (city and owner). Therefore, the relation team is in BCNF because every determinant is a candidate key.</p>\n<p>The relation team is decomposed into two new relations:</p>\n\n<p><p>T1(name, city)</p></p>\n<p><p>T2(name, owner)</p></p>\n\n<p>Both T1 and T2 are in BCNF because each has a single functional dependency where the determinant is a candidate key (name → city in T1 and name → owner in T2).</p>\n<p>The decomposition of the team into T1 and T2 is lossless join, which means that when T1 and T2 are joined back together using a natural join on the name attribute, we can recreate the original team relation without any loss of information.</p>\n<p>Additionally, the decomposition is dependency preserving, meaning that all functional dependencies are preserved in the decomposed relations. </p>\n<p>Overall, the original relation team is in BCNF, and both decomposed relations (T1 and T2) are also in BCNF. The decomposition is both lossless and dependency preserving.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A functional dependency $F: X \\to Y$ is termed as a useful functional dependency if and only if it satisfies all the following three conditions:<ul><li>$X$ is not the empty set.</li><li>$Y$ is not the empty set.</li><li>Intersection of $X$ and $Y$ is the empty set.</li></ul> <br/>For a relation $R$ with 4 attributes, the total number of possible useful functional dependencies is _________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "50",
+    "explanation": "<p>To determine the total number of possible useful functional dependencies for a relation $R$ with 4 attributes, we need to carefully analyze the conditions specified for a functional dependency $F: X \\to Y$ to be considered useful.</p>\n\n<p>Let's denote the 4 attributes by $A, B, C, D$.</p>\n\n<p>A useful functional dependency $F: X \\to Y$ must satisfy the following conditions:</p>\n\n<ul>\n\n<li>$X$ is not the empty set.</li>\n\n<li>$Y$ is not the empty set.</li>\n\n<li>The intersection of $X$ and $Y$ is the empty set (i.e., $X \\cap Y = \\emptyset$).</li>\n\n</ul>\n\n<p>Given that the relation $R$ has 4 attributes, there are a total of $2^4 - 1 = 15$ possible non-empty subsets for $X$. Similarly, there are $2^4 - 1 = 15$ possible non-empty subsets for $Y$. However, we must ensure that $X \\cap Y = \\emptyset$.</p>\n\n<p>The total number of useful functional dependencies can be determined by counting all valid combinations of $X$ and $Y$ such that $X$ and $Y$ are disjoint subsets of $\\{A, B, C, D\\}$.</p>\n\n<p>Let's approach this step by step:</p>\n\n<ol>\n\n<li>We need to choose $X$ such that it's a non-empty subset of $\\{A, B, C, D\\}$. Each non-empty subset can be chosen in $2^4 - 1 = 15$ ways.</li>\n\n<li>For a given $X$, $Y$ must be a non-empty subset of the remaining attributes $\\{A, B, C, D\\} \\setminus X$. The number of attributes left after choosing $X$ is $4 - |X|$.</li>\n\n<li>The number of non-empty subsets of the remaining attributes is $2^{4-|X|} - 1$.</li>\n\n<li>We need to sum these counts over all possible sizes of $X$.</li>\n\n</ol>\n\n<p>Summarizing, we compute the total number of useful functional dependencies:</p>\n\n<p>$$ \\sum_{k=1}^{4} \\binom{4}{k} \\cdot (2^{4-k} - 1) $$</p>\n\n<p>Where $\\binom{4}{k}$ represents the number of ways to choose $X$ with $k$ attributes.</p>\n\n<p>Calculating each term:</p>\n\n<ul>\n\n<li>For $k=1$: $\\binom{4}{1} \\cdot (2^{4-1} - 1) = 4 \\cdot (8 - 1) = 4 \\cdot 7 = 28$</li>\n\n<li>For $k=2$: $\\binom{4}{2} \\cdot (2^{4-2} - 1) = 6 \\cdot (4 - 1) = 6 \\cdot 3 = 18$</li>\n\n<li>For $k=3$: $\\binom{4}{3} \\cdot (2^{4-3} - 1) = 4 \\cdot (2 - 1) = 4 \\cdot 1 = 4$</li>\n\n<li>For $k=4$: $\\binom{4}{4} \\cdot (2^{4-4} - 1) = 1 \\cdot (1 - 1) = 1 \\cdot 0 = 0$</li>\n\n</ul>\n\n<p>Adding all these, the total number of useful functional dependencies is:</p>\n\n<p>$$ 28 + 18 + 4 + 0 = 50 $$</p>\n\n<p>Thus, the total number of possible useful functional dependencies is 50.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The symbol &rarr; indicates functional dependency in the context of a relational database. Which of the following options is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>(X, Y) &rarr; (Z, W) implies X &rarr; (Z, W)</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>(X, Y) &rarr; (Z, W) implies (X, Y) &rarr; Z</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>((X, Y) &rarr; Z and W &rarr; Y) implies (X, W) &rarr; Z</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>(X &rarr; Y and Y &rarr; Z) implies X &rarr; Z</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Option A:</p>\n<p>$$(X, Y) \\rightarrow (Z, W)$$ implies $$(X \\rightarrow (Z, W)).$$</p>\n<p>This is not always true. Knowing that the pair (X, Y) determines (Z, W) does not necessarily mean that X alone determines (Z, W).</p>\n<p>Option B:</p>\n<p>$$(X, Y) \\rightarrow (Z, W)$$ implies $$(X, Y) \\rightarrow Z.$$</p>\n<p>This is true. If the pair (X, Y) determines (Z, W), it certainly determines Z individually as Z is part of (Z, W).</p>\n<p>Option C:</p>\n<p>$$((X, Y) \\rightarrow Z \\text{ and } W \\rightarrow Y)$$ implies $$((X, W) \\rightarrow Z).$$</p>\n<p>This is true due to the principle of transitivity in functional dependencies.</p>\n<p>Option D:</p>\n<p>$$(X \\rightarrow Y \\text{ and } Y \\rightarrow Z)$$ implies $$X \\rightarrow Z.$$</p>\n<p>This is true by the transitive property of functional dependencies.</p>\n<p>Thus, the options that are TRUE are:</p>\n<p><strong>Option B, Option C, and Option D</strong>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Suppose the following functional dependencies hold on a relation U with attributes P, Q, R, S, and T :</p>\n\n<p>P&nbsp;→ QR</p>\n\n<p>RS&nbsp;→ T</p>\n\n<p>Which of the following functional dependencies can be inferred from the above functional dependencies?&nbsp;&nbsp;</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P&nbsp;→ R"
+      },
+      {
+        "identifier": "B",
+        "content": "PS&nbsp;→ T"
+      },
+      {
+        "identifier": "C",
+        "content": "R&nbsp;→ T"
+      },
+      {
+        "identifier": "D",
+        "content": "PS&nbsp;→ Q"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Given Functional Dependencies :</strong></h3>\n\n<p><p><strong>$ P \\rightarrow Q R $</strong>  </p>\n<p>This means $ P $ functionally determines both $ Q $ and $ R $.</p></p>\n<p><p><strong>$ R S \\rightarrow T $</strong>  </p>\n<p>This means the combination of $ R $ and $ S $ functionally determines $ T $.</p></p>\n\n<hr />\n<h3><strong>Option A : $ P \\rightarrow R $</strong></h3>\n<p><strong>Analysis :</strong></p>\n\n<p><p>From the given dependency $ P \\rightarrow Q R $, we can <strong>decompose</strong> it into :</p></p>\n<p><p>$ P \\rightarrow Q $</p></p>\n<p><p>$ P \\rightarrow R $</p></p>\n<p><p>Therefore, <strong>$ P \\rightarrow R $</strong> can be directly inferred.</p></p>\n\n<p><strong>Conclusion :</strong> <strong>Option A is correct.</strong></p>\n<hr />\n<h3><strong>Option B : $ P S \\rightarrow T $</strong></h3>\n<p><strong>Analysis :</strong></p>\n<p>We need to check if $ P S \\rightarrow T $ can be inferred using the given dependencies.</p>\n\n<p><strong>From $ P \\rightarrow R $ :</strong></p>\n\n\n<p><p>Since $ P \\rightarrow R $ and $ P S $ includes $ P $, we can <strong>augment</strong> $ P \\rightarrow R $ with $ S $ :</p>\n\n<p>$ P S \\rightarrow R S $</p></p>\n\n\n<p><strong>From $ R S \\rightarrow T $ :</strong></p>\n\n\n<p>We already have $ R S \\rightarrow T $.</p>\n\n\n<p><strong>Transitivity :</strong></p>\n\n\n<p><p>Using <strong>transitivity</strong> on the above results :</p>\n\n<p>If $ P S \\rightarrow R S $ and $ R S \\rightarrow T $, then $ P S \\rightarrow T $.</p></p>\n\n<p><strong>Conclusion :</strong> <strong>Option B is correct.</strong></p>\n<hr />\n<h3><strong>Option C : $ R \\rightarrow T $</strong></h3>\n<p><strong>Analysis :</strong></p>\n<p>We need to determine if $ R \\rightarrow T $ can be inferred from the given dependencies.</p>\n\n<p><p><strong>Given :</strong> $ R S \\rightarrow T $</p></p>\n\n<p><p><strong>To infer $ R \\rightarrow T $,</strong> we would need either :</p></p>\n<p><p>$ S \\rightarrow T $, or</p></p>\n<p><p>$ R \\rightarrow S $</p></p>\n<p><p><strong>But we have no such dependencies.</strong></p></p>\n<p><p><strong>No inference rule</strong> allows us to deduce $ R \\rightarrow T $ from $ R S \\rightarrow T $ alone.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option C cannot be inferred and is incorrect.</strong></p>\n<hr />\n<h3><strong>Option D : $ P S \\rightarrow Q $</strong></h3>\n<p><strong>Analysis :</strong></p>\n\n<p><strong>From $ P \\rightarrow Q $ :</strong></p>\n\n\n<p><p>Since $ P \\rightarrow Q $ and $ P S $ includes $ P $, we can <strong>augment</strong> $ P \\rightarrow Q $ with $ S $ :</p>\n\n<p>$ P S \\rightarrow Q $</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option D is correct.</strong></p>\n<hr />\n<h3><strong>Final Answer :</strong></h3>\n\n<p><p><strong>Options A, B, and D can be inferred from the given functional dependencies.</strong></p></p>\n<p><p><strong>Option C cannot be inferred.</strong></p></p>\n\n<hr />\n<p><strong>Therefore, the functional dependencies that can be inferred are :</strong></p>\n\n<p><p><strong>Option A :</strong> $ P \\rightarrow R $</p></p>\n<p><p><strong>Option B :</strong> $ P S \\rightarrow T $</p></p>\n<p><p><strong>Option D :</strong> $ P S \\rightarrow Q $</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Options A, B, and D can be inferred from the given functional dependencies.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the relation R(P, Q, S, T, X, Y, Z, W) with the following functional dependencies.</p>\n\n<p>PQ&nbsp;→ X; P&nbsp;→ YX; Q&nbsp;→ Y; Y&nbsp;→ ZW</p>\n\n<p>Consider the decomposition of the relation R into the constituent relations according to the following two decomposition schemes.</p>\n\n<p>D<sub>1</sub> : R = [(P, Q, S, T); (P, T, X); (Q, Y); (Y, Z, W)]</p>\n\n<p>D<sub>2</sub>&nbsp;: R = [(P, Q, S); (T, X); (Q, Y); (Y, Z, W)]</p>\n\n<p>Which one of the following options is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>D<sub>1</sub> is a lossy decomposition, but D<sub>2</sub> is a lossless decomposition.</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Both D<sub>1</sub> and D<sub>2</sub> are lossless decompositions."
+      },
+      {
+        "identifier": "C",
+        "content": "Both D<sub>1</sub> and D<sub>2</sub> are lossy decompositions."
+      },
+      {
+        "identifier": "D",
+        "content": "D<sub>1</sub> is a lossless decomposition, but D<sub>2</sub> is a lossy decomposition."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine whether the decompositions $ D_1 $ and $ D_2 $ are lossless or lossy, we'll analyze each decomposition using the concept of <strong>lossless join decomposition</strong> and the given functional dependencies (FDs).</p>\n<h3><strong>Given Relation and Functional Dependencies:</strong></h3>\n\n<p><p><strong>Relation $ R $:</strong> $ (P, Q, S, T, X, Y, Z, W) $</p></p>\n<p><p><strong>Functional Dependencies:</strong></p></p>\n\n\n<p><p>$ PQ \\rightarrow X $</p></p>\n<p><p>$ P \\rightarrow YX $</p></p>\n<p><p>$ Q \\rightarrow Y $</p></p>\n<p><p>$ Y \\rightarrow ZW $</p></p>\n\n<h3><strong>Decomposition $ D_1 $:</strong></h3>\n\n<p>$ R = \\{ R_1(P, Q, S, T); \\ R_2(P, T, X); \\ R_3(Q, Y); \\ R_4(Y, Z, W) \\} $</p>\n\n<h4><strong>Checking for Lossless Join:</strong></h4>\n<p><strong>Step 1:</strong> Identify the common attributes between the relations.</p>\n\n<p><strong>Between $ R_1 $ and $ R_2 $:</strong> Common attributes are $ \\{ P, T \\} $.</p>\n\n<p><strong>Step 2:</strong> Check if the common attributes form a superkey in one of the relations.</p>\n\n<p><p><strong>Compute $ (P, T)^+ $:</strong></p></p>\n<p><p>Start with $ \\{ P, T \\} $.</p></p>\n<p><p>From $ P \\rightarrow YX $, add $ Y, X $.</p></p>\n<p><p>From $ Y \\rightarrow ZW $, add $ Z, W $.</p></p>\n<p><p>Closure: $ (P, T)^+ = \\{ P, T, Y, X, Z, W \\} $.</p></p>\n<p><p><strong>In Relation $ R_2(P, T, X) $:</strong></p></p>\n<p><p>Attributes are $ \\{ P, T, X \\} $.</p></p>\n<p><p>Since $ (P, T)^+ $ includes all attributes of $ R_2 $, $ \\{ P, T \\} $ is a superkey for $ R_2 $.</p></p>\n\n<p><strong>Conclusion for $ R_1 $ and $ R_2 $:</strong> Since the common attributes $ \\{ P, T \\} $ form a superkey for $ R_2 $, the join between $ R_1 $ and $ R_2 $ is lossless.</p>\n<p><strong>Similarly, for other pairs:</strong></p>\n<ol start=\"2\">\n<p><strong>Between $ R_1 $ and $ R_3 $:</strong> Common attribute is $ Q $.</p>\n\n\n<p><p>$ Q \\rightarrow Y $, but $ (Q)^+ = \\{ Q, Y \\} $ does not cover $ R_1 $, but $ Q $ is a superkey for $ R_3 $.</p></p>\n<p><p><strong>Conclusion:</strong> The join between $ R_1 $ and $ R_3 $ is lossless.</p></p>\n\n<ol start=\"2\">\n<p><strong>Between $ R_3 $ and $ R_4 $:</strong> Common attribute is $ Y $.</p>\n\n\n<p><p>$ Y \\rightarrow ZW $, so $ (Y)^+ = \\{ Y, Z, W \\} $.</p></p>\n<p><p>$ Y $ is a superkey for $ R_4 $.</p></p>\n<p><p><strong>Conclusion:</strong> The join between $ R_3 $ and $ R_4 $ is lossless.</p></p>\n\n<p><strong>Final Conclusion for $ D_1 $:</strong></p>\n\n<p><p>All joins where relations share common attributes are lossless.</p></p>\n<p><p>**Therefore, $ D_1 $ is a *<em>lossless</em>* decomposition.**</p></p>\n\n<h3><strong>Decomposition $ D_2 $:</strong></h3>\n\n<p>$ R = \\{ R_1(P, Q, S); \\ R_2(T, X); \\ R_3(Q, Y); \\ R_4(Y, Z, W) \\} $</p>\n\n<h4><strong>Checking for Lossless Join:</strong></h4>\n<p><strong>Between $ R_1 $ and $ R_2 $:</strong></p>\n\n<p><p><strong>Common attributes:</strong> None ($ R_1 $ and $ R_2 $ are disjoint).</p></p>\n<p><p><strong>Conclusion:</strong> Cannot have a lossless join between $ R_1 $ and $ R_2 $.</p></p>\n\n<p><strong>Between $ R_2 $ and other relations:</strong></p>\n\n<p>$ R_2(T, X) $ does not share common attributes with any other relation except possibly through dependencies.</p>\n\n<p><strong>Problem Identified:</strong></p>\n\n<p><p><strong>No common attributes</strong> between $ R_2 $ and other relations to facilitate a lossless join.</p></p>\n<p><p><strong>Functional dependencies involving $ T $ and $ X $:</strong></p></p>\n<p><p>No FDs are given that involve $ T $ alone determining $ X $ or vice versa.</p></p>\n<p><p>Thus, $ R_2 $ lacks a superkey, and the decomposition does not preserve dependencies or guarantee a lossless join.</p></p>\n\n<p><strong>Final Conclusion for $ D_2 $:</strong></p>\n\n<p>**$ D_2 $ is a *<em>lossy</em>* decomposition** because there is no way to guarantee that the original relation can be reconstructed without loss of information.</p>\n\n<h3><strong>Answer:</strong></h3>\n<p><strong>Option D is correct:</strong></p>\n\n<p><strong>$ D_1 $ is a lossless decomposition</strong>, but <strong>$ D_2 $ is a lossy decomposition</strong>.</p>\n\n<hr />\n<p><strong>Answer:</strong> Option D</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a relational table R that is in 3NF, but not in BCNF. Which one of the following statements is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A cell in R holds a set instead of an atomic value."
+      },
+      {
+        "identifier": "B",
+        "content": "R has a nontrivial functional dependency X $$ \\to $$ A, where X is not a superkey and A is a non-prime attribute and X is not a proper subset of any key"
+      },
+      {
+        "identifier": "C",
+        "content": "R has a nontrivial functional dependency X $$ \\to $$ A, where X is not a superkey and A is a non-prime attribute and X is a proper subset of some key."
+      },
+      {
+        "identifier": "D",
+        "content": "R has a nontrivial functional dependency X $$ \\to $$ A, where X is not a superkey and A is a prime attribute."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statement is <strong>TRUE</strong>, let's analyze each option in the context of a relational table $ R $ that is in <strong>Third Normal Form (3NF)</strong> but <strong>not</strong> in <strong>Boyce-Codd Normal Form (BCNF)</strong>.</p>\n<hr>\n<h3><strong>Understanding the Difference Between 3NF and BCNF:</strong></h3>\n\n<p></p><p><strong>3NF Definition:</strong></p><p></p>\n<p></p><p>A relation $ R $ is in 3NF if, for every nontrivial functional dependency $ X \\to A $:</p>\n\n<p></p><p><strong>(a)</strong> $ X $ is a superkey, <strong>or</strong></p><p></p>\n<p></p><p><strong>(b)</strong> $ A $ is a prime attribute (an attribute that is part of some candidate key).</p><p></p><p></p>\n<p></p><p><strong>BCNF Definition:</strong></p><p></p>\n<p></p><p>A relation $ R $ is in BCNF if, for every nontrivial functional dependency $ X \\to A $:</p>\n\n<p>$ X $ is a superkey.</p><p></p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3iaw1wu/2e922698-3b86-4f48-a6d5-fccdee5b55e0/c015fce0-a312-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iaw1wv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3iaw1wu/2e922698-3b86-4f48-a6d5-fccdee5b55e0/c015fce0-a312-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iaw1wv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Database Management System - Functional Dependencies and Normalization Question 15 English Explanation\">\n\n<p><strong>Key Point:</strong> The main difference is that 3NF allows certain functional dependencies where $ X $ is not a superkey, provided $ A $ is a prime attribute. BCNF is stricter and does not allow any such exceptions.</p>\n<hr>\n<h3><strong>Analyzing the Options:</strong></h3>\n<h4><strong>Option A:</strong></h4>\n<p><strong>Statement:</strong> <em>A cell in $ R $ holds a set instead of an atomic value.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p></p><p><strong>First Normal Form (1NF):</strong> Requires that all attributes contain only atomic (indivisible) values.</p><p></p>\n<p></p><p>Since $ R $ is in 3NF, it must also be in 1NF.</p><p></p>\n<p></p><p><strong>Conclusion:</strong> <strong>False</strong>. $ R $ cannot have non-atomic values.</p><p></p>\n\n<hr>\n<h4><strong>Option B:</strong></h4>\n<p><strong>Statement:</strong> <em>$ R $ has a nontrivial functional dependency $ X \\to A $, where $ X $ is not a superkey and $ A $ is a non-prime attribute, and $ X $ is <strong>not</strong> a proper subset of any key.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p></p><p>In 3NF, if $ X $ is not a superkey, then $ A $ must be a <strong>prime attribute</strong>.</p><p></p>\n<p></p><p>This option states that $ A $ is a <strong>non-prime attribute</strong>, which would violate 3NF.</p><p></p>\n<p></p><p><strong>Conclusion:</strong> <strong>False</strong>. Such a dependency would prevent $ R $ from being in 3NF.</p><p></p>\n\n<hr>\n<h4><strong>Option C:</strong></h4>\n<p><strong>Statement:</strong> <em>$ R $ has a nontrivial functional dependency $ X \\to A $, where $ X $ is not a superkey and $ A $ is a non-prime attribute, and $ X $ is a proper subset of some key.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p></p><p>Similar to Option B, $ A $ is a <strong>non-prime attribute</strong>.</p><p></p>\n<p></p><p>In 3NF, this is not allowed when $ X $ is not a superkey.</p><p></p>\n<p></p><p>The fact that $ X $ is a subset of a key does not change this violation.</p><p></p>\n<p></p><p><strong>Conclusion:</strong> <strong>False</strong>. Such a dependency would violate 3NF.</p><p></p>\n\n<hr>\n<h4><strong>Option D:</strong></h4>\n<p><strong>Statement:</strong> <em>$ R $ has a nontrivial functional dependency $ X \\to A $, where $ X $ is not a superkey and $ A $ is a <strong>prime attribute</strong>.</em></p>\n<p><strong>Analysis:</strong></p>\n\n<p></p><p>This situation is exactly what differentiates 3NF from BCNF.</p><p></p>\n<p></p><p>In 3NF, such a dependency is <strong>allowed</strong>.</p><p></p>\n<p></p><p>In BCNF, it is <strong>not allowed</strong> because $ X $ must be a superkey.</p><p></p>\n<p></p><p>Therefore, $ R $ is in 3NF but not in BCNF.</p><p></p>\n<p></p><p><strong>Conclusion:</strong> <strong>True</strong>.</p><p></p>\n\n<hr>\n<h3><strong>Final Answer:</strong></h3>\n\n<p><strong>Option D</strong> accurately describes a scenario where $ R $ is in 3NF but not in BCNF.</p>\n\n<hr>\n<p><strong>Answer:</strong> Option D</p>\n<p><strong>R has a nontrivial functional dependency X → A, where X is not a superkey and A is a prime attribute.</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Let the set of functional dependencies <br><br>F = {QR → S, R → P, S → Q} <br><br>hold on a relation schema X = (PQRS). X is not in BCNF. Suppose X is decomposed into two schemas Y and Z, where Y = (PR) and Z = (QRS).\n\n<br><br>Consider the two statements given below.\n   <br><br> I. Both Y and Z are in BCNF\n   <br>II. Decomposition of X into Y and Z is dependency preserving and lossless\n<br><br>Which of the above statements is/are correct?  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I only"
+      },
+      {
+        "identifier": "B",
+        "content": "Neither I nor II"
+      },
+      {
+        "identifier": "C",
+        "content": "II only"
+      },
+      {
+        "identifier": "D",
+        "content": "Both I and II"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statements are correct, let's analyze each statement step by step.</p>\n<hr />\n<h3><strong>Given:</strong></h3>\n\n<p><p><strong>Relation Schema:</strong> $ X = \\{P, Q, R, S\\} $</p></p>\n<p><p><strong>Functional Dependencies (F):</strong></p></p>\n\n\n<p><p>$ QR \\to S $</p></p>\n<p><p>$ R \\to P $</p></p>\n<p><p>$ S \\to Q $</p></p>\n\n\n<p><p><strong>Decomposition:</strong></p></p>\n<p><p>$ Y = \\{P, R\\} $</p></p>\n<p><p>$ Z = \\{Q, R, S\\} $</p></p>\n\n<hr />\n<h3><strong>Statement I:</strong> <em>Both $ Y $ and $ Z $ are in BCNF.</em></h3>\n<h4><strong>Checking BCNF for $ Y $:</strong></h4>\n\n<p><strong>Find Candidate Keys for $ Y $:</strong></p>\n\n\n<p><p><strong>Attributes:</strong> $ P, R $</p></p>\n<p><p><strong>Relevant FD:</strong> $ R \\to P $</p></p>\n<p><p><strong>Closure of $ R $:</strong></p>\n\n<p><p>$ R^+ = \\{ R, P \\} $ (since $ R \\to P $)</p></p>\n<p><p><strong>Therefore, $ R $ is a candidate key for $ Y $.</strong></p></p></p>\n\n\n<p><strong>Check Functional Dependencies:</strong></p>\n\n\n<p><p><strong>FD:</strong> $ R \\to P $</p>\n\n<p><p>Left side $ R $ is a candidate key.</p></p>\n<p><p><strong>No violation of BCNF.</strong></p></p></p>\n\n\n<p><strong>Conclusion for $ Y $:</strong></p>\n\n\n<p>$ Y $ is in <strong>BCNF</strong>.</p>\n\n<h4><strong>Checking BCNF for $ Z $:</strong></h4>\n\n<p><strong>Find Candidate Keys for $ Z $:</strong></p>\n\n\n<p><p><strong>Attributes:</strong> $ Q, R, S $</p></p>\n<p><p><strong>Relevant FDs:</strong></p>\n\n<p><p>$ QR \\to S $</p></p>\n<p><p>$ S \\to Q $</p></p></p>\n<p><p><strong>Find Closures:</strong></p>\n\n<p><p><strong>$ QR^+ $:</strong></p></p>\n<p><p>$ QR \\to S $, so $ QR^+ = \\{ Q, R, S \\} $</p></p>\n<p><p><strong>$ QR $ is a candidate key.</strong></p></p>\n<p><p><strong>$ RS^+ $:</strong></p></p>\n<p><p>$ S \\to Q $, so $ RS^+ = \\{ R, S, Q \\} $</p></p>\n<p><p><strong>$ RS $ is a candidate key.</strong></p></p></p>\n\n\n<p><strong>Check Functional Dependencies:</strong></p>\n\n\n<p><p><strong>FD:</strong> $ QR \\to S $</p>\n\n<p><p>Left side $ QR $ is a candidate key.</p></p>\n<p><p><strong>No violation of BCNF.</strong></p></p></p>\n<p><p><strong>FD:</strong> $ S \\to Q $</p>\n\n<p><p>Left side $ S $ is <strong>not</strong> a candidate key.</p></p>\n<p><p><strong>Violates BCNF.</strong></p></p></p>\n\n\n<p><strong>Conclusion for $ Z $:</strong></p>\n\n\n<p>$ Z $ is <strong>not</strong> in BCNF.</p>\n\n<h4><strong>Conclusion for Statement I:</strong></h4>\n\n<p><strong>Statement I is FALSE</strong> because $ Z $ is not in BCNF.</p>\n\n<hr />\n<h3><strong>Statement II:</strong> <em>Decomposition of $ X $ into $ Y $ and $ Z $ is dependency preserving and lossless.</em></h3>\n<h4><strong>Checking for Lossless Join:</strong></h4>\n\n<p><p><strong>Common Attribute:</strong> $ R $ (present in both $ Y $ and $ Z $)</p></p>\n<p><p><strong>Condition for Lossless Join:</strong></p></p>\n\n\n<p>The common attribute must be a <strong>superkey</strong> in at least one of the relations.</p>\n\n\n<p><strong>In $ Y $:</strong></p>\n\n\n<p><p>$ R $ is a candidate key.</p></p>\n<p><p><strong>Condition satisfied.</strong></p></p>\n\n\n<p><strong>Conclusion:</strong></p>\n\n\n<p><strong>Decomposition is lossless.</strong></p>\n\n<h4><strong>Checking for Dependency Preservation:</strong></h4>\n\n<p><strong>Functional Dependencies in Decomposed Schemas:</strong></p>\n\n\n<p><p><strong>In $ Y $:</strong></p>\n\n<p>$ R \\to P $</p></p>\n<p><p><strong>In $ Z $:</strong></p>\n\n<p><p>$ QR \\to S $</p></p>\n<p><p>$ S \\to Q $</p></p></p>\n\n\n<p><p><strong>All original FDs are preserved in the decomposed schemas.</strong></p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n\n\n<p><strong>Decomposition is dependency preserving.</strong></p>\n\n<h4><strong>Conclusion for Statement II:</strong></h4>\n\n<p><strong>Statement II is TRUE.</strong></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Statement I:</strong> FALSE</p></p>\n<p><p><strong>Statement II:</strong> TRUE</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Option C</p>\n<p><strong>II only</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider an Entity-Relationship (ER) model in which entity sets E<sub>1</sub> and E<sub>2</sub> are connected by an m : n relationship R<sub>12</sub>. E<sub>1</sub> and E<sub>3</sub> are connected by a 1 : n (1 on the side of E<sub>1</sub> and n on the side of E<sub>3</sub>) relationship R<sub>13</sub>.</p> \n<p>E<sub>1</sub> has two single-valued attributes a<sub>11</sub> and a<sub>12</sub> of which a<sub>11</sub> is the key attribute. E<sub>2</sub> has two single-valued attributes a<sub>21</sub> and a<sub>22</sub> of which a<sub>21</sub> is the key attribute. E<sub>3</sub> has two single-valued attributes a<sub>31</sub> and a<sub>32</sub> of which a<sub>31</sub> is the key attribute. The relationships do not have any attributes. </p>\n<p>If a relational model is derived from the above ER model, then the minimum number of relations that would be generated if all the relations are in 3NF is _______.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Given the following two statements:\n<br>$$S1:$$ Every table with two single-valued attributes is in $$1NF, 2NF, 3NF$$ and $$BCNF.$$\n<br>$$S2:$$ $$AB \\to C,\\,\\,D \\to E,\\,\\,E \\to C$$ is a minimal cover for the set of functional dependencies $$AB \\to C,$$ $$D \\to E,\\,\\,AB \\to E,\\,\\,E \\to C.$$\n <p>Which one of the following is CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$S1$$ is TRUE and $$S2$$ is FALSE"
+      },
+      {
+        "identifier": "B",
+        "content": "Both $$S1$$ and $$S2$$ are TRUE."
+      },
+      {
+        "identifier": "C",
+        "content": "$$S1$$ is FALSE and $$S2$$ is TRUE.  "
+      },
+      {
+        "identifier": "D",
+        "content": "Both $$S1$$ and $$S2$$ are FALSE."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Relation $$R$$ has eight attribution $$ABCDEFGH.$$ Fields of $$R$$ contain only atomic values.\n<br>$$F = \\left\\{ {CH \\to G,\\,\\,A \\to BC,\\,B \\to CFH,\\,\\,E \\to A,\\,\\,F \\to EG} \\right\\}$$ \nset of functional dependencies $$(FDs)$$ so that $${F^ + }$$ is exactly the set of $$FDs$$ that hold for $$R.$$\n<p>The relation $$R$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "in $$1NF,$$ but not in $$2NF.$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "in $$2NF,$$ but not in $$3NF.$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "in $$3NF,$$ but not in $$BCNF$$"
+      },
+      {
+        "identifier": "D",
+        "content": "in $$BCNF.$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Relation $$R$$ has eight attribution $$ABCDEFGH.$$ Fields of $$R$$ contain only atomic values.\n<br>$$F = \\left\\{ {CH \\to G,\\,\\,A \\to BC,\\,B \\to CFH,\\,\\,E \\to A,\\,\\,F \\to EG} \\right\\}$$ \nset of functional dependencies $$(FDs)$$ so that $${F^ + }$$ is exactly the set of $$FDs$$ that hold for $$R.$$ \n<p>How many candidate keys does the relation $$R$$ have? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$R\\left( {A,\\,B,\\,C,\\,D,E,P,G} \\right)$$ be a relational schema in which the following functional dependencies are  known to hold: $$AB \\to CD,\\,\\,DE \\to P,\\,\\,C \\to E.\\,\\,P \\to C$$ and $$B \\to G.$$ The relational schema $$R$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "In $$BCNF$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "In $$3NF,$$ but not in $$3NF$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "In $$2NF,$$ but not in $$3NF$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Not in $$2NF$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following relational schemes for a library database. Book ( Title, Author, Catalog_ no, Publisher, Year, Pr ice )\nCollection ( Title, Author, Catalog no )\n<br>With in the following functional dependencies:\n <br>$${\\rm I}.\\,\\,\\,\\,\\,\\,$$ Title Author $$ \\to $$ Catalog_no\n<br>$${\\rm II}.\\,\\,\\,\\,$$ Catalog_no $$ \\to $$ Title Author Publisher Year\n<br>$${\\rm III}.\\,\\,\\,\\,$$ Publisher Title Year $$ \\to $$ Price\n<p>Assume { Author, Title } is the key for both schemes. Which of the following statements is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both Book and Collection are in $$BCNF$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Both Book and Collection are in $$3$$ $$NF$$ only"
+      },
+      {
+        "identifier": "C",
+        "content": "Book is in $$2$$ $$NF$$ and Collection is in $$3$$ $$NF$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Both Book and Collection are in $$2$$ $$NF$$ only "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$R\\left( {A,B,C,D} \\right)$$ be a relational schema with the following functional dependencies: \n<br>$$A \\to B,\\,\\,B \\to C,\\,\\,C \\to D$$ and $$D \\to B.$$\n<br>The decomposition of $$R$$ into $$(A,B), (B,C)$$ and $$(B,D)$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "gives a lossless join, and is dependency preserving "
+      },
+      {
+        "identifier": "B",
+        "content": "gives a lossless join, but is not dependency preserving. "
+      },
+      {
+        "identifier": "C",
+        "content": "does not give a lossless join, but is dependency preserving"
+      },
+      {
+        "identifier": "D",
+        "content": "does not give a lossless join and is not dependency preserving"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following statements if <b>FALSE?</b>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Any relation with two attributes is in $$BCNF.$$"
+      },
+      {
+        "identifier": "B",
+        "content": "A relation in which every key has only one attribute is in $$2NF$$."
+      },
+      {
+        "identifier": "C",
+        "content": "A prime attribute can be transitively dependent on a key in a $$3$$ $$N$$F relation."
+      },
+      {
+        "identifier": "D",
+        "content": "A prime attribute can be transitively dependent on a key in a $$BCNF$$ relation."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the relation enrolled (student, course) in which (student, course ) is the primary key, and the relation Paid (student, amount) where student is the primary key. Assume no null values and no foreign keys or integrity constraints. Assume that amounts $$6000, 7000, 8000,9000$$ and $$10000$$ were each paid by $$20$$% of the students. Consider these query plans (Plan $$1$$ on left, Plan $$2$$ on right) to ''List all courses taken by students who have paid more than $$x''$$.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/aTksyxKW9Cw6syJTd/4oLfq5NGfb49Qv4KtRyAFMqwUnmtE/SuJnnHSood1wzghFQztz2n/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2006 Database Management System - Functional Dependencies and Normalization Question 28 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/WKkZMxvxtoMzSMBc8/gTPzf513UNH6D1XOAM74fmpjsy5om/BvNVnc6WZebG761ilGhlHx/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2006 Database Management System - Functional Dependencies and Normalization Question 28 English 2\"> \n<p>A disk seek takes $$4ms$$, disk data transfer bandwidth is $$300MB/s$$ and checking a tuple to see if amount is greater than $$x$$ takes $$10\\mu s.$$ Which of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Plan $$1$$ and Plan $$2$$ will not output identical row sets for all databases"
+      },
+      {
+        "identifier": "B",
+        "content": "A course may be listed more than once in the output of plan $$1$$ for some databases"
+      },
+      {
+        "identifier": "C",
+        "content": "For $$x=5000,$$ Plan $$1$$ executes faster than plan $$2$$ for all databases"
+      },
+      {
+        "identifier": "D",
+        "content": "For $$x=9000,$$ Plan $$1$$ executes slower than plan $$2$$ for all databases"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The following functional dependencies are given :\n<br>$$\\eqalign{\n  &amp; AB \\to CD,\\,AF \\to D,\\,\\,DE \\to F,  \\cr \n  &amp; C \\to G.\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,F \\to E.\\,\\,\\,\\,\\,\\,\\,\\,\\,G \\to A. \\cr} $$\n<p>Which one of the following options is false? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\left\\{ {CF} \\right\\}^ + }\\,\\,\\, = \\left\\{ {ACDEFG} \\right\\}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\left\\{ {BG} \\right\\}^ + }\\,\\, = \\left\\{ {ABCDG} \\right\\}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\left\\{ {AF} \\right\\}^ + }\\,\\, = \\left\\{ {ACDEFG} \\right\\}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\left\\{ {AB} \\right\\}^ + }\\,\\, = \\left\\{ {ABCDG} \\right\\}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "In a schema with attributes $$A, B, C, D,$$ and $$E,$$ following set of functional dependencies are given\n\n<br>$$\\eqalign{\n  &amp; \\,\\,\\,A \\to B  \\cr \n  &amp; \\,\\,\\,A \\to C  \\cr \n  &amp; CD \\to E  \\cr \n  &amp; \\,\\,\\,B \\to D  \\cr \n  &amp; \\,\\,\\,E \\to A \\cr} $$\n<p>Which of the following functional dependencies is NOT implied by the above set?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$CD \\to AC$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$BD \\to CD$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$BC \\to CD$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$AC \\to BC$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a relation scheme $$R = \\left( {A,\\,B,\\,C,\\,D,\\,E,\\,H} \\right)$$ on which the following functional dependencies hold: $$\\left\\{ {A \\to B,\\,\\,BC \\to D,\\,\\,E \\to C,\\,\\,D \\to A} \\right\\}.$$ What are the candidate keys of $$R?$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$AE, BE$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$AE, BE, DE$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$AEH, BEH, BCH$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$AEH, BEH, DEH$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The relation scheme student Performance (Name, CourseNo, RollNo, Grade) has the following functional dependencies:\n<p>Name, courseNo $$\\,\\, \\to \\,\\,$$ grade\n<br>RollNo, courseNo $$\\,\\, \\to \\,\\,$$ grade\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$$$\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ Name $$\\,\\, \\to \\,\\,$$ rollNo\n<br>$$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$$$\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ RollNo $$\\,\\, \\to \\,\\,$$ name</p>\n<p>The highest normal form of this relation scheme is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2\\,NF$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3\\,NF$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$BCNF$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$4\\,NF$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A relation Empdt $$1$$ is defined with attributes empcode (unique), name, street, city, state and pincode. For any pincode, there is only one city and state. Also, for any given street city and the state, there is just one pincode. In normalization terms, Empdt$$1$$ is a relation in ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1NF$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2NF$$ and hence also in $$1NF$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$3NF$$ and hence also in $$2NF$$ and $$1NF$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$BCNF$$ and hence also in $$3NF,$$ $$2NF$$ and $$1NF$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following functional dependencies in a database.\n<br>$$\\eqalign{\n  &amp; \\,\\,\\,\\,Date\\,\\,of\\,\\,Birth\\,\\, \\to \\,\\,Age  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,Age\\,\\, \\to \\,\\,Eligibility  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,Name\\,\\, \\to \\,\\,Roll\\_number  \\cr \n  &amp; \\,\\,\\,\\,\\,Roll\\_number\\,\\, \\to \\,\\,Name  \\cr \n  &amp; Course\\_number\\, \\to \\,\\,Course\\_name  \\cr \n  &amp; Course\\_number\\, \\to Instructor  \\cr \n  &amp; (Roll\\_Number,\\,Course\\_number)\\,\\, \\to \\,\\,Grade \\cr} $$\n<p>The relation (Roll_number, Name, Date_of_Birth, Age) is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "In $$2$$ $$NF$$ but not in  $$3$$ $$NF$$"
+      },
+      {
+        "identifier": "B",
+        "content": "In $$3$$ $$NF$$ but not  in $$BCNF$$"
+      },
+      {
+        "identifier": "C",
+        "content": "In $$BCNF$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "From the following instance of a relation schema $$R(A, B, C),$$ we can conclude that:\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/hk5moBwQsiUXvypUd/Z9AXkbtfbozSEbeGxQMloyFTzr9gT/vKedpQsx1KRJUnhG6pDnAB/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2002 Database Management System - Functional Dependencies and Normalization Question 34 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A functionally determines $$B$$ and $$B$$ functionally determines $$C$$"
+      },
+      {
+        "identifier": "B",
+        "content": "A functionally determines $$B$$ and $$B$$ does not functionally determines $$C$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$B$$ does not functionally determines $$C$$"
+      },
+      {
+        "identifier": "D",
+        "content": "A does not functionally determine $$B$$ and $$B$$ does not functionally determine $$C$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Relation $$R$$ is decomposed using a set of functional dependencies, $$F,$$ and relation $$S$$ is decomposed using another set of functional dependencies, $$G.$$ One decomposition is definitely $$BCNF,$$ the other is definitely. $$3NF,$$ but it is not known which is which. To make a guaranteed identification, which one of the following tests should be used on the decompositions? (Assume that the closures of $$F$$ and $$G$$ are available).",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Dependency-preservation "
+      },
+      {
+        "identifier": "B",
+        "content": "Lossless-join "
+      },
+      {
+        "identifier": "C",
+        "content": "$$BCNF$$ definition"
+      },
+      {
+        "identifier": "D",
+        "content": "$$3$$ $$NF$$ definition"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "$$R(A,B,C,D)$$ is a relation. Which of the following does not have a lossless-join, dependency preserving $$BCNF$$ decomposition? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$A \\to B,\\,B \\to CD$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$A \\to B,\\,B \\to C.\\,C \\to D$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$AB \\to C,\\,C \\to AD$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$A \\to BCD$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Given the following relation instance\n<br>$$\\eqalign{\n  &amp; X\\,\\,\\,\\,\\,Y\\,\\,\\,\\,\\,Z  \\cr \n  &amp; \\,\\,1\\,\\,\\,\\,\\,\\,4\\,\\,\\,\\,\\,\\,2  \\cr \n  &amp; \\,\\,1\\,\\,\\,\\,\\,\\,5\\,\\,\\,\\,\\,\\,3  \\cr \n  &amp; \\,\\,1\\,\\,\\,\\,\\,\\,6\\,\\,\\,\\,\\,\\,3  \\cr \n  &amp; \\,\\,3\\,\\,\\,\\,\\,\\,2\\,\\,\\,\\,\\,\\,2 \\cr} $$\n<p>Which of the following functional dependencies are satisfied by the instance?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$XY \\to Z$$ and $$Z \\to Y$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$YZ \\to X$$ and $$Y \\to Z$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$YZ \\to X$$ and $$X \\to Z$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$XZ \\to Y$$ and $$Y \\to X$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the schema $$R = \\left( {S\\,\\,T\\,\\,U\\,\\,V} \\right)$$ and the dependencies $$S \\to T,\\,\\,T \\to U,\\,\\,U \\to V$$ and $$V \\to S$$ let $$R =$$ $$(R1$$ and $$R2)$$ be a decomposition such that $$R1 \\cap R2 \\ne \\phi .$$ The decomposition is:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Not in $$2NF$$"
+      },
+      {
+        "identifier": "B",
+        "content": "In $$2NF$$ but not $$3NF$$"
+      },
+      {
+        "identifier": "C",
+        "content": "In $$3NF$$ but not in $$2NF$$"
+      },
+      {
+        "identifier": "D",
+        "content": "In both $$2NF$$ and $$3NF$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following database relations containing the attributes\n<br>Book–id\n<br>Subject–Category–of–book\n<br>Name–of–Author\n<br>Nationality–of–Author\n<br>With book–id as the primary key.\n<br>(a) What is the highest normal form satisfied by this relation?\n<p>(b) Suppose the attributes Book–title and Author–address are added to the relation, and the primary key is changed to {Name–of–Author, Book–title}, what will be the highest normal form satisfied by the relation? </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) $$2NF$$\n<br>(b) $$3NF$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following database relations containing the attributes\n<br>Book–id\n<br>Subject–Category–of–book\n<br>Name–of–Author\n<br>Nationality–of–Author\n<br>With book–id as the primary key.\n<br>(a) What is the highest normal form satisfied by this relation?\n<p>(b) Suppose the attributes Book–title and Author–address are added to the relation, and the primary key is changed to {Name–of–Author, Book–title}, what will be the highest normal form satisfied by the relation? </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) $$2NF$$\n<br>(b) $$3NF$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "For a database relation $$R(a,b,c,d),$$ where the domains of $$a, b, c, d$$ include only atomic values, only the following functional dependencies and those that can be inferred from them hold:\n<br>$$a \\to c\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,b \\to d$$\n<br>This relation is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "In $$1$$ $$NF$$ but not in $$2$$ $$NF$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "In $$2$$ $$NF$$ but not in $$3$$ $$NF$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "In $$3$$ $$NF$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$R (a, b, c)$$ and $$S(d, e, f)$$ be two relations in which $$d$$ is the foreign key of $$S$$ that refers to the primary key of $$R.$$ Consider the following four operations $$R$$ and $$S$$\n<br>(a) Insert into $$R$$ (b) Insert into $$S$$\n<br>(c) Delete from $$R$$ (d) Delete from $$S$\n<p>Which of the following statements is true about the referential integrity constraint above?  </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "None of (a), (b), (c) or (d) can cause its violation"
+      },
+      {
+        "identifier": "B",
+        "content": "All of (a), (b), (c) and (d) can cause its violation "
+      },
+      {
+        "identifier": "C",
+        "content": "Both (a) and (d) can cause its violation"
+      },
+      {
+        "identifier": "D",
+        "content": "Both (b) and (c) can cause its violation"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "(a) Consider the relation scheme $$R(A, B, C)$$ with the following functional dependencies:\n<br>$$\\eqalign{\n  &amp; A,B \\to C  \\cr \n  &amp; \\,\\,\\,\\,\\,\\,C \\to A \\cr} $$\n<br>Show that the scheme $$R$$ is the Third Normal Form $$(3NF)$$ but not in Boyce-Code Normal Form $$(BCNF).$$\n<p>(b) Determine the minimal keys of relation $$R.$$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,558 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For the closed loop amplifier circuit shown below, the magnitude of open loop low frequency small signal voltage gain is 40. All the transistors are biased in saturation. The current source $I_{ss}$ is ideal. Neglect body effect, channel length modulation and intrinsic device capacitances. The closed loop low frequency small signal voltage gain $\\frac{v_{out}}{v_{in}}$ (rounded off to three decimal places) is ____.</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxkxwvg7/5298d08e-8a6e-4eb3-92f6-763bdb52a0f5/0de62470-2dbd-11ef-8399-1ffca357d536/file-jaoe38c1lxkxwvg8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxkxwvg7/5298d08e-8a6e-4eb3-92f6-763bdb52a0f5/0de62470-2dbd-11ef-8399-1ffca357d536/file-jaoe38c1lxkxwvg8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Analog Circuits - Feedback Amplifier Question 1 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>0.976</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>1.000</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>1.025</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>0.488</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $A_{O L}=40$</p>\n<p>Below circuit is a differential amplifier with current mirror active load.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfeajni1/9982b4c2-b8fd-4aad-8246-e69f2dc4871c/dd316a90-8e70-11f0-af8a-fb4a25e5b24b/file-jaoe38c1mfeajni2.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfeajni1/9982b4c2-b8fd-4aad-8246-e69f2dc4871c/dd316a90-8e70-11f0-af8a-fb4a25e5b24b/file-jaoe38c1mfeajni2.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Analog Circuits - Feedback Amplifier Question 1 English Explanation 1\"></p>\n<p>AC equivalent circuit.</p>\n<p>(i) All DC voltage source are replaced by short circuit and current source of open circuit</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mfeakcqk/422208af-bba4-42a0-8382-c0610c690a1f/f0b01bc0-8e70-11f0-af8a-fb4a25e5b24b/file-jaoe38c1mfeakcql.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mfeakcqk/422208af-bba4-42a0-8382-c0610c690a1f/f0b01bc0-8e70-11f0-af8a-fb4a25e5b24b/file-jaoe38c1mfeakcql.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Analog Circuits - Feedback Amplifier Question 1 English Explanation 2\"></p>\n<p>From figure, $V_f=V_{\\text {out }}$</p>\n<p>Feedback factor, $\\beta=\\frac{V_f}{V_{\\text {out }}}=1$</p>\n<p>Since, the given circuit acts as differential amplifier. It is a negative feedback system. Closed loop gain for negative feedback amplifier is given by</p>\n<p>$$ \\begin{aligned} &amp; A_{C L}=\\frac{A_{O L}}{1+\\beta A_{O L}}=\\frac{40}{1+1 \\times 40}=0.976 \\\\ &amp; \\frac{V_{\\text {out }}}{V_{\\text {in }}}=0.976 \\end{aligned} $$</p>\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A cascade of common-source amplifiers in a unity gain feedback configuration oscillates when</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the closed loop gain is less than 1 and the phase shift is less than 180$$^\\circ$$."
+      },
+      {
+        "identifier": "B",
+        "content": "the closed loop gain is greater than 1 and the phase shift is less than 180$$^\\circ$$."
+      },
+      {
+        "identifier": "C",
+        "content": "the closed loop gain is less than 1 and the phase shift is greater than 180$$^\\circ$$."
+      },
+      {
+        "identifier": "D",
+        "content": "the closed loop gain is greater than 1 and the phase shift is greater than 180$$^\\circ$$."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine when a cascade of common-source amplifiers in a unity gain feedback configuration oscillates, we need to consider both the gain and the phase shift conditions of the system. The critical criteria for oscillation can be derived from the Barkhausen stability criterion, which states:</p>\n\n<p>1. The loop gain (product of the amplifier gain and the feedback factor) must be equal to or greater than 1.</p>\n\n<p>2. The total phase shift around the loop must be an integer multiple of $$360^\\circ$$ (or $$0^\\circ$$ modulo $$360^\\circ$$).</p>\n\n<p>In the context of unity gain feedback configuration:</p>\n\n<p>If the closed-loop gain is greater than 1, this means the amplitude condition for oscillation is satisfied.</p>\n\n<p>For the phase condition, if the phase shift is greater than $$180^\\circ$$, it ensures that additional circuitry (or inherent amplifier phase shift) can bring the total phase shift around the loop to precisely $$360^\\circ$$ or $$0^\\circ$$ modulo $$360^\\circ$$, thus satisfying the phase condition for oscillation.</p>\n\n<p>Hence, a cascade of common-source amplifiers in a unity gain feedback configuration will oscillate when:</p>\n\n<p><strong>Option D:</strong> the closed loop gain is greater than 1 and the phase shift is greater than 180$$^\\circ$$.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "content": "The feedback topology in the amplifier circuit (the base bias circuit is not shown for simplicity) in the figure is <img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/939249f9e709442c2f246d7aac8fa34fb90eac3a9efb684f7d31b69443947153.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 2 Analog Circuits - Feedback Amplifier Question 13 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Voltage shunt feedback.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Current series feedback."
+      },
+      {
+        "identifier": "C",
+        "content": "Current shunt feedback."
+      },
+      {
+        "identifier": "D",
+        "content": "Voltage series feedback."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A good current buffer has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "low input impedance and low output impedance."
+      },
+      {
+        "identifier": "B",
+        "content": "low input impedance and high output impedance."
+      },
+      {
+        "identifier": "C",
+        "content": "high input impedance and low output impedance."
+      },
+      {
+        "identifier": "D",
+        "content": "high input impedance and high output impedance."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the ac equivalent circuit shown in the figure, if i$${_F}$$  is very large, the type of feedback is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/7d45ab16e1f1fee226829d8fbef8c7dc4e2a74e0615a41a1ea3bf8a1d888f639.jpg\" loading=\"lazy\" alt=\"GATE ECE 2014 Set 1 Analog Circuits - Feedback Amplifier Question 14 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "voltage-voltage feedback "
+      },
+      {
+        "identifier": "B",
+        "content": "voltage-current feedback "
+      },
+      {
+        "identifier": "C",
+        "content": "current-voltage feedback"
+      },
+      {
+        "identifier": "D",
+        "content": "current-current feedback"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The desirable  characteristics of a transconductance amplifier are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "high input resistance and high output resistance"
+      },
+      {
+        "identifier": "B",
+        "content": "high input resistance and low output resistance"
+      },
+      {
+        "identifier": "C",
+        "content": "low  input resistance and high output resistance"
+      },
+      {
+        "identifier": "D",
+        "content": "low  input resistance and low output resistance"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In a voltage-voltage feedback as shown below, which one of the following statements is TRUE, if the gain k is increased? <img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8a03a4e27bae4ae7505b851a450d6174c4c0e9b10b494226d13d41ac8fbfebe8.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Analog Circuits - Feedback Amplifier Question 16 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The input impedance increases and output impedance decreases."
+      },
+      {
+        "identifier": "B",
+        "content": "The input impedance increases and output impedance also increases."
+      },
+      {
+        "identifier": "C",
+        "content": "The input impedance increases and output impedance also increases."
+      },
+      {
+        "identifier": "D",
+        "content": "The input impedance increases and output impedance increases."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "In a shunt-shunt negative feedback Amplifier, as compared to the basic Amplifier,",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "both input and output impedance  decreases . "
+      },
+      {
+        "identifier": "B",
+        "content": "input  impedance  decreases but output impedance increases."
+      },
+      {
+        "identifier": "C",
+        "content": "input impedance increases but output   impedance  decreases "
+      },
+      {
+        "identifier": "D",
+        "content": "both input and output impedance  decreases "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "To obtain very high input and output impedances in a feedback Amplifier, the mostly used is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Voltage - series"
+      },
+      {
+        "identifier": "B",
+        "content": "Current - series"
+      },
+      {
+        "identifier": "C",
+        "content": "Voltage - shunt"
+      },
+      {
+        "identifier": "D",
+        "content": "Current - shunt"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "Negative feedback in Amplifiers.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "improves the signal to noise ratio at the i/p."
+      },
+      {
+        "identifier": "B",
+        "content": "improves the signal to noise ratio at the o/p."
+      },
+      {
+        "identifier": "C",
+        "content": "does not effect the signal to noise ratio at the o/p."
+      },
+      {
+        "identifier": "D",
+        "content": "Reduces distortion"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "content": "Voltage series feedback (also called series-shunt feedback) results in",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "increase in both input and output impedances."
+      },
+      {
+        "identifier": "B",
+        "content": "decrease in both input and output impedances.\n"
+      },
+      {
+        "identifier": "C",
+        "content": "increase in both input impedances and decrease in output impedances."
+      },
+      {
+        "identifier": "D",
+        "content": "decrease in input  impedances and increase in output impedance."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "An amplifier without feedback has a voltage gain of 50, input Resistance of 1 k$$\\Omega $$  and output Resistance of 2.5 k$$\\Omega $$ . The input Resistance of the current-shunt negative feedback factor of 0.2 is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1/1 k$$\\Omega $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "1/5  k$$\\Omega $$"
+      },
+      {
+        "identifier": "C",
+        "content": "5 k$$\\Omega $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "11 k$$\\Omega $$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "In a negative feedback amplifier using voltage - Series (i.e., voltage - sampling, series mixing) feedback",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${R_i}$$ decreases and $${R_0}$$  decreases   \n<br>($${R_i}$$ and $${R_0}$$  denote the input and outout resistances respectively)"
+      },
+      {
+        "identifier": "B",
+        "content": "$${R_i}$$  decreases  and  $${R_0}$$  increases\n<br>($${R_i}$$ and $${R_0}$$  denote the input and outout resistances respectively)"
+      },
+      {
+        "identifier": "C",
+        "content": "$${R_i}$$  increases  and  $${R_0}$$  decreases\n<br>($${R_i}$$ and $${R_0}$$  denote the input and outout resistances respectively)"
+      },
+      {
+        "identifier": "D",
+        "content": "$${R_i}$$  increases  and  $${R_0}$$  increases\n<br>($${R_i}$$ and $${R_0}$$  denote the input and outout resistances respectively)"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The most commonly used Amplifier in sample and hold circuit is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A unity gain inverting Amplifier"
+      },
+      {
+        "identifier": "B",
+        "content": "A unity gain non-inverting inverting Amplifier"
+      },
+      {
+        "identifier": "C",
+        "content": "An inverting  Amplifier with a gain of 10."
+      },
+      {
+        "identifier": "D",
+        "content": "An inverting  Amplifier with a gain of 100.\n"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ece-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Negative feedback in an amplifier",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Reduces gain"
+      },
+      {
+        "identifier": "B",
+        "content": "Increase frequency and phase distortions"
+      },
+      {
+        "identifier": "C",
+        "content": "Reduces bandth"
+      },
+      {
+        "identifier": "D",
+        "content": "Increase Noise"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "An amplifier has an open loop gain of 100, an input impedance of 1 k$$_\\Omega $$, and an output impedance of 100 $$_\\Omega $$ . A feedback network with a feedback factor of  0.99 is connected to the amplifier an a voltage series feedback mode. The new input  and output  impedance respectively are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10\\,\\Omega \\,and\\,1\\,\\Omega $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10\\,\\Omega \\,and\\,10\\,\\Omega $$  "
+      },
+      {
+        "identifier": "C",
+        "content": "$$100 k\\,\\Omega \\,and\\,1\\,\\Omega $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$100 k\\,\\Omega \\,and\\,1 \\,\\Omega $$  "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Negative feedback in\n<p>1. Voltage series configuration\n<br>2.Current shunt   configuration\n</p>\n<p>(a) increases input impedance \n<br>(b) decreases input  impedance \n<br>(c)   increases closed loop gain \n<br>(d) leads to ascillation. </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1-(a) , 2-(b)",
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Two non-inverting amplifiers, one having a unity gain and other having a gain of twenty,  are made using identical operational gain amplifier, the amplifier with gain twenty has",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "less negative feedback "
+      },
+      {
+        "identifier": "B",
+        "content": "greater input impedance"
+      },
+      {
+        "identifier": "C",
+        "content": "less bandwidth"
+      },
+      {
+        "identifier": "D",
+        "content": "none of the above "
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  },
+  {
+    "content": "The feedback amplifier shown in Fig.has:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/z7oa7Maxm7yZjABY4/9zZh2xnSEiZOm26nCULJRlnZP3pjU/SnbkhGLcaMUGwkeSz9nbYl/image.svg\" loading=\"lazy\" alt=\"GATE ECE 1989 Analog Circuits - Feedback Amplifier Question 3 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "current - series feedback with large input impedance and large output impedance."
+      },
+      {
+        "identifier": "B",
+        "content": "voltage - series feedback with large input impedance and low output impedance."
+      },
+      {
+        "identifier": "C",
+        "content": "voltage - shunt feedback with low input impedance and low output impedance."
+      },
+      {
+        "identifier": "D",
+        "content": "current - shunt feedback  with low input impedance and output impedance."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  }
+]

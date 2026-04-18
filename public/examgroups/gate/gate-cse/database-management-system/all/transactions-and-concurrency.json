@@ -1,0 +1,1138 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider concurrent execution of two transactions $T 1$ and $T 2$ in a DBMS, both of which access a data object $A$. For these two transactions to not conflict on $A$, which one of the following statements must be true?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Both $T 1$ and $T 2$ only read $A$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$T 1$ reads $A$ and $T 2$ writes $A$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$T 1$ writes $A$ and $T 2$ reads $A$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Both $T 1$ and $T 2$ write $A$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Two operations on the same data object $A$ are <strong>non-conflicting</strong> only when <strong>both are read operations</strong>.</p>\n<h3>Rule for conflict</h3>\n<p>Two operations conflict if:</p>\n<ul>\n<li><p>they belong to different transactions,</p></li>\n<li><p>they access the same data item,</p></li>\n<li><p>and at least one of them is a <strong>write</strong> operation.</p></li>\n</ul>\n<p>So, for <strong>no conflict</strong>, neither operation should be a write.</p>\n<p>That means:</p>\n<ul>\n<li><p><strong>Read-Read</strong>: non-conflicting</p></li>\n<li><p><strong>Read-Write</strong>: conflicting</p></li>\n<li><p><strong>Write-Read</strong>: conflicting</p></li>\n<li><p><strong>Write-Write</strong>: conflicting</p></li>\n</ul>\n<h3>Therefore, the correct option is:</h3>\n<p><strong>Option A: Both $T1$ and $T2$ only read $A$</strong></p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An audit of a banking transactions system has found that on an earlier occasion, two joint holders of account $A$ attempted simultaneous transfers of Rs. 10000 each from account $A$ to account $B$. Both transactions read the same value, Rs. 11000, as the initial balance in $A$ and were allowed to go through. $B$ was credited Rs. 10000 twice. $A$ was debited only once and ended up with a balance of Rs. 1000.\nWhich of the following properties is/are certain to have been violated by the system?\n</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " Atomicity\n"
+      },
+      {
+        "identifier": "B",
+        "content": " Consistency\n"
+      },
+      {
+        "identifier": "C",
+        "content": " Isolation\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Durability"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Two holders of account A</p>\n<p>A = 11000 Rs.</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}\n.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 367px\"><colgroup>\n<col style=\"width: 178px\">\n<col style=\"width: 189px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-7btt\">$T_1$</th>\n    <th class=\"tg-7btt\">$T_2$</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-c3ow\">$R(A)$<br><br>$A=A-1000$<br><br>$R(B)$<br>$B=B+1000$<br>$W(B)$<br>$W(A)$<br></td>\n    <td class=\"tg-c3ow\"><br>$R(A)$<br><br>$A=A-1000$<br><br><br><br><br>$R(B)$<br>$B=B+10000$<br>$W(B)$<br>$W(A)$<br></td>\n  </tr>\n</tbody>\n</table></p>\n<p>Its violation of isolation.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A schedule of three database transactions $T_1, T_2$, and $T_3$ is shown. $R_i(A)$ and $W_i(A)$ denote read and write of data item $A$ by transaction $T_i, i=1,2,3$. The transaction $T_1$ aborts at the end. Which other transaction(s) will be required to be rolled back?</p>\n<p>$$R_1(X) W_1(Y) R_2(X) R_2(Y) R_3(Y) \\operatorname{ABORT}\\left(T_1\\right)$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " Only $T_2$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " Only $T_3$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " Both $T_2$ and $T_3$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " Neither $T_2$ nor $T_3$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7u5uyq8/facbb4f0-925d-4e16-b673-65a70256c5db/597b4320-f8c9-11ef-bbaa-773c57498a69/file-jaoe38c1m7u5uyqa.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7u5uyq8/facbb4f0-925d-4e16-b673-65a70256c5db/597b4320-f8c9-11ef-bbaa-773c57498a69/file-jaoe38c1m7u5uyqa.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Database Management System - Transactions and Concurrency Question 4 English Explanation\"></p>\n<p>$T_1$ updated data of data item $X$ is reads by $T_2 T_3$ which are uncommitted reads because of $T_1$ failure [ABORT] has to rollback $T_1 T_2$ also. [Cascade Rollbacks]</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Once the DBMS informs the user that a transaction has been successfully completed, its effect should persist even if the system crashes before all its changes are reflected on disk. This property is called</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>durability</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>atomicity</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>consistency</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>isolation</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>The property being described in your question is known as <strong>durability</strong>. In the context of database management systems (DBMS), durability is one of the four ACID properties that ensure reliable transaction processing.</p>\n\n<p>Let's briefly explore what each of the ACID properties refers to:</p>\n\n<ul>\n    <li><strong>Atomicity:</strong> This property ensures that a transaction is treated as a single, indivisible unit. It either completes in its entirety or not at all. If any part of the transaction fails, the entire transaction is rolled back.</li>\n    <li><strong>Consistency:</strong> This property ensures that a transaction brings the database from one valid state to another, maintaining database invariants. Essentially, after a transaction, the database must remain in a consistent state.</li>\n    <li><strong>Isolation:</strong> This property ensures that transactions are executed in such a way that they do not interfere with each other. Intermediate states of a transaction are not visible to other transactions.</li>\n    <li><strong>Durability:</strong> This property guarantees that once a transaction has been committed, it will persist even in the event of a system crash. The effects of the transaction are permanently recorded in the database.</li>\n</ul>\n\n<p>Therefore, the correct answer is:</p>\n\n<p>Option A: <strong>durability</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statements about the Two Phase Locking (2PL) protocol is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>2PL permits only serializable schedules</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>With 2PL, a transaction always locks the data item being read or written just before every operation and always releases the lock just after the operation</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>With 2PL, once a lock is released on any data item inside a transaction, no more locks on any data item can be obtained inside that transaction</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>A deadlock is possible with 2PL</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's evaluate each statement one by one to determine whether they are true or false regarding the Two Phase Locking (2PL) protocol.</p>\n\n<p><b>Option A: 2PL permits only serializable schedules</b></p>\n<p>This statement is TRUE. The Two Phase Locking protocol ensures that the schedules it permits are conflict-serializable. This is achieved by enforcing a protocol where a transaction must acquire all the required locks before releasing any lock.</p>\n\n<p><b>Option B: With 2PL, a transaction always locks the data item being read or written just before every operation and always releases the lock just after the operation</b></p>\n<p>This statement is FALSE. In the Two Phase Locking protocol, a transaction cannot release a lock until it has acquired all of the locks it needs. Therefore, locks are not released immediately after an operation as implied in this statement.</p>\n\n<p><b>Option C: With 2PL, once a lock is released on any data item inside a transaction, no more locks on any data item can be obtained inside that transaction</b></p>\n<p>This statement is TRUE. The essence of the Two Phase Locking protocol is that it operates in two distinct phases: the growing phase (where locks can be acquired) and the shrinking phase (where locks are released). Once a lock is released in the shrinking phase, no additional locks can be acquired in that transaction.</p>\n\n<p><b>Option D: A deadlock is possible with 2PL</b></p>\n<p>This statement is TRUE. While the Two Phase Locking protocol ensures serializability, it does not prevent deadlocks. Deadlocks can occur when two or more transactions hold locks on resources that the other transactions need, leading to a cycle of dependencies that can halt progress.</p>\n\n<p>In summary, the TRUE statements about the Two Phase Locking (2PL) protocol are:</p>\n<p><b>Option A: 2PL permits only serializable schedules</b></p>\n<p><b>Option C: With 2PL, once a lock is released on any data item inside a transaction, no more locks on any data item can be obtained inside that transaction</b></p>\n<p><b>Option D: A deadlock is possible with 2PL</b></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Suppose a database system crashes again while recovering from a previous crash. Assume checkpointing is not done by the database either during the transactions or during recovery.</p>\n\n<p>Which of the following statements is/are correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The same undo and redo list will be used while recovering again."
+      },
+      {
+        "identifier": "B",
+        "content": "The database will become inconsistent."
+      },
+      {
+        "identifier": "C",
+        "content": "All the transactions that are already undone and redone will not be recovered again."
+      },
+      {
+        "identifier": "D",
+        "content": "The system cannot recover any further."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>In order to recover the database even on multiple crashes the same undo and redo lift will used.</p> <p>Hence, option (a) is the correct answer.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following two statements about database transaction schedules:\n\n<br><br>I. Strict two-phase locking protocol generates conflict serializable schedules that are also recoverable.\n<br><br>II. Timestamp-ordering concurrency control protocol with Thomas Write Rule can generate view serializable schedules that are not conflict serializable.\n<br><br>Which of the above statements is/are TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both I and II"
+      },
+      {
+        "identifier": "B",
+        "content": "I only"
+      },
+      {
+        "identifier": "C",
+        "content": "II only"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither I nor II"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Statement I:</strong></h3>\n<p><strong>\"Strict two-phase locking protocol generates conflict serializable schedules that are also recoverable.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><strong>Strict Two-Phase Locking Protocol (Strict 2PL):</strong></p>\n\n\n<p><p><strong>Definition:</strong></p>\n\n<p><p>Transactions follow the <strong>two-phase locking (2PL)</strong> protocol:</p></p>\n<p><p><strong>Growing Phase:</strong> A transaction may obtain locks but not release any.</p></p>\n<p><p><strong>Shrinking Phase:</strong> A transaction may release locks but not obtain any new locks.</p></p>\n<p><p><strong>Strict 2PL</strong> adds an additional constraint:</p></p>\n<p><p>All <strong>exclusive (write) locks</strong> held by a transaction are released <strong>only after the transaction commits or aborts</strong>.</p></p>\n<p><p>This means <strong>no dirty reads or writes</strong> can occur, as data modified by uncommitted transactions is not visible to others.</p></p></p>\n\n\n<p><strong>Conflict Serializability:</strong></p>\n\n\n<p><p><strong>Definition:</strong></p>\n\n<p>A schedule is <strong>conflict serializable</strong> if it can be transformed into a serial schedule by swapping non-conflicting operations.</p></p>\n<p><p><strong>Strict 2PL ensures conflict serializability:</strong></p>\n\n<p>By locking, it prevents conflicting operations from different transactions from interleaving in a way that would violate serializability.</p></p>\n\n\n<p><strong>Recoverability:</strong></p>\n\n\n<p><p><strong>Definition:</strong></p>\n\n<p>A schedule is <strong>recoverable</strong> if transactions commit only after all transactions whose changes they have read have committed.</p></p>\n<p><p><strong>Strict 2PL ensures recoverability:</strong></p>\n\n<p><p>Since uncommitted writes are not visible to other transactions, there is no possibility of cascading aborts or uncommitted data being read.</p></p>\n<p><p>Transactions cannot read uncommitted data, so recoverability is guaranteed.</p></p></p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p><strong>Statement I is TRUE.</strong></p>\n\n<hr />\n<h3><strong>Statement II:</strong></h3>\n<p><strong>\"Timestamp-ordering concurrency control protocol with Thomas Write Rule can generate view serializable schedules that are not conflict serializable.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><strong>Timestamp-Ordering Protocol (TO):</strong></p>\n\n\n<p><p><strong>Definition:</strong></p>\n\n<p><p>Each transaction is assigned a unique timestamp.</p></p>\n<p><p>Operations are ordered based on these timestamps.</p></p>\n<p><p><strong>Basic TO protocol</strong> ensures that the order of conflicting operations is consistent with the timestamp order.</p></p></p>\n\n\n<p><strong>Thomas Write Rule:</strong></p>\n\n\n<p><p><strong>Definition:</strong></p>\n\n<p><p>An enhancement to the basic TO protocol that allows certain obsolete writes to be <strong>ignored</strong> if they do not affect the final outcome.</p></p>\n<p><p>Specifically, if a transaction $ T_i $ attempts to write to an item that has already been written by a transaction with a later timestamp, $ T_i $'s write can be safely ignored.</p></p></p>\n\n\n<p><strong>View Serializability vs. Conflict Serializability:</strong></p>\n\n\n<p><p><strong>Conflict Serializability:</strong></p>\n\n<p>A stricter form of serializability that requires conflicts to be ordered the same way as in some serial schedule.</p></p>\n<p><p><strong>View Serializability:</strong></p>\n\n<p><p>A broader notion where the final view (result) is the same as that of some serial schedule, even if conflicts are not ordered identically.</p></p>\n<p><p>All conflict-serializable schedules are view-serializable, but the converse is not necessarily true.</p></p></p>\n\n\n<p><strong>TO with Thomas Write Rule:</strong></p>\n\n\n<p><p><strong>Impact:</strong></p>\n\n<p><p>By ignoring obsolete writes, the schedule may include operations that, under basic TO, would be considered conflicting but are now permitted.</p></p>\n<p><p>This can result in schedules that are <strong>view serializable but not conflict serializable</strong>.</p></p></p>\n\n\n<p><strong>Example:</strong></p>\n\n\n<p><p>Suppose we have transactions $ T_1 $ and $ T_2 $ with timestamps TS($ T_1 $) &lt; TS($ T_2 $).</p></p>\n<p><p>If $ T_1 $ writes to item X, and later $ T_2 $ writes to X, but $ T_1 $'s write is ignored due to Thomas Write Rule, the resulting schedule may not be conflict serializable but remains view serializable.</p></p>\n\n<p><strong>Conclusion:</strong></p>\n\n<p><strong>Statement II is TRUE.</strong></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><strong>Both Statement I and Statement II are TRUE.</strong></p>\n\n<hr />\n<p><strong>Answer:</strong> Option A</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is <b>NOT</b> a part of the $$ACID$$ properties of database transactions?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Atomicity"
+      },
+      {
+        "identifier": "B",
+        "content": "Consistency "
+      },
+      {
+        "identifier": "C",
+        "content": "Isolation "
+      },
+      {
+        "identifier": "D",
+        "content": "Deadlock-freedom "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose a database schedule $$S$$ involves transactions $${T_1},\\,...,\\,{T_n}.$$ Construct the precedence graph of $$S$$ with vertices representing the transactions and edges representing the conflicts. If $$S$$ is serializable, which one of the following orderings of the vertices of the precedence graph is guaranteed to yield a serial schedule?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Topological order "
+      },
+      {
+        "identifier": "B",
+        "content": "Depth-first order "
+      },
+      {
+        "identifier": "C",
+        "content": "Breadth-first order "
+      },
+      {
+        "identifier": "D",
+        "content": "Ascending order of transaction indices "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following transaction involving two bank accounts x and y. \n<pre><code>read (x) ; x: = x - 50; write (x); read (y); y: = y + 50;   write (y)</code></pre>\n<p>The constraint that the sum of the accounts x and y should remain constant is that of </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Atomicity "
+      },
+      {
+        "identifier": "B",
+        "content": "Consistency "
+      },
+      {
+        "identifier": "C",
+        "content": "Isolation "
+      },
+      {
+        "identifier": "D",
+        "content": "Durability"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following concurrency control protocols ensure both conflict serializability and freedom from deadlock? \n<p>I. 2-phase locking \n<br>II. Time-stamp ordering </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I only"
+      },
+      {
+        "identifier": "B",
+        "content": "II only"
+      },
+      {
+        "identifier": "C",
+        "content": "Both I and II"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither I nor II"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Amongst the ACID properties of a transaction, the 'Durability' property requires that the changes made to the database by a successful transaction persist",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Except in case of an Operating System crash"
+      },
+      {
+        "identifier": "B",
+        "content": "Except in case of a Disk crash"
+      },
+      {
+        "identifier": "C",
+        "content": "Except in case of a power failure"
+      },
+      {
+        "identifier": "D",
+        "content": "Always, even if there is a failure of any kind"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "Irrespective of failures, the change made by a committed transaction must be permanent.",
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Which level of locking provides the highest degree of concurrency in a relational database?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Page."
+      },
+      {
+        "identifier": "B",
+        "content": "Table."
+      },
+      {
+        "identifier": "C",
+        "content": "Row. "
+      },
+      {
+        "identifier": "D",
+        "content": "Page, table and row level locking allow the same degree of concurrency."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "Row has lower level of granularity( granularity of locks in a database refers to how much of the data is locked at one time) among page, table and row. As in case of Row the amount of data which is locked very less so it takes less amount of memory then many processes can run at the same time. So concurrency is high for Row level locking.",
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following scenarios may lead to an irrecoverable error in a database system?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A transaction writes a data item after it is read by an uncommitted transaction"
+      },
+      {
+        "identifier": "B",
+        "content": "A transaction reads a data item after it is read by an uncommitted transaction"
+      },
+      {
+        "identifier": "C",
+        "content": "A transaction reads a data item after it is written by a committed transaction "
+      },
+      {
+        "identifier": "D",
+        "content": "A transaction reads a data item after it is written by an uncommitted transaction"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "Reading uncommitted data is called as dirty read. If a transaction reads uncommitted data and commits before the transaction that writes data item leads to non-recoverable schedule if transaction that writes data item rolled back.",
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the database transactions T 1 and T 2, and data items X and Y . Which of the schedule(s) is/are conflict serializable?</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7zsgm6u/dc3bf111-ea2e-4ce7-b0f8-ea1929d31416/a7af1f60-fbe1-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zsgm6v.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7zsgm6u/dc3bf111-ea2e-4ce7-b0f8-ea1929d31416/a7af1f60-fbe1-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zsgm6v.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Database Management System - Transactions and Concurrency Question 2 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\mathrm{R} 1(\\mathrm{X}), \\mathrm{W} 2(\\mathrm{X}), \\mathrm{W} 1(\\mathrm{Y}), \\mathrm{W} 2(\\mathrm{Y}), \\mathrm{R} 1(\\mathrm{X}), \\mathrm{W} 1(\\mathrm{X}), \\operatorname{COMMIT}(\\mathrm{T} 2), \\operatorname{COMMIT}(\\mathrm{T} 1)$\n\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\mathrm{W} 2(\\mathrm{X}), \\mathrm{R} 1(\\mathrm{X}), \\mathrm{W} 2(\\mathrm{Y}), \\mathrm{W} 1(\\mathrm{Y}), \\mathrm{R} 1(\\mathrm{X}), \\mathrm{COMMIT}(\\mathrm{T} 2), \\mathrm{W} 1(\\mathrm{X}), \\operatorname{COMMIT}(\\mathrm{T} 1)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\mathrm{R} 1(\\mathrm{X}), \\mathrm{W} 1(\\mathrm{Y}), \\mathrm{W} 2(\\mathrm{X}), \\mathrm{W} 2(\\mathrm{Y}), \\mathrm{R} 1(\\mathrm{X}), \\mathrm{W} 1(\\mathrm{X}), \\mathrm{COMMIT}(\\mathrm{T} 1), \\operatorname{COMMIT}(\\mathrm{T} 2)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\mathrm{W} 2(\\mathrm{X}), \\mathrm{R} 1(\\mathrm{X}), \\mathrm{W} 1(\\mathrm{Y}), \\mathrm{W} 2(\\mathrm{Y}), \\mathrm{R} 1(\\mathrm{X}), \\mathrm{COMMIT}(\\mathrm{T} 2), \\mathrm{W} 1(\\mathrm{X}), \\operatorname{COMMIT}(\\mathrm{T} 1)$\n"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Precedence graphs of each schedule:</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7zsin6n/2fa3f60c-edff-4c23-ad0e-379d61e14346/e01216f0-fbe1-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zsin6o.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7zsin6n/2fa3f60c-edff-4c23-ad0e-379d61e14346/e01216f0-fbe1-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zsin6o.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Database Management System - Transactions and Concurrency Question 2 English Explanation\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following read-write schedule $S$ over three transactions $T_{1}$, $T_{2}$, and $T_{3}$, where the subscripts in the schedule indicate transaction IDs:</p><p>$S: r_{1}(z); w_{1}(z); r_{2}(x); r_{3}(y); w_{3}(y); r_{2}(y); w_{2}(x); w_{2}(y);$</p><p>Which of the following transaction schedules is/are conflict equivalent to $S$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$T_{1}T_{2}T_{3}$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$T_{1}T_{3}T_{2}$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$T_{3}T_{2}T_{1}$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$T_{3}T_{1}T_{2}$</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><strong>Precedence Graph :</strong></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m00r2d8t/0aec4da3-ef05-4c3e-aa43-9d8cda3cc328/3fef63d0-5e07-11ef-aed1-3becbdb48cb2/file-jaoe38c1m00r2d8u.png\" alt=\"GATE CSE 2024 Set 1 Database Management System - Transactions and Concurrency Question 7 English Explanation\"></p>\n<p><strong>Serial Schedules Conflict Equivalent to $ S $ :</strong></p>\n<p>$ \\begin{array}{lll}  T_{1} &amp; T_{3} &amp; T_{2} \\quad (T_{1} \\rightarrow T_{3} \\rightarrow T_{2}) \\\\  T_{3} &amp; T_{2} &amp; T_{1} \\quad (T_{3} \\rightarrow T_{2} \\rightarrow T_{1}) \\\\  T_{3} &amp; T_{1} &amp; T_{2} \\quad (T_{3} \\rightarrow T_{1} \\rightarrow T_{2})  \\end{array} $</p>\n<p>Therefore, the schedules that are conflict equivalent to $ S $ are options B, C, and D.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let R<sub>i</sub>(z) and W<sub>i</sub>(z) denote read and write operations on a data element z by a transaction T<sub>i</sub>, respectively. Consider the schedule S with four transactions.</p>\n<p>S : R<sub>4</sub>(x), R<sub>2</sub>(x), R<sub>3</sub>(x), R<sub>1</sub>(y), W<sub>1</sub>(y), W<sub>2</sub>(x), W<sub>3</sub>(y), R<sub>4</sub>(y)</p>\n<p>Which one of the following serial schedules is conflict equivalent to S?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "T<sub>1</sub> $$\\to$$ T<sub>3</sub> $$\\to$$ T<sub>4</sub> $$\\to$$ T<sub>2</sub>"
+      },
+      {
+        "identifier": "B",
+        "content": "T<sub>1</sub> $$\\to$$ T<sub>4</sub> $$\\to$$ T<sub>3</sub> $$\\to$$ T<sub>2</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "T<sub>4</sub> $$\\to$$ T<sub>1</sub> $$\\to$$ T<sub>3</sub> $$\\to$$ T<sub>2</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "T<sub>3</sub> $$\\to$$ T<sub>1</sub> $$\\to$$ T<sub>4</sub> $$\\to$$ T<sub>2</sub>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l0118qe5/08032c60-1d21-44e1-9746-24fdba6ea431/42991be0-9577-11ec-be9f-cb8174b7a38c/file-1l0118qe6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l0118qe5/08032c60-1d21-44e1-9746-24fdba6ea431/42991be0-9577-11ec-be9f-cb8174b7a38c/file-1l0118qe6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Database Management System - Transactions and Concurrency Question 8 English Explanation\"></p>\n<p>Precedence graph of schedule S.</p>\n<p>Topological order = Conflict equal serial order</p>\n<p>$$\\Rightarrow$$ T<sub>1</sub> T<sub>3</sub> T<sub>4</sub> T<sub>2</sub></p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Let S be the following schedule of operations of three transactions T<sub>1</sub>, T<sub>2</sub> and T<sub>3</sub> in a relational database system:</p>\n\n<p>R<sub>2</sub>(Y), R<sub>1</sub>(X), R<sub>3</sub>(Z), R<sub>1</sub>(Y), W<sub>1</sub>(X), R<sub>2</sub>(Z), W<sub>2</sub>(Y), R<sub>3</sub>(X), W<sub>3</sub>(Z)</p>\n\n<p>Consider the statements P and Q below:</p>\n\n<p>P: S is conflict-serializable.</p>\n\n<p>Q: If T<sub>3</sub> commits before T<sub>1</sub> finishes, then S is recoverable.</p>\n\n<p>Which one of the following choices is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P is true and Q is false."
+      },
+      {
+        "identifier": "B",
+        "content": "Both P and Q are true."
+      },
+      {
+        "identifier": "C",
+        "content": "P is false and Q is true."
+      },
+      {
+        "identifier": "D",
+        "content": "Both P and Q are false."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine whether statements <strong>P</strong> and <strong>Q</strong> are true or false, let's analyze each one step by step.</p>\n<hr>\n<h3><strong>Given Schedule $ S $:</strong></h3>\n\n$$\n\\begin{array}{|c|c|c|}\n\\hline \\boldsymbol{T 1} &amp; \\boldsymbol{T 2} &amp; \\mathbf{T 3} \\\\\n\\hline &amp; R_2(y) &amp; \\\\\nR_1(x) &amp; &amp; \\\\\n&amp; &amp; R_3(z) \\\\\nR_1(x) &amp; R_2(z) &amp; \\\\\nW_1(x) &amp; W_2(y) &amp; \\\\\n&amp; &amp; R_3(X) \\\\\n&amp; &amp; W_3(z) \\\\\n\\hline\n\\end{array}\n$$\n<h3><strong>Statement P:</strong></h3>\n<p><strong>$ S $ is conflict-serializable.</strong></p>\n<p><strong>Conflict-Serializable Analysis:</strong></p>\n\n<p></p><p><strong>Identify Conflicting Actions:</strong></p>\n<p>Conflicts occur when:</p><p></p>\n\n\n<p></p><p>Two operations are on the same data item.</p><p></p>\n<p></p><p>At least one operation is a write.</p><p></p>\n<p></p><p>Operations are from different transactions.</p><p></p>\n\n\n<p><strong>List Conflicting Pairs:</strong></p>\n\n\n<p></p><p><strong>Data Item $ X $:</strong></p>\n\n<p></p><p>$ R_1(X) $ and $ W_1(X) $: Same transaction ($ T_1 $); no conflict.</p><p></p>\n<p></p><p>$ W_1(X) $ and $ R_3(X) $: $ T_1 $ writes before $ T_3 $ reads; edge from $ T_1 $ to $ T_3 $.</p><p></p><p></p>\n<p></p><p><strong>Data Item $ Y $:</strong></p>\n\n<p>$ R_1(Y) $ and $ W_2(Y) $: $ T_1 $ reads before $ T_2 $ writes; edge from $ T_1 $ to $ T_2 $.</p><p></p>\n<p></p><p><strong>Data Item $ Z $:</strong></p>\n\n<p>$ R_2(Z) $ and $ W_3(Z) $: $ T_2 $ reads before $ T_3 $ writes; edge from $ T_2 $ to $ T_3 $.</p><p></p>\n\n\n<p></p><p><strong>Construct Precedence Graph:</strong></p>\n<p>Nodes: $ T_1, T_2, T_3 $</p>\n<p>Edges:</p><p></p>\n\n\n<p></p><p>$ T_1 \\rightarrow T_2 $</p><p></p>\n<p></p><p>$ T_1 \\rightarrow T_3 $</p><p></p>\n<p></p><p>$ T_2 \\rightarrow T_3 $</p><p></p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2a6fpzz/2713d5fe-d6eb-459c-ad78-714f38e3a569/d8d887e0-8ace-11ef-9d40-0549cdc3868a/file-jaoe38c1m2a6fq00.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2a6fpzz/2713d5fe-d6eb-459c-ad78-714f38e3a569/d8d887e0-8ace-11ef-9d40-0549cdc3868a/file-jaoe38c1m2a6fq00.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Database Management System - Transactions and Concurrency Question 9 English Explanation\">\n\n<p><strong>Check for Cycles:</strong></p>\n\n\n<p></p><p>No cycles are present in the graph.</p><p></p>\n<p></p><p><strong>Conclusion:</strong> Schedule $ S $ is conflict-serializable.</p><p></p>\n\n<hr>\n<h3><strong>Statement Q:</strong></h3>\n<p><strong>If $ T_3 $ commits before $ T_1 $ finishes, then $ S $ is recoverable.</strong></p>\n<p><strong>Recoverability Analysis:</strong></p>\n\n<p></p><p><strong>Definition of Recoverability:</strong></p>\n<p>A schedule is <strong>recoverable</strong> if a transaction commits only after all transactions from which it has read have committed.</p><p></p>\n<p></p><p><strong>Identify Reads From Uncommitted Writes:</strong></p><p></p>\n\n\n<p></p><p>$ W_1(X) $ by $ T_1 $ at step 5.</p><p></p>\n<p></p><p>$ R_3(X) $ by $ T_3 $ at step 8.</p><p></p>\n<p></p><p>$ T_3 $ reads $ X $ written by $ T_1 $ before $ T_1 $ commits.</p><p></p>\n\n\n<p><strong>Order of Commits:</strong></p>\n\n\n<p></p><p>Given $ T_3 $ commits before $ T_1 $ finishes (and thus before $ T_1 $ commits).</p><p></p>\n<p></p><p>$ T_3 $ has read uncommitted data from $ T_1 $ and commits before $ T_1 $ commits.</p><p></p>\n\n\n<p><strong>Conclusion:</strong></p>\n\n\n<p></p><p>This violates the recoverability condition.</p><p></p>\n<p></p><p><strong>Therefore, $ S $ is not recoverable under the given condition.</strong></p><p></p>\n\n<hr>\n<h3><strong>Final Answer:</strong></h3>\n\n<p></p><p><strong>Statement P is true:</strong> Schedule $ S $ is conflict-serializable.</p><p></p>\n<p></p><p><strong>Statement Q is false:</strong> Schedule $ S $ is not recoverable if $ T_3 $ commits before $ T_1 $ finishes.</p><p></p>\n\n<p><strong>Answer:</strong> Option A</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Let r<sub>i</sub>(z) and w<sub>i</sub>(z) denote read and write operations respectively on a data item z by a transaction T<sub>i</sub>. Consider the following two schedules.</p>\n\n<p>S<sub>1</sub> : r<sub>1</sub>(x) r<sub>1</sub>(y) r<sub>2</sub>(x) r<sub>2</sub>(y) w<sub>2</sub>(y) w<sub>1</sub>(x)</p>\n\n<p>S<sub>2</sub> : r<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span>(x) r<sub>2</sub>(x) r<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span>(y)&nbsp;w<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">2</span>(y) r<sub>1</sub>(y) w<span style=\"position: relative;  line-height: 0; vertical-align: baseline; bottom: -0.25em;font-size:10.5px;\">1</span>(x)</p>\n\n<p>Which one of the following options is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S<sub>1</sub> is conflict serializable, and S<sub>2</sub> is not conflict serializable."
+      },
+      {
+        "identifier": "B",
+        "content": "S<sub>1</sub> is not conflict serializable, and S<sub>2</sub> is conflict serializable."
+      },
+      {
+        "identifier": "C",
+        "content": "Both S<sub>1</sub> and S<sub>2</sub> are conflict serializable."
+      },
+      {
+        "identifier": "D",
+        "content": "Neither S<sub>1</sub> nor S<sub>2</sub> is conflict serializable."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine whether the given schedules $ S_1 $ and $ S_2 $ are conflict serializable, we analyze each schedule's precedence graph to check for cycles.</p>\n<p><strong>Schedule $ S_1 $:</strong>  </p>\n<p>Sequence: $ r_1(x) \\, r_1(y) \\, r_2(x) \\, r_2(y) \\, w_2(y) \\, w_1(x) $</p>\n<p><strong>Precedence Graph for $ S_1 $:</strong></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2skpwft/e0b66615-c165-4b95-9b2a-466a227abd88/cf68f690-94ec-11ef-8a42-950d351c70a3/file-jaoe38c1m2skpwfu.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2skpwft/e0b66615-c165-4b95-9b2a-466a227abd88/cf68f690-94ec-11ef-8a42-950d351c70a3/file-jaoe38c1m2skpwfu.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 1 Database Management System - Transactions and Concurrency Question 10 English Explanation 1\"></p>\n\n<p>This graph contains a cycle, indicating that $ S_1 $ is not conflict serializable.</p>\n\n<p><strong>Schedule $ S_2 $:</strong>  </p>\n<p>Sequence: $ r_1(x) \\, r_2(x) \\, r_2(y) \\, w_2(y) \\, r_1(y) \\, w_1(x) $</p>\n<p><strong>Precedence Graph for $ S_2 $:</strong></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2skqqqt/5390b49d-6e71-4c37-8fa4-4fb41031c1bf/e6d20150-94ec-11ef-8a42-950d351c70a3/file-jaoe38c1m2skqqqu.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2skqqqt/5390b49d-6e71-4c37-8fa4-4fb41031c1bf/e6d20150-94ec-11ef-8a42-950d351c70a3/file-jaoe38c1m2skqqqu.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 1 Database Management System - Transactions and Concurrency Question 10 English Explanation 2\"></p>\n\n<p>This graph does not contain a cycle, indicating that $ S_2 $ is conflict serializable.</p>\n\n<p>Thus, $ S_1 $ is not conflict serializable due to the cycle in its precedence graph, while $ S_2 $ is conflict serializable, as there is no cycle present.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a schedule of transactions T<sub>1</sub> and T<sub>2</sub> :\n<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu2d4qa/400c524c-3a46-4b39-babf-4f7b2b8996b6/2fc71120-ca49-11ea-b796-4745b429ed6f/file-1da9i2ynkcu2d4qb-320w.png\"><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu2d4qa/400c524c-3a46-4b39-babf-4f7b2b8996b6/2fc71120-ca49-11ea-b796-4745b429ed6f/file-1da9i2ynkcu2d4qb-500w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English\"></picture>\n<br>Here, RX stands for “Read(X)” and WX stands for “Write(X)”. Which one of the following schedules is conflict equivalent to the above schedule?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu2e9w5/15d93e3b-6a2b-41ad-b490-77eca02541c1/4f935360-ca49-11ea-b796-4745b429ed6f/file-1da9i2ynkcu2e9w6-320w.png\"><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu2e9w5/15d93e3b-6a2b-41ad-b490-77eca02541c1/4f935360-ca49-11ea-b796-4745b429ed6f/file-1da9i2ynkcu2e9w6-500w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English Option 1\"></picture>"
+      },
+      {
+        "identifier": "B",
+        "content": "<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu2kfgt/a637d111-190d-4e82-960b-f4e3cf83026a/fabc4fd0-ca49-11ea-b796-4745b429ed6f/file-1da9i2ynkcu2kfgu-320w.png\"><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu2kfgt/a637d111-190d-4e82-960b-f4e3cf83026a/fabc4fd0-ca49-11ea-b796-4745b429ed6f/file-1da9i2ynkcu2kfgu-500w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English Option 2\"></picture>"
+      },
+      {
+        "identifier": "C",
+        "content": "<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu2h61x/fe7ce254-c990-4673-a65d-6b8f559904f1/a0095150-ca49-11ea-b796-4745b429ed6f/file-1da9i2ynkcu2h61y-320w.png\"><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu2h61x/fe7ce254-c990-4673-a65d-6b8f559904f1/a0095150-ca49-11ea-b796-4745b429ed6f/file-1da9i2ynkcu2h61y-500w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English Option 3\"></picture>"
+      },
+      {
+        "identifier": "D",
+        "content": "<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu2htyd/1562b08e-e43c-455a-9cd6-e1147258aa62/b27fe150-ca49-11ea-b796-4745b429ed6f/file-1da9i2ynkcu2htye-320w.png\"><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcu2htyd/1562b08e-e43c-455a-9cd6-e1147258aa62/b27fe150-ca49-11ea-b796-4745b429ed6f/file-1da9i2ynkcu2htye-500w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English Option 4\"></picture>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3iak5q5/87c10fcc-c445-4bfd-9377-fafafda80822/75528ad0-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iak5q6.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3iak5q5/87c10fcc-c445-4bfd-9377-fafafda80822/75528ad0-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iak5q6.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English Explanation 1\"></p>\n<p>Precedence graph of given schedule - </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3iak3ti/8d94d09a-3346-43b9-9319-2560030fbc41/73d97f60-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iak3tj.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3iak3ti/8d94d09a-3346-43b9-9319-2560030fbc41/73d97f60-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iak3tj.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English Explanation 2\"></p>\n<p>Precedence graph of option (A) </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3iak3ti/8d94d09a-3346-43b9-9319-2560030fbc41/73d97f60-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iak3tj.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3iak3ti/8d94d09a-3346-43b9-9319-2560030fbc41/73d97f60-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iak3tj.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English Explanation 3\"></p>\n<p>Precedence graph of option (B)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3iajye3/f7f37ea4-9a34-4974-a078-bbda865db4e6/6fa80ab0-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iajye4.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3iajye3/f7f37ea4-9a34-4974-a078-bbda865db4e6/6fa80ab0-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iajye4.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English Explanation 4\"></p>\n<p>Precedence graph of option (C). </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3iajvfu/0c932a4f-59c0-49fe-bbef-a5bb3e060549/6d6064a0-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iajvfv.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3iajvfu/0c932a4f-59c0-49fe-bbef-a5bb3e060549/6d6064a0-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iajvfv.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English Explanation 5\"></p>\n<p>Precedence graph of option (D). </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m3iajsvc/a7982b0f-12c4-4694-86b4-afa9d7fb538c/6b641f70-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iajsvd.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m3iajsvc/a7982b0f-12c4-4694-86b4-afa9d7fb538c/6b641f70-a311-11ef-91ea-cf6d3b5e56a2/file-jaoe38c1m3iajsvd.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Database Management System - Transactions and Concurrency Question 12 English Explanation 6\"></p>\n<p>Option (B) and (D) are false because graphs is not equivalent to given graph. </p>\n<p>Option (C) is also false because there is a swapping operation of conflicting operations W<sub>1</sub>(D)and R<sub>2</sub>(D) </p>\n<p>Hence, the correct option is (A). </p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following two phase locking protocol. Suppose a transaction $$T$$ accesses (for read or write operations), a certain set of objects $$\\left\\{ {{O_1},...,{O_k}} \\right\\}.$$ This is done in the following manner:\n<p><b>Step 1.</b> T acquires exclusive locks to $${{O_1},...,{O_k}}$$ in increasing order of their \n<br>addresses.\n<br><b>Step 2.</b> The required operations are performed.\n<br><b>Step 3.</b> All locks are released.</p>\n<p>This protocol will</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "guarantee serializability and deadlock-freedom"
+      },
+      {
+        "identifier": "B",
+        "content": "guarantee neither serializability nor deadlock-freedom "
+      },
+      {
+        "identifier": "C",
+        "content": "guarantee serializability but not deadlock-freedom "
+      },
+      {
+        "identifier": "D",
+        "content": "guarantee deadlock-freedom but not serializability "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following database schedule with two transactions, T<sub>1</sub>  and T<sub>2</sub>\n<pre><code> S = r<sub>2</sub>(X); r<sub>1</sub>(X); r<sub>2</sub>(Y); w<sub>1</sub>(X); r<sub>1</sub>(Y); w<sub>2</sub>(X); a<sub>1</sub>; a<sub>2</sub></code></pre> \n       \n<p>where r<sub>i</sub>(Z) denotes a read operation by transaction T<sub>i</sub> on a variable Z, w<sub>i</sub>(Z) denotes a write operation by T<sub>i</sub> on a variable Z and a<sub>i</sub> denotes an abort by transaction T<sub>i</sub>\n.        </p>\n<p>Which one of the following statements about the above schedule is <b>TRUE</b>?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S is non-recoverable "
+      },
+      {
+        "identifier": "B",
+        "content": "S is recoverable, but has a cascading abort "
+      },
+      {
+        "identifier": "C",
+        "content": "S does not have a cascading abort "
+      },
+      {
+        "identifier": "D",
+        "content": "S is strict "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following partial Schedule S involving two transactions $$T1$$ and $$T2.$$ Only the read and the write operations have been shown. The read operation on data item $$P$$ is denoted by read$$(P)$$ and the write operation on data item $$P$$ is denoted by write $$(P).$$\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/jE6wYQoKbIZ98KYP7/77WnMgBVYrKhYS8vpazYIjCs1ykSC/S5Pls1XQ92SBr5pYZtZi3X/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2015 Set 3 Database Management System - Transactions and Concurrency Question 18 English\">\n<p>Suppose that the transaction $$T1$$ fails immediately after time instance $$9.$$  Which one of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$T2$$ must be aborted and then both $$T1$$ and $$T2$$ must be re-started to ensure transaction atomicity"
+      },
+      {
+        "identifier": "B",
+        "content": "Schedule $$S$$ is non-recoverable and cannot ensure transaction atomicity "
+      },
+      {
+        "identifier": "C",
+        "content": "Only $$T2$$ must be aborted and then re-started to ensure transaction atomicity "
+      },
+      {
+        "identifier": "D",
+        "content": "Schedule $$S$$ is recoverable and can ensure atomicity and nothing else needs to be done  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a simple checkpointing protocol and the following set of operations in the log.\n <p>(start, $$T4$$); (write, $$T4, y, 2, 3$$); (start, $$T1$$); (commit, $$T4$$); (write, $$T1, z, 5, 7$$);  \n<br>(checkpoint);\n <br>(start, $$T2$$); (write, $$T2, x, 1, 9$$); (commit, $$T2$$); (start, $$T3$$), (write, $$T3, z, 7, 2$$);</p>\n<p>If a crash happens now and the system tries to recovver using both undo and redo operations, what are the contents of the undo list and the redo list? </p> \n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Undo: $$T3,T1;$$ Redo: $$T2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Undo: $$T3,T1;\\,{\\mathop{\\rm Re}\\nolimits} do:T2,T4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "Undo: none; Redo: $$T2,T4,T3,T1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Undo: $$T3,T1,T4;\\,\\,$$ Redo : $$T2$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following schedule S of transactions T1, T2, T3, T4:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/l9xuSXdhy2xLnrHwe/SoNCtN4sW05PdgV1qLaGQS17zsgFT/l4Kmu5Q1AmwVsXJJJrG5CX/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 2 Database Management System - Transactions and Concurrency Question 22 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S is conflict-serializable but not recoverable"
+      },
+      {
+        "identifier": "B",
+        "content": "S is not conflict-serializable but is recoverable"
+      },
+      {
+        "identifier": "C",
+        "content": "S is both conflict-serializable and recoverable"
+      },
+      {
+        "identifier": "D",
+        "content": "S is neither conflict-serializable not is it recoverable"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following four schedules due to three transactions (indicated by the subscript) using\nread and write on a data item x, denoted by r(x) and w(x) respectively. Which one of them is\nconflict serializable?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "r<sub>1</sub>(x); r<sub>2</sub>(x); w<sub>1</sub>(x); r<sub>3</sub>(x); w<sub>2</sub>(x)"
+      },
+      {
+        "identifier": "B",
+        "content": "r<sub>2</sub>(x); r<sub>1</sub>(x); w2(x); r3(x); w1(x)"
+      },
+      {
+        "identifier": "C",
+        "content": "r<sub>3</sub>(x); r<sub>2</sub>(x); r<sub>1</sub>(x); w<sub>2</sub>(x); w<sub>1</sub>(x)"
+      },
+      {
+        "identifier": "D",
+        "content": "r<sub>2</sub>(x); w<sub>2</sub>(x); r<sub>3</sub>(x); r<sub>1</sub>(x); w<sub>1</sub>(x)"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the transactions T1, T2, and T3 and the schedules S1 and S2 given below.\n<p>T1 : r1 (X) ; r1 (Z) ; w1 (X) ; w1 (Z) </p>\n<p>T2 : r2 (X) ; r2 (Z) ; w2 (Z)</p> \n<p>T3 : r3 (X) ; r3 (X) ; w3 (Y)</p>\n<p>S1: r1(X); r3(Y); r3(X); r2(Y); r2(Z); w3(Y); w2(Z); r1(Z); w1(X); w1(Z)</p> \n<p>S2: r1(X); r3(Y); r2(Y); r3(X); r1(Z); r2(Z); w3(Y); w1(X); w2(Z); w1(Z)</p>\nWhich one of the following statements about the schedules is TRUE? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only <b>S1</b> is conflict-serializable."
+      },
+      {
+        "identifier": "B",
+        "content": "Only <b>S2</b> is conflict-serializable."
+      },
+      {
+        "identifier": "C",
+        "content": "Both <b>S1</b> and <b>S2</b> are conflict-serializable."
+      },
+      {
+        "identifier": "D",
+        "content": "Neither <b>S1</b> nor <b>S2</b> is conflict-serializable."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following transactions with data items P and Q initialized to zero:\n<pre><code>T<sub>1</sub> : read (P) ; \n     read (Q) ; \n     if P = 0 then Q : = Q + 1 ; \n     write (Q). </code></pre>\n<pre><code>T<sub>2</sub> : read (Q) ; \n     read (P) \n     if Q = 0 then P : = P + 1 ; \n     write (P).</code></pre>\nAny non-serial interleaving of T<sub>1</sub> and T<sub>2</sub> for concurrent execution leads to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a serializable schedule"
+      },
+      {
+        "identifier": "B",
+        "content": "a schedule that is not conflict serializable"
+      },
+      {
+        "identifier": "C",
+        "content": "a conflict serializable schedule"
+      },
+      {
+        "identifier": "D",
+        "content": "a schedule for which precedence graph cannot be drawn"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following schedule for transactions T1, T2 and T3:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/XuzlRsBgkWAUShRcn/kd4sLDTxgcLyLjGgpFa6f8IUohrnU/ZMaI9gYSjp0I8ewOU7N0DR/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2010 Database Management System - Transactions and Concurrency Question 25 English\">\nWhich one of the schedules below is the correct serialization of the above?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$T1 \\to T3 \\to T2$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$T2 \\to T1 \\to T3$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$T2 \\to T3 \\to T1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$T3 \\to T1 \\to T2$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two transactions T<sub>1</sub> and T<sub>2</sub> and four schedules S<sub>1</sub>, S<sub>2</sub>, S<sub>3</sub>, S<sub>4</sub> of T<sub>1</sub> and T<sub>2</sub>\nas given below:\n<p>T<sub>1</sub>: R<sub>1</sub>[ x ]  W<sub>1</sub>[ x ] W<sub>1</sub>[ y ]\n<br>T<sub>2</sub>: R<sub>2</sub>[ x ]  R<sub>2</sub>[ y ] W<sub>2</sub>[ y ]\n<br>S<sub>1</sub>: R<sub>1</sub>[ x ] R<sub>2</sub>[ x ] R<sub>2</sub>[ y ] W<sub>1</sub>[ x ] W<sub>1</sub>[ y ] W<sub>2</sub>[ y ]\n<br>S<sub>2</sub>: R<sub>1</sub>[ x ] R<sub>2</sub>[ x ] R<sub>2</sub>[ y ] W<sub>1</sub>[ x ] W<sub>2</sub>[ y ] W<sub>1</sub>[ y ]\n<br>S<sub>3</sub>: R<sub>1</sub>[ x ] W<sub>1</sub>[ x ] R<sub>2</sub>[ x ] W<sub>1</sub>[ y ] R<sub>2</sub>[ y ] W<sub>2</sub>[ y ]\n<br>S<sub>4</sub>: R<sub>2</sub>[ x ] R<sub>2</sub>[ y ] R<sub>1</sub>[ x ] W<sub>1</sub>[ x ] W<sub>1</sub>[ y ] W<sub>2</sub>[ y ]</p>\nWhich of the above schedules are conflict-serializable?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S<sub>1</sub> and S<sub>2</sub>"
+      },
+      {
+        "identifier": "B",
+        "content": "S<sub>2</sub> and S<sub>3</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "S<sub>3</sub> only"
+      },
+      {
+        "identifier": "D",
+        "content": "S<sub>4</sub> only"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Let R and S be relational schemes such that R = { a, b, c } and S = { c }. Now consider the following queries on the database:\n<p>I. $$\\pi_{R-S}(r) - \\pi_{R-S} \\left (\\pi_{R-S} (r) \\times s - \\pi_{R-S,S}(r)\\right )$$</p>\n<p>II. $$\\left\\{t \\mid t \\in \\pi_{R-S} (r) \\wedge \\forall u \\in s \\left(\\exists v \\in r \\left(u = v[S] \\wedge t = v\\left[R-S\\right]\\right )\\right )\\right\\}$$</p>\n<p>III.$$\\left\\{t \\mid t \\in \\pi_{R-S} (r) \\wedge \\forall v \\in r \\left(\\exists u \\in s \\left(u = v[S] \\wedge t = v\\left[R-S\\right]\\right )\\right ) \\right\\}$$</p>\n<pre><code class=\"sql\">IV. Select R.a, R.b\n    From R, S\n    Where R.c = S.c</code></pre>\nWhich of the above queries are equivalent?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and II"
+      },
+      {
+        "identifier": "B",
+        "content": "I and III"
+      },
+      {
+        "identifier": "C",
+        "content": "II and IV"
+      },
+      {
+        "identifier": "D",
+        "content": "III and IV"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following three schedules of transactions T<sub>1</sub>, T<sub>2</sub> and T<sub>3</sub>. <br>[ Notation: In the following NYO represents the action Y (R for read, W for write) performed by transac­tion N on object O. ]\n<p>(S1)    \t2RA    \t2WA    \t3RC    \t2WB    \t3WA    \t3WC    \t1RA    \t1RB    \t1WA    \t1WB  </p>   \n<p>(S2)    \t3RC    \t2RA    \t2WA    \t2WB    \t3WA    \t1RA    \t1RB    \t1WA    \t1WB    \t3WC </p>    \n<p>(S3)    \t2RZ    \t3RC    \t3WA    \t2WA    \t2WB    \t3WC    \t1RA    \t1RB    \t1WA    \t1WB</p> \nWhich of the following statements is TRUE? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S1, S2 and S3 are all conflict equivalent to each other"
+      },
+      {
+        "identifier": "B",
+        "content": "No two of S1, S2 and S3 are conflict equivalent to each other"
+      },
+      {
+        "identifier": "C",
+        "content": "S2 is conflict equivalent to S3, but not to S1"
+      },
+      {
+        "identifier": "D",
+        "content": "S1 is conflict equivalent to S2, but not to S3"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following two transactions: T<sub>1</sub> and T<sub>2</sub>.\n<pre><code class=\"sql\">T<sub>1</sub>: read (A);                  T<sub>2</sub>: read (B);\n    read (B);                      read (A);\n    if A = 0 then B ← B + 1;       if B ≠ 0 then A ← A - 1;\n    write (B);                     write (A);</code></pre>\nWhich of the following schemes, using shared and exclusive locks, satisfy the requirements for strict two phase locking for the above transactions?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<pre><code class=\"sql\">S1 : lockS(A); \t        S2 : lockS(B);\n     read (A);               read (B);\n     lockS(B);               lockS(A);\n     read (B);               read (A);\n     if A = 0                if B ≠ 0\n     then B ← B + 1;        then A ← A - 1;\n     write (B);              write (A);\n     commit;                 commit;\n     unlock (A);             unlock (B);\n     unlock (B);             unlock (A);</code></pre>"
+      },
+      {
+        "identifier": "B",
+        "content": "<pre><code class=\"sql\">S1 : lockX(A);          S2 : lockX(B);\n     read (A);               read (B);\n     lockX(B);               lockX(A);\n     read (B);               read (A);\n     if A = 0                if B ≠ 0\n     then B ← B + 1;        then A ← A - 1;\n     write (B);              write (A);\n     unlock (A);             unlock (A);\n     commit;                 commit;\n     unlock (B);             unlock (A);</code></pre>"
+      },
+      {
+        "identifier": "C",
+        "content": "<pre><code class=\"sql\">S1 : lockS(A);           S2 : lockS(B);\n     read (A);                read (B);\n     lockX(B);                lockX(A);\n     read (B);                read (A);\n     if A = 0                 if B ≠ 0\n     then B ← B + 1;         then A ← A - 1;\n     write (B);               write (A);\n     unlock (A);              unlock (B);\n     commit;                  commit;\n     unlock (B);              unlock (A);</code></pre>"
+      },
+      {
+        "identifier": "D",
+        "content": "<pre><code class=\"sql\">S1 : lockS(A);           S2 : lockS(B);\n     read (A);                read (B);\n     lockX(B);                lockX(A);\n     read (B);                read (A);\n     if A = 0                 if B ≠ 0\n    then B ← B + 1;        then A ← A - 1;\n     write (B);               write (A);                                                                                                     \n     unlock (A);              unlock (A);\n     unlock (B);              unlock (B);\n     commit;                  commit;</code></pre>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following schedules involving two transactions. Which one of the following statements is TRUE? \n<p><b>S<sub>1</sub>:</b> r<sub>1</sub>(X); r<sub>1</sub>(Y); r<sub>2</sub>(Y); r<sub>2</sub>(X); w<sub>2</sub>(Y); w<sub>1</sub>(X);</p>\n<p><b>S<sub>2</sub>:</b> r<sub>1</sub>(X); r<sub>2</sub>(X); r<sub>2</sub>(Y); w<sub>2</sub>(Y); r<sub>1</sub>(Y); w<sub>1</sub>(X);</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both S<sub>1</sub> and S<sub>2</sub> are conflict serializable."
+      },
+      {
+        "identifier": "B",
+        "content": "S<sub>1</sub> is conflict serializable and S<sub>2</sub> is not conflict serializable."
+      },
+      {
+        "identifier": "C",
+        "content": "S<sub>1</sub> is not conflict serializable and S<sub>2</sub> is conflict serializable."
+      },
+      {
+        "identifier": "D",
+        "content": "Both S<sub>1</sub> and S<sub>2</sub> are not conflict serializable. "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following schedule S of transactions T1 and T2:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/5VeewF49Zt52UCss8/6cNG0ih3xm2uldoqlg7oDeDzkJ9Yj/zfKzqQSgVxzSWZKQq8PnVW/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2004 Database Management System - Transactions and Concurrency Question 31 English\">\nWhich of the following is <b>TRUE</b> about the schedule S?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S is serializable only as T1,T2"
+      },
+      {
+        "identifier": "B",
+        "content": "S is serializable only as T2,T1"
+      },
+      {
+        "identifier": "C",
+        "content": "S is serializable both as T1, T2 and T2, T2 "
+      },
+      {
+        "identifier": "D",
+        "content": "S is not serializable either as T1 or as T2"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider three data items D1, D2, and D3, and the following execution schedule of transactions T1, T2, and T3. In the diagram, R(D) and W(D) denote the actions reading and writing the data item D respectively.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/tUCN4wzwlY19sC7fi/q5vGf6E9D38CfbFD3wYl9zlVdH5YM/UyGApKGEx44hz5xk1qZGvR/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2003 Database Management System - Transactions and Concurrency Question 32 English\">\n<p>Which of the following statements is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The schedule is serializable as T2; T3; T1"
+      },
+      {
+        "identifier": "B",
+        "content": "The schedule is serializable as T2; T1; T3"
+      },
+      {
+        "identifier": "C",
+        "content": "The schedule is serializable as T3; T2; T1"
+      },
+      {
+        "identifier": "D",
+        "content": "The schedule is not serializable"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "For the schedule given below, which of the following is correct:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/QPtBqOPtKszl0pdN5/LCGVuvuVdXEGvWQQF4FbKsVCXL4YF/IZ1PtzkowSjPQt5xMDzPyg/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1999 Database Management System - Transactions and Concurrency Question 33 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "This schedule is serialized and can occur in a scheme using 2PL protocol"
+      },
+      {
+        "identifier": "B",
+        "content": "This schedule is serializable but cannot occur in a scheme using 2PL protocol "
+      },
+      {
+        "identifier": "C",
+        "content": "This schedule is not serializable but can occur in a scheme using 2PL protocol"
+      },
+      {
+        "identifier": "D",
+        "content": "This schedule is not serializable and cannot occur in a scheme using 2PL protocol."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  }
+]

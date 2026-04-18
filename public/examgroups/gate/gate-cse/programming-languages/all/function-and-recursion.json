@@ -1,0 +1,1108 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following C program. Assume parameters to a function are evaluated from right to left.</p>\n<pre><code>\n#include &lt;studio.h&gt;\n\nint g(int p) { printf(\"%d\", p); return p; }\n\nint h(int q) { printf(\"%d\", q); return q; }\n\nvoid f(int x, int y) {\n\n   g(x);\n\n   h(y);\n\n}\n\nint main() {\n\n   f(g(10),h(20));\n\n}\n</code></pre>\n<p>Which one of the following options is the CORRECT output of the above C program?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>20101020</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>10202010</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>20102010</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>10201020</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m01pzcl9/8cd258ed-5e17-4836-94f9-b971387b1840/cb85c2d0-5e8f-11ef-857f-f71289df724d/file-jaoe38c1m01pzcla.png?format=png\" alt=\"GATE CSE 2024 Set 2 Programming Languages - Function and Recursion Question 5 English Explanation 1\"></p>\n<p>As mentioned, \"parameters to a function are evaluated from right to left.\"</p>\n<p>So, <code>h()</code> will be evaluated first and will print <code>20</code>. Then, <code>g()</code> will be evaluated and will print <code>10</code>.</p>\n<p>Next, as <code>g()</code> and <code>h()</code> both return <code>10</code> and <code>20</code> respectively, <code>f(10, 20)</code> will be called. Within <code>f(10, 20)</code>, <code>g(10)</code> and <code>h(20)</code> will be called again, printing <code>10</code> and <code>20</code> respectively.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m01q3bdo/6510e227-ec52-4357-80fb-0811a1459756/39d2e9c0-5e90-11ef-857f-f71289df724d/file-jaoe38c1m01q3bdp.png?format=png\" alt=\"GATE CSE 2024 Set 2 Programming Languages - Function and Recursion Question 5 English Explanation 2\"></p>\n<p>Hence, the correct output is <code>20101020</code>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following C program:</p>\n<pre><code>\n#include &lt;stdio.h&gt;\nvoid fX();\nint main() {\n   fX();\n   return 0;}\n</code></pre>\n\n<br/>\n<pre>\n<code>\nvoid fX() {\n   char a;\n   if ((a = getchar()) != '\\n')\n       fX();\n   if (a != '\\n')\n       putchar(a);}\n</code>\n</pre>\n\n<p>Assume that the input to the program from the command line is 1234 followed by a newline character. Which one of the following statements is CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>The program will not terminate</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>The program will terminate with no output</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>The program will terminate with 4321 as output</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The program will terminate with 1234 as output</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze the given C program to determine its behavior and find the correct option among the provided choices.</p>\n\n<p>First, let's break down the main segments of the code:</p>\n\n<p>The <code>main</code> function:</p>\n\n<pre><code>\n\n<p>#include &lt;stdio.h&gt;</p>\n\n<p>void fX();</p>\n\n<p>int main() {</p>\n\n<p>fX();</p>\n\n<p>return 0;</p>\n\n<p>}</p>\n\n</code></pre>\n\n<p>The <code>fX</code> function:</p>\n\n<pre><code>\n\n<p>void fX() {</p>\n\n<p>char a;</p>\n\n<p>if ((a = getchar()) != '\\n')</p>\n\n<p>fX();</p>\n\n<p>if (a != '\\n')</p>\n\n<p>putchar(a);</p>\n\n<p>}</p>\n\n</code></pre>\n\n<p>Here's a step-by-step breakdown of the code execution:</p>\n\n<p>1. The <code>main</code> function calls the <code>fX</code> function.</p>\n\n<p>2. Inside the <code>fX</code> function:</p>\n\n<p>   - A character variable <code>a</code> is declared.\n\n<ul>\n<li>The statement <code>(a = getchar()) != '\\n'</code> reads a character from the input.</li><br>\n<li>If the character is not a newline, the function calls itself recursively: <code>fX();</code></li><br>\n<li>After returning from the recursive call, if <code>a</code> is not a newline, the character <code>a</code> is printed using <code>putchar(a);</code>.</li>\n</ul>\n</p>\n\n<p>Given the input \"1234\\n\" (1234 followed by a newline character), let's follow the recursive calls:</p>\n\n<p>1. <code>fX()</code> is called, and it reads <code>a = '1'</code>. Since '1' is not a newline, it calls <code>fX()</code> recursively.</p>\n\n<p>2. Inside the recursive call, <code>fX()</code> reads <code>a = '2'</code>. Since '2' is not a newline, it calls <code>fX()</code> recursively again.</p>\n\n<p>3. This process continues for the characters '3' and '4' as well:</p>\n\n<p>   - Read: <code>a = '3'</code>, make another recursive call.\n\n<ul>\n<li>Read: <code>a = '4'</code>, make yet another recursive call.</li>\n</ul>\n</p>\n\n<p>4. Finally, <code>a = '\\n'</code> is read. The first <code>if</code> condition fails, so no more recursive calls are made, and this instance of <code>fX</code> returns back to the previous instance in the call stack.</p>\n\n<p>5. Now, as the function returns from its recursive calls, each returning instance checks the second <code>if</code> condition:</p>\n\n<p>   - The instance with <code>a = '4'</code> prints '4'.\n\n<ul>\n<li>The instance with <code>a = '3'</code> prints '3'.</li><br>\n<li>The instance with <code>a = '2'</code> prints '2'.</li><br>\n<li>The instance with <code>a = '1'</code> prints '1'.</li>\n</ul>\n</p>\n\n<p>This results in the output \"4321\". Therefore, after processing all input characters and considering the order of the putchar calls as the function unwinds, the correct output is \"4321\".</p>\n\n<p>The correct answer is:</p>\n\n<p>Option C</p>\n\n<p>The program will terminate with 4321 as output</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The integer value printed by the ANSI-C program given below is ___________.</p>\n<pre><code>\n#include&lt;stdio.h&gt;\nint funcp(){\n    static int x = 1;\n    x++ ;\n    return x;\n}\nint main(){\n    int x,y;\n    x = funcp();\n    y = funcp()+x;\n    printf(\"%d\\n\", (x+y));\n    return 0;\n}\n</code></pre>",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": "<p>Let's analyze the ANSI-C program step by step to determine the integer value that will be printed.</p>\n\n<p>Here's the given code:</p>\n\n<pre><code>\n\n<p>#include &lt;stdio.h&gt;</p>\n\n<p>int funcp(){</p>\n\n<p>static int x = 1;</p>\n\n<p>x++ ;</p>\n\n<p>return x;</p>\n\n<p>}</p>\n\n<p>int main(){</p>\n\n<p>int x,y;</p>\n\n<p>x = funcp();</p>\n\n<p>y = funcp()+x;</p>\n\n<p>printf(\"%d\\n\", (x+y));</p>\n\n<p>return 0;</p>\n\n<p>}</p>\n\n</code></pre>\n\n<p>First, let's understand how the <code>funcp</code> function works. It uses a static variable <code>x</code>. A static variable retains its value between function calls and is initialized only once.</p>\n\n<p>Initially, <code>static int x = 1;</code> sets <code>x</code> to 1. On the first call to <code>funcp</code>, <code>x</code> is incremented by 1, making its value 2, and then it returns 2.</p>\n\n<p>On the second call to <code>funcp</code>, <code>x</code> is incremented again by 1, making its value 3, and then it returns 3.</p>\n\n<p>Now, let's step through the <code>main</code> function:</p>\n\n<p><code>x = funcp();</code></p>\n\n<p>Here, <code>x</code> will be set to the return value of the first call to <code>funcp</code>, which is 2.</p>\n\n<p><code>y = funcp() + x;</code></p>\n\n<p>Now, <code>y</code> will be set to the return value of the second call to <code>funcp</code> (which is 3) plus <code>x</code> (which is 2). So, <code>y = 3 + 2 = 5</code></p>\n\n<p>Finally, the program prints the sum of <code>x</code> and <code>y</code>:</p>\n\n<p><code>printf(\"%d\\n\", (x+y));</code></p>\n\n<p>This results in:</p>\n\n<p><code>(x + y) = 2 + 5 = 7</code></p>\n\n<p>Therefore, the integer value printed by the program is <b>7</b>.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following ANSI C function:</p>\n\n<p>int SomeFunction (int x, int y)</p>\n\n<p>{</p>\n\n<p>if ( (x&nbsp;== 1) I I (y == 1)) return 1;</p>\n\n<p>if (x == y) return x;</p>\n\n<p>if (x &gt; y) return SomeFunction(x - y, y);</p>\n\n<p>if (y &gt; x) return SomeFunction(x, y - x);</p>\n\n<p>}</p>\n\n<p>The value returned by SomeFunction(15, 255) is _______.</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "15",
+    "explanation": "<p>To solve this problem, we need to determine the value returned by the function <code>SomeFunction(15, 255)</code>. Let's first understand what the given C function does.</p>\n<h3><strong>Understanding the Function :</strong></h3>\n<pre><code class=\"c language-c\">int SomeFunction (int x, int y)\n\n{\n\n    if ( (x == 1) || (y == 1)) return 1;\n\n    if (x == y) return x;\n\n    if (x &gt; y) return SomeFunction(x - y, y);\n\n    if (y &gt; x) return SomeFunction(x, y - x);\n\n}\n</code></pre>\n<p>This function recursively reduces the values of <code>x</code> and <code>y</code> by repeatedly subtracting the smaller from the larger until one of the base cases is met:</p>\n\n<p><p><strong>Base Case 1 :</strong> If either <code>x</code> or <code>y</code> equals 1, the function returns 1.</p></p>\n<p><p><strong>Base Case 2 :</strong> If <code>x</code> equals <code>y</code>, the function returns <code>x</code> (or <code>y</code>).</p></p>\n\n<p><strong>Observation :</strong> This function is implementing the <strong>Euclidean Algorithm</strong> for finding the <strong>Greatest Common Divisor (GCD)</strong> of two numbers.</p>\n<h3><strong>Calculating GCD of 15 and 255 :</strong></h3>\n<p>We need to compute <code>gcd(15, 255)</code> using the Euclidean Algorithm as implemented in the function.</p>\n<h4><strong>Using the Recursive Function Calls :</strong></h4>\n<p>We will follow the recursive calls step by step :</p>\n\n<p><strong>First Call :</strong></p>\n\n\n<p><p><code>SomeFunction(15, 255)</code></p></p>\n<p><p>Since <code>y &gt; x</code>, we have <code>y = y - x = 255 - 15 = 240</code>.</p></p>\n<p><p>Recursive Call: <code>SomeFunction(15, 240)</code></p></p>\n\n\n<p><p><strong>Subsequent Calls :</strong></p>\n<p>We continue subtracting <code>x</code> from <code>y</code> because <code>y</code> is still greater than <code>x</code> :</p></p>\n\n\n<p><p><code>SomeFunction(15, 240)</code> ➔ <code>SomeFunction(15, 225)</code> (<code>240 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 225)</code> ➔ <code>SomeFunction(15, 210)</code> (<code>225 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 210)</code> ➔ <code>SomeFunction(15, 195)</code> (<code>210 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 195)</code> ➔ <code>SomeFunction(15, 180)</code> (<code>195 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 180)</code> ➔ <code>SomeFunction(15, 165)</code> (<code>180 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 165)</code> ➔ <code>SomeFunction(15, 150)</code> (<code>165 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 150)</code> ➔ <code>SomeFunction(15, 135)</code> (<code>150 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 135)</code> ➔ <code>SomeFunction(15, 120)</code> (<code>135 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 120)</code> ➔ <code>SomeFunction(15, 105)</code> (<code>120 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 105)</code> ➔ <code>SomeFunction(15, 90)</code> (<code>105 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 90)</code> ➔ <code>SomeFunction(15, 75)</code> (<code>90 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 75)</code> ➔ <code>SomeFunction(15, 60)</code> (<code>75 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 60)</code> ➔ <code>SomeFunction(15, 45)</code> (<code>60 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 45)</code> ➔ <code>SomeFunction(15, 30)</code> (<code>45 - 15</code>)</p></p>\n<p><p><code>SomeFunction(15, 30)</code> ➔ <code>SomeFunction(15, 15)</code> (<code>30 - 15</code>)</p></p>\n\n\n<p><strong>Base Case Reached :</strong></p>\n\n\n<p><p><code>SomeFunction(15, 15)</code></p></p>\n<p><p>Since <code>x == y</code>, the function returns <code>x</code>, which is <code>15</code>.</p></p>\n\n<h3><strong>Final Answer :</strong></h3>\n<p>The function <code>SomeFunction(15, 255)</code> returns <strong>15</strong>, which is the greatest common divisor of <code>15</code> and <code>255</code>.</p>\n<p><strong>Answer :</strong> 15</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program:<br><br>\n <pre><code>        #include &lt; stdio.h &gt;\n         int jumble (int x, int y)  {\n               x = 2 * x + y ;\n               return x ;\n         }\n         int main ( )  {\n               int x=2, y=5 ;\n               y = jumble (y, x) ;\n               x = jumble (y, x) ;\n               printf (\"%d \\n\", x) ;\n               return 0 ;\n         }</code></pre>\n<br><br>The value printed by the program is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "26",
+    "explanation": "<h3><strong>Given Program:</strong></h3>\n<pre><code class=\"c language-c\">#include &lt;stdio.h&gt;\n\nint jumble (int x, int y)  {\n\n      x = 2 * x + y ;\n\n      return x ;\n\n}\n\nint main ( )  {\n\n      int x = 2, y = 5 ;\n\n      y = jumble (y, x) ;\n\n      x = jumble (y, x) ;\n\n      printf (\"%d \\n\", x) ;\n\n      return 0 ;\n\n}\n</code></pre>\n<hr />\n<h3><strong>Step-by-Step Execution:</strong></h3>\n<h4><strong>Initial Values in <code>main</code>:</strong></h4>\n\n<p><p><code>x = 2</code></p></p>\n<p><p><code>y = 5</code></p></p>\n\n<h4><strong>First Function Call: <code>y = jumble(y, x);</code></strong></h4>\n\n<p><p><strong>Arguments Passed:</strong></p></p>\n<p><p><code>x = y = 5</code></p></p>\n<p><p><code>y = x = 2</code></p></p>\n<p><p><strong>Inside <code>jumble</code>:</strong></p></p>\n<p><p>Compute <code>x = 2 * x + y</code></p></p>\n<p><p>Substitute values: <code>x = 2 * 5 + 2 = 10 + 2 = 12</code></p></p>\n<p><p>Return <code>x = 12</code></p></p>\n<p><p><strong>Update in <code>main</code>:</strong></p></p>\n<p><p><code>y</code> receives the returned value: <code>y = 12</code></p></p>\n<p><p>Current values:</p>\n\n<p><p><code>x = 2</code></p></p>\n<p><p><code>y = 12</code></p></p></p>\n\n<h4><strong>Second Function Call: <code>x = jumble(y, x);</code></strong></h4>\n\n<p><p><strong>Arguments Passed:</strong></p></p>\n<p><p><code>x = y = 12</code></p></p>\n<p><p><code>y = x = 2</code></p></p>\n<p><p><strong>Inside <code>jumble</code>:</strong></p></p>\n<p><p>Compute <code>x = 2 * x + y</code></p></p>\n<p><p>Substitute values: <code>x = 2 * 12 + 2 = 24 + 2 = 26</code></p></p>\n<p><p>Return <code>x = 26</code></p></p>\n<p><p><strong>Update in <code>main</code>:</strong></p></p>\n<p><p><code>x</code> receives the returned value: <code>x = 26</code></p></p>\n<p><p>Current values:</p>\n\n<p><p><code>x = 26</code></p></p>\n<p><p><code>y = 12</code></p></p></p>\n\n<h4><strong>Print the Result:</strong></h4>\n\n<p><p>The <code>printf</code> statement outputs the value of <code>x</code>:</p></p>\n<p><p><code>printf (\"%d \\n\", x);</code></p></p>\n<p><p>Prints: <code>26</code></p></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n<p><strong>26</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program:\n<pre><code class=\"c\">#include &lt; stdio.h &gt;\n  int counter = 0;\n  int calc (int a, int b) {\n  int c;\n  counter++;\n  if (b==3) return (a*a*a);\n  else {\n    c = calc(a, b/3);\n    return (c*c*c);\n }\n}\nint main (){\n  calc(4, 81);\n  printf (\"%d\", counter);\n}</code></pre>\nThe output of this program is _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program segment.\n<pre><code class=\"c\">#include &lt; stdio.h &gt;\nint main()\n{\n    char s1[7] = \"1234\", *p;\n    p = s1 + 2;\n   *p = ‘0’;\n    printf(\"%s\", s1);\n}</code></pre>\nWhat will be printed by the program?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "12"
+      },
+      {
+        "identifier": "B",
+        "content": "120400"
+      },
+      {
+        "identifier": "C",
+        "content": "1204"
+      },
+      {
+        "identifier": "D",
+        "content": "1034"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following function written in the C programming language.\n<pre><code class=\"c\">void foo(char *a){\n if ( *a &amp;&amp; *a != ' '){\n     foo(a+1);\n     putchar(*a);\n   }\n}</code></pre>\nThe output of the above function on input “ABCD EFGH” is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "ABCD EFGH"
+      },
+      {
+        "identifier": "B",
+        "content": "ABCD"
+      },
+      {
+        "identifier": "C",
+        "content": "HGFE DCBA"
+      },
+      {
+        "identifier": "D",
+        "content": "DCBA"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "What will be the output of the following C program segment?\n<pre><code class=\"c\">Char inchar = 'A';\nSwitch ( inchar ) {\ncase 'A' : printf (\"Choice A\\ n\") ;\ncase 'B' :\ncase 'C' : printf (“Choice B”) ;\ncase 'D' :\ncase 'E' :\ndefault : printf ( \" No Choice\" ) ; }</code></pre>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "No Choice"
+      },
+      {
+        "identifier": "B",
+        "content": "Choice A\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Choice A\n<br>Choice B No Choice "
+      },
+      {
+        "identifier": "D",
+        "content": "Program gives no output as it is erroneous\n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following are essential features of an object-oriented programming language?\n<br>i) Abstraction and encapsulation\n<br>ii) Strictly-typedness\n<br>iii) Type-safe property coupled with sub-type rule\n<br>iv) Polymorphism in the presence of inheritance",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) and (ii) only"
+      },
+      {
+        "identifier": "B",
+        "content": "(i) and (iv) only"
+      },
+      {
+        "identifier": "C",
+        "content": "(i), (ii) and (iv) only"
+      },
+      {
+        "identifier": "D",
+        "content": "(i), (ii) and (iii) only"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "An Abstract Data Type (ADT) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "same as an abstract class"
+      },
+      {
+        "identifier": "B",
+        "content": "a data type that cannot be instantiated"
+      },
+      {
+        "identifier": "C",
+        "content": "a data type for which only the operations defined on it can be used, but none else"
+      },
+      {
+        "identifier": "D",
+        "content": "all of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C function.\n<pre><code class=\"c\">float f,(float x, int y) {\n    float p, s; int i;\n    for (s=1,p=1,i=1; i &lt; y; i++) {\n         p *= x/i;\n         s+=p;\n    }\nreturn s;\n}</code></pre>\nFor large values of y, the return value of the function f best approximates",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "X<sup>y</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "e<sup>x</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\ln (1 + x)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "X<sup>x</sup>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "In the C language",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "At most one activation record exists between the current activation record\nand the activation record for the main"
+      },
+      {
+        "identifier": "B",
+        "content": "The number of activation records between the current activation record and\nthe activation record of the main depends on the actual function calling\nsequence."
+      },
+      {
+        "identifier": "C",
+        "content": "The visibility of global variables depends on the actual function calling\nsequence."
+      },
+      {
+        "identifier": "D",
+        "content": "Recursion requires the activation record for the recursive function to be\nsaved on a different stack before the recursive fraction can be called."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following ANSI-C function.</p>\n<pre><code>int func(int start, int end){\n\n    int length = end + 1 - start;\n\n    if((length&lt;1)| (start &lt; 0)||(end&lt;0)){ return(0); }\n\n    if(length%3 == 0){\n\n        return(func(start+1, end));\n\n    } else if(length%3 == 1){\n\n        return(1 + func(start, end -1));\n\n    } else {\n\n        return(func(start + 2, end));\n\n    }\n\n}\n</code></pre>\n<p>The maximum possible value that can be returned from this function is $\\_\\_\\_\\_$ . (answer in integer)</p>\n<p>Note: Ignore syntax errors (if any) in the function.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": "<p>$$ \\text { Assume start }=2 \\text {, end }=5 $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyxjmvl/ce359e4e-a5ff-4b8f-af87-3a178c9679fe/ff529010-245f-11f1-b399-8d95003d7d74/file-jaoe38c1mmyxjmvm.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyxjmvl/ce359e4e-a5ff-4b8f-af87-3a178c9679fe/ff529010-245f-11f1-b399-8d95003d7d74/file-jaoe38c1mmyxjmvm.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2026 Set 2 Programming Languages - Function and Recursion Question 1 English Explanation\"></p>\n<p>$$ \\text { We can assume any other values and solve, understand the pattern how it is working. } $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<pre><code>Consider the recursive functions represented by the following code segment:\n\nint bar(int n){\n\n    if (n == 1) return 0;\n\n    else return 1 + bar(n/2);\n\n}\n\nint foo(int n){\n\n    if (n == 1) return 1;\n\n    else return 1 + foo(bar(n));\n\n}\n</code></pre>\n<p>The smallest positive integer n for which foo(n) returns 5 is $\\_\\_\\_\\_$ . (answer in integer)</p>\n<p>Note: Ignore syntax errors (if any) in the function.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "65536",
+    "explanation": null,
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following C function definition.</p>\n\n<pre><code>int f(int x, int y) {\n    for (int i=0; i&lt;y; i++) {\n        x=x+x+y;\n    }\n    return x;\n}\n</code></pre>\n\n<p>Which of the following statements is/are TRUE about the above function?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>If the inputs are x=20, y=10, then the return value is greater than 2<sup>20</sup></p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>If the inputs are x=20, y=20, then the return value is greater than 2<sup>20</sup></p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>If the inputs are x=20, y=10, then the return value is less than 2<sup>10</sup></p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>If the inputs are x=10, y=20, then the return value is greater than 2<sup>20</sup></p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To analyze the function, let’s break it down step-by-step.</p>\n\n<p>The function is defined as:</p>\n\n<pre><code>int f(int x, int y) {\n\n<p>for (int i=0; i&lt;y; i++) {</p>\n\n<p>x = x + x + y;</p>\n\n<p>}</p>\n\n<p>return x;</p>\n\n<p>}</p>\n\n</code></pre>\n\n<p>Let’s rewrite the loop operation for better understanding:</p>\n\n<p>Inside the loop, the statement <code>x = x + x + y</code> simplifies to:</p>\n\n<pre><code>x = 2*x + y\n\n</code></pre>\n\n<p>This means that in each iteration of the loop, <code>x</code> is updated as <code>2*x + y</code>. The loop runs <code>y</code> times.</p>\n\n<p>Now let’s try to understand how <code>x</code> evolves over the iterations:</p>\n\n<pre><code>Iteration 0: x = x (initial value)\n\n<p>Iteration 1: x = 2 * x + y</p>\n\n<p>Iteration 2: x = 2 * (2 * x + y) + y = 4 * x + 3 * y</p>\n\n<p>Iteration 3: x = 2 * (4 * x + 3 * y) + y = 8 * x + 7 * y</p>\n\n<p>...</p>\n\n<p>Iteration n: x = 2^n * x + (2^n - 1) * y</p>\n\n</code></pre>\n\n<p>This reveals a general formula for the value of <code>x</code> after <code>n</code> iterations of the loop:</p>\n\n<p>$$ x_n = 2^n * x + (2^n - 1) * y $$</p>\n\n<p>In this case, <code>y</code> iterations will transform <code>x</code> into:</p>\n\n<p>$$ x_y = 2^y * x + (2^y - 1) * y $$</p>\n\n<p>Now, let’s evaluate the given options using the derived formula:</p>\n\n<h3>Option A</h3>\n\n<p>If the inputs are <code>x=20</code> and <code>y=10</code>, then:</p>\n\n<p>$$ x_{10} = 2^{10} * 20 + (2^{10} - 1) * 10 $$</p>\n\n<p>$$ x_{10} = 1024 * 20 + (1023) * 10        = 20480 + 10230        = 30710 $$</p>\n\n<p>We need to check if the result is greater than $2^{20}$.</p>\n\n<p>$$ 2^{20} = 1048576 $$</p>\n\n<p>Since 30710 is less than 1048576, Option A is <b>false</b>.</p>\n\n<h3>Option B</h3>\n\n<p>If the inputs are <code>x=20</code> and <code>y=20</code>, then:</p>\n\n<p>$$ x_{20} = 2^{20} * 20 + (2^{20} - 1) * 20 $$</p>\n\n<p>$$ x_{20} = 1048576 * 20 + 1048575 * 20        = 20971520 + 20971500        = 41943020 $$</p>\n\n<p>We need to check if the result is greater than $2^{20}$.</p>\n\n<p>$$ 2^{20} = 1048576 $$</p>\n\n<p>Since 41943020 is greater than 1048576, Option B is <b>true</b>.</p>\n\n<h3>Option C</h3>\n\n<p>If the inputs are <code>x=20</code> and <code>y=10</code>, then:</p>\n\n<p>$$ x_{10} = 1024 * 20 + (1023) * 10        = 30710 $$</p>\n\n<p>We need to check if the result is less than $2^{10}$.</p>\n\n<p>$$ 2^{10} = 1024 $$</p>\n\n<p>Since 30710 is much greater than 1024, Option C is <b>false</b>.</p>\n\n<h3>Option D</h3>\n\n<p>If the inputs are <code>x=10</code> and <code>y=20</code>, then:</p>\n\n<p>$$ x_{20} = 2^{20} * 10 + (2^{20} - 1) * 20 $$</p>\n\n<p>$$ x_{20} = 1048576 * 10 + 1048575 * 20        = 10485760 + 20971500        = 31457260 $$</p>\n\n<p>We need to check if the result is greater than $2^{20}$.</p>\n\n<p>$$ 2^{20} = 1048576 $$</p>\n\n<p>Since 31457260 is much greater than 1048576, Option D is <b>true</b>.</p>\n\n<p>Therefore, the correct statements are <b>Option B</b> and <b>Option D</b>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>What is printed by the following ANSI C program?</p>\n<pre>\n<code lang=\"c\">\n  #include &lt;stdio.h&gt;\n  int main(int argc, char *argv[ ]) {\n    int a[3][3][3] = {{1, 2, 3, 4, 5, 6, 7, 8, 9},\n        {10, 11, 12, 13, 14, 15, 16, 17, 18},\n        {19, 20, 21, 22, 23, 24, 25, 26, 27}};\n    int i = 0, j = 0, k = 0;\n    for(i = 0; i < 3; i++) {\n        for(k = 0; k < 3; k++)\n              printf(\"%d\"\",a[i][j][k]);\n        printf(\"\\n\");\n    }\n   return 0;\n   }\n</code>\n</pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\matrix{\n   1 & 2 & 3  \\cr \n   {10} & {11} & {12}  \\cr \n   {19} & {20} & {21}  \\cr \n\n } $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\matrix{\n   1 & 4 & 7  \\cr \n   {10} & {13} & {16}  \\cr \n   {19} & {22} & {25}  \\cr \n\n } $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\matrix{\n   1 & 2 & 3  \\cr \n   4 & 5 & 6  \\cr \n   7 & 8 & 9  \\cr \n\n } $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\matrix{\n   1 & 2 & 3  \\cr \n   {13} & {14} & {15}  \\cr \n   {25} & {26} & {27}  \\cr \n\n } $$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> Code, in which</p>\n<p>$$ \\begin{aligned} & \\text { int } \\mathrm{a}[3][3][3]=\\{\\{1,2,3,4,5,6,7,8,9\\},\\{10,11,12,13,14,15,16,17,18\\},\\{19,20,21,22 \\text {, } \\\\ & \\text { int } \\mathrm{i}=0, \\mathrm{j}=0, \\mathrm{k}=0 \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} & \\text { for }(i=0 ; i<3 ; i++)\\{ \\\\ & \\text { for }(k=0 ; k<3 ; k++) \\end{aligned} $$</p>\n<p>So, from given code</p>\n<p>$$ \\begin{aligned} j=k=i= & 0 \\\\ a[3][3][3]= & \\{11,2,3, \\ldots \\ldots .9\\}, \\rightarrow a[0] \\\\ & \\{10,11, \\ldots \\ldots .18\\}, \\rightarrow a[1] \\\\ & \\{19, \\ldots . .27\\}\\} \\rightarrow a[2] \\end{aligned} $$</p>\n<p>In short, there are total three 2-D arrays, and in the code we need to find first row of each 2D array i.e.</p>\n<p>$1,2,3 \\quad$ First row of first 2-D array</p>\n<p>10, 11, 12 First row of second 2-D array</p>\n<p>$19,20,21$ First row of third 2-D array</p>\n\nSo, the output of the code is $\\begin{array}{rrr}1 & 2 & 3 \\\\10 & 11 & 12 \\\\ 19 & 20 & 21\\end{array}$\n\n<p>Hence, the correct option is (A).</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following ANSI C program</p>\n\n<p>#include &lt;stdio.h&gt;</p>\n\n<p>int foo(int x, int y, int q)</p>\n\n<p>{</p>\n\n<p>if ((x &lt;= 0 &amp;&amp; (y &lt;= 0))</p>\n\n<p>return q;</p>\n\n<p>if (x &lt;= 0)</p>\n\n<p>return foo(x, y - q, q);</p>\n\n<p>if (y &lt;= 0)</p>\n\n<p>return foo(x - q, y, q);</p>\n\n<p>return foo (x, y - q, q) + foo(x - q, y, q);</p>\n\n<p>}</p>\n\n<p>int main()<br>\n(</p>\n\n<p>int r = foo(15, 15, 10);</p>\n\n<p>printf(\"%d\", r);</p>\n\n<p>return 0;</p>\n\n<p>}</p>\n\n<p>The output of the program upon execution is ________&nbsp;</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "60",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2ewwrqv/92e83663-4a8d-479d-84ae-1b37d81bbb24/82e80160-8d69-11ef-a0aa-01ec6c8ad70c/file-jaoe38c1m2ewwrqw.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2ewwrqv/92e83663-4a8d-479d-84ae-1b37d81bbb24/82e80160-8d69-11ef-a0aa-01ec6c8ad70c/file-jaoe38c1m2ewwrqw.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Programming Languages - Function and Recursion Question 10 English Explanation\"></p>\n<p>Hence the function call will return 60 .</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following ANSI C program.</p>\n<pre>\n<code class=\"c\">#include &lt;stdio.h&gt;\n\nint main( ) {\n\nint i, j, count;\n\ncount = 0;\n\ni = 0;\n\nfor (j = -3; j <= 3; j++)  {\n\nif ((j >= 0) && (i++))\n\ncount = count + j;\n\n}\n\ncount = count + i;\n\nprintf(\"%d\", count);\n\nreturn 0;\n\n}</code>\n</pre>\n\n<p>Which one of the following options is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The program will compile successfully and output 10 when executed."
+      },
+      {
+        "identifier": "B",
+        "content": "The program will compile successfully and output 8 when executed."
+      },
+      {
+        "identifier": "C",
+        "content": "The program will compile successfully and output 13 when executed."
+      },
+      {
+        "identifier": "D",
+        "content": "The program will not compile successfully."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "\n    <h3>Step-by-Step Execution:</h3>\n\n    <h4>1. Initialization:</h4>\n    <ul>\n        <li><code>count = 0</code></li>\n        <li><code>i = 0</code></li>\n    </ul>\n\n    <h4>2. Loop Iteration (<code>j</code> from -3 to 3):</h4>\n    <p>Let's iterate through each value of <code>j</code> and observe the changes to <code>i</code> and <code>count</code>.</p>\n\n    <table>\n        <thead>\n            <tr>\n                <th>Iteration</th>\n                <th>j</th>\n                <th>Condition (<code>j &gt;= 0</code>)</th>\n                <th>i Before <code>i++</code></th>\n                <th><code>i++</code> Value</th>\n                <th>Overall Condition</th>\n                <th>count After Iteration</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr>\n                <td>1</td>\n                <td>-3</td>\n                <td>False</td>\n                <td>N/A</td>\n                <td>N/A</td>\n                <td>False</td>\n                <td>0</td>\n            </tr>\n            <tr>\n                <td>2</td>\n                <td>-2</td>\n                <td>False</td>\n                <td>N/A</td>\n                <td>N/A</td>\n                <td>False</td>\n                <td>0</td>\n            </tr>\n            <tr>\n                <td>3</td>\n                <td>-1</td>\n                <td>False</td>\n                <td>N/A</td>\n                <td>N/A</td>\n                <td>False</td>\n                <td>0</td>\n            </tr>\n            <tr>\n                <td>4</td>\n                <td>0</td>\n                <td>True</td>\n                <td>0</td>\n                <td>0</td>\n                <td>False (<code>0</code> is False)</td>\n                <td>0</td>\n            </tr>\n            <tr>\n                <td>5</td>\n                <td>1</td>\n                <td>True</td>\n                <td>1</td>\n                <td>1</td>\n                <td>True</td>\n                <td>1</td>\n            </tr>\n            <tr>\n                <td>6</td>\n                <td>2</td>\n                <td>True</td>\n                <td>2</td>\n                <td>2</td>\n                <td>True</td>\n                <td>3</td>\n            </tr>\n            <tr>\n                <td>7</td>\n                <td>3</td>\n                <td>True</td>\n                <td>3</td>\n                <td>3</td>\n                <td>True</td>\n                <td>6</td>\n            </tr>\n        </tbody>\n    </table>\n\n    <h4>Detailed Breakdown:</h4>\n    <ul>\n        <li><strong>For <code>j = -3, -2, -1</code>:</strong> <code>(j &gt;= 0)</code> is <code>False</code>, so the <code>if</code> condition fails. <code>i</code> remains <code>0</code>, and <code>count</code> stays <code>0</code>.</li>\n        <li><strong>For <code>j = 0</code>:</strong>\n            <ul>\n                <li><code>(j &gt;= 0)</code> is <code>True</code>.</li>\n                <li><code>i++</code> evaluates to <code>0</code> (post-increment), so the overall condition is <code>False</code>.</li>\n                <li><code>i</code> is incremented to <code>1</code>.</li>\n                <li><code>count</code> remains <code>0</code>.</li>\n            </ul>\n        </li>\n        <li><strong>For <code>j = 1</code>:</strong>\n            <ul>\n                <li><code>(j &gt;= 0)</code> is <code>True</code>.</li>\n                <li><code>i++</code> evaluates to <code>1</code>, so the overall condition is <code>True</code>.</li>\n                <li><code>count = 0 + 1 = 1</code>.</li>\n                <li><code>i</code> is incremented to <code>2</code>.</li>\n            </ul>\n        </li>\n        <li><strong>For <code>j = 2</code>:</strong>\n            <ul>\n                <li><code>(j &gt;= 0)</code> is <code>True</code>.</li>\n                <li><code>i++</code> evaluates to <code>2</code>, so the overall condition is <code>True</code>.</li>\n                <li><code>count = 1 + 2 = 3</code>.</li>\n                <li><code>i</code> is incremented to <code>3</code>.</li>\n            </ul>\n        </li>\n        <li><strong>For <code>j = 3</code>:</strong>\n            <ul>\n                <li><code>(j &gt;= 0)</code> is <code>True</code>.</li>\n                <li><code>i++</code> evaluates to <code>3</code>, so the overall condition is <code>True</code>.</li>\n                <li><code>count = 3 + 3 = 6</code>.</li>\n                <li><code>i</code> is incremented to <code>4</code>.</li>\n            </ul>\n        </li>\n    </ul>\n\n    <h4>3. After the Loop:</h4>\n    <ul>\n        <li><code>count = count + i = 6 + 4 = 10</code></li>\n    </ul>\n\n    <h4>4. Output:</h4>\n    <ul>\n        <li>The program prints <code>10</code>.</li>\n    </ul>\n",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following ANSI C function:</p>\n\n<pre><code class =‘c’>int SimpleFunction (int y[], int n, int x)\n\n{\n\nint total = y[0], loopIndex;\n\nfor (loopIndex = 1; loopIndex &lt;= n - 1; loopIndex<span style=\"font-size: 10.5px;\">++</span>)\n\ntotal = x * total + y[loopIndex];\n\nreturn total :\n\n}</code></pre>\n\n<p>Let Z be an array of 10 elements with Z[i] = 1, for all i such that 0&nbsp;≤ i&nbsp;≤ 9. The value returned by SimpleFunction (Z, 10, 2) is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "1023",
+    "explanation": "<p>To determine the value returned by the function <code>SimpleFunction</code> when called with the specified parameters, let's analyze the function step by step.</p>\n<p><strong>Given:</strong></p>\n\n<p><p>An array <code>Z</code> of 10 elements where each element <code>Z[i] = 1</code> for <code>0 ≤ i ≤ 9</code>.</p></p>\n<p><p>Function call: <code>SimpleFunction(Z, 10, 2)</code>.</p></p>\n<p><p>The function <code>SimpleFunction</code> is:</p></p>\n\n<pre><code class=\"c language-c\">  int SimpleFunction (int y[], int n, int x)\n\n  {\n\n      int total = y[0], loopIndex;\n\n      for (loopIndex = 1; loopIndex &lt;= n - 1; loopIndex++)\n\n          total = x * total + y[loopIndex];\n\n      return total;\n\n  }\n</code></pre>\n<p><strong>Understanding the Function:</strong></p>\n\n<p><p><strong>Initialization:</strong></p></p>\n<p><p><code>total</code> is initialized to <code>y[0]</code>, which is <code>1</code> since <code>Z[0] = 1</code>.</p></p>\n<p><p><strong>Loop Execution:</strong></p></p>\n<p><p>The loop runs from <code>loopIndex = 1</code> to <code>loopIndex = n - 1</code> (which is <code>9</code> in this case).</p></p>\n<p><p>In each iteration, <code>total</code> is updated using the formula:</p>\n<p>$     \\text{total} = x \\times \\text{total} + y[\\text{loopIndex}]     $</p></p>\n<p><p>Given that <code>x = 2</code> and <code>y[loopIndex] = 1</code> for all <code>loopIndex</code>, the update simplifies to:</p>\n<p>$     \\text{total} = 2 \\times \\text{total} + 1     $</p></p>\n\n<p><strong>Calculating <code>total</code> in Each Iteration:</strong></p>\n<p>Let's compute <code>total</code> after each iteration.</p>\n\n<p><p><strong>Iteration 1 (<code>loopIndex = 1</code>):</strong></p>\n<p>$    \\text{total} = 2 \\times 1 + 1 = 3    $</p></p>\n<p><p><strong>Iteration 2 (<code>loopIndex = 2</code>):</strong></p>\n<p>$    \\text{total} = 2 \\times 3 + 1 = 7    $</p></p>\n<p><p><strong>Iteration 3 (<code>loopIndex = 3</code>):</strong></p>\n<p>$    \\text{total} = 2 \\times 7 + 1 = 15    $</p></p>\n<p><p><strong>Iteration 4 (<code>loopIndex = 4</code>):</strong></p>\n<p>$    \\text{total} = 2 \\times 15 + 1 = 31    $</p></p>\n<p><p><strong>Iteration 5 (<code>loopIndex = 5</code>):</strong></p>\n<p>$    \\text{total} = 2 \\times 31 + 1 = 63    $</p></p>\n<p><p><strong>Iteration 6 (<code>loopIndex = 6</code>):</strong></p>\n<p>$    \\text{total} = 2 \\times 63 + 1 = 127    $</p></p>\n<p><p><strong>Iteration 7 (<code>loopIndex = 7</code>):</strong></p>\n<p>$    \\text{total} = 2 \\times 127 + 1 = 255    $</p></p>\n<p><p><strong>Iteration 8 (<code>loopIndex = 8</code>):</strong></p>\n<p>$    \\text{total} = 2 \\times 255 + 1 = 511    $</p></p>\n<p><p><strong>Iteration 9 (<code>loopIndex = 9</code>):</strong></p>\n<p>$    \\text{total} = 2 \\times 511 + 1 = 1023    $</p></p>\n\n<p><strong>Observing a Pattern:</strong></p>\n\n<p><p>After each iteration, the <code>total</code> value follows the pattern:</p>\n<p>$   \\text{total} = 2^{\\text{loopIndex} + 1} - 1   $</p></p>\n<p><p>After the final iteration (<code>loopIndex = 9</code>):</p>\n<p>$   \\text{total} = 2^{10} - 1 = 1024 - 1 = 1023   $</p></p>\n\n<p><strong>Final Result:</strong></p>\n\n<p>The function returns <code>1023</code>.</p>\n\n<p><strong>Answer:</strong></p>\n<p>1023</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C functions.\n<br><pre><code class=\"c\">int fun1 (int n) {\n     static int i = 0;\n     if (n &gt; 0) {\n            ++i;\n            fun1(n-1);\n     }\n     return (i);\n}</code></pre>\n<br>___________________\n<br><pre><code class=\"c\">int fun2 (int n) {\n     static int i = 0;\n     if (n &gt; 0) {\n            i = i + fun1 (n);\n            fun2(n-1);\n     }\n     return (i);\n}</code></pre>\n<br>The return value of fun2 (5) is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "55",
+    "explanation": "<p>To determine the return value of <code>fun2(5)</code>, we'll analyze the given C functions step by step, paying close attention to the static variables and their scopes.</p>\n<hr />\n<h3><strong>Understanding the Functions:</strong></h3>\n<p><strong>Function <code>fun1</code>:</strong></p>\n<pre><code class=\"c language-c\">int fun1 (int n) {\n\n     static int i = 0;\n\n     if (n &gt; 0) {\n\n            ++i;\n\n            fun1(n-1);\n\n     }\n\n     return (i);\n\n}\n</code></pre>\n\n<p><p><strong>Purpose:</strong> Counts the total number of times <code>fun1</code> is called with <code>n &gt; 0</code>.</p></p>\n<p><p><strong>Static Variable <code>i</code>:</strong> Retains its value across all calls to <code>fun1</code>, including recursive calls.</p></p>\n<p><p><strong>Behavior:</strong> Each time <code>n &gt; 0</code>, it increments <code>i</code> and calls itself with <code>n - 1</code>.</p></p>\n\n<p><strong>Function <code>fun2</code>:</strong></p>\n<pre><code class=\"c language-c\">int fun2 (int n) {\n\n     static int i = 0;\n\n     if (n &gt; 0) {\n\n            i = i + fun1(n);\n\n            fun2(n-1);\n\n     }\n\n     return (i);\n\n}\n</code></pre>\n\n<p><p><strong>Purpose:</strong> Accumulates the values returned by <code>fun1(n)</code> into <code>i</code>.</p></p>\n<p><p><strong>Static Variable <code>i</code>:</strong> Retains its value across all calls to <code>fun2</code>, including recursive calls.</p></p>\n<p><p><strong>Behavior:</strong> For each <code>n &gt; 0</code>, it adds the result of <code>fun1(n)</code> to <code>i</code> and calls itself with <code>n - 1</code>.</p></p>\n\n<hr />\n<h3><strong>Calculating <code>fun2(5)</code>:</strong></h3>\n<p>We'll simulate the execution of <code>fun2(5)</code> step by step.</p>\n<h4><strong>Initial State:</strong></h4>\n\n<p><p><strong><code>fun1.i</code></strong> is initialized to <code>0</code>.</p></p>\n<p><p><strong><code>fun2.i</code></strong> is initialized to <code>0</code>.</p></p>\n\n<h4><strong>Execution Steps:</strong></h4>\n<p><strong>1. Call <code>fun2(5)</code>:</strong></p>\n\n<p><p><strong><code>n = 5</code></strong></p></p>\n<p><p>Since <code>n &gt; 0</code>, execute:</p></p>\n<p><p><code>i = i + fun1(5)</code></p></p>\n\n<p><strong>2. Compute <code>fun1(5)</code>:</strong></p>\n\n<p><p><strong><code>fun1.i</code></strong> is currently <code>0</code>.</p></p>\n<p><p><strong>Calls to <code>fun1</code>:</strong></p></p>\n<p><p><code>fun1(5)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 1</code></p></p>\n<p><p>Calls <code>fun1(4)</code></p></p></p>\n<p><p><code>fun1(4)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 2</code></p></p>\n<p><p>Calls <code>fun1(3)</code></p></p></p>\n<p><p><code>fun1(3)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 3</code></p></p>\n<p><p>Calls <code>fun1(2)</code></p></p></p>\n<p><p><code>fun1(2)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 4</code></p></p>\n<p><p>Calls <code>fun1(1)</code></p></p></p>\n<p><p><code>fun1(1)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 5</code></p></p>\n<p><p>Calls <code>fun1(0)</code></p></p></p>\n<p><p><code>fun1(0)</code>:</p>\n\n<p><code>n = 0</code>, returns <code>fun1.i = 5</code></p></p>\n<p><p><strong>Return Value:</strong> <code>fun1(5)</code> returns <code>5</code>.</p></p>\n\n<p><strong>3. Update <code>fun2.i</code> after <code>fun1(5)</code>:</strong></p>\n\n<p><p><code>fun2.i = fun2.i + 5</code> → <code>fun2.i = 5</code></p></p>\n<p><p>Calls <code>fun2(4)</code></p></p>\n\n<hr />\n<p><strong>4. Call <code>fun2(4)</code>:</strong></p>\n\n<p><p><strong><code>n = 4</code></strong></p></p>\n<p><p>Since <code>n &gt; 0</code>, execute:</p></p>\n<p><p><code>i = i + fun1(4)</code></p></p>\n\n<p><strong>5. Compute <code>fun1(4)</code>:</strong></p>\n\n<p><p><strong><code>fun1.i</code></strong> is currently <code>5</code> (from previous calls).</p></p>\n<p><p><strong>Calls to <code>fun1</code>:</strong></p></p>\n<p><p><code>fun1(4)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 6</code></p></p>\n<p><p>Calls <code>fun1(3)</code></p></p></p>\n<p><p><code>fun1(3)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 7</code></p></p>\n<p><p>Calls <code>fun1(2)</code></p></p></p>\n<p><p><code>fun1(2)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 8</code></p></p>\n<p><p>Calls <code>fun1(1)</code></p></p></p>\n<p><p><code>fun1(1)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 9</code></p></p>\n<p><p>Calls <code>fun1(0)</code></p></p></p>\n<p><p><code>fun1(0)</code>:</p>\n\n<p><code>n = 0</code>, returns <code>fun1.i = 9</code></p></p>\n<p><p><strong>Return Value:</strong> <code>fun1(4)</code> returns <code>9</code>.</p></p>\n\n<p><strong>6. Update <code>fun2.i</code> after <code>fun1(4)</code>:</strong></p>\n\n<p><p><code>fun2.i = 5 + 9</code> → <code>fun2.i = 14</code></p></p>\n<p><p>Calls <code>fun2(3)</code></p></p>\n\n<hr />\n<p><strong>7. Call <code>fun2(3)</code>:</strong></p>\n\n<p><p><strong><code>n = 3</code></strong></p></p>\n<p><p>Since <code>n &gt; 0</code>, execute:</p></p>\n<p><p><code>i = i + fun1(3)</code></p></p>\n\n<p><strong>8. Compute <code>fun1(3)</code>:</strong></p>\n\n<p><p><strong><code>fun1.i</code></strong> is currently <code>9</code>.</p></p>\n<p><p><strong>Calls to <code>fun1</code>:</strong></p></p>\n<p><p><code>fun1(3)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 10</code></p></p>\n<p><p>Calls <code>fun1(2)</code></p></p></p>\n<p><p><code>fun1(2)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 11</code></p></p>\n<p><p>Calls <code>fun1(1)</code></p></p></p>\n<p><p><code>fun1(1)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 12</code></p></p>\n<p><p>Calls <code>fun1(0)</code></p></p></p>\n<p><p><code>fun1(0)</code>:</p>\n\n<p><code>n = 0</code>, returns <code>fun1.i = 12</code></p></p>\n<p><p><strong>Return Value:</strong> <code>fun1(3)</code> returns <code>12</code>.</p></p>\n\n<p><strong>9. Update <code>fun2.i</code> after <code>fun1(3)</code>:</strong></p>\n\n<p><p><code>fun2.i = 14 + 12</code> → <code>fun2.i = 26</code></p></p>\n<p><p>Calls <code>fun2(2)</code></p></p>\n\n<hr />\n<p><strong>10. Call <code>fun2(2)</code>:</strong></p>\n\n<p><p><strong><code>n = 2</code></strong></p></p>\n<p><p>Since <code>n &gt; 0</code>, execute:</p></p>\n<p><p><code>i = i + fun1(2)</code></p></p>\n\n<p><strong>11. Compute <code>fun1(2)</code>:</strong></p>\n\n<p><p><strong><code>fun1.i</code></strong> is currently <code>12</code>.</p></p>\n<p><p><strong>Calls to <code>fun1</code>:</strong></p></p>\n<p><p><code>fun1(2)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 13</code></p></p>\n<p><p>Calls <code>fun1(1)</code></p></p></p>\n<p><p><code>fun1(1)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 14</code></p></p>\n<p><p>Calls <code>fun1(0)</code></p></p></p>\n<p><p><code>fun1(0)</code>:</p>\n\n<p><code>n = 0</code>, returns <code>fun1.i = 14</code></p></p>\n<p><p><strong>Return Value:</strong> <code>fun1(2)</code> returns <code>14</code>.</p></p>\n\n<p><strong>12. Update <code>fun2.i</code> after <code>fun1(2)</code>:</strong></p>\n\n<p><p><code>fun2.i = 26 + 14</code> → <code>fun2.i = 40</code></p></p>\n<p><p>Calls <code>fun2(1)</code></p></p>\n\n<hr />\n<p><strong>13. Call <code>fun2(1)</code>:</strong></p>\n\n<p><p><strong><code>n = 1</code></strong></p></p>\n<p><p>Since <code>n &gt; 0</code>, execute:</p></p>\n<p><p><code>i = i + fun1(1)</code></p></p>\n\n<p><strong>14. Compute <code>fun1(1)</code>:</strong></p>\n\n<p><p><strong><code>fun1.i</code></strong> is currently <code>14</code>.</p></p>\n<p><p><strong>Calls to <code>fun1</code>:</strong></p></p>\n<p><p><code>fun1(1)</code>:</p>\n\n<p><p><code>++fun1.i</code> → <code>fun1.i = 15</code></p></p>\n<p><p>Calls <code>fun1(0)</code></p></p></p>\n<p><p><code>fun1(0)</code>:</p>\n\n<p><code>n = 0</code>, returns <code>fun1.i = 15</code></p></p>\n<p><p><strong>Return Value:</strong> <code>fun1(1)</code> returns <code>15</code>.</p></p>\n\n<p><strong>15. Update <code>fun2.i</code> after <code>fun1(1)</code>:</strong></p>\n\n<p><p><code>fun2.i = 40 + 15</code> → <code>fun2.i = 55</code></p></p>\n<p><p>Calls <code>fun2(0)</code></p></p>\n\n<hr />\n<p><strong>16. Call <code>fun2(0)</code>:</strong></p>\n\n<p><p><strong><code>n = 0</code></strong></p></p>\n<p><p>Since <code>n &lt;= 0</code>, return <code>fun2.i</code></p></p>\n\n<hr />\n<h3><strong>Final Result:</strong></h3>\n\n<p><strong><code>fun2(5)</code> returns <code>55</code></strong></p>\n\n<hr />\n<p><strong>Answer:</strong> <strong>55</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C functions.\n<br><pre><code class=\"c\">int tob(int b, int* arr) {\n     int i;\n     for (i=0; b&gt;0; i++) {\n           if (b%2) arr[i] = 1;\n           else arr[i]=0;\n           b = b/2;\n    }\n    return (i);\n}</code></pre>\n<br>____________________\n<br><pre><code class=\"c\">int pp(int a, int b) {\n     int arr[20];\n     int i, tot = 1, ex, len;\n     ex = a;\n     len = tob (b, arr);\n     for (i=0;  i &lt; len; i++) {\n           if (arr[i] ==1)\n              tot = tot * ex;\n           ex = ex * ex;\n    }\n    return (tot);\n}</code></pre>\n<br>The value returned by pp (3, 4) is ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "81",
+    "explanation": "<p>To determine the value returned by <code>pp(3, 4)</code>, let's analyze the given C functions step by step.</p>\n<hr />\n<h3><strong>Understanding the <code>tob</code> Function:</strong></h3>\n<p>The <code>tob</code> function converts an integer <code>b</code> into its binary representation and stores it in the array <code>arr</code>. The bits are stored in reverse order (least significant bit first).</p>\n<pre><code class=\"c language-c\">int tob(int b, int* arr) {\n\n    int i;\n\n    for (i = 0; b &gt; 0; i++) {\n\n        if (b % 2) arr[i] = 1;\n\n        else arr[i] = 0;\n\n        b = b / 2;\n\n    }\n\n    return (i);\n\n}\n</code></pre>\n\n<p><p><strong>Input:</strong> Integer <code>b</code> and an array <code>arr</code>.</p></p>\n<p><p><strong>Output:</strong> The function returns the number of bits in the binary representation of <code>b</code>.</p></p>\n<p><p><strong>Process:</strong></p></p>\n<p><p>Initializes <code>i = 0</code>.</p></p>\n<p><p>In each iteration:</p>\n\n<p><p>Stores the least significant bit (<code>b % 2</code>) in <code>arr[i]</code>.</p></p>\n<p><p>Divides <code>b</code> by 2 to shift bits right.</p></p>\n<p><p>Increments <code>i</code>.</p></p></p>\n<p><p>Continues until <code>b</code> becomes 0.</p></p>\n\n<hr />\n<h3><strong>Understanding the <code>pp</code> Function:</strong></h3>\n<p>The <code>pp</code> function calculates a power using the binary representation of the exponent.</p>\n<pre><code class=\"c language-c\">int pp(int a, int b) {\n\n    int arr[20];\n\n    int i, tot = 1, ex, len;\n\n    ex = a;\n\n    len = tob(b, arr);\n\n    for (i = 0; i &lt; len; i++) {\n\n        if (arr[i] == 1)\n\n            tot = tot * ex;\n\n        ex = ex * ex;\n\n    }\n\n    return (tot);\n\n}\n</code></pre>\n\n<p><p><strong>Input:</strong> Integers <code>a</code> and <code>b</code>.</p></p>\n<p><p><strong>Output:</strong> Returns an integer <code>tot</code>.</p></p>\n<p><p><strong>Process:</strong></p></p>\n<p><p>Initializes <code>tot = 1</code> and <code>ex = a</code>.</p></p>\n<p><p>Calls <code>tob(b, arr)</code> to get the binary representation of <code>b</code> and stores the length in <code>len</code>.</p></p>\n<p><p>Iterates over each bit of <code>b</code> (from least significant to most significant).</p>\n\n<p><p>If the bit is <code>1</code>, multiplies <code>tot</code> by <code>ex</code>.</p></p>\n<p><p>Squares <code>ex</code> in each iteration (<code>ex = ex * ex</code>).</p></p></p>\n\n<p><strong>Note:</strong> This is an implementation of the <strong>Exponentiation by Squaring</strong> algorithm, which efficiently computes <code>a<sup>b</sup></code>.</p>\n<hr />\n<h3><strong>Computing <code>pp(3, 4)</code>:</strong></h3>\n<h4><strong>Step 1: Convert 4 to Binary</strong></h4>\n<p>Call <code>tob(4, arr)</code>:</p>\n\n<p><p><strong>Iteration 0:</strong></p></p>\n<p><p><code>b = 4</code>, <code>b % 2 = 0</code>, so <code>arr[0] = 0</code>.</p></p>\n<p><p><code>b = 4 / 2 = 2</code>, increment <code>i</code> to <code>1</code>.</p></p>\n<p><p><strong>Iteration 1:</strong></p></p>\n<p><p><code>b = 2</code>, <code>b % 2 = 0</code>, so <code>arr[1] = 0</code>.</p></p>\n<p><p><code>b = 2 / 2 = 1</code>, increment <code>i</code> to <code>2</code>.</p></p>\n<p><p><strong>Iteration 2:</strong></p></p>\n<p><p><code>b = 1</code>, <code>b % 2 = 1</code>, so <code>arr[2] = 1</code>.</p></p>\n<p><p><code>b = 1 / 2 = 0</code>, increment <code>i</code> to <code>3</code>.</p></p>\n<p><p><strong>Exit Loop:</strong> <code>b = 0</code>, <code>len = 3</code>.</p></p>\n\n<p><strong>Binary Representation of 4:</strong> <code>[0, 0, 1]</code> (in reverse order).</p>\n<h4><strong>Step 2: Compute <code>pp(3, 4)</code></strong></h4>\n<p>Initialize <code>tot = 1</code>, <code>ex = 3</code>.</p>\n<p>Iterate over <code>arr</code>:</p>\n\n<p><p><strong>Iteration 0 (i = 0):</strong></p></p>\n<p><p><code>arr[0] = 0</code>, so <code>tot</code> remains <code>1</code>.</p></p>\n<p><p>Update <code>ex = ex * ex = 3 * 3 = 9</code>.</p></p>\n<p><p><strong>Iteration 1 (i = 1):</strong></p></p>\n<p><p><code>arr[1] = 0</code>, so <code>tot</code> remains <code>1</code>.</p></p>\n<p><p>Update <code>ex = ex * ex = 9 * 9 = 81</code>.</p></p>\n<p><p><strong>Iteration 2 (i = 2):</strong></p></p>\n<p><p><code>arr[2] = 1</code>, so <code>tot = tot * ex = 1 * 81 = 81</code>.</p></p>\n<p><p>Update <code>ex = ex * ex = 81 * 81 = 6561</code>.</p></p>\n\n<p><strong>Final Value of <code>tot</code>:</strong> <code>81</code>.</p>\n<h4><strong>Verification:</strong></h4>\n\n<p><p>$ 3^4 = 3 \\times 3 \\times 3 \\times 3 = 81 $.</p></p>\n<p><p>The function correctly computes $ a^b $.</p></p>\n\n<hr />\n<p><strong>Answer:</strong></p>\n<p>81</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following C function.</p>\n<pre><code>void convert(int n){\n\n    if(n &lt; 0)\n\n        printf(\"%d\",n);\n\n    else {\n\n        convert(n/2);\n\n        printf(\"%d\",n%2);\n\n    }\n\n}\n</code></pre>\n<p>Which one of the following will happen when the function convert is called with any positive integer n as argument?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It will print the binary representation of n and terminate"
+      },
+      {
+        "identifier": "B",
+        "content": "It will print the binary representation of n in the reverse order and terminate"
+      },
+      {
+        "identifier": "C",
+        "content": "It will print the binary representation of $n$ but will not terminate"
+      },
+      {
+        "identifier": "D",
+        "content": "It will not print anything and will not terminate"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine what happens when <code>convert</code> is called with any positive integer $ n $, let's analyze the code and follow its logic step by step :</p>\n<pre><code class=\"c language-c\">void convert(int n) {\n\n    if (n &lt; 0)\n\n        printf(\"%d\", n);\n\n    else {\n\n        convert(n / 2);\n\n        printf(\"%d\", n % 2);\n\n    }\n\n}\n</code></pre>\n<h3>Understanding the Function</h3>\n\n<p><strong>Case for negative $ n $</strong>:</p>\n\n\n<p><p>If $ n < 0 $, the function prints $ n $ and returns immediately.</p></p>\n<p><p>This branch is not relevant for positive $ n $.</p></p>\n\n\n<p><strong>Case for non-negative $ n $</strong>:</p>\n\n\n<p><p>If $ n \\geq 0 $, the function first calls <code>convert(n / 2)</code>.</p></p>\n<p><p>After returning from the recursive call, it prints <code>n % 2</code>.</p></p>\n\n<p><strong>Key Observation</strong>: The function does not have a base case for $ n = 0 $ that stops recursion. Consider what happens when the recursion proceeds down to $ n = 0 $:</p>\n\n<p><p>For $ n = 0 $:</p></p>\n<p><p><code>n &lt; 0</code> is false, so it goes to the <code>else</code> clause.</p></p>\n<p><p>It calls <code>convert(0 / 2)</code>, which is <code>convert(0)</code>.</p></p>\n<p><p>This leads to an infinite recursion, as it repeatedly calls <code>convert(0)</code> without ever reaching a printing statement or a terminating condition.</p></p>\n\n<p>Because of this, when starting with any positive integer $ n $:</p>\n\n<p><p>The recursion keeps reducing $ n $ until it eventually calls <code>convert(0)</code>.</p></p>\n<p><p>At $ n = 0 $, the function will call <code>convert(0)</code> again and again.</p></p>\n<p><p>This results in an infinite loop of recursive calls with no output being printed, as the printing occurs only after the recursive call returns (which it never does).</p></p>\n\n<h3>Conclusion</h3>\n<p>The given code, as is, will not successfully print the binary representation or any output for any positive integer $ n $. Instead, it will result in infinite recursion at $ n = 0 $ and never terminate.</p>\n<p><strong>Answer :</strong></p>\n<p><strong>Option D</strong> – It will not print anything and will not terminate.</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following C program :</p>\n<pre><code>#include&lt;stdio.h&gt;\n\nint r()\n\n{\n\n        static int num=7;\n\n        return num--;\n\n}\n\nint main()\n\n{\n\n        for(r();r();r())\n\n        printf(\"%od \",r());\n\n        return 0;\n\n}\n</code></pre>\n<p>Which one of the following values will be displayed on execution of the programs?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "41"
+      },
+      {
+        "identifier": "B",
+        "content": "52"
+      },
+      {
+        "identifier": "C",
+        "content": "63"
+      },
+      {
+        "identifier": "D",
+        "content": "630"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which value the program prints, we need to carefully trace through the code execution step-by-step.</p>\n<p><strong>Given Code:</strong></p>\n<pre><code class=\"c language-c\">#include &lt;stdio.h&gt;\n\nint r() {\n\n    static int num = 7;\n\n    return num--;\n\n}\n\nint main() {\n\n    for (r(); r(); r())\n\n        printf(\"%d\", r());\n\n    return 0;\n\n}\n</code></pre>\n<p><strong>Key Points:</strong></p>\n\n<p><p>The function <code>r()</code> returns the current value of <code>num</code> and then decrements it. Since <code>num</code> is <code>static</code>, it retains its value between calls.</p></p>\n<p><p>The <code>for</code> loop is structured as <code>for (r(); r(); r())</code>. This means:</p></p>\n<p><p>Initialization: <code>r()</code> is called once before the loop starts.</p></p>\n<p><p>Condition: <code>r()</code> is called before each iteration to check if the returned value is non-zero.</p></p>\n<p><p>Increment: <code>r()</code> is also called at the end of each iteration.</p></p>\n\n<p><strong>Step-by-Step Execution:</strong></p>\n\n<p><strong>Initial call (Initialization):</strong></p>\n\n\n<p><p>Call <code>r()</code>:</p>\n\n<p><p>Initially, <code>num = 7</code>.</p></p>\n<p><p><code>r()</code> returns <code>7</code> and then decrements <code>num</code> to <code>6</code>.</p></p></p>\n<p><p>The initialization expression (<code>r()</code>) doesn't affect the loop run directly other than calling <code>r()</code> once.</p></p>\n\n\n<p><strong>First condition check:</strong></p>\n\n\n<p><p>Call <code>r()</code> for the condition:</p>\n\n<p><p>Now <code>num = 6</code>.</p></p>\n<p><p><code>r()</code> returns <code>6</code> and decrements <code>num</code> to <code>5</code>.</p></p></p>\n<p><p>Since the returned value is <code>6</code>, which is non-zero, the loop body executes.</p></p>\n\n\n<p><strong>Loop Body (first iteration):</strong></p>\n\n\n<p><p><code>printf(\"%d\", r())</code> is called.</p></p>\n<p><p>Call <code>r()</code> again:</p>\n\n<p><p>Now <code>num = 5</code>.</p></p>\n<p><p><code>r()</code> returns <code>5</code> and decrements <code>num</code> to <code>4</code>.</p></p></p>\n<p><p>The printed value this iteration is <code>5</code>.</p></p>\n\n\n<p><strong>Increment expression:</strong></p>\n\n\n<p><p>End of first iteration, <code>r()</code> is called again:</p>\n\n<p><p>Now <code>num = 4</code>.</p></p>\n<p><p><code>r()</code> returns <code>4</code> and decrements <code>num</code> to <code>3</code>.</p></p></p>\n\n\n<p><strong>Second condition check:</strong></p>\n\n\n<p><p>Call <code>r()</code> for the condition:</p>\n\n<p><p>Now <code>num = 3</code>.</p></p>\n<p><p><code>r()</code> returns <code>3</code> and decrements <code>num</code> to <code>2</code>.</p></p></p>\n<p><p><code>3</code> is non-zero, so the second iteration runs.</p></p>\n\n\n<p><strong>Loop Body (second iteration):</strong></p>\n\n\n<p><p><code>printf(\"%d\", r())</code> is called:</p>\n\n<p><p>Now <code>num = 2</code>.</p></p>\n<p><p><code>r()</code> returns <code>2</code> and decrements <code>num</code> to <code>1</code>.</p></p></p>\n<p><p>The printed value this iteration is <code>2</code>.</p>\n<p>Currently, the output so far is: <code>52</code></p></p>\n\n\n<p><strong>Increment expression (after second iteration):</strong></p>\n\n\n<p><p>Call <code>r()</code>:</p>\n\n<p><p>Now <code>num = 1</code>.</p></p>\n<p><p><code>r()</code> returns <code>1</code> and decrements <code>num</code> to <code>0</code>.</p></p></p>\n\n\n<p><strong>Third condition check:</strong></p>\n\n\n<p><p>Call <code>r()</code>:</p>\n\n<p><p>Now <code>num = 0</code>.</p></p>\n<p><p><code>r()</code> returns <code>0</code> and decrements <code>num</code> to <code>-1</code>.</p></p></p>\n<p><p>Since the returned value is <code>0</code>, the loop condition fails and the loop ends.</p></p>\n\n<p><strong>Final Output:</strong></p>\n\n<p>The loop printed <code>5</code> in the first iteration and <code>2</code> in the second iteration, resulting in <code>52</code>.</p>\n\n<p><strong>Answer:</strong></p>\n<p><strong>52</strong></p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C code. Assume that <i>unsigned long int</i> type length is 64\nbits.\n<pre><code class=\"c\">unsigned long int fun(unsigned long int n){\n     unsigned long int i, j = 0, sum = 0;\n     for (i = n; i &gt; 1; i = i/2) j++;\n     for ( ; j &gt; 1; j = j/2) sum++;\n     return(sum);\n}</code></pre>\nThe value returned when we call <i>fun</i> with the input $${2^{40}}$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "40"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the C program below.\n<pre><code class=\"c\">#include &lt; stdio.h &gt;\nint *A, stkTop;\nint stkFunc(int opcode, int val)\n{\n     static int size=0, stkTop=0;\n     switch (opcode) {\n         case -1: size = val; break;\n         case 0: if (stkTop &lt; size) A[stkTop++] = val; break;\n         default: if (stkTop) return A[--stkTop];\n     }\n     return -1;\n}\nint main()\n{\n     int B[20]; A = B; stkTop = -1;\n     stkFunc (-1, 10);\n     stkFunc ( 0, 5);\n     stkFunc ( 0, 10);\n     printf (\"%d\\n\", stkFunc(1, 0) + stkFunc(1, 0));\n}</code></pre>\nThe value printed by the above program is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "15",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the program given below, in a block-structured pseudo-language with lexical\nscoping and nesting of procedures permitted.\n<pre><code class=\"pascal\">Program main;\n  Var . . .\n\n  Procedure A1;\n      Var . . .\n      Call A2;\n  End A1\n\n  Procedure A2;\n      Var . . .\n\n      Procedure A21;\n        Var . . .\n        Call A1;\n      End A21\n\n      Call A21;\n  End A2\n\n  Call A1;\nEnd main.</code></pre>\nConsider the calling chain: Main $$ \\to $$ A1 $$ \\to $$ A2 $$ \\to $$ A21 $$ \\to $$ A1\n<br>The correct set of activation records along with their access links is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/UL8ECZRjOrFfck4Bf/VEogLqHnYjqwJIaGn9DAd87y97GJe/PcvGlxBhQfXU184RkfC7yg/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Programming Languages - Function and Recursion Question 22 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/JbTI5UGKRshb8Ntrz/AxSiyfnCh0gAYt6yNgNkUc7MDQWP7/IeDBItyJVB2Aq0Ysmd3xQN/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Programming Languages - Function and Recursion Question 22 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/CgnkwBbTbZegfPZlk/8nTuSzMm8sh5BrswMVPlfq0XNVfMU/XscYXU4q3UTxKE5PjxztqF/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Programming Languages - Function and Recursion Question 22 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/o7oPgbpYAeir6w3xS/ERnWMnLYsFHcEMXKAoTK6kMWkskyG/FoOoQ5Guj0B4itRYYsizAv/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2012 Programming Languages - Function and Recursion Question 22 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following recursive C function that takes two arguments:\n<pre><code class=\"c\">unsigned int foo (unsigned int n, unsigned int r) {\n  if (n &gt; 0) return((n % r) + foo(n/r, r));\n  else return 0;\n}</code></pre>\nWhat is the return value of the function foo when it is called as <b>foo (513, 2)</b>? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "9"
+      },
+      {
+        "identifier": "B",
+        "content": "8"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following recursive C function that takes two arguments:\n<pre><code class=\"c\">unsigned int foo (unsigned int n, unsigned int r) {\n  if (n &gt; 0) return((n % r) + foo(n/r, r));\n  else return 0;\n}</code></pre>\nWhat is the return value of the function foo when it is called as <b>foo (345, 10)</b>?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "345"
+      },
+      {
+        "identifier": "B",
+        "content": "12"
+      },
+      {
+        "identifier": "C",
+        "content": "5"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Choose the correct option to fill ? 1 and ? 2 so that the program below prints an\ninput string in reverse order. Assume that the input string is terminated by a\nnewline character.\n<pre><code class=\"c\">void recerse (void) {\n  int c;\n  if (?1) reverse() ;\n  ?2\n}\nmain {\n  printf (\"Enter Text\" ); \n  printf(\"\\n\");\n  reverse() ;\n  printf(\"\\n\") ;\n}</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "?1 is (getchar ( )! = '\\ n')\n<br>?2 is getchar (c);  "
+      },
+      {
+        "identifier": "B",
+        "content": "?1 is ((c = getchar ( ) )! = '\\ n')\n<br>?2 is getchar (c); "
+      },
+      {
+        "identifier": "C",
+        "content": "?1 is (c ! = '\\ n')\n<br>?2 is putchar (c);"
+      },
+      {
+        "identifier": "D",
+        "content": "?1 is ((c = getchar ( ) )! = '\\ n')\n<br>?2 is putchar (c);"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C function:\n<pre><code>int f(int n)\n{\n   static int r = 0;\n   if(n &lt;= 0) return 1;\n   if(n&gt;3)\n   {\n     r = n;\n     return f(n-2)+2;\n   }\n  return f(n-1)+r;\n}</code></pre>\nWhat is the value of f(5)?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5"
+      },
+      {
+        "identifier": "B",
+        "content": "7"
+      },
+      {
+        "identifier": "C",
+        "content": "9"
+      },
+      {
+        "identifier": "D",
+        "content": "18"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program:\n<pre><code class=\"c\">double foo(double); /* Line 1 */\nint main () {\n  double da, db;\n  //input da\n  db = foo(da);\n}\ndouble foo(double a){\n  return a;\n}</code></pre>\nThe above code compiled without any error or warning. If Line 1 is deleted, the above code will show:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "no compile warning or error"
+      },
+      {
+        "identifier": "B",
+        "content": "some compiler-warnings not leading to unintended results"
+      },
+      {
+        "identifier": "C",
+        "content": "some compiler-warnings due to type-mismatch eventually leading to unintended results"
+      },
+      {
+        "identifier": "D",
+        "content": "compiler errors"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program:\n<pre><code class=\"c\">void foo (int n, int sum) {\n  int k = 0, j = 0;\n  if(n==0) return;\n  k=n%10; j = n /10;\n  sum = sum + k;\n  foo(j, sum);\n  printf(\"%d\",k);\n}\nint main () {\n  int a = 2048, sum = 0;\n  foo(a, sum);\n  printf(\"%d\\n\", sum);\n}</code></pre>\nWhat does the above program print?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8, 4, 0, 2, 14"
+      },
+      {
+        "identifier": "B",
+        "content": "8, 4, 0, 2, 0"
+      },
+      {
+        "identifier": "C",
+        "content": "2, 0, 4, 8, 14"
+      },
+      {
+        "identifier": "D",
+        "content": "2, 0, 4, 8, 0"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C function:\n<pre><code>int f(int n)\n{\nstatic int i = 1;\nif(n&gt;=5) return n;\nn = n+1;\ni++;\nreturn f(n);\n}</code></pre>\nThe value returned by f(1) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5"
+      },
+      {
+        "identifier": "B",
+        "content": "6"
+      },
+      {
+        "identifier": "C",
+        "content": "7"
+      },
+      {
+        "identifier": "D",
+        "content": "8"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C program \n<pre><code class=\"c\">main ( )\n{\n  int x, y, m, n;\n  scanf(\"%d %d\", &amp;x, &amp;y);\n  /* Assume x &gt; 0 and y &gt; 0 */\n  m=x; n=y;\n  while(m!=n)\n  {\n    if(m&gt;n)\n    m=m-n;\n    else\n    n=n-m;\n  }\n  printf(\"%d\", n);\n}</code></pre>\nThe program computes",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x + y using repeated subtraction"
+      },
+      {
+        "identifier": "B",
+        "content": "x mod y using repeated subtraction"
+      },
+      {
+        "identifier": "C",
+        "content": "the greatest common divisor of x and y"
+      },
+      {
+        "identifier": "D",
+        "content": "the least common multiple of x and y"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following class definitions in a hypothetical Object Oriented\nlanguage that supports inheritance and uses dynamic binding. The language\nshould not be assumed to be either Java or C++, though the syntax is similar.\n<pre><code class=\"java\">Class P {\n    void f(int i) {\n           print(i);\n          }\n}\n\nClass Q subclass of P {\n       void f(int i) {\n            print(2*i);\n          }\n}</code></pre>\nNow consider the following program fragment:\n<br>Px = new Q();\n<br>Qy = new Q();\n<br>Pz = new Q();\n<br>x.f(1); ((P)y).f(1); z.f(1);\n<br>Here ((P)y) denotes a typecast of y to P. The output produced by executing the\nabove program fragment will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1 2 1"
+      },
+      {
+        "identifier": "B",
+        "content": "2 1 1"
+      },
+      {
+        "identifier": "C",
+        "content": "2 1 2"
+      },
+      {
+        "identifier": "D",
+        "content": "2 2 2"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following declaration of a two-dimensional array in C:\n<br><br>char a[100][100];\n<br><br>Assuming that the main memory is byte-addressable and that the array is stored\nstarting from memory address 0, the address of a[40][50] is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4040"
+      },
+      {
+        "identifier": "B",
+        "content": "4050"
+      },
+      {
+        "identifier": "C",
+        "content": "5040"
+      },
+      {
+        "identifier": "D",
+        "content": "5050"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The value of j at the end of the execution of the following C program\n<pre><code class=\"c\">int incr (int i)\n{\n     static int count = 0;\n     count = count + i;\n     return (count);\n}\nmain () {\n   int i,j;\n   for (i = 0; i &lt;= 4; i++)\n   j = incr(i);\n}</code></pre>\nis",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "10"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "7"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following C function definition\n<pre><code class=\"c\">int Trial (int a, int b, int c)\n{\n       if ((a &gt; = b) &amp;&amp; (c &lt; b)) return b;\n       else if (a &gt; = b) return Trial (a,c,b);\n       else return Trial (b,a,c);\n}</code></pre>\nThe function Trial:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Finds the maximum of a, b and c"
+      },
+      {
+        "identifier": "B",
+        "content": "Finds the minimum of a, b and c"
+      },
+      {
+        "identifier": "C",
+        "content": "Finds the middle number of a, b, c"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "What value would the following function return for the input x = 95?\n<pre><code class=\"c\">Function fun (x:integer):integer;\nBegin\n     If x &gt; 100 then fun : x – 10\n     Else fun : fun(fun (x + 11))\nEnd;</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "89"
+      },
+      {
+        "identifier": "B",
+        "content": "90"
+      },
+      {
+        "identifier": "C",
+        "content": "91"
+      },
+      {
+        "identifier": "D",
+        "content": "92"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "What is the result of the following program?\n<pre><code class=\"pascal\">program side-effect (input, output);\nvar x, result: integer:\nfucntion f (var x:integer):integer;\nbegin\n    x:x+1;f:=x;\nend\nbegin\n    x:=5\n    result:=f(x)*f(x)\n    writeln(result)\nend</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5"
+      },
+      {
+        "identifier": "B",
+        "content": "25"
+      },
+      {
+        "identifier": "C",
+        "content": "36"
+      },
+      {
+        "identifier": "D",
+        "content": "42"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "What is the value of X printed by the following program?\n<pre><code class=\"pascal\">program COMPUTE (input, output);\nvar\n    X:integer;\nprocedure FIND (X:real);\n    begin\n    X:=sqrt(X);\n    end;\nbegin\n   X:=2\n   Find(X)\n   Writeln(X)\nend</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sqrt 2 $$"
+      },
+      {
+        "identifier": "C",
+        "content": "Runtime error"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "What does the following code do?\n<pre><code class=\"c\">var a, b : integer;\nbegin\n    a:=a+b;\n    b:=a-b;\n    a:=a-b;\nend;</code></pre>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "exchanges a and b"
+      },
+      {
+        "identifier": "B",
+        "content": "doubles a and stores in b"
+      },
+      {
+        "identifier": "C",
+        "content": "doubles b and stores in a"
+      },
+      {
+        "identifier": "D",
+        "content": "leaves a and b unchanged"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  }
+]

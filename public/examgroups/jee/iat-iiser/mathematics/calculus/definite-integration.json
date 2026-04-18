@@ -1,0 +1,290 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>What is the value of $\\int_0^\\pi x|\\cos x| \\sin x d x$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{\\pi}{2}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{\\pi}{4}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\pi$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{\\pi}{6}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2025,
+    "yearKey": "iat-iiser-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Let $I=\\int_{e^{-\\pi / 2}}^{e^{\\pi / 2}}\\left(\\sin ^2(\\log (x))+\\sin \\left(\\log \\left(x^2\\right)\\right)\\right) d x$. What is the value of $I$ ?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{\\pi e^{\\frac{\\pi}{2}}}{2}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$e^{\\pi / 2}-e^{-\\pi / 2}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$e^\\pi-1$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\int_{e^{-\\pi / 2}}^{e^{\\pi / 2}}\\left(\\sin ^2(\\log (x))+\\sin (2 \\log (x))\\right) d x $$</p>\n<p>Let's use the substitution $t=\\log (x)$. Also note, $x=e^t$</p>\n<p>Then, $d t=\\frac{1}{x} d x$ or $d x=x d t=e^t d t$</p>\n<p>$$ \\int_{-\\pi / 2}^{\\pi / 2}\\left(\\sin ^2(t)+\\sin (2 t)\\right) e^t d t $$</p>\n<p>Note, $\\frac{d}{d x}\\left(\\sin ^2(x)\\right)=2 \\sin (x) \\cos (x)$</p>\n<p>Now, using $\\sin (2 t)=2 \\sin (t) \\cos (t)$ :</p>\n<p>$$ \\int_{-\\pi / 2}^{\\pi / 2}\\left(\\sin ^2(t)+2 \\sin (t) \\cos (t)\\right) e^t d t $$</p>\n<p>This is present in the form:</p>\n<p>$\\int e^x\\left[f(x)+f^{\\prime}(x)\\right] d x$ which is equal to $\\int e^x f(x) d x$ (NCERT XII page 327)</p>\n<p>So,</p>\n<p>$$ \\int_{-\\pi / 2}^{\\pi / 2}\\left(\\sin ^2(t)+2 \\sin (t) \\cos (t)\\right) e^t d t .=\\left[\\sin ^2(t) e^t\\right]_{-\\pi / 2}^{\\pi / 2}\n=e^{\\pi / 2}-e^{-\\pi / 2} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "iat-iiser-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Let $f: \\mathbf{R} \\rightarrow(0, \\infty)$ be a continuous decreasing function. Suppose $f(0), \\dot{f}(1), \\ldots, f(10)$ are in a geometric progression with common ratio $\\frac{1}{5}$. In which of the following intervals does the value of $\\int_0^{10} f(x) d x$ lie?\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$(0,2 f(0))$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $(4 f(0), 6 f(0))$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $(8 f(0), 10 f(0))$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $(12 f(0), 14 f(0))$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Since it is given that $ f(0), f(1), \\ldots, f(10) $ form a geometric progression (GP) with a common ratio of $\\frac{1}{5}$, we can express the function as:</p>\n<p>$ f(x) = f(0) \\left(\\frac{1}{5}\\right)^x $</p>\n<p>To find the integral $\\int_0^{10} f(x) \\, dx$, we integrate the function:</p>\n<p>$  \\int a^x \\, dx = \\frac{a^x}{\\ln(a)} + C  $</p>\n<p>Substituting our function into the integral:</p>\n<p>$ \\int_0^{10} f(x) \\, dx = f(0) \\int_0^{10} \\left(\\frac{1}{5}\\right)^x \\, dx = f(0) \\left[ \\frac{\\left(\\frac{1}{5}\\right)^x}{\\ln\\left(\\frac{1}{5}\\right)} \\right]_0^{10} $</p>\n<p>Calculate the definite integral:</p>\n<p>$ = f(0) \\cdot \\left[ \\frac{1}{5}^{10} - 1 \\right] \\times \\frac{1}{-\\ln(5)} $</p>\n<p>Simplifying:</p>\n<p>$ = \\frac{f(0) \\left[1 - \\frac{1}{5}^{10}\\right]}{\\ln(5)} $</p>\n<p>Using a calculator to approximate this result:</p>\n<p>$ = f(0) \\times 0.62 $</p>\n<p>Therefore, we conclude:</p>\n<p>$ \\int_0^{10} f(x) \\, dx \\in (0, 2f(0)) $</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "iat-iiser-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": " Let $f:(-1,2) \\rightarrow \\mathbf{R}$ be a differentiable function such that $f^{\\prime}(x)=\\frac{2}{x^2-5}$ and $f(0)=0$. Then in which of the following intervals does $f(1)$ lie?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $(-\\infty, 0)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $(0,2)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $(2,4)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $(4, \\infty)$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ f^{\\prime}(x)=\\frac{2}{x^2-5} $$</p>\n<p>On integrating both side wrt $x$,</p>\n<p>$$ f(x)=\\int \\frac{2}{x^2-5} d x $$</p>\n<p>Using the identity,</p>\n<p>$$ \\int \\frac{1}{x^2-a^2} d x=\\frac{1}{2 a} \\ln \\left|\\frac{x-a}{x+a}\\right|+c $$</p>\n<p>Here, $a=\\sqrt{5}$</p>\n<p>$$ f(x)=2 \\int \\frac{1}{x^2-5} d x=\\frac{2}{2 \\sqrt{5}} \\ln \\left|\\frac{x-\\sqrt{5}}{x+\\sqrt{5}}\\right|+c $$</p>\n<p>It is given that, $f(0)=0$</p>\n<p>$$ \\begin{gathered} \\rightarrow \\frac{1}{\\sqrt{5}} \\ln |-1|+c=0 \\\\ c=0 \\text { as } \\log |-1|=\\log 1=0 \\\\ f(1)=\\frac{1}{\\sqrt{5}} \\ln \\left|\\frac{1-\\sqrt{5}}{1+\\sqrt{5}}\\right|=\\frac{1}{\\sqrt{5}} \\ln \\left|\\frac{(1-\\sqrt{5})^2}{4}\\right| \\end{gathered} $$</p>\n<p>Using a calculator, we get $f(0) \\approx-.43$ which lies in $(-\\infty, 0)$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "iat-iiser-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "For a natural number $n$, let $C_n$ be the curve in the $X Y$-plane given by $y=x^n$, where $0 \\leq$ $x \\leq 1$. Let $A_n$ denote the area of the region bounded between $C_n$ and $C_n+1$. Then the largest value of $A_n$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$1 / 2$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$1 / 3$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$1 / 6$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$1 / 12$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To understand the area it is asking us to maximize, observe the following diagram to visualise better:</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mb63h59p/56c3e8df-324d-4570-a31d-f2d967c688b0/14e059d0-3abe-11f0-b01e-2742f6fbc89b/file-jaoe38c1mb63h59q.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mb63h59p/56c3e8df-324d-4570-a31d-f2d967c688b0/14e059d0-3abe-11f0-b01e-2742f6fbc89b/file-jaoe38c1mb63h59q.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"IAT (IISER) 2022 Mathematics - Definite Integration Question 3 English Explanation\"></p>\n<p>Given,</p>\n<p>$-n$ is a natural number</p>\n<p>The equation of the area will be given by:</p>\n<p>$$ \\begin{aligned} A(x) &amp; =\\int_0^1\\left(x^n-x^{n-1}\\right) d x \\\\ &amp; =\\left[\\frac{x^{n+1}}{n+1}-\\frac{x^{n+2}}{n+2}\\right]_0^1 \\\\ &amp; =\\frac{1}{n+1}-\\frac{1}{n+2} \\\\ &amp; =\\frac{(n+2)-(n+1)}{(n+1)(n+2)} \\end{aligned} $$</p>\n<p>$$ A(x)=\\frac{1}{(n+1)(n+2)} $$</p>\n<p>For the largest value of $A(x)$, we need the smallest denominator (the smallest NATURAL number), i.e., $n=1$</p>\n<p>$$ A_{\\max }=\\frac{1}{2 \\times 3}=\\frac{1}{6} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "iat-iiser-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Let $f$ be a continuous function on $[0,1]$ and $F$ be its antiderivative. If $F(0)=1$ and $\\int_0^1 f(x) d x=1$, then $F(1)$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$1 / 2$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "1\n"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\text { Given, } F(0)=1\\\\ &\\begin{gathered} \\int f(x)=F(X) \\\\ \\int_0^1 f(x)=F(1)-F(0)=1 \\\\ F(1)=1+F(0)=2 \\end{gathered} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "iat-iiser-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The value of the integral</p>\n<p>$$ \\int_1^{100} \\frac{[x]}{x} d x $$</p>\n<p>where $[x]$ is the greatest integer less than or equal to $x$ for any real number $x$, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\log \\left(\\frac{100^{98}}{98!}\\right)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\log \\left(\\frac{100^{99}}{98!}\\right)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\log \\left(\\frac{100^{98}}{99!}\\right)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\log \\left(\\frac{100^{99}}{99!}\\right)$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "\n<p>The integral is split into segments where $[x]$ is constant. For $n \\leq x<n+1,[x]=n$.</p>\n\n<p>$$ \\int_0^{100} \\frac{[x]}{x}=\\int_0^1 \\frac{0}{x}+\\int_1^2 \\frac{1}{x}+\\int_2^3 \\frac{3}{x} \\cdots+\\int_{99}^{100} \\frac{99}{x} $$</p>\n<p>$\\int \\frac{1}{x} d x=\\ln |x|$, Here $\\ln |x|=\\ln (x)$ as all values being used are positive</p>\n<p>$$ \\begin{gathered} =0+[\\ln (x)]_1^2+[2 \\ln (x)]_2^3+[3 \\ln (x)]_3^4 \\cdots+[99 \\ln (x)]_{99}^{100} \\\\ =[\\ln (2)-0]+[2 \\ln (3)-2 \\ln (2)]+[3 \\ln (4)-3 \\ln (3)] \\cdots+[99 \\ln (100)-99 \\ln (99)] \\end{gathered} $$</p>\n<p>Rearrange the terms to group similar logarithms.</p>\n<p>$$ \\begin{gathered} =[\\ln (2)-2 \\ln (2)]+[2 \\ln (3)-3 \\ln (3)]+[3 \\ln (4)-4 \\ln (4)] \\cdots[98 \\ln (99)-99 \\ln (99)] \\\\ +99 \\ln (100) \\\\ =-\\ln (2)-\\ln (3)-\\ln (4)-\\ln (5) \\cdots-\\ln (99)+99 \\ln (100) \\\\ =99 \\ln (100)-\\ln (99)-\\ln (98)-\\ln (97) \\cdots-\\ln (2) \\\\ =\\ln \\left(100^{99}\\right)-\\ln (99!) \\\\ =\\ln \\left(\\frac{100^{99}}{99!}\\right) \\end{gathered} $$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "iat-iiser-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $p(t)=\\frac{t(t-1) \\cdots(t-2019)}{2019!}$, then the value of</p>\n<p>$$ \\int_0^1\\left(\\frac{1}{t+1}+\\frac{1}{t+2}+\\cdots+\\frac{1}{t+2020}\\right) p(-t-1) d t $$</p>\n<p>is:</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $2019^2$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " 2019\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $2020^2$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " 2020"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given,</p>\n<p>$$ \\begin{gathered} \\int_0^1\\left(\\frac{1}{(t+1)}+\\frac{1}{(t+2)}+\\cdots+\\frac{1}{(t+2020)} p(-t-1) d t\\right. \\\\ p(t)=\\frac{t(t-1) \\ldots(t-2019)}{2019!} \\end{gathered} $$</p>\n<p>The expression for $p(-t-1)$ :</p>\n<p>$$ \\begin{aligned} \\Rightarrow p(-t-1) & =\\frac{(-t-1)(-t-2) \\ldots(-t-2020)}{2019!} \\\\ p(-t-1) & =\\frac{(t+1)(t+2) \\ldots(t+2020)}{2019!} \\end{aligned} $$</p>\n<p>Taking log on both sides,</p>\n<p>$$ \\ln (p(-t-1))=\\ln (t+1)+\\ln (t+2)+\\ldots+\\ln (t+2020)-\\ln (2019!) $$</p>\n<p>Let $p(-t-1)=y$ and then differentiating,</p>\n<p>$$ \\begin{gathered} \\frac{1}{y} \\frac{d y}{d t}=\\frac{1}{t+1}+\\frac{1}{t+2}+\\ldots \\frac{1}{t+2020} \\\\ \\frac{d y}{d t}=\\left[\\frac{1}{t+1}+\\frac{1}{t+2}+\\ldots \\frac{1}{t+2020}\\right] p(-t-1) \\end{gathered} $$</p>\n<p>On integrating both sides and multiplying with $d t$, we get</p>\n<p>$$ \\int_0^1\\left(\\frac{1}{t+1}+\\frac{1}{t+2}+\\cdots+\\frac{1}{t+2020}\\right) p(-t-1) d t=\\int_{y(0)}^{y(1)} d y=[y]_{y(0)}^{y(1)} $$</p>\n<p>Using</p>\n<p>$$ y(t)=p(-t-1)=\\frac{(t+1)(t+2) \\ldots(t+2020)}{2019!} $$</p>\n<p>We get,</p>\n<p>$$ y(1)=\\frac{2 \\cdot 3 \\cdot 4 \\cdots 2021}{2019!}=\\frac{2021!}{2019!}=2021 \\times 2020 $$</p>\n<p>You can similarly find $y(0)=2020$</p>\n<p>$$ \\begin{gathered} =y(1)-y(0)=2021 \\times 2020-2020=2020(2021-1) \\\\ =2020^2 \\end{gathered} $$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "iat-iiser-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$F(x)=\\int_0^{e^x}\\left(t^3+2 t^2-t-2\\right) d t$, then for how many real numbers $x$ does $F^{\\prime}(x)=0$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given $ F(x) = \\int_0^{e^x} (t^3 + 2t^2 - t - 2) \\, dt $.</p>\n<p>Let's evaluate this integral:</p>\n<p>$ \\begin{aligned} F(x) &= \\left[ \\frac{t^4}{4} + \\frac{2t^3}{3} - \\frac{t^2}{2} - 2t \\right]_0^{e^x} \\\\ &= \\frac{(e^x)^4}{4} + \\frac{2(e^x)^3}{3} - \\frac{(e^x)^2}{2} - 2(e^x) \\\\ &= \\frac{e^{4x}}{4} + \\frac{2e^{3x}}{3} - \\frac{e^{2x}}{2} - 2e^x \\end{aligned} $</p>\n<p>Now, we find the derivative $ F'(x) $:</p>\n<p>$ \\begin{aligned} F'(x) &= \\frac{d}{dx} \\left( \\frac{e^{4x}}{4} + \\frac{2e^{3x}}{3} - \\frac{e^{2x}}{2} - 2e^x \\right) \\\\ &= e^{4x} + 2e^{3x} - e^{2x} - 2e^x \\end{aligned} $</p>\n<p>Factor out $ e^x $ from the expression:</p>\n<p>$ F'(x) = e^x \\left( e^{3x} + 2e^{2x} - e^x - 2 \\right) $</p>\n<p>Further factorization results in:</p>\n<p>$ F'(x) = e^x \\left( (e^x - 1)(e^x + 2) \\right) $</p>\n<p>For $ F'(x) = 0 $ to hold, one of the factors must be zero. Since $ e^x $ can never be zero or negative for real $ x $, we look at:</p>\n<p>$ e^x - 1 = 0 $</p>\n<p>Solve for $ x $:</p>\n<p>$ e^x = 1 \\quad \\Rightarrow \\quad x = 0 $</p>\n<p>Thus, there is only one real solution: $ x = 0 $. Therefore, there is a single real number $ x $ for which $ F'(x) = 0 $.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "iat-iiser-2020",
+    "difficulty": null
+  }
+]

@@ -1,0 +1,1241 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If an IP network uses a subnet mask of 255.255 .240 .0 , the maximum number of IP addresses that can be assigned to network interfaces is $\\_\\_\\_\\_$ . (answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4094",
+    "explanation": "<p>Given subnet mask is 255.255.240.0</p>\n<p>[Prefix + suffix] bits</p>\n<p>$$ \\underbrace{11111111111111111111}_{\\text {Prefix }} \\underbrace{000000000000}_{\\text {Suffix bits }} $$</p>\n<p>Suffix bits = 12 bits</p>\n<p>Number of address that can be assigned to network interfaces</p>\n<p>$$ =2^{12}-2=4094 $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A machine receives an IPv4 datagram. The protocol field of the IPv4 header has the protocol number of a protocol X .</p>\n<p>Which ONE of the following is NOT a possible candidate for X ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Internet Control Message Protocol (ICMP)\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Internet Group Management Protocol (IGMP)\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Open Shortest Path First (OSPF)\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Routing Information Protocol (RIP)\n"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>The answer is Option D: Routing Information Protocol (RIP).</p>\n<p>To explain briefly:</p>\n\n<p><p>The IPv4 header’s protocol field indicates which protocol is carried in the payload of the datagram.  </p></p>\n<p><p>Both Internet Control Message Protocol (ICMP) and Internet Group Management Protocol (IGMP) are directly carried on top of IP, with protocol numbers 1 and 2 respectively.  </p></p>\n<p><p>Open Shortest Path First (OSPF) is also a protocol that runs directly over IP (with protocol number 89).  </p></p>\n<p><p>RIP, on the other hand, is not directly encapsulated by IP. Instead, RIP messages are carried inside UDP datagrams (using UDP port 520). Hence, if an IPv4 datagram carries RIP data, its protocol field will indicate UDP (protocol number 17), not RIP.</p></p>\n\n<p>That's why RIP is not a possible candidate for the value of the protocol field in an IPv4 header.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a network that uses Ethernet and IPv4. Assume that IPv4 headers do not use any options field. Each Ethernet frame can carry a maximum of 1500 bytes in its data field. A UDP segment is transmitted. The payload (data) in the UDP segment is 7488 bytes. Which ONE of the following choices has the CORRECT total number of fragments transmitted and the size of the last fragment including IPv4 header?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " 5 fragments, 1488 bytes\n"
+      },
+      {
+        "identifier": "B",
+        "content": " 6 fragments, 88 bytes\n"
+      },
+      {
+        "identifier": "C",
+        "content": " 6 fragments, 108 bytes\n"
+      },
+      {
+        "identifier": "D",
+        "content": " 6 fragments, 116 bytes"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7ymgar9/4e862ad8-3d0c-4a3f-90a2-d4d4afac0426/5f6d9a50-fb3d-11ef-9d16-d79a93a9cdba/file-jaoe38c1m7ymgara.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7ymgar9/4e862ad8-3d0c-4a3f-90a2-d4d4afac0426/5f6d9a50-fb3d-11ef-9d16-d79a93a9cdba/file-jaoe38c1m7ymgara.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Computer Networks - Network Layer Question 3 English Explanation 1\"></p>\n<p>Number of fragments $=\\frac{7496}{1480}=5.06 \\approx 6$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7ymh1ay/112630cf-b5f7-4735-b049-5a50ac8c2d99/73ef8ab0-fb3d-11ef-9d16-d79a93a9cdba/file-jaoe38c1m7ymh1az.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7ymh1ay/112630cf-b5f7-4735-b049-5a50ac8c2d99/73ef8ab0-fb3d-11ef-9d16-d79a93a9cdba/file-jaoe38c1m7ymh1az.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Computer Networks - Network Layer Question 3 English Explanation 2\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Node X has a TCP connection open to node Y. The packets from X to Y go through an intermediate IP router R. Ethernet switch S is the first switch on the network path between X and R. Consider a packet sent from X to Y over this connection.</p><p>Which of the following statements is/are TRUE about the destination IP and MAC addresses on this packet at the time it leaves X?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>The destination IP address is the IP address of R</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>The destination IP address is the IP address of Y</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>The destination MAC address is the MAC address of S</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The destination MAC address is the MAC address of Y</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the correct destination IP and MAC addresses for a packet at the time it leaves node X, let's consider the role of these addresses in a TCP/IP network. The IP address helps determine the final destination of the packet, while the MAC address is used to move the packet from one network interface to another within the same network segment or to an adjacent segment.</p>\n\n<p>Reviewing each option:</p>\n\n<p><b>Option A:</b> The destination IP address is the IP address of R.</p>\n<p>This is incorrect. The destination IP address should be the IP address of the final destination, which in this case is node Y. The IP address remains unchanged throughout the journey of the packet from source to the final destination.</p>\n\n<p><b>Option B:</b> The destination IP address is the IP address of Y.</p>\n<p>This is correct. The destination IP address does not change as the packet traverses the network. Since the final destination of the packet is node Y, the destination IP address should be the IP address of Y.</p>\n\n<p><b>Option C:</b> The destination MAC address is the MAC address of S.</p>\n<p>This is incorrect. The Ethernet switch S is responsible for switching frames within the local network, but the first hop after X is typically towards R, the intermediary router. The MAC address would be the next device on the path at the intermediate level, often the router R.</p>\n\n<p><b>Option D:</b> The destination MAC address is the MAC address of Y.</p>\n<p>This is incorrect. MAC addresses are only used within the local network segment. The correct MAC address should be that of the next hop device, which is usually router R in this context. Hence, at the point it leaves X, the destination MAC address would be the MAC address of R.</p>\n\n<p>To summarize, the true statements about the destination IP and MAC addresses on this packet at the time it leaves X are:</p>\n<p><b>Option B</b>: The destination IP address is the IP address of Y.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statements about IPv4 fragmentation is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>The fragmentation of an IP datagram is performed only at the source of the datagram</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>The fragmentation of an IP datagram is performed at any IP router which finds that the size of the datagram to be transmitted exceeds the MTU</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>The reassembly of fragments is performed only at the destination of the datagram</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The reassembly of fragments is performed at all intermediate routers along the path from the source to the destination</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To understand which statements about IPv4 fragmentation are true, it's important to delve into the mechanics of IPv4 fragmentation and reassembly.</p>\n\n<p>IPv4 fragmentation occurs when an IP datagram is too large to be transmitted over a network with a smaller Maximum Transmission Unit (MTU) than the size of the datagram. This process helps ensure that datagrams can travel across diverse networks with varying MTU sizes.</p>\n\n<p>Let's analyze each option:</p>\n\n<p><strong>Option A: The fragmentation of an IP datagram is performed only at the source of the datagram</strong></p>\n<p>This statement is FALSE. In IPv4, fragmentation can be performed by routers, not just the source. When a router encounters a datagram that is too large for the next network segment based on its MTU, it can fragment the datagram.</p>\n\n<p><strong>Option B: The fragmentation of an IP datagram is performed at any IP router which finds that the size of the datagram to be transmitted exceeds the MTU</strong></p>\n<p>This statement is TRUE. Any intermediate router that discovers a datagram larger than the MTU of the next hop network can fragment the datagram. This ensures that the datagram can continue to be transmitted to its destination.</p>\n\n<p><strong>Option C: The reassembly of fragments is performed only at the destination of the datagram</strong></p>\n<p>This statement is TRUE. In IPv4, fragment reassembly is performed only by the destination host. Intermediate routers do not reassemble fragments; they only participate in forwarding the individual fragments to the destination.</p>\n\n<p><strong>Option D: The reassembly of fragments is performed at all intermediate routers along the path from the source to the destination</strong></p>\n<p>This statement is FALSE. Intermediate routers do not perform reassembly of fragments. They forward the fragments to the destination, where reassembly takes place.</p>\n\n<p>Therefore, the statements that are TRUE are:</p>\n<p><strong>Option B: The fragmentation of an IP datagram is performed at any IP router which finds that the size of the datagram to be transmitted exceeds the MTU</strong></p>\n<p><strong>Option C: The reassembly of fragments is performed only at the destination of the datagram</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following fields of an IP header is/are <b>always</b> modified by any router before it forwards the IP packet?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Source IP Address</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Protocol</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Time to Live (TTL)</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Header Checksum</p>"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>The fields of an IP header that are always modified by any router before it forwards the IP packet are:</p>\n\n<p>Option C: <b>Time to Live (TTL)</b></p>\n\n<p>Option D: <b>Header Checksum</b></p>\n\n<p>Here's an explanation for each field:</p>\n\n<p><b>Source IP Address:</b> The Source IP Address is set by the originator of the packet and is not typically altered by routers along the way. Any alteration of this field would generally indicate a more complex networking process such as Network Address Translation (NAT), which is not a typical behavior for standard routing.</p>\n\n<p><b>Protocol:</b> This field indicates the higher-layer protocol used in the data portion of the IP packet. Routers use this field for routing decisions, but they do not modify it. This field ensures that the packet is correctly handed off to the appropriate software module for further processing.</p>\n\n<p><b>Time to Live (TTL):</b> The TTL field is decremented by 1 by each router that handles the packet. This is done to prevent routing loops by ensuring the packet does not circulate indefinitely, effectively placing a limit on the packet's journey through the network. When the TTL reaches zero, the packet is discarded.</p>\n\n<p><b>Header Checksum:</b> Since the TTL field is modified, the IPv4 checksum must also be recalculated to reflect this change. The header checksum ensures the integrity of the IP header; therefore, it must be updated whenever any part of the header is altered, including the TTL field. This ensures that errors introduced during transmission can be detected and handled appropriately.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following fields is/are modified in the IP header of a packet going out of a network address translation (NAT) device from an internal network to an external network?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Source IP</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Destination IP</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Header Checksum</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Total Length</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>When a packet goes out of a Network Address Translation (NAT) device from an internal network (private IP address range) to an external network (public IP address range), certain fields in the IP header are modified. Let’s examine each option to determine which fields are modified:</p>\n\n<p><strong>Option A: Source IP</strong></p>\n<p>Yes, the Source IP address is modified. NAT changes the source IP address from the private IP address of the internal network to the public IP address of the NAT device. This allows external devices to recognize and communicate back to the source device using the public IP address.</p>\n\n<p><strong>Option B: Destination IP</strong></p>\n<p>No, the Destination IP address is not changed by the NAT device when a packet is going out from the internal network to the external network. The destination remains the same as originally set by the internal device.</p>\n\n<p><strong>Option C: Header Checksum</strong></p>\n<p>Yes, the Header Checksum is modified. The IP header checksum is a value that is recalculated every time a change is made to the IP header (such as modifying the Source IP address). Since the NAT device changes the Source IP address, it must also recalculate and modify the Header Checksum to ensure data integrity.</p>\n\n<p><strong>Option D: Total Length</strong></p>\n<p>No, the Total Length field is not modified by the NAT device when the packet is sent out from the internal network to the external network. The total length field includes the header and the data section, and since the size of the packet remains the same, this value does not change.</p>\n\n<p>In summary, the fields that are modified in the IP header of a packet going out of a NAT device from an internal network to an external network are:</p>\n\n<p><strong>Option A: Source IP</strong> and <strong>Option C: Header Checksum</strong>.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider an enterprise network with two Ethernet segments, a web server and a firewall, connected via three routers as shown below.</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02cag7f/06861d8f-96a6-44e8-a8cc-98b9240aa2fc/3f6ab5b0-962f-11ec-ad0b-13b5a0a5d166/file-1l02cag7g.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02cag7f/06861d8f-96a6-44e8-a8cc-98b9240aa2fc/3f6ab5b0-962f-11ec-ad0b-13b5a0a5d166/file-1l02cag7g.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Computer Networks - Network Layer Question 16 English\"></p>\n<p>What is the number of subnets inside the enterprise network?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "12"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "8"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The correct answer is <strong>Option C: 6</strong>. Here's why:</p>\n\n<p>To determine the number of subnets, we need to analyze the network addresses and subnet masks assigned to each segment.  Let's break down the network configuration:</p>\n\n<p><strong>Segment 1:</strong></p>\n\n<ul>\n\n<li>Network Address: 192.168.1.0</li>\n\n<li>Subnet Mask: 255.255.255.192</li>\n\n</ul>\n\n<p><strong>Segment 2:</strong></p>\n\n<ul>\n\n<li>Network Address: 192.168.2.0</li>\n\n<li>Subnet Mask: 255.255.255.192</li>\n\n</ul>\n\n<p><strong>Segment 3 (Web Server):</strong></p>\n\n<ul>\n\n<li>Network Address: 192.168.3.0</li>\n\n<li>Subnet Mask: 255.255.255.192</li>\n\n</ul>\n\n<p><strong>Subnet Calculation:</strong></p>\n\n<p>The subnet mask 255.255.255.192 provides a subnet mask of $$2^{32-26} = 64$$ addresses.</p>\n\n<p>Each of the three segments uses this subnet mask.  Therefore, there are 6 subnets: </p>\n\n<ul>\n\n<li>192.168.1.0/26</li>\n\n<li>192.168.1.64/26</li>\n\n<li>192.168.1.128/26</li>\n\n<li>192.168.2.0/26</li>\n\n<li>192.168.2.64/26</li>\n\n<li>192.168.3.0/26</li>\n\n</ul>\n\n<p><strong>Key Points:</strong></p>\n\n<ul>\n\n<li>The subnet mask determines the number of subnets within a given network address space.</li>\n\n<li>A subnet mask with more bits set to '1' indicates a smaller subnet size and therefore more subnets.</li>\n\n</ul>\n\n<p></p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following two statements.</p>\n\n<p>S<sub>1</sub> : Destination MAC address of an ARP reply is a broadcast address.</p>\n\n<p>S<sub>2</sub> : Destination MAC address of an ARP request is a broadcast address.</p>\n\n<p>Which one of the following choices is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S<sub>1</sub> is tue and S<sub>2</sub> is false."
+      },
+      {
+        "identifier": "B",
+        "content": "Both S<sub>1</sub> and S<sub>2</sub> are false."
+      },
+      {
+        "identifier": "C",
+        "content": "S<sub>1</sub> is false and S<sub>2</sub> is true."
+      },
+      {
+        "identifier": "D",
+        "content": "Both S<sub>1</sub> and S<sub>2</sub> are true."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statements are correct, let's analyze each one in the context of the <strong>Address Resolution Protocol (ARP)</strong> and how it uses MAC addresses.</p>\n<hr />\n<h3><strong>Understanding ARP:</strong></h3>\n\n<p><p><strong>ARP Request:</strong></p></p>\n<p><p>Sent when a host needs to find the MAC address associated with an IP address on the local network.</p></p>\n<p><p>Since the sender does not know the target's MAC address, the ARP request is <strong>broadcast</strong> to all devices on the local network.</p></p>\n<p><p><strong>Destination MAC Address:</strong> Broadcast address (<strong>FF:FF:FF:FF:FF:FF</strong>).</p></p>\n<p><p><strong>ARP Reply:</strong></p></p>\n<p><p>Sent by the host that owns the requested IP address in response to an ARP request.</p></p>\n<p><p>The responder knows the MAC address of the requester (it was included in the ARP request).</p></p>\n<p><p><strong>Destination MAC Address:</strong> Unicast address of the requesting host.</p></p>\n\n<hr />\n<h3><strong>Analyzing the Statements:</strong></h3>\n<h4><strong>Statement S₁:</strong></h4>\n<p><strong>\"Destination MAC address of an ARP reply is a broadcast address.\"</strong></p>\n\n<p><p><strong>Analysis:</strong></p></p>\n<p><p>In an ARP reply, the responding device sends the reply <strong>directly</strong> to the requesting host.</p></p>\n<p><p>The ARP reply contains the MAC address mapping and is sent using the <strong>unicast MAC address</strong> of the requester.</p></p>\n<p><p><strong>Therefore, the destination MAC address is not the broadcast address.</strong></p></p>\n<p><p><strong>Conclusion:</strong> <strong>Statement S₁ is false.</strong></p></p>\n\n<hr />\n<h4><strong>Statement S₂:</strong></h4>\n<p><strong>\"Destination MAC address of an ARP request is a broadcast address.\"</strong></p>\n\n<p><p><strong>Analysis:</strong></p></p>\n<p><p>When a host sends an ARP request, it does not know the MAC address of the target IP address.</p></p>\n<p><p>To reach all possible devices that might have the IP address, the request is sent to the <strong>broadcast MAC address</strong>.</p></p>\n<p><p><strong>Destination MAC Address:</strong> <strong>FF:FF:FF:FF:FF:FF</strong> (broadcast address).</p></p>\n<p><p><strong>Conclusion:</strong> <strong>Statement S₂ is true.</strong></p></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Statement S₁ is false.</strong></p></p>\n<p><p><strong>Statement S₂ is true.</strong></p></p>\n\n<hr />\n<p><strong>Answer:</strong> <strong>Option C</strong></p>\n<p><strong>S₁ is false and S₂ is true.</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements about the functionality of an IP based router.\n<br><br>I. A router does not modify the IP packets during forwarding.\n<br>II. It is not necessary for a router to implement any routing protocol.\n<br>III. A router should reassemble IP fragments if the MTU of the outgoing link is larger than the size of the incoming IP packet.\n<br><br>Which of the above statements is/are TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and II only"
+      },
+      {
+        "identifier": "B",
+        "content": "II only"
+      },
+      {
+        "identifier": "C",
+        "content": "I only"
+      },
+      {
+        "identifier": "D",
+        "content": "II and III only"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Statement I:</strong></h3>\n<p><strong>\"A router does not modify the IP packets during forwarding.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>IP Packet Modification by Routers:</strong></p></p>\n<p><p>When a router forwards an IP packet, it <strong>decrements the Time To Live (TTL)</strong> field by 1. The TTL field is used to prevent packets from looping indefinitely in the network.</p></p>\n<p><p>Due to the change in the TTL field, the router must <strong>recalculate the IP header checksum</strong> to maintain packet integrity.</p></p>\n<p><p>These modifications are essential for proper network operation and are part of the IP protocol specifications.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>Since routers modify the TTL and checksum fields during forwarding, <strong>Statement I is FALSE</strong>.</p></p>\n\n<hr />\n<h3><strong>Statement II:</strong></h3>\n<p><strong>\"It is not necessary for a router to implement any routing protocol.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Routing Protocols:</strong></p></p>\n<p><p>Routing protocols (like RIP, OSPF, or BGP) enable routers to dynamically learn network routes from other routers.</p></p>\n<p><p>However, it is possible for a router to operate <strong>without implementing any routing protocol</strong> by using <strong>static routing</strong>.</p></p>\n<p><p><strong>Static Routing:</strong></p>\n\n<p><p>Network administrators manually configure routing tables with fixed paths.</p></p>\n<p><p>Suitable for small or simple networks where routes do not change frequently.</p></p></p>\n<p><p>In some cases, routers may rely on <strong>default routes</strong> or be configured with static entries to handle packet forwarding without dynamic routing protocols.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>A router can function without implementing a routing protocol by using static routing.</p></p>\n<p><p><strong>Statement II is TRUE</strong>.</p></p>\n\n<hr />\n<h3><strong>Statement III:</strong></h3>\n<p><strong>\"A router should reassemble IP fragments if the MTU of the outgoing link is larger than the size of the incoming IP packet.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>IP Fragmentation and Reassembly:</strong></p></p>\n<p><p><strong>Fragmentation</strong> occurs when an IP packet is larger than the Maximum Transmission Unit (MTU) of a network segment.</p></p>\n<p><p><strong>Reassembly</strong> of IP fragments is performed <strong>only at the destination host</strong>, not by intermediate routers.</p></p>\n<p><p><strong>Router Behavior:</strong></p></p>\n<p><p>Routers <strong>do not reassemble fragmented packets</strong> during transit.</p></p>\n<p><p>If the outgoing link's MTU is larger than the incoming packet size (including fragments), the router forwards the fragments as they are.</p></p>\n<p><p><strong>Reassembly by Routers:</strong></p>\n\n<p>Reassembling fragments at each router would be inefficient and is not part of standard IP routing behavior.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>Since routers do not reassemble IP fragments, <strong>Statement III is FALSE</strong>.</p></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Statement I:</strong> FALSE</p></p>\n<p><p><strong>Statement II:</strong> TRUE</p></p>\n<p><p><strong>Statement III:</strong> FALSE</p></p>\n\n<hr />\n<p><strong>Answer:</strong> <strong>Option B</strong></p>\n<p><strong>II only</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following fields of an IP header is NOT modified by a typical IP router?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Checksum "
+      },
+      {
+        "identifier": "B",
+        "content": "Source address"
+      },
+      {
+        "identifier": "C",
+        "content": "Time to Live (TTL)"
+      },
+      {
+        "identifier": "D",
+        "content": "Length"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Option C: (TTL) is decremented by each visited router. When it reaches to Zero, then Packet will be discarded.</p> \n\n<p>Option A: (Checksum) needs to be updated by each visited Router since TTL Value is modified. \n</p>\n<p>Option D: (Length) also modified whenever there is a need of performing the fragmentation process.</p> \n\n<p>Option B: (Source Address) can't be modified by an IP router. Only Network Address Translation (NAT) can modify it.</p>",
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Host A (on TCP/IPv4 network A) sends an IP datagram D to host B (also on TCP/IPv4 network B). Assume that no error occurred during the transmission of D. When D reaches B, which of the following IP header field(s) may be different from that of the original datagram D? \n<br><br>(i) TTL \n<br>(ii) Checksum \n<br>(iii) Fragment Offset",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) only "
+      },
+      {
+        "identifier": "B",
+        "content": "(i) and (ii) only"
+      },
+      {
+        "identifier": "C",
+        "content": "(ii) and (iii) only"
+      },
+      {
+        "identifier": "D",
+        "content": "(i), (ii) and (iii)"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In the IPv4 addressing format, the number of networks allowed under Class C addresses is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2<sup>14</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "2<sup>7</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "2<sup>21</sup>"
+      },
+      {
+        "identifier": "D",
+        "content": "2<sup>24</sup>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "For class C address, size of network id is 24 bits. But first 3 bits are fixed as 110 so we can use only (24 - 3) = 21 bits to create networks; hence total number of networks possible is 2<sup>21</sup>. ",
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "One of the header fields in an IP datagram is the Time to Live (TTL) field. Which of the following statements best explains the need for this field?  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It can be used to prioritize packets "
+      },
+      {
+        "identifier": "B",
+        "content": "It can be used to reduce delays"
+      },
+      {
+        "identifier": "C",
+        "content": "It can be used to optimize throughput"
+      },
+      {
+        "identifier": "D",
+        "content": "It can be used to prevent packet looping"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "For which one of the following reasons does Internet Protocol (IP) use the time-to-live (TTL) field in the IP datagram header?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Ensure packets reach destination within that time"
+      },
+      {
+        "identifier": "B",
+        "content": "Discard packets that reach later than that time"
+      },
+      {
+        "identifier": "C",
+        "content": "Prevent packets from looping indefinitely"
+      },
+      {
+        "identifier": "D",
+        "content": "Limit the time for which a packet gets queued in intermediate routers."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "An organization has a class B network and wishes to form subnets for 64 departments. The subnet mask would be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "255.255.0.0 "
+      },
+      {
+        "identifier": "B",
+        "content": "255.255.64.0 "
+      },
+      {
+        "identifier": "C",
+        "content": "255.255.128.0"
+      },
+      {
+        "identifier": "D",
+        "content": "255.255.252.0"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The address resolution protocol (ARP) is used for",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Finding the IP address from the DNS"
+      },
+      {
+        "identifier": "B",
+        "content": "Finding the IP address of the default gateway"
+      },
+      {
+        "identifier": "C",
+        "content": "Finding the IP address that corresponds to a MAC address"
+      },
+      {
+        "identifier": "D",
+        "content": "Finding the MAC address that corresponds to an IP address"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is NOT true with respect to a transparent bridge and a router?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both bridge and router selectively forward data packets"
+      },
+      {
+        "identifier": "B",
+        "content": "A bridge uses IP addresses while a router uses MAC addresses"
+      },
+      {
+        "identifier": "C",
+        "content": "A bridge builds up its routing table by inspecting incoming packets"
+      },
+      {
+        "identifier": "D",
+        "content": "A router can connect between a LAN and a WAN"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following assertions is FALSE about the Internet Protocol (IP)?  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It is possible for a computer to have multiple IP addresses"
+      },
+      {
+        "identifier": "B",
+        "content": "IP packets from the same source to the same destination can take different routes in the network "
+      },
+      {
+        "identifier": "C",
+        "content": "IP ensures that a packet is discarded if it is unable to reach its destination within a given number of hops "
+      },
+      {
+        "identifier": "D",
+        "content": "The packet source cannot set the route of an outgoing packets; the route is determined only by the routing tables in the routers on the way"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An ISP having an address block 202.16.0.0/15 assigns a block of 6000 IP addresses to a client, using the classless internet domain routing (CIDR) super-netting approach. Which of the following address blocks can be assigned by the ISP?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$202.16 .0 .0 / 19$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$202.17 .64 .0 / 19$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>202.16.32.0/19</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>202.17.24.0/19</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>An ISP has the address block 202.16.0.0/15.</p>\n<p>The client needs 6000 IP addresses.</p>\n<p>In CIDR, the number of addresses in a block must be a power of 2.</p>\n<p>The next power of 2 greater than 6000 is 8192.</p>\n<p>Since $$8192 = 2^{13}$$, the block has 13 host bits.</p>\n<p>So, the prefix length is $$32 - 13 = 19$$.</p>\n<p>Hence, the client must be assigned a block of size $$/19$$.</p>\n<p>Now we check which given blocks are valid $$/19$$ sub-blocks inside 202.16.0.0/15.</p>\n<pre><code>Given, Address block = 202.16.0.0/15\n\nClient requires 6000 IP address [8192] 213 = 2 32 - 19\n\n202.16.0.0\n\n0001000.00000000.00000000\n\n00010000.00011111.11111111\n\n202.16.0.0/19\n\nOption (a) is correct\n\n202.17.64.0/19\n\n00010001.01000000.00000000\n\n00010001.01011111.11111111\n\nOption (b) is correct\n\n202.16.32.0/10\n\n00010000.00100000.00000000\n\nOption (c) is correct\n\n202.17.24.0/19\n\n00010001.00011000.00000000\n\nOption (d) is false\n\n</code></pre>\n<p>For a $$/19$$ block, the third octet must increase in steps of 32, because $$256 - 224 = 32$$.</p>\n<p>So valid network addresses can start with third octet values like 0, 32, 64, 96, 128, 160, 192, and 224.</p>\n<p><b>Option (a):</b> 202.16.0.0/19</p>\n<p>This starts at third octet 0, which is a valid multiple of 32.</p>\n<p>So this block is valid.</p>\n<p><b>Option (b):</b> 202.17.64.0/19</p>\n<p>This starts at third octet 64, which is also a valid multiple of 32.</p>\n<p>So this block is valid.</p>\n<p><b>Option (c):</b> 202.16.32.0/19</p>\n<p>This starts at third octet 32, which is also a valid multiple of 32.</p>\n<p>So this block is valid.</p>\n<p><b>Option (d):</b> 202.17.24.0/19</p>\n<p>This starts at third octet 24, which is not a multiple of 32.</p>\n<p>So this block is not a valid $$/19$$ network address.</p>\n<p>Therefore, the possible blocks are <b>(a), (b), and (c)</b>.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose a message of size 15000 bytes is transmitted from a source to a destination using IPv4 protocol via two routers as shown in the figure. Each router has a defined maximum transmission unit (MTU) as shown in the figure, including IP header. The number of fragments that will be delivered to the destination is _________ . (Answer in integer)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7wkvqow/64a1d627-9118-4f47-879a-bb84fe4c7cb5/a9515510-fa1d-11ef-9d2b-0be52cb40b6b/file-jaoe38c1m7wkvqox.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7wkvqow/64a1d627-9118-4f47-879a-bb84fe4c7cb5/a9515510-fa1d-11ef-9d2b-0be52cb40b6b/file-jaoe38c1m7wkvqox.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Computer Networks - Network Layer Question 5 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7wldgnq/bdc6e21a-c518-4157-a9c3-4e18fb0b1170/9621c360-fa1f-11ef-9d2b-0be52cb40b6b/file-jaoe38c1m7wldgnr.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7wldgnq/bdc6e21a-c518-4157-a9c3-4e18fb0b1170/9621c360-fa1f-11ef-9d2b-0be52cb40b6b/file-jaoe38c1m7wldgnr.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Computer Networks - Network Layer Question 5 English Explanation\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following CIDR prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>10.12.2.0/23</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>10.12.2.0/24</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>10.12.0.0/22</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>10.12.2.0/22</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which CIDR prefix exactly represents the range of IP addresses from 10.12.2.0 to 10.12.3.255, we need to understand how CIDR notation works and calculate the appropriate range.</p>\n\n<p>CIDR (Classless Inter-Domain Routing) notation is used to specify IP addresses and their associated routing prefix. The format is: <i>IP address/prefix length</i>. The prefix length (or subnet mask) determines how many bits are fixed and how many are variable, which in turn dictates the size of the address range.</p>\n\n<p>Let's analyze each option individually:</p>\n\n<p><b>Option A: 10.12.2.0/23</b></p>\n\n<p>- The /23 prefix length means 23 bits are fixed and the remaining 9 bits can vary.</p>\n\n<p>- In binary: 10.12.2.0 = 00001010.00001100.00000010.00000000</p>\n\n<p>- With 23 fixed bits, the range covers: 00001010.00001100.0000001<font color=\"red\">0</font>xxxxxxx to 00001010.00001100.0000001<font color=\"red\">1</font>xxxxxxx</p>\n\n<p>- This gives the range: 10.12.2.0 to 10.12.3.255</p>\n\n<p>- Thus, 10.12.2.0/23 covers the entire range from 10.12.2.0 to 10.12.3.255.</p>\n\n<p><b>Option B: 10.12.2.0/24</b></p>\n\n<p>- The /24 prefix length means 24 bits are fixed and the remaining 8 bits can vary.</p>\n\n<p>- This gives the range: 10.12.2.0 to 10.12.2.255</p>\n\n<p>- This range does not cover 10.12.3.0 to 10.12.3.255, so it is not correct.</p>\n\n<p><b>Option C: 10.12.0.0/22</b></p>\n\n<p>- The /22 prefix length means 22 bits are fixed and the remaining 10 bits can vary.</p>\n\n<p>- This gives the range: 10.12.0.0 to 10.12.3.255</p>\n\n<p>- This is a larger range than required, as it also includes 10.12.0.0 to 10.12.1.255, so it is not correct.</p>\n\n<p><b>Option D: 10.12.2.0/22</b></p>\n\n<p>- The /22 prefix length means 22 bits are fixed, but this starts from 10.12.2.0</p>\n\n<p>- This gives the range: 10.12.2.0 to 10.12.5.255</p>\n\n<p>- This range also covers more addresses than required, making it incorrect.</p>\n\n<p>Therefore, the correct option is:</p>\n\n<p><b>Option A: 10.12.2.0/23</b></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a network path P—Q—R between nodes P and R via router Q. Node P sends a file of size $10^6$ bytes to R via this path by splitting the file into chunks of $10^3$ bytes each. Node P sends these chunks one after the other without any wait time between the successive chunk transmissions. Assume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU.</p><p>Each of the links P—Q and Q—R has a bandwidth of $10^6$ bits/sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P—Q and transmit on link Q—R.</p><p>Assume P starts transmitting the chunks at time $t = 0$.</p><p>Which one of the following options gives the time <i>(in seconds, rounded off to 3 decimal places)</i> at which R receives all the chunks of the file?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>8.000</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>8.008</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>15.992</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>16.000</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's analyze the given problem step by step to calculate the time at which the last chunk of the file is received by node R.</p>\n\n<p>We are given the following information:</p>\n\n<ul>\n\n<li>File size = $$10^6$$ bytes</li>\n\n<li>Chunk size = $$10^3$$ bytes</li>\n\n<li>Bandwidth of both links P—Q and Q—R = $$10^6$$ bits/sec</li>\n\n<li>Each byte is equal to 8 bits.</li>\n\n<li>Negligible header size, propagation latency, processing, and queueing delays.</li>\n\n</ul>\n\n<p>First, let's calculate the number of chunks:</p>\n\n<p>Total chunks = $$\\frac{10^6 \\text{ bytes}}{10^3 \\text{ bytes/chunk}} = 10^3 \\text{ chunks}$$</p>\n\n<p>Now, let's calculate the time required to send one chunk of size 1000 bytes from node P to router Q:</p>\n\n<p>Size of each chunk in bits = $$10^3 \\text{ bytes} \\times 8 \\text{ bits/byte} = 8 \\times 10^3 \\text{ bits}$$</p>\n\n<p>Time to send one chunk over the link P—Q = $$\\frac{8 \\times 10^3 \\text{ bits}}{10^6 \\text{ bits/sec}} = 0.008 \\text{ sec/chunk}$$</p>\n\n<p>Since router Q can start transmitting the packet to R immediately after receiving it with no additional delay, we know that each chunk transmitted from P takes 0.008 seconds to reach Q and be sent out by Q.</p>\n\n<p>We must account for the transmission time of the final chunk. The last of the 1000 chunks sent from P will finish reaching Q at:</p>\n\n<p>The time to send 1000 chunks in series from P = $$10^3 \\text{ chunks} \\times 0.008 \\text{ sec/chunk} = 8 \\text{ seconds}$$</p>\n\n<p>Finally, we need to add the time taken for router Q to transmit the last chunk to node R, which is the same 0.008 seconds:</p>\n\n<p>Total time for the last chunk to reach R = $$8 \\text{ sec} + 0.008 \\text{ sec} = 8.008 \\text{ sec}$$</p>\n\n<p>So, the time at which node R receives all the chunks is:</p>\n\n<p>Option B: 8.008 seconds</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation &ldquo;/N&rdquo; in a prefix indicates a subnet mask with the most significant N bits set to 1.</p><style>\ntable {\n  width: 100%;\n  border-collapse: collapse;\n  margin: 20px 0;\n}\nth {\n  background-color: blue;\n  color: white;\n  border: 1px solid lightgrey;\n  padding: 10px;\n}\ntd {\n  border: 1px solid lightgrey;\n  padding: 10px;\n  text-align: left;\n}\n</style><table><thead><tr><th>Prefix</th><th>Next hop router</th></tr></thead>\n<tbody><tr><td>10.1.1.0/24</td><td>R1</td></tr>\n<tr><td>10.1.1.128/25</td><td>R2</td></tr>\n<tr><td>10.1.1.64/26</td><td>R3</td></tr>\n<tr><td>10.1.1.192/26</td><td>R4</td></tr></tbody></table><p>This router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are 10.1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205 . The number of packets forwarded via the next hop router R2 is _______</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "40",
+    "explanation": "<p>To determine how many packets are forwarded via the next hop router R2, we need to understand the prefix matching for each destination IP address and how many packets go to each IP address. Let&#39;s analyze the forwarding table and the IP addresses:</p>\n\n<h3 id=\"prefix-analysis-\">Prefix Analysis:</h3>\n\n<ol>\n\n<li><p><strong>10.1.1.0/24</strong></p>\n\n<ul>\n\n<li>Range: 10.1.1.0 to 10.1.1.255</li>\n\n<li>Next hop: R1</li>\n\n</ul>\n\n</li>\n\n<li><p><strong>10.1.1.128/25</strong></p>\n\n<ul>\n\n<li>Range: 10.1.1.128 to 10.1.1.255</li>\n\n<li>Next hop: R2</li>\n\n</ul>\n\n</li>\n\n<li><p><strong>10.1.1.64/26</strong></p>\n\n<ul>\n\n<li>Range: 10.1.1.64 to 10.1.1.127</li>\n\n<li>Next hop: R3</li>\n\n</ul>\n\n</li>\n\n<li><p><strong>10.1.1.192/26</strong></p>\n\n<ul>\n\n<li>Range: 10.1.1.192 to 10.1.1.255</li>\n\n<li>Next hop: R4</li>\n\n</ul>\n\n</li>\n\n</ol>\n\n<h3 id=\"ip-address-analysis-\">IP Address Analysis:</h3>\n\n<ol>\n\n<li><p><strong>10.1.1.16</strong></p>\n\n<ul>\n\n<li>Matches: 10.1.1.0/24</li>\n\n<li>Next hop: R1</li>\n\n</ul>\n\n</li>\n\n<li><p><strong>10.1.1.72</strong></p>\n\n<ul>\n\n<li>Matches: 10.1.1.64/26</li>\n\n<li>Next hop: R3</li>\n\n</ul>\n\n</li>\n\n<li><p><strong>10.1.1.132</strong></p>\n\n<ul>\n\n<li>Matches: 10.1.1.128/25</li>\n\n<li>Next hop: R2</li>\n\n</ul>\n\n</li>\n\n<li><p><strong>10.1.1.191</strong></p>\n\n<ul>\n\n<li>Matches: 10.1.1.128/25</li>\n\n<li>Next hop: R2</li>\n\n</ul>\n\n</li>\n\n<li><p><strong>10.1.1.205</strong></p>\n\n<ul>\n\n<li>Matches: 10.1.1.192/26</li>\n\n<li>Next hop: R4</li>\n\n</ul>\n\n</li>\n\n</ol>\n<br/>\n<h3 id=\"packet-count-\">Packet Count:</h3><br/>\n<ul>\n\n<li>Each IP address receives 20 packets.</li>\n<br/>\n<li>To find the number of packets forwarded via R2, we consider the IPs that match the prefix for R2 (10.1.1.128/25):<ul>\n<br/>\n<li><strong>10.1.1.132</strong>: 20 packets</li><br/>\n\n<li><strong>10.1.1.191</strong>: 20 packets</li>\n\n</ul>\n\n</li>\n\n</ul>\n\n<p>Thus, the total number of packets forwarded via R2 is:\n\n<p>20 + 20 = 40</p>\n\n<p>Therefore, the number of packets forwarded via the next hop router R2 is $\\boxed{40} $.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider sending an IP datagram of size 1420 bytes (including 20 bytes of IP header) from a sender to a receiver over a path of two links with a router between them. The first link (sender to router) has an MTU (Maximum Transmission Unit) size of 542 bytes, while the second link (router to receiver) has an MTU size of 360 bytes.</p>\n<p>The number of fragments that would be delivered at the receiver is ______________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p>To determine the number of fragments that will be delivered to the receiver, we need to perform IP fragmentation based on the MTU sizes of the links. The IP datagram has a total size of 1420 bytes, including a 20-byte IP header, leaving us with a data payload of 1400 bytes.</p>\n\n<p>The first link has an MTU of 542 bytes. Since the IP header is 20 bytes, the maximum data size that can be sent in one fragment is:</p>\n\n<p>$$ 542 - 20 = 522 \\text{ bytes} $$</p>\n\n<p>We need to calculate how many fragments are needed for the first link:</p>\n\n<p>$$ \\lceil \\frac{1400}{522} \\rceil = \\lceil 2.68 \\rceil = 3 \\text{ fragments} $$</p>\n\n<p>However, the payload size of 522 bytes must be a multiple of 8 (the fragment offset field is measured in units of 8 bytes). Adjusting the payload size:</p>\n\n<p>$$ 522 \\div 8 = 65.25 \\Rightarrow 65 \\times 8 = 520 \\text{ bytes} $$</p>\n\n<p>So, each fragment data payload on the first link would be 520 bytes. Let's outline the fragmentation process for the first link:</p>\n\n<ol>\n<li>First fragment:</li>\n</ol>\n<ul>\n<li>20 bytes of IP header</li><br>\n<li>520 bytes of data</li>\n</ul>\n<p></p>\n\n<ol>\n<li>Second fragment:</li>\n</ol>\n<ul>\n<li>20 bytes of IP header</li><br>\n<li>520 bytes of data</li>\n</ul>\n<p></p>\n\n<ol>\n<li>Third fragment:</li>\n</ol>\n<ul>\n<li>20 bytes of IP header</li><br>\n<li>remaining 360 bytes of data.</li>\n</ul>\n<p>These three fragments will be examined by the router. Now, let’s consider the second link with an MTU of 360 bytes. After adding the IP header (20 bytes), the maximum data payload is:</p>\n\n<p>$$ 360 - 20 = 340 \\text{ bytes} $$</p>\n\n<p>To see how the first fragment (520 bytes) will be further fragmented:</p>\n\n<p>$$ \\lceil \\frac{520}{340} \\rceil = \\lceil 1.53 \\rceil = 2 \\text{ fragments} $$</p>\n\n<ol>\n<li>Fragment 1:</li>\n</ol>\n<ul>\n<li>20 bytes of IP header</li><br>\n<li>340 bytes of data</li>\n</ul>\n<ol>\n<li>Fragment 2:</li>\n</ol>\n<ul>\n<li>20 bytes of IP header</li><br>\n<li>remaining 180 bytes of data</li>\n</ul>\n<p>The second fragment (520 bytes) will be split in the same manner:</p>\n\n<ol>\n<li>Fragment 3:</li>\n</ol>\n<ul>\n<li>20 bytes of IP header</li><br>\n<li>340 bytes of data</li>\n</ul>\n<ol>\n<li>Fragment 4:</li>\n</ol>\n<ul>\n<li>20 bytes of IP header</li><br>\n<li>remaining 180 bytes of data</li>\n</ul>\n<p>Finally, the third fragment's 360 bytes of data will be sent as one fragment:</p>\n\n<ol>\n<li>Fragment 5:</li>\n</ol>\n<ul>\n<li>20 bytes of IP header</li><br>\n<li>340 bytes of data</li>\n</ul>\n<ol>\n<li>Fragment 6:</li>\n</ol>\n<ul>\n<li>20 bytes of IP header</li><br>\n<li>20 bytes of data</li>\n</ul>\n<p>Summarizing, the total number of fragments delivered at the receiver is the sum of all fragments processed through the router for the second link, which is 6 fragments.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider a computer network using the distance vector routing algorithm in its network layer. The partial topology of the network is as shown below.</p>\n\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2exra6f/50e00906-bc03-46ec-98ff-f9657067e1dd/d36b6570-8d6c-11ef-ac43-89f0e1ef45d6/file-jaoe38c1m2exra6g.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2exra6f/50e00906-bc03-46ec-98ff-f9657067e1dd/d36b6570-8d6c-11ef-ac43-89f0e1ef45d6/file-jaoe38c1m2exra6g.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Computer Networks - Network Layer Question 17 English\"></p>\n\n<p>The objective is to find the shortest-cost path from the router R to routers P and Q. Assume that R does not initially know the shortest routes to P and Q. Assume that R&nbsp;has three neighbouring routers denoted as X, Y, and Z. During one iteration, R measures its distance to its neighbours X, Y, and Z&nbsp;as 3, 2, and 5, respectively. Router R gets routing vectors from its neighbours that indicate that the distance to router P from routers X, Y, and Z are 7, 6, and 5, respectively. The routing vector also indicates that the distance to router Q from routers X, Y, and Z are 4, 6, and 8, respectively. Which of the following statement(s) is/are correct with respect to the new routing table of R, after updation during this iteration ?&nbsp;</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The next hop router for a packet from R to P is Y."
+      },
+      {
+        "identifier": "B",
+        "content": "The distance from R to Q will be stored as 7"
+      },
+      {
+        "identifier": "C",
+        "content": "The next hop router for a packet from R to Q is Z."
+      },
+      {
+        "identifier": "D",
+        "content": "The distance from R to P will be stored as 10."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>A computer network using the distance vector routing algorithm in its network layer. The partial topology is given below</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2exra6f/50e00906-bc03-46ec-98ff-f9657067e1dd/d36b6570-8d6c-11ef-ac43-89f0e1ef45d6/file-jaoe38c1m2exra6g.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2exra6f/50e00906-bc03-46ec-98ff-f9657067e1dd/d36b6570-8d6c-11ef-ac43-89f0e1ef45d6/file-jaoe38c1m2exra6g.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Computer Networks - Network Layer Question 17 English Explanation 1\"></p>\n<p>Routing vector from $R$ :</p>\n<p>$$ \\begin{array}{|c|c|c|} \\hline X &amp; Y &amp; Z \\\\ \\hline 3 &amp; 2 &amp; 5 \\\\ \\hline \\end{array} $$</p>\n<p>Routing vector from $P$ :</p>\n<p>$$ \\begin{array}{|c|c|c|} \\hline X &amp; Y &amp; Z \\\\ \\hline 7 &amp; 6 &amp; 5 \\\\ \\hline \\end{array} $$</p>\n<p>Routing vector from $Q$ :</p>\n<p>$$ \\begin{array}{|l|l|l|} \\hline X &amp; Y &amp; Z \\\\ \\hline 4 &amp; 6 &amp; 8 \\\\ \\hline \\end{array} $$</p>\n<p>Now, if we draw complete topology of the network.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2ey090h/cbffb6e5-c541-4af9-a289-7c0b00f54860/cccd4110-8d6d-11ef-ac43-89f0e1ef45d6/file-jaoe38c1m2ey090i.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2ey090h/cbffb6e5-c541-4af9-a289-7c0b00f54860/cccd4110-8d6d-11ef-ac43-89f0e1ef45d6/file-jaoe38c1m2ey090i.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Computer Networks - Network Layer Question 17 English Explanation 2\"></p>\n<p>As per Distance Vector Routing Algorithm,</p>\n<p>$$ \\begin{aligned} R \\text { to } P &amp; =\\min \\{R-X-P, R-Y-P, R-Z-P\\} \\\\ &amp; =\\min \\{10,8,11\\} \\\\ &amp; =8 \\text { through } Y . \\\\ R \\text { to } Q &amp; =\\min \\{R-X-Q, R-Y-Q, R-Z-Q\\} \\\\ &amp; =\\min 7,8,13\\} \\\\ &amp; =7 \\text { through } X . \\end{aligned} $$</p>\n<p>Hence, the correct option are (A), (B).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "An organization requires a range of IP addresses to assign one to each of its 1500 computers. The organization has approached an Internet Service Provider (ISP) for this task. The ISP uses CIDR and serves the requests from the available IP address space 202.61.0.0/17. The ISP wants to assign an address space to the organization which will minimize the number of routing entries in the ISP’s router using route aggregation. Which of the following address spaces are potential candidates from which the ISP can allot any one to the organization?\n<br><br>I. 202.61.84.0/21\n<br>II. 202.61.104.0/21\n<br>III. 202.61.64.0/21\n<br>IV. 202.61.144.0/21",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I and II only"
+      },
+      {
+        "identifier": "B",
+        "content": "II and III only"
+      },
+      {
+        "identifier": "C",
+        "content": "III and IV only"
+      },
+      {
+        "identifier": "D",
+        "content": "I and IV only"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve this problem, let's analyze the requirements and the given options step by step.</p>\n<h3><strong>Requirements:</strong></h3>\n\n<p><p><strong>Organization's Need:</strong> An IP address range sufficient for <strong>1500 computers</strong>.</p></p>\n<p><p><strong>ISP's Available Address Space:</strong> <strong>202.61.0.0/17</strong>, which includes IP addresses from <strong>202.61.0.0</strong> to <strong>202.61.127.255</strong>.</p></p>\n<p><p><strong>Objective:</strong> Assign an address space to the organization that <strong>minimizes routing entries</strong> in the ISP's router using <strong>route aggregation</strong>.</p></p>\n\n<h3><strong>Understanding CIDR Notation:</strong></h3>\n\n<p><p><strong>CIDR Notation /21:</strong></p></p>\n<p><p>Subnet Mask: <strong>255.255.248.0</strong>.</p></p>\n<p><p>Total IP Addresses: $ 2^{32 - 21} = 2^{11} = 2048 $ addresses.</p></p>\n<p><p><strong>Sufficient</strong> for 1500 computers.</p></p>\n\n<h3><strong>Analyzing the Options:</strong></h3>\n<p>Let's examine each option to see if it meets the criteria.</p>\n<h4><strong>Option I: 202.61.84.0/21</strong></h4>\n\n<p><p><strong>Range:</strong> 202.61.84.0 to 202.61.91.255.</p></p>\n<p><p><strong>Within ISP's Address Space:</strong> Yes.</p></p>\n<p><p><strong>Aggregation Potential:</strong> Falls within <strong>202.61.80.0/20</strong> (202.61.80.0 to 202.61.95.255).</p></p>\n<p><p><strong>Route Aggregation:</strong> Possible, but <strong>202.61.80.0/20</strong> is not aligned on a <strong>/17</strong> or <strong>/18</strong> boundary, potentially leading to less optimal aggregation.</p></p>\n\n<h4><strong>Option II: 202.61.104.0/21</strong></h4>\n\n<p><p><strong>Range:</strong> 202.61.104.0 to 202.61.111.255.</p></p>\n<p><p><strong>Within ISP's Address Space:</strong> Yes.</p></p>\n<p><p><strong>Aggregation Potential:</strong> Falls within <strong>202.61.96.0/19</strong> (202.61.96.0 to 202.61.127.255).</p></p>\n<p><p><strong>Route Aggregation:</strong> Good potential, as <strong>202.61.96.0/19</strong> aligns well for aggregation within the ISP's <strong>/17</strong> network.</p></p>\n\n<h4><strong>Option III: 202.61.64.0/21</strong></h4>\n\n<p><p><strong>Range:</strong> 202.61.64.0 to 202.61.71.255.</p></p>\n<p><p><strong>Within ISP's Address Space:</strong> Yes.</p></p>\n<p><p><strong>Aggregation Potential:</strong> Falls within <strong>202.61.64.0/19</strong> (202.61.64.0 to 202.61.95.255).</p></p>\n<p><p><strong>Route Aggregation:</strong> Good potential, as <strong>202.61.64.0/19</strong> aligns well for aggregation.</p></p>\n\n<h4><strong>Option IV: 202.61.144.0/21</strong></h4>\n\n<p><p><strong>Range:</strong> 202.61.144.0 to 202.61.151.255.</p></p>\n<p><p><strong>Within ISP's Address Space:</strong> <strong>No</strong> (since <strong>202.61.128.0/17</strong> is outside the ISP's available range).</p></p>\n<p><p><strong>Conclusion:</strong> Cannot be assigned by the ISP.</p></p>\n\n<h3><strong>Conclusion:</strong></h3>\n\n<p><p><strong>Valid Options:</strong> <strong>I</strong>, <strong>II</strong>, and <strong>III</strong>.</p></p>\n<p><p><strong>Best Options for Route Aggregation:</strong></p></p>\n<p><p><strong>Option II</strong> and <strong>Option III</strong> have better aggregation potential because they align with larger blocks that can be aggregated efficiently (<strong>/19</strong> networks).</p></p>\n<p><p><strong>Option I</strong> is less optimal for aggregation within the ISP's network.</p></p>\n\n<h3><strong>Final Answer:</strong></h3>\n<p><strong>Option B: II and III only</strong></p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider three machines M, N, and P with IP addresses 100.10.5.2, 100.10.5.5, and 100.10.5.6 respectively. The subnet mask is set to 255.255 .255 .252 for all the three machines. Which one of the following is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\mathrm{M}, \\mathrm{N}$, and P all belong to the same subnet"
+      },
+      {
+        "identifier": "B",
+        "content": "Only M and N belong to the same subnet"
+      },
+      {
+        "identifier": "C",
+        "content": "Only N and P belong to the same subnet"
+      },
+      {
+        "identifier": "D",
+        "content": "M, N, and P belong to three different subnets"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><strong>Step-by-step Reasoning:</strong></p>\n\n<p><p><strong>Identify the subnet mask and block size:</strong></p>\n<p>The given subnet mask is 255.255.255.252. In binary, this is:</p></p>\n\n<pre><code>   11111111.11111111.11111111.11111100\n</code></pre>\n<p>This mask corresponds to a /30 prefix length. A /30 network has:</p>\n\n<p><p>4 IP addresses per subnet block (2 usable host addresses, 1 network address, and 1 broadcast address).</p></p>\n<p><p>The increment in the last octet is in multiples of 4.</p></p>\n\n\n<p><p><strong>Determine subnet blocks for /30:</strong></p>\n<p>For a /30 subnet, the network addresses increment by 4 in the last octet. Some possible /30 network ranges are:</p></p>\n\n\n<p><p>100.10.5.0/30 → usable hosts: 100.10.5.1 and 100.10.5.2 (network: 100.10.5.0, broadcast: 100.10.5.3)</p></p>\n<p><p>100.10.5.4/30 → usable hosts: 100.10.5.5 and 100.10.5.6 (network: 100.10.5.4, broadcast: 100.10.5.7)</p></p>\n<p><p>and so forth.</p></p>\n\n\n<p><strong>Find each machine's subnet:</strong></p>\n\n\n<p><p><strong>M = 100.10.5.2</strong>:  </p>\n<p>Check which block 2 falls into:</p>\n\n<p>Since 0–3 is the first block, 2 is within 100.10.5.0/30.</p></p>\n\n<p><p><strong>N = 100.10.5.5</strong>:  </p>\n<p>Check which block 5 falls into:</p>\n\n<p>Since 4–7 is the second block, 5 is within 100.10.5.4/30.</p></p>\n\n<p><p><strong>P = 100.10.5.6</strong>:  </p>\n<p>Check which block 6 falls into:</p>\n\n<p>Since 6 is also in the 4–7 range, 6 is within 100.10.5.4/30.</p>\n<p>Therefore:</p></p>\n<p><p>M is in the 100.10.5.0/30 subnet.</p></p>\n<p><p>N and P are in the 100.10.5.4/30 subnet.</p></p>\n\n\n<p><p><strong>Conclusion:</strong></p>\n<p>M is on a different subnet than N and P, but N and P share the same subnet.</p></p>\n\n<p><strong>Final Answer:</strong> Only N and P belong to the same subnet.</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose that in an IP-over-Ethernet network, a machine X wishes to find the MAC address of another machine Y in its subnet. Which one of the following techniques can be used for this?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "X sends an ARP request packet to the local gateway's IP address which then finds the MAC address of Y and sends to X"
+      },
+      {
+        "identifier": "B",
+        "content": "X sends an ARP request packet to the local gateway's MAC address which then finds the MAC address of Y and sends to X"
+      },
+      {
+        "identifier": "C",
+        "content": "X sends an ARP request packet with broadcast MAC address in its local subnet"
+      },
+      {
+        "identifier": "D",
+        "content": "X sends an ARP request packet with broadcast IP address in its local subnet"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The correct approach involves using the ARP protocol, which is specifically designed to find the MAC address corresponding to a known IP address within the same subnet. When a machine $ X $ needs to discover the MAC address of another machine $ Y $ in its subnet:</p>\n\n<p><strong>ARP Request Behavior:</strong></p>\n\n\n<p><p>$ X $ knows $ Y $'s IP address.</p></p>\n<p><p>$ X $ does not know $ Y $'s MAC address.</p></p>\n\n\n<p><strong>Broadcast ARP Request:</strong></p>\n\n\n<p><p>To find $ Y $'s MAC address, $ X $ sends an ARP request onto the local network.</p></p>\n<p><p>This ARP request is encapsulated in an Ethernet frame with the <strong>destination MAC address set to the broadcast address (FF:FF:FF:FF:FF:FF)</strong>.</p></p>\n<p><p>Every machine in the subnet receives this broadcast frame.</p></p>\n\n\n<p><strong>Response:</strong></p>\n\n\n<p>The machine whose IP matches the one in the ARP request responds with an ARP reply, providing its MAC address directly to $ X $.</p>\n\n<p><strong>Conclusion:</strong></p>\n<p>The standard mechanism is for $ X $ to send a broadcast ARP request on the local subnet. Thus, the correct choice is:</p>\n<p><strong>Answer:</strong></p>\n<p><strong>Option C</strong> – $ X $ sends an ARP request packet with a broadcast MAC address in its local subnet.</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "An IP datagram of size 1000 bytes arrives at a router. The router has to forward this packet on a link whose MTU (maximum transmission unit) is 100 bytes. Assume that the size of the IP header is 20 bytes. <p>The number of fragments that the IP datagram will be divided into for transmission is ________.</p> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "13",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the network 200.20.11.144/27, the fourth octet (in decimal) of the last IP address of the network which can be assigned to a host is ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "158",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Host A sends a UDP datagram containing 8880 bytes of user data to host B over an Ethernet LAN. Ethernet frames may carry data up to 1500 bytes (i.e. MTU = 1500 bytes). Size of UDP header is 8 bytes and size of IP heard is 20 bytes.There is no option field in IP header How many total number of IP fragments will be transmitted and what will be the contents of offset field in the last fragment?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6 and 925"
+      },
+      {
+        "identifier": "B",
+        "content": "6 and 7400"
+      },
+      {
+        "identifier": "C",
+        "content": "7 and 1110"
+      },
+      {
+        "identifier": "D",
+        "content": "7 and 8880"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following routing table at an IP router:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/4gxPodxDxivhmA0nx/QOmWaujnZEbYUsWtpUQyiG8kYKeMm/031qMlPMUJlghfMZlsuxik/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2015 Set 2 Computer Networks - Network Layer Question 22 English 1\">\n<p>For each IP address in <b>Group I</b> identify the correct choice of the next hop from <b>Group II</b> using the entries from the routing table above.</p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/qeEKiezc7br2DwmSc/MRpe3Pbbtg2hajnjxxj3KKSmiwcud/8kSqt0cO6rY1qP8KCRZB0A/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2015 Set 2 Computer Networks - Network Layer Question 22 English 2\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "i - a, ii - c, iii - e, iv - d "
+      },
+      {
+        "identifier": "B",
+        "content": "i - a, ii - d, iii - b, iv - e"
+      },
+      {
+        "identifier": "C",
+        "content": "i - b, ii - c, iii - d, iv - e"
+      },
+      {
+        "identifier": "D",
+        "content": "i - b, ii - c, iii - e, iv - d"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "An IP machine Q has a path to another IP machine H via three IP routers R1, R2, and R3. \n<p>Q—R1—R2—R3—H </p>\n<p>H acts as an HTTP server, and Q connects to H via HTTP and downloads a file. Session layer encryption is used, with DES as the shared key encryption protocol. Consider the following four pieces of information:</p> \n<p>$$[I1]$$ The URL of the file downloaded by Q \n<br>$$[I2]$$ The TCP port numbers at Q and H \n<br>$$[I3]$$ The IP addresses of Q and H \n<br>$$[I4]$$ The link layer addresses of Q and H</p>\nWhich of $$[I1]$$, $$[I2]$$, $$[I3]$$, and $$[I4]$$ can an intruder learn through sniffing at R2 alone?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $$[I1]$$ and $$[I2]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Only $$[I1]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "Only $$[I2]$$ and $$[I3]$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Only $$[I3]$$ and $$[I4]$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "An IP router implementing Classless Inter-domain Routing (CIDR) receives a packet with address 131.23.151.76. The router’s routing table has the following entries:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/k3PKA9JEi9w2TDyuF/913EfIPuNeSpqBSlIK7hGTzWBpUoU/AjGadL7QogJR0NbgwdN0aH/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 3 Computer Networks - Network Layer Question 27 English\">\n<p>The identifier of the output interface on which this packet will be forwarded is ______.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Every host in an IPv4 network has a 1-second resolution real-time clock with battery backup. Each host needs to generate up to 1000 unique identifiers per second. Assume that each host has a globally unique IPv4 address. Design a 50-bit globally unique ID for this purpose. After what period (in seconds) will the identifiers generated by a host wrap around?",
+    "options": [],
+    "correct_options": [],
+    "answer": "256",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "An IP router with a Maximum Transmission Unit (MTU) of 1500 bytes has received an IP packet of size 4404 bytes with an IP header of length 20 bytes. The values of the relevant fields in the header of the third IP fragment generated by the router for this packet are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "MF bit: 0, Datagram Length: 1444; Offset: 370"
+      },
+      {
+        "identifier": "B",
+        "content": "MF bit: 1, Datagram Length: 1424; Offset: 185"
+      },
+      {
+        "identifier": "C",
+        "content": "MF bit: 1, Datagram Length: 1500; Offset: 370"
+      },
+      {
+        "identifier": "D",
+        "content": "MF bit: 0, Datagram Length: 1424; Offset: 2960"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In an IPv4 datagram, the M bit is 0, the value of HLEN is 10, the value of total length is 400 and the fragment offset value is 300. The position of the datagram, the sequence numbers of the first and the last bytes of the payload, respectively are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Last fragment, 2400 and 2789"
+      },
+      {
+        "identifier": "B",
+        "content": "First fragment, 2400 and 2759"
+      },
+      {
+        "identifier": "C",
+        "content": "Last fragment, 2400 and 2759"
+      },
+      {
+        "identifier": "D",
+        "content": "Middle fragment, 300 and 689"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "An Internet Service Provider (ISP) has the following chunk of CIDR-based IP addresses available with it: 245.248.128.0/20. <br>The ISP wants to give half of this chunk of addresses to Organization A, and a quarter to Organization B, while retaining the remaining with itself. Which of the following is a valid allocation of address to A and B? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "245.248.136.0/21 and 245.248.128.0/22"
+      },
+      {
+        "identifier": "B",
+        "content": "245.248.128.0/21 and 245.248.128.0/22"
+      },
+      {
+        "identifier": "C",
+        "content": "245.248.132.0/22 and 245.248.132.0/21"
+      },
+      {
+        "identifier": "D",
+        "content": "245.248.136.0/24 and 245.248.132.0/21"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose computers A and B have IP addresses 10.105.1.113 and 10.105.1.91 respectively and they both use the same net mask N. Which of the values of N given below should not be used if A and B should belong to the same network?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "255.255.255.0 "
+      },
+      {
+        "identifier": "B",
+        "content": "255.255.255.128"
+      },
+      {
+        "identifier": "C",
+        "content": "255.255.255.192"
+      },
+      {
+        "identifier": "D",
+        "content": "255.255.255.224"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "If a class B network on the Internet has a subnet mask of 255.255.248.0, what is the maximum number of hosts per subnet?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1022"
+      },
+      {
+        "identifier": "B",
+        "content": "1023"
+      },
+      {
+        "identifier": "C",
+        "content": "2046"
+      },
+      {
+        "identifier": "D",
+        "content": "2047"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The address of a class B host is to be split into subnets with a 6-bit subnet number. What is the maximum number of subnets and the maximum number of hosts in each subnet?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "62 subnets and 262142 hosts. "
+      },
+      {
+        "identifier": "B",
+        "content": "64 subnets and 262142 hosts. "
+      },
+      {
+        "identifier": "C",
+        "content": "62 subnets and 1022 hosts."
+      },
+      {
+        "identifier": "D",
+        "content": "64 subnets and 1024 hosts."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Two computers C1 and C2 are configured as follows. C1 has IP address 203.197.2.53 and netmask 255.255.128.0. C2 has IP address 203.197.75.201 and netmask 255.255.192.0. which one of the following statements is true?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "C1 and C2 both assume they are on the same network "
+      },
+      {
+        "identifier": "B",
+        "content": "C2 assumes C1 is on same network, but C1 assumes C2 is on a different network"
+      },
+      {
+        "identifier": "C",
+        "content": "C1 assumes C2 is on same network, but C2 assumes C1 is on a different network "
+      },
+      {
+        "identifier": "D",
+        "content": "C1 and C2 both assume they are on different networks"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The routing table of a router is shown below:\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/9iWVob4CNh0Rs4wP9/q4QxhET6V52lHGI8xfkouUYIDtpyH/lGFtJ5I2VY5rdl2xWsteiY/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2004 Computer Networks - Network Layer Question 35 English\">\n<p>On which interface will the router forward packets addressed to destinations\n128.75.43.16 and 192.12.17.10 respectively?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Eth1 and Eth2 "
+      },
+      {
+        "identifier": "B",
+        "content": "Eth0 and Eth2"
+      },
+      {
+        "identifier": "C",
+        "content": "Eth0 and Eth3"
+      },
+      {
+        "identifier": "D",
+        "content": "Eth1 and Eth3"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The subnet mask for a particular network is 255.255.31.0. Which of the following pairs of IP addresses could belong to this network?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "172.57.88.62 and 172.56.87.233"
+      },
+      {
+        "identifier": "B",
+        "content": "10.35.28.2 and 10.35.29.4"
+      },
+      {
+        "identifier": "C",
+        "content": "191.203.31.87 and 191.234.31.88"
+      },
+      {
+        "identifier": "D",
+        "content": "128.8.129.43 and 128.8.161.55"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  }
+]

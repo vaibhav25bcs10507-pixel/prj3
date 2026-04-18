@@ -1,0 +1,450 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The area (in sq units) of the region given by $R=\\left\\{(x, y) ; \\frac{y^2}{2} \\leq x \\leq y+4\\right\\}$ is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>16</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>18</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>24</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>30</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &amp;\\\\ &amp;\\begin{aligned} &amp; \\text {  } \\begin{aligned} &amp; R=\\left\\{(x, y): \\frac{y^2}{2} \\leq x \\leq y+4\\right\\} \\\\ &amp; x \\geq \\frac{y^2}{2} \\Rightarrow y^2 \\leq 2 x \\\\ &amp; \\text { and } x \\leq y+4 \\Rightarrow y-x+4 \\geq 0 \\end{aligned} \\end{aligned} \\end{aligned} $$</p>\n<p><img alt=\"AP EAPCET 2025 - 27th May Morning Shift Mathematics - Area Under The Curves Question 1 English Explanation\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mjbte0gw/ffac77b8-1909-4c11-be93-8a1241ea66f7/11608e00-dc45-11f0-b0e3-ed49471ceb84/file-jaoe38c1mjbte0gx.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mjbte0gw/ffac77b8-1909-4c11-be93-8a1241ea66f7/11608e00-dc45-11f0-b0e3-ed49471ceb84/file-jaoe38c1mjbte0gx.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p>$$ \\begin{aligned} &amp;\\text { Solving } y^2=2 x \\text { and } y-x+4=0\\\\ &amp;\\begin{aligned} &amp; \\quad y-\\frac{y^2}{2}+4=0 \\\\ &amp; \\Rightarrow \\quad y^2-2 y-8=0 \\\\ &amp; \\Rightarrow(y-4)(y+2)=0 \\\\ &amp; \\Rightarrow \\quad y=-2,4 \\\\ &amp; \\text { Area required }=\\int_{-2}^4\\left(x_L-x_p\\right) d y \\\\ &amp; =\\int_{-2}^4\\left(y+4-\\frac{y^2}{2}\\right) d y \\\\ &amp; =\\left[\\frac{y^2}{2}+4 y-\\frac{y^3}{6}\\right]_{-2}^4 \\\\ &amp; =\\left(8+16-\\frac{32}{3}\\right)-\\left(2-8+\\frac{4}{3}\\right) \\\\ &amp; =24-\\frac{32}{3}+6-\\frac{4}{3} \\\\ &amp; =30-\\frac{36}{3}=30-12=18 \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "ap-eapcet-2025-27th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The area of the region (in sq units) bounded by the curves $x^2+y^2=16$ and $y^2=6 x$ is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$4 \\pi+4 \\sqrt{3}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{2}{3}(4 \\pi+\\sqrt{3})$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{4}{3}(4 \\pi+\\sqrt{3})$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{4 \\pi+\\sqrt{3}}{3}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given:</b></p>\n<p>The circle is $x^2 + y^2 = 16$.</p>\n<p>The parabola is $y^2 = 6x$.</p>\n<p><b>Finding Intersection Points:</b></p>\n<p>To find where these curves meet, put $y^2$ from the parabola into the circle's equation:</p>\n<p>\n\n$$ \\begin{array}{ll} \\rightarrow &amp; x^2 + y^2 = 16 \\\\            &amp; x^2 + 6x = 16 \\\\            &amp; x^2 + 6x - 16 = 0 \\\\            &amp; (x + 8)(x - 2) = 0 \\\\            &amp; x = -8,\\ 2 \\end{array} $$\n\n</p>\n<p>We only use $x = 2$ (since $x = -8$ is outside the region for $y^2 = 6x$ and gives no real $y$ for $x^2 + y^2 = 16$).</p>\n<p>For $x = 2$, $y^2 = 6 \\cdot 2 = 12$. So $y = \\sqrt{12}$ and $y = -\\sqrt{12}$.</p>\n<p><b>Finding the Area:</b></p>\n<p>We want the area inside the circle and outside the parabola, between $x = 0$ and $x = 4$.</p>\n<p>To get this area, we split it into two parts:</p>\n<p>\n\n</p><ul>\n\n<li>From $x = 0$ to $x = 2$ (where the parabola is below the circle), the top curve is the parabola: $y = \\sqrt{6x}$</li>\n\n<li>From $x = 2$ to $x = 4$ (where only the circle remains), the top curve is the circle: $y = \\sqrt{16 - x^2}$</li>\n\n</ul>\n\n<p></p>\n<p>So, the area is:</p>\n<p>\n\nArea $= 2 \\left[\\int_0^2 y_\\text{parabola} \\,dx + \\int_2^4 y_\\text{circle} \\,dx \\right]$\n\n</p>\n<p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mj7iqoff/31a52aa7-9090-4085-a22e-908306203e65/4a938fb0-d9e8-11f0-b77e-e997f300e456/file-jaoe38c1mj7iqofg.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mj7iqoff/31a52aa7-9090-4085-a22e-908306203e65/4a938fb0-d9e8-11f0-b77e-e997f300e456/file-jaoe38c1mj7iqofg.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2025 - 26th May Evening Shift Mathematics - Area Under The Curves Question 2 English Explanation\">\n\n</p>\n<p>\n\nSo,\n\n$$ = 2 \\int_0^2 \\sqrt{6x}\\,dx + 2 \\int_2^4 \\sqrt{16 - x^2}\\,dx $$\n\n</p>\n<p>\n\n<b>Solving the Integrals:</b>\n\n</p>\n<p>\n\nFirst, $\\int_0^2 \\sqrt{6x}\\,dx$:\n\n</p>\n<p>\n\n$\\sqrt{6x} = \\sqrt{6} \\sqrt{x}$, so\n\n<br><br>$$ \\int_0^2 \\sqrt{6x} dx = \\sqrt{6} \\int_0^2 x^{1/2} dx = \\sqrt{6} \\cdot \\left[\\frac{2}{3}x^{3/2}\\right]_0^2 = \\sqrt{6} \\cdot \\frac{2}{3} \\left[(2)^{3/2} - 0\\right] $$\n\n</p>\n<p>\n\nSecond, $\\int_2^4 \\sqrt{16 - x^2}\\,dx$:\n\n</p>\n<p>\n\nThe formula for this is:\n\n<br><br>$$ \\int \\sqrt{a^2 - x^2} dx = \\frac{x}{2}\\sqrt{a^2 - x^2} + \\frac{a^2}{2} \\sin^{-1}\\left(\\frac{x}{a}\\right) $$\n\n<br><br>Here $a = 4$. Plug in $x = 4$ and $x = 2$ to get the answer.\n\n</p>\n<p>\n\nNow, combine both solutions:\n\n</p>\n<p>\n\n$$ \\begin{aligned} &amp;= 2 \\sqrt{6} \\cdot \\frac{2}{3} \\left(2^{3/2}\\right) + 2\\left[ \\frac{x}{2}\\sqrt{16 - x^2} + 8 \\sin^{-1}\\left(\\frac{x}{4}\\right)\\Big|_{x=2}^{x=4} \\right] \\\\ &amp;= \\frac{4}{3}\\sqrt{6}\\cdot 2\\sqrt{2} + 2 \\left[ \\left(0 + 8 \\frac{\\pi}{2}\\right) - \\left(2\\sqrt{3} + 8 \\frac{\\pi}{6}\\right) \\right] \\\\ &amp;= \\frac{16\\sqrt{3}}{3} + 2\\left(\\frac{8\\pi}{3} - 2\\sqrt{3}\\right) \\\\ &amp;= \\frac{16\\sqrt{3}}{3} + \\frac{16\\pi}{3} - 4\\sqrt{3} \\\\ &amp;= \\frac{4\\sqrt{3}}{3} + \\frac{16\\pi}{3} \\\\ &amp;= \\frac{4}{3}(4\\pi + \\sqrt{3}) \\end{aligned} $$\n\n</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "ap-eapcet-2025-26th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The area (in sq. units) of the region bounded by the curves $y=x^2$ and $y=8-x^2$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{32}{3}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{16}{3}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{64}{3}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{128}{3}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, curves are $y=x^2$ and</p>\n<p>$$ y=8-x^2 $$</p>\n<p>Equating these two equations, we get</p>\n<p>$$ x^2=8-x^2 \\Rightarrow 2 x^2=8 $$</p>\n<p>$$ \\begin{aligned} & \\Rightarrow \\quad x^2=4 \\Rightarrow x= \\pm 2 \\\\ & \\text { Thus, area }=\\int_{-2}^2\\left[\\left(8-x^2\\right)-x^2\\right] d x \\\\ & \\qquad \\begin{array}{l} \\quad=\\int_{-2}^2\\left(8-x^2-x^2\\right) d x=\\int_{-2}^2\\left(8-2 x^2\\right) d x \\\\ \\quad=\\left[8 x-\\frac{2}{3} x^3\\right]_{-2}^2 \\\\ \\quad=\\left\\{8(2)-\\frac{2}{3}(2)^3\\right\\}-\\left\\{8(-2)-\\frac{2}{3}(-2)^3\\right\\} \\\\ \\quad=\\left(16-\\frac{16}{3}\\right)-\\left(-16+\\frac{16}{3}\\right) \\\\ \\quad=16-\\frac{16}{3}+16-\\frac{16}{3} \\\\ \\quad=32-\\frac{32}{3}=\\frac{96-32}{3}=\\frac{64}{3} \\end{array} \\end{aligned} $$</p>\n<p>$\\therefore$ The area of the region bounded by the curves is $\\frac{64}{3}$ sq. units.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "ap-eapcet-2025-24th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Area of the region (in sq. units) bounded by the curve $y=x^2-5 x+4, x=0, x=2$ and the $X$-axis is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{8}{3}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>3</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>5</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{5}{2}$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ y=x^2-5 x+4=(x-1)(x-4) $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mhxro2tw/45b4558e-154e-4cac-bb6c-170e8b10c2b2/26904140-c0bf-11f0-8011-3b52d40ba17e/file-jaoe38c1mhxro2tx.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mhxro2tw/45b4558e-154e-4cac-bb6c-170e8b10c2b2/26904140-c0bf-11f0-8011-3b52d40ba17e/file-jaoe38c1mhxro2tx.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2025 - 23rd May Evening Shift Mathematics - Area Under The Curves Question 4 English Explanation\">$$ \\begin{aligned} A=A_1+A_2=\\int_0^1\\left(x^2\\right. &amp; -5 x+4) d x  +\\int_1^2-\\left(x^2-5 x+4\\right) \\\\ =\\left[\\frac{x^3}{3}-\\frac{5 x^2}{2}+4 x\\right]_0^1 &amp; +\\left[\\frac{-x^3}{3}+\\frac{5 x^2}{2}-4 x\\right]^2_1 \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp; =\\left(\\frac{1}{3}-\\frac{5}{2}+4\\right)+\\left(-\\frac{8}{3}+10-8+\\frac{1}{3}-\\frac{5}{2}+4\\right) \\\\ &amp; =\\left(\\frac{3}{2}+\\frac{1}{3}\\right)+\\left(6-\\frac{7}{3}-\\frac{5}{2}\\right) \\\\ &amp; =\\frac{9+2}{6}+\\left(\\frac{36-14-15}{6}\\right) \\\\ &amp; =\\frac{11}{6}+\\frac{7}{6}=\\frac{18}{6}=3 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "ap-eapcet-2025-23rd-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The area (in sq. units) of the region bounded by the lines $x=0, x=\\frac{\\pi}{2}$ and $f(x)=\\sin x, g(x)=\\cos x$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$2(\\sqrt{2}-1)$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$2(\\sqrt{2}+1)$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$2(\\sqrt{3}-1)$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$3 \\sqrt{2}+1$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &amp;\\text {  Required area (A) }\\\\ &amp;=\\int_0^{\\frac{\\pi}{4}}(\\cos x-\\sin x) d x+\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{2}}(\\sin x-\\cos x) d x \\end{aligned} $$</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mhx2hvgw/e38ce8bd-dcb6-4cd9-917a-ca5b0204b2f7/b5cb2900-c05c-11f0-89db-c30b5be35a40/file-jaoe38c1mhx2hvgx.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mhx2hvgw/e38ce8bd-dcb6-4cd9-917a-ca5b0204b2f7/b5cb2900-c05c-11f0-89db-c30b5be35a40/file-jaoe38c1mhx2hvgx.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2025 - 23rd May Morning Shift Mathematics - Area Under The Curves Question 3 English Explanation\">\n<p>$$ \\begin{aligned} = &amp; (\\sin x+\\cos x)_0^{\\frac{\\pi}{4}}+(-\\cos x-\\sin x)_{\\frac{\\pi}{4}}^{\\frac{\\pi}{2}} \\\\ = &amp; {\\left[\\left(\\sin \\frac{\\pi}{4}+\\cos \\frac{\\pi}{4}\\right)-(\\sin 0+\\cos 0)\\right] }-\\left[\\left(\\cos \\frac{\\pi}{2}+\\sin \\frac{\\pi}{2}\\right)-\\left(\\cos \\frac{\\pi}{4}+\\sin \\frac{\\pi}{4}\\right)\\right] \\\\ = &amp; (\\sqrt{2}-1)-(1-\\sqrt{2}) \\\\ = &amp; \\sqrt{2}-1-1+\\sqrt{2} \\\\ = &amp; 2 \\sqrt{2}-2=2(\\sqrt{2}-1) \\text { sq. unit } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "ap-eapcet-2025-23rd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The area of the region lying between the curves $y=\\sqrt{4-x^2}, y^2=3 x$ and the $Y$-axis is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\frac{\\pi}{3}-\\frac{1}{2 \\sqrt{3}}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\frac{\\pi}{6}+\\frac{1}{2 \\sqrt{3}}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{\\pi}{3}+\\frac{1}{2 \\sqrt{3}}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{\\pi}{6}-\\frac{1}{2 \\sqrt{3}}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text {  } y=\\sqrt{4-x^2} \\text { and } y^2=3 x $$</p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh51z7vp/27eb29dc-7ae8-489b-bf01-ddd2c7b5c382/bcd2dd50-b0f4-11f0-a7e7-873a6257f59f/file-jaoe38c1mh51z7vq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh51z7vp/27eb29dc-7ae8-489b-bf01-ddd2c7b5c382/bcd2dd50-b0f4-11f0-a7e7-873a6257f59f/file-jaoe38c1mh51z7vq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2025 - 22nd May Morning Shift Mathematics - Area Under The Curves Question 6 English Explanation\">\n<p>$$ \\begin{aligned} &amp;\\begin{array}{ll} \\Rightarrow &amp; 3 x=4-x^2 \\\\ \\Rightarrow &amp; x^2+3 x-4=0 \\\\ \\Rightarrow &amp; (x+4)(x-1)=0 \\\\ &amp; x=1,-4 \\Rightarrow y=\\sqrt{3} \\end{array}\\\\ &amp;\\therefore \\text { Required area, }\\\\ &amp;\\begin{aligned} &amp; =\\frac{1}{3} \\int_0^{\\sqrt{3}} y^2 d y+\\int_{\\sqrt{3}}^2 \\sqrt{4-y^2} d y \\\\ &amp; =\\frac{1}{3}\\left[\\frac{y^3}{3}\\right]_0^{\\sqrt{3}}+\\left[\\frac{y}{2} \\sqrt{4-y^2}+\\frac{4}{2} \\sin ^{-1} \\frac{y}{2}\\right]_{\\sqrt{3}}^2 \\\\ &amp; =\\frac{1}{9}(3 \\sqrt{3})+2 \\frac{\\pi}{2}-\\frac{\\sqrt{3}}{2}-2\\left(\\frac{\\pi}{3}\\right) \\\\ &amp; =\\frac{\\sqrt{3}}{3}-\\frac{\\sqrt{3}}{2}+\\frac{\\pi}{3}=\\frac{\\pi}{3}-\\frac{1}{2 \\sqrt{3}} \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "ap-eapcet-2025-22nd-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The area of the region (in sq. units) enclosed between the curves $y=|x|, y=[x]$ and the ordinates $x=-1$, $x=0, x=1$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>2</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$3 / 2$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>3</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$5 / 2$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Area of enclosed region, } $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mgvz0yqs/d9237f5a-dba2-46b2-a408-e6fd4521b4cb/2426ea40-abf6-11f0-adef-376150e3572c/file-jaoe38c1mgvz0yqt.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mgvz0yqs/d9237f5a-dba2-46b2-a408-e6fd4521b4cb/2426ea40-abf6-11f0-adef-376150e3572c/file-jaoe38c1mgvz0yqt.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2025 - 21st May Evening Shift Mathematics - Area Under The Curves Question 7 English Explanation\"></p>\n<p>$$ \\begin{aligned} &amp; =2\\left(\\frac{1}{2} \\times 1 \\times 1\\right)+(x) \\\\ &amp; =1+1=2 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "ap-eapcet-2025-21st-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $(a, \\beta)$ is the stationary point of the curve $y=2 x-x^2$, then the area bounded by the curves $y=2^x, y=2 x-x^2, x=0$ and $x=\\alpha$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{3 \\log 2+4}{2}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{3+\\log 4}{6}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{3-\\log 4}{3 \\log 2}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{1}{\\log 2}+\\frac{3}{4}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &amp;\\text {  As }(\\alpha, \\beta) \\text { is the stationary point of }\\\\ &amp;\\begin{aligned} &amp; &amp; y &amp; =2 x-x^2, \\frac{d y}{d x}=0 \\\\ &amp; &amp; &amp; 2-2 x \\\\ \\Rightarrow &amp; &amp; x &amp; =0 \\\\ \\Rightarrow &amp; &amp; \\alpha &amp; =1 \\end{aligned} \\end{aligned} $$</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mayyltae/982b1570-cb14-451b-a319-66571b568c49/8c811560-36d1-11f0-aa3f-29ea6a190fec/file-jaoe38c1mayyltbq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mayyltae/982b1570-cb14-451b-a319-66571b568c49/8c811560-36d1-11f0-aa3f-29ea6a190fec/file-jaoe38c1mayyltbq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2024 - 23th May Morning Shift Mathematics - Area Under The Curves Question 8 English Explanation\">\n<p>$$ \\begin{aligned} &amp; \\therefore \\text { Required area }=\\int_0^1\\left(y_2-y_1\\right) d x \\\\ &amp; \\left.=\\int_0^1\\left(2^x-2 x+x^2\\right)\\right) d x=\\left[\\frac{2^x}{\\log 2}-x^2+\\frac{x^3}{3}\\right]_0^1 \\\\ &amp; =\\left[\\frac{2^1}{\\log 2}-1+\\frac{1}{3}-\\frac{1}{\\log 2}\\right] \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp; =\\frac{2}{\\log 2}-1+\\frac{1}{3}-\\frac{1}{\\log 2} \\\\ &amp; =\\frac{1}{\\log 2}-\\frac{2}{3} \\\\ &amp; \\Rightarrow \\frac{3-\\log 4}{3 \\log 2} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "ap-eapcet-2024-23th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The area (in sq units) bounded by the curves $x=y^2$ and $x=3-2 y^2$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$8 / 3$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "4\n"
+      },
+      {
+        "identifier": "D",
+        "content": "6"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &amp; x=y^2, x=3-2 y^2 \\\\ &amp; y=\\sqrt{x} \\\\ &amp; y=\\sqrt{\\frac{3-x}{2}} \\end{aligned} $$</p>\n<p>Vertices $(0,0)$ and $(3,0)$</p>\n<p>intersect at ( 1,1 ) and (1, -1)</p>\n<p>Area of shaded region</p>\n<p>$=2 \\times($ Area of $P Q M)$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m9n4wkth/b2a35d73-22ab-4784-98c2-cd1ae7277296/8f6fb950-1c84-11f0-a221-b1a58d551ead/file-jaoe38c1m9n4wkti.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m9n4wkth/b2a35d73-22ab-4784-98c2-cd1ae7277296/8f6fb950-1c84-11f0-a221-b1a58d551ead/file-jaoe38c1m9n4wkti.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2024 - 22th May Morning Shift Mathematics - Area Under The Curves Question 9 English Explanation\"></p>\n<p>$$ \\begin{aligned} &amp;\\begin{aligned} &amp; =2\\left\\{\\left[\\int_0^1 \\sqrt{x} d x\\right]+\\left[\\int_1^3 \\sqrt{\\frac{3-x}{2}} d x\\right]\\right\\} \\\\ &amp; \\left.=2\\left[\\left(\\frac{2}{3} x^{3 / 2}\\right)_0^1+\\left(\\frac{-1}{\\sqrt{2}} \\cdot \\frac{2}{3}(3-x)^{3 / 2}\\right)\\right)_1^3\\right] \\\\ &amp; =2\\left[\\frac{2}{3}-\\left(0-\\frac{1}{\\sqrt{2}} \\cdot \\frac{2}{3} 2^{3 / 2}\\right)\\right] \\\\ &amp; =2\\left(\\frac{2}{3}+\\frac{4}{3}\\right)=2 \\times \\frac{6}{3}=4 \\end{aligned}\\\\ &amp;\\text { Area of required region }=4 \\mathrm{sq} \\text { units } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "ap-eapcet-2024-22th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Area of the region enclosed by the curves $3 x^2-y^2-2 x y+4 x+1=0$ and $3 x^2-y^2-2 x y+6 x+2 y=0$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{3}{4}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\frac{1}{4}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " 1\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{1}{2}$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p> Given curves are</p>\n<p>$$ \\begin{array}{r} 3 x^2-y^2-2 x y+4 x+1=0 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\\\ \\text { and } 3 x^2-y^2-2 x y+6 x+2 y=0 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)\\end{array} $$</p>\n<p>Eqs. (i) and (ii) can be written as</p>\n<p>$(3 x+y+1)(x-y+1)=0$, and $(3 x+y)(x-y+2)=0$, respectively.</p>\n<p>Thus, the curve (i) represents the pair of lines</p>\n<p>$$ \\begin{array}{r} L_1: 3 x+y+1=0 \\\\ L_2: x-y+1=0 \\end{array} $$</p>\n<p>and the curve (ii) represents the pair of lines</p>\n<p>$$ \\begin{array}{r} L_3: 3 x+y=0 \\\\ L_4: x-y+2=0 \\end{array} $$</p>\n<p>Here, $L_1 \\| L_3$ and $L_2 \\| L_4$</p>\n<p>So, the region closed by the given curves will be a parallelogram.</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m94q0efv/10c9915b-8905-434b-b882-3675a47b3bc4/351e8eb0-1264-11f0-8e3f-131426b3fab0/file-jaoe38c1m94q0efw.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m94q0efv/10c9915b-8905-434b-b882-3675a47b3bc4/351e8eb0-1264-11f0-8e3f-131426b3fab0/file-jaoe38c1m94q0efw.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2024 - 21th May Evening Shift Mathematics - Area Under The Curves Question 10 English Explanation\">\n<p>Now, required area $=$ Area of parallelogram $A B C D$ $=2 \\times($ area of $\\triangle A B C)$</p>\n<p>$$ \\begin{aligned} &amp; =2 \\times \\frac{1}{2}\\left|\\begin{array}{ccc} -\\frac{1}{2} &amp; \\frac{1}{2} &amp; 1 \\\\ -\\frac{1}{4} &amp; \\frac{3}{4} &amp; 1 \\\\ -\\frac{1}{2} &amp; \\frac{3}{2} &amp; 1 \\end{array}\\right| \\\\ &amp; =\\left[-\\frac{1}{2}\\left(\\frac{3}{4}-\\frac{3}{2}\\right)-\\frac{1}{2}\\left(-\\frac{1}{4}+\\frac{1}{2}\\right)+1\\left(-\\frac{3}{8}+\\frac{3}{8}\\right)\\right] \\\\ &amp; =-\\frac{1}{2}\\left(-\\frac{3}{4}\\right)-\\frac{1}{2}\\left(\\frac{1}{4}\\right)+0 \\\\ &amp; =\\frac{3}{8}-\\frac{1}{8}=\\frac{2}{8}=\\frac{1}{4} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "ap-eapcet-2024-21th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The area of the region under the curve $y=|\\sin -\\cos x|$, $0 \\leq x \\leq \\frac{n}{2}$ and above $X$-axis, is (in sq units)\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $2 \\sqrt{2}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $2 \\sqrt{2}-1$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$2(\\sqrt{2}-1)$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$2(\\sqrt{2}+1)$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the area under the curve $ y = |\\sin x - \\cos x| $ from $ x = 0 $ to $ x = \\frac{\\pi}{2} $, and above the $ X $-axis, we proceed as follows:</p>\n<p>The expression $|\\sin x - \\cos x|$ changes based on $x$. Solving $|\\sin x - \\cos x| = 0$:</p>\n<p>$ \\begin{align*} \\sin x - \\cos x &= 0 \\\\ \\sin x &= \\cos x \\\\ \\tan x &= 1 \\\\ x &= \\frac{\\pi}{4} \\end{align*} $</p>\n<p>This implies that $ \\sin x - \\cos x $ is negative from $ 0 $ to $ \\frac{\\pi}{4} $ and positive from $ \\frac{\\pi}{4} $ to $ \\frac{\\pi}{2} $.</p>\n<p>Thus, the function can be defined piecewise as:</p>\n<p>$ |\\sin x - \\cos x| =  \\begin{cases}  \\cos x - \\sin x & \\text{for } 0 \\leq x < \\frac{\\pi}{4} \\\\  \\sin x - \\cos x & \\text{for } \\frac{\\pi}{4} \\leq x \\leq \\frac{\\pi}{2} \\end{cases} $</p>\n<p><strong>Integrating from $ x = 0 $ to $ x = \\frac{\\pi}{4} $:</strong></p>\n<p>$ \\int_0^{\\pi/4} (\\cos x - \\sin x) \\, dx = \\int_0^{\\pi/4} \\cos x \\, dx - \\int_0^{\\pi/4} \\sin x \\, dx  $</p>\n<p>Calculating each integral:</p>\n<p>$ \\int_0^{\\pi/4} \\cos x \\, dx = [\\sin x]_0^{\\pi/4} = \\sin\\frac{\\pi}{4} - \\sin 0 = \\frac{\\sqrt{2}}{2} $</p>\n<p>$ \\int_0^{\\pi/4} \\sin x \\, dx = [-\\cos x]_0^{\\pi/4} = -\\cos\\frac{\\pi}{4} + \\cos 0 = -\\frac{\\sqrt{2}}{2} + 1 $</p>\n<p>Thus, the area from $ x = 0 $ to $ x = \\frac{\\pi}{4} $ is:</p>\n<p>$ \\int_0^{\\pi/4} (\\cos x - \\sin x) \\, dx = \\frac{\\sqrt{2}}{2} - \\left( -\\frac{\\sqrt{2}}{2} + 1 \\right) = \\sqrt{2} - 1 $</p>\n<p><strong>Integrating from $ x = \\frac{\\pi}{4} $ to $ x = \\frac{\\pi}{2} $:</strong></p>\n<p>$ \\int_{\\pi/4}^{\\pi/2} (\\sin x - \\cos x) \\, dx = \\int_{\\pi/4}^{\\pi/2} \\sin x \\, dx - \\int_{\\pi/4}^{\\pi/2} \\cos x \\, dx  $</p>\n<p>Calculating each integral:</p>\n<p>$ \\int_{\\pi/4}^{\\pi/2} \\sin x \\, dx = [-\\cos x]_{\\pi/4}^{\\pi/2} = -\\cos\\frac{\\pi}{2} + \\cos\\frac{\\pi}{4} = 0 + \\frac{\\sqrt{2}}{2} = \\frac{\\sqrt{2}}{2} $</p>\n<p>$ \\int_{\\pi/4}^{\\pi/2} \\cos x \\, dx = [\\sin x]_{\\pi/4}^{\\pi/2} = \\sin\\frac{\\pi}{2} - \\sin\\frac{\\pi}{4} = 1 - \\frac{\\sqrt{2}}{2} $</p>\n<p>Thus, the area from $ x = \\frac{\\pi}{4} $ to $ x = \\frac{\\pi}{2} $ is:</p>\n<p>$ \\int_{\\pi/4}^{\\pi/2} (\\sin x - \\cos x) \\, dx = \\frac{\\sqrt{2}}{2} - \\left( 1 - \\frac{\\sqrt{2}}{2} \\right) = \\sqrt{2} - 1 $</p>\n<p><strong>Total Area:</strong></p>\n<p>Adding the two parts:</p>\n<p>$ (\\sqrt{2} - 1) + (\\sqrt{2} - 1) = 2(\\sqrt{2} - 1) $</p>\n<p>Thus, the total area under the curve is $ 2(\\sqrt{2} - 1) $ square units.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "ap-eapcet-2024-21th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Area of the region (in sq units) enclosed by the curves $y^2=8(x+2), y^2=4(1-x)$ and the $Y$-axis is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{8}{3}(5-3 \\sqrt{2})$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{8}{3}(\\sqrt{2}-1)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\frac{8}{3}(3-\\sqrt{2})$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\frac{4}{3}(\\sqrt{2}+1)$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { We have, } $$</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m8c0txii/4a366591-0efb-4be8-b649-178cb23b0260/cac6d4a0-029b-11f0-95a8-a53fce3c3ac8/file-jaoe38c1m8c0txij.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m8c0txii/4a366591-0efb-4be8-b649-178cb23b0260/cac6d4a0-029b-11f0-95a8-a53fce3c3ac8/file-jaoe38c1m8c0txij.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2024 - 20th May Morning Shift Mathematics - Area Under The Curves Question 12 English Explanation\">\n<p>$$ y^2=8(x+2) \\text { and } y^2=4(1-x) $$</p>\n<p>The intersecting point of the above 2 parabola are $(-1, \\pm 2 \\sqrt{2})$</p>\n<p>$\\therefore$ Required area</p>\n<p>$$ \\begin{aligned} &amp; =\\left\\lvert\\, 2\\left[\\int_2^{2 \\sqrt{2}}\\left(1-\\frac{y^2}{4}\\right) d y+\\int_{2 \\sqrt{2}}^4\\left(\\frac{y^2}{8}-2\\right) d y\\right]\\right. \\\\ &amp; =\\left\\lvert\\, 2\\left[\\left[y-\\frac{y^3}{12}\\right]_2^{2 \\sqrt{2}}+\\left[\\frac{y^3}{24}-2 y\\right]_{2 \\sqrt{2}}^4\\right]\\right. \\\\ &amp; =\\left\\lvert\\, 2\\left[\\left(2 \\sqrt{2}-\\frac{16 \\sqrt{2}}{12}\\right)-\\left(2-\\frac{8}{12}\\right)+\\left(\\frac{64}{24}-8\\right)\\right.\\right. \\\\ &amp; \\left.-\\left(\\frac{16 \\sqrt{2}}{24}-4 \\sqrt{2}\\right)\\right] \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp; =\\left\\lvert\\, 2\\left[\\frac{2 \\sqrt{2}}{3}-\\frac{4}{3}-\\frac{16}{3}+\\frac{10 \\sqrt{2}}{3}\\right]\\right. \\\\ &amp; =\\left|2\\left[\\frac{12 \\sqrt{2}}{3}-\\frac{20}{3}\\right]\\right| \\\\ &amp; =\\left|\\frac{8}{3}[3 \\sqrt{2}-5]\\right|=\\frac{8}{3}(5-3 \\sqrt{2}) \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "ap-eapcet-2024-20th-may-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The area (in sq units) of the smaller region lying above the $X$-axis and bounded between the circle $x^2+y^2=2 a x$ and the parabola $y^2=a x$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$2 a^2\\left(\\frac{\\pi}{4}-\\frac{2}{3}\\right)$"
+      },
+      {
+        "identifier": "B",
+        "content": "$a^2\\left(\\frac{\\pi}{4}-\\frac{2}{3}\\right)$"
+      },
+      {
+        "identifier": "C",
+        "content": "$a^2\\left(\\frac{\\pi}{4}+\\frac{2}{3}\\right)$"
+      },
+      {
+        "identifier": "D",
+        "content": "$a^2\\left(\\frac{\\pi^2}{4}-\\frac{1}{3}\\right)$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given the problem of finding the area of a region bounded by a circle and a parabola, let's explore how to calculate it.</p>\n<p>The equation of the circle is:</p>\n<p>$ x^2 + y^2 = 2ax $</p>\n<p>This can be rewritten by completing the square for $x$:</p>\n<p>$ (x-a)^2 + y^2 = a^2 $</p>\n<p>The equation of the parabola is:</p>\n<p>$ y^2 = ax $</p>\n<p><strong>Finding Points of Intersection:</strong></p>\n<p>To find the intersection points between the circle and the parabola, we set:</p>\n<p>$ x^2 + ax = 2ax $</p>\n<p>$ x^2 - ax = 0 $</p>\n<p>$ x(x-a) = 0 $</p>\n<p>Thus, $x = 0$ or $x = a$.</p>\n\n<p></p><p>For $x = 0$, substituting in the parabola $y^2 = ax$, we get $y = 0$.</p><p></p>\n<p></p><p>For $x = a$, substituting in the parabola $y^2 = ax$, we get $y = \\pm a$.</p><p></p>\n\n<p>Thus, the points of intersection are $(0, 0)$, $(a, a)$, and $(a, -a)$.</p>\n\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7niu14p/d71cab1e-711e-4218-bf47-6ed17292e518/99a8e290-f522-11ef-b71d-3b04b01b26a7/file-jaoe38c1m7niu14q.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7niu14p/d71cab1e-711e-4218-bf47-6ed17292e518/99a8e290-f522-11ef-b71d-3b04b01b26a7/file-jaoe38c1m7niu14q.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2024 - 19th May Evening Shift Mathematics - Area Under The Curves Question 14 English Explanation\">\n\n<p><strong>Calculating the Area:</strong></p>\n<p>We need to integrate the area between the circle and the parabola from $x = 0$ to $x = a$:</p>\n<p>$ \\text{Required Area} = \\int_0^a \\left( \\sqrt{a^2 - (x-a)^2} - \\sqrt{a} \\sqrt{x} \\right) \\, dx  $</p>\n<p>This evaluates to:</p>\n<p>$ = \\left[ \\frac{x-a}{2} \\sqrt{a^2-(x-a)^2} + \\frac{a^2}{2} \\sin^{-1}\\left(\\frac{x-a}{a}\\right) - \\sqrt{a} \\times \\frac{2}{3} x^{\\frac{3}{2}} \\right]_0^a $</p>\n<p>$ = \\left[ -\\sqrt{a} \\cdot a^{\\frac{3}{2}} \\times \\frac{2}{3} - \\frac{a^2}{2} \\cdot \\sin^{-1}(-1) \\right] $</p>\n<p>$ = -\\frac{2}{3} a^2 + \\frac{a^2}{2} \\times \\frac{\\pi}{2} $</p>\n<p>Therefore, the area of the smaller region lying above the $X$-axis is:</p>\n<p>$ a^2 \\left(\\frac{\\pi}{4} - \\frac{2}{3}\\right) $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "ap-eapcet-2024-19th-may-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The area of the region ( in sq units) enclosed by the curve $y=x^3-19 x+30$ and the $X$-axis, is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$\\frac{167}{2}$"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{517}{2}$"
+      },
+      {
+        "identifier": "C",
+        "content": "36"
+      },
+      {
+        "identifier": "D",
+        "content": "72"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$\\begin{aligned} &amp; (y)=x^3-19 x+30 \\\\ &amp; =(x-2)(x-3)(x+5)\\end{aligned}$ </p><p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m85s2oam/3f751662-7443-4195-9aed-de209f51a620/d7e110f0-ff2c-11ef-a94d-e3e0595ebe6f/file-jaoe38c1m85s2oan.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m85s2oam/3f751662-7443-4195-9aed-de209f51a620/d7e110f0-ff2c-11ef-a94d-e3e0595ebe6f/file-jaoe38c1m85s2oan.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"AP EAPCET 2024 - 18th May Morning Shift Mathematics - Area Under The Curves Question 13 English Explanation\"> </p><p>$\\begin{aligned} &amp; \\therefore \\text { Required area } \\\\ &amp; \\begin{aligned} &amp;=\\int_{-5}^2\\left(x^3-19 x+30\\right) d x+\\left|\\int_2^3 x^3-19 x+30 d x\\right| \\\\ &amp;= {\\left[\\frac{x^4}{4}-\\frac{19 x^2}{2}+30 x\\right]_{-5}^2 } \\\\ &amp;+\\left|\\left[\\frac{x^4}{4}-\\frac{19 x^2}{2}+30 x\\right]_2^3\\right| \\\\ &amp;=(4-38+60)-\\left(\\frac{625}{4}-\\frac{475}{2}-150\\right) \\\\ &amp;+\\left|\\left(\\frac{81}{4}-\\frac{171}{2}+90\\right)-(4-38+60)\\right| \\\\ &amp;=26+\\frac{925}{4}+\\left|\\frac{99}{4}-26\\right|=\\frac{1029}{4}+\\frac{5}{4} \\\\ &amp;= \\frac{1034}{4}=\\frac{517}{2}\\end{aligned}\\end{aligned}$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "ap-eapcet-2024-18th-may-morning-shift",
+    "difficulty": null
+  }
+]

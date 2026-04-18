@@ -1,0 +1,1010 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In an 8085 microprocessor, the number of address lines required to access a 16 K bytes memory bank is</p>\n<p>$\\_\\_\\_\\_$ .</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "14",
+    "explanation": "<p>16 Kbytes memory bytes $=16 \\times 1024$</p>\n<p>$$ \\begin{aligned} & =(2)^4 \\times(2)^{10} \\\\ & =(2)^{14} \\end{aligned} $$</p>\n<p>The number of address lines required to access a 16 K bytes memory bank $=14 \\quad$ Ans.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The clock frequency of an 8085 microprocessor is 5 MHz. If the time required to execute an instruction is 1.4 $$\\mu $$s, \nthen the number of T-states needed for executing the instruction is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "6"
+      },
+      {
+        "identifier": "C",
+        "content": "7"
+      },
+      {
+        "identifier": "D",
+        "content": "8"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In an 8085 microprocessor, the contents of the accumulator and the carry flag are A7 (in hex) and 0, respectively. If the instruction RLC is executed, then the contents of the accumulator  (in hex) and the carry flag, respectively, will be\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4E and 0"
+      },
+      {
+        "identifier": "B",
+        "content": "4E and 1"
+      },
+      {
+        "identifier": "C",
+        "content": "4F and 0"
+      },
+      {
+        "identifier": "D",
+        "content": "4F and 1"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "Given that Carry flag = 0 and\n<br>Accumulator content = A7 H = 1010 0111\n<br><br>RLC means Rotate accumulator content 1 bit left without carry.\n<br><br>In RLC method every bit in accumulator move left side 1 bit and Most Significant Bit of Accumulator goes to the carry flag and in the Least Significant bit of Accumulator.\n<br><br>Here Most Significant Bit of Accumulator is = 1. So 1 will go to carry flag and in Least Significant bit of Accumulator.\n<br><br>After RLC method, in carry flag bit present = 1\n<br><br>And in Accumulator bits present = $$\\underbrace {0100}_4\\underbrace {1111}_F$$ = 4F H\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/HsPIpro5tojFFMMBP/7FRa6FrzYvZxULKODI35GybSv7Q2r/Inyz6hm6JeiMkTEIgJ3Jmu/image.png\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 3 Microprocessors - Instruction Set and Programming with 8085 Question 23 English Explanation\">\n<br><br>Hence Option (D) is correct.",
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In an 8085 microprocessor, which one of the following instructions changes the content of the accumulator?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "MOV B, M"
+      },
+      {
+        "identifier": "B",
+        "content": "PCHL"
+      },
+      {
+        "identifier": "C",
+        "content": "RNZ"
+      },
+      {
+        "identifier": "D",
+        "content": "SBI BEH"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In an 8085 microprocessor, the shift registers which store the result of an addition and the overflew bit are, respectively.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "B &amp; F"
+      },
+      {
+        "identifier": "B",
+        "content": "A &amp; F"
+      },
+      {
+        "identifier": "C",
+        "content": "H &amp; F"
+      },
+      {
+        "identifier": "D",
+        "content": "A &amp; C"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following 8085 microprocessor programs correctly calculates the product of two 8-bit numbers stored in registers B and C? \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<br> MVI A, 00H\n <br> JNZ LOOP\n<br>  CMP C\n <br> LOOP DCR B\n <br> HLT  "
+      },
+      {
+        "identifier": "B",
+        "content": "<br> MVI A, 00H\n<br>  CMP C\n<br> LOOP DCR B\n <br> JNZ LOOP\n <br> HLT  "
+      },
+      {
+        "identifier": "C",
+        "content": "<br> MVI A, 00H\n <br> LOOP ADD C\n<br> DCR B\n <br> JNZ LOOP\n <br> HLT  \n"
+      },
+      {
+        "identifier": "D",
+        "content": "<br> MVI A, 00H\n <br>  ADD C\n<br> JNZ LOOP\n <br> LOOP DCR B\n<br> HLT "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "For 8085 microprocessor, the following program is executed. \n\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b108a57aa3da465dfa59af0ff533b8822b8d0d037f1e02f6d452efeaca69f75a.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Microprocessors - Instruction Set and Programming with 8085 Question 27 English\">\nAt the end of program, accumulator contains",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "17 H"
+      },
+      {
+        "identifier": "B",
+        "content": "20 H"
+      },
+      {
+        "identifier": "C",
+        "content": "23 H"
+      },
+      {
+        "identifier": "D",
+        "content": "05 H"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "An instruction used to set the carry flag in a computer can be classified as",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "data transfer "
+      },
+      {
+        "identifier": "B",
+        "content": "arithmetic"
+      },
+      {
+        "identifier": "C",
+        "content": "logical"
+      },
+      {
+        "identifier": "D",
+        "content": "program control"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The following instructions have been executed by an 8085 $$\\mu $$P\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/a645737a1b0cc0f6b7204dfeecf7509495d9cf2307cae05348630f1bb8ebfbea.jpg\" loading=\"lazy\" alt=\"GATE ECE 1997 Microprocessors - Instruction Set and Programming with 8085 Question 29 English\">\n<br> From which address will be text instruction be fetched?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "6019"
+      },
+      {
+        "identifier": "B",
+        "content": "0379"
+      },
+      {
+        "identifier": "C",
+        "content": "6979"
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-ece-1997",
+    "difficulty": null
+  },
+  {
+    "content": "The total number of memory accesses involved (inclusive of the op-code fetch) when an 8085 processor executes, the instruction LDA 2003 is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The following sequence of instructions are executed by an 8085 microprocessor:\n<br> 1000: LXI SP&lt; 27FF\n<br> 1003: CALL 1006\n<br> 1006: POP H\n<p> The contents of the stack pointer (SP) and the HL register pair on completion or execution of these instructions are.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "SP= 27FF, HL = 1003\n"
+      },
+      {
+        "identifier": "B",
+        "content": "SP= 27FD, HL = 1003\n\n"
+      },
+      {
+        "identifier": "C",
+        "content": "SP= 27FF, HL = 1006\n\n\n"
+      },
+      {
+        "identifier": "D",
+        "content": "SP= 27FD, HL = 1006"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "An 'Assembler' for a microprocessor a used for",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "assembly of processors in a production lines."
+      },
+      {
+        "identifier": "B",
+        "content": "creation of new programs using different modules."
+      },
+      {
+        "identifier": "C",
+        "content": "translation of a program from assembly language to machine language."
+      },
+      {
+        "identifier": "D",
+        "content": "translation of a  higher level language into English text."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "In a microprocessor, the register which holds the address of the next instruction to be fetched is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Accumulator"
+      },
+      {
+        "identifier": "B",
+        "content": "Program Counter"
+      },
+      {
+        "identifier": "C",
+        "content": "Stack Pointer"
+      },
+      {
+        "identifier": "D",
+        "content": "Instruction Register"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "content": "The following program is run on 8085 microprocessor: \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/4e7f8c231f9648cacb2964993ab8e7a8fb081d3fa15878a1900e3f1af5f57a6b.jpg\" loading=\"lazy\" alt=\"GATE ECE 1992 Microprocessors - Instruction Set and Programming with 8085 Question 30 English\">\nAt the completion of execution of the program, the program Counter of the 8085 contains ________ and the Stack Pointer contains ________. \n\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br> PC= 200 AH\n<br> SP = OFF EH",
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-ece-1992",
+    "difficulty": null
+  },
+  {
+    "content": "In a microprocessor system, the stack is used for",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "storing the program return address whenever a sub-routine jump instruction is executed."
+      },
+      {
+        "identifier": "B",
+        "content": "transmitting and receiving input-output data."
+      },
+      {
+        "identifier": "C",
+        "content": "storing all important CPU register contents whenever an interrupt is to be serviced."
+      },
+      {
+        "identifier": "D",
+        "content": "storing program instructions for interrupt service routines."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "In register index addressing mode the effective address is given by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The index register Value."
+      },
+      {
+        "identifier": "B",
+        "content": "The sum of the index register Value and the operand."
+      },
+      {
+        "identifier": "C",
+        "content": "The operand."
+      },
+      {
+        "identifier": "D",
+        "content": "The difference of the index register Value and the operand."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The content of the registers are $R_1=25 \\mathrm{H}, R_2=30 \\mathrm{H}$ and $R_3 =40 \\mathrm{H}$. The following machine instructions are executed.</p>\n<p>$$ \\begin{aligned} & \\operatorname{PUSH}\\left\\{R_1\\right\\} \\\\ & \\operatorname{PUSH}\\left\\{R_2\\right\\} \\\\ & \\operatorname{PUSH}\\left\\{R_3\\right\\} \\\\ & \\operatorname{POP}\\left\\{R_1\\right\\} \\\\ & \\operatorname{POP}\\left\\{R_2\\right\\} \\\\ & \\operatorname{POP}\\left\\{R_3\\right\\} \\end{aligned} $$</p>\n<p>After execution, the content of registers $R_1, R_2, R_3$ are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$R_1=40 \\mathrm{H}, R_2=30 \\mathrm{H}, R_3=25 \\mathrm{H}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$R_1=40 \\mathrm{H}, R_2=25 \\mathrm{H}, R_3=30 \\mathrm{H}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$R_1=25 \\mathrm{H}, R_2=30 \\mathrm{H}, R_3=40 \\mathrm{H}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$R_1=30 \\mathrm{H}, R_2=40 \\mathrm{H}, R_3=25 \\mathrm{H}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>For the mentioned register, we have $R_1=25 \\mathrm{H}, R_2=30 \\mathrm{H}, R_3=40 \\mathrm{H}$, Now pushing $R_1, R_2$ and $R_3$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh0u5a1l/e9880924-d09b-4c7f-a5e1-23b53836a336/f9b81090-aea2-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0u5a1m.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh0u5a1l/e9880924-d09b-4c7f-a5e1-23b53836a336/f9b81090-aea2-11f0-b8e0-3b25f37f987e/file-jaoe38c1mh0u5a1m.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Microprocessors - Instruction Set and Programming with 8085 Question 2 English Explanation\">In First in Last out fashion or Last in First out Fashion, the values are popped out from the stack. So, the popped values</p>\n<p>are $40 \\mathrm{H}, 30 \\mathrm{H}$ and 25 H consecutively and it gets stored into registers $R_1, R_2$ and $R_3$ correspondingly. So finally values of registers $R_1, R_2$ and $R_3$ are respectively $40 \\mathrm{H}, 30 \\mathrm{H}, 25 \\mathrm{H}$. </p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "content": "The following five instructions were executed on an 8085 microprocessor.\n<br> MVI A, 33H\n<br> MVI B, 78H\n<br>  ADD B\n<br>  CMA\n<br>  ANI 32H\n<p>The Accumulator value immediately after the execution of the fifth instruction is </p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "00H"
+      },
+      {
+        "identifier": "B",
+        "content": "10H"
+      },
+      {
+        "identifier": "C",
+        "content": "11H"
+      },
+      {
+        "identifier": "D",
+        "content": "32H"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In an 8085 system, a PUSH operation requires more clock cycles than a POP operation. Which one of the following options\n is the correct reason for this?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "For POP, the data transceivers remain in the same direction as for instruction fetch (memory to\nprocessor), whereas for PUSH their direction has to be reversed.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Memory write operations are slower than memory read operations in an 8085 based system."
+      },
+      {
+        "identifier": "C",
+        "content": "The stack pointer needs to be pre-decremented before writing registers in a PUSH, whereas a\nPOP operation uses the address already in the stack pointer. "
+      },
+      {
+        "identifier": "D",
+        "content": "Order of registers has to be interchanged for a PUSH operation, whereas POP uses their natural order.\n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An 8085 microprocessor executes “STA 1234H” with starting address location 1FFEH (STA copies the contents of the\n Accumulator to the 16-bit address location). While the instruction is fetched and executed, the sequence of values  written\n at the address pins $${A_{15}}$$ − $${A_{8}}$$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1FH, 1FH, 20H, 12H"
+      },
+      {
+        "identifier": "B",
+        "content": "1FH, FEH, 1FH, FFH, 12H "
+      },
+      {
+        "identifier": "C",
+        "content": "1FH, 1FH, 12H, 12H  "
+      },
+      {
+        "identifier": "D",
+        "content": "1FH, 1FH, 12H, 20H, 12H "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "An 8085 assembly language program is given below. Assume that the carry flag is initially unset. The content of the accumulator after the execution of the program is\n<br> MVI A,07H\n<br> RLC\n<br> MOV B,A\n<br> RLC\n<br> RLC\n<br> ADD B\n<br> RRC ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8C H"
+      },
+      {
+        "identifier": "B",
+        "content": "64 H"
+      },
+      {
+        "identifier": "C",
+        "content": "23 H"
+      },
+      {
+        "identifier": "D",
+        "content": "15 H"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "For the 8085 assembly language program given below, the content of the accumulator after the executions of the program is \n<br> 3000  MVI A, 45H\n<br> 3002 MOV B, A\n<br> 3003 STC\n<br> 3004 CMC\n<br> 3005 RAR\n<br> 3006 XRA B",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "OOH"
+      },
+      {
+        "identifier": "B",
+        "content": "45H"
+      },
+      {
+        "identifier": "C",
+        "content": "67H"
+      },
+      {
+        "identifier": "D",
+        "content": "E7H"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "An 8085 executes the following instructions\n<br> 2710 LXI H, 30A0H\n<br>  DAD H\n<br>  PCHL\n<p> All addresses and constants are in Hex. Let PC be the contents of the program counter and HL be the contents of the HL register pair just after executing PCHL. </p>\nWhich of the following statements is correct.\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "PC 2715H  HL 30A0H "
+      },
+      {
+        "identifier": "B",
+        "content": "PC 30A0H  HL 2715H"
+      },
+      {
+        "identifier": "C",
+        "content": "PC 6140H  HL 6140H"
+      },
+      {
+        "identifier": "D",
+        "content": "PC 6140H  HL 2715H"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "An 8085 assembly language program is given below.\n<br> Line 1: MVI A, B5H \n<br> 2: MVI B, 0EH\n<br> 3: XRI 69H\n<br> 4: ADD B\n<br> 5: ANI 9BH \n<br> 6: CPI 9FH\n<br> 7: STA 3010H\n<br> 8: HLT \n<p> The contents of the accumulator just after execution of the ADD instruction in line 4 will be </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "C3H"
+      },
+      {
+        "identifier": "B",
+        "content": "EAH"
+      },
+      {
+        "identifier": "C",
+        "content": "DCH"
+      },
+      {
+        "identifier": "D",
+        "content": "69H"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "An 8085 assembly language program is given below.\n<br> Line 1: MVI A, B5H \n<br> 2: MVI B, 0EH\n<br> 3: XRI 69H\n<br> 4: ADD B\n<br> 5: ANI 9BH \n<br> 6: CPI 9FH\n<br> 7: STA 3010H\n<br> 8: HLT \n<p> After execution of line of the program, the status of the CY and Z  flags will be</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "CY= 0, Z=0"
+      },
+      {
+        "identifier": "B",
+        "content": "CY= 0, Z=1"
+      },
+      {
+        "identifier": "C",
+        "content": "CY= 1, Z=0"
+      },
+      {
+        "identifier": "D",
+        "content": "CY= 1, Z=1"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Following is the segment of a 8085 assembly Language program:\n\n<br> LXI SP, EFFF H\n<br> CALL 3000 H\n<br> 3000H: LXI H, 3CF4H\n<br> PUSH PSW\n <br> SPHL\n<br> POP PSW\n<br> RET \n<p> On completion of RET execution, the contents of SP is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3CF0H"
+      },
+      {
+        "identifier": "B",
+        "content": "3CF8H"
+      },
+      {
+        "identifier": "C",
+        "content": "EFFDH"
+      },
+      {
+        "identifier": "D",
+        "content": "EFFFH"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "<p> Consider an 8085 microprocessor system </p>\n<br> The following program starts at locaton 0100H.\n<br> LXI SP, 00FF\n<br> LXI H, 0107\n<br> MVI A, 20H\n<br> SUB M\n<p>  The contents of accumulator wnen the program counter reaches 0109H is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "20H"
+      },
+      {
+        "identifier": "B",
+        "content": "02H"
+      },
+      {
+        "identifier": "C",
+        "content": "00H"
+      },
+      {
+        "identifier": "D",
+        "content": "FFH."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "<p> Consider an 8085 microprocessor system </p>\n<br> If in addition following code exists from 0109H onwards ORI 40H, ADD M What will be the result in the accumulator after the last instruction is executed",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "40H"
+      },
+      {
+        "identifier": "B",
+        "content": "20H"
+      },
+      {
+        "identifier": "C",
+        "content": "60H"
+      },
+      {
+        "identifier": "D",
+        "content": "42H"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The number of memory cycles required to execute the following 8085 instructions\n<br> (I.) LDA 3000H\n<br> (II.)  LXI D, FOF 1H\n<br> Would be\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2 for (I) and 2 for (II )"
+      },
+      {
+        "identifier": "B",
+        "content": "4 for (I)and 3 for (II)"
+      },
+      {
+        "identifier": "C",
+        "content": "3 for ( I )and 3 for (II)"
+      },
+      {
+        "identifier": "D",
+        "content": "3 for (I) and 4 for (II)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the sequence of 8085 instructions given below.\n<br> LXI H, 9258 \n<br> MOV A, M\n<br>  CMA\n<br>  MOV M, A\n<br> Which one of the following is performed by this sequence?\n\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "contents of location 9258 are moved to the accumulator."
+      },
+      {
+        "identifier": "B",
+        "content": "contents of location 9258 are compared with the contents of the accumulator."
+      },
+      {
+        "identifier": "C",
+        "content": "contents of location 9258 are complemented and stored in location 9258."
+      },
+      {
+        "identifier": "D",
+        "content": "contents of location 5892 are complemented and stored in location 5892."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "It is desired to multiply the numbers 0AH by 0BH and store the result in the accumulator. The numbers are available in registers B and C respectively. A part of the 8085 program for this purpose is given below: \n<br> MVI A, 00H\n<br> LOOP:.........\n<br>...............\n<br> HLT END\n<p> The sequence of instruction to be complete the program would be\n</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "JNZ LOOP, ADD B, DCR C"
+      },
+      {
+        "identifier": "B",
+        "content": "ADD B, JNZ LOOP, DCR C"
+      },
+      {
+        "identifier": "C",
+        "content": "DCR C, JNZ LOOP, ADD B"
+      },
+      {
+        "identifier": "D",
+        "content": "ADD B, DCR C, JNZ LOOP"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "In an 8085 microprocessor, the instruction CMP B has been executed while the\ncontent of the accumulator is less than that of register B. As a result\n  \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Carry flag will be set but Zero flag will be reset"
+      },
+      {
+        "identifier": "B",
+        "content": "Carry flag will be reset but Zero flag will be set\n\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Both Carry flag and Zero flag will be reset "
+      },
+      {
+        "identifier": "D",
+        "content": "Both Carry flag and Zero flag will be set "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The contents of Register (B) and Accumulator (A) of 8085 microprocessor are 49H and 3AH respectively. The contents of A and the status of carry flag (CY) and sign flag (S) after executing SUB B instructions are \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A = F1, CY = 1, S =1"
+      },
+      {
+        "identifier": "B",
+        "content": "A = 0F, CY = 1, S =1"
+      },
+      {
+        "identifier": "C",
+        "content": "A = F0, CY = 0, S =0"
+      },
+      {
+        "identifier": "D",
+        "content": "A = 1F, CY = 1, S =1 "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following assembly language program. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/53e50f0b4f5075439b34067dbcac87f86b97b00b3828befe827c4fa42048a8ff.jpg\" loading=\"lazy\" alt=\"GATE ECE 2002 Microprocessors - Instruction Set and Programming with 8085 Question 20 English\">\nThe execution of the above program in an 8085 microprocessor will result in\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "an output of 87H at port 1"
+      },
+      {
+        "identifier": "B",
+        "content": "an output of 87H at port 2"
+      },
+      {
+        "identifier": "C",
+        "content": "infinite looping of the program execution with accumulator data remaining at 00H.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "infinite looping of the program execution with accumulator data alternating between 00H and 87H \n\n"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ece-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Write down the sequence of Instructions which are actually (till HLT instruction), if the program begins with the location 1FF5H.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/JfRTlEjhmmaKHXnLw/LqMkbT9wePpHaAAHKAspcSPxM3hdl/wUakMQ9NG6OYqd5ugMSsBy/image.png\" loading=\"lazy\" alt=\"GATE ECE 1994 Microprocessors - Instruction Set and Programming with 8085 Question 3 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "content": "The program given below is run on an 8085 based microcomputer system. Determine the contents of the registers: PC, SP, B, \n C, H, L after a half instruction is executed.\n<br> LOC\n<br> 2000 START: LXI SP, 1000H\n<br> LXI H, 2F37 H\n<br> XRA A\n<br> MOV A, H\n<br> INX H\n<br> PUSH H\n<br> CZ 20 FF H\nJMP 3000 H\n<br> HLT\n<br> 20FF ADD H \n<br> RZ\n<br> POP B\n<br> PUSH B\n<br> RNZ\n<br> HLT",
+    "options": [],
+    "correct_options": [],
+    "answer": "<br> PC = 3001 H\n<br> SP = OFFE H\n<br> BC = 200D H\n<br> HL = 2F38 H",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ece-1991",
+    "difficulty": null
+  }
+]

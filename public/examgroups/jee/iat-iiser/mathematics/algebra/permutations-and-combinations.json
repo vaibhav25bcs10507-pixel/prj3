@@ -1,0 +1,66 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>How many three digit numbers divisible by 5 are there in which no digits are repeated?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>136</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>128</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>144</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>162</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the number of three-digit numbers divisible by 5 with no repeated digits, let the three-digit number be represented as ABC, where A, B, and C are digits.</p>\n<p>We have the following conditions:</p>\n<ol>\n<li><p><strong>Three-digit number:</strong> A must be a digit from 1 to 9 (A ∈ {1, 2, …, 9}). B and C can be any digit from 0 to 9 (B, C ∈ {0, 1, …, 9}).</p></li>\n<li><p><strong>Divisible by 5:</strong> The last digit C must be either 0 or 5.</p></li>\n<li><p><strong>No repeated digits:</strong> A ≠ B, B ≠ C, and A ≠ C.</p></li>\n</ol>\n<p>We can analyze this problem by considering the two possible values for C.</p>\n<p><strong>Case 1: The last digit C is 0.</strong></p>\n<p>If C = 0, the number is of the form AB0.</p>\n<ul>\n<li><p><strong>For C:</strong> There is only 1 choice (0).</p></li>\n<li><p><strong>For A:</strong> A cannot be 0 (Property 1, three-digit number). Also, A cannot be C (Property 3, no repeated digits), so A cannot be 0. Thus, A can be any digit from {1, 2, 3, 4, 5, 6, 7, 8, 9}. This gives 9 choices for A.</p></li>\n<li><p><strong>For B:</strong> B cannot be C (Property 3), so B cannot be 0. B also cannot be A (Property 3). Since A is one of the 9 non-zero digits, B must be chosen from the remaining 8 non-zero digits. (e.g., if A=1, B can be any of 2,3,4,5,6,7,8,9). This gives 8 choices for B.</p></li>\n</ul>\n<p>Total numbers for Case 1 = (Choices for A) × (Choices for B) × (Choices for C)</p>\n<p>Total = 9 × 8 × 1 = 72.</p>\n<p><strong>Case 2: The last digit C is 5.</strong></p>\n<p>If C = 5, the number is of the form AB5.</p>\n<ul>\n<li><p><strong>For C:</strong> There is only 1 choice (5).</p></li>\n<li><p><strong>For A:</strong> A cannot be 0 (Property 1). A also cannot be C (Property 3), so A cannot be 5.</p>\n<p>Therefore, A can be any digit from {1, 2, 3, 4, 6, 7, 8, 9}. This gives 8 choices for A.</p></li>\n<li><p><strong>For B:</strong> B cannot be C (Property 3), so B cannot be 5. B also cannot be A (Property 3).</p>\n<p>The available digits for B are all digits from 0 to 9, excluding C (5) and excluding A.</p>\n<p>Since there are 10 total digits, excluding 5 leaves 9 digits. Excluding A (which is one of the 8 choices for A) leaves 8 digits. So, B has 8 choices.</p>\n<p>(e.g., if A=1, B can be any of 0, 2, 3, 4, 6, 7, 8, 9).</p></li>\n</ul>\n<p>Total numbers for Case 2 = (Choices for A) × (Choices for B) × (Choices for C)</p>\n<p>Total = 8 × 8 × 1 = 64.</p>\n<p><strong>Total Number of such three-digit numbers</strong></p>\n<p>Adding the numbers from both cases:</p>\n<p>Total = 72 (from Case 1) + 64 (from Case 2) = 136.</p>\n<p>Thus, there are 136 three-digit numbers divisible by 5 in which no digits are repeated.</p>\n<p>The final answer is $\\boxed{\\text{136}}$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "iat-iiser-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\text { What is the total number of distinct divisors of } 2^9 \\times 3^{19} \\text { ? } $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "30"
+      },
+      {
+        "identifier": "B",
+        "content": "100"
+      },
+      {
+        "identifier": "C",
+        "content": "200"
+      },
+      {
+        "identifier": "D",
+        "content": "435"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the total number of distinct divisors of $ N = 2^9 \\times 3^{19} $, follow these steps:</p>\n\n<p><p><strong>Identify the Form of the Divisors:</strong></p>\n<p>Any divisor of $ N $ can be expressed as $ 2^a \\times 3^b $, where $ a $ and $ b $ are non-negative integers.</p></p>\n<p><p><strong>Determine the Range for $ a $:</strong></p>\n<p>Since the highest power of 2 in $ N $ is 9, $ a $ can take any integer value from 0 to 9, which gives us 10 possible values.</p></p>\n<p><p><strong>Determine the Range for $ b $:</strong></p>\n<p>Similarly, since the highest power of 3 in $ N $ is 19, $ b $ can take any integer value from 0 to 19, providing 20 possible values.</p></p>\n<p><p><strong>Calculate the Total Number of Divisors:</strong></p>\n<p>The total number of distinct divisors is obtained by multiplying the number of choices for $ a $ and $ b $:</p>\n<p>$    10 \\times 20 = 200    $</p></p>\n\n<p>Thus, the total number of distinct divisors of $ 2^9 \\times 3^{19} $ is 200.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "iat-iiser-2023",
+    "difficulty": null
+  }
+]

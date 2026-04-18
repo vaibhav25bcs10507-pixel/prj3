@@ -1,0 +1,900 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The function $y(t)$ satisfies</p>\n<p>$$ t^2 y^{\\prime \\prime}(t)-2 t y^{\\prime}(t)+2 y(t)=0 $$</p>\n<p>where $y^{\\prime}(t)$ and $y^{\\prime \\prime}(t)$ denote the first and second derivatives of $y(t)$, respectively. Given $y^{\\prime}(0)=1$ and $y^{\\prime}(1)=-1$, the maximum value of $y(t)$ over $[0,1]$ is ___________ (rounded off to two decimal places).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.25",
+    "explanation": "<p>Cauchy's Euler differential equation,</p>\n<p>$$ \\begin{aligned} x &amp; =e^t \\\\ t &amp; =e^u \\\\ \\ln t &amp; =u \\\\ t^2 y^{\\prime \\prime}(t)-2 t y(t)+2 y(t) &amp; =0 \\\\ D(D-1) y-2 D y+2 y &amp; =0 \\\\ \\left(D^2-D-2 D+2\\right) y &amp; =0 \\\\ \\left(D^2-3 D+2\\right) y &amp; =0 \\end{aligned} $$</p>\n<p>A.E.</p>\n<p>$$ \\begin{aligned} m^2-3 m+2 &amp; =0 \\\\ m &amp; =1,2 \\\\ y &amp; =C_1 e^u+C_2 e^{2 u} \\\\ y &amp; =C_1 t+C_2 t^2 \\\\ \\frac{d y}{d t} &amp; =C_1+C_2 \\times 2 t \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp; \\text { at } t=0, \\quad \\frac{d y}{d t}=1 \\\\ &amp; \\Rightarrow \\quad C_1=1 \\\\ &amp; \\text { at } t=1, \\quad \\frac{d y}{d t}=-1 \\\\ &amp; -1=1+C_2 \\times 2 \\times 1 \\\\ &amp; -1=1+2 C_2 \\\\ &amp; -2=2 C_2 \\\\ &amp; C_2=-1 \\\\ &amp; y=C_1 t+C_2 t^2 \\\\ &amp; y=t-t^2 \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} \\frac{d y}{d t} &amp; =1-2 t=0 \\\\ t &amp; =\\frac{1}{2} \\\\ \\frac{d^2 y}{d t^2} &amp; =-2&lt;0 \\\\ t &amp; =\\frac{1}{2} \\Rightarrow \\text { maxima point } \\\\ y\\left(\\frac{1}{2}\\right) &amp; =\\frac{1}{2}-\\left(\\frac{1}{2}\\right)^2 \\\\ &amp; =\\frac{1}{2}-\\frac{1}{4}=\\frac{1}{4} \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbewn7bi/4e60624c-0e62-4e15-a190-54b0acf3c094/6b4195f0-3f96-11f0-a491-e768f614f5b9/file-jaoe38c1mbewn7bk.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbewn7bi/4e60624c-0e62-4e15-a190-54b0acf3c094/6b4195f0-3f96-11f0-a491-e768f614f5b9/file-jaoe38c1mbewn7bk.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Engineering Mathematics - Differential Equations Question 3 English Explanation\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The general form of the complementary function of a differential equation is given by $y(t) = (At + B)e^{-2t}$, where $A$ and $B$ are real constants determined by the initial condition. The corresponding differential equation is ____.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\dfrac{d^2 y}{d t^2} + 4 \\dfrac{d y}{d t} + 4 y = f(t)$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\dfrac{d^2 y}{d t^2} + 4 y = f(t)$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\dfrac{d^2 y}{d t^2} + 3 \\dfrac{d y}{d t} + 2 y = f(t)$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\dfrac{d^2 y}{d t^2} + 5 \\dfrac{d y}{d t} + 6 y = f(t)$</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the corresponding differential equation, we need to match the given complementary function with the homogeneous solution of one of the given differential equations. The complementary function given is:</p>\n\n<p>$$y(t) = (At + B)e^{-2t}$$</p>\n\n<p>This form suggests that the characteristic equation of the homogeneous part of the differential equation has a repeated root. Let's derive the necessary differential equation step by step.</p>\n\n<p>1. First, let's consider the structure of the complementary function. This complementary function is of the form:</p>\n\n<p>$$y(t) = (At + B)e^{-2t}$$</p>\n\n<p>This indicates that the characteristic equation has a repeated root at $$r = -2$$.</p>\n\n<p>2. The characteristic equation for a second-order linear homogeneous differential equation with repeated roots is typically of the form:</p>\n\n<p>$$r^2 + 2br + b^2 = 0$$</p>\n\n<p>Given that the repeated root is $$-2$$, we can deduce that:</p>\n\n<p>$$r + 2 = 0 \\implies r = -2$$</p>\n\n<p>Thus, the characteristic equation is:</p>\n\n<p>$$r^2 + 4r + 4 = 0$$</p>\n\n<p>3. This characteristic equation corresponds to the homogeneous differential equation:</p>\n\n<p>$$\\dfrac{d^2 y}{d t^2} + 4 \\dfrac{d y}{d t} + 4 y = 0$$</p>\n\n<p>4. The problem mentions a non-homogeneous differential equation (one with an additional $$f(t)$$ term), so we need to include the non-homogeneous part:</p>\n\n<p>$$\\dfrac{d^2 y}{d t^2} + 4 \\dfrac{d y}{d t} + 4 y = f(t)$$</p>\n\n<p>Thus, the correct option is:</p>\n\n<p><strong>Option A:</strong> $$\\dfrac{d^2 y}{d t^2} + 4 \\dfrac{d y}{d t} + 4 y = f(t)$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the following partial differential equation (PDE)</p>\n<p>$$a{{{\\partial ^2}f(x,y)} \\over {\\partial {x^2}}} + b{{{\\partial ^2}f(x,y)} \\over {\\partial {y^2}}} = f(x,y)$$,</p>\n<p>where a and b are distinct positive real numbers. Select the combination(s) of values of the real parameters $$\\xi $$ and $$\\eta $$ such that $$f(x,y) = {e^{\\xi x + \\eta y}}$$ is a solution of the given PDE.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\xi  = {1 \\over {\\sqrt {2a} }},\\eta {1 \\over {\\sqrt {2b} }}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\xi  = {1 \\over {\\sqrt a }},\\eta  = 0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\xi  = 0,\\,\\eta  = 0$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\xi  = {1 \\over {\\sqrt a }},\\eta {1 \\over {\\sqrt b }}$$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$f(x,y) = {e^{\\xi x + \\eta y}}$$</p>\n<p>Differentiating f(x, y) two times w.r.t. x.</p>\n<p>$${{{\\partial ^2}f(x,y)} \\over {\\partial {x^2}}} = {\\xi ^2}{e^{\\xi x + \\eta y}}$$</p>\n<p>Differentiating f(x, y) two times w.r.t. y,</p>\n<p>$${{{\\partial ^2}f(x,y)} \\over {\\partial {y^2}}} = {\\eta ^2}{e^{\\xi x + \\eta y}}$$</p>\n<p>$${{a{\\partial ^2}f(x,y)} \\over {\\partial {x^2}}} + {{b{\\partial ^2}f(x,y)} \\over {\\partial {y^2}}} = \\left( {a{\\xi ^2} + b{\\eta ^2}} \\right)f(x,y)$$</p>\n<p>$$a{\\xi ^2} + b{\\eta ^2} = 1$$</p>\n<p>For $$\\xi  = {1 \\over {\\sqrt a }},\\eta  = 0$$</p>\n<p>$$a \\times {\\left( {{1 \\over {\\sqrt a }}} \\right)^2} + b \\times 0 = {a \\over a} = 1$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "Consider the differential equation given below. $${{dy} \\over {dx}} + {x \\over {1 - {x^2}}}y = x\\sqrt y $$<br><br>The integrating factor of the differential equation is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${(1 - {x^2})^{ - {1 \\over 2}}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${(1 - {x^2})^{ - {3 \\over 4}}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${(1 - {x^2})^{ - {3 \\over 2}}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${(1 - {x^2})^{ - {1 \\over 4}}}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "$${{dy} \\over {dx}} + {x \\over {1 - {x^2}}}y = x\\sqrt y $$<br><br>Dividing by $$\\sqrt y $$ on both side<br><br>$${1 \\over {\\sqrt y }}.{{dy} \\over {dx}} + {x \\over {1 - {x^2}}}.{y \\over {\\sqrt y }} = x$$<br><br>$$ \\Rightarrow {1 \\over {\\sqrt y }}.{{dy} \\over {dx}} + {x \\over {1 - {x^2}}}.\\sqrt y  = x$$<br><br>Let $$\\sqrt y  = t$$<br><br>$${1 \\over {2\\sqrt y }}.{{dy} \\over {dx}} = {{dt} \\over {dx}}$$<br><br>$$2{{dt} \\over {dx}} + {x \\over {1 - {x^2}}}t = x$$<br><br>$${{dt} \\over {dx}} + {1 \\over 2}{x \\over {1 - {x^2}}}t = {x \\over 2}$$<br><br>Comparing with $${{dt} \\over {dx}} + P.(x).t = Q$$<br><br>$$I.F = {e^{\\int {P(x).dx} }}$$<br><br>$$ = {e^{\\int {{1 \\over 2}{x \\over {1 - {x^2}}}dx} }}$$<br><br>$$ = {e^{ - {1 \\over 4}\\log (1 - {x^2})}}$$<br><br>$$ = {e^{\\log {{(1 - {x^2})}^{ - 1/4}}}}$$<br><br>$$I.F = {(1 - {x^2})^{ - 1/4}}$$",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The general solution of $\\frac{d^2 y}{d x^2}-6 \\frac{d y}{d x}+9 y=0$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$y=C_1 e^{3 x}+C_2 e^{-3 x}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$y=C_1 e^{3 x}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$y=\\left(C_1+C_2 x\\right) e^{3 x}$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$y=\\left(C_1+C_2 x\\right) e^{-3 x}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : Differential equation is</p>\n<p>$$ \\begin{aligned} & \\frac{d^2 y}{d x^2}-6 \\frac{d y}{d x}+9 y=0 \\\\ & \\left(D^2-6 D+9\\right) y=0 \\end{aligned} $$</p>\n<p>This is in form of a homogeneous linear differential equation</p>\n<p>$$ [f(D)] y=0 $$</p>\n<p>The auxiliary equation is given by,</p>\n<p>$$ \\begin{aligned} & f(m)=0 \\\\ & m^2-6 m+9=0 \\\\ & m^2-3 m-3 m+9=0 \\\\ & m(m-3)-3(m-3)=0 \\\\ & (m-3)(m-3)=0 \\\\ & m=3,3 \\end{aligned} $$</p>\n<p>The roots are real and equal so, the complementary function is given by,</p>\n<p>$$ \\begin{aligned} & \\text { C.F. }=\\left(C_1+x C_2\\right) e^{m x} \\\\ & \\text { C.F. }=\\left(C_1+C_2 x\\right) e^{3 x} \\end{aligned} $$</p>\n<p>Particular integral (P.I.) is ' 0 ' since it is a homogeneous equation.</p>\n<p>The complete solution is given by,</p>\n<p>$$ \\begin{aligned} & y=\\text { C.F. }+ \\text { P.I. } \\\\ & y=\\left(C_1+C_2 x\\right) e^{3 x}+0 \\\\ & y=\\left(C_1+C_2 x\\right) e^{3 x} \\end{aligned} $$</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements about the linear dependence of the real valued functions $${y_1} = 1,\\,\\,{y_2} = x$$ and $${y_3} = {x^2}$$. Over the field of real numbers. \n<p>$${\\rm I}.\\,\\,\\,\\,\\,$$ $${y_1},{y_2}$$ and $${y_3}$$ are linearly independent  on $$ - 1 \\le x \\le 0$$\n<br>$${\\rm II}.\\,\\,\\,\\,\\,$$ $${y_1},{y_2}$$ and $${y_3}$$ are linearly dependent on $$0 \\le x \\le 1$$\n<br>$${\\rm III}.\\,\\,\\,\\,\\,$$ $${y_1},{y_2}$$ and $${y_3}$$ are linearly independent on $$0 \\le x \\le 1$$\n<br>$${\\rm IV}.\\,\\,\\,\\,\\,$$ $${y_1},{y_2}$$ and $${y_3}$$ are linearly dependent on $$ - 1 \\le x \\le 0$$</p>\n<p>Which one among the following is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both $${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$ are true"
+      },
+      {
+        "identifier": "B",
+        "content": "Both $${\\rm I}$$ and $${\\rm I}$$$${\\rm I}$$$${\\rm I}$$ are true "
+      },
+      {
+        "identifier": "C",
+        "content": "Both $${\\rm I}$$$${\\rm I}$$ and $${\\rm IV}$$ are true "
+      },
+      {
+        "identifier": "D",
+        "content": "Both $${\\rm I}$$$${\\rm I}$$$${\\rm I}$$ and $${\\rm IV}$$ are true"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The general solution of the differential equation $$\\,\\,{{{d^2}y} \\over {d{x^2}}} + 2{{dy} \\over {dx}} - 5y = 0\\,\\,\\,$$ in terms of arbitrary constants $${K_1}$$ and $${K_2}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${K_1}{e^{\\left( { - 1 + \\sqrt 6 } \\right)x}} + {K_2}{e^{\\left( { - 1 - \\sqrt 6 } \\right)x}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${K_1}{e^{\\left( { - 1 + \\sqrt 8 } \\right)x}} + {K_2}{e^{\\left( { - 1 - \\sqrt 8 } \\right)x}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${K_1}{e^{\\left( { - 2 + \\sqrt 6 } \\right)x}} + {K_2}{e^{\\left( { - 2 - \\sqrt 6 } \\right)x}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${K_1}{e^{\\left( { - 2 + \\sqrt 8 } \\right)x}} + {K_2}{e^{\\left( { - 2 - \\sqrt 8 } \\right)x}}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the differential equation $$\\,\\,{{dx} \\over {dt}} = 10 - 0.2\\,x$$ with initial condition $$x(0)=1.$$  The response $$x(t)$$ for $$t &gt; 0$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2 - {e^{ - 0.2t}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2 - {e^{  0.2t}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$50 - 49\\,{e^{ - 0.2t}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$50 - 49\\,{e^{  0.2t}}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The general solution of the differential equation $$\\,\\,{{dy} \\over {dx}} = {{1 + \\cos 2y} \\over {1 - \\cos 2x}}\\,\\,$$  is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\,\\,\\tan \\,y - \\cot \\,x = C\\,\\,$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\tan \\,x - \\cot \\,y = C\\,$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\,\\,\\tan \\,y + \\cot \\,x = C\\,\\,$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\tan \\,x + \\cot \\,y = C\\,$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "If the characteristic equation of the differential equation $$\\,{{{d^2}y} \\over {d{x^2}}} + 2\\alpha {{dy} \\over {dx}} + y = 0\\,\\,$$ has two equal roots, then the values of $$\\alpha $$ are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ \\pm \\,\\,1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0,0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$ \\pm \\,\\,j$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$ \\pm \\,\\,1/2$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "If $$a$$ and $$b$$  are constants, the most general solution of the differential equation $$\\,{{{d^2}x} \\over {d{t^2}}} + 2{{dx} \\over {dt}} + x = 0$$  is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a{e^{ - t}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$a{e^{ - t}} + bt{e^{ - t}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$a{e^t} + bt{e^{ - t}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$a{e^{ - 2t}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "With initial condition $$x\\left( 1 \\right)\\,\\,\\, = \\,\\,\\,\\,0.5,\\,\\,\\,$$ the solution of the differential equation, $$\\,\\,\\,t{{dx} \\over {dt}} + x = t\\,\\,\\,$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$x = t - {1 \\over 2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x = {t^2} - {1 \\over 2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$xt = {{{t^2}} \\over 2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$x = {t \\over 2}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The solution  of differential equation $${{dy} \\over {dx}} = ky,y\\left( 0 \\right) = C$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$x = C{e^{ky}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x = k{e^{Cy}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$y = {e^{kx}}C$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$y = C{e^{ - kx}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The order of differential equation $$\\,\\,{{{d^2}y} \\over {d{t^2}}} + {\\left( {{{dy} \\over {dx}}} \\right)^3} + {y^4} = {e^{ - t}}\\,\\,$$  is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$4$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The following differential equation has $$3{{{d^2}y} \\over {d{t^2}}} + 4{\\left( {{{dy} \\over {dt}}} \\right)^3} + {y^2} + 2 = x$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "degree $$=2,$$ order $$=1$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "degree $$=1,$$ order $$=2$$  "
+      },
+      {
+        "identifier": "C",
+        "content": "degree $$=4,$$ order $$=3$$  "
+      },
+      {
+        "identifier": "D",
+        "content": "degree $$=2,$$ order $$=3$$  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "A solution of the differential equation $${{{d^2}y} \\over {d{x^2}}} - 5{{dy} \\over {dx}} + 6y = 0\\,$$ is given by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y = {e^{2x}} + {e^{ - 3x}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$y = {e^{2x}} + {e^{3x}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$y = {e^{ - 2x}} + {e^{3x}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$y = {e^{ - 2x}} + {e^{ - 3x}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "$$y = {e^{ - 2x}}$$ is a solution of the differential equation $$\\,{y^{11}} + {y^1} - 2y = 0$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following options contains two solutions of the differential equation $\\frac{d y}{d x}=(y-1) x$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\ln |y-1|=0.5 x^2+c$ and $y=-1$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\ln |y-1|=2 x^2+c$ and $y=-1$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\ln |y-1|=0.5 x^2+c$ and $y=1$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\ln |y-1|=2 x^2+c$ and $y=1$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $\\quad \\frac{d y}{d x}=(y-1) x$</p>\n<p>When, $y \\neq 1$</p>\n<p>By variable separate method,</p>\n<p>$$ \\frac{d y}{y-1}=x d x $$</p>\n<p>Integrating both side,</p>\n<p>$$ \\begin{aligned} & \\int \\frac{d y}{y-1}=\\int x d x \\\\ & \\ln |y-1|=\\frac{x^2}{2}+C \\\\ & \\ln |y-1|=0.5 x^2+C \\end{aligned} $$</p>\n<p>When $y=1, \\quad \\frac{d y}{d x}=0$</p>\n<p>On integrating, $y=C$</p>\n<p>This solution is valid for $y=1$ and as we have first solution in options (A) or (C), and $y=1$ is in option (C).</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "A curve passes through the point\n($$x$$ = 1, $$y$$ = 0)\nand satisfies the differential equation\n<br><br>$${{dy} \\over {dx}} = {{{x^2} + {y^2}} \\over {2y}} + {y \\over x}$$. The equation that describes the curve is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\ln \\left( {1 + {{{y^2}} \\over {{x^2}}}} \\right) = x - 1$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 2}\\ln \\left( {1 + {{{y^2}} \\over {{x^2}}}} \\right) = x - 1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over 2}\\ln \\left( {1 + {y \\over x}} \\right) = x - 1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\ln \\left( {1 + {y \\over x}} \\right) = x - 1$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "The position of a particle y(t) is described by the differential equation :\n<br><br>$${{{d^2}y} \\over {d{t^2}}} =  - {{dy} \\over {dt}} - {{5y} \\over 4}$$.\n<br><br>The initial conditions are y(0) = 1 and $${\\left. {{{dy} \\over {dt}}} \\right|_{t = 0}}$$ = 0.\n<br><br>The position (accurate to two\ndecimal places) of the particle at t = $$\\pi $$ is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "-0.23 to -0.19",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is the general solution of the first order differential equation $${{dy} \\over {dx}} = {\\left( {x + y - 1} \\right)^2}$$ ,  where $$x,$$ $$y$$ are real ? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y = 1 + x + {\\tan ^{ - 1}}\\left( {x + c} \\right),$$  where $$c$$ is a constant"
+      },
+      {
+        "identifier": "B",
+        "content": "$$y = 1 + x + \\tan \\left( {x + c} \\right),$$ where $$c$$ is a constant"
+      },
+      {
+        "identifier": "C",
+        "content": "$$y = 1 - x + {\\tan ^{ - 1}}\\left( {x + c} \\right),$$ where $$c$$ is a constant "
+      },
+      {
+        "identifier": "D",
+        "content": "$$y = 1 - x + \\tan \\left( {x + c} \\right),$$  where $$c$$ is a constant"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The particular solution of the initial value problem given below is $$\\,\\,{{{d^2}y} \\over {d{x^2}}} + 12{{dy} \\over {dx}} + 36y = 0\\,\\,$$ with $$\\,y\\left( 0 \\right) = 3\\,\\,$$ and $$\\,\\,{\\left. {{{dy} \\over {dx}}} \\right|_{x = 0}} =  - 36\\,\\,$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {3 - 18x} \\right){e^{ - 6x}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {3 + 25x} \\right){e^{ - 6x}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {3 + 20x} \\right){e^{ - 6x}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {3 - 12x} \\right){e^{ - 6x}}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The Solution of the differential equation $$\\,{{{d^2}y} \\over {d{t^2}}} + 2{{dy} \\over {dt}} + y = 0\\,\\,$$ with $$\\,y\\left( 0 \\right) = {y^1}\\left( 0 \\right) = 1\\,\\,$$  is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {2 - t} \\right){e^t}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {1 + 2t} \\right){e^{ - t}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {2 + t} \\right){e^{ - t}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {1 - 2t} \\right){e^t}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the differential equation $${{{d^2}x\\left( t \\right)} \\over {d{t^2}}} + 3{{dx\\left( t \\right)} \\over {dt}} + 2x\\left( t \\right) = 0$$  \n<br>Given $$x(0) = 20$$ &amp; $$\\,x\\left( 1 \\right) = {{10} \\over e},$$ where $$e=2.718,$$ \n<p>The value of $$x(2)$$ is </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.85",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which ONE of the following is a linear non - homogeneous differential equation , where $$x$$ and $$y$$ are the independent and dependent variables respectively?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{dy} \\over {dx}} + xy = {e^{ - x}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{dy} \\over {dx}} + xy = 0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{dy} \\over {dx}} + xy = {e^{ - y}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{dy} \\over {dx}} + {e^{ - y}} = 0$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "With initial values $$\\,\\,\\,y\\left( 0 \\right) = y'\\left( 0 \\right) = 1,\\,\\,\\,$$ the solution of the differential  equation $$\\,\\,{{{d^2}y} \\over {d{x^2}}} - 4{{dy} \\over {dx}} + 4y = 0\\,\\,$$ at $$x=1$$ is ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.54",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "A function $$n(x)$$ satisfies the differential equation $${{{d^2}n\\left( x \\right)} \\over {d{x^2}}} - {{n\\left( x \\right)} \\over {{L^2}}} = 0$$  where $$L$$ is a constant. The boundary conditions are $$n(0)=k$$ and $$n\\left(  \\propto  \\right) = 0.$$ The  solution to this equation is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n\\left( x \\right) = k\\,\\exp \\left( {{{ - x} \\over L}} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$n\\left( x \\right) = k\\,\\exp \\left( {{{ - x} \\over {\\sqrt L }}} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$n\\left( x \\right) = {k^2}\\,\\exp \\left( {{{ - x} \\over L}} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$n\\left( x \\right) = {k^2}\\,\\exp \\left( {{{ - x} \\over {\\sqrt L }}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Match each differential equation  in Group $$I$$ to its family of solution curves from Group $$II.$$ \n<p><b>Group $$I$$</b> \n<br>$$P:$$$$\\,\\,\\,$$ $${{dy} \\over {dx}} = {y \\over x}$$ \n<br>$$Q:$$$$\\,\\,\\,$$ $${{dy} \\over {dx}} = {{ - y} \\over x}$$ \n<br>$$R:$$$$\\,\\,\\,$$ $${{dy} \\over {dx}} = {x \\over y}$$\n<br>$$S:$$$$\\,\\,\\,$$ $${{dy} \\over {dx}} = {{ - x} \\over y}$$</p>\n<p><b>Group $$II$$</b> \n<br>$$(1)$$$$\\,\\,\\,$$ Circle \n<br>$$(2)$$$$\\,\\,\\,$$ straight lines\n<br>$$(3)$$$$\\,\\,\\,$$ Hyperbola</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P - 2,\\,Q - 3,\\,R - 3,S - 1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P - 1,\\,Q - 3,\\,R - 2,S - 1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$P - 2,\\,Q - 1,\\,R - 3,S - 3$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$P - 3,\\,Q - 2,\\,R - 1,S - 2$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is a solution to the differential equation $${d \\over {dt}}x\\left( t \\right) + 3x\\left( t \\right) = 0,\\,\\,x\\left( 0 \\right) = 2?$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$x\\left( t \\right) = 3{e^{ - t}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x\\left( t \\right) = 2\\,{e^{ - 3t}}\\,$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$x\\left( t \\right) = {{ - 3} \\over 2}{t^2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$x\\left( t \\right) = 3{t^2}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The solution of the differential equation $${k^2}{{{d^2}y} \\over {d\\,{x^2}}} = y - {y_2}\\,\\,$$  under the boundary conditions (i) $$y = {y_1}$$ at $$x=0$$ and (ii) $$y = {y_2}$$ at $$x =  \\propto $$ where $$k$$, $${y_1}$$ and $${y_2}$$ are constant is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y = \\left( {{y_1} - {y_2}} \\right){e^{{{ - x} \\over {{k^2}}}}} + {y_2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$y = \\left( {{y_2} - {y_1}} \\right){e^{{{ - x} \\over k}}} + {y_1}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$y = \\left( {{y_1} - {y_2}} \\right)\\,\\sin \\,h\\left( {{x \\over k}} \\right) + {y_1}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$y = \\left( {{y_1} - {y_2}} \\right){e^{{{ - x} \\over k}}} + {y_2}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "For the differential equation $${{{d^2}y} \\over {d{x^2}}} + {k^2}y = 0,$$ the boundary conditions are \n<br>(i)  $$y=0$$   for $$x=0$$ and \n<br>(ii) $$y=0$$ for $$x=a$$ \n<br>The form of non-zero solution of $$y$$ (where $$m$$ varies over all integrals ) are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y = \\sum\\limits_m {{A_m}\\sin \\left( {{{m\\pi x} \\over a}} \\right)} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$y = \\sum\\limits_m {{A_m}\\cos \\left( {{{m\\pi x} \\over a}} \\right)} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$y = \\sum\\limits_m {{A_m}\\,\\,{X^{{{m\\pi x} \\over a}}}} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$y = \\sum\\limits_m {{A_m}\\,\\,{e^{{{m\\pi x} \\over a}}}} $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Solve the differential equation $${{{d^2}y} \\over {d{x^2}}} + y = x\\,\\,$$  with the following conditions $$(i)$$ at $$x=0, y=1$$ $$(ii)$$ at $$x=0, $$ $${y^1} = 1$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$y = x + \\cos x$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Match each of the items $$A, B, C$$ with an appropriate item from $$1, 2, 3, 4$$ and $$5$$\n<p><b>List-$${\\rm I}$$</b>\n<br>$$(P)$$ $${a_1}{{{d^2}y} \\over {d{x^2}}} + {a_2}y{{dy} \\over {dx}} + {a_3}y = {a_4}$$\n<br>$$(Q)$$ $${a_1}{{{d^2}y} \\over {d{x^3}}} + {a_2}y = {a_3}$$\n<br>$$(Q)$$  $${a_1}{{{d^2}y} \\over {d{x^2}}} + {a_2}x{{dy} \\over {dx}} + {a_3}{x^2}y = 0$$</p>\n<p><b>List-$${\\rm II}$$</b>\n<br>$$(1)$$ Non-linear differential equation \n<br>$$(2)$$ Linear differential equation with constants coefficients\n<br>$$(3)$$ Linear homogeneous differential equation\n<br>$$(4)$$ Non-linear homogeneous differential equation\n<br>$$(5)$$ Non-linear first order differential equation </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P - 1,Q - 2,R - 3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P - 3,Q - 4,R - 2$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$P - 2,Q - 5,R - 3$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$P - 3,Q - 1,R - 2$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  }
+]

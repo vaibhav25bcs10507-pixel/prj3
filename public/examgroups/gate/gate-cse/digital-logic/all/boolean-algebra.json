@@ -1,0 +1,1532 @@
+[
+  {
+    "direction": null,
+    "content": "<p>Which one of the following options is not a property of Boolean Algebra?</p>\n<p>Note: + is OR operation, • is AND operation, and ' is NOT operation</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$a+b=b+a$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$a \\cdot a^{\\prime}=1$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$a+a^{\\prime}=1$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$a \\times b=b \\cdot a$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><strong>Option A:</strong>  </p>\n<p>$$a+b=b+a$$  </p>\n<p>This is the <strong>commutative law of OR</strong>. ✅ Property of Boolean algebra.</p>\n<p><strong>Option B:</strong>  </p>\n<p>$$a \\cdot a^{\\prime}=1$$  </p>\n<p>In Boolean algebra, a variable AND its complement is always <strong>0</strong>, not 1:  </p>\n<p>$$a \\cdot a^{\\prime}=0$$  </p>\n<p>So this statement is <strong>false</strong>. ❌ Not a property.</p>\n<p><strong>Option C:</strong>  </p>\n<p>$$a+a^{\\prime}=1$$  </p>\n<p>This is the <strong>complement law of OR</strong>. ✅ Property of Boolean algebra.</p>\n<p><strong>Option D:</strong>  </p>\n<p>$$a \\times b=b \\cdot a$$  </p>\n<p>If $\\times$ is intended to mean AND (same as $\\cdot$), then it is just the <strong>commutative law of AND</strong>:  </p>\n<p>$$a \\cdot b=b \\cdot a$$  </p>\n<p>✅ Property of Boolean algebra (notation aside).</p>\n<p><strong>Answer: Option B</strong> is not a property of Boolean Algebra.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following Boolean expression of a function $F$ :</p>\n<p>$$ F(P, Q)=(\\bar{P}+Q) \\oplus(\\bar{P} Q) $$</p>\n<p>Which of the following expressions is/are equivalent to $F$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\overline{P \\oplus Q}$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$P \\oplus Q$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\bar{P} \\oplus Q$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\bar{P} \\oplus \\bar{Q}$</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} & X \\oplus Y=(\\bar{X}+\\bar{Y})(X+Y) \\\\\\\\ & \\text{Here, } X=(\\bar{P}+Q) \\text{ and } Y=\\bar{P} Q \\\\\\\\ & \\therefore (\\bar{P}+Q) \\oplus \\bar{P} Q =(\\overline{\\bar{P}+Q}+\\overline{\\bar{P} Q}) \\cdot((\\bar{P}+Q)+\\bar{P} Q) \\\\\\\\ & = (P\\bar{Q}+P+\\bar{Q}) \\cdot(\\bar{P}+Q+\\bar{P} Q) \\\\\\\\ & = (P+\\bar{Q}) \\cdot(\\bar{P}+Q) \\\\\\\\ & \\text{since } \\bar{P}+Q+\\bar{P} Q=\\bar{P}+Q \\\\\\\\ & \\therefore F=(P+\\bar{Q})(\\bar{P}+Q) \\\\\\\\ & = \\overline{P \\oplus Q} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The following two signed 2's complement numbers (multiplicand M and multiplier Q ) are being multiplied using Booth's algorithm :</p>\n<p>M : 1100110111101101 and Q : 1010010010101010</p>\n<p>The total number of addition and subtraction operations to be performed is ________ (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "13",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yqz64r/4b7b635a-3c17-488a-aa59-a1bb8c0591e2/10bee9b0-fb4f-11ef-9115-8db426cbf786/file-jaoe38c1m7yqz64s.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yqz64r/4b7b635a-3c17-488a-aa59-a1bb8c0591e2/10bee9b0-fb4f-11ef-9115-8db426cbf786/file-jaoe38c1m7yqz64s.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Digital Logic - Boolean Algebra Question 4 English Explanation\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $X$ be a 3-variable Boolean function that produces output as ' 1 ' when at least two of the input variables are ' 1 '. Which of the following statement(s) is/are CORRECT, where $a, b, c, d, e$ are Boolean variables?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $X(a, b, X(c, d, e))=X(X(a, b, c), d, e)$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $X(a, b, X(a, b, c))=X(a, b, c)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $X(a, b, X(a, c, d))=(X(a, b, a)$ AND $X(c, d, c))$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $X(a, b, c)=X(a, X(a, b, c), X(a, c, c))$"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&amp;X \\text { is a majority function }\\\\\n&amp;X(P, Q, R)=P Q+Q R+P R\n\\end{aligned}$$</p>\n<p>(a) <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7upl2py/eb067df3-5085-4edf-ae36-6c7932456430/7d0e4a60-f916-11ef-8df3-c921ee280ca9/file-jaoe38c1m7upl2pz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7upl2py/eb067df3-5085-4edf-ae36-6c7932456430/7d0e4a60-f916-11ef-8df3-c921ee280ca9/file-jaoe38c1m7upl2pz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Digital Logic - Boolean Algebra Question 5 English Explanation 1\"></p>\n<p>$$\\begin{aligned}\n&amp; =a b+b R+a R \\\\\n&amp; =a b+b(c d+d e+c e)+a(c d+d e+c e) \\\\\n&amp; =a b+b c d+b d e+b c e+a c d+a d e+a c e\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7upm7fy/7c21bb1e-f33b-4913-acac-0cc0673b7063/9c8344e0-f916-11ef-8df3-c921ee280ca9/file-jaoe38c1m7upm7fz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7upm7fy/7c21bb1e-f33b-4913-acac-0cc0673b7063/9c8344e0-f916-11ef-8df3-c921ee280ca9/file-jaoe38c1m7upm7fz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Digital Logic - Boolean Algebra Question 5 English Explanation 2\"></p>\n<p>$$\\begin{aligned}\n&amp; =P d+d e+P e \\\\\n&amp; =(a b+b c+a c) d+d e+(a b+b c+a c) e \\\\\n&amp; =a b d+b c d+a c d+d e+a b e+b c e+a c e \\\\\n\\text { LHS } &amp; \\neq \\text { RHS }\n\\end{aligned}$$</p>\n<p>(b) <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7upnea8/ace903c5-098d-4d7d-978a-1716650019d1/bd9b4100-f916-11ef-8df3-c921ee280ca9/file-jaoe38c1m7upnea9.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7upnea8/ace903c5-098d-4d7d-978a-1716650019d1/bd9b4100-f916-11ef-8df3-c921ee280ca9/file-jaoe38c1m7upnea9.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Digital Logic - Boolean Algebra Question 5 English Explanation 3\"></p>\n<p>$$\\begin{aligned}\n&amp; =a b+b R+a R \\\\\n&amp; =a b+b(a b+b c+a c)+a(a b+b c+a c) \\\\\n&amp; =a b+a b+b c+a b c+a b+a b c+a c \\\\\n= &amp; a b+b c+a c \\\\\n\\text { RHS } &amp; =X(a, b, c) \\\\\n&amp; =a b+b c+a c \\\\\n\\text { LHS } &amp; =\\text { RHS }\n\\end{aligned}$$</p>\n<p>(c) <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7upocwn/45cd9387-3db3-4b6c-9927-425f0e44966f/d85a0670-f916-11ef-8df3-c921ee280ca9/file-jaoe38c1m7upocwo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7upocwn/45cd9387-3db3-4b6c-9927-425f0e44966f/d85a0670-f916-11ef-8df3-c921ee280ca9/file-jaoe38c1m7upocwo.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Digital Logic - Boolean Algebra Question 5 English Explanation 4\"></p>\n<p>$$\\begin{aligned}\n&amp; =a b+b R+a R \\\\\n&amp; =a b+b(a c+c d+a d)+a(a c+c d+a d) \\\\\n&amp; =a b+a b c+b c d+a b d+a c+a c d+a d \\\\\n&amp; =a b(1+c+d)+a c(1+d)+b c d+a d \\\\\n&amp; =a b+a c+b c d+a d \\\\\n\\text { RHS } &amp; =X(a, b, a) \\text { AND } X(c, d, c)\n\\end{aligned}$$</p>\n<p>where $$\\quad X(a, b, a)=a b+b a+a=a$$</p>\n<p>and $\\quad X(c, d, c)=c d+d c+c c=c$</p>\n<p>$$\\mathrm{RHS}=a \\mathrm{AND} c$$</p>\n<p>$$=a c$$</p>\n<p>$\\mathrm{LHS \\ne RHS}$</p>\n<p>$$\\begin{aligned}\n\\text{(d)}\\quad \\mathrm{LHS} &amp; =X(a, b, c) \\\\\n&amp; =a b+b c+a c \\\\\n\\mathrm{RHS} &amp; =X(a, X(a, b, c), X(a, c, c))\n\\end{aligned}$$</p>\n<p>where, $\\quad X(a, b, c)=a b+b c+a c=Q$</p>\n<p>and $\\quad X(a, c, c)=a c+c c+a c=C$</p>\n<p>$$\\begin{aligned}\n\\mathrm{RHS} &amp; =X(a, Q, c) \\\\\n&amp; =a Q+Q c+a c\n\\end{aligned}$$</p>\n<p>$$\\begin{aligned}\n&amp; =a(a b+b c+a c)+(a b+b c+a c) c+a c \\\\\n&amp; =a b+a b c+a c+a b c+b c+a c+a c \\\\\n&amp; =a b+b c+a c \\\\\n\\text { LHS } &amp; =\\text { RHS }\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For a Boolean variable x, which of the following statements is/are FALSE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>x . 1 = x</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>x + 1 = x</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>x . x = 0</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>x + x&#772; = 1</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given statements is/are FALSE, let's analyze each statement in terms of Boolean algebra rules and identities.</p>\n\n<p><strong>Option A:</strong> $ x \\cdot 1 = x $</p>\n\n<p>This statement is true. According to the Boolean algebra identity for the AND operation, any variable ANDed with 1 is equal to the variable itself:</p>\n\n<p>$$ x \\cdot 1 = x $$</p>\n\n<p><strong>Option B:</strong> $ x + 1 = x $</p>\n\n<p>This statement is false. According to the Boolean algebra identity for the OR operation, any variable ORed with 1 is always 1:</p>\n\n<p>$$ x + 1 = 1 $$</p>\n\n<p><strong>Option C:</strong> $ x \\cdot x = 0 $</p>\n\n<p>This statement is false. According to the Boolean algebra identity for the AND operation, any variable ANDed with itself is equal to the variable itself:</p>\n\n<p>$$ x \\cdot x = x $$</p>\n\n<p><strong>Option D:</strong> $ x + \\overline{x} = 1 $</p>\n\n<p>This statement is true. According to the Boolean algebra identity for the OR operation with a variable and its complement, the result is always 1:</p>\n\n<p>$$ x + \\overline{x} = 1 $$</p>\n\n<p>Therefore, the statements that are FALSE are:</p>\n\n<ul>\n\n<li><strong>Option B:</strong> $ x + 1 = x $</li>\n\n<li><strong>Option C:</strong> $ x \\cdot x = 0 $</li>\n\n</ul>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is NOT a valid identity?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(x ⊕ y) ⊕ z = x ⊕ (y ⊕ z)"
+      },
+      {
+        "identifier": "B",
+        "content": "(x + y) ⊕ z = x ⊕ (y + z)"
+      },
+      {
+        "identifier": "C",
+        "content": "x ⊕ y = x + y, if xy = 0"
+      },
+      {
+        "identifier": "D",
+        "content": "x ⊕ y = (xy + x'y')'"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Option B: </p>\n<p>$$(x + y) \\oplus z = x \\oplus (y + z)$$ </p>\n<p>is not a valid identity.</p>\n<p>This expression implies that the XOR operation distributes over addition, which is not true. The XOR operation, denoted by $\\oplus$, operates as follows:</p>\n\n<p><p>It's associative: $$(x \\oplus y) \\oplus z = x \\oplus (y \\oplus z)$$</p></p>\n<p><p>It's commutative: $$x \\oplus y = y \\oplus x$$</p></p>\n<p><p>Has an identity element: $$x \\oplus 0 = x$$</p></p>\n<p><p>Follows: $$x \\oplus x = 0$$</p></p>\n\n<p>For the remaining options:</p>\n\n<p><p>Option A is valid because the XOR operation is associative.</p></p>\n<p><p>Option C is valid because if at least one of the variables $x$ or $y$ is zero, then $x \\oplus y = x + y$ effectively follows the definition of XOR where if both inputs are equal, the output is 0, and if they are different, the output is 1. When $xy = 0$, one of them has to be zero, confirming that the operation resembles addition without carrying.</p></p>\n<p><p>Option D is valid using De Morgan's Theorems and complements, which can be simplified as follows:</p>\n<p>$$x \\oplus y = (xy + x'y')'$$</p>\n<p>This expression indeed describes the XOR operation, where $(xy + x'y')'$ is equivalent to exclusive OR. The equation states that XOR is equivalent to negating all the possibilities when both inputs are the same (both true or both false).</p></p>\n",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the Boolean operator $$ \\ne $$ with the following properties: \n<br>$$x \\ne 0 = x,\\,\\,x \\ne 1 = \\overline x ,\\,\\,x \\ne x = 0$$ and $$x \\ne \\overline x  = 1.$$ Then $$x \\ne y$$ is equivalent to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$x\\overline y  + \\overline x y$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x\\overline y  + \\overline x \\overline y $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline x y + xy$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$xy + \\overline x \\overline y $$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let, $${x_1} \\oplus {x_2} \\oplus {x_3} \\oplus {x_4} = 0$$ where $${x_1},\\,{x_2},\\,{x_3},\\,{x_4}$$ are Boolean Variables, and $$ \\oplus $$ is the $$XOR$$ operator.  \n<p>Which one of the following must always be <b>TRUE</b>?  </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${x_1}{x_2}{x_3}{x_4} = 0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${x_1}{x_3} + {x_2} = 0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\overline x _1} \\oplus {\\overline x _3} = {\\overline x _2} \\oplus {\\overline x _4}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${x_1} + {x_2} + {x_3} + {x_4} = 0$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$ \\ne $$ be a binary operator defined as $$X \\ne Y = X' + Y'$$ where $$𝑋$$ and $$𝑌$$ are Boolean variables. Consider the following two statements.\n$$$\\eqalign{\n  &amp; \\left( {S1} \\right)\\,\\,\\,\\,\\,\\,\\,\\left( {P \\ne Q} \\right) \\ne R = P \\ne \\left( {Q \\ne R} \\right)  \\cr \n  &amp; \\left( {S2} \\right)\\,\\,\\,\\,\\,\\,\\,Q \\ne R = R \\ne Q \\cr} $$$\n<p>Which of the following is/are true for the Boolean variables $$𝑃, 𝑄$$ and $$𝑅$$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $$S1$$ is true "
+      },
+      {
+        "identifier": "B",
+        "content": "Only $$S2$$ is true "
+      },
+      {
+        "identifier": "C",
+        "content": "Both $$S1$$ and $$S2$$ are true "
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $$S1$$ nor $$S2$$ are true  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The dual of a Boolean function $$F\\left( {{x_1},{x_2},\\,....,\\,{x_n},\\, + , \\cdot ,'} \\right),$$ written as $${F^D}$$, is the same expression as that of $$F$$ with $$+$$ and $$ \\cdot $$ swapped. $$F$$ is said to be self-dual if $$F = {F^D} \\cdot $$. The number of self-dual functions with $$n$$ Boolean variables is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${2^n}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^{n - 1}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^{{2^n}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{{2^{n - 1}}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following Boolean expression for $$F:$$ \n<br>$$F\\left( {P,\\,Q,\\,R,\\,S} \\right) = PQ + \\overline P QR + \\overline P Q\\overline R S.$$\n<br>The minimal sum-of-products form of $$F$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${PQ}  + QR + QS$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P + Q + R + S$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline P  + \\overline Q  + \\overline R  + \\overline S $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline P R + \\overline P \\overline R S + P$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "PQ + P'QR + P'QR'S\n<br><br>= Q(P+P'R) + P'QR'S\n<br><br>= Q(P+R) + P'QR'S\n<br><br>= QP + QR + P'QR'S\n<br><br>= QP + Q(R + P'R'S)\n<br><br>= QP + Q( R + P'S)\n<br><br>= QP + QR + QP'S\n<br><br>= Q(P+P'S) + QR\n<br><br>= Q(P+S)+ QR\n<br><br>= PQ + QS + QR",
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following combinational function block involving four Boolean variables $$x, y, a,$$ \n<br>$$b$$ where $$x, a, b$$ are inputs and $$y$$ is the output. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/W0HWfOgiYwoHvWgsA/0P8KRPpw5FQjjPpS9T9sLVaufcDzg/BSFTVGwZSnLobOV4n5tk1a/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 3 Digital Logic - Boolean Algebra Question 46 English\"> \n<br>Which one of the following digital logic blocks is the most suitable for implementing this function?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Full adder "
+      },
+      {
+        "identifier": "B",
+        "content": "Priority encoder "
+      },
+      {
+        "identifier": "C",
+        "content": "Multiplexer "
+      },
+      {
+        "identifier": "D",
+        "content": "Flip-flop"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following expressions does <b>NOT</b> represent exclusive <b>NOR</b> of $$x$$ and $$y?$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$xy+x'y'$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x \\otimes y'$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$x' \\otimes y$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$x' \\otimes y'$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following circuits is <b>NOT</b> equivalent to a $$2$$-input $$XNOR$$ (exclusive <b>NOR</b>) gate",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/tJxNswZynEcsCjbTQ/Yal948voqFu3fn7DaYJzHcxxmRbii/CilNxxp9X1iYvl8yIThlQZ/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Digital Logic - Boolean Algebra Question 50 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/Ea2WhjypKmCAEqnXT/GMeMYk7fS21hHXHzHq6SydlYUEAES/jtJYtx3lJotn1CBC6GY6Uh/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Digital Logic - Boolean Algebra Question 50 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/ouuEoTAWYIVHFERzS/wu6UnPJu8Wjj6XkmePVjK3sqYgbZQ/dVmvD2yLExBMlpySPFTvAC/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Digital Logic - Boolean Algebra Question 50 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/DI5ZuSe88YUTYa2i7/8rCulORwt6Xh2nL32Vecjcuywx2o1/e1EmP7wjOgnYmWq8YnohM7/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2011 Digital Logic - Boolean Algebra Question 50 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The simplified $$SOP$$ (Sum of product) form of the Boolean expression \n<br>$$\\left( {P + \\overline Q  + \\overline R } \\right).\\left( {P + \\overline Q  + R} \\right).\\left( {P + Q + \\overline R } \\right)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {\\overline P .Q + \\overline R } \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {P + \\overline Q .\\overline R } \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {\\overline P .Q + R} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {P.Q + R} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The minters expansion of $$f\\left( {P,Q,R} \\right) = PQ + Q\\overline R  + P\\overline R $$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${m_2} + {m_4} + {m_6} + {m_7}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${m_0} + {m_1} + {m_3} + {m_5}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${m_0} + {m_1} + {m_6} + {m_7}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${m_2} + {m_3} + {m_4} + {m_5}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "What is the minimum number of gates required to implement the Boolean function $$(AB+C)$$ if we have to use only $$2$$-input NOR gates?  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Given $${f_1},$$ $${f_3},$$ and $$f$$ in canonical sum of products form (in decimal) for the circuit.\n$$${f_1} = \\sum {m\\left( {4,5,6,7,8} \\right)} $$$\n$$${f_3} = \\sum {m\\left( {1,6,15} \\right)} $$$\n$$$f = \\sum {m\\left( {1,6,8,15} \\right)} $$$\n<br>Then $${f_2}$$ is \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/csvhUlzruGqhg71Kt/2pB15RRsN1bKB3MOb4Ozd6OH3shZd/lCnZibOgs9MJm5bhhc4BdL/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2008 Digital Logic - Boolean Algebra Question 54 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sum {m\\left( {4,6} \\right)} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sum {m\\left( {4,8} \\right)} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sum {m\\left( {6,8} \\right)} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sum {m\\left( {4,6,8} \\right)} $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following Boolean function with four variables \n<br>$$F\\left( {w,\\,x,\\,y,\\,z} \\right) = \\sum {\\left( {1,\\,3,\\,4,\\,6,\\,9,\\,11,\\,12,\\,14} \\right)} $$ the function is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Independent of one variables "
+      },
+      {
+        "identifier": "B",
+        "content": "Independent of two variables "
+      },
+      {
+        "identifier": "C",
+        "content": "Independent of three variables "
+      },
+      {
+        "identifier": "D",
+        "content": "Depends on all variables "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The Boolean function $$x'y' +xy +x'y$$ is equivalent to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$x'+y'$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x+y$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$x+y'$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$x'+y$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$^ * $$ be defined as $${x^ * }y = \\overline x  + y,$$ Let $$z = {x^ * }y.$$ Value of $${z^ * }x$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline x  + y$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following Boolean algebraic equation(s) is/are CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\bar{A} B C+A \\bar{B} \\bar{C}+\\bar{A} \\bar{B} \\bar{C}+A \\bar{B} C+A B C=B C+\\bar{B} \\bar{C}+\\bar{A} \\bar{B}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $A B+\\bar{A} C+B C=A B+\\bar{A} C$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $(A+C)(\\bar{A}+B)=A B+\\bar{A} C$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\overline{(A+\\bar{B}+\\bar{D})(C+D)(\\bar{A}+C+D)(A+B+\\bar{D})}=\\bar{A} D+\\bar{C} \\bar{D}$"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>(a) <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yye0d8/79911cd2-cc25-4bfe-ace1-cc7ec997d722/0d5579c0-fb6c-11ef-9d17-b19dcdbd8148/file-jaoe38c1m7yye0d9.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yye0d8/79911cd2-cc25-4bfe-ace1-cc7ec997d722/0d5579c0-fb6c-11ef-9d17-b19dcdbd8148/file-jaoe38c1m7yye0d9.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Digital Logic - Boolean Algebra Question 3 English Explanation 1\"></p>\n<p>$$\\begin{aligned}\n&amp; =B C+\\bar{B} \\bar{C}+A C \\\\\n&amp; \\neq \\mathrm{RHS}\n\\end{aligned}$$</p>\n<p>(b) $$\\begin{aligned}\n\\mathrm{LHS} &amp; =A B+\\bar{A} C+B C \\\\\n&amp; =A B+\\bar{A} C \\leftarrow \\text { using consensus property } \\\\\n&amp; =\\mathrm{RHS}\n\\end{aligned}$$</p>\n<p>(c) $$\\begin{aligned}\n\\mathrm{LHS} &amp; =(A+C)(\\bar{A}+B) \\\\\n&amp; =A B+\\bar{A} C+B C \\\\\n&amp; =A B+\\bar{A} C \\leftarrow \\text { using consensus property } \\\\\n&amp; =\\text { RHS }\n\\end{aligned}$$</p>\n<p>(d) $\\mathrm{LHS}=\\overline{(A+\\bar{B}+\\bar{D})(C+D)(\\bar{A}+C+D)(A+B+\\bar{D})}$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7yyfwn7/ea3936d4-76a9-4552-9691-f8a5dd11fd85/4213ac40-fb6c-11ef-9d17-b19dcdbd8148/file-jaoe38c1m7yyfwn8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7yyfwn7/ea3936d4-76a9-4552-9691-f8a5dd11fd85/4213ac40-fb6c-11ef-9d17-b19dcdbd8148/file-jaoe38c1m7yyfwn8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Digital Logic - Boolean Algebra Question 3 English Explanation 2\"></p>\n<p>$$\\begin{aligned}\n&amp; =\\bar{A} D+\\bar{C} \\bar{D} \\\\\n&amp; =\\mathrm{RHS}\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider 4-variable functions $f1, f2, f3, f4$ expressed in sum-of-minterms form as given below.</p><p>$f1 = \\sum(0,2,3,5,7,8,11,13)$</p><p>$f2 = \\sum(1,3,5,7,11,13,15)$</p><p>$f3 = \\sum(0,1,4,11)$</p><p>$f4 = \\sum(0,2,6,13)$</p>\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1lwugc6kh/aa2a37ba-6ad7-4220-8f83-8e2f6f32f4bc/f26a9220-1f2b-11ef-b236-4f75b99a7f02/file-6y3zli1lwugc6ki.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/6y3zli1lwugc6kh/aa2a37ba-6ad7-4220-8f83-8e2f6f32f4bc/f26a9220-1f2b-11ef-b236-4f75b99a7f02/file-6y3zli1lwugc6ki.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 2 Digital Logic - Boolean Algebra Question 6 English\">\n<p>With respect to the circuit given above, which of the following options is/are CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p> $Y = \\sum(0,1,2,11,13)$ </p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p> $Y = \\prod(3,4,5,6,7,8,9,10,12,14,15)$ </p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p> $Y = \\sum(0,1,2,3,4,5,6,7)$ </p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p> $Y = \\prod(8,9,10,11,12,13,14,15)$ </p>"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/6y3zli1lwugc6kh/aa2a37ba-6ad7-4220-8f83-8e2f6f32f4bc/f26a9220-1f2b-11ef-b236-4f75b99a7f02/file-6y3zli1lwugc6ki.png\" alt=\"GATE CSE 2024 Set 2 Digital Logic - Boolean Algebra Question 6 English Explanation\"></p>\n<p>The following steps explain the output at various stages of the given circuit:</p>\n\n<p></p><p><strong>AND Gate Output (x)</strong> :\n$    x = f_1 \\cdot f_2 = \\sum(3, 5, 7, 11, 13)    $</p><p></p>\n<p></p><p><strong>OR Gate Output (z)</strong> :\n$    z = f_3 + f_4 = \\sum(0, 1, 2, 4, 6, 11, 13)    $</p><p></p>\n<p></p><p><strong>EX-OR Gate Output (y)</strong>:\n$    y = x \\oplus z = \\sum(0, 1, 2, 3, 4, 5, 6, 7) = \\prod(8, 9, 10, 11, 12, 13, 14, 15)    $</p><p></p>\n\n<p>Thus, the final output $ Y $ is represented both as a sum of minterms :\n$ Y = \\sum(0, 1, 2, 3, 4, 5, 6, 7) $\nand as a product of maxterms :\n$ Y = \\prod(8, 9, 10, 11, 12, 13, 14, 15) $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a Boolean expression given by $F(X, Y, Z) = \\Sigma(3,5,6,7)$.</p><p>Which of the following statements is/are CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$F(X, Y, Z) = \\\\Pi(0,1,2,4)$</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$F(X, Y, Z) = XY + YZ + XZ$</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$F(X, Y, Z)$ is independent of input $Y$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$F(X, Y, Z)$ is independent of input $X$</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The Boolean expression $F(X, Y, Z) = \\Sigma(3, 5, 6, 7)$ represents the sum of minterms for the given indices.</p>\n\n<p>The complement of $F(X, Y, Z)$ would be the Product of Maxterms (POM), specifically those indices that do not appear in the sum of minterms :</p>\n\n\n<p></p><p>For $\\Sigma(3, 5, 6, 7)$, the indices that do not appear are 0, 1, 2, and 4. Therefore, </p>\n<p>$$F(X, Y, Z) = \\Pi(0, 1, 2, 4)$$ </p>\n<p>making Option A correct.</p><p></p>\n\n\n<p></p><p>To verify if $F(X, Y, Z) = XY + YZ + XZ$, construct a Karnaugh Map or simplify using Boolean algebra :</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m00qsx4l/5acfd522-06b3-4a93-a0cd-494edf628758/39340560-5e06-11ef-aed1-3becbdb48cb2/file-jaoe38c1m00qsx4m.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m00qsx4l/5acfd522-06b3-4a93-a0cd-494edf628758/39340560-5e06-11ef-aed1-3becbdb48cb2/file-jaoe38c1m00qsx4m.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2024 Set 1 Digital Logic - Boolean Algebra Question 8 English Explanation\"></p>\n<p>The minterms covered are 3, 5, 6, and 7 which aligns with $F(X, Y, Z)$, confirming that :</p>\n<p>$$F(X, Y, Z) = XY + YZ + XZ$$ </p>\n<p>Thus, Option B is correct.</p><p></p>\n<p></p><p>The given expression $F(X, Y, Z)$ clearly depends on $Y$ since $Y$ appears in the simplified form $XY + YZ + XZ$, making Option C incorrect.</p><p></p>\n<p></p><p>Similarly, $F(X, Y, Z)$ depends on $X$ as well, making Option D incorrect.</p><p></p>\n\n<p>So, the correct statements are :</p>\n\n<p></p><p><strong>Option A</strong> : $F(X, Y, Z) = \\Pi(0, 1, 2, 4)$</p><p></p>\n<p></p><p><strong>Option B</strong> : $F(X, Y, Z) = XY + YZ + XZ$</p><p></p>\n",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider a Boolean function f(w, x, y, z) such that&nbsp;</p>\n\n<p>f(w, 0, 0, z) = 1</p>\n\n<p>f(1, x, 1, z) = x + z</p>\n\n<p>f(w, 1, y, z) = wz + y</p>\n\n<p>The number of literals in the minimal sum-of-products expression of f is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p>Given :</p>\n<p>Boolean function $f(w, x, y, z)$ such that</p>\n<p>$$ \\begin{aligned} &amp; f(w, 0,0, z)=1 \\\\ &amp; f(1, x, 1, z)=x+z \\\\ &amp; f(w, 1, y, z)=w z+y \\end{aligned} $$</p>\n<p>Truth table for above expression is,</p>\n<p>$$ \\begin{array}{|llll|l|} \\hline w &amp; x &amp; y &amp; z &amp; f \\\\ \\hline 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\\\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \\\\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; x \\\\ 0 &amp; 0 &amp; 1 &amp; 1 &amp; x \\\\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\\\ 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 \\\\ 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\\\ 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\\\ 1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \\\\ 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\\\ 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 \\\\ 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\\\ 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 \\\\ 1 &amp; 1 &amp; 1 &amp; 0 &amp; 1 \\\\ 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\\\ \\hline \\end{array} $$</p>\n<p>From the above table SOP function is</p>\n<p>$$ \\begin{aligned} &amp; f(w, x, y, z) \\\\ &amp; \\quad=\\sum m(0,1,6,7,8,9,11,13,14,15)  +d(2,3) \\end{aligned} $$</p>\n<p>SOP K-Map for $f(w, x, y, z)$ :</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2bing7i/7f9ee420-4360-40c8-aa82-65f4905c258a/65f49ee0-8b8b-11ef-975f-0b6cc3596fc4/file-jaoe38c1m2bing7j.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2bing7i/7f9ee420-4360-40c8-aa82-65f4905c258a/65f49ee0-8b8b-11ef-975f-0b6cc3596fc4/file-jaoe38c1m2bing7j.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2021 Set 2 Digital Logic - Boolean Algebra Question 9 English Explanation\"></p>\n<p>So, minimized function in SOP format is, $f=x y+\\bar{x} \\bar{y}+w z$</p>\n<p>Therefore, the number of literals in the minimal sum of products expression of $f$ is 6 . Hence, the correct answer is 6 .</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the following Boolean expression.</p>\n\n<p>$$F = (X + Y + Z)(\\overline X + Y)(\\overline Y + Z)$$</p>\n\n<p>Which of the following Boolean expressions is/are equivalent to&nbsp;$$\\overline F$$&nbsp;(complement of F)?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(\\overline X + \\overline Y + \\overline Z )(X + \\overline Y )(Y + \\overline Z )$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$X\\overline Y + \\overline Z$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$X\\overline Y + Y\\overline Z + \\overline X \\overline Y \\overline Z $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$(X + \\overline Z ) . (\\overline Y + \\overline Z )$$"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given Boolean expressions are equivalent to the complement of $ F $ (denoted as $ \\overline{F} $), we will first find $ \\overline{F} $ by using De Morgan's laws and Boolean algebra. Then, we will analyze each option to see if it simplifies to $ \\overline{F} $.</p>\n<h3><strong>Given Boolean Expression:</strong></h3>\n<p>$ F = (X + Y + Z)(\\overline{X} + Y)(\\overline{Y} + Z) $</p>\n<h3><strong>Step 1: Find the Complement of $ F $, i.e., $ \\overline{F} $</strong></h3>\n<p>Since $ F $ is a product of three terms, its complement $ \\overline{F} $ is the sum of the complements of these terms:</p>\n<p>$ \\overline{F} = \\overline{(X + Y + Z)} + \\overline{(\\overline{X} + Y)} + \\overline{(\\overline{Y} + Z)} $</p>\n<p>Now, compute each term:</p>\n\n<p><p><strong>Complement of $ (X + Y + Z) $:</strong></p>\n<p>$ \\overline{(X + Y + Z)} = \\overline{X} \\cdot \\overline{Y} \\cdot \\overline{Z} $</p></p>\n<p><p><strong>Complement of $ (\\overline{X} + Y) $:</strong></p>\n<p>$ \\overline{(\\overline{X} + Y)} = X \\cdot \\overline{Y} $</p></p>\n<p><p><strong>Complement of $ (\\overline{Y} + Z) $:</strong></p>\n<p>$ \\overline{(\\overline{Y} + Z)} = Y \\cdot \\overline{Z} $</p></p>\n\n<p>Now, combine these using OR operation:</p>\n<p>$ \\overline{F} = \\overline{X} \\cdot \\overline{Y} \\cdot \\overline{Z} + X \\cdot \\overline{Y} + Y \\cdot \\overline{Z} $</p>\n<p>So,</p>\n<p>$ \\overline{F} = X \\overline{Y} + Y \\overline{Z} + \\overline{X} \\overline{Y} \\overline{Z} $</p>\n<hr />\n<h3><strong>Analyzing Each Option:</strong></h3>\n<h4><strong>Option A:</strong></h4>\n<p>$ (\\overline{X} + \\overline{Y} + \\overline{Z})(X + \\overline{Y})(Y + \\overline{Z}) $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>This expression is structurally similar to $ F $ but with variables complemented.</p></p>\n<p><p>It does not simplify to $ \\overline{F} $ as derived above.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option A is not equivalent to $ \\overline{F} $.</strong></p>\n<hr />\n<h4><strong>Option B:</strong></h4>\n<p>$ X \\overline{Y} + \\overline{Z} $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>Our derived $ \\overline{F} = X \\overline{Y} + Y \\overline{Z} + \\overline{X} \\overline{Y} \\overline{Z} $</p></p>\n<p><p>Notice that $ \\overline{Z} $ is a common factor in $ Y \\overline{Z} $ and $ \\overline{X} \\overline{Y} \\overline{Z} $.</p></p>\n<p><p>$ \\overline{Z} $ encompasses $ Y \\overline{Z} $ and $ \\overline{X} \\overline{Y} \\overline{Z} $ because:</p>\n<p>$ Y \\overline{Z} + \\overline{X} \\overline{Y} \\overline{Z} \\leq \\overline{Z} $</p></p>\n<p><p>Therefore, the expression simplifies to:</p>\n<p>$ \\overline{F} = X \\overline{Y} + \\overline{Z} $</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option B is equivalent to $ \\overline{F} $.</strong></p>\n<hr />\n<h4><strong>Option C:</strong></h4>\n<p>$ X \\overline{Y} + Y \\overline{Z} + \\overline{X} \\overline{Y} \\overline{Z} $</p>\n<p><strong>Analysis:</strong></p>\n\n<p>This expression matches exactly with the derived $ \\overline{F} $.</p>\n\n<p><strong>Conclusion:</strong> <strong>Option C is equivalent to $ \\overline{F} $.</strong></p>\n<hr />\n<h4><strong>Option D:</strong></h4>\n<p>$ (X + \\overline{Z})(\\overline{Y} + \\overline{Z}) $</p>\n<p><strong>Analysis:</strong></p>\n\n<p><p>Expand the expression:</p>\n<p>$ (X + \\overline{Z})(\\overline{Y} + \\overline{Z}) = X \\overline{Y} + X \\overline{Z} + \\overline{Z} \\overline{Y} + \\overline{Z} $</p></p>\n<p><p>Simplify:</p></p>\n<p><p>$ X \\overline{Z} + \\overline{Z} \\overline{Y} $ both have $ \\overline{Z} $ as a factor.</p></p>\n<p><p>$ \\overline{Z} + X \\overline{Z} + \\overline{Z} \\overline{Y} = \\overline{Z} $ (since $ \\overline{Z} $ ORed with anything remains $ \\overline{Z} $).</p></p>\n<p><p>So, the expression simplifies to:</p>\n<p>$ X \\overline{Y} + \\overline{Z} $</p></p>\n<p><p>This matches the simplified form of $ \\overline{F} $ as in Option B.</p></p>\n\n<p><strong>Conclusion:</strong> <strong>Option D is equivalent to $ \\overline{F} $.</strong></p>\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Options equivalent to $ \\overline{F} $:</strong> <strong>B, C, and D</strong></p></p>\n<p><p><strong>Option not equivalent to $ \\overline{F} $:</strong> <strong>A</strong></p></p>\n\n<hr />\n<p><strong>Answer:</strong> Options <strong>B</strong>, <strong>C</strong>, and <strong>D</strong> are equivalent to $ \\overline{F} $.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the Boolean function z(a,b,c).\n<picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/1da9i2ynkcsmdwz3/ee981909-3618-4152-877d-a5feaed9adf8/eae14bf0-c97d-11ea-b796-4745b429ed6f/file-1da9i2ynkcsmdwz4-320w.jpg\"><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcsmdwz3/ee981909-3618-4152-877d-a5feaed9adf8/eae14bf0-c97d-11ea-b796-4745b429ed6f/file-1da9i2ynkcsmdwz4-500w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Digital Logic - Boolean Algebra Question 11 English\"></picture>\n<br>Which one of the following minterm lists represents the circuit given above?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "z = $$\\sum {\\left( {0,1,3,7} \\right)} $$"
+      },
+      {
+        "identifier": "B",
+        "content": "z = $$\\sum {\\left( {1,4,5,6,7} \\right)} $$"
+      },
+      {
+        "identifier": "C",
+        "content": "z = $$\\sum {\\left( {2,4,5,6,7} \\right)} $$"
+      },
+      {
+        "identifier": "D",
+        "content": "z = $$\\sum {\\left( {2,3,5} \\right)} $$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The Boolean function $ z(a,b,c) $ is defined by the circuit given above. To determine the correct list of minterms representing this circuit, we analyze the components:</p>\n\n<p><strong>Circuit Components</strong>:</p>\n\n\n<p><p>Input function $ f_1 = \\overline{b}c $.</p></p>\n<p><p>The function is expressed as $ z = a + f_1 $.</p></p>\n<p><p>Therefore, we have the equation: </p>\n<p>$      z = a + \\overline{b}c      $</p></p>\n<p><p>This represents a logical OR between $ a $ and the expression $ \\overline{b}c $.</p></p>\n\n\n<p><strong>Constructing the K-map</strong>:</p>\n\n\n<p><p>Create a Karnaugh map (K-map) to identify the minterms for the expression $ z = a + \\overline{b}c $.</p></p>\n<p><p>Map the function in Sum of Products (SOP) form.</p></p>\n\n\n<p><strong>K-map Analysis</strong>:</p>\n\n\n<p><p>The K-map for $ z $ helps visually identify which input combinations result in a high output (1).</p></p>\n<p><p>The minterms observed in the K-map are: $1, 4, 5, 6, 7$.</p></p>\n\n\n<p><strong>Result</strong>:</p>\n\n\n<p><p>The correct representation of the circuit using minterms is:</p>\n<p>$      z = \\sum (1, 4, 5, 6, 7)      $</p></p>\n\n<p>This analysis identifies the correct list of minterms as defined in the provided choices, confirming it matches the circuit's behavior with option B.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider three 4-variable functions f<sub>1</sub>, f<sub>2</sub> and f<sub>3</sub>, which are expressed in sum-of-minterms as\n<br><br>f<sub>1</sub> = Σ(0, 2, 5, 8, 14),  \n<br><br>f<sub>2</sub> = Σ(2, 3, 6, 8, 14, 15),  \n<br><br>f<sub>3</sub> = Σ(2, 7, 11, 14)\n<br><br>For the following circuit with one AND gate and one XOR gate, the output function f can be expressed as :\n<img src=\"https://imagex.cdn.examgoal.net/7kejek2748qcj/ba08fe77-71ad-46d5-a8fa-1985521d2157/56f6cb30-f7b0-11e9-a7bc-b7b08ce8d541/file-7kejek2748qck-371w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Digital Logic - Boolean Algebra Question 12 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Σ (2, 14)"
+      },
+      {
+        "identifier": "B",
+        "content": "Σ (7, 8, 11)"
+      },
+      {
+        "identifier": "C",
+        "content": "Σ (2, 7, 8, 11, 14)"
+      },
+      {
+        "identifier": "D",
+        "content": "Σ (0, 2, 3, 5, 6, 7, 8, 11, 14, 15)"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> Circuit is shown below, </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m49f88hx/498bdaf5-1654-4930-9d37-85663de3e2b9/e0ef0350-b1fc-11ef-b9df-afb93ffd8189/file-jaoe38c1m49f88hy.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m49f88hx/498bdaf5-1654-4930-9d37-85663de3e2b9/e0ef0350-b1fc-11ef-b9df-afb93ffd8189/file-jaoe38c1m49f88hy.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2019 Digital Logic - Boolean Algebra Question 12 English Explanation 1\"></p>\n<p>We know that, AND gate only passes common minterms of inputs that are applied to it so,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m49fadis/de9e96af-99f8-40e8-884d-e0edba76e59a/1c6ecb40-b1fd-11ef-b9df-afb93ffd8189/file-jaoe38c1m49fadit.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m49fadis/de9e96af-99f8-40e8-884d-e0edba76e59a/1c6ecb40-b1fd-11ef-b9df-afb93ffd8189/file-jaoe38c1m49fadit.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2019 Digital Logic - Boolean Algebra Question 12 English Explanation 2\"></p>\n<p>XOR gate passes only those minterms from input which are uncommon and blocks the common minterms. </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m49fby28/2bf85190-6a65-41b6-b1e4-fc755d8a72bb/481bd300-b1fd-11ef-b9df-afb93ffd8189/file-jaoe38c1m49fby29.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m49fby28/2bf85190-6a65-41b6-b1e4-fc755d8a72bb/481bd300-b1fd-11ef-b9df-afb93ffd8189/file-jaoe38c1m49fby29.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2019 Digital Logic - Boolean Algebra Question 12 English Explanation 3\"></p>\n<p>So, output function $(f)$ can be expressed as,</p>\n<p>$$ f=\\operatorname{\\Sigma m}(7,8,11) $$</p>\n<p>Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$ \\oplus $$ and $$ \\odot $$ denote the Exclusive OR and Exclusive NOR operations, respectively.\n<p>Which one of the following is NOT CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline {P \\oplus Q}  = P \\odot Q$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline P  \\oplus Q = P \\odot Q$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline P  \\oplus \\overline Q  = P \\oplus Q$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {P \\oplus \\overline P } \\right) \\oplus Q = \\left( {P \\odot \\overline P } \\right) \\odot \\overline Q $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a carry lookahead adder for adding two $$n$$-bit integers, built using gates of fan-in at most two. The time to perform addition using this adder is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\Theta \\left( 1 \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\Theta \\left( {\\log \\left( n \\right)} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\Theta \\left( {\\sqrt n } \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\Theta \\left( n \\right)$$  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Given the function $$F = P′ + QR,$$ where $$F$$ is a function in three Boolean variables $$P,Q$$ and $$R$$ and $$P'=!P,$$ \nconsider the following statements.\n<p>$$\\eqalign{\n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\left( {S1} \\right)\\,\\,\\,\\,F = \\sum {\\left( {4,5,6} \\right)}   \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\left( {S2} \\right)\\,\\,\\,\\,F = \\sum {\\left( {0,1,2,3,7} \\right)}   \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\left( {S3} \\right)\\,\\,\\,\\,F = \\sum {\\Pi \\left( {4,5,6} \\right)}   \\cr \n  &amp; \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\left( {S4} \\right)\\,\\,\\,\\,F = \\sum {\\Pi \\left( {0,1,2,3,7} \\right)}  \\cr} $$</p>\n<p>Which of the following is true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(S1)$$- False, $$(S2)$$- True, $$(S3)$$- True, $$(S4)$$- False"
+      },
+      {
+        "identifier": "B",
+        "content": "$$(S1)$$- True, $$(S2)$$- False, $$(S3)$$- False, $$(S4)$$- True "
+      },
+      {
+        "identifier": "C",
+        "content": "$$(S1)$$- False, $$(S2)$$- False, $$(S3)$$- True, $$(S4)$$- True "
+      },
+      {
+        "identifier": "D",
+        "content": "$$(S1)$$- True, $$(S2)$$- True, $$(S3)$$- False, $$(S4)$$- False  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The total number of prime implicants of the function \n<br>$$f\\left( {w,x,y,z} \\right) = \\sum {\\left( {0,2,4,5,6,10} \\right)} $$ _________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3 ",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider the operations</p>\n $$f\\left( {x,y,z} \\right) = X'YZ + XY' + Y'Z'$$ and <br>$$g\\left( {x,y,z} \\right) = X'YZ + X'YZ' + XY$$.\n<p>Which one of the following is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both $$\\left\\{ f \\right\\}$$ and  $$\\left\\{ g \\right\\}$$ are functionally complete"
+      },
+      {
+        "identifier": "B",
+        "content": "Only  $$\\left\\{ f \\right\\}$$  is functionally complete"
+      },
+      {
+        "identifier": "C",
+        "content": "Only  $$\\left\\{ g \\right\\}$$  is functionally complete"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither $$\\left\\{ f \\right\\}$$  nor  $$\\left\\{ g \\right\\}$$ is functionally complete"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "<p>The binary operator $$ \\ne $$ is defined by the following truth table.</p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\">p</th>\n    <th class=\"tg-s6z2\">q</th>\n    <th class=\"tg-s6z2\">p$$ \\ne $$q</th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-s6z2\">0</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n    <td class=\"tg-baqh\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">1</td>\n    <td class=\"tg-baqh\">0</td>\n  </tr>\n</tbody></table>\n<p>Which one of the following is true about the binary operator $$ \\ne $$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Both commutative and associative"
+      },
+      {
+        "identifier": "B",
+        "content": "Commutative but not associative"
+      },
+      {
+        "identifier": "C",
+        "content": "Not commutative but associative"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither commutative nor associative"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A half adder is implemented with $$XOR$$ and $$AND$$ gates. A full adder is implemented with two half adders and one $$OR$$ gate. The propagation delay of an $$XOR$$ gate is twice that of an $$AND/OR$$ gate. The propagation delay of an $$AND/OR$$ gate is $$1.2$$ microseconds. A $$4$$-bit ripple-carry binary adder is implemented by using four full adders. The total propagation time of this $$4$$-bit binary adder in microseconds is____________ .",
+    "options": [],
+    "correct_options": [],
+    "answer": "19.2",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The number of min-terms after minimizing the following Boolean expression is _______________ . \n$$$\\left[ {D' + AB' + A'C + AC'D + A'C'D} \\right]'$$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$ \\oplus $$ denote the exclusive $$OR\\left( {XOR} \\right)$$ operation. Let $$'1'$$ and $$'0'$$ denote the binary constants. Consider the following Boolean expression for $$F$$ over two variables $$P$$ and $$Q$$: \n<br>$$F\\left( {P,Q} \\right) = \\left( {1 \\oplus P} \\right) \\oplus \\left( {P \\oplus Q} \\right) \\oplus \\left( {P \\oplus Q} \\right) \\oplus \\left( {Q \\oplus 0} \\right)$$ \n<p>The equivalent expression for $$F$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P+Q$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline {P + Q} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${P \\oplus Q}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline {P \\oplus Q} $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "What is the Boolean expression for the output f of the combinational logic circuit of NOR gates given below?\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/VCnpqeent1tXE3hW6/9lcRmEh04ZtGhLSedpt9OZTGow01W/KduVVUNDNm9Cv1mgg4yGod/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2010 Digital Logic - Boolean Algebra Question 34 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline {Q + R} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overline {P + Q} $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overline {P + R} $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline {P+Q + R} $$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "If $$P, Q, R$$ are Boolean variables, then $$\\left( {P + \\overline Q } \\right)$$ $$\\left( {P.\\overline Q  + P.R} \\right)\\left( {\\overline P .\\overline R  + \\overline Q } \\right)$$ Simplifies to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${P.\\,\\,\\overline Q }$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${P.\\,\\,\\overline R }$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${P.\\,\\,\\overline Q  + R}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${P.\\,\\,\\overline R  + Q}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$f\\left( {w,x,y,z} \\right) = \\sum {\\left( {0,4,5,7,8,9,13,15} \\right).} $$ Which of the following expressions are NOT equivalent to $$f?$$ \n<br>$$(P)\\,\\,\\,$$ $$x'y'z' + w'xy' + wy'z + xz$$ \n<br>$$(Q)\\,\\,\\,$$ $$w'y'z' + wx'y' + xz$$ \n<br>$$(R)\\,\\,\\,$$ $$w'y'z' + wx'y' + xyz + xy'z$$ \n<br>$$(S)\\,\\,\\,$$ $$x'y'z' + wx'y' + w'y$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$$Q$$ and $$S$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$R$$ and $$S$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$S$$ only "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a Boolean function $$f(w, x, y, z).$$ Suppose that exactly one of its inputs is allowed to change at a time. If the function happens to be true for two input vectors $${i_1} =  &lt; {w_1},{x_1},{y_1},{z_1} &gt; $$ and $${i_2} =  &lt; {w_2},{x_2},{y_2},{z_2} &gt; ,$$ we would like the function to remain true as the input changes from $${i_1}$$ to $${i_2}$$ ($${i_1}$$ and $${i_2}$$ differ in exactly one bit position), without becoming false momentarily. Let $$f\\left( {w,x,y,z} \\right) = \\sum {\\left( {5,7,11,12,13,15} \\right)} .$$ Which of the following cube  covers of $$f$$ will entire that the required property is satisfied?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline w xz,\\,wx\\overline y ,\\,x\\overline y z,\\,xyz,wyz$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$wxy,\\,\\overline w xz,\\,wyz$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$wx\\overline {yz} ,\\,xz,\\,w\\overline x yz$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$wzy,\\,wyz,\\,wxz,\\,\\overline w xz,\\,x\\overline y z,\\,xyz$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Which are the essential prime implicants of the following Boolean function? $$F\\left( {a,b,c} \\right) = {a^1}c + a{c^1} + {b^1}c$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a'c$$ and $$ac'$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$a'c$$ and $$b'c$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$a'c$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ac'$$ and $$bc'$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "$$f\\left( {A,B} \\right) = A' + B$$ Simplified expression for function $$f((x+y,y),z)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(x'+z)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x\\,y\\,z$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$xy' + \\,z$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Transform the following logic circuit (without expressing its switching function) into an equivalent logic circuit that employs only $$6$$ $$NAND$$ gates each with $$2$$-inputs.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/jsbEBNflQZ44dQPqn/cv3gi2dhX3qYvyA4KvWM76aADHSDT/Jc9ABx1qDhcVHzuWKV5cRN/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2002 Digital Logic - Boolean Algebra Question 41 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following logic circuit whose inputs are functions $${f_1},$$ $${f_2},$$ $${f_3},$$ and output is $$f.$$ \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/zQFIEP3emgjj2rWQS/FFxv3g20WzQOmgrqRQLVjrWA9DDaR/hcn71TYKvzZBBxkpHdSbLP/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2002 Digital Logic - Boolean Algebra Question 40 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sum {\\left( {1,4,5} \\right)} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sum {\\left( {6,7} \\right)} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sum {\\left( {0,1,3,5} \\right)} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "The simultaneous equations on the Boolean variables $$x, y, z$$ and $$w,$$ \n$$$x+y+z=1$$$\n$$$xy=0$$$\n$$$xz+w=1$$$\n$$$xy + \\overline z \\overline w  = 0$$$\n<br>have the following for $$x, y, z$$ and $$w,$$ respectively.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0100$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1101$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1011$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1000$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following sets of component(s) is/are sufficient to implement any arbitrary Boolean function?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$XOR$$ gates, $$NOT$$ gates "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ to $$1$$ multiplexers "
+      },
+      {
+        "identifier": "C",
+        "content": "$$AND$$ gates, $$XOR$$ gates "
+      },
+      {
+        "identifier": "D",
+        "content": "Three-input gates that output $$(A.B) + C$$ for the inputs $$A. B$$ and $$C.$$   "
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the logic circuit shown in Figure below. The functions $${f_1},$$ $${f_2}$$ and $$f$$ (in canonical sum of products form in decimal notation) are: \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/HauXr1WpHwtWsXU0Z/kmlO2ZEc6o9AvmtlIkTnGVfGOjEzX/XtTQwXL9AootscB61bJdvO/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1997 Digital Logic - Boolean Algebra Question 44 English\"> \n<p>$${f_1}\\left( {w,\\,x,\\,y,\\,z} \\right) = \\sum {8,9,10} $$ \n<br>$${f_2}\\left( {w,\\,x,\\,y,\\,z} \\right) = \\sum {7,8,12,13,18,15} $$\n<br>$$f\\left( {w,\\,x,\\,y,\\,z} \\right) = \\sum {\\left( {8,9} \\right)} $$</p>\n<p>The function $${f_3}$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sum {9,\\,10} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sum 9 $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sum {1,8,9} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sum {8,10,15} $$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$f\\left( {x,y,z} \\right) = \\overline x  + \\overline y x + xz$$ be a switching function. Which one of the following is valid? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overline y x$$ is a prime implicates of $$f$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$xz$$ is a minters of $$f$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$xz$$ is an implicant of $$f$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "y is a prime applicant of $$f$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1997,
+    "yearKey": "gate-cse-1997",
+    "difficulty": null
+  },
+  {
+    "content": "Two $$NAND$$ gates having open collector outputs are tied together as shown in fig. The logic function $$Y,$$ implemented by the circuit is.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/Xmk7NEDsUikukwUs3/m6aC8AQoWizKBCfWAGX942cIs9QJD/3MrNvQiZIZKDsH0zEyVQMP/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1990 Digital Logic - Boolean Algebra Question 26 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$Y = A\\overline {BC}  + \\overline {DE} $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$Y = ABC + DE$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$Y = \\overline {ABC} .\\overline {DE} $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$Y = ABC\\,.\\,DE$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "A circuit outputs a digit in the form of $$4$$ bits. $$0$$ is represented by $$0000$$, $$1$$ by $$0001..., $$ $$9$$ by $$1001.$$ A combinational circuit is to be designed which takes these $$4$$ bits as input and outputs $$1$$ if the digit $$ \\ge 5,$$ and $$0$$ otherwise. If only $$AND,$$ $$OR$$ and $$NOT$$ gates may be used, what is the minimum number of gates required?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following circuit composed of $$XOR$$ gates are non-inverting buffers.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/achsxGBeVKginYDYO/uTScaNs6cVM7wzNtmLegFqJVqEPCh/YZzmM9MsGDTtUmxs3bJ9zM/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2003 Digital Logic - Boolean Algebra Question 25 English 1\"> \n<p>The non-inverting buffers have delays $${\\delta _1} = 2$$ $$ns$$ and $${\\delta _2} = 4$$ $$ns$$ as shown in the figure. Both $$XOR$$ gates and all wires have zero delay. Assume that all gate inputs, outputs and wires are stable at logic level $$0$$ at time$$0.$$ If the following waveform is applied at input $$A$$, how many transition(s) (change of logic levels) occurs(s) at $$B$$ during the interval from $$0$$ to $$10$$ $$ns?$$ </p>\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/FPR8v96YgcqxL0Ms0/kaM4iW8C4fcYfAIMLyzm6OcRSJlH7/V41Adxvy1kz4Jw8FNk7FAG/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2003 Digital Logic - Boolean Algebra Question 25 English 2\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$4$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Express the function $$f( x, y, z)= xy'+ yz'$$ with only one complement operation and one or more $$AND/OR$$ operations. Draw the logic circuit implementing the expression obtained, using a single <b>NOT</b> gate and one or more $$AND/OR$$ gates.  ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "A logic network has two data inputs $$A$$ and $$B,$$ and two control inputs $${C_0}$$ and $${C_1}$$. It implements the function $$F$$ according to the following Table.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/23lzAsGWwnASgss8q/PRs9lqJwJiodPZ6hl9b4XpwCSNleO/rUHWFyCNmHp4KI5aLzZ3ZY/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1996 Digital Logic - Boolean Algebra Question 29 English\"> \n<p>Implement the circuit using one $$4$$ to $$1$$ Multiplexor, one $$2$$-input Exclusive $$OR$$ gate, one $$2$$-input $$AND$$ gate, one $$2$$-input $$OR$$ gate and one Inverter. </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Find the minimum sum of products form of the logic function \n<br>$$f\\left( {A,B,C,D} \\right) = \\sum d \\left( {3,11,12,14} \\right)$$ \n<br>Where $$m$$ and $$d$$ denote the minterms and don't cares respectively.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-cse-1991",
+    "difficulty": null
+  },
+  {
+    "content": "Find the minimum product of sums of the following expression\n<br>$$f = ABC + \\overline A \\,\\overline B \\,\\overline C .$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$f = \\left( {\\overline B  + C} \\right)\\left( {\\overline A  + B} \\right)\\left( {A + \\overline C } \\right)$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "Show with the help of a block diagram represent Boolean function: \n<br>$$f=AB+BC+CA$$ can be realized using only $$4:1$$ multiplexer. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  }
+]

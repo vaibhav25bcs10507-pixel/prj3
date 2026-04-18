@@ -1,0 +1,1166 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For the differential equation given below, which one of the following options is correct?</p>\n<p>$$ \\frac{\\partial^2 u}{\\partial x^2}+\\frac{\\partial^2 u}{\\partial y^2}=0,0 \\leq x \\leq 1,0 \\leq y \\leq 1 $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$u=e^{x+y}$ is a solution for all $x$ and $y$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$u=e^x \\sin y$ is a solution for all $x$ and $y$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$u=\\sin x \\sin y$ is a solution for all $x$ and $y$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$u=\\cos x \\cos y$ is a solution for all $x$ and $y$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The differential equation given is:</p>\n<p>$ \\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0, \\quad 0 \\leq x \\leq 1, \\quad 0 \\leq y \\leq 1 $</p>\n<p>This is known as the Laplace equation, which is a type of partial differential equation. We need to determine which of the given functions satisfies this equation.</p>\n<p>Consider the function $ u = e^x \\sin y $:</p>\n\n<p><strong>First Partial Derivatives</strong>:</p>\n\n\n<p><p>$\\frac{\\partial u}{\\partial x} = e^x \\sin y$</p></p>\n<p><p>$\\frac{\\partial u}{\\partial y} = e^x \\cos y$</p></p>\n\n\n<p><strong>Second Partial Derivatives</strong>:</p>\n\n\n<p><p>$\\frac{\\partial^2 u}{\\partial x^2} = e^x \\sin y$</p></p>\n<p><p>$\\frac{\\partial^2 u}{\\partial y^2} = e^x (-\\sin y) = -e^x \\sin y$</p></p>\n\n\n<p><p><strong>Sum of Second Partial Derivatives</strong>:</p>\n<p>$    \\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = e^x \\sin y + (-e^x \\sin y) = 0    $</p></p>\n\n<p>Hence, $ u = e^x \\sin y $ satisfies the Laplace equation as the sum of the second partial derivatives is zero. Thus, this function is a solution to the given differential equation for all $ x $ and $ y $ within the specified intervals.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-me-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Solution of ∇<sup>2</sup>T = 0 in a square domain (0 &lt; x &lt; 1 and 0 &lt; y &lt; 1) with boundary conditions:</p>\n\n<p>T(x, 0) = x; T(0, y) = y; T(x, 1) = 1 + x; T(1, y) = 1 + y is</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "T(x, y) = x - xy + y"
+      },
+      {
+        "identifier": "B",
+        "content": "<span style=\"\">T(x, y) = x + y</span>"
+      },
+      {
+        "identifier": "C",
+        "content": "<span style=\"\">T(x, y) = -x + y</span>"
+      },
+      {
+        "identifier": "D",
+        "content": "<span style=\"\">T(x, y) = x + xy + y</span>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "explanation": "<p>Given the Laplace equation :</p>\n\n<p>$$ \\nabla^2 T = 0 \\quad \\text{for} \\quad 0 < x < 1 \\quad \\text{and} \\quad 0 < y < 1 $$</p>\n\n<p>The boundary conditions are :</p>\n\n<p>$$ T(x, 0) = x $$</p>\n\n<p>$$ T(0, y) = y $$</p>\n\n<p>$$ T(x, 1) = 1 + x $$</p>\n\n<p>$$ T(1, y) = 1 + y $$</p>\n\n<p>The general solution of the Laplace equation can be expressed as :</p>\n\n<p>$$ T(x, y) = \\left(C_1 x + C_2\\right) \\left(C_3 y + C_4\\right) $$</p>\n\n<p>Using the boundary conditions :</p>\n\n<p>$$ \\begin{aligned} & T(x, 0) = \\left(C_1 x + C_2\\right) \\left(C_4\\right) = x \\quad \\text{...(ii)} \\\\ & T(0, y) = C_2 \\left(C_3 y + C_4\\right) = y \\quad \\text{...(iii)} \\\\ & T(x, 1) = \\left(C_1 x + C_2\\right) \\left(C_3 + C_4\\right) = 1 + x \\quad \\text{...(iv)} \\\\ & T(1, y) = \\left(C_1 + C_2\\right) \\left(C_3 y + C_4\\right) = 1 + y \\quad \\text{...(v)} \\end{aligned} $$</p>\n\n<p>Solving equations (ii), (iii), (iv), and (v), we find :</p>\n\n<p>$$ C_1 = 1, \\quad C_3 = 1, \\quad C_2 = 0, \\quad \\text{and} \\quad C_4 = 0 $$</p>\n\n<p>Therefore, the solution given by equation (i) is :</p>\n\n<p>$$ T(x, y) = x + y $$</p>\n\n<p>Thus, the correct option is (B).</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The differential equation $$\\,{{{d^2}y} \\over {d{x^2}}} + 16y = 0$$ for $$y(x)$$ with the two boundary conditions $${\\left. {{{dy} \\over {dx}}} \\right|_{x = 0}} = 1$$ and $${\\left. {{{dy} \\over {dx}}} \\right|_{x = {\\pi  \\over 2}}} =  - 1$$ has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "no solution "
+      },
+      {
+        "identifier": "B",
+        "content": "exactly two solutions "
+      },
+      {
+        "identifier": "C",
+        "content": "exactly one solution "
+      },
+      {
+        "identifier": "D",
+        "content": "infinitely many solutions "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following partial differential equation for $$u(x,y)$$ with the constant $$c&gt;1:$$ $$\\,{{\\partial u} \\over {\\partial y}} + c{{\\partial u} \\over {dx}} = 0\\,\\,$$  solution of this equation is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$u(x,y)=f(x+cy)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$u(x,y)=f(x-cy)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$u(x,y)=f(cx+y)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$u(x,y)=f(cx-y)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Find the solution of $${{{d^2}y} \\over {d{x^2}}} = y$$  which passes through origin and the point $$\\left( {ln2,{3 \\over 4}} \\right)$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y = {1 \\over 2}{e^x} - {e^{ - x}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 2}\\left( {{e^x} + {e^{ - x}}} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$y = {1 \\over 2}\\left( {{e^x} - {e^{ - x}}} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 2}{e^x} + {e^{ - x}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following differential equation $${{dy} \\over {dt}} =  - 5y;$$ initial condition: $$y=2$$ at $$t=0.$$ \n<br>The value of $$y$$ at $$t=3$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - 5{e^{ - 10}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2{e^{ - 10}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2{e^{ - 15}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - 15{e^2}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-me-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The solution of the initial value problem $$\\,\\,{{dy} \\over {dx}} =  - 2xy;y\\left( 0 \\right) = 2\\,\\,\\,$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1 + {e^{ - {x^2}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2{e^{ - {x^2}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1 + {e^{  {x^2}}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2{e^{  {x^2}}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "The partial differential equation $$\\,\\,{{\\partial u} \\over {\\partial t}} + u{{\\partial u} \\over {\\partial x}} = {{{\\partial ^2}u} \\over {\\partial {x^2}}}\\,\\,\\,$$  is a ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Linear equation of order $$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "Non-linear equation of order $$1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "Linear equation of order $$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "non-linear equation of order $$2$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-me-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the differential equation $${{dy} \\over {dx}} = \\left( {1 + {y^2}} \\right)x\\,\\,.$$  The general solution with constant $$'C'$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y = \\tan \\left( {{{{x^2}} \\over 2}} \\right) + C$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$y = {\\tan ^2}\\left( {{x \\over 2} + C} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$y = {\\tan ^2}\\left( {{x \\over 2}} \\right) + C$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$y = \\tan \\left( {{{{x^2}} \\over 2} + C} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-me-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The blasius equation $$\\,{{{d^3}f} \\over {d{\\eta ^3}}} + {f \\over 2}\\,{{{d^2}f} \\over {d{\\eta ^2}}} = 0\\,\\,\\,\\,$$  is a ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2<sup>nd</sup>   order non-linear ordinary differential equation "
+      },
+      {
+        "identifier": "B",
+        "content": "3<sup>rd</sup>   order non-linear ordinary differential equation "
+      },
+      {
+        "identifier": "C",
+        "content": "3<sup>rd</sup>    order linear ordinary differential equation "
+      },
+      {
+        "identifier": "D",
+        "content": "mixed order non-linear ordinary differential equation "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-me-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The solution of $$x{{dy} \\over {dx}} + y = {x^4}$$  with condition $$y\\left( 1 \\right) = {6 \\over 5}$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y = {{{x^4}} \\over 5} + {1 \\over x}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$y = {{4{x^4}} \\over 5} + {4 \\over {5x}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$y = {{{x^4}} \\over 5} + 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$y = {{{x^5}} \\over 5} + 1$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-me-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Given that $$\\mathop x\\limits^{ \\bullet  \\bullet }  + 3x = 0$$  and $$x\\left( 0 \\right) = 1,\\,\\,\\mathop x\\limits^ \\bullet  \\left( 0 \\right) = 1,$$ What is $$x(1)$$ ________.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-0.99$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-0.16$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.41$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.99$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The partial differential equation $$\\,\\,{{{\\partial ^2}\\phi } \\over {\\partial {x^2}}} + {{{\\partial ^2}\\phi } \\over {\\partial {y^2}}} + {{\\partial \\phi } \\over {\\partial x}} + {{\\partial \\phi } \\over {\\partial y}} = 0\\,\\,\\,\\,$$ has ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "degree $$1$$ and order $$2$$"
+      },
+      {
+        "identifier": "B",
+        "content": "degree $$1$$ and order $$1$$"
+      },
+      {
+        "identifier": "C",
+        "content": "degree $$2$$ and order $$1$$"
+      },
+      {
+        "identifier": "D",
+        "content": "degree $$2$$ and order $$2$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The solution of $${{d\\,y} \\over {d\\,x}} = {y^2}$$ with initial value $$y(0)=1$$ is bounded in the interval is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - \\infty  \\le x \\le  \\propto $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - \\infty  \\le x \\le 1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$x &lt; 1,x &gt; 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - 2 \\le x \\le 2$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-me-2007",
+    "difficulty": null
+  },
+  {
+    "content": "For $$\\,\\,\\,{{{d^2}y} \\over {d{x^2}}} + 4{{dy} \\over {dx}} + 3y = 3{e^{2x}},\\,\\,$$ the particular integral is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {15}}{e^{2x}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {5}}{e^{2x}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$3{e^{2x}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${c_1}{e^{ - x}} + {c_2}{e^{ - 3x}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-me-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The solution of the differential equation $${{dy} \\over {dx}} + 2xy = {e^{ - {x^2}}}\\,\\,$$  with $$y(0)=1$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left( {1 + x} \\right)\\,\\,{e^{{x^2}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left( {1 + x} \\right)\\,\\,{e^{ - {x^2}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left( {1 - x} \\right)\\,\\,{e^{{x^2}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left( {1 - x} \\right)\\,\\,{e^{ - {x^2}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-me-2006",
+    "difficulty": null
+  },
+  {
+    "content": "If  $${x^2}\\left( {{{d\\,y} \\over {d\\,x}}} \\right) + 2xy = {{2\\ln x} \\over x}$$ and $$y(1)=0$$  then what is $$y(e)$$? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$e$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{1 \\over e}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{1 \\over {{e^2}}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The solution of the differential equation $${{dy} \\over {dx}} + {y^2} = 0$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y = {1 \\over {x + c}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$y =  - {{{x^3}} \\over 3} + c$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$c\\,\\,{e^x}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "unsolvable as equation is non-linear "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-me-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The equation $$\\,\\,\\,{{{d^2}u} \\over {d{x^2}}} + \\left( {{x^2} + 4x} \\right){{dy} \\over {dx}} + y = {x^8} - 8\\,\\,{u \\over {{x^2}}} = 8.\\,\\,\\,$$  is a ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "partial differential equation "
+      },
+      {
+        "identifier": "B",
+        "content": "non-linear differential equation "
+      },
+      {
+        "identifier": "C",
+        "content": "non-homogeneous differential equation "
+      },
+      {
+        "identifier": "D",
+        "content": "ordinary differential equation"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-me-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The general solution of the differential equation  $${x^2}{{{d^2}y} \\over {d{x^2}}} - x{{dy} \\over {dx}} + y = 0$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$Ax + B{x^2}$$  ($$A, B$$ are constants)"
+      },
+      {
+        "identifier": "B",
+        "content": "$$Ax + B\\log x$$  ($$A, B$$ are constants)"
+      },
+      {
+        "identifier": "C",
+        "content": "$$Ax + B{x^2}\\log x$$  ($$A, B$$ are constants) "
+      },
+      {
+        "identifier": "D",
+        "content": "$$Ax + Bx\\log x$$  ($$A, B$$ are constants)"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-me-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The particular solution for the differential equation $${{{d^2}y} \\over {d{t^2}}} + 3{{dy} \\over {dx}} + 2y = 5\\cos x$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.5\\,Cos\\,x + 1.5\\,Sin\\,x$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1.5\\,Cos\\,x + 0.5\\,Sin\\,x$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1.5\\,Sin\\,x$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0.5\\,Cos\\,x$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-me-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The one dimensional heat conduction partial difference equation $$\\,\\,{{\\partial T} \\over {\\partial t}} = {{{\\partial ^2}T} \\over {\\partial {x^2}}}\\,\\,$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "parabolic "
+      },
+      {
+        "identifier": "B",
+        "content": "hyperbolic "
+      },
+      {
+        "identifier": "C",
+        "content": "elliptic"
+      },
+      {
+        "identifier": "D",
+        "content": "mixed"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-me-1996",
+    "difficulty": null
+  },
+  {
+    "content": "A differential  equation of the form $${{dy} \\over {dx}} = f\\left( {x,y} \\right)\\,\\,$$  is homogeneous if the function $$f(x,y)$$ depends only on the ratio $${y \\over x}$$ (or) $${x \\over y}$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TRUE"
+      },
+      {
+        "identifier": "B",
+        "content": "FALSE"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-me-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The solution to the differential equation $$\\,{f^{11}}\\left( x \\right) + 4{f^1}\\left( x \\right) + 4f\\left( x \\right) = 0$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${f_1}\\left( x \\right) = {e^{ - 2x}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${f_1}\\left( x \\right) = {e^{2x}},\\,\\,{f_2}\\left( x \\right) = {e^{ - 2x}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${f_1}\\left( x \\right) = {e^{ - 2x}},\\,\\,{f_2}\\left( x \\right) = x{e^{ - 2x}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${f_1}\\left( x \\right) = {e^{ - 2x}},\\,\\,{f_2}\\left( x \\right) = {e^{ - x}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-me-1995",
+    "difficulty": null
+  },
+  {
+    "content": "For the differential equation $$\\,\\,{{dy} \\over {dt}} + 5y = 0\\,\\,$$  with $$y(0)=1,$$ the general solution is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${e^{5t}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${e^{ - 5t}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5$$ $${e^{ - 5t}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${e^{\\sqrt { - 5t} }}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-me-1994",
+    "difficulty": null
+  },
+  {
+    "content": "The differential equation $${y^{11}} + y = 0\\,$$ is subjected to the conditions $$y(0) = 0,$$ $$\\,\\,\\,y\\left( \\lambda  \\right) = 0.\\,\\,$$  In order that the equation has non-trivial solutions, the general value of $$\\lambda $$ is.",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$n\\pi $$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-me-1993",
+    "difficulty": null
+  },
+  {
+    "content": "The differential $$\\,\\,\\,{{{d^2}y} \\over {d{x^2}}} + {{dy} \\over {dx}} + \\sin y = 0\\,\\,$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "linear "
+      },
+      {
+        "identifier": "B",
+        "content": "non-linear "
+      },
+      {
+        "identifier": "C",
+        "content": "homogeneous "
+      },
+      {
+        "identifier": "D",
+        "content": "of degree two"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-me-1993",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $y$ be the solution of the differential equation with the initial conditions given below. If $y(x=2)=A \\ln 2$, then the value of $A$ is _________ (rounded off to 2 decimal places).</p>\n<p>$$ x^2 \\frac{d^2 y}{d x^2}+3 x \\frac{d y}{d x}+y=0 \\quad y(x=1)=0 \\quad 3 x \\frac{d y}{d x}(x=1)=1 $$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.45TO0.55",
+    "explanation": "<p>To solve the differential equation given by:</p>\n<p>$ x^2 \\frac{d^2 y}{dx^2} + 3x \\frac{dy}{dx} + y = 0 $</p>\n<p>with initial conditions $ y(x=1) = 0 $ and $ 3x \\frac{dy}{dx}(x=1) = 1 $, and finding the solution where $ y(x=2) = A \\ln 2 $, we need to determine the value of constant $A$.</p>\n<h3>Step-by-Step Solution</h3>\n\n<p><p><strong>Formulate the Characteristic Equation:</strong></p>\n<p>We start by converting the differential equation into an operator form:</p>\n<p>$    (D(D-1) + 3D + 1)y = 0    $</p>\n<p>Simplifying the characteristic equation yields:</p>\n<p>$    (D^2 + 2D + 1)y = 0    $</p>\n<p>This equation can further be rewritten as:</p>\n<p>$    (D+1)^2 = 0    $</p>\n<p>Thus, the roots of the characteristic equation are $m = -1$ with multiplicity 2.</p></p>\n<p><p><strong>Write the General Solution:</strong></p>\n<p>The general solution for the differential equation is given by the formula for repeated roots:</p>\n<p>$    y = (C_1 + C_2 x^m)e^{-x} = (C_1 + C_2 \\ln x)\\frac{1}{x}    $</p></p>\n<p><p><strong>Apply Initial Conditions:</strong></p></p>\n\n\n<p><p>At $x = 1$, $y = 0$:</p>\n<p>$    0 = \\left(C_1 + C_2 \\ln 1\\right) \\frac{1}{1}    $</p>\n<p>Since $\\ln 1 = 0$, it simplifies to $C_1 = 0$.</p>\n<p>Therefore, the solution simplifies to:</p>\n<p>$    y = \\frac{C_2 \\ln x}{x}    $</p></p>\n\n\n<p><p><strong>Determine the Value of $C_2$:</strong></p>\n<p>Differentiate $y$ with respect to $x$:</p>\n<p>$    \\frac{dy}{dx} = C_2 \\left(\\frac{1 - \\ln x}{x^2}\\right)    $</p>\n<p>At $x = 1$, the derivative is set to:</p>\n<p>$    1 = C_2 \\left(1 - \\ln 1\\right) = C_2    $</p>\n<p>So, $C_2 = 1$.</p>\n<p>Therefore, the solution becomes:</p>\n<p>$    y = \\frac{\\ln x}{x}    $</p></p>\n<p><p><strong>Find the Value of $A$:</strong></p>\n<p>At $x = 2$, $y = A \\ln 2$:</p>\n<p>$    A \\ln 2 = \\frac{\\ln 2}{2}    $</p>\n<p>Solving for $A$, we find:</p>\n<p>$    A = \\frac{1}{2}    $</p></p>\n\n<p>Therefore, the value of $A$ is $\\textbf{0.50}$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-me-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>If $x(t)$ satisfies the differential equation</p><p>$t \\frac{dx}{dt} + (t - x) = 0$</p><p>subject to the condition $x(1) = 0$, then the value of $x(2)$ is __________ (rounded off to 2 decimal places).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "-1.4TO-1.38",
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-me-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the second-order linear ordinary differential equation</p>\n\n<p><span class=\"math-tex\">$\\rm x^2\\frac{d^2y}{dx^2}+x\\frac{dy}{dx}-y=0, x\\ge1$</span></p>\n\n<p>with the initial conditions&nbsp;</p>\n\n<p><span class=\"math-tex\">$\\rm y(x=1)=6, \\left.\\frac{dy}{dx}\\right|_{x=1}=2$</span></p>\n\n<p>The value of 𝑦 at 𝑥 = 2 equals ________.</p>\n\n<p>(Answer in integer)</p>\n",
+    "options": [],
+    "correct_options": [],
+    "explanation": "<p>To solve the given second-order linear ordinary differential equation:</p>\n\n<p>$ x^2 \\frac{d^2 y}{dx^2} + x \\frac{dy}{dx} - y = 0, \\quad x \\geq 1 $</p>\n\n<p>with the initial conditions:</p>\n\n<p>$ y(x=1) = 6, \\quad \\left. \\frac{dy}{dx} \\right|_{x=1} = 2 $</p>\n\n<p>we recognize it as an Euler differential equation.</p>\n\n<p>We can transform it into a more manageable form by using the substitution $ t = \\ln(x) $. The general form for solving such equations involves finding the roots of the auxiliary equation. For this differential equation, we rewrite it as:</p>\n\n<p>$ D(D - 1)y + Dy - y = 0 $</p>\n\n<p>$ [D(D - 1) + (D - 1)]y = 0 $</p>\n\n<p>where $ D = \\frac{d}{dx} $. This gives the auxiliary equation:</p>\n\n<p>$ m^2 - m + m - 1 = 0 $</p>\n\n<p>$ m^2 = 1 $</p>\n\n<p>$ m = \\pm 1 $</p>\n\n<p>Thus, the general solution to the differential equation is:</p>\n\n<p>$ y = C_1 e^t + C_2 e^{-t} $</p>\n\n<p>$ \\text{Since } t = \\ln(x), $</p>\n\n<p>$ y = C_1 x + \\frac{C_2}{x} $</p>\n\n<p>Next, we determine the constants $ C_1 $ and $ C_2 $ using the initial conditions:</p>\n\n<ol>\n<li>$ y(x=1) = 6 $:</li>\n</ol>\n<p>$ C_1 (1) + \\frac{C_2}{1} = 6 $</p>\n\n<p>$ C_1 + C_2 = 6 $ ........(i)</p>\n\n<ol>\n<li>$ \\left. \\frac{dy}{dx} \\right|_{x=1} = 2 $:</li>\n</ol>\n<p>$ \\frac{dy}{dx} = C_1 - \\frac{C_2}{x^2} $</p>\n\n<p>$ \\left. \\frac{dy}{dx} \\right|_{x=1} = C_1 - C_2 = 2 $.........(ii)</p>\n\n<p>Solving equations (i) and (ii):</p>\n\n<p>$ C_1 + C_2 = 6 $</p>\n\n<p>$ C_1 - C_2 = 2 $</p>\n\n<p>Adding these equations:</p>\n\n<p>$ 2C_1 = 8 $</p>\n\n<p>$ C_1 = 4 $</p>\n\n<p>Subtracting these equations:</p>\n\n<p>$ 2C_2 = 4 $</p>\n\n<p>$ C_2 = 2 $</p>\n\n<p>Therefore, the constants are $ C_1 = 4 $ and $ C_2 = 2 $. Consequently, the particular solution becomes:</p>\n\n<p>$ y = 4x + \\frac{2}{x} $</p>\n\n<p>Now, substituting $ x = 2 $:</p>\n\n<p>$ y = 4(2) + \\frac{2}{2} $</p>\n\n<p>$ y = 8 + 1 $</p>\n\n<p>$ y = 9 $</p>\n\n<p>Thus, the value of $ y $ at $ x = 2 $ is $ 9 $.</p>",
+    "answer": "8.999TO9.001",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-me-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>For the exact differential equation,</p>\n\n<p><span class=\"math-tex\">$\\frac{du}{dx}=\\frac{-xu^2}{2+x^2u}$</span></p>\n\n<p>which one of the following is the solution?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "u<sup>2</sup>&nbsp;+ 2x<sup>2</sup>&nbsp;= constant"
+      },
+      {
+        "identifier": "B",
+        "content": "xu<sup>2</sup>&nbsp;+ u = constant"
+      },
+      {
+        "identifier": "C",
+        "content": "<span class=\"math-tex\">$\\frac{1}{2}x^2u^2+2u$</span>&nbsp;=&nbsp; constant"
+      },
+      {
+        "identifier": "D",
+        "content": "<span class=\"math-tex\">$\\frac{1}{2}ux^2+2u$</span>&nbsp; = constant"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "explanation": "<p>Given the exact differential equation:</p>\n<p>$$\\frac{du}{dx} = \\frac{-xu^2}{2 + x^2 u}$$</p>\n<p>We need to determine the solution.</p>\n<p>Here's the detailed solution process:</p>\n<p>First, rewrite the differential equation:</p>\n<p>$$ (2 + x^2 u) du = -xu^2 dx $$</p>\n<p>Combining terms:</p>\n<p>$$ (2 + x^2 u) du + x u^2 dx = 0 $$</p>\n<p>We recognize that an ordinary differential equation of the form $ M du + N dx = 0 $ is exact if:</p>\n<p>$$ \\frac{\\partial M}{\\partial x} = \\frac{\\partial N}{\\partial u} $$</p>\n<p>For our equation, we identify $ M $ and $ N $ as follows:</p>\n<p>$$ M = 2 + x^2 u \\quad \\text{and} \\quad N = x u^2 $$</p>\n<p>Now, compute the partial derivatives:</p>\n<p>$$ \\frac{\\partial M}{\\partial x} = \\frac{\\partial}{\\partial x} (2 + x^2 u) = 2xu $$</p>\n<p>$$ \\frac{\\partial N}{\\partial u} = \\frac{\\partial}{\\partial u} (x u^2) = 2xu $$</p>\n<p>Since:</p>\n<p>$$ \\frac{\\partial M}{\\partial x} = \\frac{\\partial N}{\\partial u} $$</p>\n<p>We validate that the differential equation is exact.</p>\n<p>To solve an exact differential equation, we use the formula:</p>\n<p>$$ \\int M du + \\int N dx = \\text{Constant} \\text{ (where N does not contain terms involving u)} $$</p>\n<p>Substitute $ M $ into the equation:</p>\n<p>$$ \\int (2 + x^2 u) du + \\int 0 dx = \\text{Constant} $$</p>\n<p>Integrate $ M $:</p>\n<p>$$ \\int (2 + x^2 u) du = 2u + \\frac{x^2 u^2}{2} \\text{ (Constant of integration)} $$</p>\n<p>Thus, we get:</p>\n<p>$$ 2u + \\frac{x^2 u^2}{2} = \\text{Constant} $$</p>\n<p>Rewriting the equation:</p>\n<p>$$ \\frac{1}{2} x^2 u^2 + 2u = \\text{Constant} $$</p>\n<p>Therefore, the correct solution is:</p>\n<p>$$ \\frac{1}{2} x^2 u^2 + 2u = \\text{Constant} $$</p>",
+    "answer": null,
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-me-2022-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the differential equation $$\\,\\,3y''\\left( x \\right) + 27y\\left( x \\right) = 0\\,\\,$$ with initial conditions $$y\\left( 0 \\right) = 0$$ and $$y'\\left( 0 \\right) = 2000.\\,\\,$$  The value of $$y$$ at $$x=1$$ is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "94.08",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-me-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "If $$y = f(x)$$ satiesfies the boundary value problem $$\\,\\,y''\\,\\,\\, + \\,\\,\\,9y\\,\\,\\, = \\,\\,\\,0,\\,\\,\\,y\\left( 0 \\right)\\,\\,\\, = \\,\\,\\,0,\\,$$ $$\\,\\,y\\left( {{\\pi  \\over 2}} \\right) = \\sqrt 2 ,\\,\\,\\,$$ then $$\\,\\,y\\left( {{\\pi  \\over 4}} \\right)\\,\\,$$ is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "-1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-me-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "If $$\\,y = f\\left( x \\right)\\,\\,$$  is the solution of  $${{{d^2}y} \\over {d{x^2}}} = 0$$ with the boundary conditions $$y=5$$ at $$x=0,$$ and $$\\,{{dy} \\over {dx}} = 2$$ at $$x=10,$$ $$f(15)=$$_______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "35",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The matrix form of the linear system $${{dx} \\over {dt}} = 3x - 5y$$ and $$\\,{{dy} \\over {dt}} = 4x + 8y\\,\\,$$  is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${d \\over {dt}}\\left\\{ {\\matrix{\n   x  \\cr \n   y  \\cr \n\n } } \\right\\} = \\left[ {\\matrix{\n   3 &amp; { - 5}  \\cr \n   4 &amp; 8  \\cr \n\n } } \\right]\\left\\{ {\\matrix{\n   x  \\cr \n   y  \\cr \n\n } } \\right\\}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${d \\over {dt}}\\left\\{ {\\matrix{\n   x  \\cr \n   y  \\cr \n\n } } \\right\\} = \\left[ {\\matrix{\n   3 &amp; 8  \\cr \n   4 &amp; { - 5}  \\cr \n\n } } \\right]\\left\\{ {\\matrix{\n   x  \\cr \n   y  \\cr \n\n } } \\right\\}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${d \\over {dt}}\\left\\{ {\\matrix{\n   x  \\cr \n   y  \\cr \n\n } } \\right\\} = \\left[ {\\matrix{\n   4 &amp; { - 5}  \\cr \n   3 &amp; 8  \\cr \n\n } } \\right]\\left\\{ {\\matrix{\n   x  \\cr \n   y  \\cr \n\n } } \\right\\}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${d \\over {dt}}\\left\\{ {\\matrix{\n   x  \\cr \n   y  \\cr \n\n } } \\right\\} = \\left[ {\\matrix{\n   4 &amp; 8  \\cr \n   3 &amp; { - 5}  \\cr \n\n } } \\right]\\left\\{ {\\matrix{\n   x  \\cr \n   y  \\cr \n\n } } \\right\\}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The general solution of the differential equation $$\\,\\,{{dy} \\over {dx}} = \\cos \\left( {x + y} \\right),\\,\\,$$ with $$c$$ as a constant, is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y + \\sin \\left( {x + y} \\right) = x + c$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\tan \\left( {{{x + y} \\over 2}} \\right) = y + c$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\cos \\left( {{{x + y} \\over 2}} \\right) = x + c$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\tan \\left( {{{x + y} \\over 2}} \\right) = x + c$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two solutions $$\\,x\\left( t \\right)\\,\\,\\,\\, = \\,\\,\\,{x_1}\\left( t \\right)\\,\\,$$  and   $$x\\left( t \\right)\\,\\,\\,\\, = \\,\\,\\,{x_2}\\left( t \\right)\\,\\,$$ of the differential equation \n<br>$$\\,\\,{{{d^2}x\\left( t \\right)} \\over {d{t^2}}} + x\\left( t \\right) = 0,t &gt; 0,\\,\\,$$ such that \n<br>$$\\,{x_1}\\left( 0 \\right) = 1,{\\left. {{{d{x_1}\\left( t \\right)} \\over {dt}}} \\right|_{t = 0}} = 0,$$ $$\\,\\,\\,\\,{x_2}\\left( 0 \\right) = 0,{\\left. {{{d{x_2}\\left( t \\right)} \\over {dt}}} \\right|_{t = 0}} = 1$$\n<p>The wronskian $$\\,w\\left( t \\right) = \\left| {{{\\matrix{\n   {{x_1}\\left( t \\right)}  \\cr \n   {d{x_1}\\left( t \\right)}  \\cr \n\n } } \\over {dt}}} \\right.\\left. {{{\\matrix{\n   {{x_2}\\left( t \\right)}  \\cr \n   {d{x_2}\\left( t \\right)}  \\cr \n\n } } \\over {dt}}} \\right|$$ at $$\\,\\,t = \\pi /2$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pi /2$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-me-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The solution to the differential equation $$\\,{{{d^2}u} \\over {d{x^2}}} - k{{du} \\over {dx}} = 0\\,\\,\\,$$  where $$'k'$$ is a constant, subjected to the boundary  conditions $$\\,\\,u\\left( 0 \\right) = 0\\,\\,$$ and $$\\,\\,\\,u\\left( L \\right) = U,\\,\\,$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$u = U{x \\over L}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$u = U\\left( {{{1 - {e^{kx}}} \\over {1 - {e^{kL}}}}} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$u = U\\left( {{{1 - {e^{ - kx}}} \\over {1 - {e^{ - kL}}}}} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$u = U\\left( {{{1 + {e^{kx}}} \\over {1 + {e^{kL}}}}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-me-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the differential equation $$\\,\\,{x^2}{{{d^2}y} \\over {d{x^2}}} + x{{dy} \\over {dx}} - 4y = 0\\,\\,\\,$$ with the boundary conditions of $$\\,\\,y\\left( 0 \\right) = 0\\,\\,\\,$$ and $$\\,\\,y\\left( 1 \\right) = 1.\\,\\,\\,$$ The complete solution of the differential equation is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${x^2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sin \\left( {{{\\pi x} \\over 2}} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${e^x}\\sin \\left( {{{\\pi x} \\over 2}} \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${e^{ - x}}\\sin \\left( {{{\\pi x} \\over 2}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-me-2012",
+    "difficulty": null
+  },
+  {
+    "content": "It is given that $$y'' + 2y' + y = 0,\\,\\,\\,\\,y\\left( 0 \\right) = 0,y\\left( 1 \\right) = 0.$$ What is $$y(0.5)$$?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.37$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.62$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.13$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-me-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The complete solution of the ordinary differential equation $${{{d^2}y} \\over {d\\,{x^2}}} + p{{dy} \\over {dx}} + qy = 0$$  is $$\\,y = {c_1}\\,{e^{ - x}} + {C_2}\\,{e^{ - 3x}}\\,\\,$$ then $$p$$ and $$q$$ are  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$p=3, q=3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$p=3, q=4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$p=4, q=3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$p=4, q=4$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is a solution of the differential equation $$\\,{{{d^2}y} \\over {d{x^2}}} + p{{dy} \\over {dx}} + \\left( {q + 1} \\right)y = 0?$$  Where $$p=4, q=3$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${e^{ - 3x}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$x{e^{ - x}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$x$$ $${e^{ - 2x}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${x^2}\\,{e^{ - 2x}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-me-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Find the solution   of the differential equation $$\\,{{{d^2}u} \\over {d{t^2}}} + {\\lambda ^2}y = \\cos \\left( {wt + k} \\right)$$  with initial conditions $$\\,y\\left( 0 \\right) = 0,\\,\\,{{dy\\left( 0 \\right)} \\over {dt}} = 0.$$  Here $$\\lambda ,$$ $$w$$ and $$k$$ are constants. Use either the method of undetermined coefficients (or) the operator  $$\\left( {D = {\\raise0.5ex\\hbox{$\\scriptstyle d$}\n\\kern-0.1em/\\kern-0.15em\n\\lower0.25ex\\hbox{$\\scriptstyle {dt}$}}} \\right)$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$y = {{\\cos k} \\over {{w^2} - {\\lambda ^2}}}\\cos \\left( {\\lambda t} \\right) + {{w\\sin k} \\over {\\lambda \\left( {{\\lambda ^2} - {w^2}} \\right)}}\\sin \\left( {\\lambda t} \\right) + {\\lambda  \\over {\\left( {{\\lambda ^2} - {w^2}} \\right)}}\\cos \\left( {wt + k} \\right)$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-me-2000",
+    "difficulty": null
+  },
+  {
+    "content": "The radial displacement in a rotating disc is governed by the differential equation $$\\,\\,{{{d^2}u} \\over {d{x^2}}} + {1 \\over x}{{du} \\over {dx}} - {u \\over {{x^2}}} = 8x.\\,\\,\\,$$  where $$u$$ is the displacement and $$x$$ is the radius. If $$u=0$$ at $$x=0$$ and $$u=2$$ at $$x=1,$$  calculate the displacement at $$\\,x = {1 \\over {2.}}$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-me-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Solve for $$y$$ if $${{{d^2}y} \\over {d{t^2}}} + 2{{dy} \\over {dt}} + y = 0$$ with $$y(0)=1$$ and $${y^1}\\left( 0 \\right) = 2$$ ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$y = \\left( {1 + 3t} \\right){e^{ - t}}$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-me-1994",
+    "difficulty": null
+  }
+]

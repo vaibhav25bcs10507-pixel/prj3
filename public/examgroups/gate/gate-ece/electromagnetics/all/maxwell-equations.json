@@ -1,0 +1,1212 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $\\hat{i}$ and $\\hat{j}$ be the unit vectors along $x$ and $y$ axes, respectively and let $A$ be a positive constant. Which one of the following statements is true for the vector fields $\\vec{F}_1 = A(\\hat{i}y + \\hat{j}x)$ and $\\vec{F}_2 = A(\\hat{i}y − \\hat{j}x)$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Both $\\vec{F}_1$ and $\\vec{F}_2$ are electrostatic fields.</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Only $\\vec{F}_1$ is an electrostatic field.</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Only $\\vec{F}_2$ is an electrostatic field.</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Neither $\\vec{F}_1$ nor $\\vec{F}_2$ is an electrostatic field.</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given vector fields $\\vec{F}_1$ and $\\vec{F}_2$ are electrostatic fields, we need to check whether these fields are conservative. A vector field is conservative (and thus can be an electrostatic field) if and only if its curl is zero.</p>\n\n<p>Let's calculate the curl of $\\vec{F}_1$ first. Recall that the curl of a vector field $\\vec{F} = (F_x, F_y, F_z)$ in Cartesian coordinates is given by:</p>\n\n<p>$$ \\nabla \\times \\vec{F} = \\left( \\frac{\\partial F_z}{\\partial y} - \\frac{\\partial F_y}{\\partial z} \\right) \\hat{i} + \\left( \\frac{\\partial F_x}{\\partial z} - \\frac{\\partial F_z}{\\partial x} \\right) \\hat{j} + \\left( \\frac{\\partial F_y}{\\partial x} - \\frac{\\partial F_x}{\\partial y} \\right) \\hat{k} $$</p>\n\n<p>Given that $\\vec{F}_1 = A(\\hat{i}y + \\hat{j}x)$, we have:</p>\n\n<p>$$ F_{1x} = Ay, \\quad F_{1y} = Ax, \\quad F_{1z} = 0 $$</p>\n\n<p>Thus, the components of the curl of $\\vec{F}_1$ are:</p>\n\n<p>$$ \\left( \\frac{\\partial F_{1z}}{\\partial y} - \\frac{\\partial F_{1y}}{\\partial z} \\right) \\hat{i} + \\left( \\frac{\\partial F_{1x}}{\\partial z} - \\frac{\\partial F_{1z}}{\\partial x} \\right) \\hat{j} + \\left( \\frac{\\partial F_{1y}}{\\partial x} - \\frac{\\partial F_{1x}}{\\partial y} \\right) \\hat{k} $$</p>\n\n<p>Since $F_{1z} = 0$, the first two terms vanish, and we are left with:</p>\n\n<p>$$ \\nabla \\times \\vec{F}_1 = \\left( \\frac{\\partial F_{1y}}{\\partial x} - \\frac{\\partial F_{1x}}{\\partial y} \\right) \\hat{k} $$</p>\n\n<p>Substitute $F_{1x} = Ay$ and $F_{1y} = Ax$:</p>\n\n<p>$$ \\frac{\\partial F_{1y}}{\\partial x} = \\frac{\\partial (Ax)}{\\partial x} = A, \\quad \\frac{\\partial F_{1x}}{\\partial y} = \\frac{\\partial (Ay)}{\\partial y} = A $$</p>\n\n<p>Therefore,</p>\n\n<p>$$ \\nabla \\times \\vec{F}_1 = (A - A) \\hat{k} = 0 $$</p>\n\n<p>This indicates that $\\vec{F}_1$ is a conservative field and thus could be an electrostatic field.</p>\n\n<p>Now, let's calculate the curl of $\\vec{F}_2 = A(\\hat{i}y - \\hat{j}x)$:</p>\n\n<p>$$ F_{2x} = Ay, \\quad F_{2y} = -Ax, \\quad F_{2z} = 0 $$</p>\n\n<p>Using the same process as before, we find:</p>\n\n<p>$$ \\left( \\frac{\\partial F_{2z}}{\\partial y} - \\frac{\\partial F_{2y}}{\\partial z} \\right) \\hat{i} + \\left( \\frac{\\partial F_{2x}}{\\partial z} - \\frac{\\partial F_{2z}}{\\partial x} \\right) \\hat{j} + \\left( \\frac{\\partial F_{2y}}{\\partial x} - \\frac{\\partial F_{2x}}{\\partial y} \\right) \\hat{k} $$</p>\n\n<p>Since $F_{2z} = 0$, the first two terms vanish, and we are left with:</p>\n\n<p>$$ \\nabla \\times \\vec{F}_2 = \\left( \\frac{\\partial F_{2y}}{\\partial x} - \\frac{\\partial F_{2x}}{\\partial y} \\right) \\hat{k} $$</p>\n\n<p>Substitute $F_{2x} = Ay$ and $F_{2y} = -Ax$:</p>\n\n<p>$$ \\frac{\\partial F_{2y}}{\\partial x} = \\frac{\\partial (-Ax)}{\\partial x} = -A, \\quad \\frac{\\partial F_{2x}}{\\partial y} = \\frac{\\partial (Ay)}{\\partial y} = A $$</p>\n\n<p>Therefore,</p>\n\n<p>$$ \\nabla \\times \\vec{F}_2 = (-A - A) \\hat{k} = -2A \\hat{k} $$</p>\n\n<p>This indicates that $\\vec{F}_2$ is not a conservative field and thus cannot be an electrostatic field.</p>\n\n<p>Therefore, the correct answer is:</p>\n\n<p>Option B: Only $\\vec{F}_1$ is an electrostatic field.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>In a circuit, there is a series connection of an ideal resistor and an ideal capacitor. The conduction current (in Amperes) through the resistor is 2sin(t + $$\\pi$$/2). The displacement current (in Amperes) through the capacitor is __________.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2sin(t)"
+      },
+      {
+        "identifier": "B",
+        "content": "2sin(t + $$\\pi$$)"
+      },
+      {
+        "identifier": "C",
+        "content": "2sin(t + $$\\pi$$/2)"
+      },
+      {
+        "identifier": "D",
+        "content": "0"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7e88qqf/c2439a5b-36ae-49ce-b1fb-db9cd8f5d86e/56dc1670-274e-11ed-9790-fb4466c4cdf1/file-1l7e88qqg.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7e88qqf/c2439a5b-36ae-49ce-b1fb-db9cd8f5d86e/56dc1670-274e-11ed-9790-fb4466c4cdf1/file-1l7e88qqg.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Electromagnetics - Maxwell Equations Question 4 English Explanation\"></p>\n<p>In series connection, current through each elements remain same. Hence, i<sub>c</sub> = i<sub>d</sub>.</p>\n<p>So, $${i_d} = 2\\sin \\left( {t + {\\pi  \\over 2}} \\right)$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "Two conducting spheres S1 and S2 of radii a and b (b&gt;a) respectively, are placed far apart and\nconnected by a long, thin conducting wire, as shown in the figure.\n<img alt=\"GATE ECE 2017 Set 2 Electromagnetics - Maxwell Equations Question 35 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/f11eb1c783b83bfb6f49a2de624914c5f20ba32ad96082b03a39735cbccdce5c.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<p>For some charge placed on this structure, the potential and surface electric field on S1 are V<sub>a</sub>\nand E<sub>a</sub>\n, and that on S2 are V<sub>b</sub> and E<sub>b</sub>, respectively, which of the following is CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "V<sub>a</sub> = V<sub>b</sub> and E<sub>a</sub> &lt; E<sub>b</sub> "
+      },
+      {
+        "identifier": "B",
+        "content": "V<sub>a</sub> &gt; V<sub>b</sub> and E<sub>a</sub> &gt; E<sub>b</sub>"
+      },
+      {
+        "identifier": "C",
+        "content": "V<sub>a</sub> = V<sub>b</sub> and E<sub>a</sub> &gt; E<sub>b</sub>"
+      },
+      {
+        "identifier": "D",
+        "content": "V<sub>a</sub> &gt; V<sub>b</sub> and E<sub>a</sub> = E<sub>b</sub>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the time-varying vector $$I = \\,\\hat x\\,\\,15\\,\\cos \\,(\\omega \\,t) + \\,\\hat y\\,5\\,sin(\\omega \\,t)$$ in Cartesian coordinates, where $$\\omega $$ &gt; 0 is a constant. When the vector magnitude $$\\left| I \\right|$$ is at its minimum value, the angle $$\\theta $$ that I makes with the x axis (in degree, such that $$0\\, \\le \\,0 \\le \\,180$$) is _________________",
+    "options": [],
+    "correct_options": [],
+    "answer": "90",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A uniform and constant magnetic field\n$$B=\\widehat zB$$\nexists in the\n$$\\widehat z$$\ndirection in vacuum. A particle of\nmass m with a small charge q is introduced into this region with an initial\nvelocity\n$$v=\\widehat xv_x+\\widehat zv_z$$.\nGiven that B, m, q, v<sub>x</sub> and v<sub>z</sub> are all non-zero, which one of the\nfollowing describes the eventual trajectory of the particle?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Helical motion in the\n$$\\widehat z$$\ndirection."
+      },
+      {
+        "identifier": "B",
+        "content": "Circular motion in the xy plane."
+      },
+      {
+        "identifier": "C",
+        "content": "Linear motion in the\n$$\\widehat z$$\ndirection."
+      },
+      {
+        "identifier": "D",
+        "content": "Linear motion in the\n$$\\widehat x$$\ndirection."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Faraday's law of electromagnetic induction is mathematically described by which one of the following equations?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\nabla  \\bullet \\,\\mathop B\\limits^ \\to   = \\,0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\nabla  \\bullet \\,\\mathop D\\limits^ \\to   = \\,{\\rho _v}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\nabla \\, \\times \\,\\mathop E\\limits^ \\to   = \\, - {{\\partial \\,\\mathop B\\limits^ \\to  \\,} \\over {\\partial t}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\nabla \\, \\times \\,\\mathop H\\limits^ \\to   = \\,\\sigma \\mathop E\\limits^ \\to   + {{\\partial \\,\\mathop D\\limits^ \\to  \\,} \\over {\\partial t}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Concentric spherical shells of radii 2 m, 4 m, and 8 m carry uniform surface charge densities\nof 20 nC/m<sup>2</sup>\n, −4 nC/m<sup>2</sup>\nand ρ<sub>s</sub>\n,respectively. The value of ρ<sub>s</sub> (nC/m<sup>2</sup>) required to ensure that the\nelectric flux density $$\\overrightarrow D=\\overrightarrow0$$\nat radius 10 m is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "-0.25",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In a source free region in vacuum, if the electrostatic potential\n$$\\varphi\\;=\\;2x^2\\;+y^2+cz^2$$ , the value of\nconstant c must be ________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "-3",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The divergence of the vector field $$\\overrightarrow A\\;=\\;x{\\widehat a}_x\\;+\\;y{\\widehat a}_y\\;+\\;z{\\widehat a}_z$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "1/3"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider a closed surface S surrounding volume V. If $$\\overrightarrow{\\mathrm r}$$\n is the position vector of a\npoint inside S, with $$\\widehat n$$ the unit normal on S, the value of the integral is</p>\n<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/174547f4d201c1b45046553cd7cdb066697d77cdd422aeffe678f581522841c9.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 2011 Electromagnetics - Maxwell Equations Question 40 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3 V"
+      },
+      {
+        "identifier": "B",
+        "content": "5 V"
+      },
+      {
+        "identifier": "C",
+        "content": "10 V"
+      },
+      {
+        "identifier": "D",
+        "content": "15 V"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Two infinitely long wires carrying current are as shown in the figure below. One wire is in the\ny-z plane and parallel to the y-axis. The other wire is in the x-y plane and parallel to the x-axis.\nWhich components of the resulting magnetic field are non-zero at the origin?\n<img alt=\"GATE ECE 2009 Electromagnetics - Maxwell Equations Question 41 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/414c99721a6fa49175fae965a5a0a261a0fcc9ab9b74c03637f0ee69ff3fefb9.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x, y, z components"
+      },
+      {
+        "identifier": "B",
+        "content": "x, y components"
+      },
+      {
+        "identifier": "C",
+        "content": "y, z components"
+      },
+      {
+        "identifier": "D",
+        "content": "x, z components"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "If C is a closed curve enclosing a surface S, then the magnetic field intensity $$\\overrightarrow H $$, the current density $$\\overrightarrow J $$\nand the electric flux density $$\\overrightarrow D $$ are related by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\int\\!\\!\\!\\int\\limits_S {\\overrightarrow H } .d\\overrightarrow s  = \\oint\\limits_C {\\left( {\\overrightarrow J  + {{\\partial \\overrightarrow D } \\over {\\partial t}}} \\right)} .d\\overrightarrow l $$"
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/sPXwP3Srf84OHUYki/ay1qF0EqjLLOSCTNqYKvvZIZWvQCz/fMhvB1W1bOaKekg1aU1AtN/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2007 Electromagnetics - Maxwell Equations Question 14 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/26E4w7ClmSjQ4pdEL/E7CiToogqY2SuLLITLY491PUYOUYA/eWc7P55LzPBHsQzEsSDc1h/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2007 Electromagnetics - Maxwell Equations Question 14 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\oint\\limits_C {\\overrightarrow H } .d\\overrightarrow l  = \\int\\!\\!\\!\\int\\limits_S {\\left( {\\overrightarrow J  + {{\\partial \\overrightarrow D } \\over {\\partial t}}} \\right)} .d\\overrightarrow s $$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\int\\int\\left(\\nabla\\times\\mathrm P\\right)\\;\\cdot\\mathrm{ds}$$ , where is a vector, is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\mathrm P\\times\\nabla\\times\\mathrm P\\;-\\;\\nabla^2\\;\\mathrm P$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\nabla^2\\;\\mathrm P\\;+\\;\\nabla\\left(\\nabla\\cdot\\mathrm P\\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\nabla^2\\;\\mathrm P\\;+\\;\\nabla\\times\\mathrm P$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\nabla\\left(\\nabla\\cdot\\mathrm P\\right)-\\nabla^2\\;\\mathrm P\\;$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\nabla  \\times \\nabla  \\times P$$, where P is a vector, is equal to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P \\times \\nabla  \\times P - {\\nabla ^2}P$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\nabla ^2}P + \\nabla \\left( {\\nabla .P} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\nabla ^2}P + \\nabla  \\times P$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\nabla \\left( {\\nabla .P} \\right) - {\\nabla ^2}P$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The unit of $$\\nabla\\times\\mathrm H$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Ampere"
+      },
+      {
+        "identifier": "B",
+        "content": "Ampere/meter"
+      },
+      {
+        "identifier": "C",
+        "content": "Ampere/meter<sup>2</sup>"
+      },
+      {
+        "identifier": "D",
+        "content": "Ampere - meter"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Identify which one of the following will <b>NOT</b> satisfy the wave equation.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$50{e^{j\\left( {\\omega t - 3z} \\right)}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sin \\left[ {\\omega \\left( {10z + 5t} \\right)} \\right]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\cos \\left( {{y^2} + 5t} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sin \\left( x \\right).\\cos \\left( t \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "An electric field on a plane is described by its potential V = $$20\\left(r^{-1}\\;+\\;r^{-2}\\right)$$ where r\nis the distance from the source. The field is due to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a monopole"
+      },
+      {
+        "identifier": "B",
+        "content": "a dipole"
+      },
+      {
+        "identifier": "C",
+        "content": "both a monopole and a dipole"
+      },
+      {
+        "identifier": "D",
+        "content": "a quadrupole"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The time averaged Poynting vector, in W/m<sup>2</sup>, for a wave with $$\\vec E = 24{e^{j\\left( {\\omega t + \\beta z} \\right)}}{\\mkern 1mu} {\\overrightarrow a _y}$$ V/m in free space is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - {{2.4} \\over \\pi }\\,{\\overrightarrow a _z}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{2.4} \\over \\pi }\\,{\\overrightarrow a _z}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{4.8} \\over \\pi }\\,{\\overrightarrow a _z}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - {{4.8} \\over \\pi }\\,{\\overrightarrow a _z}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The Maxwell's equation $$\\nabla\\times\\overrightarrow H\\;=\\;\\overrightarrow J\\;+\\;\\frac{\\partial\\overrightarrow D}{\\partial t}$$ is based on",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Ampere’s law "
+      },
+      {
+        "identifier": "B",
+        "content": "Gauss’ law "
+      },
+      {
+        "identifier": "C",
+        "content": "Faraday’s law"
+      },
+      {
+        "identifier": "D",
+        "content": "Coulomb’s law"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A loop is rotating about the y-axis in a magnetic field $$$\\overrightarrow B\\;=\\;B_0\\cos\\left(\\mathrm{ωt}\\;+\\;\\mathrm\\phi\\;\\right)\\;{\\overrightarrow a}_x\\;\\mathrm T .$$$\nThe\nvoltage in the loop is \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "zero"
+      },
+      {
+        "identifier": "B",
+        "content": "due to rotation only"
+      },
+      {
+        "identifier": "C",
+        "content": "due to transformer action only"
+      },
+      {
+        "identifier": "D",
+        "content": "due to both rotation and transformer action"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "content": "A metal sphere with 1 m radius and a surface charge density of 10 Coulombs/m<sup>2</sup>  is enclosed in \na cube of 10 m side. The total outward electric displacement normal\nto the surface of the cube is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "40$$\\pi $$ Coulombs "
+      },
+      {
+        "identifier": "B",
+        "content": "10$$\\pi $$ Coulombs"
+      },
+      {
+        "identifier": "C",
+        "content": "5$$\\pi $$ Coulombs  "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ece-1996",
+    "difficulty": null
+  },
+  {
+    "content": "In the infinite plane, y = 6 m, there exists a uniform surface charge density of (1/6000$$\\pi $$) $$\\mu $$C/m<sup>2</sup>. The associated electric field strength is:\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$30\\,\\widehat i\\,$$ V/m"
+      },
+      {
+        "identifier": "B",
+        "content": "$$3\\,\\widehat j\\,$$ V/m"
+      },
+      {
+        "identifier": "C",
+        "content": "$$30\\,\\widehat k\\,$$ V/m"
+      },
+      {
+        "identifier": "D",
+        "content": "$$60\\,\\widehat j\\,$$ V/m"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The electric field strength at a distance point, P, due to a point charge, +q,\nlocated at the origin, is 100  $$\\mu $$V/m. If the point  charge is now  enclosed  by  a perfectly \nconducting metal sheet sphere whose center is at the origin, then the\nelectric field strength at the point P outside the sphere becomes.\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Zero"
+      },
+      {
+        "identifier": "B",
+        "content": "100  $$\\mu $$V/m"
+      },
+      {
+        "identifier": "C",
+        "content": "-100  $$\\mu $$V/m"
+      },
+      {
+        "identifier": "D",
+        "content": "50  $$\\mu $$V/m"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-ece-1995",
+    "difficulty": null
+  },
+  {
+    "content": "<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/39d36773e4089f9bbc24a02026a5a06faa2d747ee2830aaa1c3994cbdc24360a.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 1994 Electromagnetics - Maxwell Equations Question 47 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$\\nabla\\times\\;\\overrightarrow A$$",
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ece-1994",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "An electric field of $0.01 \\mathrm{~V} / \\mathrm{m}$ is applied along the length of a copper wire of circular crosssection with diameter 1 mm . Copper has a conductivity of $5.8 \\times 10^7 \\mathrm{~S} / \\mathrm{m}$. The current (in Amperes, rounded off to two decimal places) flowing through the wire is ________\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.46\n"
+      },
+      {
+        "identifier": "B",
+        "content": "1.82\n"
+      },
+      {
+        "identifier": "C",
+        "content": "0.58\n"
+      },
+      {
+        "identifier": "D",
+        "content": "1.12"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbeyq9ly/c54e7fbe-c7dd-4ae5-aba4-71543f3627ec/92b5dc60-3f9e-11f0-a491-e768f614f5b9/file-jaoe38c1mbeyq9lz.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbeyq9ly/c54e7fbe-c7dd-4ae5-aba4-71543f3627ec/92b5dc60-3f9e-11f0-a491-e768f614f5b9/file-jaoe38c1mbeyq9lz.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Electromagnetics - Maxwell Equations Question 2 English Explanation\"></p>\n<p>$$ \\begin{aligned} &amp;\\text { As we know that }\\\\ &amp;\\begin{aligned} &amp; I=\\frac{V}{R}=\\frac{E . l}{\\frac{l}{\\sigma A}}=E \\cdot \\sigma A \\\\ \\Rightarrow \\quad &amp; I=0.01 \\times 5.8 \\times 10^7 \\times \\frac{\\pi}{4}\\left(1 \\times 10^{-3}\\right)^2=0.46 \\mathrm{~A} \\end{aligned} \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Two resistors are connected in a circuit loop of area $5 \\mathrm{~m}^2$, as shown in the figure below. The circuit loop is placed on the $x-y$ plane. When a time-varying magnetic flux, with flux-density $B(t)=0.5 t$ (in Tesla), is applied along the positive $z$-axis, the magnitude of current $I$ (in Amperes, rounded off to two decimal places) in the loop is__________ .\n<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbf0c563/b2f9ab19-bfbf-44a6-b837-9b178cba5854/dc35dfb0-3fa4-11f0-a491-e768f614f5b9/file-jaoe38c1mbf0c564.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbf0c563/b2f9ab19-bfbf-44a6-b837-9b178cba5854/dc35dfb0-3fa4-11f0-a491-e768f614f5b9/file-jaoe38c1mbf0c564.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Electromagnetics - Maxwell Equations Question 1 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.62TO0.63",
+    "explanation": "<p>Given:</p>\n\n<p><p>The magnetic flux density is $ B(t) = 0.5t $ (in Tesla).</p></p>\n<p><p>The area of the loop $ A = 5 \\, \\text{m}^2 $.</p></p>\n\n<p>First, calculate the electromotive force (emf) $ V_{\\text{emf}} $ induced in the loop using Faraday’s Law of Induction, which states:</p>\n<p>$ V_{\\text{emf}} = -\\frac{d\\Phi}{dt} $</p>\n<p>Where $ \\Phi = B(t) \\times A $ is the magnetic flux through the loop. Differentiating $ \\Phi $ with respect to time $ t $ gives:</p>\n<p>$ \\frac{d\\Phi}{dt} = A \\frac{dB(t)}{dt} $</p>\n<p>Substitute $ B(t) = 0.5t $:</p>\n<p>$ \\frac{dB(t)}{dt} = \\frac{d}{dt}(0.5t) = 0.5 $</p>\n<p>Thus, the induced emf becomes:</p>\n<p>$ V_{\\text{emf}} = -A \\times 0.5 = -5 \\times 0.5 = -2.5 \\, \\text{V} $</p>\n<p>Now, to find the current $ I $ in the loop, use Ohm’s Law:</p>\n<p>$ I = \\frac{V_{\\text{emf}}}{R} $</p>\n<p>Assuming the resistance $ R = 4 \\, \\Omega $:</p>\n<p>$ I = \\frac{-2.5}{4} = -0.625 \\, \\text{A} $</p>\n<p>The magnitude of the current is:</p>\n<p>$ |I| = 0.625 \\, \\text{A} \\approx 0.63 \\, \\text{A} $</p>\n<p>Therefore, the magnitude of the current in the loop is approximately $ 0.63 \\, \\text{A} $.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>In an electrostatic field, the electric displacement density vector, $$\\overrightarrow D $$, is given by</p>\n<p>$$\\overrightarrow D (x,y,z) = ({x^3}\\overrightarrow i  + {y^3}\\overrightarrow j  + x{y^2}\\overrightarrow k )$$ C/m<sup>2</sup>,</p>\n<p>where, $$\\overrightarrow i $$, $$\\overrightarrow j $$, $$\\overrightarrow k $$ are the unit vectors along x-axis, y-axis, and z-axis, respectively. Consider a cubical region R centered at the origin with each side of length 1 m, and vertices at ($$\\pm$$ 0.5 m, $$\\pm$$ 0.5 m, $$\\pm$$ 0.5 m). The electric charge enclosed within R is __________ C (rounded off to two decimal places).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.5",
+    "explanation": "<p>$${Q_{enclosed}} = \\int\\limits_v {{\\rho _v}dv = \\int {(\\nabla \\,.\\,D)dv} } $$</p>\n<p>$$\\nabla \\,.\\,D = {\\partial  \\over {\\partial x}}({x^3}) + {\\partial  \\over {\\partial y}}({y^3}) + {\\partial  \\over {\\partial z}}(x{y^2})$$</p>\n<p>$$\\nabla \\,.\\,D = (3{x^2} + 3{y^2}) = 3({x^2} + {y^2})$$</p>\n<p>$$dv = dxdydz$$</p>\n<p>$${Q_{enc}} = \\int\\limits_v {3({x^2} + {y^2})dxdydz} $$</p>\n<p>$$ = 3\\int\\limits_{x =  - 0.5}^{0.5} {\\int\\limits_{y =  - 0.5}^{0.5} {\\int\\limits_{z =  - 0.5}^{0.5} {({x^2} + {y^2})dxdydz} } } $$</p>\n<p>$$ = 3\\left[ {\\left\\{ {{{{x^3}} \\over 3}} \\right\\}_{ - 0.5}^{0.5}\\{ y\\} _{ - 0.5}^{0.5}\\{ z\\} _{ - 0.5}^{0.5} + \\{ x\\} _{ - 0.5}^{0.5}\\left\\{ {{{{y^3}} \\over 3}} \\right\\}_{ - 0.5}^{0.5}\\{ z\\} _{ - 0.5}^{0.5}} \\right]$$</p>\n<p>$$ = \\left( {{{(0.5)}^3} - {{( - 0.5)}^3}} \\right)(0.5 + 0.5)(0.5 + 0.5) \\times 2$$</p>\n<p>$${Q_{enc}} = 0.5$$ C</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "An electron (q<sub>1</sub>) is moving in free space with velocity 10<sup>5</sup> m/s towards a stationary electron\n(q<sub>2</sub>) far away. The closest distance that this moving electron gets to the stationary electron\nbefore the repulsive force diverts its path is ___________ ×10<sup>-8</sup>m.\n<p>[Given, mass of electron m = 9.11×10<sup>-31</sup> kg, charge of electron e = -1.6×10<sup>-19</sup> C , and\npermittivity $$\\varepsilon_0=\\left(1/36\\mathrm\\pi\\right)\\times10^{-9}\\;\\mathrm F/\\mathrm m$$].</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "5.06",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The parallel-plate capacitor shown in the figure has movable plates. The capacitor is charged\nso that the energy stored in it is E when the plate separation is d. The capacitor is then isolated\nelectrically and the plates are moved such that the plate separation becomes 2d.\n<img alt=\"GATE ECE 2016 Set 2 Electromagnetics - Maxwell Equations Question 22 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/259fbababbade0301816b334d799d31cde4f1614aa8cafcc71ba001cfef7e055.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<p>At this new plate separation, what is the energy stored in the capacitor, neglecting fringing\neffects?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2E"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sqrt2\\mathrm E$$"
+      },
+      {
+        "identifier": "C",
+        "content": "E"
+      },
+      {
+        "identifier": "D",
+        "content": "E/2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A coaxial capacitor of inner radius 1 mm and outer radius 5 mm has a capacitance per\nunit length of 172 pF/m. If the ratio of outer radius to inner is doubled, the capacitance\nper unit length (in pF/m) is _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "120.22",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Given the vector $$$\\mathrm A=\\left(\\cos\\;\\mathrm x\\right)\\left(\\sin\\;\\mathrm y\\right)\\;{\\widehat{\\mathrm a}}_\\mathrm x\\;+\\;\\left(\\sin\\;\\mathrm x\\right)\\left(\\cos\\;\\mathrm y\\right){\\widehat{\\mathrm a}}_\\mathrm y$$$ where $${\\widehat{\\mathrm a}}_\\mathrm x$$ , $${\\widehat{\\mathrm a}}_\\mathrm y$$ denote unit vectors\nalong x, y directions, respectively. The magnitude of curl of A is ________",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The electric field (assumed to be one-dimensional) between two points A and B is shown. Let\n$$\\psi_A$$ and $$\\psi_B$$ be the electrostatic potentials at A and B, respectively. The value of  $$\\psi_A$$ − $$\\psi_B$$ in\nVolts is ________.\n<img alt=\"GATE ECE 2014 Set 4 Electromagnetics - Maxwell Equations Question 24 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/0f4715be8abe6fd02959ac9dc5ca2becd4afc2d3c90b896ccc3e29c8f7638b73.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "-15",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "If $$\\overrightarrow{\\mathrm E}=-\\left(2\\mathrm y^2\\;-3\\mathrm{yz}^2\\right)\\widehat{\\mathrm x}\\;-\\left(6\\mathrm{xy}^2-3\\mathrm{xz}^2\\right)\\widehat{\\mathrm y}+\\left(6\\mathrm{xyz}\\right)\\widehat{\\mathrm z}$$ <p>is the electric field in a source free\nregion, a valid expression for the electrostatic potential is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "xy<sup>3</sup> - yz<sup>2</sup>"
+      },
+      {
+        "identifier": "B",
+        "content": "2xy<sup>3</sup> - xyz<sup>2</sup>"
+      },
+      {
+        "identifier": "C",
+        "content": "y<sup>3</sup> + xyz<sup>2</sup>"
+      },
+      {
+        "identifier": "D",
+        "content": "2xy<sup>3</sup> - 3xyz<sup>2</sup>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "An infinitely long uniform solid wire of radius a carries a uniform dc current of density $$\\widehat{\\mathrm j}$$.\n<p>A hole of radius b (b &lt; a) is now drilled along the length of the wire at a distance d from the center\nof the wire as shown below.</p>\n<img alt=\"GATE ECE 2012 Electromagnetics - Maxwell Equations Question 27 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/42dde962cfc1eb89e1a33b9c0dc575c5e489f4d05983b90de7a2245f1cdfb57e.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">\n<p>The magnetic field inside the hole is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "uniform and depends only on d"
+      },
+      {
+        "identifier": "B",
+        "content": "uniform and depends only on b"
+      },
+      {
+        "identifier": "C",
+        "content": "uniform and depends on both b and d"
+      },
+      {
+        "identifier": "D",
+        "content": "non uniform"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "An infinitely long uniform solid wire of radius a carries a uniform dc current of density $$\\widehat{\\mathrm j}$$\n<p>The magnetic field at a distance r from the center of the wire is proportional to</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "r for r &lt; a and 1/r<sup>2</sup>\nfor r &gt; a\n"
+      },
+      {
+        "identifier": "B",
+        "content": "0 for r &lt; a and 1/r for r &gt; a"
+      },
+      {
+        "identifier": "C",
+        "content": "r for r &lt; a and 1/r for r &gt; a"
+      },
+      {
+        "identifier": "D",
+        "content": "0 for r &lt; a and 1/r<sup>2</sup>\nfor r &gt; a"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "If $$\\overrightarrow{\\mathrm A}\\;=\\;\\mathrm{xy}\\;{\\widehat{\\mathrm a}}_\\mathrm x\\;+\\;\\mathrm x^2\\;{\\widehat{\\mathrm a}}_\\mathrm y$$ then $$\\oint\\overrightarrow{\\mathrm A}.\\overrightarrow{\\mathrm d}\\mathcal l$$\n over the path shown in the figure is\n<img alt=\"GATE ECE 2010 Electromagnetics - Maxwell Equations Question 29 English\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/35c55484da86e24a85ef0a6612a308b49d0c894bcce874b907ec4165027eb11b.jpg\" style=\"text-align:center;max-width:100%;height:auto;\" loading=\"lazy\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac2{\\sqrt3}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2\\sqrt3$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the integral of the function $$\\mathrm g\\left(\\mathrm x,\\mathrm y\\right)=4\\mathrm x^3\\;+\\;10\\mathrm y^4$$ along the straight\nline segment from the point (0, 0) to the point (1, 2) in the x-y plane is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "33"
+      },
+      {
+        "identifier": "B",
+        "content": "35"
+      },
+      {
+        "identifier": "C",
+        "content": "40"
+      },
+      {
+        "identifier": "D",
+        "content": "56"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "If the electric field intensity is given by $$\\mathrm E=\\left(\\mathrm x{\\widehat{\\mathrm u}}_\\mathrm x\\;+\\mathrm y{\\widehat{\\mathrm u}}_\\mathrm y+\\mathrm z{\\widehat{\\mathrm u}}_\\mathrm z\\right)\\;\\mathrm{volt}/\\mathrm m$$, the potential\ndifference between X(2,0,0) and Y(1,2,3) is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "+1 volt"
+      },
+      {
+        "identifier": "B",
+        "content": "-1 volt"
+      },
+      {
+        "identifier": "C",
+        "content": "+5 volt"
+      },
+      {
+        "identifier": "D",
+        "content": "+6 volt"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ece-2003",
+    "difficulty": null
+  },
+  {
+    "content": "A material has conductivity of 10<sup>-2</sup> mho/m and a relative permittivity of 4. The\nfrequency at which the conduction current in the medium is equal to the\ndisplacement current is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "45 MHz"
+      },
+      {
+        "identifier": "B",
+        "content": "90 MHz"
+      },
+      {
+        "identifier": "C",
+        "content": "450 MHz"
+      },
+      {
+        "identifier": "D",
+        "content": "900 MHz"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Given,$$\\overrightarrow V=x\\cos^2y\\;\\;\\widehat{\\mathrm i}\\;+\\;\\mathrm x^2\\mathrm e^\\mathrm z\\;\\widehat{\\mathrm j}\\;+\\;\\mathrm{zsin}^2\\mathrm y\\;\\widehat{\\mathrm k}$$ and S the surface of a unit cube with one\ncorner at the origin and edges parallel to the coordinate axes, the value of the\nintegral is</p>\n<img src=\"https://gateclass.cdn.examgoal.net/examside/questions/72d5f47faa6e1fed96f1488777f322da7d53b21217f350376b5fc45ad9efde84.jpg\" style=\"text-align:center;height:auto;max-width:100%;\" loading=\"lazy\" alt=\"GATE ECE 1993 Electromagnetics - Maxwell Equations Question 34 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "(1/2)sin(2)",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following field equations indicate that the free magnetic charges do not exits?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\mathop H\\limits^ \\to   = {1 \\over \\mu }\\,\\nabla \\, \\times \\,A$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\mathop H\\limits^ \\to   = \\oint {{{Id\\,\\ell \\, \\times \\,R\\,} \\over {4\\,\\,\\pi \\,\\,{R^2}}}} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\nabla \\,.\\,\\mathop H\\limits^ \\to   = 0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\nabla \\, \\times \\,\\mathop H\\limits^ \\to   = J$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-ece-1990",
+    "difficulty": null
+  },
+  {
+    "content": "The incoming solar radiation at a place on the surface of the earth is 1.2 KW/m<sup>2</sup>.The amplitude of the electric field corresponding to this incident power is nearly equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "80 mV/m"
+      },
+      {
+        "identifier": "B",
+        "content": "2.5 V/m"
+      },
+      {
+        "identifier": "C",
+        "content": "30 V/m"
+      },
+      {
+        "identifier": "D",
+        "content": "950 V/m"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-ece-1990",
+    "difficulty": null
+  },
+  {
+    "content": "The electric field strength at a far-off point P due to a point charge + q, located at the origin O is 100 millivolts/metre. The point charge is now enclosed by a perfectly conducting hollow metal sphere with its centre at the origin O. The electric field strength at the point, P,",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "remains unchanged in its magnitude and direction "
+      },
+      {
+        "identifier": "B",
+        "content": "remains unchanged in its magnitude but reverse in  direction "
+      },
+      {
+        "identifier": "C",
+        "content": "would be that due to a dipole formed by the charge + q at O and - q induced "
+      },
+      {
+        "identifier": "D",
+        "content": "would be zero "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1989,
+    "yearKey": "gate-ece-1989",
+    "difficulty": null
+  },
+  {
+    "content": "Vector potential is a vector ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "whose curl is equal to the magnetic flux density "
+      },
+      {
+        "identifier": "B",
+        "content": "whose curl is equal to the electric field intensity"
+      },
+      {
+        "identifier": "C",
+        "content": "whose divergence is equal to the electric potential "
+      },
+      {
+        "identifier": "D",
+        "content": "which is equal to the vector product E x H"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "On either side of a charge-free interface between two media, ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the normal components of the electric field are equal "
+      },
+      {
+        "identifier": "B",
+        "content": "the tangential components of the electric field are equal "
+      },
+      {
+        "identifier": "C",
+        "content": "the normal components of the electric flux density are equal "
+      },
+      {
+        "identifier": "D",
+        "content": "the tangential components of the electric flux density are equal "
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-ece-1988",
+    "difficulty": null
+  },
+  {
+    "content": "Two long parallel wires in free space are separated by a distance R and carry currents of equal magnitude but opposite in direction. At any general point, the Z-component of \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/0UiLIGpr52rqAeZMF/3ok67UMjOq5LjgohKnwEZMu4QUHmi/4rjigVwluCM7feJYVWe8JI/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 1987 Electromagnetics - Maxwell Equations Question 6 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The magnetic vector potential is $${{{\\mu _o}\\,I} \\over {4\\,\\pi }}\\,\\ell \\,n\\left( {{{{d_2}^2} \\over {{d_1}^2}}} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "The magnetic induction is $${{{\\mu _o}\\,I} \\over {2\\,\\pi }}\\,\\,\\left( {{{{d_2}} \\over {{d_1}}}} \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "The magnetic induction is zero "
+      },
+      {
+        "identifier": "D",
+        "content": "The magnetic vector potential is $${{{\\mu _o}\\,I} \\over {2\\,\\pi }}\\,\\,\\left( {{{{d_2}^2} \\over {{d_1}^2}}} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  },
+  {
+    "content": "An electrostatic field is said to be conservative when ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The divergence of the field is equal to zero. "
+      },
+      {
+        "identifier": "B",
+        "content": "The curl of the field is equal to zero."
+      },
+      {
+        "identifier": "C",
+        "content": "The curl of the field is equal to $$ - {{\\partial \\,B} \\over {\\partial \\,t}}$$."
+      },
+      {
+        "identifier": "D",
+        "content": "The Laplacian of the field is equal to $$\\mu \\,\\,\\varepsilon {{{\\partial ^2}\\,E} \\over {\\partial \\,{t^2}}}$$."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1987,
+    "yearKey": "gate-ece-1987",
+    "difficulty": null
+  }
+]

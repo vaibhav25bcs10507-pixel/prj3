@@ -1,0 +1,1186 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The solution of the differential equation: $x \\cos y d y=\\left(x e^x \\log x+e^x\\right) d x$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\sin y-e^x \\log x=c$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\sin y=e^x \\log x+c$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\sin y=e^x+\\log x+c$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\sin y=\\frac{e^x}{x}+c$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>First separate variables:</p>\n<p>$$ x\\cos y\\,dy \\;=\\;\\bigl(xe^x\\ln x+e^x\\bigr)\\,dx \\;\\Rightarrow\\; \\cos y\\,dy \\;=\\;e^x\\Bigl(\\ln x+\\tfrac1x\\Bigr)\\,dx. $$</p>\n<p>Notice</p>\n<p>$$ \\frac{d}{dx}\\bigl(e^x\\ln x\\bigr) = e^x\\ln x + e^x\\cdot\\frac1x = e^x\\Bigl(\\ln x+\\tfrac1x\\Bigr). $$</p>\n<p>Integrate both sides:</p>\n<p>$$ \\int\\cos y\\,dy = \\int e^x(\\ln x+\\tfrac1x)\\,dx \\;\\Longrightarrow\\; \\sin y = e^x\\ln x + C. $$</p>\n<p>Hence the general solution is</p>\n<p>$$ \\sin y = e^x\\ln x + C, $$</p>\n<p>which is Option B.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The number of solutions of $\\frac{d y}{d x}=\\frac{y+1}{x-1}$, when $y(1)=2$ is :",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " two\n"
+      },
+      {
+        "identifier": "B",
+        "content": " one\n"
+      },
+      {
+        "identifier": "C",
+        "content": " zero\n"
+      },
+      {
+        "identifier": "D",
+        "content": "infinite"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We separate variables:  </p>\n<p>$$\\frac{dy}{y+1}=\\frac{dx}{x-1}$$  </p>\n<p>Integrating,  </p>\n<p>$$\\ln|y+1|=\\ln|x-1|+C\\quad\\Longrightarrow\\quad y+1=A(x-1)\\,. $$  </p>\n<p>For any constant $A$, at $x=1$ this gives  </p>\n<p>$$y(1)+1=A\\cdot0\\quad\\Longrightarrow\\quad y(1)=-1\\,, $$  </p>\n<p>so it’s impossible to have $y(1)=2$.  Hence there are no solutions satisfying the given initial condition.</p>\n<p>Answer: zero.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Find the function ' $f$ ' which satisfies the equation $\\frac{d f}{d x}=2 f$, given that $f(0)=e^3$\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $2 x+3$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\log (2 x+3)$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $e^{2 x+3}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\frac{x^2}{2}$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We solve the ODE by separating variables:</p>\n\n<p><p>$$\\frac{df}{dx}=2f\\;\\;\\Longrightarrow\\;\\;\\frac{df}{f}=2\\,dx$$  </p></p>\n<p><p>Integrate both sides:  </p>\n<p>$$\\int\\frac{df}{f}=\\int2\\,dx\\quad\\Longrightarrow\\quad \\ln|f|=2x+C$$  </p></p>\n<p><p>Exponentiate:  </p>\n<p>$$f(x)=e^{2x+C}=e^C\\,e^{2x}$$  </p></p>\n<p><p>Use the initial condition $f(0)=e^3$:  </p>\n<p>$$e^C=e^3\\quad\\Longrightarrow\\quad C=3$$  </p></p>\n<p><p>Therefore  </p>\n<p>$$f(x)=e^{2x+3}$$  </p></p>\n\n<p>This matches Option C.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Solve the following differential equation $\\cos ^2 x \\frac{d y}{d x}+y=\\tan x$, given that $y(0)=1$. Hence find $y\\left(\\frac{\\pi}{4}\\right)$\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\frac{2}{e}$"
+      },
+      {
+        "identifier": "C",
+        "content": "e"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Divide through by $\\cos^2x$:  </p>\n<p>$$    \\frac{dy}{dx} + \\sec^2x\\,y \\;=\\;\\tan x\\;\\sec^2x.    $$  </p></p>\n<p><p>The integrating factor is  </p>\n<p>$$    \\mu(x)=\\exp\\!\\Bigl(\\int \\sec^2x\\,dx\\Bigr)             =\\exp(\\tan x).    $$  </p></p>\n<p><p>Multiply the equation by $\\mu(x)$:  </p>\n<p>$$    \\frac{d}{dx}\\Bigl(y\\,e^{\\tan x}\\Bigr)      =\\tan x\\sec^2x\\;e^{\\tan x}.    $$  </p></p>\n<p><p>Notice $\\tan x\\sec^2x\\,dx = u\\,du$ if $u=\\tan x$.  Hence  </p>\n<p>$$    \\int \\tan x\\sec^2x\\;e^{\\tan x}\\,dx    =\\int u\\,e^u\\,du    =(u-1)e^u + C    =(\\tan x -1)e^{\\tan x}+C.    $$  </p>\n<p>So  </p>\n<p>$$    y\\,e^{\\tan x}=(\\tan x-1)e^{\\tan x}+C    \\quad\\Longrightarrow\\quad    y=\\tan x-1 + C\\,e^{-\\tan x}.    $$  </p></p>\n<p><p>Apply $y(0)=1$.  Since $\\tan0=0$,  </p>\n<p>$$    1 = 0-1 + C\\cdot e^0    \\quad\\Longrightarrow\\quad    C=2.    $$  </p>\n<p>Thus  </p>\n<p>$$    y(x)=\\tan x-1 + 2\\,e^{-\\tan x}.    $$  </p></p>\n<p><p>Finally, at $x=\\pi/4$, $\\tan(\\pi/4)=1$:  </p>\n<p>$$    y\\Bigl(\\tfrac\\pi4\\Bigr)    =1-1 + 2\\,e^{-1}    =\\frac{2}{e}.    $$  </p></p>\n\n<p>Answer: Option B, $\\displaystyle \\frac{2}{e}$.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Integrating factor of the differential equation $\\frac{d y}{d x}+y=\\frac{x^3+y}{x}$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\frac{x}{e^x}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $e^x$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\frac{e^x}{x}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $x e^x$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>First rewrite the equation in standard linear form:</p>\n\n<p><p>Start with  </p>\n<p>$$\\frac{dy}{dx} + y = \\frac{x^3+y}{x}\\,. $$</p></p>\n<p><p>Bring the $y/x$ term to the left:  </p>\n<p>$$\\frac{dy}{dx} + y - \\frac{y}{x} = x^2 \\quad\\Longrightarrow\\quad \\frac{dy}{dx} +\\Bigl(1-\\frac1x\\Bigr)y = x^2.$$</p></p>\n\n<p>Here $P(x)=1-\\tfrac1x$. The integrating factor is</p>\n<p>$$ \\mu(x)=\\exp\\!\\Bigl(\\!\\int P(x)\\,dx\\Bigr) =\\exp\\!\\Bigl(\\!\\int\\bigl(1-\\tfrac1x\\bigr)dx\\Bigr) =\\exp\\bigl(x-\\ln|x|\\bigr) =\\frac{e^x}{x}. $$</p>\n<p>So the correct choice is <strong>Option C</strong>:  </p>\n<p>$ \\boxed{\\frac{e^x}{x}}. $</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The degree of the differential equation $\\left[1+\\left(\\frac{d y}{d x}\\right)^2\\right]^{\\frac{3}{4}}=\\left(\\frac{d^2 y}{d x^2}\\right)^{\\frac{1}{3}}$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "9"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>First, recall that the degree of a differential equation is the power of the highest-order derivative after the equation has been made free of radicals and fractions in derivatives.</p>\n\n<p><p>Start with  </p>\n<p>$$\\bigl[1+(y')^2\\bigr]^{\\tfrac34} \\;=\\;\\bigl(y''\\bigr)^{\\tfrac13}$$</p></p>\n<p><p>To eliminate the fractional powers, raise both sides to the least common multiple of 4 and 3, which is 12:  </p>\n<p>$$\\Bigl(\\bigl[1+(y')^2\\bigr]^{\\tfrac34}\\Bigr)^{12}      \\;=\\;      \\Bigl(\\bigl(y''\\bigr)^{\\tfrac13}\\Bigr)^{12}$$  </p>\n<p>This gives  </p>\n<p>$$\\bigl[1+(y')^2\\bigr]^{9} \\;=\\; (y'')^4\\,. $$</p></p>\n<p><p>Now the equation is a polynomial in $y''$ (and lower derivatives). The highest power of the highest-order derivative $y''$ is 4.</p></p>\n\n<p>Therefore, the degree of the given differential equation is <strong>4</strong>.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Which of the following transformations reduce the differential equation $\\frac{d z}{d x}+\\frac{z}{x} \\log z=\\frac{z}{x^2}(\\log z)^2$ into the form $\\frac{d u}{d x}+P(x) u=Q(x)$\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $u=(\\log z)^{-1}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $u=\\log x$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $u=(\\log z)^2$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $u=e^x$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>The shortcut is to set  </p>\n<p>$$u=\\frac1{\\ln z}\\,. $$  </p>\n<p>Indeed, one finds  </p>\n<p>$ \\frac{dz}{dx} =-\\frac z{u^2}\\,\\frac{du}{dx}, \\quad \\ln z=\\frac1u $</p>\n<p>and the original equation  </p>\n<p>$ \\frac{dz}{dx}+\\frac z x\\ln z=\\frac z{x^2}(\\ln z)^2 $</p>\n<p>becomes, after dividing by $z$ and clearing denominators,  </p>\n<p>$ \\frac{du}{dx}-\\frac1x\\,u=-\\frac1{x^2}, $</p>\n<p>i.e. a linear ODE of the form  </p>\n<p>$ \\frac{du}{dx}+P(x)\\,u=Q(x). $</p>\n<p>Hence the correct choice is <strong>A</strong>.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Solution of the differential equation $y \\frac{d y}{d x}+x=0$ represents a family of\n \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " Ellipse\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Parabola"
+      },
+      {
+        "identifier": "C",
+        "content": " Circles\n"
+      },
+      {
+        "identifier": "D",
+        "content": " Hyperbola"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>First, rewrite and separate variables:</p>\n\n<p><p>$$y\\,\\frac{dy}{dx} + x = 0\\;\\;\\Longrightarrow\\;\\;y\\,\\frac{dy}{dx} = -x$$  </p></p>\n<p><p>$$y\\,dy = -\\,x\\,dx$$  </p></p>\n\n<p>Now integrate both sides:</p>\n<ol start=\"3\">\n<p><p>$$\\int y\\,dy = -\\int x\\,dx$$  </p></p>\n<p><p>$$\\frac{y^2}{2} = -\\frac{x^2}{2} + C$$  </p></p>\n\n<p>Multiply through by 2 and rearrange:</p>\n<ol start=\"5\">\n<p>$$x^2 + y^2 = 2C \\;=\\; K\\quad(K>0)$$  </p>\n\n<p>This is the equation of a circle (centered at the origin, radius $\\sqrt{K}$).  </p>\n<p>Answer: Option C (Circles).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The solution of $(x+\\log y) d y+y d x=0$ when $y(0)=1$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $y(x-1+\\log y)+1=0$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $x y+y \\log y+1=0$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $x y=y \\log y-y-1$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $y(x+1+\\log y)-1=0$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>We recognize the differential form  </p>\n<p>$$y\\,dx + (x+\\ln y)\\,dy = 0$$  </p>\n<p>is exact because  </p>\n<p>$$\\frac{\\partial}{\\partial y}(y)=1  \\quad\\text{and}\\quad  \\frac{\\partial}{\\partial x}(x+\\ln y)=1.$$  </p>\n\n<p><p>Find a potential Φ(x,y) with  </p>\n<p>$$\\frac{\\partial Φ}{\\partial x}=y       \\;\\;\\Longrightarrow\\;\\;       Φ=xy+h(y).$$  </p></p>\n<p><p>Impose  </p>\n<p>$$\\frac{\\partial Φ}{\\partial y}       =x + h'(y)       =x+\\ln y       \\;\\;\\Longrightarrow\\;\\;       h'(y)=\\ln y       \\;\\;\\Longrightarrow\\;\\;       h(y)=y\\ln y - y.$$  </p></p>\n<p><p>Hence the general solution is  </p>\n<p>$$Φ(x,y)=xy + y\\ln y -y =C.$$  </p></p>\n<p><p>The condition $y(0)=1$ gives  </p>\n<p>$$0\\cdot1 + 1\\cdot\\ln1 -1 =C       \\;\\;\\Longrightarrow\\;\\;C=-1.$$  </p></p>\n<p><p>Therefore  </p>\n<p>$$xy + y\\ln y -y = -1       \\;\\;\\Longrightarrow\\;\\;       y\\,(x-1+\\ln y)+1=0,$$  </p></p>\n\n<p>which is Option A.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The order of the differential equation $\\frac{d}{d x}\\left[\\left(\\frac{d y}{d x}\\right)^3\\right]=0$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "not defined"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>The highest derivative that appears is the second derivative. In fact, if you expand</p>\n<p>$$\\frac{d}{dx}\\Bigl[\\bigl(y'\\bigr)^3\\Bigr] =3\\bigl(y'\\bigr)^2\\,y''=0$$</p>\n<p>you see $y''=\\dfrac{d^2y}{dx^2}$ shows up. Hence the order is 2. </p>\n<p>Answer: Option C (2).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The general solution of the differential equation $(x-y) d y=(x+y) d x$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\tan ^{-1}\\left(\\frac{y}{x}\\right)=c \\sqrt{x^2+y^2}$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\tan ^{-1}\\left(\\frac{y}{x}\\right)=x^2+y^2+c$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $e^{\\tan ^{-1}\\left(\\frac{y}{x}\\right)}=\\frac{c \\sqrt{x^2+y^2}}{x}$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $e^{\\tan ^{-1}\\left(\\frac{y}{x}\\right)}=c \\sqrt{x^2+y^2}$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s set it up as a homogeneous equation:</p>\n\n<p><p>Rewrite in differential form  </p>\n<p>$$(x - y)\\,dy = (x + y)\\,dx       \\quad\\Longrightarrow\\quad      \\frac{dy}{dx} = \\frac{x + y}{x - y}\\,. $$</p></p>\n<p><p>Use the substitution  </p>\n<p>$$v = \\frac{y}{x},\\quad y = v x,\\quad       \\frac{dy}{dx} = v + x\\frac{dv}{dx}.$$</p>\n<p>Then</p>\n<p>$$v + x\\frac{dv}{dx} = \\frac{1+v}{1-v}      \\;\\Longrightarrow\\;      x\\frac{dv}{dx} = \\frac{1+v^2}{1-v}\\,. $$</p></p>\n<p><p>Separate variables and integrate  </p>\n<p>$$\\int\\frac{1-v}{1+v^2}\\,dv = \\int\\frac{dx}{x}       \\;\\Longrightarrow\\;      \\arctan v - \\tfrac12\\ln(1+v^2) = \\ln|x| + C.$$</p></p>\n<p><p>Back-substitute $v=y/x$ and simplify  </p>\n<p>$      2\\arctan\\!\\frac{y}{x}-\\ln\\bigl(x^2+y^2\\bigr)      =\\;C      \\;\\Longrightarrow\\;      e^{2\\arctan(y/x)}=e^C\\,(x^2+y^2)\\,.    $</p>\n<p>Taking square-roots (absorbing signs into a new constant) gives</p>\n<p>$$      e^{\\arctan(y/x)}=K\\sqrt{x^2+y^2}\\,.    $$</p></p>\n\n<p>That matches Option D:</p>\n<p>$$   e^{\\tan^{-1}\\!\\bigl(\\tfrac{y}{x}\\bigr)}=c\\sqrt{x^2+y^2}\\,.  $$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "The solution of the differential equation $\\frac{d y}{d x}+y \\log y \\cot x=0$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\cos x \\log y=c$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\log y=c \\sin x$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\sin x \\log y=c$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $y \\sin x=c$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let’s separate variables. The DE is  </p>\n<p>$$\\frac{dy}{dx} + y\\log y\\cot x = 0$$  </p>\n<p>so  </p>\n<p>$$\\frac{dy}{y\\log y} = -\\cot x\\,dx\\,. $$  </p>\n<p>Integrate both sides:  </p>\n\n<p><p>Left: let $u=\\log y$, $du=dy/y$, so  </p>\n<p>$$\\int\\frac{dy}{y\\log y}=\\int\\frac{du}{u}=\\ln|\\ln y|\\,. $$  </p></p>\n<p><p>Right:  </p>\n<p>$$\\int -\\cot x\\,dx = -\\ln|\\sin x|\\,. $$  </p></p>\n\n<p>Hence  </p>\n<p>$$\\ln|\\ln y| = -\\ln|\\sin x| + C     \\quad\\Longrightarrow\\quad \\ln|\\ln y| + \\ln|\\sin x| = C     \\quad\\Longrightarrow\\quad \\ln y\\;\\sin x = \\tilde C.$$  </p>\n<p>Thus the general solution is  </p>\n<p>$$\\boxed{\\sin x\\;\\log y = C}\\quad\\text{(Option C).}$$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "comedk-2025-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The general solution of the differential equation $$x \\frac{d y}{d x}=y+x \\tan \\left(\\frac{y}{x}\\right)$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\n\\sin \\left(\\frac{y}{x}\\right)=\\frac{C}{x}\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\n\\sin \\left(\\frac{y}{x}\\right)=C x\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\n\\sin \\left(\\frac{x}{y}\\right)=C x\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\n\\sin \\left(\\frac{x}{y}\\right)=C y\n$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the general solution of the given differential equation:</p>\n\n<p>$$x \\frac{d y}{d x}=y+x \\tan \\left(\\frac{y}{x}\\right)$$</p>\n\n<p>we can use a substitution method. Let's set:</p>\n\n<p>$$v = \\frac{y}{x}$$</p>\n\n<p>so that</p>\n\n<p>$$y = vx$$</p>\n\n<p>To find the derivative $ \\frac{d y}{d x} $, we use the product rule:</p>\n\n<p>$$\\frac{d y}{d x} = v + x \\frac{d v}{d x}$$</p>\n\n<p>Substitute this expression and $ y = vx $ into the original differential equation:</p>\n\n<p>$$x \\left(v + x \\frac{d v}{d x}\\right) = vx + x \\tan(v)$$</p>\n\n<p>Simplify the equation:</p>\n\n<p>$$xv + x^{2} \\frac{d v}{d x} = vx + x \\tan(v)$$</p>\n\n<p>Cancel the $ x v $ term on both sides:</p>\n\n<p>$$x^{2} \\frac{d v}{d x} = x \\tan(v)$$</p>\n\n<p>Divide both sides by $ x $:</p>\n\n<p>$$x \\frac{d v}{d x} = \\tan(v)$$</p>\n\n<p>Separate variables in the differential equation:</p>\n\n<p>$$\\frac{d v}{\\tan(v)} = \\frac{d x}{x}$$</p>\n\n<p>Integrate both sides:</p>\n\n<p>$$\\int \\cot(v) \\, dv = \\int \\frac{d x}{x}$$</p>\n\n<p>The integral of $ \\cot(v) $ is:</p>\n\n<p>$$\\ln|\\sin(v)|$$</p>\n\n<p>and the integral of $ \\frac{1}{x} $ is:</p>\n\n<p>$$\\ln|x|$$</p>\n\n<p>So the equation becomes:</p>\n\n<p>$$\\ln |\\sin(v)| = \\ln |x| + \\ln|C|$$</p>\n\n<p>Rewrite this as:</p>\n\n<p>$$\\ln |\\sin(v)| = \\ln |Cx|$$</p>\n\n<p>which implies:</p>\n\n<p>$$|\\sin(v)| = |Cx|$$</p>\n\n<p>Since $ v = \\frac{y}{x} $, we get:</p>\n\n<p>$$|\\sin \\left(\\frac{y}{x}\\right)| = |Cx|$$</p>\n\n<p>or simply:</p>\n\n<p>$$\\sin \\left(\\frac{y}{x}\\right) = C x$$</p>\n\n<p>where $ C $ is an arbitrary constant. Thus, the general solution of the differential equation is given by Option B:</p>\n\n<p>$$\\sin \\left(\\frac{y}{x}\\right)=C x$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\n\\text { The general solution of the differential equation }(1+\\tan y)(d x-d y)+2 x d y=0 \\text { is }\n$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y(\\sin x+\\cos x)=\\sin x+c e^x$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$y(\\sin x+\\cos x)=\\sin x+c e^{-x}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$x(\\sin y+\\cos y)=\\sin y+c e^y$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$x(\\sin y+\\cos y)=\\sin y+c e^{-y}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The sum of the order and degree of the differential equation $$\\left(\\frac{d^2 y}{d x^2}\\right)^5+\\frac{4\\left(\\frac{d^2 y}{d x^2}\\right)^3}{\\left(\\frac{d^3 y}{d x^3}\\right)}+\\frac{d^3 y}{d x^3}=x^2-1$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "5"
+      },
+      {
+        "identifier": "C",
+        "content": "6"
+      },
+      {
+        "identifier": "D",
+        "content": "8"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\n\\text { If } \\frac{d y}{d x}=y+3>0 \\text { and } y(0)=2 \\text { then } y(\\log 2) \\text { is equal to }\n$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5"
+      },
+      {
+        "identifier": "B",
+        "content": "13"
+      },
+      {
+        "identifier": "C",
+        "content": "$$-$$2"
+      },
+      {
+        "identifier": "D",
+        "content": "7"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We are given the differential equation:</p>\n\n<p>$$ \\frac{d y}{d x} = y + 3 $$</p>\n\n<p>along with the initial condition:</p>\n\n<p>$$ y(0) = 2 $$</p>\n\n<p>First, we need to solve the differential equation. Let's rewrite it as:</p>\n\n<p>$$ \\frac{d y}{d x} - y = 3 $$</p>\n\n<p>We recognize this as a first-order linear differential equation of the form:</p>\n\n<p>$$ \\frac{d y}{d x} + P(x)y = Q(x) $$</p>\n\n<p>where $ P(x) = -1 $ and $ Q(x) = 3 $. The integrating factor $ \\mu(x) $ is given by:</p>\n\n<p>$$ \\mu(x) = e^{\\int P(x) \\, dx} = e^{-\\int 1 \\, dx} = e^{-x} $$</p>\n\n<p>We multiply the original differential equation by the integrating factor:</p>\n\n<p>$$ e^{-x}\\frac{d y}{d x} - e^{-x}y = 3e^{-x} $$</p>\n\n<p>This can be written as:</p>\n\n<p>$$ \\frac{d}{dx} \\left( y e^{-x} \\right) = 3e^{-x} $$</p>\n\n<p>We integrate both sides with respect to $ x $:</p>\n\n<p>$$ \\int \\frac{d}{dx} \\left( y e^{-x} \\right) dx = \\int 3e^{-x} \\, dx $$</p>\n\n<p>So, we get:</p>\n\n<p>$$ y e^{-x} = -3 e^{-x} + C $$</p>\n\n<p>where $ C $ is the constant of integration. Multiplying both sides by $ e^x $ to solve for $ y $:</p>\n\n<p>$$ y = -3 + C e^x $$</p>\n\n<p>Using the initial condition $ y(0) = 2 $, we can find $ C $:</p>\n\n<p>$$ 2 = -3 + C e^0 $$</p>\n\n<p>Since $ e^0 = 1 $:</p>\n\n<p>$$ 2 = -3 + C $$</p>\n\n<p>Therefore:</p>\n\n<p>$$ C = 5 $$</p>\n\n<p>Substituting $ C $ back into the solution for $ y $:</p>\n\n<p>$$ y = -3 + 5 e^x $$</p>\n\n<p>Now, we need to find $ y(\\log 2) $:</p>\n\n<p>$$ y(\\log 2) = -3 + 5 e^{\\log 2} $$</p>\n\n<p>Since $ e^{\\log 2} = 2 $:</p>\n\n<p>$$ y(\\log 2) = -3 + 5(2) = -3 + 10 = 7 $$</p>\n\n<p>Therefore, the value of $ y(\\log 2) $ is:</p>\n\n<p><b>Option D: 7</b></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\n\\text { The general solution of the differential equation } \\frac{d y}{d x}=\\frac{x y}{x^2+y^2} \\text { is }\n$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\ny=c e^{\\left(\\frac{x^2}{2 y^2}\\right)}\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\ny=c e^{\\left(\\frac{x^2}{3 y^2}\\right)}\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\ny=c e^{\\left(-\\frac{x^2}{2 y^2}\\right)}\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\ny=c e^{\\left(\\frac{x^2}{y^2}\\right)}\n$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's solve the differential equation</p>\n<p>$$ \\frac{dy}{dx}=\\frac{xy}{x^2+y^2} $$</p>\n<p>and determine which option represents its general solution.</p>\n<p>Step 1. Recognize the Equation is Homogeneous  </p>\n<p>The right-hand side is homogeneous because both $xy$ and $x^2+y^2$ are of degree 2. This suggests the substitution</p>\n<p>$$ y=vx \\quad \\text{or} \\quad v=\\frac{y}{x}, $$</p>\n<p>with</p>\n<p>$$ \\frac{dy}{dx}=v+x\\frac{dv}{dx}. $$</p>\n<p>Step 2. Substitute into the Differential Equation  </p>\n<p>Replace $y$ and $\\frac{dy}{dx}$ in the original equation:</p>\n<p>$$ v+x\\frac{dv}{dx}=\\frac{x(vx)}{x^2+(vx)^2}=\\frac{vx^2}{x^2\\left(1+v^2\\right)} =\\frac{v}{1+v^2}. $$</p>\n<p>Thus, we have:</p>\n<p>$$ v+x\\frac{dv}{dx}=\\frac{v}{1+v^2}. $$</p>\n<p>Step 3. Isolate the $dv/dx$ Term  </p>\n<p>Subtract $v$ from both sides:</p>\n<p>$$ x\\frac{dv}{dx}=\\frac{v}{1+v^2}-v. $$</p>\n<p>Factor $v$ on the right-hand side:</p>\n<p>$$ x\\frac{dv}{dx}=v\\left(\\frac{1}{1+v^2}-1\\right) =v\\left(\\frac{1-(1+v^2)}{1+v^2}\\right) =-\\frac{v^3}{1+v^2}. $$</p>\n<p>So,</p>\n<p>$$ \\frac{dv}{dx}=-\\frac{v^3}{x(1+v^2)}. $$</p>\n<p>Step 4. Separate the Variables  </p>\n<p>Separate the $v$ and $x$ variables:</p>\n<p>$$ \\frac{1+v^2}{v^3}\\,dv=-\\frac{dx}{x}. $$</p>\n<p>Step 5. Integrate Both Sides  </p>\n<p>Express the left-hand side as two separate terms:</p>\n<p>$$ \\frac{1+v^2}{v^3}=\\frac{1}{v^3}+\\frac{v^2}{v^3}=\\frac{1}{v^3}+\\frac{1}{v}. $$</p>\n<p>Now integrate:</p>\n<p>$$ \\int \\left(\\frac{1}{v^3}+\\frac{1}{v}\\right)\\,dv=\\int -\\frac{dx}{x}. $$</p>\n<p>Compute the integrals:</p>\n\n<p><p>For $ \\int \\frac{1}{v^3}\\,dv $:</p>\n<p>$$   \\int v^{-3}\\,dv=-\\frac{1}{2}v^{-2}.   $$</p></p>\n<p><p>For $ \\int \\frac{1}{v}\\,dv $:</p>\n<p>$$   \\int v^{-1}\\,dv=\\ln|v|.   $$</p></p>\n\n<p>Thus, the left-hand side is:</p>\n<p>$$ -\\frac{1}{2v^2}+\\ln|v| $$</p>\n<p>and the right-hand side is:</p>\n<p>$$ -\\ln|x|+C, $$</p>\n<p>so we have:</p>\n<p>$$ -\\frac{1}{2v^2}+\\ln|v|=-\\ln|x|+C. $$</p>\n<p>Step 6. Return to the Original Variables  </p>\n<p>Recall that $v=\\frac{y}{x}$, so we have:</p>\n\n<p><p>Replace $v^{-2}$ with:</p>\n<p>$$   v^{-2}=\\left(\\frac{y}{x}\\right)^{-2}=\\frac{x^2}{y^2}.   $$</p></p>\n<p><p>Also, note that $\\ln|v|=\\ln\\left|\\frac{y}{x}\\right|=\\ln|y|-\\ln|x|$.</p></p>\n\n<p>Substitute these back into the integrated equation:</p>\n<p>$$ -\\frac{1}{2}\\frac{x^2}{y^2}+\\ln|y|-\\ln|x|=-\\ln|x|+C. $$</p>\n<p>Add $\\ln|x|$ to both sides to cancel the $-\\ln|x|$ terms:</p>\n<p>$$ \\ln|y|-\\frac{x^2}{2y^2}=C. $$</p>\n<p>Step 7. Solve for $y$  </p>\n<p>Exponentiate both sides to remove the logarithm:</p>\n<p>$$ \\exp\\left(\\ln|y|-\\frac{x^2}{2y^2}\\right)=\\exp(C). $$</p>\n<p>This simplifies to:</p>\n<p>$$ |y|e^{-\\frac{x^2}{2y^2}}=e^{C}. $$</p>\n<p>Let $ c = e^{C} $ (where $ c $ can absorb the sign issue arising from the absolute value), then:</p>\n<p>$$ y=e^{\\frac{x^2}{2y^2}}\\,c. $$</p>\n<p>This is equivalent to writing:</p>\n<p>$$ y=c\\,e^{\\left(\\frac{x^2}{2y^2}\\right)}. $$</p>\n<p>Step 8. Match with the Given Options  </p>\n<p>Comparing with the provided options, we see that Option A exactly matches our solution:</p>\n<p>$$ y=c\\,e^{\\left(\\frac{x^2}{2y^2}\\right)}. $$</p>\n<p>Therefore, the correct answer is:</p>\n<p>Option A.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\n\\text { Integrating factor of the differential equation } \\frac{d y}{d x}+y=\\frac{x^3+y}{x} \\text { is }\n$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\n\\frac{x}{e^x}\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\ne^x\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\n\\frac{e^x}{x}\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\nx e^x\n$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>First, we need to rewrite the given differential equation in the standard form of a first-order linear differential equation, which is $$\\frac{dy}{dx} + P(x)y = Q(x)$$.</p>\n<p>Given equation: $$\\frac{dy}{dx} + y = \\frac{x^3 + y}{x}$$</p>\n<p>Let's simplify it:</p>\n<p>$$\\frac{dy}{dx} + y = \\frac{x^3}{x} + \\frac{y}{x}$$</p>\n<p>$$\\frac{dy}{dx} + y = x^2 + \\frac{y}{x}$$</p>\n<p>Now, rearrange the terms to get it into the standard form:</p>\n<p>$$\\frac{dy}{dx} + y - \\frac{y}{x} = x^2$$</p>\n<p>$$\\frac{dy}{dx} + \\left(1 - \\frac{1}{x}\\right)y = x^2$$</p>\n<p>Here, $$P(x) = 1 - \\frac{1}{x}$$.</p>\n<p>The integrating factor (IF) is given by $$e^{\\int P(x) \\, dx}$$. So, let's calculate that:</p>\n<p>$$\\text{IF} = e^{\\int \\left(1 - \\frac{1}{x}\\right) \\, dx}$$</p>\n<p>$$\\text{IF} = e^{\\int 1 \\, dx - \\int \\frac{1}{x} \\, dx}$$</p>\n<p>$$\\text{IF} = e^{x - \\ln|x|}$$</p>\n<p>$$\\text{IF} = e^x \\cdot e^{-\\ln|x|}$$</p>\n<p>Since $$e^{-\\ln|x|} = e^{\\ln|x|^{-1}} = \\frac{1}{|x|}$$, we have:</p>\n<p>$$\\text{IF} = e^x \\cdot \\frac{1}{x} = \\frac{e^x}{x}$$</p>\n<p>So, the integrating factor of the given differential equation is $$\\frac{e^x}{x}$$.</p>\n<p>Therefore, the correct option is C:</p>\n<p>$$ \\frac{e^x}{x} $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$\n\\text { The general solution of } \\frac{d y}{d x}=\\sin ^{-1} x \\text { is }\n$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\ny=x \\sin ^{-1} x+\\sqrt{1-x^2}+C\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\ny=x \\sin ^{-1} x-\\sqrt{1-x^2}+C\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\ny=-x \\sin ^{-1} x+\\sqrt{1-x^2}+C\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\ny=-x \\sin ^{-1} x-\\sqrt{1-x^2}+C\n$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve the differential equation</p>\n<p>$$ \\frac{dy}{dx} = \\sin^{-1} x, $$</p>\n<p>we need to integrate both sides with respect to $$x$$:</p>\n<p>$$ y = \\int \\sin^{-1} x \\, dx. $$</p>\n<p>Here's how to evaluate the integral step by step:</p>\n\n<p><p><strong>Use Integration by Parts:</strong>  </p>\n<p>The formula for integration by parts is</p>\n<p>$$    \\int u \\, dv = uv - \\int v \\, du.    $$</p>\n<p>Choose:</p></p>\n\n\n<p><p>$$u = \\sin^{-1} x$$ so that</p>\n<p>$$      du = \\frac{dx}{\\sqrt{1-x^2}}.      $$</p></p>\n<p><p>$$dv = dx$$ so that</p>\n<p>$$      v = x.      $$</p></p>\n\n\n<p><p><strong>Apply the Formula:</strong></p>\n<p>Substitute into the formula:</p>\n<p>$$    \\int \\sin^{-1} x \\, dx = x \\sin^{-1} x - \\int x \\left(\\frac{1}{\\sqrt{1-x^2}}\\right) dx.    $$</p></p>\n<p><p><strong>Evaluate the Remaining Integral:</strong>  </p>\n<p>Consider the integral</p>\n<p>$$    \\int \\frac{x}{\\sqrt{1-x^2}} \\, dx.    $$</p>\n<p>Notice that the derivative of $$\\sqrt{1-x^2}$$ is</p>\n<p>$$    \\frac{d}{dx}\\left(\\sqrt{1-x^2}\\right) = \\frac{-x}{\\sqrt{1-x^2}}.    $$</p>\n<p>Hence,</p>\n<p>$$    \\frac{d}{dx}\\left(-\\sqrt{1-x^2}\\right) = \\frac{x}{\\sqrt{1-x^2}}.    $$</p>\n<p>This implies</p>\n<p>$$    \\int \\frac{x}{\\sqrt{1-x^2}} \\, dx = -\\sqrt{1-x^2} + C.    $$</p></p>\n<p><p><strong>Combine the Results:</strong></p>\n<p>Substitute back into our integration by parts expression:</p>\n<p>$$    \\int \\sin^{-1} x \\, dx = x \\sin^{-1} x - \\left(-\\sqrt{1-x^2}\\right) = x \\sin^{-1} x + \\sqrt{1-x^2} + C,    $$</p>\n<p>where $$C$$ is the constant of integration.</p></p>\n\n<p>Thus, the general solution of the differential equation is</p>\n<p>$$ y = x \\sin^{-1} x + \\sqrt{1-x^2} + C. $$</p>\n<p>Comparing with the provided options, the correct answer is:</p>\n<p>Option A  </p>\n<p>$$ y = x \\sin^{-1} x + \\sqrt{1-x^2} + C. $$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Degree of the differential equation $$\\log \\left(\\frac{d y}{d x}\\right)^{\\frac{1}{2}}=5 x+4 y$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Not defined"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "1"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Let's determine the degree step by step.</p>\n\n<p><p>We start with the differential equation:</p>\n<p>$$\\log \\left(\\frac{dy}{dx}\\right)^{\\frac{1}{2}} = 5x + 4y.$$</p></p>\n\n<p><p>Using the logarithm property, we can bring the exponent in front:</p>\n<p>$$\\frac{1}{2} \\log \\frac{dy}{dx} = 5x + 4y.$$</p></p>\n\n<p><p>Multiply both sides by 2:</p>\n<p>$$\\log \\frac{dy}{dx} = 10x + 8y.$$</p></p>\n\n<p><p>Now, exponentiate both sides to remove the logarithm (this is an invertible operation which does not change the dependence on the derivative):</p>\n<p>$$\\frac{dy}{dx} = e^{10x+8y}.$$</p></p>\n\n<p><p>In the resulting equation</p>\n<p>$$\\frac{dy}{dx} - e^{10x+8y} = 0,$$</p>\n<p>the highest order derivative (which is $$\\frac{dy}{dx}$$) appears to the power 1.</p></p>\n<p><p>Recall that the degree of a differential equation is defined as the power of its highest order derivative when the equation is written in a polynomial form in the derivatives. Although the original equation had a logarithm, after exponentiating, the derivative appears in a polynomial form with degree 1.</p></p>\n\n<p>Thus, the degree of the differential equation is 1.</p>\n<p>The correct option is Option C.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-afternoon-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The particular solution of $$\\frac{d y}{d x}+\\sqrt{\\frac{1-y^2}{1-x^2}}=0$$, when $$x=0, y=\\frac{1}{2}$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sin ^{-1} x+\\sin ^{-1} y=\\frac{\\pi}{6}$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sin ^{-1} x+\\sin ^{-1} y=\\frac{\\pi}{2}$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sin ^{-1} x-\\sin ^{-1} y=\\frac{\\pi}{2}$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sin ^{-1} x+\\sin ^{-1} y=\\frac{\\pi}{3}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The particular solution of the differential equation $$\\cos x \\frac{d y}{d x}+y=\\sin x$$ at $$y(0)=1$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y(\\sec x+\\tan x)=\\sec x+\\tan x-x+1$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$y(\\sec x+\\tan x)=\\sec x+\\tan x-x$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$y(\\sec x+\\tan x)=\\sec x+\\tan x+x$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$y(\\sec x+\\tan x)=\\sec x+\\tan x-x+2$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The given differential equation is a linear differential equation of the form $$\\frac{dy}{dx}+P(x)y=Q(x)$$ where $$P(x)=\\frac{1}{\\cos x}=\\sec x$$ and $$Q(x)=\\frac{\\sin x}{\\cos x}=\\tan x$$. </p>\n\n<p>The integrating factor is given by: $$I.F.=e^{\\int P(x) dx}=e^{\\int \\sec x dx}=e^{\\log |\\sec x + \\tan x|}=\\sec x + \\tan x$$.</p>\n\n<p>Multiplying both sides of the differential equation by the integrating factor, we get:</p>\n\n<p>$$(\\sec x + \\tan x) \\frac{dy}{dx} + (\\sec x + \\tan x)y = (\\sec x + \\tan x) \\tan x$$</p>\n\n<p>The left-hand side can be written as the derivative of the product of the integrating factor and the dependent variable, i.e., $$\\frac{d}{dx}[(\\sec x + \\tan x)y]=(\\sec x + \\tan x) \\tan x$$.</p>\n\n<p>Integrating both sides with respect to x, we get:</p>\n\n<p>$$(\\sec x + \\tan x)y = \\int (\\sec x + \\tan x) \\tan x dx$$</p>\n\n<p>Simplifying the integral on the right-hand side:</p>\n\n<p>$$\\int (\\sec x + \\tan x) \\tan x dx = \\int (\\sec x \\tan x + \\tan^2 x) dx = \\int (\\sec x \\tan x + \\sec^2 x -1) dx = \\sec x + \\tan x - x + C$$</p>\n\n<p>Therefore, the general solution of the differential equation is:</p>\n\n<p>$$(\\sec x + \\tan x)y = \\sec x + \\tan x - x + C$$</p>\n\n<p>Using the initial condition $$y(0)=1$$, we can find the value of the constant C:</p>\n\n<p>$$(\\sec 0 + \\tan 0) \\cdot 1 = \\sec 0 + \\tan 0 - 0 + C$$</p>\n\n<p>$$1 = 1 + C$$</p>\n\n<p>$$C=0$$</p>\n\n<p>Therefore, the particular solution of the differential equation is:</p>\n\n<p>$$(\\sec x + \\tan x)y = \\sec x + \\tan x - x$$</p>\n\n<p>So, the correct option is <strong>Option B</strong>. </p>\n\n<p></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "comedk-2024-morning-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The differential equation of all non-vertical lines in a plane is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{d^2 y}{d x^2}=0$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\frac{d^2 x}{d y^2}=0$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{d y}{d x}=0$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\frac{d x}{d y}=0$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>The general equation of all non-vertical lines in a plane is $$a x+b y=1$$, where $$b \\neq 0$$.</p>\n<p>On differentiating both sides w.r.t. $$x$$, we get</p>\n<p>$$a+b \\frac{d y}{d x}=0$$</p>\n<p>Again, differentiating w.r.t $$x$$, we get</p>\n<p>$$\\begin{gathered}\nb \\frac{d^2 y}{d x^2} \\\\\n\\Rightarrow \\quad\\frac{d^2 y}{d x^2}=0 \\quad\n[\\because b \\neq 0] .\n\\end{gathered}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The general solution of $$\\left(\\frac{d y}{d x}\\right)^2=1-x^2-y^2+x^2 y^2$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2 \\sin ^{-1} y=x \\sqrt{1-x^2}+\\sin ^{-1} x+C$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\cos ^{-1} y=x \\cos ^{-1} x$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sin ^{-1} y=\\frac{1}{2} \\sin ^{-1} x+C$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2 \\sin ^{-1} y=x \\sqrt{1-y^2}+C$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$\\left(\\frac{d y}{d x}\\right)^2=1-x^2-y^2+x^2 y^2$$</p>\n<p>$$\\begin{aligned}\n& \\Rightarrow \\quad\\left(\\frac{d y}{d x}\\right)^2=\\left(1-y^2\\right)-x^2\\left(1-y^2\\right)=\\left(1-x^2\\right)\\left(1-y^2\\right) \\\\\n& \\therefore \\quad \\frac{d y}{d x}=\\sqrt{\\left(1-x^2\\right)\\left(1-y^2\\right)} \\\\\n& \\Rightarrow \\quad \\frac{d y}{\\sqrt{1-y^2}}=\\sqrt{1-x^2} d x\n\\end{aligned}$$</p>\n<p>On integrating both sides, we get</p>\n<p>$$\\begin{aligned}\n& \\int \\frac{d y}{\\sqrt{1-y^2}}=\\int \\sqrt{1-x^2} d x \\\\\n\\Rightarrow \\quad \\sin ^{-1} y & =\\frac{x}{2} \\sqrt{1-x^2}+\\frac{1}{2} \\sin ^{-1} x+\\frac{C}{2} \\\\\n\\Rightarrow \\quad 2 \\sin ^{-1} y & =x \\sqrt{1-x^2}+\\sin ^{-1} x+C\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The solution of the differential equation $$\\left(\\frac{d y}{d x}\\right) \\tan y=\\sin (x+y)+\\sin (x-y)$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\sec x=-2 \\sec y+C$$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sec y=2 \\cos y+C$$\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\sec y=-2 \\cos x+C$$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sec x=-2 \\cos y+C$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, differential equation is</p>\n<p>$$\\begin{aligned}\n& \\left(\\frac{d y}{d x}\\right) \\tan y=\\sin (x+y)+\\sin (x-y) \\\\\n& \\Rightarrow\\left(\\frac{d y}{d x}\\right) \\tan y=2 \\sin \\left(\\frac{x+y+x-y}{2}\\right) \\\\\n& \\Rightarrow\\left(\\frac{d y}{d x}\\right) \\frac{\\sin y}{\\cos y}=2 \\sin x \\cos y \\\\\n& \\Rightarrow \\frac{\\sin y}{\\cos ^2 y} d y=2 \\sin x d x\n\\end{aligned}$$</p>\n<p>On integration both sides, we get</p>\n<p>$$\\begin{aligned}\n& \\int \\frac{\\sin y}{\\cos ^2 y} d y=\\int 2 \\sin x d x \\\\\n\\Rightarrow & -\\frac{(\\cos y)^{-2+1}}{(-2+1)}=-2 \\cos x+C \\\\\n\\Rightarrow \\quad & \\frac{1}{\\cos y}=-2 \\cos x+C \\Rightarrow \\sec y=-2 \\cos x+C\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The particular solution of $$e^{\\frac{d y}{d x}}=2 x+1$$ given that $$y=1$$ when $$x=0$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\ny=\\left(x+\\frac{1}{2}\\right) \\log |2 x+1|-x+1\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\ny=(x+1) \\log |2 x+1|-x+1\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\ny=\\left(x+\\frac{1}{2}\\right) \\log |2 x+1|-\\frac{1}{2} x+1\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\ny=\\left(x-\\frac{1}{2}\\right) \\log |2 x+1|-x-1\n$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the particular solution of the given differential equation $$e^{\\frac{d y}{d x}}=2 x+1$$ with the initial condition $$y=1$$ when $$x=0$$, let's start by analyzing the differential equation:</p>\n\n<p>The differential equation can be rewritten by taking the natural log of both sides (assuming that $$ \\frac{dy}{dx} $$ is in the range where $$ e^{\\frac{dy}{dx}} $$ is defined and $$ 2x+1 > 0 $$). Hence, we take the logarithm:</p>\n\n$$\n\\frac{dy}{dx} = \\log(2x + 1)\n$$\n\n<p>We can now integrate both sides with respect to $$x$$ to find $$y$$. Integrating the right-hand side:</p>\n\n$$\ny = \\int \\log(2x + 1) \\, dx \n$$\n\n<p>To solve the integral, we make the following substitution:</p>\n\n<p>Let $$ u = 2x + 1 \\Rightarrow du = 2 \\, dx \\Rightarrow dx = \\frac{du}{2} $$. Therefore, substituting this in, the integral becomes:</p>\n\n$$\ny = \\int \\log u \\cdot \\frac{1}{2} \\, du = \\frac{1}{2} \\int \\log u \\, du\n$$\n\n<p>The integral of $$ \\log u $$ is a well-known result:</p>\n\n$$\n\\int \\log u \\, du = u \\log u - u + C\n$$\n\n<p>Substituting back for $$ u $$, we get:</p>\n\n$$\ny = \\frac{1}{2} ( (2x + 1) \\log (2x + 1) - (2x + 1) ) + C = (x + \\frac{1}{2}) \\log (2x + 1) - x - \\frac{1}{2} + C\n$$\n\n<p>Using the initial condition $$ y(0) = 1 $$, we substitute $$ x = 0 $$ into our equation:</p>\n\n$$\n1 = \\left(0 + \\frac{1}{2}\\right) \\log (1) - 0 - \\frac{1}{2} + C = -\\frac{1}{2} + C\n$$\n\n<p>Now solving for $$ C $$:</p>\n\n$$\nC = 1 + \\frac{1}{2} = 1.5\n$$\n\n<p>Therefore, the solution becomes:</p>\n\n$$\ny = \\left(x + \\frac{1}{2}\\right) \\log (2x + 1) - x - \\frac{1}{2} + 1.5 = \\left(x + \\frac{1}{2}\\right) \\log |2x + 1| - x + 1\n$$\n\n<p>This matches with Option A:</p>\n\n$$\ny=\\left(x+\\frac{1}{2}\\right) \\log |2 x+1|-x+1\n$$\n\n<p>Thus, Option A is the correct answer.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The general solution of the differential equation $$\\left(1+y^2\\right) d x=\\left(\\tan ^{-1} y-x\\right) d y$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\nx=\\tan ^{-1} y-1+c e^{\\tan ^{-1} y}\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\nx=\\tan ^{-1} y-1+c e^{-\\tan ^{-1} y}\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\nx=\\tan ^{-1} y+c e^{\\tan ^{-1} y}\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\nx=c \\tan ^{-1} y+e^{-\\tan ^{-1} y}\n$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve the given differential equation $$\\left(1+y^2\\right) d x=\\left(\\tan ^{-1} y-x\\right) d y$$, we rearrange it into a form that allows us to separate variables or use another method to simplify.</p>\n\n<p>Dividing both sides by $dy$ and rearranging the terms, we get:</p>\n\n<p>$$ (1+y^2) \\frac{dx}{dy} + x = \\tan^{-1} y $$</p>\n\n<p>Now, let's try using an integrating factor method. Rewriting the equation:</p>\n\n<p>$$ \\frac{dx}{dy} + \\frac{x}{1+y^2} = \\frac{\\tan^{-1} y}{1+y^2} $$</p>\n\n<p>We observe that the integrating factor, $ \\mu(y) $, for this differential equation must satisfy:</p>\n\n<p>$$ \\frac{d \\mu}{dy} = \\frac{\\mu}{1+y^2} $$</p>\n\n<p>Solving this, we find:</p>\n\n<p>$$ \\mu(y) = e^{\\int \\frac{1}{1+y^2} \\, dy} = e^{\\tan^{-1} y} $$</p>\n\n<p>Multiplying through the differential equation by $ e^{\\tan^{-1} y} $:</p>\n\n<p>$$ e^{\\tan^{-1} y} \\frac{dx}{dy} + e^{\\tan^{-1} y} \\frac{x}{1+y^2} = e^{\\tan^{-1} y} \\frac{\\tan^{-1} y}{1+y^2} $$</p>\n\n<p>This simplifies to:</p>\n\n<p>$$ \\frac{d}{dy} \\left( e^{\\tan^{-1} y} x \\right) = e^{\\tan^{-1} y} \\frac{\\tan^{-1} y}{1+y^2} $$</p>\n\n<p>Since the derivative of $ \\tan^{-1} y $ with respect to y is $ \\frac{1}{1+y^2} $, replacing in the equation gives:</p>\n\n<p>$$ \\frac{d}{dy} \\left( e^{\\tan^{-1} y} x \\right) = e^{\\tan^{-1} y} \\left(\\tan^{-1} y\\right) \\left(\\frac{1}{1+y^2}\\right) $$</p>\n\n<p>This simplifies further:</p>\n\n<p>$$ \\frac{d}{dy} \\left( e^{\\tan^{-1} y} x \\right) = e^{\\tan^{-1} y} d(\\tan^{-1} y) $$</p>\n\n<p>Integrating both sides with respect to $y$ gives:</p>\n\n<p>$$ e^{\\tan^{-1} y} x = \\int d \\left( e^{\\tan^{-1} y} \\right) + C = e^{\\tan^{-1} y} + C $$</p>\n\n<p>Finally, solving for $x$:</p>\n\n<p>$$ x = 1 + C e^{-\\tan^{-1} y} $$</p>\n\n<p>To match this result with the options given, we notice if we let $C - 1$ be represented as a new constant, say $c'$, then:</p>\n\n<p>$$ x = \\tan^{-1} y - 1 + c e^{-\\tan^{-1} y} $$</p>\n\n<p>Thus, the correct option based on the above development should be:</p>\n\n<p><strong>Option B:</strong>\n\n\n\n<p>$$x=\\tan ^{-1} y-1+c e^{-\\tan ^{-1} y}$$</p>\n\n</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The solution of the differential equation $$\\frac{d y}{d x}+y \\cos x=\\frac{1}{2} \\sin 2 x$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\ny e^{\\sin x}=e^{\\sin x}(\\sin x+1)+c\n$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\ny e^{\\sin x}=e^{\\sin x}(\\sin x-1)+c\n$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\ny e^{\\sin 2 x}=e^{\\sin 2 x}(\\sin x-1)+c\n$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\ny e^{\\cos x}=e^{\\sin x}(\\cos x-1)+c\n$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We are given the differential equation:</p>\n\n<p>$$ \\frac{dy}{dx} + y \\cos x = \\frac{1}{2} \\sin 2x. $$</p>\n\n<p>This is a first-order linear differential equation. The standard form of such an equation is:</p>\n\n<p>$$ \\frac{dy}{dx} + P(x) y = Q(x). $$</p>\n\n<p>In this example, $ P(x) = \\cos x $ and $ Q(x) = \\frac{1}{2} \\sin 2x $.</p>\n\n<p>First, we need to find the integrating factor, $ \\mu(x) $, which is given by:</p>\n\n<p>$$ \\mu(x) = e^{\\int P(x) \\, dx} = e^{\\int \\cos x \\, dx} = e^{\\sin x}. $$</p>\n\n<p>Now, multiply every term of the original differential equation by the integrating factor:</p>\n\n<p>$$ e^{\\sin x} \\frac{dy}{dx} + e^{\\sin x} y \\cos x = \\frac{1}{2} e^{\\sin x} \\sin 2x. $$</p>\n\n<p>The left-hand side of the equation can be rewritten (thanks to the integrating factor being correctly applied) as:</p>\n\n<p>$$ \\frac{d}{dx} (y e^{\\sin x}). $$</p>\n\n<p>Notice that we can simplify $ \\frac{1}{2} \\sin 2x $ using the identity $ \\sin 2x = 2 \\sin x \\cos x $, which in this case gives us:</p>\n\n<p>$$ \\frac{1}{2} \\sin 2x = \\sin x \\cos x. $$</p>\n\n<p>Now our equation becomes:</p>\n\n<p>$$ \\frac{d}{dx} (y e^{\\sin x}) = e^{\\sin x} \\sin x \\cos x. $$</p>\n\n<p>Integrating both sides:</p>\n\n<p>$$ y e^{\\sin x} = \\int e^{\\sin x} \\sin x \\cos x \\, dx + C. $$</p>\n\n<p>Let's tackle the integral on the right. To simplify this integral, recognize that differentiating $ e^{\\sin x} $ gives $ e^{\\sin x} \\cos x $, suggesting a substitution $ u = \\sin x $, hence $ du = \\cos x \\, dx $:\n\n<p>$$ \\int e^{\\sin x} \\sin x \\cos x \\, dx = \\int u e^u \\, du. $$</p>\n\n<p>The integration of $ u e^u $ can be handled by integration by parts, or recognizing it as a standard integral:\n\n<p>$$ \\int u e^u \\, du = u e^u - \\int e^u \\, du = u e^u - e^u = (u - 1)e^u + C. $$</p>\n\n<p>Returning back to $ x $ terms, we find:\n\n<p>$$ \\int e^{\\sin x} \\sin x \\cos x \\, dx = (\\sin x - 1) e^{\\sin x} + C. $$</p>\n\n<p>Substituting this back into our integrated solution gives us:</p>\n\n<p>$$ y e^{\\sin x} = e^{\\sin x} (\\sin x - 1) + C. $$</p>\n\n<p>Comparing this with the provided options, the correct answer is:</p>\n\n<b>Option B: </b>\n\n<p>$$ y e^{\\sin x} = e^{\\sin x} (\\sin x - 1) + C. $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The sum of the degree and order of the following differential equation $$\\left[1-\\left(\\frac{d y}{d x}\\right)^2\\right]^{\\frac{3}{2}}=k x \\frac{d^2 y}{d x^2}$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\frac{5}{2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\frac{3}{2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2023,
+    "yearKey": "comedk-2023-evening-shift",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The solution of the differential equation $${{{d^2}y} \\over {d{x^2}}} = 0$$ represents</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "all circles in a plane"
+      },
+      {
+        "identifier": "B",
+        "content": "all straight lines in a plane"
+      },
+      {
+        "identifier": "C",
+        "content": "all parabolas in a plane"
+      },
+      {
+        "identifier": "D",
+        "content": "all ellipses in a plane"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, differential equation is $$\\frac{d^2 y}{d x^2}=0$$</p>\n<p>On integrating, we get</p>\n<p>$$\\frac{d y}{d x}=c$$, where $$c$$ is a constant</p>\n<p>$$\\Rightarrow d y=c d x$$</p>\n<p>Again integrating,</p>\n<p>$$\\Rightarrow \\quad \\int d y=c \\int d x$$</p>\n<p>$$\\Rightarrow \\quad y=c x+d$$, where $$d$$ is a constant.</p>\n<p>$$\\therefore$$ The solution of differential equation represents all straight lines in a plane.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "comedk-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The solution of the differential equation $$\\frac{d y}{d x}+\\sqrt{\\frac{1-y^2}{1-x^2}}=0$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\cos ^{-1} x+\\cos ^{-1} y=c$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sin ^{-1} x+\\sin ^{-1} y=c$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\cosh ^{-1} x+\\cosh ^{-1} y=c$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\sinh ^{-1} x+\\sinh ^{-1} y=c$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n& \\text { Given, } \\frac{d y}{d x}+\\frac{\\sqrt{1-y^2}}{\\sqrt{1-x^2}}=0 \\\\\n& \\Rightarrow \\quad \\frac{d y}{\\sqrt{1-y^2}}+\\frac{d x}{\\sqrt{1-x^2}}=0\n\\end{aligned}$$</p>\n<p>On integrating, we get</p>\n<p>$$\\begin{aligned}\n& \\Rightarrow \\quad \\int \\frac{d y}{\\sqrt{1-y^2}}+\\int \\frac{d x}{\\sqrt{1-x^2}}=0 \\\\\n& \\Rightarrow \\quad \\sin ^{-1} y+\\sin ^{-1} x=c\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "comedk-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The solution of the differential equation $$x \\frac{d y}{d x}=\\cot y$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y \\cos x=c$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$x \\cos y=c$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\log (x \\cos y)=c$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\log (y \\cos x)=c$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Given, $$x \\frac{d y}{d x}=\\cot y$$</p>\n<p>$$\\Rightarrow \\quad \\tan y d y=\\frac{d x}{x}$$</p>\n<p>On integrating, we get</p>\n<p>$$\\begin{array}{ll}\n\\Rightarrow & \\int \\tan y d y=\\int \\frac{d x}{x} \\\\\n\\Rightarrow & \\log \\sec y=\\log x+\\log c_1 \\\\\n\\Rightarrow \\quad & \\log \\sec y=\\log x \\cdot c_1 \\\\\n\\Rightarrow \\quad & \\sec y=x \\cdot c_1 \\\\\n\\Rightarrow \\quad & x \\cos y=c,\n\\end{array}$$</p>\n<p>where $$c=\\frac{1}{c_1}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "comedk-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The solution of the differential equation $${\\sec ^2}x\\tan ydx + {\\sec ^2}y\\tan xdy = 0$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\tan y\\,.\\,\\tan x = C$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{\\tan y} \\over {\\tan x}} = C$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{{{\\tan }^2}x} \\over {\\tan y}} = C$$"
+      },
+      {
+        "identifier": "D",
+        "content": "None of these"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\n\\begin{aligned}\n& \\text { Given, } \\frac{\\sec ^2 x}{\\tan x} d x=-\\frac{\\sec ^2 y}{\\tan y} d y \\\\\n& \\Rightarrow \\int \\frac{\\sec ^2 x}{\\tan x} d x=-\\int \\frac{\\sec ^2 y}{\\tan y} d y\n\\end{aligned}$$<p>\n<p>Put $$\\tan x=u \\Rightarrow \\sec ^2 x d x=d u$$</p>\n<p>and $$\\tan y=v \\Rightarrow \\sec ^2 y d y=d v$$</p>\n<p>$$\\begin{aligned}\n& \\therefore \\quad \\int \\frac{d u}{u}=-\\int \\frac{d v}{v} \\\\\n& \\Rightarrow \\log u=-\\log v+\\log C \\Rightarrow u v=C \\Rightarrow \\tan x \\cdot \\tan y=C\n\\end{aligned}\n$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "comedk-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The solution of the differential equation $$y{{dy} \\over {dx}} = x\\left[ {{{{y^2}} \\over {{x^2}}} + {{\\phi \\left( {{{{y^2}} \\over {{x^2}}}} \\right)} \\over {\\phi '\\left( {{{{y^2}} \\over {{x^2}}}} \\right)}}} \\right]$$ is (where, C is a constant)</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\phi \\left( {{{{y^2}} \\over {{x^2}}}} \\right) = Cx$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$x\\phi \\left( {{{{y^2}} \\over {{x^2}}}} \\right) = C$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\phi \\left( {{{{y^2}} \\over {{x^2}}}} \\right) = C{x^2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${x^2}\\phi \\left( {{{{y^2}} \\over {{x^2}}}} \\right) = C$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given differential equation can be rewritten as</p>\n<p>$$\\frac{d y}{d x}=\\frac{y}{x}+\\frac{x \\phi\\left(\\frac{y^2}{x^2}\\right)}{y \\phi^{\\prime}\\left(\\frac{y^2}{x^2}\\right)}\n$$</p>\n<p>Put $$\\quad y=v x \\Rightarrow \\frac{d y}{d x}=v+x \\frac{d v}{d x}$$</p>\n<p>Given equation becomes,</p>\n<p>$$\\begin{gathered}v+x \\frac{d v}{d x}=\\frac{v x}{x}+\\frac{x \\phi\\left(\\frac{v^2 x^2}{x^2}\\right)}{v x \\phi^{\\prime}\\left(\\frac{v^2 x^2}{x^2}\\right)} \\\\\n\\Rightarrow \\quad x \\frac{d v}{d x}=\\frac{\\phi\\left(v^2\\right)}{v \\phi^{\\prime}\\left(v^2\\right)} \\Rightarrow \\frac{v \\phi^{\\prime}\\left(v^2\\right)}{\\phi\\left(v^2\\right)} d v=\\frac{d x}{x}\n\\end{gathered}\n$$</p>\n<p>On integrating both sides, we get</p>\n<p>$$\\begin{array}{r}\n\\frac{1}{2} \\log \\phi\\left(v^2\\right)=\\log x+\\log C_1 \\Rightarrow \\log \\phi\\left(v^2\\right)=2 \\log x C_1 \\\\\n\\Rightarrow \\phi\\left(v^2\\right)=\\left(x C_1\\right)^2 \\Rightarrow \\phi\\left(\\frac{y^2}{x^2}\\right)=x^2 C_1^2 \\Rightarrow \\phi\\left(\\frac{y^2}{x^2}\\right)=x^2 C \\\\\n{\\left[\\operatorname{put} C_1^2=C\\right]}\n\\end{array}\n$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "comedk-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The solution of the differential equation $$(1 + {y^2}) + (x - {e^{{{\\tan }^{ - 1}}y}}){{dy} \\over {dx}} = 0$$ is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2x{e^{{{\\tan }^{ - 1}}y}} = {e^{2{{\\tan }^{ - 1}}y}} + C$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$x{e^{{{\\tan }^{ - 1}}y}} = {\\tan ^{ - 1}}y + C$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$x{e^{2{{\\tan }^{ - 1}}y}} = {e^{{{\\tan }^{ - 1}}y}} + C$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$(x - 2) = C{e^{ - {{\\tan }^{ - 1}}y}}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Given differential equation is</p>\n<p>$$\\begin{array}{cc} \n& \\left(1+y^2\\right)+\\left(x-e^{\\tan ^{-1} y}\\right) \\frac{d y}{d x}=0 \\\\\n\\Rightarrow & \\left(1+y^2\\right) \\frac{d x}{d y}=-x+e^{\\tan ^{-1} y} \\\\\n\\Rightarrow & \\frac{d x}{d y}+\\frac{x}{1+y^2}=\\frac{e^{\\tan ^{-1} y}}{1+y^2}\n\\end{array}$$</p>\n<p>which is a linear differential equation.</p>\n<p>Here, $$P=\\frac{1}{1+y^2}, Q=\\frac{e^{\\tan ^{-1} y}}{1+y^2}$$ and</p>\n<p>$$\\therefore \\quad \\mathrm{IF}=e^{\\int P d y}=e^{\\int \\frac{1}{1+y^2} d y}=e^{\\tan ^{-1} y}\n$$</p>\n<p>Hence, required solution is $$x \\cdot \\mathrm{IF}=\\int Q \\cdot \\mathrm{IF} d y+C$$</p>\n<p>$$\\Rightarrow \\quad x e^{\\tan ^{-1} y}=\\int\\left(\\frac{e^{\\tan ^{-1} y}}{1+y^2} \\cdot e^{\\tan ^{-1} y}\\right) d y+\\frac{C}{2}$$</p>\n<p>$$ \\Rightarrow x{e^{{{\\tan }^{ - 1}}y}} = {{{e^{2{{\\tan }^{ - 1}}y}}} \\over 2} + {C \\over 2}$$</p>\n<p>$$ \\Rightarrow 2x{e^{{{\\tan }^{ - 1}}y}} = {e^{2{{\\tan }^{ - 1}}y}} + C$$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "comedk-2021",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The differential equation of the family of\nstraight lines whose slope is equal to y-intercept\nis</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(x + 1){{dy} \\over {dx}} + y = 0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$(x + 1){{dy} \\over {dx}} - y = 0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{dy} \\over {dx}} = {{x + 1} \\over {y + 1}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{dy} \\over {dx}} = {{x - 1} \\over {y - 1}}$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>We have, equation of line is</p>\n<p>$$y=m x+C$$</p>\n<p>But $$m=C$$ (given)</p>\n<p>$$\\begin{aligned}\n& \\therefore \\quad y=C x+C \\\\\n& \\text { Now, } \\frac{d y}{d x}=C \\\\\n& \\therefore \\quad y=\\frac{d y}{d x}(x+1) \\Rightarrow(x+1) \\frac{d y}{d x}-y=0\n\\end{aligned}$$</p>\n<p>which is required differential equation.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "comedk-2020",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The order and degree of the differential equation $${\\left[ {1 + {{\\left( {{{dy} \\over {dx}}} \\right)}^5}} \\right]^{{1 \\over 3}}} = {{{d^2}y} \\over {d{x^2}}}$$ are respectively</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2, 1"
+      },
+      {
+        "identifier": "B",
+        "content": "1, 5"
+      },
+      {
+        "identifier": "C",
+        "content": "2, 3"
+      },
+      {
+        "identifier": "D",
+        "content": "2, 5"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We have,</p>\n<p>$$\\begin{aligned}\n& \\quad\\left[1+\\left(\\frac{d y}{d x}\\right)^5\\right]^{1 / 3}=\\frac{d^2 y}{d x^2} \\Rightarrow\\left(\\frac{d^2 y}{d x^2}\\right)^3=1+\\left(\\frac{d y}{d x}\\right)^5 \\\\\n& \\therefore \\text { Order }=2 \\text { and degree }=3\n\\end{aligned}$$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "comedk-2020",
+    "difficulty": null
+  }
+]

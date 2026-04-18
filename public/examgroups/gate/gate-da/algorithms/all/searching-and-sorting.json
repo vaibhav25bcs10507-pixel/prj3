@@ -1,0 +1,67 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For which of the following inputs does binary search take time $O(\\log n)$ in the worst case?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " An array of $n$ integers in any order\n"
+      },
+      {
+        "identifier": "B",
+        "content": " A linked list of $n$ integers in any order\n"
+      },
+      {
+        "identifier": "C",
+        "content": " An array of $n$ integers in increasing order\n"
+      },
+      {
+        "identifier": "D",
+        "content": " A linked list of $n$ integers in increasing order"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<h3>Option A: An array of $ n $ integers in <em>any order</em></h3>\n<ul>\n<li><p>Binary search works only if the array is <strong>sorted</strong>.</p></li>\n<li><p>If the array is <em>not sorted</em>, then binary search cannot be used correctly.</p></li>\n<li><p>Even if you <em>try</em> to apply binary search blindly, it won’t correctly find the element.</p></li>\n<li><p>So this option is <strong>invalid</strong> for binary search’s $ O(\\log n) $ time.</p></li>\n</ul>\n<p>❌ <strong>Not applicable</strong></p>\n\n<h3>Option B: A linked list of $ n $ integers in any order</h3>\n<ul>\n<li><p>Again, “in any order” means <strong>unsorted</strong>, so binary search cannot be applied correctly.</p></li>\n<li><p>Even worse, even if the list were sorted, you cannot directly index into the middle of a linked list in $ O(1) $ time—jumping to the middle would take $ O(n) $.</p></li>\n<li><p>So this is <strong>even slower</strong>, not $ O(\\log n) $.</p></li>\n</ul>\n<p>❌ <strong>Not applicable</strong></p>\n\n<h3>Option C: An array of $ n $ integers in <em>increasing order</em></h3>\n<ul>\n<li><p>This is exactly the case where binary search works as intended.</p></li>\n<li><p>On each comparison, you eliminate half the search space.</p></li>\n<li><p>And since random access in an array is $ O(1) $,</p>\n<p>total time in the worst case is $ O(\\log n) $.</p></li>\n</ul>\n<p>✅ <strong>This is the correct input.</strong></p>\n\n<h3>Option D: A linked list of $ n $ integers in <em>increasing order</em></h3>\n<ul>\n<li><p>Although it’s sorted, binary search requires <strong>random access</strong> to the middle element.</p></li>\n<li><p>In a linked list, access to the middle (say position $ n/2 $) takes $ O(n) $ time.</p></li>\n<li><p>So every “midpoint” operation inside the binary search costs $ O(n) $.</p></li>\n<li><p>Total worst‑case time = $ O(n \\log n) $, not $ O(\\log n) $.</p></li>\n</ul>\n<p>❌ <strong>Not $ O(\\log n) $</strong></p>\n\n<p>✅ <strong>Final Answer:</strong>  </p>\n<p>→ <strong>Option C: An array of $ n $ integers in increasing order</strong></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Suppose that insertion sort is applied to the array $[1,3,5,7,9,11, x, 15,13]$ and it takes exactly two swaps to sort the array. Select all possible values of $x$.\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " 10\n"
+      },
+      {
+        "identifier": "B",
+        "content": " 12\n"
+      },
+      {
+        "identifier": "C",
+        "content": " 14\n"
+      },
+      {
+        "identifier": "D",
+        "content": " 16"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We apply <strong>insertion sort</strong> to:  </p>\n<p>$ [1, 3, 5, 7, 9, 11, x, 15, 13] $</p>\n<p>and it takes <strong>exactly two swaps</strong> for the entire sort to finish.</p>\n<p>We have to find all possible $ x $.</p>\n\n<h3>Step 1. Recall how insertion sort works</h3>\n<p>Insertion sort processes the array from left to right.</p>\n<p>At index $ i $, it takes <code>A[i]</code> (the \"key\") and inserts it into the correct position among the sorted prefix <code>A[0..i-1]</code>, shifting elements larger than the key to the right.</p>\n<p>Each <strong>swap</strong> corresponds to moving the key past one element that is greater than it.</p>\n\n<h3>Step 2. The “sorted” version of the array</h3>\n<p>Fully sorted version of the array will be:</p>\n<p>$ [1, 3, 5, 7, 9, 11, 13, 15, x] \\quad \\text{if } x > 15, $</p>\n<p>or  </p>\n<p>$ [1, 3, 5, 7, 9, 11, x, 13, 15] \\quad \\text{if } 11 < x < 13, $</p>\n<p>etc.</p>\n<p>But we’ll reason by simulation.</p>\n\n<h3>Step 3. Run insertion sort logically, tracking swaps</h3>\n<p>Up through <code>11</code>, the array <code>[1,3,5,7,9,11]</code> is sorted.  </p>\n<p>No swaps so far.</p>\n<p>So we start at index 6, value <code>x</code>.</p>\n<ul>\n<li><p>Position 6, <code>x</code>:</p></li>\n<li><p>Compare <code>x</code> to 11.  </p>\n<ul>\n<li>If <code>x &lt; 11</code>, we’ll have to shift 11 (and possibly earlier elements).</li></ul></li>\n<li><p>If <code>x &gt; 11</code>, no swaps needed (since the prefix up to 11 is sorted ascending).</p></li>\n</ul>\n<p>Then index 7, <code>15</code> (check if it’s in order). Then index 8, <code>13</code>.</p>\n\n<p>We know insertion sort counts swaps when the current key moves left.</p>\n<p>We can proceed case by case for each option.</p>\n\n<h3>Case A. $ x = 10 $</h3>\n<p>Array: <code>[1,3,5,7,9,11,10,15,13]</code></p>\n<h4>Step for index 6 (x=10)</h4>\n<ul>\n<li><p>Compare 10 &lt; 11 → swap once (11 moves right)</p></li>\n<li><p>New array: <code>[1,3,5,7,9,10,11,15,13]</code></p></li>\n<li><p>10 &gt; 9, so stop.  </p></li>\n</ul>\n<p>→ <strong>1 swap so far.</strong></p>\n<h4>Step for index 7 (15)</h4>\n<ul>\n<li>15 &gt; 11 → no swaps.</li>\n</ul>\n<h4>Step for index 8 (13)</h4>\n<ul>\n<li><p>Compare 13 &lt; 15 → swap once (15 moves right)</p></li>\n<li><p>Compare 13 &gt; 11 → stop.</p></li>\n<li><p><strong>1 more swap</strong></p></li>\n</ul>\n<p><strong>Total swaps = 2</strong></p>\n<p>✅ Works.</p>\n\n<h3>Case B. $ x = 12 $</h3>\n<p>Array: <code>[1,3,5,7,9,11,12,15,13]</code></p>\n<h4>Step for index 6 (x=12)</h4>\n<p>12 &gt; 11 → no swaps.</p>\n<h4>Step for index 7 (15)</h4>\n<p>15 &gt; 12 → no swaps.</p>\n<h4>Step for index 8 (13)</h4>\n<p>13 &lt; 15 → one swap (move 15 right)</p>\n<p>13 &gt; 12 → stop.</p>\n<p><strong>Total = 1 swap</strong></p>\n<p>❌ Not enough, we want exactly 2.</p>\n\n<h3>Case C. $ x = 14 $</h3>\n<p>Array: <code>[1,3,5,7,9,11,14,15,13]</code></p>\n<h4>Step for x=14</h4>\n<p>14 &gt; 11 → no swap.</p>\n<h4>Step for 15</h4>\n<p>Well placed, no swap.</p>\n<h4>Step for 13</h4>\n<p>13 &lt; 15 → swap (1)</p>\n<p>Then compare 13 &lt; 14 → swap (2)</p>\n<p>Then 13 &gt; 11 → stop.</p>\n<p><strong>Total = 2 swaps</strong></p>\n<p>✅ Works.</p>\n\n<h3>Case D. $ x = 16 $</h3>\n<p>Array: <code>[1,3,5,7,9,11,16,15,13]</code></p>\n<h4>Step for 16</h4>\n<p>16 &gt; 11 → no swaps.</p>\n<h4>Step for 15</h4>\n<p>15 &lt; 16 → one swap (swap 15 &amp; 16)</p>\n<p>Now <code>[1,3,5,7,9,11,15,16,13]</code></p>\n<h4>Step for 13</h4>\n<p>13 &lt; 16 → swap (1)</p>\n<p>13 &lt; 15 → swap (2)</p>\n<p>13 &gt; 11 → stop.</p>\n<p>That’s <strong>3 swaps during this step</strong>, but insertion sort counts these individually.</p>\n<p>Total swaps = 1 (for 15) + 2 (for 13) = 3 swaps.</p>\n<p>❌ Too many.</p>\n\n<p>✅ Therefore, the possible values of $ x $ that lead to exactly 2 swaps are:</p>\n<p>$ \\boxed{x = 10 \\text{ or } x = 14.} $</p>\n\n<p>✅ <strong>Answer: Option A (10) and Option C (14).</strong></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ai-2025",
+    "difficulty": null
+  }
+]

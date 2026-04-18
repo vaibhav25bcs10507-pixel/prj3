@@ -1,0 +1,437 @@
+[
+  {
+    "direction": null,
+    "content": "<p>Let $${w^4} = 16j$$. Which of the following cannot be a value of $$w$$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2{e^{{{j2\\pi } \\over 8}}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$2{e^{{{j\\pi } \\over 8}}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$2{e^{{{j5\\pi } \\over 8}}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2{e^{{{j9\\pi } \\over 8}}}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve the given equation $$w^4 = 16j$$, we need to find all possible values of $$w$$. Let's start by expressing $$16j$$ in polar form. The complex number $$j$$ can be written as $$e^{j\\pi/2}$$ in exponential form (Euler's formula), where the magnitude is 1 and the argument is $$\\pi/2$$. Thus, we can express $$16j$$ as:</p>\n\n<p>$$16j = 16e^{j\\pi/2}$$</p>\n\n<p>Now, we need to find the 4th roots of $$16e^{j\\pi/2}$$. The magnitude of the roots will be $$\\sqrt[4]{16} = 2$$, and the arguments will be given by:</p>\n\n<p>$$\\frac{\\pi/2 + 2k\\pi}{4} \\quad \\text{for} \\quad k = 0, 1, 2, 3$$</p>\n\n<p>This gives us four distinct roots:</p>\n\n<p>For $$k = 0$$:</p>\n\n<p>$$\\omega_0 = 2e^{j(\\frac{\\pi/2 + 0}{4})} = 2e^{j\\pi/8}$$</p>\n\n<p>For $$k = 1$$:</p>\n\n<p>$$\\omega_1 = 2e^{j(\\frac{\\pi/2 + 2\\pi}{4})} = 2e^{j5\\pi/8}$$</p>\n\n<p>For $$k = 2$$:</p>\n\n<p>$$\\omega_2 = 2e^{j(\\frac{\\pi/2 + 4\\pi}{4})} = 2e^{j9\\pi/8}$$</p>\n\n<p>For $$k = 3$$:</p>\n\n<p>$$\\omega_3 = 2e^{j(\\frac{\\pi/2 + 6\\pi}{4})} = 2e^{j13\\pi/8}$$</p>\n\n<p>Comparing the given options with the calculated roots:</p>\n\n<p>Option A: $$2e^{j2\\pi/8} = 2e^{j\\pi/4}$$ (not one of the roots)</p>\n\n<p>Option B: $$2e^{j\\pi/8}$$ (matches $$\\omega_0$$)</p>\n\n<p>Option C: $$2e^{j5\\pi/8}$$ (matches $$\\omega_1$$)</p>\n\n<p>Option D: $$2e^{j9\\pi/8}$$ (matches $$\\omega_2$$)</p>\n\n<p>Therefore, the value of $$w$$ that cannot be one of the roots is:</p>\n\n<p>Option A: $$2e^{j\\pi/4}$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The Fourier transform X(j$$\\omega$$) of the signal $$x(t) = {t \\over {{{(1 + {t^2})}^2}}}$$ is ____________.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\pi  \\over {2j}}w{e^{ - |\\omega |}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\pi  \\over 2}w{e^{ - |\\omega |}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\pi  \\over {2j}}{e^{ - |\\omega |}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\pi  \\over 2}{e^{ - |\\omega |}}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>Consider $$x(t) = {e^{ - |t|}}$$</p>\n<p>by taking Fourier transform,</p>\n<p>$${e^{|t|}}\\buildrel {F.T} \\over\n \\longleftrightarrow {2 \\over {1 + {\\omega ^2}}}$$</p>\n<p>Apply differentiation in frequency,</p>\n<p>$$tx(t)\\buildrel {F.T} \\over\n \\longleftrightarrow j{d \\over {d\\omega }}X(\\omega )$$</p>\n<p>$$t{e^{ - |t|}}\\buildrel {F.T} \\over\n \\longleftrightarrow j\\left[ {{d \\over {d\\omega }}\\left( {{2 \\over {1 + {\\omega ^2}}}} \\right)} \\right]$$</p>\n<p>$$t{e^{ - |t|}}\\buildrel {F.T} \\over\n \\longleftrightarrow j\\left[ {{{[0 - 2(2\\omega )]} \\over {{{(1 + {\\omega ^2})}^2}}}} \\right]$$</p>\n<p>$$t{e^{ - |t|}}\\buildrel {F.T} \\over\n \\longleftrightarrow {{ - 4j\\omega } \\over {{{(1 + {\\omega ^2})}^2}}}$$</p>\n<p>Apply duality property,</p>\n<p>$${{ - 4jt} \\over {{{(1 + {t^2})}^2}}}\\buildrel {F.T} \\over\n \\longleftrightarrow 2\\pi ( - \\omega ){e^{ - | - \\omega |}}$$</p>\n<p>$${t \\over {{{(1 + {t^2})}^2}}}\\buildrel {F.T} \\over\n \\longleftrightarrow {{ - 2\\pi \\omega {e^{ - |\\omega |}}} \\over { - 4j}}$$</p>\n<p>$${t \\over {{{(1 + {t^2})}^2}}}\\buildrel {F.T} \\over\n \\longleftrightarrow {\\pi  \\over {2j}}\\omega {e^{ - |\\omega |}}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "Consider two 16-point sequences x[n] and h[n]. Let the linear convolution of x[n] and h[n] be denoted by y[n], while z[n] denotes the 16-point inverse discrete Fourier transform (IDFT) of the product of the 16-point DFTs of x[n] and h[n]. The value(s) of k for which z[k] = y[k] is/are :",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "k = 0, 1, 2, ....., 15"
+      },
+      {
+        "identifier": "B",
+        "content": "k = 0 and k = 15"
+      },
+      {
+        "identifier": "C",
+        "content": "k = 0"
+      },
+      {
+        "identifier": "D",
+        "content": "k = 15"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $x[n]$ and $h[n]$ are 16 point sequences</p>\n<p>and $\\quad y[n]=x[n] \\otimes h[n]$ ..........(i)</p>\n<p>Also, $\\quad z[n]=I D F T[X(k) \\cdot H(k)]$</p>\n<p>Where, <br><br>$\\begin{aligned} &amp; x[n] \\underset{\\text { 16point }}{\\stackrel{D F T}{\\longleftrightarrow}} X(k) \\\\ &amp; h[n] \\underset{\\text { 16point }}{\\stackrel{D F T}{\\longleftrightarrow}} H(k)\\end{aligned}$</p>\n<p>From circular convolution property of DFT.</p>\n<p>$$ x[n] (N) h[n] \\stackrel{D F T}{\\longleftrightarrow} X(k) \\cdot H(k) $$</p>\n<p>So, $z[n]=x[n](N) h[n]$ .........(ii)</p>\n<p>We have to find value of $k$, for which</p>\n<p>$$ y(k)=z(k) $$.</p>\n<p>i.e., value of $n$, for which linear and circular convolutions of 16 point sequences $x[n]$ and $h[n]$ are same.</p>\n<p>From definitions of linear convolution,</p>\n<p>$$ y[n]=\\sum\\limits_{k=-\\infty}^{\\infty} x[k] \\cdot h[n-k] $$</p>\n<p>From definitions of circular convolution,</p>\n<p>$$ z[n]=\\sum\\limits_{k=0}^{N-1} x(k) \\cdot h[(n-k)]_N $$</p>\n<p>where, $N=16$</p>\n<p>Assuming two 16 point sequences as,</p>\n<p>$$ \\begin{array}{r} x[n]=\\left\\{\\begin{array}{r} \\{\\underset{\\uparrow}{1},2,3,4,5,6,7,8,9,10, 11,12,13,14,15,16\\} \\end{array}\\right. \\\\ h[n]=\\{\\underset{\\uparrow}{a}, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p\\} \\end{array} $$</p>\n<p>So, linear convolution $y[n]$ is,</p>\n<p>$$ \\begin{aligned} &amp; y[n]=\\sum_{k=-\\infty}^{\\infty} x[k] h[n-k] \\\\ &amp; y[0]=\\sum_{k=-\\infty}^{\\infty} x[k] h[-k] \\end{aligned} $$</p>\n<p>$$ \\begin{array}{r} x[k]=\\left\\{\\begin{array}{r} \\{\\underset{\\uparrow}{1},2,3,4,5,6,7,8,9,10,11,12, \\\\ 13,14,15,16 \\end{array}\\right\\} \\\\ h[-k]=\\{p, o, n, m, l, k, j, i, h, g, f, e, d, c, b, \\underset{\\uparrow}{a}\\} \\\\ \\therefore \\begin{array}{r} y[0]=(1 \\times a)+0+0+0+0+0+0+0+0 \\\\ +0+0+0+0+0+0+0 \\end{array} \\\\ y[0]=a \\quad \\text { (i) } \\end{array} $$</p>\n<p>From 16 point circular convolution,</p>\n<p>$$ \\begin{aligned} &amp; z[n]=\\sum_{K=0}^{15} x(k) \\cdot h[(n-k)]_{16} \\\\ &amp; z[0]=\\sum_{K=0}^{15} x(k) \\cdot h[(-k)]_{16} \\end{aligned} $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mgteyitk/ef52e7a4-f50d-406f-af6a-fdf3dec985ab/185a1480-aa8e-11f0-b600-2fe4d8ae98f8/file-jaoe38c1mgteyitl.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mgteyitk/ef52e7a4-f50d-406f-af6a-fdf3dec985ab/185a1480-aa8e-11f0-b600-2fe4d8ae98f8/file-jaoe38c1mgteyitl.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Signals and Systems - Discrete Fourier Transform and Fast Fourier Transform Question 7 English Explanation 1\"></p>\n<p>Thus, $z(0)=(a \\times 1)+(b \\times 2)+(c \\times 3)+(d \\times 4)$</p>\n<p>$$ \\begin{array}{r} +(e \\times 5)+(f \\times 6)+(g \\times 7)+(h \\times 8) \\\\ +(i \\times 9)+(j \\times 10)+(k \\times 11) \\\\ +(l \\times 12)+(m \\times 13)+(n \\times 14) \\\\ +(o \\times 15)+(p \\times 16) \\quad \\ldots \\text { (ii) } \\end{array} $$</p>\n<p>From equations (i) and (ii),</p>\n<p>$$ z(0) \\neq y(0) $$</p>\n<p>So, $z(k)=y(k)$ is not satisfied for $k=0$ and hence options (A), (B) and (D) are wrong.</p>\n<p>Now we are choosing option (C) and verify it as follows,</p>\n<p>Linear convolution, $y[n]=\\sum\\limits_{k=-\\infty}^{\\infty} x[k] \\cdot h[n-k]$</p>\n<p>Taking $n=15, y[15]=\\sum\\limits_{k=-\\infty}^{\\infty} x[k] \\cdot h[15-k]$</p>\n<p>To find $h[15-k]$, shifting sequence $h(-k) \\quad 15$ times towards right hand side.</p>\n<p>So, $x(k)=\\{\\underset{\\uparrow}{1},2,3,4,5,6,7,8,9,10,11$,</p>\n<p>$$ \\begin{array}{r} \\quad 12,13,14,15,16\\} \\\\ h[-k]=\\{p, o, n, m, l, k, j, i, h, g, f, e, d, c, b, \\underset{\\uparrow}{a}\\} \\\\ h[15-k]=\\{\\underset{\\uparrow}{p}, o, n, m, l, k, j, i, h, g, f, e, d, c, b, a\\} \\\\ \\therefore \\quad y(15)=p+2 o+3 n+4 m+5 l+6 k+7 j \\\\ \\quad+8 i+9 h+10 g+11 f+12 e \\\\ \\quad+13 d+14 c+15 b+16 a .......(iii)\\end{array} $$</p>\n<p>Circular convolution,</p>\n<p>$$ \\begin{aligned} &amp; z[n]=\\sum_{k=0}^{15} x(k) \\cdot h[(n-k)]_{16} \\\\ &amp; z[15]=\\sum_{k=0}^{15} x(k) \\cdot h[(15-k)]_{16} \\end{aligned} $$</p>\n<p>To find $h[(15-k)]_{16}$, rotating $h[(-k)]_{16}$ in anticlockwise direction 15 times. So,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mgtf6uou/dda850a8-0d52-4e2a-89f4-d2106fc7c1dd/fffe4fe0-aa8e-11f0-b600-2fe4d8ae98f8/file-jaoe38c1mgtf6uov.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mgtf6uou/dda850a8-0d52-4e2a-89f4-d2106fc7c1dd/fffe4fe0-aa8e-11f0-b600-2fe4d8ae98f8/file-jaoe38c1mgtf6uov.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2021 Signals and Systems - Discrete Fourier Transform and Fast Fourier Transform Question 7 English Explanation 2\"></p>\n<p>$$ \\begin{array}{r} \\therefore \\quad z(15)=p+2 o+3 n+4 m+5 l+6 k+7 j+8 i \\\\ +9 h+10 g+11 f+12 e+13 d+14 c \\\\ +15 b+16 a \\\\ \\ldots \\text { (iv) } \\end{array} $$</p>\n<p>From equation (iii) and (iv),</p>\n<p>$$ y(15)=z(15) $$</p>\n<p>Hence, $y(k)=z(k)$ for $k=15$ is satisfied.</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "content": "For an N-point FFT algorithm with N = $${2^m}$$  which one of the following statements is TRUE?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It is not possible to construct a signal flow graph with both input and output in\nnormal order. "
+      },
+      {
+        "identifier": "B",
+        "content": "The number of butterflies in the $${m^{th}}$$ stage is \nN/m."
+      },
+      {
+        "identifier": "C",
+        "content": "In-place computation requires storage of only 2N node data.\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Computation of a butterfly requires only one complex multiplication."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The relationship between any N-length sequence $x[n]$ and its corresponding N-point discrete Fourier transform $X[k]$ is defined as</p> <p>$X[k] = \\mathcal{F}\\{x[n]\\}$.</p> <p>Another sequence $y[n]$ is formed as below </p> <p>$y[n] = \\mathcal{F}\\{ \\mathcal{F}\\{ \\mathcal{F}\\{ \\mathcal{F}\\{x[n]\\}\\}\\}\\}\\}$.</p> <p>For the sequence $x[n] = \\{1, 2, 1, 3\\}$, the value of $Y[0]$ is <u>_________</u>.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "112",
+    "explanation": "<h3>Given</h3>\n<p>We have an $ N = 4 $-point sequence:</p>\n<p>$ x[n] = \\{1, 2, 1, 3\\} $</p>\n<p>and the discrete Fourier transform (DFT) defined as:</p>\n<p>$ X[k] = \\mathcal{F}\\{x[n]\\} = \\sum_{n=0}^{N-1} x[n] e^{-j \\frac{2\\pi}{N} kn}, \\quad k = 0, 1, 2, 3 $</p>\n<p>Then we define a new sequence</p>\n<p>$ y[n] = \\mathcal{F}\\{\\mathcal{F}\\{\\mathcal{F}\\{\\mathcal{F}\\{x[n]\\}\\}\\}\\} \\} $</p>\n<p>We are to find $ Y[0] $.  </p>\n<p>(Note: $Y[k] = \\mathcal{F}\\{y[n]\\}$.)</p>\n\n<h3>Step 1. Recall DFT properties</h3>\n<p>For an $ N $-point DFT:</p>\n<p>$ \\mathcal{F}\\{x[n]\\} = X[k] $</p>\n<p>$ \\mathcal{F}\\{X[k]\\} = N x[-n \\bmod N] $</p>\n<p>because applying the DFT twice corresponds to time reversal (and scaling by $N$).</p>\n<p>Hence:</p>\n<p>$ \\mathcal{F}^2\\{x[n]\\} = N x[-n \\bmod N] $</p>\n<p>$ \\mathcal{F}^3\\{x[n]\\} = \\mathcal{F}\\{\\mathcal{F}^2\\{x[n]\\}\\} = \\mathcal{F}\\{N x[-n]\\} = N \\mathcal{F}\\{x[-n]\\} $</p>\n<p>But $\\mathcal{F}\\{x[-n]\\} = X[-k]$.  </p>\n<p>Hence $\\mathcal{F}^3\\{x[n]\\} = N X[-k]$.</p>\n<p>Finally,</p>\n<p>$ \\mathcal{F}^4\\{x[n]\\} = \\mathcal{F}\\{\\mathcal{F}^3\\{x[n]\\}\\} = \\mathcal{F}\\{N X[-k]\\} $</p>\n<p>Now applying the same property again:</p>\n<p>$ \\mathcal{F}\\{X[k]\\} = N x[-n] $</p>\n<p>and</p>\n<p>$ \\mathcal{F}\\{X[-k]\\} = N x[n] $</p>\n<p>because reversing frequency also reverses the time-index reversal.</p>\n<p>Hence:</p>\n<p>$ \\mathcal{F}^4\\{x[n]\\} = N (N x[n]) = N^2 x[n] $</p>\n\n<p>Therefore:</p>\n<p>$ y[n] = \\mathcal{F}^4\\{x[n]\\} = N^2 x[n] $</p>\n\n<h3>Step 2. For $N = 4$:</h3>\n<p>$ y[n] = 4^2 x[n] = 16 x[n] = \\{16, 32, 16, 48\\} $</p>\n\n<h3>Step 3. Compute $Y[0]$</h3>\n<p>By DFT definition:</p>\n<p>$ Y[0] = \\sum_{n=0}^{N-1} y[n] e^{-j \\frac{2\\pi}{N} 0 \\cdot n} = \\sum_{n=0}^{3} y[n] $</p>\n<p>So:</p>\n<p>$ Y[0] = 16 + 32 + 16 + 48 = 112 $</p>\n\n<p>✅ <strong>Final Answer:</strong></p>\n<p>$ \\boxed{Y[0] = 112} $</p>\n\n<p><strong>Summary of key property:</strong></p>\n<p>$ \\mathcal{F}^4\\{x[n]\\} = N^2 x[n] $</p>\n<p>and for $N=4$, this leads directly to $Y[0] = 16 \\cdot \\sum x[n] = 16 \\times 7 = 112.$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let an input $$x[n]$$ having discrete time Fourier transform $$x({e^{j\\Omega }}) = 1 - {e^{ - j\\Omega }} + 2{e^{ - 3j\\Omega }}$$ be passed through an LTI system. The frequency response of the LTI system is $$H({e^{j\\Omega }}) = 1 - {1 \\over 2}{e^{ - j2\\Omega }}$$. The output $$y[n]$$ of the system is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\delta [n] + \\delta [n - 1] - {1 \\over 2}\\delta [n - 2] - {5 \\over 2}\\delta [n - 3] + \\delta [n - 5]$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\delta [n] - \\delta [n - 1] - {1 \\over 2}\\delta [n - 2] - {5 \\over 2}\\delta [n - 3] + \\delta [n - 5]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\delta [n] - \\delta [n - 1] - {1 \\over 2}\\delta [n - 2] + {5 \\over 2}\\delta [n - 3] - \\delta [n - 5]$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\delta [n] + \\delta [n - 1] + {1 \\over 2}\\delta [n - 2] + {5 \\over 2}\\delta [n - 3] + \\delta [n - 5]$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To find the output $ y[n] $ of the system, we need to take the product of the input's Discrete Time Fourier Transform (DTFT) and the system's frequency response in the frequency domain, and then apply the inverse DTFT to get back to the time domain.</p>\n\n<p>Given the input DTFT:</p>\n\n<p>$$ x(e^{j\\Omega}) = 1 - e^{-j\\Omega} + 2e^{-3j\\Omega} $$</p>\n\n<p>and the frequency response:</p>\n\n<p>$$ H(e^{j\\Omega}) = 1 - \\frac{1}{2}e^{-j2\\Omega} $$</p>\n\n<p>We find the product in the frequency domain:</p>\n\n<p>$$ Y(e^{j\\Omega}) = x(e^{j\\Omega}) \\cdot H(e^{j\\Omega}) = \\left(1 - e^{-j\\Omega} + 2e^{-3j\\Omega}\\right) \\left(1 - \\frac{1}{2}e^{-j2\\Omega}\\right) $$</p>\n\n<p>Expanding and simplifying the product, we get:</p>\n\n<p>$$ Y(e^{j\\Omega}) = (1 - e^{-j\\Omega} + 2e^{-3j\\Omega})(1 - \\frac{1}{2}e^{-j2\\Omega}) $$</p>\n\n<p>$$ = 1 - \\frac{1}{2}e^{-j2\\Omega} - e^{-j\\Omega} + \\frac{1}{2}e^{-j3\\Omega} + 2e^{-3\\Omega} - \\frac{1}{2} \\cdot 2e^{-5j\\Omega} $$</p>\n\n<p>$$ = 1 - e^{-j\\Omega} - \\frac{1}{2}e^{-j2\\Omega} + \\frac{5}{2}e^{-3\\Omega} - e^{-5\\Omega} $$</p>\n\n<p>Now, taking the inverse DTFT, we convert each term back to the time domain:</p>\n\n<ul>\n\n<li>$$ 1 \\rightarrow \\delta[n] $$</li>\n\n<li>$$ -e^{-j\\Omega} \\rightarrow -\\delta[n-1] $$</li>\n\n<li>$$ -\\frac{1}{2}e^{-j2\\Omega} \\rightarrow -\\frac{1}{2}\\delta[n-2] $$</li>\n\n<li>$$ \\frac{5}{2}e^{-3j\\Omega} \\rightarrow \\frac{5}{2}\\delta[n-3] $$</li>\n\n<li>$$ -e^{-5\\Omega} \\rightarrow -\\delta[n-5] $$</li>\n\n</ul>\n\n<p>Therefore, the output $ y[n] $ is:</p>\n\n<p>$$ y[n] = \\delta[n] - \\delta[n-1] - \\frac{1}{2}\\delta[n-2] + \\frac{5}{2}\\delta[n-3] - \\delta[n-5] $$</p>\n\n<p>Thus, the correct answer is:</p>\n\n<p>Option C: $$\\delta[n] - \\delta[n - 1] - \\frac{1}{2}\\delta[n - 2] + \\frac{5}{2}\\delta[n - 3] - \\delta[n - 5]$$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>For a vector $$\\overline x $$ = [x[0], x[1], ....., x[7]], the 8-point discrete Fourier transform (DFT) is denoted by $$\\overline X $$ = DFT($$\\overline x $$) = [X[0], X[1], ....., X[7]], where</p>\n<p>$$X[k] = \\sum\\limits_{n = 0}^7 {x[n]\\exp \\left( { - j{{2\\pi } \\over 8}nk} \\right)} $$.</p>\n<p>Here, $$j = \\sqrt { - 1} $$. If $$\\overline x $$ = [1, 0, 0, 0, 2, 0, 0, 0] and $$\\overline y $$ = DFT (DFT($$\\overline x $$)), then the value of y[0] is __________ (rounded off to one decimal place).</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "8",
+    "explanation": "<p>To find $y(n)$, we compute the DFT of the DFT of $x(n)$:</p>\n\n<p>$ y(n) = \\text{DFT}[\\text{DFT}(x(n))]. $</p>\n\n<p>Using the duality property of the DFT, we have:</p>\n\n<p>$ x(n) \\xrightarrow{\\text{DFT}} X(k) \\xrightarrow{\\text{DFT}} 8 x(-k) = y(n). $</p>\n\n<p>Since $x(n)$ is periodic with period $N = 8$, we can write:</p>\n\n<p>$ y(n) = 8 x(N - k), $</p>\n\n<p>which simplifies to:</p>\n\n<p>$ y(n) = 8 [1, 0, 0, 0, 2, 0, 0, 0]. $</p>\n\n<p>Therefore, at $n = 0$:</p>\n\n<p>$ y[0] = 8 \\times 1 = 8. $</p>\n\n<p>The value of $y[0]$ is 8.0.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A finite duration discrete-time signal $x[n]$ is obtained by sampling a continuous - time signal $x(t)=\\cos (200 \\pi t)$ at sampling instants $t=\\frac{n}{400}, n=0,1, \\ldots ., 7$. The 8-point discrete Fourier transform (DFT) is defined as</p>\n<p>$$ X[k]=\\sum_{n=0}^7 x[n] e^{-j \\pi n k / 4} \\text { for } k=0,1, \\ldots ., 7 $$</p>\n<p>Which one of the following statements is TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Only $X(3)$ and $X(5)$ are non-zero.</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Only $X(4)$ is non-zero.</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>All $X(K)$ are non-zero.</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Only $X(2)$ and $X(6)$ are non-zero.</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : $x(t)=\\cos 200 \\pi t$ is sampled at instants $t=\\frac{n}{400} \\approx n T_S$</p>\n<p>$$ \\begin{aligned} & x(t) \\xrightarrow{t \\rightarrow n T_S} x\\left[n T_S\\right] \\approx x[n] \\\\ & x[n]=\\left.x(t)\\right|_{t=\\frac{n}{400}}=\\cos 200 \\pi \\cdot \\frac{n}{400} \\\\ & x[n]=\\cos n \\frac{\\pi}{2} \\end{aligned} $$</p>\n<p>To calculate 8 -point DFT, taking 8 -point sequence $x[n]$ for $n=0,1,2, \\ldots 7$</p>\n<p>$$ x[n]=\\{1,0,-1,0,1,0,-1,0\\} $$</p>\n<p>If&nbsp;&nbsp;&nbsp;$$ x[n] \\stackrel{N-p \\text { oint }}{\\underset{D F T}{\\leftrightarrows}} X(K) $$</p>\n<p>then by definition,</p>\n<p>$$ \\begin{aligned} & X(K)=\\sum_{n=0}^{N-1} x[n] e^{\\frac{-j 2 \\pi k n}{N}}=\\sum_{n=0}^{N-1} x[n] e^{\\frac{-j \\pi k n}{4}} \\quad(\\text { for } N=8) \\\\ & X\\left(\\frac{N}{2}\\right)=\\sum_{n=0}^{N-1} x[n] \\cdot e^{\\frac{-j 2 \\pi}{8} \\cdot 4 \\times n} \\\\ & X(4)=\\sum_{n=0}^{N-1} x[n](-1)^n=x(0)-x(1)+x(2)-x(3)+x(4)-x(5)+x(6)-x(7) \\\\ & X(4)=1-0+(-1)-0+1-0+(-1)-0=0 \\end{aligned} $$</p>\n<p>So, options (B) and (C) are eliminated.</p>\n<p>So check correct option, we just have to find any of $X(2), X(6)$ or $X(3)$ and $X(5)$.</p>\n<p>From the definition of 8-point DFT.</p>\n<p>$$ \\left[\\begin{array}{c} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\\\ X(4) \\\\ X(5) \\\\ X(6) \\\\ X(7) \\end{array}\\right]=\\left[\\begin{array}{cccccccc} 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\\\ 1 & W_8^1 & W_8^2 & W_8^3 & W_8^4 & W_8^5 & W_8^6 & W_8^7 \\\\ 1 & W_8^2 & W_8^4 & W_8^6 & W_8^8 & W_8^{10} & W_8^{12} & W_8^{14} \\\\ 1 & W_8^3 & W_8^6 & W_8^9 & W_8^{12} & W_8^{15} & W_8^{18} & W_8^{21} \\\\ 1 & W_8^4 & W_8^8 & W_8^{12} & W_8^{16} & W_8^{20} & W_8^{24} & W_8^{28} \\\\ 1 & W_8^5 & W_8^{10} & W_8^{15} & W_8^{20} & W_8^{25} & W_8^{30} & W_8^{35} \\\\ 1 & W_8^6 & W_8^{12} & W_8^{18} & W_8^{24} & W_8^{30} & W_8^{36} & W_8^{42} \\\\ 1 & W_8^7 & W_8^{14} & W_8^{21} & W_8^{28} & W_8^{35} & W_8^{42} & W_8^{49} \\end{array}\\right]\\left[\\begin{array}{c} x(0) \\\\ x(1) \\\\ x(2) \\\\ x(3) \\\\ x(4) \\\\ x(5) \\\\ x(6) \\\\ x(7) \\end{array}\\right] $$</p>\n<p>$$ X(2)=1 \\cdot x(0)+W_8^2 x(1)+W_8^4 \\cdot x(2)+W_8^6 \\cdot x(3)+W_8^8 x(4)+W_8^{10} x(5)+W_8^{12} x(6)+W_8^{14} x(7) $$</p>\n<p>From periodic property of $W_N^{K+N}=W_N^K$</p>\n<p>$$ \\begin{aligned} X(2) & =1 \\cdot x(0)+W_8^2 x(1)+W_8^4 x(2)+W_8^6 x(3)+W_8^0 x(4)+W_8^2 x(5)+W_8^4 x(6)+W_8^6 x(7) \\\\ & =1 \\cdot 1+0+W_8^4(-1)+0+W_8^0(1)+0+W_8^4 \\cdot(-1)+0=2-2 W_8^4 \\\\ & W_8^4=e^{\\frac{-j 2 \\pi}{8} \\times 4}=e^{-j \\pi}=-1 \\\\ \\therefore \\quad & X(2)=2-2(-1)=4 \\neq 0 \\end{aligned} $$</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The Discrete Fourier Transform (DFT) of the 4-point sequence\n<br>  $$x\\left[ n \\right]$$= {x[0], x[1], x[2], x[3]}\n<br> = {3, 2, 3, 4 } is \n<br> x[k] = {X[0], X[1], X[2], X[3]}\n<br> = {12, 2j, 0, -2j }\n<br> If $${X_1}$$ [k] is the DFT of the 12- point sequence$${X_1}$$[n] = {3, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0 },\n<br> The value of $$\\left| {{{{X_1}[8]} \\over {{X_1}[11]}}} \\right|$$  is-----------------------.",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A continuous-time speech signal $${x_a}(t)$$  is sampled at a rate of 8 kHz and the samples are subsequently grouped in\n blocks, each of size N. The DFT of each block is to be computed in real time using the radix-2 decimation-in-frequency\n FFT algorithm. If the processor performs all operations sequentially, and takes 20 µs  for computing each complex multiplication (including multiplications by 1 and −1) and the time required for addition/  subtraction is negligible, then the\nmaximum value of N is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "4096",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Two sequences [a, b, c ] and [A, B, C  ] are related as, \n<br> $$\\left[ {\\matrix{\n   A  \\cr \n   B  \\cr \n   C  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   1  \\cr \n   1  \\cr \n   1  \\cr \n\n } {\\mkern 1mu} \\,\\matrix{\n   1  \\cr \n   {W_3^{ - 1}}  \\cr \n   {W_3^{ - 2}}  \\cr \n\n } \\,\\matrix{\n   1  \\cr \n   {W_3^{ - 2}}  \\cr \n   {W_3^{ - 4}}  \\cr \n\n } } \\right]{\\mkern 1mu} \\left[ {\\matrix{\n   a  \\cr \n   b  \\cr \n   c  \\cr \n\n } } \\right]$$ Where \n<br> $${W_3}$$ = $${e^{j{{2\\pi } \\over 3}}}$$ .\n<br> if another sequence $$\\left[ {p,\\,q,\\,r} \\right]$$ is derived as,\n<br> $$\\left[ {\\matrix{\n   p  \\cr \n   q  \\cr \n   r  \\cr \n\n } } \\right] = \\left[ {\\matrix{\n   1  \\cr \n   1  \\cr \n   1  \\cr \n\n } \\,\\,\\matrix{\n   1  \\cr \n   {W_3^1}  \\cr \n   {W_3^2}  \\cr \n\n } \\,\\matrix{\n   1  \\cr \n   {W_3^2}  \\cr \n   {W_3^4}  \\cr \n\n } } \\right]\\,\\left[ {\\matrix{\n   1  \\cr \n   0  \\cr \n   0  \\cr \n\n } \\,\\matrix{\n   0  \\cr \n   {W_3^2}  \\cr \n   {0\\,}  \\cr \n\n } \\,\\matrix{\n   0  \\cr \n   0  \\cr \n   {W_3^4}  \\cr \n\n } } \\right]\\,\\left[ {\\matrix{\n   {A/3}  \\cr \n   {B/3}  \\cr \n   {C/3}  \\cr \n\n } } \\right]$$ ,\n<br> Then the relationship between the sequences $$\\left[ {p,\\,q,\\,r} \\right]$$ and $$\\left[ {a,\\,b,\\,c} \\right]$$ is\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {p,\\,q,\\,r} \\right]$$= $$\\left[ {b,\\,a,\\,c} \\right]$$   "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {p,\\,q,\\,r} \\right]$$ = $$\\left[ {b,\\,c,\\,a} \\right]$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {p,\\,q,\\,r} \\right]$$= $$\\left[ {c,\\,a,\\,b} \\right]$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {p,\\,q,\\,r} \\right]$$ = $$\\left[ {c,\\,b,\\,a} \\right]$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider two real sequences with time- origin marked by the bold value, $${x_1}\\left[ n \\right] = \\left\\{ {1,\\,2,\\,3,\\,0} \\right\\}\\,,\\,{x_2}\\left[ n \\right] = \\left\\{ {1,\\,3,\\,2,\\,1} \\right\\}$$ Let $${X_1}(k)$$ and $${X_2}(k)$$ be 4-point DFTs of $${x_1}\\left[ n \\right]$$ and $${x_2}\\left[ n \\right]$$, respectively. Another sequence $${X_3}(n)$$ is derived by taking 4-ponit inverse DFT of $${X_3}(k)$$= $${X_1}(k)$$$${X_2}(k)$$. The value of $${x_3}\\left[ 2 \\right]$$",
+    "options": [],
+    "correct_options": [],
+    "answer": "11",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a discrete time periodic signal x$$\\left[ n \\right]$$=  $$\\sin \\left( {{{\\pi n} \\over 5}} \\right)$$. Let a<sub>k</sub> be the complex Fourier serier coefficients of x$$\\left[ n \\right]$$. The coefficients $$\\left\\{ {{a_k}} \\right\\}$$ are non- zero when k = Bm $$ \\pm $$ 1, where m is any integer. The value of B is _________________. ",
+    "options": [],
+    "correct_options": [],
+    "answer": "10",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The N-point DFT X of a sequence x[n]  0 ≤ n ≤ N − 1 is given  by\n<br> $$X\\left[ k \\right] = {1 \\over {\\sqrt N }}\\,\\,\\sum\\limits_{n = 0}^{N - 1} x \\,[n\\,]e{\\,^{ - j{{2\\pi } \\over N}nk}}$$, 0$$ \\le k \\le N - 1$$\n<br> Denote this relation as X = DFT(x). For N= 4 which one of the following sequences satisfies DFT (DFT(x) ) = ___________.\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "x = $$\\left[ {1\\,2\\,3\\,4} \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "x = $$\\left[ {1\\,2\\,3\\,2} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "x = $$\\left[ {1\\,3\\,2\\,2} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "x = $$\\left[ {1\\,2\\,2\\,3} \\right]$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "The DFT of a vector [a b c d] is the vector [α β γ δ ]. Consider the product \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ec241ebc50ad4d1948acf8340bdf4b58f464ee528f57f44f38bda34715db0c99.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Signals and Systems - Discrete Fourier Transform and Fast Fourier Transform Question 14 English\">\n\nThe DFT of the vector [ p q r s] is a scaled version of\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {{\\alpha ^2}{\\beta ^2}{\\Upsilon ^2}{\\delta ^2}} \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\sqrt {\\alpha \\,} \\,\\sqrt \\beta  \\,\\sqrt \\gamma  \\,\\sqrt \\delta  $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {\\alpha  + \\beta \\,\\beta  + \\delta \\, + \\gamma \\,\\gamma \\, + \\alpha } \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {\\delta {\\rm{ }}\\beta \\,\\gamma \\,\\delta } \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The first six points of the 8-point DFT of a real valued sequence are 5, 1 - j3, 0, 3- j4,  0 and 3+  j4. The last two points of the DFT are respectively",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0, 1- j3"
+      },
+      {
+        "identifier": "B",
+        "content": "0, 1+ j3"
+      },
+      {
+        "identifier": "C",
+        "content": "1+j3, 5 "
+      },
+      {
+        "identifier": "D",
+        "content": "1 – j3, 5 "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The 4-point Discrete Fourier Transform (DFT) of a discrete time sequence $$\\left\\{ {1,\\,0,\\,2,\\,3} \\right\\}$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {0,\\, - 2 + 2j,\\,2,\\, - 2 - 2j} \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {2,\\,2 + 2j,\\,6,\\,2\\, - 2j} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {6,\\,1 - 3j,\\,2,\\,1 + 3j} \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {6,\\, - 1 + 3j,\\,0,\\, - 1\\, - 3j} \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "{x(n)} is a real-valued periodic sequence with a period N. x(n) and X(k) form N-point. Discrete Fourier Transform (DFT) pairs.\n The DFT Y(k) of the sequence\n<br> y (n) = $${1 \\over N}\\,\\sum\\limits_{r = 0}^{N - 1} x \\,\\left( r \\right)x\\,(n + r\\,)$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\left| {X(k)} \\right|^2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over N}\\,\\sum\\limits_{r = 0}^{N - 1} X \\,\\left( r \\right){X^*}\\,(k + r\\,)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over N}\\,\\,\\sum\\limits_{r = 0}^{N - 1} X \\,(r\\,)X(k + r)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "0"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  }
+]

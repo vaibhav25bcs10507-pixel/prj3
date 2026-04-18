@@ -1,0 +1,1893 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following CPU scheduling algorithms cannot be preemptive?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Shortest Remaining Time First (SRTF) Scheduling</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>First Come First Serve (FCFS) Scheduling</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Round Robin Scheduling</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Priority Scheduling</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The correct answer is <strong>Option B: First Come First Serve (FCFS) Scheduling</strong>.</p>\n<h3>Explanation:</h3>\n<p>A <strong>preemptive</strong> scheduling algorithm is one in which the CPU can be taken away from a running process before it finishes.</p>\n<p>Now check each option:</p>\n<ul>\n<li><p><strong>SRTF (Shortest Remaining Time First)</strong>  </p>\n<p>This is a <strong>preemptive</strong> version of shortest job scheduling.  </p>\n<p>If a new process arrives with less remaining burst time, the current process is stopped.</p></li>\n<li><p><strong>FCFS (First Come First Serve)</strong>  </p>\n<p>In this method, the process that comes first gets the CPU first and keeps it until completion.  </p>\n<p>So it is <strong>non-preemptive</strong>.</p></li>\n<li><p><strong>Round Robin Scheduling</strong>  </p>\n<p>This is <strong>preemptive</strong> because each process gets CPU for a fixed time quantum.</p></li>\n<li><p><strong>Priority Scheduling</strong>  </p>\n<p>This can be <strong>preemptive or non-preemptive</strong>, depending on the system.</p></li>\n</ul>\n<h3>Final Answer:</h3>\n<p>$$\\boxed{\\text{FCFS Scheduling}}$$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Processes $P 1, P 2, P 3, P 4$ arrive in that order at times $0,1,2$, and 8 milliseconds respectively, and have execution times of $10,13,6$, and 9 milliseconds respectively. Shortest Remaining Time First (SRTF) algorithm is used as the CPU scheduling policy. Ignore context switching times.\n<br/>Which ONE of the following correctly gives the average turnaround time of the four processes in milliseconds?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "22"
+      },
+      {
+        "identifier": "B",
+        "content": "15"
+      },
+      {
+        "identifier": "C",
+        "content": "37"
+      },
+      {
+        "identifier": "D",
+        "content": "19"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}\n.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}\n</style>\n</p><table class=\"tg\" style=\"undefined;table-layout: fixed; width: 400px\"><colgroup>\n<col style=\"width: 103px\">\n<col style=\"width: 75px\">\n<col style=\"width: 78px\">\n<col style=\"width: 71px\">\n<col style=\"width: 73px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-7btt\">Process</th>\n    <th class=\"tg-7btt\">A.T.</th>\n    <th class=\"tg-7btt\">B.T.</th>\n    <th class=\"tg-7btt\">C.T.</th>\n    <th class=\"tg-7btt\">T.A.T.</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-c3ow\">$P_1$</td>\n    <td class=\"tg-c3ow\">0</td>\n    <td class=\"tg-c3ow\">10</td>\n    <td class=\"tg-c3ow\">16</td>\n    <td class=\"tg-c3ow\">16</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">$P_2$</td>\n    <td class=\"tg-c3ow\">1</td>\n    <td class=\"tg-c3ow\">13</td>\n    <td class=\"tg-c3ow\">38</td>\n    <td class=\"tg-c3ow\">37</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">$P_3$</td>\n    <td class=\"tg-c3ow\">2</td>\n    <td class=\"tg-c3ow\">6</td>\n    <td class=\"tg-c3ow\">8</td>\n    <td class=\"tg-c3ow\">6</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">$P_4$</td>\n    <td class=\"tg-c3ow\">8</td>\n    <td class=\"tg-c3ow\">9</td>\n    <td class=\"tg-c3ow\">25</td>\n    <td class=\"tg-c3ow\">17</td>\n  </tr>\n</tbody>\n</table><p></p>\n<p>Gantt Chart:</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7ypyhy3/af1792d9-8e4c-4469-9ef2-7398673d6822/14ef49c0-fb4b-11ef-8a9f-8d6d832c06e4/file-jaoe38c1m7ypyhy5.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7ypyhy3/af1792d9-8e4c-4469-9ef2-7398673d6822/14ef49c0-fb4b-11ef-8a9f-8d6d832c06e4/file-jaoe38c1m7ypyhy5.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Operating Systems - Process Concepts and Cpu Scheduling Question 4 English Explanation\"></p>\n<p>Average Turn Around Time $=\\frac{16+37+6+17}{4}=\\frac{76}{4}=19$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Suppose in a multiprogramming environment, the following C program segment is executed. A process goes into I/O queue whenever an I/O related operation is performed. Assume that there will always be a context switch whenever a process requests for an I/O, and also whenever the process returns from an I/O. The number of times the process will enter the ready queue during its lifetime (not counting the time the process enters the ready queue when it is run initially) is _________ . (Answer in integer)</p>\n<pre><code class=\"c\">\nint main( )\n{\n    int x = 0,i=0;\n    scanf(\"%d\", &x);\n    for(i=0; i<20;i++)\n    {\n        x=x+20;\n        printf(\"%d\\n\", x);\n    }\n    return 0;\n}\n</pre></code>",
+    "options": [],
+    "correct_options": [],
+    "answer": "21",
+    "explanation": "<p>To understand how many times the process enters the ready queue after it first starts, let's analyze the program's flow:</p>\n<h3>Program Execution Steps:</h3>\n\n<p><strong>Program Start and Initial Entry to Ready Queue:</strong></p>\n\n\n<p>The process starts execution and enters the ready queue initially. This entry is <strong>not counted</strong> for this problem.</p>\n\n\n<p><strong>User Input with <code>scanf</code>:</strong></p>\n\n\n<p><p>The statement <code>scanf(\"%d\", &amp;x);</code> takes input from the user.</p></p>\n<p><p>The process performs an I/O operation, moves to the I/O queue, and a context switch occurs.</p></p>\n<p><p>After completing the I/O, the process returns to the ready queue. <strong>1 entry</strong> to the ready queue occurs here.</p></p>\n\n\n<p><strong>For Loop Execution (20 iterations):</strong></p>\n\n\n<p><p>Within the loop, <code>printf(\"%d\\n\", x);</code> is executed in each iteration.</p></p>\n<p><p>Each <code>printf</code> causes an I/O operation, moving the process to the I/O queue followed by a return to the ready queue after I/O completes.</p></p>\n<p><p>Since there are 20 iterations, the process enters the ready queue <strong>20 additional times</strong> due to the 20 <code>printf</code> statements.</p></p>\n\n<h3>Calculating Total Entries to the Ready Queue:</h3>\n\n<p><p><strong>From <code>scanf</code>:</strong> 1 entry</p></p>\n<p><p><strong>From <code>printf</code> (20 iterations):</strong> 20 entries</p></p>\n\n<p>Therefore, the total number of times the process enters the ready queue during its lifetime, excluding the initial entry, is:</p>\n<p>$ 1 + 20 = 21 $</p>\n<p>In conclusion, the process will enter the ready queue 21 times in total after the initial start.</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a process P running on a CPU. Which one or more of the following events will <b>always</b> trigger a context switch by the OS that results in process P moving to a non-running state (e.g., ready, blocked)?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>P makes a blocking system call to read a block of data from the disk</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>P tries to access a page that is in the swap space, triggering a page fault</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>An interrupt is raised by the disk to deliver data requested by some other process</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>A timer interrupt is raised by the hardware</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which events will <b>always</b> trigger a context switch that results in process P moving to a non-running state, let's analyze each option in detail:</p>\n\n<p><b>Option A:</b><br>\n\n<p>When process P makes a blocking system call to read a block of data from the disk, the process will enter a blocked state until the data is read from the disk. This means a context switch will occur to allow another process to use the CPU while P is waiting for the data. Therefore, Option A <b>always</b> results in process P moving to a non-running state.</p></p>\n\n<p><b>Option B:</b><br>\n\n<p>If process P tries to access a page that is in the swap space, this will trigger a page fault. Handling a page fault requires the OS to read the required page from the swap space into physical memory. During this time, process P cannot continue executing and must be moved to a blocked state, necessitating a context switch. Thus, Option B <b>always</b> results in process P moving to a non-running state.</p></p>\n\n<p><b>Option C:</b><br>\n\n<p>When an interrupt is raised by the disk to deliver data requested by some other process, the interrupt service routine (ISR) will be executed by the CPU. However, the interrupt itself does not necessarily cause process P to move to a non-running state. The interrupt may be processed, and process P could continue running if it is not directly affected. Therefore, Option C does not <b>always</b> result in process P moving to a non-running state.</p></p>\n\n<p><b>Option D:</b><br>\n\n<p>A timer interrupt is raised by the hardware to maintain the system's time clock or for preemptive multitasking purposes. In a preemptive multitasking system, a timer interrupt can lead to a context switch if the OS decides to schedule another process. However, this does not mean process P will <b>always</b> move to a non-running state—process P could remain in the ready state if it still has time left in its time slice. Thus, Option D does not <b>always</b> result in process P moving to a non-running state.</p></p>\n\n<p>In conclusion, the events that will <b>always</b> trigger a context switch by the OS and result in process P moving to a non-running state are:</p>\n\n<p><b>Answer: Option A and Option B</b></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following process state transitions is/are NOT possible?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Running to Ready</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Waiting to Running</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Ready to Waiting</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Running to Terminated</p>"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>In the context of process state transitions within an operating system, certain transitions are typical and expected, while others are not. Let's analyze each of the given options:</p>\n\n<p><strong>Option A: Running to Ready</strong><br>\nThis transition occurs when a running process is interrupted by the scheduler to allocate CPU time to another process. It is a common and valid transition, known as preemption.</p>\n\n<p><strong>Option B: Waiting to Running</strong><br>\nThis transition is not typically possible without passing through the Ready state first. A process in the Waiting (or Blocked) state must first be moved to the Ready state once the condition it was waiting for is met (e.g., I/O completion). Only then can it be scheduled to Run.</p>\n\n<p><strong>Option C: Ready to Waiting</strong><br>\nThis transition is not possible. A process in the Ready state is waiting for CPU time and should only move to the Running state. A move from Ready to Waiting would imply the process needs to wait for an event without ever having run, which defies the standard state transition logic.</p>\n\n<p><strong>Option D: Running to Terminated</strong><br>\nThis transition occurs when a process completes its execution and terminates. This is a standard and valid transition.</p>\n\n<p>Based on this analysis, the transitions that are NOT possible are:</p>\n\n<p><strong>Option B: Waiting to Running</strong><br>\n<strong>Option C: Ready to Waiting</strong></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which one or more of the following need to be saved on a context switch from one thread (T1) of a process to another thread (T2) of the same process?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Page table base register"
+      },
+      {
+        "identifier": "B",
+        "content": "Stack pointer"
+      },
+      {
+        "identifier": "C",
+        "content": "Program counter"
+      },
+      {
+        "identifier": "D",
+        "content": "General purpose registers"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>In a context switch between threads of the same process, certain aspects of the thread's state need to be preserved so that execution can resume correctly. Let's analyze each option to determine which ones are required to be saved:</p>\n\n<p><strong>Option A: Page table base register</strong></p>\n\n<p>The page table base register is not typically saved in a context switch between threads of the same process because threads share the same address space within a process. The page table base register is crucial in process switches, where different processes have their own address spaces, but for a context switch within the same process, this is unnecessary.</p>\n\n<p><strong>Option B: Stack pointer</strong></p>\n\n<p>The stack pointer is essential to be saved because each thread has its own stack. The stack pointer points to the current location in the stack that is being used by the thread. To ensure that T1’s context is preserved and T2 can resume correctly, the stack pointer must be saved and restored during a context switch.</p>\n\n<p><strong>Option C: Program counter</strong></p>\n\n<p>The program counter (also known as the instruction pointer) must also be saved. It holds the address of the next instruction to be executed. Without saving the program counter, the thread cannot resume execution from the point it was interrupted, making it essential for context switching between threads.</p>\n\n<p><strong>Option D: General purpose registers</strong></p>\n\n<p>General purpose registers hold intermediate data and are critical for the execution of a thread. These registers need to be saved so that the thread can resume its execution without data corruption or loss. Thus, saving the state of general purpose registers is necessary during a context switch.</p>\n\n<p>In summary, the key components that need to be saved on a context switch from one thread to another within the same process are:</p>\n\n<p>$$ \\text{Option B: Stack pointer} $$</p>\n\n<p>$$ \\text{Option C: Program counter} $$</p>\n\n<p>$$ \\text{Option D: General purpose registers} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which one or more of the following CPU scheduling algorithms can potentially cause starvation?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "First-in First-out"
+      },
+      {
+        "identifier": "B",
+        "content": "Round Robin"
+      },
+      {
+        "identifier": "C",
+        "content": "Priority Scheduling"
+      },
+      {
+        "identifier": "D",
+        "content": "Shortest Job First"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Starvation in the context of CPU scheduling refers to a scenario where a process is perpetually delayed from accessing the CPU due to the continuous arrival of other processes that take precedence over it. Let's consider each of the given CPU scheduling algorithms to determine which can potentially cause starvation:</p>\n\n<p><strong>Option A: First-in First-out (FIFO)</strong></p>\n<p>First-in, First-out, also known as FIFO or FCFS (First-Come, First-Served), is the simplest type of CPU scheduling algorithm that schedules processes in the order they arrive in the ready queue. Since each process is given the CPU in the exact order they arrive without any other consideration, there is no case for starvation; every process will be executed in due time. However, this can lead to poor performance for time-critical processes if they get stuck behind long, non-urgent tasks.</p>\n<p>For FIFO, in case of infinite loop like <br/>while (1);\n<br/>then it cause starvation so until there's special case of a task running forever there'll be no starvation. But this scenario is typically addressed through system design rather than scheduling.</p>\n\n<p><strong>Option B: Round Robin (RR)</strong></p>\n<p>Round Robin scheduling is designed to prevent starvation by allocating each process a fixed time slot or quantum. The CPU scheduler rotates through the ready queue, assigning the CPU to each process for a time interval not exceeding the predefined quantum. When a process's time quantum expires, it is placed at the end of the queue, if it still has work to do. This cycling ensures that no process is starved of CPU time, though individual processes may experience longer wait times under heavy load.</p>\n\n<p><strong>Option C: Priority Scheduling</strong></p>\n<p>Priority scheduling assigns each process a priority, and the CPU is allocated to the process with the highest priority (smallest integer = highest priority). If two processes have the same priority, they are typically scheduled according to FIFO rules. This can lead to starvation, as low-priority processes may never get the CPU if there are enough high-priority processes continuously entering the ready queue. Therefore, priority scheduling can potentially cause starvation unless mechanisms like priority aging are implemented to eventually increase the priority of waiting processes.</p>\n\n<p><strong>Option D: Shortest Job First (SJF)</strong></p>\n<p>Shortest Job First, or SJF, is a non-preemptive scheduling strategy that selects the process with the smallest estimated running time to execute next. This algorithm can cause starvation for processes with longer estimated run times if shorter processes keep arriving. Since the CPU always prefers the jobs estimated to finish quickest, longer processes could be delayed indefinitely.</p>\n\n<p>In conclusion, both Option C (Priority Scheduling) and Option D (Shortest Job First) can potentially cause starvation, as they prioritize certain processes in a way that can indefinitely postpone the execution of others.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Which of the following statement(s) is/are correct in the context of CPU scheduling?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Implementing preemptive scheduling needs hardware support."
+      },
+      {
+        "identifier": "B",
+        "content": "Turnaround time includes waiting time."
+      },
+      {
+        "identifier": "C",
+        "content": "Round-robin policy can be used even when the CPU time required by each of the processes is not known apriori."
+      },
+      {
+        "identifier": "D",
+        "content": "The goal is to only maximize CPU utilization and minimize throughput."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which statements are correct in the context of CPU scheduling, let's analyze each option individually.</p>\n<hr />\n<h3><strong>Option A:</strong></h3>\n<p><strong>Implementing preemptive scheduling needs hardware support.</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Preemptive Scheduling:</strong></p></p>\n<p><p>In preemptive scheduling, the operating system can interrupt a currently running process to assign the CPU to another process.</p></p>\n<p><p>This requires the ability to <strong>forcefully regain control</strong> from a running process.</p></p>\n<p><p><strong>Hardware Support:</strong></p></p>\n<p><p><strong>Timer Interrupts:</strong> Hardware timers generate interrupts at regular intervals.</p></p>\n<p><p>The operating system uses these interrupts to <strong>preempt</strong> the running process.</p></p>\n<p><p><strong>Context Switching:</strong> The CPU must support context switching, saving the state of the current process and loading the state of another.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>Implementing preemptive scheduling <strong>requires hardware support</strong> in the form of timer interrupts and context-switching capabilities.</p></p>\n\n<p><strong>Option A is correct.</strong></p>\n<hr />\n<h3><strong>Option B:</strong></h3>\n<p><strong>Turnaround time includes waiting time.</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Turnaround Time:</strong></p></p>\n<p><p>Defined as the <strong>total time taken</strong> from the submission of a process to its completion.</p></p>\n<p><p>It includes all periods of waiting, execution, and I/O operations.</p></p>\n<p><p><strong>Components of Turnaround Time:</strong></p></p>\n<p><p><strong>Waiting Time:</strong> Time the process spends in the ready queue waiting for CPU allocation.</p></p>\n<p><p><strong>Execution Time:</strong> Time during which the process is executing on the CPU.</p></p>\n<p><p><strong>I/O Time:</strong> Time spent waiting for or performing I/O operations.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p><strong>Waiting time is a part of turnaround time</strong>, along with execution and I/O times.</p></p>\n\n<p><strong>Option B is correct.</strong></p>\n<hr />\n<h3><strong>Option C:</strong></h3>\n<p><strong>Round-robin policy can be used even when the CPU time required by each of the processes is not known apriori.</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Round-Robin Scheduling:</strong></p></p>\n<p><p>Each process is assigned a fixed time slice (quantum) in a cyclic order.</p></p>\n<p><p>Processes are scheduled without requiring knowledge of their total CPU burst time.</p></p>\n<p><p><strong>CPU Time Requirement:</strong></p></p>\n<p><p>Round-robin scheduling <strong>does not need to know</strong> the total CPU time required by each process.</p></p>\n<p><p>It handles processes dynamically, making it suitable when CPU times are unknown.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>Round-robin scheduling can be effectively used <strong>without prior knowledge</strong> of CPU time requirements.</p></p>\n\n<p><strong>Option C is correct.</strong></p>\n<hr />\n<h3><strong>Option D:</strong></h3>\n<p><strong>The goal is to only maximize CPU utilization and minimize throughput.</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>CPU Scheduling Goals:</strong></p></p>\n<p><p><strong>Maximize CPU Utilization:</strong> Keep the CPU as busy as possible.</p></p>\n<p><p><strong>Maximize Throughput:</strong> Increase the number of processes completed per unit time.</p></p>\n<p><p><strong>Minimize Turnaround Time:</strong> Reduce the total time taken for a process to complete.</p></p>\n<p><p><strong>Minimize Waiting Time:</strong> Reduce the time processes spend waiting in the ready queue.</p></p>\n<p><p><strong>Minimize Response Time:</strong> Quick response for interactive users.</p></p>\n<p><p><strong>Statement Evaluation:</strong></p></p>\n<p><p>The goal is to <strong>maximize CPU utilization</strong>, which is correct.</p></p>\n<p><p>However, the statement says <strong>\"minimize throughput,\"</strong> which implies reducing the number of processes completed per unit time.</p></p>\n<p><p><strong>Minimizing throughput is not a goal</strong>; the goal is to <strong>maximize throughput</strong>.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>The statement is incorrect because it suggests minimizing throughput, which is contrary to scheduling objectives.</p></p>\n\n<p><strong>Option D is incorrect.</strong></p>\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Correct Statements:</strong> Options <strong>A</strong>, <strong>B</strong>, and <strong>C</strong> are correct.</p></p>\n<p><p><strong>Incorrect Statement:</strong> Option <strong>D</strong> is incorrect.</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Options A, B, and C are correct.</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Which of the following standard C library functions will always invoke a system call when executed from a single-threaded process in a UNIX/Linux operating system?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "strlen"
+      },
+      {
+        "identifier": "B",
+        "content": "malloc"
+      },
+      {
+        "identifier": "C",
+        "content": "exit"
+      },
+      {
+        "identifier": "D",
+        "content": "sleep"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<h3><strong>Option A: <code>strlen</code></strong></h3>\n\n<p><p><strong>Functionality</strong>: The <code>strlen</code> function calculates the length of a null-terminated string by iterating over each character until it encounters the null terminator <code>'\\0'</code>.</p></p>\n<p><p><strong>System Calls</strong>: <code>strlen</code> operates entirely in user space. It does not perform any I/O operations or interact with the kernel.</p></p>\n<p><p><strong>Conclusion</strong>: <code>strlen</code> <strong>does not</strong> invoke any system calls.</p></p>\n\n<hr />\n<h3><strong>Option B: <code>malloc</code></strong></h3>\n\n<p><p><strong>Functionality</strong>: The <code>malloc</code> function allocates a specified amount of memory from the heap for use by the program.</p></p>\n<p><p><strong>System Calls</strong>:</p></p>\n<p><p><strong>Sometimes Invokes System Calls</strong>: When the heap requires expansion, <code>malloc</code> may internally invoke system calls like <code>sbrk</code> or <code>mmap</code> to request more memory from the operating system.</p></p>\n<p><p><strong>Not Always</strong>: However, if sufficient memory is already available in the heap (from previous allocations or free operations), <code>malloc</code> can allocate memory without invoking any system calls.</p></p>\n<p><p><strong>Conclusion</strong>: <code>malloc</code> <strong>does not always</strong> invoke a system call.</p></p>\n\n<hr />\n<h3><strong>Option C: <code>exit</code></strong></h3>\n\n<p><p><strong>Functionality</strong>: The <code>exit</code> function terminates the calling process and returns control to the operating system. It performs cleanup tasks like flushing I/O buffers and calling functions registered with <code>atexit</code>.</p></p>\n<p><p><strong>System Calls</strong>:</p></p>\n<p><p><strong>Always Invokes System Calls</strong>: Ultimately, <code>exit</code> needs to terminate the process, which requires a system call to inform the kernel. It typically invokes the <code>_exit</code> or <code>exit_group</code> system call to terminate the process.</p></p>\n<p><p><strong>Conclusion</strong>: <code>exit</code> <strong>always</strong> invokes a system call.</p></p>\n\n<hr />\n<h3><strong>Option D: <code>sleep</code></strong></h3>\n\n<p><p><strong>Functionality</strong>: The <code>sleep</code> function suspends the execution of the calling thread for a specified number of seconds.</p></p>\n<p><p><strong>System Calls</strong>:</p></p>\n<p><p><strong>Always Invokes System Calls</strong>: To suspend execution, <code>sleep</code> must interact with the kernel to block the process or thread. It typically uses system calls like <code>nanosleep</code>, <code>clock_nanosleep</code>, or <code>sleep</code>.</p></p>\n<p><p><strong>Conclusion</strong>: <code>sleep</code> <strong>always</strong> invokes a system call.</p></p>\n\n<hr />\n<h3><strong>Final Answer</strong></h3>\n\n<p><p><strong>Functions that always invoke a system call</strong>:</p></p>\n<p><p><strong>Option C: <code>exit</code></strong></p></p>\n<p><p><strong>Option D: <code>sleep</code></strong></p></p>\n<p><p><strong>Functions that do not always invoke a system call</strong>:</p></p>\n<p><p><strong>Option A: <code>strlen</code></strong> (never invokes a system call)</p></p>\n<p><p><strong>Option B: <code>malloc</code></strong> (may invoke a system call, but not always)</p></p>\n\n<hr />\n<p><strong>Answer:</strong> Options <strong>C</strong> and <strong>D</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements about process state transitions for a system using preemptive scheduling.\n<br><br>I. A running process can move to ready state.\n<br><br/>II. A ready process can move to ready state.\n<br><br/>III. A blocked process can move to running state.\n<br><br/>IV. A blocked process can move to ready state.\n<br><br>Which of the above statements are TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "I, II and III only"
+      },
+      {
+        "identifier": "B",
+        "content": "II and III only"
+      },
+      {
+        "identifier": "C",
+        "content": "I, II and IV only"
+      },
+      {
+        "identifier": "D",
+        "content": "I, II, III and IV"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>Given statements :</p>\n<p>I. A running process can move to ready state.</p>\n<p>II. A ready process can move to running state.</p>\n<p>III. A blocked process can move to running state.</p>\n<p>IV. A blocked process can move to ready state.</p>\n<p>A blocked process cannot go to running state directly. Except (III), every option is viable.</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The following C program is executed on a Unix/Linux system:<br><br>\n\n   <pre><code>         #include &lt; unistd.h &gt;\n            int main ()\n            {\n                  int i ;\n                  for (i=0; i&lt;10; i++)\n                         if (i%2 == 0) fork ( ) ;\n                  return 0 ;\n            }</code></pre>\n<br><br>The total number of child processes created is _____.  ",
+    "options": [],
+    "correct_options": [],
+    "answer": "31 to 31",
+    "explanation": "When the value of 'i' is even then fork() statement is executed.\n<br><br>(1) when i = 0, then fork() will executed.\n<br><br>(2) when i = 2, then fork() will executed.\n<br><br>(3) when i = 4, then fork() will executed.\n<br><br>(4) when i = 6, then fork() will executed.\n<br><br>(5) when i = 8, then fork() will executed.\n<br><br>So total 5 times fork() will executed.\n<br><br>We know, n - fork statements will create 2<sup>n</sup> - 1 childs.\n<br><br>$$ \\therefore $$ 5 fork statements will create 2<sup>5</sup> - 1 = 31 childs.",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an arbitrary set of $$CPU$$-bound processes with unequal $$CPU$$ burst lengths submitted at the same time to a computer system. Which one of the following process scheduling algorithms would minimize the average waiting time in the ready queue?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Shortest remaining time first "
+      },
+      {
+        "identifier": "B",
+        "content": "Round-robin with time quantum less than the shortest $$CPU$$ burst "
+      },
+      {
+        "identifier": "C",
+        "content": "Uniform random "
+      },
+      {
+        "identifier": "D",
+        "content": "Highest priority first with priority proportional to $$CPU$$ burst length"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The maximum number of processes that can be in $$Ready$$ state for a computer system with $$n$$ $$CPUs$$ is  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${n^2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^n}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "Independent of $$n$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is <b>FALSE?</b>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "User level threads are not scheduled by the kernel. "
+      },
+      {
+        "identifier": "B",
+        "content": "When a user level thread is blocked, all other threads of its process are blocked. "
+      },
+      {
+        "identifier": "C",
+        "content": "Context switching between user level threads is faster than context switching between kernel level threads."
+      },
+      {
+        "identifier": "D",
+        "content": "Kernel level threads cannot share the code segment.  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "A scheduling algorithm assigns priority proportional to the waiting time of a process. Every process starts with priority zero (the lowest priority). The scheduler re-evaluates the process priorities every $$T$$ time units and decides the next process to schedule. Which one of the following is TRUE if the processes have no $${\\rm I}/O$$ operations and all arrive at time zero?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "This algorithm is equivalent to the first-come-first-serve algorithm. "
+      },
+      {
+        "identifier": "B",
+        "content": "This algorithm is equivalent to the round-robin algorithm. "
+      },
+      {
+        "identifier": "C",
+        "content": "This algorithm is equivalent to the shortest-job-first algorithm. "
+      },
+      {
+        "identifier": "D",
+        "content": "This algorithm is equivalent to the shortest-remaining-time-first algorithm.   "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "A process executes the code \n<br>fork $$\\left( {\\,\\,\\,} \\right);$$\n<br>fork $$\\left( {\\,\\,\\,} \\right);$$\n<br>fork $$\\left( {\\,\\,\\,} \\right);$$\n<br>The total number of <b>child</b> processes created is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$7$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$8$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "For n fork( ) calls <br><br>We will get 2<sup>n</sup> processes created out of which one process will be original parent process. <br><br>Therefore,Total no of child processes =  2<sup>n</sup> - 1 <br><br> From the given data n = 3 <br><br>So, (8 -1) = 7 child processes created.",
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "A Computer handles several interrupt sources of which the following are relevant for this question:\n<p>$$ * \\,\\,\\,$$ Interrupt from $$CPU$$ temperature sensor (raises interrupt if $$CPU$$ temperature is too high)</p>\n<p>$$ * \\,\\,\\,$$  Interrupt from Mouse (raises interrupt if the mouse is moved or a button is pressed) </p>\n<p>$$ * \\,\\,\\,$$ Interrupt from keyboard (raises interrupt when a key is pressed or release)</p>\n<p>$$ * \\,\\,\\,$$ Interrupt from Hard Disk (raises interrupt when a disk read is completed)&gt;/p&gt;\n</p><p>Which one these will be handled at the HIGHEST priority?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Interrupt from Hard Disk "
+      },
+      {
+        "identifier": "B",
+        "content": "Interrupt from Mouse "
+      },
+      {
+        "identifier": "C",
+        "content": "Interrupt from Keyboard "
+      },
+      {
+        "identifier": "D",
+        "content": "Interrupt from $$CPU$$ temperature sensor."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "A thread is usually defined as a ''light weight process'' because an operating system $$(OS)$$ maintains smaller data structures for a thread than for a process. In relation to this, which of the following is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "On per-thread basis, the $$OS$$ maintains only $$CPU$$ register state. "
+      },
+      {
+        "identifier": "B",
+        "content": "The $$OS$$ does not maintain a separate stack for each thread "
+      },
+      {
+        "identifier": "C",
+        "content": "On per-thread basis, the $$OS$$ does not maintain virtual memory state. "
+      },
+      {
+        "identifier": "D",
+        "content": "On per-thread basis, the $$OS$$ maintains only scheduling and accounting "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "Operating system mantains a separate program counter,stack and CPU register set for a thread,so options A , B and D will be false. All the threads within a process/task share the same virtual memory space. Hence the OS does not maintain virtual memory space for each individual threads.",
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Let the time taken to switch between user and kernel modes of execution be $${t_1}$$ while the time taken to switch between two processes be $${t_2}$$. \n<p>Which of the following is TRUE?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${t_1} &gt; {t_2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${t_1} = {t_2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${t_1} &lt; {t_2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "Nothing can be said about the relation between $${t_1}$$ and $${t_2}.$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "Since the kernel is what facilitates switching from one process to the other, you need to switch from user mode to kernel mode for the scheduler (which is part of the kernel) to take control, then, after it makes its decisions, you have a switch from kernel to user mode in the new process. So switching process to process likely takes at least twice as long as user to kernel, at least in the general case.",
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following statements are true?\n<br>$${\\rm I}.$$ Shortest remaining time first scheduling may cause starvation\n<br>$${\\rm II}.$$ Preemptive scheduling may cause starvation\n<br>$${\\rm III}.$$ Round robin is better than $$FCFS$$ in terms of response time",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm I}$$ and $${\\rm II}$$ only "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm II}$$ and $${\\rm III}$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm I},$$ $${\\rm II}$$ and $${\\rm III}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "A CPU generally handles an interrupt by executing an interrupt service routine",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "As soon as an interrupt is raised "
+      },
+      {
+        "identifier": "B",
+        "content": "By checking the interrupt register at the end of fetch cycle."
+      },
+      {
+        "identifier": "C",
+        "content": "By checking the interrupt register after finishing the execution of the current instruction."
+      },
+      {
+        "identifier": "D",
+        "content": "By checking the interrupt register at fixed time intervals.   "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "<b>Group-1</b> contains some $$CPU$$ scheduling algorithms and <b>Group-2</b> contains some applications. Match entries in <b>Group-1</b> to entries in <b>Group-2.</b>\n<p><b>Group-1</b>\n<br>(P) Gang Scheduling\n<br>(Q) Rate Monotonic Scheduling\n<br>(R) Fair Share Scheduling</p>\n<p><b>Group-2</b>\n<br>(1) Guaranteed Scheduling\n<br>(2) Real-time Scheduling\n<br>(3) Thread Scheduling</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P - 3,Q - 2,R - 1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$P - 1,Q - 2,R - 3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$P - 2,Q - 3,R - 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$P - 1,Q - 3,R - 2$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements about user level threads and kernel level threads. \n<p>Which one of the following statements is FALSE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Context switch time is longer for kernel level threads than for user level threads."
+      },
+      {
+        "identifier": "B",
+        "content": "User level threads do not need any hardware support. "
+      },
+      {
+        "identifier": "C",
+        "content": "Related kernel level threads can be scheduled on different processors in a multi-processor system."
+      },
+      {
+        "identifier": "D",
+        "content": "Blocking one kernel level thread blocks all related threads.  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider three $$CPU$$-intensive process, which require $$10,20$$ and $$30$$ time units and arrive at times $$0,2$$ and $$6$$ respectively. How many context switches are needed if the operating system implements a shortest remaining time first scheduling algorithm? Do not count the context switches at time zero and at the end.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$4$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/PuzSbLNtBXYxeGkDg/4SwhkGIDqF9VaVYg0U1z8HwDhFCQD/0vaC7MIBCUVLplTVGsfoA2/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2006 Operating Systems - Process Concepts and Cpu Scheduling Question 61 English Explanation\">",
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements with respect to user-level threads and kernel-supported threads. \n<br>i) Context switch is faster with kernel- supported threads\n<br>ii) For user-level threads, a system call can block the entire process\n<br>iii) Kernel-supported threads can be scheduled independently\n<br>iv) Use-level threads are transparent to the kernel\n<p>Which of the above statements are true?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(ii), (iii) &amp; (iv) only "
+      },
+      {
+        "identifier": "B",
+        "content": "(ii) &amp; (iii) only "
+      },
+      {
+        "identifier": "C",
+        "content": "(i) &amp; (iii) only "
+      },
+      {
+        "identifier": "D",
+        "content": "(i) &amp; (ii) only"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "Case (i): This is False.<br>As in kernal level threads to go from one thread to other thread we need to call Operating System but in user-level-threads without calling the OS we can context switch from one thread to another.  <br><br>Case (ii): This is True. <br> As in user-level-threads threads are created by the user, so Operating System's Kernal has no idea about how many threads are present inside a process/task.That is why when one thread get blocked entire process/task will be blocked by the OS.   <br><br>Case (iii): This is True. <br> As kernal supported threads are created by kernal itself,so kernal knows how many threads are present inside a process/task.That is why kernal can schedule each thread independently.  <br><br>Case (iv): This is True. <br>As in user-level-threads threads are created by the user, so Operating System's kernal has no idea about how many threads are present inside a process/task.So we can say user-level-threads are transparent to the OS kernal.",
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following scheduling algorithms is non-preemptive?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Round Robin  "
+      },
+      {
+        "identifier": "B",
+        "content": "First-In First-Out "
+      },
+      {
+        "identifier": "C",
+        "content": "Multilevel Queue Scheduling "
+      },
+      {
+        "identifier": "D",
+        "content": "Multilevel Queue Scheduling with Feedback  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "Non-preemptive means untill a job gets finished the job is not going to removed from the CPU to execute a new job. FIFO/FCFS is non-preemptive others are preemptive.",
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "A processor needs software interrupt to",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Test the interrupt system of the processor "
+      },
+      {
+        "identifier": "B",
+        "content": "Implement co-routines "
+      },
+      {
+        "identifier": "C",
+        "content": "Obtain system services which need execution of privileged instructions "
+      },
+      {
+        "identifier": "D",
+        "content": "Return from subroutine  "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "Privileged instruction means an instruction which is under the control of Operating System. Software interrupt let processor access those privilege instructions by changing user mode to kernal mode. That is how a processor access privileged instructions.",
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a set of $$n$$ tasks with known runtimes $${r_1},{r_2},.....\\,{r_n}\\,\\,$$ to be run on a uniprocessor machine. Which of the following processor scheduling algorithms will result in the maximum throughput?.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Round -Robin "
+      },
+      {
+        "identifier": "B",
+        "content": "Shortest -Job -First "
+      },
+      {
+        "identifier": "C",
+        "content": "Highest-Response-Ratio-Next  "
+      },
+      {
+        "identifier": "D",
+        "content": "First -Come-First-Served "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "Throughput means no of processes completed per unit time. As in Shortest-job-first algorithm shorter jobs are executing earlier then no of jobs completed pre unit time will be maximum. So in Shortest-job-first algorithm throughput will be maximum.",
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "A CPU has two modes-privileged and non-privileged. In order to change the mode from privileged to non-privileged",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A hardware interrupt is needed"
+      },
+      {
+        "identifier": "B",
+        "content": "A software interrupt is needed "
+      },
+      {
+        "identifier": "C",
+        "content": "A privileged instruction (which does not generate an interrupt) is needed."
+      },
+      {
+        "identifier": "D",
+        "content": "A non-privileged instruction (which does not generate an interrupt) is needed."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "System calls are usually invoked by using:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A software interrupt "
+      },
+      {
+        "identifier": "B",
+        "content": "Polling"
+      },
+      {
+        "identifier": "C",
+        "content": "An indirect jump "
+      },
+      {
+        "identifier": "D",
+        "content": "A privileged instruction  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "When a program in user mode requires access to RAM or a hardware resource, it must switch to kernel mode to provide access to that resource. This is done via something called a system call and switching between user mode to kernel mode is done through software interrupt.",
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is an example of spooled device?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The terminal used to enter the input data for the C program being executed."
+      },
+      {
+        "identifier": "B",
+        "content": "An output device used to print the output of a number of jobs."
+      },
+      {
+        "identifier": "C",
+        "content": "The secondary memory device in a virtual storage system."
+      },
+      {
+        "identifier": "D",
+        "content": "The swapping area on a disk used by the swapper."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Consider $$n$$ processes sharing the $$CPU$$ in a round-robin fashion. Assuming that each process switch takes $$s$$ seconds, what must be the quantum size $$q$$ such that the overhead resulting from process switching is minimized but, at the same time each process is guaranteed to get its turn at the $$CPU$$ at least every $$t$$ seconds? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$q \\le {{t - ns} \\over {n - 1}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$q \\ge {{t - ns} \\over {n - 1}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$q \\le {{t - ns} \\over {n + 1}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$q \\ge {{t - ns} \\over {n + 1}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>For every process next turn we will get after (n - 1) process execution and between that n context switches occurs. Time taken for executing (n - 1) process is [(n - 1)q] and for n context switches time takes = nq. \nAccording to question we can write-</p>\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/8r14deUVQHT61WWUA/uF8ePNnx5G3ZtFhGth6uilE8yiobE/WD6FM3QZVDvZwwQc4meqHR/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1998 Operating Systems - Process Concepts and Cpu Scheduling Question 68 English Explanation\">",
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The process state transition diagram in Figure is representative of \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/60ZZqL17mF8idHub7/a68IK83UyVwBkZa22IL395GfYPiSc/iWy910AmnSZcDhxrPEU9lY/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1996 Operating Systems - Process Concepts and Cpu Scheduling Question 71 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a batch operating system"
+      },
+      {
+        "identifier": "B",
+        "content": "an operating system with a preemptive scheduler "
+      },
+      {
+        "identifier": "C",
+        "content": "an operating system with a non-preemptive scheduler "
+      },
+      {
+        "identifier": "D",
+        "content": "a uni-programmed operating system.  "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "Here a process can go from running state to ready state. So it is always preemptive.",
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is an example of spooled device?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A line printer used to print the output of a number of jobs. "
+      },
+      {
+        "identifier": "B",
+        "content": "A terminal used to enter input data to a running program. "
+      },
+      {
+        "identifier": "C",
+        "content": "A secondary storage device in a virtual memory system."
+      },
+      {
+        "identifier": "D",
+        "content": "A graphic display device.  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><b>SPOOL</b> means simultaneous peripheral operations on-line, spooling refers to putting jobs in a buffer, a special area in memory or on a disk where a device can access them when it is ready. Spooling is useful because devices access data at different rates.</p> \n\n<p>The most common spooling application is print spooling. Printers have a limited amount of memory, often times much smaller than the size of a document that you are wanting to print. Printer spooling allows you to send large documents, or multiple documents, to a printer and not have to wait for it to finish printing before continuing on to your next task.</p>",
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "Which scheduling policy is most suitable for a time-shared operating systems? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Shortest Job First "
+      },
+      {
+        "identifier": "B",
+        "content": "Round Robin "
+      },
+      {
+        "identifier": "C",
+        "content": "First come First serve "
+      },
+      {
+        "identifier": "D",
+        "content": "Elevator "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "Round Robin is a pre-emptive scheduler, which is designed especially for time sharing system. In Round Robin, each process is given a time slot to run. If the process does not finish in that time slot, then it will put in a queue and new process will enter into the running state.",
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the following program snippet. Assume that the program compiles and runs successfully. Further, assume that the fork( ) system call is always successful in creating a process.</p>\n\n<p>int main( ) {</p>\n<pre><code>int i;\n\nfor (i = 0; i &amp;lt; 3; i++){\n\n    if (fork() == 0){\n\n        continue;\n\n    }\n\n    break;\n\n}\n\nprintf(\"Hello!\");\n\nreturn 0;\n\n</code></pre>\n<p>}</p>\n<p>```</p>\n<p>The total number of times that the printf statement gets executed is $\\_\\_\\_\\_$ . (answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p><b>Execution Trace:</b></p>\n<p>At the start, there is only one process, say $P_0$.</p>\n<p><b>1. First iteration: $i=0$</b></p>\n<p>Process $P_0$ executes <code>fork()</code>.</p>\n<p>The child process gets value $0$ from <code>fork()</code>, so the condition <code>fork() == 0</code> becomes true. Therefore, the child executes <code>continue</code> and goes to the next iteration.</p>\n<p>The parent process gets a non-zero value from <code>fork()</code>, so the condition is false. Therefore, it does not go inside the <code>if</code> block and executes <code>break</code>.</p>\n<p>So, parent $P_0$ comes out of the loop and executes <code>printf(\"Hello!\")</code> once.</p>\n<p>The child from this step, call it $C_1$, moves to the next iteration.</p>\n<p><b>2. Second iteration: $i=1$</b></p>\n<p>Now only process $C_1$ is inside the loop.</p>\n<p>Process $C_1$ again executes <code>fork()</code>.</p>\n<p>Its child gets $0$, so it executes <code>continue</code> and goes to the next iteration.</p>\n<p>Its parent gets a non-zero value, so it executes <code>break</code> and comes out of the loop.</p>\n<p>Thus, process $C_1$ executes <code>printf(\"Hello!\")</code> once.</p>\n<p>The new child from this step, call it $C_2$, moves to the next iteration.</p>\n<p><b>3. Third iteration: $i=2$</b></p>\n<p>Now only process $C_2$ is inside the loop.</p>\n<p>Process $C_2$ executes <code>fork()</code>.</p>\n<p>Its child gets $0$, so it executes <code>continue</code>. After this, the loop variable becomes $i=3$, so the loop condition fails and the child comes out of the loop normally.</p>\n<p>This child now executes <code>printf(\"Hello!\")</code> once.</p>\n<p>The parent process $C_2$ gets a non-zero value, so it executes <code>break</code> and comes out of the loop.</p>\n<p>So, process $C_2$ also executes <code>printf(\"Hello!\")</code> once.</p>\n<p><b>Total count</b></p>\n<p>The processes that execute <code>printf(\"Hello!\")</code> are:</p>\n<p>$P_0,\\ C_1,\\ C_2,\\ C_3$</p>\n<p>So the total number of executions is $$4$$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a CPU that has to execute two types of processes. The first type, Actuators (A), requires a CPU burst of 6 seconds. The second type, Controllers (C), requires a CPU burst of 8 seconds. A new process of type A arrives at time $t=10,20,30,40$, and 50 (in seconds). Similarly, a new process of type C arrives at time $t=11,22,33$, 44, and 55 (in seconds). The CPU scheduling policy is First Come First Serve (FCFS). The first process of type A starts running at $t=10$ seconds. The average waiting time (in seconds) for the 10 processes is $\\_\\_\\_\\_$ . (rounded off to one decimal place)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "9.5",
+    "explanation": "<p>$$ \\text { Burst time } A=6 \\mathrm{sec}, B=8 \\mathrm{sec} $$</p>\n<table class=\"tabular\">\n\n<tbody>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">Process</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">Arrival time</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">Burst time</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">CT</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">TAT</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top-style: solid !important; border-top-width: 1px !important; width: auto; vertical-align: middle; \">WT</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">A</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">10</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">6</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">16</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">6</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">0</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">C</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">11</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">8</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">24</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">13</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">5</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">A</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">20</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">6</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">30</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">10</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">4</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">C</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">22</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">8</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">38</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">16</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">8</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">A</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">30</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">6</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">44</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">14</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">8</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">C</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">33</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">8</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">52</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">19</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">11</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">A</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">40</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">6</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">58</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">18</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">12</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">C</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">44</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">8</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">66</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">22</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">14</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">A</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">50</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">6</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">72</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">22</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">16</td>\n\n</tr>\n\n<tr style=\"border-top: none !important; border-bottom: none !important;\">\n\n<td style=\"text-align: left; border-left-style: solid !important; border-left-width: 1px !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">C</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">55</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">8</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">80</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">25</td>\n\n<td style=\"text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; \">17</td>\n\n</tr>\n\n</tbody>\n\n</table>\n<p>$$ \\text { CPU idle } $$<img alt=\"GATE CSE 2026 Set 1 Operating Systems - Process Concepts and Cpu Scheduling Question 1 English Explanation\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyr47m7/08441f30-ef7c-4b04-b43d-b255c87ee080/db9f31f0-2446-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyr47m8.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyr47m7/08441f30-ef7c-4b04-b43d-b255c87ee080/db9f31f0-2446-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyr47m8.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p>$$ \\text { Average waiting time }=\\frac{0+5+4+8+8+11+12+14+16+17}{10}=\\frac{95}{10}=9.5 $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A computer has two processors, $M_1$ and $M_2$. Four processes $P_1, P_2, P_3, P_4$ with CPU bursts of $20,16,25$, and 10 milliseconds, respectively, arrive at the same time and these are the only processes in the system. The scheduler uses non-preemptive priority scheduling, with priorities decided as follows:</p>\n<p>$\\bullet$ $M_1$ uses priority of execution for the processes as, $P_1>P_3>P_2>P_4$, i.e., $P_1$ and $P_4$ have highest and lowest priorities, respectively.</p>\n<p>$\\bullet$ $M_2$ uses priority of execution for the processes as, $P_2>P_3>P_4>P_1$, i.e., $P_2$ and $P_1$ have highest and lowest priorities, respectively.</p>\n<p>A process $P_i$ is scheduled to a processor $M_k$, if the processor is free and no other process $P_j$ is waiting with higher priority. At any given point of time, a process can be allocated to any one of the free processors without violating the execution priority rules. Ignore the context switch time. What will be the average waiting time of the processes in milliseconds?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "9.00"
+      },
+      {
+        "identifier": "B",
+        "content": "8.75"
+      },
+      {
+        "identifier": "C",
+        "content": "6.50"
+      },
+      {
+        "identifier": "D",
+        "content": "7.50"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p></p><table style=\"undefined;table-layout: fixed; width: 529px\"><colgroup>\n<col style=\"width: 89px\">\n<col style=\"width: 89px\">\n<col style=\"width: 88px\">\n<col style=\"width: 89px\">\n<col style=\"width: 85px\">\n<col style=\"width: 89px\">\n</colgroup>\n<thead>\n  <tr>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n    <th></th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td>$\\mathrm{P.No.}$</td>\n    <td>$\\mathrm{A.T.}$</td>\n    <td>$\\mathrm{B.T.}$</td>\n    <td>$\\mathrm{C.T.}$</td>\n    <td>$\\mathrm{T.A.T.}$</td>\n    <td>$\\mathrm{W.T.}$</td>\n  </tr>\n  <tr>\n    <td>$P_1$</td>\n    <td>0</td>\n    <td>20</td>\n    <td>20</td>\n    <td>20</td>\n    <td>0</td>\n  </tr>\n  <tr>\n    <td>$P_2$</td>\n    <td>0</td>\n    <td>16</td>\n    <td>16</td>\n    <td>16</td>\n    <td>0</td>\n  </tr>\n  <tr>\n    <td>$P_3$</td>\n    <td>0</td>\n    <td>25</td>\n    <td>45</td>\n    <td>45</td>\n    <td>20</td>\n  </tr>\n  <tr>\n    <td>$P_4$</td>\n    <td>0</td>\n    <td>10</td>\n    <td>26</td>\n    <td>26</td>\n    <td>16</td>\n  </tr>\n</tbody>\n</table><p></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7vfj2us/bebb67d1-c73a-470a-9d53-27480b0c278d/f2e62f40-f97b-11ef-bdd1-8fcf8ec6e3e2/file-jaoe38c1m7vfj2ut.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7vfj2us/bebb67d1-c73a-470a-9d53-27480b0c278d/f2e62f40-f97b-11ef-bdd1-8fcf8ec6e3e2/file-jaoe38c1m7vfj2ut.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Operating Systems - Process Concepts and Cpu Scheduling Question 5 English Explanation\"></p>\n<p>Average waiting time $=\\frac{0+0+20+16}{4}=\\frac{36}{4}=9$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a single processor system with four processes A, B, C, and D, represented as given below, where for each process the first value is its arrival time, and the second value is its CPU burst time.</p> <p>A (0, 10), B (2, 6), C (4, 3), and D (6, 7).</p> <p>Which one of the following options gives the average waiting times when preemptive Shortest Remaining Time First (SRTF) and Non-Preemptive Shortest Job First (NP-SJF) CPU scheduling algorithms are applied to the processes?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>SRTF = 6, NP-SJF = 7</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>SRTF = 6, NP-SJF = 7.5</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>SRTF = 7, NP-SJF = 7.5</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>SRTF = 7, NP-SJF = 8.5</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the average waiting times for both the Preemptive Shortest Remaining Time First (SRTF) and Non-Preemptive Shortest Job First (NP-SJF) CPU scheduling algorithms, we need to calculate the waiting times for each process, and then find the average of these waiting times.</p>\n\n<p>First, let's calculate the waiting times using the SRTF (Preemptive) algorithm:</p>\n\n<h3>SRTF (Preemptive) Algorithm</h3>\n\n<p>1. At time 0, Process A starts execution (as it's the only process that arrived).</p>\n\n<p>2. At time 2, Process B arrives, but A still has 8 units remaining, so A continues.</p>\n\n<p>3. At time 4, Process C arrives. Now, the remaining times are:\n\n<ul>\n\n<li> A = 6 units</li>\n\n<li> B = 6 units</li>\n\n<li> C = 3 units</li>\n\n</ul>\n\n<p>Hence, Process C starts executing.</p>\n\n</p>\n\n<p>4. At time 7, Process C completes. Process D arrives. Now, the remaining times are:\n\n<ul>\n\n<li> A = 6 units</li>\n\n<li> B = 6 units</li>\n\n<li> D = 7 units</li>\n\n</ul>\n\n<p>Hence, Process B starts executing.</p></p>\n\n<p>5. At time 13, Process B completes. Now, the remaining times are:\n\n<ul>\n\n<li> A = 6 units</li>\n\n<li> D = 7 units</li>\n\n</ul>\n\n<p>Hence, Process A resumes execution.</p>\n\n</p>\n\n<p>6. At time 19, Process A completes. Now, only Process D is left to execute.</p>\n\n<p>7. At time 26, Process D completes.</p>\n\n<p>Now, let's calculate the waiting times:\n\n<ul>\n\n<li>Waiting time for A = Finish time - Arrival time - Burst time = 19 - 0 - 10 = 9</li>\n\n<li>Waiting time for B = Finish time - Arrival time - Burst time = 13 - 2 - 6 = 5</li>\n\n<li>Waiting time for C = Finish time - Arrival time - Burst time = 7 - 4 - 3 = 0</li>\n\n<li>Waiting time for D = Finish time - Arrival time - Burst time = 26 - 6 - 7 = 13</li>\n\n</ul>\n\n<p>Average waiting time for SRTF = $$ \\frac{9 + 5 + 0 + 13}{4} = 6.75 $$</p>\n\n<h3>NP-SJF (Non-Preemptive Shortest Job First) Algorithm</h3>\n\n<p>1. At time 0, Process A starts execution because it's the only process arrived.</p>\n\n<p>2. At time 10, Process A finishes. Processes B, C, and D have arrived by this time. Process C has the shortest burst time, so it executes next.</p>\n\n<p>3. At time 13, Process C finishes. Among B and D, Process B has the shortest burst time, so it executes next.</p>\n\n<p>4. At time 19, Process B finishes, and finally Process D executes.</p>\n\n<p>5. At time 26, Process D finishes.</p>\n\n<p>Now, let's calculate the waiting times:\n\n<ul>\n\n<li>Waiting time for A = Finish time - Arrival time - Burst time = 10 - 0 - 10 = 0</li>\n\n<li>Waiting time for B = Finish time - Arrival time - Burst time = 19 - 2 - 6 = 11</li>\n\n<li>Waiting time for C = Finish time - Arrival time - Burst time = 13 - 4 - 3 = 6</li>\n\n<li>Waiting time for D = Finish time - Arrival time - Burst time = 26 - 6 - 7 = 13</li>\n\n</ul>\n\n<p>Average waiting time for NP-SJF = $$ \\frac{0 + 11 + 6 + 13}{4} = 7.5 $$</p>\n\n<p>Thus, the correct answer is:</p>\n\n<p><b>Option B</b>: SRTF = 6, NP-SJF = 7.5</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider four processes P, Q, R and S scheduled on a CPU as per round robin algorithm with a time quantum of 4 units. The processes arrive in the order P, Q, R, S, all at time t = 0. There is exactly one context switch from S to Q, exactly one context switch from R to Q, and exactly two context switches from Q to R. There is no context switch from S to P. Switching to a ready process after the termination of another process is also considered a context switch. Which one of the following is NOT possible as CPU burst time (in time units) of these processes?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P = 4, Q = 10, R = 6, S = 2"
+      },
+      {
+        "identifier": "B",
+        "content": "P = 2, Q = 9, R = 5, S = 1"
+      },
+      {
+        "identifier": "C",
+        "content": "P = 4, Q = 12, R = 5, S = 4"
+      },
+      {
+        "identifier": "D",
+        "content": "P = 3, Q = 7, R = 7, S = 3"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02s2dz6/ffb803c8-1a18-4e15-83b6-aff536c248ae/f149c220-966c-11ec-aab8-afa0f0cdb3c1/file-1l02s2dz7.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02s2dz6/ffb803c8-1a18-4e15-83b6-aff536c248ae/f149c220-966c-11ec-aab8-afa0f0cdb3c1/file-1l02s2dz7.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Operating Systems - Process Concepts and Cpu Scheduling Question 12 English Explanation\"></p>\n<p>The above grant chart satisfies all conditions given in the question the option (a), (b), (c) but not option (d).</p>\n<p>So, answer is option (d).</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following set of processes, assumed to have arrived at time 0. Consider the CPU scheduling algorithms Shortest Job First (SJF) and Round Robin (RR). For RR, assume that the processes are scheduled in the order P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub>, P<sub>4</sub>.\n<img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcvfc5vv/8cf5a578-a9db-4ba9-b71f-b225369cb29f/b43069b0-cb08-11ea-b796-4745b429ed6f/file-1da9i2ynkcvfc5vw-434w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Operating Systems - Process Concepts and Cpu Scheduling Question 15 English\">\n<br>If the time quantum for RR is 4 ms, then the absolute value of the difference between the average turnaround times (in ms) of SJF and RR (round off to 2 decimal places) is _____.\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "5.25",
+    "explanation": "<p><b>Given :</b></p>\n<p><img src=\"https://imagex.cdn.examgoal.net/1da9i2ynkcvfc5vv/8cf5a578-a9db-4ba9-b71f-b225369cb29f/b43069b0-cb08-11ea-b796-4745b429ed6f/file-1da9i2ynkcvfc5vw-434w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2020 Operating Systems - Process Concepts and Cpu Scheduling Question 15 English Explanation 1\"></p>\n<p><b>SJF : </b></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2rd4x3j/9703c19a-d339-4e4f-9356-025e9fcbea03/5f5fa1f0-9442-11ef-8741-9747ab238763/file-jaoe38c1m2rd4x3k.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2rd4x3j/9703c19a-d339-4e4f-9356-025e9fcbea03/5f5fa1f0-9442-11ef-8741-9747ab238763/file-jaoe38c1m2rd4x3k.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Operating Systems - Process Concepts and Cpu Scheduling Question 15 English Explanation 2\"></p>\n<p>$$ T A T=(21-0)+(13-0)+(2-0)+(6-0) $$</p>\n<p>Average $T A T=\\frac{42}{4}=10.5$</p>\n<p><b>RR : </b></p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m2rd794g/0d5152ea-b1da-4225-8302-262b3cf4e27c/a047ff00-9442-11ef-8741-9747ab238763/file-jaoe38c1m2rd794h.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m2rd794g/0d5152ea-b1da-4225-8302-262b3cf4e27c/a047ff00-9442-11ef-8741-9747ab238763/file-jaoe38c1m2rd794h.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2020 Operating Systems - Process Concepts and Cpu Scheduling Question 15 English Explanation 3\"></p>\n<p>$$ \\begin{aligned} T A T= &amp; (18-0)+(21-0)+(10-0)+(14-0) \\\\\\\\ &amp; =18+21+10+14 \\end{aligned} $$</p>\n<p>Average $T A T=\\frac{63}{4}=15.75$</p>\n<p>Hence,</p>\n<p>$$ \\begin{aligned} &amp; |S J F(T A T)-R R(T A T)|=|10.5-15.75| \\\\\\\\ &amp; =5.25 \\end{aligned} $$</p>\n<p>Hence, the correct answer is 5.25 .</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following four processes with arrival times (in milliseconds) and their length of CPU bursts (in milliseconds) as shown below :\n<br><picture><source media=\"(max-width: 320px)\" srcset=\"https://imagex.cdn.examgoal.net/7kejek277dist/a95a5797-6785-4b89-862d-44ea114caeb0/979111d0-f7bc-11e9-a7bc-b7b08ce8d541/file-7kejek277disu-320w.jpg\"><img src=\"https://imagex.cdn.examgoal.net/7kejek277dist/a95a5797-6785-4b89-862d-44ea114caeb0/979111d0-f7bc-11e9-a7bc-b7b08ce8d541/file-7kejek277disu-500w.jpg\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE CSE 2019 Operating Systems - Process Concepts and Cpu Scheduling Question 17 English\"></picture>\n<br>These processes are run on a single processor using preemptive Shortest Remaining Time First scheduling algorithm. If the average waiting time of the processes is 1 millisecond, then the value of Z is _____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "2",
+    "explanation": "<p>$$ \\begin{array}{|c|c|c|} \\hline \\text { Process } &amp; \\text { Arrival Time } &amp; \\text { Burst Time } \\\\ \\hline \\text { P1 } &amp; 0 &amp; 3 \\\\ \\hline \\text { P2 } &amp; 1 &amp; 1 \\\\ \\hline \\text { P3 } &amp; 3 &amp; 3 \\\\ \\hline \\text { P4 } &amp; 4 &amp; \\text { Z } \\\\ \\hline \\end{array} $$</p>\n<p>Gantt chart till t = 4 : </p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m49e4dv6/03adc657-6015-40ab-8cf4-7188db6fb0c3/8cb6f120-b1f8-11ef-8f19-a999ea391b1b/file-jaoe38c1m49e4dv7.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m49e4dv6/03adc657-6015-40ab-8cf4-7188db6fb0c3/8cb6f120-b1f8-11ef-8f19-a999ea391b1b/file-jaoe38c1m49e4dv7.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2019 Operating Systems - Process Concepts and Cpu Scheduling Question 17 English Explanation 1\"></p>\n<p>Now, there are 2 processes which are waiting in ready queue $P_3$ and $P_4$</p>\n<p><b>So, Case 1 :</b> If $z&lt;3$,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m49e6dhz/62618ff3-0914-422b-9078-bae2752e1c61/c40cbe70-b1f8-11ef-8f19-a999ea391b1b/file-jaoe38c1m49e6di0.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m49e6dhz/62618ff3-0914-422b-9078-bae2752e1c61/c40cbe70-b1f8-11ef-8f19-a999ea391b1b/file-jaoe38c1m49e6di0.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2019 Operating Systems - Process Concepts and Cpu Scheduling Question 17 English Explanation 2\"></p>\n<p>Hence, $z=1$ or 2 is only possible. After solving we will get $z=2$.</p>\n<p><b>Case 2:</b> If $z \\geq 3$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m49e9g9o/ef2f3d2c-9166-4a86-8681-f6fa690c5de2/199dcdc0-b1f9-11ef-8f19-a999ea391b1b/file-jaoe38c1m49e9g9p.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m49e9g9o/ef2f3d2c-9166-4a86-8681-f6fa690c5de2/199dcdc0-b1f9-11ef-8f19-a999ea391b1b/file-jaoe38c1m49e9g9p.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2019 Operating Systems - Process Concepts and Cpu Scheduling Question 17 English Explanation 3\"></p>\n<p>Here, Average waiting time will not depend on $z$, hence $z&gt;3$ is not possible.</p>\n<p>Waiting Time = Turnaround Time - Burst Time</p>\n<p>Hence, the correct answer is 2.</p>",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following processes, with the arrival time and the length of the CPU burst given in milliseconds. The scheduling algorithm used is preemptive shortest remaining-time first. \n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}\n.tg .tg-b4to{font-weight:bold;font-size:24px;border-color:inherit;text-align:center;vertical-align:top}\n.tg .tg-v15n{font-weight:bold;font-size:24px;border-color:inherit;text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-v15n\">Process </th>\n    <th class=\"tg-v15n\">Arrival Time</th>\n    <th class=\"tg-b4to\">Burst Time </th>\n  </tr>\n  <tr>\n    <td class=\"tg-v15n\">P<sub>1</sub><br>P<sub>2</sub><br>P<sub>3</sub><br>P<sub>4</sub></td>\n    <td class=\"tg-v15n\">0<br>3<br>7<br>8</td>\n    <td class=\"tg-b4to\">10<br>6<br>1<br>3</td>\n  </tr>\n</tbody></table></p>     \n<p>The average turn around time of these processes is milliseconds.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "8.2 to 8.3",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For the processes listed in the following table, which of the following scheduling schemes will give the lowest average turnaround time? \n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}\n.tg .tg-bn4o{font-weight:bold;font-size:18px;text-align:center;vertical-align:top}\n.tg .tg-asmn{font-weight:bold;font-size:18px;text-align:center}\n.tg .tg-izya{font-size:18px;text-align:center}\n.tg .tg-13pz{font-size:18px;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-asmn\">Process</th>\n    <th class=\"tg-asmn\">Arrival Time</th>\n    <th class=\"tg-bn4o\">Processing Time</th>\n  </tr>\n  <tr>\n    <td class=\"tg-izya\">A</td>\n    <td class=\"tg-izya\">0</td>\n    <td class=\"tg-13pz\">3</td>\n  </tr>\n  <tr>\n    <td class=\"tg-izya\">B</td>\n    <td class=\"tg-izya\">1</td>\n    <td class=\"tg-13pz\">6</td>\n  </tr>\n  <tr>\n    <td class=\"tg-13pz\">D</td>\n    <td class=\"tg-13pz\">4</td>\n    <td class=\"tg-13pz\">4</td>\n  </tr>\n  <tr>\n    <td class=\"tg-13pz\">E</td>\n    <td class=\"tg-13pz\">6</td>\n    <td class=\"tg-13pz\">2</td>\n  </tr>\n</tbody></table></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "First Come First Serve"
+      },
+      {
+        "identifier": "B",
+        "content": "Non-preemptive Shortest Job First "
+      },
+      {
+        "identifier": "C",
+        "content": "Shortest Remaining Time "
+      },
+      {
+        "identifier": "D",
+        "content": "Round Robin with Quantum value two "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a uniprocessor system executing three tasks T<sub>1</sub>, T<sub>2</sub> and T<sub>3</sub>, each of which is composed of an infinite sequence of jobs (or instances) which arrive periodically at intervals of 3, 7 and 20 milliseconds, respectively. The priority of each task is the inverse of its period, and the available tasks are scheduled in order of priority, with the highest priority task scheduled first. Each instance of T<sub>1</sub>, T<sub>2</sub> and T<sub>3</sub> requires an execution time of 1, 2 and 4 milliseconds, respectively. Given that all tasks initially arrive at the beginning of the 1<sup>st</sup> millisecond and task preemptions are allowed, the first instance of T<sub>3</sub> completes its execution at the end of _____________ milliseconds.",
+    "options": [],
+    "correct_options": [],
+    "answer": "12",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Three processes $$A, B$$ and $$C$$ each execute a loop of $$100$$ iterations. In each iteration of the loop, a process performs a single computation that requires $${t_c}\\,\\,CPU$$ milliseconds and then initiates a single $${\\rm I}/O$$ operation that lasts for $${t_{io}}$$ milliseconds. It is assumed that the computer where the processes execute has sufficient number of $${\\rm I}/O$$  devices and the $$OS$$ of the computer assigns different $${\\rm I}/O$$  devices to each process. Also, the scheduling overhead of the $$OS$$ is negligible. The processes have the following characteristics: \n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Process id</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">t<sub>c</sub></span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold\">t<sub>io</sub></span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">A</td>\n    <td class=\"tg-s6z2\">100 ms</td>\n    <td class=\"tg-baqh\">500 ms</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">B</td>\n    <td class=\"tg-s6z2\">350 ms</td>\n    <td class=\"tg-baqh\">500 ms<br></td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">C</td>\n    <td class=\"tg-s6z2\">200 ms</td>\n    <td class=\"tg-baqh\">500 ms</td>\n  </tr>\n</tbody></table> \n<p>The processes $$A, B,$$ and $$C$$ are started at times $$0, 5$$ and $$10$$ milliseconds respectively, in a pure time\nsharing system (round robin scheduling) that uses a time slice of $$50$$ milliseconds. The time in milliseconds at which process $$C$$ would <b>complete</b> its first $${\\rm I}/O$$  operation is __________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "1000",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following set of processes that need to be scheduled on a single $$CPU.$$ All the times are given in milliseconds.  \n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Process Name</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Arrival Time</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold\">Execution Time</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">A</td>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-baqh\">6</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">B</td>\n    <td class=\"tg-s6z2\">3</td>\n    <td class=\"tg-baqh\">2</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">C</td>\n    <td class=\"tg-s6z2\">5</td>\n    <td class=\"tg-baqh\">4</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">D</td>\n    <td class=\"tg-baqh\">7</td>\n    <td class=\"tg-baqh\">6</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">E</td>\n    <td class=\"tg-baqh\">10</td>\n    <td class=\"tg-baqh\">3</td>\n  </tr>\n</tbody></table> \n<p>Using the $$shortest$$ $$remaining$$ $$time$$ $$first$$ scheduling algorithm, the average process turnaround time (in $$msec$$) is _______.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "7.2",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "An operating system uses $$shortest$$ $$remaining$$ $$time$$ $$first$$ scheduling algorithm for pre-emptive scheduling of processes. Consider the following set of processes with their arrival times and $$CPU$$ burst times (in milliseconds): \n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Process</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Arrival Time</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold\">Burst Time</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">P1</td>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-baqh\">12</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">P2</td>\n    <td class=\"tg-s6z2\">2</td>\n    <td class=\"tg-baqh\">4<br></td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">P3</td>\n    <td class=\"tg-s6z2\">3</td>\n    <td class=\"tg-baqh\">6</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">P4</td>\n    <td class=\"tg-baqh\">8</td>\n    <td class=\"tg-baqh\">5</td>\n  </tr>\n</tbody></table> \n<p>The average waiting time (in milliseconds) of the processes is ________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "5.5",
+    "explanation": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/vvjsNwJM5oka35966/CzTmwrwOib9vBh2eDAo1xc3X6h1kN/YwCGhMK9eni0OvtabyopyT/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2014 Set 3 Operating Systems - Process Concepts and Cpu Scheduling Question 25 English Explanation\">\n\n<p>*Completion Time is found from Gantt Chart. To find completion time go from right to left in the Gantt Chart and see last time a process executed. That will be completion time of that process.</p> \n\n<p>*Turnaroud Time = Completion Time - Arrival Time </p>\n\n<p>*Waiting Time = Turnarund Time - Burst Time</p>",
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the $$3$$ processes, $$P1,$$ $$P2$$ and $$P3$$ shown in the table. \n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-s268{text-align:left}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s268\"><span style=\"font-weight:bold\">Process</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Arrival Time</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold\">Time Units</span><br><span style=\"font-weight:bold\">Required</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">P1</td>\n    <td class=\"tg-s6z2\">0</td>\n    <td class=\"tg-baqh\">5</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">P2</td>\n    <td class=\"tg-s6z2\">1</td>\n    <td class=\"tg-baqh\">7</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">P3</td>\n    <td class=\"tg-s6z2\">3</td>\n    <td class=\"tg-baqh\">4</td>\n  </tr>\n</tbody></table>\n<p>The completion order of the $$3$$ processes under the policies $$FCFS$$ and $$RR2$$ (round robin scheduling with $$CPU$$ quantum of $$2$$ time units) are</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$FCFS:P1,P2,P3\\,\\,\\,\\,RR2:P1,P2,P3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$FCFS:P1,P3,P2\\,\\,\\,\\,RR2:P1,P3,P2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$FCFS:P1,P2,P3\\,\\,\\,\\,RR2:P1,P3,P2$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$FCFS:P1,P3,P2\\,\\,\\,\\,RR2:P1,P2,P3$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following table of arrival time and burst time for three processes $$P0,P1$$ and $$P2$$.\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-s268{text-align:left}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s268\"><span style=\"font-weight:bold\">Process</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Arrival Time</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold\">Burst Time</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">P0</td>\n    <td class=\"tg-s6z2\">0 ms</td>\n    <td class=\"tg-baqh\">9 ms</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">P1</td>\n    <td class=\"tg-s6z2\">1 ms</td>\n    <td class=\"tg-baqh\">4 ms</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">P2</td>\n    <td class=\"tg-s6z2\">2 ms</td>\n    <td class=\"tg-baqh\">9 ms</td>\n  </tr>\n</tbody></table> \n<p>The pre-emptive shortest job first scheduling algorithm is used. Scheduling is carried out only a arrival or completion of processes. What is the average waiting time for the three processes? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5.0$$ $$ms$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$4.33$$ $$ms$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$6.33$$ $$ms$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$7.33$$ $$ms$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "In the following process state transition diagram for a uniprocessor system, assume that there are always some processes in the ready state:\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/ACWa3t1MstSoC2Eyt/miYifrL6sTBdrYAXTgYFd4lwYBW8n/nF4oMhrBVDW3ZmBTo8lYtI/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2009 Operating Systems - Process Concepts and Cpu Scheduling Question 29 English\">\n<p>Now consider the following statements:\n<br>$$1.\\,\\,\\,$$ If a process makes a transition $$D,$$ it would result in another process making transition $$A$$ immediately.\n<br>$$2.\\,\\,\\,$$ $$A$$ process $${P_2}$$ in blocked state can make transition $$E$$ while another process $${P_1}$$ is in running state.\n<br>$$3.\\,\\,\\,$$ The $$OS$$ uses preemptive scheduling.\n<br>$$4.\\,\\,\\,$$ The $$OS$$ uses non-preemptive scheduling.\nWhich of the above statements are TRUE? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ and $$2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ and $$3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2$$ and $$3$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$2$$ and $$4$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is/are true of the auto-increment addressing mode?\n<br>$${\\rm I}.\\,\\,\\,$$ It is useful in creating self-relocating code\n<br>$${\\rm II}.\\,\\,\\,$$ If it is included in an Instruction Set Architecture, then an additional $$ALU$$ is required for effective address calculation.\n<br>$${\\rm III}.\\,\\,\\,$$ The amount of increment depends on the size of the data item accessed",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\rm I}$$ only "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\rm II}$$ only"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\rm III}$$ only "
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\rm II}$$ &amp; $${\\rm III}$$ only "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A process executes the following code\n<pre><code class=\"c\">for (i = 0; i &lt; n; i + +) fork ( ); </code></pre>\nThe total number of child processes created is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$n$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2^n} - 1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${2^n}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${2^{n + 1}} - 1$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "An operating system uses Shortest Remaining Time first $$(SRT)$$ process scheduling algorithm. Consider the arrival times and execution times for the following processes:\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/MuSqG889yuigAcuHD/UoNKM6StOnaipBw0XpdlTcrtTJlDH/vsBD7exIGf3w04LDt7zARk/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2007 Operating Systems - Process Concepts and Cpu Scheduling Question 31 English\"> \n<p>What is the total waiting time for process $$P2?$$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$15$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$40$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$55$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider three processes (process id $$0,1,2,$$ respectively) with compute time bursts $$2, 4,$$ and $$8$$ time units. All processes arrive at time zero. Consider the longest remaining time first $$(LRTF)$$ scheduling algorithm. In $$LRTF$$ ties are broken by giving priority to the process with the lowest process id. The average turn around time is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$13$$ units "
+      },
+      {
+        "identifier": "B",
+        "content": "$$14$$ units "
+      },
+      {
+        "identifier": "C",
+        "content": "$$15$$ units"
+      },
+      {
+        "identifier": "D",
+        "content": "$$16$$ units"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider three processes, all arriving at time zero, with total execution time of $$10,20,$$ and $$30$$ units, respectively. Each process spends the first $$20$$% of execution time doing $${\\rm I}/O$$, the next $$70$$% of time doing computation, and the last $$10$$% of time doing $${\\rm I}/O$$ again. The operating system uses a shortest remaining compute time first scheduling algorithm and scheduling a new process either when the running processes gets blocked on $${\\rm I}/O$$ or when the running process finishes its compute burst. Assume that all $${\\rm I}/O$$ operations can be overlapped as much as possible. For what percentage of time does the $$CPU$$ remain idle? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$% "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10.6$$%"
+      },
+      {
+        "identifier": "C",
+        "content": "$$30.0$$% "
+      },
+      {
+        "identifier": "D",
+        "content": "$$89.4$$% "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-cse-2006",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following code fragment: \n<pre><code class=\"c\">if (fork() == 0)\n{\n   a = a + 5;\n   printf(\"%d, %d \\n\", a, &amp;a);\n}\nelse\n{\n   a = a - 5;\n   printf (\"%d, %d \\n\", a, &amp;a);\n}</code></pre>\n<br>Let $$u,v$$ be the values printed by the parent process, and $$x,y$$ be the values printed by the child process. Which one of the following is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$u=x+10$$ and $$v=y$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$u=x+10$$ and $$v \\ne y$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$u+10=x$$ and $$v=y$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$u+10=x$$ and  $$v \\ne y$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following set of processes, with the arrival times and the $$CPU$$-burst times given in milliseconds. \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/ieoDVD5TyNpQmZncX/wbuiXeKakl87soTX3T01puvpDFdzv/ult3RAF164D8BCTBUgynpz/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2004 Operating Systems - Process Concepts and Cpu Scheduling Question 37 English\"> \n<p>What is the average turnaround time for these processes with the preemptive shortest remaining processing time first $$(SRTF)$$ algorithm?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5.50$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5.75$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$6.00$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$6.25$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A uni-processor computer system only has two processes, both of which alternate $$10$$ $$ms$$ $$CPU$$ bursts with $$90$$ $$ms$$ $${\\rm I}/O$$ bursts. Both the processes were created at nearly the same time. The $${\\rm I}/O$$ of both processes can proceed in parallel. Which of the following scheduling strategies will result in the least $$CPU$$ utilization (over a long period of time) for this system? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "First come First served scheduling"
+      },
+      {
+        "identifier": "B",
+        "content": "Shortest remaining time first scheduling"
+      },
+      {
+        "identifier": "C",
+        "content": "Static priority scheduling with different priorities for the two processes"
+      },
+      {
+        "identifier": "D",
+        "content": "Round robin scheduling with a time quantum of $$5$$ $$ms.$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "content": "Draw the process state transition diagram of an $$OS$$ in which \n<br>(i) each process is in one of the five states: created, ready, running, blocked (i.e. sleep or\nwait), or terminated, and \n<br>(ii) only non-preemptive scheduling is used by the $$OS.$$ Label the transitions appropriately. \n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it. ",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Which combination of the following features will suffice to characterize an $$OS$$ as a multi-programmed $$OS?$$ <br>$$(a).$$ More than one program may be loaded into main memory at the same time for execution. <br>$$(b).$$ If a program waits for certain events such as $$I/O$$, another program is immediately scheduled for execution. <br>$$(c).$$ If the execution of a program terminates, another program is immediately scheduled for execution.  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$a$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "$$a$$ and $$b$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$a$$ and $$c$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$a, b$$ and $$c$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following does not interrupt a running process?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "A device "
+      },
+      {
+        "identifier": "B",
+        "content": "Timer "
+      },
+      {
+        "identifier": "C",
+        "content": "Scheduler process "
+      },
+      {
+        "identifier": "D",
+        "content": "Power failure  "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-cse-2001",
+    "difficulty": null
+  },
+  {
+    "content": "A multi-user, multi-processing operating system cannot be implemented on hardware that does not support:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Address translation "
+      },
+      {
+        "identifier": "B",
+        "content": "DMA for disk transfer "
+      },
+      {
+        "identifier": "C",
+        "content": "At least two modes of CPU execution (privileged and non-privileged) "
+      },
+      {
+        "identifier": "D",
+        "content": "Demand paging   "
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following actions is/are typically not performed by the operating system when switching context from process $$A$$ to process $$B$$ ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Saving current register values and restoring saved register values for process "
+      },
+      {
+        "identifier": "B",
+        "content": "Changing address translation tables. "
+      },
+      {
+        "identifier": "C",
+        "content": "Swapping out the memory image of process A to the disk. "
+      },
+      {
+        "identifier": "D",
+        "content": "Invalidating the translation look-aside buffer.  "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "Four jobs are waiting to be run. Their expected run times are $$6, 3, 5$$ and $$x$$. $${\\rm I}$$n what order should they be run to minimize the average response time? \n",
+    "options": [],
+    "correct_options": [],
+    "answer": "Solve it.",
+    "explanation": "The order depends on the value of x and the average response time is minimum when x=1.",
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "content": "Four jobs to be executed on a single processor system arrive at time $${0^ + }$$  in the order $$A, B, C, D.$$ their burst $$CPU$$ time requirements are $$4, 1, 8, 1$$ time units respectively. The completion time of A under round robin scheduling with time slice of one time units.\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$10$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$8$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$9$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-cse-1996",
+    "difficulty": null
+  },
+  {
+    "content": "The sequence $$.........$$ is an optimal non-preemptive scheduling sequence for the following jobs which leaves the $$CPU$$ idle for $$..........$$ Unit (s) of time\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/uo8JVOpJOO7WNYjSh/aiCM7itMswqGTVYXVtiI9ZGlZBvEC/MpHC2oIdxxt1QCou36xlPI/image.svg\" loading=\"lazy\" alt=\"GATE CSE 1995 Operating Systems - Process Concepts and Cpu Scheduling Question 33 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left\\{ {3,2,1} \\right\\},1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left\\{ {2,1,3} \\right\\},0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left\\{ {3,2,1} \\right\\},0$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left\\{ {1,2,3} \\right\\},5$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1995,
+    "yearKey": "gate-cse-1995",
+    "difficulty": null
+  },
+  {
+    "content": "The details of an interrupt cycle are shown in Figure \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/iUnVxHPOGmGUGe81J/u5M1NvB6fC3eNXeh8KPs1PWOknJ8F/vu81chcZHUAX3aoqM2hUoC/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 1993 Operating Systems - Process Concepts and Cpu Scheduling Question 47 English\">\n<br>Given that an interrupt input arrives every $$1$$ $$msec,$$ what is the percentage of the total time that the $$CPU$$ devotes for the main program execution. \n",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$90$$% of the total time $$CPU$$ spent executing main program ",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that the following jobs are to be executed on a single processor system. \n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">Job Id</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold\">CPU Burst Time</span></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">p</td>\n    <td class=\"tg-s6z2\">4</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">q</td>\n    <td class=\"tg-s6z2\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">r</td>\n    <td class=\"tg-s6z2\">8</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">s</td>\n    <td class=\"tg-s6z2\">1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">t</td>\n    <td class=\"tg-baqh\">2</td>\n  </tr>\n</tbody></table> \n<p>The jobs are assumed to have arrived at time $${0^ + }$$ and in the order $$p,q,r,s,t.$$ Calculate the departure time (completion time) for job $$p$$ if scheduling is round robin with time slice$$1.$$ </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$11$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$12$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-cse-1993",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is an example of a spooled device?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The terminal used to the input data for a program being executed. "
+      },
+      {
+        "identifier": "B",
+        "content": "The secondary memory device in a virtual memory system."
+      },
+      {
+        "identifier": "C",
+        "content": "A line printer used to print the output of a number of jobs. "
+      },
+      {
+        "identifier": "D",
+        "content": "None of the above."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1992,
+    "yearKey": "gate-cse-1992",
+    "difficulty": null
+  },
+  {
+    "content": "The highest-response ratio next scheduling policy favours $$.......$$ jobs, but it also limits the waiting time of $$ .....$$ jobs.",
+    "options": [],
+    "correct_options": [],
+    "answer": "Shorter ;  Longer ",
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-cse-1990",
+    "difficulty": null
+  },
+  {
+    "content": "State an undesirable characteristic of each of the following criteria for measuring performance of an operating system: \n<br>(a)  Turn around time.   (b) Waiting time.",
+    "options": [],
+    "correct_options": [],
+    "answer": "The CPU efficiency decrease as the turn-aroun time/wating time of the processor increases.It is better to have less turn-around and waiting time ,for all process.",
+    "explanation": null,
+    "topic": null,
+    "year": 1988,
+    "yearKey": "gate-cse-1988",
+    "difficulty": null
+  }
+]

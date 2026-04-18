@@ -1,0 +1,383 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following protocols may need to broadcast some of its messages?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>SMTP</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>FTP</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>DHCP</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>HTTP</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p><b>DHCP protocol</b> is used to give IP addresses to computers on a network automatically.</p>\n<p>When a new computer joins the network, it does not know the address of the DHCP server.</p>\n<p>So, the computer sends a message to all devices in the network using a broadcast address (255.255.255.255).</p>\n<p>This way, the DHCP server can reply to the computer and help it get an IP address.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statements is/are true with respect to the interaction of a web browser with a web server using HTTP 1.1?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>HTTP 1.1 facilitates downloading multiple objects of the same webpage over the same TCP connection, if the objects are stored in the same server.</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>HTTP 1.1 facilitates downloading multiple objects of the same webpage over the same TCP connection, even if they are stored in different servers.</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>HTTP 1.1 facilitates sending a request for downloading one object without waiting for a previously requested object to be downloaded completely.</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>HTTP 1.1 facilitates downloading multiple webpages on the same server to be downloaded over a single TCP connection.</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<ul>\n<li>HTTP 1.1 means persistent http</li>\n</ul>\n<p>Persistent http will be help by for web client to access the multiple objects from webserver in single TCP connection, So (a) is correct.</p>\n<ul>\n<li>HTTP is client server protocols.</li>\n</ul>\n<p>TCP connection is established between single client to single server so it is not possible to access object from different servers. Option (b) is false.</p>\n<ul>\n<li><p>HTTP/1.1 supports pipelining. Option (c) is true.</p></li>\n<li><p>It is possible to download multiple web pages using hyperlink. Option (d) is true.</p></li>\n</ul>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A user starts browsing a webpage hosted at a remote server. The browser opens a single TCP connection to fetch the entire webpage from the server. The webpage consists of a top-level index page with multiple embedded image objects. Assume that all caches (e.g., DNS cache, browser cache) are all initially empty. The following packets leave the user's computer in some order.</p><p>(i) HTTP GET request for the index page</p><p>(ii) DNS request to resolve the web server's name to its IP address</p><p>(iii) HTTP GET request for an image object</p><p>(iv) TCP SYN to open a connection to the web server</p><p>Which one of the following is the CORRECT chronological order (earliest in time to latest) of the packets leaving the computer?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>(iv), (ii), (iii), (i)</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>(ii), (iv), (iii), (i)</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>(ii), (iv), (i), (iii)</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>(iv), (ii), (i), (iii)</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the correct chronological order of the packets leaving the user's computer, let's understand the sequence of events in a typical webpage loading process.</p>\n\n<p>When a user starts browsing a webpage, the sequence of operations is as follows:</p>\n\n<ol>\n  <li><p>First, the web browser needs to resolve the domain name of the web server into an IP address. Thus, the first packet sent will be the <b>DNS request</b> to resolve the web server's name.</p></li>\n  <li><p>Once the IP address is resolved and received, the browser needs to establish a TCP connection with the web server. This is done by sending a <b>TCP SYN</b> packet to initiate the connection.</p></li>\n  <li><p>With the TCP connection established, the browser can now send an <b>HTTP GET request</b> to fetch the index page.</p></li>\n  <li><p>After receiving the index page, which contains references to multiple embedded image objects, the browser sends subsequent <b>HTTP GET requests</b> for each image object to the server.</p></li>\n</ol>\n\n<p>Based on this logical sequence, the correct chronological order of the packets leaving the computer is:</p>\n\n<p>Option C: (ii), (iv), (i), (iii)</p>\n\n<p>Here’s the explanation of the sequence:</p>\n\n<p><b>(ii) DNS request to resolve the web server's name to its IP address:</b> The first step is to find the IP address of the web server.</p>\n\n<p><b>(iv) TCP SYN to open a connection to the web server:</b> After knowing the IP address, the browser initiates a TCP connection with the server.</p>\n\n<p><b>(i) HTTP GET request for the index page:</b> With the TCP connection established, the browser requests the main index page of the website.</p>\n\n<p><b>(iii) HTTP GET request for an image object:</b> Once the index page is received, the browser then sends requests for various embedded image objects.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that you have made a request for a web page through your web browser to a web server. Initially the browser cache is empty. Further, the browser is configured to send HTTP requests in non-persistent mode. The web page contains text and five very small images. The minimum number of TCP connections required to display the web page completely in your browser is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p>Since non-persistent HTTP opens a separate TCP connection for each object, and you have 1 HTML file + 5 images, you need</p>\n<p>• 1 connection for the HTML  </p>\n<p>• 5 connections for the five images  </p>\n<p>Total = 1 + 5 = 6 TCP connections.</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following protocols is <b>NOT</b> used to resolve one form of address to another one?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "DNS"
+      },
+      {
+        "identifier": "B",
+        "content": "ARP"
+      },
+      {
+        "identifier": "C",
+        "content": "DHCP"
+      },
+      {
+        "identifier": "D",
+        "content": "RARP"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is/are example(s) of stateful application layer protocols? \n<p>(i) HTTP \n<br>(ii) FTP \n<br>(iii) TCP \n<br>(iv) POP3</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) and (ii) only "
+      },
+      {
+        "identifier": "B",
+        "content": "(ii) and (iii) only "
+      },
+      {
+        "identifier": "C",
+        "content": "(ii) and (iv) only"
+      },
+      {
+        "identifier": "D",
+        "content": "(iv) only"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Identify the correct sequence in which the following packets are transmitted on the network by a host when a browser requests a webpage from a remote server, assuming that the host has just been restarted.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "HTTP GET request, DNS query, TCP SYN"
+      },
+      {
+        "identifier": "B",
+        "content": "DNS query, HTTP GET request, TCP SYN"
+      },
+      {
+        "identifier": "C",
+        "content": "DNS query, TCP SYN, HTTP GET request"
+      },
+      {
+        "identifier": "D",
+        "content": "TCP SYN, DNS query, HTTP GET request"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In one of the pairs of protocols given below, both the protocols can use multiple TCP connections between the same client and the server. Which one is that?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "HTTP, FTP "
+      },
+      {
+        "identifier": "B",
+        "content": "HTTP, TELNET"
+      },
+      {
+        "identifier": "C",
+        "content": "FTP, SMTP"
+      },
+      {
+        "identifier": "D",
+        "content": "HTTP, SMTP"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider different activities related to email:\n<p>m1: Send an email from a mail client to a mail server \n<br>m2: Download an email from mailbox server to a mail client \n<br>m3: Checking email in a web browser </p>\nWhich is the application level protocol used in each activity? ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "m1: HTTP m2: SMTP m3: POP "
+      },
+      {
+        "identifier": "B",
+        "content": "m1: SMTP m2: FTP m3: HTTP "
+      },
+      {
+        "identifier": "C",
+        "content": "m1: SMTP m2: POP m3: HTTP"
+      },
+      {
+        "identifier": "D",
+        "content": "m1: POP m2: SMTP m3: IMAP"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following uses UDP as the transport protocol?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "HTTP"
+      },
+      {
+        "identifier": "B",
+        "content": "Telnet"
+      },
+      {
+        "identifier": "C",
+        "content": "DNS"
+      },
+      {
+        "identifier": "D",
+        "content": "SMTP"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Suppose in a web browser, you click on the www.gate-2023.in URL. The browser cache is empty. The IP address for this URL is not cached in your local host, so a DNS lookup is triggered (by the local DNS server deployed on your local host) over the 3-tier DNS hierarchy in an iterative mode. No resource records are cached anywhere across all DNS servers.</p>\n<p>Let RTT denote the round trip time between your local host and DNS servers in the DNS hierarchy. The group trip time between the local host and the web server hosting www.gate-2023.in is also equal to RTT. The HTML file associated with the URL is small enough to have negligible transmission time and negligible rendering time by your web browser, which references 10 equally small objects on the same web server.</p>\n<p>Which of the following statements is/are CORRECT about the minimum elapsed time between clicking on the URL and your browser fully rendering it?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "7 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections."
+      },
+      {
+        "identifier": "B",
+        "content": "5 RTTs, in case of persistent HTTP with pipelining."
+      },
+      {
+        "identifier": "C",
+        "content": "9 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections."
+      },
+      {
+        "identifier": "D",
+        "content": "6 RTTs, in case of persistent HTTP with pipelining."
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Case I :</b></p>\n\n<p>Persistent HTTP : TCP connection is established once and multiple files are transmitted in single connection.</p>\n\n<p>Pipelined : New HTTP request can be sent to server without receiving acknowledgement of previous. $S_{a y}$ a client Alfiya request a page from server, following steps are followed in order before Alfiya gets all data needed :</p>\n\n<p>(i) There's 3-tier DNS hierarchy, 100 kup is done in iterative mode taking 3 RTT.</p>\n\n<p>(ii) 1 RTT is used for TCP connection establishment.</p>\n\n<p>(iii) 1 RTT is used to fetch HTML base file.</p>\n\n<p>(iv) 1 RTT is for all other 10 objects.</p>\n\n<p>So, n total 6 RTT's are used.</p>\n\n<p><b>Case-II :</b> Non persistent HTTP with 5 parallel connections :</p>\n\n<p><b>Non persistent :</b> TCP connection is made for each HTTP request and closed.</p>\n\n<p><b>5-prallel connections :</b> 5 objects could be sent parallel at same time.</p>\n\n<p>So, in this case the client Alfiya have to wait for request to be fulfilled as following steps need to be completed.</p>\n\n<p>(i) 3 RTT for DNS resolution.</p>\n\n<p>(ii) 1 RTT for TCP connection establishment.</p>\n\n<p>(iii) 1 RTT for fetch base HTML page.</p>\n\n<p>(iv) 1 RTT for TCP connection establishment.</p>\n\n<p>(v) 1 RTT to get 5 objects parallely (5 still test)</p>\n\n<p>(vi) 1 RTT for TCP connection establishment</p>\n\n<p>(viii) 1 RTT for getting remaining 5 objects.</p>\n\n<p>In total it takes RTT's.</p>\n\n<p>Hence, the correct options are (C) & (D).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "content": "A graphical HTML browser resident at a network client machine Q accesses a static HTML webpage from a HTTP server S. The static HTML page has exactly one static embedded image which is also at S. Assuming no caching, which one of the following is correct about the HTML webpage loading (including the embedded image)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Q needs to send at least 2 HTTP requests to S, each necessarily in a separate TCP connection to server S"
+      },
+      {
+        "identifier": "B",
+        "content": "Q needs to send at least 2 HTTP requests to S, but a single TCP connection to server S is sufficient"
+      },
+      {
+        "identifier": "C",
+        "content": "A single HTTP request from Q to S is sufficient, and a single TCP connection between Q and S is necessary for this"
+      },
+      {
+        "identifier": "D",
+        "content": "A single HTTP request from Q to S is sufficient, and this is possible without any TCP connection between Q and S"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Match the following: \n<p><b>List - I</b> </p>\n(P) SMTP\n<br>(Q) BGP \n<br>(R) TCP     \n<br>(S) PPP\n<p><b>List - II</b> </p>\n(1) Application layer \n<br>(2) Transport layer\n<br>(3) Data link layer     \n<br>(4) Network layer\n<br>(5) Physical layer",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "P - 2 Q - 1 R - 3 S - 5"
+      },
+      {
+        "identifier": "B",
+        "content": "P - 1 Q - 4 R - 2 S - 3"
+      },
+      {
+        "identifier": "C",
+        "content": "P - 1 Q - 4 R - 2 S - 5"
+      },
+      {
+        "identifier": "D",
+        "content": "P - 2 Q - 4 R - 1 S - 3"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  }
+]

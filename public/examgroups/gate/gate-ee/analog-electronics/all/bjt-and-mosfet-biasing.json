@@ -1,0 +1,996 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Which one of the following statements is true about the small signal voltage gain of a MOSFET based single stage amplifier?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Common source and common gate amplifiers are both inverting amplifiers\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Common source and common gate amplifiers are both non-inverting amplifiers\n"
+      },
+      {
+        "identifier": "C",
+        "content": "Common source amplifier is inverting and common gate amplifier is non-inverting amplifier\n"
+      },
+      {
+        "identifier": "D",
+        "content": "Common source amplifiers is non-inverting and common gate amplifier is inverting amplifier"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\">\n\n  <thead>\n\n    <tr>\n\n      <th>Parameters</th>\n\n      <th>Common Source (CS)</th>\n\n      <th>Common Drain (CD)</th>\n\n      <th>Common Gate (CG)</th>\n\n    </tr>\n\n  </thead>\n\n  <tbody>\n\n    <tr>\n\n      <td><strong>Input resistance</strong></td>\n\n      <td>$R_{i} = \\infty$</td>\n\n      <td>$R_{i} = \\infty$</td>\n\n      <td>$R_{i} = \\frac{1}{g_{m}}$</td>\n\n    </tr>\n\n    <tr>\n\n      <td><strong>Output resistance</strong></td>\n\n      <td>$R_{0} = R_{0} \\parallel R_{L}$</td>\n\n      <td>$R_{0} = \\dfrac{1}{g_{m}}$</td>\n\n      <td>$R_{0} = R_{0} \\parallel R_{L}$</td>\n\n    </tr>\n\n    <tr>\n\n      <td><strong>Voltage gain</strong></td>\n\n      <td>\n\n        $           A_{v} = -\\,g_{m}\\,R'_{L}           \\quad\\bigl(R'_{L} = R_{L} \\parallel R_{D}\\bigr)         $\n\n      </td>\n\n      <td>\n\n        $           A_{v} \\;=\\; \\frac{g_{m}\\,R'_{L}}{1 + g_{m}\\,R'_{L}}           \\;\\approx\\; 1         $\n\n      </td>\n\n      <td>\n\n        $           A_{v} = g_{m}\\,R'_{L}           \\quad\\bigl(R'_{L} = R_{L} \\parallel R_{D}\\bigr)         $\n\n      </td>\n\n    </tr>\n\n    <tr>\n\n      <td><strong>Phase shift</strong></td>\n\n      <td>$180^\\circ$</td>\n\n      <td>$0^\\circ$</td>\n\n      <td>$0^\\circ$</td>\n\n    </tr>\n\n  </tbody>\n\n</table>\n<p>From the above table.</p>\n<p>(i) In common source amplifier the phase shift between input and output voltage is $180^{\\circ}$. Hence, it is an inverting amplifier.</p>\n<p>(ii) In common drain amplifier the phase shift between input and output voltage is $0^0$. Hence, it is a non inverting amplifier.</p>\n<p>(iii) In common gate amplifier the phase shift between input and output voltage is $0^{\\circ}$. Thus, it is a non inverting amplifier.</p>\n<p>Hence, the correct option is (C).</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ee-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In the BJT circuit shown, beta of the PNP transistor is 100 . Assume $V_{B E}=-0.7 \\mathrm{~V}$. The voltage across $R_C$ will be 5 V when $R_2$ is $\\_\\_\\_\\_$ $\\mathrm{k} \\Omega$. (Round off to 2 decimal places)</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh61wg2e/c8a88224-9c78-4959-a032-d1438e81984a/385e7f60-b181-11f0-9ec5-a735814724b3/file-jaoe38c1mh61wg2f.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh61wg2e/c8a88224-9c78-4959-a032-d1438e81984a/385e7f60-b181-11f0-9ec5-a735814724b3/file-jaoe38c1mh61wg2f.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2021 Analog Electronics - Bjt and Mosfet Biasing Question 1 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "18.099",
+    "explanation": "<p>Given :</p>\n<p>(i) $\\beta=100$</p>\n<p>(ii) $V_{B E}=-0.7 \\mathrm{~V}$</p>\n<p>(iii) $V_s=12 \\mathrm{~V}$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh61werg/479beb05-ad4b-4f0c-b0f2-0b31a6d71453/375c9fc0-b181-11f0-9ec5-a735814724b3/file-jaoe38c1mh61werh.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh61werg/479beb05-ad4b-4f0c-b0f2-0b31a6d71453/375c9fc0-b181-11f0-9ec5-a735814724b3/file-jaoe38c1mh61werh.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2021 Analog Electronics - Bjt and Mosfet Biasing Question 1 English Explanation\">$$ \\begin{aligned} &amp; I_C=\\beta I_B \\\\ &amp; 1.51=100 I_B \\\\ &amp; I_B=1.51 \\times 10^{-2} \\mathrm{~mA} \\\\ &amp; I_E=(1+\\beta) I_B \\\\ &amp; I_E=1.52 \\mathrm{~mA} \\\\ &amp; 12-1.2 \\times 1.5251-0.7-V_{R_2}=0 \\\\ &amp; V_{R_2}=9.46988 \\\\ &amp; I=\\frac{12-9.46988}{4.7}=0.53 \\mathrm{~mA} \\\\ &amp; I_{R_2}=0.53-\\frac{1.51}{100}=0.52322 \\mathrm{~mA} \\\\ &amp; R_2=\\frac{V_{R_2}}{I_{R_2}}=\\frac{9.46988}{0.52322}=18.099 \\mathrm{k} \\Omega \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ee-2021",
+    "difficulty": null
+  },
+  {
+    "content": "A transistor circuit is given below. The Zener diode breakdown voltage is $$5.3$$ $$V$$ as shown. Take base to emitter voltage drop to be $$0.6$$ V. The value of the current gain  $$\\beta $$ is ________.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/HuIEJ6kECY3todRuj/aduj0C1Tri4d973kCYY8SbrKJ4GYJ/p43HkzBMSsi8p3VFs7IqXi/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2016 Set 1 Analog Electronics - Bjt and Mosfet Biasing Question 26 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "19",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ee-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "In the given circuit, the silicon transistor has $$\\beta $$ $$=75$$ and a collector voltage $${V_C} = 9\\,V.$$ Then the ratio of $${R_B}$$ and $${R_C}$$ is ___________.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/eC4FNvYLaapJ0TBXk/w2s5GInzUN8zv2qqVqqqMuSEyxdII/zIMet5GTzngnTHRsEoeVf1/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2015 Set 1 Analog Electronics - Bjt and Mosfet Biasing Question 25 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "100 to 110",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "When a bipolar junction transistor is operating in the saturation mode, which one of the following statements is TRUE about the state of its collector-base (CB) and the base-emitter (BE) junctions?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The CB junction is forward biased and the BE junction is reverse biased."
+      },
+      {
+        "identifier": "B",
+        "content": "The CB junction is reverse biased and the BE junction is forward biased. "
+      },
+      {
+        "identifier": "C",
+        "content": "Both the CB and BE junctions are forward biased. "
+      },
+      {
+        "identifier": "D",
+        "content": "Both the CB and BE junctions are reverse biased. "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "In the following circuit, the transistor is in active mode and $${V_C} = 2V.$$ To get $${V_C} = 4V,$$ we replace $${R_C}$$ with $${R_C}.$$ Then the ratio $$R{'_C}/{R_C}$$ is __________.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/Xy60g13o1GVldFyEP/YZgj6QMjyMlvJQOEmhBP5gcFh9SeV/2BNEuLuKiIQ2XAOHBDeQeI/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2015 Set 2 Analog Electronics - Bjt and Mosfet Biasing Question 27 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.75",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ee-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The magnitude of the mid-band voltage gain of the circuit shown in figure is (assuming $${h_{fe}}$$ of the transistor to be $$100$$) \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/jjf62dfTlq825MoXM/Qv1uWsORaKFGuVr2JVXZlFAERjwHf/dpVOFpy02FNpX4J1GjYh85/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2014 Set 1 Analog Electronics - Bjt and Mosfet Biasing Question 30 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$20$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$100$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ee-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The transistor in the given circuit should always be in active region.  Take $${V_{CE\\left( {sat} \\right)}} = 0.2\\,\\,V,\\,\\,\\,{V_{BE}} = 0.7\\,\\,V.\\,\\,\\,$$ The maximum value of $${R_C}$$ in $$\\Omega $$ which can be used, is __________.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/Z32AxHSWpPv4Tx098/48IoDrBM5XqCzZdMF3iXidYtKqEd4/stCjfm5lsEo7V6RsD2wHgn/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2014 Set 2 Analog Electronics - Bjt and Mosfet Biasing Question 29 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "22 to 23",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ee-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The three terminal linear voltage regular is connected to a $$10\\Omega $$ load resistor as shown in the figure. If $${V_{in}}$$ is $$10$$ $$V,$$ what is the power dissipated in the transistor\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/rtAULVrl46SyRfkqQ/FN9EPWmYQhYAnBQpprTNsMR498JJZ/Jo3bpcfmbPCYGOHm149rGL/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2007 Analog Electronics - Bjt and Mosfet Biasing Question 8 English\">   ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.6$$ $$W$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4.2$$ $$W$$  "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2.4$$ $$W$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5.4$$ $$W$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ee-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The common emitter forward current gain of the transistor shown  is $${\\beta _p} = 100.$$ The transistor is operating in \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/KWQt0mDfvsHGLaX7E/ja71WVxwakGRLo0vZffaaeZLGWkbf/Tt0rO9zX8KZnjojb44dK5z/image.svg\" loading=\"lazy\" alt=\"GATE EE 2007 Analog Electronics - Bjt and Mosfet Biasing Question 9 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Saturation region "
+      },
+      {
+        "identifier": "B",
+        "content": "Cut-off region "
+      },
+      {
+        "identifier": "C",
+        "content": "Reverse active region "
+      },
+      {
+        "identifier": "D",
+        "content": "Forward active region "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ee-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that the $$N$$-channel $$MOSFET$$ shown in figure is ideal, and that its threshold voltage is  The voltage $${\\rm I}V,$$ the voltage $${{V_{ab}}}$$ between nodes $$'a'$$ and $$'b'$$ is \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/wCGIFGDHQB2jaCAyA/Vgc4QBFF0VUml7bYs1zes8BYHFIkV/Ec9RnvaOSiX4hzTMyE6T8y/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2005 Analog Electronics - Bjt and Mosfet Biasing Question 31 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5V$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2V$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1V$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0V$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ee-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Two perfectly matched silicon transistors are connected as shown in figure. The value of the current $${\\rm I}$$ is \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/imnTrP7Wg5LP4iJO5/Z1jixMzFNf5qBJMfXSBf5clrc0ZrL/xFUt6onQLwtRxYiiuwbrei/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2004 Analog Electronics - Bjt and Mosfet Biasing Question 33 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ mA"
+      },
+      {
+        "identifier": "B",
+        "content": "$$2.3$$ mA "
+      },
+      {
+        "identifier": "C",
+        "content": "$$4.3$$ mA"
+      },
+      {
+        "identifier": "D",
+        "content": "$$7.3$$ mA"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ee-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A bipolar junction transistor (BJT) is used as a power control switch by biasing it in the cutoff region (OFF state) or in the saturation region (ON state). In the ON state, for the BJT",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "both the base-emitter and base-collector junctions are reverse biased "
+      },
+      {
+        "identifier": "B",
+        "content": "the base-emitter junctions is reverse biased, and the base-collector junction is forward biased"
+      },
+      {
+        "identifier": "C",
+        "content": "the base-emitter junction is forward biased, and the base-collector junction is reverse biased\n"
+      },
+      {
+        "identifier": "D",
+        "content": "both the base-emitter and base-collector junctions are forward biased "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ee-2004",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit of figure shown, assume that the transistor has $${h_{fe}} = 99$$ and $${V_{BE}} = 0.7V.$$ \n<br>The value of collector current $${{\\rm I}_C}$$ of the transistor is approximately\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/aYjFkbuv1VnQYzsMy/WQ3xGewBSMxkaJLZimRPgq5Qg1PP9/znPWSLuXGjW3uJqOvhJwed/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2003 Analog Electronics - Bjt and Mosfet Biasing Question 35 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left[ {3.3/3.3} \\right]\\,mA$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left[ {3.3/\\left( {3.3 + 0.33} \\right)} \\right]\\,mA$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left[ {3.3/33} \\right]\\,mA$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left[ {3.3/\\left( {33 + 33} \\right)} \\right]\\,mA$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ee-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The variation of drain current with gate-to-source voltage $$\\left( {{{\\rm I}_D} - {V_{GS}}} \\right.$$ characteristic$$\\left. \\, \\right)$$ of a MOSFET is shown in Figure. The MOSFET is \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/VwJy3yNE3btOk1FZw/kpWj1GqsompFp4EQM5os13fhszFgS/Mp8HAonTvpxbxyjcOnD2er/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2003 Analog Electronics - Bjt and Mosfet Biasing Question 34 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "an n-channel depletion mode device"
+      },
+      {
+        "identifier": "B",
+        "content": "an n-channel enhancement mode device "
+      },
+      {
+        "identifier": "C",
+        "content": "a p-channel depletion mode device "
+      },
+      {
+        "identifier": "D",
+        "content": "a p-channel enhancement mode device "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ee-2003",
+    "difficulty": null
+  },
+  {
+    "content": "The enhancement type n-channel MOSFET is represented by the symbol \n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/LNUldwxwaIPaTacrI/q17RYspUZwU3QE4S36JRbU4rgzjq5/uBnDL3VbqCz6CRxnQlW7Eo/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 1999 Analog Electronics - Bjt and Mosfet Biasing Question 36 English Option 1\"> "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/Djg15shAhlhVDyxdp/BERpC6QjZqpZvKF1CbH5WBmJbw1qb/lOMy93yDfAUU5snmJaXSQN/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 1999 Analog Electronics - Bjt and Mosfet Biasing Question 36 English Option 2\"> "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/P3uCf0SmIUxN0P1pa/BmyJ37HxxNQix9iEs4iyvR2I24GYJ/D4ByLxH31vJiEGkeeSHZou/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 1999 Analog Electronics - Bjt and Mosfet Biasing Question 36 English Option 3\"> "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/SqnLR6LBsoVxrTzbe/3b0kV5FPdA9dBmgTciNhe38Kdn1bM/yXRdcUsqp1KS5i5CNwjZwA/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 1999 Analog Electronics - Bjt and Mosfet Biasing Question 36 English Option 4\"> "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ee-1999",
+    "difficulty": null
+  },
+  {
+    "content": "One of the applications of current mirror is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Output current limiting"
+      },
+      {
+        "identifier": "B",
+        "content": "Obtaining a very high current gain"
+      },
+      {
+        "identifier": "C",
+        "content": "Current feedback "
+      },
+      {
+        "identifier": "D",
+        "content": "Temperature stabilized biasing  "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ee-1998",
+    "difficulty": null
+  },
+  {
+    "content": "The depletion region (or) space charge region (or) transition region in a semiconductor $$p-n$$ junction diode has",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "electrons and holes"
+      },
+      {
+        "identifier": "B",
+        "content": "positive ions and electrons "
+      },
+      {
+        "identifier": "C",
+        "content": "positive and negative ions"
+      },
+      {
+        "identifier": "D",
+        "content": "negative ions and holes"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1996,
+    "yearKey": "gate-ee-1996",
+    "difficulty": null
+  },
+  {
+    "content": "In the transistor circuit shown in figure. Collector to ground voltage is $$+20V.$$ Which of the following is the probable cause of error?\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/a8l3fTujFAOXSC9p6/hExsXHuMHACjAWR5vyNwQWfuQ7qae/X0Cv6Snf5tqij4xVh6770V/image.svg\" loading=\"lazy\" alt=\"GATE EE 1994 Analog Electronics - Bjt and Mosfet Biasing Question 10 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Collector Emitter terminals shorted "
+      },
+      {
+        "identifier": "B",
+        "content": "Emitter to ground connection open "
+      },
+      {
+        "identifier": "C",
+        "content": "$$10\\,\\,k\\Omega $$ resistor open "
+      },
+      {
+        "identifier": "D",
+        "content": "Collector base terminals shorted "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1994,
+    "yearKey": "gate-ee-1994",
+    "difficulty": null
+  },
+  {
+    "content": "Figure shown below shows a common emitter amplifier. The quiescent collector voltage of the circuit is approximately.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/wl2EkRXXGsbTowfs0/Yl6SY88aQm0shytwLFmdjVApqAVHm/buht2vZytnf2ySI0o4Gibd/image.svg\" loading=\"lazy\" alt=\"GATE EE 1991 Analog Electronics - Bjt and Mosfet Biasing Question 11 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{20} \\over 3}V$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10V$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$14V$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$20V$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1991,
+    "yearKey": "gate-ee-1991",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A BJT biasing circuit is shown in the figure, where $V_{BE} = 0.7\\,V$ and $\\beta = 100$. The Quiescent Point values of $V_{CE}$ and $I_c$ are respectively</p><p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxoltajn/7f680b57-5317-4acc-9f4f-ec8f660afa36/df5f0f30-2fc0-11ef-9032-99cc6a311420/file-jaoe38c1lxoltajo.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxoltajn/7f680b57-5317-4acc-9f4f-ec8f660afa36/df5f0f30-2fc0-11ef-9032-99cc6a311420/file-jaoe38c1lxoltajo.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE EE 2024 Analog Electronics - Bjt and Mosfet Biasing Question 3 English\"></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>4.6 V and 2.46 mA</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>3.5 V and 2.46 mA</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>2.61 V and 3.13 mA</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>4.6 V and 3.13 mA</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ee-2024",
+    "difficulty": null
+  },
+  {
+    "content": "For the circuit shown in the figure below, it is given that $${V_{CE}} = {{{V_{CC}}} \\over 2}.$$ The transistor has $$\\beta  = 29$$ and $${V_{BE}} = 0.7\\,\\,V$$ when the $$B$$-$$E$$ junction is forward biased.\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/dxwLa30ozPrIJ9Xei/BrtfUXdh6ATTFq8dm9zbURh9FD5Ga/nB755T6HYOHSUz38y95Kct/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2017 Set 2 Analog Electronics - Bjt and Mosfet Biasing Question 13 English\"> \n<p>For this circuit, the value of $${{{R_B}} \\over R}$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$43$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$92$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$121$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$129$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The circuit shown in the figure uses matched transistors with a thermal voltage $${V_T} = 25\\,mV.$$ The base currents of the transistors are negligible. The value of the resistance $$R$$ in $$k\\Omega $$ that is required to provide $$1\\,\\,\\,\\mu A$$ bias current for the differential amplifier block shown is ____________.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/neEhqJASOjS4vLuWq/Lg1fiV5U2mtrtGWkzgMjFganSbv5V/xTBgrSFKL4o7h39lmkz0e3/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2017 Set 1 Analog Electronics - Bjt and Mosfet Biasing Question 14 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "170 to 174",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ee-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The voltage gain $${A_V}$$ of the circuit shown below is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/vBi0nSW85Sx5XfChr/THi12UgPgufo9eW1J1dbe4SS2b6zo/kaKbaAmI7tIzu1kyWlmtJO/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2012 Analog Electronics - Bjt and Mosfet Biasing Question 15 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left| {{A_V}} \\right| \\approx 200$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left| {{A_V}} \\right| \\approx 100$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left| {{A_V}} \\right| \\approx 20$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left| {{A_V}} \\right| \\approx 10$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ee-2012",
+    "difficulty": null
+  },
+  {
+    "content": "The transistor used in the circuit shown below has a $$\\beta $$ of $$30$$ and $${{\\rm I}_{CBO}}$$ is negligible.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/3uOBrPxCzYWGeBS6y/lfDAmvOEfdeC9usraHWSqjv9rDHjK/X0TwyB6LYnuBqKeEU9v91I/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2011 Analog Electronics - Bjt and Mosfet Biasing Question 16 English\"> \n<p>If the forward voltage drop of diode is $$0.7V.$$ Then the current through collector will be</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$168$$ $$mA$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$108$$ $$mA$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$20.54$$ $$mA$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$5.36$$ $$mA$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ee-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The transistor circuit shown uses a silicon transistor with $${V_{BE}} = 0.7V,{{\\rm I}_C} \\approx {{\\rm I}_E}$$ and a $$DC$$ current gain of $$100.$$ The value of $${V_0}$$ is\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/wh5PRgr0v252dlhCV/oKr6TLGXjhUYgcFveUnWMS637dtJU/3oXSCeQIaeieq3M5ddUTne/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2010 Analog Electronics - Bjt and Mosfet Biasing Question 17 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4.65$$ $$V$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$5$$ $$V$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$6.3$$ $$V$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$7.32$$ $$V$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ee-2010",
+    "difficulty": null
+  },
+  {
+    "content": "Two perfectly matched silicon transistors are connected as shown in the figure. Assuming the $$\\beta $$ of the transistors to be very high and forward voltage drop to be $$0.7V,$$ the value of current $${\\rm I}$$ is (assume diode $$(D)$$ is ideal)\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/NGFIwRyXyXxrFw1ge/LkauD0df4NttQWgUzlzQeKH8rQtwe/ZXyAwMHDUFGVdkRl46atmS/image.svg\" loading=\"lazy\" alt=\"GATE EE 2008 Analog Electronics - Bjt and Mosfet Biasing Question 4 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ $$mA$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$3.6$$ $$mA$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$4.3$$ $$mA$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$5.7$$ $$mA$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ee-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the circuit shown in figure. If the $$\\beta $$ of the transistor is $$30$$ and $${{\\rm I}_{CBO}}$$  is $$20$$  $$nA$$ and the input voltage  is $$5V$$ then the transistor would be operating in \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/efEgIaZsnUF2j690c/KkXsEXi5LCV4AQLKUild9rGB9fwpE/RTFCvEdJ0deY0FKUEowi8m/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2006 Analog Electronics - Bjt and Mosfet Biasing Question 5 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Saturation region "
+      },
+      {
+        "identifier": "B",
+        "content": "Active region "
+      },
+      {
+        "identifier": "C",
+        "content": "Break down region "
+      },
+      {
+        "identifier": "D",
+        "content": "Cut-off region "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ee-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The common emitter amplifier shown in the figure is biased using a $$1mA$$ ideal current source. The approximate base current value is_____.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/zc1ds5wGnB4gRmiR1/ifHM61b9sFaCTiTVzJLPUHZnFs1JW/lSRIDZGeqe8lo65GoACS5K/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2005 Analog Electronics - Bjt and Mosfet Biasing Question 18 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0\\,\\mu A$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$10\\,\\mu A$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$100\\,\\mu A$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1000\\,\\mu A$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ee-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that the threshold voltage of the $$N$$-channel $$MOSFET$$ shown in figure is $$0.75$$ $$V.$$ The output characteristics of the $$MOSFET$$ are also shown\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/USuLYfBeSHyvpIzFX/elKWr63HvpAYKcAIXd5gMqjwX0SFe/KwwBdbe9enRf75Tbes0O1H/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2005 Analog Electronics - Bjt and Mosfet Biasing Question 7 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/Wo0jWC3jCTHoi5xTl/yG58pQ8qlXMxHNtVBcuKQXpjiMiPi/oAOrFJMU7lhP1qYdyKgPh3/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2005 Analog Electronics - Bjt and Mosfet Biasing Question 7 English 2\"> \n<p>The Transconductance of the $$MOSFET$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.75$$ $$mS$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1$$ $$mS$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2$$ $$mS$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$10$$ $$mS$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ee-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that the threshold voltage of the $$N$$-channel $$MOSFET$$ shown in figure is $$0.75$$ $$V.$$ The output characteristics of the $$MOSFET$$ are also shown\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/USuLYfBeSHyvpIzFX/elKWr63HvpAYKcAIXd5gMqjwX0SFe/KwwBdbe9enRf75Tbes0O1H/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2005 Analog Electronics - Bjt and Mosfet Biasing Question 6 English 1\"> \n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/Wo0jWC3jCTHoi5xTl/yG58pQ8qlXMxHNtVBcuKQXpjiMiPi/oAOrFJMU7lhP1qYdyKgPh3/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2005 Analog Electronics - Bjt and Mosfet Biasing Question 6 English 2\"> \n<p>The voltage gain of the amplifier is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$+5$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-7.5$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$+10$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$-10$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ee-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The value of $$R$$ for which the $$PMOS$$ transistor in Figure. $$Q$$ $$63$$  will be biased in linear region is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/7MwfUzXYFefRExhZw/O7DEf740EIKT12exgtlxN1Enqd9IZ/BVdugqIgwkGy3XMNuP7ggz/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2004 Analog Electronics - Bjt and Mosfet Biasing Question 19 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$220\\,\\Omega $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$470\\,\\Omega $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$680\\,\\Omega $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1200\\,\\Omega $$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ee-2004",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit shown, the current gain $$'\\beta '$$ of the ideal transistor is $$10.$$ The operating point of the transistor $$\\left( {{V_{CE}},{{\\rm I}_C}} \\right)$$ is\n<img class=\"question-image\" src=\"https://gateclass.static.cdn.examgoal.net/k1n42S14C27jERLjW/M046G6Aj1b4T6TrvRpbeXCAOwTPnD/laFLBqLuuH5r6gb0fxVcjL/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2003 Analog Electronics - Bjt and Mosfet Biasing Question 20 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(40V, 4A)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$(0V, 4A)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$(40V, 5A)$$  "
+      },
+      {
+        "identifier": "D",
+        "content": "$$(15V, 4A)$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ee-2003",
+    "difficulty": null
+  },
+  {
+    "content": "For the $$n$$-channel enhancement $$MOSFET$$ shown in figure,, the threshold voltage $${V_{th}}\\,\\, = \\,\\,2V.$$ The drain current $${I_D}$$ of the $$MOSFET$$ is $$4$$ $$mA$$ when the drain resistance $${R_D}$$ is $$1k\\Omega .$$ If the value of $${R_D}$$ is increased to $$4\\Omega ,$$ drain current $${I_D}$$ will become\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/4aoKJGZYxIjpkMmMa/CNxtaj9r6E8NghwOqkaFWpWzhGSZ3/SnDyPZdOY22vMp5sDAxt2H/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2003 Analog Electronics - Bjt and Mosfet Biasing Question 21 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2.8$$ mA "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2.0$$ mA"
+      },
+      {
+        "identifier": "C",
+        "content": "$$1.4$$ mA"
+      },
+      {
+        "identifier": "D",
+        "content": "$$1.0$$ mA"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-ee-2003",
+    "difficulty": null
+  },
+  {
+    "content": "An $$N$$-channel $$JFET$$ having a pinch-off voltage $$\\left( {{V_P}} \\right)$$ of $$-5V$$ shows a transconductance (gm) of $$1$$ $$mA/V$$ when the applied Gate to source voltage $$\\left( {{V_{GS}}} \\right)$$ is $$-3V.$$ Its maximum transconductance (in $$mA/V$$) is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$1.5$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$2.0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2.5$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$3.0$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ee-2001",
+    "difficulty": null
+  },
+  {
+    "content": "In the circuit of figure, the value of the base current $${{\\rm I}_B}$$ will be\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/ZQm1QfsMdfwWpyLTs/2qIMETlyd3Qu4Cwa1akBIeWQURVyg/B0AsCi2Pgo3aUTdeMS1l9Y/image.svg\" loading=\"lazy\" alt=\"GATE EE 2000 Analog Electronics - Bjt and Mosfet Biasing Question 23 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0\\,\\mu A$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$18.2\\,\\mu A$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$26.7\\,\\mu A$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$40\\,\\mu A$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-ee-2000",
+    "difficulty": null
+  },
+  {
+    "content": "A $$NPN$$ Si transistor is meant for low-current audio amplification. Match is following characteristic against their values.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/kYe5TIEAmTJ7iC4ZJ/1n1D9D5ndXEhT85xAc9HfUVcjL3Nu/MAbp53mTc1mSwEcxdu8Mt3/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 1998 Analog Electronics - Bjt and Mosfet Biasing Question 24 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$A - P,\\,B - R,\\,C - Q$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ee-1998",
+    "difficulty": null
+  },
+  {
+    "content": "For the circuit shown in Figure, $${{\\rm I}_E} = 1\\,\\,mA,\\,\\,\\,\\beta  = 99$$ and $${V_{BE}} = 0.7\\,\\,V$$ determine\n<p>(a) Current through $${R_1}$$ and $${R_C}$$\n<br>(b) The output voltage $${V_0}$$\n<br>(c) The value of $${R_F}$$</p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/kfpvP3Ysa5dKTuMpO/n9gb4mCCalT3XLtY3TZ2xXmcyNPaz/R1VTeHo03Z1YG3q4AY4Dml/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE EE 2002 Analog Electronics - Bjt and Mosfet Biasing Question 12 English\"> ",
+    "options": [],
+    "correct_options": [],
+    "answer": "(a) $$1.1$$ $$mA$$\n<br>(b) $$13.9$$ Volts\n<br>(c) $$110.9$$ $$k\\Omega $$",
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-ee-2002",
+    "difficulty": null
+  }
+]

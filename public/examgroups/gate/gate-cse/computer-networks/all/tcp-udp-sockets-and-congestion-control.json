@@ -1,0 +1,1103 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>With respect to a TCP connection between a client and a server, which one of the following statements is true?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>The client and server use a two-way handshake mechanism before the start of data transmission.</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>The server cannot initiate closing of the connection before the client initiates closing of the connection.</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>The TCP connection is half-duplex.</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The client and server can initiate closing of the connection at the same time.</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Client and server can close connection at same time. This paradigm is Catted Simultaneous close in TCP client sends FIN segment, at same time server sends FIN segment. TCP protocol (defined in RFC 793) allows simultaneous close. Closing state appears only in Simultaneous close Both Sides go to TIME-WAIT</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the 3-way handshaking protocol for TCP connection establishment. Let the three packets exchanged during the connection establishment be denoted as P1, P2 and P3, in order. Which of the following option(s) is/are TRUE with respect to TCP header flags that are set in the packets?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\mathrm{P3}: \\mathrm{SYN}=1, \\mathrm{ACK}=1$\n"
+      },
+      {
+        "identifier": "B",
+        "content": " $\\mathrm{P2}: \\mathrm{S Y N=1, A C K=1}$\n"
+      },
+      {
+        "identifier": "C",
+        "content": " $\\mathrm{P2}: \\mathrm{SYN}=0, \\mathrm{ACK}=1$\n"
+      },
+      {
+        "identifier": "D",
+        "content": " $\\mathrm{P1}: \\mathrm{SYN = 1}$"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Connection establishment phase of TCP</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7uh04f3/070c0788-d151-4281-8cd2-98ed9689e614/ed57aef0-f8f4-11ef-8fbb-c32045c72183/file-jaoe38c1m7uh04f4.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7uh04f3/070c0788-d151-4281-8cd2-98ed9689e614/ed57aef0-f8f4-11ef-8fbb-c32045c72183/file-jaoe38c1m7uh04f4.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Computer Networks - TCP UDP Sockets and Congestion Control Question 4 English Explanation\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>TCP client P successfully establishes a connection to TCP server Q. Let $N_P$ denote the sequence number in the SYN sent from P to Q. Let $N_Q$ denote the acknowledgement number in the SYN ACK from Q to P. Which of the following statements is/are CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>The sequence number $N_P$ is chosen randomly by P</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>The sequence number $N_P$ is always 0 for a new connection</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>The acknowledgement number $N_Q$ is equal to $N_P$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The acknowledgement number $N_Q$ is equal to $N_P + 1$</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>In the context of a TCP connection establishment, understanding the roles of sequence and acknowledgment numbers is crucial. Let's analyze each option:</p>\n\n<p>Option A: The sequence number $N_P$ is chosen randomly by P</p>\n<p>This statement is correct. The sequence number $N_P$ in the SYN packet sent by client P is not fixed to any value but is chosen randomly. This randomness helps in ensuring security and reliability in the communication.</p>\n\n<p>Option B: The sequence number $N_P$ is always 0 for a new connection</p>\n<p>This statement is incorrect. The sequence number $N_P$ is not fixed at 0 for a new connection. As mentioned in Option A, it is chosen randomly.</p>\n\n<p>Option C: The acknowledgement number $N_Q$ is equal to $N_P$</p>\n<p>This statement is incorrect. The acknowledgment number $N_Q$ in the SYN-ACK packet from server Q to client P is not equal to the sequence number $N_P$. Instead, it acknowledges the receipt of the SYN packet from P.</p>\n\n<p>Option D: The acknowledgement number $N_Q$ is equal to $N_P + 1$</p>\n<p>This statement is correct. When server Q sends the SYN-ACK packet, it sets the acknowledgment number $N_Q$ to $N_P + 1$ to indicate that it has received the SYN packet from P and expects the next byte to be $N_P + 1$. This is a part of the TCP three-way handshake protocol.</p>\n\n<p>Therefore, the correct statements are:</p>\n<p>Option A: The sequence number $N_P$ is chosen randomly by P</p>\n<p>Option D: The acknowledgement number $N_Q$ is equal to $$N_P + 1$$</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Suppose two hosts are connected by a point-to-point link and they are configured to use Stop-end-Wait protocol for reliable data transfer. Identify in which one of the following scenarios, the utilization of the link is the lowest.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Longer link length and lower transmission rate"
+      },
+      {
+        "identifier": "B",
+        "content": "Longer link length and higher transmission rate"
+      },
+      {
+        "identifier": "C",
+        "content": "Shorter link length and lower transmission rate"
+      },
+      {
+        "identifier": "D",
+        "content": "Shorter link length and higher transmission rate"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>In the Stop-and-Wait protocol, the link utilization (U) is given by the formula :</p>\n<p>$$\nU = \\frac{1}{1+2a}\n$$</p>\n<p>where &#39;a&#39; is the ratio of propagation delay (Tp) to transmission time (Tt), which can be expressed as :</p>\n<p>$$\na = \\frac{T_p}{T_t}\n$$</p>\n<p>Propagation delay (Tp) is the time it takes for a signal to travel from the sender to the receiver, which depends on the link length (l) and the propagation speed (V) :</p>\n<p>$$\nT_p = \\frac{l}{V}\n$$</p>\n<p>Transmission time (Tt) is the time required to transmit a frame of length F onto the link at a given bandwidth (B) :</p>\n<p>$$\nT_t = \\frac{F}{B}\n$$</p>\n<p>Combining these equations, we have :</p>\n<p>$$\na = \\frac{\\frac{l}{V}}{\\frac{F}{B}} = \\frac{lB}{VF}\n$$</p>\n<p>Substituting this expression for &#39;a&#39; into the utilization formula, we get :</p>\n<p>$$\nU = \\frac{1}{1 + 2 \\frac{lB}{VF}} = \\frac{VF}{VF + 2lB}\n$$</p>\n<p>From this formula, we can observe that the utilization is affected by the link length (l) and the bandwidth (B). Specifically, longer link lengths and higher bandwidths lead to lower link utilization, as they increase the ratio of propagation delay to transmission time.</p>\n<p>Therefore, the scenario with the longest link length (increasing propagation delay) and the highest transmission rate (decreasing transmission time) would result in the lowest utilization of the link.</p>\n<p>So, Option B &quot;Longer link length and higher transmission rate&quot; is the correct answer.</p>\n",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "Consider the three-way handshake mechanism followed during TCP connection establishment between hosts P and Q. Let X and Y be two random 32-bit starting sequence numbers chosen by P and Q respectively. Suppose P sends a TCP connection request message to Q with a TCP segment having SYN bit = 1, SEQ number = X, and ACK bit = 0. Suppose Q accepts the connection request. Which one of the following choices represents the information present in the TCP segment header that is sent by Q to P?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "SYN bit = 0, SEQ number = X + 1, ACK bit = 0, ACK number = Y, FIN bit = 1"
+      },
+      {
+        "identifier": "B",
+        "content": "SYN bit = 1, SEQ number = X + 1, ACK bit = 0, ACK number = Y, FIN bit = 0"
+      },
+      {
+        "identifier": "C",
+        "content": "SYN bit = 1, SEQ number = Y, ACK bit = 1, ACK number = X, FIN bit = 0"
+      },
+      {
+        "identifier": "D",
+        "content": "SYN bit = 1, SEQ number = Y, ACK bit = 1, ACK number = X + 1, FIN bit = 0"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p><b>Given :</b> TCP connection establishment between hosts $P$ and $Q$.</p>\n<p>X and Y are two random 32-bit starting sequence numbers chosen by P and Q respectively.</p>\n<p>$P$ sends a TCP connection request message to $Q$ with a TCP segment having SYN bit $=1$, SEQ number $=\\mathrm{X}$, and ACK bit $=0$.</p>\n<p>Host P sends the first SYN packet with SEQ number $=$ X, SYN flag $=1$ and ACK flag $=0$ as it's a connection request.</p>\n<p>Host Q will reply back with a SYN packet and acknowledging the arrival of P's SYN packet. Host Q will send a packet with SYN flag $=1$, SEQ number $=\\mathrm{Y}$, to synchronize and establish the connection, and ACK flag $=1$ to acknowledge the P's SYN packet, with ACK number $=\\mathrm{X}+1$ because ACK number denotes the sequence number of next expecting Byte. Then P will reply back with an ACK packet to complete the three-way handshake.</p>\n<p>FIN flag is used to terminate the connection, and will not be used here, FIN flag $=0$.</p>\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following protocol pairs can be used to send and retrieve e-mails (in that order)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "IMAP, SMTP"
+      },
+      {
+        "identifier": "B",
+        "content": "SMTP, POP3"
+      },
+      {
+        "identifier": "C",
+        "content": "IMAP, POP3"
+      },
+      {
+        "identifier": "D",
+        "content": "SMTP, MIME"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<b>SMTP</b> : Simple Mail Transfer Protocol is responsible for outgoing mail \n<br><br><b>POP3</b> : Post Office Protocol is responsible for retrieving mail.",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a long-lived $$TCP$$ session with an end-to-end bandwidth of $$1$$ $$Gbps$$ ($$ = {10^9}\\,$$ bits-persecond). The session starts with a sequence number of $$1234.$$ The minimum time (in seconds, rounded to the closest integer) before this sequence number can be used again is _______.\n ",
+    "options": [],
+    "correct_options": [],
+    "answer": "34 to 35.",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements. \n<p>I. TCP connections are full duplex \n<br>II. TCP has no option for selective acknowledgment \n<br>III. TCP connections are message streams </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only I is correct"
+      },
+      {
+        "identifier": "B",
+        "content": "Only I and III are correct"
+      },
+      {
+        "identifier": "C",
+        "content": "Only II and III are correct"
+      },
+      {
+        "identifier": "D",
+        "content": "All of I, II and III are correct"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose two hosts use a TCP connection to transfer a large file. Which of the following statements is/are FALSE with respect to the TCP connection? \n<p><b>I.</b> If the sequence number of a segment is m, then the sequence number of the subsequent segment is always m + 1. \n<br><b>II.</b> If the estimated round trip time at any given point of time is t sec, the value of the retransmission timeout is always set to greater than or equal to t sec. \n<br><b>III.</b> The size of the advertised window never changes during the course of the TCP connection. \n<br><b>IV.</b> The number of unacknowledged bytes at the sender is always less than or equal to the advertised window</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "III only "
+      },
+      {
+        "identifier": "B",
+        "content": "I and III only"
+      },
+      {
+        "identifier": "C",
+        "content": "I and IV only"
+      },
+      {
+        "identifier": "D",
+        "content": "II and IV only"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Identify the correct order in which a server process must invoke the function calls accept, bind, listen, and recv according to UNIX socket APL",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "listen, accept, bind recv"
+      },
+      {
+        "identifier": "B",
+        "content": "bind, listen, accept, recv"
+      },
+      {
+        "identifier": "C",
+        "content": "bind, accept, listen, recv"
+      },
+      {
+        "identifier": "D",
+        "content": "accept, listen, bind recv"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following socket API functions converts an unconnected active TCP socket into a passive socket?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "connect"
+      },
+      {
+        "identifier": "B",
+        "content": "bind"
+      },
+      {
+        "identifier": "C",
+        "content": "listen"
+      },
+      {
+        "identifier": "D",
+        "content": "accept"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The transport layer protocols used for real time multimedia, file transfer, DNS and email, respectively are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TCP, UDP, UDP and TCP"
+      },
+      {
+        "identifier": "B",
+        "content": "UDP, TCP, TCP and UDP"
+      },
+      {
+        "identifier": "C",
+        "content": "UDP, TCP, UDP and TCP"
+      },
+      {
+        "identifier": "D",
+        "content": "TCP, UDP, TCP and UDP"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-cse-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following transport layer protocols is used to support electronic mail?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "SMTP"
+      },
+      {
+        "identifier": "B",
+        "content": "IP"
+      },
+      {
+        "identifier": "C",
+        "content": "TCP"
+      },
+      {
+        "identifier": "D",
+        "content": "UDP"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>a) SMTP - It is a application layer protocol for sending email.</p> \n\n<p>b) IP - It is a network layer protocol.</p> \n\n<p>c) TCP - It is a connection oriented transport layer protocol.</p> \n\n<p>d) UDP - It is a connectionless transport layer protocol.</p> \n\n\n<p>SMTP is an application layer protocol used for sending e-mail, it is a connection oriented protocol, therefore it uses TCP at transport layer.</p> \n\n<p>Therefore, SMTP in application layer uses TCP in transport layer for mail services.</p>",
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following system calls results in the sending of SYN packets?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "socket"
+      },
+      {
+        "identifier": "B",
+        "content": "bind"
+      },
+      {
+        "identifier": "C",
+        "content": "listen"
+      },
+      {
+        "identifier": "D",
+        "content": "connect"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "What is the maximum size of data that the application layer can pass on to the TCP layer below?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Any size "
+      },
+      {
+        "identifier": "B",
+        "content": "2<sup>16</sup> bytes-size of TCP header"
+      },
+      {
+        "identifier": "C",
+        "content": "2<sup>16</sup> bytes"
+      },
+      {
+        "identifier": "D",
+        "content": "1500 bytes"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Packets of the same session may be routed through different paths in",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TCP, but not UDP"
+      },
+      {
+        "identifier": "B",
+        "content": "TCP and UDP"
+      },
+      {
+        "identifier": "C",
+        "content": "UDP, but not TCP"
+      },
+      {
+        "identifier": "D",
+        "content": "Neither TCP, nor UDP"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following functionalities must be implemented by a transport protocol over and above the network protocol?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Recovery from packet losses "
+      },
+      {
+        "identifier": "B",
+        "content": "Detection of duplicate packets"
+      },
+      {
+        "identifier": "C",
+        "content": "Packet delivery in the correct order"
+      },
+      {
+        "identifier": "D",
+        "content": "End to end connectivity"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>The transport layer is responsible for providing communication services directly to the application processes running on different hosts. Transport protocols add functionalities to the services provided by the network layer to ensure reliable and efficient data transfer. Let's evaluate the options provided one by one:</p>\n\n<p>Option A: Recovery from packet losses</p>\n<p>This functionality is indeed a part of what transport protocols like TCP (Transmission Control Protocol) provide. The network layer protocol (like IP - Internet Protocol) does not guarantee packet delivery; thus, it's the responsibility of the transport protocol to detect losses (usually through timeouts or duplicate acknowledgments) and to retransmit lost packets to ensure reliable data transfer.</p>\n\n<p>Option B: Detection of duplicate packets</p>\n<p>Transport protocols are also responsible for detecting duplicate packets and, if necessary, discarding them. Duplicate packets can occur due to retransmissions triggered by loss detection mechanisms. For instance, TCP uses sequence numbers to identify and discard duplicate data that may have been retransmitted if an acknowledgment was delayed or lost.</p>\n\n<p>Option C: Packet delivery in the correct order</p>\n<p>The network layer doesn't ensure that packets will arrive in the order they were sent; packets can take different paths and arrive out of order. Transport protocols such as TCP are designed to make sure data is reassembled in the correct order before passing it to the application layer. This is accomplished using sequence numbers to order segments correctly.</p>\n\n<p>Option D: End to end connectivity</p>\n<p>End to end connectivity is, in fact, offered by the network layer. For example, IP is responsible for routing packets from the source to the destination host, regardless of the number of intermediate networks. The transport layer builds on this capability to provide communication between specific processes on these hosts, but the basic connectivity is already established by the network layer.</p>\n\n<p>In summary, Options A, B, and C are functionalities that must be implemented by the transport protocol over and above the network protocol. These functions are crucial in providing the kind of reliable, process-to-process communication that applications need. Option D, end to end connectivity, is a fundamental service of the network layer on which the transport layer builds.</p>",
+    "topic": null,
+    "year": 2003,
+    "yearKey": "gate-cse-2003",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a new TCP connection between a sender and a receiver. The receiver advertised window is constant at 48 KB , the maximum segment size (MSS) is 2 KB , and the slow start threshold for TCP congestion control is 16 KB . Assume that there are no timeouts or duplicate acknowledgements. The number of rounds of transmission required for the congestion control algorithm of the TCP connection to reach the congestion avoidance phase is $\\_\\_\\_\\_$ . (answer in integer)</p>\n<p>Note: $1 \\mathrm{~K}=2^{10}$</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p>Let's write the given values first:</p>\n<p>\n\n$$ \\begin{aligned} \\text{Receiver window (Rwnd)} &= 48~\\text{KB} \\\\ \\text{Maximum Segment Size (MSS)} &= 2~\\text{KB} \\\\ \\text{Slow start threshold (ssthresh)} &= 16~\\text{KB} \\\\ \\end{aligned} $$\n\n</p>\n<p>\n\nThe TCP connection starts with the congestion window (cwnd) equal to 1 MSS, which is $2~\\text{KB}$.\n\n</p>\n<p>\n\n<b>How the congestion window (cwnd) grows in Slow Start:</b>\n\n</p>\n<p>\n\nEach round trip time (RTT), cwnd doubles until it reaches the slow start threshold ($16~\\text{KB}$).\n\n</p>\n<p>\n\nLet us see the increase in cwnd over each RTT:\n\n</p>\n<p>\n\nAfter 1st RTT: $2~\\text{KB} \\rightarrow 4~\\text{KB}$\n\n</p>\n<p>\n\nAfter 2nd RTT: $4~\\text{KB} \\rightarrow 8~\\text{KB}$\n\n</p>\n<p>\n\nAfter 3rd RTT: $8~\\text{KB} \\rightarrow 16~\\text{KB}$\n\n</p>\n<p>\n\nAt the next step, cwnd would try to double to $32~\\text{KB}$, but that would exceed the slow start threshold ($16~\\text{KB}$). So, slow start phase stops when cwnd becomes $16~\\text{KB}$.\n\n</p>\n<p>\n\nSo, the number of RTTs required for the congestion window to reach the threshold is $3$ rounds.\n\n</p>\n<p>\n\nBut we must count the first round where TCP sends the initial $2~\\text{KB}$, and then doubles in subsequent rounds as shown:\n\n</p>\n<p>\n\n$\\begin{array}{l} \\text{Round 1: } 2~\\text{KB} \\\\ \\text{Round 2: } 4~\\text{KB} \\\\ \\text{Round 3: } 8~\\text{KB} \\\\ \\text{Round 4: } 16~\\text{KB} \\\\ \\end{array}$\n\n</p>\n<p>\n\nTherefore, it takes <b>4 rounds</b> to reach $16~\\text{KB}$.\n\n</p>\n<p>\n\n<b>Final Answer:</b> The number of rounds required is <b>4</b>.\n\n</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A TCP sender successfully establishes a connection with a TCP receiver and starts the transmission of segments. The TCP congestion control mechanism's slow-start threshold is set to 10000 segments. Assume that the round-trip time is fixed at 1 millisecond. Assume that the sender always has data to send, the segments are numbered from 1, and no segment is lost. Let $t$ denote the time (in milliseconds) at which the transmission of segment number 2000 starts.</p>\n<p>Which one of the following options is correct?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$9 \\leq t<10$</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$10 \\leq t<11$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$11 \\leq t<12$</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$12 \\leq t<13$</p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ t \\geq 10 $$</p>\n<p>Slow start threshold $=10000$ segments</p>\n<p>$$ \\text { Round trip time = } 1 \\text { millisec } $$</p>\n<p>No segment is lost and sender always has data to send. Slow start Algorithm:</p>\n<p><img alt=\"GATE CSE 2026 Set 1 Computer Networks - TCP UDP Sockets and Congestion Control Question 1 English Explanation\" src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mmyorz10/ef448e41-5141-45c4-ab80-ad10db601516/b504ed40-243d-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyorz11.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mmyorz10/ef448e41-5141-45c4-ab80-ad10db601516/b504ed40-243d-11f1-b51d-29f27efe72cc/file-jaoe38c1mmyorz11.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\"></p>\n<p>$$ \\begin{aligned} &amp;1024 \\leq 2000 \\leq 2048\\\\ &amp;11^{\\text {th }} \\text { millisec with start } 2048\\\\ &amp;10 \\leq t \\leq 11 \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider a TCP connection operating at a point of time with the congestion window of size 12 MSS (Maximum Segment Size), when a timeout occurs due to packet loss. Assuming that all the segments transmitted in the next two RTTs (Round Trip Time) are acknowledged correctly, the congestion window size (in MSS) during the third RTT will be _________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p>Given that the congestion window (cwnd) is initially 12 MSS (Maximum Segment Size), a timeout occurs due to packet loss. After a timeout, the congestion control algorithm dictates that the congestion window resets and the slow start threshold (ssthresh) is updated. Here’s a step-by-step breakdown:</p>\n\n<p><strong>Initial State:</strong></p>\n\n\n<p>cwnd = 12 MSS</p>\n\n\n<p><strong>After Timeout:</strong></p>\n\n\n<p>cwnd is reset to 1 MSS</p>\n<p>ssthresh is set to half of the original cwnd:\n $      \\text{ssthresh} = \\frac{12}{2} = 6 \\text{ MSS}      $</p>\n\n\n<p><strong>Slow Start Phase Begins:</strong></p>\n\n\n<p>In the slow start phase, the cwnd doubles with each RTT until it reaches the ssthresh.</p>\n\n\n<p><strong>First RTT:</strong></p>\n\n\n<p>cwnd = 1 MSS</p>\n\n\n<p><strong>Second RTT:</strong></p>\n\n\n<p>cwnd = 2 MSS</p>\n\n\n<p><strong>Third RTT:</strong></p>\n\n\n<p>Since the slow start phase continues, cwnd doubles from 2 MSS:\n $      \\text{cwnd} = 2 \\times 2 = 4 \\text{ MSS}      $</p>\n\n<p>Thus, during the third RTT, the congestion window size will be 4 MSS.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Suppose you are asked to design a new reliable byte-stream transport protocol like TCP. This protocol, named myTCP, runs over a 100 Mbps network with Round Trip Time of 150 milliseconds and the maximum segment lifetime of 2 minutes.</p>\n<p>Which of the following is/are valid lengths of the Sequence Number field in the myTCP header?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "30 bits"
+      },
+      {
+        "identifier": "B",
+        "content": "32 bits"
+      },
+      {
+        "identifier": "C",
+        "content": "34 bits"
+      },
+      {
+        "identifier": "D",
+        "content": "36 bits"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given bandwidth $(\\mathrm{BW})=100 \\mathrm{Mbps}$</p>\n\n<p>So, in 1 second we can send $100 \\times 10^6$ bits</p>\n\n<p>$$ \\begin{aligned} & =125 \\times 10^3 \\mathrm{~B} \\\\\\\\ & \\text { In } 120 \\text { seconds }=120 \\times 125 \\times 10^3 \\mathrm{~B} \\\\\\\\ & =15000 \\times 10^5 \\mathrm{~B} \\end{aligned} $$</p>\n\n<p>Since $n$ lifetime of 120 seconds $15 \\times 10^8$ bytes are generated, so</p>\n\n<p>Sequence number bits $=\\log _2\\left(15 \\times 10^8\\right)$</p>\n\n<p>$$ \\begin{aligned} & \\geq 30.48 \\\\\\\\ & \\geq 31 \\text { bits } \\end{aligned} $$</p>\n\n<p>Hence, the correct options are (B), (C) and (D).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a 100 Mbps link between an earth station (sender) and a satellite (receiver) at an altitude of 2100 km. The signal propagates at a speed of 3 $$\\times$$ 10<sup>8</sup> m/s. The time taken (in milliseconds, rounded off to two decimal places) for the receiver to completely receive a packet of 1000 bytes transmitted by the sender is _____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "7.08",
+    "explanation": "<p>To determine the time taken for the receiver to completely receive a packet of 1000 bytes, we need to consider both the propagation delay and the transmission delay.</p>\n\n<p><strong>Step 1: Calculate the propagation delay</strong></p>\n\n<p>The propagation delay is the time taken for a signal to travel from the sender to the receiver. It is given by the formula:</p>\n\n<p>$$ \\text{Propagation delay} = \\frac{\\text{Distance}}{\\text{Propagation speed}} $$</p>\n\n<p>Here, the distance between the earth station and the satellite is 2100 km (which is 2100 × 10<sup>3</sup> meters), and the propagation speed is 3 × 10<sup>8</sup> meters per second.</p>\n\n<p>Substituting the values:</p>\n\n<p>\n\n<p>$$ \\text{Propagation delay} = \\frac{2100 \\times 10^3 \\text{ meters}}{3 \\times 10^8 \\text{ meters/second}} = \\frac{2100 \\times 10^3}{3 \\times 10^8} \\text{ seconds} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ \\text{Propagation delay} = 7 \\times 10^{-3} \\text{ seconds} = 7 \\text{ milliseconds} $$</p>\n\n</p>\n\n<p><strong>Step 2: Calculate the transmission delay</strong></p>\n\n<p>The transmission delay is the time taken to push all the packet's bits into the link. It is given by the formula:</p>\n\n<p>$$ \\text{Transmission delay} = \\frac{\\text{Packet size}}{\\text{Transmission rate}} $$</p>\n\n<p>Here, the packet size is 1000 bytes (which is 1000 × 8 = 8000 bits), and the transmission rate is 100 Mbps (which is 100 × 10<sup>6</sup> bits per second).</p>\n\n<p>Substituting the values:</p>\n\n<p>\n\n<p>$$ \\text{Transmission delay} = \\frac{8000 \\text{ bits}}{100 \\times 10^6 \\text{ bits/second}} = \\frac{8000}{100 \\times 10^6} \\text{ seconds} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ \\text{Transmission delay} = 8 \\times 10^{-5} \\text{ seconds} = 0.08 \\text{ milliseconds} $$</p>\n\n</p>\n\n<p><strong>Step 3: Calculate the total delay</strong></p>\n\n<p>The total delay is the sum of the propagation delay and the transmission delay:</p>\n\n<p>\n\n<p>$$ \\text{Total delay} = \\text{Propagation delay} + \\text{Transmission delay} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ \\text{Total delay} = 7 \\text{ milliseconds} + 0.08 \\text{ milliseconds} $$</p>\n\n</p>\n\n<p>\n\n<p>$$ \\text{Total delay} = 7.08 \\text{ milliseconds} $$</p>\n\n</p>\n\n<p>Therefore, the time taken for the receiver to completely receive a packet of 1000 bytes is 7.08 milliseconds.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the data transfer using TCP over a 1 Gbps link. Assuming that the maximum segment lifetime (MSL) is set to 60 seconds, the minimum number of bits required for the sequence number field of the TCP header, to prevent the sequence number space from wrapping around during the MSL is ___________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "33",
+    "explanation": "<p>B.W = 1 Gbps</p>\n<p>= $${{{2^{30}}} \\over 8}$$ bytes/sec</p>\n<p>1 sec = $${{{2^{30}}} \\over 8}$$ bytes</p>\n<p>$$\\Rightarrow$$ 1 sec = $${{{2^{30}}} \\over 8}$$ sequence number</p>\n<p>$$\\Rightarrow$$ 60 sec = $${{{2^{30}} \\times 60} \\over 8}$$ sequence number</p>\n<p>Number of sequence bits required = $${\\log _2}\\left[ {{{{2^{30}} \\times 60} \\over 8}} \\right]$$</p>\n<p>$$ = {\\log _2}{2^{30}} + \\log _2^{60} - \\log _2^8$$</p>\n<p>$$ = 30 + 5.9 - 3$$</p>\n<p>$$ = 32.9 \\simeq 33$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider two hosts P and Q connected through a router R. The maximum transfer unit (MTU) value of the link between P and R is 1500 bytes, and between R and Q is 820 bytes.</p>\n\n<p>A TCP segment of size 1400 bytes was transferred from P to Q through R, with IP identification value as 0 × 1234. Assume that the IP header size is 20 bytes. Further, the packet is allowed to be fragmented i. e, Don't Fragment (DF) flag in the IP header is not set by P.</p>\n\n<p>Which of the following statements is/are correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "TCP destination port can be determined by analysing only the second fragement."
+      },
+      {
+        "identifier": "B",
+        "content": "If the second fragment is lost, P is required to resend the whole TCP segment."
+      },
+      {
+        "identifier": "C",
+        "content": "Two fragments are created at R and the IP datagram size carrying the second fragment is 620 bytes."
+      },
+      {
+        "identifier": "D",
+        "content": "If the second fragment is lost, R will resend the fragment with the IP identification value 0 × 1234."
+      }
+    ],
+    "correct_options": [
+      "B",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which of the given statements are correct, we'll analyze each option based on the fragmentation process in IPv4 and how TCP operates over IP networks.</p>\n<h3><strong>Given Information:</strong></h3>\n\n<p><p><strong>Hosts and Router:</strong></p></p>\n<p><p>Host <strong>P</strong> sends data to Host <strong>Q</strong> through Router <strong>R</strong>.</p></p>\n<p><p><strong>MTU Values:</strong></p></p>\n<p><p><strong>Between P and R:</strong> MTU is <strong>1500 bytes</strong>.</p></p>\n<p><p><strong>Between R and Q:</strong> MTU is <strong>820 bytes</strong>.</p></p>\n<p><p><strong>TCP Segment:</strong></p></p>\n<p><p><strong>Size:</strong> <strong>1400 bytes</strong>.</p></p>\n<p><p><strong>IP Identification:</strong> <code>0x1234</code>.</p></p>\n<p><p><strong>IP Header Size:</strong> <strong>20 bytes</strong>.</p></p>\n<p><p><strong>Fragmentation:</strong></p></p>\n<p><p>The <strong>Don't Fragment (DF)</strong> flag is <strong>not set</strong>, so fragmentation is allowed.</p></p>\n\n<h3><strong>Understanding IP Fragmentation:</strong></h3>\n\n<p><p>When an IP packet is larger than the MTU of the outgoing link and fragmentation is allowed, the router fragments the packet.</p></p>\n<p><p>Each fragment has:</p></p>\n<p><p>Its own <strong>IP header</strong> (20 bytes).</p></p>\n<p><p>A <strong>Fragment Offset</strong> indicating its position in the original data.</p></p>\n<p><p>A <strong>More Fragments (MF)</strong> flag indicating if more fragments follow.</p></p>\n<p><p>The <strong>Fragment Offset</strong> is measured in units of <strong>8 bytes</strong>.</p></p>\n\n<h3><strong>Step-by-Step Analysis:</strong></h3>\n<h4><strong>Total Size of the Original IP Datagram:</strong></h4>\n\n<p><p><strong>Original Data Size:</strong> TCP segment size = <strong>1400 bytes</strong>.</p></p>\n<p><p><strong>Original IP Datagram Size:</strong> Data + IP header = $ 1400 + 20 = 1420 $ bytes.</p></p>\n\n<h4><strong>Fragmentation at Router R:</strong></h4>\n\n<p><p><strong>MTU between R and Q:</strong> <strong>820 bytes</strong>.</p></p>\n<p><p><strong>Maximum Data Size per Fragment:</strong></p></p>\n<p><p>MTU - IP header = $ 820 - 20 = 800 $ bytes.</p></p>\n<p><p><strong>Data Payload Must Be a Multiple of 8 Bytes:</strong></p></p>\n<p><p>Since the fragment offset is in 8-byte units, data sizes should be multiples of 8.</p></p>\n<p><p><strong>First Fragment:</strong></p></p>\n<p><p><strong>Data Size:</strong> <strong>800 bytes</strong> (already a multiple of 8).</p></p>\n<p><p><strong>IP Header:</strong> <strong>20 bytes</strong>.</p></p>\n<p><p><strong>Total Size:</strong> $ 800 + 20 = 820 $ bytes.</p></p>\n<p><p><strong>Fragment Offset:</strong> <strong>0</strong> (since it's the first fragment).</p></p>\n<p><p><strong>MF Flag:</strong> <strong>1</strong> (more fragments follow).</p></p>\n<p><p><strong>Second Fragment:</strong></p></p>\n<p><p><strong>Remaining Data:</strong> $ 1400 - 800 = 600 $ bytes.</p></p>\n<p><p><strong>Data Size:</strong> <strong>600 bytes</strong> (600 is a multiple of 8).</p></p>\n<p><p><strong>IP Header:</strong> <strong>20 bytes</strong>.</p></p>\n<p><p><strong>Total Size:</strong> $ 600 + 20 = 620 $ bytes.</p></p>\n<p><p><strong>Fragment Offset:</strong> $ \\frac{800}{8} = 100 $ (since 800 bytes have been sent).</p></p>\n<p><p><strong>MF Flag:</strong> <strong>0</strong> (last fragment).</p></p>\n\n<h3><strong>Analyzing Each Option:</strong></h3>\n<hr />\n<h4><strong>Option A:</strong></h4>\n<p><strong>\"TCP destination port can be determined by analysing only the second fragment.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>TCP Header Location:</strong></p></p>\n<p><p>The TCP header (which includes source and destination ports) is located at the <strong>beginning</strong> of the TCP segment.</p></p>\n<p><p><strong>Fragmentation Impact:</strong></p></p>\n<p><p>The <strong>first fragment</strong> contains the IP header and the <strong>beginning of the TCP segment</strong>, including the TCP header.</p></p>\n<p><p>The <strong>second fragment</strong> contains only the <strong>next portion</strong> of the data.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>The second fragment <strong>does not</strong> contain the TCP destination port.</p></p>\n<p><p><strong>Option A is incorrect.</strong></p></p>\n\n<hr />\n<h4><strong>Option B:</strong></h4>\n<p><strong>\"If the second fragment is lost, P is required to resend the whole TCP segment.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>IP Layer Behavior:</strong></p></p>\n<p><p>IP is an <strong>unreliable</strong> protocol; it does not guarantee delivery or handle retransmissions.</p></p>\n<p><p>If any fragment is lost, the destination cannot reassemble the original datagram, and it is discarded.</p></p>\n<p><p><strong>TCP Layer Behavior:</strong></p></p>\n<p><p>TCP ensures reliable delivery by using acknowledgments and retransmissions.</p></p>\n<p><p>If the TCP segment is not acknowledged (due to the lost fragment), the sender <strong>P</strong> will retransmit the entire TCP segment after a timeout.</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p>If the second fragment is lost, <strong>P must retransmit the entire TCP segment</strong>.</p></p>\n<p><p><strong>Option B is correct.</strong></p></p>\n\n<hr />\n<h4><strong>Option C:</strong></h4>\n<p><strong>\"Two fragments are created at R and the IP datagram size carrying the second fragment is 620 bytes.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>As calculated earlier:</strong></p></p>\n<p><p>The second fragment has:</p>\n\n<p><p><strong>Data Size:</strong> <strong>600 bytes</strong>.</p></p>\n<p><p><strong>IP Header:</strong> <strong>20 bytes</strong>.</p></p>\n<p><p><strong>Total Size:</strong> $ 600 + 20 = 620 $ bytes.</p></p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p><strong>Option C is correct.</strong></p></p>\n\n<hr />\n<h4><strong>Option D:</strong></h4>\n<p><strong>\"If the second fragment is lost, R will resend the fragment with the IP identification value 0 × 1234.\"</strong></p>\n<p><strong>Analysis:</strong></p>\n\n<p><p><strong>Router Behavior:</strong></p></p>\n<p><p>Routers <strong>do not store</strong> copies of packets they have forwarded.</p></p>\n<p><p>Routers <strong>do not perform retransmissions</strong> if a fragment is lost.</p></p>\n<p><p><strong>Retransmissions:</strong></p></p>\n<p><p>Retransmissions are handled by the end hosts (in this case, by TCP at host <strong>P</strong>).</p></p>\n<p><p><strong>Conclusion:</strong></p></p>\n<p><p><strong>Option D is incorrect.</strong></p></p>\n\n<hr />\n<h3><strong>Final Answer:</strong></h3>\n\n<p><p><strong>Correct Options:</strong> <strong>B</strong> and <strong>C</strong></p></p>\n<p><p><strong>Incorrect Options:</strong> <strong>A</strong> and <strong>D</strong></p></p>\n\n<hr />\n<p><strong>Therefore, the correct statements are Options B and C.</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider the sliding window flow-control protocol operating between a sender and a receiver over a full-duplex error-free link. Assume the following:</p>\n\n<p>1. The time taken for processing the data frame by the receiver is negligible.</p>\n\n<p>2. The time taken for processing the acknowledgement frame by the sender is negligible.</p>\n\n<p>3. The sender has infinite number of frames available for transmission.</p>\n\n<p>4. The size of the data frame is 2,000 bits and the size of the acknowledgment frame is 10 bits.</p>\n\n<p>5. The link data rate in each direction is 1 Mbps (= 10<sup>6</sup>&nbsp;bits per second).</p>\n\n<p>6. One way propagation delay of the link is 100 milliseconds.</p>\n\n<p>The minimum value of the sender's window size in terms of the number of frames, (rounded to the nearest integer) needed to achieve a link utilization of 50% is ______</p>\n",
+    "options": [],
+    "correct_options": [],
+    "answer": "50TO52",
+    "explanation": "<p>To determine the minimum sender's window size required to achieve a link utilization of 50% in the given sliding window protocol, we'll perform a step-by-step analysis using the provided parameters.</p>\n<h3><strong>Given Parameters:</strong></h3>\n\n<p><p><strong>Data Frame Size ($ S $)</strong>: 2000 bits</p></p>\n<p><p><strong>Acknowledgment Frame Size</strong>: 10 bits (negligible for calculations)</p></p>\n<p><p><strong>Link Data Rate ($ R $)</strong>: $ 1 \\times 10^6 $ bits per second (1 Mbps)</p></p>\n<p><p><strong>One-way Propagation Delay ($ T_p $)</strong>: 100 milliseconds</p></p>\n<p><p><strong>Transmission Time of Data Frame ($ T_t $)</strong>:</p>\n<p>$    T_t = \\frac{S}{R} = \\frac{2000 \\text{ bits}}{1 \\times 10^6 \\text{ bps}} = 0.002 \\text{ seconds} = 2 \\text{ milliseconds}    $</p></p>\n<p><p><strong>Round-Trip Time ($ \\text{RTT} $)</strong>:</p>\n<p>$    \\text{RTT} = 2 \\times T_p = 2 \\times 100 \\text{ ms} = 200 \\text{ milliseconds}    $</p></p>\n\n<h3><strong>Understanding Link Utilization:</strong></h3>\n<p>Link utilization ($ U $) is the fraction of time the sender is actively transmitting data over the total time, which includes both transmission and waiting times. For a sliding window protocol without errors and infinite frames, the utilization is given by:</p>\n<p>$ U = \\frac{\\text{Total Data Transmission Time}}{\\text{Total Time}} $</p>\n<h3><strong>Calculating Utilization ($ U $) for Sliding Window Protocol:</strong></h3>\n\n<p><p><strong>Total Data Transmission Time for $ W $ Frames</strong>:</p>\n<p>$   T_{\\text{data}} = W \\times T_t   $</p></p>\n<p><p><strong>Total Time Until the Sender Can Send More Frames</strong>:</p></p>\n<p><p>The sender begins transmitting at $ t = 0 $.</p></p>\n<p><p>The first acknowledgment is received after:</p>\n<p>$     T_{\\text{ack}} = T_t + 2 \\times T_p = 2 \\text{ ms} + 200 \\text{ ms} = 202 \\text{ milliseconds}     $</p></p>\n<p><p>Since the processing times are negligible, the sender must wait until $ T_{\\text{ack}} $ to move the window and send more frames if needed.</p></p>\n<p><p><strong>Total Time ($ T_{\\text{total}} $)</strong>:</p>\n<p>$   T_{\\text{total}} = T_{\\text{ack}} = 202 \\text{ milliseconds}   $</p></p>\n<p><p><strong>Utilization ($ U $)</strong>:</p>\n<p>$   U = \\frac{T_{\\text{data}}}{T_{\\text{total}}} = \\frac{W \\times T_t}{T_{\\text{ack}}}   $</p></p>\n\n<h3><strong>Solving for Window Size ($ W $) to Achieve $ U = 50\\% $:</strong></h3>\n<p>Set $ U = 0.5 $ and solve for $ W $:</p>\n<p>$ 0.5 = \\frac{W \\times T_t}{T_{\\text{ack}}} $</p>\n<p>Plug in the known values:</p>\n<p>$ 0.5 = \\frac{W \\times 2 \\text{ ms}}{202 \\text{ ms}} $</p>\n<p>Solve for $ W $:</p>\n<p>$ W = \\frac{0.5 \\times 202 \\text{ ms}}{2 \\text{ ms}} = \\frac{101 \\text{ ms}}{2 \\text{ ms}} = 50.5 $</p>\n<p>Since the window size $ W $ must be an integer number of frames, and we need the <strong>minimum</strong> window size to achieve at least 50% utilization, we <strong>round up</strong> to the next integer:</p>\n<p>$ W = \\lceil 50.5 \\rceil = 51 $</p>\n<h3><strong>Answer:</strong></h3>\n<p><strong>51</strong></p>\n<hr />\n<p><strong>Therefore, the minimum sender's window size needed to achieve a link utilization of 50% is 51 frames.</strong></p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>A TCP server application is programmed to listen on port number P on host S. A TCP client connected to the TCP server over the network.</p>\n\n<p>Consider that while the TCP connection was active, the server machine S crashed are rebooted. Assume that the client does not use the TCP keepalive timer.</p>\n\n<p>Which of the following behaviours is/are possible?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "If the client sends a packet after the server reboot, it will receive a RST segment."
+      },
+      {
+        "identifier": "B",
+        "content": "If the client was waiting to receive a packet, it may wait indefinitely."
+      },
+      {
+        "identifier": "C",
+        "content": "It the client sends a packet after the server reboot, it will receive a FIN segment."
+      },
+      {
+        "identifier": "D",
+        "content": "The TCP server application on S can listen on P after reboot."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which behaviors are possible when a TCP server crashes and reboots during an active connection with a client, let's analyze each option:</p>\n<hr />\n<p><strong>Option A</strong>: <em>If the client sends a packet after the server reboot, it will receive a RST segment.</em></p>\n<p><strong>Explanation</strong>: When the server reboots, it loses all information about existing TCP connections. If the client sends a packet to the server after it has rebooted, the server's TCP stack does not recognize the connection. As a result, the server responds with a <strong>RST (Reset)</strong> segment to inform the client that the connection no longer exists.</p>\n<p><strong>Conclusion</strong>: This behavior is <strong>possible</strong>.</p>\n<hr />\n<p><strong>Option B</strong>: <em>If the client was waiting to receive a packet, it may wait indefinitely.</em></p>\n<p><strong>Explanation</strong>: Since the client does not use the TCP keepalive timer and the server has crashed, the client has no way of knowing that the server is unavailable. If the client is waiting to receive data from the server, it may continue to wait indefinitely unless it implements its own timeout mechanism.</p>\n<p><strong>Conclusion</strong>: This behavior is <strong>possible</strong>.</p>\n<hr />\n<p><strong>Option C</strong>: <em>If the client sends a packet after the server reboot, it will receive a FIN segment.</em></p>\n<p><strong>Explanation</strong>: A <strong>FIN</strong> segment is used to gracefully terminate an existing TCP connection. However, after rebooting, the server has no record of any established connections. Therefore, it cannot send a FIN segment in response to the client's packet. Instead, it would send a RST segment as in Option A.</p>\n<p><strong>Conclusion</strong>: This behavior is <strong>not possible</strong> in this scenario.</p>\n<hr />\n<p><strong>Option D</strong>: <em>The TCP server application on S can listen on P after reboot.</em></p>\n<p><strong>Explanation</strong>: After rebooting, the server can restart its TCP server application and begin listening on port <strong>P</strong> again. This is a normal behavior after a reboot, assuming the application is configured to start automatically or is manually restarted.</p>\n<p><strong>Conclusion</strong>: This behavior is <strong>possible</strong>.</p>\n<hr />\n<h3><strong>Final Answer</strong></h3>\n<p>The possible behaviors are:</p>\n\n<p><p><strong>Option A</strong></p></p>\n<p><p><strong>Option B</strong></p></p>\n<p><p><strong>Option D</strong></p></p>\n",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a TCP connection between a client and a server with the following specifications: the round trip time is 6 ms, the size of the receiver advertised window is 50 KB, slow start threshold at the client is 32 KB, and the maximum segment size is 2 KB. The connection is established at time t = 0. Assume that there are no timeouts and errors during transmission. <br>Then the size of the congestion window (in KB) at time t + 60 ms after all acknowledgements are processed is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "44",
+    "explanation": "<p>To determine the size of the congestion window ($ \\text{cwnd} $) at time $ t + 60 $ ms, we'll simulate the TCP congestion control behavior over the 10 Round Trip Times (RTTs) within the 60 ms interval.</p>\n<h3><strong>Given Parameters:</strong></h3>\n\n<p><p><strong>Round Trip Time (RTT):</strong> $ 6 $ ms</p></p>\n<p><p><strong>Receiver advertised window ($ \\text{rwnd} $):</strong> $ 50 $ KB</p></p>\n<p><p><strong>Slow Start Threshold ($ \\text{ssthresh} $):</strong> $ 32 $ KB</p></p>\n<p><p><strong>Maximum Segment Size (MSS):</strong> $ 2 $ KB</p></p>\n<p><p><strong>Initial Congestion Window ($ \\text{cwnd} $):</strong> $ 1 $ MSS ($ 2 $ KB)</p></p>\n<p><p><strong>Total Time:</strong> $ 60 $ ms</p></p>\n\n<h3><strong>Number of RTTs in 60 ms:</strong></h3>\n<p>$ \\text{Number of RTTs} = \\frac{\\text{Total Time}}{\\text{RTT}} = \\frac{60 \\text{ ms}}{6 \\text{ ms}} = 10 \\text{ RTTs} $</p>\n<h3><strong>Simulating Each RTT:</strong></h3>\n<p><strong>RTT 1 (0–6 ms):</strong></p>\n\n<p><p>$ \\text{cwnd} = 2 $ KB</p></p>\n<p><p>After ACKs, $ \\text{cwnd} $ doubles to $ 4 $ KB (slow start)</p></p>\n\n<p><strong>RTT 2 (6–12 ms):</strong></p>\n\n<p><p>$ \\text{cwnd} = 4 $ KB</p></p>\n<p><p>After ACKs, $ \\text{cwnd} $ doubles to $ 8 $ KB</p></p>\n\n<p><strong>RTT 3 (12–18 ms):</strong></p>\n\n<p><p>$ \\text{cwnd} = 8 $ KB</p></p>\n<p><p>After ACKs, $ \\text{cwnd} $ doubles to $ 16 $ KB</p></p>\n\n<p><strong>RTT 4 (18–24 ms):</strong></p>\n\n<p><p>$ \\text{cwnd} = 16 $ KB</p></p>\n<p><p>After ACKs, $ \\text{cwnd} $ doubles to $ 32 $ KB</p></p>\n\n<p><strong>RTT 5 (24–30 ms):</strong></p>\n\n<p><p>$ \\text{cwnd} = 32 $ KB (reaches $ \\text{ssthresh} $)</p></p>\n<p><p><strong>Transition to Congestion Avoidance</strong></p></p>\n<p><p>After ACKs, $ \\text{cwnd} $ increases by $ 1 $ MSS to $ 34 $ KB</p></p>\n\n<p><strong>RTT 6 (30–36 ms):</strong></p>\n\n<p><p>$ \\text{cwnd} = 34 $ KB</p></p>\n<p><p>After ACKs, $ \\text{cwnd} $ increases to $ 36 $ KB</p></p>\n\n<p><strong>RTT 7 (36–42 ms):</strong></p>\n\n<p><p>$ \\text{cwnd} = 36 $ KB</p></p>\n<p><p>After ACKs, $ \\text{cwnd} $ increases to $ 38 $ KB</p></p>\n\n<p><strong>RTT 8 (42–48 ms):</strong></p>\n\n<p><p>$ \\text{cwnd} = 38 $ KB</p></p>\n<p><p>After ACKs, $ \\text{cwnd} $ increases to $ 40 $ KB</p></p>\n\n<p><strong>RTT 9 (48–54 ms):</strong></p>\n\n<p><p>$ \\text{cwnd} = 40 $ KB</p></p>\n<p><p>After ACKs, $ \\text{cwnd} $ increases to $ 42 $ KB</p></p>\n\n<p><strong>RTT 10 (54–60 ms):</strong></p>\n\n<p><p>$ \\text{cwnd} = 42 $ KB</p></p>\n<p><p>After ACKs, $ \\text{cwnd} $ increases to $ 44 $ KB</p></p>\n\n<h3><strong>Final Congestion Window Size:</strong></h3>\n<p>At time $ t + 60 $ ms, after processing all acknowledgements, the congestion window size is:</p>\n<p>$ \\text{cwnd} = 44 \\text{ KB} $</p>\n<p><strong>Answer:</strong> 44</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Match the following \n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}\n.tg .tg-nnyo{font-weight:bold;text-decoration:underline;font-size:24px;text-align:center}\n.tg .tg-hgcj{font-weight:bold;text-align:center}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-nnyo\">Field </th>\n    <th class=\"tg-nnyo\">Length in bits </th>\n  </tr>\n  <tr>\n    <td class=\"tg-hgcj\">P. UDP Header’s Port Number </td>\n    <td class=\"tg-hgcj\">I. 48</td>\n  </tr>\n  <tr>\n    <td class=\"tg-hgcj\">Q. Ethernet MAC Address</td>\n    <td class=\"tg-hgcj\">II. 8</td>\n  </tr>\n  <tr>\n    <td class=\"tg-hgcj\">R. IPv6 Next Header</td>\n    <td class=\"tg-hgcj\">III. 32</td>\n  </tr>\n  <tr>\n    <td class=\"tg-hgcj\">S. TCP Header’s Sequence Number</td>\n    <td class=\"tg-hgcj\">IV. 16</td>\n  </tr>\n</tbody></table> </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P - {\\rm I}{\\rm I}{\\rm I},\\,\\,Q - {\\rm I}V,\\,\\,R - {\\rm I}{\\rm I},S - {\\rm I}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$P - {\\rm I}{\\rm I},\\,\\,Q - {\\rm I},\\,\\,R - {\\rm I}V,S - {\\rm I}{\\rm I}{\\rm I}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$P - {\\rm I}V,\\,\\,Q - {\\rm I},\\,\\,R - {\\rm I}{\\rm I},S - {\\rm I}{\\rm I}{\\rm I}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$P - {\\rm I}V,\\,\\,Q - {\\rm I},\\,\\,R - {\\rm I}{\\rm I}{\\rm I},S - {\\rm I}{\\rm I}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an $$IP$$ packet with a length of $$4,500$$ bytes that includes a $$20$$-byte $$IPv$$$$4$$ header and a $$40$$-byte $$TCP$$ header. The packet is forwarded to an $$IPv4$$ router that supports a Maximum Transmission Unit $$(MTU)$$ of $$600$$ bytes. Assume that the length of the $$IP$$ header in all the outgoing fragments of this packet is $$20$$ bytes. Assume that the fragmentation offset value stored in the first fragment is $$0.$$ \n<p>The fragmentation offset value stored in the third fragment is _______. </p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "144",
+    "explanation": "<p>First, let us restate the key information :</p>\n\n<p><p>An original IP packet has a total length of 4500 bytes, which includes :</p></p>\n<p><p>20‑byte IPv4 header</p></p>\n<p><p>40‑byte TCP header</p></p>\n<p><p>Therefore, the <strong>data payload</strong> is $4500 - (20 + 40) = 4440$ bytes.</p></p>\n<p><p>The router’s MTU is 600 bytes.  </p></p>\n<p><p>Each fragment that the router creates will have :</p></p>\n<p><p>a <strong>20‑byte IP header</strong> (given in the problem),</p></p>\n<p><p>a certain number of data bytes (which must be a multiple of 8 for all fragments except possibly the last).</p></p>\n<p><p>IP fragmentation offset is measured in multiples of 8 bytes.</p></p>\n<p><p>The first fragment has fragmentation offset = 0.</p></p>\n\n<hr />\n<h2>Step 1: Maximum data per fragment</h2>\n<p>Since each fragment has a 20‑byte IP header and the total MTU is 600 bytes,</p>\n<p>$ \\text{Maximum bytes per fragment}  = 600 \\text{ bytes (MTU)}  = 20 \\text{ (IP header)} + \\text{data}. $</p>\n<p>Hence, the maximum <strong>data</strong> that can fit in each fragment is :</p>\n<p>$ 600 - 20 = 580 \\text{ bytes (raw space for data)}. $</p>\n<p>However, to respect the IP requirement that fragmentation offsets be multiples of 8 bytes of data, each fragment (except possibly the last) can only carry a number of data bytes that is a multiple of 8. The largest multiple of 8 that does not exceed 580 is :</p>\n<p>$ 576 \\quad (\\text{since } 580 \\div 8 = 72.5,  \\text{ so } 72 \\times 8 = 576). $</p>\n<p>Thus each “full-size” fragment will have 20 bytes of IP header + 576 bytes of data = 596 bytes total, which is under the 600‑byte MTU limit.</p>\n<hr />\n<h2>Step 2 : Determine the number of fragments</h2>\n<p>The total data payload is 4440 bytes. If each full‑size fragment carries 576 data bytes, we can see how many full‑size fragments are needed before reaching (or exceeding) 4440:</p>\n<p>$ \\frac{4440}{576} \\;\\approx\\; 7.7083\\ldots $</p>\n<p>Thus we need <strong>8</strong> fragments total :</p>\n\n<p><p><strong>Fragments 1–7</strong> each carry 576 bytes of data.</p></p>\n<p><p><strong>Fragment 8</strong> will carry whatever remains.</p></p>\n\n<p>Check how many data bytes remain for the last fragment :</p>\n<p>$ 7 \\times 576 = 4032 \\quad\\Longrightarrow\\quad  4440 - 4032 = 408 \\text{ bytes of data in the last fragment.} $</p>\n<hr />\n<h2>Step 3 : Fragmentation offsets in multiples of 8</h2>\n\n<p><p><strong>Fragment 1</strong> : </p></p>\n<p><p>Offset = 0, </p></p>\n<p><p>Data = 576 bytes </p></p>\n<p><p>(hence the next offset in multiples of 8 is $576/8 = 72$).</p></p>\n<p><p><strong>Fragment 2</strong> : </p></p>\n<p><p>Offset = 72, </p></p>\n<p><p>Data = 576 bytes </p></p>\n<p><p>(next offset = $72 + 576/8 = 144$).</p></p>\n<p><p><strong>Fragment 3</strong> : </p></p>\n<p><p><strong>Offset = 144</strong>, </p></p>\n<p><p>Data = 576 bytes </p></p>\n<p><p>(next offset = $144 + 576/8 = 216$), </p></p>\n<p><p>and so on…</p></p>\n\n<p>Accordingly, the <strong>third fragment</strong> in the sequence has a fragmentation offset of $144$.</p>\n<hr />\n<h2>Final Answer</h2>\n<p>$ \\boxed{144} $</p>",
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following statements regarding the slow start phase of the $$TCP$$ congestion control algorithm. Note that $$cwnd$$ stands for the $$TCP$$ congestion window and $$MSS$$ denotes the Maximum Segment Size.\n<p>$$(i)$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ The $$cwnd$$ increases by $$2$$ $$MSS$$ on every successful acknowledgment.\n<br>$$(ii)$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ The $$cwnd$$ approximately doubles on every successful acknowledgement.\n<br>$$(iii)$$ $$\\,\\,\\,\\,\\,\\,\\,$$ The $$cwnd$$ increases by $$1$$ $$MSS$$ every round trip time.\n<br>$$(iv)$$ $$\\,\\,\\,\\,\\,\\,\\,\\,\\,$$ The $$cwnd$$ approximately doubles every round trip time.\n</p><p>Which one of the following is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Only $$(ii)$$ and $$(iii)$$ are true "
+      },
+      {
+        "identifier": "B",
+        "content": "Only $$(i)$$ and $$(iii)$$ are true"
+      },
+      {
+        "identifier": "C",
+        "content": "Only $$(iv)$$ is true "
+      },
+      {
+        "identifier": "D",
+        "content": "Only $$(i)$$ and $$(iv)$$ are true\n"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-cse-2018",
+    "difficulty": null
+  },
+  {
+    "content": "For a host machine that uses the token bucket algorithm for congestion control, the token bucket has a capacity of 1 megabyte and the maximum output rate is 20 megabytes per second. Tokens arrive at a rate to sustain output at a rate of 10 megabytes per second. The token bucket is currently full and the machine needs to send 12 megabytes of data. The minimum time required to transmit the data is __________ seconds.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1.2",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Assume that the bandwidth for a TCP connection is 1048560 bits/sec. Let $$\\alpha $$ be the value of RTT in milliseconds(rounded off to the nearest integer) after which the TCP window scale option is needed. Let $$\\beta $$ be the maximum possible window size the window scale option. Then the values of $$\\alpha $$ and $$\\beta $$ are",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "63 milliseconds, $$65535 \\times {2^{14}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "63 milliseconds, $$65535 \\times {2^{16}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "500 milliseconds, $$65535 \\times {2^{14}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "63 milliseconds, $$65535 \\times {2^{16}}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let the size of congestion window of a TCP connection be 32 KB when a timeout occurs. The round trip time of the connection is 100 msec and the maximum segment size used is 2 KB. The time taken (<b>in msec</b>) by the TCP connection to get back to 32 KB congestion window is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1100",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Consider an instance of TCP’s Additive Increase Multiplicative Decrease (AIMD) algorithm where the window size at the start of the slow start phase is 2 MSS and the threshold at the start of the first transmission is 8 MSS. Assume that a timeout occurs during the fifth transmission. Find the congestion window size at the end of the tenth transmission.",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8 MSS "
+      },
+      {
+        "identifier": "B",
+        "content": "14 MSS"
+      },
+      {
+        "identifier": "C",
+        "content": "7 MSS"
+      },
+      {
+        "identifier": "D",
+        "content": "12 MSS"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "While opening a TCP connection, the initial sequence number is to be derived using a time-of-day (ToD) clock that keeps running even when the host is down. The low order 32 bits of the counter of the ToD clock is to be used for the initial sequence numbers. The clock counter increments once per millisecond. The maximum packet lifetime is given to be 64s. \n<p>Which one of the choices given below is closest to the minimum permissible rate at which sequence numbers used for packets of a connection can increase?</p> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.015/s "
+      },
+      {
+        "identifier": "B",
+        "content": "0.064/s"
+      },
+      {
+        "identifier": "C",
+        "content": "0.135/s"
+      },
+      {
+        "identifier": "D",
+        "content": "0.327/s"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "In the slow start phase of the TCP congestion control algorithm, the size of the congestion window",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "does not increase"
+      },
+      {
+        "identifier": "B",
+        "content": "increases linearly"
+      },
+      {
+        "identifier": "C",
+        "content": "increases quadratically"
+      },
+      {
+        "identifier": "D",
+        "content": "increases exponentially"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A client process P needs to make a TCP connection to a server process S. Consider the following situation: the server process S executes a socket( ), a bind( ) and a listen( ) system call in that order, following which it is preempted. Subsequently, the client process P executes a socket( ) system call followed by connect( ) system call to connect to the server process S. The server process has not executed any accept( ) system call. Which one of the following events could take place?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "connect( ) system call returns successfully"
+      },
+      {
+        "identifier": "B",
+        "content": "connect( ) system call blocks "
+      },
+      {
+        "identifier": "C",
+        "content": "connect( ) system call returns an error"
+      },
+      {
+        "identifier": "D",
+        "content": "connect( ) system call results in a core dump"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A computer on a 10 Mbps network is regulated by a token bucket. The token bucket is filled at a rate of 2 Mbps. It is initially filled to capacity with 16 Megabits. What is the maximum duration for which the computer can transmit at the full 10 Mbps?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1.6 seconds"
+      },
+      {
+        "identifier": "B",
+        "content": "2 seconds"
+      },
+      {
+        "identifier": "C",
+        "content": "5 seconds"
+      },
+      {
+        "identifier": "D",
+        "content": "8 seconds"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose that the maximum transmit window size for a TCP connection is 12000 bytes. Each packet consists of 2000 bytes. At some point of time, the connection is slow start phase with a current transmit window of 4000 bytes. Subsequently, the transmitter receiver two acknowledgments. Assume that no packet are lost and there are no time-outs. What is the maximum possible value of the current transmit window?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4000 bytes "
+      },
+      {
+        "identifier": "B",
+        "content": "8000 bytes"
+      },
+      {
+        "identifier": "C",
+        "content": "10000 bytes"
+      },
+      {
+        "identifier": "D",
+        "content": "12000 bytes"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A TCP message consisting of 2100 bytes is passed to IP for delivery across two networks. The first network can carry a maximum payload of 1200 bytes per frame and the second network can carry a maximum payload of 400 bytes per frame, excluding network overhead. Assume that IP overhead per packet is 20 bytes. What is the total IP overhead in the second network for this transmission?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "40 bytes "
+      },
+      {
+        "identifier": "B",
+        "content": "80 bytes"
+      },
+      {
+        "identifier": "C",
+        "content": "120 bytes"
+      },
+      {
+        "identifier": "D",
+        "content": "160 bytes"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider three IP networks A, B and C. Host H<sub>A</sub> in networks A sends messages each containing 180 bytes of application data to a host H<sub>C</sub> in network C. The TCP layer prefixes a 20 byte header to the message. This passes through an intermediate network B. the maximum packet size, including 20 byte IP header, in each network is: </p>\n    A : 1000 bytes \n   <br> B : 100 bytes \n    <br>C : 1000 bytes \n<p>The network A and B are connected through a 1 Mbps link, while B and C are connected by a 512 Kbps link (bps = bits per second).</p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/zNtY02xV67XiJ59W1/XMTwDc5WlLkL496CgErwa69Owy4zI/KKTlzbmybHCdv6rH3OGZzg/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2004 Computer Networks - TCP UDP Sockets and Congestion Control Question 31 English\">\nWhat is the rate at which application data is transferred to host H<sub>C</sub>? Ignore errors, acknowledgements, and other overheads. ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "325.5 Kbps"
+      },
+      {
+        "identifier": "B",
+        "content": "354.5 Kbps"
+      },
+      {
+        "identifier": "C",
+        "content": "409.6 Kbps"
+      },
+      {
+        "identifier": "D",
+        "content": "512.0 Kbps"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider three IP networks A, B and C. Host H<sub>A</sub> in networks A sends messages each containing 180 bytes of application data to a host H<sub>C</sub> in network C. The TCP layer prefixes a 20 byte header to the message. This passes through an intermediate network B. the maximum packet size, including 20 byte IP header, in each network is: </p>\n    A : 1000 bytes \n   <br> B : 100 bytes \n    <br>C : 1000 bytes \n<p>The network A and B are connected through a 1 Mbps link, while B and C are connected by a 512 Kbps link (bps = bits per second).</p>\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/zNtY02xV67XiJ59W1/XMTwDc5WlLkL496CgErwa69Owy4zI/KKTlzbmybHCdv6rH3OGZzg/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2004 Computer Networks - TCP UDP Sockets and Congestion Control Question 32 English\">\n<p>Assuming that the packets are correctly delivered, how many bytes, including\nheaders, are delivered to the IP layer at the destination for one application\nmessage, in the best case? Consider only data packets.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "200"
+      },
+      {
+        "identifier": "B",
+        "content": "220"
+      },
+      {
+        "identifier": "C",
+        "content": "240"
+      },
+      {
+        "identifier": "D",
+        "content": "260"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  }
+]

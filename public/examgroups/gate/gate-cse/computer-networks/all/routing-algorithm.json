@@ -1,0 +1,320 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Consider the routing protocols given in List-I and the names given in List-II:</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}\n.tg .tg-0lax{text-align:left;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 485px\"><colgroup>\n<col style=\"width: 71px\">\n<col style=\"width: 192px\">\n<col style=\"width: 61px\">\n<col style=\"width: 161px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-amwm\"></th>\n    <th class=\"tg-amwm\">List - I</th>\n    <th class=\"tg-amwm\"></th>\n    <th class=\"tg-amwm\">List - II</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-baqh\">(i)</td>\n    <td class=\"tg-0lax\">Distance vector routing</td>\n    <td class=\"tg-baqh\">(a)</td>\n    <td class=\"tg-0lax\">Bellman-Ford</td>\n  </tr>\n  <tr>\n    <td class=\"tg-baqh\">(ii)</td>\n    <td class=\"tg-0lax\">Link state routing</td>\n    <td class=\"tg-baqh\">(b)</td>\n    <td class=\"tg-0lax\">Dijkstra</td>\n  </tr>\n</tbody>\n</table></p>\n<p>For matching of items in List-I with those in List-II, which ONE of the following options is CORRECT?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " (i) - (a) and (ii) - (b)\n"
+      },
+      {
+        "identifier": "B",
+        "content": " (i) - (a) and (ii) - (a)\n"
+      },
+      {
+        "identifier": "C",
+        "content": " (i) - (b) and (ii) - (a)\n"
+      },
+      {
+        "identifier": "D",
+        "content": " (i) - (b) and (ii) - (b)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p><p>Distance vector routing uses the Bellman-Ford algorithm to compute the best paths iteratively by exchanging information with directly connected neighbors.</p></p>\n<p><p>Link state routing uses Dijkstra's algorithm to compute shortest paths based on the complete view of the network topology.</p></p>\n\n<p>Thus, matching the items :</p>\n\n<p><p>(i) Distance vector routing → (a) Bellman-Ford  </p></p>\n<p><p>(ii) Link state routing → (b) Dijkstra</p></p>\n\n<p>The correct option is :</p>\n<p>$$\\textbf{Option A : (i) - (a) and (ii) - (b)}$$</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Which of the following statements is/are INCORRECT about the OSPF (Open Shortest Path First) routing protocol used in the Internet?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "OSPF implements Bellman-Ford algorithm to find shortest paths."
+      },
+      {
+        "identifier": "B",
+        "content": "OSPF uses Dijkstra's shortest path algorithm to important least-cost path routing."
+      },
+      {
+        "identifier": "C",
+        "content": "OSPF is used as an inter-domain routing protocol."
+      },
+      {
+        "identifier": "D",
+        "content": "OSPF implements hierarchical routing."
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>OSPF uses Dijkstra’s algorithm to compute the shortest path tree for each route, the cost of a route is</p>\n\n<p>calculated by gathering link state information from available routers.</p>\n\n<p>Also, OSPF is hierarchical routing protocol, using are 0 (autonomous system) at top of hierarchy.</p>\n\n<p>So, A and C are False.</p>\n\n<p>Hence, the correct options are (A) & (C).</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following is TRUE about the interior gateway routing protocols – Routing Information Protocol (RIP) and Open Shortest Path First (OSPF)?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "RILP uses distance vector routing and OSPF uses link state routing"
+      },
+      {
+        "identifier": "B",
+        "content": "OSPF uses distance vector routing and RIP uses link state routing"
+      },
+      {
+        "identifier": "C",
+        "content": "Both RIP and OSPF use link state routing"
+      },
+      {
+        "identifier": "D",
+        "content": "Both RIP and OSPF use distance vector routing"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the following three statements about link state and distance vector routing protocols, for a large network with 500 network nodes and 4000 links \n<p>[S1] The computational overhead in link state protocols is higher than in distance vector protocols. \n<br>[S2] A distance vector protocol (with split horizon) avoids persistent routing loops, but not a link state protocol. \n<br>[S3] After a topology change, a link state protocol will converge faster than a distance vector protocol.</p> \nWhich one of the following is correct about S1, S2, and S3?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "S1, S2, and S3 are all true "
+      },
+      {
+        "identifier": "B",
+        "content": "S1, S2, and S3 are all false."
+      },
+      {
+        "identifier": "C",
+        "content": "S1 and S2 are true, but S3 is false"
+      },
+      {
+        "identifier": "D",
+        "content": "S1 and S3 are true, but S2 is false."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-cse-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>A packet with the destination IP address 145.36.109.70 arrives at a router whose routing table is shown. Which interface will the packet be forwarded to?</p>\n<p><style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}\n.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 599px\"><colgroup>\n<col style=\"width: 188px\">\n<col style=\"width: 210px\">\n<col style=\"width: 201px\">\n</colgroup>\n<thead>\n  <tr>\n    <th class=\"tg-7btt\">Subnet Address</th>\n    <th class=\"tg-7btt\">Subnet Mask<br>(in CIDR notation)</th>\n    <th class=\"tg-7btt\">Interface</th>\n  </tr></thead>\n<tbody>\n  <tr>\n    <td class=\"tg-c3ow\">145.36.0.0</td>\n    <td class=\"tg-c3ow\">/16</td>\n    <td class=\"tg-c3ow\">E1</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">145.36.128.0</td>\n    <td class=\"tg-c3ow\">/17</td>\n    <td class=\"tg-c3ow\">E2</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">145.36.64.0</td>\n    <td class=\"tg-c3ow\">/18</td>\n    <td class=\"tg-c3ow\">E3</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">145.36.255.0</td>\n    <td class=\"tg-c3ow\">/24</td>\n    <td class=\"tg-c3ow\">E4</td>\n  </tr>\n  <tr>\n    <td class=\"tg-c3ow\">Default</td>\n    <td class=\"tg-c3ow\">$-$</td>\n    <td class=\"tg-c3ow\">E5</td>\n  </tr>\n</tbody>\n</table></p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "E3"
+      },
+      {
+        "identifier": "B",
+        "content": "E1"
+      },
+      {
+        "identifier": "C",
+        "content": "E2"
+      },
+      {
+        "identifier": "D",
+        "content": "E5"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>$$\\begin{aligned}\n&amp; n_1=16 \\\\\n&amp; \\Rightarrow 145.36 .109 .70 / 16\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7vinz1y/4132233a-e362-4f57-9506-084c0215c2b9/36654650-f988-11ef-afb9-81d4d1a41495/file-jaoe38c1m7vinz1z.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7vinz1y/4132233a-e362-4f57-9506-084c0215c2b9/36654650-f988-11ef-afb9-81d4d1a41495/file-jaoe38c1m7vinz1z.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Computer Networks - Routing Algorithm Question 2 English Explanation 1\"></p>\n<p>$$\\begin{aligned}\n&amp;\\Rightarrow 145.36 .00000000 .00000000 / 16\\\\\n&amp;\\Rightarrow 145 \\cdot 36 \\cdot 0 \\cdot 0 / 16 \\Rightarrow \\text { matched with } 1^{\\text {st }} \\text { entry of SNA column of RT. }\\\\\n&amp;\\begin{aligned}\n&amp; n_2=17 \\\\\n&amp; \\Rightarrow 145.36 .109 .70 / 17\n\\end{aligned}\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7vipv9p/3d8a2b5c-515f-4253-975e-cc97025ff7e6/6b1743d0-f988-11ef-afb9-81d4d1a41495/file-jaoe38c1m7vipv9q.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7vipv9p/3d8a2b5c-515f-4253-975e-cc97025ff7e6/6b1743d0-f988-11ef-afb9-81d4d1a41495/file-jaoe38c1m7vipv9q.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Computer Networks - Routing Algorithm Question 2 English Explanation 2\"></p>\n<p>$$\\begin{aligned}\n&amp; \\Rightarrow 145.00100100 .00000000 .00000000 / 17 \\\\\n&amp; \\Rightarrow 145.36 .0 .0 / 17 \\Rightarrow \\text { not matched with } 2^{\\text {nd }} \\text { entry of SNA column of RT. } \\\\\n&amp; \\quad n_3=18 \\\\\n&amp; \\Rightarrow 145.36 .109 .70 / 18\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7viqmkl/e4801fff-dd9d-4c1f-a4a6-b831aeb1a94d/802e6f50-f988-11ef-afb9-81d4d1a41495/file-jaoe38c1m7viqmkm.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7viqmkl/e4801fff-dd9d-4c1f-a4a6-b831aeb1a94d/802e6f50-f988-11ef-afb9-81d4d1a41495/file-jaoe38c1m7viqmkm.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Computer Networks - Routing Algorithm Question 2 English Explanation 3\"></p>\n<p>$$\\begin{aligned}\n&amp; \\Rightarrow 145.36 .01000000 .00000000 / 18 \\\\\n&amp; \\Rightarrow 145.36 .64 .0 / 18 \\Rightarrow \\text { matched with } 3^{\\text {rd }} \\text { entry of SNA column of RT. } \\\\\n&amp; \\qquad n_4=24 \\\\\n&amp; \\Rightarrow 145.36 .109 .70 / 24\n\\end{aligned}$$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7virci6/773762c4-f4d0-4456-9e64-6e9f3157314f/9436c2e0-f988-11ef-afb9-81d4d1a41495/file-jaoe38c1m7virci7.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7virci6/773762c4-f4d0-4456-9e64-6e9f3157314f/9436c2e0-f988-11ef-afb9-81d4d1a41495/file-jaoe38c1m7virci7.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 1 Computer Networks - Routing Algorithm Question 2 English Explanation 4\"></p>\n<p>$$\\Rightarrow \\text { 145.36.109.00000000/24 }$$</p>\n<p>$\\Rightarrow 145.36 .109 .0 / 24 \\Rightarrow$ not matched with $4^{\\text {th }}$ entry of SNA column of RT.</p>\n<p>$\\therefore \\quad$ The packet with DA : 145.36.109.70 can be forwarded E3 interface [As per the longest mask rule]</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a network with three routers P, Q, R shown in the figure below. All the links have cost of unity.</p>\n<p> <img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l02oc619/746c2f14-75ae-44aa-afb7-6977fbb6fb26/5cba53d0-965e-11ec-acac-4f2c17d6cc3e/file-1l02oc61a.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l02oc619/746c2f14-75ae-44aa-afb7-6977fbb6fb26/5cba53d0-965e-11ec-acac-4f2c17d6cc3e/file-1l02oc61a.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE CSE 2022 Computer Networks - Routing Algorithm Question 4 English\"></p>\n<p>The routers exchange distance vector routing information and have converged on the routing tables, after which the link Q-R fails. Assume that P and Q send out routing updates at random times, each at the same average rate. The probability of a routing loop formation (rounded off to one decimal place) between P and Q, leading to count-to-infinity problem, is _____________</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.5",
+    "explanation": "<p>It is given that P and Q are sending routing update at same average rate, so in a particular time period of sending update, there are two possibilities, one is P sends before Q and other is Q sends before P.</p>\n<p>Now, we have 2 conditions:</p>\n<p>1. Q sends update to P first, then P finds the value of R as $$\\infty$$ and count-to-infinity will not occur.</p>\n<p>2. P sends update to Q first, then Q found that P has a way to reach R, so it is count-to-infinity problem.</p>\n<p>As Q - R is broken, so R cannot send update to anyone.</p>\n<p>From above two conditions (total possibilities) only one condition leads to count-to-infinity problem and each possibility have equal probability of occurrence, so probability is 1/2 = 0.5 for count-to-infinity.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a source computer (S) transmitting a file of size 10<sup>6</sup> bits to a destination computer (D) over a network of two routers (R<sub>1</sub> and R<sub>2</sub>) and three links (L<sub>1</sub>, L<sub>2</sub>, and L<sub>3</sub>). L<sub>1</sub> connects S to R<sub>1</sub>; L<sub>2</sub> connects R<sub>1</sub> to R<sub>2</sub>; and L<sub>3</sub> connects R<sub>2</sub> to D. Let each link be of length 100 km. Assume signals travel over each line at a speed of 10<sup>8</sup> meters per second. Assume that the link bandwidth on each link is 1 Mbps. Let the file be broken down into 1000 packets each of size 1000 bits. Find the total sum of transmission and propagation delays in transmitting the file from S to D?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1005 ms"
+      },
+      {
+        "identifier": "B",
+        "content": "1010 ms "
+      },
+      {
+        "identifier": "C",
+        "content": "3000 ms"
+      },
+      {
+        "identifier": "D",
+        "content": "3003 ms"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-cse-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a network with five nodes, N1 to N5, as shown below. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/rJYAp4dSGWWJz3g80/6Go2MvqLACllZO4960ijpbNeo3YXr/P8IZJ1Bur7Lrd5n98EARXe/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2011 Computer Networks - Routing Algorithm Question 7 English\">\n<p>The network uses a Distance Vector Routing protocol. Once the routes have stabilized, the distance vectors at different nodes are as following</p> \n<p>N1 : ( 0, 1, 7, 8, 4 ) \n<br>N2 : ( 1, 0, 6, 7, 3 ) \n<br>N3 : ( 7, 6, 0, 2, 6 ) \n<br>N4 : ( 8, 7, 2, 0, 4 ) \n<br>N5 : ( 4, 3, 6, 4, 0 )</p> \nEach distance vector is the distance of the best known path at that instance to nodes, N1 to N5, where the distance to itself is 0. Also, all links are symmetric and the cost is identical in both directions. In each round, all nodes exchange their distance vectors with their respective neighbors. Then all nodes update their distance vectors. In between two rounds, any change in cost of a link will cause the two incident nodes to change only that entry in their distance vectors\n<p>The cost of link N2 - N3 reduces to 2 in (both directions). After the next round of\nupdates, what will be the new distance vector at node, N3?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(3, 2, 0, 2, 5)"
+      },
+      {
+        "identifier": "B",
+        "content": "(3, 2, 0, 2, 6)"
+      },
+      {
+        "identifier": "C",
+        "content": "(7, 2, 0, 2, 5)"
+      },
+      {
+        "identifier": "D",
+        "content": "(7, 2, 0, 2, 6)"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a network with five nodes, N1 to N5, as shown below. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/rJYAp4dSGWWJz3g80/6Go2MvqLACllZO4960ijpbNeo3YXr/P8IZJ1Bur7Lrd5n98EARXe/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2011 Computer Networks - Routing Algorithm Question 6 English\">\n<p>The network uses a Distance Vector Routing protocol. Once the routes have stabilized, the distance vectors at different nodes are as following</p> \n<p>N1 : ( 0, 1, 7, 8, 4 ) \n<br>N2 : ( 1, 0, 6, 7, 3 ) \n<br>N3 : ( 7, 6, 0, 2, 6 ) \n<br>N4 : ( 8, 7, 2, 0, 4 ) \n<br>N5 : ( 4, 3, 6, 4, 0 )</p> \nEach distance vector is the distance of the best known path at that instance to nodes, N1 to N5, where the distance to itself is 0. Also, all links are symmetric and the cost is identical in both directions. In each round, all nodes exchange their distance vectors with their respective neighbors. Then all nodes update their distance vectors. In between two rounds, any change in cost of a link will cause the two incident nodes to change only that entry in their distance vectors\n<p>After the update in the previous question, the link N1-N2 goes down. N2 will reflect this change immediately in its distance vector as cost, $$\\infty $$. After the <b>NEXT ROUND</b> of update, what will be the cost to N1 in the distance vector of N3? </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "3"
+      },
+      {
+        "identifier": "B",
+        "content": "9"
+      },
+      {
+        "identifier": "C",
+        "content": "10"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\infty $$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-cse-2011",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider a network with 6 routers R1 to R6 connected with links having\nweights as shown in the following diagram</p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/rZgVwljvrNRZcxEwu/DxNcOIddYPF7lRSwLpuyfOhN1qr0g/Z8AWp9p6kfeQWqVHXfdo44/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2010 Computer Networks - Routing Algorithm Question 9 English\">\n<p>All the routers use the distance vector based routing algorithm to update their\nrouting tables. Each router starts with its routing table initialized to contain an\nentry for each neighbour with the weight of the respective connecting link.\nAfter all the routing tables stabilize, how many links in the network will never\nbe used for carrying any data?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "4"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "1"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "<p>Consider a network with 6 routers R1 to R6 connected with links having\nweights as shown in the following diagram</p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/rZgVwljvrNRZcxEwu/DxNcOIddYPF7lRSwLpuyfOhN1qr0g/Z8AWp9p6kfeQWqVHXfdo44/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2010 Computer Networks - Routing Algorithm Question 8 English\">\nSuppose the weights of all unused links in the previous question are changed to 2 and the distance vector algorithm is used again until all routing tables stabilize. How many links will now remain unused?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$"
+      },
+      {
+        "identifier": "B",
+        "content": "1"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "3"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  }
+]

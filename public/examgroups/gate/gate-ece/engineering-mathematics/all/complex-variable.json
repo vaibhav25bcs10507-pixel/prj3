@@ -1,0 +1,779 @@
+[
+  {
+    "direction": null,
+    "content": "<p>The value of the contour integral, $$\\oint\\limits_C {\\left( {{{z + 2} \\over {{z^2} + 2z + 2}}} \\right)dz} $$, where the contour C is $$\\left\\{ {z:\\left| {z + 1 - {3 \\over 2}j} \\right| = 1} \\right\\}$$, taken in the counter clockwise direction, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - \\pi (1 + j)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\pi (1 + j)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\pi (1 - j)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - \\pi (1 - j)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To solve the contour integral, we first need to identify the poles of the integrand.</p>\n\n<p>$$ \\frac{z + 2}{z^2 + 2z + 2} $$</p>\n\n<p>The denominator can be rewritten as:</p>\n\n<p>$$ z^2 + 2z + 2 = (z + 1)^2 + 1 $$</p>\n\n<p>This is a quadratic equation, and the roots of the quadratic can be calculated using the quadratic formula:</p>\n\n<p>$$ z = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} $$</p>\n\n<p>Here, $$a = 1$$, $$b = 2$$, and $$c = 2$$. So:</p>\n\n<p>$$ z = \\frac{-2 \\pm \\sqrt{4 - 8}}{2} = \\frac{-2 \\pm \\sqrt{-4}}{2} = \\frac{-2 \\pm 2j}{2} = -1 \\pm j $$</p>\n\n<p>Thus, the poles of integrand are at:</p>\n\n<p>$$ z = -1 + j \\quad \\text{and} \\quad z = -1 - j $$</p>\n\n<p>Next, we need to determine the location of these poles with respect to the contour $$C$$.</p>\n\n<p>The contour $$C$$ is defined as:</p>\n\n<p>$$ \\left\\{ z: \\left| z + 1 - \\frac{3}{2}j \\right| = 1 \\right\\} $$</p>\n\n<p>This describes a circle centered at $$z = -1 + \\frac{3}{2}j$$ with radius 1. Observing the poles:</p>\n\n<p>The pole at $$z = -1 + j$$ lies inside the contour $$C$$, as the distance from the center to this pole is:</p>\n\n<p>$$ \\left| (-1 + j) - \\left( -1 + \\frac{3}{2}j \\right) \\right| = \\left| -\\frac{1}{2}j \\right| = \\frac{1}{2} < 1 $$</p>\n\n<p>The pole at $$z = -1 - j$$ lies outside the contour $$C$$, since:</p>\n\n<p>$$ \\left| (-1 - j) - \\left( -1 + \\frac{3}{2}j \\right) \\right| = \\left| -2.5j \\right| = 2.5 > 1 $$</p>\n\n<p>So, only the pole at $$z = -1 + j$$ is relevant for this contour integral.</p>\n\n<p>To evaluate the contour integral, we use the residue theorem. The residue theorem states that:</p>\n\n<p>\n\n<p>$$ \\oint\\limits_C f(z) dz = 2 \\pi j \\cdot \\text{Res}(f, z_0) $$</p>\n\n</p>\n\n<p>where $\\text{Res}(f, z_0)$ is the residue of $f$ at $z_0$, the pole inside the contour.</p>\n\n<p>The residue of $f(z)$ at $z = -1 + j$ is found by computing:</p>\n\n<p>\n\n<p>$$ \\text{Res}\\left(f, -1 + j\\right) = \\lim_{z \\to -1 + j} \\left( (z + 1 - j) \\cdot \\frac{z + 2}{{(z + 1 + j)(z + 1 - j)}} \\right) $$</p>\n\n</p>\n\n<p>Since $(z + 1 - j)$ cancels out, we get:</p>\n\n<p>\n\n<p>$$ \\text{Res}\\left(f, -1 + j\\right) = \\lim_{z \\to -1 + j} \\left( \\frac{z + 2}{z + 1 + j} \\right) = \\frac{-1 + j + 2}{-1 + j + 1 + j} = \\frac{1 + j}{2j} = \\frac{1 + j}{2j} = \\frac{1 + j}{j} \\cdot \\frac{1}{2} = \\frac{1}{2}(1 - j) $$</p>\n\n</p>\n\n<p>Finally, we apply the residue theorem:</p>\n\n<p>\n\n<p>$$ \\oint\\limits_C f(z)dz = 2 \\pi j \\cdot \\text{Res}\\left(f, -1 + j\\right) = 2 \\pi j \\cdot \\frac{1}{2}(1 - j) = \\pi j (1 - j) = \\pi (j - j^2) $$</p>\n\n</p>\n\n<p>Since $j^2 = -1$, we have:</p>\n\n<p>\n\n<p>$$\\pi (j - (-1)) = \\pi (j + 1) = \\pi (1 + j)$$</p>\n\n</p>\n\n<p>Therefore, the value of the contour integral is:</p>\n\n<p>\n\n<p>$$ \\pi (1 + j) $$</p>\n\n</p>\n\n<p>The correct option is:\n\n<p>Option B</p>\n\n<p>$$\\pi (1 + j)$$</p></p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>A simple closed path C in the complex plane is shown in the figure. If</p>\n<p>$$\\oint\\limits_c {{{{2^z}} \\over {{z^2} - 1}}dz =  - i\\pi A} $$,</p>\n<p>where $$i = \\sqrt { - 1} $$, then the value of A is ___________ (rounded off to two decimal places).</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/1l7kgt29t/d7f0a0a4-7945-4d3a-b821-70cae20cb273/88e2b310-2abc-11ed-ac06-93878138b969/file-1l7kgt29u.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/1l7kgt29t/d7f0a0a4-7945-4d3a-b821-70cae20cb273/88e2b310-2abc-11ed-ac06-93878138b969/file-1l7kgt29u.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0px auto;max-height:40vh\" alt=\"GATE ECE 2022 Engineering Mathematics - Complex Variable Question 4 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.5",
+    "explanation": "<p>Poles are given as,</p>\n<p>$${z^2} - 1 = 0$$</p>\n<p>$$z =  \\pm 1$$</p>\n<p>$$\\therefore$$ $$\\oint\\limits_c {f(z)\\,.\\,dz = 2\\pi i} $$ [Residue at $$-$$1]</p>\n<p>$$ = 2\\pi i{{{2^{ - 1}}} \\over {( - 1 - 1)}} = {{ - 2\\pi i} \\over {2 \\times 2}}$$</p>\n<p>$$ =  - {{\\pi i} \\over 2}$$</p>\n<p>Comparing with $$-$$$$\\pi$$iA</p>\n<p>$$A = {1 \\over 2}$$</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "content": "The residues of a function $$f\\left( z \\right) = {1 \\over {\\left( {z - 4} \\right){{\\left( {z + 1} \\right)}^3}}}$$ are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{ - 1} \\over {27}}$$ and $${{ - 1} \\over {125}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {125}}$$ and $${{ - 1} \\over {125}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{ - 1} \\over {27}}$$ and $${1 \\over 5}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over {125}}$$ and $${{ - 1} \\over 5}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For $$f\\left( z \\right) = {{\\sin \\left( z \\right)} \\over {{z^2}}},$$ the residue of the pole at $$z=0$$ ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "1",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The real part of an analytic function $$f(z)$$ where $$z=x+jy$$ is given by $${e^{ - y}}\\cos \\left( x \\right).$$ The imaginary part of $$f(z)$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${e^y}\\cos \\left( x \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${e^{ - y}}sin\\left( x \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$ - {e^y}sin\\left( x \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - {e^{ - y}}sin\\left( x \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "$$C$$ is a closed path in the $$z-$$plane given by \n<br>$$\\left| z \\right| = 3.$$ The value of the integral \n<br>$$\\oint\\limits_c {{{{z^2} - z + 4j} \\over {z + 2j}}dz} $$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - 4\\pi \\left( {1 + j2} \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$4\\pi \\left( {3 - j2} \\right)$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$ - 4\\pi \\left( {3 + j2} \\right)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$4\\pi \\left( {1 - j2} \\right)$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the integral $$\\oint\\limits_c {{{ - 3z + 4} \\over {{z^2} + 4z + 5}}} \\,\\,dz,$$ when $$C$$ is the circle $$|z| = 1$$ is given by ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {10}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${4 \\over 5}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "The residues of a complex function $$X\\left( z \\right) = {{1 - 2z} \\over {z\\left( {z - 1} \\right)\\left( {z - 2} \\right)}}$$ at it poles ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 2},\\,\\, - {1 \\over 2},\\,1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 2},\\,\\, - {1 \\over 2},\\, - 1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over 2},\\,\\,1,\\,\\, - {3 \\over 2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 2},\\,\\, - 1,\\,\\,{3 \\over 2}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "If $$f\\left( z \\right) = {C_0} + {C_1}{z^{ - 1}}\\,\\,$$ then $$\\oint\\limits_{|z| = 1} {{{1 + f\\left( z \\right)} \\over z}} \\,\\,dz$$ is given",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2\\,\\pi \\,{C_1}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2\\,\\pi \\,(1 + {C_0})$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$2\\,\\pi \\,j\\,{C_1}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2\\,\\pi \\,j\\,(1 + {C_0})$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "The residue of the function\n<br>$$f(z) = {1 \\over {{{\\left( {z + 2} \\right)}^2}{{\\left( {z - 2} \\right)}^2}}}$$ at z = 2 is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - {1 \\over {32}}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - {1 \\over {16}}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$  {1 \\over {16}}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$ {1 \\over {32}}$$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The equation sin(z) = 10 has",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "no real (or) complex solution"
+      },
+      {
+        "identifier": "B",
+        "content": "exactly two distinct complex solutions"
+      },
+      {
+        "identifier": "C",
+        "content": "a unique solution"
+      },
+      {
+        "identifier": "D",
+        "content": "an infinite no of complex solutions"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The value of $$\\oint\\limits_C {{1 \\over {\\left( {1 + {z^2}} \\right)}}} dz$$ where C is the contour $$\\,\\left| {z - {i \\over 2}} \\right| = 1$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2\\pi i$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\pi $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\tan ^{ - 1}}(z)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\pi i{\\tan ^{ - 1}}(z)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "For the function of a complex variable w = lnz (where w = u + jv and z = x + jy) the u = constant lines get mapped in the z-plane as",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "set of radial straight lines"
+      },
+      {
+        "identifier": "B",
+        "content": "set of concentric circles"
+      },
+      {
+        "identifier": "C",
+        "content": "set of confocal hyperbola"
+      },
+      {
+        "identifier": "D",
+        "content": "set of confocal ellipses"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the counter integral\n$$$\\int\\limits_{\\left| {z - j} \\right| = 2} {{1 \\over {{z^2} + 4}}\\,} dz\\,\\,in\\,the\\,positive\\,sense\\,is$$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{j\\pi } \\over 2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{ - \\pi } \\over 2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${{ - j\\pi } \\over 2}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${\\pi  \\over 2}$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following statements involving contour integrals (evaluated counter-clockwise) on the unit circle $C$ in the complex plane is/are TRUE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": " $\\oint_C e^z d z=0$\n"
+      },
+      {
+        "identifier": "B",
+        "content": "$\\oint_C z^n d z=0$, where $n$ is an even integer\n"
+      },
+      {
+        "identifier": "C",
+        "content": "$\\oint_C \\cos z d z \\neq 0$\n"
+      },
+      {
+        "identifier": "D",
+        "content": "$\\oint_C \\sec z d z \\neq 0$"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\text { Given } C:|z|=1 $$</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mbeyupew/d6ba9109-c303-4455-8dd5-5a74b834fca3/0e27ba80-3f9f-11f0-a491-e768f614f5b9/file-jaoe38c1mbeyupex.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mbeyupew/d6ba9109-c303-4455-8dd5-5a74b834fca3/0e27ba80-3f9f-11f0-a491-e768f614f5b9/file-jaoe38c1mbeyupex.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2025 Engineering Mathematics - Complex Variable Question 1 English Explanation\"></p>\n<p>(a) $f=e^z$ is always analytic</p>\n<p>$\\therefore$ by C.I.T</p>\n<p>$$ \\oint_C f(z) d z=0 \\,\\,\\,\\,\\,\\,\\,(a) is\\,\\, true$$</p>\n<p></p>\n<p>(b) $f(z)=z^n$ is always analytic</p>\n<p>$$ \\therefore \\text { by C.I.T } $$</p>\n<p>$$ \\oint_C z^n d z=0 \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,(b) is \\,\\,true$$</p>\n<p></p>\n<p>(c) $f(z)=\\cos z$ is also always analytic</p>\n<p>$$ \\therefore \\text { by C.I.T } $$</p>\n<p>$$ \\oint_C \\cos z d z=0 $$</p>\n<p>$\\therefore$ (c) is false.</p>\n<p>(d) $f(z)=\\sec z$,</p>\n<p>Singularities are given by $\\cos z=0 \\Rightarrow z=(2 n+1) \\frac{\\pi}{2}$</p>\n<p>i.e., $\\quad z= \\pm \\frac{\\pi}{2}, \\pm \\frac{3 \\pi}{2}, \\ldots$.</p>\n<p>$\\because \\quad$ all poles lies out ' $C$ '</p>\n<p>$\\therefore$ by C.I.T $\\oint_C \\sec z d z=0 \\quad(\\therefore$ (d) is false)</p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $z$ be a complex variable. If $f(z)=\\frac{\\sin(\\pi z)}{z^{2}(z-2)}$ and $C$ is the circle in the complex plane with $|z|=3$ then $\\oint\\limits_{C} f(z)dz$ is _______.</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$ \\pi^2 j $</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$ j\\pi\\left(\\frac{1}{2}-\\pi\\right) $</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$ j\\pi\\left(\\frac{1}{2}+\\pi\\right) $</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$-\\pi^2 j$</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>We want  </p>\n<p>$ I = \\oint_{|z|=3} f(z) \\,dz,  \\quad f(z)=\\frac{\\sin(\\pi z)}{z^{2}(z-2)}. $</p>\n\n<h3>Step 1: Locate singularities</h3>\n<p>The poles of $f(z)$ are at:</p>\n<ul>\n<li><p>$z=0$ (order 2),</p></li>\n<li><p>$z=2$ (simple pole).</p></li>\n</ul>\n<p>Both lie inside the contour $|z|=3$.</p>\n<p>So, by the residue theorem,</p>\n<p>$ I = 2\\pi i \\left( \\operatorname{Res}[f,0] + \\operatorname{Res}[f,2]\\right). $</p>\n\n<h3>Step 2: Residue at $z=2$</h3>\n<p>Near $z=2$,</p>\n<p>$ \\operatorname{Res}[f,2]  = \\lim_{z\\to 2}\\,(z-2)\\frac{\\sin(\\pi z)}{z^{2}(z-2)} = \\lim_{z\\to 2} \\frac{\\sin(\\pi z)}{z^{2}}. $</p>\n<p>At $z=2$: $\\sin(2\\pi)=0$. So residue is 0.  </p>\n<p>Thus $\\operatorname{Res}[f,2]=0$.</p>\n\n<h3>Step 3: Residue at $z=0$ (order 2)</h3>\n<p>We need</p>\n<p>$ \\operatorname{Res}[f,0]  = \\lim_{z\\to 0}\\frac{d}{dz}\\left[ z^{2} f(z)\\right]. $</p>\n<p>Since it’s a double pole, formula is:</p>\n<p>$ \\operatorname{Res}[f,0] = \\lim_{z\\to 0} \\frac{d}{dz}\\left( \\frac{\\sin(\\pi z)}{z-2}\\right). $</p>\n<p>Because</p>\n<p>$ f(z)=\\frac{\\sin(\\pi z)}{z^{2}(z-2)}  \\quad\\implies\\quad z^2 f(z)=\\frac{\\sin(\\pi z)}{z-2}. $</p>\n<p>So we need derivative of $g(z)=\\frac{\\sin(\\pi z)}{z-2}$ at $z=0$.</p>\n\n<h3>Step 4: Differentiate</h3>\n<p>$ g(z) = \\frac{\\sin(\\pi z)}{z-2}. $</p>\n<p>Differentiate:</p>\n<p>$ g'(z) = \\frac{\\pi\\cos(\\pi z)(z-2) - \\sin(\\pi z)}{(z-2)^2}. $</p>\n<p>Now evaluate at $z=0$:</p>\n<ul>\n<li><p>Numerator: $\\pi \\cos(0)(0-2) - \\sin(0) = \\pi\\cdot 1\\cdot (-2) - 0 = -2\\pi.$  </p></li>\n<li><p>Denominator: $(0-2)^2=4.$</p></li>\n</ul>\n<p>So $g'(0) = \\tfrac{-2\\pi}{4} = -\\tfrac{\\pi}{2}.$</p>\n<p>Thus</p>\n<p>$ \\operatorname{Res}[f,0]=-\\tfrac{\\pi}{2}. $</p>\n\n<h3>Step 5: Combine</h3>\n<p>Sum of residues inside contour = $-\\tfrac{\\pi}{2}+0 = -\\tfrac{\\pi}{2}.$</p>\n<p>So</p>\n<p>$ I = 2\\pi i\\Bigl(-\\tfrac{\\pi}{2}\\Bigr) = -\\pi^2 i. $</p>\n\n<h3>Final Answer</h3>\n<p>$ \\boxed{-\\pi^{2}j} \\quad \\text{(Option D)} $</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider the following series :</p>\n<p>$$\\sum\\limits_{n = 1}^\\infty  {{{{n^d}} \\over {{c^n}}}} $$</p>\n<p>For which of the following combinations of c, d values does this series converge?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "c = 1, d = $$-$$1"
+      },
+      {
+        "identifier": "B",
+        "content": "c = 2, d = 1"
+      },
+      {
+        "identifier": "C",
+        "content": "c = 0.5, d = $$-$$10"
+      },
+      {
+        "identifier": "D",
+        "content": "c = 1, d = $$-$$2"
+      }
+    ],
+    "correct_options": [
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>c = 2, d = 1</p>\n<p>$$\\sum {{u_n}}  = \\sum {{n \\over {{2^n}}}} $$</p>\n<p>Ratio test : $$\\mathop {\\lim }\\limits_{n \\to \\infty } {{{u_{n + 1}}} \\over {{u_n}}} = \\mathop {\\lim }\\limits_{n \\to \\infty } {{n + 1} \\over {{2^{n + 1}}}} \\times {{{2^n}} \\over n} = {1 \\over 2}$$</p>\n<p>$${1 \\over 2} < 2$$</p>\n<p>$$\\therefore$$ By ratio test, $$\\sum {{u_n}} $$ is convergent.</p>\n<p>(a) c = 1, d = $$-$$1</p>\n<p>$$\\sum {{u_n}}  = \\sum {{1 \\over n}} $$ is divergent by P-test</p>\n<p>(c) c = 0.5, d = $$-$$10</p>\n<p>$$\\sum {{u_n}}  = \\sum {{{{n^{ - 10}}} \\over {{{(0.5)}^n}}}} $$</p>\n<p>Ratio test : $$\\mathop {\\lim }\\limits_{n \\to \\infty } {{{u_{n + 1}}} \\over {{u_n}}} = \\mathop {\\lim }\\limits_{n \\to \\infty } {{{{(n + 1)}^{ - 10}}} \\over {{{(0.5)}^{n + 1}}}} \\times {{{{(0.5)}^n}} \\over {{n^{10}}}}$$</p>\n<p>$$ = {1 \\over {0.5}} = 2$$</p>\n<p>$$2 < 1$$</p>\n<p>$$\\sum {{u_n}} $$ is divergent.</p>\n<p>(d) c = 1, d = $$-$$2</p>\n<p>$$\\sum {{u_n}}  = \\sum {{{{n^{ - 2}}} \\over {{{(1)}^n}}} = \\sum {{1 \\over {{n^2}}}} } $$</p>\n<p>$$\\Sigma$$u<sub>n</sub> is convergent by P-test.</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-ece-2022",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "Consider the integral<br><br>$$\\oint {{{\\sin (x)} \\over {{x^2}({x^2} + 4)}}dx} $$<br><br>where C is counter-clockwise oriented circle defined as |x $$-$$ i| = 2. The value of the integral is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${\\pi  \\over 4}\\sin (2i)$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - {\\pi  \\over 8}\\sin (2i) + {{\\pi i} \\over 4}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\pi  \\over 8}\\sin (2i)$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - {\\pi  \\over 4}\\sin (2i)$$"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "Poles are :<br><br>$${Z^2}({Z^2} + 4) = 0$$<br><br>$${Z^2} = 0,{Z^2} =  - 4$$<br><br>$$Z = 0,Z = 2i, - 2i$$<br><br>Z = 0, and Z = 2i is inside the circle and Z = $$-$$ 2i is outside the circle.<br><br>$$ \\therefore $$ $$\\mathop {{\\mathop{\\rm Re}\\nolimits} s}\\limits_{Z = 0}  = {1 \\over {(2 - 1)!}}\\mathop {\\lim }\\limits_{Z \\to 0} {{{d^{2 - 1}}} \\over {d{z^{2 - 1}}}}{(z - D)^2}{{\\sin z} \\over {{z^2}({z^2} + 4)}} = {1 \\over 4}$$<br><br>$$\\mathop {{\\mathop{\\rm Re}\\nolimits} s}\\limits_{z = 2i}  = \\mathop {\\lim }\\limits_{z = 2i} (z - 2i).{{\\sin z} \\over {{z^2}({z^2} + 4)}}$$<br><br>$$ = \\mathop {\\lim }\\limits_{z = 2i} (z - 2i).{{\\sin z} \\over {{z^2}(z + 2i)(z - 2i)}}$$<br><br>$$ = {{\\sin (2i)} \\over { - 16i}}$$<br><br>$$ \\therefore $$ $$\\oint\\limits_C {F(z)dz = 2\\pi i\\left[ {\\mathop {{\\mathop{\\rm Re}\\nolimits} s}\\limits_{z = 0}  + \\mathop {{\\mathop{\\rm Re}\\nolimits} s}\\limits_{z = 2i} } \\right]} $$<br><br>$$ = 2\\pi i\\left[ {{1 \\over 4} + {{\\sin 2i} \\over { - 16i}}} \\right]$$<br><br>$$ = {{\\pi i} \\over 4} - {{\\pi \\sin 2i} \\over 8}$$",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-ece-2021",
+    "difficulty": null
+  },
+  {
+    "content": "The contour\nC\ngiven below is on the complex plane $$z = x + jy$$, where $$j = \\sqrt { - 1} $$.\n<img src=\"https://imagex.cdn.examgoal.net/jf76htyjzl8ja1j/9f85b0c8-46b2-49e9-a04f-b080544ba03e/73bd9a70-c40f-11e9-8a74-7f4f47aa0c85/file-jf76htyjzl8ja1k-320w.png\" style=\"max-width: 100%;height: auto;display: block;margin: 0 auto;\" loading=\"lazy\" alt=\"GATE ECE 2018 Engineering Mathematics - Complex Variable Question 7 English\">\nThe value of the integral $${1 \\over {\\pi j}}\\oint\\limits_C {{{dz} \\over {{z^2} - 1}}} $$ is ________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "2 to 2",
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "An integral $${\\rm I}$$ over a counter clock wise circle $$C$$ is given by $${\\rm I} = \\oint\\limits_c {{{{z^2} - 1} \\over {{z^2} + 1}}} \\,\\,{e^z}\\,dz$$ \n<br>If $$C$$ is defined as $$\\left| z \\right| = 3,$$ then the value of $${\\rm I}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$ - \\pi i\\,\\,\\sin \\left( 1 \\right)$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - 2\\pi i\\,\\,\\sin \\left( 1 \\right)$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$ - 3\\pi i\\,\\,\\sin \\left( 1 \\right)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - 4\\pi i\\,\\,\\sin \\left( 1 \\right)$$"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider  the complex valued function $$f\\left( z \\right) = 2{z^3} + b{\\left| z \\right|^3}$$ where $$z$$ is a complex variable. The value of $$b$$ for which the function $$f(z)$$ is analytic is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The value of the integral $${1 \\over {2\\pi j}}\\oint\\limits_C {{{{e^z}} \\over {z - 2}}dz} $$ along a closed contour $$c$$ in anti-clockwise direction for\n<br>(i) the point $${z_0} = 2$$ inside the contour $$c,$$ and \n<br>(ii) the point $${z_0} = 2$$  outside the contour $$c,$$ respectively, are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "(i) $$2.72,$$ (ii) $$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "(i) $$7.39,$$ (ii) $$0$$"
+      },
+      {
+        "identifier": "C",
+        "content": "(i) $$0,$$ (ii) $$2.72$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "(i) $$0,$$ (ii) $$7.39$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In the following integral, the contour $$C$$ encloses the points $${2\\pi j}$$ and $$-{2\\pi j}$$. The value of the integral $$ - {1 \\over {2\\pi }}\\oint\\limits_c {{{\\sin z} \\over {{{\\left( {z - 2\\pi j} \\right)}^3}}}} dz$$ is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "- 133.8",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$f\\left( z \\right) = {{az + b} \\over {cz + d}}.$$ If $$f\\left( {{z_1}} \\right) = f\\left( {{z_2}} \\right)$$ for all $${z_1} \\ne {z_2}.\\,\\,a = 2,\\,\\,b = 4$$ and $$C=5,$$ then $$d$$ should be equal to ",
+    "options": [],
+    "correct_options": [],
+    "answer": "10",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "If $$C$$ denotes the counter clockwise unit circle. The value of the contour integral $${1 \\over {2\\pi i}}\\oint\\limits_c {{\\mathop{\\rm Re}\\nolimits} \\left\\{ z \\right\\}dz} $$ is __________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.5",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let $$z=x+iy$$ be a complex variable. Consider that contour integration is performed along the unit circle in anticlockwise direction . Which one of the following statement is NOT TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The residue of $${z \\over {{z^2} - 1}}$$ at $$z=1$$ is $${1 \\over 2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\oint\\limits_C {{z^2}\\,\\,dz = 0} $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over {2\\pi i}}\\oint\\limits_c {{1 \\over z}} dz = 1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overline z $$ (complex conjugate of $$z$$ ) is an analytical function."
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "If $$C$$ is a circle of radius $$r$$ with centre $${z_0}$$ in the complex $$z$$-plane and if $$'n'$$ is a non-zero integer, then $$\\oint\\limits_c {{{dz} \\over {{{\\left( {z - {z_0}} \\right)}^{n + 1}}}}} $$ equals ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$2\\pi nj$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{nj} \\over {2\\pi }}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2\\pi n$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "If $$x = \\sqrt { - 1} ,\\,\\,$$ then the value of $${X^x}$$  is  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${e^{ - \\pi /2}}$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "$${e^{  \\pi /2}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$x$$  "
+      },
+      {
+        "identifier": "D",
+        "content": "$$1$$  "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Given $$f\\left( z \\right) = {1 \\over {z + 1}} - {2 \\over {z + 3}}.$$ If $$C$$ is a counterclockwise path in the $$z$$-plane such that <br>$$\\left| {z + 1} \\right| = 1,$$  the value of $${1 \\over {2\\,\\pi \\,j}}\\oint\\limits_c {f\\left( z \\right)dz} $$ is  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$-1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "If the semi-circular contour D of radius 2 is as shown in the figure, then the value\nof the integral $$\\oint\\limits_D {{1 \\over {{s^2} - 1}}} ds$$ is\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/4eRhJnFaxMYVzk4dc/O1HjELqYWx3CjbPjiqhSX31gpkF0x/VvuObkVVbIcnsUaTtultkg/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2007 Engineering Mathematics - Complex Variable Question 27 English\">\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$i\\pi $$"
+      },
+      {
+        "identifier": "B",
+        "content": "$$ - i\\pi $$"
+      },
+      {
+        "identifier": "C",
+        "content": "$$ - \\pi $$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$ \\pi $$"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  }
+]

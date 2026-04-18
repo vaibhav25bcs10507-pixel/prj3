@@ -1,0 +1,979 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "Let $x[n]$ be a discrete-time signal whose $z$-transform is $X(z)$.\nWhich of the following statements is/are TRUE?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "The discrete-time Fourier transform (DTFT) of $x[n]$ always exists\n"
+      },
+      {
+        "identifier": "B",
+        "content": "The region of convergence (RoC) of $X(z)$ contains neither poles nor zeros\n"
+      },
+      {
+        "identifier": "C",
+        "content": "The discrete-time Fourier transform (DTFT) exists if the region of convergence (RoC) contains the unit circle\n"
+      },
+      {
+        "identifier": "D",
+        "content": "If $x[n]=\\alpha \\delta[n]$, where $\\delta[n]$ is the unit impulse and $\\alpha$ is a scalar, then the region of convergence (RoC) is the entire $z$-plane"
+      }
+    ],
+    "correct_options": [
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "The discrete-time Fourier transform (DTFT) exists if the region of convergence (RoC) contains the unit circle<div></div>\n\nIf $x[n]=\\alpha \\delta[n]$, where $\\delta[n]$ is the unit impulse and $\\alpha$ is a scalar, then the region of convergence (RoC) is the entire $z$-plane",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-ece-2025",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For a causal discrete-time LTI system with transfer function</p><p>$H(z) = \\frac{2z^2 + 3}{\\left(z + \\frac{1}{3}\\right)\\left(z - \\frac{1}{3}\\right)}$</p><p>which of the following statements is/are true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>The system is stable.</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>The system is a minimum phase system.</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>The initial value of the impulse response is 2.</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>The final value of the impulse response is 0.</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Given : Transfer function of causal discrete LTI system</p>\n<p>$$ H(\\mathrm{z})=\\frac{2 z^2+3}{\\left(z+\\frac{1}{3}\\right)\\left(z-\\frac{1}{3}\\right)} $$</p>\n<p>(i) For stability of system Poles of given system are</p>\n<p>$$ z=\\frac{1}{3}, z=\\frac{-1}{3} $$</p>\n<p>Hence, $|z|=\\frac{1}{3}$</p>\n<p>Since all the poles are lying inside the unit circle $|z|=1$. Hence the system is stable</p>\n<p>Hence, option (A) is correct.</p>\n<p>(ii) Final value theorem is given by</p>\n<p>$$ \\begin{aligned} & h(\\infty)=\\lim _{z \\rightarrow 1}\\left(1-z^{-1}\\right) H(z) \\\\ & h(\\infty)=\\lim _{z \\rightarrow 1}\\left(1-z^{-1}\\right) \\frac{2 z^2+3}{\\left(z+\\frac{1}{3}\\right)\\left(z-\\frac{1}{3}\\right)} \\\\ & h(\\infty)=0 \\end{aligned} $$</p>\n<p>Hence, option (D) is correct.</p>\n<p>(iii) Initial value theorem is given by</p>\n<p>$$ \\begin{aligned} & h(0)=\\lim _{z \\rightarrow \\infty} H(z) \\\\ & h(0)=\\lim _{z \\rightarrow \\infty} \\frac{2 z^2+3}{\\left(z+\\frac{1}{3}\\right)\\left(z-\\frac{1}{3}\\right)} \\\\ & h(0)=\\lim _{z \\rightarrow \\infty} \\frac{z^2\\left[2+\\frac{3}{z^2}\\right]}{z^2\\left(1+\\frac{1}{3 z}\\right)\\left(1-\\frac{1}{3 z}\\right)} \\\\ & h(0)=\\lim _{z \\rightarrow \\infty} \\frac{\\left[2+\\frac{3}{z^2}\\right]}{\\left[1+\\frac{1}{3 z}\\right]\\left[1-\\frac{1}{3 z}\\right]} \\\\ & h(0)=\\frac{2}{1}=2 \\end{aligned} $$</p>\n<p>Hence, option (C) is correct.</p>\n<p>(iv) For minimum phase system</p>\n<p>$$ H(z)=\\frac{2 z^2+3}{\\left(z+\\frac{1}{3}\\right)\\left(z-\\frac{1}{3}\\right)} $$</p>\n<p>Poles of given system are :</p>\n<p>$$ z=\\frac{1}{3}, z=-\\frac{1}{3} $$</p>\n<p>$$ |z|=\\frac{1}{3} $$</p>\n<p>Zeros of given system are :</p>\n<p>$$ \\begin{aligned} & 2 z^2+3=0 \\\\ & 2 z^2=-3 \\\\ & z^2=\\frac{-3}{2} \\\\ & z= \\pm i \\sqrt{\\frac{3}{2}} \\\\ & |z|=1.22 \\end{aligned} $$</p>\n<p>All the poles are inside the unit circle $|z|=1$ but zeros are lying outside the unit circle. Hence system is not a minimum phase system.</p>\n<p>Hence option (B) is not correct. Hence, the correct options are (A), (C) and (D).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which one of the following pole-zero plots corresponds to the transfer function of an LTI system characterized by the input-output difference equation given below?</p>\n<p>$$ y[n]=\\sum_{k=0}^3(-1)^k x[n-k] $$</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh20med6/5fdcd9be-b638-46fc-ad46-488fe8587989/153ce0b0-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20med7.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh20med6/5fdcd9be-b638-46fc-ad46-488fe8587989/153ce0b0-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20med7.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Signals and Systems - Discrete Time Signal Z Transform Question 1 English Option 1\"></p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh20mfdb/04e7dbaf-11f4-4252-b9b3-d2e712da4315/16033df0-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20mfdc.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh20mfdb/04e7dbaf-11f4-4252-b9b3-d2e712da4315/16033df0-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20mfdc.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Signals and Systems - Discrete Time Signal Z Transform Question 1 English Option 2\"></p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh20mg8w/f5c02249-f591-42ce-86b0-f35374088195/16b0bc00-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20mg8x.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh20mg8w/f5c02249-f591-42ce-86b0-f35374088195/16b0bc00-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20mg8x.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Signals and Systems - Discrete Time Signal Z Transform Question 1 English Option 3\"></p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh20mh5w/831e6f5b-2931-4e8f-9846-d31e58bf958a/17660240-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20mh5x.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh20mh5w/831e6f5b-2931-4e8f-9846-d31e58bf958a/17660240-af49-11f0-ba93-393527bdf085/file-jaoe38c1mh20mh5x.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Signals and Systems - Discrete Time Signal Z Transform Question 1 English Option 4\"></p>"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>Method 1</p>\n<p>Given : $y[n]=\\sum_{k=0}^3(-1)^k \\delta[n-k]$</p>\n<p>To find impulse response, substitution $x[n]=\\delta[n]$ in the given input output relation.</p>\n<p>$$ \\begin{aligned} & h[n]=\\sum_{k=0}^3(-1)^k \\delta[n-k] \\\\ & h[n]=\\delta[n]-\\delta[n-1]+\\delta[n-2]-\\delta[n-3] \\end{aligned} $$</p>\n<p>Taking $z$-transform both sides to find the transfer function of the system,</p>\n<p>$$ \\begin{aligned} & H(z)=1-z^{-1}+z^{-2}-z^{-3} \\\\ & H(z)=\\frac{z^3-z^2+z-1}{z^3} \\\\ & \\left.H(z)\\right|_{z=+1}=\\frac{1-1+1-1}{1}=0 \\end{aligned} $$</p>\n<p>So, the system function has a zero at $z=+1$ that indicates that the low frequency gain of filter in zero.</p>\n<p>So it will be a high pass filter. To check, finding $H(z)$ at $\\omega=\\pi$ or $z=-1$</p>\n<p>$$ \\left.H(z)\\right|_{z=-1}=\\frac{-1-1-1-1}{-1}=4 $$</p>\n<p>So the system behaves as a HPF and it will not have zero at $z=-1$.</p>\n<p>The only option satisfying this is option (B).</p>\n<p>Hence, the correct option is (B).</p>\n<p>Method 2</p>\n<p>Given : $y[n]=\\sum_{k=0}^3(-1)^k x(n-k)$</p>\n<p>$$ y(n)=x(n)-x(n-1)+x(n-2)-x(n-3) $$</p>\n<p>Taking $z$-transform on both sides,</p>\n<p>$$ \\begin{aligned} & Y(z)=\\left(1-z^{-1}+z^{-2}-z^{-3}\\right) X(z) \\\\ & \\frac{Y(z)}{X(z)}=1-z^{-1}+z^{-2}-z^{-3} \\\\ & H(z)=1-z^{-1}+z^{-2}-z^{-3}=\\frac{z^3-z^2+z-1}{z^3} \\end{aligned} $$</p>\n<p>$H(z)$ has a pole of order 3 at $z=0$.</p>\n<p>To find zero's, equate numerator to zero.</p>\n<p>$$ \\begin{aligned} & z^3-z^2+z-1=0 \\\\ & (z-1)\\left(z^2+1\\right)=0 \\\\ & z=1 \\text { and } z= \\pm j \\end{aligned} $$</p>\n<p>$\\therefore \\quad H(z)$ has zero's at $z=1$ and $z= \\pm j$ Hence, the correct option is (B).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "A discrete time all-pass system has two of its poles at\n0.25$$\\angle 0^\\circ $$ and $$\\angle 30^\\circ $$. Which one of the following statements about the system is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It has two more poles at\n0.5$$\\angle 30^\\circ $$\nand\n4$$\\angle 0^\\circ $$."
+      },
+      {
+        "identifier": "B",
+        "content": "It is stable only when the impulse response is two-sided."
+      },
+      {
+        "identifier": "C",
+        "content": "It has constant phase response over all frequencies."
+      },
+      {
+        "identifier": "D",
+        "content": "It has constant phase response over the entire\nz-plane."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2018,
+    "yearKey": "gate-ece-2018",
+    "difficulty": null
+  },
+  {
+    "content": "A discrete-time signal$$x\\left[ n \\right]\\, = \\delta \\left[ {n - 3} \\right]\\, + 2\\delta \\left[ {n - 5} \\right]$$ has z-transform x(z). If Y (z)=X (-z) is the z-transform of another signal y$$\\left[ n \\right]$$, then",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$y\\left[ n \\right] = x\\left[ n \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$y\\left[ n \\right] = x\\left[ { - n} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$y\\left[ n \\right] =  - x\\left[ n \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$y\\left[ n \\right] =  - x\\left[ { - n} \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the sequence\n<br> $$x\\left[ n \\right]$$= $${a^n}u\\left[ n \\right] + {b^{\\partial n}}u\\left[ n \\right]$$ , where u[n]  denotes the unit step sequence and 0&lt;$$\\left| a \\right| &lt; \\left| b \\right| &lt; 1.$$\n<br> The region of convergence (ROC) of the z-transform of $$\\left[ n \\right]$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left| z \\right| &gt; \\left| a \\right|$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left| z \\right| &gt; \\left| b \\right|$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left| z \\right| &lt; \\left| a \\right|$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\left| a \\right| &lt; \\left| z \\right| &lt; \\left| b \\right|$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Two casual discrete-time signals $$x\\left[ n \\right]$$ and $$y\\left[ n \\right]$$ =$$\\sum\\limits_{m = 0}^n x \\left[ m \\right]$$. If the z-transform of y$$\\left[ n \\right]$$=$${2 \\over {z{{(z - 1)}^2}}}$$ , the value of $$x\\left[ 2 \\right]$$ is _____________________",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "An FIR system is described by the system function\n$$$H(z) = 1 + {7 \\over 2}{z^{ - 1}} + {3 \\over 2}{z^{ - 2}}$$$",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "maximum phase"
+      },
+      {
+        "identifier": "B",
+        "content": "manimum phase"
+      },
+      {
+        "identifier": "C",
+        "content": "mixed phase"
+      },
+      {
+        "identifier": "D",
+        "content": "zero phase"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let x$$\\left[ n \\right]$$ = x$$\\left[- n \\right]$$ . Let X(z) be the z-transform of x$$\\left[ n \\right]$$. if 0.5 +j 0.25 is a zero of X(z), which one of the folowing must also be a zero of X (z)",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "0.5 - j0.25"
+      },
+      {
+        "identifier": "B",
+        "content": "1/ (0.5 + j0.25)"
+      },
+      {
+        "identifier": "C",
+        "content": "1/ (0.5 - j 0.25)"
+      },
+      {
+        "identifier": "D",
+        "content": "2 + j4"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "For an all-pass system  H(z)= $${{({z^{ - 1}} - b)} \\over {(1 - a{z^{ - 1}})}}$$  where $$\\left| {H({e^{ - j\\omega }})} \\right| = \\,1$$ , for all $$\\omega $$. If Re (a) $$ \\ne $$ 0,$${\\mathop{\\rm Im}\\nolimits} (a) \\ne 0$$ then b equals",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "a"
+      },
+      {
+        "identifier": "B",
+        "content": "a*"
+      },
+      {
+        "identifier": "C",
+        "content": "1/a*"
+      },
+      {
+        "identifier": "D",
+        "content": "1/a"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The sequence x $$\\left[ n \\right]$$ = $${0.5^n}$$ u[n],  where u$$\\left[ n \\right]$$  is the unit step sequence, is convolved with itself to obtain y $$\\left[ n \\right]$$ . Then $$\\sum\\limits_{n = \\infty }^{ + \\infty } y \\left[ n \\right]$$ is ____________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "If $$x\\left[ n \\right]$$= $${(1/3)^{\\left| n \\right|}} - {(1/2)^n}u\\left[ n \\right]$$, then the region of convergence (ROC)  of its Z- transform in the Z-plane will be",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 3} &lt; \\left| {z\\,} \\right| &lt; 3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over 3} &lt; \\left| {z\\,} \\right| &lt; {1 \\over 2}$$  "
+      },
+      {
+        "identifier": "C",
+        "content": "$${1 \\over 2} &lt; \\left| {z\\,} \\right| &lt; 3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 3} &lt; \\left| {z\\,} \\right|$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the z-transform \n<br>X(z)=5$${z^2} + 4{z^{ - 1}} + 3;0 &lt; \\left| z \\right| &lt; \\infty $$.\n<p> The inverse z - transform x$$\\,\\left[ n \\right]$$ is </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$5\\,\\delta [n + 2] + 3\\,\\delta {\\rm{\\;}}[n]{\\mkern 1mu}  + 4\\delta [n - 1]$$  "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5\\,\\delta [n - 2] + 3\\,\\delta [n] + 4\\,\\delta [n + 1]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5\\,u[n + 2] + 3\\,u[n]{\\mkern 1mu}  + 4\\,u[n - 1]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5\\,u[n - 2] + 3\\,u[n]{\\mkern 1mu}  + 4\\,u[n + 1]$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "The ROC of Z-transform of the discrete time sequence\n<br> x(n)= $${\\left( {{1 \\over 3}} \\right)^{n}}u(n) - {\\left( {{1 \\over 2}} \\right)^{ n}}\\,u( - n - 1)$$ is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 3} &lt; \\left| {z\\,} \\right| &lt; {1 \\over 2}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left| {z\\,} \\right| &gt; {1 \\over 2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\left| {z\\,} \\right| &lt; {1 \\over 2}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2 &lt; \\left| {z\\,} \\right| &lt; 3$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "If the region of convergence of $${x_1}\\left[ n \\right]$$ + $${x_2}\\left[ n \\right]$$ is  1/3&lt; $$\\left| {z\\,} \\right|$$&lt;2/3, then the region of convergence of $${x_1}\\left[ n \\right]$$ - $${x_2}\\left[ n \\right]$$ includes",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over 3} &lt; \\left| {z\\,} \\right| &lt; 3$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2 \\over 3} &lt; \\left| {z\\,} \\right| &lt; 3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${3 \\over 2} &lt; \\left| {z\\,} \\right| &lt; 3$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over 3} &lt; \\left| {z\\,} \\right| &lt; {2 \\over 3}$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2006,
+    "yearKey": "gate-ece-2006",
+    "difficulty": null
+  },
+  {
+    "content": "The region of convergence of z-transform of the sequence  $${\\left( {{5 \\over 6}} \\right)^n}u(n) - {\\left( {{6 \\over 5}} \\right)^n}u( - n - 1)$$ must be ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left| {z\\,} \\right| &lt; {5 \\over 6}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left| {z\\,} \\right| &gt; {6 \\over 5}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${5 \\over 6} &lt; \\left| {z\\,} \\right| &lt; {6 \\over 5}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${6 \\over 5} &lt; \\left| {z\\,} \\right| &lt; \\infty $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "The z transform of a system is \n<br> H(z) = $${z \\over {z - 0.2}}$$ .\n<br> If the ROC is $$\\left| {z\\,} \\right|$$ &lt; 0.2, then the impulse response of the system is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${(0.2)^n}\\,u\\left[ n \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${(0.2)^n}\\,u\\left[ { - n - 1} \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$ - {(0.2)^n}\\,u\\left[ n \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$ - {(0.2)^n}\\,u\\left[ { - n - 1} \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-ece-2004",
+    "difficulty": null
+  },
+  {
+    "content": "The region of convergence of the z- transform of a unit step function is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\left| {z\\,} \\right| &gt; 1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\left| {z\\,} \\right| &lt; 1$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "(Real part of z )&gt; 0"
+      },
+      {
+        "identifier": "D",
+        "content": "(Real part of z )&lt; 0"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2001,
+    "yearKey": "gate-ece-2001",
+    "difficulty": null
+  },
+  {
+    "content": "The z-transform F(z) of the function f(nT) = $${a^{nT}}$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${z \\over {z - {a^T}}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${z \\over {z + {a^T}}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${z \\over {z - {a^{ - T}}}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${z \\over {z + {a^{ - T}}}}$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The z - transform of the time function $$\\sum\\limits_{k = 0}^\\infty  {\\delta \\left( {n - k} \\right)} $$  is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$(z - 1)/z$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$z/{(z - 1)^2}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$z/(z - 1)$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${(z - 1)^2}/z$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-ece-1998",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>The transfer function of a stable discrete - time LTI system is $H(z)=\\frac{K(z-\\alpha)}{(z+0.5)}$ where $K$ and $\\alpha$ are real numbers. The value of $\\alpha$ (rounded off to one decimal place) with $|\\alpha|>1$, for which magnitude response of the system is constant over all frequencies, is $\\_\\_\\_\\_$ .</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "-2",
+    "explanation": "<p>Given transfer function for discrete time LTI system</p>\n<p>$$ H(z)=\\frac{K(z-\\alpha)}{(z+0.5)} $$</p>\n<p>Where ' $K$ ' and ' $\\alpha$ ' are real numbers.</p>\n<p>As it is asked to find value of ' $\\alpha$ ' such that the magnitude of response is constant over all frequencies, so we have to find value of ' $\\alpha$ ' for which the given LTI system will behave as an All Pass Filter.</p>\n<p>Location of poles and zeros follows the reciprocal conjugate relationship as poles and zeros are symmetrical about the unit circle.</p>\n<p>$$ p=\\frac{1}{z^*} \\quad \\text { where }\\left\\{\\begin{array}{l} P=\\text { location of pole } \\\\ Z=\\text { location of zero } \\end{array}\\right. $$</p>\n<p>$$ \\begin{aligned} &\\text { For given system }\\\\ &p=-0.5 \\quad z=\\alpha \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &\\therefore \\quad-0.5=\\frac{1}{\\alpha^*}\\\\ &\\text { Given, ' } \\alpha \\text { ' is real, so, } \\alpha^*=\\alpha\\\\ &-0.5=\\frac{1}{\\alpha} \\quad \\therefore \\alpha=-2 \\end{aligned} $$</p>\n<p>$$ \\text { Hence, the value of } \\alpha \\text { is } \\mathbf{- 2} \\text {. } $$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The ROC (region of convergence) of the z-transform of a discrete-time signal is represented by the shaded\nregion in the z-plane. If the signal $$x\\left[ n \\right] = \\,{\\left( {2.0} \\right)^{\\left| n \\right|}}$$ , $$ - \\infty  &lt; n &lt;  + \\infty $$ then the ROC of its z-transform is\nrepresented by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/43db04da3e51421bb4bdc542239b9a9ea7bf95adfc8d27fae1bb51ad000e7a80.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 3 Signals and Systems - Discrete Time Signal Z Transform Question 6 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/3c84f54d06d7377d2542f5cbb7f3def1417d66487731b409679bac62ab9f6b70.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 3 Signals and Systems - Discrete Time Signal Z Transform Question 6 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/952b5486d8e4676c919ae9a55975a2807c78c23bbbe933c40a7f7ae1c5d0554c.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 3 Signals and Systems - Discrete Time Signal Z Transform Question 6 English Option 3\">"
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/b24ba80be78082796ea97df057bbec9d00ea57b34b3195ab992d2d7da78daa56.jpg\" loading=\"lazy\" alt=\"GATE ECE 2016 Set 3 Signals and Systems - Discrete Time Signal Z Transform Question 6 English Option 4\">"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A sequence x$$\\left[ n \\right]$$ is specified as $$\\left[ {\\matrix{\n   {x\\left[ n \\right]}  \\cr \n   {x\\left[ {n - 1} \\right]}  \\cr \n\n } } \\right] = {\\left[ {\\matrix{\n   1  \\cr \n   1  \\cr \n\n } \\,\\matrix{\n   1  \\cr \n   0  \\cr \n\n } } \\right]^n}\\left[ {\\matrix{\n   1  \\cr \n   0  \\cr \n\n } } \\right]$$, for  n $$ \\ge $$2.\n<br> The initial conditions are x$$\\left[ 0 \\right]$$ = 1, x$$\\left[ 1 \\right]$$=1 and x$$\\left[ n \\right]$$=0 for n&lt; 0. The value of x$$\\left[ 12 \\right]$$ is _____________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "233",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "For the discrete-time system shown in the figure, the poles of the system transfer function are located at\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/77ef7fe43addccae8aa53a5fb3801f6f51e6f373e821cec4e6d263bf7bd834ba.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 1 Signals and Systems - Discrete Time Signal Z Transform Question 23 English\">\n ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2, 3"
+      },
+      {
+        "identifier": "B",
+        "content": "1/2, 3"
+      },
+      {
+        "identifier": "C",
+        "content": "1/2 , 1/3"
+      },
+      {
+        "identifier": "D",
+        "content": "2, 1/3"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The pole-zero diagram of a causal and stable discrete-time system is shown in the figure. The zero at the origin has \nmultiplicity 4. The impulse response of the system is ℎ[n]. If ℎ[0] =1, we can conclude. \n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/8c408a3007fec4fdf962270abc846bd07ca35262b4e896338f6418ea610b457b.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 1 Signals and Systems - Discrete Time Signal Z Transform Question 24 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "h (n) is real for all n.\n "
+      },
+      {
+        "identifier": "B",
+        "content": "h (n) is purely imaginary for all n."
+      },
+      {
+        "identifier": "C",
+        "content": "h (n) is real for only even n."
+      },
+      {
+        "identifier": "D",
+        "content": "h (n) is purely imaginary for only odd n ݊"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose x $$\\left[ n \\right]$$ is an absolutely summable discrete-time signal. Its z-transform is a rational function\nwith two poles and two zeroes. The poles are at z = ±  2j. Which one of the following statements is\nTRUE for the signal x=$$\\left[ n \\right]$$ ?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "It is a finite duration signal.\n"
+      },
+      {
+        "identifier": "B",
+        "content": "It is a causal signal.\n "
+      },
+      {
+        "identifier": "C",
+        "content": "It is a non-causal signal."
+      },
+      {
+        "identifier": "D",
+        "content": "It is a periodic signal."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "A realization of a stable discrete time system is shown in the figure. If the system is excited by a\nunit step sequence input x[n ]  , the response y[ n]  is\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/17f8c3e4be538f4fd95b19298d4edd7ab9c69860f710f6ce6d2351f28afc505e.jpg\" loading=\"lazy\" alt=\"GATE ECE 2015 Set 3 Signals and Systems - Discrete Time Signal Z Transform Question 22 English\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$4{\\left( { - {1 \\over 3}} \\right)^n}u\\left[ n \\right] - 5{\\left( { - {2 \\over 3}} \\right)^n}u\\left[ n \\right]$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5{\\left( { - {2 \\over 3}} \\right)^n}u\\left[ n \\right] - 3{\\left( { - {1 \\over 3}} \\right)^n}u\\left[ n \\right]$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5{\\left( {{1 \\over 3}} \\right)^n}u\\left[ n \\right] - 5{\\left( {{2 \\over 3}} \\right)^n}u\\left[ n \\right]$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5{\\left( {{2 \\over 3}} \\right)^n}u\\left[ n \\right] - 5{\\left( {{1 \\over 3}} \\right)^n}u\\left[ n \\right]$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The input-output relationship of a causal stable LTI system is given as \n<br> 𝑦[𝑛] = 𝛼 𝑦[𝑛 − 1] + $$\\beta $$ x[n].\n<br> If the impulse response h[n] of this system satisfies the condition  $$\\sum\\limits_{n = 0}^\\infty  h $$[n] = 2,  the relationship  between α and  is $$\\alpha $$ and $$\\beta $$ is\n\n\n\n\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "𝛼 = 1 − $${\\beta  \\over 2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "𝛼 = 1 + $${\\beta  \\over 2}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "𝛼 = 2𝛽 "
+      },
+      {
+        "identifier": "D",
+        "content": "𝛼 = −2𝛽"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Let x $$\\left[ n\\right]$$= $${\\left( { - {1 \\over 9}} \\right)^n}\\,u(n) - {\\left( { - {1 \\over 3}} \\right)^n}u( - n - 1).$$ The region of Convergence (ROC) of the z-tansform of x$$\\left[ n \\right]$$ ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "is $$\\left| z \\right| &gt; {1 \\over 9}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "is $$\\left| z \\right| &lt; {1 \\over 3}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "is $${1 \\over 3} &gt; \\left| z \\right| &gt; {1 \\over 9}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "does not exist."
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "The z-transform of the sequence x$$\\left[ n \\right]$$ is given by x(z)= $${1 \\over {{{(1 - 2{z^{ - 1}})}^2}}}$$ , with the region of convergence $$\\left| z \\right| &gt; 2$$. Then, $$x\\left[ 2 \\right]$$ is ____________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "12",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "Let $${H_1}(z) = {(1 - p{z^{ - 1}})^{ - 1}},{H_2}(z) = {(1 - q{z^{^{ - 1}}})^{ - 1}}$$ , H(z) =$${H_1}(z)$$ +r $${H_2}$$. The quantities p, q, r are real numbers. Consider , p=$${1 \\over 2}$$, q=-$${1 \\over 4}$$ $$\\left| r \\right|$$ &lt;1. If the zero H(z) lies on the unit circle, the r = ____________________________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0.5",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "In the following network (Fig .1), the switch is closed at t = 0- and the sampling starts from t = 0. The sampling frequency is 10 Hz.\n<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/examside/questions/ef248b76321a3a648ae8f6a779b72d96ad3522eed6533f1c251f0c09006e641a.jpg\" loading=\"lazy\" alt=\"GATE ECE 2008 Signals and Systems - Discrete Time Signal Z Transform Question 15 English\">\n<br> The expression and the region of convergence of the z-transform of the sampled signal are\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${{5z} \\over {z - {e^{^{ - 5}}}}},\\left| z \\right| &lt; {e^{ - 5}}$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${{5z} \\over {z - {e^{^{ - 0.05}}}}},\\left| z \\right| &lt; {e^{ - 0.05}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${{5z} \\over {z - {e^{^{ - 0.05}}}}},\\left| z \\right| &gt; {e^{ - 0.05}}$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$${{5z} \\over {z - {e^{^{ - 5}}}}},\\left| z \\right| &lt; {e^{ - 5}}$$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "In the following network (Fig.1), the switch is closed at t = 0 and the sampling starts from t=0. The sampling frequency is 10 Hz.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/D7arKhzwPpVSUeJnO/Sj7FfOLD6ZtGHXr3JKHGNQDu0wf7w/b4yXTU8jwCo0dWSFoZBiDz/image.png\" loading=\"lazy\" alt=\"GATE ECE 2008 Signals and Systems - Discrete Time Signal Z Transform Question 16 English\">\n<p> The samples x (n) (n=0, 1, 2,...........) are given by </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5(1-$${e^{ - 0.05n}}$$)"
+      },
+      {
+        "identifier": "B",
+        "content": "$$5{e^{ - 0.05n}}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$5(1 - {e^{ - 5n}})$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$5{e^{ - 5n}}$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  },
+  {
+    "content": "The z-transform X (z)  f a sequence x$$\\left[ n \\right]$$ is given by = $${{0.5} \\over {1 - 2{z^{ - 1}}}}$$ . It is given that the region of convergence of X$$\\left[ z \\right]$$ includes the unit circle. The value of x$$\\left[ 0 \\right]$$ is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "-0.5"
+      },
+      {
+        "identifier": "B",
+        "content": "0"
+      },
+      {
+        "identifier": "C",
+        "content": "0.25"
+      },
+      {
+        "identifier": "D",
+        "content": "0.5"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-ece-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The z-transform of a signal is given by c(z)=$${1 \\over 4}{{{z^{ - 1}}(1 - {z^{ - 4}})} \\over {{{(1 - {z^{ - 1}})}^2}}}$$. Its final value is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1/4"
+      },
+      {
+        "identifier": "B",
+        "content": "zero"
+      },
+      {
+        "identifier": "C",
+        "content": "1.0"
+      },
+      {
+        "identifier": "D",
+        "content": "infinity"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-ece-1999",
+    "difficulty": null
+  },
+  {
+    "content": "The Z-transform of the following real exponential sequence:\n<br> x(nT) = $${a^n}$$, nT $$ \\ge $$ 0\n<br> =0, nT&lt;0, a&gt; 0 \n<br> gives us by",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${1 \\over {1 - {z^{ - 1}}}}; \\left| z \\right| &gt; 1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${1 \\over {1 - a{z^{ - 1}}}}; \\left| z \\right| &gt; a$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "1 for all z"
+      },
+      {
+        "identifier": "D",
+        "content": "$${1 \\over {1 - a{z^{ - 1}}}}; \\left| z \\right| &lt; a$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1990,
+    "yearKey": "gate-ece-1990",
+    "difficulty": null
+  }
+]

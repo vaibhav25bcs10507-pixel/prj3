@@ -1,0 +1,564 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $\\rho(x, y, z, t)$ and $u(x, y, z, t)$ represent density and velocity, respectively, at a point $(x, y, z)$ and time $t$. Assume $\\frac{\\partial \\rho }{\\partial t}$ is continuous. Let $V$ be an arbitrary volume in space enclosed by the closed surface $S$ and $\\hat{n}$ be the outward unit normal of $S$. Which of the following equations is/are equivalent to $\\frac{\\partial \\rho }{\\partial t} + \\nabla \\cdot(\\rho u) = 0$?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxkz0hac/d9576767-e3ea-4a06-8ed3-29fd83d12f66/5b530440-2dc1-11ef-ab56-674ed58d7efd/file-jaoe38c1lxkz0had.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxkz0hac/d9576767-e3ea-4a06-8ed3-29fd83d12f66/5b530440-2dc1-11ef-ab56-674ed58d7efd/file-jaoe38c1lxkz0had.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Engineering Mathematics - Vector Calculus Question 4 English Option 1\">"
+      },
+      {
+        "identifier": "B",
+        "content": "<img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lxkz0er6/9da50837-6b87-4970-b99c-a289afb7a95e/595e3920-2dc1-11ef-ab56-674ed58d7efd/file-jaoe38c1lxkz0er7.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lxkz0er6/9da50837-6b87-4970-b99c-a289afb7a95e/595e3920-2dc1-11ef-ab56-674ed58d7efd/file-jaoe38c1lxkz0er7.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2024 Engineering Mathematics - Vector Calculus Question 4 English Option 2\">"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\int\\limits_{V} \\frac{\\partial \\rho}{\\partial t} \\, dv = - \\int\\limits_{V} \\nabla \\cdot(\\rho u) \\, dv$</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\int\\limits_{V} \\frac{\\partial \\rho}{\\partial t} \\, dv = \\int\\limits_{V} \\nabla \\cdot(\\rho u) \\, dv$</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>$$ \\begin{aligned} &\\text { Given : Equation, }\\\\ &\\begin{aligned} & \\frac{\\partial \\rho}{\\partial t}+\\nabla \\cdot(\\rho u)=0 \\\\ & \\frac{\\partial \\rho}{\\partial t}=-\\nabla \\cdot(\\rho u) \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(i)\\end{aligned} \\end{aligned} $$</p>\n<p>Where, $\\rho(x, y, z, t)$ is a scalar function in $x, y, z$ and $t$</p>\n<p>and $\\vec{u}(x, y, z, t)$ is a vector function in $x, y, z$ and $t$</p>\n<p>Taking volume integration both side in equation</p>\n<p>(i)</p>\n<p>$$ \\int_V \\frac{\\partial \\rho}{\\partial t} d v=-\\int_V \\nabla \\cdot(\\rho \\vec{u}) d v $$</p>\n<p>Let $\\quad \\vec{F}=\\rho \\vec{u}\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(ii)$</p>\n<p>$$ \\int_V \\frac{\\partial \\rho}{\\partial t} d v=-\\int_V \\nabla \\cdot \\vec{F} d v \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iii)$$</p>\n<p>$$ \\begin{aligned} &\\text { By Gauss divergence theorem, }\\\\ &\\oint_S \\vec{F} \\cdot \\hat{n} d s=\\int_V \\nabla \\cdot \\vec{F} d v \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,...(iv)\\end{aligned} $$</p>\n<p>From equation (iii) and (iv)</p>\n<p>$$ \\int_V \\frac{\\partial \\rho}{\\partial t} d v=-\\oint_S \\vec{F} \\cdot \\hat{n} d s $$</p>\n<p>From equation (ii), $\\vec{F}=\\rho \\vec{u}$</p>\n<p>$$ \\int_V \\frac{\\partial \\rho}{\\partial t} d v=-\\oint_S(\\rho \\vec{u}) \\cdot \\hat{n} d s $$</p>\n<p>Hence the correct options are (A) and (C).</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Let $${v_1} = \\left[ {\\matrix{\n   1  \\cr \n   2  \\cr \n   0  \\cr \n\n } } \\right]$$ and $${v_2} = \\left[ {\\matrix{\n   2  \\cr \n   1  \\cr \n   3  \\cr \n\n } } \\right]$$ be two vectors. The value of the coefficient $$\\alpha$$ in the expression $${v_1} = \\alpha {v_2} + e$$, which minimizes the length of the error vector e, is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${7 \\over 2}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${{ - 2} \\over 7}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "$${2 \\over 7}$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$${{ - 7} \\over 2}$$"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>We are given two vectors  $${v_1} = \\left[ {\\matrix{    1  \\cr     2  \\cr     0  \\cr    } } \\right]$$ and $${v_2} = \\left[ {\\matrix{    2  \\cr     1  \\cr     3  \\cr    } } \\right]$$, and we are asked to find the value of $$\\alpha$$ in the expression  $${v_1} = \\alpha {v_2} + e$$, that minimizes the length of the error vector $$e$$.</p>\n\n<p>First, we need to find the error vector, $$e$$. We can do this by rearranging the equation above:\n\n<p>$$e = {v_1} - \\alpha {v_2}$$</p>\n\n<p>Now, we need to find the value of $$\\alpha$$ that minimizes the length of $$e$$. The length of a vector is given by its norm, which can be calculated using the Pythagorean theorem:\n\n<p>$$||e|| = \\sqrt{e_1^2 + e_2^2 + e_3^2}$$</p>\n\n<p>To minimize the length of $$e$$, we need to minimize its norm. This can be achieved by finding the value of $$\\alpha$$ that makes the norm of $$e$$ a minimum. The easiest way to do this is to minimize the square of the norm of $$e$$, as this will give us the same minimum value for $$\\alpha$$:\n\n<p>$$||e||^2 = e_1^2 + e_2^2 + e_3^2$$</p>\n\n<p>Let's find the components of $$e$$:\n\n<p>$$e = {v_1} - \\alpha {v_2} = \\left[ {\\matrix{    1  \\cr     2  \\cr     0  \\cr    } } \\right] - \\alpha \\left[ {\\matrix{    2  \\cr     1  \\cr     3  \\cr    } } \\right] = \\left[ {\\matrix{    1 - 2\\alpha  \\cr     2 - \\alpha  \\cr     - 3\\alpha  \\cr    } } \\right]$$</p>\n\n<p>Now, let's substitute the components of $$e$$ into the expression for $$||e||^2$$:\n\n<p>$$||e||^2 = (1 - 2\\alpha)^2 + (2 - \\alpha)^2 + (-3\\alpha)^2$$</p>\n\n<p>To find the minimum value of $$||e||^2$$, we need to find its derivative with respect to $$\\alpha$$ and set it equal to zero:\n\n<p>$$\\frac{d}{d\\alpha} ||e||^2 = 2(1 - 2\\alpha)(-2) + 2(2 - \\alpha)(-1) + 2(-3\\alpha)(-3) = 0$$</p>\n\n<p>Simplifying the equation:\n\n<p>$$-4 + 8\\alpha - 4 + 2\\alpha + 18\\alpha = 0$$</p>\n\n<p>Combining like terms:\n\n<p>$$28\\alpha - 8 = 0$$</p>\n\n<p>Solving for $$\\alpha$$:\n\n<p>$$\\alpha = \\frac{8}{28} = \\frac{2}{7}$$</p>\n\n<p>Therefore, the value of the coefficient $$\\alpha$$ that minimizes the length of the error vector $$e$$ is $$\\frac{2}{7}$$.\n\n<p>So the correct answer is <strong>Option C</strong>.</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>The rate of increase, of a scalar field $$f(x,y,z) = xyz$$, in the direction $$v = (2,1,2)$$ at a point (0,2,1) is</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$${2 \\over 3}$$"
+      },
+      {
+        "identifier": "B",
+        "content": "$${4 \\over 3}$$"
+      },
+      {
+        "identifier": "C",
+        "content": "2"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine the rate of increase of the scalar field $$f(x,y,z) = xyz$$ in the direction $$v = (2,1,2)$$ at the point $$(0,2,1)$$, we first need to compute the gradient of the scalar field. The gradient of a scalar field $$f$$ is a vector of its partial derivatives:</p>\n\n<p>$$ \\nabla f = \\left( \\frac{\\partial f}{\\partial x}, \\frac{\\partial f}{\\partial y}, \\frac{\\partial f}{\\partial z} \\right) $$</p>\n\n<p>Let's compute these partial derivatives for the given scalar field $$f(x,y,z) = xyz$$:</p>\n\n<p>$$ \\frac{\\partial f}{\\partial x} = yz $$</p>\n\n<p>$$ \\frac{\\partial f}{\\partial y} = xz $$</p>\n\n<p>$$ \\frac{\\partial f}{\\partial z} = xy $$</p>\n\n<p>Now, we evaluate these partial derivatives at the point $$(0,2,1)$$:</p>\n\n<p>$$ \\nabla f(0,2,1) = \\left( \\frac{\\partial f}{\\partial x}(0,2,1), \\frac{\\partial f}{\\partial y}(0,2,1), \\frac{\\partial f}{\\partial z}(0,2,1) \\right) $$</p>\n\n<p>$$ \\frac{\\partial f}{\\partial x}(0,2,1) = 2 \\cdot 1 = 2 $$</p>\n\n<p>$$ \\frac{\\partial f}{\\partial y}(0,2,1) = 0 \\cdot 1 = 0 $$</p>\n\n<p>$$ \\frac{\\partial f}{\\partial z}(0,2,1) = 0 \\cdot 2 = 0 $$</p>\n\n<p>Hence, the gradient at the specified point is:</p>\n\n<p>$$ \\nabla f(0,2,1) = (2, 0, 0) $$</p>\n\n<p>The rate of increase in the direction $$v = (2,1,2)$$ is given by the dot product of the gradient and the unit vector in the direction of $$v$$. First, we need to find the unit vector in the direction of $$v$$:</p>\n\n<p>$$ \\|v\\| = \\sqrt{2^2 + 1^2 + 2^2} = \\sqrt{4 + 1 + 4} = \\sqrt{9} = 3 $$</p>\n\n<p>$$ \\hat{v} = \\left( \\frac{2}{3}, \\frac{1}{3}, \\frac{2}{3} \\right) $$</p>\n\n<p>Now, compute the dot product of $$\\nabla f(0,2,1)$$ and $$\\hat{v}$$:</p>\n\n<p>$$ \\nabla f \\cdot \\hat{v} = (2, 0, 0) \\cdot \\left( \\frac{2}{3}, \\frac{1}{3}, \\frac{2}{3} \\right) $$</p>\n\n<p>$$ \\nabla f \\cdot \\hat{v} = 2 \\cdot \\frac{2}{3} + 0 \\cdot \\frac{1}{3} + 0 \\cdot \\frac{2}{3} $$</p>\n\n<p>$$ \\nabla f \\cdot \\hat{v} = \\frac{4}{3} $$</p>\n\n<p>Therefore, the rate of increase of the scalar field $$f(x,y,z) = xyz$$ in the direction $$v = (2,1,2)$$ at the point $$(0,2,1)$$ is</p>\n\n<p>$$ \\frac{4}{3} $$</p>\n\n<p>The correct option is B:</p>\n\n<p>$$ \\frac{4}{3} $$</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-ece-2023",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For a vector field $\\vec{A}$, which one of the following is FALSE?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\vec{A}$ is solenoid if $\\nabla \\cdot \\vec{A}=0$.</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$\\nabla \\times(\\nabla \\times \\vec{A})=\\nabla(\\nabla \\cdot \\vec{A})-\\nabla^2 \\vec{A}$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\nabla \\times \\vec{A}$ is another vector field.</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\vec{A}$ is irrotational if $\\nabla^2 \\vec{A}=0$.</p>"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>Key point :</p>\n\n<p>$\\nabla \\cdot \\vec{A}=0$</p>\n\n<p>Then it is solenoidal or divergenceless.</p>\n<ol start=\"2\">\n<p><p>$\\nabla \\times \\nabla \\times \\vec{A}=\\nabla(\\nabla \\cdot \\vec{A})-\\nabla^2 \\vec{A}$ [identity] referred to as vector triple product.</p></p>\n<p><p>$\\nabla \\times \\vec{A}$ is an another vector because when we have curl of vector we will get new vector.</p></p>\n<p><p>For irrotational vector $\\nabla \\times \\vec{A}=0$.</p></p>\n\n<p>Hence, the correct option is (D).</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "The smaller angle (in degrees) between the planes $$x+y+z=1$$ and $$2x-y+2z=0$$ is ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "54.7",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A vector $$\\overrightarrow P $$ is given by $$\\,\\,\\overrightarrow P  = {x^3}y\\overrightarrow a {}_x - {x^2}{y^2}\\overrightarrow a {}_y - {x^2}yz\\overrightarrow a {}_z.\\,\\,\\,$$  Which one of the following statements is TRUE?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\overrightarrow P $$  is solenoidal, but not irrotational"
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\overrightarrow P $$ is irrotational, but not solenoidal "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\overrightarrow P $$  is neither solenoidal nor irrotational "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\overrightarrow P $$  is both solenoidal and irrotational"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-ece-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "If $$\\,\\overrightarrow r  = x\\widehat a{}_x + y\\widehat a{}_y + z\\widehat a{}_z\\,\\,\\,\\,$$  and $$\\,\\left| {\\overrightarrow r } \\right| = r,$$  then div $$\\left( {{r^2}\\nabla \\left( {\\ln \\,r} \\right)} \\right)  $$ = ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "The magnitude of the gradient for the function $$f\\left( {x,y,z} \\right) = {x^2} + 3{y^2} + {z^3}\\,\\,$$ at the point $$(1,1,1)$$ is _________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "7",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "The directional derivative  of $$f\\left( {x,y} \\right) = {{xy} \\over {\\sqrt 2 }}\\left( {x + y} \\right)$$ at $$(1, 1)$$  in the direction of the unit vector at an angle of $${\\pi  \\over 4}$$ with $$y-$$axis,  is given by ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a vector field $$\\overrightarrow A \\left( {\\overrightarrow r } \\right).$$ The closed loop line integral $$\\oint {\\overrightarrow A  \\bullet \\overrightarrow {dl} } $$ can be expressed as ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/tPiY4HB9KbU3IiHkX/0BsWdNfwX9qtRlhI0S7Nm4V0PgWv8/fvvpb3FCQvSRcS3I4VYBj1/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Engineering Mathematics - Vector Calculus Question 17 English Option 1\">\nover the closed surface bounded by the loop "
+      },
+      {
+        "identifier": "B",
+        "content": "<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/4T3dz8Prlp6Kg17u2/bo2pSrd3rzZBLm5j6RcMpcOHUch8F/ZlL5KU42h1atODJ4nhPTOC/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Engineering Mathematics - Vector Calculus Question 17 English Option 2\">\nover the closed volume bounded by the loop "
+      },
+      {
+        "identifier": "C",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/dSajOM1VcjNV2cVr5/Os7hjkCNoLaPkCwd4GPysVIQmT1rI/kp43JvGYwvwAUrSVAWP8GJ/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Engineering Mathematics - Vector Calculus Question 17 English Option 3\">\nover the open volume bounded by the loop "
+      },
+      {
+        "identifier": "D",
+        "content": "<img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/gAAliq4OTfSoSBHH0/3W1RZ234YLnkGlkyddb8MEBeA02g0/do3PgOLo2NthcE9t3Yjnhs/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2013 Engineering Mathematics - Vector Calculus Question 17 English Option 4\"> over the open surface bounded by the loop"
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a closed surface $$'S'$$ surrounding a volume $$V.$$ If $$\\overrightarrow r $$ is the position vector of a point inside $$S$$ with $$\\overrightarrow n $$ the unit normal on $$'S',$$ the value of the integral  \n <img class=\"question-image\" src=\"https://gateclass.cdn.examgoal.net/5APXoDCQuWq1KpjAF/gWUyzn6kMz5BnA4zwTEzGJixofkly/ysQcS4dqJ9tTx10Xn59i72/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE ECE 2011 Engineering Mathematics - Vector Calculus Question 19 English\"> \nis ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$3V$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$5V$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$10$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$15V$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2011,
+    "yearKey": "gate-ece-2011",
+    "difficulty": null
+  },
+  {
+    "content": "$$\\nabla  \\times \\left( {\\nabla  \\times P} \\right)\\,\\,$$ where $$P$$ is a vector is equal to ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$P \\times \\nabla  \\times P \\to {\\nabla ^2}P$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${\\nabla ^2}P + \\nabla \\left( {\\nabla .P} \\right)\\,$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$${\\nabla ^2}P + \\left( {\\nabla  \\times P} \\right)\\,\\,$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\nabla \\left( {\\nabla .P} \\right) \\to {\\nabla ^2}P$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-ece-2005",
+    "difficulty": null
+  },
+  {
+    "content": "If the linear velocity $${\\overrightarrow V }$$ is given by $$\\overrightarrow V  = {x^2}y\\overrightarrow i  + xyz\\overrightarrow j  - y{z^2}\\overrightarrow k $$  then the angular velocity $$\\overrightarrow W $$ at the point $$\\left( {1,1, - 1} \\right)$$ is _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "$$ - \\left( {\\widehat i + \\widehat k} \\right)$$ ",
+    "explanation": null,
+    "topic": null,
+    "year": 1993,
+    "yearKey": "gate-ece-1993",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Let $F_1$, $F_2$, and $F_3$ be functions of $(x, y, z)$. Suppose that for every given pair of points A and B in space, the line integral $\\int\\limits_C (F_1 dx + F_2 dy + F_3 dz)$ evaluates to the same value along any path C that starts at A and ends at B. Then which of the following is/are true?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>For every closed path Γ, we have $\\oint\\limits_Γ (F_1 dx + F_2 dy + F_3 dz) = 0$.</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>There exists a differentiable scalar function $f(x, y, z)$ such that $F_1 = \\frac{\\partial f}{\\partial x}$, $F_2 = \\frac{\\partial f}{\\partial y}$, $F_3 = \\frac{\\partial f}{\\partial z}$.</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\frac{\\partial F_1}{\\partial x} + \\frac{\\partial F_2}{\\partial y} + \\frac{\\partial F_3}{\\partial z} = 0$.</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\frac{\\partial F_3}{\\partial y} = \\frac{\\partial F_2}{\\partial z}$, $\\frac{\\partial F_1}{\\partial z} = \\frac{\\partial F_3}{\\partial x}$, $\\frac{\\partial F_2}{\\partial x} = \\frac{\\partial F_1}{\\partial y}$.</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>The given information states that the line integral $\\int\\limits_C (F_1 dx + F_2 dy + F_3 dz)$ is path-independent. This means the integral's value only depends on the starting and ending points, not the specific path taken. This property has significant implications, and we'll examine each option to see which ones are true.</p>\n\n<p><strong>Option A:</strong></p>\n\n<p>This option is <strong>true</strong>.  A closed path Γ starts and ends at the same point. Since the line integral is path-independent, the integral over any closed path will be zero.  This is because the integral going from the starting point to the ending point cancels out the integral going back from the ending point to the starting point.</p>\n\n<p><strong>Option B:</strong></p>\n\n<p>This option is also <strong>true</strong>.  Path-independence is a defining characteristic of conservative vector fields.  A vector field is conservative if and only if it can be expressed as the gradient of a scalar function (called a potential function). In this case, the vector field is given by $(F_1, F_2, F_3)$, and the potential function is $f(x, y, z)$.  This means we can write:</p>\n\n<p>$$F_1 = \\frac{\\partial f}{\\partial x}, \\ F_2 = \\frac{\\partial f}{\\partial y}, \\ F_3 = \\frac{\\partial f}{\\partial z}$$.</p>\n\n<p><strong>Option C:</strong></p>\n\n<p>This option is <strong>false</strong>. This equation represents the divergence of the vector field $(F_1, F_2, F_3)$.  While the divergence being zero has implications for certain types of vector fields, it's not directly related to path-independence. A vector field can be path-independent without having zero divergence. For example, the vector field $(y, x, 0)$ is path-independent (it's the gradient of the function $xy$) but has non-zero divergence.</p>\n\n<p><strong>Option D:</strong></p>\n\n<p>This option is <strong>true</strong>. These equations represent the curl of the vector field $(F_1, F_2, F_3)$. A path-independent vector field must have a curl of zero.  This is because the curl being zero implies that the vector field is irrotational, which is a necessary condition for path-independence.</p>\n\n<p>In conclusion, the correct options are <strong>A, B, and D</strong>.  These options capture the key properties of path-independent vector fields, including their conservative nature, their zero line integral over closed paths, and their zero curl.</p>\n\n<p></p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-ece-2024",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>For the solid $S$ shown below, the value of $\\iiint_S x d x d y d z$ (rounded off to two decimal places) is $\\_\\_\\_\\_$ .</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh23qmep/e8180163-4263-4c9d-9f31-2d23eed156ff/4612e610-af55-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh23qmeq.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh23qmep/e8180163-4263-4c9d-9f31-2d23eed156ff/4612e610-af55-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh23qmeq.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Engineering Mathematics - Vector Calculus Question 1 English\"></p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "2.25",
+    "explanation": "<p>Given figure is shown below,</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1mh23qkjz/0add8058-22f2-4bc0-bcd0-47a107b59318/44a48900-af55-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh23qkk0.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1mh23qkjz/0add8058-22f2-4bc0-bcd0-47a107b59318/44a48900-af55-11f0-8ff7-4f6304b9a291/file-jaoe38c1mh23qkk0.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE ECE 2020 Engineering Mathematics - Vector Calculus Question 1 English Explanation\">We can see that, $x$ is varying from 0 to 3 and the $y z$ plane consists of a triangle AOB .</p>\n<p></p>\n<p>$$ \\begin{aligned}Therefore,&nbsp;&nbsp;\\,\\,\\ &amp; I=\\iiint x d x d y d z=\\int_{x=0}^3 x d x \\iint d y d z \\\\ &amp; I=\\left(\\int_{x=0}^3 x d x\\right) \\times(\\text { Area of triangle } \\mathrm{AOB}) \\\\ &amp; I=\\left(\\frac{x^2}{2}\\right)_0^3 \\times \\frac{1}{2} \\times 1 \\times 1 \\end{aligned} $$</p>\n<p>$$ \\begin{aligned} &amp;I=\\frac{9}{4}=2.25\\\\ &amp;\\text { Hence, the value of } \\iiint_S x d x d y d z \\text { is } \\mathbf{2 . 2 5} \\text {. } \\end{aligned} $$</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-ece-2020",
+    "difficulty": null
+  },
+  {
+    "content": "If the vector function \n<br>$$\\,\\,\\overrightarrow F  = \\widehat a{}_x\\left( {3y - k{}_1z} \\right) + \\widehat a{}_y\\left( {k{}_2x - 2z} \\right) - \\widehat a{}_z\\left( {k{}_3y + z} \\right)\\,\\,\\,$$\n<br>is irrotational, then the values of the constants $$\\,{k_1},\\,{k_2}\\,\\,$$ and $$\\,{k_3}$$ respectively, are ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0.3, -2.5, 0.5$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$0.0, 3.0, 2.0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$0.3, 0.33, 0.5$$"
+      },
+      {
+        "identifier": "D",
+        "content": "$$4.0, 3.0, 2.0$$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Let  $$\\,\\,\\,{\\rm I} = \\int_c {\\left( {2z\\,dx + 2y\\,dy + 2x\\,dz} \\right)} \\,\\,\\,\\,$$ where $$x, y, z$$ are real, and let $$C$$ be the straight line segment from point $$A: (0, 2, 1)$$ to point $$B:   (4,1,-1).$$  The value of $${\\rm I}$$ is ___________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "-11",
+    "explanation": null,
+    "topic": null,
+    "year": 2017,
+    "yearKey": "gate-ece-2017-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Suppose $$C$$ is the closed curve defined as the circle $$\\,\\,{x^2} + {y^2} = 1\\,\\,$$  with $$C$$ oriented anti-clockwise. The value of $$\\,\\,\\oint {\\left( {x{y^2}dx + {x^2}ydx} \\right)\\,\\,} $$  over the curve $$C$$  equals _______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "0",
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-ece-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Given $$\\,\\,\\overrightarrow F  = z\\widehat a{}_x + x\\widehat a{}_y + y\\widehat a{}_z.\\,\\,$$ If  $$S$$  represents the portion of the sphere $${x^2} + {y^2} + {z^2} = 1$$ for $$\\,z \\ge 0,$$ then $$\\int\\limits_s {\\left( {\\nabla  \\times \\overrightarrow F .} \\right)\\overrightarrow {ds} \\,\\,} $$  is ________.",
+    "options": [],
+    "correct_options": [],
+    "answer": "3.14",
+    "explanation": null,
+    "topic": null,
+    "year": 2014,
+    "yearKey": "gate-ece-2014-set-4",
+    "difficulty": null
+  },
+  {
+    "content": "The divergence of the vector field $$\\,\\overrightarrow A  = x\\widehat a{}_x + y\\widehat a{}_y + z\\widehat a{}_z\\,\\,$$   is ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$1/3$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$3$$ "
+      }
+    ],
+    "correct_options": [
+      "D"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2013,
+    "yearKey": "gate-ece-2013",
+    "difficulty": null
+  },
+  {
+    "content": "The direction of vector $$A$$ is radially outward \n<br>from the origin, with $$\\left| A \\right| = K\\,{r^n}$$ \n<br>where $${r^2} = {x^2} + {y^2} + {z^2}$$  and $$K$$ is constant. \n<br>The value  of $$n$$ for which $$\\nabla .A = 0\\,\\,$$ is  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$-2$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$2$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$0$$ "
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2012,
+    "yearKey": "gate-ece-2012",
+    "difficulty": null
+  },
+  {
+    "content": "If $$\\overrightarrow A  = xy\\,\\widehat a{}_x + {x^2}\\widehat a{}_y\\,\\,$$ then $$\\,\\,\\oint {\\overrightarrow A .d\\overrightarrow r \\,\\,} $$ over the path shown in the figure is \n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/6xH1MB0qyFHLvVnM5/oc6tsVzVFcXsXWnr4qlAo735yMlX0/1DnejN9WpzWRgBBpzdMz1R/image.svg\" loading=\"lazy\" alt=\"GATE ECE 2010 Engineering Mathematics - Vector Calculus Question 18 English\"> ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$0$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$${2 \\over {\\sqrt 3 }}$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$2\\sqrt 3 $$ "
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-ece-2010",
+    "difficulty": null
+  },
+  {
+    "content": "If a vector field$$\\overrightarrow V $$  is related to another field $$\\overrightarrow A $$ through $$\\,\\overrightarrow V  = \\nabla  \\times \\overrightarrow A ,$$  which of the following is true?\n<p><b>Note:</b> $$C$$ and   $${S_C}$$ refer to any closed contour and any surface whose boundary is $$C.$$ </p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "$$\\oint\\limits_C {\\overrightarrow V .\\,\\overrightarrow {dl} }  = \\int {\\int_{{S_C}} {\\overrightarrow A .\\,\\overrightarrow {ds} } } $$ "
+      },
+      {
+        "identifier": "B",
+        "content": "$$\\oint\\limits_C {\\overrightarrow A .\\,\\overrightarrow {dl} }  = \\int\\limits_{{S_C}} {\\int {\\overrightarrow \\nabla  .\\,\\overrightarrow {ds} } } $$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$\\oint\\limits_C {\\nabla  \\times \\vec V.{\\mkern 1mu} \\overrightarrow {dl} }  = \\int\\limits_{{S_C}} {\\int {\\nabla  \\times \\vec A.{\\mkern 1mu} \\overrightarrow {ds} } } $$ "
+      },
+      {
+        "identifier": "D",
+        "content": "$$\\oint\\limits_C {\\nabla  \\times \\vec A.{\\mkern 1mu} \\overrightarrow {dl} }  = \\int {\\int_{{S_C}} {\\vec V.{\\mkern 1mu} \\overrightarrow {ds} } } $$ "
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-ece-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Consider points $$P$$ and $$Q$$ in $$xy-$$plane with $$P=(1,0)$$ and $$Q=(0,1).$$  The line integral  $$2\\int\\limits_P^Q {\\left( {x\\,dx + y\\,dy} \\right)\\,\\,} $$  along the semicircle with the line segment $$PQ$$ as its diameter",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "is $$-1$$ "
+      },
+      {
+        "identifier": "B",
+        "content": "is $$0$$ "
+      },
+      {
+        "identifier": "C",
+        "content": "$$1$$ "
+      },
+      {
+        "identifier": "D",
+        "content": "depends on the direction (clockwise (or) anti-clockwise) of the semi circle"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-ece-2008",
+    "difficulty": null
+  }
+]

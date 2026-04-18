@@ -1,0 +1,757 @@
+[
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>$$ \\text { In the context of DBMS, consider the two sets } \\mathbf{T} \\text { and } \\mathbf{S} \\text { given below. } $$</p>\n<p>$$ \\begin{array}{ll}\\,\\,\\,\\,\\, \\text { T } &\\,\\,\\,\\,\\, \\text { S } \\\\ \\text { I: } \\text { Logical schema } & \\text { L: Views } \\\\ \\text { II: } \\text { Physical schema } & \\text { M: File organization and indexes } \\\\ \\text { III: External schema } & \\text { N: Relations } \\end{array} $$</p>\n<p>Which one of the following is the correct match from $T$ to $S$ ?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>$\\mathrm{I}-\\mathrm{L}$, II -M , III -N</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>$ I -M , II -L , III -N$</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>$\\mathrm{I}-\\mathrm{N}, \\mathrm{II}-\\mathrm{M}$, III -L</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>$\\mathrm{I}-\\mathrm{N}, \\mathrm{II}-\\mathrm{L}, \\mathrm{III}-\\mathrm{M}$</p>"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": "<p>In DBMS, the three-level architecture is:</p>\n<ol>\n<li><p><strong>External schema</strong> $\\to$ <strong>Views</strong></p></li>\n<li><p><strong>Logical schema</strong> $\\to$ <strong>Relations</strong></p></li>\n<li><p><strong>Physical schema</strong> $\\to$ <strong>File organization and indexes</strong></p></li>\n</ol>\n<p>Now match carefully:</p>\n<ul>\n<li><p>I: <strong>Logical schema</strong> $\\to$ <strong>N: Relations</strong></p></li>\n<li><p>II: <strong>Physical schema</strong> $\\to$ <strong>M: File organization and indexes</strong></p></li>\n<li><p>III: <strong>External schema</strong> $\\to$ <strong>L: Views</strong></p></li>\n</ul>\n<p>So the correct matching is:</p>\n<p>$$ \\mathrm{I}-\\mathrm{N},\\ \\mathrm{II}-\\mathrm{M},\\ \\mathrm{III}-\\mathrm{L} $$</p>\n<p>Therefore, the correct option is <strong>Option C</strong>.</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>Which of the following file organizations is/are I/O efficient for the scan operation in DBMS?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Sorted</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Heap</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>Unclustered tree index</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Unclustered hash index</p>"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "B"
+    ],
+    "answer": null,
+    "explanation": "<p>The following file organizations are I/O efficient for the scan operation in DBMS :</p>\n\n<p><p><strong>Option A : Sorted</strong></p></p>\n<p><p><strong>Option B : Heap</strong></p></p>\n\n<p>Sorted files allow for efficient sequential scanning because the data is organized in a specific order, which minimizes the number of I/O operations required to access a large number of records consecutively. Heap files, while not sorted, are nonetheless suitable for scan operations since they store records in no particular order, allowing for straightforward reading but without the benefits of ordered access.</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In a B+ tree, the requirement of at least half-full (50%) node occupancy is relaxed for which one of the following cases?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Only the root node</p>"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>All leaf nodes</p>"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>All internal nodes</p>"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>Only the leftmost leaf node</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<p>In a B+ tree, the requirement of at least half-full (50%) node occupancy is relaxed only for the root node. This means that the root node does not need to maintain the condition of being at least half full.</p>\n\n<p>The reason behind this is that B+ trees are balanced trees where every leaf node is at the same depth, and the internal nodes ensure the tree remains balanced. Enforcing the 50% rule on internal nodes and leaf nodes guarantees that the tree remains efficient in terms of search, insertion, and deletion operations.</p>\n\n<p>However, the root node is an exception. When nodes are split, the root node can be the only node with fewer than the minimum number of keys because it adjusts to maintain the balance of the tree without causing inefficiencies.</p>\n  \n<p>Thus, the correct option is:</p>\n  \n<p><strong>Option A</strong></p>\n<p>Only the root node</p>",
+    "topic": null,
+    "year": 2024,
+    "yearKey": "gate-cse-2024-set-1",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "A data file consisting of 1,50,000 student-records is stored on a hard disk with block size of 4096 bytes. The data file is sorted on the primary key RollNo. The size of a record pointer for this disk is 7 bytes. Each student-record has a candidate key attribute called ANum of size 12 bytes. Suppose an index file with records consisting of two fields, ANum value and the record pointer to the corresponding student record, is built and stored on the same disk. Assume that the records of data file and index file are not split across disk blocks. The number of blocks in the index file is _______",
+    "options": [],
+    "correct_options": [],
+    "answer": "698",
+    "explanation": "<p>Given : Index is being built on attribute \"Anum\" which is candidate key, but given that file is sorted on primary key \"RollNo\".</p>\n<p>This dates indicates that the index must be a secondary index, so \"There should exist an Index record for every record of original 'student table' \".</p>\n<p>Also \"Assume that Records of data file and index file are not split across disk blocks\".</p>\n<p>This data indicated unspanned strategy.</p>\n<p>So, Size of Index record $=12+7=19$</p>\n<p>No. of index record $=1,50,000$</p>\n<p>Block factor for index,</p>\n<p>$$ \\begin{aligned} & \\begin{aligned} \\text { (Block factor) index }= & \\frac{4096}{19} \\\\ & =215 \\text { records/block } \\end{aligned} \\\\ & \\begin{aligned} \\text { Number of index blocks } & =\\frac{150000}{215}=697.67 \\\\ & =698 \\text { index blocks } \\end{aligned} \\end{aligned} $$</p>\n<p>Hence, the correct answer is 698 .</p>",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "comprehension": null,
+    "content": "<p>Consider a linear list based implementation in a file system. Each directory is a list of nodes, where each node contains the file name along with the file metadata, such as the list of pointers to the data blocks. Consider a given directory foo.</p>\n\n<p>Which of the following operations will necessarily require a full scan of foo for successful completion?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Renaming of an existing file in foo"
+      },
+      {
+        "identifier": "B",
+        "content": "Opening of an existing file in foo"
+      },
+      {
+        "identifier": "C",
+        "content": "Deletion of an existing file from foo"
+      },
+      {
+        "identifier": "D",
+        "content": "Creation of a new file in foo"
+      }
+    ],
+    "correct_options": [
+      "A",
+      "D"
+    ],
+    "answer": null,
+    "explanation": "<p>To determine which operations will necessarily require a full scan of the directory <code>foo</code> for successful completion in a linear list-based implementation, let's analyze each option.</p>\n<h3><strong>Understanding the Linear List-Based Directory Implementation</strong></h3>\n\n<p><p><strong>Directory Structure</strong>: The directory is implemented as a linear list of nodes.</p></p>\n<p><p><strong>Each Node Contains</strong>:</p></p>\n<p><p><strong>File Name</strong></p></p>\n<p><p><strong>File Metadata</strong> (e.g., pointers to data blocks)</p></p>\n<p><p><strong>Operations on the Directory</strong>:</p></p>\n<p><p><strong>Search Operations</strong>: To find a file, the system scans the directory entries sequentially from the beginning.</p></p>\n<p><p><strong>Uniqueness Checks</strong>: To ensure a file name is unique (e.g., when creating or renaming a file), the system must verify that no other file in the directory has the same name.</p></p>\n\n<h3><strong>Option A: Renaming of an Existing File in <code>foo</code></strong></h3>\n<p><strong>Analysis</strong>:</p>\n\n<p><strong>Steps Involved</strong>:</p>\n\n\n<p><p><strong>Locate the File to Rename</strong>:</p>\n\n<p><p>Scan the directory sequentially until the file with the existing name is found.</p></p>\n<p><p><strong>May not require a full scan</strong> if the file is found before reaching the end.</p></p></p>\n<p><p><strong>Check for Name Uniqueness</strong>:</p>\n\n<p><p>Ensure that the <strong>new name</strong> is not already used by another file in the directory.</p></p>\n<p><p><strong>Requires scanning the entire directory</strong> to confirm no duplicate exists.</p></p></p>\n\n<p><strong>Conclusion</strong>:</p>\n\n<p><p><strong>Requires a full scan</strong> to ensure the new name is unique.</p></p>\n<p><p><strong>Answer</strong>: <strong>Option A requires a full scan.</strong></p></p>\n\n<h3><strong>Option B: Opening of an Existing File in <code>foo</code></strong></h3>\n<p><strong>Analysis</strong>:</p>\n\n<p><p><strong>Steps Involved</strong>:</p></p>\n<p><p><strong>Locate the File to Open</strong>:</p>\n\n<p><p>Scan the directory sequentially until the file is found.</p></p>\n<p><p><strong>Search stops once the file is found</strong>.</p></p></p>\n<p><p><strong>Conclusion</strong>:</p></p>\n<p><p><strong>Does not necessarily require a full scan</strong> since the file may be found before reaching the end of the directory.</p></p>\n<p><p><strong>Answer</strong>: <strong>Option B does not require a full scan.</strong></p></p>\n\n<h3><strong>Option C: Deletion of an Existing File from <code>foo</code></strong></h3>\n<p><strong>Analysis</strong>:</p>\n\n<p><strong>Steps Involved</strong>:</p>\n\n\n<p><p><strong>Locate the File to Delete</strong>:</p>\n\n<p><p>Scan the directory sequentially until the file is found.</p></p>\n<p><p><strong>Search stops once the file is found</strong>.</p></p></p>\n<p><p><strong>Delete the File Entry</strong>:</p>\n\n<p><p>Remove the file's entry from the directory.</p></p>\n<p><p><strong>May require shifting subsequent entries</strong> to fill the gap.</p></p>\n<p><p><strong>Does not require scanning entries before the deleted file</strong>.</p></p></p>\n\n\n<p><p><strong>Conclusion</strong>:</p></p>\n<p><p><strong>Does not necessarily require a full scan</strong> because only entries after the deleted file need adjustment.</p></p>\n<p><p><strong>Answer</strong>: <strong>Option C does not require a full scan.</strong></p></p>\n\n<h3><strong>Option D: Creation of a New File in <code>foo</code></strong></h3>\n<p><strong>Analysis</strong>:</p>\n\n<p><p><strong>Steps Involved</strong>:</p></p>\n<p><p><strong>Ensure New File Name is Unique</strong>:</p>\n\n<p><p>Scan the entire directory to verify that no existing file has the same name.</p></p>\n<p><p><strong>Cannot skip entries</strong> since any could have the conflicting name.</p></p></p>\n<p><p><strong>Conclusion</strong>:</p></p>\n<p><p><strong>Requires a full scan</strong> to ensure the new file name does not duplicate an existing one.</p></p>\n<p><p><strong>Answer</strong>: <strong>Option D requires a full scan.</strong></p></p>\n\n<h3><strong>Final Answer</strong></h3>\n\n<p><p><strong>Operations That Necessarily Require a Full Scan</strong>:</p></p>\n<p><p><strong>Option A</strong>: Renaming an existing file.</p></p>\n<p><p><strong>Option D</strong>: Creating a new file.</p></p>\n\n<hr />\n<p><strong>Therefore, the correct options are:</strong></p>\n\n<p><p><strong>Option A</strong></p></p>\n<p><p><strong>Option D</strong></p></p>\n",
+    "topic": null,
+    "year": 2021,
+    "yearKey": "gate-cse-2021-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "Which one of the following statements is NOT correct about the B<sup>+</sup> tree data structure used for creating an index of a relational database table?\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "B<sup>+</sup> tree is a height-balanced tree\n\n"
+      },
+      {
+        "identifier": "B",
+        "content": "Non-leaf nodes have pointers to data records"
+      },
+      {
+        "identifier": "C",
+        "content": "Each leaf node has a pointer to the next leaf node"
+      },
+      {
+        "identifier": "D",
+        "content": "Key values in each node are kept in sorted order"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": "In B<sup>+</sup> trees non leaf nodes have pointers to the next level nodes but not to the data records.",
+    "topic": null,
+    "year": 2019,
+    "yearKey": "gate-cse-2019",
+    "difficulty": null
+  },
+  {
+    "content": "B<sup>+</sup> Trees are considered BALANCED because",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "the lengths of the paths from the root to all leaf nodes are all equal."
+      },
+      {
+        "identifier": "B",
+        "content": "the lengths of the paths from the root to all leaf nodes differ from each other by at most 1."
+      },
+      {
+        "identifier": "C",
+        "content": "the number of children of any two non-leaf sibling nodes differ by at most 1."
+      },
+      {
+        "identifier": "D",
+        "content": "the number of records in any two leaf nodes differ by at most 1."
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2016,
+    "yearKey": "gate-cse-2016-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "A file is organized so that the ordering of data records is the same as or close to the ordering of data entries in some index. Then that index is called",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Dense"
+      },
+      {
+        "identifier": "B",
+        "content": "Sparse"
+      },
+      {
+        "identifier": "C",
+        "content": "Clustered"
+      },
+      {
+        "identifier": "D",
+        "content": "Unclustered"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-1",
+    "difficulty": null
+  },
+  {
+    "content": "With reference to the B<sup>+</sup> tree index of order 1 shown below, the minimum number of nodes (including the Root node) that must be fetched in order to satisfy the following query: “Get all records with a search key greater than or equal to 7 and less than 15” is _________\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/dVlH8Nj1pXjd9rmU5/XvOALtnxkqWqjYrYZjOGCRAGmHsHj/PmahfDSxg8lm0aJF3QP16S/uploadfile.jpg\" loading=\"lazy\" alt=\"GATE CSE 2015 Set 2 Database Management System - File Structures and Indexing Question 22 English\">",
+    "options": [],
+    "correct_options": [],
+    "answer": "5",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-2",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a B<sup>+</sup>- tree in which the maximum number of keys in a node is 5. What is the minimum number of keys in any non-root node?  ",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2010,
+    "yearKey": "gate-cse-2010",
+    "difficulty": null
+  },
+  {
+    "content": "A clustering index is defined on the fields which are of type",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "non-key and ordering"
+      },
+      {
+        "identifier": "B",
+        "content": "non-key and non-ordering"
+      },
+      {
+        "identifier": "C",
+        "content": "key and ordering"
+      },
+      {
+        "identifier": "D",
+        "content": "key and non-ordering"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "A B-Tree used as an index for a large database table has four levels including the root node. If a new key is inserted in this index, then the maximum number of nodes that could be newly created in the process are:",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "5"
+      },
+      {
+        "identifier": "B",
+        "content": "4"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "2"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2005,
+    "yearKey": "gate-cse-2005",
+    "difficulty": null
+  },
+  {
+    "content": "B<sup>+</sup>-trees are preferred to binary trees in databases because",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Disk capacities are greater than memory capacities"
+      },
+      {
+        "identifier": "B",
+        "content": "Disk access is much slower than memory access"
+      },
+      {
+        "identifier": "C",
+        "content": "Disk data transfer rates are much less than memory data transfer rates"
+      },
+      {
+        "identifier": "D",
+        "content": "Disks are more reliable than memory"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2000,
+    "yearKey": "gate-cse-2000",
+    "difficulty": null
+  },
+  {
+    "content": "Which of the following is correct?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "B-trees are for storing data on disk and B<sup>+</sup> trees are for main memory."
+      },
+      {
+        "identifier": "B",
+        "content": "Range queries are faster on B<sup>+</sup> trees."
+      },
+      {
+        "identifier": "C",
+        "content": "B-trees are for primary indexes and B<sup>+</sup> trees are for secondary indexes."
+      },
+      {
+        "identifier": "D",
+        "content": "The height of a B<sup>+</sup> tree is independent of the number of records."
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1999,
+    "yearKey": "gate-cse-1999",
+    "difficulty": null
+  },
+  {
+    "content": "<p>There are five records in a database.</p>\n<style type=\"text/css\">\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}\n.tg .tg-s6z2{text-align:center}\n.tg .tg-baqh{text-align:center;vertical-align:top}\n</style>\n<table class=\"tg\">\n  <tbody><tr>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">Name</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">Age</span></th>\n    <th class=\"tg-s6z2\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">Occupation</span></th>\n    <th class=\"tg-baqh\"><span style=\"font-weight:bold;color:rgb(254, 0, 0)\">Category</span><br></th>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">Rama</td>\n    <td class=\"tg-s6z2\">27</td>\n    <td class=\"tg-s6z2\">CON</td>\n    <td class=\"tg-baqh\">A</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">Abdul</td>\n    <td class=\"tg-s6z2\">22</td>\n    <td class=\"tg-s6z2\">ENG</td>\n    <td class=\"tg-baqh\">A</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">Jennifer<br></td>\n    <td class=\"tg-s6z2\">28</td>\n    <td class=\"tg-s6z2\">DOC</td>\n    <td class=\"tg-baqh\">B</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">Maya</td>\n    <td class=\"tg-s6z2\">32</td>\n    <td class=\"tg-s6z2\">SER</td>\n    <td class=\"tg-baqh\">D</td>\n  </tr>\n  <tr>\n    <td class=\"tg-s6z2\">Dev</td>\n    <td class=\"tg-s6z2\">24</td>\n    <td class=\"tg-s6z2\">MUS</td>\n    <td class=\"tg-baqh\">C</td>\n  </tr>\n</tbody></table>\n<p>There is an index file associated with this and it contains the values 1, 3, 2, 5 and 4. Which one of the fields is the index built from?</p>",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Age"
+      },
+      {
+        "identifier": "B",
+        "content": "Name"
+      },
+      {
+        "identifier": "C",
+        "content": "Occupation"
+      },
+      {
+        "identifier": "D",
+        "content": "Category"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 1998,
+    "yearKey": "gate-cse-1998",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>An index in a DBMS is said to be dense if an index entry appears for every searchkey value in the indexed file. Otherwise it is called a sparse index. Consider the following two statements.</p>\n<p>S1: A hash index must be a dense index</p>\n<p>S2: A $\\mathrm{B}^{+}$tree index can be a sparse index</p>\n<p>Which one of the following options is correct?</p>\n",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "<p>Both S 1 and S 2 are true</p>\n"
+      },
+      {
+        "identifier": "B",
+        "content": "<p>Both S 1 and S 2 are false</p>\n"
+      },
+      {
+        "identifier": "C",
+        "content": "<p>S 1 is true and S 2 is false</p>\n"
+      },
+      {
+        "identifier": "D",
+        "content": "<p>S1 is false and S2 is true</p>"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": "<h2>Statement $S1$: A hash index must be a dense index</h2>\n<p>This is <strong>true</strong>.</p>\n<h3>Why?</h3>\n<p>In hashing, the search is done by applying a hash function directly on the search-key value.  </p>\n<p>So, for a given search-key value, the index must contain an entry to locate the record or the bucket containing that record.</p>\n<p>That means <strong>for every search-key value</strong>, there must be an index entry.</p>\n<p>Hence, a <strong>hash index must be dense</strong>.</p>\n<p>So, $S1$ is <strong>true</strong>.</p>\n\n<h2>Statement $S2$: A $\\mathrm{B}^{+}$ tree index can be a sparse index</h2>\n<p>This is also <strong>true</strong>.</p>\n<h3>Why?</h3>\n<p>A $\\mathrm{B}^{+}$ tree index can be built in two ways:</p>\n<ul>\n<li><p><strong>Dense index</strong>: one index entry for every search-key value</p></li>\n<li><p><strong>Sparse index</strong>: index entries for only some search-key values</p></li>\n</ul>\n<p>If the data file is ordered on the search key, then a $\\mathrm{B}^{+}$ tree can use fewer entries and still help locate records correctly.</p>\n<p>So, a $\\mathrm{B}^{+}$ tree index <strong>can be sparse</strong>.</p>\n<p>Thus, $S2$ is <strong>true</strong>.</p>\n\n<h2>Final Answer</h2>\n<p>Both $S1$ and $S2$ are true.</p>\n<p>$$ \\boxed{\\text{Option A}} $$</p>",
+    "topic": null,
+    "year": 2026,
+    "yearKey": "gate-cse-2026-set-2",
+    "difficulty": null
+  },
+  {
+    "comprehension": null,
+    "direction": null,
+    "content": "<p>In a $\\mathrm{B}^{+}$- tree where each node can hold at most four key values, a root to leaf path consists of the following nodes:</p>\n<p>$$A=(49,77,83,-), B=(7,19,33,44), C=\\left(20^*, 22^*, 25^*, 26^*\\right)$$</p>\n<p>The *-marked keys signify that these are data entries in a leaf.</p>\n<p>Assume that a pointer between keys $k_1$ and $k_2$ points to a subtree containing keys in [ $k_1, k_2$ ], and that when a leaf is created, the smallest key in it is copied up into A record with key value 23 is inserted into the $\\mathrm{B}^{+}$- tree.</p>\n<p>The smallest key value in the parent of the leaf that contains $25^*$ is _________ . (Answer in integer)</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "33",
+    "explanation": "<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1m7zt36p4/8bedd08f-ea01-4ea6-8110-17cd52d7ae3f/1b53b280-fbe4-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zt36p5.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1m7zt36p4/8bedd08f-ea01-4ea6-8110-17cd52d7ae3f/1b53b280-fbe4-11ef-bdd8-436f5e4e4e33/file-jaoe38c1m7zt36p5.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2025 Set 2 Database Management System - File Structures and Indexing Question 3 English Explanation\"></p>",
+    "topic": null,
+    "year": 2025,
+    "yearKey": "gate-cse-2025-set-2",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider a database of fixed-length records, stored as an ordered file. The database has 25,000 records, with each record being 100 bytes, of which the primary key occupies 15 bytes. The data file is block-aligned in that each data record is fully contained within a block. The database is indexed by a primary index file, which is also stored as a block-aligned ordered file. The figure below depicts this indexing scheme.</p>\n<p><img src=\"https://app-content.cdn.examgoal.net/fly/@width/image/jaoe38c1lyr7ltab/07ef58bf-74d5-4ff1-9aa0-ba847bafc2b8/e0e4dd30-44fb-11ef-b8e7-e36aaf4aa694/file-jaoe38c1lyr7ltac.png?format=png\" data-orsrc=\"https://app-content.cdn.examgoal.net/image/jaoe38c1lyr7ltab/07ef58bf-74d5-4ff1-9aa0-ba847bafc2b8/e0e4dd30-44fb-11ef-b8e7-e36aaf4aa694/file-jaoe38c1lyr7ltac.png\" loading=\"lazy\" style=\"max-width:100%;height:auto;display:block;margin:0 auto;max-height:40vh;vertical-align:baseline\" alt=\"GATE CSE 2023 Database Management System - File Structures and Indexing Question 6 English\"></p>\n<p>Suppose the block size of the file system is 1024 bytes, and a pointer to a block occupies 5 bytes. The system uses binary search on the index file to search for a record with a given key. You may assume that a binary search on an index file of b blocks takes $$\\left\\lceil {{{\\log }_2}b} \\right\\rceil $$ block accesses in the worst case.</p>\n<p>Given a key, the number of block accesses required to identify the block in the data file that may contain a record with the key, in the worst case, is ___________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "6",
+    "explanation": "<p>Given database is stored as ordered file and indexed by primary index file</p>\n\n<p>There're 25,000  records</p>\n\n<p>100 B  records size</p>\n\n<p>15 B  Primary key size</p>\n\n<p>5 B  Pointer size</p>\n\n<p>1024 B  Block size</p>\n\n<p>It's stored in unspanned organization.</p>\n\n<p>$$ \\text { So, Number of records per block }=\\left\\lfloor\\frac{\\text { Block size }}{\\text { Record size }}\\right\\rfloor=\\left\\lfloor\\frac{1024 \\mathrm{~B}}{100 \\mathrm{~B}}\\right\\rfloor=10 $$</p>\n\n<p>$$ \\begin{aligned} & \\text { Number of data blocks needed }=\\left\\lceil\\frac{\\text { Number of records }}{\\text { Number of records per block }}\\right\\rceil=\\frac{25000}{10}=2500 \\\\\\\\ & \\text { No. of Index records per block }=\\left\\lfloor\\frac{\\text { Block size }}{\\text { primany key size }+ \\text { Pointer size }}\\right\\rfloor=\\left\\lfloor\\frac{1024}{15+5}\\right\\rfloor=\\left\\lfloor\\frac{1024}{20}\\right\\rfloor=51 \\\\\\\\ & \\text { Number of index block needed }=\\left\\lceil\\frac{2500}{51}\\right\\rceil=50 \\\\\\\\ & \\text { Applying binary search, }\\left\\lceil\\log _2(50)\\right\\rceil=6 \\end{aligned} $$</p>\n\n<p>Hence, the correct answer is 6 .</p>",
+    "topic": null,
+    "year": 2023,
+    "yearKey": "gate-cse-2023",
+    "difficulty": null
+  },
+  {
+    "direction": null,
+    "content": "<p>Consider two files systems A and B, that use contiguous allocation and linked allocation, respectively. A file of size 100 blocks is already stored in A and also in B. Now, consider inserting a new block in the middle of the file (between 50<sup>th</sup> and 51<sup>st</sup> block), whose data is already available in the memory. Assume that there are enough free blocks at the end of the file and that the file control blocks are already in memory. Let the number of disk accesses required to insert a block in the midele of the file in A and B are n<sub>A</sub> and n<sub>B</sub>, respectively, then the value of n<sub>A</sub> + n<sub>B</sub> is _____________.</p>",
+    "options": [],
+    "correct_options": [],
+    "answer": "153",
+    "explanation": "<p>Contiguous Allocation :</p>\n<p>50 read operations + 50 write operations + 1 operation to write the newly inserted block = 101 operations (n<sub>A</sub>)</p>\n<p>Linked Allocation :</p>\n<p>50 read operations + 1 operation delete next pointer of 50<sup>th</sup> element + 1 operation to connect it to the 51<sup>st</sup> element = 52 operations (n<sub>B</sub>)</p>\n<p>Total operations:</p>\n<p>Required = n<sub>A</sub> + n<sub>B</sub> = 101 + 52 = 153</p>",
+    "topic": null,
+    "year": 2022,
+    "yearKey": "gate-cse-2022",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a database implemented using B+ tree for file indexing and installed on a disk drive with block size of 4 KB. The size of search key is 12 bytes and the size of tree/disk pointer is 8 bytes. Assume that the database has one million records. Also assume that no node of the B+ tree and no records are present initially in main memory. Consider that each record fits into one disk block. The minimum number of disk accesses required to retrieve any record in the database is ______.",
+    "options": [],
+    "correct_options": [],
+    "answer": "4",
+    "explanation": "<p>To determine the minimum number of disk accesses required to retrieve any record from the database, we need to analyze the structure of the B+ tree and calculate its height based on the given parameters.</p>\n<p><strong>Given Parameters:</strong></p>\n\n<p><p><strong>Block size ($ B $)</strong>: 4 KB = 4096 bytes</p></p>\n<p><p><strong>Search key size ($ K $)</strong>: 12 bytes</p></p>\n<p><p><strong>Pointer size ($ P $)</strong>: 8 bytes</p></p>\n<p><p><strong>Number of records ($ N $)</strong>: 1,000,000</p></p>\n<p><p><strong>Each record fits into one disk block</strong></p></p>\n<p><p><strong>No nodes or records are initially in main memory</strong></p></p>\n\n<p><strong>Step 1: Calculate the Order (Fanout) of the B+ Tree</strong></p>\n<p><strong>For Internal Nodes:</strong></p>\n<p>Each internal node can have up to $ p $ pointers and $ p - 1 $ keys.</p>\n<p>The size of an internal node ($ S_{\\text{internal}} $) is:</p>\n<p>$ S_{\\text{internal}} = \\text{Header} + (\\text{Pointers} \\times P) + (\\text{Keys} \\times K) $</p>\n<p>Assuming a header size ($ H $) of 16 bytes:</p>\n<p>$ S_{\\text{internal}} = H + (p \\times P) + ((p - 1) \\times K) $</p>\n<p>Substitute $ P = 8 $ bytes, $ K = 12 $ bytes, $ H = 16 $ bytes:</p>\n<p>$ S_{\\text{internal}} = 16 + (8p) + 12(p - 1) = 16 + 8p + 12p - 12 = (20p + 4) \\text{ bytes} $</p>\n<p>Set $ S_{\\text{internal}} \\leq B $:</p>\n<p>$ 20p + 4 \\leq 4096 \\implies 20p \\leq 4092 \\implies p \\leq 204.6 $</p>\n<p>So, the maximum number of pointers $ p $ is 204.</p>\n<p><strong>For Leaf Nodes:</strong></p>\n<p>Each leaf node entry requires space for a key and a record pointer:</p>\n<p>$ S_{\\text{leaf}} = H + (L \\times (K + P)) $</p>\n<p>$ S_{\\text{leaf}} = 16 + (L \\times 20) \\leq 4096 $</p>\n<p>$ L \\leq \\frac{4096 - 16}{20} = \\frac{4080}{20} = 204 $</p>\n<p>So, each leaf node can contain up to 204 entries.</p>\n<p><strong>Step 2: Calculate the Number of Leaf Nodes</strong></p>\n<p>$ \\text{Number of leaf nodes} = \\left\\lceil \\frac{N}{L} \\right\\rceil = \\left\\lceil \\frac{1,000,000}{204} \\right\\rceil = 4902 \\text{ leaf nodes} $</p>\n<p><strong>Step 3: Determine the Height of the B+ Tree</strong></p>\n\n<p><p><strong>Level h (Leaf Level):</strong> 4902 nodes</p></p>\n<p><p><strong>Level h - 1:</strong></p>\n<p>$   \\left\\lceil \\frac{4902}{204} \\right\\rceil = 25 \\text{ nodes}   $</p></p>\n<p><p><strong>Level h - 2 (Root Level):</strong></p>\n<p>$   \\left\\lceil \\frac{25}{204} \\right\\rceil = 1 \\text{ node (root)}   $</p></p>\n<p><p><strong>Total Levels (Height h):</strong> 3</p></p>\n\n<p><strong>Step 4: Calculate the Minimum Number of Disk Accesses</strong></p>\n<p>To retrieve a record:</p>\n\n<p><p><strong>Access the Root Node:</strong> 1 disk access</p></p>\n<p><p><strong>Access Level h - 1 Node:</strong> 1 disk access</p></p>\n<p><p><strong>Access the Leaf Node:</strong> 1 disk access</p></p>\n<p><p><strong>Access the Record's Disk Block:</strong> 1 disk access</p></p>\n\n<p><strong>Total Minimum Disk Accesses:</strong> $ 1 + 1 + 1 + 1 = 4 $</p>\n<p><strong>Answer:</strong></p>\n<p>4</p>",
+    "topic": null,
+    "year": 2020,
+    "yearKey": "gate-cse-2020",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a B<sup>+</sup> tree in which the search key is 12 bytes long, block size is 1024 bytes, record pointer is 10 bytes long and block pointer is 8 bytes long. The maximum number of keys that can be accommodated in each non-leaf node of the tree is ____.",
+    "options": [],
+    "correct_options": [],
+    "answer": "50",
+    "explanation": null,
+    "topic": null,
+    "year": 2015,
+    "yearKey": "gate-cse-2015-set-3",
+    "difficulty": null
+  },
+  {
+    "content": "The following key values are inserted into a B<sup>+</sup>-tree in which order of the internal nodes is 3, and that of the leaf nodes is 2, in the sequence given below. The order of internal nodes is the maximum number of tree pointers in each node, and the order of leaf nodes is the maximum number of data items that can be stored in it. The B<sup>+</sup>- tree is initially empty.\n<p>10, 3, 6, 8, 4, 2, 1</p>\nThe maximum number of times leaf nodes would get split up as a result of these insertions is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "2"
+      },
+      {
+        "identifier": "B",
+        "content": "3"
+      },
+      {
+        "identifier": "C",
+        "content": "4"
+      },
+      {
+        "identifier": "D",
+        "content": "5"
+      }
+    ],
+    "correct_options": [
+      "B"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2009,
+    "yearKey": "gate-cse-2009",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a file of 16384 records. Each record is 32 bytes long and its key field is of size 6 bytes. The file is ordered on a non-key field, and the file organization is unspanned. The file is stored in a file system with block size 1024 bytes, and the size of a block pointer is 10 bytes. If the secondary index is built on the key field of the file, and a multi-level index scheme is used to store the secondary index, the number of first-level and second-level blocks in the multi-level index are respectively",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "8 and 0"
+      },
+      {
+        "identifier": "B",
+        "content": "128 and 6"
+      },
+      {
+        "identifier": "C",
+        "content": "256 and 4"
+      },
+      {
+        "identifier": "D",
+        "content": "512 and 5"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2008,
+    "yearKey": "gate-cse-2008",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the B<sup>+</sup> tree in the adjoining figure, where each node has at most two keys and three links.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/8LObniz7bAgdMRy8O/T9lkobr5JP9aT0fOlC8nc0mncFO8m/jEJBBcSBWhodzT3z7hCR8f/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2007 Database Management System - File Structures and Indexing Question 15 English 1\">\n<p>Now the key K 50 is deleted from the B<sup>+</sup> tree resulting after the two insertions made earlier. Consider the following statements about the B<sup>+</sup> tree resulting after this deletion.</p>\n<p>i) The height of the tree remains the same.</p>\n<p>ii) The node <img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/4cLYqwpQaWixUvntX/VyeUugGkDeg3dJTy1hcTEHnyXj1bF/UOdIieB6RhWuHUIGmXiXj0/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2007 Database Management System - File Structures and Indexing Question 15 English 2\">\n(disregarding the links) is present in the tree.</p>\n<p>iii) The root node remains unchanged (disregarding the links).</p>\nWhich one of the following options is true ?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "Statements (i) and (ii) are true"
+      },
+      {
+        "identifier": "B",
+        "content": "Statements (ii) and (iii) are true"
+      },
+      {
+        "identifier": "C",
+        "content": "Statements (iii) and (i) are true"
+      },
+      {
+        "identifier": "D",
+        "content": "All the statements are false"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The order of a leaf node in a B<sup>+</sup>- tree is the maximum number of (value, data record pointer) pairs it can hold. Given that the block size is 1K bytes, data record pointer is 7 bytes long, the value field is 9 bytes long and a block pointer is 6 bytes long, what is the order of the leaf node?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "63"
+      },
+      {
+        "identifier": "B",
+        "content": "64"
+      },
+      {
+        "identifier": "C",
+        "content": "67"
+      },
+      {
+        "identifier": "D",
+        "content": "68"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "Consider the B<sup>+</sup> tree in the adjoining figure, where each node has at most two keys and three links.\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/8LObniz7bAgdMRy8O/T9lkobr5JP9aT0fOlC8nc0mncFO8m/jEJBBcSBWhodzT3z7hCR8f/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2007 Database Management System - File Structures and Indexing Question 16 English 1\">\n<p>Keys K 15 and then K 25 are inserted into this tree in that order. Exactly how many of the following nodes (disregarding the links) will be present in the tree after the two insertions?</p>\n<img class=\"question-image\" src=\"https://imagex.cdn.examgoal.net/f25OvysJYD5ESY4XT/VaAmiTl2fyo8ZesuJ3mdDIUZr2EPq/or46wC3jun0NbPejuYVhNg/image.svg\" loading=\"lazy\" alt=\"GATE CSE 2007 Database Management System - File Structures and Indexing Question 16 English 2\">",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "1"
+      },
+      {
+        "identifier": "B",
+        "content": "2"
+      },
+      {
+        "identifier": "C",
+        "content": "3"
+      },
+      {
+        "identifier": "D",
+        "content": "4"
+      }
+    ],
+    "correct_options": [
+      "A"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2007,
+    "yearKey": "gate-cse-2007",
+    "difficulty": null
+  },
+  {
+    "content": "The order of an internal node in a B<sup>+</sup> tree index is the maximum number of children it can have. Suppose that a child pointer takes 6 bytes, the search field value takes 14 bytes, and the block size is 512 bytes. What is the order of the internal node?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "24"
+      },
+      {
+        "identifier": "B",
+        "content": "25"
+      },
+      {
+        "identifier": "C",
+        "content": "26"
+      },
+      {
+        "identifier": "D",
+        "content": "27"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "Consider a table T in a relational database with a key field K. A B-tree of order p is used as an access structure on K, where p denotes the maximum number of tree pointers in a B-tree index node. Assume that K is 10 bytes long; disk block size is 512 bytes; each data pointer P<sub>D</sub> is 8 bytes long and each block pointer P<sub>B</sub> is 5 bytes long. In order for each B-tree node to fit in a single disk block, the maximum value of p is",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "20"
+      },
+      {
+        "identifier": "B",
+        "content": "22"
+      },
+      {
+        "identifier": "C",
+        "content": "23"
+      },
+      {
+        "identifier": "D",
+        "content": "32"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2004,
+    "yearKey": "gate-cse-2004",
+    "difficulty": null
+  },
+  {
+    "content": "A B<sup>+</sup> - tree index is to be built on the Name attribute of the relation STUDENT. Assume that all student names are of length 8 bytes, disk blocks are of size 512 bytes, and index pointers are of size 4 bytes. Given this scenario, what would be the best choice of the degree (i.e. the number of pointers per node) of the B<sup>+</sup> - tree?",
+    "options": [
+      {
+        "identifier": "A",
+        "content": "16"
+      },
+      {
+        "identifier": "B",
+        "content": "42"
+      },
+      {
+        "identifier": "C",
+        "content": "43"
+      },
+      {
+        "identifier": "D",
+        "content": "44"
+      }
+    ],
+    "correct_options": [
+      "C"
+    ],
+    "answer": null,
+    "explanation": null,
+    "topic": null,
+    "year": 2002,
+    "yearKey": "gate-cse-2002",
+    "difficulty": null
+  }
+]
