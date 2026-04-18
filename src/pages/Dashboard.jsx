@@ -1,68 +1,26 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { useQuiz } from '../context/QuizContext'
 import { getStructure } from '../services/questionsService'
-import { BookOpen, ChevronRight, BarChart3, Target, Award } from 'lucide-react'
+import { BookOpen, ChevronRight, ChevronDown, BarChart3, Target, Award, Folder, FileText } from 'lucide-react'
 
 export default function Dashboard() {
   const { user } = useAuth()
   const { progressMap } = useQuiz()
+  const navigate = useNavigate()
   const [structure, setStructure] = useState(null)
   const [loading, setLoading] = useState(true)
+
+  // Accordion state
+  const [expandedSubject, setExpandedSubject] = useState(null)
+  const [expandedDivision, setExpandedDivision] = useState(null)
 
   useEffect(() => {
     getStructure()
       .then(setStructure)
       .finally(() => setLoading(false))
   }, [])
-
-  // Compute per-subject stats
-  const subjectStats = useMemo(() => {
-    if (!structure) return []
-    const stats = []
-
-    for (const [examGroup, exams] of Object.entries(structure)) {
-      for (const [exam, subjects] of Object.entries(exams)) {
-        for (const [subject, divisions] of Object.entries(subjects)) {
-          let totalQuestions = 0
-          let attempted = 0
-          let correct = 0
-
-          for (const [division, chapters] of Object.entries(divisions)) {
-            for (const chapter of chapters) {
-              // We don't know exact question count without loading files,
-              // but we can count from progressMap
-              // This gives us stats only for attempted questions
-            }
-          }
-
-          // Count from progressMap
-          for (const [qid, progress] of progressMap) {
-            if (qid.startsWith(`${examGroup}/${exam}/${subject}/`)) {
-              totalQuestions++
-              if (progress.selectedOption != null) {
-                attempted++
-                if (progress.isCorrect) correct++
-              }
-            }
-          }
-
-          stats.push({
-            examGroup,
-            exam,
-            subject,
-            attempted,
-            correct,
-            divisionsCount: Object.keys(divisions).length,
-            chaptersCount: Object.values(divisions).reduce((sum, chs) => sum + chs.length, 0),
-          })
-        }
-      }
-    }
-
-    return stats
-  }, [structure, progressMap])
 
   // Overall stats
   const overallStats = useMemo(() => {
@@ -87,14 +45,40 @@ export default function Dashboard() {
     )
   }
 
+  // Assuming structure is mostly 1 examGroup and 1 exam for now (e.g. jee / jee-main)
+  // We'll just grab the first one to display the hierarchy nicely
+  const examGroup = structure ? Object.keys(structure)[0] : null
+  const exam = examGroup ? Object.keys(structure[examGroup])[0] : null
+  const subjects = exam ? structure[examGroup][exam] : {}
+
+  const toggleSubject = (subj) => {
+    setExpandedSubject(expandedSubject === subj ? null : subj)
+    setExpandedDivision(null) // Reset division when changing subject
+  }
+
+  const toggleDivision = (div) => {
+    setExpandedDivision(expandedDivision === div ? null : div)
+  }
+
+  const startQuiz = (subject, division, chapter) => {
+    const params = new URLSearchParams({
+      examGroup,
+      exam,
+      subject,
+      division,
+      chapter
+    })
+    navigate(`/quiz?${params.toString()}`)
+  }
+
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
       {/* Greeting */}
       <div>
         <h1 className="text-2xl sm:text-3xl font-bold text-white">
-          Hello, {displayName}
+          Welcome back, {displayName}
         </h1>
-        <p className="text-slate-400 mt-1">Here's your preparation overview</p>
+        <p className="text-slate-400 mt-1">Select a chapter to start practicing or review your progress.</p>
       </div>
 
       {/* Overall stats cards */}
@@ -130,61 +114,90 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Subject cards */}
+      {/* Syllabus Explorer */}
       <div>
-        <h2 className="text-lg font-semibold text-slate-200 mb-4">Subjects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {subjectStats.map((s) => (
-            <Link
-              key={`${s.examGroup}/${s.exam}/${s.subject}`}
-              to="/quiz"
-              className="bg-slate-900/50 border border-slate-800 rounded-xl p-5 hover:border-slate-700 
-                         transition-colors no-underline group"
-            >
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <BookOpen size={18} className="text-indigo-400" />
-                  <h3 className="text-base font-semibold text-white capitalize">{s.subject}</h3>
-                </div>
-                <ChevronRight size={16} className="text-slate-600 group-hover:text-slate-400 transition-colors" />
-              </div>
-
-              <div className="flex items-center gap-4 text-xs text-slate-500">
-                <span>{s.divisionsCount} divisions</span>
-                <span>{s.chaptersCount} chapters</span>
-              </div>
-
-              {s.attempted > 0 && (
-                <div className="mt-3 pt-3 border-t border-slate-800">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-slate-500">{s.attempted} attempted</span>
-                    <span className="text-emerald-400">{s.correct} correct</span>
+        <h2 className="text-lg font-semibold text-slate-200 mb-4 flex items-center gap-2">
+          <BookOpen size={20} className="text-indigo-400" />
+          Course Syllabus ({examGroup?.toUpperCase()} - {exam?.toUpperCase()})
+        </h2>
+        
+        <div className="space-y-3">
+          {Object.entries(subjects).map(([subject, divisions]) => (
+            <div key={subject} className="border border-slate-800 bg-slate-900/30 rounded-xl overflow-hidden">
+              {/* Subject Header */}
+              <button
+                onClick={() => toggleSubject(subject)}
+                className="w-full flex items-center justify-between p-4 bg-slate-900/50 hover:bg-slate-800/50 transition-colors"
+              >
+                <div className="flex items-center gap-3">
+                  <div className={`p-2 rounded-lg ${expandedSubject === subject ? 'bg-indigo-500/20 text-indigo-400' : 'bg-slate-800 text-slate-400'}`}>
+                    <Folder size={20} />
                   </div>
+                  <h3 className="text-lg font-medium text-white capitalize">{subject}</h3>
+                  <span className="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded-full">
+                    {Object.keys(divisions).length} divisions
+                  </span>
+                </div>
+                {expandedSubject === subject ? (
+                  <ChevronDown size={20} className="text-slate-400" />
+                ) : (
+                  <ChevronRight size={20} className="text-slate-400" />
+                )}
+              </button>
+
+              {/* Divisions (Expanded) */}
+              {expandedSubject === subject && (
+                <div className="border-t border-slate-800 p-2 space-y-2">
+                  {Object.entries(divisions).map(([division, chapters]) => (
+                    <div key={division} className="rounded-lg overflow-hidden border border-slate-800/50">
+                      {/* Division Header */}
+                      <button
+                        onClick={() => toggleDivision(division)}
+                        className="w-full flex items-center justify-between p-3 bg-slate-800/30 hover:bg-slate-800/60 transition-colors"
+                      >
+                        <div className="flex items-center gap-2 ml-2">
+                          <Folder size={16} className={expandedDivision === division ? 'text-indigo-400' : 'text-slate-500'} />
+                          <span className="text-sm font-medium text-slate-200 capitalize">{division.replace(/-/g, ' ')}</span>
+                          <span className="text-xs text-slate-500 ml-2">
+                            ({chapters.length} chapters)
+                          </span>
+                        </div>
+                        {expandedDivision === division ? (
+                          <ChevronDown size={16} className="text-slate-500" />
+                        ) : (
+                          <ChevronRight size={16} className="text-slate-500" />
+                        )}
+                      </button>
+
+                      {/* Chapters (Expanded) */}
+                      {expandedDivision === division && (
+                        <div className="p-2 space-y-1 bg-slate-950/50">
+                          {chapters.map((chapter) => (
+                            <button
+                              key={chapter}
+                              onClick={() => startQuiz(subject, division, chapter)}
+                              className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-indigo-500/10 group transition-colors text-left"
+                            >
+                              <div className="flex items-center gap-3 ml-6">
+                                <FileText size={16} className="text-slate-600 group-hover:text-indigo-400 transition-colors" />
+                                <span className="text-sm text-slate-300 group-hover:text-white capitalize">
+                                  {chapter.replace(/-/g, ' ')}
+                                </span>
+                              </div>
+                              <span className="text-xs font-medium text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity bg-indigo-500/10 px-2 py-1 rounded">
+                                Start Practice
+                              </span>
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               )}
-
-              <p className="text-xs text-slate-600 mt-2 uppercase">
-                {s.examGroup} / {s.exam}
-              </p>
-            </Link>
+            </div>
           ))}
         </div>
-      </div>
-
-      {/* Quick start CTA */}
-      <div className="bg-gradient-to-r from-indigo-900/30 to-purple-900/30 border border-indigo-800/30 rounded-xl p-6 text-center">
-        <h3 className="text-lg font-semibold text-white mb-2">Ready to practice?</h3>
-        <p className="text-sm text-slate-400 mb-4">
-          Jump into the quiz and start solving questions
-        </p>
-        <Link
-          to="/quiz"
-          className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-medium 
-                     px-5 py-2.5 rounded-lg transition-colors no-underline"
-        >
-          <BookOpen size={16} />
-          Start Quiz
-        </Link>
       </div>
     </div>
   )
