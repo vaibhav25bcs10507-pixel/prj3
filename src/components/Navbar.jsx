@@ -1,9 +1,11 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
-import { LogOut, Zap, LayoutDashboard, BookOpen } from 'lucide-react'
+import { useTheme } from '../context/ThemeContext'
+import { LogOut, Zap, LayoutDashboard, BookOpen, Palette } from 'lucide-react'
 
 export default function Navbar() {
   const { user, signOut } = useAuth()
+  const { theme, setTheme } = useTheme()
   const navigate = useNavigate()
   const { pathname } = useLocation()
 
@@ -46,6 +48,13 @@ export default function Navbar() {
           <div className="flex gap-1 items-center">
             {user ? (
               <>
+                <button
+                  onClick={() => setTheme(theme === 'dark' ? 'cherry' : 'dark')}
+                  title="Toggle Theme"
+                  className="flex gap-1.5 items-center p-1.5 text-sm font-medium bg-transparent rounded-lg border-none transition-all cursor-pointer text-zinc-500 hover:text-indigo-400 hover:bg-indigo-500/10 mr-1"
+                >
+                  <Palette size={16} />
+                </button>
                 {navLink('/', 'Dashboard', LayoutDashboard)}
                 {pathname.startsWith('/quiz') && (
                   <div className="flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-500/15 text-indigo-300 select-none">

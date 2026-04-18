@@ -29,7 +29,7 @@ function getTheme(subject) {
 // eslint-disable-next-line no-unused-vars
 function StatCard({ value, label, sub, colorClass, icon: _IconComponent }) {
   return (
-    <div className="flex flex-col gap-3 p-5 rounded-2xl border transition-colors bg-[#121214] border-zinc-800/80 hover:border-zinc-700/80">
+    <div className="flex flex-col gap-3 p-5 rounded-2xl border transition-colors bg-zinc-900 border-zinc-800/80 hover:border-zinc-700/80">
       <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${colorClass}`}>
         <_IconComponent size={18} />
       </div>
@@ -119,7 +119,7 @@ export default function Dashboard() {
   return (
     <div className="flex min-h-[calc(100vh-3.5rem)] relative">
       {/* ── Permanent Mini Sidebar (Mobile Only) ── */}
-      <div className="lg:hidden w-14 shrink-0 bg-[#121214] border-r border-zinc-800/80 flex flex-col items-center py-4 sticky top-14 h-[calc(100vh-3.5rem)] z-30">
+      <div className="lg:hidden w-14 shrink-0 bg-zinc-900 border-r border-zinc-800/80 flex flex-col items-center py-4 sticky top-14 h-[calc(100vh-3.5rem)] z-30">
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-xl transition-colors cursor-pointer border-none bg-transparent"
@@ -138,7 +138,7 @@ export default function Dashboard() {
 
       {/* ── Left Sidebar Drawer (Mobile) / Permanent Sidebar (Desktop) ── */}
       <div className={`
-        fixed bottom-0 left-0 z-40 w-72 bg-[#121214] border-r border-zinc-800 p-6 overflow-y-auto transform transition-transform duration-300 ease-in-out
+        fixed bottom-0 left-0 z-40 w-72 bg-zinc-900 border-r border-zinc-800 p-6 overflow-y-auto transform transition-transform duration-300 ease-in-out
         lg:sticky lg:top-14 lg:h-[calc(100vh-3.5rem)] lg:translate-x-0 lg:z-20
         ${isSidebarOpen ? 'translate-x-14 top-14 shadow-2xl lg:shadow-none' : '-translate-x-full top-14 lg:shadow-none'}
       `}>
@@ -238,7 +238,7 @@ export default function Dashboard() {
             </div>
 
             {Object.keys(subjects).length === 0 ? (
-            <div className="p-10 text-center rounded-2xl border bg-[#121214] border-zinc-800/80">
+            <div className="p-10 text-center rounded-2xl border bg-zinc-900 border-zinc-800/80">
               <p className="text-sm text-zinc-500">No subjects available for this exam.</p>
             </div>
           ) : (
@@ -252,7 +252,7 @@ export default function Dashboard() {
                 <button
                   key={subject}
                   onClick={() => navigate(`/subject?examGroup=${selectedGroup}&exam=${selectedExam}&subject=${subject}`)}
-                  className="flex flex-col gap-4 items-start p-5 text-left rounded-2xl border transition-all cursor-pointer bg-[#121214] border-zinc-800/80 group hover:border-zinc-700/80 hover:bg-zinc-800/30"
+                  className="flex flex-col gap-4 items-start p-5 text-left rounded-2xl border transition-all cursor-pointer bg-zinc-900 border-zinc-800/80 group hover:border-zinc-700/80 hover:bg-zinc-800/30"
                 >
                   <div className={`w-10 h-10 rounded-xl flex items-center justify-center bg-zinc-800/50 group-hover:bg-zinc-800 transition-colors`}>
                     <Icon size={20} className={theme.accent} />

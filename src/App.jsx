@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import { QuizProvider } from './context/QuizContext'
+import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
 import ProtectedRoute from './components/ProtectedRoute'
 
@@ -23,11 +24,12 @@ function LoadingFallback() {
 export default function App() {
   return (
     <BrowserRouter basename="/prj3">
-      <AuthProvider>
-        <QuizProvider>
-          <div className="min-h-screen bg-slate-950 text-slate-100">
-            <Navbar />
-            <Suspense fallback={<LoadingFallback />}>
+      <ThemeProvider>
+        <AuthProvider>
+          <QuizProvider>
+            <div className="min-h-screen bg-zinc-950 text-white">
+              <Navbar />
+              <Suspense fallback={<LoadingFallback />}>
               <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
@@ -61,6 +63,7 @@ export default function App() {
           </div>
         </QuizProvider>
       </AuthProvider>
+      </ThemeProvider>
     </BrowserRouter>
   )
 }

@@ -83,3 +83,42 @@ body::before {
 /* ── Hide scrollbar class ────────────────────────────────────── */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── Theme: Cherry ──────────────────────────────────────────── */
+[data-theme="cherry"] {
+  /* Backgrounds */
+  --color-zinc-950: #EAE9FF; /* Main Background */
+ /*  --color-zinc-900: #D6D3FF; Cards/Surface */
+  --color-zinc-900: #EAE9FF; /* Cards/Surface */
+  --color-zinc-800: #C2BEFF; /* Hover states / Secondary surface */
+  --color-zinc-700: #ADA6FF; /* Borders & active states */
+  
+  /* Text */
+  --color-white: #312D65; /* Headers / Primary text */
+  --color-zinc-200: #1D193D; /* Main text */
+  --color-zinc-400: #484390; /* Muted text */
+  --color-zinc-500: #9A91FE; /* Very muted text */
+  --color-zinc-600: #ADA6FF; /* Lowest contrast text */
+
+  /* Accents */
+  --color-indigo-400: #9A91FE; /* Light accent / hover */
+  --color-indigo-500: #484390; /* Main accent */
+  --color-indigo-600: #312D65; /* Dark accent */
+  
+  /* Per-subject colors (optional, we tint them to match the light theme) */
+  /* Physics - Sky */
+  --color-sky-400: #2563eb;
+  --color-sky-500: #3b82f6;
+  /* Math - Violet */
+  --color-violet-400: #7c3aed;
+  --color-violet-500: #8b5cf6;
+  /* Chem - Emerald */
+  --color-emerald-400: #059669;
+  --color-emerald-500: #10b981;
+  /* Amber / Red */
+  --color-amber-400: #d97706;
+  --color-amber-500: #f59e0b;
+  --color-red-500: #ef4444;
+
+  color-scheme: light;
+}

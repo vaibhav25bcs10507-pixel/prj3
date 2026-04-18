@@ -78,7 +78,7 @@ export default function Subject() {
           </div>
           <span className="text-sm font-medium">Back to Dashboard</span>
         </button>
-        <div className="bg-[#121214] border border-zinc-800/80 rounded-2xl p-10 text-center">
+        <div className="bg-zinc-900 border border-zinc-800/80 rounded-2xl p-10 text-center">
           <p className="text-zinc-500 text-sm">Subject data not found.</p>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default function Subject() {
       </button>
 
       {/* Header */}
-      <div className="bg-[#121214] border border-zinc-800/80 rounded-2xl p-6 sm:p-8 mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+      <div className="bg-zinc-900 border border-zinc-800/80 rounded-2xl p-6 sm:p-8 mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
         <div className={`w-16 h-16 rounded-2xl flex items-center justify-center bg-zinc-800/50 shrink-0`}>
           <Icon size={32} className={theme.accent} />
         </div>
@@ -147,7 +147,7 @@ export default function Subject() {
                   const topics = topicsIndex?.[cacheKey] || []
 
                   return (
-                    <div key={chapter} className="bg-[#121214] border border-zinc-800/80 rounded-2xl p-5 hover:border-zinc-700/80 transition-colors flex flex-col h-full">
+                    <div key={chapter} className="bg-zinc-900 border border-zinc-800/80 rounded-2xl p-5 hover:border-zinc-700/80 transition-colors flex flex-col h-full">
                       {/* Chapter Header */}
                       <div className="flex items-start justify-between gap-4 mb-4">
                         <div className="flex items-center gap-2.5 min-w-0">
