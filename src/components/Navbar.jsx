@@ -31,34 +31,39 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-zinc-800/60 bg-zinc-950/80 backdrop-blur-xl">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-14">
+      <div className="px-6 w-full lg:px-12">
+        <div className="flex justify-between items-center h-14">
 
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 no-underline group">
-            <div className="w-7 h-7 rounded-lg bg-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-500/30 group-hover:shadow-indigo-500/50 transition-shadow">
+          <Link to="/" className="flex gap-2 items-center no-underline group">
+            <div className="flex justify-center items-center w-7 h-7 bg-indigo-500 rounded-lg shadow-lg transition-shadow shadow-indigo-500/30 group-hover:shadow-indigo-500/50">
               <Zap size={14} className="text-white" fill="white" />
             </div>
-            <span className="text-sm font-bold text-white tracking-tight">QuizVault</span>
+            <span className="text-sm font-bold tracking-tight text-white">QuizVault</span>
           </Link>
 
           {/* Right */}
-          <div className="flex items-center gap-1">
+          <div className="flex gap-1 items-center">
             {user ? (
               <>
                 {navLink('/', 'Dashboard', LayoutDashboard)}
-                {navLink('/quiz', 'Quiz', BookOpen)}
+                {pathname.startsWith('/quiz') && (
+                  <div className="flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg bg-indigo-500/15 text-indigo-300 select-none">
+                    <BookOpen size={15} />
+                    <span className="hidden sm:inline">Quiz</span>
+                  </div>
+                )}
 
-                <div className="w-px h-5 bg-zinc-800 mx-1" />
+                <div className="mx-1 w-px h-5 bg-zinc-800" />
 
-                <span className="text-xs text-zinc-600 hidden md:inline max-w-[160px] truncate">
+                <span className="hidden text-xs md:inline text-zinc-600 max-w-[160px] truncate">
                   {user.email}
                 </span>
 
                 <button
                   onClick={handleSignOut}
                   title="Sign out"
-                  className="flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-red-400 px-2.5 py-1.5 rounded-lg hover:bg-red-500/10 transition-all cursor-pointer border-none bg-transparent"
+                  className="flex gap-1.5 items-center py-1.5 px-2.5 text-sm font-medium bg-transparent rounded-lg border-none transition-all cursor-pointer hover:text-red-400 text-zinc-500 hover:bg-red-500/10"
                 >
                   <LogOut size={15} />
                   <span className="hidden sm:inline">Sign Out</span>
@@ -68,13 +73,13 @@ export default function Navbar() {
               <>
                 <Link
                   to="/login"
-                  className="text-sm font-medium text-zinc-400 hover:text-zinc-100 px-3 py-1.5 rounded-lg hover:bg-white/5 transition-all no-underline"
+                  className="py-1.5 px-3 text-sm font-medium no-underline rounded-lg transition-all text-zinc-400 hover:text-zinc-100 hover:bg-white/5"
                 >
                   Log in
                 </Link>
                 <Link
                   to="/signup"
-                  className="text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 px-3.5 py-1.5 rounded-lg transition-colors no-underline shadow-lg shadow-indigo-500/20"
+                  className="py-1.5 px-3.5 text-sm font-semibold text-white no-underline bg-indigo-600 rounded-lg shadow-lg transition-colors hover:bg-indigo-500 shadow-indigo-500/20"
                 >
                   Sign Up
                 </Link>

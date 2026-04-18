@@ -52,6 +52,7 @@ export default function Quiz() {
   const subject  = searchParams.get('subject') || ''
   const division = searchParams.get('division') || ''
   const chapter  = searchParams.get('chapter')  || 'Quiz'
+  const topic    = searchParams.get('topic')    || null
 
   const fmt = (s) => s.replace(/-/g, ' ')
 
@@ -61,20 +62,26 @@ export default function Quiz() {
       {/* ── Header ── */}
       <div className="flex items-center gap-3">
         <button
-          onClick={() => navigate('/')}
+          onClick={() => navigate(-1)}
           className="w-8 h-8 flex items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-400 hover:text-white transition-all cursor-pointer"
-          title="Back to Dashboard"
+          title="Go Back"
         >
           <ArrowLeft size={15} />
         </button>
 
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-1.5 text-xs text-zinc-600 overflow-x-auto">
+        <nav className="flex flex-wrap items-center gap-1.5 text-xs text-zinc-600">
           <span className="capitalize whitespace-nowrap">{fmt(subject)}</span>
           <ChevronRight size={11} />
           <span className="capitalize whitespace-nowrap">{fmt(division)}</span>
           <ChevronRight size={11} />
-          <span className="text-zinc-300 font-medium capitalize whitespace-nowrap">{fmt(chapter)}</span>
+          <span className={`capitalize whitespace-nowrap ${!topic ? 'text-zinc-300 font-medium' : ''}`}>{fmt(chapter)}</span>
+          {topic && (
+            <>
+              <ChevronRight size={11} />
+              <span className="text-zinc-300 font-medium capitalize whitespace-nowrap truncate max-w-[200px]">{fmt(topic)}</span>
+            </>
+          )}
         </nav>
       </div>
 

@@ -4,10 +4,12 @@ export default function ProgressBar({ stats }) {
   const { total, attempted, correct, percentage } = stats
 
   const { barColor, label } = useMemo(() => {
+    const displayPct = percentage % 1 === 0 ? percentage : percentage.toFixed(2)
+
     if (percentage === 0) return { barColor: 'bg-zinc-700', label: '' }
-    if (percentage < 30)  return { barColor: 'bg-red-500',    label: `${percentage}%` }
-    if (percentage < 70)  return { barColor: 'bg-amber-500',  label: `${percentage}%` }
-    return                       { barColor: 'bg-emerald-500', label: `${percentage}%` }
+    if (percentage < 30)  return { barColor: 'bg-red-500',    label: `${displayPct}%` }
+    if (percentage < 70)  return { barColor: 'bg-amber-500',  label: `${displayPct}%` }
+    return                       { barColor: 'bg-emerald-500', label: `${displayPct}%` }
   }, [percentage])
 
   const unattempted = total - attempted

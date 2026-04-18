@@ -10,6 +10,7 @@ const Login = lazy(() => import('./pages/Login'))
 const Signup = lazy(() => import('./pages/Signup'))
 const Dashboard = lazy(() => import('./pages/Dashboard'))
 const Quiz = lazy(() => import('./pages/Quiz'))
+const Subject = lazy(() => import('./pages/Subject'))
 
 function LoadingFallback() {
   return (
@@ -43,6 +44,14 @@ export default function App() {
                   element={
                     <ProtectedRoute>
                       <Quiz />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/subject"
+                  element={
+                    <ProtectedRoute>
+                      <Subject />
                     </ProtectedRoute>
                   }
                 />
