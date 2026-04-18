@@ -7,7 +7,8 @@ import {
   ChevronRight, ChevronDown,
   TrendingUp, CheckCircle2, Target,
   Atom, Calculator, FlaskConical,
-  PlayCircle, BookMarked,
+  PlayCircle, BookMarked, ChevronDown as ChevDown,
+  GraduationCap, Layers,
 } from 'lucide-react'
 
 /* ── per-subject theming ─────────────────────────────── */
@@ -44,21 +45,46 @@ function StatCard({ value, label, sub, colorClass, icon: Icon }) {
   )
 }
 
+/* ── exam group / exam display labels ───────────────── */
+const GROUP_LABELS = { jee: 'JEE', neet: 'NEET', upsc: 'UPSC', cat: 'CAT' }
+const EXAM_LABELS  = { 'jee-main': 'JEE Main', 'jee-advanced': 'JEE Advanced', 'neet-ug': 'NEET UG' }
+
+const fmtGroup = (g) => GROUP_LABELS[g] || g.toUpperCase()
+const fmtExam  = (e) => EXAM_LABELS[e]  || e.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+
 export default function Dashboard() {
   const { user } = useAuth()
   const { progressMap } = useQuiz()
   const navigate = useNavigate()
 
-  const [structure, setStructure] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [expandedSubject, setExpandedSubject] = useState(null)
+  const [structure, setStructure]         = useState(null)
+  const [loading, setLoading]             = useState(true)
+  const [selectedGroup, setSelectedGroup] = useState(null)
+  const [selectedExam, setSelectedExam]   = useState(null)
+  const [expandedSubject, setExpandedSubject]   = useState(null)
   const [expandedDivision, setExpandedDivision] = useState(null)
 
   useEffect(() => {
-    getStructure()
-      .then(s => { setStructure(s); setExpandedSubject(Object.keys(Object.values(Object.values(s)[0])[0])[0]) })
-      .finally(() => setLoading(false))
+    getStructure().then(s => {
+      setStructure(s)
+      const firstGroup = Object.keys(s)[0]
+      const firstExam  = firstGroup ? Object.keys(s[firstGroup])[0] : null
+      setSelectedGroup(firstGroup)
+      setSelectedExam(firstExam)
+      // Auto-open the first subject
+      if (firstGroup && firstExam) {
+        setExpandedSubject(Object.keys(s[firstGroup][firstExam])[0])
+      }
+    }).finally(() => setLoading(false))
   }, [])
+
+  // When the exam changes, reset accordion and auto-open first subject
+  const handleSelectExam = (group, exam) => {
+    setSelectedGroup(group)
+    setSelectedExam(exam)
+    setExpandedSubject(structure?.[group]?.[exam] ? Object.keys(structure[group][exam])[0] : null)
+    setExpandedDivision(null)
+  }
 
   const overallStats = useMemo(() => {
     let attempted = 0, correct = 0
@@ -71,9 +97,12 @@ export default function Dashboard() {
 
   const displayName = user?.email?.split('@')[0] || 'Student'
 
-  const examGroup = structure ? Object.keys(structure)[0] : null
-  const exam = examGroup ? Object.keys(structure[examGroup])[0] : null
-  const subjects = exam ? structure[examGroup][exam] : {}
+  // Derived from selections
+  const examGroups = structure ? Object.keys(structure) : []
+  const exams      = (structure && selectedGroup) ? Object.keys(structure[selectedGroup]) : []
+  const subjects   = (structure && selectedGroup && selectedExam)
+    ? structure[selectedGroup][selectedExam]
+    : {}
 
   const toggleSubject = (subj) => {
     setExpandedSubject(expandedSubject === subj ? null : subj)
@@ -83,7 +112,9 @@ export default function Dashboard() {
     setExpandedDivision(expandedDivision === div ? null : div)
   }
   const startQuiz = (subject, division, chapter) => {
-    const params = new URLSearchParams({ examGroup, exam, subject, division, chapter })
+    const params = new URLSearchParams({
+      examGroup: selectedGroup, exam: selectedExam, subject, division, chapter,
+    })
     navigate(`/quiz?${params}`)
   }
 
@@ -109,7 +140,7 @@ export default function Dashboard() {
         </div>
         <div className="flex items-center gap-2 text-xs text-zinc-600">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          JEE Main · All Subjects
+          {fmtGroup(selectedGroup)} {fmtExam(selectedExam)} · All Subjects
         </div>
       </div>
 
@@ -140,21 +171,46 @@ export default function Dashboard() {
 
       {/* ── Syllabus explorer ── */}
       <div>
-        <div className="flex items-center justify-between mb-5">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
           <h2 className="text-base font-semibold text-white">Course Syllabus</h2>
-          <span className="text-xs text-zinc-600 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">
-            {exam?.toUpperCase()}
-          </span>
+
+          {/* ── Exam Selector Tabs ── */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 scrollbar-hide">
+            {examGroups.map((grp) => (
+              Object.keys(structure[grp] || {}).map((ex) => {
+                const isSelected = selectedGroup === grp && selectedExam === ex
+                return (
+                  <button
+                    key={`${grp}-${ex}`}
+                    onClick={() => handleSelectExam(grp, ex)}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all border cursor-pointer
+                      ${isSelected
+                        ? 'bg-indigo-500/10 border-indigo-500/20 text-indigo-400'
+                        : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800'
+                      }`}
+                  >
+                    <Layers size={13} className={isSelected ? 'text-indigo-400' : 'text-zinc-500'} />
+                    {fmtGroup(grp)} · {fmtExam(ex)}
+                  </button>
+                )
+              })
+            ))}
+          </div>
         </div>
 
-        <div className="space-y-3">
-          {Object.entries(subjects).map(([subject, divisions]) => {
-            const theme = getTheme(subject)
-            const { Icon } = theme
-            const isExpanded = expandedSubject === subject
-            const totalChapters = Object.values(divisions).reduce((s, chs) => s + chs.length, 0)
+        {Object.keys(subjects).length === 0 ? (
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-10 text-center">
+            <p className="text-zinc-500 text-sm">No subjects available for this exam.</p>
+          </div>
+        ) : (
+          <div className="space-y-3">
+            {Object.entries(subjects).map(([subject, divisions]) => {
+              const theme = getTheme(subject)
+              const { Icon } = theme
+              const isExpanded = expandedSubject === subject
+              const totalChapters = Object.values(divisions).reduce((s, chs) => s + chs.length, 0)
 
-            return (
+              return (
               <div
                 key={subject}
                 className={`bg-zinc-900 border rounded-2xl overflow-hidden transition-all duration-200
@@ -241,6 +297,11 @@ export default function Dashboard() {
               </div>
             )
           })}
+          </div>
+        )}
+        <div className="flex items-center gap-2 text-xs text-zinc-600 mt-5">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          {fmtGroup(selectedGroup)} {fmtExam(selectedExam)} · All Subjects
         </div>
       </div>
     </div>
