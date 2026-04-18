@@ -48,7 +48,7 @@ export default function QuestionGrid() {
       </div>
 
       {/* Grid */}
-      <div className="flex flex-wrap gap-1">
+      <div className="flex flex-wrap gap-1 max-h-[40vh] overflow-y-auto pr-1 pb-1">
         {gridItems.map((item) => {
           let cls = 'bg-zinc-800 text-zinc-500'
           if (item.answered) cls = item.isCorrect ? 'bg-emerald-600/80 text-white' : 'bg-red-600/80 text-white'

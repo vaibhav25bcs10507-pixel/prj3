@@ -1,34 +1,51 @@
-import { useCallback, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
-/**
- * Renders raw HTML content and triggers MathJax typesetting.
- * Uses useRef to target the container and useCallback for the typeset function.
- */
+// Global queue to ensure MathJax typesetting doesn't overlap and cause errors
+let typesetQueue = Promise.resolve()
+
 export default function MathRenderer({ html, className = '' }) {
   const containerRef = useRef(null)
 
-  const typesetMath = useCallback((node) => {
-    containerRef.current = node
-    if (!node || !window.MathJax) return
+  useEffect(() => {
+    if (!containerRef.current || !window.MathJax) return
 
-    if (typeof MathJax.typesetPromise === 'function') {
-      MathJax.typesetPromise([node]).catch((err) =>
+    let isMounted = true
+
+    // Add this component's typesetting to the global queue
+    typesetQueue = typesetQueue
+      .then(() => {
+        if (!isMounted || !containerRef.current) return
+
+        // Make sure startup is complete
+        const p = window.MathJax.startup?.promise || Promise.resolve()
+        return p.then(() => {
+          if (!isMounted || !containerRef.current) return
+
+          // Clear previous state for this element
+          if (typeof window.MathJax.typesetClear === 'function') {
+            try { window.MathJax.typesetClear([containerRef.current]) } catch (e) { /* ignore */ }
+          }
+
+          // Typeset
+          if (typeof window.MathJax.typesetPromise === 'function') {
+            return window.MathJax.typesetPromise([containerRef.current])
+          }
+        })
+      })
+      .catch((err) => {
         console.warn('MathJax typeset error:', err.message)
-      )
-    } else if (typeof MathJax.typeset === 'function') {
-      try {
-        MathJax.typeset([node])
-      } catch (err) {
-        console.warn('MathJax typeset error:', err.message)
-      }
+      })
+
+    return () => {
+      isMounted = false
     }
-  }, [html]) // re-run when html changes
+  }, [html])
 
   if (!html) return null
 
   return (
     <div
-      ref={typesetMath}
+      ref={containerRef}
       className={`question-html ${className}`}
       dangerouslySetInnerHTML={{ __html: html }}
     />

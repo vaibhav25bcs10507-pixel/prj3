@@ -17,8 +17,9 @@
           skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
         },
         startup: {
+          typeset: false,
           pageReady: () => {
-            // MathJax ready — React will call typeset manually
+            return MathJax.startup.defaultPageReady();
           }
         }
       };
