@@ -63,10 +63,15 @@ export default function Dashboard() {
   useEffect(() => {
     getStructure().then(s => {
       setStructure(s)
-      const firstGroup = Object.keys(s)[0]
-      const firstExam  = firstGroup ? Object.keys(s[firstGroup])[0] : null
-      setSelectedGroup(firstGroup)
-      setSelectedExam(firstExam)
+      
+      const savedGroup = localStorage.getItem('dashboard_selectedGroup')
+      const savedExam = localStorage.getItem('dashboard_selectedExam')
+      
+      let initialGroup = savedGroup && s[savedGroup] ? savedGroup : Object.keys(s)[0]
+      let initialExam = savedExam && s[initialGroup]?.[savedExam] ? savedExam : (initialGroup ? Object.keys(s[initialGroup])[0] : null)
+
+      setSelectedGroup(initialGroup)
+      setSelectedExam(initialExam)
     }).finally(() => setLoading(false))
   }, [])
 
@@ -74,6 +79,8 @@ export default function Dashboard() {
   const handleSelectExam = (group, exam) => {
     setSelectedGroup(group)
     setSelectedExam(exam)
+    localStorage.setItem('dashboard_selectedGroup', group)
+    localStorage.setItem('dashboard_selectedExam', exam)
     setIsSidebarOpen(false) // auto-close on mobile
   }
 

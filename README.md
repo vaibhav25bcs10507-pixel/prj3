@@ -1,7 +1,10 @@
 # QuizVault
 
-QuizVault is a production-ready, modern React application for JEE exam preparation. It features a complete quiz platform with user authentication, progress tracking, and a multi-exam-ready architecture.
+QuizVault is a no-nonsense / bloat-free , modern React application for exam preparation. It features a complete quiz platform with user authentication, progress tracking, and a multi-exam-ready architecture.
 
+It is highly comprehensive and includes a very large data set which is extracted by reverse engineering a paywalled website.
+
+Demo-video: https://drive.google.com/file/d/1r7T--XbuzrQQ87EJn04yRUCUM8f-Disa/view?usp=sharing
 ## Features
 
 - **Authentication:** Secure user sign-up, login, and session management using Supabase Auth.
