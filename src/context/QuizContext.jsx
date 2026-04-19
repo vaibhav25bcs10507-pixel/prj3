@@ -67,14 +67,7 @@ export function QuizProvider({ children }) {
 
   // Load user progress from Supabase on login
   useEffect(() => {
-    if (!user) {
-      dispatch({ type: 'SET_PROGRESS_MAP', payload: new Map() })
-      return
-    }
-
-    fetchUserProgress(user.id).then((map) => {
-      dispatch({ type: 'SET_PROGRESS_MAP', payload: map })
-    })
+    dispatch({ type: 'SET_PROGRESS_MAP', payload: new Map() })
   }, [user])
 
   const setFilters = useCallback((newFilters) => {
@@ -108,9 +101,10 @@ export function QuizProvider({ children }) {
       },
     })
 
-    if (user) {
-      await recordAttempt(user.id, questionId, selectedOption, isCorrect)
-    }
+    // Offline mode: don't record to Supabase
+    // if (user) {
+    //   await recordAttempt(user.id, questionId, selectedOption, isCorrect)
+    // }
   }, [user, state.progressMap])
 
   const toggleReviewMark = useCallback(async (questionId) => {
@@ -130,9 +124,10 @@ export function QuizProvider({ children }) {
       },
     })
 
-    if (user) {
-      await toggleReview(user.id, questionId, newMarked)
-    }
+    // Offline mode: don't record to Supabase
+    // if (user) {
+    //   await toggleReview(user.id, questionId, newMarked)
+    // }
   }, [user, state.progressMap])
 
   const setQuestionsLoading = useCallback((loading) => {

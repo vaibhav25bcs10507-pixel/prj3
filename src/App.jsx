@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import { QuizProvider } from './context/QuizContext'
 import { ThemeProvider } from './context/ThemeContext'
@@ -23,7 +23,7 @@ function LoadingFallback() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/prj3">
+    <HashRouter>
       <ThemeProvider>
         <AuthProvider>
           <QuizProvider>
@@ -64,6 +64,6 @@ export default function App() {
         </QuizProvider>
       </AuthProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
